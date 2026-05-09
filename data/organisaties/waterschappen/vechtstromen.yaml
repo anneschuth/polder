@@ -16,6 +16,9 @@ contact:
   email: info@vechtstromen.nl
 valid_from: '1900-01-01'
 valid_until: null
+predecessor_id:
+- org:ws-regge-en-dinkel
+- org:ws-velt-en-vecht
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/118745/
@@ -27,4 +30,7 @@ sources:
   - oin
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q15883321
+  retrieved: '2026-05-09'
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/waterschap/ws0663
   retrieved: '2026-05-09'

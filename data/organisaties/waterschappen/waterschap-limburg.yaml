@@ -16,6 +16,9 @@ contact:
   email: info@waterschaplimburg.nl
 valid_from: '1900-01-01'
 valid_until: null
+predecessor_id:
+- org:ws-peel-en-maasvallei
+- org:ws-roer-en-overmaas
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/21194/
@@ -27,4 +30,7 @@ sources:
   - oin
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q27895262
+  retrieved: '2026-05-09'
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/waterschap/ws0665
   retrieved: '2026-05-09'

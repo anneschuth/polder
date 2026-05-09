@@ -16,6 +16,9 @@ contact:
   email: info@vallei-veluwe.nl
 valid_from: '1900-01-01'
 valid_until: null
+predecessor_id:
+- org:ws-vallei-en-eem
+- org:ws-veluwe
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/21237/
@@ -27,4 +30,7 @@ sources:
   - oin
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2474783
+  retrieved: '2026-05-09'
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/waterschap/ws0662
   retrieved: '2026-05-09'

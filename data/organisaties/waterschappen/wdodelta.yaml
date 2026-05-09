@@ -17,6 +17,9 @@ contact:
   email: info@wdodelta.nl
 valid_from: '1900-01-01'
 valid_until: null
+predecessor_id:
+- org:ws-groot-salland
+- org:ws-reest-en-wieden
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/27192110/
@@ -28,4 +31,7 @@ sources:
   - oin
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q21921798
+  retrieved: '2026-05-09'
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/waterschap/ws0664
   retrieved: '2026-05-09'

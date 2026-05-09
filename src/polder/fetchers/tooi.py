@@ -59,7 +59,7 @@ import re
 import sys
 import unicodedata
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -367,6 +367,14 @@ def _date_from_datetime(value: str | None) -> str | None:
     if not value:
         return None
     return value[:10]
+
+
+def _next_day(iso_date: str) -> str:
+    """Geef ISO-datum één dag na ``iso_date`` (YYYY-MM-DD). Best-effort."""
+    try:
+        return (date.fromisoformat(iso_date) + timedelta(days=1)).isoformat()
+    except ValueError:
+        return iso_date
 
 
 def parse_history_rdf(content: bytes) -> tuple[list[TooiOrg], list[TooiEvent]]:
@@ -821,13 +829,15 @@ def apply_history_to_records(
     #   - Oprichting: prov:generated, geen voorganger. Niets te linken.
     #   - Opheffing: prov:invalidated org eindigt zonder opvolger.
     #   - Toestandswijziging: prov:used (live) + prov:invalidated (HV).
-    #     Pure naamswijziging op één URI; HV's krijgen we via specializationOf.
-    #     Geen URI-keten te leggen.
-    #   - Uitbreiding: variant op Toestandswijziging; geen URI-keten.
+    #     Pure naamswijziging op één URI; HV's krijgen we via specializationOf
+    #     en als losstaand record (zie Stap 4 hieronder).
+    #   - Uitbreiding: prov:invalidated org gaat volledig op in prov:used org.
+    #     Zelfde semantiek als Samenvoeging, maar de absorberende kant is
+    #     prov:used (loopt door) i.p.v. prov:generated.
     succ_of: dict[str, str] = {}
     pred_of: dict[str, list[str]] = {}
     for ev in events:
-        if ev.event_type in {"Toestandswijziging", "Uitbreiding", "Oprichting", "Opheffing"}:
+        if ev.event_type in {"Toestandswijziging", "Oprichting", "Opheffing"}:
             continue
         if ev.event_type == "Samenvoeging":
             sources = ev.invalidated
@@ -853,8 +863,24 @@ def apply_history_to_records(
                     ]
                     if preds:
                         pred_of.setdefault(tgt, []).extend(preds)
+        elif ev.event_type == "Uitbreiding":
+            # prov:invalidated gaat op in prov:used. Een echte URI-keten:
+            # de invalidated org wordt opgeheven en heeft de used-org als
+            # opvolger; de used-org krijgt de invalidated als voorganger.
+            sources = ev.invalidated
+            targets = ev.used
+            for src in sources:
+                if src in by_uri and not by_uri[src].is_historische_versie and targets:
+                    succ_of.setdefault(src, targets[0])
+            for tgt in targets:
+                if tgt in by_uri and not by_uri[tgt].is_historische_versie:
+                    preds = [
+                        s for s in sources if s in by_uri and not by_uri[s].is_historische_versie
+                    ]
+                    if preds:
+                        pred_of.setdefault(tgt, []).extend(preds)
 
-    # Stap 2: bepaal slug per URI. Bestaande record? gebruik z'n id.
+    # Stap 2a: bepaal slug per URI. Bestaande record? gebruik z'n id.
     # Anders bouwen we hieronder een nieuwe slug. We doen dit in twee passes
     # zodat predecessor/successor-IDs naar de uiteindelijke slug verwijzen.
     slug_for_uri: dict[str, str] = {}
@@ -872,20 +898,61 @@ def apply_history_to_records(
             stripped = oid[len("org:") :]
             used_slugs.add(stripped)
 
-    # Plan nieuwe records voor TOOI-orgs zonder polder-match.
+    # Stap 2b: orden HV's per levende org chronologisch (op eind_datum) en
+    # bouw een keten: oudste HV -> volgende HV -> ... -> levende org.
+    # De predecessor van de oudste HV erft van wat oorspronkelijk de
+    # predecessor van de levende org was (Samenvoeging/Uitbreiding-input).
+    hvs_by_live: dict[str, list[TooiOrg]] = {}
+    for org in orgs:
+        if org.is_historische_versie and org.specialization_of and org.eind_datum:
+            hvs_by_live.setdefault(org.specialization_of, []).append(org)
+    for live_uri in list(hvs_by_live.keys()):
+        hvs_by_live[live_uri].sort(key=lambda h: h.eind_datum or "9999-12-31")
+
+    # Verschuif inkomende Samenvoeging/Uitbreiding-predecessors van de levende
+    # org naar de eerste (oudste) HV — die representeert de naamsperiode direct
+    # na de fusie/uitbreiding.
+    for live_uri, hv_list in hvs_by_live.items():
+        if not hv_list:
+            continue
+        oldest_hv = hv_list[0]
+        if live_uri in pred_of:
+            preds = pred_of.pop(live_uri)
+            pred_of.setdefault(oldest_hv.uri, []).extend(preds)
+            for pred_uri in preds:
+                # successor van die predecessor moet naar de HV wijzen i.p.v. live.
+                if succ_of.get(pred_uri) == live_uri:
+                    succ_of[pred_uri] = oldest_hv.uri
+
+        # Bouw HV-keten: hv[i].successor = hv[i+1] (of live), hv[i+1].pred += hv[i].
+        for i, hv in enumerate(hv_list):
+            next_uri = hv_list[i + 1].uri if i + 1 < len(hv_list) else live_uri
+            succ_of.setdefault(hv.uri, next_uri)
+            pred_of.setdefault(next_uri, []).append(hv.uri)
+
+    # Stap 2c: plan nieuwe records voor TOOI-orgs (incl. HV's) zonder
+    # polder-match.
     new_records: list[tuple[Path, dict[str, Any]]] = []
     for org in orgs:
-        if org.is_historische_versie:
-            continue
         if org.uri in existing_by_uri:
             continue
-        # Maak alleen records voor opgeheven organisaties (eind_datum gezet).
-        # Levende organisaties zonder polder-record zijn een ander probleem.
-        if not org.eind_datum:
+        # Echte (niet-HV) orgs alleen als ze opgeheven zijn (eind_datum gezet);
+        # levende orgs zonder polder-record zijn een ander probleem.
+        if not org.is_historische_versie and not org.eind_datum:
+            continue
+        # HV zonder einddatum is een nog levende naamsperiode; die slaan we
+        # over (komt in de praktijk niet voor in de TOOI-RDF).
+        if org.is_historische_versie and not org.eind_datum:
             continue
         # Reserveer eerst de slug zodat we hem kunnen referentieren.
         name = org.naam_excl_soort or org.label or org.uri
         base_slug = _slugify(name) or "onbekend"
+        if org.is_historische_versie and org.eind_datum:
+            # HV's krijgen een einddatum-jaar-suffix om te onderscheiden van
+            # het gelijknamige levende record en van eerdere HV's met dezelfde
+            # naam.
+            year = org.eind_datum[:4]
+            base_slug = f"{base_slug}-{year}"
         candidate = base_slug
         n = 2
         while f"{slug_prefix}-{candidate}" in used_slugs:
@@ -895,6 +962,18 @@ def apply_history_to_records(
         full_id = f"org:{slug_prefix}-{candidate}"
         slug_for_uri[org.uri] = full_id
 
+    # Voor HV's: leid begin_datum af uit de keten. Eerste HV start op de
+    # levende org's begin_datum; opvolgende HV's starten 1 dag na de eind_datum
+    # van de vorige HV.
+    hv_begin: dict[str, str] = {}
+    for live_uri, hv_list in hvs_by_live.items():
+        live = by_uri.get(live_uri)
+        prev_end: str | None = live.begin_datum if live else None
+        for hv in hv_list:
+            if prev_end:
+                hv_begin[hv.uri] = _next_day(prev_end) if prev_end != live.begin_datum else prev_end
+            prev_end = hv.eind_datum
+
     # Stap 3: schrijf updates voor bestaande records en bouw nieuwe records.
     updated_existing = 0
     successor_links = 0
@@ -903,8 +982,6 @@ def apply_history_to_records(
     written_paths: list[Path] = []
 
     for org in orgs:
-        if org.is_historische_versie:
-            continue
         succ_uri = succ_of.get(org.uri)
         pred_uris = pred_of.get(org.uri, [])
         succ_slug = slug_for_uri.get(succ_uri) if succ_uri else None
@@ -946,7 +1023,8 @@ def apply_history_to_records(
                 predecessor_links += len(pred_slugs)
             continue
 
-        # Geen match: nieuwe historische record (alleen als opgeheven).
+        # Geen match: nieuwe historische record. Skip orgs zonder eind_datum
+        # (levende orgs worden niet aangemaakt vanuit deze fetcher).
         if not org.eind_datum:
             continue
         full_id = slug_for_uri.get(org.uri)
@@ -954,7 +1032,10 @@ def apply_history_to_records(
             # gebeurt niet als slug-allocatie hierboven goed liep
             continue
         slug = full_id[len(f"org:{slug_prefix}-") :]
-        valid_from = org.begin_datum or "1900-01-01"
+        if org.is_historische_versie:
+            valid_from = hv_begin.get(org.uri) or org.begin_datum or "1900-01-01"
+        else:
+            valid_from = org.begin_datum or "1900-01-01"
         name_value = org.naam_excl_soort or org.label or org.uri
         name_entry: dict[str, Any] = {
             "value": name_value,
