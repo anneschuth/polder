@@ -18,6 +18,8 @@ contact:
   email: contactpersoonwoo@minbzk.nl
 valid_from: '2026-02-23'
 valid_until: '2022-07-01'
+predecessor_id:
+- org:min-vro
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/9632/
@@ -30,3 +32,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  retrieved: '2026-05-09'

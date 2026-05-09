@@ -22,6 +22,8 @@ contact:
   email: contactpersoonwoo@minienw.nl
 valid_from: '2010-10-14'
 valid_until: '2018-01-01'
+predecessor_id:
+- org:min-infrastructuur-en-milieu-2017
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/112773/
@@ -34,3 +36,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  retrieved: '2026-05-09'

@@ -818,7 +818,8 @@ def apply_history_to_records(
     by_uri: dict[str, TooiOrg] = {o.uri: o for o in orgs}
     existing_by_uri = _index_existing_records(out_dir, sub_folder=sub_folder, org_type=org_type)
 
-    # Stap 1: bouw successor- en predecessor-mapping uit events.
+    # Stap 1: extracteer per event de "echte" bron- en doel-URIs en het
+    # tijdstip. Dat is zonder HV-redirect; die volgt in Stap 2b.
     #
     # Semantiek per event-type:
     #   - Samenvoeging: prov:invalidated orgs eindigen -> prov:generated org.
@@ -830,55 +831,27 @@ def apply_history_to_records(
     #   - Opheffing: prov:invalidated org eindigt zonder opvolger.
     #   - Toestandswijziging: prov:used (live) + prov:invalidated (HV).
     #     Pure naamswijziging op één URI; HV's krijgen we via specializationOf
-    #     en als losstaand record (zie Stap 4 hieronder).
-    #   - Uitbreiding: prov:invalidated org gaat volledig op in prov:used org.
-    #     Zelfde semantiek als Samenvoeging, maar de absorberende kant is
-    #     prov:used (loopt door) i.p.v. prov:generated.
-    succ_of: dict[str, str] = {}
-    pred_of: dict[str, list[str]] = {}
+    #     en als losstaand record.
+    #   - Uitbreiding: prov:invalidated gaat volledig op in prov:used.
+    #     Zelfde semantiek als Samenvoeging maar absorberende kant is prov:used.
+    edges: list[tuple[list[str], list[str], str | None]] = []
     for ev in events:
         if ev.event_type in {"Toestandswijziging", "Oprichting", "Opheffing"}:
             continue
         if ev.event_type == "Samenvoeging":
-            sources = ev.invalidated
-            targets = ev.generated
-            for src in sources:
-                if src in by_uri and not by_uri[src].is_historische_versie and targets:
-                    succ_of.setdefault(src, targets[0])
-            for tgt in targets:
-                if tgt in by_uri and not by_uri[tgt].is_historische_versie:
-                    preds = [
-                        s for s in sources if s in by_uri and not by_uri[s].is_historische_versie
-                    ]
-                    if preds:
-                        pred_of.setdefault(tgt, []).extend(preds)
+            sources, targets = ev.invalidated, ev.generated
         elif ev.event_type == "Afsplitsing":
-            # prov:used is de levende bron, prov:generated is de afsplitsing.
-            sources = ev.used
-            targets = ev.generated
-            for tgt in targets:
-                if tgt in by_uri and not by_uri[tgt].is_historische_versie:
-                    preds = [
-                        s for s in sources if s in by_uri and not by_uri[s].is_historische_versie
-                    ]
-                    if preds:
-                        pred_of.setdefault(tgt, []).extend(preds)
+            # prov:used is de levende bron; bron blijft bestaan, alleen pred.
+            sources, targets = ev.used, ev.generated
         elif ev.event_type == "Uitbreiding":
-            # prov:invalidated gaat op in prov:used. Een echte URI-keten:
-            # de invalidated org wordt opgeheven en heeft de used-org als
-            # opvolger; de used-org krijgt de invalidated als voorganger.
-            sources = ev.invalidated
-            targets = ev.used
-            for src in sources:
-                if src in by_uri and not by_uri[src].is_historische_versie and targets:
-                    succ_of.setdefault(src, targets[0])
-            for tgt in targets:
-                if tgt in by_uri and not by_uri[tgt].is_historische_versie:
-                    preds = [
-                        s for s in sources if s in by_uri and not by_uri[s].is_historische_versie
-                    ]
-                    if preds:
-                        pred_of.setdefault(tgt, []).extend(preds)
+            sources, targets = ev.invalidated, ev.used
+        else:
+            continue
+        sources = [s for s in sources if s in by_uri and not by_uri[s].is_historische_versie]
+        targets = [t for t in targets if t in by_uri and not by_uri[t].is_historische_versie]
+        if not sources or not targets:
+            continue
+        edges.append((sources, targets, ev.tijdstip))
 
     # Stap 2a: bepaal slug per URI. Bestaande record? gebruik z'n id.
     # Anders bouwen we hieronder een nieuwe slug. We doen dit in twee passes
@@ -900,8 +873,6 @@ def apply_history_to_records(
 
     # Stap 2b: orden HV's per levende org chronologisch (op eind_datum) en
     # bouw een keten: oudste HV -> volgende HV -> ... -> levende org.
-    # De predecessor van de oudste HV erft van wat oorspronkelijk de
-    # predecessor van de levende org was (Samenvoeging/Uitbreiding-input).
     hvs_by_live: dict[str, list[TooiOrg]] = {}
     for org in orgs:
         if org.is_historische_versie and org.specialization_of and org.eind_datum:
@@ -909,22 +880,42 @@ def apply_history_to_records(
     for live_uri in list(hvs_by_live.keys()):
         hvs_by_live[live_uri].sort(key=lambda h: h.eind_datum or "9999-12-31")
 
-    # Verschuif inkomende Samenvoeging/Uitbreiding-predecessors van de levende
-    # org naar de eerste (oudste) HV — die representeert de naamsperiode direct
-    # na de fusie/uitbreiding.
-    for live_uri, hv_list in hvs_by_live.items():
-        if not hv_list:
-            continue
-        oldest_hv = hv_list[0]
-        if live_uri in pred_of:
-            preds = pred_of.pop(live_uri)
-            pred_of.setdefault(oldest_hv.uri, []).extend(preds)
-            for pred_uri in preds:
-                # successor van die predecessor moet naar de HV wijzen i.p.v. live.
-                if succ_of.get(pred_uri) == live_uri:
-                    succ_of[pred_uri] = oldest_hv.uri
+    def _resolve_target(live_uri: str, tijdstip: str | None) -> str:
+        """Map een levende org-URI naar de juiste HV op een gegeven tijdstip.
 
-        # Bouw HV-keten: hv[i].successor = hv[i+1] (of live), hv[i+1].pred += hv[i].
+        Als ``live_uri`` HV's heeft, wijst de inkomende edge naar de eerste
+        HV waarvan de geldigheidsperiode het tijdstip omvat. Valt het tijdstip
+        ná alle HV's, dan blijft de levende URI het doel.
+        """
+        chain = hvs_by_live.get(live_uri) or []
+        if not chain or not tijdstip:
+            return live_uri
+        for hv in chain:
+            if hv.eind_datum and tijdstip <= hv.eind_datum:
+                return hv.uri
+        return live_uri
+
+    # Resolveer events naar succ_of/pred_of, met HV-redirect op tijdstip.
+    succ_of: dict[str, str] = {}
+    pred_of: dict[str, list[str]] = {}
+    for sources, targets, tijdstip in edges:
+        primary_target = targets[0]
+        resolved_target = _resolve_target(primary_target, tijdstip)
+        # Predecessor-link: alle bronnen op de (mogelijk verschoven) target.
+        for src in sources:
+            # Afsplitsing wordt herkend doordat ``primary_target`` een
+            # afsplitsing is en de bron de levende used-URI: in dat geval
+            # leggen we alleen pred op target, geen succ op bron.
+            # Dat onderscheid maken we hier door: succ alleen leggen als
+            # de bron in by_uri opgeheven is (eind_datum gezet) en als de
+            # bron-org doorlopend is (geen eind_datum) skippen we de succ.
+            src_org = by_uri.get(src)
+            if src_org and src_org.eind_datum:
+                succ_of.setdefault(src, resolved_target)
+        pred_of.setdefault(resolved_target, []).extend(sources)
+
+    # Bouw HV-keten: hv[i].successor = hv[i+1] (of live), hv[i+1].pred += hv[i].
+    for live_uri, hv_list in hvs_by_live.items():
         for i, hv in enumerate(hv_list):
             next_uri = hv_list[i + 1].uri if i + 1 < len(hv_list) else live_uri
             succ_of.setdefault(hv.uri, next_uri)

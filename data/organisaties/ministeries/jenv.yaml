@@ -18,6 +18,9 @@ contact:
   email: contactpersoonwoo@minjenv.nl
 valid_from: '2026-02-23'
 valid_until: '2018-11-15'
+predecessor_id:
+- org:min-aenm
+- org:min-veiligheid-en-justitie-2017
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/11906/
@@ -30,3 +33,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  retrieved: '2026-05-09'

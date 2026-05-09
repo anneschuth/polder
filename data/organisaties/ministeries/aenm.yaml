@@ -17,6 +17,7 @@ contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-asiel-en-migratie
 valid_from: '2024-07-02'
 valid_until: '2026-02-23'
+successor_id: org:min-jenv
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/29481986/
@@ -29,3 +30,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1162
+  retrieved: '2026-05-09'

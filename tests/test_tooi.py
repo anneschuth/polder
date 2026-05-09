@@ -358,15 +358,14 @@ def test_apply_history_updates_existing_and_creates_historic(tmp_path: Path) -> 
     )
 
     assert summary["updated_existing"] == 2
-    assert summary["created_historic"] == 2  # mnre1040 (EZ) + mnre1150 (LNV)
+    # mnre1040 (EZ), mnre1150 (LNV) en hv_05434137 (HV-EZ 2017).
+    assert summary["created_historic"] == 3
 
-    # EZK: predecessors zijn de twee historische records, geen successor (nog levend).
+    # EZK: predecessor is de jongste HV (op 2017-12-31 eindigend en daarna
+    # gevolgd door de levende EZK-naamsperiode). Geen successor (nog levend).
     ezk = yaml.safe_load((sub / "ezk.yaml").read_text())
     assert "successor_id" not in ezk or ezk["successor_id"] is None
-    assert sorted(ezk["predecessor_id"]) == [
-        "org:min-economische-zaken",
-        "org:min-landbouw-natuur-en-voedselkwaliteit",
-    ]
+    assert ezk["predecessor_id"] == ["org:min-economische-zaken-2017"]
     # TOOI-source toegevoegd.
     assert any(s["id"] == "tooi" for s in ezk["sources"])
 
@@ -374,13 +373,27 @@ def test_apply_history_updates_existing_and_creates_historic(tmp_path: Path) -> 
     lvvn = yaml.safe_load((sub / "lvvn.yaml").read_text())
     assert lvvn["predecessor_id"] == ["org:min-ezk"]
 
-    # Nieuw historisch EZ-record: heeft TOOI-URI, einddatum, successor naar EZK.
+    # Nieuw historisch EZ-record (mnre1040): heeft TOOI-URI, einddatum,
+    # en successor naar de oudste HV van mnre1045 (de Samenvoeging-target
+    # wordt verschoven naar de eerste HV).
     ez = yaml.safe_load((sub / "economische-zaken.yaml").read_text())
     assert ez["id"] == "org:min-economische-zaken"
     assert ez["valid_until"] == "2010-10-13"
-    assert ez["successor_id"] == "org:min-ezk"
+    assert ez["successor_id"] == "org:min-economische-zaken-2017"
     assert ez["names"][0]["abbr"] == "EZ"
     assert any(s["id"] == "tooi" for s in ez["sources"])
+
+    # HV-record voor de naamsperiode "Economische Zaken" 2013-2017 (hv_05434137).
+    hv_ez = yaml.safe_load((sub / "economische-zaken-2017.yaml").read_text())
+    assert hv_ez["id"] == "org:min-economische-zaken-2017"
+    assert hv_ez["valid_until"] == "2017-12-31"
+    # Successor is de levende mnre1045 (geen latere HV in deze fixture).
+    assert hv_ez["successor_id"] == "org:min-ezk"
+    # Predecessors van de oudste HV: de twee Samenvoeging-bronnen.
+    assert sorted(hv_ez["predecessor_id"]) == [
+        "org:min-economische-zaken",
+        "org:min-landbouw-natuur-en-voedselkwaliteit",
+    ]
 
 
 def test_apply_history_idempotent(tmp_path: Path) -> None:
@@ -436,7 +449,7 @@ def test_apply_history_idempotent(tmp_path: Path) -> None:
         today="2026-05-09",
     )
     assert first["updated_existing"] == 2
-    assert first["created_historic"] == 2
+    assert first["created_historic"] == 3
 
     second = tooi.apply_history_to_records(
         orgs=orgs,
@@ -447,6 +460,122 @@ def test_apply_history_idempotent(tmp_path: Path) -> None:
     )
     assert second["updated_existing"] == 0
     assert second["created_historic"] == 0
+
+
+# RDF met een Uitbreiding-event en een HV: een opgeheven mini-ministerie
+# (mnre1162 "Asiel en Migratie") gaat in 2026 op in een levend ministerie
+# (mnre1058 "Justitie en Veiligheid") dat zelf een eerder geeindigde
+# HV-naamsperiode kent. Regressie-fixture voor de tijdstip-bewuste resolve:
+# de Uitbreiding van 2026-02-23 mag niet redirected worden naar een HV die
+# in 2010 al eindigde.
+UITBREIDING_RDF = b"""<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tooiont="https://identifier.overheid.nl/tooi/def/ont/"
+    xmlns:prov="http://www.w3.org/ns/prov#">
+
+  <rdf:Description rdf:about="https://identifier.overheid.nl/tooi/id/ministerie/mnre1058">
+    <rdf:type rdf:resource="https://identifier.overheid.nl/tooi/def/ont/Ministerie"/>
+    <rdfs:label>ministerie van Justitie en Veiligheid</rdfs:label>
+    <tooiont:officieleNaamExclSoort>Justitie en Veiligheid</tooiont:officieleNaamExclSoort>
+    <tooiont:afkorting>JenV</tooiont:afkorting>
+    <tooiont:organisatiecode>mnre1058</tooiont:organisatiecode>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://identifier.overheid.nl/tooi/id/ministerie/hv_04793043">
+    <rdf:type rdf:resource="https://identifier.overheid.nl/tooi/def/ont/HistorischeVersie"/>
+    <rdf:type rdf:resource="https://identifier.overheid.nl/tooi/def/ont/Ministerie"/>
+    <prov:specializationOf rdf:resource="https://identifier.overheid.nl/tooi/id/ministerie/mnre1058"/>
+    <rdfs:label>ministerie van Justitie</rdfs:label>
+    <tooiont:officieleNaamExclSoort>Justitie</tooiont:officieleNaamExclSoort>
+    <tooiont:afkorting>MinJus</tooiont:afkorting>
+    <tooiont:einddatumHV rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-11-30</tooiont:einddatumHV>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://identifier.overheid.nl/tooi/id/ministerie/mnre1162">
+    <rdf:type rdf:resource="https://identifier.overheid.nl/tooi/def/ont/Ministerie"/>
+    <rdfs:label>ministerie van Asiel en Migratie</rdfs:label>
+    <tooiont:officieleNaamExclSoort>Asiel en Migratie</tooiont:officieleNaamExclSoort>
+    <tooiont:afkorting>AenM</tooiont:afkorting>
+    <tooiont:organisatiecode>mnre1162</tooiont:organisatiecode>
+    <tooiont:begindatum rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-07-02</tooiont:begindatum>
+    <tooiont:einddatum rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-23</tooiont:einddatum>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://identifier.overheid.nl/tooi/id/ministerie/wzg_uitbreiding">
+    <rdf:type rdf:resource="https://identifier.overheid.nl/tooi/def/ont/Uitbreiding"/>
+    <prov:used rdf:resource="https://identifier.overheid.nl/tooi/id/ministerie/mnre1058"/>
+    <prov:invalidated rdf:resource="https://identifier.overheid.nl/tooi/id/ministerie/mnre1162"/>
+    <tooiont:tijdstipWijziging rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-02-23T00:00:00+01:00</tooiont:tijdstipWijziging>
+  </rdf:Description>
+</rdf:RDF>
+"""
+
+
+def test_apply_history_uitbreiding_after_hv_resolves_to_live(tmp_path: Path) -> None:
+    """Uitbreiding na alle HV-einddata wijst naar de levende org, niet de HV."""
+    out = tmp_path / "data" / "organisaties"
+    sub = out / "ministeries"
+    _write_yaml(
+        sub / "jenv.yaml",
+        {
+            "id": "org:min-jenv",
+            "type": "ministerie",
+            "identifiers": {
+                "tooi": "https://identifier.overheid.nl/tooi/id/ministerie/mnre1058",
+            },
+            "names": [
+                {"value": "Justitie en Veiligheid", "abbr": "JenV", "valid_from": "2017-12-01"}
+            ],
+            "valid_from": "2017-12-01",
+            "valid_until": None,
+            "sources": [
+                {"id": "roo", "url": "https://example.test/jenv", "retrieved": "2026-05-09"}
+            ],
+        },
+    )
+    _write_yaml(
+        sub / "aenm.yaml",
+        {
+            "id": "org:min-aenm",
+            "type": "ministerie",
+            "identifiers": {
+                "tooi": "https://identifier.overheid.nl/tooi/id/ministerie/mnre1162",
+            },
+            "names": [
+                {
+                    "value": "Asiel en Migratie",
+                    "abbr": "AenM",
+                    "valid_from": "2024-07-02",
+                    "valid_until": "2026-02-23",
+                }
+            ],
+            "valid_from": "2024-07-02",
+            "valid_until": "2026-02-23",
+            "sources": [
+                {"id": "roo", "url": "https://example.test/aenm", "retrieved": "2026-05-09"}
+            ],
+        },
+    )
+
+    orgs, events = tooi.parse_history_rdf(UITBREIDING_RDF)
+    tooi.apply_history_to_records(
+        orgs=orgs,
+        events=events,
+        out_dir=out,
+        scheme="ministeries",
+        today="2026-05-09",
+    )
+
+    aenm = yaml.safe_load((sub / "aenm.yaml").read_text())
+    # AenM gaat op in JenV (levend), NIET in de HV "Justitie" uit 2010.
+    assert aenm["successor_id"] == "org:min-jenv"
+
+    jenv = yaml.safe_load((sub / "jenv.yaml").read_text())
+    # JenV krijgt AenM en de HV "Justitie" als predecessors.
+    assert "org:min-aenm" in jenv["predecessor_id"]
+    assert "org:min-justitie-2010" in jenv["predecessor_id"]
 
 
 def test_apply_history_skips_unknown_scheme(tmp_path: Path) -> None:

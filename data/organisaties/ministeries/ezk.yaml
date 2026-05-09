@@ -21,6 +21,9 @@ contact:
   email: WooContactWJZ@minezk.nl
 valid_from: '2010-10-14'
 valid_until: null
+predecessor_id:
+- org:min-economische-zaken-2026
+- org:min-kgg
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/10621/
@@ -33,3 +36,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  retrieved: '2026-05-09'

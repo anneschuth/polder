@@ -17,6 +17,7 @@ contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening
 valid_from: '2024-07-02'
 valid_until: '2026-02-23'
+successor_id: org:min-bzk
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/29481991/
@@ -29,3 +30,6 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: tooi
+  url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1171
+  retrieved: '2026-05-09'
