@@ -1,6 +1,7 @@
 id: person:rutte-m-1967
 identifiers:
   tk_persoon_id: 8b3664bd-77e4-468b-af96-f3f4ec27fcce
+  wikidata: Q57792
 name:
   full: Mark Rutte
   family: Rutte
@@ -58,7 +59,40 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(99570cc6-f141-42e1-9f2f-797aa754a141)
     retrieved: '2026-05-09'
+- id: wd-373969a8e6aa
+  organization_id: org:min-az
+  post_id: post:minister-min-az
+  role: Nederlands minister van Algemene Zaken
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q57792#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
+- id: wd-a27b937da334
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q57792#P39
+    retrieved: '2026-05-09'
+  end_date: '2004-06-16'
+- id: wd-e28b7d8b50a0
+  organization_id: org:min-az
+  post_id: post:minister-president
+  role: Minister-president van Nederland
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q57792#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8b3664bd-77e4-468b-af96-f3f4ec27fcce)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q57792
   retrieved: '2026-05-09'

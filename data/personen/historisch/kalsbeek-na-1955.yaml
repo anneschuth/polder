@@ -1,6 +1,7 @@
 id: person:kalsbeek-na-1955
 identifiers:
   tk_persoon_id: c3879693-5700-4605-bffe-931bc819ad33
+  wikidata: Q3284544
 name:
   full: Neeltje Adriana Kalsbeek
   family: Kalsbeek
@@ -11,7 +12,21 @@ name:
 birth:
   year: 1955
 gender: f
+mandaten:
+- id: wd-a83d3299e85f
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2001-01-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3284544#P39
+    retrieved: '2026-05-09'
+  end_date: '2002-07-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c3879693-5700-4605-bffe-931bc819ad33)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q3284544
   retrieved: '2026-05-09'

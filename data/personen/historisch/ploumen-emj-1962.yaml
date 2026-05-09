@@ -1,6 +1,7 @@
 id: person:ploumen-emj-1962
 identifiers:
   tk_persoon_id: 16be6093-7884-4d00-ae31-70dc7062f57a
+  wikidata: Q459509
 name:
   full: Lilianne Ploumen
   family: Ploumen
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b39d44fb-bb2a-4dc2-8f93-943b33adb786)
     retrieved: '2026-05-09'
+- id: wd-2528d0335707
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
+  start_date: '2012-11-05'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q459509#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(16be6093-7884-4d00-ae31-70dc7062f57a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q459509
   retrieved: '2026-05-09'

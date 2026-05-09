@@ -1,6 +1,7 @@
 id: person:veldkamp-ccj-1964
 identifiers:
   tk_persoon_id: 2109eb16-0536-4adb-a32c-38022e10564e
+  wikidata: Q123174040
 name:
   full: Caspar Veldkamp
   family: Veldkamp
@@ -22,7 +23,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29939749-cf41-458c-89b3-ef245095aecb)
     retrieved: '2026-05-09'
+- id: wd-cd45c8f939ca
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Nederlands minister van Buitenlandse Zaken
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q123174040#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-08-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2109eb16-0536-4adb-a32c-38022e10564e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123174040
   retrieved: '2026-05-09'

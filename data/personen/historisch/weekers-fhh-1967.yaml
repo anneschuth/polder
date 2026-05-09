@@ -1,6 +1,7 @@
 id: person:weekers-fhh-1967
 identifiers:
   tk_persoon_id: 78d8748c-7690-4c87-b927-42311124607c
+  wikidata: Q2251992
 name:
   full: Frans Weekers
   family: Weekers
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b954c31a-f8d0-4025-b3ac-13cbd18375cd)
     retrieved: '2026-05-09'
+- id: wd-9dafe6820257
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2251992#P39
+    retrieved: '2026-05-09'
+  end_date: '2014-01-30'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(78d8748c-7690-4c87-b927-42311124607c)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2251992
   retrieved: '2026-05-09'

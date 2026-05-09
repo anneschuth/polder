@@ -1,6 +1,7 @@
 id: person:bos-wj-1963
 identifiers:
   tk_persoon_id: 55dfb769-28c2-4542-88de-d04b6fe079e1
+  wikidata: Q554127
 name:
   full: Wouter Bos
   family: Bos
@@ -11,7 +12,31 @@ name:
 birth:
   year: 1963
 gender: m
+mandaten:
+- id: wd-e58855bb3dbe
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Nederlands minister van Financiën
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q554127#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-02-23'
+- id: wd-7ed0cfdbb5c0
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '2000-03-24'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q554127#P39
+    retrieved: '2026-05-09'
+  end_date: '2002-07-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(55dfb769-28c2-4542-88de-d04b6fe079e1)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q554127
   retrieved: '2026-05-09'

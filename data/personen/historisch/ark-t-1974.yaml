@@ -1,6 +1,7 @@
 id: person:ark-t-1974
 identifiers:
   tk_persoon_id: 7f3c60c7-b846-4f3a-a9f4-a18abf37bb3a
+  wikidata: Q4363961
 name:
   full: Tamara van Ark
   family: van Ark
@@ -36,7 +37,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5b66a15c-45e1-4c41-9fec-a6b6dae60be4)
     retrieved: '2026-05-09'
+- id: wd-177aab7eafc7
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: Minister voor Medische Zorg
+  start_date: '2020-07-09'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q4363961#P39
+    retrieved: '2026-05-09'
+  end_date: '2021-09-04'
+- id: wd-ffe78a45792b
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q4363961#P39
+    retrieved: '2026-05-09'
+  end_date: '2020-07-09'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7f3c60c7-b846-4f3a-a9f4-a18abf37bb3a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q4363961
   retrieved: '2026-05-09'

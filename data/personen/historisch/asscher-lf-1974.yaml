@@ -1,6 +1,7 @@
 id: person:asscher-lf-1974
 identifiers:
   tk_persoon_id: 5ab23e3a-aed4-4713-9214-53336765be9d
+  wikidata: Q466868
 name:
   full: Lodewijk Asscher
   family: Asscher
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8a4632f5-4df5-4c12-ba84-adf41bbd2875)
     retrieved: '2026-05-09'
+- id: wd-91c758059154
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  start_date: '2012-11-05'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q466868#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5ab23e3a-aed4-4713-9214-53336765be9d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q466868
   retrieved: '2026-05-09'

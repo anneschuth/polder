@@ -1,6 +1,7 @@
 id: person:faber-mhm-1960
 identifiers:
   tk_persoon_id: fe1727e3-35bc-4b62-869b-be60b0c861f7
+  wikidata: Q13815905
 name:
   full: Marjolein Faber
   family: Faber
@@ -34,7 +35,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4570f24b-8466-40d4-9ed8-4b7782059656)
     retrieved: '2026-05-09'
+- id: wd-6f38b2d769ec
+  organization_id: org:min-aenm
+  post_id: post:minister-min-aenm
+  role: minister van Asiel en Migratie
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q13815905#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fe1727e3-35bc-4b62-869b-be60b0c861f7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q13815905
   retrieved: '2026-05-09'

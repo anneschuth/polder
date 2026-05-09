@@ -1,6 +1,7 @@
 id: person:rooijen-mj-1942
 identifiers:
   tk_persoon_id: cfb17042-9f10-4e44-99f4-358bad067455
+  wikidata: Q2801440
 name:
   full: Martin van Rooijen
   family: van Rooijen
@@ -36,10 +37,23 @@ mandaten:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
     retrieved: '2026-05-09'
+- id: wd-fe02823f5fe3
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '1973-12-21'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2801440#P39
+    retrieved: '2026-05-09'
+  end_date: '1977-10-14'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cfb17042-9f10-4e44-99f4-358bad067455)
   retrieved: '2026-05-09'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2801440
   retrieved: '2026-05-09'

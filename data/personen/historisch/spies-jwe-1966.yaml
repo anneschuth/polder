@@ -1,6 +1,7 @@
 id: person:spies-jwe-1966
 identifiers:
   tk_persoon_id: 038cce0f-d321-4059-9e78-fb72de1a529e
+  wikidata: Q440235
 name:
   full: Liesbeth Spies
   family: Spies
@@ -24,7 +25,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bb6a2693-adbf-46c4-8e82-276395656f71)
     retrieved: '2026-05-09'
+- id: wd-66dfd61de079
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2011-12-16'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q440235#P39
+    retrieved: '2026-05-09'
+  end_date: '2012-11-05'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(038cce0f-d321-4059-9e78-fb72de1a529e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q440235
   retrieved: '2026-05-09'

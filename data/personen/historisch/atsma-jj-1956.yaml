@@ -1,6 +1,7 @@
 id: person:atsma-jj-1956
 identifiers:
   tk_persoon_id: e55ca731-e1aa-44c0-a5f3-0008c23976f7
+  wikidata: Q560481
 name:
   full: Joop Atsma
   family: Atsma
@@ -22,7 +23,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1d85c59c-12ef-475e-9c7a-701a181eb23d)
     retrieved: '2026-05-09'
+- id: wd-a2a4ca47e8b2
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q560481#P39
+    retrieved: '2026-05-09'
+  end_date: '2012-11-05'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e55ca731-e1aa-44c0-a5f3-0008c23976f7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q560481
   retrieved: '2026-05-09'

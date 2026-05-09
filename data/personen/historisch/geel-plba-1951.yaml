@@ -1,6 +1,7 @@
 id: person:geel-plba-1951
 identifiers:
   tk_persoon_id: e814959e-9ca8-4dae-b9a2-481bb2c7bd67
+  wikidata: Q1284480
 name:
   full: Pieter Van Geel
   family: Van Geel
@@ -22,7 +23,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(51a39833-7ca8-4b32-ba8b-973d333fd7fe)
     retrieved: '2026-05-09'
+- id: wd-8d3946c4348a
+  organization_id: org:min-vro
+  post_id: post:staatssecretaris-min-vro
+  role: staatssecretaris van Volkshuisvesting, Ruimtelijke Ordening en Milieubeheer
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1284480#P39
+    retrieved: '2026-05-09'
+  end_date: '2007-02-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e814959e-9ca8-4dae-b9a2-481bb2c7bd67)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1284480
   retrieved: '2026-05-09'

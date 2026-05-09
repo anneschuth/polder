@@ -1,6 +1,7 @@
 id: person:schippers-ei-1964
 identifiers:
   tk_persoon_id: 4e8545ce-64b7-48bb-be83-c46c11009f55
+  wikidata: Q467604
 name:
   full: Edith Schippers
   family: Schippers
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ded4d979-7396-4641-83eb-80f663fad7b1)
     retrieved: '2026-05-09'
+- id: wd-95a1332026f2
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q467604#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4e8545ce-64b7-48bb-be83-c46c11009f55)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q467604
   retrieved: '2026-05-09'

@@ -1,6 +1,7 @@
 id: person:brekelmans-rp-1986
 identifiers:
   tk_persoon_id: e5c4753f-d2d8-4a4a-ae9d-62118892a731
+  wikidata: Q106119770
 name:
   full: Ruben Brekelmans
   family: Brekelmans
@@ -46,7 +47,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d677c643-30e7-42c8-9344-9d8c804e84a2)
     retrieved: '2026-05-09'
+- id: wd-7aeee284d2a7
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Nederlands minister van Buitenlandse Zaken
+  start_date: '2025-08-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q106119770#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
+- id: wd-151267616c31
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Nederlands minister van Defensie
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q106119770#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e5c4753f-d2d8-4a4a-ae9d-62118892a731)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119770
   retrieved: '2026-05-09'

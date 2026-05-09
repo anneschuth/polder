@@ -150,9 +150,30 @@ daily-update` of de losse `polder skill ...` commando's. Geen
 subscription. Zie [docs/lokaal-draaien.md](docs/lokaal-draaien.md) voor de
 volledige uitleg en voorbeelden per skill.
 
+## Reproduceerbaarheid
+
+Elke run is een `polder`-commando of een script in `scripts/`. Geen ad-hoc
+shell-loops, geen handmatige stappen, geen UI-clicks.
+
+| Operatie | Commando |
+|---|---|
+| Volledige dagelijkse update | `polder daily-update` |
+| Alle fetchers achter elkaar | `polder fetch all` |
+| Eén fetcher | `polder fetch <bron>` |
+| Skills lokaal | `polder skill <skill-naam> <input>` |
+| ABD-organogrammen op alle PDFs | `bash scripts/parse_organogram_all.sh` |
+| Staatscourant-backfill | `bash scripts/backfill_staatscourant.sh --since 2024-01-01` |
+| Validatie | `polder validate` |
+| Datasette lokaal | `polder serve` |
+
+Alle paden in commando's zijn relatief aan de repo-root. Caches in `_cache/`,
+build-output in `dist/`, beide gitignored. Records in `data/` zijn de
+source-of-truth en gaan via PR's. LLM-proposals landen eerst in
+`data/_staging/`, nooit direct in `data/`.
+
 ## Status
 
-Pre-alpha. ROO-fetcher live (~2850 organisaties), TK OData-fetcher live (~800 Kamerleden vanaf 2008). Validate-CI groen op main. Schemas, library en CLI klaar. Daily-update workflow draait, maar de Claude-review-job wacht op een `ANTHROPIC_API_KEY`-secret. Andere fetchers (EK, ABD, Wikidata, KOOP) staan in de roadmap (zie open issues). Dit is geen productie-dataset zolang de versie onder 0.1 staat.
+Pre-alpha. Live fetchers: ROO (~4500 organisaties inclusief organisatieonderdelen), TK OData (~800 Kamerleden vanaf 2008), EK (73 senatoren), Logius COR (OIN-crosswalk), Wikidata (Q-id-crosswalk voor ministeries, provincies, gemeenten, waterschappen), AR RWT (RWT-status), ORI (gemeentebestuurders Utrecht/Rotterdam/Nijmegen), ABD organogrammen (manifest + PDFs voor 15 ministeries). Skills v0.2.0: review-pr-diff, parse-staatscourant, parse-organogram, entity-resolution. Library + CLI klaar. Validate-CI groen op main, lokaal idem (geen secrets nodig). Dit is geen productie-dataset zolang de versie onder 0.1 staat.
 
 ## Deep-links naar externe systemen
 

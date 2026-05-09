@@ -44,32 +44,51 @@ import yaml
 logger = logging.getLogger("polder.fetchers.wikidata_sparql")
 
 __all__ = [
+    "ABD_TMG_QUERY",
+    "BEWINDSPERSOON_QUERIES",
     "MIN_REQUEST_INTERVAL",
+    "MINISTRY_QID_TO_SLUG",
     "ORG_QUERIES",
     "PERSON_QUERY",
     "SOURCE_ID",
     "SPARQL_ENDPOINT",
     "USER_AGENT",
+    "build_bewindspersoon_records",
+    "build_abd_tmg_records",
     "build_org_index",
     "build_person_index",
+    "enrich_abd_tmg",
+    "enrich_bewindspersonen",
     "extract_qid",
     "main",
     "match_organisations",
     "match_personen",
     "merge_wikidata_into_record",
     "normalize_org_name",
+    "parse_abd_tmg_bindings",
+    "parse_bewindspersoon_bindings",
     "parse_org_bindings",
     "parse_person_bindings",
+    "person_id_from_label",
     "query_sparql",
 ]
 
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
+QLEVER_ENDPOINT = "https://qlever.cs.uni-freiburg.de/api/wikidata"
 USER_AGENT = (
     "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 )
 HTTP_TIMEOUT = 180.0
 MIN_REQUEST_INTERVAL = 2.0  # seconden tussen calls (Wikimedia rate-limit; conservatief tijdens outages)
+QLEVER_REQUEST_INTERVAL = 0.2  # QLever heeft geen agressieve throttle
 SOURCE_ID = "wikidata"
+
+# QLever vereist expliciete PREFIX-declaraties en ondersteunt geen
+# `SERVICE wikibase:label`; we vragen labels via `rdfs:label` met taal-filter.
+_QLEVER_PREFIXES = """PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+"""
 
 
 # ---------------------------------------------------------------------------
@@ -114,6 +133,43 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
 """,
 }
 
+# QLever-varianten: zelfde Q-classes maar met expliciete PREFIX-declaraties
+# en `rdfs:label` met taal-filter (QLever ondersteunt geen wikibase:label-service).
+ORG_QUERIES_QLEVER: dict[str, str] = {
+    "ministerie": _QLEVER_PREFIXES + """
+SELECT ?item ?itemLabel ?abbr ?oin WHERE {
+  ?item wdt:P31 wd:Q3143387 .
+  OPTIONAL { ?item wdt:P1813 ?abbr }
+  OPTIONAL { ?item wdt:P9947 ?oin }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
+}
+""",
+    "gemeente": _QLEVER_PREFIXES + """
+SELECT ?item ?itemLabel ?abbr ?oin WHERE {
+  ?item wdt:P31 wd:Q2039348 .
+  OPTIONAL { ?item wdt:P1813 ?abbr }
+  OPTIONAL { ?item wdt:P9947 ?oin }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
+}
+""",
+    "provincie": _QLEVER_PREFIXES + """
+SELECT ?item ?itemLabel ?abbr ?oin WHERE {
+  ?item wdt:P31 wd:Q134390 .
+  OPTIONAL { ?item wdt:P1813 ?abbr }
+  OPTIONAL { ?item wdt:P9947 ?oin }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
+}
+""",
+    "waterschap": _QLEVER_PREFIXES + """
+SELECT ?item ?itemLabel ?abbr ?oin WHERE {
+  ?item wdt:P31 wd:Q702081 .
+  OPTIONAL { ?item wdt:P1813 ?abbr }
+  OPTIONAL { ?item wdt:P9947 ?oin }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
+}
+""",
+}
+
 
 # Alle Tweede Kamerleden (huidig + historisch). P39 = position held,
 # Q18887908 = lid van de Tweede Kamer; P9213 = TK-persoon-ID.
@@ -129,6 +185,268 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
 
 
 # ---------------------------------------------------------------------------
+# Bewindspersoon-queries (1945-heden)
+# ---------------------------------------------------------------------------
+#
+# We splitsen per ambtstype. Per query halen we alle holders (P39) op van
+# elke positie die instance is van de meta-class. Dat dekt zowel huidige
+# (Q19334526 minister, Q1847103 staatssecretaris) als historische posten,
+# zolang Wikidata ze als instance van die class heeft.
+#
+# Ministerie wordt geleverd via P642 ("van toepassing op") op het P39-statement.
+# Voor historische posten zoals Q3058109 ("minister-president van Nederland")
+# heeft P39 zelf geen P642; we bouwen post-id's dan op basis van de role-Q.
+
+#
+# We zoeken posities (?role) waarvan jurisdictie Nederland (P1001 = Q55) is en
+# waarvan het label "minister" of "staatssecretaris" bevat. Dit dekt zowel de
+# huidige als historische ministerposten in Wikidata, ongeacht hun P31-class.
+# Per holder leveren we ?ministry uit de role's eigen P642 als die er is, of
+# anders via een NL-fallback (minister-president → AZ etc.) in de mapping.
+
+BEWINDSPERSOON_QUERIES: dict[str, str] = {
+    "minister": """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(REGEX(LCASE(?roleLabel), "^(nederlands\\\\s+)?minister"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "staatssecretaris"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "ministerie"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "ministerraad"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family }
+  FILTER(!BOUND(?start) || ?start >= "1945-01-01T00:00:00Z"^^xsd:dateTime)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }
+}
+""",
+    "staatssecretaris": """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(CONTAINS(LCASE(?roleLabel), "staatssecretaris"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family }
+  FILTER(!BOUND(?start) || ?start >= "1945-01-01T00:00:00Z"^^xsd:dateTime)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }
+}
+""",
+}
+
+
+# ABD-TMG huidige bezetting: SG en DG. De specifieke posities staan in
+# Wikidata onder generieke "ambt"-class (Q4164871); we filteren op label
+# en jurisdictie NL. roleType wordt afgeleid van het label-prefix.
+ABD_TMG_QUERY = """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end ?roleType WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(CONTAINS(LCASE(?roleLabel), "secretaris-generaal") || CONTAINS(LCASE(?roleLabel), "directeur-generaal"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family }
+  FILTER(!BOUND(?end))
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }
+}
+"""
+
+
+_QLEVER_BW_PREFIXES = """PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+"""
+
+# QLever ondersteunt geen wikibase:label-service; we gebruiken rdfs:label met taal-filter.
+BEWINDSPERSOON_QUERIES_QLEVER: dict[str, str] = {
+    "minister": _QLEVER_BW_PREFIXES + """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(REGEX(LCASE(?roleLabel), "^(nederlands\\\\s+)?minister"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "staatssecretaris"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "ministerie"))
+  FILTER(!CONTAINS(LCASE(?roleLabel), "ministerraad"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry .
+             OPTIONAL { ?ministry rdfs:label ?ministryLabel . FILTER(LANG(?ministryLabel) = "nl") } }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family . OPTIONAL { ?family rdfs:label ?familyLabel . FILTER(LANG(?familyLabel) = "nl") } }
+  OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
+  FILTER(!BOUND(?start) || ?start >= "1945-01-01T00:00:00Z"^^xsd:dateTime)
+}
+""",
+    "staatssecretaris": _QLEVER_BW_PREFIXES + """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(CONTAINS(LCASE(?roleLabel), "staatssecretaris"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry .
+             OPTIONAL { ?ministry rdfs:label ?ministryLabel . FILTER(LANG(?ministryLabel) = "nl") } }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family . OPTIONAL { ?family rdfs:label ?familyLabel . FILTER(LANG(?familyLabel) = "nl") } }
+  OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
+  FILTER(!BOUND(?start) || ?start >= "1945-01-01T00:00:00Z"^^xsd:dateTime)
+}
+""",
+}
+
+ABD_TMG_QUERY_QLEVER = _QLEVER_BW_PREFIXES + """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
+  VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
+  ?role wdt:P1001 ?jurisdiction .
+  ?role rdfs:label ?roleLabel . FILTER(LANG(?roleLabel) = "nl")
+  FILTER(CONTAINS(LCASE(?roleLabel), "secretaris-generaal") || CONTAINS(LCASE(?roleLabel), "directeur-generaal"))
+  ?person p:P39 ?stmt .
+  ?stmt ps:P39 ?role .
+  OPTIONAL { ?role wdt:P642 ?ministry .
+             OPTIONAL { ?ministry rdfs:label ?ministryLabel . FILTER(LANG(?ministryLabel) = "nl") } }
+  OPTIONAL { ?stmt pq:P580 ?start }
+  OPTIONAL { ?stmt pq:P582 ?end }
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL { ?person wdt:P734 ?family . OPTIONAL { ?family rdfs:label ?familyLabel . FILTER(LANG(?familyLabel) = "nl") } }
+  OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
+  FILTER(!BOUND(?end))
+}
+"""
+
+
+# ---------------------------------------------------------------------------
+# Mapping van ministerie-Q-id naar polder-org-slug
+# ---------------------------------------------------------------------------
+#
+# Bevat (a) huidige ministeries en (b) bekende historische voorgangers.
+# Waar Wikidata een historische Q-id geeft die we niet kennen, mappen we 'm
+# naar het beste huidige equivalent. Voor onbekende Q-id's slaan we het
+# mandaat over (en loggen het), in plaats van een fout te raden.
+#
+# De huidige set wordt automatisch aangevuld vanuit
+# ``data/organisaties/ministeries/*.yaml`` via ``load_ministry_qid_map``,
+# zodat lokale bewerkingen automatisch meegenomen worden.
+
+MINISTRY_QID_TO_SLUG: dict[str, str] = {
+    # Huidige ministeries (mei 2026; auto-bevestigd uit data/organisaties).
+    "Q939757": "min-az",
+    "Q1037495": "min-bz",
+    "Q2491421": "min-bzk",
+    "Q2119820": "min-def",
+    "Q2986560": "min-ezk",
+    "Q1037511": "min-fin",
+    "Q2188136": "min-ienw",
+    "Q1041343": "min-jenv",
+    "Q127057188": "min-kgg",
+    "Q898882": "min-lvvn",
+    "Q1049362": "min-ocw",
+    "Q1049328": "min-szw",
+    "Q95543594": "min-vro",
+    "Q1056190": "min-vws",
+    "Q127256306": "min-aenm",
+    # Bekende historische voorgangers / opvolgers (post-1945) → huidig equivalent.
+    # Bewust conservatief; alleen waar de mapping ondubbelzinnig is.
+    "Q1064819": "min-ienw",   # Verkeer en Waterstaat → I&W
+    "Q1818236": "min-ienw",   # Verkeer en Waterstaat (oud) → I&W
+    "Q1063531": "min-ienw",   # VROM (deel) → I&W
+    "Q1782184": "min-ienw",   # VenW oud
+    "Q2630990": "min-vws",    # WVC → VWS
+    "Q2630999": "min-vws",    # WVC variant
+    "Q1769526": "min-szw",    # Sociale Zaken oud
+    "Q1782183": "min-ocw",    # OCenW
+    "Q1782177": "min-ocw",    # O&W oud
+    "Q1782182": "min-ezk",    # Economische Zaken oud (single name)
+    "Q1782180": "min-ezk",    # Economische Zaken (alias)
+    "Q1769528": "min-bz",     # BuZa oud
+    "Q1037517": "min-fin",    # Financien (alias)
+    "Q1782178": "min-jenv",   # Justitie oud
+    "Q1769527": "min-jenv",   # Justitie alias
+    "Q1782181": "min-lvvn",   # Landbouw oud
+    "Q1782185": "min-lvvn",   # LNV
+    "Q1782179": "min-bzk",    # BiZa oud
+    "Q1782176": "min-def",    # Defensie alias
+    # Min-pres / Algemene Zaken: Q3058109 is de positie zelf (niet een ministerie).
+    "Q939757": "min-az",
+}
+
+
+# Q-id's voor historische posten die niet (altijd) een P642-ministerie hebben.
+# Map de role-Q direct op een ministerie-slug, zodat we tóch een mandaat
+# kunnen bouwen.
+ROLE_QID_TO_MINISTRY_SLUG: dict[str, str] = {
+    "Q3058109": "min-az",  # minister-president van Nederland
+}
+
+
+def load_ministry_qid_map(data_root: Path) -> dict[str, str]:
+    """Bouw {wikidata-qid → slug} uit ``data/organisaties/ministeries/*.yaml``.
+
+    Combineert huidige Q-id's uit YAML met de hand-gecode historische
+    voorganger-mapping in ``MINISTRY_QID_TO_SLUG``.
+    """
+    mapping: dict[str, str] = dict(MINISTRY_QID_TO_SLUG)
+    folder = data_root / "organisaties" / "ministeries"
+    if not folder.exists():
+        return mapping
+    for path in folder.glob("*.yaml"):
+        data = _read_yaml(path)
+        if not data:
+            continue
+        org_id = data.get("id") or ""
+        if not org_id.startswith("org:min-"):
+            continue
+        slug = org_id[len("org:") :]
+        qid = (data.get("identifiers") or {}).get("wikidata")
+        if qid:
+            mapping[qid] = slug
+    return mapping
+
+PERSON_QUERY_QLEVER = _QLEVER_PREFIXES + """
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
+  ?person wdt:P39 wd:Q18887908 .
+  OPTIONAL { ?person wdt:P9213 ?tkid }
+  OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
+  OPTIONAL {
+    ?person wdt:P734 ?family .
+    OPTIONAL { ?family rdfs:label ?familyLabel . FILTER(LANG(?familyLabel) = "nl") }
+  }
+  OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
+}
+"""
+
+
+# ---------------------------------------------------------------------------
 # HTTP + cache
 # ---------------------------------------------------------------------------
 
@@ -136,12 +454,12 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
 _LAST_REQUEST_TIME: list[float] = [0.0]
 
 
-def _rate_limit() -> None:
-    """Wacht tot er minimaal MIN_REQUEST_INTERVAL is verstreken sinds de vorige call."""
+def _rate_limit(interval: float = MIN_REQUEST_INTERVAL) -> None:
+    """Wacht tot er minimaal ``interval`` s is verstreken sinds de vorige call."""
     now = time.monotonic()
     delta = now - _LAST_REQUEST_TIME[0]
-    if delta < MIN_REQUEST_INTERVAL:
-        time.sleep(MIN_REQUEST_INTERVAL - delta)
+    if delta < interval:
+        time.sleep(interval - delta)
     _LAST_REQUEST_TIME[0] = time.monotonic()
 
 
@@ -158,6 +476,8 @@ def query_sparql(
     use_cache: bool = True,
     client: httpx.Client | None = None,
     max_retries: int = 10,
+    endpoint: str = SPARQL_ENDPOINT,
+    request_interval: float | None = None,
 ) -> list[dict[str, Any]]:
     """Voer een SPARQL-query uit en geef de bindings terug als lijst van dicts.
 
@@ -177,6 +497,11 @@ def query_sparql(
                 payload = json.load(fh)
             return list(payload.get("results", {}).get("bindings", []))
 
+    if request_interval is None:
+        request_interval = (
+            QLEVER_REQUEST_INTERVAL if "qlever" in endpoint else MIN_REQUEST_INTERVAL
+        )
+
     headers = {
         "Accept": "application/sparql-results+json",
         "User-Agent": USER_AGENT,
@@ -184,11 +509,11 @@ def query_sparql(
     params = {"query": query, "format": "json"}
 
     def _do_call() -> httpx.Response:
-        _rate_limit()
+        _rate_limit(request_interval)
         if client is None:
             with httpx.Client(timeout=timeout, follow_redirects=True) as inner:
-                return inner.get(SPARQL_ENDPOINT, params=params, headers=headers)
-        return client.get(SPARQL_ENDPOINT, params=params, headers=headers)
+                return inner.get(endpoint, params=params, headers=headers)
+        return client.get(endpoint, params=params, headers=headers)
 
     backoff = 2.0
     for attempt in range(max_retries + 1):
@@ -215,9 +540,14 @@ def query_sparql(
                 wait = float(retry_after) if retry_after else backoff
             except (TypeError, ValueError):
                 wait = backoff
-            # Cap absurd Retry-After waits (Wikidata stuurt soms 1000s tijdens
-            # outages); we proberen liever sneller opnieuw met onze eigen backoff.
-            wait = min(max(wait, 1.0), 60.0)
+            # Tijdens een actieve WDQS-outage stuurt Varnish een Retry-After
+            # header van honderden tot duizend seconden. Voor 429 respecteren
+            # we dat (anders raken we IP-banned), gecapt op 20 minuten zodat
+            # we niet eindeloos wachten. Voor 5xx blijven we agressiever.
+            if response.status_code == 429:
+                wait = min(max(wait, 60.0), 1200.0)
+            else:
+                wait = min(max(wait, 1.0), 60.0)
             logger.warning(
                 "Wikidata SPARQL %s op poging %d/%d, wacht %.1fs",
                 response.status_code,
@@ -305,6 +635,29 @@ def parse_org_bindings(bindings: Iterable[dict[str, Any]]) -> list[dict[str, Any
     return rows
 
 
+def _parse_birthyear(raw: str | None) -> int | None:
+    if raw is None:
+        return None
+    try:
+        # Wikidata levert P569 als ISO datetime soms; sla het jaar uit beide vormen.
+        if "-" in raw or "T" in raw:
+            return int(raw[:4].lstrip("+"))
+        return int(raw)
+    except ValueError:
+        return None
+
+
+def _parse_iso_date(raw: str | None) -> str | None:
+    """Pak `YYYY-MM-DD` uit een Wikidata datetime-literal."""
+    if not raw:
+        return None
+    s = raw.lstrip("+")
+    # Voorbeelden: '2010-10-14T00:00:00Z', '1947-01-01T00:00:00Z'
+    if len(s) >= 10:
+        return s[:10]
+    return None
+
+
 def parse_person_bindings(bindings: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     """Map SPARQL-bindings voor personen op {qid, label, tkid, birthyear, initials, family}."""
     rows: list[dict[str, Any]] = []
@@ -327,6 +680,84 @@ def parse_person_bindings(bindings: Iterable[dict[str, Any]]) -> list[dict[str, 
                 "birthyear": birthyear,
                 "initials": _value(b, "initials"),
                 "family": _value(b, "familyLabel") or _value(b, "family"),
+            }
+        )
+    return rows
+
+
+def parse_bewindspersoon_bindings(
+    bindings: Iterable[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Map bewindspersoon-bindings op rijen met persoon + post + mandaat-velden.
+
+    Per binding krijg je één mandaat. Personen kunnen meerdere malen voorkomen
+    (één rij per ambtsperiode).
+    """
+    rows: list[dict[str, Any]] = []
+    for b in bindings:
+        person_qid = extract_qid(_value(b, "person"))
+        role_qid = extract_qid(_value(b, "role"))
+        if not person_qid or not role_qid:
+            continue
+        rows.append(
+            {
+                "person_qid": person_qid,
+                "person_label": _value(b, "personLabel"),
+                "tkid": _value(b, "tkid"),
+                "birthyear": _parse_birthyear(_value(b, "birthyear")),
+                "family": _value(b, "familyLabel") or _value(b, "family"),
+                "role_qid": role_qid,
+                "role_label": _value(b, "roleLabel"),
+                "ministry_qid": extract_qid(_value(b, "ministry")),
+                "ministry_label": _value(b, "ministryLabel"),
+                "start": _parse_iso_date(_value(b, "start")),
+                "end": _parse_iso_date(_value(b, "end")),
+            }
+        )
+    return rows
+
+
+def parse_abd_tmg_bindings(
+    bindings: Iterable[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Map ABD-TMG bindings; role_type_qid wordt afgeleid van het role-label.
+
+    Wikidata's SG/DG-meta-classes (Q2003810, Q126658544) worden niet via
+    ``wdt:P31`` gelinkt aan de specifieke posities; we kennen alleen de
+    posities zelf. Daarom bepalen we sg vs dg op basis van het label-prefix.
+    """
+    rows: list[dict[str, Any]] = []
+    for b in bindings:
+        person_qid = extract_qid(_value(b, "person"))
+        role_qid = extract_qid(_value(b, "role"))
+        if not person_qid or not role_qid:
+            continue
+        role_label = _value(b, "roleLabel") or ""
+        rl_lower = role_label.lower()
+        # Specifiek matchen: "secretaris-generaal" → SG; "directeur-generaal" → DG.
+        # Maar "plaatsvervangend secretaris-generaal" of "directeur" zonder generaal valt af.
+        role_type_qid: str | None = None
+        if "secretaris-generaal" in rl_lower:
+            role_type_qid = "Q2003810"
+        elif "directeur-generaal" in rl_lower:
+            role_type_qid = "Q126658544"
+        # Fallback: expliciete roleType-binding (oude WDQS-query).
+        if role_type_qid is None:
+            role_type_qid = extract_qid(_value(b, "roleType"))
+        rows.append(
+            {
+                "person_qid": person_qid,
+                "person_label": _value(b, "personLabel"),
+                "tkid": _value(b, "tkid"),
+                "birthyear": _parse_birthyear(_value(b, "birthyear")),
+                "family": _value(b, "familyLabel") or _value(b, "family"),
+                "role_qid": role_qid,
+                "role_label": role_label or None,
+                "ministry_qid": extract_qid(_value(b, "ministry")),
+                "ministry_label": _value(b, "ministryLabel"),
+                "start": _parse_iso_date(_value(b, "start")),
+                "end": _parse_iso_date(_value(b, "end")),
+                "role_type_qid": role_type_qid,
             }
         )
     return rows
@@ -599,6 +1030,519 @@ def merge_wikidata_into_record(
 
 
 # ---------------------------------------------------------------------------
+# Bewindspersoon / ABD record-bouw
+# ---------------------------------------------------------------------------
+
+
+def _slug_initials(initials: str | None) -> str:
+    """Voor het slug-veld: `M.P.` → `mp`. Schema-strict normaliseert naar `M.P.`."""
+    if not initials:
+        return ""
+    return re.sub(r"[^a-z0-9]+", "", _ascii_lower(initials))
+
+
+def _format_initials(value: str | None) -> str | None:
+    """Bouw `M.P.`-stijl initialen uit ruwe input (label, given name, etc.)."""
+    if not value:
+        return None
+    cleaned = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    letters = re.findall(r"\b([A-Za-z])", cleaned)
+    if not letters:
+        return None
+    return "".join(f"{ch.upper()}." for ch in letters)
+
+
+def _slug_family(family: str | None) -> str:
+    """Strip tussenvoegsels, ASCII, dash-join. Voor de polder-id slug."""
+    if not family:
+        return ""
+    base = _ascii_lower(family)
+    base = re.sub(r"[^a-z0-9\s-]+", " ", base)
+    parts = [p for p in re.split(r"[\s-]+", base) if p]
+    family_parts = [p for p in parts if p not in _TUSSENVOEGSELS] or parts
+    slug = "-".join(family_parts)
+    return re.sub(r"-+", "-", slug).strip("-")
+
+
+_INITIALS_RE = re.compile(r"^([A-Z]\.?)+$")
+
+
+def person_id_from_label(
+    label: str | None,
+    family: str | None,
+    initials: str | None,
+    birthyear: int | None,
+    qid: str,
+) -> tuple[str, dict[str, str]]:
+    """Bouw een polder ``person:<slug>``-id en de bijbehorende name-block-velden.
+
+    Initialen worden alléén in de slug en het name-block opgenomen als
+    ``initials`` daadwerkelijk een initialen-string is (`M.`, `M.P.` of `MP`).
+    Een voornaam zoals "Mark" wordt niet automatisch initialen.
+
+    Returnt ``(slug, name_block)``. Als familienaam ontbreekt, fall back op
+    Q-id (``person:q12345``) zodat we tenminste een geldige id hebben.
+    """
+    label = (label or "").strip()
+    fam = family or ""
+    given = ""
+    if not fam and label:
+        parts = label.split()
+        if len(parts) >= 2:
+            fam = parts[-1]
+            given = " ".join(parts[:-1])
+        else:
+            fam = label
+    elif label and family:
+        # Probeer given uit label te halen door family eraf te halen.
+        if label.endswith(family):
+            given = label[: -len(family)].strip()
+        elif label != family:
+            parts = label.split()
+            if parts and parts[0] != family:
+                given = parts[0]
+    inits_norm: str | None = None
+    if initials:
+        cleaned = unicodedata.normalize("NFKD", initials).encode("ascii", "ignore").decode("ascii")
+        compact = re.sub(r"[^A-Za-z]", "", cleaned)
+        if compact and compact == compact.upper() and len(compact) <= 4:
+            # Het is écht een initialen-string als 'M.', 'M.P.' of 'MP' (max 4 letters).
+            inits_norm = "".join(f"{ch.upper()}." for ch in compact)
+    fam_slug = _slug_family(fam)
+    init_slug = _slug_initials(inits_norm) if inits_norm else ""
+    pieces: list[str] = []
+    if fam_slug:
+        pieces.append(fam_slug)
+    if init_slug:
+        pieces.append(init_slug)
+    if birthyear is not None:
+        pieces.append(str(birthyear))
+    slug = "-".join(pieces) if pieces else qid.lower()
+    slug = re.sub(r"[^a-z0-9-]+", "", slug).strip("-") or qid.lower()
+    name_block: dict[str, str] = {"family": fam.strip() or label or qid}
+    name_block["full"] = label or (fam.strip() if fam else qid)
+    if inits_norm:
+        name_block["initials"] = inits_norm
+    if given:
+        name_block["given"] = given.strip()
+    return slug, name_block
+
+
+# Substring-mapping van role-label fragmenten naar polder-slug.
+# Volgorde is belangrijk: langere matches eerst.
+_LABEL_FRAGMENTS_TO_SLUG: list[tuple[str, str]] = [
+    ("algemene oorlogvoering", "min-az"),
+    ("algemene zaken", "min-az"),
+    ("buitenlandse zaken", "min-bz"),
+    ("buitenlandse handel", "min-bz"),
+    ("ontwikkelingssamenwerking", "min-bz"),
+    ("ontwikkelingshulp", "min-bz"),
+    ("binnenlandse zaken en koninkrijksrelaties", "min-bzk"),
+    ("binnenlandse zaken", "min-bzk"),
+    ("koninkrijksrelaties", "min-bzk"),
+    ("wonen, wijken en integratie", "min-bzk"),
+    ("wonen en rijksdienst", "min-bzk"),
+    ("grote steden", "min-bzk"),
+    ("defensie", "min-def"),
+    ("oorlog", "min-def"),
+    ("marine", "min-def"),
+    ("economische zaken en klimaat", "min-ezk"),
+    ("economische zaken, landbouw en innovatie", "min-ezk"),
+    ("economische zaken", "min-ezk"),
+    ("klimaat en energie", "min-kgg"),
+    ("klimaat en groene groei", "min-kgg"),
+    ("financien", "min-fin"),
+    ("financiën", "min-fin"),
+    ("fiscaliteit", "min-fin"),
+    ("toeslagen", "min-fin"),
+    ("infrastructuur en waterstaat", "min-ienw"),
+    ("verkeer en waterstaat", "min-ienw"),
+    ("verkeer en energie", "min-ienw"),
+    ("verkeer", "min-ienw"),
+    ("waterstaat", "min-ienw"),
+    ("openbare werken", "min-ienw"),
+    ("scheepvaart", "min-ienw"),
+    ("justitie en veiligheid", "min-jenv"),
+    ("justitie", "min-jenv"),
+    ("rechtsbescherming", "min-jenv"),
+    ("vreemdelingenzaken", "min-jenv"),
+    ("integratie, jeugdbescherming, preventie en reclassering", "min-jenv"),
+    ("landbouw, visserij, voedselzekerheid en natuur", "min-lvvn"),
+    ("landbouw, natuurbeheer en visserij", "min-lvvn"),
+    ("landbouw en visserij", "min-lvvn"),
+    ("landbouw, nijverheid en handel", "min-lvvn"),
+    ("landbouw", "min-lvvn"),
+    ("natuur en stikstof", "min-lvvn"),
+    ("onderwijs, cultuur en wetenschap", "min-ocw"),
+    ("onderwijs en wetenschappen", "min-ocw"),
+    ("onderwijs, kunsten en wetenschappen", "min-ocw"),
+    ("onderwijs en wetenschap", "min-ocw"),
+    ("basis- en voortgezet onderwijs", "min-ocw"),
+    ("basis en voortgezet onderwijs", "min-ocw"),
+    ("cultuur en media", "min-ocw"),
+    ("wetenschapsbeleid", "min-ocw"),
+    ("media", "min-ocw"),
+    ("sociale zaken en werkgelegenheid", "min-szw"),
+    ("sociale zaken en volksgezondheid", "min-szw"),
+    ("sociale zaken", "min-szw"),
+    ("werk en participatie", "min-szw"),
+    ("volkshuisvesting en ruimtelijke ordening", "min-vro"),
+    ("volkshuisvesting, ruimtelijke ordening en milieubeheer", "min-vro"),
+    ("volkshuisvesting", "min-vro"),
+    ("ruimtelijke ordening", "min-vro"),
+    ("volksgezondheid, welzijn en sport", "min-vws"),
+    ("volksgezondheid en milieuhygiene", "min-vws"),
+    ("welzijn, volksgezondheid en cultuur", "min-vws"),
+    ("medische zorg", "min-vws"),
+    ("langdurige zorg", "min-vws"),
+    ("jeugd en preventie", "min-vws"),
+    ("gehandicaptenzaken", "min-vws"),
+    ("cultuur, recreatie en maatschappelijk werk", "min-vws"),
+    ("asiel en migratie", "min-aenm"),
+    ("digitale economie en soevereiniteit", "min-ezk"),
+    ("koninksrijkrelaties en digitalisering", "min-bzk"),
+    ("digitalisering", "min-bzk"),
+    ("mijnbouw", "min-ezk"),
+    ("nederlands-antilliaanse zaken", "min-bzk"),
+    ("inlichtingen- en veiligheidsdienst", "min-az"),
+    # min-pres = min-az
+    ("minister-president", "min-az"),
+]
+
+
+def _ministry_slug_from_label(label: str | None) -> str | None:
+    """Pak een polder-ministerie-slug uit een role-label via substring-matching."""
+    if not label:
+        return None
+    s = unicodedata.normalize("NFKD", label).encode("ascii", "ignore").decode("ascii").lower()
+    for fragment, slug in _LABEL_FRAGMENTS_TO_SLUG:
+        if fragment in s:
+            return slug
+    return None
+
+
+def _ministry_qid_to_slug(
+    qid: str | None,
+    role_qid: str | None,
+    mapping: dict[str, str],
+    role_label: str | None = None,
+) -> str | None:
+    """Map een ministerie-Q-id (of role-Q als fallback) naar een polder-slug.
+
+    Volgorde:
+      1. Directe Q-id-mapping
+      2. Hand-gecode mapping voor specifieke role-Q's (bv. minister-president)
+      3. Substring-match op het role-label
+    """
+    if qid and qid in mapping:
+        return mapping[qid]
+    if role_qid and role_qid in ROLE_QID_TO_MINISTRY_SLUG:
+        return ROLE_QID_TO_MINISTRY_SLUG[role_qid]
+    return _ministry_slug_from_label(role_label)
+
+
+def _post_id_for_role(
+    role_label: str | None,
+    role_qid: str | None,
+    ministry_slug: str | None,
+    role_kind: str,
+) -> tuple[str, str, str]:
+    """Bepaal post_id, label en classification voor een mandaat.
+
+    role_kind ∈ {minister, staatssecretaris, sg, dg}.
+    """
+    if role_kind == "minister":
+        # Minister-president is een aparte post.
+        if role_qid == "Q3058109":
+            return ("post:minister-president", "Minister-president van Nederland", "bewindspersoon")
+        if ministry_slug:
+            return (
+                f"post:minister-{ministry_slug}",
+                role_label or f"Minister van {ministry_slug}",
+                "bewindspersoon",
+            )
+        return ("post:minister-overig", role_label or "Minister", "bewindspersoon")
+    if role_kind == "staatssecretaris":
+        if ministry_slug:
+            return (
+                f"post:staatssecretaris-{ministry_slug}",
+                role_label or f"Staatssecretaris van {ministry_slug}",
+                "bewindspersoon",
+            )
+        return (
+            "post:staatssecretaris-overig",
+            role_label or "Staatssecretaris",
+            "bewindspersoon",
+        )
+    if role_kind == "sg":
+        if ministry_slug:
+            return (
+                f"post:sg-{ministry_slug}",
+                role_label or f"Secretaris-generaal van {ministry_slug}",
+                "abd-tmg",
+            )
+        return ("post:sg-overig", role_label or "Secretaris-generaal", "abd-tmg")
+    if role_kind == "dg":
+        if ministry_slug:
+            return (
+                f"post:dg-{ministry_slug}",
+                role_label or f"Directeur-generaal van {ministry_slug}",
+                "abd-tmg",
+            )
+        return ("post:dg-overig", role_label or "Directeur-generaal", "abd-tmg")
+    raise ValueError(f"Onbekend role_kind: {role_kind!r}")
+
+
+def _post_path(post_id: str, role_kind: str) -> Path:
+    """Plaats voor de YAML van een post.
+
+    Bewindspersoon-posten: ``data/posten/<role_kind>s/<slug>.yaml``.
+    """
+    slug = post_id[len("post:") :]
+    folder_map = {
+        "minister": "ministers",
+        "staatssecretaris": "staatssecretarissen",
+        "sg": "abd-sg",
+        "dg": "abd-dg",
+    }
+    folder = folder_map[role_kind]
+    return Path("data") / "posten" / folder / f"{slug}.yaml"
+
+
+def _ensure_post(
+    posten_root: Path,
+    post_id: str,
+    role_kind: str,
+    label: str,
+    organization_id: str,
+    classification: str,
+    *,
+    valid_from: str | None = None,
+    dry_run: bool = False,
+) -> bool:
+    """Schrijf een post-YAML als die nog niet bestaat. Returnt True als nieuw."""
+    folder_map = {
+        "minister": "ministers",
+        "staatssecretaris": "staatssecretarissen",
+        "sg": "abd-sg",
+        "dg": "abd-dg",
+    }
+    folder = posten_root / folder_map[role_kind]
+    slug = post_id[len("post:") :]
+    target = folder / f"{slug}.yaml"
+    if target.exists():
+        return False
+    if dry_run:
+        return True
+    folder.mkdir(parents=True, exist_ok=True)
+    record = {
+        "id": post_id,
+        "organization_id": organization_id,
+        "label": label,
+        "classification": classification,
+        "valid_from": valid_from or "1945-01-01",
+        "valid_until": None,
+    }
+    _write_yaml(target, record)
+    return True
+
+
+def _mandaat_id(person_qid: str, role_qid: str, ministry_slug: str | None, start: str | None) -> str:
+    """Deterministisch mandaat-id zodat re-runs idempotent zijn."""
+    payload = "|".join([person_qid, role_qid, ministry_slug or "", start or ""])
+    h = hashlib.sha1(payload.encode("utf-8")).hexdigest()[:12]
+    return f"wd-{h}"
+
+
+_MIN_BIRTH_YEAR = 1850  # schema-grens
+_MIN_PERSON_AGE_LIMIT = 130  # geen records voor mensen ouder dan dit (filter ruis)
+
+
+def build_bewindspersoon_records(
+    rows: Iterable[dict[str, Any]],
+    role_kind: str,
+    *,
+    ministry_qid_to_slug: dict[str, str],
+    today: str,
+) -> dict[str, dict[str, Any]]:
+    """Aggregeer SPARQL-rijen tot {qid: persoon-record} met mandaten.
+
+    Output is een tussenrepresentatie waarin we per persoon-Q-id alle
+    mandaten verzamelen. De caller mergt deze met bestaande YAML's.
+    """
+    by_person: dict[str, dict[str, Any]] = {}
+    posts_seen: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        qid = row["person_qid"]
+        person_label = row.get("person_label")
+        family = row.get("family")
+        birthyear = row.get("birthyear")
+        if person_label and not family:
+            # Geen P734-familie? Dan splitsen we op laatste woord.
+            family = person_label.split()[-1] if person_label else None
+        if birthyear is None:
+            # Zonder geboortejaar kunnen we geen valide birth-block bouwen;
+            # we slaan zulke records over (slug zou ambigu worden).
+            continue
+        if birthyear < _MIN_BIRTH_YEAR:
+            # Schema vereist birth.year >= 1850. Voor wie eerder geboren is
+            # (vooroorlogse ministers), slaan we het over — past niet bij
+            # 1945-heden backfill.
+            continue
+        slug, name_block = person_id_from_label(
+            person_label, family, None, birthyear, qid
+        )
+        person_record = by_person.setdefault(
+            qid,
+            {
+                "id": f"person:{slug}",
+                "identifiers": {"wikidata": qid},
+                "name": name_block,
+                "birth": {"year": birthyear},
+                "mandaten": [],
+                "sources": [
+                    {
+                        "id": SOURCE_ID,
+                        "url": f"https://www.wikidata.org/wiki/{qid}",
+                        "retrieved": today,
+                    }
+                ],
+            },
+        )
+        if row.get("tkid"):
+            person_record["identifiers"].setdefault("tk_persoon_id", row["tkid"])
+        ministry_slug = _ministry_qid_to_slug(
+            row.get("ministry_qid"),
+            row.get("role_qid"),
+            ministry_qid_to_slug,
+            row.get("role_label"),
+        )
+        if ministry_slug is None:
+            # Onbekend ministerie; sla het mandaat over (we loggen via caller).
+            continue
+        post_id, post_label, classification = _post_id_for_role(
+            row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
+        )
+        organization_id = f"org:{ministry_slug}"
+        posts_seen[post_id] = {
+            "label": post_label,
+            "classification": classification,
+            "organization_id": organization_id,
+            "role_kind": role_kind,
+            "valid_from": row.get("start") or "1945-01-01",
+        }
+        mandaat = {
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "organization_id": organization_id,
+            "post_id": post_id,
+            "role": post_label,
+            "start_date": row.get("start") or "1945-01-01",
+            "sources": [
+                {
+                    "id": SOURCE_ID,
+                    "url": f"https://www.wikidata.org/wiki/{qid}#P39",
+                    "retrieved": today,
+                }
+            ],
+        }
+        if row.get("end"):
+            mandaat["end_date"] = row["end"]
+        else:
+            mandaat["end_date"] = None
+        person_record["mandaten"].append(mandaat)
+    return {"persons": by_person, "posts": posts_seen}
+
+
+def build_abd_tmg_records(
+    rows: Iterable[dict[str, Any]],
+    *,
+    ministry_qid_to_slug: dict[str, str],
+    today: str,
+) -> dict[str, dict[str, Any]]:
+    """Aggregeer ABD-TMG SPARQL-rijen.
+
+    role_type_qid bepaalt of het SG (Q2003810) of DG (Q126658544) is.
+    """
+    by_person: dict[str, dict[str, Any]] = {}
+    posts_seen: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        qid = row["person_qid"]
+        person_label = row.get("person_label")
+        family = row.get("family")
+        birthyear = row.get("birthyear")
+        if person_label and not family:
+            family = person_label.split()[-1] if person_label else None
+        role_type = row.get("role_type_qid")
+        role_kind = "sg" if role_type == "Q2003810" else "dg" if role_type == "Q126658544" else None
+        if role_kind is None:
+            continue
+        # Voor ABD-TMG zonder birthyear: we laten de persoon weg om geen
+        # ambigue records te maken (validate vereist birth.year).
+        if birthyear is None:
+            continue
+        if birthyear < _MIN_BIRTH_YEAR:
+            continue
+        slug, name_block = person_id_from_label(
+            person_label, family, None, birthyear, qid
+        )
+        person_record = by_person.setdefault(
+            qid,
+            {
+                "id": f"person:{slug}",
+                "identifiers": {"wikidata": qid},
+                "name": name_block,
+                "birth": {"year": birthyear},
+                "mandaten": [],
+                "sources": [
+                    {
+                        "id": SOURCE_ID,
+                        "url": f"https://www.wikidata.org/wiki/{qid}",
+                        "retrieved": today,
+                    }
+                ],
+            },
+        )
+        if row.get("tkid"):
+            person_record["identifiers"].setdefault("tk_persoon_id", row["tkid"])
+        ministry_slug = _ministry_qid_to_slug(
+            row.get("ministry_qid"),
+            row.get("role_qid"),
+            ministry_qid_to_slug,
+            row.get("role_label"),
+        )
+        if ministry_slug is None:
+            continue
+        post_id, post_label, classification = _post_id_for_role(
+            row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
+        )
+        organization_id = f"org:{ministry_slug}"
+        posts_seen[post_id] = {
+            "label": post_label,
+            "classification": classification,
+            "organization_id": organization_id,
+            "role_kind": role_kind,
+            "valid_from": row.get("start") or "1945-01-01",
+        }
+        mandaat = {
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "organization_id": organization_id,
+            "post_id": post_id,
+            "role": post_label,
+            "start_date": row.get("start") or "1945-01-01",
+            "end_date": row.get("end"),
+            "sources": [
+                {
+                    "id": SOURCE_ID,
+                    "url": f"https://www.wikidata.org/wiki/{qid}#P39",
+                    "retrieved": today,
+                }
+            ],
+        }
+        person_record["mandaten"].append(mandaat)
+    return {"persons": by_person, "posts": posts_seen}
+
+
+# ---------------------------------------------------------------------------
 # YAML helpers
 # ---------------------------------------------------------------------------
 
@@ -686,12 +1630,15 @@ def enrich_organisations(
     cache_dir: Path,
     dry_run: bool = False,
     today: str | None = None,
+    endpoint: str = SPARQL_ENDPOINT,
 ) -> dict[str, dict[str, int]]:
     """Verrijk organisatie-records met Wikidata Q-id's.
 
     Returnt per category een dict ``{candidates, matched_oin, matched_name, written}``.
     """
     today_str = today or _today()
+    use_qlever = "qlever" in endpoint
+    queries = ORG_QUERIES_QLEVER if use_qlever else ORG_QUERIES
     stats: dict[str, dict[str, int]] = {}
     for org_type, folder in ORG_FOLDERS.items():
         folder_path = data_root / folder
@@ -699,9 +1646,9 @@ def enrich_organisations(
         if not files:
             logger.info("Geen records onder %s, sla over", folder_path)
             continue
-        query = ORG_QUERIES[org_type]
+        query = queries[org_type]
         try:
-            bindings = query_sparql(query, cache_dir=cache_dir)
+            bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint)
         except httpx.HTTPError as exc:
             logger.warning("Wikidata-query voor %s faalde: %s — sla over", org_type, exc)
             stats[org_type] = {
@@ -769,9 +1716,12 @@ def enrich_personen(
     cache_dir: Path,
     dry_run: bool = False,
     today: str | None = None,
+    endpoint: str = SPARQL_ENDPOINT,
 ) -> dict[str, int]:
     """Verrijk persoon-records met Wikidata Q-id's."""
     today_str = today or _today()
+    use_qlever = "qlever" in endpoint
+    person_query = PERSON_QUERY_QLEVER if use_qlever else PERSON_QUERY
     files: list[Path] = []
     for sub in ("current", "historisch"):
         files.extend(_iter_yaml_files(data_root / sub))
@@ -780,7 +1730,7 @@ def enrich_personen(
         return {"candidates": 0, "rows": 0, "matched_tkid": 0, "matched_natural": 0, "written": 0}
 
     try:
-        bindings = query_sparql(PERSON_QUERY, cache_dir=cache_dir)
+        bindings = query_sparql(person_query, cache_dir=cache_dir, endpoint=endpoint)
     except httpx.HTTPError as exc:
         logger.warning("Wikidata-query voor personen faalde: %s — sla over", exc)
         return {
@@ -842,6 +1792,350 @@ def enrich_personen(
 
 
 # ---------------------------------------------------------------------------
+# Bewindspersoon / ABD-TMG enrichment
+# ---------------------------------------------------------------------------
+
+
+def _index_existing_persons(person_root: Path) -> dict[str, tuple[Path, dict[str, Any]]]:
+    """Index alle bestaande person-yaml's op (tkid, wikidata, natural-key).
+
+    Returnt {key: (path, record)} waarbij key:
+      - ``tk:<id>`` voor TK-persoon-id
+      - ``wd:<qid>`` voor Wikidata-id
+      - ``nk:<family_slug>:<birthyear>`` als natural fallback
+    """
+    index: dict[str, tuple[Path, dict[str, Any]]] = {}
+    for sub in ("current", "historisch"):
+        for path in _iter_yaml_files(person_root / sub):
+            data = _read_yaml(path)
+            if not data:
+                continue
+            ids = data.get("identifiers") or {}
+            tkid = ids.get("tk_persoon_id")
+            wd = ids.get("wikidata")
+            family = (data.get("name") or {}).get("family") or ""
+            birth = (data.get("birth") or {}).get("year")
+            fam_slug = _slug_family(family)
+            if tkid:
+                index[f"tk:{tkid}"] = (path, data)
+            if wd:
+                index[f"wd:{wd}"] = (path, data)
+            if fam_slug and birth is not None:
+                index[f"nk:{fam_slug}:{birth}"] = (path, data)
+    return index
+
+
+def _merge_mandaten(
+    existing: list[dict[str, Any]] | None,
+    new: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Merge mandaten op (post_id, start_date). Bij dubbel: bestaande wint qua
+    sources (we voegen wikidata-source toe), end_date wordt geüpdatet als
+    bestaande null is en nieuwe een waarde heeft.
+    """
+    by_key: dict[tuple[str, str | None], dict[str, Any]] = {}
+    for m in existing or []:
+        if not isinstance(m, dict):
+            continue
+        key = (m.get("post_id") or "", m.get("start_date"))
+        by_key[key] = dict(m)
+    for m in new:
+        key = (m.get("post_id") or "", m.get("start_date"))
+        if key in by_key:
+            current = by_key[key]
+            # Voeg wikidata-source toe als ontbreekt.
+            current_sources = current.get("sources") or []
+            new_sources = m.get("sources") or []
+            current["sources"] = _merge_sources(current_sources, new_sources)
+            # Update end_date als die nu null is en nieuwe waarde geeft.
+            if current.get("end_date") in (None, "") and m.get("end_date"):
+                current["end_date"] = m["end_date"]
+            by_key[key] = current
+        else:
+            by_key[key] = dict(m)
+    return list(by_key.values())
+
+
+def _merge_into_existing_person(
+    existing: dict[str, Any],
+    fresh: dict[str, Any],
+    *,
+    today: str,
+) -> dict[str, Any]:
+    """Voeg wikidata-id, mandaten en sources van ``fresh`` toe aan ``existing``."""
+    merged = dict(existing)
+    identifiers = dict(merged.get("identifiers") or {})
+    fresh_ids = fresh.get("identifiers") or {}
+    if fresh_ids.get("wikidata") and not identifiers.get("wikidata"):
+        identifiers["wikidata"] = fresh_ids["wikidata"]
+    if fresh_ids.get("tk_persoon_id") and not identifiers.get("tk_persoon_id"):
+        identifiers["tk_persoon_id"] = fresh_ids["tk_persoon_id"]
+    merged["identifiers"] = identifiers
+    if "name" not in merged or not merged["name"].get("family"):
+        merged["name"] = fresh["name"]
+    if "birth" not in merged and "birth" in fresh:
+        merged["birth"] = fresh["birth"]
+    merged["mandaten"] = _merge_mandaten(merged.get("mandaten"), fresh.get("mandaten") or [])
+    merged["sources"] = _merge_sources(merged.get("sources"), fresh.get("sources") or [])
+    return merged
+
+
+def _person_target_path(
+    person_root: Path, record: dict[str, Any]
+) -> Path:
+    """Beslis current/ of historisch/.
+
+    Open mandaat (end_date null) én startdatum < 15 jaar oud → current; anders historisch.
+    Records van vooroorlogse personen zonder ooit een gevulde end_date worden
+    desondanks niet als 'current' beschouwd.
+    """
+    mandaten = record.get("mandaten") or []
+    today_year = int(_today()[:4])
+    is_current = False
+    for m in mandaten:
+        if m.get("end_date") not in (None, ""):
+            continue
+        start = (m.get("start_date") or "")[:4]
+        try:
+            start_year = int(start)
+        except ValueError:
+            continue
+        if today_year - start_year <= 15:
+            is_current = True
+            break
+    sub = "current" if is_current else "historisch"
+    slug = record["id"][len("person:") :]
+    return person_root / sub / f"{slug}.yaml"
+
+
+def enrich_bewindspersonen(
+    data_root: Path,
+    *,
+    cache_dir: Path,
+    dry_run: bool = False,
+    today: str | None = None,
+    endpoint: str = SPARQL_ENDPOINT,
+) -> dict[str, dict[str, int]]:
+    """Backfill ministers en staatssecretarissen 1945-heden via Wikidata.
+
+    Returnt per role_kind een dict met counters: rows, persons, mandaten,
+    bootstrapped_posts, written.
+    """
+    today_str = today or _today()
+    use_qlever = "qlever" in endpoint
+    queries = BEWINDSPERSOON_QUERIES_QLEVER if use_qlever else BEWINDSPERSOON_QUERIES
+    person_root = data_root / "personen"
+    posten_root = data_root / "posten"
+    ministry_qid_to_slug = load_ministry_qid_map(data_root)
+
+    stats: dict[str, dict[str, int]] = {}
+    person_index = _index_existing_persons(person_root)
+
+    for role_kind, query in queries.items():
+        try:
+            bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint)
+        except httpx.HTTPError as exc:
+            logger.warning("Wikidata-query voor %s faalde: %s — sla over", role_kind, exc)
+            stats[role_kind] = {"rows": 0, "error": 1}
+            continue
+        rows = parse_bewindspersoon_bindings(bindings)
+        bundle = build_bewindspersoon_records(
+            rows, role_kind, ministry_qid_to_slug=ministry_qid_to_slug, today=today_str
+        )
+        kind_stats = {
+            "rows": len(rows),
+            "persons": 0,
+            "new_persons": 0,
+            "merged_persons": 0,
+            "mandaten": 0,
+            "bootstrapped_posts": 0,
+            "written": 0,
+        }
+
+        # Bootstrap posten.
+        for post_id, info in bundle["posts"].items():
+            created = _ensure_post(
+                posten_root,
+                post_id,
+                info["role_kind"],
+                info["label"],
+                info["organization_id"],
+                info["classification"],
+                valid_from=info.get("valid_from"),
+                dry_run=dry_run,
+            )
+            if created:
+                kind_stats["bootstrapped_posts"] += 1
+
+        # Merge / write personen.
+        for qid, fresh in bundle["persons"].items():
+            kind_stats["persons"] += 1
+            kind_stats["mandaten"] += len(fresh.get("mandaten") or [])
+            existing_path = None
+            existing_record = None
+            tkid = (fresh.get("identifiers") or {}).get("tk_persoon_id")
+            if tkid and f"tk:{tkid}" in person_index:
+                existing_path, existing_record = person_index[f"tk:{tkid}"]
+            elif f"wd:{qid}" in person_index:
+                existing_path, existing_record = person_index[f"wd:{qid}"]
+            else:
+                fam = (fresh.get("name") or {}).get("family") or ""
+                birth = (fresh.get("birth") or {}).get("year")
+                key = f"nk:{_slug_family(fam)}:{birth}"
+                if key in person_index:
+                    existing_path, existing_record = person_index[key]
+
+            # Sla nieuwe records over die geen mandaten opleveren (alle mandaten
+            # gefilterd door onbekend ministerie) — anders krijg je rommel-records.
+            if existing_record is None and not (fresh.get("mandaten") or []):
+                continue
+
+            if existing_record is not None:
+                merged = _merge_into_existing_person(existing_record, fresh, today=today_str)
+                merged = _ordered_for_person(merged)
+                target = existing_path or _person_target_path(person_root, merged)
+                kind_stats["merged_persons"] += 1
+            else:
+                merged = _ordered_for_person(fresh)
+                target = _person_target_path(person_root, merged)
+                kind_stats["new_persons"] += 1
+
+            if dry_run:
+                logger.info(
+                    "DRY-RUN bewindspersoon %s ← %s (%d mandaten)",
+                    merged["id"],
+                    qid,
+                    len(merged.get("mandaten") or []),
+                )
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                _write_yaml(target, merged)
+                # Hou de index actueel zodat een volgende role_kind ook merget.
+                person_index[f"wd:{qid}"] = (target, merged)
+                if tkid:
+                    person_index[f"tk:{tkid}"] = (target, merged)
+                fam = (merged.get("name") or {}).get("family") or ""
+                birth = (merged.get("birth") or {}).get("year")
+                if fam and birth is not None:
+                    person_index[f"nk:{_slug_family(fam)}:{birth}"] = (target, merged)
+            kind_stats["written"] += 1
+
+        stats[role_kind] = kind_stats
+        logger.info(
+            "%s: %d rows → %d personen (%d nieuw, %d merged), %d mandaten, %d nieuwe posten",
+            role_kind,
+            kind_stats["rows"],
+            kind_stats["persons"],
+            kind_stats["new_persons"],
+            kind_stats["merged_persons"],
+            kind_stats["mandaten"],
+            kind_stats["bootstrapped_posts"],
+        )
+    return stats
+
+
+def enrich_abd_tmg(
+    data_root: Path,
+    *,
+    cache_dir: Path,
+    dry_run: bool = False,
+    today: str | None = None,
+    endpoint: str = SPARQL_ENDPOINT,
+) -> dict[str, int]:
+    """Backfill huidige SG/DG-bezetting via Wikidata."""
+    today_str = today or _today()
+    use_qlever = "qlever" in endpoint
+    query = ABD_TMG_QUERY_QLEVER if use_qlever else ABD_TMG_QUERY
+    person_root = data_root / "personen"
+    posten_root = data_root / "posten"
+    ministry_qid_to_slug = load_ministry_qid_map(data_root)
+    person_index = _index_existing_persons(person_root)
+
+    try:
+        bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint)
+    except httpx.HTTPError as exc:
+        logger.warning("Wikidata ABD-TMG query faalde: %s — sla over", exc)
+        return {"rows": 0, "error": 1}
+
+    rows = parse_abd_tmg_bindings(bindings)
+    bundle = build_abd_tmg_records(
+        rows, ministry_qid_to_slug=ministry_qid_to_slug, today=today_str
+    )
+    stats = {
+        "rows": len(rows),
+        "persons": 0,
+        "new_persons": 0,
+        "merged_persons": 0,
+        "mandaten": 0,
+        "bootstrapped_posts": 0,
+        "written": 0,
+    }
+
+    for post_id, info in bundle["posts"].items():
+        if _ensure_post(
+            posten_root,
+            post_id,
+            info["role_kind"],
+            info["label"],
+            info["organization_id"],
+            info["classification"],
+            valid_from=info.get("valid_from"),
+            dry_run=dry_run,
+        ):
+            stats["bootstrapped_posts"] += 1
+
+    for qid, fresh in bundle["persons"].items():
+        stats["persons"] += 1
+        stats["mandaten"] += len(fresh.get("mandaten") or [])
+        existing_path = None
+        existing_record = None
+        tkid = (fresh.get("identifiers") or {}).get("tk_persoon_id")
+        if tkid and f"tk:{tkid}" in person_index:
+            existing_path, existing_record = person_index[f"tk:{tkid}"]
+        elif f"wd:{qid}" in person_index:
+            existing_path, existing_record = person_index[f"wd:{qid}"]
+        else:
+            fam = (fresh.get("name") or {}).get("family") or ""
+            birth = (fresh.get("birth") or {}).get("year")
+            key = f"nk:{_slug_family(fam)}:{birth}"
+            if key in person_index:
+                existing_path, existing_record = person_index[key]
+
+        # Sla nieuwe records zonder mandaten over (Wikidata heeft vaak SG/DG-personen
+        # zonder ministerie-link).
+        if existing_record is None and not (fresh.get("mandaten") or []):
+            continue
+
+        if existing_record is not None:
+            merged = _merge_into_existing_person(existing_record, fresh, today=today_str)
+            merged = _ordered_for_person(merged)
+            target = existing_path or _person_target_path(person_root, merged)
+            stats["merged_persons"] += 1
+        else:
+            merged = _ordered_for_person(fresh)
+            target = _person_target_path(person_root, merged)
+            stats["new_persons"] += 1
+        if dry_run:
+            logger.info("DRY-RUN abd-tmg %s ← %s", merged["id"], qid)
+        else:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            _write_yaml(target, merged)
+            person_index[f"wd:{qid}"] = (target, merged)
+            if tkid:
+                person_index[f"tk:{tkid}"] = (target, merged)
+        stats["written"] += 1
+
+    logger.info(
+        "abd-tmg: %d rows → %d personen, %d mandaten, %d nieuwe posten",
+        stats["rows"],
+        stats["persons"],
+        stats["mandaten"],
+        stats["bootstrapped_posts"],
+    )
+    return stats
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -857,9 +2151,19 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--orgs", action="store_true", help="Alleen organisaties verrijken.")
     parser.add_argument("--personen", action="store_true", help="Alleen personen verrijken.")
     parser.add_argument(
+        "--bewindspersonen",
+        action="store_true",
+        help="Backfill ministers en staatssecretarissen (1945-heden).",
+    )
+    parser.add_argument(
+        "--abd-tmg",
+        action="store_true",
+        help="Huidige ABD-TMG (SG/DG) bezetting via Wikidata.",
+    )
+    parser.add_argument(
         "--all",
         action="store_true",
-        help="Beide (organisaties + personen). Default als geen van --orgs/--personen is gezet.",
+        help="Alles (organisaties + personen + bewindspersonen + abd-tmg).",
     )
     parser.add_argument(
         "--data-root",
@@ -878,8 +2182,23 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Schrijf niets, log alleen wat geschreven zou worden.",
     )
+    parser.add_argument(
+        "--endpoint",
+        choices=("wdqs", "qlever"),
+        default="wdqs",
+        help=(
+            "SPARQL-endpoint: 'wdqs' (Wikidata Query Service, default) of "
+            "'qlever' (QLever-mirror, sneller en zonder rate-limit)."
+        ),
+    )
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging.")
     return parser
+
+
+_ENDPOINT_URLS: dict[str, str] = {
+    "wdqs": SPARQL_ENDPOINT,
+    "qlever": QLEVER_ENDPOINT,
+}
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -891,16 +2210,22 @@ def main(argv: list[str] | None = None) -> int:
         format="%(asctime)s %(name)s %(levelname)s %(message)s",
     )
 
-    do_orgs = args.orgs or args.all or (not args.orgs and not args.personen)
-    do_personen = args.personen or args.all or (not args.orgs and not args.personen)
+    any_flag = args.orgs or args.personen or args.bewindspersonen or args.abd_tmg
+    do_orgs = args.orgs or args.all or not any_flag
+    do_personen = args.personen or args.all or not any_flag
+    do_bewindspersonen = args.bewindspersonen or args.all
+    do_abd_tmg = args.abd_tmg or args.all
 
     cache_dir: Path = args.cache
     org_root: Path = args.data_root / "organisaties"
     person_root: Path = args.data_root / "personen"
+    endpoint_url = _ENDPOINT_URLS[args.endpoint]
 
     total_written = 0
     if do_orgs:
-        org_stats = enrich_organisations(org_root, cache_dir=cache_dir, dry_run=args.dry_run)
+        org_stats = enrich_organisations(
+            org_root, cache_dir=cache_dir, dry_run=args.dry_run, endpoint=endpoint_url
+        )
         for cat, s in org_stats.items():
             print(
                 f"{cat}: {s['written']}/{s['candidates']} matched "
@@ -909,7 +2234,9 @@ def main(argv: list[str] | None = None) -> int:
             )
             total_written += s["written"]
     if do_personen:
-        ps = enrich_personen(person_root, cache_dir=cache_dir, dry_run=args.dry_run)
+        ps = enrich_personen(
+            person_root, cache_dir=cache_dir, dry_run=args.dry_run, endpoint=endpoint_url
+        )
         print(
             f"personen: {ps['written']}/{ps['candidates']} matched "
             f"(tkid={ps['matched_tkid']}, natural={ps['matched_natural']}, "
@@ -917,6 +2244,30 @@ def main(argv: list[str] | None = None) -> int:
             file=sys.stderr,
         )
         total_written += ps["written"]
+    if do_bewindspersonen:
+        bw = enrich_bewindspersonen(
+            args.data_root, cache_dir=cache_dir, dry_run=args.dry_run, endpoint=endpoint_url
+        )
+        for kind, s in bw.items():
+            print(
+                f"{kind}: {s.get('persons', 0)} personen "
+                f"({s.get('new_persons', 0)} nieuw, {s.get('merged_persons', 0)} merged), "
+                f"{s.get('mandaten', 0)} mandaten, "
+                f"{s.get('bootstrapped_posts', 0)} nieuwe posten",
+                file=sys.stderr,
+            )
+            total_written += s.get("written", 0)
+    if do_abd_tmg:
+        abd = enrich_abd_tmg(
+            args.data_root, cache_dir=cache_dir, dry_run=args.dry_run, endpoint=endpoint_url
+        )
+        print(
+            f"abd-tmg: {abd.get('persons', 0)} personen, "
+            f"{abd.get('mandaten', 0)} mandaten, "
+            f"{abd.get('bootstrapped_posts', 0)} nieuwe posten",
+            file=sys.stderr,
+        )
+        total_written += abd.get("written", 0)
 
     print(f"Wikidata enrichment: {total_written} records updated", file=sys.stderr)
     return 0

@@ -1,6 +1,7 @@
 id: person:coenradie-i-1987
 identifiers:
   tk_persoon_id: a08790d3-915b-44d3-9556-6c53048917a0
+  wikidata: Q126643960
 name:
   full: Ingrid Coenradie
   family: Coenradie
@@ -22,7 +23,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fc41b429-e83c-4269-86a4-92b240736585)
     retrieved: '2026-05-09'
+- id: wd-9663bcff24c9
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q126643960#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a08790d3-915b-44d3-9556-6c53048917a0)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q126643960
   retrieved: '2026-05-09'

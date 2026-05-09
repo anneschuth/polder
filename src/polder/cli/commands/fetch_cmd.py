@@ -17,6 +17,7 @@ from typing import Annotated
 import typer
 
 from polder.fetchers import (
+    abd_nieuws,
     abd_organogrammen,
     ar_rwt,
     ek_scrape,
@@ -234,6 +235,56 @@ def fetch_abd(
 ) -> None:
     """ABD-organogrammen: download PDF's voor latere LLM-parsing."""
     _delegate(abd_organogrammen.main, _common_argv(cache, out, limit, dry_run, verbose))
+
+
+@app.command("abd-nieuws")
+def fetch_abd_nieuws(
+    since: Annotated[
+        str | None,
+        typer.Option(help="Ondergrens artikel-datum (ISO `YYYY-MM-DD`)."),
+    ] = None,
+    cache: Annotated[Path, typer.Option(help="Cache-root (default: _cache).")] = Path(
+        "_cache"
+    ),
+    cache_dir: Annotated[
+        Path | None,
+        typer.Option(help="Override volledige cache-pad (default: <cache>/abd-nieuws)."),
+    ] = None,
+    limit: Annotated[int | None, typer.Option(help="Max artikelen.")] = None,
+    deep: Annotated[
+        bool,
+        typer.Option(
+            "--deep", help="Forceer sitemap-index walk voor backfill tot 2010."
+        ),
+    ] = False,
+    no_articles: Annotated[
+        bool,
+        typer.Option(
+            "--no-articles", help="Skip artikel-downloads; alleen index.json."
+        ),
+    ] = False,
+    dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
+    verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
+) -> None:
+    """ABD-nieuws: download nieuwsberichten van algemenebestuursdienst.nl."""
+    argv: list[str] = []
+    if since is not None:
+        argv += ["--since", since]
+    if cache is not None:
+        argv += ["--cache", str(cache)]
+    if cache_dir is not None:
+        argv += ["--cache-dir", str(cache_dir)]
+    if limit is not None:
+        argv += ["--limit", str(limit)]
+    if deep:
+        argv.append("--deep")
+    if no_articles:
+        argv.append("--no-articles")
+    if dry_run:
+        argv.append("--dry-run")
+    if verbose:
+        argv.append("-v")
+    _delegate(abd_nieuws.main, argv)
 
 
 # ---------------------------------------------------------------------------

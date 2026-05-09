@@ -1,6 +1,7 @@
 id: person:visser-b-1977
 identifiers:
   tk_persoon_id: c955972d-2702-4d28-8461-262072218f3f
+  wikidata: Q1397858
 name:
   full: Barbara Visser
   family: Visser
@@ -22,7 +23,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(962bbd85-51dd-424d-bca4-53dead963a31)
     retrieved: '2026-05-09'
+- id: wd-5d8b32d2c785
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Nederlands minister van Infrastructuur en Waterstaat
+  start_date: '2021-08-31'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1397858#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
+- id: wd-a70683204a2d
+  organization_id: org:min-def
+  post_id: post:staatssecretaris-min-def
+  role: staatssecretaris van Defensie
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1397858#P39
+    retrieved: '2026-05-09'
+  end_date: '2021-08-31'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c955972d-2702-4d28-8461-262072218f3f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1397858
   retrieved: '2026-05-09'

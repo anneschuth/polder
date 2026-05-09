@@ -1,6 +1,7 @@
 id: person:koolmees-w-1977
 identifiers:
   tk_persoon_id: 9522ae6b-a187-4f51-9df7-1b0feb767d6e
+  wikidata: Q2595414
 name:
   full: Wouter Koolmees
   family: Koolmees
@@ -24,7 +25,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b3dfb60c-ef4a-4598-8c36-3a5add4132d8)
     retrieved: '2026-05-09'
+- id: wd-98587b0fb162
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2595414#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9522ae6b-a187-4f51-9df7-1b0feb767d6e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2595414
   retrieved: '2026-05-09'

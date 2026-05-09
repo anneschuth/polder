@@ -1,6 +1,7 @@
 id: person:jetten-raa-1987
 identifiers:
   tk_persoon_id: 49be3576-cea3-46c0-87eb-89beb108248d
+  wikidata: Q28860866
 name:
   full: Rob Jetten
   family: Jetten
@@ -94,7 +95,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(12507fdd-1aeb-4c00-9aa8-cca790454867)
     retrieved: '2026-05-09'
+- id: wd-9078c2506168
+  organization_id: org:min-kgg
+  post_id: post:minister-min-kgg
+  role: Minister voor Klimaat en Energie
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860866#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
+- id: wd-13214ee7b898
+  organization_id: org:min-az
+  post_id: post:minister-president
+  role: Minister-president van Nederland
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860866#P39
+    retrieved: '2026-05-09'
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(49be3576-cea3-46c0-87eb-89beb108248d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860866
   retrieved: '2026-05-09'

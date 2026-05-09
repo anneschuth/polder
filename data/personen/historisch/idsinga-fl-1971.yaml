@@ -1,6 +1,7 @@
 id: person:idsinga-fl-1971
 identifiers:
   tk_persoon_id: 7954eb2c-1bf5-42af-80dc-85f29b367db0
+  wikidata: Q106119773
 name:
   full: Folkert Idsinga
   family: Idsinga
@@ -48,7 +49,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6bf65765-b5c4-4cd1-af9e-0faae84a3975)
     retrieved: '2026-05-09'
+- id: wd-f6e415568bf4
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q106119773#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-11-01'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7954eb2c-1bf5-42af-80dc-85f29b367db0)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119773
   retrieved: '2026-05-09'

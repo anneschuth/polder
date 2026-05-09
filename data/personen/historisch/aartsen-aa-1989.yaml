@@ -1,6 +1,7 @@
 id: person:aartsen-aa-1989
 identifiers:
   tk_persoon_id: 397c857a-fda0-414d-8fdc-8288cd3284aa
+  wikidata: Q28861067
 name:
   full: Thierry Aartsen
   family: Aartsen
@@ -34,7 +35,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1b873ed3-be96-43c7-bb3b-a404e52ce2a1)
     retrieved: '2026-05-09'
+- id: wd-11f047c0ded6
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Minister van Werk en Participatie
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861067#P39
+    retrieved: '2026-05-09'
+  end_date: null
+- id: wd-3cd651d11a64
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2025-06-19'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861067#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(397c857a-fda0-414d-8fdc-8288cd3284aa)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861067
   retrieved: '2026-05-09'

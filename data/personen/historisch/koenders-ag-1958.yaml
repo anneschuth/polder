@@ -1,6 +1,7 @@
 id: person:koenders-ag-1958
 identifiers:
   tk_persoon_id: bd57935a-842e-497d-9f6f-e74bc61836a0
+  wikidata: Q3023616
 name:
   full: Bert Koenders
   family: Koenders
@@ -11,7 +12,31 @@ name:
 birth:
   year: 1958
 gender: m
+mandaten:
+- id: wd-934e1dfe9963
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Minister voor Ontwikkelingssamenwerking
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3023616#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-02-23'
+- id: wd-2b0fa859afea
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Nederlands minister van Buitenlandse Zaken
+  start_date: '2014-10-17'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3023616#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(bd57935a-842e-497d-9f6f-e74bc61836a0)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q3023616
   retrieved: '2026-05-09'

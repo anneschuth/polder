@@ -1,6 +1,7 @@
 id: person:heinen-e-1981
 identifiers:
   tk_persoon_id: a3b17348-54cf-4bca-82d4-e62bd46c2fbc
+  wikidata: Q106119762
 name:
   full: Eelco Heinen
   family: Heinen
@@ -34,7 +35,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(97c801dd-aca9-443d-a7ce-a4744c48b5d2)
     retrieved: '2026-05-09'
+- id: wd-845bd221a097
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Nederlands minister van Financiën
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q106119762#P39
+    retrieved: '2026-05-09'
+  end_date: null
+- id: wd-e08e3c60b31b
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2025-06-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q106119762#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-18'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a3b17348-54cf-4bca-82d4-e62bd46c2fbc)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119762
   retrieved: '2026-05-09'

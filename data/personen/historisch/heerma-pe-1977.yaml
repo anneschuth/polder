@@ -1,6 +1,7 @@
 id: person:heerma-pe-1977
 identifiers:
   tk_persoon_id: cf4c4d24-798d-4bbe-bf06-23ca674f0d28
+  wikidata: Q94234
 name:
   full: Pieter Heerma
   family: Heerma
@@ -72,7 +73,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(885e4be5-c439-4dc9-99b4-f32ac8cb6eda)
     retrieved: '2026-05-09'
+- id: wd-4bc9668e7275
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q94234#P39
+    retrieved: '2026-05-09'
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cf4c4d24-798d-4bbe-bf06-23ca674f0d28)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q94234
   retrieved: '2026-05-09'

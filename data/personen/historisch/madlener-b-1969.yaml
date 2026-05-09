@@ -1,6 +1,7 @@
 id: person:madlener-b-1969
 identifiers:
   tk_persoon_id: 7c43c8c2-1958-496c-8060-b0f3bf652992
+  wikidata: Q545023
 name:
   full: Barry Madlener
   family: Madlener
@@ -34,7 +35,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1abdd1e0-26db-4604-a735-1ea5141b9ae7)
     retrieved: '2026-05-09'
+- id: wd-6523a85d82d9
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Nederlands minister van Infrastructuur en Waterstaat
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q545023#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7c43c8c2-1958-496c-8060-b0f3bf652992)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q545023
   retrieved: '2026-05-09'

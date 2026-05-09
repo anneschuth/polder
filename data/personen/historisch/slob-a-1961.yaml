@@ -1,6 +1,7 @@
 id: person:slob-a-1961
 identifiers:
   tk_persoon_id: 412ecb41-f20c-477d-b8e7-d7b548a10a44
+  wikidata: Q658258
 name:
   full: Arie Slob
   family: Slob
@@ -60,7 +61,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0ab6530a-60c7-46db-9d75-b31745f828ec)
     retrieved: '2026-05-09'
+- id: wd-80af62a14e8b
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: Minister voor Basis- en Voortgezet Onderwijs en Media
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q658258#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(412ecb41-f20c-477d-b8e7-d7b548a10a44)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q658258
   retrieved: '2026-05-09'

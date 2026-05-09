@@ -1,6 +1,7 @@
 id: person:hijum-yj-1972
 identifiers:
   tk_persoon_id: 61721e3f-a394-42ff-9885-8a58aa1d1612
+  wikidata: Q3029970
 name:
   full: Eddy van Hijum
   family: van Hijum
@@ -12,18 +13,6 @@ birth:
   year: 1972
 gender: m
 mandaten:
-- id: e2ac2bfc-b171-4d4b-bdbe-55d68094bb15
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor Nieuw Sociaal Contract
-  start_date: '2025-09-02'
-  end_date: '2025-11-11'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(93610ed2-4f3f-4d9a-94fb-9ccafbae140b)
-    retrieved: '2026-05-09'
 - id: cd62d5d9-8bcd-4886-91d5-896a9791404d
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -60,7 +49,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c354cab-4e73-4e5e-9aa0-1041fb226193)
     retrieved: '2026-05-09'
+- id: wd-df71fed0f6f9
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2025-06-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3029970#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-18'
+- id: wd-3cd097d0a8e4
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3029970#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-08-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(61721e3f-a394-42ff-9885-8a58aa1d1612)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q3029970
   retrieved: '2026-05-09'

@@ -1,6 +1,7 @@
 id: person:teeven-f-1958
 identifiers:
   tk_persoon_id: a3986ffd-c057-46cc-afd5-54846c9955ef
+  wikidata: Q2150230
 name:
   full: Fred Teeven
   family: Teeven
@@ -48,7 +49,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7d524ba7-a137-4aff-9cc1-f7af637cad2c)
     retrieved: '2026-05-09'
+- id: wd-5c3a830c3b81
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2150230#P39
+    retrieved: '2026-05-09'
+  end_date: '2015-03-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a3986ffd-c057-46cc-afd5-54846c9955ef)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2150230
   retrieved: '2026-05-09'

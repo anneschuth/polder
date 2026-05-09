@@ -1,6 +1,7 @@
 id: person:blok-sa-1964
 identifiers:
   tk_persoon_id: 909e3fd2-9883-448f-bb9f-33e57ad81f93
+  wikidata: Q2858481
 name:
   full: Stef Blok
   family: Blok
@@ -48,7 +49,70 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(421662f6-55b9-45a5-a4c0-729f327a69b1)
     retrieved: '2026-05-09'
+- id: wd-3312535b82b5
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Nederlands minister van Justitie en Veiligheid
+  start_date: '2015-03-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2015-03-20'
+- id: wd-a2dcff003294
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Nederlands minister van Justitie en Veiligheid
+  start_date: '2017-01-27'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
+- id: wd-8d1236a57865
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: minister voor Wonen en Rijksdienst
+  start_date: '2012-11-05'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-01-27'
+- id: wd-2b308c70fa0d
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2021-05-25'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
+- id: wd-6b42bc3b2fe9
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Nederlands minister van Buitenlandse Zaken
+  start_date: '2018-03-07'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2021-05-25'
+- id: wd-3c90fabc5f82
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2016-06-29'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2858481#P39
+    retrieved: '2026-05-09'
+  end_date: '2016-09-16'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(909e3fd2-9883-448f-bb9f-33e57ad81f93)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2858481
   retrieved: '2026-05-09'

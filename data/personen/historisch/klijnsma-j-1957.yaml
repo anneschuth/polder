@@ -1,6 +1,7 @@
 id: person:klijnsma-j-1957
 identifiers:
   tk_persoon_id: e20987d2-3f77-4737-bdd4-d8c566ff3e73
+  wikidata: Q2608700
 name:
   full: Jetta Klijnsma
   family: Klijnsma
@@ -24,7 +25,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2cf72f55-55b7-4d60-828f-afa258cb97a8)
     retrieved: '2026-05-09'
+- id: wd-488cd2d31982
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2008-12-18'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2608700#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-02-23'
+- id: wd-5cb9a7e95d20
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2012-11-05'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2608700#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e20987d2-3f77-4737-bdd4-d8c566ff3e73)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2608700
   retrieved: '2026-05-09'

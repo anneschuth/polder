@@ -77,6 +77,23 @@ def parse_staatscourant(
     _run(cmd)
 
 
+@app.command("parse-abd-nieuws")
+def parse_abd_nieuws(
+    html_path: Annotated[Path, typer.Argument(help="ABD-nieuwsbericht HTML-bestand.")],
+    output: Annotated[
+        Path | None,
+        typer.Argument(help="Output JSON-pad (default: data/_staging/abd-nieuws-<datum>.json)."),
+    ] = None,
+) -> None:
+    """Parse een ABD-nieuwsbericht naar Membership-proposals."""
+    bash = _ensure_bash()
+    script = _scripts_dir() / "parse_abd_nieuws_local.sh"
+    cmd = [bash, str(script), str(html_path)]
+    if output is not None:
+        cmd.append(str(output))
+    _run(cmd)
+
+
 @app.command("parse-organogram")
 def parse_organogram(
     pdf_path: Annotated[Path, typer.Argument(help="ABD organogram-PDF.")],

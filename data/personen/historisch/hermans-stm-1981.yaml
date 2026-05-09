@@ -1,6 +1,7 @@
 id: person:hermans-stm-1981
 identifiers:
   tk_persoon_id: b8663b71-f92b-4d2b-a06b-f78dba168d98
+  wikidata: Q28860996
 name:
   full: Sophie Hermans
   family: Hermans
@@ -48,7 +49,50 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1ebfea5f-b1dd-4a65-aedb-186e9dfdd8d2)
     retrieved: '2026-05-09'
+- id: wd-2589130faabe
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Nederlands minister van Infrastructuur en Waterstaat
+  start_date: '2025-06-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
+- id: wd-5a05f0215323
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-09'
+  end_date: null
+- id: wd-8755e24cd784
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: minister van Onderwijs, Cultuur en Wetenschap
+  start_date: '2025-08-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
+- id: wd-693a43790ecb
+  organization_id: org:min-kgg
+  post_id: post:minister-min-kgg
+  role: minister van Klimaat en Groene Groei
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8663b71-f92b-4d2b-a06b-f78dba168d98)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860996
   retrieved: '2026-05-09'

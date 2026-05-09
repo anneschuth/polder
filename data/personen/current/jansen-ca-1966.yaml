@@ -1,6 +1,7 @@
 id: person:jansen-ca-1966
 identifiers:
   tk_persoon_id: 3c96ed5d-f7bf-4cae-9ec7-a5a29f5299da
+  wikidata: Q28861876
 name:
   full: Chris Jansen
   family: Jansen
@@ -34,7 +35,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(41578072-2191-429a-80ed-e32ea21e1e56)
     retrieved: '2026-05-09'
+- id: wd-c2d8b4caa3c1
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861876#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3c96ed5d-f7bf-4cae-9ec7-a5a29f5299da)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861876
   retrieved: '2026-05-09'

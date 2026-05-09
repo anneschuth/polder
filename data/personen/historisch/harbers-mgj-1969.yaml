@@ -1,6 +1,7 @@
 id: person:harbers-mgj-1969
 identifiers:
   tk_persoon_id: 5a2cb9b8-4a4c-4860-8793-59da092434b6
+  wikidata: Q2257536
 name:
   full: Mark Harbers
   family: Harbers
@@ -34,7 +35,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2435ebb0-6b16-4b1e-ad98-b0c1618d9b18)
     retrieved: '2026-05-09'
+- id: wd-c39ad4f037e6
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Nederlands minister van Infrastructuur en Waterstaat
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2257536#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
+- id: wd-ad4a5310512e
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2257536#P39
+    retrieved: '2026-05-09'
+  end_date: '2019-05-21'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5a2cb9b8-4a4c-4860-8793-59da092434b6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2257536
   retrieved: '2026-05-09'

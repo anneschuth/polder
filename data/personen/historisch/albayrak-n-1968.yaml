@@ -1,6 +1,7 @@
 id: person:albayrak-n-1968
 identifiers:
   tk_persoon_id: af6d5f33-b2d2-4301-9133-9037caf666ed
+  wikidata: Q459831
 name:
   full: Nebahat Albayrak
   family: Albayrak
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(35af7239-72c9-4588-a38a-576b577c0b14)
     retrieved: '2026-05-09'
+- id: wd-05d6e1ffda7e
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q459831#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(af6d5f33-b2d2-4301-9133-9037caf666ed)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q459831
   retrieved: '2026-05-09'

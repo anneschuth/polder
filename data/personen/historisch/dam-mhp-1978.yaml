@@ -1,6 +1,7 @@
 id: person:dam-mhp-1978
 identifiers:
   tk_persoon_id: 9e009009-0ec2-4eea-9a2e-dfd82f88db87
+  wikidata: Q2010479
 name:
   full: Martijn van Dam
   family: van Dam
@@ -24,7 +25,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1e0523ce-c488-44de-832b-14ff22073a3f)
     retrieved: '2026-05-09'
+- id: wd-5c6f68678d85
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-min-ezk
+  role: Nederlands staatssecretaris van Economische Zaken
+  start_date: '2015-11-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2010479#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-09-01'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9e009009-0ec2-4eea-9a2e-dfd82f88db87)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2010479
   retrieved: '2026-05-09'

@@ -1,6 +1,7 @@
 id: person:knops-rw-1971
 identifiers:
   tk_persoon_id: 8dfa0156-0834-4c00-87e8-c4e9919f781f
+  wikidata: Q2125339
 name:
   full: Raymond Knops
   family: Knops
@@ -48,7 +49,40 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d5e8dcc8-29f7-4f9f-9bad-f92a08c69701)
     retrieved: '2026-05-09'
+- id: wd-79408c26fdef
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2019-11-01'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2125339#P39
+    retrieved: '2026-05-09'
+  end_date: '2020-04-14'
+- id: wd-7b69ffae735b
+  organization_id: org:min-bzk
+  post_id: post:staatssecretaris-min-bzk
+  role: staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-04-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2125339#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
+- id: wd-4caf8b19f4e5
+  organization_id: org:min-bzk
+  post_id: post:staatssecretaris-min-bzk
+  role: staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2125339#P39
+    retrieved: '2026-05-09'
+  end_date: '2019-11-01'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8dfa0156-0834-4c00-87e8-c4e9919f781f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2125339
   retrieved: '2026-05-09'

@@ -1,6 +1,7 @@
 id: person:veldhoven-s-1973
 identifiers:
   tk_persoon_id: 9d2229a5-c46a-485a-9b82-315e270c3e9a
+  wikidata: Q5090363
 name:
   full: Stientje van Veldhoven
   family: van Veldhoven
@@ -24,7 +25,40 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7dd7a593-7f7c-44b0-861b-14cd41a57f59)
     retrieved: '2026-05-09'
+- id: wd-b1ecdddb1cbf
+  organization_id: org:min-kgg
+  post_id: post:minister-min-kgg
+  role: minister van Klimaat en Groene Groei
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q5090363#P39
+    retrieved: '2026-05-09'
+  end_date: null
+- id: wd-7273cc564d17
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q5090363#P39
+    retrieved: '2026-05-09'
+  end_date: '2019-11-01'
+- id: wd-5697c7e99072
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2020-04-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q5090363#P39
+    retrieved: '2026-05-09'
+  end_date: '2021-07-19'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9d2229a5-c46a-485a-9b82-315e270c3e9a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q5090363
   retrieved: '2026-05-09'

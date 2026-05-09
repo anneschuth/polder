@@ -1,6 +1,7 @@
 id: person:nawijn-hpa-1948
 identifiers:
   tk_persoon_id: dc2f6e9a-325f-409d-ba43-b2a8bb3100ca
+  wikidata: Q2846783
 name:
   full: Hilbrand Nawijn
   family: Nawijn
@@ -11,7 +12,21 @@ name:
 birth:
   year: 1948
 gender: m
+mandaten:
+- id: wd-7187b6c057fb
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Minister voor Vreemdelingenzaken en Integratie
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2846783#P39
+    retrieved: '2026-05-09'
+  end_date: '2003-05-27'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dc2f6e9a-325f-409d-ba43-b2a8bb3100ca)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2846783
   retrieved: '2026-05-09'

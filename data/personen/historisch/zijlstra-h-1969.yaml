@@ -1,6 +1,7 @@
 id: person:zijlstra-h-1969
 identifiers:
   tk_persoon_id: 8dcd68d9-3f9b-4c92-b3e6-9f6c48a3bdfe
+  wikidata: Q1375236
 name:
   full: Halbe Zijlstra
   family: Zijlstra
@@ -48,7 +49,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(de5e2c23-2826-48f1-b066-00edd667ec7f)
     retrieved: '2026-05-09'
+- id: wd-10f27abebc04
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Nederlands minister van Buitenlandse Zaken
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1375236#P39
+    retrieved: '2026-05-09'
+  end_date: '2018-02-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8dcd68d9-3f9b-4c92-b3e6-9f6c48a3bdfe)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1375236
   retrieved: '2026-05-09'

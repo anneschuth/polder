@@ -1,6 +1,7 @@
 id: person:krom-p-1963
 identifiers:
   tk_persoon_id: 62f807a5-d94d-4114-9c8c-b3a792a517f8
+  wikidata: Q5631856
 name:
   full: Paul de Krom
   family: de Krom
@@ -24,7 +25,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9695c045-d9e0-40e5-b354-eccb93f39800)
     retrieved: '2026-05-09'
+- id: wd-83cfe5470b62
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q5631856#P39
+    retrieved: '2026-05-09'
+  end_date: '2012-11-05'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(62f807a5-d94d-4114-9c8c-b3a792a517f8)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q5631856
   retrieved: '2026-05-09'

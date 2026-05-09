@@ -1,6 +1,7 @@
 id: person:dijkhoff-khdm-1981
 identifiers:
   tk_persoon_id: b4e1d8cf-e8cf-4b66-9ded-97fc8176fa4a
+  wikidata: Q2784118
 name:
   full: Klaas Dijkhoff
   family: Dijkhoff
@@ -48,7 +49,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ab880c09-bcb8-4a39-9ca7-dcc31688b5fe)
     retrieved: '2026-05-09'
+- id: wd-88db2ad708b8
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Nederlands minister van Defensie
+  start_date: '2017-10-04'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2784118#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-26'
+- id: wd-c7b82881ce2f
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2015-03-20'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2784118#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-10-04'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b4e1d8cf-e8cf-4b66-9ded-97fc8176fa4a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2784118
   retrieved: '2026-05-09'

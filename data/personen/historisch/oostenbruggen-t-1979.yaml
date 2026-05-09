@@ -1,6 +1,7 @@
 id: person:oostenbruggen-t-1979
 identifiers:
   tk_persoon_id: fd56ae47-9aad-480b-8b5f-a581266b4dfb
+  wikidata: Q123173892
 name:
   full: Tjebbe van Oostenbruggen
   family: van Oostenbruggen
@@ -24,7 +25,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ea30b3d8-d801-4549-99ad-a19efaa2b79e)
     retrieved: '2026-05-09'
+- id: wd-9129daa6bf09
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris Fiscaliteit en Belastingdienst
+  start_date: '2024-11-15'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q123173892#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-08-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fd56ae47-9aad-480b-8b5f-a581266b4dfb)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123173892
   retrieved: '2026-05-09'

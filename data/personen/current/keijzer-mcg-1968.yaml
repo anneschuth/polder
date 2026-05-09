@@ -1,6 +1,7 @@
 id: person:keijzer-mcg-1968
 identifiers:
   tk_persoon_id: 8c5a8186-8f46-4bca-956d-06d4fa521635
+  wikidata: Q94229
 name:
   full: Mona Keijzer
   family: Keijzer
@@ -72,7 +73,40 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b57d5f47-8854-4dee-8939-1b4e783fdb72)
     retrieved: '2026-05-09'
+- id: wd-710d376b47eb
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  start_date: '2025-08-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q94229#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
+- id: wd-87ad95050262
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-min-ezk
+  role: staatssecretaris van Economische Zaken en Klimaat
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q94229#P39
+    retrieved: '2026-05-09'
+  end_date: '2021-09-24'
+- id: wd-bd3ca8f7fc64
+  organization_id: org:min-vro
+  post_id: post:minister-min-vro
+  role: minister van Volkshuisvesting en Ruimtelijke Ordening
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q94229#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8c5a8186-8f46-4bca-956d-06d4fa521635)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q94229
   retrieved: '2026-05-09'

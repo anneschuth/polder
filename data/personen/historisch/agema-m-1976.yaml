@@ -1,6 +1,7 @@
 id: person:agema-m-1976
 identifiers:
   tk_persoon_id: 1c889902-6ede-427c-8682-000f683fffaa
+  wikidata: Q467982
 name:
   full: Fleur Agema
   family: Agema
@@ -36,7 +37,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7775dd12-1de9-446e-8c81-d9499a4e875a)
     retrieved: '2026-05-09'
+- id: wd-1a9e257e2c67
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q467982#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1c889902-6ede-427c-8682-000f683fffaa)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q467982
   retrieved: '2026-05-09'

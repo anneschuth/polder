@@ -1,6 +1,7 @@
 id: person:zalm-g-1952
 identifiers:
   tk_persoon_id: 546b2fac-ce67-4bf0-9594-3710a78c1400
+  wikidata: Q717674
 name:
   full: Gerrit Zalm
   family: Zalm
@@ -11,7 +12,41 @@ name:
 birth:
   year: 1952
 gender: m
+mandaten:
+- id: wd-682df83eae94
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2006-07-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q717674#P39
+    retrieved: '2026-05-09'
+  end_date: '2006-07-07'
+- id: wd-7c8aa0f83092
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Nederlands minister van Financiën
+  start_date: '1994-08-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q717674#P39
+    retrieved: '2026-05-09'
+  end_date: '2002-07-22'
+- id: wd-9bea7542c9c6
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Nederlands minister van Financiën
+  start_date: '2003-05-27'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q717674#P39
+    retrieved: '2026-05-09'
+  end_date: '2007-02-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(546b2fac-ce67-4bf0-9594-3710a78c1400)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q717674
   retrieved: '2026-05-09'

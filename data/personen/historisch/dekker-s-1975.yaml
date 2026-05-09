@@ -1,6 +1,7 @@
 id: person:dekker-s-1975
 identifiers:
   tk_persoon_id: 6cf382f6-d1fb-4c91-8348-6ddd52d1e334
+  wikidata: Q501714
 name:
   full: Sander Dekker
   family: Dekker
@@ -22,7 +23,20 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4a3c68af-bec1-4607-93e3-cc6901155d17)
     retrieved: '2026-05-09'
+- id: wd-83fd7de477d0
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Minister voor Rechtsbescherming
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q501714#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6cf382f6-d1fb-4c91-8348-6ddd52d1e334)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q501714
   retrieved: '2026-05-09'

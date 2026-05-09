@@ -1,6 +1,7 @@
 id: person:gennip-ceg-1968
 identifiers:
   tk_persoon_id: ef9e78ce-980c-40be-bc6d-ea6e69ef4ac6
+  wikidata: Q2469097
 name:
   full: Karien Van Gennip
   family: Van Gennip
@@ -22,7 +23,30 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9e1a24bd-887d-4539-8287-05fdc776d4ad)
     retrieved: '2026-05-09'
+- id: wd-77a4fe23ac1f
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2469097#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
+- id: wd-ade235127fc7
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-min-ezk
+  role: Nederlands staatssecretaris van Economische Zaken
+  start_date: '2003-05-27'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2469097#P39
+    retrieved: '2026-05-09'
+  end_date: '2007-02-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ef9e78ce-980c-40be-bc6d-ea6e69ef4ac6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2469097
   retrieved: '2026-05-09'
