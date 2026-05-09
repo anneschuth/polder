@@ -75,12 +75,30 @@ def _strip_initials(initials: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", cleaned)
 
 
-def slugify_person(family: str, initials: str, birth_year: int) -> str:
-    """Bouw stabiele slug `<familienaam>-<initialen>-<jaartal>`.
+_HEX8_RE = re.compile(r"^[0-9a-f]{8}$")
+
+
+def slugify_person(
+    family: str,
+    initials: str,
+    birth_year: int | None,
+    *,
+    fallback_uuid: str | None = None,
+) -> str:
+    """Bouw stabiele slug `<familienaam>-<initialen>-<suffix>`.
 
     `family` mag tussenvoegsels bevatten zoals "van der Linden". Die laten we
     bewust uit de slug, omdat tussenvoegsels vaak inconsistent worden ingevoerd
     (van/Van, der/Der). De familienaam in `name.family` blijft wel intact.
+
+    Suffix-keuze:
+
+    1. ``birth_year`` aanwezig: gebruik het 4-cijferige jaartal (huidige
+       conventie wint, ook als ``fallback_uuid`` ook is meegegeven).
+    2. Alleen ``fallback_uuid``: neem de eerste 8 hex-tekens (lowercase) van de
+       UUID. Geschikt als input een UUIDv7 is — de eerste 8 hex-chars dragen
+       voldoende entropie voor uniciteit binnen polder-schaal.
+    3. Geen van beide: ``ValueError``.
     """
     base = _ascii_lower(family or "")
     base = re.sub(r"[^a-z0-9\s-]+", " ", base)
@@ -115,7 +133,20 @@ def slugify_person(family: str, initials: str, birth_year: int) -> str:
     family_slug = "-".join(family_parts)
     family_slug = re.sub(r"-+", "-", family_slug).strip("-")
     initials_slug = _strip_initials(initials)
-    pieces = [p for p in (family_slug, initials_slug, str(birth_year)) if p]
+
+    if birth_year is not None:
+        suffix = str(birth_year)
+    elif fallback_uuid is not None:
+        cleaned = fallback_uuid.strip().lower().replace("-", "")
+        if len(cleaned) < 8 or not _HEX8_RE.match(cleaned[:8]):
+            raise ValueError(
+                "fallback_uuid moet minstens 8 hex-tekens bevatten (0-9a-f)"
+            )
+        suffix = cleaned[:8]
+    else:
+        raise ValueError("geboortejaar of fallback_uuid vereist voor slugify_person")
+
+    pieces = [p for p in (family_slug, initials_slug, suffix) if p]
     return "-".join(pieces)
 
 

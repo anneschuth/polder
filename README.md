@@ -119,8 +119,13 @@ uv run polder skill review-diff diff.json
 uv run polder skill parse-staatscourant kb.xml
 uv run polder skill parse-organogram organogram.pdf min-bzk
 
+# resolver-output uit data/_staging/ automatisch toepassen op data/
+uv run polder apply-staging data/_staging/                 # dry-run
+uv run polder apply-staging data/_staging/ --apply         # echt toepassen
+
 # pipeline
 uv run polder daily-update          # fetchers + validate + diff + review
+uv run polder ingest --commit --push  # vol-automatische staging-pipeline
 ```
 
 De oude losse scripts (`polder-fetch-roo`, `polder-validate`, `polder-build`,
@@ -132,15 +137,33 @@ De oude losse scripts (`polder-fetch-roo`, `polder-validate`, `polder-build`,
 `make` is een dunne wrapper rond de CLI:
 
 ```bash
-make sync          # uv sync
-make fetch         # polder fetch all
-make fetch-roo     # polder fetch roo
-make validate      # polder validate
-make diff          # polder diff
-make build         # polder build all
-make serve         # polder serve
-make daily-update  # polder daily-update
+make sync           # uv sync
+make fetch          # polder fetch all
+make fetch-roo      # polder fetch roo
+make validate       # polder validate
+make diff           # polder diff
+make build          # polder build all
+make serve          # polder serve
+make daily-update   # polder daily-update
+make ingest         # polder ingest (zonder commit/push)
+make ingest-commit  # polder ingest --commit --push
 ```
+
+## Ingest: dagelijkse staging-pipeline
+
+`polder ingest` draait per bron parse, resolve, apply, validate, build, commit
+en push in één keer. Drempel staat op 0.85; records eronder komen op de
+skip-stack en blijven in `data/_staging/` voor handmatige review.
+
+```bash
+uv run polder ingest --dry-run                        # plan tonen
+uv run polder ingest --source abd-nieuws --limit 50   # 50 nieuwe nieuwsberichten
+uv run polder ingest --commit --push                  # vol-automatisch
+```
+
+Idempotent: een tweede run zonder nieuwe input doet niets. Bij validate-error
+stopt de pipeline en wordt er niet gecommit. Volledige uitleg in
+[docs/ingest.md](docs/ingest.md).
 
 ## Lokaal draaien
 
@@ -161,6 +184,8 @@ shell-loops, geen handmatige stappen, geen UI-clicks.
 | Alle fetchers achter elkaar | `polder fetch all` |
 | Eén fetcher | `polder fetch <bron>` |
 | Skills lokaal | `polder skill <skill-naam> <input>` |
+| Apply-staging dry-run | `polder apply-staging data/_staging/` |
+| Apply-staging echt | `polder apply-staging data/_staging/ --apply` |
 | ABD-organogrammen op alle PDFs | `bash scripts/parse_organogram_all.sh` |
 | Staatscourant-backfill | `bash scripts/backfill_staatscourant.sh --since 2024-01-01` |
 | Validatie | `polder validate` |

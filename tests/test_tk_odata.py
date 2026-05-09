@@ -95,6 +95,72 @@ def test_slugify_person_familie_met_streepje():
 
 
 # ---------------------------------------------------------------------------
+# slugify_person fallback paden (D+C: Wikidata wint, anders UUID-suffix)
+# ---------------------------------------------------------------------------
+
+
+def test_slugify_person_birth_year_wint_van_fallback():
+    """Beide gegeven: birth_year wint, fallback wordt genegeerd."""
+    slug = slugify_person(
+        "Rutte", "M.P.", 1967, fallback_uuid="0192a3f4-5d6e-7008-b9ab-cdef01234567"
+    )
+    assert slug == "rutte-mp-1967"
+
+
+def test_slugify_person_uuid_fallback_zonder_jaar():
+    """Geen birth_year + UUIDv7-fallback → eerste 8 hex als suffix."""
+    slug = slugify_person(
+        "Kewal", "S.", None, fallback_uuid="0192a3f4-5d6e-7008-b9ab-cdef01234567"
+    )
+    assert slug == "kewal-s-0192a3f4"
+
+
+def test_slugify_person_uuid_fallback_zonder_initialen():
+    slug = slugify_person(
+        "Kewal", "", None, fallback_uuid="0192a3f4-5d6e-7008-b9ab-cdef01234567"
+    )
+    assert slug == "kewal-0192a3f4"
+
+
+def test_slugify_person_geen_jaar_geen_uuid_raised():
+    with pytest.raises(ValueError, match="geboortejaar of fallback_uuid"):
+        slugify_person("Rutte", "M.P.", None)
+
+
+def test_slugify_person_uuid_fallback_lowercased_en_dashstrip():
+    """Hex met hoofdletters en streepjes wordt genormaliseerd."""
+    slug = slugify_person(
+        "Test", "T.", None, fallback_uuid="ABCDEF12-3456-7890-ABCD-EF1234567890"
+    )
+    assert slug == "test-t-abcdef12"
+
+
+def test_slugify_person_uuid_fallback_invalid_hex_raised():
+    """Suffix is niet hex (bijv. een letter buiten a-f)."""
+    with pytest.raises(ValueError, match="hex"):
+        slugify_person("Test", "T.", None, fallback_uuid="zzzzzzzz")
+
+
+def test_slugify_person_uuid_fallback_te_kort_raised():
+    """UUID-string moet >=8 hex-tekens leveren (na dash-strip)."""
+    with pytest.raises(ValueError, match="hex"):
+        slugify_person("Test", "T.", None, fallback_uuid="abc")
+
+
+def test_slugify_person_fallback_slug_voldoet_aan_schema_pattern():
+    """De UUID-fallback-slug moet matchen op het Persoon.id-patroon."""
+    import re
+
+    pattern = re.compile(
+        r"^person:([a-z][a-z0-9-]*-)?([0-9]{4}|[0-9]{7,}|[0-9a-f]{8})$"
+    )
+    slug = slugify_person(
+        "Kewal", "S.", None, fallback_uuid="0192a3f4-5d6e-7008-b9ab-cdef01234567"
+    )
+    assert pattern.match(f"person:{slug}")
+
+
+# ---------------------------------------------------------------------------
 # person_to_polder_record
 # ---------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 ---
 name: parse-abd-nieuws
-description: Parse een ABD-nieuwsbericht (HTML van algemenebestuursdienst.nl/actueel/nieuws) naar Membership-proposals met evidence_snippet als verifieerbare substring. Gebruik wanneer de gebruiker zegt 'parse abd-nieuws', 'verwerk abd-bericht', 'extract benoeming uit abd', 'lees abd-nieuwsbericht', of in English 'parse abd news', 'extract appointments from abd', 'process abd article'.
-version: 0.2.0
+description: Parse een ABD-nieuwsbericht (HTML van algemenebestuursdienst.nl/actueel/nieuws) naar Membership-proposals met evidence_snippet als verifieerbare substring en organization_chain (ministerie, DG, directie, afdeling). Gebruik wanneer de gebruiker zegt 'parse abd-nieuws', 'verwerk abd-bericht', 'extract benoeming uit abd', 'lees abd-nieuwsbericht', of in English 'parse abd news', 'extract appointments from abd', 'process abd article'.
+version: 0.4.0
 triggers:
   - parse abd-nieuws
   - verwerk abd-bericht
@@ -30,9 +30,10 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 
 - `person_name` (string): naam zoals in het bericht, met titulering en initialen indien aanwezig.
 - `existing_person_id` (string of null): polder-slug bij match in `data/personen/`, anders null.
-- `organization_id` (string): slug van de organisatie waar de post bij hoort.
-- `post_id` (string): slug van de post (bijv. `post:dg-migratie-min-jenv`). Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`.
-- `role` (string): functie zoals "directeur-generaal Migratie bij het ministerie van Justitie en Veiligheid".
+- `organization_id` (string): slug van het diepste organisatie-niveau dat in het bericht genoemd wordt (afdeling boven directie boven DG boven ministerie). Verbreed niet automatisch.
+- `organization_chain` (array): hiërarchische keten vanaf ministerie naar afdeling. Elke entry is `{level, name, slug_proposal}`. Levels: `ministerie`, `directoraat-generaal`, `directie`, `afdeling`. Alleen niveaus die letterlijk in het bericht voorkomen, in volgorde van top naar diepst.
+- `post_id` (string): slug van de post (bijv. `post:dg-migratie-min-jenv` of `post:afdelingshoofd-beleid-wonen-min-vro`). Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`.
+- `role` (string): functie zoals "afdelingshoofd Beleid Wonen, Directie Wonen, ministerie van VRO".
 - `start_date` (ISO 8601 of null): ingangsdatum van de benoeming, expliciet uit "per <datum>" of "met ingang van <datum>".
 - `end_date` (ISO 8601 of null): null bij benoeming, datum bij ontslag of einde verlenging.
 - `decision_reference` (string): KB-nummer als het bericht dit noemt, anders `"ABD-nieuwsbericht <YYYY-MM-DD>"`.
@@ -46,42 +47,99 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 ## Stappen voor de LLM
 
 1. Laad de HTML met `BeautifulSoup` of vergelijkbaar. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
-2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix in de URL-slug. Match tegen `data/organisaties/` op naam of afkorting (`JenV`, `IenW`, `OCW`, `BZK`, `Belastingdienst`, ...).
+2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix in de URL-slug. Match tegen `data/organisaties/` op naam of afkorting (`JenV`, `IenW`, `OCW`, `BZK`, `VRO`, `Belastingdienst`, ...).
 3. Per benoeming of ontslag in de tekst:
    - Extract persoonsnaam. ABD gebruikt zelden titulering, dus vaak alleen voornaam plus achternaam.
    - Extract functie. Let op samenstellingen zoals "kwartiermaker/directeur" en "plaatsvervangend directeur".
    - Extract ingangsdatum: zoek "De benoeming gaat in op <datum>", "per <datum>", "met ingang van <datum>".
    - Extract KB-referentie als die in het bericht staat (vaak in de laatste alinea).
-4. Bouw `event_type`. Heuristieken:
+4. **Identificeer organisatie-niveaus.** Berichten beschrijven vaak een keten van top naar diepst:
+   - "ministerie van X" (top, level `ministerie`).
+   - "directoraat-generaal Y" of "DG Y" (level `directoraat-generaal`, organisatieonderdeel).
+   - "directie Z" (level `directie`).
+   - "afdeling W" (level `afdeling`, het diepst).
+   Extract alle niveaus die het bericht letterlijk noemt en bouw `organization_chain` als array van top naar diepst. Per entry een slug-voorstel volgens de Polder-conventie:
+   - Ministerie: `org:min-<slug>` (bestaat al, ROO).
+   - DG, directie, afdeling: `org:onderdeel-<slug>-min-<min-slug>` of korter `org:onderdeel-<slug>` als die slug al bestaat in `data/organisaties/organisatieonderdelen/`.
+   `organization_id` is altijd de slug van het diepste niveau in `organization_chain`. Geen automatische verbreding: als het bericht alleen "directeur Wonen" zegt, is `organization_id` directie-niveau; bij "afdelingshoofd Beleid Wonen" is het afdeling-niveau.
+5. Bouw `event_type`. Heuristieken:
    - Titel of tekst noemt "benoemd", "wordt directeur", "wordt DG": `benoeming`.
    - "neemt afscheid", "vertrekt", "wordt opgevolgd": `ontslag`.
    - "verlengd", "wordt herbenoemd": `verlenging`.
    - Persbericht zonder concrete persoon-functie-koppeling (jaarverslag, ABD-blad): `overig` met confidence-cap 0.4.
-5. Confidence-rubriek (geldt voor merge-overweging, niet voor staging-write):
-   - Volledige naam plus expliciete functie plus expliciete datum plus KB-referentie of staatscourant-link: tot 0.9. Cap op 0.85 voor standalone ABD-nieuws zonder KB-link, in lijn met de two-source rule.
-   - KB-link in tekst (`zoek.officielebekendmakingen.nl/stcrt-...`): cap mag tot 0.95 omdat het bericht dan effectief twee bronnen citeert.
-   - Naam ambigu (twee of meer matches in `data/personen/`): max 0.7, forceert review.
-   - Functie niet matchbaar tegen bestaande post: max 0.6, plus `confidence_reasoning` waarin je een nieuwe `post_id`-suggestie expliciet noemt.
-6. Substring-check vóór output: `assert evidence_snippet in raw_html_text`. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
+6. Bepaal `confidence` volgens de regels in "Confidence-bepaling" hieronder.
+7. Substring-check vóór output: `assert evidence_snippet in raw_html_text`. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
+
+## Confidence-bepaling
+
+Vanaf v0.4.0 vervangen onderstaande regels de oude vlakke 0.85-cap. De drempel voor `apply-staging-auto` is 0.85; tussen 0.85 en 0.94 is een proposal dus auto-mergeable.
+
+### Floor: 0.85 als de vier kernfeiten expliciet en ondubbelzinnig zijn
+
+Bij `event_type` van `benoeming`, `ontslag` of `verlenging` geldt een vloer van 0.85 als alle vier hieronder waar zijn:
+
+1. **Familienaam expliciet** in de tekst (volledige achternaam letterlijk genoemd).
+2. **Functie expliciet** (functietitel woordelijk in de tekst).
+3. **Organisatie expliciet** (ministerie of organisatieonderdeel woordelijk genoemd, of duidelijk in de `organization_chain`).
+4. **Datum expliciet** (`start_date` of `end_date` afleidbaar uit een ISO-converteerbare datum-frase).
+
+Als deze vier kloppen: `confidence` mag niet onder 0.85 zakken, ook niet door de verzwarende factoren hieronder.
+
+### Cap: 0.94 zonder `staatscourant_url`
+
+De two-source rule blijft staan: zonder externe verificatie via een Staatscourant-URL is de bovengrens 0.94. Met een geldige `staatscourant_url` mag de confidence tot 0.97. Boven de 0.97 vereist een tweede onafhankelijke bron buiten ABD plus Staatscourant.
+
+### Lagere ceiling bij ontbrekende kernfeiten
+
+- **1 van de 4 kernfeiten ontbreekt** (bijvoorbeeld geen datum, of organisatie alleen impliciet): max 0.80.
+- **2 of meer kernfeiten ontbreken**: max 0.65.
+- **Naam ambigu** (twee of meer matches in `data/personen/` zonder onderscheidende informatie): max 0.55, forceert review.
+
+### Verzwarende factoren (verlagen, niet onder de floor)
+
+- **"voorlopig", "tijdelijk", "vermoedelijk"** in de zin rond de benoeming: -0.05 op de berekende confidence.
+- **Meerdere benoemingen** in één bericht waarvan onduidelijk welke persoon welke post krijgt: cap 0.70 op alle betrokken proposals, met expliciete note in `confidence_reasoning`.
+- **Functie of niveau niet matchbaar** tegen bestaande post of organisatieonderdeel in `data/`: cap 0.85 (op het floor-niveau, niet eronder), met de nieuwe slug-suggestie expliciet in `confidence_reasoning`.
+
+Verzwarende factoren mogen de confidence niet onder 0.85 brengen wanneer de basis 4-uit-4 expliciet was. De boete voor "voorlopig" is een nuance, geen blokkade.
+
+### Voorbeelden
+
+**Aart van der Vlist** (waarnemend pSG bij EZK, 20 april 2026):
+
+- Familienaam ✓, functie "waarnemend pSG" ✓, organisatie "EZK" ✓, datum "20 april 2026" ✓.
+- Geen `staatscourant_url`: cap 0.94.
+- Geen verzwarende factoren.
+- `confidence` = 0.92.
+
+**Gerdine Keijzer-Baldé** (legt pSG-functie neer, 13 april 2026):
+
+- Familienaam ✓, functie "pSG (voorlopig)" ✓, organisatie "EZK" ✓, datum "13 april 2026" ✓.
+- Geen `staatscourant_url`: cap 0.94.
+- "voorlopig" in de zin: -0.05.
+- `confidence` = 0.89.
+
+Beide vallen boven de 0.85-drempel en zijn auto-mergeable in `apply-staging`.
 
 ## Harde regels
 
 1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van de gedownloade artikel-HTML. Validator faalt anders.
-2. **Two-source rule.** Een proposal uit alleen ABD-nieuws krijgt confidence-cap 0.85 en merget niet automatisch. Met expliciete KB-link of staatscourant-URL in de tekst mag de cap naar 0.95.
+2. **Two-source rule.** Een proposal uit alleen ABD-nieuws krijgt confidence-cap 0.94 (was 0.85 in v0.3.0). Met expliciete KB-link of staatscourant-URL in de tekst mag de cap naar 0.97. Boven 0.97 vereist een derde onafhankelijke bron.
 3. **Staging-only.** Schrijf naar `data/_staging/abd-nieuws-YYYY-MM-DD.json`. Nooit direct naar `data/personen/`, `data/organisaties/` of `data/posten/`.
 4. **Geen privé-data.** Alleen functie en naam en datum. Geen geboortedatum (alleen jaartal als die elders al vaststaat), geen contactgegevens, nooit BSN.
-5. **Confidence per proposal** als float in [0, 1] met `confidence_reasoning` als string.
+5. **Confidence per proposal** als float in [0, 1] met `confidence_reasoning` als string. Volg de regels in "Confidence-bepaling".
+6. **Niveau-discipline.** `organization_chain` bevat alleen niveaus die letterlijk genoemd worden. Geen geraden DG-tussenlaag als het bericht die niet noemt. `organization_id` is het diepste niveau, niet het breedste.
 
 ## Voorbeeld
 
-Zie `example_input.md` voor de relevante body-tekst van een ABD-nieuwsbericht, en `example_output.json` voor het bijbehorende proposal. De `evidence_snippet` in het output-bestand is letterlijk te vinden in de input.
+Zie `example_input.md` voor de relevante body-tekst van een ABD-nieuwsbericht (afdelingsbenoeming met vier niveaus), en `example_output.json` voor het bijbehorende proposal met `organization_chain`. De `evidence_snippet` in het output-bestand is letterlijk te vinden in de input.
 
 ## Aanroep vanuit Claude Code CLI
 
 ```bash
-claude "Gebruik parse-abd-nieuws op _cache/abd-nieuws/esther-pijs-directeur-generaal-migratie-bij-jenv-2026-05-08.html en schrijf naar data/_staging/abd-nieuws-2026-05-09.json"
+claude "Gebruik parse-abd-nieuws op _cache/abd-nieuws/marleen-heijster-afdelingshoofd-beleid-wonen-2026-05-09.html en schrijf naar data/_staging/abd-nieuws-2026-05-09.json"
 ```
 
 ## Status
 
-Actief, versie 0.2.0. Vierde skill in Polder, na review-pr-diff, parse-staatscourant en parse-organogram.
+Actief, versie 0.4.0. Vierde skill in Polder, na review-pr-diff, parse-staatscourant en parse-organogram. Nieuw in 0.4.0: confidence-vloer 0.85 bij vier expliciete kernfeiten, cap 0.94 zonder staatscourant_url, en expliciete verzwarende factor voor "voorlopig"-formuleringen. Nieuw in 0.3.0: `organization_chain` met expliciete niveau-keten en `organization_id` op diepste genoemde niveau.

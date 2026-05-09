@@ -6,8 +6,12 @@ dunne `subprocess`-call; geen Python-port van de skill-logica.
 
 from __future__ import annotations
 
+import json
+import re
 import shutil
 import subprocess
+import unicodedata
+from datetime import date
 from pathlib import Path
 from typing import Annotated
 
@@ -125,6 +129,119 @@ def entity_resolution(
     bash = _ensure_bash()
     script = _scripts_dir() / "run_skill.sh"
     cmd = [bash, str(script), "entity-resolution", str(input_path)]
+    if output is not None:
+        cmd.append(str(output))
+    _run(cmd)
+
+
+def _name_filename_slug(name: str) -> str:
+    """Bouw een veilig bestandsnaam-fragment uit een persoonsnaam."""
+    decomposed = unicodedata.normalize("NFKD", name)
+    ascii_name = decomposed.encode("ascii", "ignore").decode("ascii").lower()
+    cleaned = re.sub(r"[^a-z0-9]+", "-", ascii_name).strip("-")
+    return cleaned or "onbekend"
+
+
+def _split_name(name: str) -> tuple[str, str | None, str | None]:
+    """Splits 'Mark Rutte' naar (family, given, initials).
+
+    Heuristiek: laatste woord = family, eerste = given. Een token van max 4
+    hoofdletters met punten wordt als initialen herkend.
+    """
+    tokens = [t for t in name.strip().split() if t]
+    if not tokens:
+        raise typer.BadParameter("Lege naam-string.")
+    if len(tokens) == 1:
+        return tokens[0], None, None
+    family = tokens[-1]
+    rest = tokens[:-1]
+    given: str | None = None
+    initials: str | None = None
+    for tok in rest:
+        compact = re.sub(r"[^A-Za-z]", "", tok)
+        if compact and compact == compact.upper() and len(compact) <= 4:
+            initials = "".join(f"{ch.upper()}." for ch in compact)
+        elif given is None:
+            given = tok
+    return family, given, initials
+
+
+@app.command("lookup-person")
+def lookup_person(
+    name: Annotated[str, typer.Argument(help='Volledige naam, bv "Suzie Kewal".')],
+    organization: Annotated[
+        str | None,
+        typer.Option("--organization", "-o", help="Optionele organisatie-context."),
+    ] = None,
+    out: Annotated[
+        Path | None,
+        typer.Option(
+            "--out", help="Output JSON-pad (default: data/_staging/lookup-<naam>.json)."
+        ),
+    ] = None,
+    endpoint: Annotated[
+        str,
+        typer.Option(
+            "--endpoint",
+            help="SPARQL-endpoint: 'qlever' (default) of 'wdqs'.",
+        ),
+    ] = "qlever",
+    cache: Annotated[
+        Path,
+        typer.Option(help="Cache-directory voor SPARQL-responses."),
+    ] = Path("_cache/wikidata-personen"),
+) -> None:
+    """Zoek persoon in Wikidata, retourneer kandidaten plus geboortejaar."""
+    from polder.fetchers.wikidata_sparql import lookup_person_by_name
+
+    family, given, initials = _split_name(name)
+    candidates = lookup_person_by_name(
+        family,
+        initials=initials,
+        given=given,
+        endpoint=endpoint,
+        cache_dir=cache,
+    )
+
+    payload = {
+        "input": {
+            "name": {"raw": name, "family": family, "given": given, "initials": initials},
+            "organization": organization,
+        },
+        "candidates": candidates,
+        "retrieved": date.today().isoformat(),
+    }
+
+    if out is None:
+        out = (
+            _repo_root()
+            / "data"
+            / "_staging"
+            / f"lookup-{_name_filename_slug(name)}.json"
+        )
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    typer.echo(f"Wrote {len(candidates)} candidates to {out}")
+
+
+@app.command("resolve-staging")
+def resolve_staging(
+    input_path: Annotated[Path, typer.Argument(help="Pad naar staging-file in data/_staging/.")],
+    output: Annotated[
+        Path | None,
+        typer.Option(
+            "--out",
+            "-o",
+            help="Output-pad (default: <input-stem>.resolved.json naast de input).",
+        ),
+    ] = None,
+) -> None:
+    """Match staging-proposals aan bestaande records in `data/`."""
+    bash = _ensure_bash()
+    script = _scripts_dir() / "resolve_staging_local.sh"
+    cmd = [bash, str(script), str(input_path)]
     if output is not None:
         cmd.append(str(output))
     _run(cmd)

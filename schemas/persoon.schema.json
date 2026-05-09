@@ -8,7 +8,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^person:[a-z0-9-]+$"
+      "description": "Slug eindigt op een 4-cijferig geboortejaar, een numeriek extern ID (>=7 cijfers) of een 8-hex UUID-fallback-suffix.",
+      "pattern": "^person:([a-z][a-z0-9-]*-)?([0-9]{4}|[0-9]{7,}|[0-9a-f]{8})$"
     },
     "identifiers": {
       "type": "object",

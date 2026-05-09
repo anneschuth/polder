@@ -1,0 +1,15 @@
+{
+  "input": {
+    "name": {
+      "raw": "Suzie Kewal",
+      "family": "Kewal",
+      "given": "Suzie",
+      "initials": "S."
+    },
+    "organization": "BZK directie Digitale Samenleving"
+  },
+  "candidates": [],
+  "recommended_qid": null,
+  "retrieved": "2026-05-09",
+  "note": "Suzie Kewal staat (nog) niet in Wikidata. Caller valt terug op slugify_person(family='Kewal', initials='S.', birth_year=None, fallback_uuid=<UUIDv7>) waardoor de slug person:kewal-s-<8hex> wordt."
+}

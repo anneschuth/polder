@@ -1,18 +1,63 @@
 [
   {
-    "person_name": "Esther Pijs",
+    "person_name": "Marleen Heijster",
     "existing_person_id": null,
-    "organization_id": "org:min-jenv",
-    "post_id": "post:dg-migratie-min-jenv",
-    "role": "directeur-generaal Migratie bij het ministerie van Justitie en Veiligheid",
-    "start_date": "2026-06-15",
+    "organization_id": "org:onderdeel-beleid-wonen-min-vro",
+    "organization_chain": [
+      {
+        "level": "ministerie",
+        "name": "Ministerie van Volkshuisvesting en Ruimtelijke Ordening",
+        "slug_proposal": "org:min-vro"
+      },
+      {
+        "level": "directoraat-generaal",
+        "name": "Directoraat-generaal Volkshuisvesting en Bouwen",
+        "slug_proposal": "org:onderdeel-directoraat-generaal-volkshuisvesting-en-bouwen"
+      },
+      {
+        "level": "directie",
+        "name": "Directie Wonen",
+        "slug_proposal": "org:onderdeel-directie-wonen"
+      },
+      {
+        "level": "afdeling",
+        "name": "Afdeling Beleid Wonen",
+        "slug_proposal": "org:onderdeel-beleid-wonen-min-vro"
+      }
+    ],
+    "post_id": "post:afdelingshoofd-beleid-wonen-min-vro",
+    "role": "afdelingshoofd Beleid Wonen, Directie Wonen, directoraat-generaal Volkshuisvesting en Bouwen, ministerie van Volkshuisvesting en Ruimtelijke Ordening",
+    "start_date": "2026-07-01",
     "end_date": null,
-    "decision_reference": "ABD-nieuwsbericht 2026-05-08",
+    "decision_reference": "ABD-nieuwsbericht 2026-05-09",
     "staatscourant_url": null,
-    "abd_nieuws_url": "https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/esther-pijs-directeur-generaal-migratie-bij-jenv",
+    "abd_nieuws_url": "https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/09/marleen-heijster-afdelingshoofd-beleid-wonen-bij-vro",
     "event_type": "benoeming",
-    "confidence": 0.82,
-    "confidence_reasoning": "Volledige naam en expliciete functie en expliciete ingangsdatum staan in het bericht. Geen KB-nummer of staatscourant-link in de tekst, dus confidence-cap 0.85 conform two-source rule. Post-slug `post:dg-migratie-min-jenv` is een voorstel; `data/posten/` bevat nog geen exacte match, dus extra review nodig.",
-    "evidence_snippet": "Esther Pijs wordt directeur-generaal Migratie bij het ministerie van Justitie en Veiligheid. De ministerraad heeft ingestemd met het voorstel hiervoor van minister Heerma van Binnenlandse Zaken en Koninkrijksrelaties. De benoeming gaat in op 15 juni 2026."
+    "confidence": 0.92,
+    "confidence_reasoning": "Vier kernfeiten expliciet: familienaam 'Heijster', functie 'afdelingshoofd Beleid Wonen', organisatie 'ministerie van Volkshuisvesting en Ruimtelijke Ordening' (plus DG, directie, afdeling) en datum '1 juli 2026'. Floor 0.85 actief. Geen staatscourant_url, dus cap 0.94. Geen verzwarende factoren ('voorlopig', 'tijdelijk' niet aanwezig). Resulteert in 0.92. De afdelings-slug `org:onderdeel-beleid-wonen-min-vro` bestaat nog niet in `data/organisaties/organisatieonderdelen/` en de post-slug `post:afdelingshoofd-beleid-wonen-min-vro` evenmin in `data/posten/`; resolve-staging-proposals nodig vóór merge, maar dat brengt confidence niet onder de floor 0.85.",
+    "evidence_snippet": "Marleen Heijster wordt afdelingshoofd Beleid Wonen, een afdeling van de Directie Wonen, onderdeel van het directoraat-generaal Volkshuisvesting en Bouwen bij het ministerie van Volkshuisvesting en Ruimtelijke Ordening. De ministerraad heeft ingestemd met het voorstel hiervoor van minister Heerma van Binnenlandse Zaken en Koninkrijksrelaties. De benoeming gaat in op 1 juli 2026."
+  },
+  {
+    "person_name": "Aart van der Vlist",
+    "existing_person_id": null,
+    "organization_id": "org:min-ezk",
+    "organization_chain": [
+      {
+        "level": "ministerie",
+        "name": "Ministerie van Economische Zaken en Klimaat",
+        "slug_proposal": "org:min-ezk"
+      }
+    ],
+    "post_id": "post:waarnemend-psg-min-ezk",
+    "role": "waarnemend plaatsvervangend secretaris-generaal (pSG), ministerie van Economische Zaken en Klimaat (EZK)",
+    "start_date": "2026-04-20",
+    "end_date": null,
+    "decision_reference": "ABD-nieuwsbericht 2026-04-15",
+    "staatscourant_url": null,
+    "abd_nieuws_url": "https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/04/15/aart-van-der-vlist-waarnemend-plaatsvervangend-secretaris-generaal-bij-ezk",
+    "event_type": "benoeming",
+    "confidence": 0.92,
+    "confidence_reasoning": "Vier kernfeiten expliciet: familienaam 'Van der Vlist', functie 'waarnemend plaatsvervangend secretaris-generaal (pSG)', organisatie 'ministerie van Economische Zaken en Klimaat (EZK)' en datum '20 april 2026'. Floor 0.85 actief. Geen staatscourant_url, dus cap 0.94. Geen verzwarende factoren. Post 'post:waarnemend-psg-min-ezk' bestaat niet in data/posten/ en is een nieuw slug-voorstel; dit brengt confidence niet onder de floor.",
+    "evidence_snippet": "Aart van der Vlist wordt met ingang van 20 april 2026 waarnemend plaatsvervangend secretaris-generaal (pSG) bij het ministerie van Economische Zaken en Klimaat (EZK)."
   }
 ]

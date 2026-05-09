@@ -22,11 +22,13 @@ from typing import Annotated
 import typer
 
 from polder.cli.commands import (
+    apply_staging_cmd,
     build_cmd,
     daily_cmd,
     diff_cmd,
     export_cmd,
     fetch_cmd,
+    ingest_cmd,
     list_cmd,
     serve_cmd,
     show_cmd,
@@ -92,6 +94,8 @@ app.command("diff")(diff_cmd.diff)
 app.command("build")(build_cmd.build)
 app.command("serve")(serve_cmd.serve)
 app.command("daily-update")(daily_cmd.daily_update)
+app.command("apply-staging")(apply_staging_cmd.apply_staging)
+app.command("ingest")(ingest_cmd.ingest)
 
 
 # ---------------------------------------------------------------------------

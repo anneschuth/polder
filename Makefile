@@ -1,7 +1,7 @@
 .PHONY: help sync validate fetch fetch-roo fetch-tk fetch-ek fetch-logius \
 	fetch-wikidata fetch-ar-rwt fetch-koop fetch-ori fetch-tooi fetch-kiesraad \
 	fetch-abd diff build serve test format lint daily-update review-diff \
-	parse-stcrt parse-organogram
+	parse-stcrt parse-organogram ingest ingest-commit
 
 # Het Makefile is nu een dunne wrapper rond `uv run polder ...`. Alle echte
 # logica zit in de `polder` CLI; zie `polder --help` of `docs/cli.md`.
@@ -74,6 +74,12 @@ parse-stcrt:
 parse-organogram:
 	@if [ -z "$(PDF)" ] || [ -z "$(MIN)" ]; then echo "usage: make parse-organogram PDF=path MIN=min-bzk"; exit 2; fi
 	uv run polder skill parse-organogram $(PDF) $(MIN)
+
+ingest:
+	uv run polder ingest
+
+ingest-commit:
+	uv run polder ingest --commit --push
 
 test:
 	uv run pytest

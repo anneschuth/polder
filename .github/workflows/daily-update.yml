@@ -202,3 +202,59 @@ jobs:
             Post de gegenereerde markdown als comment op PR #${{ needs.pr.outputs.pr_number }}
             in repo ${{ github.repository }}. Niet de PR-titel of -labels wijzigen.
           claude_args: "--model claude-haiku-4-5 --max-turns 8"
+
+  ingest:
+    name: ingest
+    needs: pr
+    # Alleen op cron en handmatige dispatch, niet op pull_request (te kostelijk).
+    # Skipt zichzelf als ANTHROPIC_API_KEY niet is gezet.
+    if: |
+      ${{
+        success()
+        && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+        && secrets.ANTHROPIC_API_KEY != ''
+        && needs.pr.outputs.pr_branch != ''
+      }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - name: Checkout daily-update branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.pr.outputs.pr_branch }}
+          fetch-depth: 0
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Install Claude Code CLI
+        run: |
+          curl -fsSL https://claude.ai/install.sh | sh
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run polder ingest
+        # Limit zorgt dat de eerste runs niet de hele 2946-file backlog
+        # in één keer verwerken. Pas deze waarde naar boven aan zodra de
+        # pipeline stabiel is.
+        run: |
+          uv run polder ingest \
+            --source all \
+            --threshold 0.85 \
+            --limit 50 \
+            --commit \
+            --push \
+            --branch "${{ needs.pr.outputs.pr_branch }}"

@@ -36,7 +36,7 @@ import unicodedata
 from collections.abc import Iterable
 from datetime import date
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 import httpx
 import yaml
@@ -46,20 +46,23 @@ logger = logging.getLogger("polder.fetchers.wikidata_sparql")
 __all__ = [
     "ABD_TMG_QUERY",
     "BEWINDSPERSOON_QUERIES",
-    "MIN_REQUEST_INTERVAL",
     "MINISTRY_QID_TO_SLUG",
+    "MIN_REQUEST_INTERVAL",
     "ORG_QUERIES",
     "PERSON_QUERY",
+    "QLEVER_ENDPOINT",
     "SOURCE_ID",
     "SPARQL_ENDPOINT",
     "USER_AGENT",
-    "build_bewindspersoon_records",
+    "Endpoint",
     "build_abd_tmg_records",
+    "build_bewindspersoon_records",
     "build_org_index",
     "build_person_index",
     "enrich_abd_tmg",
     "enrich_bewindspersonen",
     "extract_qid",
+    "lookup_person_by_name",
     "main",
     "match_organisations",
     "match_personen",
@@ -71,10 +74,26 @@ __all__ = [
     "parse_person_bindings",
     "person_id_from_label",
     "query_sparql",
+    "resolve_endpoint",
 ]
 
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 QLEVER_ENDPOINT = "https://qlever.cs.uni-freiburg.de/api/wikidata"
+
+# Korte alias voor de twee endpoints die we ondersteunen. CLI/skill-laag gebruikt
+# de alias; lagere helpers verwachten een URL. ``resolve_endpoint`` vertaalt.
+Endpoint = Literal["wdqs", "qlever"]
+_ENDPOINT_URLS: dict[str, str] = {
+    "wdqs": SPARQL_ENDPOINT,
+    "qlever": QLEVER_ENDPOINT,
+}
+
+
+def resolve_endpoint(endpoint: str) -> str:
+    """Vertaal een endpoint-alias (`wdqs`/`qlever`) of volledige URL naar een URL."""
+    if endpoint in _ENDPOINT_URLS:
+        return _ENDPOINT_URLS[endpoint]
+    return endpoint
 USER_AGENT = (
     "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 )
@@ -680,6 +699,103 @@ def parse_person_bindings(bindings: Iterable[dict[str, Any]]) -> list[dict[str, 
                 "birthyear": birthyear,
                 "initials": _value(b, "initials"),
                 "family": _value(b, "familyLabel") or _value(b, "family"),
+            }
+        )
+    return rows
+
+
+def _escape_sparql_literal(value: str) -> str:
+    """Escape een string voor invoeging als SPARQL-literal (tussen `"..."`)."""
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def _build_lookup_person_query(
+    family: str,
+    given: str | None,
+    initials: str | None,
+) -> str:
+    """Bouw een QLever-compatibele SPARQL-query voor name-based persoon-lookup.
+
+    Strategie: filter op P31 wd:Q5 (mens) en op rdfs:label dat de family-naam
+    bevat. Als ``given`` of ``initials`` zijn meegegeven, voeg een extra
+    CONTAINS-filter toe op het label. Levert max 25 kandidaten.
+    """
+    family_lit = _escape_sparql_literal(family.strip())
+    label_filters = [
+        f'CONTAINS(LCASE(?label), LCASE("{family_lit}"))',
+    ]
+    if given:
+        label_filters.append(
+            f'CONTAINS(LCASE(?label), LCASE("{_escape_sparql_literal(given.strip())}"))'
+        )
+    elif initials:
+        first_letter = initials.strip()[0:1]
+        if first_letter and first_letter.isalpha():
+            label_filters.append(
+                f'CONTAINS(LCASE(?label), LCASE("{_escape_sparql_literal(first_letter)}"))'
+            )
+    label_filter_clause = " && ".join(label_filters)
+    return _QLEVER_PREFIXES + f"""PREFIX schema: <http://schema.org/>
+SELECT ?person ?label ?birthyear ?description WHERE {{
+  ?person wdt:P31 wd:Q5 .
+  ?person rdfs:label ?label .
+  FILTER(LANG(?label) = "nl" || LANG(?label) = "en")
+  FILTER({label_filter_clause})
+  OPTIONAL {{ ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }}
+  OPTIONAL {{ ?person schema:description ?description .
+             FILTER(LANG(?description) = "nl") }}
+}}
+LIMIT 25
+"""
+
+
+def lookup_person_by_name(
+    family: str,
+    initials: str | None = None,
+    given: str | None = None,
+    *,
+    endpoint: Endpoint | str = "qlever",
+    cache_dir: Path | None = None,
+) -> list[dict[str, Any]]:
+    """Zoek personen in Wikidata op naam.
+
+    Returns een lijst kandidaten van de vorm
+    ``{qid, label, birth_year, description}``. Lege lijst als geen match.
+
+    Strategie:
+
+    1. SPARQL met FILTER op rdfs:label van de family-naam, beperkt via
+       ``P31 wd:Q5`` (mens). ``given`` of het eerste initiaal versmalt verder.
+    2. Geen birthyear-property is vereist; de waarde mag ``None`` blijven.
+
+    Caller-side scoring (zoals naam-overeenkomst en context-fit) gebeurt buiten
+    deze helper. Hier doen we alleen de I/O en parsing.
+    """
+    if not family or not family.strip():
+        raise ValueError("family is verplicht voor lookup_person_by_name")
+    endpoint_url = resolve_endpoint(endpoint)
+    query = _build_lookup_person_query(family, given, initials)
+    bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint_url)
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for b in bindings:
+        qid = extract_qid(_value(b, "person"))
+        if not qid or qid in seen:
+            continue
+        seen.add(qid)
+        birthyear_raw = _value(b, "birthyear")
+        birth_year: int | None = None
+        if birthyear_raw is not None:
+            try:
+                birth_year = int(birthyear_raw)
+            except ValueError:
+                birth_year = None
+        rows.append(
+            {
+                "qid": qid,
+                "label": _value(b, "label"),
+                "birth_year": birth_year,
+                "description": _value(b, "description"),
             }
         )
     return rows
@@ -2193,12 +2309,6 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging.")
     return parser
-
-
-_ENDPOINT_URLS: dict[str, str] = {
-    "wdqs": SPARQL_ENDPOINT,
-    "qlever": QLEVER_ENDPOINT,
-}
 
 
 def main(argv: list[str] | None = None) -> int:
