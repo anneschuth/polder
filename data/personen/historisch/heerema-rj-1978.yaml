@@ -1,0 +1,40 @@
+id: person:heerema-rj-1978
+identifiers:
+  tk_persoon_id: 522d59a0-10ba-488f-a27a-a1dda7581900
+name:
+  full: Rudmer Heerema
+  family: Heerema
+  given: Rudmer
+  initials: R.J.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 1a51b873-598c-4587-8fd5-08764918ee5e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-10-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f1ce0f6e-582b-4742-8b3f-a7763dff98b6)
+    retrieved: '2026-05-09'
+- id: a470d865-9c43-4322-becc-7c9b22a59752
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2013-09-03'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(48c5130b-51c2-41bf-9560-ef5f0ddfacab)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(522d59a0-10ba-488f-a27a-a1dda7581900)
+  retrieved: '2026-05-09'

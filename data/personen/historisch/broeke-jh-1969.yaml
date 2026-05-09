@@ -1,0 +1,30 @@
+id: person:broeke-jh-1969
+identifiers:
+  tk_persoon_id: 3dbbf804-bad5-44f2-b8c7-091baf63758d
+name:
+  full: Han ten Broeke
+  family: ten Broeke
+  given: Han
+  initials: J.H.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 454572ee-186c-4b02-84a4-f2599b6431f7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-11-30'
+  end_date: '2018-09-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(618a0733-d16e-412d-a959-1049b0ac0beb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3dbbf804-bad5-44f2-b8c7-091baf63758d)
+  retrieved: '2026-05-09'

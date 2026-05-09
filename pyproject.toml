@@ -29,6 +29,8 @@ dependencies = [
     "tkapi>=0.9",
     "frictionless>=5.16",
     "datasette>=0.64",
+    "typer>=0.12",
+    "rich>=13.7",
 ]
 
 [project.optional-dependencies]
@@ -38,7 +40,9 @@ dev = [
 ]
 
 [project.scripts]
+polder = "polder.cli.main:app"
 polder-fetch-roo = "polder.fetchers.roo:main"
+polder-fetch-tk-odata = "polder.fetchers.tk_odata:main"
 polder-validate = "polder.validate:main"
 polder-diff = "polder.diff:main"
 polder-build = "polder.build:main"

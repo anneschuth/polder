@@ -1,0 +1,40 @@
+id: person:taverne-j-1971
+identifiers:
+  tk_persoon_id: d3023879-e3c7-411b-bb8a-1a0be0ca6035
+name:
+  full: Joost Taverne
+  family: Taverne
+  given: Joost
+  initials: J.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: 1951dec2-938e-4e05-bc5c-7e41d5d0451d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-11-08'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2b5b27ad-a354-4763-99d1-f41ec92bb723)
+    retrieved: '2026-05-09'
+- id: 757a5bb7-6721-4d6a-8949-49717efeda1b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-10-26'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(031f40dc-4e35-4950-90c0-1fcc77115602)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d3023879-e3c7-411b-bb8a-1a0be0ca6035)
+  retrieved: '2026-05-09'

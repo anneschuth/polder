@@ -1,0 +1,30 @@
+id: person:tseggai-m-1995
+identifiers:
+  tk_persoon_id: b8e78559-8f69-4ec6-89ce-17645a5eecdb
+name:
+  full: Mikal Tseggai
+  family: Tseggai
+  given: Mikal
+  initials: M.
+  honorifics_pre:
+  - MA
+birth:
+  year: 1995
+gender: f
+mandaten:
+- id: 4005ffbb-139e-4be7-b233-e3a6e370f4c3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bada9e2c-dde9-4b3b-8622-7e4016364c0c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8e78559-8f69-4ec6-89ce-17645a5eecdb)
+  retrieved: '2026-05-09'

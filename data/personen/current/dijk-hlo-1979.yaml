@@ -1,0 +1,28 @@
+id: person:dijk-hlo-1979
+identifiers:
+  tk_persoon_id: 0079c245-1bd8-45fb-8cb8-afa4b7bc5d36
+name:
+  full: Heera Dijk
+  family: Dijk
+  given: Heera
+  initials: H.L.O.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: a4c0cfd9-07f5-4115-ada2-efd79eebe6a4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ed56bc16-ea24-492c-99c1-c279bfed6da3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0079c245-1bd8-45fb-8cb8-afa4b7bc5d36)
+  retrieved: '2026-05-09'

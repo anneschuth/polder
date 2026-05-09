@@ -1,0 +1,28 @@
+id: person:hammelburg-ar-1982
+identifiers:
+  tk_persoon_id: 03d66e4a-8698-44fb-9c29-625630da268c
+name:
+  full: Alexander Hammelburg
+  family: Hammelburg
+  given: Alexander
+  initials: A.R.
+birth:
+  year: 1982
+gender: m
+mandaten:
+- id: 48eea5d4-5887-4757-bfda-18a80b079cc0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(85e54de0-b324-466d-95f0-b37d48bfe5dd)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(03d66e4a-8698-44fb-9c29-625630da268c)
+  retrieved: '2026-05-09'

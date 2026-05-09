@@ -1,0 +1,28 @@
+id: person:vlottes-e-1989
+identifiers:
+  tk_persoon_id: 71653caa-dc3a-4441-80cb-34f6a737ee1e
+name:
+  full: Elmar Vlottes
+  family: Vlottes
+  given: Elmar
+  initials: E.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: 2a69409a-702b-4353-9015-145d68b4f06e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4dee4dc2-91f5-4d18-9383-4b428816fc9c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71653caa-dc3a-4441-80cb-34f6a737ee1e)
+  retrieved: '2026-05-09'

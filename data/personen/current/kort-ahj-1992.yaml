@@ -1,0 +1,28 @@
+id: person:kort-ahj-1992
+identifiers:
+  tk_persoon_id: 8767e9de-869e-4e8a-940f-1a63d15eab3c
+name:
+  full: Daan de Kort
+  family: de Kort
+  given: Daan
+  initials: A.H.J.
+birth:
+  year: 1992
+gender: m
+mandaten:
+- id: 74707c9f-5ce7-4526-a0cf-534f3fbd3c51
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6a7fa191-fe23-427f-bb56-65fbfc7d844a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8767e9de-869e-4e8a-940f-1a63d15eab3c)
+  retrieved: '2026-05-09'

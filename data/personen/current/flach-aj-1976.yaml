@@ -1,0 +1,28 @@
+id: person:flach-aj-1976
+identifiers:
+  tk_persoon_id: 2bea63db-715f-401f-b710-e91c7650df0c
+name:
+  full: André Flach
+  family: Flach
+  given: André
+  initials: A.J.
+birth:
+  year: 1976
+gender: m
+mandaten:
+- id: a64c391e-48cf-4b5b-ad3b-8f418f5d563d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SGP
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f030dab8-c044-4830-a62a-042e61a518dd)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2bea63db-715f-401f-b710-e91c7650df0c)
+  retrieved: '2026-05-09'

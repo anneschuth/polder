@@ -1,0 +1,28 @@
+id: person:six-dijkstra-jps-1994
+identifiers:
+  tk_persoon_id: fd6c6b85-606d-46c2-a803-72f793816c73
+name:
+  full: Jesse Six Dijkstra
+  family: Six Dijkstra
+  given: Jesse
+  initials: J.P.S.
+birth:
+  year: 1994
+gender: m
+mandaten:
+- id: 124b67a4-e2a4-4408-a431-2d85413bbd5d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bacc967a-5af8-4a14-8e70-03dc0eeec66d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fd6c6b85-606d-46c2-a803-72f793816c73)
+  retrieved: '2026-05-09'

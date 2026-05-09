@@ -1,0 +1,28 @@
+id: person:holman-h-1957
+identifiers:
+  tk_persoon_id: 81774f5d-f9f4-4991-9d42-11c6f49bd575
+name:
+  full: Harm Holman
+  family: Holman
+  given: Harm
+  initials: H.
+birth:
+  year: 1957
+gender: m
+mandaten:
+- id: 94fd53be-3e5a-479f-9b6f-df7b33d3c4f2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(44b2beda-354b-4a0b-a1c8-e5580b0e95e9)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(81774f5d-f9f4-4991-9d42-11c6f49bd575)
+  retrieved: '2026-05-09'

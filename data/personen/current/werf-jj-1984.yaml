@@ -1,0 +1,52 @@
+id: person:werf-jj-1984
+identifiers:
+  tk_persoon_id: 6a54c095-9872-4322-81be-114b74233d40
+name:
+  full: Hanneke van der Werf
+  family: van der Werf
+  given: Hanneke
+  initials: J.J.
+birth:
+  year: 1984
+gender: f
+mandaten:
+- id: 4dd984ff-6ede-4496-93d8-8e0442a285ff
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2024-03-29'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(63c65435-625f-410e-96e1-6eb72a9776ee)
+    retrieved: '2026-05-09'
+- id: e57d4893-c0d6-4c9b-a75f-ef28e39313f1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-12-06'
+  end_date: '2023-12-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ce8d169b-490d-4948-ac51-698525cdb794)
+    retrieved: '2026-05-09'
+- id: 61bc2e83-8459-49e0-b330-111306d69dab
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-10-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cb54196e-def7-4ade-900e-786945212413)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6a54c095-9872-4322-81be-114b74233d40)
+  retrieved: '2026-05-09'

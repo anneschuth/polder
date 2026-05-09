@@ -1,0 +1,28 @@
+id: person:karremans-vpg-1986
+identifiers:
+  tk_persoon_id: 27b46aa9-1f94-490e-9cc1-ea7f49f84639
+name:
+  full: Vincent Karremans
+  family: Karremans
+  given: Vincent
+  initials: V.P.G.
+birth:
+  year: 1986
+gender: m
+mandaten:
+- id: 0e085b77-38ff-4f62-8625-899810baaf23
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4401e6cd-b68e-404c-a95a-a5008c0e1635)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(27b46aa9-1f94-490e-9cc1-ea7f49f84639)
+  retrieved: '2026-05-09'

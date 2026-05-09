@@ -1,0 +1,28 @@
+id: person:aalst-rr-1983
+identifiers:
+  tk_persoon_id: a59b540b-1460-4aa0-b9ce-19356f87c77e
+name:
+  full: Roy van Aalst
+  family: van Aalst
+  given: Roy
+  initials: R.R.
+birth:
+  year: 1983
+gender: m
+mandaten:
+- id: 41aa7170-b6c5-44b3-b2a6-a6c676e8806a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5312067a-3628-49d0-9bc9-25fc9dbee852)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a59b540b-1460-4aa0-b9ce-19356f87c77e)
+  retrieved: '2026-05-09'

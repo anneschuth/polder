@@ -1,0 +1,30 @@
+id: person:erkens-spa-1990
+identifiers:
+  tk_persoon_id: 9c8bc5bc-8d13-4c11-be37-57a43a1d734b
+name:
+  full: Silvio Erkens
+  family: Erkens
+  given: Silvio
+  initials: S.P.A.
+  honorifics_pre:
+  - Bsc. Msc. MBA
+birth:
+  year: 1990
+gender: m
+mandaten:
+- id: f9ff3ff4-fd8a-46c4-8150-9c433af04ccb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e196a61a-2072-4159-93e4-afc0e6838969)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9c8bc5bc-8d13-4c11-be37-57a43a1d734b)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:waveren-a-1980
+identifiers:
+  tk_persoon_id: 8affdbcb-01ef-4bf3-9744-34dd42fa2331
+name:
+  full: Sander van Waveren
+  family: van Waveren
+  given: Sander
+  initials: A.
+birth:
+  year: 1980
+gender: m
+mandaten:
+- id: a95a0fb3-ecba-4e07-a4fd-18f72cfb78ea
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2024-12-03'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f6d8dba3-2a63-4a18-b39e-bbc5a7c7da12)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8affdbcb-01ef-4bf3-9744-34dd42fa2331)
+  retrieved: '2026-05-09'

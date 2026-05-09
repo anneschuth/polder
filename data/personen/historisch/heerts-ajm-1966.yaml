@@ -1,0 +1,28 @@
+id: person:heerts-ajm-1966
+identifiers:
+  tk_persoon_id: 82b05cd3-ac8f-47f1-8fc0-bb52e3784be4
+name:
+  full: Ton Heerts
+  family: Heerts
+  given: Ton
+  initials: A.J.M.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: cd6dc942-4a6d-42cc-b0bb-f6092a447126
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a388e68f-d848-485a-be50-4202f9dd3f4f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(82b05cd3-ac8f-47f1-8fc0-bb52e3784be4)
+  retrieved: '2026-05-09'

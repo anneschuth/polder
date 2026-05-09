@@ -1,0 +1,28 @@
+id: person:lacin-c-1986
+identifiers:
+  tk_persoon_id: dc9f60e4-e1a4-487b-a002-40b3c77ba896
+name:
+  full: Cem Laçin
+  family: Laçin
+  given: Cem
+  initials: C.
+birth:
+  year: 1986
+gender: m
+mandaten:
+- id: cf38a1a3-46cf-4483-8a60-b724ee84c2e3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4c0d6efd-abac-475d-aa75-91c5f0dcf392)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dc9f60e4-e1a4-487b-a002-40b3c77ba896)
+  retrieved: '2026-05-09'

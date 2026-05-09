@@ -1,0 +1,28 @@
+id: person:helvert-mjf-1978
+identifiers:
+  tk_persoon_id: e7f0d8e8-4c52-4d0a-8b94-28729046f45b
+name:
+  full: Martijn van Helvert
+  family: van Helvert
+  given: Martijn
+  initials: M.J.F.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 381bb576-2f03-46e0-9d91-a8992f26fefa
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2014-11-12'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1f745740-aef5-4e00-afa1-9ee20163d1b3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e7f0d8e8-4c52-4d0a-8b94-28729046f45b)
+  retrieved: '2026-05-09'

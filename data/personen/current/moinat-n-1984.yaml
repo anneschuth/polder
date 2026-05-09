@@ -1,0 +1,40 @@
+id: person:moinat-n-1984
+identifiers:
+  tk_persoon_id: 5222c31a-b0b0-496b-8f74-55988b1b8dda
+name:
+  full: Nicole Moinat
+  family: Moinat
+  given: Nicole
+  initials: N.
+birth:
+  year: 1984
+gender: f
+mandaten:
+- id: f3d51f4f-b2ba-45e3-b2cb-44dafd459784
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Markuszower
+  start_date: '2026-01-20'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7634c62d-45b4-4cc2-a40f-257910281b0a)
+    retrieved: '2026-05-09'
+- id: 9b2b6c0b-b63b-4012-9fdd-594f38434103
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: '2026-01-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(57bb4630-573c-441f-9ccc-64b598fa5011)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5222c31a-b0b0-496b-8f74-55988b1b8dda)
+  retrieved: '2026-05-09'

@@ -1,0 +1,30 @@
+id: person:wiersma-ad-1986
+identifiers:
+  tk_persoon_id: c3b1dca8-2cb4-4025-9527-36163a098c1f
+name:
+  full: Dennis Wiersma
+  family: Wiersma
+  given: Dennis
+  initials: A.D.
+  honorifics_pre:
+  - MA
+birth:
+  year: 1986
+gender: m
+mandaten:
+- id: 007c7335-c7bc-4698-bdc8-3ca82551fde7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-09-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cbbdd677-a407-4f59-a6ce-040a30cef0fb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c3b1dca8-2cb4-4025-9527-36163a098c1f)
+  retrieved: '2026-05-09'

@@ -1,0 +1,40 @@
+id: person:aartsen-aa-1989
+identifiers:
+  tk_persoon_id: 397c857a-fda0-414d-8fdc-8288cd3284aa
+name:
+  full: Thierry Aartsen
+  family: Aartsen
+  given: Thierry
+  initials: A.A.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: 91649e87-5f3d-4281-960a-ab757594f0bd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2018-09-13'
+  end_date: '2025-06-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e3e32f4b-ef10-4e92-8b5a-cde6b4667be1)
+    retrieved: '2026-05-09'
+- id: 506508b9-84bc-4b4b-b173-7989964c0fb7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1b873ed3-be96-43c7-bb3b-a404e52ce2a1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(397c857a-fda0-414d-8fdc-8288cd3284aa)
+  retrieved: '2026-05-09'

@@ -1,0 +1,40 @@
+id: person:haan-nl-1967
+identifiers:
+  tk_persoon_id: 3e48d4c9-0d66-4b50-9f9c-969b5e314a42
+name:
+  full: Liane den Haan
+  family: den Haan
+  given: Liane
+  initials: N.L.
+birth:
+  year: 1967
+gender: f
+mandaten:
+- id: 574d2b81-9b5d-48c1-9caf-d2e813dad87c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Fractie Den Haan
+  start_date: '2021-05-11'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7bdabaf5-eb8c-476f-b516-b3eedc0c0ad8)
+    retrieved: '2026-05-09'
+- id: 447fe932-88b3-4438-9451-625a172803d1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS
+  start_date: '2021-03-31'
+  end_date: '2021-05-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e6dd9266-5041-46a7-a04f-31963bdd9a7a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3e48d4c9-0d66-4b50-9f9c-969b5e314a42)
+  retrieved: '2026-05-09'

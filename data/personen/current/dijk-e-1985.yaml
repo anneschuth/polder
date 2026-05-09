@@ -1,0 +1,52 @@
+id: person:dijk-e-1985
+identifiers:
+  tk_persoon_id: 81552958-ef83-4fab-8a92-6e5b1975c9ef
+name:
+  full: Emiel van Dijk
+  family: van Dijk
+  given: Emiel
+  initials: E.
+birth:
+  year: 1985
+gender: m
+mandaten:
+- id: aad1ae53-7831-422a-a1b7-ef6fc7644c54
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f348dc9a-3569-40b9-84fa-75056c90449a)
+    retrieved: '2026-05-09'
+- id: c3aad9bb-4977-46df-b920-4d1ae766d123
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2018-12-12'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(968b6d32-a584-4460-ae51-b189d60ea814)
+    retrieved: '2026-05-09'
+- id: 939cecbc-4357-4b63-a43c-75fa023558f2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2018-04-03'
+  end_date: '2018-07-20'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b602ab70-db1b-4514-8630-5b74c5abf450)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(81552958-ef83-4fab-8a92-6e5b1975c9ef)
+  retrieved: '2026-05-09'

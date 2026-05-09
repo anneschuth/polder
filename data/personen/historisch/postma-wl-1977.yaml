@@ -1,0 +1,40 @@
+id: person:postma-wl-1977
+identifiers:
+  tk_persoon_id: face7642-1fd8-4ec1-a909-c2579b0bd8d2
+name:
+  full: Wytske Postma
+  family: Postma
+  given: Wytske
+  initials: W.L.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 40eb403c-898f-4b0e-92c0-b084e21ab48a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(32caa492-0a97-4423-9574-a39780aa4563)
+    retrieved: '2026-05-09'
+- id: e16fd41f-4dc0-4c9c-b7ea-29bfac4fa1f2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2019-06-05'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e1bcc36e-2bc0-4d52-9981-37da592d9a51)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(face7642-1fd8-4ec1-a909-c2579b0bd8d2)
+  retrieved: '2026-05-09'

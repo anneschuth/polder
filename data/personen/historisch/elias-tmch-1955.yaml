@@ -1,0 +1,28 @@
+id: person:elias-tmch-1955
+identifiers:
+  tk_persoon_id: 33647c30-4edf-4fdf-93e5-5977180982a0
+name:
+  full: Ton Elias
+  family: Elias
+  given: Ton
+  initials: T.M.C.H.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: b6a2927d-3466-4582-a90d-1f95824f8bb7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2008-12-18'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0834df5d-ae6a-4807-a009-934a3936e8b6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(33647c30-4edf-4fdf-93e5-5977180982a0)
+  retrieved: '2026-05-09'

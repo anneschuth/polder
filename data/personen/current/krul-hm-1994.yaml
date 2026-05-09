@@ -1,0 +1,28 @@
+id: person:krul-hm-1994
+identifiers:
+  tk_persoon_id: 36ed934d-56c7-4903-a0a8-a9f186d5a96f
+name:
+  full: Harmen Krul
+  family: Krul
+  given: Harmen
+  initials: H.M.
+birth:
+  year: 1994
+gender: m
+mandaten:
+- id: 728082db-f02b-4183-81c6-0a5285b2e1f0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2023-02-07'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(77a6a276-6c08-4606-a12f-5cfb2ecd6fb4)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(36ed934d-56c7-4903-a0a8-a9f186d5a96f)
+  retrieved: '2026-05-09'

@@ -1,0 +1,30 @@
+id: person:rutte-acl-1972
+identifiers:
+  tk_persoon_id: 4d13ea1d-c9b6-4313-8ba0-fd040d8a319e
+name:
+  full: Arno Rutte
+  family: Rutte
+  given: Arno
+  initials: A.C.L.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: fce5e14e-9884-4aec-8058-5a75124aa84c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2019-10-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(05f6b476-8eab-4f3a-a581-a2a095611575)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4d13ea1d-c9b6-4313-8ba0-fd040d8a319e)
+  retrieved: '2026-05-09'

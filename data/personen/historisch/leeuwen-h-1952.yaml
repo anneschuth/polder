@@ -1,0 +1,28 @@
+id: person:leeuwen-h-1952
+identifiers:
+  tk_persoon_id: 1c7a04af-61df-4f66-901f-a101743ad1b0
+name:
+  full: Hans van Leeuwen
+  family: van Leeuwen
+  given: Hans
+  initials: H.
+birth:
+  year: 1952
+gender: m
+mandaten:
+- id: 6ee63241-62ad-4ca3-a43a-e143f7facce1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(21b416e2-d4ca-4bce-b889-63b6adcb2145)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1c7a04af-61df-4f66-901f-a101743ad1b0)
+  retrieved: '2026-05-09'

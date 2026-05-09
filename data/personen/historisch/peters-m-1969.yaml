@@ -1,0 +1,42 @@
+id: person:peters-m-1969
+identifiers:
+  tk_persoon_id: 1343eaa0-a848-42c0-98d5-56b00a0817bd
+name:
+  full: Mariko Peters
+  family: Peters
+  given: Mariko
+  initials: M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1969
+gender: f
+mandaten:
+- id: 499181ac-e539-46ed-bf16-44f1eb941ddc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2011-03-11'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a60113ba-9426-4cc2-ac69-8b9cc5b030e0)
+    retrieved: '2026-05-09'
+- id: 4ea544d8-54e3-46e8-9697-e63809069649
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2008-12-22'
+  end_date: '2010-11-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fd88db94-cc4d-4c4e-beb0-d8c477a8230d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1343eaa0-a848-42c0-98d5-56b00a0817bd)
+  retrieved: '2026-05-09'

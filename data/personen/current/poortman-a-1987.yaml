@@ -1,0 +1,28 @@
+id: person:poortman-a-1987
+identifiers:
+  tk_persoon_id: 9039e7f6-d05b-40a7-b0af-9a4f98fc03ae
+name:
+  full: André Poortman
+  family: Poortman
+  given: André
+  initials: A.
+birth:
+  year: 1987
+gender: m
+mandaten:
+- id: f05e4a09-af48-4777-acc7-984b90ecbf5e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2026-02-25'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(43bcd1b6-e684-4be2-89e4-095cdd9d7797)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9039e7f6-d05b-40a7-b0af-9a4f98fc03ae)
+  retrieved: '2026-05-09'

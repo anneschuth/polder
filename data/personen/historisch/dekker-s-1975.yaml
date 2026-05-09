@@ -1,0 +1,28 @@
+id: person:dekker-s-1975
+identifiers:
+  tk_persoon_id: 6cf382f6-d1fb-4c91-8348-6ddd52d1e334
+name:
+  full: Sander Dekker
+  family: Dekker
+  given: Sander
+  initials: S.
+birth:
+  year: 1975
+gender: m
+mandaten:
+- id: a9e51c08-5fed-4696-89ed-88feaf0712ea
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2017-10-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4a3c68af-bec1-4607-93e3-cc6901155d17)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6cf382f6-d1fb-4c91-8348-6ddd52d1e334)
+  retrieved: '2026-05-09'

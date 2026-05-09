@@ -1,0 +1,28 @@
+id: person:mooiman-j-1995
+identifiers:
+  tk_persoon_id: b4bbefe3-6926-4d81-b8a4-b1bb6ae2e3c6
+name:
+  full: Jeremy Mooiman
+  family: Mooiman
+  given: Jeremy
+  initials: J.
+birth:
+  year: 1995
+gender: m
+mandaten:
+- id: 0d8e3d1f-ab7f-4a8d-8e3e-34b3678c5d9f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8e23ef16-9396-4fae-9f66-668ad98e39b5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b4bbefe3-6926-4d81-b8a4-b1bb6ae2e3c6)
+  retrieved: '2026-05-09'

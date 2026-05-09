@@ -1,0 +1,28 @@
+id: person:visser-b-1977
+identifiers:
+  tk_persoon_id: c955972d-2702-4d28-8461-262072218f3f
+name:
+  full: Barbara Visser
+  family: Visser
+  given: Barbara
+  initials: B.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 25ae2781-3488-4696-b846-5b045a1e67c6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2017-10-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(962bbd85-51dd-424d-bca4-53dead963a31)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c955972d-2702-4d28-8461-262072218f3f)
+  retrieved: '2026-05-09'

@@ -1,0 +1,30 @@
+id: person:smilde-mca-1954
+identifiers:
+  tk_persoon_id: 9c4877f9-c69b-4005-ad47-45687282431a
+name:
+  full: Margreeth Smilde
+  family: Smilde
+  given: Margreeth
+  initials: M.C.A.
+  honorifics_pre:
+  - mr. drs.
+birth:
+  year: 1954
+gender: f
+mandaten:
+- id: 4a313607-468e-417a-991a-2bc8259b96bf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2008-01-23'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(602b245f-7e3b-4cd2-9384-45e123632c55)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9c4877f9-c69b-4005-ad47-45687282431a)
+  retrieved: '2026-05-09'

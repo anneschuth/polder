@@ -1,0 +1,28 @@
+id: person:haasen-jp-1960
+identifiers:
+  tk_persoon_id: 380f0351-964c-4c17-a5d6-cabb5ff3f1d4
+name:
+  full: Peter van Haasen
+  family: van Haasen
+  given: Peter
+  initials: J.P.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: 171e013d-ee62-4c49-9c62-934e97f95730
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(410e001b-5024-40e4-af65-5a58eb7877e8)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(380f0351-964c-4c17-a5d6-cabb5ff3f1d4)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:volp-mjj-1972
+identifiers:
+  tk_persoon_id: a900b4e7-92d9-4903-ab21-3189f17fe2e0
+name:
+  full: Marith Volp
+  family: Volp
+  given: Marith
+  initials: M.J.J.
+birth:
+  year: 1972
+gender: f
+mandaten:
+- id: bce74d25-78b4-4a8d-bdfe-7883883ed5b3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2013-09-03'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cc9ee14a-3737-4dab-b459-d87b59ca1fd7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a900b4e7-92d9-4903-ab21-3189f17fe2e0)
+  retrieved: '2026-05-09'

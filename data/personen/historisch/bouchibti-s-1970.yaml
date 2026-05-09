@@ -1,0 +1,28 @@
+id: person:bouchibti-s-1970
+identifiers:
+  tk_persoon_id: a1bfba13-cc0b-4a86-93ff-ff8b8088da9d
+name:
+  full: Samira Bouchibti
+  family: Bouchibti
+  given: Samira
+  initials: S.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: c3c6d6a0-96ca-4f14-9ab2-6af217edf7fc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8d0464cd-c47e-4f1c-8f09-192b2227656b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a1bfba13-cc0b-4a86-93ff-ff8b8088da9d)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:kamminga-rj-1978
+identifiers:
+  tk_persoon_id: f23be4bd-7b2b-45dd-be84-4f76f11b624a
+name:
+  full: Roelien Kamminga
+  family: Kamminga
+  given: Roelien
+  initials: R.J.
+birth:
+  year: 1978
+gender: f
+mandaten:
+- id: 29618ee4-d047-4bfe-b306-0e68e8decae7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2025-06-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dc9996af-606a-4f99-8903-3214025b6687)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f23be4bd-7b2b-45dd-be84-4f76f11b624a)
+  retrieved: '2026-05-09'

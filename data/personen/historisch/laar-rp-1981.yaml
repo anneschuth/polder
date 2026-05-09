@@ -1,0 +1,28 @@
+id: person:laar-rp-1981
+identifiers:
+  tk_persoon_id: 0c33030f-88e2-44c8-803d-6dd7c58c1378
+name:
+  full: Roelof van Laar
+  family: van Laar
+  given: Roelof
+  initials: R.P.
+birth:
+  year: 1981
+gender: m
+mandaten:
+- id: d70605e7-08a5-479b-9a18-691b88bb11eb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2013-05-14'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dd68284e-e69f-4352-9365-6dba7f8bab22)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0c33030f-88e2-44c8-803d-6dd7c58c1378)
+  retrieved: '2026-05-09'

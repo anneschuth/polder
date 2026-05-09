@@ -1,0 +1,28 @@
+id: person:poppe-rjl-1938
+identifiers:
+  tk_persoon_id: befdbb37-57c2-4fe4-a2be-ba4eb0b0d1ab
+name:
+  full: Remi Poppe
+  family: Poppe
+  given: Remi
+  initials: R.J.L.
+birth:
+  year: 1938
+gender: m
+mandaten:
+- id: cecf5a54-d420-4dfb-b98d-bcb138bf1d54
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ea2f15db-0405-4b34-8020-fdf8c2ecb5f5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(befdbb37-57c2-4fe4-a2be-ba4eb0b0d1ab)
+  retrieved: '2026-05-09'

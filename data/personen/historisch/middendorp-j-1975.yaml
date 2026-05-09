@@ -1,0 +1,30 @@
+id: person:middendorp-j-1975
+identifiers:
+  tk_persoon_id: c0648a21-11c6-4b4f-a4be-205d7dcbb746
+name:
+  full: Jan Middendorp
+  family: Middendorp
+  given: Jan
+  initials: J.
+  honorifics_pre:
+  - drs. MSc
+birth:
+  year: 1975
+gender: m
+mandaten:
+- id: 2d607fcd-965b-4f17-90a3-6bc6ed990003
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e60f4d2f-215e-427a-9ea3-47d8a46e7859)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c0648a21-11c6-4b4f-a4be-205d7dcbb746)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:bonis-de-1959
+identifiers:
+  tk_persoon_id: 5262140f-31f6-4ae3-b4d7-8c9243c3df09
+name:
+  full: Désirée Bonis
+  family: Bonis
+  given: Désirée
+  initials: D.E.
+birth:
+  year: 1959
+gender: f
+mandaten:
+- id: 895df8b8-72df-4650-ad49-5b6e91a8753f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-09-20'
+  end_date: '2013-06-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1dc5b59d-e4a6-494a-be01-60912e63a417)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5262140f-31f6-4ae3-b4d7-8c9243c3df09)
+  retrieved: '2026-05-09'

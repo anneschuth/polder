@@ -1,0 +1,40 @@
+id: person:lammers-an-1993
+identifiers:
+  tk_persoon_id: 10c4f889-d7de-48bb-a0b7-9a7125f1fc98
+name:
+  full: Annelotte Lammers
+  family: Lammers
+  given: Annelotte
+  initials: A.N.
+birth:
+  year: 1993
+gender: f
+mandaten:
+- id: 341d992d-2f9a-4fce-887e-d3f0e0386159
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Markuszower
+  start_date: '2026-01-20'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(81ee7cdb-ab31-48aa-8fcb-8dc92f962f2d)
+    retrieved: '2026-05-09'
+- id: 85ce0790-1886-4bfb-9993-2a0296fbae0b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: '2026-01-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cf13e8e1-d520-475e-b76f-475836e942af)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(10c4f889-d7de-48bb-a0b7-9a7125f1fc98)
+  retrieved: '2026-05-09'

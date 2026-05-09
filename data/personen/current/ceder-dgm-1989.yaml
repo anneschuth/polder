@@ -1,0 +1,30 @@
+id: person:ceder-dgm-1989
+identifiers:
+  tk_persoon_id: 7cbb2d95-46b2-4fcb-b129-9505f56e7f07
+name:
+  full: Don Ceder
+  family: Ceder
+  given: Don
+  initials: D.G.M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: 6033e6c2-47ea-4a34-bfec-31a8afdf6bbf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2021-03-31'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(658ff04f-18e8-4906-8d4b-f66e437c7cbc)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7cbb2d95-46b2-4fcb-b129-9505f56e7f07)
+  retrieved: '2026-05-09'

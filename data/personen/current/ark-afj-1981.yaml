@@ -1,0 +1,28 @@
+id: person:ark-afj-1981
+identifiers:
+  tk_persoon_id: 60a80b41-2618-47c0-8212-2feb0f67c221
+name:
+  full: Elles van Ark
+  family: van Ark
+  given: Elles
+  initials: A.F.J.
+birth:
+  year: 1981
+gender: f
+mandaten:
+- id: 62d43ed0-e53a-4504-9301-3186f9800533
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b353dc1b-8078-4ec7-ab57-6b60ec323d94)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(60a80b41-2618-47c0-8212-2feb0f67c221)
+  retrieved: '2026-05-09'

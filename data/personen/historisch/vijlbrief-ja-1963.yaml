@@ -1,0 +1,40 @@
+id: person:vijlbrief-ja-1963
+identifiers:
+  tk_persoon_id: 19c8d0fb-66ca-4b45-be82-057cb36e1e61
+name:
+  full: Hans Vijlbrief
+  family: Vijlbrief
+  given: Hans
+  initials: J.A.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 69c9ab9f-d4d6-4eeb-8d1d-b04d4ac687f6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-12-06'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3a7df280-0abc-471f-8695-3418a26a9804)
+    retrieved: '2026-05-09'
+- id: 7a6a98dc-eb50-4021-bc39-dac54d2f1ed4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2022-01-09'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e935532a-cc7a-4b35-b8e2-9d05807e8a1d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(19c8d0fb-66ca-4b45-be82-057cb36e1e61)
+  retrieved: '2026-05-09'

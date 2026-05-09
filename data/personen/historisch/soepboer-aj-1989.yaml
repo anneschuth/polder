@@ -1,0 +1,28 @@
+id: person:soepboer-aj-1989
+identifiers:
+  tk_persoon_id: c8a96d5e-c255-455d-b239-0e8754f7341f
+name:
+  full: Aant Jelle Soepboer
+  family: Soepboer
+  given: Aant Jelle
+  initials: A.J.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: e626d24d-4979-4224-a573-93e6d25a31fd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-07-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(48f5eff0-eda4-4201-a93e-ea7e598323b2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c8a96d5e-c255-455d-b239-0e8754f7341f)
+  retrieved: '2026-05-09'

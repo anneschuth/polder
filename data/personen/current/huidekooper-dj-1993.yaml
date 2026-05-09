@@ -1,0 +1,28 @@
+id: person:huidekooper-dj-1993
+identifiers:
+  tk_persoon_id: 8a152678-92d8-41f4-9002-62ee62d2f7b0
+name:
+  full: Dion Huidekooper
+  family: Huidekooper
+  given: Dion
+  initials: D.J.
+birth:
+  year: 1993
+gender: m
+mandaten:
+- id: 47de11ac-2571-4733-ab7a-5b9c907aa35b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8fe7898e-5f37-4653-99ef-1e0df0eddda9)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8a152678-92d8-41f4-9002-62ee62d2f7b0)
+  retrieved: '2026-05-09'

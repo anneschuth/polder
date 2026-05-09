@@ -1,0 +1,30 @@
+id: person:zanten-cr-1978
+identifiers:
+  tk_persoon_id: c20ef62c-b1da-491f-bed8-0ffb6c2096d4
+name:
+  full: Claudia van Zanten
+  family: van Zanten
+  given: Claudia
+  initials: C.R.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1978
+gender: f
+mandaten:
+- id: 20fa7502-7cd1-42f5-8067-2cad7aa9a6dd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9c884b32-4e8a-4931-ac92-9f558782937a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c20ef62c-b1da-491f-bed8-0ffb6c2096d4)
+  retrieved: '2026-05-09'

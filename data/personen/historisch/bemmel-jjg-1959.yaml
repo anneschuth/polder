@@ -1,0 +1,40 @@
+id: person:bemmel-jjg-1959
+identifiers:
+  tk_persoon_id: eb86605b-38f2-4793-bd59-212c4ebbf4d4
+name:
+  full: Jhim van Bemmel
+  family: van Bemmel
+  given: Jhim
+  initials: J.J.G.
+birth:
+  year: 1959
+gender: m
+mandaten:
+- id: f637cf58-9884-4726-9b0e-0a8afcdb0700
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2010-06-17'
+  end_date: '2012-07-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a1173bd1-ddab-4fda-a352-07881e5b02a9)
+    retrieved: '2026-05-09'
+- id: 40710371-a48e-4444-abb4-4329f57f0f2a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Van Bemmel
+  start_date: '2012-07-06'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dd9fdfb4-d1c4-4f66-8421-7a4f90040453)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(eb86605b-38f2-4793-bd59-212c4ebbf4d4)
+  retrieved: '2026-05-09'

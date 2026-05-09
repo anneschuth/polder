@@ -1,0 +1,28 @@
+id: person:koorevaar-jc-1979
+identifiers:
+  tk_persoon_id: 48108814-4f16-4de8-85b2-e20e75294676
+name:
+  full: Jan Arie Koorevaar
+  family: Koorevaar
+  given: Jan Arie
+  initials: J.C.
+birth:
+  year: 1979
+gender: m
+mandaten:
+- id: 2463ab48-5f8d-452a-9675-291fff3c116f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ced17006-c20a-43bb-8d57-99a24fce7fab)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(48108814-4f16-4de8-85b2-e20e75294676)
+  retrieved: '2026-05-09'

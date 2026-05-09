@@ -1,0 +1,28 @@
+id: person:clemminck-drf-1986
+identifiers:
+  tk_persoon_id: cf6c0969-6741-4130-bd75-ee65ad71ad1d
+name:
+  full: Ranjith Clemminck
+  family: Clemminck
+  given: Ranjith
+  initials: D.R.F.
+birth:
+  year: 1986
+gender: m
+mandaten:
+- id: e9929db8-4eea-4c02-aecf-91f6f98d620b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor JA21
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(93850b46-aaea-4f72-b457-013d17c6d44f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cf6c0969-6741-4130-bd75-ee65ad71ad1d)
+  retrieved: '2026-05-09'

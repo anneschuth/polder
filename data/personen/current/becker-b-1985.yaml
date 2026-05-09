@@ -1,0 +1,54 @@
+id: person:becker-b-1985
+identifiers:
+  tk_persoon_id: a962ffcb-a300-45e1-8850-70c7173c233e
+name:
+  full: Bente Becker
+  family: Becker
+  given: Bente
+  initials: B.
+  honorifics_pre:
+  - MA
+birth:
+  year: 1985
+gender: f
+mandaten:
+- id: ebe18f23-870c-4d46-a0d7-ccdc68502225
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2019-06-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1a187d45-0100-4fec-a4c2-31ff89000163)
+    retrieved: '2026-05-09'
+- id: 646b28c5-59e8-431e-adad-f5fb0ead6ec9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2019-10-13'
+  end_date: '2022-08-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5055b676-daa9-434d-8103-5603d4854810)
+    retrieved: '2026-05-09'
+- id: 955a848e-1470-413c-86bc-2450be183da0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2022-11-28'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d147101d-68d4-4387-85f9-fe6d054f0de3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a962ffcb-a300-45e1-8850-70c7173c233e)
+  retrieved: '2026-05-09'

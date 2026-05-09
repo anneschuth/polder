@@ -1,0 +1,28 @@
+id: person:vermue-jgp-1985
+identifiers:
+  tk_persoon_id: 990c794a-2170-435a-8c43-97d4fd0e621e
+name:
+  full: Joyce Vermue
+  family: Vermue
+  given: Joyce
+  initials: J.G.P.
+birth:
+  year: 1985
+gender: f
+mandaten:
+- id: 9fce0670-452c-4c5c-8d20-6605c3c5e49b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2015-09-22'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(49cf8992-fddc-405b-9eb7-03d40d860a21)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(990c794a-2170-435a-8c43-97d4fd0e621e)
+  retrieved: '2026-05-09'

@@ -1,0 +1,40 @@
+id: person:rajkowski-qm-1988
+identifiers:
+  tk_persoon_id: 4bf69aa9-29a7-44db-b7ee-8bfa40e343dd
+name:
+  full: Queeny Rajkowski
+  family: Rajkowski
+  given: Queeny
+  initials: Q.M.
+birth:
+  year: 1988
+gender: f
+mandaten:
+- id: 716b7d23-acc0-4f93-82f0-f834e493a779
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2024-03-29'
+  end_date: '2026-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e82f0985-8faa-4cc7-889e-03b1d1cd5b32)
+    retrieved: '2026-05-09'
+- id: bc7c93ad-e362-4259-9ec1-7b2c2a359627
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2023-12-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(41ad1034-ff4f-4099-9d95-5d2d4b6bb041)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4bf69aa9-29a7-44db-b7ee-8bfa40e343dd)
+  retrieved: '2026-05-09'

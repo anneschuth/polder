@@ -1,0 +1,28 @@
+id: person:kooiman-cje-1980
+identifiers:
+  tk_persoon_id: 2211a588-7417-4e26-a386-801fe8798bd1
+name:
+  full: Nine Kooiman
+  family: Kooiman
+  given: Nine
+  initials: C.J.E.
+birth:
+  year: 1980
+gender: f
+mandaten:
+- id: 50b96b46-b768-404b-97a8-8d426886b483
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2010-06-17'
+  end_date: '2018-03-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f29b3c7a-b44c-4a7d-8967-1c102a5a3feb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2211a588-7417-4e26-a386-801fe8798bd1)
+  retrieved: '2026-05-09'

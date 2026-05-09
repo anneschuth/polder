@@ -1,0 +1,30 @@
+id: person:veldhoven-s-1973
+identifiers:
+  tk_persoon_id: 9d2229a5-c46a-485a-9b82-315e270c3e9a
+name:
+  full: Stientje van Veldhoven
+  family: van Veldhoven
+  given: Stientje
+  initials: S.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1973
+gender: f
+mandaten:
+- id: d4a493b0-2829-45fa-9a68-bd93f973d744
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2010-06-17'
+  end_date: '2017-10-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7dd7a593-7f7c-44b0-861b-14cd41a57f59)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9d2229a5-c46a-485a-9b82-315e270c3e9a)
+  retrieved: '2026-05-09'

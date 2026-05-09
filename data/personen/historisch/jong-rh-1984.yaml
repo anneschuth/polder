@@ -1,0 +1,28 @@
+id: person:jong-rh-1984
+identifiers:
+  tk_persoon_id: 666f31ca-041f-466d-9e78-804317921d69
+name:
+  full: Romke de Jong
+  family: de Jong
+  given: Romke
+  initials: R.H.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: f9ef7978-201c-4606-bf4f-b2831a34fee2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3cbcecae-d98e-40a4-94d4-5b0cb26623ea)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(666f31ca-041f-466d-9e78-804317921d69)
+  retrieved: '2026-05-09'

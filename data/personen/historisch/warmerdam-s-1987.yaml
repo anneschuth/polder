@@ -1,0 +1,40 @@
+id: person:warmerdam-s-1987
+identifiers:
+  tk_persoon_id: 0c463ce0-e8cb-4066-b37c-e664dd2f4203
+name:
+  full: Sjoerd Warmerdam
+  family: Warmerdam
+  given: Sjoerd
+  initials: S.
+birth:
+  year: 1987
+gender: m
+mandaten:
+- id: 74004198-d82d-47ea-8a0d-fc256e3c0ef6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-06-07'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(61a57b80-a883-432a-887c-98d9e89dfa64)
+    retrieved: '2026-05-09'
+- id: 56fd59d7-d8f6-4438-a4e7-fd9a33ff9c23
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2022-01-18'
+  end_date: '2022-02-15'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(77eb2e33-f590-43b6-8433-7fd9d3d3ed36)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0c463ce0-e8cb-4066-b37c-e664dd2f4203)
+  retrieved: '2026-05-09'

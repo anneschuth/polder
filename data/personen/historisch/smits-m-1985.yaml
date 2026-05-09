@@ -1,0 +1,28 @@
+id: person:smits-m-1985
+identifiers:
+  tk_persoon_id: 1d4b5617-98da-409c-afda-48bc097f51e4
+name:
+  full: Manja Smits
+  family: Smits
+  given: Manja
+  initials: M.
+birth:
+  year: 1985
+gender: f
+mandaten:
+- id: c5caadc4-1f0b-4683-9298-cac30878596f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2008-04-22'
+  end_date: '2013-05-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1da7fe98-e7f7-462a-b913-704b77fb6393)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1d4b5617-98da-409c-afda-48bc097f51e4)
+  retrieved: '2026-05-09'

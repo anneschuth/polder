@@ -1,0 +1,28 @@
+id: person:bosman-a-1965
+identifiers:
+  tk_persoon_id: 56cbb44d-9390-480d-b686-56da6c2d6d35
+name:
+  full: André Bosman
+  family: Bosman
+  given: André
+  initials: A.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: dd7a2c99-453a-4ef3-b154-8d7dbd57a64f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-06-17'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dcd88340-b64c-4449-a2ab-a385ea0ddc55)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(56cbb44d-9390-480d-b686-56da6c2d6d35)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:oskam-p-1960
+identifiers:
+  tk_persoon_id: 81d3a9a6-03c1-424b-873f-2df53af69e6c
+name:
+  full: Peter Oskam
+  family: Oskam
+  given: Peter
+  initials: P.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: 0ac9a8a3-ee8d-4a8a-b8ee-4392c17c1ea2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2012-09-20'
+  end_date: '2016-01-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1713d935-f407-43f2-b6de-393a8ca2db2f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(81d3a9a6-03c1-424b-873f-2df53af69e6c)
+  retrieved: '2026-05-09'

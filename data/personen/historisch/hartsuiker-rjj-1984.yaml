@@ -1,0 +1,28 @@
+id: person:hartsuiker-rjj-1984
+identifiers:
+  tk_persoon_id: 4a3355de-2623-415d-a72b-97e8b179534d
+name:
+  full: Jeroen Hartsuiker
+  family: Hartsuiker
+  given: Jeroen
+  initials: R.J.J.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: afc87306-2c7c-4236-9ce8-51564d95e6bf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-06-25'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bce7b1b8-e4f5-4ce3-b01d-38f35460abd4)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4a3355de-2623-415d-a72b-97e8b179534d)
+  retrieved: '2026-05-09'

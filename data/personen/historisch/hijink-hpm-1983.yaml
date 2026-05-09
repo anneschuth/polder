@@ -1,0 +1,28 @@
+id: person:hijink-hpm-1983
+identifiers:
+  tk_persoon_id: 016247cb-6d9f-408a-9581-ae3769016076
+name:
+  full: Maarten Hijink
+  family: Hijink
+  given: Maarten
+  initials: H.P.M.
+birth:
+  year: 1983
+gender: m
+mandaten:
+- id: 150f4505-0a46-4645-addb-dc5037e58fa1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-03-23'
+  end_date: '2023-04-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a5badd91-3443-41ba-b4f7-722fa67081d9)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(016247cb-6d9f-408a-9581-ae3769016076)
+  retrieved: '2026-05-09'

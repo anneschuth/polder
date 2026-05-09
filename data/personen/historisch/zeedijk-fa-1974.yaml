@@ -1,0 +1,28 @@
+id: person:zeedijk-fa-1974
+identifiers:
+  tk_persoon_id: 7af39711-d57a-490f-86c9-26ea532e8ed0
+name:
+  full: Femke Zeedijk
+  family: Zeedijk
+  given: Femke
+  initials: F.A.
+birth:
+  year: 1974
+gender: f
+mandaten:
+- id: f94f6ecf-797c-4f75-bf49-02a177959ce6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2024-11-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(416664d3-16b0-4ef3-8d50-cd68aa741636)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7af39711-d57a-490f-86c9-26ea532e8ed0)
+  retrieved: '2026-05-09'

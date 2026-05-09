@@ -1,0 +1,42 @@
+id: person:gerven-hpj-1955
+identifiers:
+  tk_persoon_id: 64522cbc-a297-4c67-a204-1e31deb91f68
+name:
+  full: Henk van Gerven
+  family: van Gerven
+  given: Henk
+  initials: H.P.J.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: 39abdb37-a491-47fc-9cee-f31071ad4827
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2018-04-03'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2916b5f6-8b8f-4929-8a89-056dbc044e01)
+    retrieved: '2026-05-09'
+- id: f40379f5-defa-41ec-8c36-7c3be001b028
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e748c5ee-d988-4898-98a5-da8b1c4444e7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(64522cbc-a297-4c67-a204-1e31deb91f68)
+  retrieved: '2026-05-09'

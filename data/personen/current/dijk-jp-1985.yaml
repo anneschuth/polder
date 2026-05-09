@@ -1,0 +1,40 @@
+id: person:dijk-jp-1985
+identifiers:
+  tk_persoon_id: 990b2d9b-0b83-4dde-ab04-5cd5d8c5c4d3
+name:
+  full: Jimmy Dijk
+  family: Dijk
+  given: Jimmy
+  initials: J.P.
+birth:
+  year: 1985
+gender: m
+mandaten:
+- id: 5a65ce30-b819-409c-93bd-319888d8229b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-12-13'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(15cbd277-0c34-4f62-86fc-e14e7b9e99eb)
+    retrieved: '2026-05-09'
+- id: 509f76d4-c4ec-4ad6-a597-4d667b66f0eb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-04-20'
+  end_date: '2023-12-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3f4c818e-c398-44c0-a843-738fc3e1c83b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(990b2d9b-0b83-4dde-ab04-5cd5d8c5c4d3)
+  retrieved: '2026-05-09'

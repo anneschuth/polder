@@ -1,0 +1,19 @@
+id: org:tweede-kamer
+type: hoge-college
+identifiers:
+  tooi: https://identifier.overheid.nl/tooi/id/orgaan/oa10000001
+classification: hoge-college
+parent_id: null
+names:
+- value: Tweede Kamer der Staten-Generaal
+  abbr: TK
+  valid_from: '1815-08-24'
+contact:
+  website: https://www.tweedekamer.nl
+  bezoekadres: Plein 2, 2511 CR Den Haag
+valid_from: '1815-08-24'
+valid_until: null
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/
+  retrieved: '2026-05-09'

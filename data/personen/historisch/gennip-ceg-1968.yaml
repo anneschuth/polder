@@ -1,0 +1,28 @@
+id: person:gennip-ceg-1968
+identifiers:
+  tk_persoon_id: ef9e78ce-980c-40be-bc6d-ea6e69ef4ac6
+name:
+  full: Karien Van Gennip
+  family: Van Gennip
+  given: Karien
+  initials: C.E.G.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: 43b71e86-63f8-4f02-ba45-45da2b02d216
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2008-09-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9e1a24bd-887d-4539-8287-05fdc776d4ad)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ef9e78ce-980c-40be-bc6d-ea6e69ef4ac6)
+  retrieved: '2026-05-09'

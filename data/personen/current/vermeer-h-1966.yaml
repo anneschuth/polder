@@ -1,0 +1,40 @@
+id: person:vermeer-h-1966
+identifiers:
+  tk_persoon_id: 02fab128-a8d3-4010-b936-5500a53caf27
+name:
+  full: Henk Vermeer
+  family: Vermeer
+  given: Henk
+  initials: H.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: 670207bb-e378-4e56-82a4-b86f70ab7224
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2026-02-24'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d8fccf2c-15ef-480f-bec5-ebcb339fc9ed)
+    retrieved: '2026-05-09'
+- id: a74bb234-fe00-4872-ba63-f85091de5ec0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2023-12-06'
+  end_date: '2026-02-23'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(75578026-c61e-47fe-b091-08988cdc2740)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(02fab128-a8d3-4010-b936-5500a53caf27)
+  retrieved: '2026-05-09'

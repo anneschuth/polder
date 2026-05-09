@@ -1,0 +1,28 @@
+id: person:ginneken-lm-1972
+identifiers:
+  tk_persoon_id: 49e7fc50-90f5-4476-9275-c31f88864082
+name:
+  full: Lisa van Ginneken
+  family: van Ginneken
+  given: Lisa
+  initials: L.M.
+birth:
+  year: 1972
+gender: f
+mandaten:
+- id: e657828b-a8e0-4485-bfcb-0cc28f014815
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9a9e09c7-f388-4ad0-b426-3b9c5db1df1c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(49e7fc50-90f5-4476-9275-c31f88864082)
+  retrieved: '2026-05-09'

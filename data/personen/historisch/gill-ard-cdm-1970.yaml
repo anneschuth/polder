@@ -1,0 +1,42 @@
+id: person:gill-ard-cdm-1970
+identifiers:
+  tk_persoon_id: ad69d8cc-17f6-4f3f-ba63-134a97a51bb2
+name:
+  full: Chantal Gill'ard
+  family: Gill'ard
+  given: Chantal
+  initials: C.D.M.
+  honorifics_pre:
+  - ing.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: 33acc169-b047-49d1-b4ed-ccb00661c8c1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(48470f1c-1c51-442f-b288-f77d7926006f)
+    retrieved: '2026-05-09'
+- id: ba471263-b911-4636-85d0-f79bba9581db
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2010-02-08'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2f625958-6b22-4ed5-885f-47242fe4f09c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ad69d8cc-17f6-4f3f-ba63-134a97a51bb2)
+  retrieved: '2026-05-09'

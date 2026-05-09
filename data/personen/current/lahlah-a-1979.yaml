@@ -1,0 +1,30 @@
+id: person:lahlah-a-1979
+identifiers:
+  tk_persoon_id: 71c301a1-74a2-433b-9810-c1f15bf86736
+name:
+  full: Esmah Lahlah
+  family: Lahlah
+  given: Esmah
+  initials: A.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: ef6bfec8-1379-4a8d-a3af-39eda1c644d6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f89aaaea-1208-4c36-8fb8-8dc034fec1e1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71c301a1-74a2-433b-9810-c1f15bf86736)
+  retrieved: '2026-05-09'

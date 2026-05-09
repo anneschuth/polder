@@ -1,0 +1,30 @@
+id: person:koppejan-aj-1962
+identifiers:
+  tk_persoon_id: e7f46d21-700f-46a3-a47d-dd46e2d79300
+name:
+  full: Ad Koppejan
+  family: Koppejan
+  given: Ad
+  initials: A.J.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: a11e7a25-93dd-4046-9736-5c9aa5fd00db
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2fefbab4-0c0f-466c-9d37-5f6419a56754)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e7f46d21-700f-46a3-a47d-dd46e2d79300)
+  retrieved: '2026-05-09'

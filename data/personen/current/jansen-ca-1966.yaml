@@ -1,0 +1,40 @@
+id: person:jansen-ca-1966
+identifiers:
+  tk_persoon_id: 3c96ed5d-f7bf-4cae-9ec7-a5a29f5299da
+name:
+  full: Chris Jansen
+  family: Jansen
+  given: Chris
+  initials: C.A.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: 0e286ce0-2f2b-4964-aa25-7c8ccb3a671a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(924643d5-7eda-4ee9-b670-63650fcaa19c)
+    retrieved: '2026-05-09'
+- id: 140527f5-30e9-4f1f-85c5-4c64d409808d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2019-11-27'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(41578072-2191-429a-80ed-e32ea21e1e56)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3c96ed5d-f7bf-4cae-9ec7-a5a29f5299da)
+  retrieved: '2026-05-09'

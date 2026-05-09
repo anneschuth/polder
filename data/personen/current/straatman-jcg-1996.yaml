@@ -1,0 +1,28 @@
+id: person:straatman-jcg-1996
+identifiers:
+  tk_persoon_id: a4e91a4e-3bc4-4dbc-af65-f5770d2eafcb
+name:
+  full: Jeltje Straatman
+  family: Straatman
+  given: Jeltje
+  initials: J.C.G.
+birth:
+  year: 1996
+gender: f
+mandaten:
+- id: d543ec75-c3a0-407e-8529-cc2fed06449b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bbb1efd5-a7ba-42bf-af77-ba8c5b547a2a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a4e91a4e-3bc4-4dbc-af65-f5770d2eafcb)
+  retrieved: '2026-05-09'

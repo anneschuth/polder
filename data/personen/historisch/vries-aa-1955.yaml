@@ -1,0 +1,28 @@
+id: person:vries-aa-1955
+identifiers:
+  tk_persoon_id: 6c2ee55a-fa05-4a41-b522-c878c6a61ce8
+name:
+  full: Albert de Vries
+  family: de Vries
+  given: Albert
+  initials: A.A.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: 1bfbda70-f939-490f-af37-3b9c5f1d8a6a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-09-20'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c587faab-c8c6-4516-97d3-a4f0ca6aef9f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6c2ee55a-fa05-4a41-b522-c878c6a61ce8)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:jonker-cwa-1966
+identifiers:
+  tk_persoon_id: ca7fecb3-8206-455c-a20b-9e2148b94cb9
+name:
+  full: Corien Jonker
+  family: Jonker
+  given: Corien
+  initials: C.W.A.
+birth:
+  year: 1966
+gender: f
+mandaten:
+- id: 788986af-b7b8-4e48-80b1-123c53529575
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2007-03-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(be636c87-5dc6-406a-ba4c-a9ccf8589809)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ca7fecb3-8206-455c-a20b-9e2148b94cb9)
+  retrieved: '2026-05-09'

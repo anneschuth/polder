@@ -1,0 +1,30 @@
+id: person:fassed-a-1973
+identifiers:
+  tk_persoon_id: 44664c36-6527-4c66-9f8e-89a901bc7c3a
+name:
+  full: Arjan El Fassed
+  family: El Fassed
+  given: Arjan
+  initials: A.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1973
+gender: m
+mandaten:
+- id: 5c985352-f78e-48c0-85e6-497aee3f7c64
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2010-06-17'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8977bf72-0c86-4cd6-a220-1c440ad8e064)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(44664c36-6527-4c66-9f8e-89a901bc7c3a)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:anker-ew-1978
+identifiers:
+  tk_persoon_id: 679f692b-8dad-4e3d-92f7-0d0831695f7c
+name:
+  full: Ed Anker
+  family: Anker
+  given: Ed
+  initials: E.W.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 36fa9161-8ea5-4edb-99e3-14a731a6bb5d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2007-03-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0ecb285e-3957-4a61-996f-1ee465c339bb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(679f692b-8dad-4e3d-92f7-0d0831695f7c)
+  retrieved: '2026-05-09'

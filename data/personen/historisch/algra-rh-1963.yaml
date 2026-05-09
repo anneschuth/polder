@@ -1,0 +1,28 @@
+id: person:algra-rh-1963
+identifiers:
+  tk_persoon_id: 7b99e5d7-a336-4ba6-a823-768ecbe6d857
+name:
+  full: Rendert Algra
+  family: Algra
+  given: Rendert
+  initials: R.H.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: ffc4a2fe-5b18-4058-89e1-1c3ac95d4a7e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2009-09-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(989cb29d-bc44-4181-8d40-ecc4f4ce4e1a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7b99e5d7-a336-4ba6-a823-768ecbe6d857)
+  retrieved: '2026-05-09'

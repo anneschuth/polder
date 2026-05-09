@@ -1,0 +1,28 @@
+id: person:hazekamp-aah-1968
+identifiers:
+  tk_persoon_id: 06bae45b-cf45-43d1-b96f-0348406cacdc
+name:
+  full: Anja Hazekamp
+  family: Hazekamp
+  given: Anja
+  initials: A.A.H.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: 07dd4247-6aab-4dc0-b712-07f2f49d465b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdD
+  start_date: '2012-01-24'
+  end_date: '2012-05-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ea7a3fd9-76e0-471a-9654-0a6c91d8618c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(06bae45b-cf45-43d1-b96f-0348406cacdc)
+  retrieved: '2026-05-09'

@@ -1,0 +1,52 @@
+id: person:brekelmans-rp-1986
+identifiers:
+  tk_persoon_id: e5c4753f-d2d8-4a4a-ae9d-62118892a731
+name:
+  full: Ruben Brekelmans
+  family: Brekelmans
+  given: Ruben
+  initials: R.P.
+birth:
+  year: 1986
+gender: m
+mandaten:
+- id: 74b64ca9-9bf0-4d03-9c60-2d5648a0517b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2026-02-23'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(541547e1-c9ff-4602-93e0-59e91aff5146)
+    retrieved: '2026-05-09'
+- id: 2a4d457e-8414-44f4-affb-be2347bb7605
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3dd5078c-716c-4221-8774-f82303f56b63)
+    retrieved: '2026-05-09'
+- id: d584c9cd-2834-44a5-baa5-bad835cdacab
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d677c643-30e7-42c8-9344-9d8c804e84a2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e5c4753f-d2d8-4a4a-ae9d-62118892a731)
+  retrieved: '2026-05-09'

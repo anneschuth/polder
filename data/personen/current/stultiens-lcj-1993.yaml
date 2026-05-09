@@ -1,0 +1,28 @@
+id: person:stultiens-lcj-1993
+identifiers:
+  tk_persoon_id: 7a727f46-0e36-493f-8779-736d3250fb27
+name:
+  full: Luc Stultiens
+  family: Stultiens
+  given: Luc
+  initials: L.C.J.
+birth:
+  year: 1993
+gender: m
+mandaten:
+- id: dfa593b8-f64a-4b69-9374-8cab24378b77
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(04628f01-3bc7-436f-a774-a1909f83ff27)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7a727f46-0e36-493f-8779-736d3250fb27)
+  retrieved: '2026-05-09'

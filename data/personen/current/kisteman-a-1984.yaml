@@ -1,0 +1,28 @@
+id: person:kisteman-a-1984
+identifiers:
+  tk_persoon_id: e0ccfbe3-9f51-4eaa-8ed6-c1ba3f6236b5
+name:
+  full: Arend Kisteman
+  family: Kisteman
+  given: Arend
+  initials: A.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: bddbb0b7-207e-4f2e-9c64-cbef80b69b8b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c961a59c-64a4-47c8-ab8f-15a3ea27370d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e0ccfbe3-9f51-4eaa-8ed6-c1ba3f6236b5)
+  retrieved: '2026-05-09'

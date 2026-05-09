@@ -1,0 +1,28 @@
+id: person:lange-j-1968
+identifiers:
+  tk_persoon_id: b6cc28af-27ba-4f88-a0bb-93cefc35f575
+name:
+  full: Jeroen de Lange
+  family: de Lange
+  given: Jeroen
+  initials: J.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: 5200c477-5397-456e-b347-72970ba35c65
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-01-25'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(996706fd-33f7-4ea6-ad11-885af0f3ea1b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b6cc28af-27ba-4f88-a0bb-93cefc35f575)
+  retrieved: '2026-05-09'

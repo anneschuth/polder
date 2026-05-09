@@ -1,0 +1,30 @@
+id: person:krom-p-1963
+identifiers:
+  tk_persoon_id: 62f807a5-d94d-4114-9c8c-b3a792a517f8
+name:
+  full: Paul de Krom
+  family: de Krom
+  given: Paul
+  initials: P.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 9608beb6-a8c4-4562-9c74-3ab20212ae93
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9695c045-d9e0-40e5-b354-eccb93f39800)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(62f807a5-d94d-4114-9c8c-b3a792a517f8)
+  retrieved: '2026-05-09'

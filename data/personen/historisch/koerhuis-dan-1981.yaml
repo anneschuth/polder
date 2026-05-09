@@ -1,0 +1,28 @@
+id: person:koerhuis-dan-1981
+identifiers:
+  tk_persoon_id: 88e0734b-8c03-4daa-8ec5-055e36c07030
+name:
+  full: Daniel Koerhuis
+  family: Koerhuis
+  given: Daniel
+  initials: D.A.N.
+birth:
+  year: 1981
+gender: m
+mandaten:
+- id: b747859f-1694-4500-8830-f8bc153a5fad
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f27dd28a-c33e-4a0c-a1b2-648557f652dc)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(88e0734b-8c03-4daa-8ec5-055e36c07030)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:deen-m-1968
+identifiers:
+  tk_persoon_id: 4506cae7-6061-4aa1-be35-69e98028574f
+name:
+  full: Marco Deen
+  family: Deen
+  given: Marco
+  initials: M.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: 9e1f00ad-335d-4544-a1e1-aea855be8f82
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0b2fa877-6a8f-4b71-8032-8b3028a1e3c7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4506cae7-6061-4aa1-be35-69e98028574f)
+  retrieved: '2026-05-09'

@@ -1,0 +1,30 @@
+id: person:buitenweg-km-1970
+identifiers:
+  tk_persoon_id: 3c3a7304-0f4d-4b1f-a953-a6515b8b7670
+name:
+  full: Kathalijne Buitenweg
+  family: Buitenweg
+  given: Kathalijne
+  initials: K.M.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: d4ad5eb2-a5b4-4363-86f9-0f15f654a655
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a2af7aa2-13ed-470b-8632-6d96c7530e9f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3c3a7304-0f4d-4b1f-a953-a6515b8b7670)
+  retrieved: '2026-05-09'

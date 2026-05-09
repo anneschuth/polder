@@ -1,0 +1,30 @@
+id: person:boer-bg-1971
+identifiers:
+  tk_persoon_id: 77d2c6f1-3af4-4256-b52f-23fcb7bb8be2
+name:
+  full: Betty de Boer
+  family: de Boer
+  given: Betty
+  initials: B.G.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1971
+gender: f
+mandaten:
+- id: 9414758c-becc-4018-87e1-ef9266a2d30c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-06-17'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a3dd7a6f-5726-48b7-830b-9226197b9e32)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(77d2c6f1-3af4-4256-b52f-23fcb7bb8be2)
+  retrieved: '2026-05-09'

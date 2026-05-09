@@ -1,0 +1,30 @@
+id: person:vermeij-ra-1968
+identifiers:
+  tk_persoon_id: aa316142-d6ee-4138-bf48-37cd7d11d058
+name:
+  full: Roos Vermeij
+  family: Vermeij
+  given: Roos
+  initials: R.A.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: e49064ad-9b16-4020-a382-e74239e0a33d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a95ba433-df6b-4a94-9ed3-f967c9026488)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(aa316142-d6ee-4138-bf48-37cd7d11d058)
+  retrieved: '2026-05-09'

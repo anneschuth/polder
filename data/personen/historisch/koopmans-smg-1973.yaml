@@ -1,0 +1,28 @@
+id: person:koopmans-smg-1973
+identifiers:
+  tk_persoon_id: f29c0ba8-4d4a-4cca-bb1b-229f68b4ae6a
+name:
+  full: Sven Koopmans
+  family: Koopmans
+  given: Sven
+  initials: S.M.G.
+birth:
+  year: 1973
+gender: m
+mandaten:
+- id: ca2d9431-b9e6-4dd5-a4fb-8e6f7291882b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f5859002-b29b-4675-97a5-6320c2893d41)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f29c0ba8-4d4a-4cca-bb1b-229f68b4ae6a)
+  retrieved: '2026-05-09'

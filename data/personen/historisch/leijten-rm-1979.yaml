@@ -1,0 +1,40 @@
+id: person:leijten-rm-1979
+identifiers:
+  tk_persoon_id: e6cc253d-14cb-437b-be88-4966f5fcb1f5
+name:
+  full: Renske Leijten
+  family: Leijten
+  given: Renske
+  initials: R.M.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: 68fd0539-7de1-4242-b292-78b22470fe47
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2014-05-29'
+  end_date: '2023-07-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c71d1bc9-b9de-4044-aeac-4bdc3d96f5b5)
+    retrieved: '2026-05-09'
+- id: 97e54d41-45ad-4c63-ad76-23ec5e15175d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2014-02-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f7546588-697b-46a5-8617-3679f23c5e6a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e6cc253d-14cb-437b-be88-4966f5fcb1f5)
+  retrieved: '2026-05-09'

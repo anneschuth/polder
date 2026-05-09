@@ -1,0 +1,54 @@
+id: person:blok-sa-1964
+identifiers:
+  tk_persoon_id: 909e3fd2-9883-448f-bb9f-33e57ad81f93
+name:
+  full: Stef Blok
+  family: Blok
+  given: Stef
+  initials: S.A.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1964
+gender: m
+mandaten:
+- id: 976fc683-a048-4e4e-86fe-7ac457c81cc7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-13'
+  end_date: '2012-11-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4dda8333-9c2c-48c5-b162-4779a1cb9f71)
+    retrieved: '2026-05-09'
+- id: 60165918-7585-44e3-8c9c-237e93bde072
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-10-08'
+  end_date: '2012-09-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(08d06d44-7752-45f9-a2cc-82f885dfafd2)
+    retrieved: '2026-05-09'
+- id: 411e1672-d50e-44e6-aa88-a35dfeb21960
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-09-03'
+  end_date: '2010-10-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(421662f6-55b9-45a5-a4c0-729f327a69b1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(909e3fd2-9883-448f-bb9f-33e57ad81f93)
+  retrieved: '2026-05-09'

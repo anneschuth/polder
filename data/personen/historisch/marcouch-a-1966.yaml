@@ -1,0 +1,28 @@
+id: person:marcouch-a-1966
+identifiers:
+  tk_persoon_id: 80d891ee-7f80-4d4f-b486-3b0d1a9fd67a
+name:
+  full: Ahmed Marcouch
+  family: Marcouch
+  given: Ahmed
+  initials: A.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: d36db9f1-4633-4f1b-8651-cda154089de0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e5707c7f-b07b-4741-af56-2bfe692b0293)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(80d891ee-7f80-4d4f-b486-3b0d1a9fd67a)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:dekken-tr-1967
+identifiers:
+  tk_persoon_id: c01b88c4-5507-49c5-9ec3-f08af6e6eace
+name:
+  full: Tjeerd van Dekken
+  family: van Dekken
+  given: Tjeerd
+  initials: T.R.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: 9235ebeb-ff9a-4a44-a2fa-e3ea42689159
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ae6a2c72-e6fb-4bed-b4ad-c5d5f6d4418a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c01b88c4-5507-49c5-9ec3-f08af6e6eace)
+  retrieved: '2026-05-09'

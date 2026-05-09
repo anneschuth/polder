@@ -1,0 +1,28 @@
+id: person:abassi-i-1983
+identifiers:
+  tk_persoon_id: 209ce05e-66ee-4999-928c-00f152b40ead
+name:
+  full: Ismail el Abassi
+  family: el Abassi
+  given: Ismail
+  initials: I.
+birth:
+  year: 1983
+gender: m
+mandaten:
+- id: 08bf25bf-0937-4063-8142-69fa81b3dfdf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2a045c63-1eaf-4b20-a718-7ca1071a5886)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(209ce05e-66ee-4999-928c-00f152b40ead)
+  retrieved: '2026-05-09'

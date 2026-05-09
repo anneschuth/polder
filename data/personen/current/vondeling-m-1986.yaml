@@ -1,0 +1,30 @@
+id: person:vondeling-m-1986
+identifiers:
+  tk_persoon_id: f3ebacbe-ae1d-4ee9-bf9f-cef7d9e0f489
+name:
+  full: Marina Vondeling
+  family: Vondeling
+  given: Marina
+  initials: M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1986
+gender: f
+mandaten:
+- id: 897d38a8-b2d6-4826-80c9-4cba4b94c1e7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ad0d94f7-ea21-427f-9d42-1e274528f58d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f3ebacbe-ae1d-4ee9-bf9f-cef7d9e0f489)
+  retrieved: '2026-05-09'

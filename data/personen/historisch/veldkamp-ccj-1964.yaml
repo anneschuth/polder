@@ -1,0 +1,28 @@
+id: person:veldkamp-ccj-1964
+identifiers:
+  tk_persoon_id: 2109eb16-0536-4adb-a32c-38022e10564e
+name:
+  full: Caspar Veldkamp
+  family: Veldkamp
+  given: Caspar
+  initials: C.C.J.
+birth:
+  year: 1964
+gender: m
+mandaten:
+- id: 21b4204d-ce9a-45f5-aafa-fe868dd3e4c8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29939749-cf41-458c-89b3-ef245095aecb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2109eb16-0536-4adb-a32c-38022e10564e)
+  retrieved: '2026-05-09'

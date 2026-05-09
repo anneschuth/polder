@@ -1,0 +1,28 @@
+id: person:jumelet-hg-1962
+identifiers:
+  tk_persoon_id: de44b333-86c1-4af7-9439-a0c186d6f2e3
+name:
+  full: Henk Jumelet
+  family: Jumelet
+  given: Henk
+  initials: H.G.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: 003271f8-f146-43b9-a069-2300598c9d57
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ed84e068-91c2-4662-a604-66c51a86e7e4)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(de44b333-86c1-4af7-9439-a0c186d6f2e3)
+  retrieved: '2026-05-09'

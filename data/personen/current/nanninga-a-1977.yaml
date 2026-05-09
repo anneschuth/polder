@@ -1,0 +1,28 @@
+id: person:nanninga-a-1977
+identifiers:
+  tk_persoon_id: a4eb6b9e-dd6c-4cc8-a95c-ccb76860b162
+name:
+  full: Annabel Nanninga
+  family: Nanninga
+  given: Annabel
+  initials: A.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 83e1c56c-e625-4cad-ac80-011e3f174cdd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor JA21
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8a495745-30ab-444f-8431-635cb993a1b5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a4eb6b9e-dd6c-4cc8-a95c-ccb76860b162)
+  retrieved: '2026-05-09'

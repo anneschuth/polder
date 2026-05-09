@@ -1,0 +1,28 @@
+id: person:boon-mch-1982
+identifiers:
+  tk_persoon_id: 0004fa63-2652-43fe-9866-4130ca4652d8
+name:
+  full: Maikel Boon
+  family: Boon
+  given: Maikel
+  initials: M.C.H.
+birth:
+  year: 1982
+gender: m
+mandaten:
+- id: fb9e50d1-a178-4e01-8e4c-9a7df0db5bc6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ac14b2ff-481c-4527-bffb-716a5a1e7d86)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0004fa63-2652-43fe-9866-4130ca4652d8)
+  retrieved: '2026-05-09'

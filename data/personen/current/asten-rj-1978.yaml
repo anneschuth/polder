@@ -1,0 +1,28 @@
+id: person:asten-rj-1978
+identifiers:
+  tk_persoon_id: 6616f1dc-73e5-4753-b259-c10856ee7e4d
+name:
+  full: Robert van Asten
+  family: van Asten
+  given: Robert
+  initials: R.J.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 3fed2114-7bd9-4044-b596-ed347d87d4a8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(14f8de53-c285-417b-bc2c-5e95004751e7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6616f1dc-73e5-4753-b259-c10856ee7e4d)
+  retrieved: '2026-05-09'

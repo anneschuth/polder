@@ -1,0 +1,28 @@
+id: person:verdonk-mcf-1955
+identifiers:
+  tk_persoon_id: 52e9efb7-5e3d-4773-b78e-d2735af90d7d
+name:
+  full: Rita Verdonk
+  family: Verdonk
+  given: Rita
+  initials: M.C.F.
+birth:
+  year: 1955
+gender: f
+mandaten:
+- id: 8301160a-0318-4395-a7e6-7b9a5f393220
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Verdonk
+  start_date: '2007-09-14'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cdfe4c5c-2c7e-481f-b911-2478f01f16b1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(52e9efb7-5e3d-4773-b78e-d2735af90d7d)
+  retrieved: '2026-05-09'

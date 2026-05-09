@@ -1,0 +1,40 @@
+id: person:siderius-te-1981
+identifiers:
+  tk_persoon_id: 872e3c31-98a5-40cb-b7dc-9c821f3b1bca
+name:
+  full: Tjitske Siderius
+  family: Siderius
+  given: Tjitske
+  initials: T.E.
+birth:
+  year: 1981
+gender: f
+mandaten:
+- id: 3a27edfa-e1e4-4ddf-9d6c-a855c2374b23
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2014-02-06'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e24fc33f-dcfb-4a87-860e-f8ec5416e556)
+    retrieved: '2026-05-09'
+- id: 91d3b0d4-50f7-434f-976d-7d79aa02666d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2013-09-03'
+  end_date: '2013-11-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(262d1522-fa7b-498c-a11e-36be88e1f726)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(872e3c31-98a5-40cb-b7dc-9c821f3b1bca)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:white-rj-1972
+identifiers:
+  tk_persoon_id: 10505586-5550-406d-aa22-81dc64a20aa8
+name:
+  full: Raoul White
+  family: White
+  given: Raoul
+  initials: R.J.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: b3bc9ee1-fede-422f-b33a-07ee7eb4f30f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e91cf228-e495-46dc-9142-f1bb708f5610)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(10505586-5550-406d-aa22-81dc64a20aa8)
+  retrieved: '2026-05-09'

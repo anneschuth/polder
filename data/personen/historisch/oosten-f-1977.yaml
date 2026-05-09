@@ -1,0 +1,30 @@
+id: person:oosten-f-1977
+identifiers:
+  tk_persoon_id: 1456a009-770b-4820-8919-55287a5780a7
+name:
+  full: Foort van Oosten
+  family: van Oosten
+  given: Foort
+  initials: F.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1977
+gender: m
+mandaten:
+- id: c1e6fa9d-10df-43a7-9722-0cda33acefce
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2019-02-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2788ce23-d15d-471d-9cfb-0014cf484003)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1456a009-770b-4820-8919-55287a5780a7)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:cramer-ea-1960
+identifiers:
+  tk_persoon_id: 3f57c8c6-117b-4ef4-a240-d621a8ae7dfb
+name:
+  full: Ernst Cramer
+  family: Cramer
+  given: Ernst
+  initials: E.A.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: 34e52abd-bc51-4d03-ae19-82f5a4f3a14a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ee3c729a-7f61-439a-b31d-a5d141790d78)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3f57c8c6-117b-4ef4-a240-d621a8ae7dfb)
+  retrieved: '2026-05-09'

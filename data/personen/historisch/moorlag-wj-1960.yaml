@@ -1,0 +1,28 @@
+id: person:moorlag-wj-1960
+identifiers:
+  tk_persoon_id: 012f6b98-9fad-4022-bbf9-edb9c7138a0f
+name:
+  full: William Moorlag
+  family: Moorlag
+  given: William
+  initials: W.J.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: 0c28d196-0bdc-470b-954f-30fcb0563842
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2017-10-25'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e6a70a1-944e-4d00-9f85-4deb4639ea34)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(012f6b98-9fad-4022-bbf9-edb9c7138a0f)
+  retrieved: '2026-05-09'

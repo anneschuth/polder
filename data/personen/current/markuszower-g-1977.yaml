@@ -1,0 +1,42 @@
+id: person:markuszower-g-1977
+identifiers:
+  tk_persoon_id: 754f2d87-8990-4b77-8181-54d8df8fa63a
+name:
+  full: Gidi Markuszower
+  family: Markuszower
+  given: Gidi
+  initials: G.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1977
+gender: m
+mandaten:
+- id: cab8c7ea-f376-4c89-a7a0-18e11865b9ab
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Markuszower
+  start_date: '2026-01-20'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(55cb6923-b33e-4329-8294-b74aa78f6277)
+    retrieved: '2026-05-09'
+- id: 0f407d48-a567-4827-ad92-fafe5c5c58c6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2017-03-23'
+  end_date: '2026-01-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d50d0bd2-dcdb-442b-9608-0cca153813d3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(754f2d87-8990-4b77-8181-54d8df8fa63a)
+  retrieved: '2026-05-09'

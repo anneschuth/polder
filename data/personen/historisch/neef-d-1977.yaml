@@ -1,0 +1,28 @@
+id: person:neef-d-1977
+identifiers:
+  tk_persoon_id: 2b223ce1-e251-462b-a5fc-971c92bbf37c
+name:
+  full: Daan de Neef
+  family: de Neef
+  given: Daan
+  initials: D.
+birth:
+  year: 1977
+gender: m
+mandaten:
+- id: a96b13bb-a808-4e8e-bd1e-50ef287c5331
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2022-09-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a501e1f5-d347-4a40-8bc0-1a90f18a29ee)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2b223ce1-e251-462b-a5fc-971c92bbf37c)
+  retrieved: '2026-05-09'

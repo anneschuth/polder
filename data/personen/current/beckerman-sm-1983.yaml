@@ -1,0 +1,30 @@
+id: person:beckerman-sm-1983
+identifiers:
+  tk_persoon_id: 0ea8e29d-3bfe-4982-8594-9350b527d553
+name:
+  full: Sandra Beckerman
+  family: Beckerman
+  given: Sandra
+  initials: S.M.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1983
+gender: f
+mandaten:
+- id: ba30d441-d7dd-43d4-99d9-984419999720
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-03-23'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7fbfc6de-34a2-4f1e-88f8-6189440e14af)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0ea8e29d-3bfe-4982-8594-9350b527d553)
+  retrieved: '2026-05-09'

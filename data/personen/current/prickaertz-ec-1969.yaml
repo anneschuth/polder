@@ -1,0 +1,28 @@
+id: person:prickaertz-ec-1969
+identifiers:
+  tk_persoon_id: e48a9b77-8c42-4369-a967-7262e8facb29
+name:
+  full: Erwin Prickaertz
+  family: Prickaertz
+  given: Erwin
+  initials: E.C.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 25516e80-5bf0-4848-ab75-6793b9506865
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b533faf7-04e6-46c9-b680-d626628463bf)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e48a9b77-8c42-4369-a967-7262e8facb29)
+  retrieved: '2026-05-09'

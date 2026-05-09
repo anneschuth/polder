@@ -1,0 +1,30 @@
+id: person:kostic-i-1984
+identifiers:
+  tk_persoon_id: 9e16daf1-18e6-4563-b371-aa50c31b79f6
+name:
+  full: Ines Kostić
+  family: Kostić
+  given: Ines
+  initials: I.
+  honorifics_pre:
+  - Msc
+birth:
+  year: 1984
+gender: x
+mandaten:
+- id: d064d72b-92a1-4a5b-a209-2aa63f0ded4e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdD
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d38d6d34-21d4-4c5b-86cc-9dc157336a46)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9e16daf1-18e6-4563-b371-aa50c31b79f6)
+  retrieved: '2026-05-09'

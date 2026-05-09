@@ -1,0 +1,28 @@
+id: person:muller-as-1993
+identifiers:
+  tk_persoon_id: 3b3c7923-b604-4902-97c1-210aa85182c1
+name:
+  full: Alisha Müller
+  family: Müller
+  given: Alisha
+  initials: A.S.
+birth:
+  year: 1993
+gender: f
+mandaten:
+- id: 2ce956d1-904a-48a5-be0f-3be3dca816b2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2026-02-25'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(19714e3d-926b-44b2-8ff2-c6e042371dee)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3b3c7923-b604-4902-97c1-210aa85182c1)
+  retrieved: '2026-05-09'

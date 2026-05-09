@@ -1,0 +1,30 @@
+id: person:verhagen-mjm-1956
+identifiers:
+  tk_persoon_id: fae5c0ff-a1bd-46a9-bd09-69528db0bfb9
+name:
+  full: Maxime Verhagen
+  family: Verhagen
+  given: Maxime
+  initials: M.J.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1956
+gender: m
+mandaten:
+- id: 752b0ab2-cd1e-4012-a1a5-9e081009f684
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-06-17'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e880d52-5222-421f-8512-8a4e0b1f1dfe)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fae5c0ff-a1bd-46a9-bd09-69528db0bfb9)
+  retrieved: '2026-05-09'

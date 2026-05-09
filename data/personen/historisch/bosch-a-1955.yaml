@@ -1,0 +1,28 @@
+id: person:bosch-a-1955
+identifiers:
+  tk_persoon_id: fd45195f-c35d-47c9-844e-a5893e10839e
+name:
+  full: Albert van den Bosch
+  family: van den Bosch
+  given: Albert
+  initials: A.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: ba9ab737-780b-4459-af2a-bbebcac328a6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(932e3827-f43e-4893-9603-36252ee4ab78)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fd45195f-c35d-47c9-844e-a5893e10839e)
+  retrieved: '2026-05-09'

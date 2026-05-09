@@ -1,0 +1,30 @@
+id: person:coruz-c-1963
+identifiers:
+  tk_persoon_id: 48dc35ff-c33d-47ee-9b8e-83fa3c0941e9
+name:
+  full: Coskun Çörüz
+  family: Çörüz
+  given: Coskun
+  initials: C.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 4067c835-f23e-45cc-a7d6-fddc52061ced
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d6e216cf-b979-44f4-a335-93f6e95d3371)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(48dc35ff-c33d-47ee-9b8e-83fa3c0941e9)
+  retrieved: '2026-05-09'

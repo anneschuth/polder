@@ -1,0 +1,28 @@
+id: person:coenradie-i-1987
+identifiers:
+  tk_persoon_id: a08790d3-915b-44d3-9556-6c53048917a0
+name:
+  full: Ingrid Coenradie
+  family: Coenradie
+  given: Ingrid
+  initials: I.
+birth:
+  year: 1987
+gender: f
+mandaten:
+- id: 3b2c6678-9a23-4601-8377-b9153f064c7c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor JA21
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fc41b429-e83c-4269-86a4-92b240736585)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a08790d3-915b-44d3-9556-6c53048917a0)
+  retrieved: '2026-05-09'

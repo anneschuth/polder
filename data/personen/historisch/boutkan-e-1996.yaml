@@ -1,0 +1,28 @@
+id: person:boutkan-e-1996
+identifiers:
+  tk_persoon_id: 0dd38227-0491-47f3-8413-898d15e473cc
+name:
+  full: Ernst Boutkan
+  family: Boutkan
+  given: Ernst
+  initials: E.
+birth:
+  year: 1996
+gender: m
+mandaten:
+- id: 9cee2612-c09d-4cb8-b0a2-feadd38f19fd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Volt
+  start_date: '2023-03-16'
+  end_date: '2023-07-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4ef23af0-0332-46d7-af23-48b8476488e7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0dd38227-0491-47f3-8413-898d15e473cc)
+  retrieved: '2026-05-09'

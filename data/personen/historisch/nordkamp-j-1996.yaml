@@ -1,0 +1,28 @@
+id: person:nordkamp-j-1996
+identifiers:
+  tk_persoon_id: 07e473d9-837d-4a83-8a83-e57a5d0f059b
+name:
+  full: Jimme Nordkamp
+  family: Nordkamp
+  given: Jimme
+  initials: J.
+birth:
+  year: 1996
+gender: m
+mandaten:
+- id: 6a033df7-6ee2-4406-8d12-0d2acf79c1eb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3356d9fb-7bf6-4ecd-a87c-0a7456bc49fa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(07e473d9-837d-4a83-8a83-e57a5d0f059b)
+  retrieved: '2026-05-09'

@@ -1,0 +1,42 @@
+id: person:albayrak-n-1968
+identifiers:
+  tk_persoon_id: af6d5f33-b2d2-4301-9133-9037caf666ed
+name:
+  full: Nebahat Albayrak
+  family: Albayrak
+  given: Nebahat
+  initials: N.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: e4a62473-bbf0-44c1-a609-2f60324fc8ae
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2011-04-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c8304223-0c0a-4bde-af6b-6927f5b7860c)
+    retrieved: '2026-05-09'
+- id: e173439c-dc52-4ade-9be7-31b94108f5b7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2011-08-02'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(35af7239-72c9-4588-a38a-576b577c0b14)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(af6d5f33-b2d2-4301-9133-9037caf666ed)
+  retrieved: '2026-05-09'

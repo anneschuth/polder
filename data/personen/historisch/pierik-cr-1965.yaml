@@ -1,0 +1,28 @@
+id: person:pierik-cr-1965
+identifiers:
+  tk_persoon_id: 043e1008-a9c1-4d69-be4f-805bd722bd05
+name:
+  full: Cor Pierik
+  family: Pierik
+  given: Cor
+  initials: C.R.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: 262ecdee-29e3-4088-ac9e-599f7304a694
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(65fac7fb-2d35-4a15-90f5-adbefbfa669f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(043e1008-a9c1-4d69-be4f-805bd722bd05)
+  retrieved: '2026-05-09'

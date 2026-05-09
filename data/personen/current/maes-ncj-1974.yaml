@@ -1,0 +1,28 @@
+id: person:maes-ncj-1974
+identifiers:
+  tk_persoon_id: ebb3123c-6520-45ad-9045-d78dd5313b30
+name:
+  full: Nicole Maes
+  family: Maes
+  given: Nicole
+  initials: N.C.J.
+birth:
+  year: 1974
+gender: f
+mandaten:
+- id: f3fbafe1-81ab-41c6-b86d-1dcf5d5b684d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2026-02-25'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(19feb9c5-5829-4451-b919-307d101e2768)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ebb3123c-6520-45ad-9045-d78dd5313b30)
+  retrieved: '2026-05-09'

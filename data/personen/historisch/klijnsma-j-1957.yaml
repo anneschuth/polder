@@ -1,0 +1,30 @@
+id: person:klijnsma-j-1957
+identifiers:
+  tk_persoon_id: e20987d2-3f77-4737-bdd4-d8c566ff3e73
+name:
+  full: Jetta Klijnsma
+  family: Klijnsma
+  given: Jetta
+  initials: J.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1957
+gender: f
+mandaten:
+- id: a52d17e3-6783-49c5-941a-97d4f83a0a4c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2012-11-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2cf72f55-55b7-4d60-828f-afa258cb97a8)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e20987d2-3f77-4737-bdd4-d8c566ff3e73)
+  retrieved: '2026-05-09'

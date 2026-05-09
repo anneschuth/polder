@@ -16,7 +16,6 @@ STUB_MODULES = [
     "wikidata_sparql",
     "tooi",
     "logius_cor",
-    "tk_odata",
     "ek_scrape",
     "koop_sru",
     "ar_rwt",

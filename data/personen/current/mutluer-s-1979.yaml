@@ -1,0 +1,42 @@
+id: person:mutluer-s-1979
+identifiers:
+  tk_persoon_id: 9f855643-68a2-409e-b4fe-81b92547212a
+name:
+  full: Songül Mutluer
+  family: Mutluer
+  given: Songül
+  initials: S.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: 10120502-e73a-4b4b-9271-a0bf459dde96
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ccb10e1a-d6ab-4016-94a9-e848cbb442a5)
+    retrieved: '2026-05-09'
+- id: 58243de3-d2bf-4e60-8e60-25c3219ec716
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2022-02-17'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4085a2e9-f6c6-4fb3-8b89-2aa6bf64932a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9f855643-68a2-409e-b4fe-81b92547212a)
+  retrieved: '2026-05-09'

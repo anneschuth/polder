@@ -1,0 +1,28 @@
+id: person:oostenbrink-m-1987
+identifiers:
+  tk_persoon_id: 1b9bcdaa-de75-4408-b894-0f22826ecf2a
+name:
+  full: Martin Oostenbrink
+  family: Oostenbrink
+  given: Martin
+  initials: M.
+birth:
+  year: 1987
+gender: m
+mandaten:
+- id: 32572c72-c555-40c5-9352-0c64445a9ccf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2025-03-05'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a7651c02-fe63-4f4f-8243-cb85a2ffc2b7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1b9bcdaa-de75-4408-b894-0f22826ecf2a)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:schoonis-j-1981
+identifiers:
+  tk_persoon_id: 05c9a6b8-4642-449a-9a1e-1df4aca70b10
+name:
+  full: Jan Schoonis
+  family: Schoonis
+  given: Jan
+  initials: J.
+birth:
+  year: 1981
+gender: m
+mandaten:
+- id: ecd5049d-8fa8-42f2-ab40-bdb0434408b8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2737d8b0-c19f-4adf-a386-de623209caae)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(05c9a6b8-4642-449a-9a1e-1df4aca70b10)
+  retrieved: '2026-05-09'

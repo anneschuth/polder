@@ -1,0 +1,30 @@
+id: person:velde-r-1957
+identifiers:
+  tk_persoon_id: b23257b9-1d5e-4d4f-a2ee-cc4501ae5c6a
+name:
+  full: Rien van der Velde
+  family: van der Velde
+  given: Rien
+  initials: R.
+  honorifics_pre:
+  - drs
+birth:
+  year: 1957
+gender: m
+mandaten:
+- id: c6d5c4d8-6dc9-4925-8f81-1af943c4ea0a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2016-10-25'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c62b326-1b25-45ea-a2c1-6688fc3a8758)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b23257b9-1d5e-4d4f-a2ee-cc4501ae5c6a)
+  retrieved: '2026-05-09'

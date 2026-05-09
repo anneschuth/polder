@@ -1,0 +1,40 @@
+id: person:cohen-mj-1947
+identifiers:
+  tk_persoon_id: 1fdf1475-c4bb-4175-835e-4e2785b6826b
+name:
+  full: Job Cohen
+  family: Cohen
+  given: Job
+  initials: M.J.
+birth:
+  year: 1947
+gender: m
+mandaten:
+- id: c1266259-c4b2-42a9-b217-5fdd6d79920a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-02-20'
+  end_date: '2012-02-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(653918cf-7913-438c-af39-6aec02c461d0)
+    retrieved: '2026-05-09'
+- id: f0107cf3-25bb-451a-b8d1-a1114d5cac04
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2012-02-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9c79a6ee-d546-4708-af18-5c2798848016)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1fdf1475-c4bb-4175-835e-4e2785b6826b)
+  retrieved: '2026-05-09'

@@ -1,0 +1,52 @@
+id: person:sap-jcm-1963
+identifiers:
+  tk_persoon_id: 40a6732a-f900-4846-aa89-7de07ede54d4
+name:
+  full: Jolande Sap
+  family: Sap
+  given: Jolande
+  initials: J.C.M.
+birth:
+  year: 1963
+gender: f
+mandaten:
+- id: b589f990-f948-4a92-b374-5a5ed3e8bddf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2012-10-08'
+  end_date: '2012-10-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3c50862e-f18c-4a66-91de-49209c5879ed)
+    retrieved: '2026-05-09'
+- id: ede14e29-1c99-4885-b7b4-bbe898201370
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2010-12-16'
+  end_date: '2012-10-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f69db19b-9b2b-428b-b3ae-6ecbef5a93b2)
+    retrieved: '2026-05-09'
+- id: 173de06c-b2e7-4639-b123-c1d68b103bf3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2008-09-02'
+  end_date: '2010-12-15'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6297d1e6-a030-4844-bee4-6d62f0f87976)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(40a6732a-f900-4846-aa89-7de07ede54d4)
+  retrieved: '2026-05-09'

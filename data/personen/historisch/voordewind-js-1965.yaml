@@ -1,0 +1,30 @@
+id: person:voordewind-js-1965
+identifiers:
+  tk_persoon_id: 238396aa-d91b-46ee-a7e9-301e9ac7bd7e
+name:
+  full: Joël Voordewind
+  family: Voordewind
+  given: Joël
+  initials: J.S.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: 42422180-c883-4d99-8b9b-40ed127fbb8a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2006-11-30'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5d8fca3f-6134-499c-b2e3-9f416a7eb964)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(238396aa-d91b-46ee-a7e9-301e9ac7bd7e)
+  retrieved: '2026-05-09'

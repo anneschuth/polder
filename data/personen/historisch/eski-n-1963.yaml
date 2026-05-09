@@ -1,0 +1,30 @@
+id: person:eski-n-1963
+identifiers:
+  tk_persoon_id: cb943835-1985-4db3-a1fd-234215dfff91
+name:
+  full: Nihat Eski
+  family: Eski
+  given: Nihat
+  initials: N.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: f3a1bd93-9344-4241-b905-784855587655
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2009-12-15'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0c5559c4-f749-44ef-b236-fbd184204ea3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cb943835-1985-4db3-a1fd-234215dfff91)
+  retrieved: '2026-05-09'

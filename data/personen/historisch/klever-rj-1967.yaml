@@ -1,0 +1,28 @@
+id: person:klever-rj-1967
+identifiers:
+  tk_persoon_id: 2d120900-fed8-43ae-a234-2bc4af510867
+name:
+  full: Reinette Klever
+  family: Klever
+  given: Reinette
+  initials: R.J.
+birth:
+  year: 1967
+gender: f
+mandaten:
+- id: b15bc8a4-5430-4e25-a955-7de6de276f08
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2012-09-20'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e134a173-4471-42a4-969d-9b3fff58fb0a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2d120900-fed8-43ae-a234-2bc4af510867)
+  retrieved: '2026-05-09'

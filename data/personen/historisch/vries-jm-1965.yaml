@@ -1,0 +1,30 @@
+id: person:vries-jm-1965
+identifiers:
+  tk_persoon_id: 4017fb3f-a6d5-438f-80bb-487f1dd27629
+name:
+  full: Jan de Vries
+  family: de Vries
+  given: Jan
+  initials: J.M.
+  honorifics_pre:
+  - mr. drs.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: 95610b3b-2bc7-4783-844d-61c257bcef1b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(50c557ca-03c5-425b-947e-06a222ca397e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4017fb3f-a6d5-438f-80bb-487f1dd27629)
+  retrieved: '2026-05-09'

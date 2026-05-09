@@ -1,0 +1,28 @@
+id: person:temmink-ngj-1987
+identifiers:
+  tk_persoon_id: 568b7814-0a39-4e94-b559-a2ec6ce0bf61
+name:
+  full: Nicole Temmink
+  family: Temmink
+  given: Nicole
+  initials: N.G.J.
+birth:
+  year: 1987
+gender: f
+mandaten:
+- id: c7267c1d-be25-4a08-8a50-c0b21f0cef42
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-07-05'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b5bd7196-4118-4651-80e7-4f83b9fe3abf)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(568b7814-0a39-4e94-b559-a2ec6ce0bf61)
+  retrieved: '2026-05-09'

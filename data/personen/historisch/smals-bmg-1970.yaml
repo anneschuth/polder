@@ -1,0 +1,52 @@
+id: person:smals-bmg-1970
+identifiers:
+  tk_persoon_id: d642dcc9-3f86-49d1-96c9-ae2771d1e89a
+name:
+  full: Bart Smals
+  family: Smals
+  given: Bart
+  initials: B.M.G.
+birth:
+  year: 1970
+gender: m
+mandaten:
+- id: f8bc47bd-c4c5-4731-bf1c-9abc516291a3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-09-07'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2ff9724c-6191-4a5e-ad29-498fbf855426)
+    retrieved: '2026-05-09'
+- id: 51dba848-c79b-481c-bff7-e98d95bcbcf8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2019-10-15'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(22619669-9187-4e08-bb54-b3ca33ca3694)
+    retrieved: '2026-05-09'
+- id: e2634007-d60a-4e56-958e-cedf453add34
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2019-07-03'
+  end_date: '2019-10-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1479ef68-f11e-4a39-a58a-6b14c581da36)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d642dcc9-3f86-49d1-96c9-ae2771d1e89a)
+  retrieved: '2026-05-09'

@@ -1,0 +1,54 @@
+id: person:groot-tc-1968
+identifiers:
+  tk_persoon_id: 762e0f40-f100-4896-85a2-b1d8818fae41
+name:
+  full: Tjeerd de Groot
+  family: de Groot
+  given: Tjeerd
+  initials: T.C.
+  honorifics_pre:
+  - Dr.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: 07f4967e-f4b5-42c7-9d14-464ca884e8f7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-12-12'
+  end_date: '2024-03-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8b23ec8d-d773-4e30-a060-58ff6fc98374)
+    retrieved: '2026-05-09'
+- id: f225fed6-8c86-448a-8340-c68ef49eda85
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-04-01'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d1c10d06-e9df-403e-8746-4038b324d7e3)
+    retrieved: '2026-05-09'
+- id: 95b714d9-d360-4fad-aee7-00c216a8eace
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(888b4081-6d1f-4b5e-8aaf-69321e2b598e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(762e0f40-f100-4896-85a2-b1d8818fae41)
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:velde-mk-1989
+identifiers:
+  tk_persoon_id: e81b08c2-7ebc-4337-99b8-1d2e2e63aa8d
+name:
+  full: Martine van der Velde
+  family: van der Velde
+  given: Martine
+  initials: M.K.
+birth:
+  year: 1989
+gender: f
+mandaten:
+- id: 43a7dc5e-3881-4caa-8e10-c33703d70295
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2b4111e8-665c-4c23-9ad1-0dab180d0144)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e81b08c2-7ebc-4337-99b8-1d2e2e63aa8d)
+  retrieved: '2026-05-09'

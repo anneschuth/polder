@@ -1,0 +1,100 @@
+[
+  {
+    "path": "data/organisaties/ministeries/bzk.yaml",
+    "type": "modified",
+    "changed_fields": ["names[0].abbr"],
+    "high_stakes": false,
+    "before": {
+      "id": "org:min-bzk",
+      "type": "ministerie",
+      "names": [
+        {"value": "Binnenlandse Zaken en Koninkrijksrelaties", "abbr": "BZK", "valid_from": "2026-02-23"}
+      ],
+      "valid_until": null,
+      "sources": [
+        {"id": "roo", "url": "https://organisaties.overheid.nl/archive/exportOO.xml", "retrieved": "2026-05-09"}
+      ]
+    },
+    "after": {
+      "id": "org:min-bzk",
+      "type": "ministerie",
+      "names": [
+        {"value": "Binnenlandse Zaken en Koninkrijksrelaties", "abbr": "BZK&KR", "valid_from": "2026-02-23"}
+      ],
+      "valid_until": null,
+      "sources": [
+        {"id": "roo", "url": "https://organisaties.overheid.nl/archive/exportOO.xml", "retrieved": "2026-05-09"}
+      ]
+    }
+  },
+  {
+    "path": "data/organisaties/ministeries/lnv.yaml",
+    "type": "modified",
+    "changed_fields": ["valid_until"],
+    "high_stakes": true,
+    "before": {
+      "id": "org:min-lnv",
+      "type": "ministerie",
+      "names": [{"value": "Landbouw, Natuur en Voedselkwaliteit", "abbr": "LNV"}],
+      "valid_until": null,
+      "sources": [
+        {"id": "roo", "url": "https://organisaties.overheid.nl/archive/exportOO.xml", "retrieved": "2026-05-09"}
+      ]
+    },
+    "after": {
+      "id": "org:min-lnv",
+      "type": "ministerie",
+      "names": [{"value": "Landbouw, Natuur en Voedselkwaliteit", "abbr": "LNV"}],
+      "valid_until": "2026-05-01",
+      "sources": [
+        {"id": "roo", "url": "https://organisaties.overheid.nl/archive/exportOO.xml", "retrieved": "2026-05-09"}
+      ]
+    }
+  },
+  {
+    "path": "data/organisaties/ministeries/fin.yaml",
+    "type": "modified",
+    "changed_fields": ["mandaten[0].end_date"],
+    "high_stakes": true,
+    "before": {
+      "id": "org:min-fin",
+      "type": "ministerie",
+      "names": [{"value": "Financien", "abbr": "FIN"}],
+      "mandaten": [
+        {"role": "secretaris-generaal", "person_id": "person:bakker-j-1968", "start_date": "2022-01-01", "end_date": null}
+      ],
+      "valid_until": null,
+      "sources": [
+        {"id": "stcrt", "url": "https://zoek.officielebekendmakingen.nl/stcrt-2026-12345.html", "retrieved": "2026-05-09"}
+      ]
+    },
+    "after": {
+      "id": "org:min-fin",
+      "type": "ministerie",
+      "names": [{"value": "Financien", "abbr": "FIN"}],
+      "mandaten": [
+        {"role": "secretaris-generaal", "person_id": "person:bakker-j-1968", "start_date": "2022-01-01", "end_date": "2026-05-31"}
+      ],
+      "valid_until": null,
+      "sources": [
+        {"id": "stcrt", "url": "https://zoek.officielebekendmakingen.nl/stcrt-2026-12345.html", "retrieved": "2026-05-09"}
+      ]
+    }
+  },
+  {
+    "path": "data/organisaties/gemeenten/amsterdam.yaml",
+    "type": "new",
+    "changed_fields": [],
+    "high_stakes": false,
+    "before": null,
+    "after": {
+      "id": "org:gemeente-amsterdam",
+      "type": "gemeente",
+      "names": [{"value": "Amsterdam", "valid_from": "2026-05-09"}],
+      "valid_until": null,
+      "sources": [
+        {"id": "roo", "url": "https://organisaties.overheid.nl/archive/exportOO.xml", "retrieved": "2026-05-09"}
+      ]
+    }
+  }
+]

@@ -1,0 +1,28 @@
+id: person:boer-mgw-1963
+identifiers:
+  tk_persoon_id: 808636f6-10d2-4ed6-a5fe-f98ab3fcbbee
+name:
+  full: Monica den Boer
+  family: den Boer
+  given: Monica
+  initials: M.G.W.
+birth:
+  year: 1963
+gender: f
+mandaten:
+- id: 838f8a47-d044-423b-a1cb-c3905db4a707
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2017-10-31'
+  end_date: '2020-05-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(788c65e7-e4e2-4daa-be71-f8ad9762be25)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(808636f6-10d2-4ed6-a5fe-f98ab3fcbbee)
+  retrieved: '2026-05-09'

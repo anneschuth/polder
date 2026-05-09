@@ -1,0 +1,28 @@
+id: person:duyvendak-ajw-1957
+identifiers:
+  tk_persoon_id: f5858d16-a19b-43cb-b25a-43bd596864f0
+name:
+  full: Wijnand Duyvendak
+  family: Duyvendak
+  given: Wijnand
+  initials: A.J.W.
+birth:
+  year: 1957
+gender: m
+mandaten:
+- id: cf141f21-fca5-4558-93cf-7fffe7385b70
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2002-05-23'
+  end_date: '2008-09-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0434dce5-3b3b-4f7c-bad9-d135509198a9)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f5858d16-a19b-43cb-b25a-43bd596864f0)
+  retrieved: '2026-05-09'

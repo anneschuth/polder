@@ -1,0 +1,42 @@
+id: person:weekers-fhh-1967
+identifiers:
+  tk_persoon_id: 78d8748c-7690-4c87-b927-42311124607c
+name:
+  full: Frans Weekers
+  family: Weekers
+  given: Frans
+  initials: F.H.H.
+  honorifics_pre:
+  - mr.drs.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: fec6f8ba-554c-4d25-8d80-fb1061bae21c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2012-11-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f7fd4ded-ef44-4daf-b18e-45ebeb5b1660)
+    retrieved: '2026-05-09'
+- id: b9bf3a82-3d8c-4eb4-b592-1548f8a5cdbc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-06-03'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b954c31a-f8d0-4025-b3ac-13cbd18375cd)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(78d8748c-7690-4c87-b927-42311124607c)
+  retrieved: '2026-05-09'

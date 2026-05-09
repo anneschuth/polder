@@ -1,0 +1,28 @@
+id: person:verouden-vchm-1971
+identifiers:
+  tk_persoon_id: 6974f277-0375-44ca-b770-d8c612baf5dc
+name:
+  full: Vincent Verouden
+  family: Verouden
+  given: Vincent
+  initials: V.C.H.M.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: 316e4586-327b-47d0-983e-09439479b194
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2025-09-02'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d770aa63-2bbe-48b0-922e-aba7dda2279d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6974f277-0375-44ca-b770-d8c612baf5dc)
+  retrieved: '2026-05-09'

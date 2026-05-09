@@ -1,0 +1,28 @@
+id: person:jansen-demc-1970
+identifiers:
+  tk_persoon_id: 20152d9b-71f1-48de-b44c-e9e5eb3d0498
+name:
+  full: Daniëlle Jansen
+  family: Jansen
+  given: Daniëlle
+  initials: D.E.M.C.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: f9eb2f87-8606-4def-9b9c-9308f8d039df
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-06-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d303f308-3e95-42e3-9155-6a2a69565386)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(20152d9b-71f1-48de-b44c-e9e5eb3d0498)
+  retrieved: '2026-05-09'

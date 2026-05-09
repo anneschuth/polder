@@ -1,0 +1,28 @@
+id: person:oosterhout-as-1993
+identifiers:
+  tk_persoon_id: 8f38a474-1b0a-4fcc-a727-28531df173a6
+name:
+  full: Sjoukje van Oosterhout
+  family: van Oosterhout
+  given: Sjoukje
+  initials: A.S.
+birth:
+  year: 1993
+gender: f
+mandaten:
+- id: 594b9a3c-7198-4b26-9337-560c6b012393
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ff96fa45-2bec-45a0-8d44-d577f5743795)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8f38a474-1b0a-4fcc-a727-28531df173a6)
+  retrieved: '2026-05-09'

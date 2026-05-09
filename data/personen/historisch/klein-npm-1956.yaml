@@ -1,0 +1,64 @@
+id: person:klein-npm-1956
+identifiers:
+  tk_persoon_id: e5c9b4ba-9064-4858-a052-bb3bbecfac4b
+name:
+  full: Norbert Klein
+  family: Klein
+  given: Norbert
+  initials: N.P.M.
+birth:
+  year: 1956
+gender: m
+mandaten:
+- id: 6fd06a29-26bc-488b-825b-f439aa47b0cd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Klein
+  start_date: '2014-11-13'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f05eba56-09f9-4d4d-be01-b85a3bcca90b)
+    retrieved: '2026-05-09'
+- id: da103e8f-cc3a-4ba9-a27b-ba4c24bae64f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS/Klein
+  start_date: '2014-06-03'
+  end_date: '2014-11-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dac59ea5-492d-4c70-aad0-46559a0c5d8b)
+    retrieved: '2026-05-09'
+- id: 33c77c1b-c5df-49f9-9b3e-6484466c7c51
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS
+  start_date: '2013-10-05'
+  end_date: '2014-06-02'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7f5ac1c1-7111-439e-942d-907b205ff351)
+    retrieved: '2026-05-09'
+- id: 1ad5b21f-80a6-41ba-8f9d-3c041a96efa7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS
+  start_date: '2012-09-20'
+  end_date: '2013-10-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0660853c-30e5-40a5-8c31-4e3214ae20a9)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e5c9b4ba-9064-4858-a052-bb3bbecfac4b)
+  retrieved: '2026-05-09'

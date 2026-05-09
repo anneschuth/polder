@@ -1,0 +1,28 @@
+id: person:worsdorfer-m-1972
+identifiers:
+  tk_persoon_id: 4d6bf62d-9d27-49b5-b00f-254d6ff6e4e1
+name:
+  full: Martin Wörsdörfer
+  family: Wörsdörfer
+  given: Martin
+  initials: M.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: ee3c3c94-7f95-4d83-932f-2d4f84a71b36
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b8a3fd67-a45c-4733-be29-1bf678eb4690)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4d6bf62d-9d27-49b5-b00f-254d6ff6e4e1)
+  retrieved: '2026-05-09'

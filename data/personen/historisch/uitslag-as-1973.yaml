@@ -1,0 +1,40 @@
+id: person:uitslag-as-1973
+identifiers:
+  tk_persoon_id: 85357bf2-1404-4f97-8182-2a4c8fbc2a04
+name:
+  full: Sabine Uitslag
+  family: Uitslag
+  given: Sabine
+  initials: A.S.
+birth:
+  year: 1973
+gender: f
+mandaten:
+- id: 6a0695b8-9e10-4b0e-a930-d95bef44e0c2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2012-04-23'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d0f880a7-a6f0-4d6a-8452-2dbc3da3c52b)
+    retrieved: '2026-05-09'
+- id: 60106ef2-8e76-4453-9236-922b2f3ae52c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2008-09-04'
+  end_date: '2012-01-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(52eba643-b078-4970-84a2-34b709487f3b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(85357bf2-1404-4f97-8182-2a4c8fbc2a04)
+  retrieved: '2026-05-09'
