@@ -1,0 +1,51 @@
+name: Feitelijke onjuistheid in data
+description: Meld een fout in een Polder-record. Bijvoorbeeld een verkeerde startdatum, een verkeerd geschreven naam of een verouderd mandaat.
+title: "[Data] "
+labels: ["data-quality"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bedankt voor het melden. Polder werkt met een twee-bron-regel: nieuwe of gewijzigde mandaten worden alleen overgenomen als er een tweede bron bestaat. Lever waar mogelijk een url naar het officiële besluit, het persbericht of de organogram-pagina.
+
+  - type: input
+    id: record-id
+    attributes:
+      label: Record-id of pad
+      description: Bijvoorbeeld `person:jansen-jp-1965` of `data/people/jansen-jp-1965.yml`.
+      placeholder: person:...
+    validations:
+      required: true
+
+  - type: input
+    id: veld
+    attributes:
+      label: Foutief veld
+      description: Welk veld klopt niet? Bijvoorbeeld `mandaten[0].start_date` of `name.full`.
+    validations:
+      required: true
+
+  - type: input
+    id: juiste-waarde
+    attributes:
+      label: Juiste waarde
+      description: Wat zou er moeten staan?
+    validations:
+      required: true
+
+  - type: input
+    id: bron-url
+    attributes:
+      label: Bron-url
+      description: Url naar de officiële bron. KB, Staatscourant, gemeenteraadsbesluit, organogram, persbericht.
+      placeholder: https://zoek.officielebekendmakingen.nl/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: toelichting
+    attributes:
+      label: Toelichting (optioneel)
+      description: Extra context, andere bronnen, eventuele onzekerheid.
+    validations:
+      required: false

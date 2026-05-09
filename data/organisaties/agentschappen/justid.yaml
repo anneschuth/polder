@@ -1,0 +1,17 @@
+id: org:agentschap-justid
+type: agentschap
+classification: agentschap
+parent_id: null
+names:
+- value: Justitiële Informatiedienst
+  abbr: Justid
+  valid_from: '2022-01-01'
+contact:
+  website: https://www.justid.nl
+  email: info@justid.nl
+valid_from: '2022-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

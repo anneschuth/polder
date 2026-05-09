@@ -1,0 +1,17 @@
+id: org:gemeente-huizen
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Huizen
+  abbr: Huizen
+  valid_from: '2024-10-01'
+contact:
+  website: https://www.huizen.nl
+  email: gemeente@huizen.nl
+valid_from: '2024-10-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

@@ -1,0 +1,17 @@
+id: org:gemeente-tilburg
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Tilburg
+  abbr: Tilburg
+  valid_from: '1900-01-01'
+contact:
+  website: https://www.tilburg.nl
+  email: gemeente@tilburg.nl
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

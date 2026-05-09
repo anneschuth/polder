@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://polder.dev/schemas/post.schema.json",
+  "title": "Post",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "organization_id", "label", "classification", "valid_from"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^post:[a-z0-9-]+$"
+    },
+    "organization_id": {
+      "type": "string",
+      "pattern": "^org:[a-z0-9-]+$"
+    },
+    "label": { "type": "string" },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "bewindspersoon",
+        "abd-tmg",
+        "abd-directeur",
+        "abd-afdelingshoofd",
+        "abd-projectleider",
+        "gemeentesecretaris",
+        "provinciesecretaris",
+        "kamerlid",
+        "statenlid",
+        "raadslid",
+        "commissaris-vd-koning",
+        "gedeputeerde",
+        "wethouder",
+        "burgemeester",
+        "dijkgraaf",
+        "db-waterschap",
+        "ab-waterschap",
+        "voorzitter-hcs",
+        "lid-hcs",
+        "rvb-zbo",
+        "rechter",
+        "officier-van-justitie",
+        "gezaghebber",
+        "griffier",
+        "overig"
+      ]
+    },
+    "seat_count": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "valid_from": { "type": "string", "format": "date" },
+    "valid_until": {
+      "oneOf": [
+        { "type": "string", "format": "date" },
+        { "type": "null" }
+      ]
+    }
+  }
+}

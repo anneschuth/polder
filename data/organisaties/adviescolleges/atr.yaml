@@ -1,0 +1,21 @@
+id: org:adviescollege-atr
+type: adviescollege
+classification: adviescollege
+parent_id: null
+names:
+- value: Adviescollege toetsing regeldruk
+  abbr: ATR
+  valid_from: '2017-06-01'
+- value: Adviescollege toetsing regeldruk
+  abbr: ATR
+  valid_from: '1900-01-01'
+  valid_until: '2022-12-01'
+contact:
+  website: https://www.adviescollegeregeldruk.nl/
+  email: info@atr-regeldruk.nl
+valid_from: '2017-06-01'
+valid_until: '2022-12-01'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

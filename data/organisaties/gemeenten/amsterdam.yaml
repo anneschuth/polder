@@ -1,0 +1,17 @@
+id: org:gemeente-amsterdam
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Amsterdam
+  abbr: Amsterdam
+  valid_from: '2022-05-01'
+contact:
+  website: https://www.amsterdam.nl
+  email: woo.ondersteuning@amsterdam.nl
+valid_from: '2022-05-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

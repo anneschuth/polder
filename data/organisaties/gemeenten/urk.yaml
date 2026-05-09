@@ -1,0 +1,17 @@
+id: org:gemeente-urk
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Urk
+  abbr: Urk
+  valid_from: '2025-12-01'
+contact:
+  website: https://www.urk.nl/
+  email: gemeente@urk.nl
+valid_from: '2025-12-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

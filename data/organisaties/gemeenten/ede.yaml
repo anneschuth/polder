@@ -1,0 +1,17 @@
+id: org:gemeente-ede
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Ede
+  abbr: Ede
+  valid_from: '2024-07-01'
+contact:
+  website: https://www.ede.nl
+  email: info@ede.nl
+valid_from: '2024-07-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

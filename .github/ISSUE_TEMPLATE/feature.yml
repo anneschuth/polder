@@ -1,0 +1,54 @@
+name: Feature- of fetcher-suggestie
+description: Stel een nieuwe feature, een nieuwe bron of een aanpassing aan het datamodel voor.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Voor inhoudelijke wijzigingen aan het datamodel of een nieuwe fetcher: schets eerst hier het idee. Implementatie volgt in een aparte PR. Voor data-correcties is er een apart formulier.
+
+  - type: textarea
+    id: voorstel
+    attributes:
+      label: Voorstel
+      description: Wat zou je willen toevoegen of veranderen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivatie
+    attributes:
+      label: Motivatie
+      description: Welk gat vult dit? Welke bron, welke gebruiker, welk gebruiksscenario?
+    validations:
+      required: true
+
+  - type: input
+    id: bron
+    attributes:
+      label: Bron of endpoint (optioneel)
+      description: Url naar de bron, API-documentatie of bestaand register.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: type-wijziging
+    attributes:
+      label: Type wijziging
+      options:
+        - Nieuwe fetcher
+        - Aanpassing datamodel of schema
+        - Aanpassing build of CI
+        - Documentatie
+        - Anders
+    validations:
+      required: true
+
+  - type: textarea
+    id: avg
+    attributes:
+      label: AVG-overweging (optioneel)
+      description: Raakt dit voorstel aan persoonsgegevens? Welke zone (groen, geel, rood)? Zie `docs/avg-grenzen.md`.
+    validations:
+      required: false

@@ -1,0 +1,17 @@
+id: org:rechtbank-rnn
+type: rechterlijke-instantie
+classification: rechterlijke-instantie
+parent_id: null
+names:
+- value: Rechtbank Noord-Nederland
+  abbr: RNN
+  valid_from: '1900-01-01'
+contact:
+  website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland
+  email: info.rechtbanknoordnederland@rechtspraak.nl
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

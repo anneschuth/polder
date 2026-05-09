@@ -1,0 +1,17 @@
+id: org:zbo-cbs
+type: zbo
+classification: zbo
+parent_id: null
+names:
+- value: Centraal Bureau voor de Statistiek
+  abbr: CBS
+  valid_from: '1899-01-09'
+contact:
+  website: http://www.cbs.nl/
+  email: info@cbs.nl
+valid_from: '1899-01-09'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

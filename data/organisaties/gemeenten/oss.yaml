@@ -1,0 +1,17 @@
+id: org:gemeente-oss
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Oss
+  abbr: Oss
+  valid_from: '2023-05-01'
+contact:
+  website: https://www.oss.nl
+  email: Gemeente@oss.nl
+valid_from: '2023-05-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

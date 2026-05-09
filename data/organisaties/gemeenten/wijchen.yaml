@@ -1,0 +1,17 @@
+id: org:gemeente-wijchen
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Wijchen
+  abbr: Wijchen
+  valid_from: '2023-05-01'
+contact:
+  website: https://www.wijchen.nl
+  email: gemeente@wijchen.nl
+valid_from: '2023-05-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

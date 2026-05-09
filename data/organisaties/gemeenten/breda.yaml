@@ -1,0 +1,17 @@
+id: org:gemeente-breda
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Breda
+  abbr: Breda
+  valid_from: '2022-11-01'
+contact:
+  website: https://www.breda.nl
+  email: Woo@breda.nl
+valid_from: '2022-11-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

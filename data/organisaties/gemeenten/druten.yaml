@@ -1,0 +1,17 @@
+id: org:gemeente-druten
+type: gemeente
+classification: gemeente
+parent_id: null
+names:
+- value: Gemeente Druten
+  abbr: Druten
+  valid_from: '2023-05-01'
+contact:
+  website: https://www.druten.nl
+  email: info@druten.nl
+valid_from: '2023-05-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

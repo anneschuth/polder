@@ -1,0 +1,17 @@
+id: org:inspectie-ibtd
+type: inspectie
+classification: inspectie
+parent_id: null
+names:
+- value: Inspectie belastingen, toeslagen en douane
+  abbr: IBTD
+  valid_from: '2022-01-01'
+contact:
+  website: https://www.inspectiebtd.nl
+  email: contact@inspectiebtd.nl
+valid_from: '2022-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

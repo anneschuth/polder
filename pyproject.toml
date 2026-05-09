@@ -1,0 +1,83 @@
+[project]
+name = "polder"
+version = "0.0.1"
+description = "Git-versioned, CC0-gelicenseerde dataset van Nederlandse overheidsorganisaties, posten, personen en mandaten."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "EUPL-1.2" }
+authors = [
+    { name = "Anne Schuth", email = "anne.schuth@gmail.com" },
+]
+keywords = ["overheid", "open-data", "nederland", "popolo", "yaml"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pyyaml>=6.0.1",
+    "jsonschema>=4.21",
+    "pydantic>=2.6",
+    "lxml>=5.1",
+    "tkapi>=0.9",
+    "frictionless>=5.16",
+    "datasette>=0.64",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+polder-fetch-roo = "polder.fetchers.roo:main"
+polder-validate = "polder.validate:main"
+polder-diff = "polder.diff:main"
+polder-build = "polder.build:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/polder"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "RUF", # ruff-specific
+]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra"

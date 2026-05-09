@@ -1,0 +1,18 @@
+id: org:prov-nh
+type: provincie
+classification: provincie
+parent_id: null
+names:
+- value: Provincie Noord-Holland
+  abbr: NH
+  valid_from: '2022-05-01'
+  valid_until: '2026-05-31'
+contact:
+  website: http://www.noord-holland.nl
+  email: post@noord-holland.nl
+valid_from: '2022-05-01'
+valid_until: '2026-05-31'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

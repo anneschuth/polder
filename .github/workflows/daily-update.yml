@@ -1,0 +1,90 @@
+# STUB: Daily update pipeline. De claude-review job activeert pas zodra de
+# ANTHROPIC_API_KEY repository-secret is gezet. Tot die tijd faalt die job
+# silent (success: false in de step) of wordt overgeslagen.
+name: Daily update
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Fetch ROO
+        run: uv run polder-fetch-roo
+
+      - name: Validate
+        run: uv run polder-validate
+
+      - name: Compute diff
+        run: uv run polder-diff > diff.json || true
+
+      - name: Upload diff artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: diff
+          path: diff.json
+          if-no-files-found: warn
+          retention-days: 14
+
+  pr:
+    needs: fetch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download diff artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: diff
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: daily-update/${{ github.run_id }}
+          title: "Daily update ${{ github.run_id }}"
+          body: |
+            Automated daily update. Zie diff.json voor details.
+          labels: needs-review
+          commit-message: "chore: daily update ${{ github.run_id }}"
+
+  claude-review:
+    needs: pr
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "Gebruik de review-pr-diff skill om een Nederlandstalige PR-body te genereren uit diff.json en post die als comment op de zojuist aangemaakte PR."
+          claude_args: "--model claude-haiku-4-5 --max-turns 8"

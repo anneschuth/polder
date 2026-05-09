@@ -1,0 +1,17 @@
+id: org:agentschap-rvig
+type: agentschap
+classification: agentschap
+parent_id: null
+names:
+- value: Rijksdienst voor Identiteitsgegevens
+  abbr: RvIG
+  valid_from: '2022-05-01'
+contact:
+  website: https://www.rvig.nl/
+  email: info@rvig.nl
+valid_from: '2022-05-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  retrieved: '2026-05-09'

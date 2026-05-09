@@ -1,0 +1,61 @@
+name: Takedown of correctie (AVG)
+description: Verzoek tot verwijdering, correctie of opt-out van persoonsgegevens in Polder.
+title: "[Takedown] "
+labels: ["avg", "takedown", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Polder respecteert de AVG. Als jouw gegevens onjuist zijn, of als je vanwege een persoonlijke bedreiging een opt-out wilt, vul dit formulier in. We reageren binnen veertien dagen.
+
+        Plaats geen BSN, geboortedatum, privé-adres of andere bijzondere persoonsgegevens in dit issue. Verwijs zo nodig naar het record en neem aanvullende details mee in een mail naar anne.schuth@gmail.com.
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optioneel)
+      description: |
+        E-mailadres voor terugkoppeling. We kunnen ook anoniem contact opnemen via een tussenpersoon, bijvoorbeeld een advocaat, een vertrouwenspersoon of de gemeentelijke ambtsdragerszorg. Laat dit veld leeg als je dat verkiest.
+      placeholder: jij@voorbeeld.nl
+    validations:
+      required: false
+
+  - type: input
+    id: record
+    attributes:
+      label: Record-pad of -id
+      description: Pad naar het YAML-bestand of de stable id. Bijvoorbeeld `data/people/jansen-jp-1965.yml` of `person:jansen-jp-1965`.
+      placeholder: data/people/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type verzoek
+      options:
+        - Verwijdering
+        - Correctie
+        - Opt-out vanwege bedreiging (Veilig Bestuur)
+    validations:
+      required: true
+
+  - type: textarea
+    id: onderbouwing
+    attributes:
+      label: Onderbouwing
+      description: Leg kort uit waarom dit verzoek terecht is. Verwijs naar bron of context. Geen bijzondere persoonsgegevens.
+      placeholder: |
+        Bijvoorbeeld: het record vermeldt mij als wethouder van X tot 2024, maar ik ben aangetreden in 2023. Bron: gemeenteraadsbesluit Y.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: respons-akkoord
+    attributes:
+      label: Akkoord
+      options:
+        - label: Ik begrijp dat de respons-termijn veertien dagen is, best-effort.
+          required: true
+        - label: Ik plaats geen BSN, geboortedatum of andere bijzondere persoonsgegevens in dit issue.
+          required: true

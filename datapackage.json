@@ -1,0 +1,90 @@
+{
+  "profile": "data-package",
+  "name": "polder",
+  "title": "Polder",
+  "description": "Git-versioned, CC0-gelicenseerde dataset van Nederlandse overheidsorganisaties, posten, personen en mandaten. Volgt een Popolo-achtig graafmodel met Organization, Person, Post, Mandaat en Event.",
+  "version": "0.0.1",
+  "homepage": "https://polder.dev/",
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "title": "Creative Commons Zero v1.0 Universal"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Anne Schuth",
+      "email": "anne.schuth@gmail.com",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Register Overheidsorganisaties (ROO)",
+      "path": "https://organisaties.overheid.nl/"
+    },
+    {
+      "title": "Tweede Kamer OData",
+      "path": "https://opendata.tweedekamer.nl/"
+    },
+    {
+      "title": "Logius Community of Origin Register (TOOI/COR)",
+      "path": "https://standaarden.overheid.nl/tooi"
+    },
+    {
+      "title": "KOOP Officiele Bekendmakingen",
+      "path": "https://zoek.officielebekendmakingen.nl/"
+    }
+  ],
+  "keywords": [
+    "overheid",
+    "open-data",
+    "nederland",
+    "popolo",
+    "yaml",
+    "ambtenaren",
+    "mandaten"
+  ],
+  "resources": [
+    {
+      "name": "organisaties",
+      "path": "dist/csv/organisaties.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": "schemas/organisatie.schema.json"
+    },
+    {
+      "name": "personen",
+      "path": "dist/csv/personen.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": "schemas/persoon.schema.json"
+    },
+    {
+      "name": "posten",
+      "path": "dist/csv/posten.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": "schemas/post.schema.json"
+    },
+    {
+      "name": "mandaten",
+      "path": "dist/csv/mandaten.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": "schemas/mandaat.schema.json"
+    },
+    {
+      "name": "sources",
+      "path": "dist/csv/sources.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8"
+    }
+  ]
+}
