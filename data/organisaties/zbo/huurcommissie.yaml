@@ -2,6 +2,8 @@ id: org:zbo-huurcommissie
 type: zbo
 identifiers:
   roo_id: '28212619'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000187
+  oin: '00000004000000061000'
 classification: zbo
 parent_id: null
 names:
@@ -15,3 +17,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28212619/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

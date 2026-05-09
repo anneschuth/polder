@@ -2,6 +2,8 @@ id: org:zbo-cak
 type: zbo
 identifiers:
   roo_id: '28212164'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000211
+  oin: 00000001803670114000
 classification: zbo
 parent_id: null
 names:
@@ -21,3 +23,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - rwt-status
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

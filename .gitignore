@@ -6,6 +6,8 @@ __pycache__/
 *$py.class
 *.so
 .Python
+# dist/ bevat naast Python-build ook lokale runner-output:
+# dist/pr-body.md (review-pr-diff skill) en dist/pr-label.txt.
 dist/
 build/
 *.egg-info/

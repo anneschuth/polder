@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import shutil
 from pathlib import Path
+from unittest.mock import patch
 
 import pytest
 import yaml
@@ -205,3 +206,195 @@ def test_export_json(mini_polder: Path, tmp_path: Path) -> None:
     assert (out_dir / "organisaties.json").exists()
     data = json.loads((out_dir / "organisaties.json").read_text())
     assert any(o["id"] == "org:min-bzk" for o in data)
+
+
+# ---------------------------------------------------------------------------
+# Subcommand-tree
+# ---------------------------------------------------------------------------
+
+
+FETCH_SUBCOMMANDS = [
+    "roo",
+    "tk",
+    "ek",
+    "logius",
+    "wikidata",
+    "ar-rwt",
+    "koop",
+    "ori",
+    "tooi",
+    "kiesraad",
+    "abd",
+    "all",
+]
+
+SKILL_SUBCOMMANDS = [
+    "review-diff",
+    "parse-staatscourant",
+    "parse-organogram",
+    "entity-resolution",
+]
+
+
+def test_fetch_help_lists_all_subcommands() -> None:
+    code, out = _run(["fetch", "--help"])
+    assert code == 0, out
+    for sub in FETCH_SUBCOMMANDS:
+        assert sub in out, f"missing fetch-subcommand in --help: {sub}"
+
+
+def test_skill_help_lists_all_subcommands() -> None:
+    code, out = _run(["skill", "--help"])
+    assert code == 0, out
+    for sub in SKILL_SUBCOMMANDS:
+        assert sub in out, f"missing skill-subcommand in --help: {sub}"
+
+
+def test_top_level_lists_all_groups() -> None:
+    code, out = _run(["--help"])
+    assert code == 0
+    for cmd in [
+        "fetch",
+        "skill",
+        "list",
+        "show",
+        "export",
+        "validate",
+        "diff",
+        "build",
+        "serve",
+        "daily-update",
+    ]:
+        assert cmd in out, f"missing top-level command in --help: {cmd}"
+
+
+def test_fetch_roo_help_runs() -> None:
+    code, out = _run(["fetch", "roo", "--help"])
+    assert code == 0
+    assert "--cache" in out
+    assert "--dry-run" in out
+    assert "--limit" in out
+
+
+def test_fetch_all_help_runs() -> None:
+    code, out = _run(["fetch", "all", "--help"])
+    assert code == 0
+    assert "--dry-run" in out
+    # `all` heeft geen per-fetcher --out, alleen --cache.
+    assert "--cache" in out
+
+
+@pytest.mark.parametrize("sub", FETCH_SUBCOMMANDS[:-1])  # alle behalve `all`
+def test_fetch_subcommand_help(sub: str) -> None:
+    code, out = _run(["fetch", sub, "--help"])
+    assert code == 0, out
+
+
+def test_fetch_roo_dry_run_delegates(tmp_path: Path) -> None:
+    """`polder fetch roo --dry-run --limit 1` mag geen netwerk-call doen.
+
+    We patchen de underlying main() en checken dat de juiste argv aankomt.
+    """
+    captured: dict[str, list[str]] = {}
+
+    def fake_main(argv: list[str] | None = None) -> int:
+        captured["argv"] = list(argv or [])
+        return 0
+
+    with patch("polder.fetchers.roo.main", side_effect=fake_main):
+        code, _out = _run(
+            [
+                "fetch",
+                "roo",
+                "--dry-run",
+                "--limit",
+                "1",
+                "--cache",
+                str(tmp_path / "_cache"),
+                "--out",
+                str(tmp_path / "out"),
+            ]
+        )
+
+    assert code == 0
+    argv = captured["argv"]
+    assert "--dry-run" in argv
+    assert "--limit" in argv and "1" in argv
+    assert "--cache" in argv
+    assert "--out" in argv
+
+
+def test_fetch_tk_dry_run_delegates(tmp_path: Path) -> None:
+    captured: dict[str, list[str]] = {}
+
+    def fake_main(argv: list[str] | None = None) -> int:
+        captured["argv"] = list(argv or [])
+        return 0
+
+    with patch("polder.fetchers.tk_odata.main", side_effect=fake_main):
+        code, _out = _run(
+            ["fetch", "tk", "--dry-run", "--cache", str(tmp_path / "_cache")]
+        )
+
+    assert code == 0
+    assert "--dry-run" in captured["argv"]
+
+
+def test_fetch_all_runs_all_deterministic_fetchers(tmp_path: Path) -> None:
+    """`polder fetch all` moet alle 9 deterministische fetchers aanroepen."""
+    from polder.cli.commands import fetch_cmd
+
+    called: list[str] = []
+
+    def make_stub(name: str):
+        def stub(argv: list[str] | None = None) -> int:
+            called.append(name)
+            return 0
+
+        return stub
+
+    # Vervang de fetcher-tabel met stubs.
+    stub_table = [(name, make_stub(name)) for name, _ in fetch_cmd.DETERMINISTIC_FETCHERS]
+    with patch.object(fetch_cmd, "DETERMINISTIC_FETCHERS", new=stub_table):
+        code, _out = _run(
+            ["fetch", "all", "--dry-run", "--cache", str(tmp_path / "_cache")]
+        )
+
+    assert code == 0
+    assert called == [name for name, _ in stub_table]
+
+
+def test_diff_help_runs() -> None:
+    code, out = _run(["diff", "--help"])
+    assert code == 0
+    assert "diff" in out.lower()
+
+
+def test_build_help_runs() -> None:
+    code, out = _run(["build", "--help"])
+    assert code == 0
+    assert "sqlite" in out.lower() or "csv" in out.lower()
+
+
+def test_serve_help_runs() -> None:
+    code, out = _run(["serve", "--help"])
+    assert code == 0
+    assert "datasette" in out.lower() or "polder.db" in out
+
+
+def test_daily_update_help_runs() -> None:
+    code, _out = _run(["daily-update", "--help"])
+    assert code == 0
+
+
+def test_skill_review_diff_help_runs() -> None:
+    code, out = _run(["skill", "review-diff", "--help"])
+    assert code == 0
+    assert "diff" in out.lower()
+
+
+def test_verbose_flag_top_level() -> None:
+    """`polder -v --help` mag niet crashen en moet de top-level help tonen."""
+    code, out = _run(["-v", "--help"])
+    assert code == 0
+    assert "fetch" in out

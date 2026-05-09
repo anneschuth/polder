@@ -249,6 +249,18 @@ def _attr_systeemid(node: etree._Element) -> str | None:
     return None
 
 
+def _attr_tooi(node: etree._Element) -> str | None:
+    """Geef de waarde van het `resourceIdentifierTOOI`-attribuut (any namespace).
+
+    De ROO-export zet de TOOI-URI als attribute op `<organisatie>` zelf, bv.
+    `p:resourceIdentifierTOOI="https://identifier.overheid.nl/tooi/id/oorg/oorg12350"`.
+    """
+    for key, value in node.attrib.items():
+        if _localname(key).lower() == "resourceidentifiertooi" and value:
+            return value.strip() or None
+    return None
+
+
 def _enclosing_organisatie(node: etree._Element) -> etree._Element | None:
     """Wandel omhoog tot de eerstvolgende `<organisatie>`-ancestor en geef die."""
     candidates = {"organisatie", "organization", "overheidsorganisatie"}
@@ -292,7 +304,11 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     roo_id = _attr_systeemid(node) or _findtext(
         node, "id", "rooid", "roo_id", "identifier"
     )
-    tooi = _findtext(node, "tooi", "tooi_uri", "uri")
+    # TOOI-URI staat als attribute `resourceIdentifierTOOI` op de organisatie-
+    # node zelf. We lezen alleen het attribute van deze node, niet van nested
+    # children (bijv. `<relatieMetMinisterie>` heeft ook een TOOI-attribute en
+    # die hoort bij een andere organisatie).
+    tooi = _attr_tooi(node) or _findtext(node, "tooi", "tooi_uri", "uri")
     oin = _findtext(node, "oin")
     kvk = _findtext(node, "kvk", "kvknummer")
     rsin = _findtext(node, "rsin", "rsinnummer")

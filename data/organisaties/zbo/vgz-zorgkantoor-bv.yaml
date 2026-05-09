@@ -2,6 +2,9 @@ id: org:zbo-vgz-zorgkantoor-bv
 type: zbo
 identifiers:
   roo_id: '30150429'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100013
+  oin: 00000003091675320000
+  kvk: 09167532
 classification: zbo
 parent_id: null
 names:
@@ -15,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/30150429/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

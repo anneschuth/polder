@@ -161,6 +161,34 @@ def test_parse_organisatie_unknown_type_returns_none():
     assert roo.parse_organisatie(node) is None
 
 
+# ROO-export 2.6.9 zet TOOI-URI als attribute, niet als child-element. We
+# lezen die direct van de organisatie-node, niet van nested kinderen zoals
+# `<relatieMetMinisterie>` (die zelf ook een TOOI-attribute kan dragen).
+ATTR_TOOI_XML = """
+<p:organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+               p:systeemId="5445"
+               p:resourceIdentifierTOOI="https://identifier.overheid.nl/tooi/id/oorg/oorg12350">
+  <p:naam>Inspecteur-Generaal der Krijgsmacht</p:naam>
+  <p:afkorting>IGK</p:afkorting>
+  <p:types><p:type>Inspectie</p:type></p:types>
+  <p:relatieMetMinisterie p:systeemId="4958"
+                          p:resourceIdentifierTOOI="https://identifier.overheid.nl/tooi/id/ministerie/mnre1018">Defensie</p:relatieMetMinisterie>
+</p:organisatie>
+"""
+
+
+def test_parse_organisatie_reads_tooi_attribute():
+    node = etree.fromstring(ATTR_TOOI_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    assert (
+        record["identifiers"]["tooi"]
+        == "https://identifier.overheid.nl/tooi/id/oorg/oorg12350"
+    )
+    # `roo_id` komt uit `systeemId` van de organisatie-node zelf.
+    assert record["identifiers"]["roo_id"] == "5445"
+
+
 # ---------------------------------------------------------------------------
 # Organisatieonderdeel
 # ---------------------------------------------------------------------------

@@ -2,6 +2,9 @@ id: org:gr-snn
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28487804'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0425
+  oin: 00000001806755891000
+  kvk: 01183237
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28487804/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

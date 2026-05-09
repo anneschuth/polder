@@ -2,6 +2,9 @@ id: org:gr-eemkracht
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28244735'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0893
+  oin: 00000001856958177000
+  kvk: '67379818'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -15,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28244735/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

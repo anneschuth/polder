@@ -2,6 +2,9 @@ id: org:onderdeel-zeeland
 type: organisatieonderdeel
 identifiers:
   roo_id: '30475026'
+  oin: '00000001001710230000'
+  kvk: '20168636'
+  tooi: https://identifier.overheid.nl/tooi/id/provincie/pv29
 classification: organisatieonderdeel
 parent_id: org:gr-woningmarktregios
 names:
@@ -13,3 +16,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/30475026/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

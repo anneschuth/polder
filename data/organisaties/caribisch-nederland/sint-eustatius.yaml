@@ -2,6 +2,8 @@ id: org:bes-sint-eustatius
 type: caribisch-openbaar-lichaam
 identifiers:
   roo_id: '27030703'
+  tooi: https://identifier.overheid.nl/tooi/id/col/col02
+  oin: 00000006510900001000
 classification: caribisch-openbaar-lichaam
 parent_id: null
 names:
@@ -16,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/27030703/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

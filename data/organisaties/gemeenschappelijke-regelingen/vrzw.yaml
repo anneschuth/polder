@@ -2,6 +2,9 @@ id: org:gr-vrzw
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28594407'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0624
+  oin: 00000001811165838000
+  kvk: '34370881'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28594407/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -2,6 +2,9 @@ id: org:gr-gemeentelijke-gezondheidsdienst-flevoland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24943450'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0910
+  oin: '00000001005740551000'
+  kvk: '32170514'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/24943450/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -68,7 +68,7 @@ USER_AGENT = (
     "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 )
 HTTP_TIMEOUT = 180.0
-MIN_REQUEST_INTERVAL = 1.0  # seconden tussen calls (Wikimedia rate-limit)
+MIN_REQUEST_INTERVAL = 2.0  # seconden tussen calls (Wikimedia rate-limit; conservatief tijdens outages)
 SOURCE_ID = "wikidata"
 
 
@@ -157,7 +157,7 @@ def query_sparql(
     cache_dir: Path | None = None,
     use_cache: bool = True,
     client: httpx.Client | None = None,
-    max_retries: int = 6,
+    max_retries: int = 10,
 ) -> list[dict[str, Any]]:
     """Voer een SPARQL-query uit en geef de bindings terug als lijst van dicts.
 
@@ -192,8 +192,24 @@ def query_sparql(
 
     backoff = 2.0
     for attempt in range(max_retries + 1):
-        response = _do_call()
-        if response.status_code in (429, 503):
+        try:
+            response = _do_call()
+        except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.RemoteProtocolError) as exc:
+            # Tijdens WDQS-outages krijgen we soms timeouts ipv 5xx. Behandel als retry-bar.
+            if attempt >= max_retries:
+                raise
+            wait = min(backoff, 60.0)
+            logger.warning(
+                "Wikidata SPARQL netwerk-error %s op poging %d/%d, wacht %.1fs",
+                type(exc).__name__,
+                attempt + 1,
+                max_retries + 1,
+                wait,
+            )
+            time.sleep(wait)
+            backoff = min(backoff * 2, 120.0)
+            continue
+        if response.status_code in (429, 502, 503, 504):
             retry_after = response.headers.get("retry-after") if hasattr(response, "headers") else None
             try:
                 wait = float(retry_after) if retry_after else backoff
@@ -215,9 +231,28 @@ def query_sparql(
             backoff = min(backoff * 2, 120.0)
             continue
         response.raise_for_status()
+        # WDQS retourneert tijdens outages soms 200 OK met truncated/corrupte JSON.
+        # Als we de body niet kunnen parsen, retry alsof het een transient was.
+        try:
+            payload = response.json()
+        except (json.JSONDecodeError, ValueError) as exc:
+            if attempt >= max_retries:
+                raise
+            wait = min(backoff, 60.0)
+            logger.warning(
+                "Wikidata SPARQL JSON-parse-error op poging %d/%d (%s), wacht %.1fs",
+                attempt + 1,
+                max_retries + 1,
+                exc,
+                wait,
+            )
+            time.sleep(wait)
+            backoff = min(backoff * 2, 120.0)
+            continue
         break
-
-    payload = response.json()
+    else:
+        # max_retries volledig opgebruikt zonder success → expliciet falen.
+        raise httpx.HTTPError("Wikidata SPARQL retries uitgeput")
 
     if cache_path is not None:
         with cache_path.open("w", encoding="utf-8") as fh:

@@ -2,6 +2,8 @@ id: org:inspectie-sodm
 type: inspectie
 identifiers:
   roo_id: '28963273'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12357
+  oin: '00000004000000016000'
 classification: inspectie
 parent_id: null
 names:
@@ -17,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28963273/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

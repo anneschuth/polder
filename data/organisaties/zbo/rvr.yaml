@@ -2,6 +2,8 @@ id: org:zbo-rvr
 type: zbo
 identifiers:
   roo_id: '28212541'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000150
+  oin: '00000004000000071000'
 classification: zbo
 parent_id: null
 names:
@@ -23,3 +25,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - rwt-status
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

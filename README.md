@@ -90,31 +90,65 @@ Takedown-flow loopt via een GitHub-issue-template met een SLA van 14 dagen. Bij 
 ## Installatie
 
 ```bash
-# dependencies installeren via uv
 uv sync
-
-# ROO-fetcher draaien
-uv run polder-fetch-roo
-
-# valideren tegen schemas
-uv run polder-validate
-
-# diff tussen _cache/ en data/ produceren
-uv run polder-diff
-
-# SQLite + Frictionless data package bouwen
-uv run polder-build
 ```
 
-Of via `make`:
+## CLI: `polder`
+
+Alle polder-functionaliteit zit onder één entrypoint: `polder`. De volledige
+referentie staat in [docs/cli.md](docs/cli.md); hier de korte versie.
 
 ```bash
-make sync
-make fetch-roo
-make validate
-make diff
-make build
+uv run polder --help                # overzicht
+uv run polder fetch --help          # 12 fetch-subcommands
+uv run polder skill --help          # Claude Code skills
+
+# data ophalen
+uv run polder fetch roo             # ROO exportOO.xml
+uv run polder fetch tk              # Tweede Kamer OData
+uv run polder fetch all             # alle deterministische fetchers
+
+# valideren, diffen, bouwen
+uv run polder validate
+uv run polder diff
+uv run polder build all             # SQLite + CSV + datapackage
+uv run polder serve                 # datasette op dist/polder.db
+
+# Claude Code skills
+uv run polder skill review-diff diff.json
+uv run polder skill parse-staatscourant kb.xml
+uv run polder skill parse-organogram organogram.pdf min-bzk
+
+# pipeline
+uv run polder daily-update          # fetchers + validate + diff + review
 ```
+
+De oude losse scripts (`polder-fetch-roo`, `polder-validate`, `polder-build`,
+...) blijven werken voor backwards-compatibility, maar nieuwe code gebruikt
+`polder <subcommand>`.
+
+## Make-targets
+
+`make` is een dunne wrapper rond de CLI:
+
+```bash
+make sync          # uv sync
+make fetch         # polder fetch all
+make fetch-roo     # polder fetch roo
+make validate      # polder validate
+make diff          # polder diff
+make build         # polder build all
+make serve         # polder serve
+make daily-update  # polder daily-update
+```
+
+## Lokaal draaien
+
+Alles wat polder via GitHub Actions doet, kan ook lokaal via `polder
+daily-update` of de losse `polder skill ...` commando's. Geen
+`ANTHROPIC_API_KEY`-secret nodig: de skills gebruiken je lokale Claude Code
+subscription. Zie [docs/lokaal-draaien.md](docs/lokaal-draaien.md) voor de
+volledige uitleg en voorbeelden per skill.
 
 ## Status
 

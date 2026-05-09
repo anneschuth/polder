@@ -2,6 +2,8 @@ id: org:onderdeel-rce
 type: organisatieonderdeel
 identifiers:
   roo_id: '71896'
+  oin: 00000004000000080000
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10003
 classification: organisatieonderdeel
 parent_id: org:onderdeel-rce
 names:
@@ -21,3 +23,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/71896/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

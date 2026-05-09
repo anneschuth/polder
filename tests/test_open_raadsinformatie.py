@@ -106,7 +106,11 @@ def test_ori_index_uit_org_id():
 
 
 def test_ori_index_met_streepje():
-    assert ori_index_for_gemeente("alphen-chaam") == "ori_alphen-chaam*"
+    # ORI gebruikt zowel `ori_alphen-chaam_*` als `ori_alphen_chaam_*` in de
+    # praktijk; we leveren beide als komma-separated lijst aan ES.
+    assert ori_index_for_gemeente("alphen-chaam") == (
+        "ori_alphen-chaam*,ori_alphen_chaam*"
+    )
 
 
 # ---------------------------------------------------------------------------

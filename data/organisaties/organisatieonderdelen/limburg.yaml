@@ -2,6 +2,9 @@ id: org:onderdeel-limburg
 type: organisatieonderdeel
 identifiers:
   roo_id: '30474990'
+  oin: '00000001001737430000'
+  kvk: '50052969'
+  tooi: https://identifier.overheid.nl/tooi/id/provincie/pv31
 classification: organisatieonderdeel
 parent_id: org:gr-woningmarktregios
 names:
@@ -13,3 +16,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/30474990/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

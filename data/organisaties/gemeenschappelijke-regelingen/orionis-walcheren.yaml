@@ -2,6 +2,8 @@ id: org:gr-orionis-walcheren
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28568418'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0703
+  oin: 00000001823540388000
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28568418/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -2,6 +2,9 @@ id: org:zbo-sbb
 type: zbo
 identifiers:
   roo_id: '28212052'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000145
+  oin: 00000001002877880000
+  kvk: '40413625'
 classification: zbo
 parent_id: null
 names:
@@ -25,3 +28,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - rwt-status
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

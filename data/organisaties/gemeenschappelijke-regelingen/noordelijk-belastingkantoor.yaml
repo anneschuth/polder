@@ -2,6 +2,9 @@ id: org:gr-noordelijk-belastingkantoor
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25038180'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so1022
+  oin: 00000001857787573000
+  kvk: '69217610'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -15,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/25038180/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

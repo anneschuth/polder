@@ -2,6 +2,9 @@ id: org:zbo-sge
 type: zbo
 identifiers:
   roo_id: '28248779'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000334
+  oin: 00000001860272047000
+  kvk: '75408619'
 classification: zbo
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28248779/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

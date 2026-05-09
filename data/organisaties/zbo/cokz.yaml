@@ -2,6 +2,9 @@ id: org:zbo-cokz
 type: zbo
 identifiers:
   roo_id: '28212426'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000138
+  oin: 00000003411899130000
+  kvk: '41189913'
 classification: zbo
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28212426/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

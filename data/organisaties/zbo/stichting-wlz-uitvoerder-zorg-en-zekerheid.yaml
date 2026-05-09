@@ -2,6 +2,9 @@ id: org:zbo-stichting-wlz-uitvoerder-zorg-en-zekerheid
 type: zbo
 identifiers:
   roo_id: '30150421'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100011
+  oin: 00000003621043490000
+  kvk: '62104349'
 classification: zbo
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/30150421/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

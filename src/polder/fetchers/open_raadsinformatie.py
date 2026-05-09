@@ -158,13 +158,19 @@ def _normalize_gemeente_slug(value: str) -> str:
 def ori_index_for_gemeente(gemeente_slug: str) -> str:
     """Map polder-gemeente-slug naar ORI-index naam.
 
-    ORI gebruikt soms `_`, soms `-` als woordscheider in indexnamen
-    (`ori_baarle_nassau` versus `ori_alphen-chaam`). De API accepteert beide
-    vormen via wildcard, dus we gebruiken `ori_<slug>*` als alias.
+    ORI is inconsistent in zijn naamgeving: meeste samengestelde namen krijgen
+    een underscore (`ori_den_haag_<datestamp>`, `ori_baarle_nassau_<datestamp>`)
+    maar een aantal houden de hyphen vast (`ori_alphen-chaam_<datestamp>`,
+    `ori_amsterdam_nieuw-west_<datestamp>`). Voor gemeenten met een hyphen in
+    de slug genereren we daarom beide varianten als komma-separated index-lijst,
+    zodat ES via wildcard alle reële indices matcht.
     """
     bare = _normalize_gemeente_slug(gemeente_slug)
-    # Probeer eerst exacte (hyphen) match, val terug op underscore.
-    return f"ori_{bare}*"
+    if "-" not in bare:
+        return f"ori_{bare}*"
+    underscore = bare.replace("-", "_")
+    # Komma-separated lijst: ES probeert beide varianten.
+    return f"ori_{bare}*,ori_{underscore}*"
 
 
 # ---------------------------------------------------------------------------

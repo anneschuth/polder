@@ -2,6 +2,9 @@ id: org:gr-zaffier
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29225988'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0263
+  oin: 00000001001721951000
+  kvk: '37153583'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/29225988/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

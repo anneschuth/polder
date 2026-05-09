@@ -2,6 +2,9 @@ id: org:gr-rbg
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '23825734'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0755
+  oin: 00000001821671765000
+  kvk: '27370953'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/23825734/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

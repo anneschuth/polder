@@ -2,6 +2,9 @@ id: org:gr-ggd-ijsselland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '23055759'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0670
+  oin: 00000001001900298000
+  kvk: '50594761'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/23055759/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

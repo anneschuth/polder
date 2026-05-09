@@ -2,6 +2,9 @@ id: org:zbo-pf
 type: zbo
 identifiers:
   roo_id: '28212088'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000128
+  oin: 00000001804415183000
+  kvk: '41134697'
 classification: zbo
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28212088/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -2,6 +2,9 @@ id: org:gr-recreatieschap-geestmerambacht
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '23807607'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0212
+  oin: 00000003371588640000
+  kvk: '37158864'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/23807607/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

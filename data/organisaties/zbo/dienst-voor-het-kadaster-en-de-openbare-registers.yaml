@@ -2,6 +2,9 @@ id: org:zbo-dienst-voor-het-kadaster-en-de-openbare-registers
 type: zbo
 identifiers:
   roo_id: '28212603'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000195
+  oin: 00000001802327497000
+  kvk: 08215619
 classification: zbo
 parent_id: null
 names:
@@ -21,3 +24,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - rwt-status
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

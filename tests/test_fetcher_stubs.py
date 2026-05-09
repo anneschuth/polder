@@ -12,11 +12,7 @@ import importlib
 
 import pytest
 
-STUB_MODULES = [
-    "tooi",
-    "koop_sru",
-    "kiesraad",
-]
+STUB_MODULES: list[str] = []
 
 
 @pytest.mark.parametrize("name", STUB_MODULES)

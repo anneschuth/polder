@@ -2,6 +2,9 @@ id: org:gr-bedrijfsvoeringsorganisatie-delft-rijswijk
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28306603'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0884
+  oin: 00000001857839160000
+  kvk: '69343454'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -13,3 +16,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28306603/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -2,6 +2,9 @@ id: org:gr-svhw
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28178164'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0498
+  oin: 00000001812181967000
+  kvk: '54750016'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28178164/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

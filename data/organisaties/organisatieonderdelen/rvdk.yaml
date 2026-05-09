@@ -2,6 +2,8 @@ id: org:onderdeel-rvdk
 type: organisatieonderdeel
 identifiers:
   roo_id: '13254'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12374
+  oin: '00000002003214436001'
 classification: organisatieonderdeel
 parent_id: org:onderdeel-dtenv
 names:
@@ -17,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/13254/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

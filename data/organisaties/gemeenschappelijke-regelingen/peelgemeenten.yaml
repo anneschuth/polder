@@ -2,6 +2,9 @@ id: org:gr-peelgemeenten
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28296886'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0877
+  oin: 00000001856992549000
+  kvk: '67441556'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28296886/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

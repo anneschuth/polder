@@ -2,6 +2,9 @@ id: org:gr-intergemeentelijke-sociale-dienst-isd-bollenstreek
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28559014'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0461
+  oin: 00000001810562376000
+  kvk: '50204904'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28559014/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

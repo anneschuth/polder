@@ -2,6 +2,9 @@ id: org:gr-ggd-brabant-zuidoost
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25250114'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0358
+  oin: 00000001812723703000
+  kvk: '50451154'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/25250114/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

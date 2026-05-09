@@ -2,6 +2,8 @@ id: org:adviescollege-college-voor-de-rechten-van-de-mens
 type: adviescollege
 identifiers:
   roo_id: '28214728'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000200
+  oin: 00000004000000082000
 classification: adviescollege
 parent_id: null
 names:
@@ -16,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28214728/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

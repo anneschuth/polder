@@ -2,6 +2,9 @@ id: org:gr-senzer
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966840'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0863
+  oin: 00000003172649640000
+  kvk: '17264964'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -16,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/24966840/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

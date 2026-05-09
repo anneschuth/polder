@@ -2,6 +2,8 @@ id: org:inspectie-nederlandse-arbeidsinspectie
 type: inspectie
 identifiers:
   roo_id: '84076'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12349
+  oin: '00000004000000021000'
 classification: inspectie
 parent_id: null
 names:
@@ -16,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/84076/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

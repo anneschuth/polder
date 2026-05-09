@@ -2,6 +2,9 @@ id: org:gr-grs
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28604201'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so0621
+  oin: 00000001817301409000
+  kvk: '52618196'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +20,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28604201/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

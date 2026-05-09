@@ -2,6 +2,8 @@ id: org:onderdeel-dg-douane
 type: organisatieonderdeel
 identifiers:
   roo_id: '29632519'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12370
+  oin: 00000001003214394001
 classification: organisatieonderdeel
 parent_id: org:min-fin
 names:
@@ -17,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/29632519/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

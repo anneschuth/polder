@@ -2,6 +2,8 @@ id: org:adviescollege-kiesraad
 type: adviescollege
 identifiers:
   roo_id: '28212627'
+  tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000174
+  oin: 00000004185618890000
 classification: adviescollege
 parent_id: null
 names:
@@ -16,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28212627/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

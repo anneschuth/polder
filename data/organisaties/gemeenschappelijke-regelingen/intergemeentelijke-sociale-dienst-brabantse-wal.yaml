@@ -2,6 +2,8 @@ id: org:gr-intergemeentelijke-sociale-dienst-brabantse-wal
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967573'
+  tooi: https://identifier.overheid.nl/tooi/id/so/so1074
+  oin: '00000004130377040000'
 classification: gemeenschappelijke-regeling
 parent_id: null
 names:
@@ -17,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/24967573/
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
