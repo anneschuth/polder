@@ -11,6 +11,15 @@
 # Output: append-merge naar data/_staging/staatscourant-<YYYY-MM>.json (JSON-array).
 # Substring-check wordt na de claude-call uitgevoerd: evidence_snippet MOET
 # letterlijk in de XML staan, anders wordt het proposal afgewezen.
+#
+# Pre-filter: KB-titel zonder benoemings/ontslag-marker -> overslaan.
+#
+# Env-vars:
+#   POLDER_CLAUDE_MODEL  default claude-haiku-4-5.
+#
+# Exit-codes:
+#   0   succes (ook bij skip)
+#   99  rate-limit gedetecteerd; bovenliggend script kan de batch afbreken.
 
 set -euo pipefail
 
@@ -46,6 +55,34 @@ if ! command -v "$CLAUDE_BIN" >/dev/null 2>&1; then
   fi
 fi
 
+CLAUDE_MODEL="${POLDER_CLAUDE_MODEL:-claude-haiku-4-5}"
+
+# Pre-filter op titel.
+PRE_FILTER_PATTERNS="benoeming|ontslag|verlenging|secretaris-generaal|directeur-generaal|inspecteur-generaal|minister|staatssecretaris"
+
+TITLE="$(python3 - "$XML_PATH" <<'PY'
+import re
+import sys
+
+with open(sys.argv[1], encoding="utf-8", errors="replace") as f:
+    content = f.read()
+
+m = re.search(
+    r"<(officiele-titel|citeertitel|intitule|titel|onderwerp)[^>]*>(.*?)</\1>",
+    content,
+    re.IGNORECASE | re.DOTALL,
+)
+title = m.group(2) if m else content[:2000]
+title = re.sub(r"<[^>]+>", " ", title)
+sys.stdout.write(title.lower())
+PY
+)"
+
+if ! printf '%s' "$TITLE" | grep -qiE "$PRE_FILTER_PATTERNS"; then
+  echo "skip-pre-filter $BASENAME" >&2
+  exit 0
+fi
+
 # Bouw een prompt die expliciet om JSON-array vraagt voor één KB en de skill
 # laadt. We pipen de prompt via stdin om quoting-issues te vermijden. De skill
 # leest het XML-bestand zelf via Read.
@@ -69,20 +106,29 @@ Output ALLEEN de JSON-array. Geen markdown, geen uitleg.
 PROMPT_EOF
 )"
 
-# Run claude -p met Sonnet 4.6, sta Read toe (de XML is binnen REPO_ROOT).
-# Timeout 90s per call; bij time-out loggen we en stoppen we niet de batch.
 TMP_OUT="$(mktemp -t parse_stcrt.XXXXXX)"
-trap 'rm -f "$TMP_OUT"' EXIT
+TMP_ERR="$(mktemp -t parse_stcrt_err.XXXXXX)"
+trap 'rm -f "$TMP_OUT" "$TMP_ERR"' EXIT
 
 if ! (cd "$REPO_ROOT" && printf '%s' "$PROMPT" | timeout 120 "$CLAUDE_BIN" \
         --print \
-        --model claude-sonnet-4-6 \
+        --model "$CLAUDE_MODEL" \
         --permission-mode bypassPermissions \
         --allowedTools "Read" \
         --output-format text \
-        >"$TMP_OUT" 2>>"$FAILURES_LOG"); then
+        >"$TMP_OUT" 2>"$TMP_ERR"); then
+  cat "$TMP_ERR" >>"$FAILURES_LOG"
+  if grep -qiE "hit your (usage |rate )?limit|rate[ -]limit|usage limit reached|429" "$TMP_OUT" "$TMP_ERR" 2>/dev/null; then
+    echo "$(date -u +%FT%TZ) RATE_LIMIT $XML_PATH" >>"$FAILURES_LOG"
+    exit 99
+  fi
   echo "$(date -u +%FT%TZ) CLAUDE_FAIL $XML_PATH" >>"$FAILURES_LOG"
   exit 0
+fi
+
+if grep -qiE "hit your (usage |rate )?limit|rate[ -]limit|usage limit reached|429" "$TMP_OUT" 2>/dev/null; then
+  echo "$(date -u +%FT%TZ) RATE_LIMIT $XML_PATH" >>"$FAILURES_LOG"
+  exit 99
 fi
 
 # Pak de eerste JSON-array uit de output (Sonnet kan soms tekst eromheen zetten).

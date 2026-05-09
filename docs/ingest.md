@@ -19,8 +19,10 @@ Voor handmatige runs of inhoudelijke review blijft het bestaande pad bruikbaar
 Per bron (`abd-nieuws`, `staatscourant`, `organogram`):
 
 1. **Parse**. Scan `_cache/<bron>/` op input-files die nog geen
-   `data/_staging/<bron>-<key>.json` hebben. Roep voor elke ontbrekende file de
-   bestaande `scripts/parse_<bron>_local.sh` aan (claude `-p` Sonnet 4.6).
+   `data/_staging/<bron>-<key>.json` hebben. Voor abd-nieuws en staatscourant
+   filtert een deterministisch voorfilter eerst HTML/XML zonder benoemings-
+   markers eruit (zie *Pre-filter* hieronder); de rest gaat naar
+   `scripts/parse_<bron>_local.sh` met claude `-p` Haiku 4.5 als default.
 2. **Resolve**. Voor elke `<bron>-*.json` zonder `.resolved.json` companion roep
    `scripts/resolve_staging_local.sh` aan.
 3. **Apply**. `polder.apply.plan_apply` + `execute_apply` met de gekozen

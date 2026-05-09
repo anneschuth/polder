@@ -33,6 +33,17 @@ logger = logging.getLogger("polder.ingest")
 Source = Literal["abd-nieuws", "staatscourant", "organogram"]
 ALL_SOURCES: tuple[Source, ...] = ("abd-nieuws", "staatscourant", "organogram")
 
+# Default LLM-model voor parse + resolve. Haiku 4.5 is een orde van grootte
+# goedkoper dan Sonnet 4.6 en accuraat genoeg voor de extraction-taken in deze
+# pipeline. Vision-skills (parse-organogram) overrulen dit zelf naar Opus.
+DEFAULT_MODEL = "claude-haiku-4-5"
+
+# Speciale exit-code uit run_skill.sh / backfill-scripts: rate-limit bereikt,
+# output is bewust niet geschreven. ingest_source detecteert deze code en
+# breekt de huidige fase af zodat de pipeline geen garbage-output blijft
+# stagen tot het reset-window om 22:00 Europe/Amsterdam.
+RATE_LIMIT_EXIT_CODE = 99
+
 
 # ---------------------------------------------------------------------------
 # Budget / kostenramingen
@@ -45,14 +56,18 @@ ALL_SOURCES: tuple[Source, ...] = ("abd-nieuws", "staatscourant", "organogram")
 # ~5-10K tokens input + 1-2K output). Pas aan als je nauwkeuriger metingen hebt.
 COST_PER_CALL_USD: dict[str, float] = {
     "sonnet-4-6": 0.025,
+    "claude-sonnet-4-6": 0.025,
     "haiku-4-5": 0.005,
+    "claude-haiku-4-5": 0.005,
     "opus-4-7": 0.10,
+    "claude-opus-4-7": 0.10,
 }
 
 # Default aanname per fase. resolve + lookup zijn lichter dan parse omdat ze
-# kortere prompts gebruiken.
-COST_PARSE_USD = COST_PER_CALL_USD["sonnet-4-6"]
-COST_RESOLVE_USD = COST_PER_CALL_USD["sonnet-4-6"]
+# kortere prompts gebruiken. Voor 2026 H1 mikt de pipeline op Haiku als default;
+# Sonnet 4.6 hits rate-limits en is 5x duurder.
+COST_PARSE_USD = COST_PER_CALL_USD["haiku-4-5"]
+COST_RESOLVE_USD = COST_PER_CALL_USD["haiku-4-5"]
 # Lookup-person wordt soms binnen resolve aangeroepen; we rekenen 0.5 call
 # extra per resolve-job als gemiddelde ondergrens.
 COST_LOOKUP_FACTOR = 0.5
@@ -82,7 +97,7 @@ class IngestBudget:
             return None
         return max(0, self.max_claude_calls - self.used_calls)
 
-    def consume(self, n: int = 1, *, model: str = "sonnet-4-6") -> None:
+    def consume(self, n: int = 1, *, model: str = DEFAULT_MODEL) -> None:
         """Boek `n` calls op het verbruik en werk de kostenschatting bij."""
         self.used_calls += n
         per_call = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
@@ -90,7 +105,7 @@ class IngestBudget:
 
 
 def estimate_cost(
-    *, parse_jobs: int, resolve_jobs: int, model: str = "sonnet-4-6"
+    *, parse_jobs: int, resolve_jobs: int, model: str = DEFAULT_MODEL
 ) -> float:
     """Schatting voor full-run kosten gegeven aantal parse + resolve jobs."""
     per_call = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
@@ -146,6 +161,11 @@ class IngestResult:
     resolve_cost_estimate_usd: float = 0.0
     claude_calls_used: int = 0
     budget_hit: bool = False
+    # True als een parse/resolve-job exit 99 retourneerde (rate-limit van de
+    # claude-API). De pipeline laat de huidige fase dan stoppen en stagest niets
+    # meer voor die bron. Apply + validate worden wel nog gedraaid op het
+    # bestaande staging-materiaal.
+    aborted_rate_limit: bool = False
     commit_sha: str | None = None
     notes: list[str] = field(default_factory=list)
 
@@ -299,16 +319,48 @@ def plan_resolve(staging_dir: Path, *, source: Source | None = None) -> list[Pat
 SubprocessRunner = Callable[[list[str]], int]
 
 
+# Module-local "current model" gelezen door _default_runner. Wordt door
+# `ingest_source` gezet voor de hele fase (alle parallelle workers gebruiken
+# hetzelfde model). Geen env-mutaties dus geen race-conditions.
+_CURRENT_MODEL: str | None = None
+
+
 def _default_runner(cmd: list[str]) -> int:
-    """Default runner: print + run + return exit-code."""
+    """Default runner: print + run + return exit-code.
+
+    Geeft `POLDER_CLAUDE_MODEL` als env-var mee aan de subprocess. Het
+    sub-shell-script (scripts/run_skill.sh, scripts/parse_*_local.sh) leest
+    die env-var en geeft hem door aan `claude --model`.
+    """
     logger.info("+ %s", " ".join(cmd))
     print("+ " + " ".join(cmd), file=sys.stderr, flush=True)
-    proc = subprocess.run(cmd, check=False)
+    env = os.environ.copy()
+    if _CURRENT_MODEL is not None:
+        env["POLDER_CLAUDE_MODEL"] = _CURRENT_MODEL
+    proc = subprocess.run(cmd, check=False, env=env)
     return proc.returncode
 
 
 def _scripts_dir(repo_root: Path) -> Path:
     return repo_root / "scripts"
+
+
+def _run_with_model(
+    cmd: list[str], runner: SubprocessRunner, model: str | None
+) -> int:
+    """Roep `runner` aan met model-context.
+
+    Voor de default runner: subprocess krijgt `POLDER_CLAUDE_MODEL` via
+    `subprocess.run(env=...)`. Geen mutatie van de huidige proces-env, dus
+    parallelle workers in een ThreadPoolExecutor stappen elkaar niet op de
+    tenen. `_CURRENT_MODEL` wordt op één plek gezet (in `ingest_source`,
+    voor de hele fase) en gelezen door `_default_runner`.
+
+    Test-mock-runners zien het model in `_CURRENT_MODEL`. Als ze de env
+    willen inspecteren kunnen ze `polder.ingest._CURRENT_MODEL` lezen
+    of het via een eigen wrapper meekijken.
+    """
+    return runner(cmd)
 
 
 def run_parse_job(
@@ -317,8 +369,15 @@ def run_parse_job(
     *,
     repo_root: Path,
     runner: SubprocessRunner = _default_runner,
-) -> bool:
-    """Roep de juiste parse-skill aan via de bestaande bash-runner."""
+    model: str | None = None,
+) -> tuple[bool, int]:
+    """Roep de juiste parse-skill aan via de bestaande bash-runner.
+
+    Retourneert `(ok, exit_code)`. `ok` is True als de skill een output-bestand
+    heeft geschreven met exit-code 0. `exit_code == RATE_LIMIT_EXIT_CODE` is
+    het signaal dat de claude-API rate-limit heeft gestuurd; aanroepers (ingest)
+    interpreteren dat als reden om de hele fase te stoppen.
+    """
     scripts = _scripts_dir(repo_root)
     if source == "abd-nieuws":
         script = scripts / "parse_abd_nieuws_local.sh"
@@ -339,8 +398,8 @@ def run_parse_job(
     else:
         raise ValueError(f"onbekende bron: {source}")
     job.output_path.parent.mkdir(parents=True, exist_ok=True)
-    code = runner(cmd)
-    return code == 0
+    code = _run_with_model(cmd, runner, model)
+    return code == 0, code
 
 
 def run_resolve_job(
@@ -348,12 +407,17 @@ def run_resolve_job(
     *,
     repo_root: Path,
     runner: SubprocessRunner = _default_runner,
-) -> bool:
+    model: str | None = None,
+) -> tuple[bool, int]:
+    """Roep de resolve-skill aan. Retourneert `(ok, exit_code)`.
+
+    `exit_code == RATE_LIMIT_EXIT_CODE` betekent: rate-limit, fase afbreken.
+    """
     scripts = _scripts_dir(repo_root)
     script = scripts / "resolve_staging_local.sh"
     cmd = ["bash", str(script), str(staging_path)]
-    code = runner(cmd)
-    return code == 0
+    code = _run_with_model(cmd, runner, model)
+    return code == 0, code
 
 
 # ---------------------------------------------------------------------------
@@ -476,6 +540,8 @@ def ingest_source(
     runner: SubprocessRunner = _default_runner,
     budget: IngestBudget | None = None,
     parallel: int = 5,
+    model: str = DEFAULT_MODEL,
+    abort_on_rate_limit: bool = True,
 ) -> IngestResult:
     """Run parse -> resolve -> apply -> validate voor één bron.
 
@@ -493,6 +559,14 @@ def ingest_source(
     dus de threads wachten vrijwel volledig op IO; `ThreadPoolExecutor` is
     daardoor goedkoper dan `ProcessPoolExecutor`. De apply-fase blijft single-
     threaded omdat die naar `data/` schrijft.
+
+    `model` wordt via env-var `POLDER_CLAUDE_MODEL` doorgegeven aan de
+    skill-runners. Default Haiku 4.5; vision-skills overrulen zelf naar Opus.
+
+    `abort_on_rate_limit` (default True): zodra één parse- of resolve-job
+    `RATE_LIMIT_EXIT_CODE` retourneert breekt de pipeline de huidige fase af.
+    Voorkomt dat een rate-limited claude oneindig garbage als JSON blijft
+    stagen tot het reset-window om 22:00 Europe/Amsterdam.
     """
     if parallel < 1:
         raise ValueError(f"parallel moet >= 1 zijn, kreeg {parallel}")
@@ -501,7 +575,56 @@ def ingest_source(
     data_dir = data_dir or (repo_root / "data")
     schemas_dir = schemas_dir or (repo_root / "schemas")
 
+    # Zet het module-level "current model" zodat _default_runner het via
+    # subprocess-env kan doorgeven aan scripts/run_skill.sh. Restoren aan
+    # het einde zodat tests geen state lekken naar elkaar.
+    global _CURRENT_MODEL
+    _previous_model = _CURRENT_MODEL
+    _CURRENT_MODEL = model
+    try:
+        return _ingest_source_impl(
+            source,
+            repo_root=repo_root,
+            cache_root=cache_root,
+            staging_dir=staging_dir,
+            data_dir=data_dir,
+            schemas_dir=schemas_dir,
+            threshold=threshold,
+            dry_run=dry_run,
+            limit=limit,
+            runner=runner,
+            budget=budget,
+            parallel=parallel,
+            model=model,
+            abort_on_rate_limit=abort_on_rate_limit,
+        )
+    finally:
+        _CURRENT_MODEL = _previous_model
+
+
+def _ingest_source_impl(
+    source: Source,
+    *,
+    repo_root: Path,
+    cache_root: Path,
+    staging_dir: Path,
+    data_dir: Path,
+    schemas_dir: Path,
+    threshold: float,
+    dry_run: bool,
+    limit: int | None,
+    runner: SubprocessRunner,
+    budget: IngestBudget | None,
+    parallel: int,
+    model: str,
+    abort_on_rate_limit: bool,
+) -> IngestResult:
+    """Body van ingest_source met de modelcontext al opgezet."""
+
     result = IngestResult(source=source)
+
+    # Per-call kost gebaseerd op gekozen model. Geen hardcoded Sonnet meer.
+    per_call_cost = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
 
     # Stap 1: parse-plan
     plan = plan_parse(
@@ -514,13 +637,13 @@ def ingest_source(
         else:
             planned_parse = plan.count
         result.parsed = planned_parse
-        result.parse_cost_estimate_usd = planned_parse * COST_PARSE_USD
+        result.parse_cost_estimate_usd = planned_parse * per_call_cost
         result.notes.append(
             f"[dry-run] parse: {planned_parse}/{plan.count} jobs "
-            f"~${result.parse_cost_estimate_usd:.2f} (Sonnet 4.6)"
+            f"~${result.parse_cost_estimate_usd:.2f} ({model})"
         )
         if budget is not None:
-            budget.consume(planned_parse)
+            budget.consume(planned_parse, model=model)
             if planned_parse < plan.count:
                 result.budget_hit = True
                 result.notes.append(
@@ -546,7 +669,7 @@ def ingest_source(
         if budget is not None:
             # Reserveer het budget vooraf zodat parallelle resolve-fase
             # de gedeelde teller correct ziet.
-            budget.consume(len(jobs_within_budget))
+            budget.consume(len(jobs_within_budget), model=model)
             result.claude_calls_used += len(jobs_within_budget)
 
         if jobs_within_budget:
@@ -559,25 +682,46 @@ def ingest_source(
                         source,
                         repo_root=repo_root,
                         runner=runner,
+                        model=model,
                     ): job
                     for job in jobs_within_budget
                 }
+                rate_limit_seen = False
                 for future in as_completed(futures):
                     job = futures[future]
                     try:
-                        ok = future.result()
+                        ok, code = future.result()
                     except Exception as exc:
                         logger.error(
                             "parse-job %s gefaald: %s", job.input_path, exc
                         )
-                        ok = False
+                        ok, code = False, 1
+                    if code == RATE_LIMIT_EXIT_CODE:
+                        rate_limit_seen = True
+                        result.parse_failed += 1
+                        continue
                     if ok and job.output_path.exists():
                         result.parsed += 1
                     else:
                         result.parse_failed += 1
 
-    # Stap 2: resolve-plan (gebaseerd op huidige staging-state)
-    pending_resolve = plan_resolve(staging_dir, source=source)
+            if rate_limit_seen and abort_on_rate_limit:
+                result.aborted_rate_limit = True
+                msg = (
+                    f"RATE-LIMIT bereikt. Pipeline gestopt na "
+                    f"{result.parsed} succesvolle parse-calls. "
+                    "Wacht tot reset (22:00 Europe/Amsterdam) of switch model."
+                )
+                result.notes.append(msg)
+                print(msg, file=sys.stderr, flush=True)
+
+    # Stap 2: resolve-plan (gebaseerd op huidige staging-state).
+    # Als parse abort heeft veroorzaakt slaan we de resolve-fase over: de
+    # claude-API is rate-limited, een tweede ronde calls heeft geen zin.
+    if result.aborted_rate_limit:
+        pending_resolve: list[Path] = []
+    else:
+        pending_resolve = plan_resolve(staging_dir, source=source)
     if dry_run:
         if budget is not None and budget.max_claude_calls is not None:
             remaining = budget.remaining() or 0
@@ -586,7 +730,7 @@ def ingest_source(
             planned_resolve = len(pending_resolve)
         result.resolved = planned_resolve
         result.resolve_cost_estimate_usd = (
-            planned_resolve * COST_RESOLVE_USD * (1 + COST_LOOKUP_FACTOR)
+            planned_resolve * per_call_cost * (1 + COST_LOOKUP_FACTOR)
         )
         result.notes.append(
             f"[dry-run] resolve: {planned_resolve}/{len(pending_resolve)} jobs "
@@ -594,14 +738,14 @@ def ingest_source(
             f"(incl. ~{COST_LOOKUP_FACTOR:.1f} lookup-person calls/staging)"
         )
         if budget is not None:
-            budget.consume(planned_resolve)
+            budget.consume(planned_resolve, model=model)
             if planned_resolve < len(pending_resolve):
                 result.budget_hit = True
                 result.notes.append(
                     f"[dry-run] budget-cap stopt resolve na {planned_resolve} "
                     f"van {len(pending_resolve)} jobs"
                 )
-    else:
+    elif not result.aborted_rate_limit:
         # Zelfde pattern als parse: vooraf afgekapt op budget, dan parallel.
         # Lookup-person calls binnen één resolve zijn impliciet sequentieel,
         # parallelism op staging-file-niveau is veilig.
@@ -619,7 +763,7 @@ def ingest_source(
             paths_within_budget = list(pending_resolve)
 
         if budget is not None:
-            budget.consume(len(paths_within_budget))
+            budget.consume(len(paths_within_budget), model=model)
             result.claude_calls_used += len(paths_within_budget)
 
         if paths_within_budget:
@@ -631,22 +775,37 @@ def ingest_source(
                         staging_path,
                         repo_root=repo_root,
                         runner=runner,
+                        model=model,
                     ): staging_path
                     for staging_path in paths_within_budget
                 }
+                rate_limit_seen = False
                 for future in as_completed(futures):
                     staging_path = futures[future]
                     try:
-                        ok = future.result()
+                        ok, code = future.result()
                     except Exception as exc:
                         logger.error(
                             "resolve-job %s gefaald: %s", staging_path, exc
                         )
-                        ok = False
+                        ok, code = False, 1
+                    if code == RATE_LIMIT_EXIT_CODE:
+                        rate_limit_seen = True
+                        result.resolve_failed += 1
+                        continue
                     if ok and staging_path.with_suffix(".resolved.json").exists():
                         result.resolved += 1
                     else:
                         result.resolve_failed += 1
+            if rate_limit_seen and abort_on_rate_limit:
+                result.aborted_rate_limit = True
+                msg = (
+                    f"RATE-LIMIT bereikt in resolve-fase. Pipeline gestopt na "
+                    f"{result.resolved} succesvolle resolve-calls. "
+                    "Wacht tot reset (22:00 Europe/Amsterdam) of switch model."
+                )
+                result.notes.append(msg)
+                print(msg, file=sys.stderr, flush=True)
 
     # Stap 3: apply
     if dry_run:
@@ -713,26 +872,36 @@ def ingest_all(
     runner: SubprocessRunner = _default_runner,
     budget: IngestBudget | None = None,
     parallel: int = 5,
+    model: str = DEFAULT_MODEL,
+    abort_on_rate_limit: bool = True,
 ) -> list[IngestResult]:
     """Run `ingest_source` voor elk gegeven bronlabel.
 
     `budget` wordt gedeeld over alle bronnen zodat de cap voor de hele run geldt.
     `parallel` wordt doorgegeven aan elke `ingest_source`-call.
+
+    Als één bron `aborted_rate_limit=True` retourneert en
+    `abort_on_rate_limit` aan staat, slaan we de resterende bronnen over: de
+    claude-API is voor de huidige sessie op slot. Apply + validate van de
+    afgebroken bron worden wel uitgevoerd op het reeds gestagete materiaal.
     """
     results: list[IngestResult] = []
     for source in sources:
-        results.append(
-            ingest_source(
-                source,
-                repo_root=repo_root,
-                threshold=threshold,
-                dry_run=dry_run,
-                limit=limit,
-                runner=runner,
-                budget=budget,
-                parallel=parallel,
-            )
+        result = ingest_source(
+            source,
+            repo_root=repo_root,
+            threshold=threshold,
+            dry_run=dry_run,
+            limit=limit,
+            runner=runner,
+            budget=budget,
+            parallel=parallel,
+            model=model,
+            abort_on_rate_limit=abort_on_rate_limit,
         )
+        results.append(result)
+        if result.aborted_rate_limit and abort_on_rate_limit:
+            break
     return results
 
 
@@ -747,6 +916,7 @@ def format_dry_run_summary(
     threshold: float,
     parallelism: int = 5,
     budget: IngestBudget | None = None,
+    model: str = DEFAULT_MODEL,
 ) -> str:
     """Render een Nederlandstalige samenvatting van een dry-run.
 
@@ -763,7 +933,7 @@ def format_dry_run_summary(
         lines.append(f"[{r.source}]")
         lines.append(
             f"  Phase 1 parse: {r.parsed} jobs, "
-            f"~${r.parse_cost_estimate_usd:.2f} (Sonnet 4.6)"
+            f"~${r.parse_cost_estimate_usd:.2f} ({model})"
         )
         lines.append(
             f"  Phase 2 resolve: {r.resolved} staging-files unresolved, "

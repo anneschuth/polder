@@ -7,7 +7,9 @@ zodat tests offline draaien en geen LLM-tokens verbranden.
 from __future__ import annotations
 
 import json
+import os
 import shutil
+import subprocess
 from pathlib import Path
 from unittest.mock import patch
 
@@ -19,6 +21,8 @@ from polder.cli.main import app
 from polder.ingest import (
     COST_PARSE_USD,
     COST_RESOLVE_USD,
+    DEFAULT_MODEL,
+    RATE_LIMIT_EXIT_CODE,
     IngestBudget,
     IngestResult,
     commit_changes,
@@ -586,11 +590,12 @@ def test_dry_run_summary_has_per_source_breakdown_and_cost() -> None:
     assert "Phase 1 parse" in output
     assert "Phase 2 resolve" in output
     assert "Phase 3 apply" in output
-    assert "Sonnet 4.6" in output
+    # Default model is Haiku 4.5 sinds we Sonnet hebben afgeschaft als default.
+    assert "claude-haiku-4-5" in output
     assert "Totale geschatte kosten" in output
     assert "Wall-clock" in output
-    # Sanity check: parse-cost = 2906 * 0.025 = 72.65
-    assert "$72.65" in output
+    # Sanity check: parse-cost = 2906 * 0.005 = 14.53
+    assert "$14.53" in output
 
 
 def test_dry_run_summary_with_budget_includes_cap_line() -> None:
@@ -920,3 +925,366 @@ def test_cli_max_claude_calls_zero_dry_run_plant_niets(
     combined = result.output + (result.stderr or "")
     assert "0/3" in combined or "0 nieuwe" in combined
     assert "Dry-run klaar" in combined
+
+
+# ---------------------------------------------------------------------------
+# Model-keuze (default Haiku) en rate-limit abort
+# ---------------------------------------------------------------------------
+
+
+def test_default_model_is_haiku() -> None:
+    """Default model voor ingest is Haiku 4.5, niet Sonnet 4.6."""
+    assert DEFAULT_MODEL == "claude-haiku-4-5"
+    # Cost-default ligt op Haiku-tarief.
+    assert COST_PARSE_USD == 0.005
+    assert COST_RESOLVE_USD == 0.005
+
+
+def test_dry_run_summary_uses_explicit_model_string() -> None:
+    """Dry-run summary print de gekozen modelnaam, niet 'Sonnet 4.6'."""
+    results = [
+        IngestResult(
+            source="abd-nieuws",
+            parsed=10,
+            parse_cost_estimate_usd=10 * COST_PARSE_USD,
+        )
+    ]
+    output = format_dry_run_summary(
+        results, threshold=0.85, model="claude-opus-4-7"
+    )
+    assert "claude-opus-4-7" in output
+    assert "Sonnet 4.6" not in output
+
+
+def test_ingest_source_passes_model_to_runner_via_module_state(
+    mini_root: Path,
+) -> None:
+    """`model=` argument wordt via module-level state doorgegeven aan
+    `_default_runner`, die het op zijn beurt via subprocess-env aan
+    scripts/run_skill.sh doorgeeft.
+
+    Deze test inspecteert `polder.ingest._CURRENT_MODEL` tijdens de call;
+    parallelle workers zien dezelfde waarde omdat alle workers in één
+    `ingest_source`-call hetzelfde model gebruiken.
+    """
+    from polder import ingest as _ingest_mod
+
+    cache = mini_root / "_cache" / "abd-nieuws"
+    (cache / "news-01.html").write_text("<html/>", encoding="utf-8")
+
+    seen_model: list[str | None] = []
+
+    def fake_runner(cmd: list[str]) -> int:
+        seen_model.append(_ingest_mod._CURRENT_MODEL)
+        cmd_str = " ".join(cmd)
+        if "parse_abd_nieuws_local.sh" in cmd_str:
+            out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+            out_path.write_text("[]", encoding="utf-8")
+        elif "resolve_staging_local.sh" in cmd_str:
+            staging_path = Path(cmd[-1])
+            staging_path.with_suffix(".resolved.json").write_text("[]")
+        return 0
+
+    ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=cache.parent,
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        model="claude-opus-4-7",
+    )
+
+    # Parse + resolve = twee runner-calls, beide met hetzelfde model.
+    assert seen_model == ["claude-opus-4-7", "claude-opus-4-7"]
+    # Na de call is _CURRENT_MODEL gerestored naar None.
+    assert _ingest_mod._CURRENT_MODEL is None
+
+
+def test_ingest_source_aborts_on_rate_limit(mini_root: Path) -> None:
+    """Eén job met exit 99 -> aborted_rate_limit=True, andere bronnen NIET
+    verder, resolve overgeslagen."""
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(5):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+
+    call_count = 0
+
+    def fake_runner(cmd: list[str]) -> int:
+        nonlocal call_count
+        call_count += 1
+        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+        # Tweede call retourneert rate-limit code; die file wordt NIET
+        # geschreven (zoals run_skill.sh ook niet schrijft bij rate-limit).
+        if call_count == 2:
+            return RATE_LIMIT_EXIT_CODE
+        out_path.write_text("[]", encoding="utf-8")
+        return 0
+
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=cache.parent,
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        parallel=1,  # sequentieel zodat call_count deterministisch is
+    )
+
+    assert result.aborted_rate_limit is True
+    # Resolve-fase moet overgeslagen zijn omdat we abort hebben getriggerd.
+    assert result.resolved == 0
+    # Note bevat de rate-limit-melding.
+    assert any("RATE-LIMIT" in n for n in result.notes)
+
+
+def test_ingest_source_no_abort_on_rate_limit_keeps_going(
+    mini_root: Path,
+) -> None:
+    """Met `abort_on_rate_limit=False` gaat de pipeline door na exit 99."""
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(3):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+
+    call_count = 0
+
+    def fake_runner(cmd: list[str]) -> int:
+        nonlocal call_count
+        call_count += 1
+        if call_count == 1:
+            return RATE_LIMIT_EXIT_CODE
+        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+        out_path.write_text("[]", encoding="utf-8")
+        return 0
+
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=cache.parent,
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        parallel=1,
+        abort_on_rate_limit=False,
+    )
+
+    assert result.aborted_rate_limit is False
+    # Twee jobs gelukt (de eerste was rate-limit), één failed.
+    assert result.parsed == 2
+    assert result.parse_failed == 1
+
+
+def test_ingest_cli_help_includes_model_and_rate_limit_flags() -> None:
+    runner = CliRunner()
+    result = runner.invoke(app, ["ingest", "--help"])
+    assert result.exit_code == 0
+    assert "--model" in result.stdout
+    assert "abort-on-rate-limit" in result.stdout
+    assert "claude-haiku-4-5" in result.stdout
+
+
+def test_ingest_cli_model_flag_doorgegeven(
+    mini_root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """`--model claude-opus-4-7` arriveert bij `ingest_source`."""
+    monkeypatch.chdir(mini_root)
+
+    captured: dict[str, str] = {}
+
+    def fake_ingest_source(source, **kwargs):
+        captured["model"] = kwargs.get("model")
+        captured["abort_on_rate_limit"] = kwargs.get("abort_on_rate_limit")
+        return IngestResult(
+            source=source, parsed=0, resolved=0, applied=0, validate_ok=True
+        )
+
+    monkeypatch.setattr(
+        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
+    )
+
+    with patch(
+        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
+    ):
+        cli = CliRunner()
+        result = cli.invoke(
+            app,
+            [
+                "ingest",
+                "--source",
+                "abd-nieuws",
+                "--model",
+                "claude-opus-4-7",
+                "--no-abort-on-rate-limit",
+                "--dry-run",
+            ],
+        )
+
+    assert result.exit_code == 0, result.output
+    assert captured["model"] == "claude-opus-4-7"
+    assert captured["abort_on_rate_limit"] is False
+
+
+# ---------------------------------------------------------------------------
+# Pre-filter wrappers (parse_abd_nieuws_local.sh / parse_staatscourant_local.sh)
+# ---------------------------------------------------------------------------
+
+
+def _scripts_dir() -> Path:
+    return Path(__file__).resolve().parent.parent / "scripts"
+
+
+def test_parse_abd_nieuws_pre_filter_skipt_zonder_marker(tmp_path: Path) -> None:
+    """HTML zonder benoeming-markers -> wrapper schrijft `[]` zonder claude-call.
+
+    We zetten POLDER_CLAUDE_MODEL niet, maar mocken `claude` niet — als de
+    wrapper toch een claude-call zou doen zou de test falen omdat `claude` ofwel
+    niet bestaat ofwel een echte API-call zou doen.
+    """
+    html = tmp_path / "no-markers.html"
+    html.write_text(
+        "<html><body><h1>Vacature voor stagiair</h1>"
+        "<p>We zoeken iemand voor een vacature.</p></body></html>",
+        encoding="utf-8",
+    )
+    out = tmp_path / "out.json"
+
+    # Sabotage: zet PATH leeg zodat een echte claude-call zou crashen. Het
+    # pre-filter moet dit alsnog overleven door claude niet aan te roepen.
+    env = {"PATH": "/usr/bin:/bin"}
+    proc = subprocess.run(
+        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"),
+         str(html), str(out)],
+        check=False,
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+    assert proc.returncode == 0, f"stderr={proc.stderr}"
+    assert out.read_text(encoding="utf-8").strip() == "[]"
+    assert "pre-filter skip" in proc.stderr
+
+
+def test_parse_abd_nieuws_pre_filter_doorgaat_met_marker(tmp_path: Path) -> None:
+    """HTML mét marker triggert claude-call. We mocken claude met een stub."""
+    html = tmp_path / "wel-marker.html"
+    html.write_text(
+        "<html><body><p>Per 1 januari 2026 wordt mw. Jansen "
+        "benoemd tot directeur Beleid bij min-bzk.</p></body></html>",
+        encoding="utf-8",
+    )
+    out = tmp_path / "out.json"
+
+    # Stub claude die altijd een vaste JSON-array print.
+    stub_dir = tmp_path / "stub-bin"
+    stub_dir.mkdir()
+    stub = stub_dir / "claude"
+    stub.write_text(
+        '#!/usr/bin/env bash\n'
+        'cat >/dev/null\n'  # leesinput
+        'echo \'[{"person_name":"stub"}]\'\n',
+        encoding="utf-8",
+    )
+    stub.chmod(0o755)
+
+    env = os.environ.copy()
+    env["PATH"] = f"{stub_dir}:{env.get('PATH','')}"
+    env["CLAUDE_BIN"] = str(stub)
+
+    proc = subprocess.run(
+        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"),
+         str(html), str(out)],
+        check=False,
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+    assert proc.returncode == 0, f"stderr={proc.stderr}"
+    text = out.read_text(encoding="utf-8")
+    assert "stub" in text
+    assert "pre-filter skip" not in proc.stderr
+
+
+def test_parse_staatscourant_pre_filter_skipt_zonder_marker(
+    tmp_path: Path,
+) -> None:
+    """KB-XML met titel die niets met benoeming te maken heeft -> skip."""
+    xml = tmp_path / "kb.xml"
+    xml.write_text(
+        '<?xml version="1.0"?>'
+        '<root><officiele-titel>Mandaatbesluit Belastingdienst 2026</officiele-titel>'
+        '<body>...</body></root>',
+        encoding="utf-8",
+    )
+    out = tmp_path / "out.json"
+
+    proc = subprocess.run(
+        ["bash", str(_scripts_dir() / "parse_staatscourant_local.sh"),
+         str(xml), str(out)],
+        check=False,
+        capture_output=True,
+        text=True,
+        env={"PATH": "/usr/bin:/bin"},
+    )
+
+    assert proc.returncode == 0, f"stderr={proc.stderr}"
+    assert out.read_text(encoding="utf-8").strip() == "[]"
+    assert "pre-filter skip" in proc.stderr
+
+
+def test_run_skill_detects_rate_limit_in_output(tmp_path: Path) -> None:
+    """run_skill.sh zet exit 99 wanneer claude rate-limit-tekst output."""
+    # Stub claude die de rate-limit-string print.
+    stub_dir = tmp_path / "stub-bin"
+    stub_dir.mkdir()
+    stub = stub_dir / "claude"
+    stub.write_text(
+        '#!/usr/bin/env bash\n'
+        'cat >/dev/null\n'
+        'echo "Claude AI usage limit reached. Try again later."\n',
+        encoding="utf-8",
+    )
+    stub.chmod(0o755)
+
+    # Maak een minimale skill-dir zodat run_skill.sh de SKILL.md vindt.
+    repo_root = tmp_path / "repo"
+    skill_dir = repo_root / ".claude" / "skills" / "stub-skill"
+    skill_dir.mkdir(parents=True)
+    (skill_dir / "SKILL.md").write_text("dummy", encoding="utf-8")
+
+    # Kopieer run_skill.sh naar de fake repo zodat REPO_ROOT klopt.
+    scripts_dst = repo_root / "scripts"
+    scripts_dst.mkdir()
+    shutil.copy(_scripts_dir() / "run_skill.sh", scripts_dst / "run_skill.sh")
+
+    input_file = tmp_path / "in.txt"
+    input_file.write_text("hoi", encoding="utf-8")
+    out = tmp_path / "out.json"
+
+    env = os.environ.copy()
+    env["CLAUDE_BIN"] = str(stub)
+
+    proc = subprocess.run(
+        ["bash", str(scripts_dst / "run_skill.sh"),
+         "stub-skill", str(input_file), str(out)],
+        check=False,
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+    assert proc.returncode == RATE_LIMIT_EXIT_CODE, (
+        f"verwachtte {RATE_LIMIT_EXIT_CODE}, kreeg {proc.returncode}\n"
+        f"stderr={proc.stderr}"
+    )
+    # Output-file mag NIET de rate-limit-tekst bevatten.
+    assert not out.exists() or "usage limit" not in out.read_text(
+        encoding="utf-8"
+    )

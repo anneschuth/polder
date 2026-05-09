@@ -341,6 +341,177 @@ def test_cli_apply_writes_files(mini_polder: Path) -> None:
     assert "Geschreven: 3 files" in result.output
 
 
+def test_dedup_exact_mandaat_skipped(mini_polder: Path) -> None:
+    """Re-applying an identical proposal must not append a duplicate mandaat."""
+    _write_yaml(
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
+        {
+            "id": "person:kewal-s-1975",
+            "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},
+            "birth": {"year": 1975},
+            "mandaten": [
+                {
+                    "id": "existing-mandate",
+                    "organization_id": "org:onderdeel-directie-digitale-samenleving",
+                    "post_id": "post:p1",
+                    "role": "afdelingshoofd test",
+                    "start_date": "2020-01-01",
+                    "end_date": "2024-01-01",
+                    "sources": [
+                        {
+                            "id": "abd_nieuws",
+                            "url": "https://example.org/abd",
+                            "retrieved": "2026-05-09",
+                        }
+                    ],
+                }
+            ],
+            "sources": [
+                {
+                    "id": "abd_nieuws",
+                    "url": "https://example.org/abd",
+                    "retrieved": "2026-05-09",
+                }
+            ],
+        },
+    )
+    p = _kewal_proposal()
+    p["resolved_person_id"] = "person:kewal-s-1975"
+    p["post_id"] = "post:p1"
+    p["organization_id"] = "org:onderdeel-directie-digitale-samenleving"
+    p["resolved_organization_id"] = "org:onderdeel-directie-digitale-samenleving"
+    p["organization_chain"] = []
+    p["start_date"] = "2020-01-01"
+    p["end_date"] = "2024-01-01"
+    p["role"] = "afdelingshoofd test"
+
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert all(a.type != "append-mandaat" for a in actions)
+    assert any("idempotent" in r for s in skipped for r in s.reasons), skipped
+
+
+def test_skip_invalid_date_order_existing_person(mini_polder: Path) -> None:
+    """Append-target met start_date > end_date wordt geweigerd."""
+    _write_yaml(
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
+        {
+            "id": "person:kewal-s-1975",
+            "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},
+            "birth": {"year": 1975},
+            "mandaten": [],
+            "sources": [
+                {
+                    "id": "abd_nieuws",
+                    "url": "https://example.org/abd",
+                    "retrieved": "2026-05-09",
+                }
+            ],
+        },
+    )
+    p = _kewal_proposal()
+    p["resolved_person_id"] = "person:kewal-s-1975"
+    p["start_date"] = "2026-01-01"
+    p["end_date"] = "2024-01-01"
+
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert all(a.type != "append-mandaat" for a in actions)
+    assert any(
+        "ongeldige datum-volgorde" in r for s in skipped for r in s.reasons
+    ), skipped
+
+
+def test_skip_invalid_date_order_new_person(mini_polder: Path) -> None:
+    """Nieuwe persoon met start > end: skip in plaats van persoon-zonder-mandaat."""
+    p = _kewal_proposal()
+    p["start_date"] = "2030-01-01"
+    p["end_date"] = "2025-01-01"
+
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert all(a.type != "create-person" for a in actions)
+    assert any(
+        "ongeldige datum-volgorde" in r for s in skipped for r in s.reasons
+    ), skipped
+
+
+def test_skip_implausible_date(mini_polder: Path) -> None:
+    """Datums >5 jaar in de toekomst of <1798 worden geweigerd."""
+    p = _kewal_proposal()
+    p["start_date"] = "1750-01-01"
+    p["end_date"] = None
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert all(a.type != "create-person" for a in actions)
+    assert any(
+        "redelijk bereik" in r for s in skipped for r in s.reasons
+    ), skipped
+
+
+def test_fuzzy_duplicate_writes_with_warning(mini_polder: Path) -> None:
+    """Datums binnen 7 dagen van bestaand mandaat: append met warning, niet skip."""
+    _write_yaml(
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
+        {
+            "id": "person:kewal-s-1975",
+            "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},
+            "birth": {"year": 1975},
+            "mandaten": [
+                {
+                    "id": "existing-mandate",
+                    "organization_id": "org:onderdeel-directie-digitale-samenleving",
+                    "post_id": "post:p1",
+                    "role": "afdelingshoofd test",
+                    "start_date": "2020-01-01",
+                    "end_date": "2024-01-01",
+                    "sources": [
+                        {
+                            "id": "abd_nieuws",
+                            "url": "https://example.org/abd",
+                            "retrieved": "2026-05-09",
+                        }
+                    ],
+                }
+            ],
+            "sources": [
+                {
+                    "id": "abd_nieuws",
+                    "url": "https://example.org/abd",
+                    "retrieved": "2026-05-09",
+                }
+            ],
+        },
+    )
+    p = _kewal_proposal()
+    p["resolved_person_id"] = "person:kewal-s-1975"
+    p["post_id"] = "post:p1"
+    p["organization_id"] = "org:onderdeel-directie-digitale-samenleving"
+    p["resolved_organization_id"] = "org:onderdeel-directie-digitale-samenleving"
+    p["organization_chain"] = []
+    p["start_date"] = "2020-01-05"
+    p["end_date"] = "2024-01-05"
+    p["role"] = "afdelingshoofd test variant"
+
+    actions, _skipped = plan_apply([p], mini_polder / "data")
+    appends = [a for a in actions if a.type == "append-mandaat"]
+    assert len(appends) == 1
+    assert any("fuzzy-duplicaat" in r for r in appends[0].reasons), appends[0].reasons
+
+
+def test_competing_proposals_keep_highest_confidence(mini_polder: Path) -> None:
+    """Twee proposals voor dezelfde (post_id, person, start_date): houd hoogste."""
+    p_low = _kewal_proposal()
+    p_low["confidence"] = 0.86
+
+    p_high = _kewal_proposal()
+    p_high["confidence"] = 0.95
+
+    actions, skipped = plan_apply([p_low, p_high], mini_polder / "data")
+    create_persons = [a for a in actions if a.type == "create-person"]
+    assert len(create_persons) == 1
+    assert create_persons[0].confidence == 0.95
+    assert any(
+        "concurrerende proposal" in r for s in skipped for r in s.reasons
+    ), skipped
+
+
 def test_load_resolved_input_directory(tmp_path: Path) -> None:
     a = tmp_path / "x.resolved.json"
     b = tmp_path / "y.resolved.json"

@@ -13,7 +13,21 @@
 #   output-file          optioneel. Schrijft stdout van claude -p naar dit pad.
 #                        Default: stdout van dit script.
 #
-# Exit non-zero bij failure. Compatibel met bash 3.2 (macOS) en bash 5+ (Linux).
+# Env-vars:
+#   POLDER_CLAUDE_MODEL  modelnaam voor `claude --model`. Default
+#                        claude-haiku-4-5. Aanroepers (parse_*_local.sh) kunnen
+#                        zelf een ander default zetten als de skill een sterker
+#                        model nodig heeft (bv. parse-organogram met Opus).
+#
+# Exit-codes:
+#   0   succes
+#   99  rate-limit gedetecteerd in claude-output. Output-file wordt NIET
+#       geschreven (anders zou rate-limit-tekst als JSON gestaged worden).
+#       Aanroepers in src/polder/ingest.py interpreteren 99 als signaal om
+#       de hele pipeline-fase af te breken.
+#   anders  gewone fout (skill niet gevonden, claude crash, etc.)
+#
+# Compatibel met bash 3.2 (macOS) en bash 5+ (Linux).
 
 set -euo pipefail
 
@@ -46,16 +60,72 @@ if ! command -v "$CLAUDE_BIN" >/dev/null 2>&1; then
   fi
 fi
 
+# Default model: Haiku 4.5 — een orde van grootte goedkoper dan Sonnet 4.6 en
+# voor de parse/resolve-skills vrijwel even accuraat. Aanroepers die een sterker
+# model nodig hebben (bv. parse_organogram_local.sh voor PDF-vision) zetten
+# POLDER_CLAUDE_MODEL voor de aanroep.
+CLAUDE_MODEL="${POLDER_CLAUDE_MODEL:-claude-haiku-4-5}"
+
 # Bouw prompt-prefix. De input gaat na de prefix als stdin of als string.
 PROMPT_PREFIX="Gebruik de skill \`${SKILL_NAME}\` zoals beschreven in \`.claude/skills/${SKILL_NAME}/SKILL.md\`. Volg de skill-instructies exact. Lees ook \`.claude/skills/${SKILL_NAME}/SKILL.md\` zelf voordat je begint. Input volgt hieronder."
 
+# Detect rate-limit markers in claude-output. Markers gebaseerd op observed
+# error-strings: "Claude AI usage limit reached", "hit your limit",
+# "rate limit", "rate-limit", "exceeded".
+is_rate_limited() {
+  # $1 = pad naar output-bestand om te scannen
+  if [ ! -f "$1" ]; then
+    return 1
+  fi
+  if grep -qiE "hit your (usage |rate )?limit|rate[ -]limit|rate limited|usage limit reached|exceeded.*limit|429" "$1"; then
+    return 0
+  fi
+  return 1
+}
+
 run_claude() {
   # $1 = full prompt text om te pipen via stdin
+  # $2 = pad waar stdout naartoe moet (mag leeg zijn voor terminal-stdout)
   # We chdir naar REPO_ROOT zodat .claude/ resolveerbaar is.
-  (
+  local prompt="$1"
+  local out_file="$2"
+  local tmp_out
+  tmp_out="$(mktemp -t polder-run-skill.XXXXXX)"
+  # Schrijf stderr ook naar het temp-bestand zodat rate-limit-detectie zowel
+  # over stdout als stderr scant; de claude-CLI print rate-limit-fouten soms
+  # naar stderr.
+  if (
     cd "$REPO_ROOT"
-    printf '%s' "$1" | "$CLAUDE_BIN" -p --permission-mode bypassPermissions
-  )
+    printf '%s' "$prompt" | "$CLAUDE_BIN" -p \
+      --model "$CLAUDE_MODEL" \
+      --permission-mode bypassPermissions \
+      >"$tmp_out" 2>>"$tmp_out"
+  ); then
+    local claude_rc=0
+  else
+    local claude_rc=$?
+  fi
+
+  if is_rate_limited "$tmp_out"; then
+    echo "run_skill.sh: rate-limit gedetecteerd, output NIET geschreven naar ${out_file:-stdout}" >&2
+    rm -f "$tmp_out"
+    return 99
+  fi
+
+  if [ "$claude_rc" -ne 0 ]; then
+    # Niet rate-limit, gewone fout. Print stderr/stdout naar onze stderr.
+    cat "$tmp_out" >&2
+    rm -f "$tmp_out"
+    return "$claude_rc"
+  fi
+
+  if [ -n "$out_file" ]; then
+    cp "$tmp_out" "$out_file"
+  else
+    cat "$tmp_out"
+  fi
+  rm -f "$tmp_out"
+  return 0
 }
 
 # Bouw de full prompt: prefix + input.
@@ -90,8 +160,21 @@ fi
 if [ -n "$OUTPUT" ]; then
   OUTPUT_DIR="$(dirname "$OUTPUT")"
   mkdir -p "$OUTPUT_DIR"
-  run_claude "$FULL_PROMPT" >"$OUTPUT"
-  echo "run_skill.sh: output geschreven naar $OUTPUT" >&2
+  if run_claude "$FULL_PROMPT" "$OUTPUT"; then
+    echo "run_skill.sh: output geschreven naar $OUTPUT (model=$CLAUDE_MODEL)" >&2
+  else
+    rc=$?
+    if [ "$rc" -eq 99 ]; then
+      exit 99
+    fi
+    exit "$rc"
+  fi
 else
-  run_claude "$FULL_PROMPT"
+  if ! run_claude "$FULL_PROMPT" ""; then
+    rc=$?
+    if [ "$rc" -eq 99 ]; then
+      exit 99
+    fi
+    exit "$rc"
+  fi
 fi

@@ -11,6 +11,16 @@
 # Output: append-merge naar data/_staging/abd-nieuws-<YYYY-MM>.json (JSON-array).
 # Substring-check wordt na de claude-call uitgevoerd: evidence_snippet MOET
 # letterlijk in de HTML staan, anders wordt het proposal afgewezen.
+#
+# Pre-filter: HTML zonder benoemings/ontslag-markers wordt overgeslagen zonder
+# claude-aanroep. Voor de bulk-backfill bespaart dat ~30-50% van de calls.
+#
+# Env-vars:
+#   POLDER_CLAUDE_MODEL  default claude-haiku-4-5.
+#
+# Exit-codes:
+#   0   succes (ook bij skip of validate-fail; failures gaan naar log)
+#   99  rate-limit gedetecteerd; bovenliggend script kan de batch afbreken.
 
 set -euo pipefail
 
@@ -49,6 +59,46 @@ if ! command -v "$CLAUDE_BIN" >/dev/null 2>&1; then
   fi
 fi
 
+CLAUDE_MODEL="${POLDER_CLAUDE_MODEL:-claude-haiku-4-5}"
+
+# Pre-filter: strip HTML naar plain text en check op markers. Geen marker ->
+# overslaan zonder LLM-call.
+PRE_FILTER_PATTERNS="wordt benoemd|is benoemd|wordt per|start als|neemt afscheid|afdelingshoofd|directeur|secretaris-generaal|directeur-generaal|inspecteur-generaal|minister|staatssecretaris|kwartiermaker"
+
+TEXT="$(python3 - "$HTML_PATH" <<'PY'
+import sys
+from html.parser import HTMLParser
+
+class TextExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self._skip = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style"):
+            self._skip += 1
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style") and self._skip > 0:
+            self._skip -= 1
+
+    def handle_data(self, data):
+        if self._skip == 0:
+            self.parts.append(data)
+
+extractor = TextExtractor()
+with open(sys.argv[1], encoding="utf-8", errors="replace") as f:
+    extractor.feed(f.read())
+sys.stdout.write(" ".join(extractor.parts).lower())
+PY
+)"
+
+if ! printf '%s' "$TEXT" | grep -qiE "$PRE_FILTER_PATTERNS"; then
+  echo "skip-pre-filter $BASENAME" >&2
+  exit 0
+fi
+
 PROMPT="$(cat <<PROMPT_EOF
 Pas de skill .claude/skills/parse-abd-nieuws/SKILL.md toe.
 
@@ -74,17 +124,31 @@ PROMPT_EOF
 )"
 
 TMP_OUT="$(mktemp -t parse_abdn.XXXXXX)"
-trap 'rm -f "$TMP_OUT"' EXIT
+TMP_ERR="$(mktemp -t parse_abdn_err.XXXXXX)"
+trap 'rm -f "$TMP_OUT" "$TMP_ERR"' EXIT
 
 if ! (cd "$REPO_ROOT" && printf '%s' "$PROMPT" | timeout 180 "$CLAUDE_BIN" \
         --print \
-        --model claude-sonnet-4-6 \
+        --model "$CLAUDE_MODEL" \
         --permission-mode bypassPermissions \
         --allowedTools "Read" \
         --output-format text \
-        >"$TMP_OUT" 2>>"$FAILURES_LOG"); then
+        >"$TMP_OUT" 2>"$TMP_ERR"); then
+  cat "$TMP_ERR" >>"$FAILURES_LOG"
+  # Rate-limit gedetecteerd? Stuur signaal omhoog.
+  if grep -qiE "hit your (usage |rate )?limit|rate[ -]limit|usage limit reached|429" "$TMP_OUT" "$TMP_ERR" 2>/dev/null; then
+    echo "$(date -u +%FT%TZ) RATE_LIMIT $HTML_PATH" >>"$FAILURES_LOG"
+    exit 99
+  fi
   echo "$(date -u +%FT%TZ) CLAUDE_FAIL $HTML_PATH" >>"$FAILURES_LOG"
   exit 0
+fi
+
+# Ook bij rc=0: scan output op rate-limit-tekst (de claude-CLI exit soms 0
+# maar plakt de rate-limit-melding in de body).
+if grep -qiE "hit your (usage |rate )?limit|rate[ -]limit|usage limit reached|429" "$TMP_OUT" 2>/dev/null; then
+  echo "$(date -u +%FT%TZ) RATE_LIMIT $HTML_PATH" >>"$FAILURES_LOG"
+  exit 99
 fi
 
 JSON="$(uv run --project "$REPO_ROOT" python "$SCRIPT_DIR/_backfill_abd_nieuws_validate.py" \

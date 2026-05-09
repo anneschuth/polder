@@ -18,6 +18,7 @@ import typer
 
 from polder.ingest import (
     ALL_SOURCES,
+    DEFAULT_MODEL,
     IngestBudget,
     IngestResult,
     Source,
@@ -80,7 +81,12 @@ def _print_result(result: IngestResult, *, dry_run: bool) -> None:
         elif result.validate_ok is False:
             typer.echo("  Validate: FAILED", err=True)
     if result.budget_hit:
-        typer.echo("  Budget:   cap bereikt — fase afgebroken", err=True)
+        typer.echo("  Budget:   cap bereikt, fase afgebroken", err=True)
+    if result.aborted_rate_limit:
+        typer.echo(
+            "  Rate-limit: pipeline gestopt voor deze bron (claude-API rate-limit)",
+            err=True,
+        )
     for note in result.notes:
         typer.echo(f"  - {note}", err=True)
     typer.echo("", err=True)
@@ -158,6 +164,30 @@ def ingest(
             ),
         ),
     ] = 5,
+    model: Annotated[
+        str,
+        typer.Option(
+            "--model",
+            help=(
+                "LLM-model voor parse + resolve fases. Default "
+                "claude-haiku-4-5 (5x goedkoper dan Sonnet 4.6, accuraat genoeg "
+                "voor de extraction-skills). Vision-skill parse-organogram "
+                "overruled zelf naar Opus."
+            ),
+        ),
+    ] = DEFAULT_MODEL,
+    abort_on_rate_limit: Annotated[
+        bool,
+        typer.Option(
+            "--abort-on-rate-limit/--no-abort-on-rate-limit",
+            help=(
+                "Stop de pipeline bij eerste rate-limit van de claude-API "
+                "(default aan). Voorkomt dat een rate-limited claude oneindig "
+                "garbage als JSON blijft stagen tot het reset-window om 22:00 "
+                "Europe/Amsterdam."
+            ),
+        ),
+    ] = True,
 ) -> None:
     """End-to-end: parse + resolve (parallel) -> apply -> validate -> [build] [commit per bron] [push]."""
     repo_root = _repo_root()
@@ -170,7 +200,8 @@ def ingest(
     typer.echo(
         f"Ingest run: source={source}, threshold={threshold}, "
         f"commit={commit}, push={push}, dry_run={dry_run}, "
-        f"max_claude_calls={max_claude_calls}, parallel={parallel}",
+        f"max_claude_calls={max_claude_calls}, parallel={parallel}, "
+        f"model={model}, abort_on_rate_limit={abort_on_rate_limit}",
         err=True,
     )
     typer.echo("", err=True)
@@ -179,6 +210,7 @@ def ingest(
 
     results: list[IngestResult] = []
     any_validate_failed = False
+    rate_limit_aborted = False
     today = date.today().isoformat()
     for s in sources:
         result = ingest_source(
@@ -189,9 +221,13 @@ def ingest(
             limit=limit,
             budget=budget,
             parallel=parallel,
+            model=model,
+            abort_on_rate_limit=abort_on_rate_limit,
         )
         _print_result(result, dry_run=dry_run)
         results.append(result)
+        if result.aborted_rate_limit:
+            rate_limit_aborted = True
         if result.validate_ok is False or result.apply_failed:
             any_validate_failed = True
             # Geen per-source commit als deze bron faalde.
@@ -220,6 +256,17 @@ def ingest(
                 result.commit_sha = sha
                 typer.echo(f"  Commit: {sha[:7]} {message!r}", err=True)
 
+        if rate_limit_aborted and abort_on_rate_limit:
+            # Rate-limit geraakt: stoppen met andere bronnen. Apply + validate
+            # van de huidige bron is al gedraaid op het reeds gestagete
+            # materiaal, dus een per-bron commit is hierboven al gedaan.
+            typer.echo(
+                "Rate-limit geraakt. Resterende bronnen overgeslagen. "
+                "Wacht tot reset (22:00 Europe/Amsterdam) of switch model.",
+                err=True,
+            )
+            break
+
     if dry_run:
         typer.echo("", err=True)
         typer.echo(
@@ -228,6 +275,7 @@ def ingest(
                 threshold=threshold,
                 parallelism=parallel,
                 budget=budget,
+                model=model,
             ),
             err=True,
         )

@@ -138,6 +138,111 @@ def _classification_from_role(role: str) -> str | None:
     return None
 
 
+# ---------------------------------------------------------------------------
+# Mandaat-deduplicatie en datum-validatie
+# ---------------------------------------------------------------------------
+
+
+# Reasonable bounds: oldest plausible Dutch civil-service date is ~1798
+# (Bataafse Republiek). Future dates beyond five years from today are likely
+# parsing errors rather than legitimate appointments.
+_MIN_PLAUSIBLE_YEAR = 1798
+_MAX_FUTURE_YEARS = 5
+
+
+def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str, str]:
+    """Canonical key voor mandaat-deduplicatie.
+
+    Identical (post_id, organization_id, start_date, end_date, role) is treated
+    as the same mandate regardless of source, decision_reference, or confidence.
+    """
+    return (
+        str(m.get("post_id") or ""),
+        str(m.get("organization_id") or ""),
+        str(m.get("start_date") or ""),
+        str(m.get("end_date") or ""),
+        str(m.get("role") or ""),
+    )
+
+
+def _parse_iso_date(value: str | None) -> date | None:
+    if not value:
+        return None
+    try:
+        return date.fromisoformat(str(value))
+    except ValueError:
+        return None
+
+
+def _dates_valid(start: str | None, end: str | None) -> bool:
+    """True als start_date <= end_date wanneer beide gezet zijn.
+
+    Falt-veilig bij parse-errors: returns True (validatie is geen schema-check).
+    """
+    sd = _parse_iso_date(start)
+    ed = _parse_iso_date(end)
+    if sd is None or ed is None:
+        return True
+    return sd <= ed
+
+
+def _date_in_plausible_range(value: str | None) -> bool:
+    """True als de datum binnen [1798, today+5y] valt of niet geparsed kan worden."""
+    d = _parse_iso_date(value)
+    if d is None:
+        return True
+    if d.year < _MIN_PLAUSIBLE_YEAR:
+        return False
+    today = date.today()
+    max_year = today.year + _MAX_FUTURE_YEARS
+    return d.year <= max_year
+
+
+def _validate_mandaat_dates(
+    start: str | None, end: str | None
+) -> str | None:
+    """Retourneer een Nederlandse skip-reden of None als datums OK zijn."""
+    if not _dates_valid(start, end):
+        return f"ongeldige datum-volgorde: start_date {start} na end_date {end}"
+    for label, value in (("start_date", start), ("end_date", end)):
+        if not _date_in_plausible_range(value):
+            return f"datum buiten redelijk bereik: {label}={value}"
+    return None
+
+
+def _within_days(a: str | None, b: str | None, days: int) -> bool:
+    """True als beide datums binnen `days` dagen liggen, of beide None."""
+    if not a and not b:
+        return True
+    da = _parse_iso_date(a)
+    db = _parse_iso_date(b)
+    if da is None or db is None:
+        return False
+    return abs((da - db).days) <= days
+
+
+def _fuzzy_duplicate_mandaat(
+    existing: list[dict[str, Any]],
+    *,
+    post_id: str,
+    organization_id: str,
+    start_date: str | None,
+    end_date: str | None,
+) -> dict[str, Any] | None:
+    """Vind een bestaand mandaat met zelfde post+org en datums binnen 7 dagen."""
+    for m in existing:
+        if m.get("post_id") != post_id:
+            continue
+        if m.get("organization_id") != organization_id:
+            continue
+        if not _within_days(m.get("start_date"), start_date, 7):
+            continue
+        if not _within_days(m.get("end_date"), end_date, 7):
+            continue
+        return m
+    return None
+
+
 def _is_red_avg(role: str) -> bool:
     role_l = role.lower()
     return any(k in role_l for k in RED_AVG_KEYWORDS)
@@ -265,6 +370,52 @@ def _person_family_match(person: dict[str, Any], family: str) -> bool:
 # ---------------------------------------------------------------------------
 
 
+def _dedupe_competing_proposals(
+    proposals: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[SkippedProposal]]:
+    """Houd per (post_id, person_name, start_date) alleen de hoogste-confidence.
+
+    Multiple proposals naming the same persoon for the same post with the same
+    start_date are treated as competing duplicates. Lower-confidence ones are
+    skipped with a clear reason.
+    """
+    grouped: dict[tuple[str, str, str], list[tuple[int, dict[str, Any]]]] = {}
+    for idx, p in enumerate(proposals):
+        post_id = str(p.get("post_id") or "")
+        name = str(p.get("person_name") or "").strip().lower()
+        start = str(p.get("start_date") or "")
+        if not post_id or not name:
+            grouped.setdefault(("", str(idx), ""), []).append((idx, p))
+            continue
+        grouped.setdefault((post_id, name, start), []).append((idx, p))
+
+    keep_indices: set[int] = set()
+    skipped: list[SkippedProposal] = []
+    for key, items in grouped.items():
+        if len(items) == 1:
+            keep_indices.add(items[0][0])
+            continue
+        # Multiple competing proposals: keep highest confidence.
+        items_sorted = sorted(
+            items, key=lambda t: float(t[1].get("confidence") or 0.0), reverse=True
+        )
+        winner_idx, winner = items_sorted[0]
+        keep_indices.add(winner_idx)
+        for _, loser in items_sorted[1:]:
+            skipped.append(
+                SkippedProposal(
+                    proposal=loser,
+                    reasons=[
+                        "concurrerende proposal: hogere confidence "
+                        f"{float(winner.get('confidence') or 0.0):.2f} wint voor "
+                        f"post_id={key[0]} start_date={key[2]}"
+                    ],
+                )
+            )
+    kept = [p for i, p in enumerate(proposals) if i in keep_indices]
+    return kept, skipped
+
+
 def plan_apply(
     resolved_proposals: list[dict[str, Any]],
     data_dir: Path,
@@ -292,6 +443,14 @@ def plan_apply(
     pending_person_ids: set[str] = set()
 
     confidence_floor = 0.95 if only_high_confidence else 0.85
+
+    # Pre-pass: collapse proposals that target the same (post_id, person_name,
+    # start_date) into the single highest-confidence one. This protects single-
+    # seat posts from being filled by multiple competing proposals in one run.
+    resolved_proposals, conflict_skips = _dedupe_competing_proposals(
+        resolved_proposals
+    )
+    skipped.extend(conflict_skips)
 
     for raw in resolved_proposals:
         proposal = dict(raw)
@@ -547,6 +706,15 @@ def _plan_person(
     if not name_full:
         return SkippedProposal(proposal=proposal, reasons=["geen person_name"])
 
+    # Validate the mandate dates before doing any persoon-resolution. Invalid
+    # dates poison the whole action: skip the proposal completely so we never
+    # create a persoon with a broken mandate or mutate an existing persoon.
+    date_skip = _validate_mandaat_dates(
+        proposal.get("start_date"), proposal.get("end_date")
+    )
+    if date_skip is not None:
+        return SkippedProposal(proposal=proposal, reasons=[date_skip])
+
     birth_year = _extract_birth_year(proposal)
 
     # Idempotency: als de slug die we zouden aanmaken al bestaat in data/personen/,
@@ -567,7 +735,7 @@ def _plan_person(
                 reasons=[f"resolved_person_id {resolved_id} niet gevonden"],
             )
         path, record = match
-        new_record = _append_mandaat(
+        new_record, fuzzy_warnings = _append_mandaat(
             record=record,
             organization_id=target_org_id,
             post_id=post_id,
@@ -576,15 +744,18 @@ def _plan_person(
         if new_record is None:
             return SkippedProposal(
                 proposal=proposal,
-                reasons=["mandaat met deze post bestaat al op persoon"],
+                reasons=["mandaat al aanwezig (idempotent)"],
             )
+        reasons = [f"append mandaat aan {resolved_id}"]
+        for w in fuzzy_warnings:
+            reasons.append(f"waarschuwing: {w}")
         return ApplyAction(
             type="append-mandaat",
             target_path=path,
             record=new_record,
             source_proposal=proposal,
             confidence=confidence,
-            reasons=[f"append mandaat aan {resolved_id}"],
+            reasons=reasons,
         )
 
     # Nieuwe persoon. Eis: confidence >= 0.85 (al gechecked) EN
@@ -646,19 +817,38 @@ def _append_mandaat(
     organization_id: str,
     post_id: str,
     proposal: dict[str, Any],
-) -> dict[str, Any] | None:
+) -> tuple[dict[str, Any] | None, list[str]]:
+    """Append een nieuw mandaat aan een persoon-record.
+
+    Retourneert (new_record, warnings).
+      * new_record is None bij idempotent skip (exact duplicate).
+      * warnings bevat fuzzy-duplicate notes maar het mandaat wordt wel toegevoegd.
+    """
+    warnings: list[str] = []
     mandaten = list(record.get("mandaten") or [])
-    for m in mandaten:
-        if m.get("post_id") == post_id and m.get("organization_id") == organization_id:
-            existing_start = m.get("start_date")
-            if existing_start == proposal.get("start_date"):
-                return None
-    new = _build_mandaat(
+    candidate = _build_mandaat(
         organization_id=organization_id, post_id=post_id, proposal=proposal
     )
+    new_key = _mandaat_key(candidate)
+    for m in mandaten:
+        if _mandaat_key(m) == new_key:
+            return None, warnings
+    fuzzy = _fuzzy_duplicate_mandaat(
+        mandaten,
+        post_id=post_id,
+        organization_id=organization_id,
+        start_date=candidate.get("start_date"),
+        end_date=candidate.get("end_date"),
+    )
+    if fuzzy is not None:
+        warnings.append(
+            "fuzzy-duplicaat: bestaand mandaat "
+            f"({fuzzy.get('start_date')}..{fuzzy.get('end_date')}) "
+            f"binnen 7 dagen van nieuw ({candidate.get('start_date')}..{candidate.get('end_date')})"
+        )
     new_record = dict(record)
-    new_record["mandaten"] = [*mandaten, new]
-    return new_record
+    new_record["mandaten"] = [*mandaten, candidate]
+    return new_record, warnings
 
 
 def _build_mandaat(

@@ -9,6 +9,11 @@
 # Roept de parse-organogram skill aan op een PDF uit de ABD-cache. PDF wordt
 # als pad doorgegeven aan claude -p; de skill leest het bestand zelf via de
 # Read-tool.
+#
+# Default model: claude-opus-4-7. Een organogram is een visueel-zwaar PDF en
+# Haiku haalt de hierarchische relaties niet betrouwbaar terug. Caller kan via
+# POLDER_CLAUDE_MODEL overrulen, maar we gokken hier zelf op Opus omdat de
+# foutkosten van een verkeerde organogramparse hoger zijn dan de extra LLM-cost.
 
 set -euo pipefail
 
@@ -53,6 +58,18 @@ skill. Voeg de ministerie_slug toe aan elke proposal in het output-record waar
 relevant. Output uitsluitend JSON naar stdout.
 EOF
 
-bash "$SCRIPT_DIR/run_skill.sh" parse-organogram "$TMP_INPUT" "$OUTPUT"
+# Override model alleen als caller geen expliciete keuze heeft gemaakt.
+if [ -z "${POLDER_CLAUDE_MODEL:-}" ]; then
+  export POLDER_CLAUDE_MODEL="claude-opus-4-7"
+fi
 
-echo "parse_organogram_local.sh: proposals geschreven naar $OUTPUT" >&2
+if bash "$SCRIPT_DIR/run_skill.sh" parse-organogram "$TMP_INPUT" "$OUTPUT"; then
+  echo "parse_organogram_local.sh: proposals geschreven naar $OUTPUT (model=$POLDER_CLAUDE_MODEL)" >&2
+else
+  rc=$?
+  if [ "$rc" -eq 99 ]; then
+    echo "parse_organogram_local.sh: rate-limit, abort signaal (exit 99)" >&2
+    exit 99
+  fi
+  exit "$rc"
+fi
