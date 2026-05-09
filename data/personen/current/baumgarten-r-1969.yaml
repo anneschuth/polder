@@ -1,0 +1,26 @@
+id: person:baumgarten-r-1969
+name:
+  full: Ruben Baumgarten
+  family: Baumgarten
+  initials: R.
+  honorifics_pre:
+  - Dr.
+birth:
+  year: 1969
+mandaten:
+- id: d55021f9-7231-44b4-b256-1eaa2af373c2
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor JA21
+  start_date: '2023-06-13'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/dr_r_baumgarten_ja21
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/dr_r_baumgarten_ja21
+  retrieved: '2026-05-09'

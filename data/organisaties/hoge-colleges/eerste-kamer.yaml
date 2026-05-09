@@ -1,0 +1,19 @@
+id: org:eerste-kamer
+type: hoge-college
+identifiers:
+  tooi: https://identifier.overheid.nl/tooi/id/orgaan/oa10000002
+classification: hoge-college
+parent_id: null
+names:
+- value: Eerste Kamer der Staten-Generaal
+  abbr: EK
+  valid_from: '1815-08-24'
+contact:
+  website: https://www.eerstekamer.nl
+  bezoekadres: Binnenhof 22, 2513 AA Den Haag
+valid_from: '1815-08-24'
+valid_until: null
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/alle_leden
+  retrieved: '2026-05-09'

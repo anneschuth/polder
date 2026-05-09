@@ -47,9 +47,38 @@ def _render_table(obj: Any, console: Console) -> None:
     console.print(table)
 
 
+LINK_TEMPLATES: dict[str, str] = {
+    "tk_persoon_id": "https://berthub.eu/tkconv/persoon.html?nummer={value}",
+    "wikidata": "https://www.wikidata.org/wiki/{value}",
+    "tooi": "{value}",
+    "roo_id": "https://organisaties.overheid.nl/{value}/",
+    "allmanak_id": "https://www.allmanak.nl/cat/{value}/",
+    "ek_lid_slug": "https://www.eerstekamer.nl/lid/{value}",
+}
+
+
+def _render_links(obj: Any, console: Console) -> None:
+    identifiers = getattr(obj, "identifiers", None)
+    if identifiers is None:
+        return
+    ids = identifiers.model_dump(mode="json", exclude_none=True)
+    if not ids:
+        return
+    table = Table(title="Deep-links", show_header=True, header_style="bold")
+    table.add_column("identifier")
+    table.add_column("waarde")
+    table.add_column("link")
+    for kind, value in ids.items():
+        template = LINK_TEMPLATES.get(kind)
+        link = template.format(value=value) if template else "-"
+        table.add_row(kind, str(value), link)
+    console.print(table)
+
+
 def show(
     id: Annotated[str, typer.Argument(help="ID, bv `org:min-bzk` of `person:rutte-...`.")],
     history: Annotated[bool, typer.Option(help="Toon mandaat-historie waar van toepassing.")] = False,
+    links: Annotated[bool, typer.Option(help="Toon deep-links naar externe systemen (tkconv, Wikidata, ROO).")] = False,
     format: Annotated[str, typer.Option(help="table | json | yaml")] = "table",
     data: Annotated[Path | None, typer.Option(help="Polder root.")] = None,
 ) -> None:
@@ -70,6 +99,9 @@ def show(
 
     console = Console()
     _render_table(obj, console)
+
+    if links:
+        _render_links(obj, console)
 
     if history:
         if id.startswith("person:"):

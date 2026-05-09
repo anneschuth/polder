@@ -31,6 +31,7 @@ dependencies = [
     "datasette>=0.64",
     "typer>=0.12",
     "rich>=13.7",
+    "beautifulsoup4>=4.12",
 ]
 
 [project.optional-dependencies]
@@ -43,6 +44,9 @@ dev = [
 polder = "polder.cli.main:app"
 polder-fetch-roo = "polder.fetchers.roo:main"
 polder-fetch-tk-odata = "polder.fetchers.tk_odata:main"
+polder-fetch-ek-scrape = "polder.fetchers.ek_scrape:main"
+polder-fetch-wikidata = "polder.fetchers.wikidata_sparql:main"
+polder-fetch-ar-rwt = "polder.fetchers.ar_rwt:main"
 polder-validate = "polder.validate:main"
 polder-diff = "polder.diff:main"
 polder-build = "polder.build:main"

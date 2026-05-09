@@ -13,12 +13,9 @@ import importlib
 import pytest
 
 STUB_MODULES = [
-    "wikidata_sparql",
     "tooi",
     "logius_cor",
-    "ek_scrape",
     "koop_sru",
-    "ar_rwt",
     "abd_organogrammen",
     "open_raadsinformatie",
     "kiesraad",

@@ -1,0 +1,26 @@
+id: person:a-sj-goot-1952
+name:
+  full: Auke van der Goot
+  family: A.Sj. van der Goot
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1952
+gender: m
+mandaten:
+- id: 5f7a84c6-ff0e-442f-9598-4a8108422ba2
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor OPNL
+  start_date: '2023-06-13'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/drs_a_sj_van_der_goot_opnl
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/drs_a_sj_van_der_goot_opnl
+  retrieved: '2026-05-09'

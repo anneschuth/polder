@@ -1,0 +1,33 @@
+id: person:crone-fjm-1954
+identifiers:
+  tk_persoon_id: 63b667df-670a-46eb-a70e-533c70656ac1
+name:
+  full: Ferd Crone
+  family: Crone
+  given: Ferd
+  initials: F.J.M.
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1954
+gender: m
+mandaten:
+- id: 5dcac5cb-7bbd-4a8c-801b-04a9bb929c21
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor GroenLinks-PvdA
+  start_date: '2023-06-13'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/drs_f_j_m_crone_groenlinks_pvda
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(63b667df-670a-46eb-a70e-533c70656ac1)
+  retrieved: '2026-05-09'
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/drs_f_j_m_crone_groenlinks_pvda
+  retrieved: '2026-05-09'

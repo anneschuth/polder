@@ -1,0 +1,28 @@
+id: person:nicolai-p-1947
+name:
+  full: Peter Nicolaï
+  family: Nicolaï
+  initials: P.
+  honorifics_pre:
+  - Prof.
+  - mr.
+birth:
+  year: 1947
+gender: m
+mandaten:
+- id: f7ffe7ca-5461-45a9-8977-3700e6f7fb0d
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor PvdD
+  start_date: '2019-06-11'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/prof_mr_p_nicolai_pvdd
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/prof_mr_p_nicolai_pvdd
+  retrieved: '2026-05-09'

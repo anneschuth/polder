@@ -118,7 +118,21 @@ make build
 
 ## Status
 
-Bootstrap fase. ROO-fetcher is in voorbereiding, andere fetchers staan in de roadmap (zie issues en `polder-plan.md`). Datamodel-schemas en CI-workflow worden parallel opgezet. Dit is geen productie-dataset zolang de versie onder 0.1 staat.
+Pre-alpha. ROO-fetcher live (~2850 organisaties), TK OData-fetcher live (~800 Kamerleden vanaf 2008). Validate-CI groen op main. Schemas, library en CLI klaar. Daily-update workflow draait, maar de Claude-review-job wacht op een `ANTHROPIC_API_KEY`-secret. Andere fetchers (EK, ABD, Wikidata, KOOP) staan in de roadmap (zie open issues). Dit is geen productie-dataset zolang de versie onder 0.1 staat.
+
+## Deep-links naar externe systemen
+
+Voor elk record met een externe identifier kun je naar de bron-systemen springen:
+
+| Identifier | Template |
+|---|---|
+| `tk_persoon_id` | `https://berthub.eu/tkconv/persoon.html?nummer={tk_persoon_id}` |
+| `wikidata` | `https://www.wikidata.org/wiki/{wikidata}` |
+| `tooi` | resolveert direct (`https://identifier.overheid.nl/tooi/id/...`) |
+| `roo_id` | `https://organisaties.overheid.nl/{roo_id}/` |
+| `allmanak_id` | `https://www.allmanak.nl/cat/{allmanak_id}/` (waar mappable) |
+
+Gebruik `polder show <id> --links` om de aanwezige identifiers met klikbare URL's getoond te krijgen.
 
 ## Verwante producten
 
