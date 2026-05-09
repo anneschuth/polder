@@ -147,17 +147,30 @@ def ingest(
             help="Push-target branch (default main).",
         ),
     ] = "main",
+    parallel: Annotated[
+        int,
+        typer.Option(
+            "--parallel",
+            help=(
+                "Aantal parallelle workers voor parse + resolve fases. "
+                "Default 5; iedere worker doet één claude-subprocess tegelijk. "
+                "Verhoog tot ~8 voor snellere runs als rate-limits het toelaten."
+            ),
+        ),
+    ] = 5,
 ) -> None:
-    """End-to-end: parse pending staging -> resolve -> apply -> validate -> [build] [commit per bron] [push]."""
+    """End-to-end: parse + resolve (parallel) -> apply -> validate -> [build] [commit per bron] [push]."""
     repo_root = _repo_root()
     sources = _resolve_sources(source)
     if push and not commit:
         commit = True
+    if parallel < 1:
+        raise typer.BadParameter(f"--parallel moet >= 1 zijn, kreeg {parallel}")
 
     typer.echo(
         f"Ingest run: source={source}, threshold={threshold}, "
         f"commit={commit}, push={push}, dry_run={dry_run}, "
-        f"max_claude_calls={max_claude_calls}",
+        f"max_claude_calls={max_claude_calls}, parallel={parallel}",
         err=True,
     )
     typer.echo("", err=True)
@@ -175,6 +188,7 @@ def ingest(
             dry_run=dry_run,
             limit=limit,
             budget=budget,
+            parallel=parallel,
         )
         _print_result(result, dry_run=dry_run)
         results.append(result)
@@ -210,7 +224,10 @@ def ingest(
         typer.echo("", err=True)
         typer.echo(
             format_dry_run_summary(
-                results, threshold=threshold, budget=budget
+                results,
+                threshold=threshold,
+                parallelism=parallel,
+                budget=budget,
             ),
             err=True,
         )

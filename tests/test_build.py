@@ -112,7 +112,7 @@ def fixture_data(tmp_path: Path) -> Path:
             }
         ],
     }
-    _write_yaml(data_dir / "personen" / "current" / "jansen-jp-1965.yaml", persoon)
+    _write_yaml(data_dir / "personen" / "jansen-jp-1965.yaml", persoon)
 
     return data_dir
 

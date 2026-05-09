@@ -29,7 +29,7 @@ Project: `polder`. Een git-versioned, CC0-gelicenseerde dataset van Nederlandse 
 ## Pad-conventies
 
 - Organisaties: `data/organisaties/<type>/<slug>.yaml` waar `<type>` een van `{ministeries, zbo, agentschappen, rwt, hoge-colleges, gemeenten, provincies, waterschappen, gemeenschappelijke-regelingen, adviescolleges, inspecties, rechterlijke-macht, politie-om, caribisch-nederland}`.
-- Personen: `data/personen/current/<slug>.yaml` zolang er een actief mandaat is, anders `data/personen/historisch/<slug>.yaml`.
+- Personen: `data/personen/<slug>.yaml`. Vlak, geen current/historisch-split. Of een persoon "current" is volgt uit de mandaten (`end_date is None` → lopend).
 - Posten: `data/posten/<slug>.yaml`.
 - Schemas: `schemas/<entity>.schema.json`. JSON Schema 2020-12. `additionalProperties: false`.
 - Slug-conventie organisatie: `org:<slug>`. Persoon: `person:<familienaam>-<initialen-lower>-<geboortejaar>`. Post: `post:<rol>-<org-slug>`.

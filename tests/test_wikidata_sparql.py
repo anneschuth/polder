@@ -499,7 +499,7 @@ def test_main_dry_run_succeeds(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
     # Lege data-root → niets te doen, maar exit-code moet 0 zijn.
     (tmp_path / "data" / "organisaties").mkdir(parents=True)
-    (tmp_path / "data" / "personen").mkdir(parents=True)
+    (tmp_path / "data" / "personen").mkdir(parents=True, exist_ok=True)
 
     monkeypatch.setattr(ws, "query_sparql", lambda *a, **k: [])
 
@@ -675,8 +675,7 @@ def test_enrich_bewindspersonen_writes_records_and_posts(
     with (org_dir / "az.yaml").open("w", encoding="utf-8") as fh:
         yaml.safe_dump(az, fh, sort_keys=False, allow_unicode=True)
 
-    (tmp_path / "data" / "personen" / "current").mkdir(parents=True)
-    (tmp_path / "data" / "personen" / "historisch").mkdir(parents=True)
+    (tmp_path / "data" / "personen").mkdir(parents=True, exist_ok=True)
 
     response_by_query: dict[str, dict[str, Any]] = {
         ws.BEWINDSPERSOON_QUERIES["minister"].strip(): BEWINDSPERSOON_RESPONSE,
@@ -697,7 +696,7 @@ def test_enrich_bewindspersonen_writes_records_and_posts(
     )
 
     # Verwacht: Mark Rutte en Jan de Test geschreven; minister-president-post bootstrap.
-    historisch = list((tmp_path / "data" / "personen" / "historisch").glob("*.yaml"))
+    historisch = list((tmp_path / "data" / "personen").glob("*.yaml"))
     assert any("rutte" in p.name for p in historisch)
     rutte_path = next(p for p in historisch if "rutte" in p.name)
     rutte = yaml.safe_load(rutte_path.read_text(encoding="utf-8"))
@@ -737,9 +736,8 @@ def test_enrich_bewindspersonen_merges_into_existing_tk_record(
     with (org_dir / "az.yaml").open("w", encoding="utf-8") as fh:
         yaml.safe_dump(az, fh, sort_keys=False, allow_unicode=True)
 
-    person_dir = tmp_path / "data" / "personen" / "historisch"
+    person_dir = tmp_path / "data" / "personen"
     person_dir.mkdir(parents=True)
-    (tmp_path / "data" / "personen" / "current").mkdir(parents=True)
     rutte_existing = {
         "id": "person:rutte-m-1967",
         "identifiers": {"tk_persoon_id": "abc-123"},
@@ -838,8 +836,7 @@ def test_enrich_bewindspersonen_idempotent(
     }
     with (org_dir / "az.yaml").open("w", encoding="utf-8") as fh:
         yaml.safe_dump(az, fh, sort_keys=False, allow_unicode=True)
-    (tmp_path / "data" / "personen" / "current").mkdir(parents=True)
-    (tmp_path / "data" / "personen" / "historisch").mkdir(parents=True)
+    (tmp_path / "data" / "personen").mkdir(parents=True, exist_ok=True)
 
     response_by_query = {
         ws.BEWINDSPERSOON_QUERIES["minister"].strip(): BEWINDSPERSOON_RESPONSE,
@@ -856,7 +853,7 @@ def test_enrich_bewindspersonen_idempotent(
     ws.enrich_bewindspersonen(
         tmp_path / "data", cache_dir=tmp_path / "cache", today="2026-05-09"
     )
-    rutte_path = tmp_path / "data" / "personen" / "historisch" / "rutte-1967.yaml"
+    rutte_path = tmp_path / "data" / "personen" / "rutte-1967.yaml"
     assert rutte_path.exists()
     first = yaml.safe_load(rutte_path.read_text(encoding="utf-8"))
     n_mandaten_first = len(first["mandaten"])
@@ -900,6 +897,327 @@ def test_parse_abd_tmg_bindings():
     assert rows[0]["ministry_qid"] == "Q1037511"
 
 
+# ---------------------------------------------------------------------------
+# Naam-historie: query + parser + merge + enrich-integratie
+# ---------------------------------------------------------------------------
+
+
+NAME_HISTORY_RESPONSE_EZK = {
+    "head": {"vars": ["qid", "prop", "name", "start", "end"]},
+    "results": {
+        "bindings": [
+            # EZK: 2017-2025, official_name
+            {
+                "qid": {"type": "uri", "value": "http://www.wikidata.org/entity/Q2986560"},
+                "prop": {"type": "literal", "value": "official"},
+                "name": {
+                    "type": "literal",
+                    "xml:lang": "nl",
+                    "value": "Ministerie van Economische Zaken en Klimaat",
+                },
+                "start": {"type": "literal", "value": "2017-10-26T00:00:00Z"},
+            },
+            # EZ: 1815-2017, official_name (zelfde Q-id, vroegere naam)
+            {
+                "qid": {"type": "uri", "value": "http://www.wikidata.org/entity/Q2986560"},
+                "prop": {"type": "literal", "value": "official"},
+                "name": {
+                    "type": "literal",
+                    "xml:lang": "nl",
+                    "value": "Ministerie van Economische Zaken",
+                },
+                "start": {"type": "literal", "value": "1815-01-01T00:00:00Z"},
+                "end": {"type": "literal", "value": "2017-10-26T00:00:00Z"},
+            },
+            # Korte naam EZK (overlapt met de huidige official).
+            {
+                "qid": {"type": "uri", "value": "http://www.wikidata.org/entity/Q2986560"},
+                "prop": {"type": "literal", "value": "short"},
+                "name": {"type": "literal", "xml:lang": "nl", "value": "EZK"},
+                "start": {"type": "literal", "value": "2017-10-26T00:00:00Z"},
+            },
+            # Korte naam EZ.
+            {
+                "qid": {"type": "uri", "value": "http://www.wikidata.org/entity/Q2986560"},
+                "prop": {"type": "literal", "value": "short"},
+                "name": {"type": "literal", "xml:lang": "nl", "value": "EZ"},
+                "start": {"type": "literal", "value": "1815-01-01T00:00:00Z"},
+                "end": {"type": "literal", "value": "2017-10-26T00:00:00Z"},
+            },
+        ]
+    },
+}
+
+
+def test_build_name_history_query_includes_values_clause():
+    q = ws._build_name_history_query(["Q1", "Q2", "Q3"], qlever=True)
+    assert "VALUES ?qid { wd:Q1 wd:Q2 wd:Q3 }" in q
+    assert "p:P1448" in q
+    assert "p:P1813" in q
+    assert "pq:P580" in q
+    assert "pq:P582" in q
+
+
+def test_build_name_history_query_rejects_empty():
+    with pytest.raises(ValueError):
+        ws._build_name_history_query([], qlever=True)
+
+
+def test_parse_name_history_bindings_groups_by_qid():
+    parsed = ws.parse_name_history_bindings(
+        NAME_HISTORY_RESPONSE_EZK["results"]["bindings"]
+    )
+    assert "Q2986560" in parsed
+    rows = parsed["Q2986560"]
+    assert len(rows) == 4
+    officials = [r for r in rows if r["prop"] == "official"]
+    shorts = [r for r in rows if r["prop"] == "short"]
+    assert len(officials) == 2
+    assert len(shorts) == 2
+
+
+def test_parse_name_history_bindings_dedupes():
+    bindings = list(NAME_HISTORY_RESPONSE_EZK["results"]["bindings"])
+    bindings.append(bindings[0])  # duplicaat
+    parsed = ws.parse_name_history_bindings(bindings)
+    assert len(parsed["Q2986560"]) == 4
+
+
+def test_build_name_variants_dedupes_duplicate_official_names():
+    """Wikidata heeft soms meerdere P1448-statements voor dezelfde naam (verschillende
+    periodes). Onze parser moet die mergen tot één entry met de vroegste start
+    en de laatste end (of None als één van de statements open is)."""
+    raw = [
+        {"prop": "official", "value": "Ministerie van Economische Zaken",
+         "valid_from": "2012-11-05", "valid_until": "2017-10-26"},
+        {"prop": "official", "value": "Ministerie van Economische Zaken",
+         "valid_from": None, "valid_until": "2026-02-23"},
+        {"prop": "official", "value": "Ministerie van Economische Zaken en Klimaat",
+         "valid_from": "2017-10-26", "valid_until": None},
+    ]
+    variants = ws._build_name_variants(raw)
+    # Ontdubbeld: 2 entries.
+    assert len(variants) == 2
+    ez = next(v for v in variants if "Klimaat" not in v["value"])
+    # Vroegste start onder de twee statements is "2012-11-05".
+    assert ez["valid_from"] == "2012-11-05"
+    # Laatste end onder de twee statements is "2026-02-23".
+    assert ez["valid_until"] == "2026-02-23"
+
+
+def test_build_name_variants_couples_official_with_short():
+    raw = ws.parse_name_history_bindings(
+        NAME_HISTORY_RESPONSE_EZK["results"]["bindings"]
+    )["Q2986560"]
+    variants = ws._build_name_variants(raw)
+    assert len(variants) == 2
+    # Sortering: oudst eerst.
+    assert variants[0]["valid_from"].startswith("1815")
+    assert variants[1]["valid_from"].startswith("2017")
+    # Abbr's gekoppeld op overlap.
+    assert variants[0]["abbr"] == "EZ"
+    assert variants[1]["abbr"] == "EZK"
+    # End-date gevuld voor de oudste, None voor huidige.
+    assert variants[0]["valid_until"] == "2017-10-26"
+    assert variants[1]["valid_until"] is None
+
+
+def test_merge_names_into_record_adds_missing_history():
+    record = {
+        "id": "org:min-ezk",
+        "names": [
+            {"value": "Economische Zaken en Klimaat", "abbr": "EZK", "valid_from": "2017-10-26"}
+        ],
+    }
+    history = [
+        {"value": "Ministerie van Economische Zaken", "valid_from": "1815-01-01",
+         "valid_until": "2017-10-26", "abbr": "EZ"},
+        {"value": "Ministerie van Economische Zaken en Klimaat", "valid_from": "2017-10-26",
+         "valid_until": None, "abbr": "EZK"},
+    ]
+    merged, changed = ws.merge_names_into_record(record, history)
+    assert changed is True
+    names = merged["names"]
+    assert len(names) == 2
+    # Bestaande entry behouden (abbr=EZK).
+    ezk_entry = next(n for n in names if "Klimaat" in n["value"])
+    assert ezk_entry["abbr"] == "EZK"
+    assert ezk_entry["value"] == "Economische Zaken en Klimaat"  # bestaande value behouden
+    # Historische entry toegevoegd.
+    ez_entry = next(n for n in names if n["value"] == "Ministerie van Economische Zaken")
+    assert ez_entry["valid_from"] == "1815-01-01"
+    assert ez_entry["valid_until"] == "2017-10-26"
+    assert ez_entry["abbr"] == "EZ"
+    # Sortering: oudst eerst.
+    assert names[0]["valid_from"] == "1815-01-01"
+
+
+def test_merge_names_into_record_idempotent_when_history_already_present():
+    record = {
+        "id": "org:min-ezk",
+        "names": [
+            {"value": "Ministerie van Economische Zaken", "abbr": "EZ",
+             "valid_from": "1815-01-01", "valid_until": "2017-10-26"},
+            {"value": "Economische Zaken en Klimaat", "abbr": "EZK",
+             "valid_from": "2017-10-26"},
+        ],
+    }
+    history = [
+        {"value": "Ministerie van Economische Zaken", "valid_from": "1815-01-01",
+         "valid_until": "2017-10-26", "abbr": "EZ"},
+        {"value": "Ministerie van Economische Zaken en Klimaat", "valid_from": "2017-10-26",
+         "valid_until": None, "abbr": "EZK"},
+    ]
+    _, changed = ws.merge_names_into_record(record, history)
+    assert changed is False
+
+
+def test_merge_names_into_record_empty_history_no_op():
+    record = {"id": "org:min-x", "names": [{"value": "Foo", "valid_from": "2020-01-01"}]}
+    merged, changed = ws.merge_names_into_record(record, [])
+    assert changed is False
+    assert merged is record
+
+
+def test_fetch_name_history_batches(monkeypatch: pytest.MonkeyPatch):
+    queries_seen: list[str] = []
+
+    def fake_query(query: str, **_: Any) -> list[dict[str, Any]]:
+        queries_seen.append(query)
+        # Lever alle bindings terug ongeacht de batch (niet realistisch, maar
+        # voldoende om te testen dat batching werkt).
+        return list(NAME_HISTORY_RESPONSE_EZK["results"]["bindings"])
+
+    monkeypatch.setattr(ws, "query_sparql", fake_query)
+    monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
+
+    qids = [f"Q{n}" for n in range(125)]  # 3 batches van 50
+    history = ws.fetch_name_history(qids, batch_size=50)
+    assert len(queries_seen) == 3
+    # Onze fake levert altijd EZK-data; check dat resultaten zijn aggregated.
+    assert "Q2986560" in history
+
+
+def test_enrich_organisations_with_name_history(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+):
+    """End-to-end: na enrich met include_name_history krijgt EZK 2 names entries."""
+    monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
+
+    org_root = tmp_path / "organisaties"
+    ezk_path = _write_org_yaml(
+        org_root / "ministeries",
+        "ezk",
+        {
+            "id": "org:min-ezk",
+            "type": "ministerie",
+            "classification": "ministerie",
+            "names": [
+                {
+                    "value": "Economische Zaken en Klimaat",
+                    "abbr": "EZK",
+                    "valid_from": "2017-10-26",
+                }
+            ],
+            "identifiers": {
+                "oin": "00000001003214369000",
+                "wikidata": "Q2986560",
+            },
+            "valid_from": "2017-10-26",
+            "sources": [
+                {"id": "roo", "url": "https://organisaties.overheid.nl/10621/", "retrieved": "2026-01-01"},
+            ],
+        },
+    )
+
+    org_response = {
+        "head": {"vars": ["item", "itemLabel", "abbr", "oin"]},
+        "results": {
+            "bindings": [
+                {
+                    "item": {"type": "uri", "value": "http://www.wikidata.org/entity/Q2986560"},
+                    "itemLabel": {"type": "literal", "value": "Ministerie van Economische Zaken en Klimaat"},
+                    "abbr": {"type": "literal", "value": "EZK"},
+                    "oin": {"type": "literal", "value": "00000001003214369000"},
+                }
+            ]
+        },
+    }
+
+    def fake_query(query: str, **_: Any) -> list[dict[str, Any]]:
+        # Naam-historie: query bevat p:P1448. Org-query: SELECT ?item.
+        if "p:P1448" in query or "P1448" in query and "p:" in query:
+            return list(NAME_HISTORY_RESPONSE_EZK["results"]["bindings"])
+        if "wdt:P31 wd:Q3143387" in query:  # ministerie-class
+            return list(org_response["results"]["bindings"])
+        return []
+
+    monkeypatch.setattr(ws, "query_sparql", fake_query)
+
+    stats = ws.enrich_organisations(
+        org_root,
+        cache_dir=tmp_path / "cache",
+        today="2026-05-09",
+        include_name_history=True,
+    )
+    assert stats["ministerie"]["names_updated"] >= 1
+
+    ezk = yaml.safe_load(ezk_path.read_text(encoding="utf-8"))
+    names = ezk["names"]
+    assert len(names) == 2
+    # Bestaande EZK-entry behouden.
+    assert any(n["value"] == "Economische Zaken en Klimaat" and n.get("abbr") == "EZK" for n in names)
+    # Historische EZ-entry toegevoegd.
+    assert any(n["value"] == "Ministerie van Economische Zaken" for n in names)
+    # Sortering: oudst eerst.
+    assert names[0]["valid_from"] == "1815-01-01"
+
+
+def test_enrich_organisations_name_history_idempotent(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+):
+    """Tweede run zonder Wikidata-wijzigingen schrijft niet opnieuw."""
+    monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
+
+    org_root = tmp_path / "organisaties"
+    ezk_path = _write_org_yaml(
+        org_root / "ministeries",
+        "ezk",
+        {
+            "id": "org:min-ezk",
+            "type": "ministerie",
+            "names": [
+                {"value": "Ministerie van Economische Zaken", "abbr": "EZ",
+                 "valid_from": "1815-01-01", "valid_until": "2017-10-26"},
+                {"value": "Ministerie van Economische Zaken en Klimaat", "abbr": "EZK",
+                 "valid_from": "2017-10-26"},
+            ],
+            "identifiers": {"oin": "x", "wikidata": "Q2986560"},
+            "valid_from": "2017-10-26",
+            "sources": [{"id": "roo", "url": "https://example.org", "retrieved": "2026-01-01"}],
+        },
+    )
+    org_response = {"head": {"vars": []}, "results": {"bindings": []}}
+
+    def fake_query(query: str, **_: Any) -> list[dict[str, Any]]:
+        if "p:P1448" in query:
+            return list(NAME_HISTORY_RESPONSE_EZK["results"]["bindings"])
+        return list(org_response["results"]["bindings"])
+
+    monkeypatch.setattr(ws, "query_sparql", fake_query)
+
+    before = ezk_path.read_text(encoding="utf-8")
+    stats = ws.enrich_organisations(
+        org_root,
+        cache_dir=tmp_path / "cache",
+        today="2026-05-09",
+        include_name_history=True,
+    )
+    after = ezk_path.read_text(encoding="utf-8")
+    assert stats["ministerie"]["names_updated"] == 0
+    assert before == after
+
+
 def test_enrich_abd_tmg_writes_sg_post(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ):
@@ -921,8 +1239,7 @@ def test_enrich_abd_tmg_writes_sg_post(
             fh,
             sort_keys=False,
         )
-    (tmp_path / "data" / "personen" / "current").mkdir(parents=True)
-    (tmp_path / "data" / "personen" / "historisch").mkdir(parents=True)
+    (tmp_path / "data" / "personen").mkdir(parents=True, exist_ok=True)
 
     monkeypatch.setattr(
         ws,
@@ -940,7 +1257,7 @@ def test_enrich_abd_tmg_writes_sg_post(
     assert sg["classification"] == "abd-tmg"
     assert sg["organization_id"] == "org:min-fin"
 
-    person_path = tmp_path / "data" / "personen" / "current" / "voorbeeld-1965.yaml"
+    person_path = tmp_path / "data" / "personen" / "voorbeeld-1965.yaml"
     assert person_path.exists()
     person = yaml.safe_load(person_path.read_text(encoding="utf-8"))
     assert person["identifiers"]["wikidata"] == "Q33333"

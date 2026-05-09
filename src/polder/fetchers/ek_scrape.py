@@ -31,6 +31,7 @@ import yaml
 from bs4 import BeautifulSoup
 
 from polder.fetchers.tk_odata import (
+    _has_active_mandaat,
     _normalize_initials,
     merge_person,
     slugify_person,
@@ -758,8 +759,8 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             record = _strip_unsupported_identifiers(record)
 
-            target = write_person(record, args.out, dry_run=args.dry_run)
-            if target.parent.name == "current":
+            write_person(record, args.out, dry_run=args.dry_run)
+            if _has_active_mandaat(record):
                 n_current += 1
             else:
                 n_historisch += 1

@@ -24,7 +24,7 @@ def mini_polder(tmp_path: Path) -> Path:
     root = tmp_path
     (root / "data" / "organisaties" / "ministeries").mkdir(parents=True)
     (root / "data" / "organisaties" / "agentschappen").mkdir(parents=True)
-    (root / "data" / "personen" / "current").mkdir(parents=True)
+    (root / "data" / "personen").mkdir(parents=True)
     (root / "data" / "posten").mkdir(parents=True)
     (root / "data" / "mandaten").mkdir(parents=True)
 
@@ -102,7 +102,7 @@ def mini_polder(tmp_path: Path) -> Path:
             {"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}
         ],
     }
-    (root / "data" / "personen" / "current" / "jansen-jp-1965.yaml").write_text(
+    (root / "data" / "personen" / "jansen-jp-1965.yaml").write_text(
         yaml.safe_dump(persoon, sort_keys=False), encoding="utf-8"
     )
 
@@ -220,7 +220,7 @@ def test_organisatie_from_yaml_roundtrip(tmp_path: Path) -> None:
 
 
 def test_persoon_from_yaml(mini_polder: Path) -> None:
-    path = mini_polder / "data" / "personen" / "current" / "jansen-jp-1965.yaml"
+    path = mini_polder / "data" / "personen" / "jansen-jp-1965.yaml"
     p = Persoon.from_yaml(path)
     assert p.id == "person:jansen-jp-1965"
     assert p.mandaten and isinstance(p.mandaten[0], InlineMandaat)

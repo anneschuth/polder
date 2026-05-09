@@ -456,10 +456,10 @@ def _record(active: bool = True) -> dict[str, Any]:
     }
 
 
-def test_write_person_actief_naar_current(tmp_path: Path):
+def test_write_person_actief(tmp_path: Path):
     rec = _record(active=True)
     target = write_person(rec, tmp_path)
-    assert target == tmp_path / "current" / "schilderman-s-6329497.yaml"
+    assert target == tmp_path / "schilderman-s-6329497.yaml"
     assert target.exists()
 
 

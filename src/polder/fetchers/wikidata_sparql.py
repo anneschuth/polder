@@ -48,6 +48,7 @@ __all__ = [
     "BEWINDSPERSOON_QUERIES",
     "MINISTRY_QID_TO_SLUG",
     "MIN_REQUEST_INTERVAL",
+    "NAME_HISTORY_BATCH_SIZE",
     "ORG_QUERIES",
     "PERSON_QUERY",
     "QLEVER_ENDPOINT",
@@ -61,15 +62,19 @@ __all__ = [
     "build_person_index",
     "enrich_abd_tmg",
     "enrich_bewindspersonen",
+    "enrich_organisations",
     "extract_qid",
+    "fetch_name_history",
     "lookup_person_by_name",
     "main",
     "match_organisations",
     "match_personen",
+    "merge_names_into_record",
     "merge_wikidata_into_record",
     "normalize_org_name",
     "parse_abd_tmg_bindings",
     "parse_bewindspersoon_bindings",
+    "parse_name_history_bindings",
     "parse_org_bindings",
     "parse_person_bindings",
     "person_id_from_label",
@@ -463,6 +468,64 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
   OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
 }
 """
+
+
+# ---------------------------------------------------------------------------
+# Naam-historie (P1448 official_name + P1813 short_name met qualifiers)
+# ---------------------------------------------------------------------------
+#
+# Voor organisaties met een bekende Q-id halen we de hele naam-historie op:
+# elke statement in P1448 (official_name) of P1813 (short_name), met
+# qualifiers P580 (start time) en P582 (end time). We batchen Q-id's in
+# één query via VALUES om HTTP-roundtrips te beperken.
+
+NAME_HISTORY_BATCH_SIZE = 50
+
+_QLEVER_NAME_HISTORY_PREFIXES = """PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+"""
+
+
+def _build_name_history_query(qids: list[str], *, qlever: bool) -> str:
+    """Bouw een SPARQL-query die naam-statements + qualifiers ophaalt voor een set Q-id's.
+
+    Voor elke Q-id worden alle P1448 (official_name) en P1813 (short_name)
+    statements opgehaald, met qualifiers P580 (start time) en P582 (end time).
+    Twee subqueries — één per property — ge-UNIONeerd, met een ?prop-discriminator
+    zodat de parser ze uit elkaar kan houden.
+    """
+    if not qids:
+        raise ValueError("qids is leeg")
+    values = " ".join(f"wd:{qid}" for qid in qids)
+    body = f"""
+SELECT ?qid ?prop ?name ?start ?end WHERE {{
+  VALUES ?qid {{ {values} }}
+  {{
+    ?qid p:P1448 ?stmt .
+    ?stmt ps:P1448 ?name .
+    BIND("official" AS ?prop)
+    OPTIONAL {{ ?stmt pq:P580 ?start }}
+    OPTIONAL {{ ?stmt pq:P582 ?end }}
+    FILTER(LANG(?name) = "nl" || LANG(?name) = "")
+  }}
+  UNION
+  {{
+    ?qid p:P1813 ?stmt .
+    ?stmt ps:P1813 ?name .
+    BIND("short" AS ?prop)
+    OPTIONAL {{ ?stmt pq:P580 ?start }}
+    OPTIONAL {{ ?stmt pq:P582 ?end }}
+    FILTER(LANG(?name) = "nl" || LANG(?name) = "")
+  }}
+}}
+"""
+    if qlever:
+        return _QLEVER_NAME_HISTORY_PREFIXES + body
+    return body
 
 
 # ---------------------------------------------------------------------------
@@ -1146,6 +1209,262 @@ def merge_wikidata_into_record(
 
 
 # ---------------------------------------------------------------------------
+# Naam-historie parser + merge
+# ---------------------------------------------------------------------------
+#
+# Per Q-id verzamelen we alle P1448-statements (en P1813 voor afkortingen) en
+# zetten die om in name-entries volgens organisatie.schema.json:
+# {value, abbr?, valid_from, valid_until?}.
+#
+# Default ``valid_from`` als geen P580-qualifier aanwezig is: ``1900-01-01``.
+# Schema vereist een datum; we kunnen geen None laten staan.
+
+_NAME_HISTORY_DEFAULT_FROM = "1900-01-01"
+
+
+def parse_name_history_bindings(
+    bindings: Iterable[dict[str, Any]],
+) -> dict[str, list[dict[str, Any]]]:
+    """Aggregeer SPARQL-bindings per Q-id tot een lijst rauwe naam-statements.
+
+    Returnt ``{qid: [{value, prop, valid_from, valid_until}, ...]}`` waarbij
+    ``prop`` ∈ {"official", "short"}. Statements zonder waarde of zonder Q-id
+    worden overgeslagen. Duplicaten (zelfde value/prop/start/end) worden
+    gededupliceerd.
+    """
+    result: dict[str, list[dict[str, Any]]] = {}
+    seen: dict[str, set[tuple[str, str, str | None, str | None]]] = {}
+    for b in bindings:
+        qid = extract_qid(_value(b, "qid"))
+        if not qid:
+            continue
+        value = _value(b, "name")
+        if not value:
+            continue
+        prop = _value(b, "prop") or "official"
+        start = _parse_iso_date(_value(b, "start"))
+        end = _parse_iso_date(_value(b, "end"))
+        key = (prop, value, start, end)
+        if qid not in seen:
+            seen[qid] = set()
+        if key in seen[qid]:
+            continue
+        seen[qid].add(key)
+        result.setdefault(qid, []).append(
+            {
+                "value": value,
+                "prop": prop,
+                "valid_from": start,
+                "valid_until": end,
+            }
+        )
+    return result
+
+
+def _build_name_variants(
+    raw: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Combineer official- en short-name statements tot polder name-entries.
+
+    Strategie:
+      * Elke ``official``-statement levert een name-entry op met ``value``.
+      * Een ``short``-statement met overlappende periode (zelfde of bevattend)
+        koppelen we als ``abbr`` aan de bijbehorende official-entry.
+      * Short-only statements (zonder matchende official) worden overgeslagen
+        (we willen geen entry waarvan ``value`` een afkorting is).
+
+    Output is gesorteerd op ``valid_from`` ascending; ``None`` valid_until
+    blijft behouden.
+    """
+    officials = [r for r in raw if r["prop"] == "official"]
+    shorts = [r for r in raw if r["prop"] == "short"]
+
+    def overlap(a_from: str | None, a_until: str | None,
+                b_from: str | None, b_until: str | None) -> bool:
+        # Behandel onbekende grenzen als open: "" -> very early / very late.
+        # End-dates zijn half-open (exclusive): A's end == B's start telt niet
+        # als overlap (anders koppelt EZ-short aan EZK-official op 2017-10-26).
+        a_lo = a_from or "0000-00-00"
+        a_hi = a_until or "9999-99-99"
+        b_lo = b_from or "0000-00-00"
+        b_hi = b_until or "9999-99-99"
+        return not (a_hi <= b_lo or b_hi <= a_lo)
+
+    # Dedup officials op (genormaliseerde value): bij meerdere statements voor
+    # dezelfde naam (komt voor als de naam meerdere periodes is gebruikt of
+    # als Wikidata duplicate statements heeft) merge naar één entry met de
+    # vroegste start en de laatste end. Zo voorkomen we YAML-rommel.
+    by_value: dict[str, dict[str, Any]] = {}
+    for off in officials:
+        key = (off["value"] or "").strip().lower()
+        if not key:
+            continue
+        cur = by_value.get(key)
+        if cur is None:
+            by_value[key] = dict(off)
+            continue
+        # Merge: vroegste start, laatste end. None-end (open) wint van een
+        # concrete end-date.
+        cur_from = cur.get("valid_from") or "9999-99-99"
+        new_from = off.get("valid_from") or "9999-99-99"
+        if new_from < cur_from:
+            cur["valid_from"] = off.get("valid_from")
+        cur_until = cur.get("valid_until")
+        new_until = off.get("valid_until")
+        if cur_until is None or new_until is None:
+            cur["valid_until"] = None
+        elif new_until > cur_until:
+            cur["valid_until"] = new_until
+
+    entries: list[dict[str, Any]] = []
+    for off in by_value.values():
+        entry: dict[str, Any] = {
+            "value": off["value"],
+            "valid_from": off["valid_from"] or _NAME_HISTORY_DEFAULT_FROM,
+        }
+        if off["valid_until"]:
+            entry["valid_until"] = off["valid_until"]
+        else:
+            entry["valid_until"] = None
+        # Zoek een matching short. Om collision te vermijden bij meerdere
+        # officials met overlappende short: de eerste hit is genoeg.
+        for sh in shorts:
+            if overlap(off["valid_from"], off["valid_until"],
+                       sh["valid_from"], sh["valid_until"]):
+                entry["abbr"] = sh["value"]
+                break
+        entries.append(entry)
+    # Sorteer op valid_from (oudst eerst).
+    entries.sort(key=lambda e: e.get("valid_from") or "")
+    return entries
+
+
+def fetch_name_history(
+    qids: Iterable[str],
+    *,
+    cache_dir: Path | None = None,
+    endpoint: str = QLEVER_ENDPOINT,
+    batch_size: int = NAME_HISTORY_BATCH_SIZE,
+) -> dict[str, list[dict[str, Any]]]:
+    """Haal naam-historie op voor een verzameling Wikidata-Q-id's.
+
+    Returnt ``{qid: [name_variant, ...]}``. Voor Q-id's zonder P1448/P1813
+    statements ontbreken in het resultaat (geen lege lijst).
+
+    Q-id's worden gebatched in groepen van ``batch_size`` om SPARQL-queries
+    onder de URL/timeout-limiet te houden.
+    """
+    qid_list = sorted({q for q in qids if q})
+    if not qid_list:
+        return {}
+    endpoint_url = resolve_endpoint(endpoint)
+    qlever = "qlever" in endpoint_url
+    out: dict[str, list[dict[str, Any]]] = {}
+    for i in range(0, len(qid_list), batch_size):
+        batch = qid_list[i : i + batch_size]
+        query = _build_name_history_query(batch, qlever=qlever)
+        try:
+            bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint_url)
+        except httpx.HTTPError as exc:
+            logger.warning(
+                "Naam-historie-query faalde voor batch %d-%d: %s",
+                i,
+                i + len(batch),
+                exc,
+            )
+            continue
+        raw_per_qid = parse_name_history_bindings(bindings)
+        for qid, raw in raw_per_qid.items():
+            entries = _build_name_variants(raw)
+            if entries:
+                out[qid] = entries
+    return out
+
+
+def _name_key(entry: dict[str, Any]) -> str:
+    """Normaliseer een name-entry voor matching: ASCII-lower, ruis-prefix strip."""
+    return normalize_org_name(entry.get("value"))
+
+
+def merge_names_into_record(
+    record: dict[str, Any],
+    name_history: list[dict[str, Any]],
+) -> tuple[dict[str, Any], bool]:
+    """Voeg historische namen toe aan ``record["names"]``. Returnt ``(merged, changed)``.
+
+    Behoud-regels:
+      * Bestaande names-entries blijven onaangeroerd qua ``value`` en ``abbr``
+        (die zijn vaak met de hand geredigeerd of komen uit ROO).
+      * Een Wikidata-entry wordt overgeslagen als de polder-records al een
+        entry heeft met dezelfde genormaliseerde naam. We updaten dan wél
+        ontbrekende ``valid_from``/``valid_until`` op de bestaande entry.
+      * Wikidata-entries die niet matchen worden toegevoegd aan ``names[]``.
+      * Resultaat wordt gesorteerd op ``valid_from`` ascending.
+
+    Idempotent: als alle Wikidata-entries al matchen op naam én de
+    valid_from/valid_until-velden zijn al gelijk, wordt ``changed=False``
+    en wordt het record niet gewijzigd.
+    """
+    if not name_history:
+        return record, False
+    merged = dict(record)
+    existing = list(merged.get("names") or [])
+    by_key: dict[str, dict[str, Any]] = {}
+    for e in existing:
+        if isinstance(e, dict):
+            k = _name_key(e)
+            if k:
+                by_key.setdefault(k, e)
+
+    new_entries: list[dict[str, Any]] = []
+    changed = False
+    for wd in name_history:
+        key = _name_key(wd)
+        if not key:
+            continue
+        if key in by_key:
+            # Bestaande entry: vul ontbrekende perioden aan vanuit Wikidata.
+            existing_entry = by_key[key]
+            if "valid_from" not in existing_entry and wd.get("valid_from"):
+                existing_entry["valid_from"] = wd["valid_from"]
+                changed = True
+            if (
+                "valid_until" not in existing_entry
+                and wd.get("valid_until") is not None
+            ):
+                existing_entry["valid_until"] = wd["valid_until"]
+                changed = True
+            continue
+        # Nieuwe entry uit Wikidata.
+        entry: dict[str, Any] = {
+            "value": wd["value"],
+            "valid_from": wd.get("valid_from") or _NAME_HISTORY_DEFAULT_FROM,
+        }
+        if wd.get("abbr"):
+            entry["abbr"] = wd["abbr"]
+        if wd.get("valid_until") is not None:
+            entry["valid_until"] = wd["valid_until"]
+        new_entries.append(entry)
+        changed = True
+
+    if not changed:
+        return record, False
+
+    combined = existing + new_entries
+    # Zorg dat elke entry een valid_from heeft (schema-vereist).
+    for e in combined:
+        if isinstance(e, dict) and not e.get("valid_from"):
+            e["valid_from"] = _NAME_HISTORY_DEFAULT_FROM
+
+    def sort_key(e: dict[str, Any]) -> str:
+        return e.get("valid_from") or ""
+
+    combined.sort(key=sort_key)
+    merged["names"] = combined
+    return merged, True
+
+
+# ---------------------------------------------------------------------------
 # Bewindspersoon / ABD record-bouw
 # ---------------------------------------------------------------------------
 
@@ -1747,10 +2066,17 @@ def enrich_organisations(
     dry_run: bool = False,
     today: str | None = None,
     endpoint: str = SPARQL_ENDPOINT,
+    include_name_history: bool = False,
+    name_history_categories: tuple[str, ...] = ("ministerie",),
 ) -> dict[str, dict[str, int]]:
     """Verrijk organisatie-records met Wikidata Q-id's.
 
     Returnt per category een dict ``{candidates, matched_oin, matched_name, written}``.
+
+    Met ``include_name_history=True`` wordt voor records die al een wikidata-Q-id
+    hebben (of er net een gekregen hebben) ook de naam-historie opgehaald via
+    P1448/P1813 + qualifiers. Default beperkt tot ministeries; uitbreiden naar
+    gemeenten/provincies kan, maar levert daar zelden iets op.
     """
     today_str = today or _today()
     use_qlever = "qlever" in endpoint
@@ -1774,6 +2100,7 @@ def enrich_organisations(
                 "matched_name": 0,
                 "matched_abbr": 0,
                 "written": 0,
+                "names_updated": 0,
                 "error": 1,
             }
             continue
@@ -1795,7 +2122,13 @@ def enrich_organisations(
             "matched_name": 0,
             "matched_abbr": 0,
             "written": 0,
+            "names_updated": 0,
         }
+        # Houd per qid een lijst (path, record) bij voor de eventuele
+        # name-history pass. Meerdere records kunnen dezelfde Q-id hebben
+        # (huidig + historisch ministerie van dezelfde naam) — die willen we
+        # allemaal bijwerken.
+        post_match_records: dict[str, list[tuple[Path, dict[str, Any]]]] = {}
         for record, row, method in matches:
             path, _ = by_id[id(record)]
             qid = row["qid"]
@@ -1812,9 +2145,47 @@ def enrich_organisations(
             else:
                 _write_yaml(path, merged)
             cat_stats["written"] += 1
+            post_match_records.setdefault(qid, []).append((path, merged))
+        # Voor records die al een wikidata-id hadden, voeg ze ook toe aan de
+        # name-history pool — die hebben de Q-id immers al.
+        already_added_paths = {
+            p for entries in post_match_records.values() for p, _ in entries
+        }
+        for path, rec in records:
+            qid = (rec.get("identifiers") or {}).get("wikidata")
+            if qid and path not in already_added_paths:
+                post_match_records.setdefault(qid, []).append((path, rec))
         stats[org_type] = cat_stats
+
+        # Naam-historie verwerking (per category, alleen als gevraagd).
+        if (
+            include_name_history
+            and org_type in name_history_categories
+            and post_match_records
+        ):
+            history = fetch_name_history(
+                list(post_match_records.keys()),
+                cache_dir=cache_dir,
+                endpoint=endpoint,
+            )
+            for qid, name_history in history.items():
+                for path, rec in post_match_records.get(qid, []):
+                    new_record, changed = merge_names_into_record(rec, name_history)
+                    if not changed:
+                        continue
+                    new_record = _ordered_for_org(new_record)
+                    cat_stats["names_updated"] += 1
+                    if dry_run:
+                        logger.info(
+                            "DRY-RUN name-history %s ← %d entries",
+                            new_record.get("id"),
+                            len(name_history),
+                        )
+                    else:
+                        _write_yaml(path, new_record)
+
         logger.info(
-            "%s: %d records, %d wikidata-rows, %d matches (oin=%d, name=%d, abbr=%d)",
+            "%s: %d records, %d wikidata-rows, %d matches (oin=%d, name=%d, abbr=%d), %d names-updated",
             folder,
             cat_stats["candidates"],
             cat_stats["rows"],
@@ -1822,6 +2193,7 @@ def enrich_organisations(
             cat_stats["matched_oin"],
             cat_stats["matched_name"],
             cat_stats["matched_abbr"],
+            cat_stats["names_updated"],
         )
     return stats
 
@@ -1838,9 +2210,7 @@ def enrich_personen(
     today_str = today or _today()
     use_qlever = "qlever" in endpoint
     person_query = PERSON_QUERY_QLEVER if use_qlever else PERSON_QUERY
-    files: list[Path] = []
-    for sub in ("current", "historisch"):
-        files.extend(_iter_yaml_files(data_root / sub))
+    files: list[Path] = list(_iter_yaml_files(data_root))
     if not files:
         logger.info("Geen persoonsrecords onder %s, sla over", data_root)
         return {"candidates": 0, "rows": 0, "matched_tkid": 0, "matched_natural": 0, "written": 0}
@@ -1921,23 +2291,22 @@ def _index_existing_persons(person_root: Path) -> dict[str, tuple[Path, dict[str
       - ``nk:<family_slug>:<birthyear>`` als natural fallback
     """
     index: dict[str, tuple[Path, dict[str, Any]]] = {}
-    for sub in ("current", "historisch"):
-        for path in _iter_yaml_files(person_root / sub):
-            data = _read_yaml(path)
-            if not data:
-                continue
-            ids = data.get("identifiers") or {}
-            tkid = ids.get("tk_persoon_id")
-            wd = ids.get("wikidata")
-            family = (data.get("name") or {}).get("family") or ""
-            birth = (data.get("birth") or {}).get("year")
-            fam_slug = _slug_family(family)
-            if tkid:
-                index[f"tk:{tkid}"] = (path, data)
-            if wd:
-                index[f"wd:{wd}"] = (path, data)
-            if fam_slug and birth is not None:
-                index[f"nk:{fam_slug}:{birth}"] = (path, data)
+    for path in _iter_yaml_files(person_root):
+        data = _read_yaml(path)
+        if not data:
+            continue
+        ids = data.get("identifiers") or {}
+        tkid = ids.get("tk_persoon_id")
+        wd = ids.get("wikidata")
+        family = (data.get("name") or {}).get("family") or ""
+        birth = (data.get("birth") or {}).get("year")
+        fam_slug = _slug_family(family)
+        if tkid:
+            index[f"tk:{tkid}"] = (path, data)
+        if wd:
+            index[f"wd:{wd}"] = (path, data)
+        if fam_slug and birth is not None:
+            index[f"nk:{fam_slug}:{birth}"] = (path, data)
     return index
 
 
@@ -1999,29 +2368,9 @@ def _merge_into_existing_person(
 def _person_target_path(
     person_root: Path, record: dict[str, Any]
 ) -> Path:
-    """Beslis current/ of historisch/.
-
-    Open mandaat (end_date null) én startdatum < 15 jaar oud → current; anders historisch.
-    Records van vooroorlogse personen zonder ooit een gevulde end_date worden
-    desondanks niet als 'current' beschouwd.
-    """
-    mandaten = record.get("mandaten") or []
-    today_year = int(_today()[:4])
-    is_current = False
-    for m in mandaten:
-        if m.get("end_date") not in (None, ""):
-            continue
-        start = (m.get("start_date") or "")[:4]
-        try:
-            start_year = int(start)
-        except ValueError:
-            continue
-        if today_year - start_year <= 15:
-            is_current = True
-            break
-    sub = "current" if is_current else "historisch"
+    """Personen liggen vlak onder ``person_root``."""
     slug = record["id"][len("person:") :]
-    return person_root / sub / f"{slug}.yaml"
+    return person_root / f"{slug}.yaml"
 
 
 def enrich_bewindspersonen(
@@ -2307,6 +2656,24 @@ def _build_parser() -> argparse.ArgumentParser:
             "'qlever' (QLever-mirror, sneller en zonder rate-limit)."
         ),
     )
+    parser.add_argument(
+        "--include-name-history",
+        action="store_true",
+        help=(
+            "Haal voor organisaties met een Q-id ook de naam-historie op "
+            "(P1448/P1813 + P580/P582 qualifiers) en merge in names[]. "
+            "Default: alleen ministeries."
+        ),
+    )
+    parser.add_argument(
+        "--name-history-categories",
+        default="ministerie",
+        help=(
+            "Comma-separated lijst van organisatie-categorieën waarvoor "
+            "naam-historie wordt opgehaald (ministerie,gemeente,provincie,waterschap). "
+            "Default: ministerie."
+        ),
+    )
     parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging.")
     return parser
 
@@ -2333,13 +2700,22 @@ def main(argv: list[str] | None = None) -> int:
 
     total_written = 0
     if do_orgs:
+        name_history_cats = tuple(
+            c.strip() for c in args.name_history_categories.split(",") if c.strip()
+        )
         org_stats = enrich_organisations(
-            org_root, cache_dir=cache_dir, dry_run=args.dry_run, endpoint=endpoint_url
+            org_root,
+            cache_dir=cache_dir,
+            dry_run=args.dry_run,
+            endpoint=endpoint_url,
+            include_name_history=args.include_name_history,
+            name_history_categories=name_history_cats,
         )
         for cat, s in org_stats.items():
             print(
                 f"{cat}: {s['written']}/{s['candidates']} matched "
-                f"(oin={s['matched_oin']}, name={s['matched_name']}, abbr={s['matched_abbr']})",
+                f"(oin={s['matched_oin']}, name={s['matched_name']}, "
+                f"abbr={s['matched_abbr']}), names_updated={s.get('names_updated', 0)}",
                 file=sys.stderr,
             )
             total_written += s["written"]

@@ -36,7 +36,7 @@ def _write_yaml(path: Path, payload: dict) -> None:
 def mini_polder(tmp_path: Path) -> Path:
     """Mini-polder met BZK + directie Digitale Samenleving al aanwezig."""
     root = tmp_path
-    (root / "data" / "personen" / "current").mkdir(parents=True)
+    (root / "data" / "personen").mkdir(parents=True)
     (root / "data" / "posten").mkdir(parents=True)
     schemas_target = root / "schemas"
     schemas_target.mkdir()
@@ -184,7 +184,7 @@ def test_skip_red_avg(mini_polder: Path) -> None:
 def test_skip_person_when_no_birthyear_and_conflict(mini_polder: Path) -> None:
     # Bestaande persoon met dezelfde familienaam toevoegen.
     _write_yaml(
-        mini_polder / "data" / "personen" / "current" / "kewal-x.yaml",
+        mini_polder / "data" / "personen" / "kewal-x.yaml",
         {
             "id": "person:kewal-x-1900",
             "name": {"full": "Andere Kewal", "family": "Kewal"},
@@ -237,7 +237,7 @@ def test_idempotent_second_run(mini_polder: Path) -> None:
 
 def test_append_mandaat_to_existing_resolved_person(mini_polder: Path) -> None:
     _write_yaml(
-        mini_polder / "data" / "personen" / "current" / "kewal-s-1975.yaml",
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
         {
             "id": "person:kewal-s-1975",
             "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},

@@ -23,6 +23,7 @@ import os
 import subprocess
 import sys
 from collections.abc import Callable, Iterable
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
@@ -474,6 +475,7 @@ def ingest_source(
     limit: int | None = None,
     runner: SubprocessRunner = _default_runner,
     budget: IngestBudget | None = None,
+    parallel: int = 5,
 ) -> IngestResult:
     """Run parse -> resolve -> apply -> validate voor één bron.
 
@@ -485,7 +487,15 @@ def ingest_source(
     teruggeeft stopt de fase met `budget_hit=True` op het result. In dry-run
     wordt het budget ook geconsumeerd zodat een `ingest_all` over meerdere
     bronnen de cap correct doorrekent.
+
+    `parallel` (default 5) bepaalt het aantal worker-threads voor de parse-
+    en resolve-fase. Iedere worker doet `subprocess.run` op de claude-binary,
+    dus de threads wachten vrijwel volledig op IO; `ThreadPoolExecutor` is
+    daardoor goedkoper dan `ProcessPoolExecutor`. De apply-fase blijft single-
+    threaded omdat die naar `data/` schrijft.
     """
+    if parallel < 1:
+        raise ValueError(f"parallel moet >= 1 zijn, kreeg {parallel}")
     cache_root = cache_root or (repo_root / "_cache")
     staging_dir = staging_dir or (repo_root / "data" / "_staging")
     data_dir = data_dir or (repo_root / "data")
@@ -518,24 +528,53 @@ def ingest_source(
                     f"van {plan.count} jobs"
                 )
     else:
-        for job in plan.jobs:
-            if budget is not None and not budget.check():
+        # Bepaal vooraf welke jobs binnen het budget vallen — dan submit alleen
+        # die naar de pool. Geen halverwege-stop midden in concurrent jobs.
+        if budget is not None and budget.max_claude_calls is not None:
+            remaining = budget.remaining() or 0
+            jobs_within_budget = plan.jobs[:remaining]
+            if len(jobs_within_budget) < len(plan.jobs):
                 result.budget_hit = True
                 result.notes.append(
-                    f"Budget bereikt: {budget.used_calls} calls / "
-                    f"{budget.max_claude_calls} max — parse afgebroken"
+                    f"Budget cap: {budget.used_calls + len(jobs_within_budget)} / "
+                    f"{budget.max_claude_calls} max — parse beperkt tot "
+                    f"{len(jobs_within_budget)}/{len(plan.jobs)} jobs"
                 )
-                break
-            ok = run_parse_job(
-                job, source, repo_root=repo_root, runner=runner
-            )
-            if budget is not None:
-                budget.consume(1)
-                result.claude_calls_used += 1
-            if ok and job.output_path.exists():
-                result.parsed += 1
-            else:
-                result.parse_failed += 1
+        else:
+            jobs_within_budget = list(plan.jobs)
+
+        if budget is not None:
+            # Reserveer het budget vooraf zodat parallelle resolve-fase
+            # de gedeelde teller correct ziet.
+            budget.consume(len(jobs_within_budget))
+            result.claude_calls_used += len(jobs_within_budget)
+
+        if jobs_within_budget:
+            workers = max(1, min(parallel, len(jobs_within_budget)))
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                futures = {
+                    executor.submit(
+                        run_parse_job,
+                        job,
+                        source,
+                        repo_root=repo_root,
+                        runner=runner,
+                    ): job
+                    for job in jobs_within_budget
+                }
+                for future in as_completed(futures):
+                    job = futures[future]
+                    try:
+                        ok = future.result()
+                    except Exception as exc:
+                        logger.error(
+                            "parse-job %s gefaald: %s", job.input_path, exc
+                        )
+                        ok = False
+                    if ok and job.output_path.exists():
+                        result.parsed += 1
+                    else:
+                        result.parse_failed += 1
 
     # Stap 2: resolve-plan (gebaseerd op huidige staging-state)
     pending_resolve = plan_resolve(staging_dir, source=source)
@@ -563,24 +602,51 @@ def ingest_source(
                     f"van {len(pending_resolve)} jobs"
                 )
     else:
-        for staging_path in pending_resolve:
-            if budget is not None and not budget.check():
+        # Zelfde pattern als parse: vooraf afgekapt op budget, dan parallel.
+        # Lookup-person calls binnen één resolve zijn impliciet sequentieel,
+        # parallelism op staging-file-niveau is veilig.
+        if budget is not None and budget.max_claude_calls is not None:
+            remaining = budget.remaining() or 0
+            paths_within_budget = pending_resolve[:remaining]
+            if len(paths_within_budget) < len(pending_resolve):
                 result.budget_hit = True
                 result.notes.append(
-                    f"Budget bereikt: {budget.used_calls} calls / "
-                    f"{budget.max_claude_calls} max — resolve afgebroken"
+                    f"Budget cap: {budget.used_calls + len(paths_within_budget)} / "
+                    f"{budget.max_claude_calls} max — resolve beperkt tot "
+                    f"{len(paths_within_budget)}/{len(pending_resolve)} jobs"
                 )
-                break
-            ok = run_resolve_job(
-                staging_path, repo_root=repo_root, runner=runner
-            )
-            if budget is not None:
-                budget.consume(1)
-                result.claude_calls_used += 1
-            if ok and staging_path.with_suffix(".resolved.json").exists():
-                result.resolved += 1
-            else:
-                result.resolve_failed += 1
+        else:
+            paths_within_budget = list(pending_resolve)
+
+        if budget is not None:
+            budget.consume(len(paths_within_budget))
+            result.claude_calls_used += len(paths_within_budget)
+
+        if paths_within_budget:
+            workers = max(1, min(parallel, len(paths_within_budget)))
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                futures = {
+                    executor.submit(
+                        run_resolve_job,
+                        staging_path,
+                        repo_root=repo_root,
+                        runner=runner,
+                    ): staging_path
+                    for staging_path in paths_within_budget
+                }
+                for future in as_completed(futures):
+                    staging_path = futures[future]
+                    try:
+                        ok = future.result()
+                    except Exception as exc:
+                        logger.error(
+                            "resolve-job %s gefaald: %s", staging_path, exc
+                        )
+                        ok = False
+                    if ok and staging_path.with_suffix(".resolved.json").exists():
+                        result.resolved += 1
+                    else:
+                        result.resolve_failed += 1
 
     # Stap 3: apply
     if dry_run:
@@ -646,10 +712,12 @@ def ingest_all(
     limit: int | None = None,
     runner: SubprocessRunner = _default_runner,
     budget: IngestBudget | None = None,
+    parallel: int = 5,
 ) -> list[IngestResult]:
     """Run `ingest_source` voor elk gegeven bronlabel.
 
     `budget` wordt gedeeld over alle bronnen zodat de cap voor de hele run geldt.
+    `parallel` wordt doorgegeven aan elke `ingest_source`-call.
     """
     results: list[IngestResult] = []
     for source in sources:
@@ -662,6 +730,7 @@ def ingest_all(
                 limit=limit,
                 runner=runner,
                 budget=budget,
+                parallel=parallel,
             )
         )
     return results

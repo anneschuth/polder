@@ -560,8 +560,7 @@ def _has_active_mandaat(record: dict[str, Any]) -> bool:
 
 def _target_path(out_dir: Path, record: dict[str, Any]) -> Path:
     slug = record["id"].split(":", 1)[1]
-    sub = "current" if _has_active_mandaat(record) else "historisch"
-    return out_dir / sub / f"{slug}.yaml"
+    return out_dir / f"{slug}.yaml"
 
 
 def _merge_sources(
@@ -653,16 +652,10 @@ def write_person(
     dry_run: bool = False,
 ) -> Path:
     target = _target_path(out_dir, record)
-    slug = record["id"].split(":", 1)[1]
-    sibling_dir = "historisch" if target.parent.name == "current" else "current"
-    sibling = out_dir / sibling_dir / f"{slug}.yaml"
 
     existing: dict[str, Any] = {}
     if target.exists():
         with target.open("r", encoding="utf-8") as fh:
-            existing = yaml.safe_load(fh) or {}
-    elif sibling.exists():
-        with sibling.open("r", encoding="utf-8") as fh:
             existing = yaml.safe_load(fh) or {}
 
     merged = merge_person(existing, record)
@@ -678,8 +671,6 @@ def write_person(
     target.parent.mkdir(parents=True, exist_ok=True)
     with target.open("w", encoding="utf-8") as fh:
         yaml.safe_dump(merged, fh, sort_keys=False, default_flow_style=False, allow_unicode=True)
-    if sibling.exists() and sibling != target:
-        sibling.unlink()
     return target
 
 
@@ -790,8 +781,8 @@ def _process_gemeente(
         )
         if record is None:
             continue
-        target = write_person(record, out_dir, dry_run=dry_run)
-        if target.parent.name == "current":
+        write_person(record, out_dir, dry_run=dry_run)
+        if _has_active_mandaat(record):
             n_current += 1
         else:
             n_historisch += 1

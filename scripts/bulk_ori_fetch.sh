@@ -134,8 +134,7 @@ ERRORS=$(awk -F'\t' '$2 != "rc=0"' "$PROGRESS_FILE" | wc -l | tr -d ' ')
 TOTAL_C=$(grep -oE 'Wrote [0-9]+ current' "$PROGRESS_FILE" | awk '{s+=$2} END {print s+0}')
 TOTAL_H=$(grep -oE '\+ [0-9]+ historisch' "$PROGRESS_FILE" | awk '{s+=$2} END {print s+0}')
 
-CURRENT_NOW=$(find data/personen/current -maxdepth 1 -name '*.yaml' 2>/dev/null | wc -l | tr -d ' ')
-HIST_NOW=$(find data/personen/historisch -maxdepth 1 -name '*.yaml' 2>/dev/null | wc -l | tr -d ' ')
+PERSONS_NOW=$(find data/personen -maxdepth 1 -name '*.yaml' 2>/dev/null | wc -l | tr -d ' ')
 
 {
   echo "totaal gemeenten verwerkt : $TOTAL"
@@ -143,7 +142,7 @@ HIST_NOW=$(find data/personen/historisch -maxdepth 1 -name '*.yaml' 2>/dev/null 
   echo "  zonder records (0/0)    : $NO_RECORDS"
   echo "  errors (rc != 0)        : $ERRORS"
   echo "som records (per-run)     : current=$TOTAL_C historisch=$TOTAL_H"
-  echo "totale bestanden op disk  : current=$CURRENT_NOW historisch=$HIST_NOW"
+  echo "totale bestanden op disk  : personen=$PERSONS_NOW"
   echo "log                       : $LOG_FILE"
   echo "progress                  : $PROGRESS_FILE"
 } | tee -a "$LOG_FILE"

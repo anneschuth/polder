@@ -52,7 +52,7 @@ def mini_root(tmp_path: Path) -> Path:
     (root / "_cache" / "staatscourant" / "2025" / "03").mkdir(parents=True)
     (root / "_cache" / "abd-organogrammen" / "min-bzk" / "assets").mkdir(parents=True)
     (root / "data" / "_staging").mkdir(parents=True)
-    (root / "data" / "personen" / "current").mkdir(parents=True)
+    (root / "data" / "personen").mkdir(parents=True)
     (root / "data" / "posten").mkdir(parents=True)
     (root / "scripts").mkdir(parents=True)
 
@@ -424,3 +424,499 @@ def test_ingest_cli_validate_failure_blokkeert_commit(
 
     assert result.exit_code != 0
     assert build_called == []
+
+
+# ---------------------------------------------------------------------------
+# IngestBudget unit tests
+# ---------------------------------------------------------------------------
+
+
+def test_budget_unlimited_default() -> None:
+    b = IngestBudget()
+    assert b.max_claude_calls is None
+    assert b.check() is True
+    b.consume(100)
+    assert b.check() is True  # blijft unlimited
+    assert b.used_calls == 100
+    assert b.cost_estimate_usd == pytest.approx(100 * COST_PARSE_USD)
+    assert b.remaining() is None
+
+
+def test_budget_cap_blocks_after_n_calls() -> None:
+    b = IngestBudget(max_claude_calls=10)
+    for _ in range(10):
+        assert b.check() is True
+        b.consume(1)
+    assert b.check() is False
+    assert b.used_calls == 10
+    assert b.remaining() == 0
+    assert b.cost_estimate_usd == pytest.approx(10 * COST_PARSE_USD)
+
+
+def test_budget_consume_uses_model_specific_cost() -> None:
+    b = IngestBudget(max_claude_calls=100)
+    b.consume(2, model="haiku-4-5")
+    b.consume(1, model="opus-4-7")
+    assert b.cost_estimate_usd == pytest.approx(2 * 0.005 + 1 * 0.10)
+    assert b.used_calls == 3
+
+
+def test_estimate_cost_parse_plus_resolve() -> None:
+    cost = estimate_cost(parse_jobs=100, resolve_jobs=20)
+    expected = 100 * COST_PARSE_USD + 20 * COST_RESOLVE_USD * 1.5
+    assert cost == pytest.approx(expected)
+
+
+# ---------------------------------------------------------------------------
+# Budget-cap in ingest_source
+# ---------------------------------------------------------------------------
+
+
+@pytest.fixture
+def cache_with_5_html(mini_root: Path) -> Path:
+    """5 fake HTML-files in abd-nieuws cache zonder staging-output."""
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(5):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+    return mini_root
+
+
+def test_ingest_source_dry_run_respects_budget(cache_with_5_html: Path) -> None:
+    budget = IngestBudget(max_claude_calls=2)
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=cache_with_5_html,
+        cache_root=cache_with_5_html / "_cache",
+        staging_dir=cache_with_5_html / "data" / "_staging",
+        data_dir=cache_with_5_html / "data",
+        schemas_dir=cache_with_5_html / "schemas",
+        dry_run=True,
+        budget=budget,
+    )
+    assert result.parsed == 2  # cap kort
+    assert result.budget_hit is True
+    assert budget.used_calls == 2
+    assert result.parse_cost_estimate_usd == pytest.approx(2 * COST_PARSE_USD)
+
+
+def test_ingest_source_dry_run_zero_budget_plans_nothing(
+    cache_with_5_html: Path,
+) -> None:
+    """`--max-claude-calls 0` betekent niets plannen."""
+    budget = IngestBudget(max_claude_calls=0)
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=cache_with_5_html,
+        cache_root=cache_with_5_html / "_cache",
+        staging_dir=cache_with_5_html / "data" / "_staging",
+        data_dir=cache_with_5_html / "data",
+        schemas_dir=cache_with_5_html / "schemas",
+        dry_run=True,
+        budget=budget,
+    )
+    assert result.parsed == 0
+    assert result.budget_hit is True
+    assert budget.used_calls == 0
+
+
+def test_ingest_source_real_run_stops_at_budget(cache_with_5_html: Path) -> None:
+    """Met cap=2 mag de runner maar 2x worden aangeroepen."""
+    calls: list[list[str]] = []
+
+    def fake_runner(cmd: list[str]) -> int:
+        calls.append(cmd)
+        # Schrijf de output-staging-file aan zodat result.parsed += 1.
+        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+        out_path.write_text("[]", encoding="utf-8")
+        return 0
+
+    budget = IngestBudget(max_claude_calls=2)
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=cache_with_5_html,
+        cache_root=cache_with_5_html / "_cache",
+        staging_dir=cache_with_5_html / "data" / "_staging",
+        data_dir=cache_with_5_html / "data",
+        schemas_dir=cache_with_5_html / "schemas",
+        dry_run=False,
+        budget=budget,
+        runner=fake_runner,
+    )
+    assert len(calls) == 2
+    assert result.parsed == 2
+    assert result.budget_hit is True
+    assert budget.used_calls == 2
+
+
+# ---------------------------------------------------------------------------
+# Dry-run rapportage
+# ---------------------------------------------------------------------------
+
+
+def _make_result(
+    source: str,
+    *,
+    parsed: int,
+    resolved: int,
+    applied: int,
+    needs_review: int,
+) -> IngestResult:
+    r = IngestResult(source=source)  # type: ignore[arg-type]
+    r.parsed = parsed
+    r.resolved = resolved
+    r.applied = applied
+    r.needs_review = needs_review
+    r.parse_cost_estimate_usd = parsed * COST_PARSE_USD
+    r.resolve_cost_estimate_usd = resolved * COST_RESOLVE_USD * 1.5
+    return r
+
+
+def test_dry_run_summary_has_per_source_breakdown_and_cost() -> None:
+    results = [
+        _make_result(
+            "abd-nieuws", parsed=2906, resolved=12, applied=28, needs_review=12
+        ),
+        _make_result(
+            "staatscourant", parsed=568, resolved=0, applied=6, needs_review=3
+        ),
+    ]
+    output = format_dry_run_summary(results, threshold=0.85)
+    assert "[abd-nieuws]" in output
+    assert "[staatscourant]" in output
+    assert "Phase 1 parse" in output
+    assert "Phase 2 resolve" in output
+    assert "Phase 3 apply" in output
+    assert "Sonnet 4.6" in output
+    assert "Totale geschatte kosten" in output
+    assert "Wall-clock" in output
+    # Sanity check: parse-cost = 2906 * 0.025 = 72.65
+    assert "$72.65" in output
+
+
+def test_dry_run_summary_with_budget_includes_cap_line() -> None:
+    results = [
+        _make_result("abd-nieuws", parsed=10, resolved=0, applied=0, needs_review=0)
+    ]
+    budget = IngestBudget(max_claude_calls=10)
+    budget.consume(10)
+    output = format_dry_run_summary(results, threshold=0.85, budget=budget)
+    assert "Budget cap" in output
+    assert "10/10" in output
+
+
+# ---------------------------------------------------------------------------
+# Per-source commits via CLI
+# ---------------------------------------------------------------------------
+
+
+def test_cli_per_source_commits_zijn_apart(
+    mini_root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Twee bronnen met records -> twee commits, niet één."""
+    monkeypatch.chdir(mini_root)
+
+    # Drie resultaten: abd + staatscourant met records, organogram zonder.
+    fake_results = {
+        "abd-nieuws": IngestResult(
+            source="abd-nieuws",
+            parsed=1,
+            resolved=1,
+            applied=28,
+            needs_review=12,
+            validate_ok=True,
+        ),
+        "staatscourant": IngestResult(
+            source="staatscourant",
+            parsed=1,
+            resolved=1,
+            applied=6,
+            needs_review=3,
+            validate_ok=True,
+        ),
+        "organogram": IngestResult(
+            source="organogram",
+            parsed=0,
+            resolved=0,
+            applied=0,
+            needs_review=0,
+            validate_ok=True,
+        ),
+    }
+
+    def fake_ingest_source(source, **kwargs):
+        return fake_results[source]
+
+    commit_calls: list[tuple[str, tuple[str, ...]]] = []
+
+    def fake_commit(message, *, repo_root, paths=("data",), push=False, branch="main"):
+        commit_calls.append((message, tuple(paths)))
+        # Eerste twee zijn data-commits, derde de build-commit.
+        return f"sha-{len(commit_calls):03d}-abcdef0"
+
+    def fake_build(**kwargs):
+        return True
+
+    monkeypatch.setattr(
+        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
+    )
+    monkeypatch.setattr(
+        "polder.cli.commands.ingest_cmd.commit_changes", fake_commit
+    )
+    monkeypatch.setattr(
+        "polder.cli.commands.ingest_cmd.run_build", fake_build
+    )
+
+    with patch(
+        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
+    ):
+        runner = CliRunner()
+        result = runner.invoke(
+            app,
+            [
+                "ingest",
+                "--source",
+                "all",
+                "--commit",
+            ],
+        )
+
+    assert result.exit_code == 0, result.output
+    # 1 commit per bron + 1 build-commit = 3.
+    data_commits = [c for c in commit_calls if c[1] == ("data",)]
+    assert len(data_commits) == 2
+    messages = [m for m, _ in data_commits]
+    assert any("abd-nieuws" in m and "+28" in m for m in messages)
+    assert any("staatscourant" in m and "+6" in m for m in messages)
+    # Plus build-commit op dist/.
+    build_commits = [c for c in commit_calls if "dist" in c[1]]
+    assert len(build_commits) == 1
+
+
+# ---------------------------------------------------------------------------
+# Parallel parse + resolve
+# ---------------------------------------------------------------------------
+
+
+def test_ingest_source_parallel_real_run_uses_pool(mini_root: Path) -> None:
+    """Met parallel=4 over 8 jobs moet de pool concurrent draaien.
+
+    We tellen het max gelijktijdig actieve runner-aanroepen door een
+    threading-counter; bij sequentieel zou dat 1 zijn.
+    """
+    import threading
+    import time
+
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(8):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+
+    active = 0
+    max_active = 0
+    lock = threading.Lock()
+
+    def fake_runner(cmd: list[str]) -> int:
+        nonlocal active, max_active
+        with lock:
+            active += 1
+            max_active = max(max_active, active)
+        # Simuleer wat IO-wachttijd zodat threads daadwerkelijk overlappen.
+        time.sleep(0.05)
+        with lock:
+            active -= 1
+        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+        out_path.write_text("[]", encoding="utf-8")
+        return 0
+
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=mini_root / "_cache",
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        parallel=4,
+    )
+
+    assert result.parsed == 8
+    # Met 8 jobs en 4 workers verwachten we tussen 2 en 4 gelijktijdig actief.
+    # Sequentieel zou max_active == 1 zijn — dat moet falen.
+    assert max_active >= 2, f"verwachtte parallel uitvoer, max_active={max_active}"
+    assert max_active <= 4
+
+
+def test_ingest_source_parallel_respects_budget(mini_root: Path) -> None:
+    """Met cap=3 en parallel=4 worden er nog steeds maar 3 jobs gedraaid."""
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(6):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+
+    calls: list[list[str]] = []
+    lock = __import__("threading").Lock()
+
+    def fake_runner(cmd: list[str]) -> int:
+        with lock:
+            calls.append(cmd)
+        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+        out_path.write_text("[]", encoding="utf-8")
+        return 0
+
+    budget = IngestBudget(max_claude_calls=3)
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=mini_root / "_cache",
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        parallel=4,
+        budget=budget,
+    )
+
+    assert len(calls) == 3
+    assert result.parsed == 3
+    assert result.budget_hit is True
+    assert budget.used_calls == 3
+
+
+def test_ingest_source_parallel_exception_in_one_does_not_stop_others(
+    mini_root: Path,
+) -> None:
+    """Als één thread crasht, draaien de andere door (zowel parse- als
+    resolve-fase gebruiken dezelfde pool-pattern)."""
+    import threading
+
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(5):
+        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+
+    parse_calls = 0
+    parse_lock = threading.Lock()
+
+    def fake_runner(cmd: list[str]) -> int:
+        nonlocal parse_calls
+        # Tel alleen parse-calls (parse_abd_nieuws_local.sh in cmd[1]).
+        if "parse_abd_nieuws_local.sh" in " ".join(cmd):
+            with parse_lock:
+                parse_calls += 1
+            out_path = next(Path(c) for c in cmd if c.endswith(".json"))
+            if "news-02" in str(out_path):
+                raise RuntimeError("fake claude crash op news-02")
+            out_path.write_text("[]", encoding="utf-8")
+            return 0
+        # resolve-call: schrijf .resolved.json companion.
+        if "resolve_staging_local.sh" in " ".join(cmd):
+            staging_path = Path(cmd[-1])
+            staging_path.with_suffix(".resolved.json").write_text("[]")
+            return 0
+        return 0
+
+    result = ingest_source(
+        "abd-nieuws",
+        repo_root=mini_root,
+        cache_root=mini_root / "_cache",
+        staging_dir=mini_root / "data" / "_staging",
+        data_dir=mini_root / "data",
+        schemas_dir=mini_root / "schemas",
+        dry_run=False,
+        runner=fake_runner,
+        parallel=3,
+    )
+
+    # Alle 5 parse-jobs zijn gesubmit ondanks de crash op news-02.
+    assert parse_calls == 5
+    assert result.parsed == 4
+    assert result.parse_failed == 1
+
+
+def test_ingest_source_parallel_invalid_value_raises(mini_root: Path) -> None:
+    with pytest.raises(ValueError):
+        ingest_source(
+            "abd-nieuws",
+            repo_root=mini_root,
+            cache_root=mini_root / "_cache",
+            staging_dir=mini_root / "data" / "_staging",
+            data_dir=mini_root / "data",
+            schemas_dir=mini_root / "schemas",
+            dry_run=True,
+            parallel=0,
+        )
+
+
+def test_ingest_cli_parallel_flag_in_help() -> None:
+    runner = CliRunner()
+    result = runner.invoke(app, ["ingest", "--help"])
+    assert result.exit_code == 0
+    assert "--parallel" in result.stdout
+
+
+def test_ingest_cli_parallel_flag_doorgegeven(
+    mini_root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """`--parallel 7` moet bij `ingest_source` aankomen."""
+    monkeypatch.chdir(mini_root)
+
+    captured: dict[str, int] = {}
+
+    def fake_ingest_source(source, **kwargs):
+        captured["parallel"] = kwargs.get("parallel")
+        return IngestResult(
+            source=source, parsed=0, resolved=0, applied=0, validate_ok=True
+        )
+
+    monkeypatch.setattr(
+        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
+    )
+
+    with patch(
+        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
+    ):
+        cli = CliRunner()
+        result = cli.invoke(
+            app,
+            [
+                "ingest",
+                "--source",
+                "abd-nieuws",
+                "--parallel",
+                "7",
+                "--dry-run",
+            ],
+        )
+
+    assert result.exit_code == 0, result.output
+    assert captured["parallel"] == 7
+
+
+def test_cli_max_claude_calls_zero_dry_run_plant_niets(
+    mini_root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """`polder ingest --max-claude-calls 0 --dry-run` plant 0 calls."""
+    monkeypatch.chdir(mini_root)
+    cache = mini_root / "_cache" / "abd-nieuws"
+    for i in range(3):
+        (cache / f"x-{i}.html").write_text("<html/>")
+
+    with patch(
+        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
+    ):
+        runner = CliRunner()
+        result = runner.invoke(
+            app,
+            [
+                "ingest",
+                "--source",
+                "abd-nieuws",
+                "--max-claude-calls",
+                "0",
+                "--dry-run",
+            ],
+        )
+
+    assert result.exit_code == 0, result.output
+    combined = result.output + (result.stderr or "")
+    assert "0/3" in combined or "0 nieuwe" in combined
+    assert "Dry-run klaar" in combined

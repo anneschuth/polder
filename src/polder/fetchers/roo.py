@@ -316,7 +316,15 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     bezoekadres = _findtext(node, "bezoekadres", "visitingaddress")
     postadres = _findtext(node, "postadres", "postaladdress")
     email = _findtext(node, "email", "emailadres")
-    valid_from = _findtext(node, "opgericht", "startdatum", "valid_from") or "1900-01-01"
+    # ROO's `<startDatum>` is de aanmaakdatum van het legale entity-record, niet
+    # de validity-datum van de huidige naam. Voor ministeries levert dat fouten
+    # op: EZK en IenW krijgen 2010-10-14 (Rutte I-cabinetdag) terwijl die namen
+    # pas in 2017 ontstonden. Wikidata's P571 (inception, gekoppeld aan de naam)
+    # is correcter; die wordt door de Wikidata-fetcher ingevuld. Hier gebruiken
+    # we een sentinel als er geen betrouwbare bron is. `<opgericht>` en
+    # `<valid_from>` worden alleen door test-fixtures gebruikt; echte ROO-XML
+    # heeft ze niet, en als ze er wel staan zijn ze al inhoudelijk juist.
+    valid_from = _findtext(node, "opgericht", "valid_from") or "1900-01-01"
     valid_until = _findtext(node, "opgeheven", "einddatum", "valid_until")
     parent_roo_id = _findtext(node, "parent", "ouder", "parent_id", "ouderorganisatie")
     parent_org_id: str | None = None

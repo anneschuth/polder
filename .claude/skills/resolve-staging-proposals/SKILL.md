@@ -34,7 +34,7 @@ Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde
 - `resolved_organization_id` (string of null): bestaande slug uit `data/organisaties/` of null.
 - `resolved_organization_level` (string of null): `afdeling`, `directie`, `directoraat-generaal`, `ministerie`, of null.
 - `resolved_post_id` (string of null): bestaande slug uit `data/posten/`.
-- `resolved_person_id` (string of null): bestaande slug uit `data/personen/current/` of `data/personen/historisch/`.
+- `resolved_person_id` (string of null): bestaande slug uit `data/personen/`.
 - `resolution_confidence` (object): `{organization, post, person}` als floats in [0, 1] per veld. Per-veld, niet één globale.
 - `resolution_notes` (string): uitleg met evidence (welk veld in welk bestand matchte).
 - `propose_post_creation` (bool): true als organisatie geresolved is maar post niet bestaat.
@@ -49,7 +49,7 @@ Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde
    - Een afdelings-match telt alleen als het matchende onderdeel `parent_id` heeft die overeenkomt met de directie-slug uit de chain. Geen ouder-relatie? Confidence-cap 0.8 met expliciete note.
    - Match op afdeling-niveau zonder ouder-conflict: confidence 0.9 of hoger.
 4. **Klim omhoog** als het diepste niveau niet matcht. Probeer directie, dan DG, dan ministerie. De eerste die matcht wordt `resolved_organization_id`, en `resolved_organization_level` is dat niveau. Confidence-cap 0.85 zodra je hoger zit dan het diepste niveau in de chain, met note "afdeling-niveau niet gevonden, gematcht op directie-niveau".
-5. **Person-match.** Lees `data/personen/current/*.yaml` (en `historisch/` voor `event_type` `ontslag`). Match op `name.family` plus `name.initials`. Geboortejaar onbekend in de proposal? Confidence-cap 0.85. Meerdere kandidaten passen? Confidence-cap 0.7 en alle kandidaten in `resolution_notes`. Volg de slug-conventie `person:<family>-<initials-lower>-<birthyear>` zoals beschreven in `entity-resolution`.
+5. **Person-match.** Lees `data/personen/*.yaml`. Match op `name.family` plus `name.initials`. Of een persoon nog actief is volgt uit de mandaten (`end_date is None`), niet uit de folder. Geboortejaar onbekend in de proposal? Confidence-cap 0.85. Meerdere kandidaten passen? Confidence-cap 0.7 en alle kandidaten in `resolution_notes`. Volg de slug-conventie `person:<family>-<initials-lower>-<birthyear>` zoals beschreven in `entity-resolution`.
 6. **Post-match.** Bouw de kandidaat-slug `post:<role-slug>-<resolved_organization_id-zonder-org-prefix>`. Bestaat in `data/posten/`? `resolved_post_id` ingevuld, confidence ≥ 0.9. Bestaat niet, maar organisatie wel geresolved? `propose_post_creation: true`, `resolved_post_id: null`, confidence 0.0 met note "post moet handmatig aangemaakt worden".
 7. **Merge-recommendation.**
    - `auto-merge`: alle drie de IDs geresolved, alle confidences ≥ 0.95, geen rood-AVG-veld geraakt, geen `propose_post_creation`.

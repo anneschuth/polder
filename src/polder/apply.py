@@ -620,7 +620,7 @@ def _plan_person(
         post_id=post_id,
         proposal=proposal,
     )
-    path = data_dir / "personen" / "current" / f"{slug_body}.yaml"
+    path = data_dir / "personen" / f"{slug_body}.yaml"
     return ApplyAction(
         type="create-person",
         target_path=path,

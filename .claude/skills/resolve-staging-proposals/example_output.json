@@ -45,7 +45,7 @@
       "post": 0.0,
       "person": 0.0
     },
-    "resolution_notes": "Afdeling Beleid Wonen niet gevonden in data/organisaties/organisatieonderdelen/. Gematcht op directie-niveau via data/organisaties/organisatieonderdelen/directie-wonen.yaml names[0].value 'Directie Wonen'. Parent_id van directie-wonen verwijst naar org:onderdeel-directoraat-generaal-volkshuisvesting-en-bouwen, consistent met de chain. Persoon Marleen Heijster niet gevonden in data/personen/current/; geen geboortejaar in proposal, dus skip-confidence. Post post:afdelingshoofd-beleid-wonen-min-vro bestaat niet en organisatie geresolved op directie-niveau (niet afdeling), dus propose_post_creation niet gezet zonder afdelings-record.",
+    "resolution_notes": "Afdeling Beleid Wonen niet gevonden in data/organisaties/organisatieonderdelen/. Gematcht op directie-niveau via data/organisaties/organisatieonderdelen/directie-wonen.yaml names[0].value 'Directie Wonen'. Parent_id van directie-wonen verwijst naar org:onderdeel-directoraat-generaal-volkshuisvesting-en-bouwen, consistent met de chain. Persoon Marleen Heijster niet gevonden in data/personen/; geen geboortejaar in proposal, dus skip-confidence. Post post:afdelingshoofd-beleid-wonen-min-vro bestaat niet en organisatie geresolved op directie-niveau (niet afdeling), dus propose_post_creation niet gezet zonder afdelings-record.",
     "propose_post_creation": false,
     "merge_recommendation": "needs-review"
   }

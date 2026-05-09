@@ -201,12 +201,25 @@ def fetch_tooi(
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path(
         "data/organisaties"
     ),
+    scheme: Annotated[
+        str, typer.Option(help="TOOI-scheme (ministeries, gemeenten, provincies, ...).")
+    ] = "ministeries",
+    apply_history: Annotated[
+        bool,
+        typer.Option(
+            "--apply-history",
+            help="Schrijf successor_id/predecessor_id/valid_until naar data/.",
+        ),
+    ] = False,
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
 ) -> None:
     """TOOI: thesaurus-URI's voor overheidsorganisaties."""
-    _delegate(tooi.main, _common_argv(cache, out, limit, dry_run, verbose))
+    extra: list[str] = ["--scheme", scheme]
+    if apply_history:
+        extra.append("--apply-history")
+    _delegate(tooi.main, _common_argv(cache, out, limit, dry_run, verbose) + extra)
 
 
 @app.command("kiesraad")

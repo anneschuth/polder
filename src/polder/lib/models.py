@@ -174,6 +174,8 @@ class Organisatie(_Base):
     contact: Contact | None = None
     valid_from: date
     valid_until: date | None = None
+    successor_id: str | None = Field(default=None, pattern=r"^org:[a-z0-9-]+$")
+    predecessor_id: list[str] | None = Field(default=None)
     sources: list[Source]
 
     @classmethod

@@ -25,7 +25,7 @@ def mini_polder(tmp_path: Path) -> Path:
     """
     root = tmp_path
     (root / "data" / "organisaties" / "ministeries").mkdir(parents=True)
-    (root / "data" / "personen" / "current").mkdir(parents=True)
+    (root / "data" / "personen").mkdir(parents=True)
     (root / "data" / "posten").mkdir(parents=True)
     (root / "data" / "mandaten").mkdir(parents=True)
 
@@ -72,7 +72,7 @@ def mini_polder(tmp_path: Path) -> Path:
         encoding="utf-8",
     )
 
-    (root / "data" / "personen" / "current" / "jansen.yaml").write_text(
+    (root / "data" / "personen" / "jansen.yaml").write_text(
         yaml.safe_dump(
             {
                 "id": "person:jansen-jp-1965",

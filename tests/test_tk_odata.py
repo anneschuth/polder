@@ -283,7 +283,7 @@ def test_build_mandaat_uniek_id():
 
 
 # ---------------------------------------------------------------------------
-# write_person + current/historisch routing
+# write_person (vlakke personen-folder)
 # ---------------------------------------------------------------------------
 
 
@@ -321,31 +321,30 @@ def _record_with_mandaat(active: bool, slug: str = "rutte-mp-1967") -> dict[str,
     }
 
 
-def test_write_person_actief_naar_current(tmp_path: Path):
+def test_write_person_actief(tmp_path: Path):
     rec = _record_with_mandaat(active=True)
     target = write_person(rec, tmp_path)
-    assert target == tmp_path / "current" / "rutte-mp-1967.yaml"
+    assert target == tmp_path / "rutte-mp-1967.yaml"
     assert target.exists()
 
 
-def test_write_person_afgesloten_naar_historisch(tmp_path: Path):
+def test_write_person_afgesloten(tmp_path: Path):
     rec = _record_with_mandaat(active=False)
     target = write_person(rec, tmp_path)
-    assert target == tmp_path / "historisch" / "rutte-mp-1967.yaml"
+    assert target == tmp_path / "rutte-mp-1967.yaml"
     assert target.exists()
 
 
-def test_write_person_verplaatst_naar_historisch(tmp_path: Path):
-    """Als persoon eerst actief was en nu afgesloten: oude file moet weg."""
+def test_write_person_idempotent_pad(tmp_path: Path):
+    """Het pad blijft hetzelfde als een mandaat eindigt; geen verhuizing meer."""
     active = _record_with_mandaat(active=True)
     write_person(active, tmp_path)
-    assert (tmp_path / "current" / "rutte-mp-1967.yaml").exists()
+    assert (tmp_path / "rutte-mp-1967.yaml").exists()
 
     closed = _record_with_mandaat(active=False)
     target = write_person(closed, tmp_path)
-    assert target == tmp_path / "historisch" / "rutte-mp-1967.yaml"
-    assert not (tmp_path / "current" / "rutte-mp-1967.yaml").exists()
-    assert (tmp_path / "historisch" / "rutte-mp-1967.yaml").exists()
+    assert target == tmp_path / "rutte-mp-1967.yaml"
+    assert (tmp_path / "rutte-mp-1967.yaml").exists()
 
 
 def test_write_person_yaml_inhoud_volgorde(tmp_path: Path):

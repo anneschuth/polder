@@ -189,6 +189,51 @@ def test_parse_organisatie_reads_tooi_attribute():
     assert record["identifiers"]["roo_id"] == "5445"
 
 
+# ROO's `<startDatum>` is geen betrouwbare valid_from voor de naam: het is de
+# datum waarop het legale entity-record is aangemaakt, vaak ouder dan de
+# huidige naam. Voor EZK/IenW levert dat 2010-10-14 op terwijl die namen pas
+# in 2017 ontstonden. We negeren `<startDatum>` en vallen terug op de sentinel
+# 1900-01-01; de Wikidata-fetcher vult de echte datum in via P571.
+STARTDATUM_XML = """
+<organisatie>
+  <id>10621</id>
+  <naam>Ministerie van Economische Zaken en Klimaat</naam>
+  <afkorting>EZK</afkorting>
+  <type>ministerie</type>
+  <startDatum>2010-10-14</startDatum>
+</organisatie>
+"""
+
+
+def test_parse_organisatie_ignores_startDatum_for_valid_from():
+    node = etree.fromstring(STARTDATUM_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    assert record["valid_from"] == "1900-01-01"
+    assert record["names"][0]["valid_from"] == "1900-01-01"
+
+
+# Als de XML een echte `<opgericht>` heeft (test-fixtures, of toekomstige
+# ROO-versies), gebruiken we die wel.
+OPGERICHT_XML = """
+<organisatie>
+  <id>9632</id>
+  <naam>Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</naam>
+  <afkorting>BZK</afkorting>
+  <type>ministerie</type>
+  <opgericht>1798-03-12</opgericht>
+</organisatie>
+"""
+
+
+def test_parse_organisatie_uses_opgericht_when_present():
+    node = etree.fromstring(OPGERICHT_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    assert record["valid_from"] == "1798-03-12"
+    assert record["names"][0]["valid_from"] == "1798-03-12"
+
+
 # ---------------------------------------------------------------------------
 # Organisatieonderdeel
 # ---------------------------------------------------------------------------
