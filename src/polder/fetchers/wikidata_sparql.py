@@ -118,14 +118,11 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
 # Alle Tweede Kamerleden (huidig + historisch). P39 = position held,
 # Q18887908 = lid van de Tweede Kamer; P9213 = TK-persoon-ID.
 PERSON_QUERY = """
-SELECT ?person ?personLabel ?tkid ?birthyear ?initials ?family WHERE {
+SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
   ?person wdt:P39 wd:Q18887908 .
   OPTIONAL { ?person wdt:P9213 ?tkid }
   OPTIONAL { ?person wdt:P569 ?birth . BIND(YEAR(?birth) AS ?birthyear) }
-  OPTIONAL { ?person wdt:P1813 ?initials }
-  OPTIONAL { ?person wdt:P734 ?familyEntity .
-             ?familyEntity rdfs:label ?family .
-             FILTER(LANG(?family) = "nl") }
+  OPTIONAL { ?person wdt:P734 ?family }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }
 }
 """
@@ -160,7 +157,7 @@ def query_sparql(
     cache_dir: Path | None = None,
     use_cache: bool = True,
     client: httpx.Client | None = None,
-    max_retries: int = 4,
+    max_retries: int = 6,
 ) -> list[dict[str, Any]]:
     """Voer een SPARQL-query uit en geef de bindings terug als lijst van dicts.
 
@@ -202,6 +199,9 @@ def query_sparql(
                 wait = float(retry_after) if retry_after else backoff
             except (TypeError, ValueError):
                 wait = backoff
+            # Cap absurd Retry-After waits (Wikidata stuurt soms 1000s tijdens
+            # outages); we proberen liever sneller opnieuw met onze eigen backoff.
+            wait = min(max(wait, 1.0), 60.0)
             logger.warning(
                 "Wikidata SPARQL %s op poging %d/%d, wacht %.1fs",
                 response.status_code,
@@ -291,7 +291,7 @@ def parse_person_bindings(bindings: Iterable[dict[str, Any]]) -> list[dict[str, 
                 "tkid": _value(b, "tkid"),
                 "birthyear": birthyear,
                 "initials": _value(b, "initials"),
-                "family": _value(b, "family"),
+                "family": _value(b, "familyLabel") or _value(b, "family"),
             }
         )
     return rows
@@ -665,7 +665,20 @@ def enrich_organisations(
             logger.info("Geen records onder %s, sla over", folder_path)
             continue
         query = ORG_QUERIES[org_type]
-        bindings = query_sparql(query, cache_dir=cache_dir)
+        try:
+            bindings = query_sparql(query, cache_dir=cache_dir)
+        except httpx.HTTPError as exc:
+            logger.warning("Wikidata-query voor %s faalde: %s — sla over", org_type, exc)
+            stats[org_type] = {
+                "candidates": len(files),
+                "rows": 0,
+                "matched_oin": 0,
+                "matched_name": 0,
+                "matched_abbr": 0,
+                "written": 0,
+                "error": 1,
+            }
+            continue
         rows = parse_org_bindings(bindings)
         index = build_org_index(rows)
         records: list[tuple[Path, dict[str, Any]]] = []
@@ -731,7 +744,19 @@ def enrich_personen(
         logger.info("Geen persoonsrecords onder %s, sla over", data_root)
         return {"candidates": 0, "rows": 0, "matched_tkid": 0, "matched_natural": 0, "written": 0}
 
-    bindings = query_sparql(PERSON_QUERY, cache_dir=cache_dir)
+    try:
+        bindings = query_sparql(PERSON_QUERY, cache_dir=cache_dir)
+    except httpx.HTTPError as exc:
+        logger.warning("Wikidata-query voor personen faalde: %s — sla over", exc)
+        return {
+            "candidates": len(files),
+            "rows": 0,
+            "matched_tkid": 0,
+            "matched_natural": 0,
+            "matched_family_birth": 0,
+            "written": 0,
+            "error": 1,
+        }
     rows = parse_person_bindings(bindings)
     index = build_person_index(rows)
 
