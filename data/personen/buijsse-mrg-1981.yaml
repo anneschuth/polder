@@ -1,0 +1,32 @@
+id: person:buijsse-mrg-1981
+identifiers:
+  tk_persoon_id: 05f96fe8-9463-4c29-bf17-0b5956832f4f
+  wikidata: Q106119789
+name:
+  full: Martijn Buijsse
+  family: Buijsse
+  given: Martijn
+  initials: M.R.G.
+birth:
+  year: 1981
+gender: m
+mandaten:
+- id: 2f0091a5-e1ed-4a99-be90-fc31e6b25f19
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fd23a707-b308-4074-9782-3a2b8aae2dc2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(05f96fe8-9463-4c29-bf17-0b5956832f4f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119789
+  retrieved: '2026-05-09'

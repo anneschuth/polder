@@ -1,0 +1,34 @@
+id: person:eijsink-amc-1960
+identifiers:
+  tk_persoon_id: ce747c36-3ef4-49e3-b55e-1bc99db62413
+  wikidata: Q1960107
+name:
+  full: Angelien Eijsink
+  family: Eijsink
+  given: Angelien
+  initials: A.M.C.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1960
+gender: f
+mandaten:
+- id: 390b957f-ee39-4df9-8c45-6f8ed4951644
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8e40192a-9d4b-46f9-a6c5-5fea552960ec)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ce747c36-3ef4-49e3-b55e-1bc99db62413)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1960107
+  retrieved: '2026-05-09'

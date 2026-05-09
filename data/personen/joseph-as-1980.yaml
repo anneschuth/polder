@@ -1,0 +1,44 @@
+id: person:joseph-as-1980
+identifiers:
+  tk_persoon_id: 7a9eb6c1-368c-48b7-a825-699dfc7c5a0c
+  wikidata: Q123173997
+name:
+  full: Agnes Joseph
+  family: Joseph
+  given: Agnes
+  initials: A.S.
+birth:
+  year: 1980
+gender: f
+mandaten:
+- id: 6f8d6bd4-a3df-4070-8152-1633843b429b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2025-07-31'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9d4f06ae-d460-4412-b49a-f2fa51ca0a67)
+    retrieved: '2026-05-09'
+- id: 6e958832-54e4-4b4b-b2d8-27063bfdd5d5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-07-31'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a0a72562-1582-4837-96d6-9b0e95374d5c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7a9eb6c1-368c-48b7-a825-699dfc7c5a0c)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123173997
+  retrieved: '2026-05-09'

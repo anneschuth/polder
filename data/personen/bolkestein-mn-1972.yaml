@@ -1,0 +1,32 @@
+id: person:bolkestein-mn-1972
+identifiers:
+  tk_persoon_id: efd89dff-2cde-4afc-ab14-e4f9795d1407
+  wikidata: Q28861078
+name:
+  full: Martijn Bolkestein
+  family: Bolkestein
+  given: Martijn
+  initials: M.N.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: 70516cb5-c16c-479f-a45a-4f5f58e71875
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2020-07-02'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(714cd19c-dffc-4042-b084-66d3b7945451)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(efd89dff-2cde-4afc-ab14-e4f9795d1407)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861078
+  retrieved: '2026-05-09'

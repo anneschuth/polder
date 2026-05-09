@@ -1,0 +1,30 @@
+id: person:vendrik-ccm-1963
+identifiers:
+  tk_persoon_id: fa167c8e-0097-4597-8873-190d8c8eee85
+name:
+  full: Kees Vendrik
+  family: Vendrik
+  given: Kees
+  initials: C.C.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 0c4d0b9a-76ab-413b-82eb-55bdfd47f993
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '1998-05-19'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4951b95c-5abd-46d4-9e16-5de9f7f30db7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fa167c8e-0097-4597-8873-190d8c8eee85)
+  retrieved: '2026-05-09'

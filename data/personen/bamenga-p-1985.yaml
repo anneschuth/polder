@@ -1,0 +1,32 @@
+id: person:bamenga-p-1985
+identifiers:
+  tk_persoon_id: d4b77771-411c-4d3d-a893-767f38e07c67
+  wikidata: Q28860899
+name:
+  full: Mpanzu Bamenga
+  family: Bamenga
+  given: Mpanzu
+  initials: P.
+birth:
+  year: 1985
+gender: m
+mandaten:
+- id: ea61a7e0-b2dd-40ff-9948-870c898b7b97
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(51778962-aab3-4918-aa98-c86a13519024)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d4b77771-411c-4d3d-a893-767f38e07c67)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860899
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:lodders-wjh-1968
+identifiers:
+  tk_persoon_id: 446e3e45-8e03-4f8d-bb52-ea092634378f
+  wikidata: Q507401
+name:
+  full: Helma Lodders
+  family: Lodders
+  given: Helma
+  initials: W.J.H.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: 5ba74def-fbd4-4336-bb04-2c0445b96ca0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-06-17'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4f32acf7-f6a4-4325-875b-c7c291918d84)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(446e3e45-8e03-4f8d-bb52-ea092634378f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q507401
+  retrieved: '2026-05-09'

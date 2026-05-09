@@ -1,0 +1,32 @@
+id: person:ronnes-hag-1967
+identifiers:
+  tk_persoon_id: 9ea41959-b952-4e42-92fb-bc616ac17241
+  wikidata: Q18692811
+name:
+  full: Erik Ronnes
+  family: Ronnes
+  given: Erik
+  initials: H.A.G.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: 8e603b63-9647-47e9-bd7c-8454e89ad138
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2015-05-20'
+  end_date: '2020-05-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8e8c4352-f500-4a59-b415-2be67640d48a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ea41959-b952-4e42-92fb-bc616ac17241)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q18692811
+  retrieved: '2026-05-09'

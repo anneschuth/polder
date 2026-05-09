@@ -1,0 +1,32 @@
+id: person:aardema-m-1963
+identifiers:
+  tk_persoon_id: 12941235-4f71-4670-bc25-08180586437d
+  wikidata: Q6794520
+name:
+  full: Max Aardema
+  family: Aardema
+  given: Max
+  initials: M.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: d1edfdc3-9eb5-47b9-b34f-e20c8f5923af
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a122f795-7835-4446-9353-5ac7bf94b6c3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(12941235-4f71-4670-bc25-08180586437d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q6794520
+  retrieved: '2026-05-09'

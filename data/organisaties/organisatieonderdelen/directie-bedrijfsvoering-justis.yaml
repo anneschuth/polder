@@ -1,0 +1,15 @@
+id: org:onderdeel-directie-bedrijfsvoering-justis
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-justis
+names:
+- value: directie Bedrijfsvoering
+  valid_from: '2026-05-09'
+valid_from: '2026-05-09'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://example.invalid
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging

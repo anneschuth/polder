@@ -1,0 +1,40 @@
+id: person:yesilgoz-zegerius-d-1977
+identifiers:
+  tk_persoon_id: 9ab41898-332f-4c08-a834-d58b4669c990
+name:
+  full: Dilan Yeşilgöz-Zegerius
+  family: Yeşilgöz-Zegerius
+  given: Dilan
+  initials: D.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 200d737c-a336-4010-8751-81ed764650f3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0fb4c192-5fc6-4188-9dc7-af5c86f5c6b8)
+    retrieved: '2026-05-09'
+- id: 2b657342-083b-4134-b566-b1ff11480182
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-09-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e0e798db-dfdb-46ff-beaf-b4e76cf5231e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ab41898-332f-4c08-a834-d58b4669c990)
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:dille-wr-1965
+identifiers:
+  tk_persoon_id: a13ac64e-5f5f-4fa3-9239-9387c089e607
+  wikidata: Q2892147
+name:
+  full: Willie Dille
+  family: Dille
+  given: Willie
+  initials: W.R.
+birth:
+  year: 1965
+gender: f
+mandaten:
+- id: 4e9250b4-6185-4b48-8ead-6d53fca6f0c5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2010-06-17'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4a21dedb-2082-4258-b5bf-f3d0b9dfe973)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a13ac64e-5f5f-4fa3-9239-9387c089e607)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2892147
+  retrieved: '2026-05-09'

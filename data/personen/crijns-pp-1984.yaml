@@ -1,0 +1,32 @@
+id: person:crijns-pp-1984
+identifiers:
+  tk_persoon_id: a9eec08a-b5b5-45b7-b173-4261be0942a2
+  wikidata: Q123176045
+name:
+  full: Patrick Crijns
+  family: Crijns
+  given: Patrick
+  initials: P.P.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: bf5f562f-ad7a-4793-b133-f2e0bd5b2ea2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(04cccb2a-afca-4a5f-b252-b4139b53e19f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a9eec08a-b5b5-45b7-b173-4261be0942a2)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176045
+  retrieved: '2026-05-09'

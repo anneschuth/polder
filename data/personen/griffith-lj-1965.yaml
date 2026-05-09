@@ -1,0 +1,34 @@
+id: person:griffith-lj-1965
+identifiers:
+  tk_persoon_id: 2c8a7846-e95d-4e6b-888f-9260189bf83b
+  wikidata: Q2528669
+name:
+  full: Laetitia Griffith
+  family: Griffith
+  given: Laetitia
+  initials: L.J.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1965
+gender: f
+mandaten:
+- id: 97ff88e5-99a1-4751-a408-34b4e84f4ac4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-06-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5c9b941b-fdd1-4dce-b23e-824eaa7bd993)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2c8a7846-e95d-4e6b-888f-9260189bf83b)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2528669
+  retrieved: '2026-05-09'

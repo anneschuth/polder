@@ -1,0 +1,28 @@
+id: person:meeuwis-clm-1964
+identifiers:
+  tk_persoon_id: 2b7cd8fb-28c1-4530-af89-6711c4878cfa
+name:
+  full: Cees Meeuwis
+  family: Meeuwis
+  given: Cees
+  initials: C.L.M.
+birth:
+  year: 1964
+gender: m
+mandaten:
+- id: 7238bb61-6da7-4628-9af2-0281e2a26a4f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2009-09-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3fa662d8-60fb-4229-877f-bf5ff45e0fc6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2b7cd8fb-28c1-4530-af89-6711c4878cfa)
+  retrieved: '2026-05-09'

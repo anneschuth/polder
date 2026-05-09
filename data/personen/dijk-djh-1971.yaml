@@ -1,0 +1,34 @@
+id: person:dijk-djh-1971
+identifiers:
+  tk_persoon_id: dd85a3cc-916a-4f94-aaed-cb341eb6a036
+  wikidata: Q20026742
+name:
+  full: Diederik van Dijk
+  family: van Dijk
+  given: Diederik
+  initials: D.J.H.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: 3b25b034-27af-4b1c-8048-f27b92caabe0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SGP
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c176c8a3-ae29-4d6b-bd8e-64c4f98e609e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dd85a3cc-916a-4f94-aaed-cb341eb6a036)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q20026742
+  retrieved: '2026-05-09'

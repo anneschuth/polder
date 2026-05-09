@@ -1,0 +1,32 @@
+id: person:esch-em-1986
+identifiers:
+  tk_persoon_id: a8e4581d-5186-4367-95c5-0a754c60b276
+  wikidata: Q28860636
+name:
+  full: Eva van Esch
+  family: van Esch
+  given: Eva
+  initials: E.M.
+birth:
+  year: 1986
+gender: f
+mandaten:
+- id: f525b619-9286-4c33-abf5-9f2668bf13de
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdD
+  start_date: '2019-10-09'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fa63411a-0558-4898-b29c-2e7ed04948ff)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a8e4581d-5186-4367-95c5-0a754c60b276)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860636
+  retrieved: '2026-05-09'

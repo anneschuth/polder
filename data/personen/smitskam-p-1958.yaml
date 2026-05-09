@@ -1,0 +1,32 @@
+id: person:smitskam-p-1958
+identifiers:
+  tk_persoon_id: fb293120-43c2-466f-82ca-52111c0357d4
+  wikidata: Q123176041
+name:
+  full: Peter Smitskam
+  family: Smitskam
+  given: Peter
+  initials: P.
+birth:
+  year: 1958
+gender: m
+mandaten:
+- id: bb7140d3-42fd-4e76-a32a-2a38ce46082d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0b27b410-d28f-492a-a673-a27c945881bd)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fb293120-43c2-466f-82ca-52111c0357d4)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176041
+  retrieved: '2026-05-09'

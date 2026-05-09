@@ -1,0 +1,32 @@
+id: person:buhler-jglm-1972
+identifiers:
+  tk_persoon_id: a9b2e7ac-3f50-4f60-bea6-4d78d3d2aefa
+  wikidata: Q136554674
+name:
+  full: Judith Bühler
+  family: Bühler
+  given: Judith
+  initials: J.G.L.M.
+birth:
+  year: 1972
+gender: f
+mandaten:
+- id: fe3da5e3-ed6a-4e82-93d1-0d114ef64518
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(254c5074-c0bd-4ffd-aee4-9a894dd81cfe)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a9b2e7ac-3f50-4f60-bea6-4d78d3d2aefa)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554674
+  retrieved: '2026-05-09'

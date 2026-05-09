@@ -1,0 +1,30 @@
+id: person:dam-cjl-1963
+identifiers:
+  tk_persoon_id: b4fdf408-8296-4d14-9e95-b4b96dc20751
+name:
+  full: Chris van Dam
+  family: van Dam
+  given: Chris
+  initials: C.J.L.
+  honorifics_pre:
+  - mr. MPM
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 45e99684-131f-4887-aa3c-964739d09c04
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(99947293-c533-4ade-92af-79c2d2bda75a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b4fdf408-8296-4d14-9e95-b4b96dc20751)
+  retrieved: '2026-05-09'

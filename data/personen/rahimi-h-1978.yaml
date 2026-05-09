@@ -1,0 +1,32 @@
+id: person:rahimi-h-1978
+identifiers:
+  tk_persoon_id: b6c27e98-0f7f-42a2-9fae-50b5f8ca76cc
+  wikidata: Q106119782
+name:
+  full: Hawre Rahimi
+  family: Rahimi
+  given: Hawre
+  initials: H.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: de75ee8c-8f81-46e3-a98d-5ff10a7649ac
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2022-01-18'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(74124a91-7389-40e0-939f-12b94c7974b0)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b6c27e98-0f7f-42a2-9fae-50b5f8ca76cc)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119782
+  retrieved: '2026-05-09'

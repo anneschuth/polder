@@ -1,0 +1,32 @@
+id: person:steen-hs-1983
+identifiers:
+  tk_persoon_id: 4acb1921-a68d-40af-9f14-35112c020da5
+  wikidata: Q122190539
+name:
+  full: Hanneke Steen
+  family: Steen
+  given: Hanneke
+  initials: H.S.
+birth:
+  year: 1983
+gender: f
+mandaten:
+- id: def7643e-cf65-4ec1-ab29-0806461e91f3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e08bf62e-09b2-4d5d-8d06-50f2f3ac7450)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4acb1921-a68d-40af-9f14-35112c020da5)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q122190539
+  retrieved: '2026-05-09'

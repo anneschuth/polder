@@ -1,0 +1,46 @@
+id: person:popken-gjf-1983
+identifiers:
+  tk_persoon_id: f6e59e50-f22a-450c-8d4f-8a7072e50277
+  wikidata: Q2403818
+name:
+  full: Gabriëlle Popken
+  family: Popken
+  given: Gabriëlle
+  initials: G.J.F.
+  honorifics_pre:
+  - mr. LLM
+birth:
+  year: 1983
+gender: f
+mandaten:
+- id: 340e2629-0a3c-45a1-9279-da2283862bc7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2018-07-21'
+  end_date: '2020-08-31'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bd04cdba-77ee-486d-9d0a-e947e712bdb7)
+    retrieved: '2026-05-09'
+- id: 8075f89b-64e4-4a24-8dfd-eed1d0157b86
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2017-03-23'
+  end_date: '2018-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dd94e418-d24d-48d0-afb2-2d8f82b649e5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f6e59e50-f22a-450c-8d4f-8a7072e50277)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2403818
+  retrieved: '2026-05-09'

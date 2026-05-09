@@ -1,0 +1,40 @@
+id: person:leerdam-jawj-1961
+identifiers:
+  tk_persoon_id: 36509264-72a2-439a-90fc-11e06b8389b9
+name:
+  full: John Leerdam
+  family: Leerdam
+  given: John
+  initials: J.A.W.J.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: 65b79923-7257-4e97-97d4-8ee9dd58034e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-02-29'
+  end_date: '2012-04-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2b577e48-2aaf-49e3-b445-951da89632ab)
+    retrieved: '2026-05-09'
+- id: 8ca7954d-a0a7-4ccf-b4b2-de074c07679e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(190e835e-d3bd-4b9d-97b5-423509370df2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(36509264-72a2-439a-90fc-11e06b8389b9)
+  retrieved: '2026-05-09'

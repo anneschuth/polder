@@ -1,0 +1,32 @@
+id: person:brink-ta-1970
+identifiers:
+  tk_persoon_id: 34fc7be9-6938-4163-8c47-f95c5f87e6b5
+  wikidata: Q2295067
+name:
+  full: Tijs van den Brink
+  family: van den Brink
+  given: Tijs
+  initials: T.A.
+birth:
+  year: 1970
+gender: m
+mandaten:
+- id: 7090fc6d-fe70-4c7b-97c5-308d9d78c959
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(aa936701-f8d8-43ea-95d9-bf5a1313b0aa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(34fc7be9-6938-4163-8c47-f95c5f87e6b5)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2295067
+  retrieved: '2026-05-09'

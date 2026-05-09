@@ -1,0 +1,29 @@
+id: person:gidts-akd-d7d53443
+name:
+  full: Aernout Korff de Gidts
+  family: Gidts
+  given: Aernout Korff de
+  initials: A.K.D.
+mandaten:
+- id: mandate-post-afdelingshoofd-business-control-douane-2023-10-01
+  organization_id: org:onderdeel-business-control-douane
+  post_id: post:afdelingshoofd-business-control-douane
+  role: afdelingshoofd Business Control, directie Finance & Control, Douane, ministerie
+    van Financiën
+  start_date: '2023-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/03/aernout-korff-de-gidts-afdelingshoofd-business-control-bij-de-douane
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-11-03
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/03/aernout-korff-de-gidts-afdelingshoofd-business-control-bij-de-douane
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging

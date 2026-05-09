@@ -1,0 +1,30 @@
+id: person:kalma-p-1948
+identifiers:
+  tk_persoon_id: 662efaf6-6aaf-40cd-b5c6-7e54a2cf444a
+name:
+  full: Paul Kalma
+  family: Kalma
+  given: Paul
+  initials: P.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1948
+gender: m
+mandaten:
+- id: 67997779-edf4-4eb8-821e-22a7d40eb10d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(00b16f39-6b0c-49b8-9122-297109139c55)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(662efaf6-6aaf-40cd-b5c6-7e54a2cf444a)
+  retrieved: '2026-05-09'

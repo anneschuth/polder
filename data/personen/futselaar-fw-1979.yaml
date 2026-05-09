@@ -1,0 +1,46 @@
+id: person:futselaar-fw-1979
+identifiers:
+  tk_persoon_id: dae67415-1ed1-4464-a59e-75170eb1925d
+  wikidata: Q28861221
+name:
+  full: Frank Futselaar
+  family: Futselaar
+  given: Frank
+  initials: F.W.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1979
+gender: m
+mandaten:
+- id: 544f650d-cb79-420d-9c03-c8c2e4265dae
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-03-30'
+  end_date: '2023-07-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8736b3f2-82b6-4b17-aa8c-b5509450b9ce)
+    retrieved: '2026-05-09'
+- id: 32a22cb4-4ba8-4a9c-ac43-b15855373ec3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(edd1257c-9a27-4c0a-b6c1-851aec2096ab)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dae67415-1ed1-4464-a59e-75170eb1925d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861221
+  retrieved: '2026-05-09'

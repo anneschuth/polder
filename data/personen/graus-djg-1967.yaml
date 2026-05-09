@@ -1,0 +1,32 @@
+id: person:graus-djg-1967
+identifiers:
+  tk_persoon_id: 819764fa-3a17-467b-8327-30899ed083b6
+  wikidata: Q2285105
+name:
+  full: Dion Graus
+  family: Graus
+  given: Dion
+  initials: D.J.G.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: 8382bad1-630e-4e82-9e4b-634a5de278e1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2006-11-30'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b01c5250-01a3-4088-abe1-4bc1c95e7a34)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(819764fa-3a17-467b-8327-30899ed083b6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2285105
+  retrieved: '2026-05-09'

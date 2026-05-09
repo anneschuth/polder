@@ -1,0 +1,30 @@
+id: person:nepperus-h-1950
+identifiers:
+  tk_persoon_id: 98cf30be-80d9-498a-966f-10f3ae8ffe22
+name:
+  full: Helma Neppérus
+  family: Neppérus
+  given: Helma
+  initials: H.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1950
+gender: f
+mandaten:
+- id: e56b3fbe-3605-4519-b2d5-2360569fde1e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-11-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(771bba02-e903-49cc-85f3-ae41a6986f83)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(98cf30be-80d9-498a-966f-10f3ae8ffe22)
+  retrieved: '2026-05-09'

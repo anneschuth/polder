@@ -1,0 +1,32 @@
+id: person:beek-wii-1949
+identifiers:
+  tk_persoon_id: 0544b8ed-a3d6-4f24-923d-b8b48b08de3d
+  wikidata: Q2163334
+name:
+  full: Willibrord van Beek
+  family: van Beek
+  given: Willibrord
+  initials: W.I.I.
+birth:
+  year: 1949
+gender: m
+mandaten:
+- id: ed38713f-2e30-4997-aed8-1986ecec4589
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-06-29'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bd9fcd0f-82ed-4102-91e8-b2f6e794aae6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0544b8ed-a3d6-4f24-923d-b8b48b08de3d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2163334
+  retrieved: '2026-05-09'

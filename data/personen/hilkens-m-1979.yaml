@@ -1,0 +1,40 @@
+id: person:hilkens-m-1979
+identifiers:
+  tk_persoon_id: e5a188f3-91be-440a-9af1-44fbf7e62807
+name:
+  full: Myrthe Hilkens
+  family: Hilkens
+  given: Myrthe
+  initials: M.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: 712ccb5b-ac4e-4bd9-bbb7-58b3d466b7ea
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-01-17'
+  end_date: '2013-08-27'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bcdd4c7f-442a-4f7b-a1da-5e0bc8cd2f85)
+    retrieved: '2026-05-09'
+- id: 4b3135ef-34cf-4e0d-af00-63e87affa930
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2011-04-12'
+  end_date: '2011-08-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(011bf674-8601-4a14-9ae4-5551206c402a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e5a188f3-91be-440a-9af1-44fbf7e62807)
+  retrieved: '2026-05-09'

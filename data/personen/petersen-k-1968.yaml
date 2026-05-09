@@ -1,0 +1,27 @@
+id: person:petersen-k-1968
+name:
+  full: Koen Petersen
+  family: Petersen
+  initials: K.
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: 88c3cf77-26b2-4cb6-8b85-be6d46e49364
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor VVD
+  start_date: '2023-06-13'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/drs_k_petersen_vvd
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/drs_k_petersen_vvd
+  retrieved: '2026-05-09'

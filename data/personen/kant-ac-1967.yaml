@@ -1,0 +1,46 @@
+id: person:kant-ac-1967
+identifiers:
+  tk_persoon_id: eef6a399-b56c-4efd-8a9f-fbf1effdf196
+  wikidata: Q2024140
+name:
+  full: Agnes Kant
+  family: Kant
+  given: Agnes
+  initials: A.C.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1967
+gender: f
+mandaten:
+- id: a1a532de-e93b-4fe8-9b32-fd0d66e7ae52
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2010-03-04'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5e46ec74-86cf-4e40-b6b6-f7aa792c1974)
+    retrieved: '2026-05-09'
+- id: c8421b9d-a943-482c-b4ef-8266be159a35
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2008-06-20'
+  end_date: '2010-03-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(06379320-990f-4b2f-a0ed-bf1621f8efec)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(eef6a399-b56c-4efd-8a9f-fbf1effdf196)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2024140
+  retrieved: '2026-05-09'

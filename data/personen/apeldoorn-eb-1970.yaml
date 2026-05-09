@@ -1,0 +1,28 @@
+id: person:apeldoorn-eb-1970
+name:
+  full: Bastiaan van Apeldoorn
+  family: van Apeldoorn
+  initials: E.B.
+  honorifics_pre:
+  - Prof.
+  - dr.
+birth:
+  year: 1970
+gender: m
+mandaten:
+- id: 84ca5329-2151-46ad-a07b-a8f0ca3b3d2d
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor SP
+  start_date: '2015-06-09'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/prof_dr_e_b_van_apeldoorn_sp
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/prof_dr_e_b_van_apeldoorn_sp
+  retrieved: '2026-05-09'

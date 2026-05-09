@@ -1,0 +1,32 @@
+id: person:verheijen-ml-1976
+identifiers:
+  tk_persoon_id: de076177-b820-4aff-9629-6829277e1c16
+  wikidata: Q2537216
+name:
+  full: Mark Verheijen
+  family: Verheijen
+  given: Mark
+  initials: M.L.
+birth:
+  year: 1976
+gender: m
+mandaten:
+- id: 30c474a9-a792-448f-b99a-1aa30bd97a15
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2015-02-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(edfbb12e-3572-4541-96d5-49b1bdfb48ee)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(de076177-b820-4aff-9629-6829277e1c16)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2537216
+  retrieved: '2026-05-09'

@@ -1,0 +1,54 @@
+id: person:faber-mhm-1960
+identifiers:
+  tk_persoon_id: fe1727e3-35bc-4b62-869b-be60b0c861f7
+  wikidata: Q13815905
+name:
+  full: Marjolein Faber
+  family: Faber
+  given: Marjolein
+  initials: M.H.M.
+birth:
+  year: 1960
+gender: f
+mandaten:
+- id: 10ef24d5-68d9-4917-9099-c130ff8bba06
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bd44fdea-d9bc-4807-8377-35a157fccb46)
+    retrieved: '2026-05-09'
+- id: ce0d6440-70b0-47c6-b3ad-7d187b11c854
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4570f24b-8466-40d4-9ed8-4b7782059656)
+    retrieved: '2026-05-09'
+- id: wd-6f38b2d769ec
+  organization_id: org:min-aenm
+  post_id: post:minister-min-aenm
+  role: minister van Asiel en Migratie
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q13815905#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fe1727e3-35bc-4b62-869b-be60b0c861f7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q13815905
+  retrieved: '2026-05-09'

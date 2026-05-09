@@ -1,0 +1,46 @@
+id: person:kerseboom-s-1984
+identifiers:
+  tk_persoon_id: 0137f25d-849f-428a-b69b-822301b2274e
+  wikidata: Q105709988
+name:
+  full: Simone Kerseboom
+  family: Kerseboom
+  given: Simone
+  initials: S.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1984
+gender: f
+mandaten:
+- id: 53ea633a-4c5d-4b82-81cd-e7a5cedb8366
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2023-03-28'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(56c9adfa-c7a2-4202-a467-4fa2fa62434d)
+    retrieved: '2026-05-09'
+- id: c820b3be-314a-4040-9d21-9a1294284b86
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2021-03-31'
+  end_date: '2022-08-15'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(da39926a-aa53-43e2-a25c-1b19333f308c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0137f25d-849f-428a-b69b-822301b2274e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105709988
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:heite-a-1970
+identifiers:
+  tk_persoon_id: d30e948c-26f3-4f15-8815-852cc2717263
+  wikidata: Q123173859
+name:
+  full: Annemarie Heite
+  family: Heite
+  given: Annemarie
+  initials: A.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: ef21656b-edb4-4071-82a3-9fcf934b2f2e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fe1003df-5816-48d6-800c-543665bb25b1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d30e948c-26f3-4f15-8815-852cc2717263)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123173859
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:timmer-aj-1961
+identifiers:
+  tk_persoon_id: 2e6e88f2-4746-4d22-9f12-b1b56310c3a5
+  wikidata: Q1895552
+name:
+  full: Anja Timmer
+  family: Timmer
+  given: Anja
+  initials: A.J.
+birth:
+  year: 1961
+gender: f
+mandaten:
+- id: c386d677-ab8d-4574-9ce7-eb024c8dccea
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2007-11-20'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cd41e3cd-60be-4488-9a71-c562fd5826ba)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2e6e88f2-4746-4d22-9f12-b1b56310c3a5)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1895552
+  retrieved: '2026-05-09'

@@ -1,0 +1,34 @@
+id: person:hessels-jwmmj-1965
+identifiers:
+  tk_persoon_id: 1c85e18b-4a15-4452-b267-0a70fa34f21e
+  wikidata: Q2615959
+name:
+  full: Jos Hessels
+  family: Hessels
+  given: Jos
+  initials: J.W.M.M.J.
+  honorifics_pre:
+  - drs
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: cd7b303e-3692-4e69-82e0-a87cefb90d0c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2009-03-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(44f31785-a566-48d2-8257-a4dcbc724fc5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1c85e18b-4a15-4452-b267-0a70fa34f21e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2615959
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:vos-jc-1972
+identifiers:
+  tk_persoon_id: caaae646-de85-453f-b6e0-9b9b4f710f03
+  wikidata: Q1196000
+name:
+  full: Jan Vos
+  family: Vos
+  given: Jan
+  initials: J.C.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: c8ad92fb-9ed7-4e73-b1a4-c035c4db15a0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-09-20'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8f284536-ec02-4a3f-a2b5-89a55c198bfa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(caaae646-de85-453f-b6e0-9b9b4f710f03)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1196000
+  retrieved: '2026-05-09'

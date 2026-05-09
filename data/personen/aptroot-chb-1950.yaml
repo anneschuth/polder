@@ -1,0 +1,32 @@
+id: person:aptroot-chb-1950
+identifiers:
+  tk_persoon_id: f1d3519e-eca2-4635-8994-04a6c1a73f69
+  wikidata: Q2496643
+name:
+  full: Charlie Aptroot
+  family: Aptroot
+  given: Charlie
+  initials: C.H.B.
+birth:
+  year: 1950
+gender: m
+mandaten:
+- id: 057250a9-ab06-402f-81a4-959819e36e13
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9d49ef7a-4f5d-42f6-ae7d-3cb747f89a4e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f1d3519e-eca2-4635-8994-04a6c1a73f69)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2496643
+  retrieved: '2026-05-09'

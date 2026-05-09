@@ -1,0 +1,28 @@
+id: person:choho-b254846d
+name:
+  full: A. (Abdeluheb) Choho
+  family: Choho
+  given: A.
+  initials: A.
+mandaten:
+- id: mandate-post-algemeen-directeur-rvo-2021-03-01
+  organization_id: org:rvo
+  post_id: post:algemeen-directeur-rvo
+  role: algemeen directeur bij de Rijksdienst voor Ondernemend Nederland (RVO)
+  start_date: '2021-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/abdeluheb-choho-algemeen-directeur-bij-de-rijksdienst-voor-ondernemend-nederland
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-27
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/abdeluheb-choho-algemeen-directeur-bij-de-rijksdienst-voor-ondernemend-nederland
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging

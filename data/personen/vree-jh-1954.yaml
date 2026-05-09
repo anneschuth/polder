@@ -1,0 +1,40 @@
+id: person:vree-jh-1954
+identifiers:
+  tk_persoon_id: fe0f0f14-651a-45b2-82d6-f8a2a065b76f
+name:
+  full: Henk de Vree
+  family: de Vree
+  given: Henk
+  initials: J.H.
+birth:
+  year: 1954
+gender: m
+mandaten:
+- id: 4ce424a2-9cf6-47f5-9faa-da1e3df05ebc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(57d89a45-ec45-4261-b0f8-185edb5f9eb1)
+    retrieved: '2026-05-09'
+- id: 3af770a4-2140-48f7-93a4-821aebb300ff
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2020-12-08'
+  end_date: '2021-03-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(41837791-376b-4362-a08a-59cca9a494ea)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fe0f0f14-651a-45b2-82d6-f8a2a065b76f)
+  retrieved: '2026-05-09'

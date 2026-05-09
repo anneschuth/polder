@@ -1,0 +1,28 @@
+id: person:jacobi-l-1955
+identifiers:
+  tk_persoon_id: b1e4718d-bf16-4b46-91fd-946b42bed3af
+name:
+  full: Lutz Jacobi
+  family: Jacobi
+  given: Lutz
+  initials: L.
+birth:
+  year: 1955
+gender: f
+mandaten:
+- id: f68d07fa-9844-4dfe-86e8-879a0218f312
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7fefccef-84ec-465c-b82d-8990dc001c2c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b1e4718d-bf16-4b46-91fd-946b42bed3af)
+  retrieved: '2026-05-09'

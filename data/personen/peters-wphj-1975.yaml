@@ -1,0 +1,34 @@
+id: person:peters-wphj-1975
+identifiers:
+  tk_persoon_id: 8ba16b4b-5dc1-441e-9229-8bb63c903ce1
+  wikidata: Q29021764
+name:
+  full: René Peters
+  family: Peters
+  given: René
+  initials: W.P.H.J.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1975
+gender: m
+mandaten:
+- id: a10e0dec-ec46-455e-89ef-ccf45f83cda5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2017-03-23'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(41010c69-5ebb-4025-964f-a74d9130fa20)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8ba16b4b-5dc1-441e-9229-8bb63c903ce1)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q29021764
+  retrieved: '2026-05-09'

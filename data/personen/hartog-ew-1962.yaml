@@ -1,0 +1,25 @@
+id: person:hartog-ew-1962
+name:
+  full: Eddy Hartog
+  family: Hartog
+  initials: E.W.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: f79ce8d0-1fd2-4f1c-9553-6f8702fcd051
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor Volt
+  start_date: '2023-06-13'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/e_w_hartog_volt
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/e_w_hartog_volt
+  retrieved: '2026-05-09'

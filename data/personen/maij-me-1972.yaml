@@ -1,0 +1,32 @@
+id: person:maij-me-1972
+identifiers:
+  tk_persoon_id: 71df2edb-5973-46ec-82d7-c65ccd00abd4
+  wikidata: Q617451
+name:
+  full: Marit Maij
+  family: Maij
+  given: Marit
+  initials: M.E.
+birth:
+  year: 1972
+gender: f
+mandaten:
+- id: 0a986c6f-f052-4f0e-8bfe-2b14cdb6db00
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-09-20'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(39c7114f-8489-44eb-8c11-11afaa778fea)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71df2edb-5973-46ec-82d7-c65ccd00abd4)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q617451
+  retrieved: '2026-05-09'

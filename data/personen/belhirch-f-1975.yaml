@@ -1,0 +1,32 @@
+id: person:belhirch-f-1975
+identifiers:
+  tk_persoon_id: 59f4fe08-4b7e-42a0-9551-082b07c5945a
+  wikidata: Q117233163
+name:
+  full: Fatimazhra Belhirch
+  family: Belhirch
+  given: Fatimazhra
+  initials: F.
+birth:
+  year: 1975
+gender: f
+mandaten:
+- id: 87b2b66f-501e-4302-a2d7-d6dddee3a6d5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5b4f89a5-f501-4383-8b38-0e794f8d05ba)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(59f4fe08-4b7e-42a0-9551-082b07c5945a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q117233163
+  retrieved: '2026-05-09'

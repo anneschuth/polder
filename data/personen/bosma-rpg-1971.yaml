@@ -1,0 +1,34 @@
+id: person:bosma-rpg-1971
+identifiers:
+  tk_persoon_id: 6490a01c-b871-4639-8d60-820be9ac7834
+  wikidata: Q22927802
+name:
+  full: Remco Bosma
+  family: Bosma
+  given: Remco
+  initials: R.P.G.
+  honorifics_pre:
+  - ir
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: f0fa3048-b8d0-4f04-bd2a-0c63ff14f0d7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2016-03-01'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4d867c31-5411-47ae-a4e3-7c712f4bdb5c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6490a01c-b871-4639-8d60-820be9ac7834)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q22927802
+  retrieved: '2026-05-09'

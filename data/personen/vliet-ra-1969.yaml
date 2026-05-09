@@ -1,0 +1,46 @@
+id: person:vliet-ra-1969
+identifiers:
+  tk_persoon_id: c6b2bdaf-8c1f-4b88-a8cb-167941b98bfb
+  wikidata: Q2508545
+name:
+  full: Roland van Vliet
+  family: van Vliet
+  given: Roland
+  initials: R.A.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 57fb7050-af7b-4989-88f6-95657bba3358
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Van Vliet
+  start_date: '2014-03-21'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ce62c8bf-1d91-4342-bcd0-a540909c56e7)
+    retrieved: '2026-05-09'
+- id: 06f1ef23-bd88-44a5-8286-2283ed9e8754
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2010-06-17'
+  end_date: '2014-03-20'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(50f8bdbd-0488-4b9c-9428-b50055380719)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c6b2bdaf-8c1f-4b88-a8cb-167941b98bfb)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2508545
+  retrieved: '2026-05-09'

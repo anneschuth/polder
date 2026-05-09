@@ -1,0 +1,34 @@
+id: person:veltman-hn-1973
+identifiers:
+  tk_persoon_id: ce22e9dd-c28e-4be3-bda9-44438d709822
+  wikidata: Q123175891
+name:
+  full: Hester Veltman
+  family: Veltman
+  given: Hester
+  initials: H.N.
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1973
+gender: f
+mandaten:
+- id: 1822064e-f413-4168-acec-ea03b3c9ea7b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6110b5e7-2ab9-4341-8268-2a2ca2c7708e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ce22e9dd-c28e-4be3-bda9-44438d709822)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123175891
+  retrieved: '2026-05-09'

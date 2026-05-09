@@ -1,0 +1,49 @@
+id: person:janssen-ra-1957
+identifiers:
+  tk_persoon_id: f98ca770-661a-409a-b49f-4c81266d8597
+  wikidata: Q2016880
+name:
+  full: Rik Janssen
+  family: Janssen
+  given: Rik
+  initials: R.A.
+  honorifics_pre:
+  - Mr.
+birth:
+  year: 1957
+gender: m
+mandaten:
+- id: f2fa307c-d758-4138-96a6-9ec0f1bcfc5c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2011-01-11'
+  end_date: '2011-04-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cf830742-7b76-487d-9f67-07637e658779)
+    retrieved: '2026-05-09'
+- id: 6ae200f9-81a7-4350-b14c-de4cb8919862
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor SP
+  start_date: '2019-06-11'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/mr_r_a_janssen_sp
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f98ca770-661a-409a-b49f-4c81266d8597)
+  retrieved: '2026-05-09'
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/mr_r_a_janssen_sp
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2016880
+  retrieved: '2026-05-09'

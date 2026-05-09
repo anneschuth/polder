@@ -1,0 +1,32 @@
+id: person:jagtenberg-mh-1992
+identifiers:
+  tk_persoon_id: dc160d87-fc55-486d-9b55-a307330e4da0
+  wikidata: Q136554639
+name:
+  full: Michelle Jagtenberg
+  family: Jagtenberg
+  given: Michelle
+  initials: M.H.
+birth:
+  year: 1992
+gender: f
+mandaten:
+- id: 633f3963-9c2f-4979-b9f2-bbe54b6b9009
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2026-02-25'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(54c3798a-2a39-4932-8fa4-cd535ce44cff)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dc160d87-fc55-486d-9b55-a307330e4da0)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554639
+  retrieved: '2026-05-09'

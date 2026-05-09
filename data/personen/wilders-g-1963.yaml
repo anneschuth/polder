@@ -1,0 +1,32 @@
+id: person:wilders-g-1963
+identifiers:
+  tk_persoon_id: 6d33b9bc-7d3a-4a60-b2d7-c2b70cd11ab1
+  wikidata: Q105338
+name:
+  full: Geert Wilders
+  family: Wilders
+  given: Geert
+  initials: G.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 39384683-2b6d-4d0e-ad06-add31c227be1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2006-11-30'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2318e164-71e4-436e-a389-5c8907e14f5a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6d33b9bc-7d3a-4a60-b2d7-c2b70cd11ab1)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105338
+  retrieved: '2026-05-09'

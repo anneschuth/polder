@@ -1,0 +1,30 @@
+id: person:langkamp-mc-1971
+identifiers:
+  tk_persoon_id: 0aabc3b1-ea43-46b5-82e8-6a4b26a553df
+name:
+  full: Marianne Langkamp
+  family: Langkamp
+  given: Marianne
+  initials: M.C.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1971
+gender: f
+mandaten:
+- id: 9764db04-9ec0-4ee6-bcc3-302c24beeb32
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8f6a988f-b73a-410f-8279-756c54d77159)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0aabc3b1-ea43-46b5-82e8-6a4b26a553df)
+  retrieved: '2026-05-09'

@@ -1,0 +1,34 @@
+id: person:nispen-m-1982
+identifiers:
+  tk_persoon_id: fdc445bd-f8fe-4cfc-b387-7fd66a181674
+  wikidata: Q16069986
+name:
+  full: Michiel van Nispen
+  family: van Nispen
+  given: Michiel
+  initials: M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1982
+gender: m
+mandaten:
+- id: 7377198d-feb4-4ac9-9ae9-9c1d181ef114
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2014-04-02'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d77eb3ee-7f18-4805-bf54-4af301b2a733)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fdc445bd-f8fe-4cfc-b387-7fd66a181674)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q16069986
+  retrieved: '2026-05-09'

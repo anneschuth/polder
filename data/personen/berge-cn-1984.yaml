@@ -1,0 +1,44 @@
+id: person:berge-cn-1984
+identifiers:
+  tk_persoon_id: 99c6218e-8f0c-45d4-bd24-f300c6cfcb2f
+  wikidata: Q1981432
+name:
+  full: Niels van den Berge
+  family: van den Berge
+  given: Niels
+  initials: C.N.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: 9deab171-6c21-4aae-8fee-5492a9ca2718
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2019-06-05'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fa971902-7611-4924-8ca0-1fe86fc7a945)
+    retrieved: '2026-05-09'
+- id: 0aa62675-61ac-4613-a033-c3deb5c424e5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2011-01-12'
+  end_date: '2011-03-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29925dd4-82ec-41f2-b8d1-7d874b285a30)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(99c6218e-8f0c-45d4-bd24-f300c6cfcb2f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1981432
+  retrieved: '2026-05-09'

@@ -1,0 +1,42 @@
+id: person:burg-e-1965
+identifiers:
+  tk_persoon_id: ad900f22-2dd0-4525-bb71-96550fa7985f
+  wikidata: Q2084799
+name:
+  full: Eric van der Burg
+  family: van der Burg
+  given: Eric
+  initials: E.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: 877b9693-a1f6-4211-8697-5f1d4d3098fb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d8d989d8-e518-47ec-bfb3-1018c0299078)
+    retrieved: '2026-05-09'
+- id: wd-8d5841fa9ab9
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2084799#P39
+    retrieved: '2026-05-09'
+  end_date: '2023-10-30'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ad900f22-2dd0-4525-bb71-96550fa7985f)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2084799
+  retrieved: '2026-05-09'

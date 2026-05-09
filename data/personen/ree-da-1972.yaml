@@ -1,0 +1,32 @@
+id: person:ree-da-1972
+identifiers:
+  tk_persoon_id: 7ab9c0fc-1503-4b03-a7f9-a872ac0bb85e
+  wikidata: Q26833712
+name:
+  full: Daniël van der Ree
+  family: van der Ree
+  given: Daniël
+  initials: D.A.
+birth:
+  year: 1972
+gender: m
+mandaten:
+- id: 4ace7e7d-8b5b-47ac-9f2b-3411b9c587b2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2016-09-07'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29271f08-4820-4347-b339-f642a5780c07)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7ab9c0fc-1503-4b03-a7f9-a872ac0bb85e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q26833712
+  retrieved: '2026-05-09'

@@ -1,0 +1,56 @@
+id: person:roemer-egm-1962
+identifiers:
+  tk_persoon_id: 3dd45c3b-636a-4f17-b11c-72e3cfc56330
+  wikidata: Q1337248
+name:
+  full: Emile Roemer
+  family: Roemer
+  given: Emile
+  initials: E.G.M.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: 77002465-d907-44cb-8075-e7cc15ecd94a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-12-13'
+  end_date: '2018-01-17'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fb75f663-048a-4088-ac68-6c5e9284c071)
+    retrieved: '2026-05-09'
+- id: fbdef1c0-fdef-49c9-965f-de47d67d879c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2010-03-05'
+  end_date: '2017-12-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(91f76dd0-937a-4d56-a500-721ede67d827)
+    retrieved: '2026-05-09'
+- id: 695ca696-db95-47b5-832b-7c91287e9990
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2010-03-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(da387a38-39b5-4df0-8981-9a547578e9d6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3dd45c3b-636a-4f17-b11c-72e3cfc56330)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1337248
+  retrieved: '2026-05-09'

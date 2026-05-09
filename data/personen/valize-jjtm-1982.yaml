@@ -1,0 +1,34 @@
+id: person:valize-jjtm-1982
+identifiers:
+  tk_persoon_id: 4ecd2363-b9f8-444a-8cdf-cd8e83fa4116
+  wikidata: Q123176048
+name:
+  full: Jan Valize
+  family: Valize
+  given: Jan
+  initials: J.J.T.M.
+  honorifics_pre:
+  - Ing
+birth:
+  year: 1982
+gender: m
+mandaten:
+- id: 9297f9fb-3a85-481e-be7f-54bc62f103bf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(89da9d67-896f-4eea-b92b-8482be89231c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4ecd2363-b9f8-444a-8cdf-cd8e83fa4116)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176048
+  retrieved: '2026-05-09'

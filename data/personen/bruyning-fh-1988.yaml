@@ -1,0 +1,32 @@
+id: person:bruyning-fh-1988
+identifiers:
+  tk_persoon_id: 0099298f-7327-4a49-823e-79e1435bb149
+  wikidata: Q123173875
+name:
+  full: Faith Bruyning
+  family: Bruyning
+  given: Faith
+  initials: F.H.
+birth:
+  year: 1988
+gender: f
+mandaten:
+- id: 381a888b-231d-4a26-ba96-a6c9f62c9cf2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(92420962-ff34-4632-aca1-ae85e008b361)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0099298f-7327-4a49-823e-79e1435bb149)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123173875
+  retrieved: '2026-05-09'

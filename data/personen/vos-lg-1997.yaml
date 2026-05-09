@@ -1,0 +1,56 @@
+id: person:vos-lg-1997
+identifiers:
+  tk_persoon_id: 0fa85a58-19e2-4a9e-8d13-0c2bf8ec38da
+  wikidata: Q123215556
+name:
+  full: Lidewij de Vos
+  family: de Vos
+  given: Lidewij
+  initials: L.G.
+birth:
+  year: 1997
+gender: f
+mandaten:
+- id: 21bf6e00-741f-439e-86eb-41829bdc0aad
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2025-09-04'
+  end_date: '2025-09-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9a2f661c-fd6b-4791-b855-044f71203a4a)
+    retrieved: '2026-05-09'
+- id: b47997a5-4782-4975-a574-a18b9094390d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2025-09-04'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7aabbd2f-9318-40bd-8601-9da648a1cc9a)
+    retrieved: '2026-05-09'
+- id: 56a30d77-f27e-4efd-bc5a-fbe7f68c8a44
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2025-01-16'
+  end_date: '2025-03-31'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b3902f79-1493-4aed-97c7-f16b208b8e0f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0fa85a58-19e2-4a9e-8d13-0c2bf8ec38da)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123215556
+  retrieved: '2026-05-09'

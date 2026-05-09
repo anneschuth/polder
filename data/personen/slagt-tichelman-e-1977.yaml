@@ -1,0 +1,28 @@
+id: person:slagt-tichelman-e-1977
+identifiers:
+  tk_persoon_id: dec3c54b-fb7a-4d4c-9e7e-ff622d7b63ab
+name:
+  full: Elke Slagt-Tichelman
+  family: Slagt-Tichelman
+  given: Elke
+  initials: E.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 08dbaf1f-50e3-4984-82bc-a0dd8d41e7d7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b4e3807d-44e8-4f14-a988-ccf0051350f3)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dec3c54b-fb7a-4d4c-9e7e-ff622d7b63ab)
+  retrieved: '2026-05-09'

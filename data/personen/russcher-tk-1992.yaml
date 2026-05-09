@@ -1,0 +1,32 @@
+id: person:russcher-tk-1992
+identifiers:
+  tk_persoon_id: 9d29cdee-6873-41d1-b4f5-61940ef11cb7
+  wikidata: Q123215557
+name:
+  full: Tom Russcher
+  family: Russcher
+  given: Tom
+  initials: T.K.
+birth:
+  year: 1992
+gender: m
+mandaten:
+- id: 01fff048-ed09-4ed7-8159-d148ecd2038a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2026-01-15'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(740d440a-2591-4568-b980-a29fb1a5681e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9d29cdee-6873-41d1-b4f5-61940ef11cb7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123215557
+  retrieved: '2026-05-09'

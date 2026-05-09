@@ -1,0 +1,32 @@
+id: person:laan-jmp-1980
+identifiers:
+  tk_persoon_id: fb291eb2-962a-482f-971a-0b62673f9a86
+  wikidata: Q21551575
+name:
+  full: Jeanet van der Laan
+  family: van der Laan
+  given: Jeanet
+  initials: J.M.P.
+birth:
+  year: 1980
+gender: f
+mandaten:
+- id: 1a3e3762-9493-4f54-a69d-06eb594ba080
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5462fa0b-7f3d-42a7-ac84-cf11d6eded54)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fb291eb2-962a-482f-971a-0b62673f9a86)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q21551575
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:rouwe-s-1980
+identifiers:
+  tk_persoon_id: de674538-350f-4a5a-9f8e-fa8f7c4b93ca
+name:
+  full: Sander de Rouwe
+  family: de Rouwe
+  given: Sander
+  initials: S.
+birth:
+  year: 1980
+gender: m
+mandaten:
+- id: fa9cde9c-62ef-40b5-8a9d-681d1a5e8e64
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2007-03-01'
+  end_date: '2015-05-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(76f0f6ee-2098-43b3-9359-acade507b4cd)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(de674538-350f-4a5a-9f8e-fa8f7c4b93ca)
+  retrieved: '2026-05-09'

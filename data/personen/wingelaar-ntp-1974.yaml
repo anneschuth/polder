@@ -1,0 +1,32 @@
+id: person:wingelaar-ntp-1974
+identifiers:
+  tk_persoon_id: 29b1ab44-c05f-4299-84d1-1918b3afbfb7
+  wikidata: Q123173943
+name:
+  full: Natascha Wingelaar
+  family: Wingelaar
+  given: Natascha
+  initials: N.T.P.
+birth:
+  year: 1974
+gender: f
+mandaten:
+- id: 7434a602-c59d-4a6f-bbe1-8ddeb632a7bf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c6d87ecc-99af-4407-b4c3-cf7270c861d4)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(29b1ab44-c05f-4299-84d1-1918b3afbfb7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123173943
+  retrieved: '2026-05-09'

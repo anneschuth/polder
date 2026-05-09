@@ -1,0 +1,32 @@
+id: person:strolenberg-mf-1979
+identifiers:
+  tk_persoon_id: f067f702-8e06-491a-9498-462205d1aaec
+  wikidata: Q106119777
+name:
+  full: Mark Strolenberg
+  family: Strolenberg
+  given: Mark
+  initials: M.F.
+birth:
+  year: 1979
+gender: m
+mandaten:
+- id: 13156de6-268f-424f-a577-e8cf61c5696f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-09-07'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(682b126a-04d7-43c2-8f93-e3e3d89382b4)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f067f702-8e06-491a-9498-462205d1aaec)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119777
+  retrieved: '2026-05-09'

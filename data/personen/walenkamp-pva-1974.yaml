@@ -1,0 +1,28 @@
+id: person:walenkamp-pva-1974
+name:
+  full: Pim Walenkamp
+  family: Walenkamp
+  initials: P.V.A.
+  honorifics_pre:
+  - Drs.
+  honorifics_post:
+  - MA
+birth:
+  year: 1974
+mandaten:
+- id: e1eb1f3e-d666-4365-9a79-c429f1c8ade2
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor Fractie-Walenkamp
+  start_date: '2025-09-23'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/drs_p_v_a_walenkamp_ma_fractie
+    retrieved: '2026-05-09'
+sources:
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/drs_p_v_a_walenkamp_ma_fractie
+  retrieved: '2026-05-09'

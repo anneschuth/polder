@@ -1,0 +1,32 @@
+id: person:asante-aa-1972
+identifiers:
+  tk_persoon_id: 14d9be8b-5e75-401c-a1cc-7a8ab59b36e7
+  wikidata: Q26836974
+name:
+  full: Amma Asante
+  family: Asante
+  given: Amma
+  initials: A.A.
+birth:
+  year: 1972
+gender: f
+mandaten:
+- id: fe6a9e0d-7260-418f-9461-c18c88e905b3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2016-09-07'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9ebab75d-245d-4b71-8be3-d24b87a09caa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(14d9be8b-5e75-401c-a1cc-7a8ab59b36e7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q26836974
+  retrieved: '2026-05-09'

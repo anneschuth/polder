@@ -1,0 +1,32 @@
+id: person:geselschap-jh-1969
+identifiers:
+  tk_persoon_id: 93ab40af-c3b7-4479-a8c5-63cf411c0e90
+  wikidata: Q27941488
+name:
+  full: Jock Geselschap
+  family: Geselschap
+  given: Jock
+  initials: J.H.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 919ea8d7-3276-4699-869b-8d7610600c04
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2016-11-30'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a4cf87ef-04e1-4963-8309-1b24bf5ff14b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(93ab40af-c3b7-4479-a8c5-63cf411c0e90)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q27941488
+  retrieved: '2026-05-09'

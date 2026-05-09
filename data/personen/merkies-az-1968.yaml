@@ -1,0 +1,32 @@
+id: person:merkies-az-1968
+identifiers:
+  tk_persoon_id: 54cbf78c-ae5e-49b7-8fcc-41d0fb7b5855
+  wikidata: Q251781
+name:
+  full: Arnold Merkies
+  family: Merkies
+  given: Arnold
+  initials: A.Z.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: c4bdbbf8-4cdd-4b27-a627-966f20acae5b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2012-09-20'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c673587-9f81-4881-909f-a50119b98314)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(54cbf78c-ae5e-49b7-8fcc-41d0fb7b5855)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q251781
+  retrieved: '2026-05-09'

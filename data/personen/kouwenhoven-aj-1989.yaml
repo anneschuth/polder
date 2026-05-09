@@ -1,0 +1,28 @@
+id: person:kouwenhoven-aj-1989
+identifiers:
+  tk_persoon_id: c4263332-2bce-405c-a17f-5ce6ed775719
+name:
+  full: Bram Kouwenhoven
+  family: Kouwenhoven
+  given: Bram
+  initials: A.J.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: 5830f652-da58-4f28-975a-715987b824e1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2025-05-14'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3407e732-7651-44c6-9a0f-1fa63d58dd0c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c4263332-2bce-405c-a17f-5ce6ed775719)
+  retrieved: '2026-05-09'

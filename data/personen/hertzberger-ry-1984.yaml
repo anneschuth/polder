@@ -1,0 +1,44 @@
+id: person:hertzberger-ry-1984
+identifiers:
+  tk_persoon_id: 5c210796-8517-4874-97c8-f9e15af72695
+  wikidata: Q29317688
+name:
+  full: Rosanne Hertzberger
+  family: Hertzberger
+  given: Rosanne
+  initials: R.Y.
+birth:
+  year: 1984
+gender: f
+mandaten:
+- id: ad5b0026-3c6d-415e-8db4-67bde2c49979
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2025-07-01'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(adfc53d9-2a6b-4298-964f-302736708dc2)
+    retrieved: '2026-05-09'
+- id: e8459d6d-f433-4aa4-8d68-d1750b8da6ab
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2024-11-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(08de2a0b-7a33-434f-ad8c-41211669bd37)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5c210796-8517-4874-97c8-f9e15af72695)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q29317688
+  retrieved: '2026-05-09'

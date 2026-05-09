@@ -1,0 +1,42 @@
+id: person:klink-a-1958
+identifiers:
+  tk_persoon_id: e349057c-4f1d-481f-8411-fcc0a29d672d
+  wikidata: Q303926
+name:
+  full: Ab Klink
+  family: Klink
+  given: Ab
+  initials: A.
+birth:
+  year: 1958
+gender: m
+mandaten:
+- id: c20f0d1f-3a04-464f-b981-a74eacc79a2d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-06-17'
+  end_date: '2010-09-06'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(120e5c5d-d8f3-468b-a870-9cfe89dd8b21)
+    retrieved: '2026-05-09'
+- id: wd-3b51ee42b3cd
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q303926#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-10-14'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e349057c-4f1d-481f-8411-fcc0a29d672d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q303926
+  retrieved: '2026-05-09'

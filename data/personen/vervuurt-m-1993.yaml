@@ -1,0 +1,28 @@
+id: person:vervuurt-m-1993
+identifiers:
+  tk_persoon_id: d36d9afd-613a-4dbe-bfef-785967a9b807
+name:
+  full: Marc Vervuurt
+  family: Vervuurt
+  given: Marc
+  initials: M.
+birth:
+  year: 1993
+gender: m
+mandaten:
+- id: e7b0eaed-b0a7-418d-994a-e98ff336271e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a19d036a-e338-4f75-b140-c58caf154ad7)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d36d9afd-613a-4dbe-bfef-785967a9b807)
+  retrieved: '2026-05-09'

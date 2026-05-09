@@ -1,0 +1,44 @@
+id: person:thijssen-j-1974
+identifiers:
+  tk_persoon_id: 2aeb5ca9-f64f-4ec6-a0ce-83223bff4772
+  wikidata: Q104439773
+name:
+  full: Joris Thijssen
+  family: Thijssen
+  given: Joris
+  initials: J.
+birth:
+  year: 1974
+gender: m
+mandaten:
+- id: 99f18619-dcc0-4329-a7ce-21d6ceac5f8a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fff875c7-8a3a-4d3d-a6ce-a33afb62cd71)
+    retrieved: '2026-05-09'
+- id: f5fe422b-ded4-4d11-9b17-813cc102e712
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2021-03-31'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c1515217-9b32-4d0c-b84d-98b1199f0524)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2aeb5ca9-f64f-4ec6-a0ce-83223bff4772)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q104439773
+  retrieved: '2026-05-09'

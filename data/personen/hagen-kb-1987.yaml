@@ -1,0 +1,28 @@
+id: person:hagen-kb-1987
+identifiers:
+  tk_persoon_id: 425ddb12-0b71-44b6-9875-70b075dc99f7
+name:
+  full: Kiki Hagen
+  family: Hagen
+  given: Kiki
+  initials: K.B.
+birth:
+  year: 1987
+gender: f
+mandaten:
+- id: 94672e22-76df-48e1-89aa-cb76003e79ba
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e925ff59-9483-452a-88e7-dbd02ee5e5b2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(425ddb12-0b71-44b6-9875-70b075dc99f7)
+  retrieved: '2026-05-09'

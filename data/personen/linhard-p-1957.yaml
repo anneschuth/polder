@@ -1,0 +1,32 @@
+id: person:linhard-p-1957
+identifiers:
+  tk_persoon_id: fee4b6df-a726-4753-84fd-eb5ee1fb2f23
+  wikidata: Q2629722
+name:
+  full: Patricia Linhard
+  family: Linhard
+  given: Patricia
+  initials: P.
+birth:
+  year: 1957
+gender: f
+mandaten:
+- id: c31b7584-e92a-4628-8079-e55df42fde08
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2009-05-12'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8cc078a7-323a-4b6c-8ef5-77bf566eba94)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fee4b6df-a726-4753-84fd-eb5ee1fb2f23)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2629722
+  retrieved: '2026-05-09'

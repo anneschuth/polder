@@ -1,0 +1,52 @@
+id: person:jager-jc-1969
+identifiers:
+  tk_persoon_id: 51e0ca40-eedf-4a02-bf00-a6ce42666aab
+  wikidata: Q1666631
+name:
+  full: Jan Kees de Jager
+  family: de Jager
+  given: Jan Kees
+  initials: J.C.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: d203ec2a-4821-453d-badd-8420f42698e5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-06-17'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(31e4b2e6-d404-42f5-9012-90ab9c59f63a)
+    retrieved: '2026-05-09'
+- id: wd-c5bd5b224e5f
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Nederlands minister van Financiën
+  start_date: '2010-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1666631#P39
+    retrieved: '2026-05-09'
+  end_date: '2012-11-05'
+- id: wd-7e397c37447a
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1666631#P39
+    retrieved: '2026-05-09'
+  end_date: '2010-02-23'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(51e0ca40-eedf-4a02-bf00-a6ce42666aab)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1666631
+  retrieved: '2026-05-09'

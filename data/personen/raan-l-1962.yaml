@@ -1,0 +1,30 @@
+id: person:raan-l-1962
+identifiers:
+  tk_persoon_id: 5d54939f-2da7-4ca6-b159-4ef344336b21
+name:
+  full: Lammert van Raan
+  family: van Raan
+  given: Lammert
+  initials: L.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: 992336ec-aaec-4156-9a33-98b59c8f64f8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdD
+  start_date: '2017-03-23'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3aa6b96b-bc89-44ef-88b1-1a3c26478543)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5d54939f-2da7-4ca6-b159-4ef344336b21)
+  retrieved: '2026-05-09'

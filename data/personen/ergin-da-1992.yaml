@@ -1,0 +1,32 @@
+id: person:ergin-da-1992
+identifiers:
+  tk_persoon_id: 02da66c7-029f-4207-a00d-21babf0d3cc6
+  wikidata: Q122451915
+name:
+  full: Doğukan Ergin
+  family: Ergin
+  given: Doğukan
+  initials: D.A.
+birth:
+  year: 1992
+gender: m
+mandaten:
+- id: 53330eae-48ea-4f08-96b4-c974ab06e4eb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b86d3316-8877-4094-a269-d3a8662d87af)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(02da66c7-029f-4207-a00d-21babf0d3cc6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q122451915
+  retrieved: '2026-05-09'

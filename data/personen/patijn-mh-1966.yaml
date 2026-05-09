@@ -1,0 +1,32 @@
+id: person:patijn-mh-1966
+identifiers:
+  tk_persoon_id: 3dd43fe1-c99a-4826-b08f-4ed3fc0dd9ba
+  wikidata: Q122395357
+name:
+  full: Mariëtte Patijn
+  family: Patijn
+  given: Mariëtte
+  initials: M.H.
+birth:
+  year: 1966
+gender: f
+mandaten:
+- id: 0254bf35-d829-4bdb-be30-c50164084fdc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7b7d34dd-7ca2-4116-800d-437cc55ee69c)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3dd43fe1-c99a-4826-b08f-4ed3fc0dd9ba)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q122395357
+  retrieved: '2026-05-09'

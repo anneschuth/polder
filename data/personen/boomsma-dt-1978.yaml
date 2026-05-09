@@ -1,0 +1,40 @@
+id: person:boomsma-dt-1978
+identifiers:
+  tk_persoon_id: 5c9533b7-a733-480e-bb38-711e96129684
+name:
+  full: Diederik Boomsma
+  family: Boomsma
+  given: Diederik
+  initials: D.T.
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 0f5ff963-7670-4eba-9f25-966611f4c9dd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor JA21
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5656deef-d5e6-439e-a12d-f565211f8b41)
+    retrieved: '2026-05-09'
+- id: 4caf078b-11db-42bd-b487-21b262c6816f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2024-07-04'
+  end_date: '2025-08-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3d097893-307c-473e-b718-8021855a9570)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5c9533b7-a733-480e-bb38-711e96129684)
+  retrieved: '2026-05-09'

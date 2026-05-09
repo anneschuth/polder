@@ -1,0 +1,44 @@
+id: person:piri-kp-1979
+identifiers:
+  tk_persoon_id: a437e923-725f-415e-a01d-5588a7af933e
+  wikidata: Q17143453
+name:
+  full: Kati Piri
+  family: Piri
+  given: Kati
+  initials: K.P.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: 81831a2c-ee7b-4773-ad26-07446b4071c4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(620c511a-c8ca-445a-aaf1-5b937ace3d81)
+    retrieved: '2026-05-09'
+- id: ec8ddf06-f43e-45e1-8ba6-36cbe46ecf85
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2021-03-31'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1bf8decc-519e-48fd-a994-7f3c743d9f45)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a437e923-725f-415e-a01d-5588a7af933e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q17143453
+  retrieved: '2026-05-09'

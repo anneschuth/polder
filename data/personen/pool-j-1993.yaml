@@ -1,0 +1,30 @@
+id: person:pool-j-1993
+identifiers:
+  tk_persoon_id: 71b17b6c-08c9-4ae7-90cc-292603765c24
+name:
+  full: Joeri Pool
+  family: Pool
+  given: Joeri
+  initials: J.
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1993
+gender: m
+mandaten:
+- id: 82648d8d-90d8-4cb6-aff6-d9a0c7025c1e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(94230488-f0c4-4f0c-a548-3366887127ef)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71b17b6c-08c9-4ae7-90cc-292603765c24)
+  retrieved: '2026-05-09'

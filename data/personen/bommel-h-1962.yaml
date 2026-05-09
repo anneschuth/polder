@@ -1,0 +1,34 @@
+id: person:bommel-h-1962
+identifiers:
+  tk_persoon_id: 7265b8e8-62d4-4ba2-8117-8f758fbf606e
+  wikidata: Q1586909
+name:
+  full: Harry van Bommel
+  family: van Bommel
+  given: Harry
+  initials: H.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: 3e296fa6-6ae5-4e01-af08-0619b98b44ab
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '1998-05-19'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9f827410-f6d6-4100-a567-3eadf0657f51)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7265b8e8-62d4-4ba2-8117-8f758fbf606e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1586909
+  retrieved: '2026-05-09'

@@ -1,0 +1,28 @@
+id: person:snoeren-maj-1974
+identifiers:
+  tk_persoon_id: 722997ad-c4fa-4012-9ea5-f1314978764b
+name:
+  full: Mark Snoeren
+  family: Snoeren
+  given: Mark
+  initials: M.A.J.
+birth:
+  year: 1974
+gender: m
+mandaten:
+- id: a5271cc1-49f1-45ac-b061-01a9e8217816
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2020-09-22'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9e33fd72-dd2d-4e27-a50e-a300f0bab68a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(722997ad-c4fa-4012-9ea5-f1314978764b)
+  retrieved: '2026-05-09'

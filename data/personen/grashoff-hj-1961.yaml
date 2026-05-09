@@ -1,0 +1,42 @@
+id: person:grashoff-hj-1961
+identifiers:
+  tk_persoon_id: 202e3325-7f81-4c5a-8aee-386a4bcd87e2
+name:
+  full: Rik Grashoff
+  family: Grashoff
+  given: Rik
+  initials: H.J.
+  honorifics_pre:
+  - ir.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: 33fcbd6c-23e1-4c3f-bf48-127e6161488f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2015-05-20'
+  end_date: '2018-06-06'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c2a8f8e7-4819-4dd0-b8f7-a9cf7cffac40)
+    retrieved: '2026-05-09'
+- id: 79bd082c-9846-4f4d-af5b-006026451293
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2010-11-23'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b8a79931-54be-4376-939d-33fd8c6b17b0)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(202e3325-7f81-4c5a-8aee-386a4bcd87e2)
+  retrieved: '2026-05-09'

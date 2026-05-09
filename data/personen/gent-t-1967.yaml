@@ -1,0 +1,28 @@
+id: person:gent-t-1967
+identifiers:
+  tk_persoon_id: ad44b24f-bb14-4f4a-a476-3cbbb3e9cdb0
+name:
+  full: Tobias van Gent
+  family: van Gent
+  given: Tobias
+  initials: T.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: 600e420e-4ea3-4ec7-85e0-5241aea10dcc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2018-09-05'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(569ce1a4-d875-4a4b-8d84-0067c82b5ddf)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ad44b24f-bb14-4f4a-a476-3cbbb3e9cdb0)
+  retrieved: '2026-05-09'

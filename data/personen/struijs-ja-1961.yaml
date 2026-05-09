@@ -1,0 +1,32 @@
+id: person:struijs-ja-1961
+identifiers:
+  tk_persoon_id: 21674d1a-d86e-46e4-bff5-7cc3e4c7d270
+  wikidata: Q113686677
+name:
+  full: Jan Struijs
+  family: Struijs
+  given: Jan
+  initials: J.A.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: c13d94c8-db09-4a5e-b3bc-198d6f9fc0ac
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e28b5c59-564b-43e0-87de-fc60e3537d8a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(21674d1a-d86e-46e4-bff5-7cc3e4c7d270)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q113686677
+  retrieved: '2026-05-09'

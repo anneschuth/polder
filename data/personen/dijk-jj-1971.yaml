@@ -1,0 +1,46 @@
+id: person:dijk-jj-1971
+identifiers:
+  tk_persoon_id: 2b533923-83a2-4ac6-b497-934a549b50ab
+  wikidata: Q20026742
+name:
+  full: Jasper van Dijk
+  family: van Dijk
+  given: Jasper
+  initials: J.J.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: 0ca9ff60-354e-4e16-8c5d-611371d07947
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-07-20'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9b8529ee-e70d-49ef-8886-c0c44fac9b4a)
+    retrieved: '2026-05-09'
+- id: 22922ab1-efa3-4a6c-881e-83a629dc16c8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2023-03-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1aeeb6e6-f8a7-460d-a6c4-da539c60e86d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2b533923-83a2-4ac6-b497-934a549b50ab)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q20026742
+  retrieved: '2026-05-09'

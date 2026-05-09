@@ -1,0 +1,32 @@
+id: person:armut-e-1998
+identifiers:
+  tk_persoon_id: e71290ca-7a53-4466-889b-fe1d113005ec
+  wikidata: Q136554680
+name:
+  full: Etkin Armut
+  family: Armut
+  given: Etkin
+  initials: E.
+birth:
+  year: 1998
+gender: f
+mandaten:
+- id: 8b84dd8b-9b94-417d-9cb6-7e7c7d42555b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(403e021e-845d-4caf-bfd3-9d1ac8c91924)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e71290ca-7a53-4466-889b-fe1d113005ec)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554680
+  retrieved: '2026-05-09'

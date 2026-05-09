@@ -1,0 +1,34 @@
+id: person:snels-baw-1966
+identifiers:
+  tk_persoon_id: b50b3f0b-afc8-46e5-bfda-cb60e2935a5a
+  wikidata: Q1871234
+name:
+  full: Bart Snels
+  family: Snels
+  given: Bart
+  initials: B.A.W.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: 9b0bd444-3314-41da-885b-636aaaf2e4cb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2017-03-23'
+  end_date: '2021-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cf8ab9be-f861-4e3e-81c7-c9de3c4ce792)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b50b3f0b-afc8-46e5-bfda-cb60e2935a5a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1871234
+  retrieved: '2026-05-09'

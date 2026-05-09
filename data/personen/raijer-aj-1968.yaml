@@ -1,0 +1,32 @@
+id: person:raijer-aj-1968
+identifiers:
+  tk_persoon_id: 50b2f0b4-0fd9-473e-bcde-17bdff81fc73
+  wikidata: Q123176053
+name:
+  full: Annette Raijer
+  family: Raijer
+  given: Annette
+  initials: A.J.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: 2ddf3ebf-0240-4a59-9a7b-2090f7255e55
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8d3c3f07-d259-43ee-ad73-ecad1a44d4b0)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(50b2f0b4-0fd9-473e-bcde-17bdff81fc73)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176053
+  retrieved: '2026-05-09'

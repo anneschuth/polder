@@ -1,0 +1,32 @@
+id: person:kent-b-1983
+identifiers:
+  tk_persoon_id: 196d0048-0369-4786-ba81-bda9da8c3636
+  wikidata: Q28861218
+name:
+  full: Bart van Kent
+  family: van Kent
+  given: Bart
+  initials: B.
+birth:
+  year: 1983
+gender: m
+mandaten:
+- id: 54f57fc9-600b-4337-a382-5dbce1336c96
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2017-03-23'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b83fc5d2-337a-4e92-b865-58a81a3b3f3a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(196d0048-0369-4786-ba81-bda9da8c3636)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861218
+  retrieved: '2026-05-09'

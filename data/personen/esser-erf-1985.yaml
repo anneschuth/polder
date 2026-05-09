@@ -1,0 +1,32 @@
+id: person:esser-erf-1985
+identifiers:
+  tk_persoon_id: c7cd9800-ef47-4739-81da-041bae01039b
+  wikidata: Q123176042
+name:
+  full: Eric Esser
+  family: Esser
+  given: Eric
+  initials: E.R.F.
+birth:
+  year: 1985
+gender: m
+mandaten:
+- id: 9f97bd8c-eee9-40f8-b139-2f971941e243
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(82a65f00-6cdd-4dff-8d2d-4cede13ec4f5)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c7cd9800-ef47-4739-81da-041bae01039b)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176042
+  retrieved: '2026-05-09'

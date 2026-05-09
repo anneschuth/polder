@@ -1,0 +1,32 @@
+id: person:veen-e-1946
+identifiers:
+  tk_persoon_id: 75f4c1ff-5825-42d5-b45b-1fba913b43e6
+  wikidata: Q2710877
+name:
+  full: Eeke van der Veen
+  family: van der Veen
+  given: Eeke
+  initials: E.
+birth:
+  year: 1946
+gender: m
+mandaten:
+- id: ea8ad1dd-702b-479b-8046-aef15a464995
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-11-30'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(502125d4-c78d-4475-9eaa-4dd14b911e2e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(75f4c1ff-5825-42d5-b45b-1fba913b43e6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2710877
+  retrieved: '2026-05-09'

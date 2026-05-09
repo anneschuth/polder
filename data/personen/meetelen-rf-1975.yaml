@@ -1,0 +1,32 @@
+id: person:meetelen-rf-1975
+identifiers:
+  tk_persoon_id: 0f5bdaad-ea3e-4d01-a85f-46010d9fb514
+  wikidata: Q123176032
+name:
+  full: Rachel van Meetelen
+  family: van Meetelen
+  given: Rachel
+  initials: R.F.
+birth:
+  year: 1975
+gender: f
+mandaten:
+- id: 0a5ed93b-eeaa-4977-8183-b448762c65a9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2023-12-06'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(04816671-a661-45a4-b0c5-c9cda5927797)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0f5bdaad-ea3e-4d01-a85f-46010d9fb514)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176032
+  retrieved: '2026-05-09'

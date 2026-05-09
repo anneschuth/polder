@@ -1,0 +1,32 @@
+id: person:sahla-f-1979
+identifiers:
+  tk_persoon_id: f289b7eb-f6ba-415b-90d9-1124c652637c
+  wikidata: Q105750190
+name:
+  full: Fonda Sahla
+  family: Sahla
+  given: Fonda
+  initials: F.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: 8d3c7d5e-5271-4c4c-b5bd-136acfaae037
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-10-27'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b4b23e57-941c-4b59-bc2c-4a4574c5939a)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f289b7eb-f6ba-415b-90d9-1124c652637c)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105750190
+  retrieved: '2026-05-09'

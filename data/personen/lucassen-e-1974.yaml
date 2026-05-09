@@ -1,0 +1,32 @@
+id: person:lucassen-e-1974
+identifiers:
+  tk_persoon_id: 0b4c65fd-3673-4ecd-8c26-182203dd0f35
+  wikidata: Q2279012
+name:
+  full: Eric Lucassen
+  family: Lucassen
+  given: Eric
+  initials: E.
+birth:
+  year: 1974
+gender: m
+mandaten:
+- id: c1aaeb91-54a0-4a13-9ed5-86c7e9afb361
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2010-06-17'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4e99fa2d-8a99-420a-aa17-e98eefad2225)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0b4c65fd-3673-4ecd-8c26-182203dd0f35)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2279012
+  retrieved: '2026-05-09'

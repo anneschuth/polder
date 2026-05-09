@@ -1,0 +1,30 @@
+id: person:saris-ig-1975
+identifiers:
+  tk_persoon_id: 4b15319d-8c5b-4a29-92c6-b144a1976026
+name:
+  full: Ilse Saris
+  family: Saris
+  given: Ilse
+  initials: I.G.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1975
+gender: f
+mandaten:
+- id: dd86ab0c-1d62-40c4-aa6d-d08925a387bd
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f69f4c42-2764-4375-a64e-e0a360277935)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4b15319d-8c5b-4a29-92c6-b144a1976026)
+  retrieved: '2026-05-09'

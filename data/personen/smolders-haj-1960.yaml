@@ -1,0 +1,44 @@
+id: person:smolders-haj-1960
+identifiers:
+  tk_persoon_id: eb79af3c-a66d-4374-b9e7-34d7f3e92dc7
+  wikidata: Q2021605
+name:
+  full: Hans Smolders
+  family: Smolders
+  given: Hans
+  initials: H.A.J.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: fd1f8ce5-fd03-4f20-8372-cf35b2e44c96
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Van Haga
+  start_date: '2021-05-13'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1d3c5648-d109-48f2-9cd3-82cf8e8ab29b)
+    retrieved: '2026-05-09'
+- id: 62473a25-2a44-4bac-9df2-15e5c7fa1e0d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2021-03-31'
+  end_date: '2021-05-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7c59be4a-d013-4b3a-830d-7822a650020b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(eb79af3c-a66d-4374-b9e7-34d7f3e92dc7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2021605
+  retrieved: '2026-05-09'

@@ -1,0 +1,42 @@
+id: person:wiersma-fm-1984
+identifiers:
+  tk_persoon_id: ed5b0339-d627-4d4e-8d65-4a9eb88cb6b0
+  wikidata: Q120640170
+name:
+  full: Femke Wiersma
+  family: Wiersma
+  given: Femke
+  initials: F.M.
+birth:
+  year: 1984
+gender: f
+mandaten:
+- id: f1dcee9f-43ec-48d4-9b29-abb20507e032
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(95130529-e28c-4280-983b-5e5ddcd77cf1)
+    retrieved: '2026-05-09'
+- id: wd-1cd673eac64c
+  organization_id: org:min-lvvn
+  post_id: post:minister-min-lvvn
+  role: Minister van Landbouw, Visserij, Voedselzekerheid en Natuur
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q120640170#P39
+    retrieved: '2026-05-09'
+  end_date: '2026-02-23'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ed5b0339-d627-4d4e-8d65-4a9eb88cb6b0)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q120640170
+  retrieved: '2026-05-09'

@@ -1,0 +1,44 @@
+id: person:steur-ga-1969
+identifiers:
+  tk_persoon_id: e6e673f5-f0a7-4d34-a6aa-d2f12fed24ed
+  wikidata: Q4787767
+name:
+  full: Ard van der Steur
+  family: van der Steur
+  given: Ard
+  initials: G.A.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: c6b6c100-8d77-4444-882b-dff684a7d940
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2010-06-17'
+  end_date: '2015-03-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d4d45ec9-59ff-4b84-a375-9b14deadd188)
+    retrieved: '2026-05-09'
+- id: wd-0924c09a9355
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Nederlands minister van Justitie en Veiligheid
+  start_date: '2015-03-20'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q4787767#P39
+    retrieved: '2026-05-09'
+  end_date: '2017-01-27'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e6e673f5-f0a7-4d34-a6aa-d2f12fed24ed)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q4787767
+  retrieved: '2026-05-09'

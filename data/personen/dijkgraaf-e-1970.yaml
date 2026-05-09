@@ -1,0 +1,30 @@
+id: person:dijkgraaf-e-1970
+identifiers:
+  tk_persoon_id: ab97f146-7308-4a7e-9197-2ef5ee467a95
+name:
+  full: Elbert Dijkgraaf
+  family: Dijkgraaf
+  given: Elbert
+  initials: E.
+  honorifics_pre:
+  - prof.dr.
+birth:
+  year: 1970
+gender: m
+mandaten:
+- id: cd67cf9c-d68f-4faa-964c-5bc0e7366b38
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SGP
+  start_date: '2010-06-17'
+  end_date: '2018-04-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cfc54f4d-8fe6-4133-a5e7-09aa8336fd17)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ab97f146-7308-4a7e-9197-2ef5ee467a95)
+  retrieved: '2026-05-09'

@@ -1,0 +1,44 @@
+id: person:drost-n-1980
+identifiers:
+  tk_persoon_id: 8f6a5115-367e-4dc2-88c5-1eae50593652
+  wikidata: Q28861462
+name:
+  full: Nico Drost
+  family: Drost
+  given: Nico
+  initials: N.
+birth:
+  year: 1980
+gender: m
+mandaten:
+- id: 62c874a1-3f40-4a33-aa30-44e246d406b4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2023-01-25'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b008205c-00ed-417c-97eb-592affecbfba)
+    retrieved: '2026-05-09'
+- id: 561e1a63-5fe4-421c-9ae3-a558d022b7a5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2019-03-26'
+  end_date: '2019-07-15'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4ad2e411-de7c-428c-a30c-79d2ba2b3621)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8f6a5115-367e-4dc2-88c5-1eae50593652)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861462
+  retrieved: '2026-05-09'

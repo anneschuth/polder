@@ -1,0 +1,32 @@
+id: person:schinkelshoek-j-1953
+identifiers:
+  tk_persoon_id: 5cddc51f-e65e-409d-8cd1-5580d8ad96d8
+  wikidata: Q5641383
+name:
+  full: Jan Schinkelshoek
+  family: Schinkelshoek
+  given: Jan
+  initials: J.
+birth:
+  year: 1953
+gender: m
+mandaten:
+- id: b6eb5d4e-b3a2-4bb4-b168-a388fa1796f5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d83f4e50-eda0-458f-b630-609107c03b3b)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5cddc51f-e65e-409d-8cd1-5580d8ad96d8)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q5641383
+  retrieved: '2026-05-09'

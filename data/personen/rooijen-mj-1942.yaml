@@ -1,0 +1,59 @@
+id: person:rooijen-mj-1942
+identifiers:
+  tk_persoon_id: cfb17042-9f10-4e44-99f4-358bad067455
+  wikidata: Q2801440
+name:
+  full: Martin van Rooijen
+  family: van Rooijen
+  given: Martin
+  initials: M.J.
+  honorifics_pre:
+  - Drs.
+birth:
+  year: 1942
+gender: m
+mandaten:
+- id: d5f3ba75-6ced-46d9-8523-ea04710788c7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor 50PLUS
+  start_date: '2017-03-23'
+  end_date: '2019-06-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3bb98595-6a08-4f4a-8087-44708eb71f74)
+    retrieved: '2026-05-09'
+- id: 42574787-0b06-4344-b598-347ee1b17dd4
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor 50PLUS
+  start_date: '2019-06-11'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
+    retrieved: '2026-05-09'
+- id: wd-fe02823f5fe3
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '1973-12-21'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2801440#P39
+    retrieved: '2026-05-09'
+  end_date: '1977-10-14'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cfb17042-9f10-4e44-99f4-358bad067455)
+  retrieved: '2026-05-09'
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2801440
+  retrieved: '2026-05-09'

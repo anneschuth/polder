@@ -1,0 +1,44 @@
+id: person:kathmann-bc-1978
+identifiers:
+  tk_persoon_id: 9e79de98-e914-4dc8-8dc7-6d7cb09b93d7
+  wikidata: Q74997605
+name:
+  full: Barbara Kathmann
+  family: Kathmann
+  given: Barbara
+  initials: B.C.
+birth:
+  year: 1978
+gender: f
+mandaten:
+- id: d7927091-b164-4f7b-8d57-ef71d07596a4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b02c30e4-cb90-488f-a5b9-f2936a949213)
+    retrieved: '2026-05-09'
+- id: 619fcc13-0372-46e3-afe8-40ab1075891d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2021-03-31'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5e69ecbf-099a-4654-8777-ebe304c5dceb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9e79de98-e914-4dc8-8dc7-6d7cb09b93d7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q74997605
+  retrieved: '2026-05-09'

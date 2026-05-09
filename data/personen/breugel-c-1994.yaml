@@ -1,0 +1,32 @@
+id: person:breugel-c-1994
+identifiers:
+  tk_persoon_id: 76ce88e8-72b1-4be9-b229-29bd9f0f0069
+  wikidata: Q105750191
+name:
+  full: Carline van Breugel
+  family: van Breugel
+  given: Carline
+  initials: C.
+birth:
+  year: 1994
+gender: f
+mandaten:
+- id: 01ccf259-835d-4f94-937f-a8c1d4cf232c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2023-10-25'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b2b112e5-46e1-4f0b-9622-669314584770)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(76ce88e8-72b1-4be9-b229-29bd9f0f0069)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105750191
+  retrieved: '2026-05-09'

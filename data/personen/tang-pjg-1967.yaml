@@ -1,0 +1,32 @@
+id: person:tang-pjg-1967
+identifiers:
+  tk_persoon_id: 75459d70-d630-4aba-8db9-236c92d3a14a
+  wikidata: Q14053382
+name:
+  full: Paul Tang
+  family: Tang
+  given: Paul
+  initials: P.J.G.
+birth:
+  year: 1967
+gender: m
+mandaten:
+- id: 0157602e-b8e4-4508-81a4-c856f2bb2f1c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2007-03-01'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d9030a4b-de19-4450-bf26-9368b1d6e24e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(75459d70-d630-4aba-8db9-236c92d3a14a)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q14053382
+  retrieved: '2026-05-09'

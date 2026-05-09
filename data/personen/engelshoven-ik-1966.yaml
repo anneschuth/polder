@@ -1,0 +1,42 @@
+id: person:engelshoven-ik-1966
+identifiers:
+  tk_persoon_id: 23fcb971-c02b-4a00-aa1f-6feed871c5d4
+  wikidata: Q510689
+name:
+  full: Ingrid van Engelshoven
+  family: van Engelshoven
+  given: Ingrid
+  initials: I.K.
+birth:
+  year: 1966
+gender: f
+mandaten:
+- id: b1c65be1-196a-4250-896f-0e457cf3c417
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2017-03-23'
+  end_date: '2017-10-25'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f559dff5-56d8-4962-99ae-c2594ec73c96)
+    retrieved: '2026-05-09'
+- id: wd-37d92de8c471
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: minister van Onderwijs, Cultuur en Wetenschap
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q510689#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(23fcb971-c02b-4a00-aa1f-6feed871c5d4)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q510689
+  retrieved: '2026-05-09'

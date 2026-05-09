@@ -1,0 +1,32 @@
+id: person:hollander-r-1977
+identifiers:
+  tk_persoon_id: 51036c88-5a8f-4842-8867-0a460bbb611e
+  wikidata: Q136554573
+name:
+  full: Renate den Hollander
+  family: den Hollander
+  given: Renate
+  initials: R.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: c47ba700-5283-42aa-8411-ed505915ae26
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f7914b61-566d-4ec7-91d8-1d7ba9610daa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(51036c88-5a8f-4842-8867-0a460bbb611e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554573
+  retrieved: '2026-05-09'

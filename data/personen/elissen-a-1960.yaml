@@ -1,0 +1,28 @@
+id: person:elissen-a-1960
+identifiers:
+  tk_persoon_id: b5e5a2b4-fdbe-4103-859e-65d0e8fdc7d8
+name:
+  full: Andre Elissen
+  family: Elissen
+  given: Andre
+  initials: A.
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: d2a876d0-a38d-4a9e-9bfd-ea92514c321e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2010-06-17'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7de9aa1d-45cb-404d-8000-1a60729f2c7d)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b5e5a2b4-fdbe-4103-859e-65d0e8fdc7d8)
+  retrieved: '2026-05-09'

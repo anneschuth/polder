@@ -1,0 +1,32 @@
+id: person:terpstra-jh-1989
+identifiers:
+  tk_persoon_id: 26f7a84e-45c7-4a94-94a2-f00a20c201aa
+  wikidata: Q28861159
+name:
+  full: Julius Terpstra
+  family: Terpstra
+  given: Julius
+  initials: J.H.
+birth:
+  year: 1989
+gender: m
+mandaten:
+- id: b22c1117-8dc5-4ac8-beb0-348480c59d32
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2020-05-20'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1e71fb13-c427-4167-825c-3fbc4cac9866)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(26f7a84e-45c7-4a94-94a2-f00a20c201aa)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861159
+  retrieved: '2026-05-09'

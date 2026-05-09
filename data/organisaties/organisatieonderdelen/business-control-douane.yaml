@@ -1,0 +1,15 @@
+id: org:onderdeel-business-control-douane
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-finance-control-douane
+names:
+- value: afdeling Business Control
+  valid_from: '2026-05-09'
+valid_from: '2026-05-09'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/03/aernout-korff-de-gidts-afdelingshoofd-business-control-bij-de-douane
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging

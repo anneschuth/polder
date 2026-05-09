@@ -1,0 +1,32 @@
+id: person:pieper-htm-1962
+identifiers:
+  tk_persoon_id: 057fc6e9-356c-4b52-8a5c-b67ca2a9a00b
+  wikidata: Q2171897
+name:
+  full: Hein Pieper
+  family: Pieper
+  given: Hein
+  initials: H.T.M.
+birth:
+  year: 1962
+gender: m
+mandaten:
+- id: ce21690d-39ca-4bb1-aee2-fb09f1d2880c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2009-03-17'
+  end_date: '2010-06-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(43bd3a5d-854a-4b3f-ab64-346a9ff159eb)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(057fc6e9-356c-4b52-8a5c-b67ca2a9a00b)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2171897
+  retrieved: '2026-05-09'

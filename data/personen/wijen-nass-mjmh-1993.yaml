@@ -1,0 +1,30 @@
+id: person:wijen-nass-mjmh-1993
+identifiers:
+  tk_persoon_id: 30e10ef9-217c-4df6-a47f-21431d3e4159
+name:
+  full: Marieke Wijen-Nass
+  family: Wijen-Nass
+  given: Marieke
+  initials: M.J.M.H.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1993
+gender: f
+mandaten:
+- id: 5ed91dd6-2a3b-47e6-b753-69f539bf2abe
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a4b8793d-126c-41f2-b071-d4b6bed0940e)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(30e10ef9-217c-4df6-a47f-21431d3e4159)
+  retrieved: '2026-05-09'

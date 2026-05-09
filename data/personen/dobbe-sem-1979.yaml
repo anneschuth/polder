@@ -1,0 +1,32 @@
+id: person:dobbe-sem-1979
+identifiers:
+  tk_persoon_id: 21cc8db0-5084-4e4d-a083-99df36fa6170
+  wikidata: Q39169000
+name:
+  full: Sarah Dobbe
+  family: Dobbe
+  given: Sarah
+  initials: S.E.M.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: c1939d46-3e8c-4f3c-b3fa-bbefcafa0ad5
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2023-12-13'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a1719e35-a082-4ead-b0bb-45a9c3d71253)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(21cc8db0-5084-4e4d-a083-99df36fa6170)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q39169000
+  retrieved: '2026-05-09'

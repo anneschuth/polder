@@ -1,0 +1,44 @@
+id: person:westerveld-em-1981
+identifiers:
+  tk_persoon_id: c7822b58-103f-4612-87ef-648be97192c6
+  wikidata: Q28860434
+name:
+  full: Lisa Westerveld
+  family: Westerveld
+  given: Lisa
+  initials: E.M.
+birth:
+  year: 1981
+gender: f
+mandaten:
+- id: 63ff9721-de67-4041-a397-578325186866
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a384aac6-e84c-4fbc-b3bd-647dc35b98a7)
+    retrieved: '2026-05-09'
+- id: b6ec8d5a-0eb3-42d0-81c4-2ee3055d3d31
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2017-03-23'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(47bea583-efa9-45eb-a5ea-1b55066322fe)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c7822b58-103f-4612-87ef-648be97192c6)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860434
+  retrieved: '2026-05-09'

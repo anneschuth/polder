@@ -1,0 +1,32 @@
+id: person:mulder-ah-1973
+identifiers:
+  tk_persoon_id: ee32e8d2-aa15-4603-901e-2cc3c72e9ead
+  wikidata: Q94239
+name:
+  full: Agnes Mulder
+  family: Mulder
+  given: Agnes
+  initials: A.H.
+birth:
+  year: 1973
+gender: f
+mandaten:
+- id: 54ba837e-4460-4065-8f55-30349455db80
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2012-09-20'
+  end_date: '2023-05-09'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c376fb9-3205-4504-b321-5d9bc59723fc)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ee32e8d2-aa15-4603-901e-2cc3c72e9ead)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q94239
+  retrieved: '2026-05-09'

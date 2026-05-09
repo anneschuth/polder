@@ -1,0 +1,32 @@
+id: person:strien-pjt-1977
+identifiers:
+  tk_persoon_id: ce400601-651e-4ac9-a43e-ed8d4817b7fd
+  wikidata: Q106119771
+name:
+  full: Pim van Strien
+  family: van Strien
+  given: Pim
+  initials: P.J.T.
+birth:
+  year: 1977
+gender: m
+mandaten:
+- id: f5a1ef0f-5959-45a7-abab-24d28a977c0b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c1dc4d6a-5a09-4144-b787-7dc54c6a2380)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ce400601-651e-4ac9-a43e-ed8d4817b7fd)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119771
+  retrieved: '2026-05-09'

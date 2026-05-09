@@ -1,0 +1,32 @@
+id: person:haage-mw-1980
+identifiers:
+  tk_persoon_id: e9fa8250-ef81-4f50-bc65-0552217c045d
+  wikidata: Q105954220
+name:
+  full: Marleen Haage
+  family: Haage
+  given: Marleen
+  initials: M.W.
+birth:
+  year: 1980
+gender: f
+mandaten:
+- id: e48f0166-effc-404b-ad90-9d737988b573
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2024-12-18'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ada10258-df49-4c07-8531-5a8edeecdafe)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e9fa8250-ef81-4f50-bc65-0552217c045d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105954220
+  retrieved: '2026-05-09'

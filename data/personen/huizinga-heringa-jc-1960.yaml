@@ -1,0 +1,31 @@
+id: person:huizinga-heringa-jc-1960
+identifiers:
+  tk_persoon_id: 33b35dd6-43ac-43d8-b609-d8e9b1989089
+name:
+  full: Tineke Huizinga-Heringa
+  family: Huizinga-Heringa
+  given: Tineke
+  initials: J.C.
+birth:
+  year: 1960
+gender: f
+mandaten:
+- id: 66117283-69b3-4ea1-85c6-908e1bc7901c
+  organization_id: org:eerste-kamer
+  post_id: post:senator
+  role: Senator voor ChristenUnie
+  start_date: '2019-06-11'
+  end_date: null
+  appointment:
+    decision: EK-installatie
+  sources:
+  - id: ek_scrape
+    url: https://www.eerstekamer.nl/persoon/j_c_huizinga_heringa_christenunie
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(33b35dd6-43ac-43d8-b609-d8e9b1989089)
+  retrieved: '2026-05-09'
+- id: ek_scrape
+  url: https://www.eerstekamer.nl/persoon/j_c_huizinga_heringa_christenunie
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:veen-ms-1971
+identifiers:
+  tk_persoon_id: 0d09a569-a906-4f4f-a2fb-cb2fedbf1c8c
+  wikidata: Q1532040
+name:
+  full: Michiel van Veen
+  family: van Veen
+  given: Michiel
+  initials: M.S.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: b2a9c837-60ef-4fe9-b3d9-676262d04571
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2016-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(19c0bc29-5a6f-4d11-9cf1-8a3aa3c22495)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0d09a569-a906-4f4f-a2fb-cb2fedbf1c8c)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1532040
+  retrieved: '2026-05-09'

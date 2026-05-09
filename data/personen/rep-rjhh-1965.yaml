@@ -1,0 +1,32 @@
+id: person:rep-rjhh-1965
+identifiers:
+  tk_persoon_id: d19f8c1e-caac-4bff-8c3b-e81ec6d118bc
+  wikidata: Q123176052
+name:
+  full: Robert Rep
+  family: Rep
+  given: Robert
+  initials: R.J.H.H.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: a6699822-5abc-4580-9b42-069623a4a28c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2024-07-04'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d5189fd9-d40a-486d-aa88-657aec2ace68)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d19f8c1e-caac-4bff-8c3b-e81ec6d118bc)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176052
+  retrieved: '2026-05-09'

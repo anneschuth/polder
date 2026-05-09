@@ -1,0 +1,34 @@
+id: person:kat-h-1983
+identifiers:
+  tk_persoon_id: 8349fff0-99b3-449a-bd4d-932ae95b29da
+  wikidata: Q28860908
+name:
+  full: Hülya Kat
+  family: Kat
+  given: Hülya
+  initials: H.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1983
+gender: f
+mandaten:
+- id: c5114171-d9b9-4f82-93fa-a99293dac07e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-03-31'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(76890627-cc9b-47bf-89b0-5360dfa45aef)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8349fff0-99b3-449a-bd4d-932ae95b29da)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860908
+  retrieved: '2026-05-09'

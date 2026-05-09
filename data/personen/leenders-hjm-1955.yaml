@@ -1,0 +1,44 @@
+id: person:leenders-hjm-1955
+identifiers:
+  tk_persoon_id: cd5a2cfd-7689-4a6e-aed1-df2a773bab9c
+  wikidata: Q15059632
+name:
+  full: Henk Leenders
+  family: Leenders
+  given: Henk
+  initials: H.J.M.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: 758b31fe-a90d-4b66-b38e-c43aa9da52c0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2014-09-10'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ec8a62f0-9e81-40be-be90-00d768636138)
+    retrieved: '2026-05-09'
+- id: 1fa93e10-0c5a-4d90-9611-785a83a2e720
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2013-09-03'
+  end_date: '2013-12-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0673d92e-bea4-40a7-ad08-50a430a76aa6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cd5a2cfd-7689-4a6e-aed1-df2a773bab9c)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q15059632
+  retrieved: '2026-05-09'

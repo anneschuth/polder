@@ -1,0 +1,44 @@
+id: person:bruins-eew-1969
+identifiers:
+  tk_persoon_id: ba21eb65-8546-40e5-a425-0d228d0eaeac
+  wikidata: Q21479701
+name:
+  full: Eppo Bruins
+  family: Bruins
+  given: Eppo
+  initials: E.E.W.
+  honorifics_pre:
+  - dr.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: feb50277-fdc0-41b0-ae46-91d71675a45d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2015-12-02'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f6c6165a-e95d-48cd-bf58-3b67def241f8)
+    retrieved: '2026-05-09'
+- id: wd-9c1698cde3d6
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: minister van Onderwijs, Cultuur en Wetenschap
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q21479701#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-08-22'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ba21eb65-8546-40e5-a425-0d228d0eaeac)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q21479701
+  retrieved: '2026-05-09'

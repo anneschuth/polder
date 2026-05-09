@@ -1,0 +1,32 @@
+id: person:kops-a-1984
+identifiers:
+  tk_persoon_id: 77c541d2-49e3-483f-869d-134df420c5ea
+  wikidata: Q17427994
+name:
+  full: Alexander Kops
+  family: Kops
+  given: Alexander
+  initials: A.
+birth:
+  year: 1984
+gender: m
+mandaten:
+- id: 76f5b89c-1095-4899-b212-181669469992
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2017-03-23'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6c072a3a-90ed-489b-a6a6-6b93785d2ab6)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(77c541d2-49e3-483f-869d-134df420c5ea)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q17427994
+  retrieved: '2026-05-09'

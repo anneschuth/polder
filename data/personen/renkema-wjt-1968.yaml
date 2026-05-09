@@ -1,0 +1,32 @@
+id: person:renkema-wjt-1968
+identifiers:
+  tk_persoon_id: e10065e1-776d-4bf3-8669-56788c453079
+  wikidata: Q28860437
+name:
+  full: Wim-Jan Renkema
+  family: Renkema
+  given: Wim-Jan
+  initials: W.J.T.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: fe4b0429-8ac8-44cf-a7e1-9da6208bbdc8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2018-06-13'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a2467a50-cc09-46c9-b9a7-c3c03d716776)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e10065e1-776d-4bf3-8669-56788c453079)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860437
+  retrieved: '2026-05-09'

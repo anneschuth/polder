@@ -1,0 +1,46 @@
+id: person:wijngaarden-j-1978
+identifiers:
+  tk_persoon_id: 7d18b6e3-de0c-4aea-bef8-242bbc38e936
+  wikidata: Q17428405
+name:
+  full: Jeroen van Wijngaarden
+  family: van Wijngaarden
+  given: Jeroen
+  initials: J.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1978
+gender: m
+mandaten:
+- id: 9bacaa3b-1438-49af-9ab1-9d3298da26f9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2019-02-20'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5d6dc1ec-89a1-40f5-a446-dd6e5f1dd88f)
+    retrieved: '2026-05-09'
+- id: 149f0f21-1ec5-4178-b5f1-5e3ed37ca6b8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2014-07-01'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(20b55f25-7744-4c17-839b-13a3bb7134a2)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7d18b6e3-de0c-4aea-bef8-242bbc38e936)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q17428405
+  retrieved: '2026-05-09'

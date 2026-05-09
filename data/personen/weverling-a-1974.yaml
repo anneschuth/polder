@@ -1,0 +1,32 @@
+id: person:weverling-a-1974
+identifiers:
+  tk_persoon_id: c8935902-45d6-45d6-ac31-77bc0e143154
+  wikidata: Q28861024
+name:
+  full: Arne Weverling
+  family: Weverling
+  given: Arne
+  initials: A.
+birth:
+  year: 1974
+gender: m
+mandaten:
+- id: 69d2e3fd-774c-46da-848f-6b79783e75d0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d965a55e-4f68-459f-981d-9ab75c502550)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c8935902-45d6-45d6-ac31-77bc0e143154)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861024
+  retrieved: '2026-05-09'

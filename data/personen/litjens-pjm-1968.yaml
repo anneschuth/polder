@@ -1,0 +1,32 @@
+id: person:litjens-pjm-1968
+identifiers:
+  tk_persoon_id: 78464103-e740-4fff-b508-c5377a089cb7
+  wikidata: Q2832366
+name:
+  full: Pieter Litjens
+  family: Litjens
+  given: Pieter
+  initials: P.J.M.
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: dbb37b79-8fbe-4e93-a5c0-3f0e39f34a3d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2014-06-24'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(86aa77ee-94d4-4e60-97f8-fc174f3c773f)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(78464103-e740-4fff-b508-c5377a089cb7)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2832366
+  retrieved: '2026-05-09'

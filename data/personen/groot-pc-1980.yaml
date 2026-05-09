@@ -1,0 +1,34 @@
+id: person:groot-pc-1980
+identifiers:
+  tk_persoon_id: a0b48551-42b7-4c55-9556-6b997d978ff2
+  wikidata: Q106119760
+name:
+  full: Peter de Groot
+  family: de Groot
+  given: Peter
+  initials: P.C.
+  honorifics_pre:
+  - ir.
+birth:
+  year: 1980
+gender: m
+mandaten:
+- id: a9a2b9ec-cec9-42d0-99d0-fbe005519f6b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(082e8348-c775-4333-adf1-2660c1ba26aa)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a0b48551-42b7-4c55-9556-6b997d978ff2)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119760
+  retrieved: '2026-05-09'

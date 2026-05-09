@@ -1,0 +1,32 @@
+id: person:ellian-u-1988
+identifiers:
+  tk_persoon_id: ea21d788-7cfe-41ff-b22f-0664397139af
+  wikidata: Q96479417
+name:
+  full: Ulysse Ellian
+  family: Ellian
+  given: Ulysse
+  initials: U.
+birth:
+  year: 1988
+gender: m
+mandaten:
+- id: ff127d1f-cc76-433f-bc47-69ec747123ed
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2021-03-31'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(266d58f5-b1d7-4d93-a285-7d6170c29898)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ea21d788-7cfe-41ff-b22f-0664397139af)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q96479417
+  retrieved: '2026-05-09'

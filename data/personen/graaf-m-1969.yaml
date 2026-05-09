@@ -1,0 +1,32 @@
+id: person:graaf-m-1969
+identifiers:
+  tk_persoon_id: 75c8786e-c5c2-4d12-95ff-4b804234f062
+  wikidata: Q2612472
+name:
+  full: Machiel de Graaf
+  family: de Graaf
+  given: Machiel
+  initials: M.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 6e2727bb-9426-4b0e-8866-f2e4ae6e45db
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2012-09-20'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(01bc675b-084b-4605-8b52-9fa2cce83dee)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(75c8786e-c5c2-4d12-95ff-4b804234f062)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2612472
+  retrieved: '2026-05-09'

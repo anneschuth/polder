@@ -1,0 +1,32 @@
+id: person:unver-e-1981
+identifiers:
+  tk_persoon_id: a657d1aa-76a0-4077-a057-baf55ab950d5
+  wikidata: Q28008940
+name:
+  full: Emre Ünver
+  family: Ünver
+  given: Emre
+  initials: E.
+birth:
+  year: 1981
+gender: m
+mandaten:
+- id: 9ba91b2c-8817-4a2a-a918-840462e73d2b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2016-12-14'
+  end_date: '2017-02-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7c3a4639-9287-4385-b6a0-cb7ab397d141)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a657d1aa-76a0-4077-a057-baf55ab950d5)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28008940
+  retrieved: '2026-05-09'

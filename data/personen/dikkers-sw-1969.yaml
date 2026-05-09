@@ -1,0 +1,46 @@
+id: person:dikkers-sw-1969
+identifiers:
+  tk_persoon_id: 6e4027b2-cb08-44ca-b030-07d9074512d1
+  wikidata: Q2310534
+name:
+  full: Sjoera Dikkers
+  family: Dikkers
+  given: Sjoera
+  initials: S.W.
+  honorifics_pre:
+  - drs. ing.
+birth:
+  year: 1969
+gender: f
+mandaten:
+- id: 19ed3d48-59c7-4c55-a494-4958effc3894
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2017-02-14'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f827642d-36a1-4340-be2f-4f65ea3e4352)
+    retrieved: '2026-05-09'
+- id: f575b69d-24d7-4bcd-ae97-0809859165f1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-06-17'
+  end_date: '2016-10-24'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(418a054d-ed28-466e-8090-92ca38b7f647)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6e4027b2-cb08-44ca-b030-07d9074512d1)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2310534
+  retrieved: '2026-05-09'

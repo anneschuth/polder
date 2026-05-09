@@ -1,0 +1,32 @@
+id: person:sneller-jc-1982
+identifiers:
+  tk_persoon_id: da9f33b0-80ca-49eb-a1ec-def3b46538d9
+  wikidata: Q28860876
+name:
+  full: Joost Sneller
+  family: Sneller
+  given: Joost
+  initials: J.C.
+birth:
+  year: 1982
+gender: m
+mandaten:
+- id: 4dae3e3e-c416-4e2b-ba8c-7f046466f55b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2017-10-31'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c5d48e12-b037-4438-bfd2-669637d57141)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(da9f33b0-80ca-49eb-a1ec-def3b46538d9)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860876
+  retrieved: '2026-05-09'

@@ -1,0 +1,32 @@
+id: person:schutz-ba-1971
+identifiers:
+  tk_persoon_id: 83886cc3-def7-45bb-bea6-e10200c1cd9e
+  wikidata: Q136554574
+name:
+  full: Björn Schutz
+  family: Schutz
+  given: Björn
+  initials: B.A.
+birth:
+  year: 1971
+gender: m
+mandaten:
+- id: 341007e1-23ed-44e3-a5f6-556319c6cc2f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d28e821a-a0f4-459f-b7db-225970a91373)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(83886cc3-def7-45bb-bea6-e10200c1cd9e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554574
+  retrieved: '2026-05-09'

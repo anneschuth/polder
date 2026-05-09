@@ -1,0 +1,28 @@
+id: person:mos-r-1976
+identifiers:
+  tk_persoon_id: 6b31b20b-6fce-4949-8276-7f7315a6ecf8
+name:
+  full: Richard de Mos
+  family: de Mos
+  given: Richard
+  initials: R.
+birth:
+  year: 1976
+gender: m
+mandaten:
+- id: 6a0c2f4c-9b89-4eef-bc5a-44be933c5e3f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2009-09-01'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2340264f-434d-463f-ac31-040dc3e707e1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6b31b20b-6fce-4949-8276-7f7315a6ecf8)
+  retrieved: '2026-05-09'

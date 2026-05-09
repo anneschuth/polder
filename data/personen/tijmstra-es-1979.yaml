@@ -1,0 +1,28 @@
+id: person:tijmstra-es-1979
+identifiers:
+  tk_persoon_id: f177383d-2044-4a7b-b6bb-2b45ff30e972
+name:
+  full: Eveline Tijmstra
+  family: Tijmstra
+  given: Eveline
+  initials: E.S.
+birth:
+  year: 1979
+gender: f
+mandaten:
+- id: b083f164-28c0-47ec-9bd2-ce47487eebd0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8b397526-6b40-4d36-9236-800ad3538686)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f177383d-2044-4a7b-b6bb-2b45ff30e972)
+  retrieved: '2026-05-09'

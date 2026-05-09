@@ -1,0 +1,48 @@
+id: person:tuinman-gp-1979
+identifiers:
+  tk_persoon_id: 4bbe4b67-071b-460a-b0d8-0ed35e7ff91e
+  wikidata: Q18433472
+name:
+  full: Gijs Tuinman
+  family: Tuinman
+  given: Gijs
+  initials: G.P.
+birth:
+  year: 1979
+gender: m
+mandaten:
+- id: 007c5567-6e1b-45f6-83e9-b0814b23fee3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BBB
+  start_date: '2023-12-06'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6b475ace-1886-49e3-9639-f01d13b9b7b3)
+    retrieved: '2026-05-09'
+- id: mandate-post-staatssecretaris-min-def-2024-07-02
+  organization_id: org:min-def
+  post_id: post:staatssecretaris-min-def
+  role: Staatssecretaris van Defensie
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22517
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2024001717, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22517
+  confidence: 0.92
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4bbe4b67-071b-460a-b0d8-0ed35e7ff91e)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q18433472
+  retrieved: '2026-05-09'

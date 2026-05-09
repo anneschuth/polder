@@ -1,0 +1,34 @@
+id: person:jansen-pfc-1954
+identifiers:
+  tk_persoon_id: ac969248-8799-4f53-ad71-76815c79da35
+  wikidata: Q2161435
+name:
+  full: Paulus Jansen
+  family: Jansen
+  given: Paulus
+  initials: P.F.C.
+  honorifics_pre:
+  - ir.
+birth:
+  year: 1954
+gender: m
+mandaten:
+- id: 011a6988-b23d-455d-8795-6276ffc4303a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2006-11-30'
+  end_date: '2014-05-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8b3f1770-9c0a-4eac-8c30-e46a3c00e731)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ac969248-8799-4f53-ad71-76815c79da35)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2161435
+  retrieved: '2026-05-09'

@@ -1,0 +1,54 @@
+id: person:madlener-b-1969
+identifiers:
+  tk_persoon_id: 7c43c8c2-1958-496c-8060-b0f3bf652992
+  wikidata: Q545023
+name:
+  full: Barry Madlener
+  family: Madlener
+  given: Barry
+  initials: B.
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: f2a7f008-1c28-46bb-bfd9-c6f7af402f3c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2012-09-20'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2002282b-88ee-49b1-8dfe-136919ab3729)
+    retrieved: '2026-05-09'
+- id: f3bba19b-909d-414a-953f-50dcca1d6ff9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PVV
+  start_date: '2006-11-30'
+  end_date: '2009-07-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1abdd1e0-26db-4604-a735-1ea5141b9ae7)
+    retrieved: '2026-05-09'
+- id: wd-6523a85d82d9
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Nederlands minister van Infrastructuur en Waterstaat
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q545023#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7c43c8c2-1958-496c-8060-b0f3bf652992)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q545023
+  retrieved: '2026-05-09'

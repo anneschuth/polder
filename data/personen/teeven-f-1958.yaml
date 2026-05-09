@@ -1,0 +1,68 @@
+id: person:teeven-f-1958
+identifiers:
+  tk_persoon_id: a3986ffd-c057-46cc-afd5-54846c9955ef
+  wikidata: Q2150230
+name:
+  full: Fred Teeven
+  family: Teeven
+  given: Fred
+  initials: F.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1958
+gender: m
+mandaten:
+- id: 9d997ed3-0983-4eb0-8255-63ed3b6f7b9b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2015-03-26'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1ab06eff-9e13-405d-90e2-af12f560d4b6)
+    retrieved: '2026-05-09'
+- id: 2a828e5d-1ee3-431f-ac97-36de008252c7
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2012-09-20'
+  end_date: '2012-11-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(409bfe25-80d7-4857-a565-32af9381e024)
+    retrieved: '2026-05-09'
+- id: af87612b-71db-4570-9e4e-debd56bf3c62
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-11-30'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7d524ba7-a137-4aff-9cc1-f7af637cad2c)
+    retrieved: '2026-05-09'
+- id: wd-5c3a830c3b81
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2150230#P39
+    retrieved: '2026-05-09'
+  end_date: '2015-03-10'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a3986ffd-c057-46cc-afd5-54846c9955ef)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2150230
+  retrieved: '2026-05-09'

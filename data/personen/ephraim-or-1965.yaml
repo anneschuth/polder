@@ -1,0 +1,58 @@
+id: person:ephraim-or-1965
+identifiers:
+  tk_persoon_id: d59d1492-57b6-482b-88b6-b2b77c45c33d
+  wikidata: Q105709997
+name:
+  full: Olaf Ephraim
+  family: Ephraim
+  given: Olaf
+  initials: O.R.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: d42bc364-b8a9-4516-8380-98e0b9f986ad
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Ephraim
+  start_date: '2023-08-02'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bd352f09-d852-45d4-b9d3-1ead72cb378a)
+    retrieved: '2026-05-09'
+- id: eb2f0f1c-f550-4c96-b1e5-225eee111b8c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Van Haga
+  start_date: '2021-05-13'
+  end_date: '2023-08-02'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0d9f8bcb-391f-4567-adad-cd1c1aeefd68)
+    retrieved: '2026-05-09'
+- id: cd9adcd5-467f-401d-91d0-3e96d6c599b9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor FVD
+  start_date: '2021-03-31'
+  end_date: '2021-05-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(31bd29f5-b716-4a85-8eb6-2bb3096a54d1)
+    retrieved: '2026-05-09'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d59d1492-57b6-482b-88b6-b2b77c45c33d)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105709997
+  retrieved: '2026-05-09'
