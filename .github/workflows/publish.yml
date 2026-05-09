@@ -1,0 +1,120 @@
+# Publiceert de polder-dataset na een merge naar main.
+#
+# Wat doet het:
+#   1. build  - draait `polder-build all` en levert dist/polder.db plus
+#               dist/datapackage.json plus dist/csv/*.csv op.
+#   2. release - upload de dist-artifacts als release-asset onder een
+#               datum-tag (yyyy-mm-dd). Latest-release blijft de meest recente.
+#   3. (optioneel) push naar Datasette Cloud zodra DATASETTE_CLOUD_TOKEN bestaat.
+#
+# Triggers:
+#   - push naar main, alleen bij wijzigingen onder data/ (PR-merges van daily-update)
+#   - workflow_dispatch (handmatig)
+#
+# Vereiste secrets:
+#   - DATASETTE_CLOUD_TOKEN (optioneel; zonder skip de cloud-push)
+
+name: publish
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "src/polder/build/**"
+      - "metadata.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    outputs:
+      release_tag: ${{ steps.tag.outputs.tag }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Build all distributions
+        run: uv run polder-build all
+
+      - name: Compute release tag
+        id: tag
+        run: echo "tag=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 30
+
+  release:
+    name: release
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Create or update release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.build.outputs.release_tag }}
+          name: "Polder ${{ needs.build.outputs.release_tag }}"
+          body: |
+            Automatische publicatie van de polder-dataset op ${{ needs.build.outputs.release_tag }}.
+
+            Distributies in deze release:
+            - polder.db (SQLite)
+            - datapackage.json (Frictionless Data Package)
+            - csv/*.csv (per resource)
+
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          files: |
+            dist/polder.db
+            dist/datapackage.json
+            dist/csv/*.csv
+          fail_on_unmatched_files: false
+
+  datasette-cloud:
+    name: datasette-cloud
+    needs: build
+    if: ${{ success() && secrets.DATASETTE_CLOUD_TOKEN != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      # Placeholder. Activeer zodra een datasette-cloud-push-action stable is
+      # of vervang door een curl-call naar de Datasette Cloud upload-API.
+      - name: Notify pending cloud push
+        run: |
+          echo "DATASETTE_CLOUD_TOKEN is gezet, maar de push-stap is nog placeholder."
+          echo "Zie docs/deploy-datasette.md voor de implementatie-opties."

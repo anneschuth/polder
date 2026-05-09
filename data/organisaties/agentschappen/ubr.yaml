@@ -1,5 +1,7 @@
 id: org:agentschap-ubr
 type: agentschap
+identifiers:
+  roo_id: '97026'
 classification: agentschap
 parent_id: null
 names:
@@ -13,5 +15,5 @@ valid_from: '1900-01-01'
 valid_until: '2023-01-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  url: https://organisaties.overheid.nl/97026/
   retrieved: '2026-05-09'

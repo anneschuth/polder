@@ -162,6 +162,56 @@ def test_parse_organisatie_unknown_type_returns_none():
 
 
 # ---------------------------------------------------------------------------
+# Organisatieonderdeel
+# ---------------------------------------------------------------------------
+
+
+ONDERDEEL_EXPORT_XML = b"""<?xml version="1.0" encoding="UTF-8"?>
+<organisaties>
+  <organisatie>
+    <id>12159</id>
+    <naam>Justis</naam>
+    <afkorting>Justis</afkorting>
+    <type>agentschap</type>
+    <organisaties>
+      <organisatie>
+        <id>12190</id>
+        <naam>Landelijk Bureau Bibob</naam>
+        <afkorting>LBB</afkorting>
+        <type>organisatieonderdeel</type>
+      </organisatie>
+    </organisaties>
+  </organisatie>
+</organisaties>
+"""
+
+
+def test_type_mapping_organisatieonderdeel():
+    result = roo.roo_type_to_internal("Organisatieonderdeel")
+    assert result is not None
+    internal, sub_folder, prefix = result
+    assert internal == "organisatieonderdeel"
+    assert sub_folder == "organisatieonderdelen"
+    assert prefix == "onderdeel"
+
+
+def test_parse_export_organisatieonderdeel_resolves_parent(tmp_path: Path):
+    target = tmp_path / "export.xml"
+    target.write_bytes(ONDERDEEL_EXPORT_XML)
+    records = roo.parse_export(target)
+    assert len(records) == 2
+
+    by_id = {r["id"]: r for r in records}
+    onderdeel = by_id["org:onderdeel-lbb"]
+    assert onderdeel["type"] == "organisatieonderdeel"
+    assert onderdeel["_sub_folder"] == "organisatieonderdelen"
+    assert onderdeel["names"][0]["abbr"] == "LBB"
+    # parent_id wordt gezet door _resolve_parents in write_records.
+    roo.write_records(records, tmp_path / "out", dry_run=True)
+    assert onderdeel["parent_id"] == "org:agentschap-justis"
+
+
+# ---------------------------------------------------------------------------
 # parse_export
 # ---------------------------------------------------------------------------
 

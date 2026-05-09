@@ -1,5 +1,7 @@
 id: org:politie-pdc
 type: politie
+identifiers:
+  roo_id: '22660975'
 classification: politie
 parent_id: null
 names:
@@ -13,5 +15,5 @@ valid_from: '2013-01-01'
 valid_until: '2024-01-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  url: https://organisaties.overheid.nl/22660975/
   retrieved: '2026-05-09'

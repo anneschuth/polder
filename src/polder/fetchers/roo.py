@@ -114,9 +114,14 @@ TYPE_MAP: dict[str, tuple[str, str, str]] = {
     # verenigingen, BV's onder overheidsinvloed. Modelleren als "rwt"-achtig.
     "organisatie met overheidsbemoeienis": ("rwt", "rwt", "oovb"),
     "overheidsstichting of -vereniging": ("rwt", "rwt", "stichting"),
-    # TODO: "organisatieonderdeel" wordt nu overgeslagen. Modelleer als sub-records
-    # met parent_id zodra we directies/divisies binnen ministeries willen tracken.
-    # Zie https://github.com/anneschuth/polder/issues/24
+    # Directies, divisies, afdelingen en bureaus binnen ministeries, agentschappen
+    # of ZBO's. Modelleren als top-level org-record met `parent_id` naar de
+    # enclosing organisatie. Zie issue #24.
+    "organisatieonderdeel": (
+        "organisatieonderdeel",
+        "organisatieonderdelen",
+        "onderdeel",
+    ),
 }
 
 
@@ -236,6 +241,25 @@ def _findtext(node: etree._Element, *names: str) -> str | None:
     return None
 
 
+def _attr_systeemid(node: etree._Element) -> str | None:
+    """Geef de waarde van het `systeemId`-attribuut (in iedere namespace)."""
+    for key, value in node.attrib.items():
+        if _localname(key).lower() == "systeemid" and value:
+            return value
+    return None
+
+
+def _enclosing_organisatie(node: etree._Element) -> etree._Element | None:
+    """Wandel omhoog tot de eerstvolgende `<organisatie>`-ancestor en geef die."""
+    candidates = {"organisatie", "organization", "overheidsorganisatie"}
+    parent = node.getparent()
+    while parent is not None:
+        if _localname(parent.tag).lower() in candidates:
+            return parent
+        parent = parent.getparent()
+    return None
+
+
 def _iter_organisatie_nodes(root: etree._Element) -> Iterator[etree._Element]:
     """Yield alle organisatie-achtige nodes onder root."""
     candidates = {"organisatie", "organization", "overheidsorganisatie"}
@@ -263,7 +287,11 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
         return None
 
     abbr = _findtext(node, "afkorting", "abbreviation")
-    roo_id = _findtext(node, "id", "rooid", "roo_id", "identifier")
+    # ROO-XML zet `systeemId` als attribuut; tests gebruiken een `<id>` child.
+    # Beide zijn geldige bronnen voor `roo_id`.
+    roo_id = _attr_systeemid(node) or _findtext(
+        node, "id", "rooid", "roo_id", "identifier"
+    )
     tooi = _findtext(node, "tooi", "tooi_uri", "uri")
     oin = _findtext(node, "oin")
     kvk = _findtext(node, "kvk", "kvknummer")
@@ -275,6 +303,33 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     valid_from = _findtext(node, "opgericht", "startdatum", "valid_from") or "1900-01-01"
     valid_until = _findtext(node, "opgeheven", "einddatum", "valid_until")
     parent_roo_id = _findtext(node, "parent", "ouder", "parent_id", "ouderorganisatie")
+    parent_org_id: str | None = None
+
+    # Voor organisatieonderdelen: de parent staat als enclosing `<organisatie>`-
+    # ancestor in de XML. Bereken zijn `org:`-id rechtstreeks zodat
+    # parent_id-resolutie niet afhangt van roo_id-matching.
+    if internal_type == "organisatieonderdeel":
+        ancestor = _enclosing_organisatie(node)
+        if ancestor is not None:
+            ancestor_type = _findtext(ancestor, "type", "soort", "organisatietype")
+            ancestor_mapping = roo_type_to_internal(ancestor_type)
+            ancestor_name = _findtext(
+                ancestor, "naam", "name", "officielenaam"
+            )
+            ancestor_abbr = _findtext(ancestor, "afkorting", "abbreviation")
+            if ancestor_mapping is not None and ancestor_name:
+                _, _, ancestor_prefix = ancestor_mapping
+                ancestor_slug = (
+                    slugify(ancestor_abbr)
+                    if ancestor_abbr and len(ancestor_abbr) <= 12
+                    else slugify(ancestor_name)
+                )
+                parent_org_id = build_id(ancestor_prefix, ancestor_slug)
+            ancestor_roo_id = _attr_systeemid(ancestor) or _findtext(
+                ancestor, "id", "rooid", "roo_id", "identifier"
+            )
+            if ancestor_roo_id and not parent_roo_id:
+                parent_roo_id = ancestor_roo_id
 
     slug = slugify(abbr) if abbr and len(abbr) <= 12 else slugify(name)
     org_id = build_id(prefix, slug)
@@ -325,6 +380,10 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
         # punt alleen de roo_id van de parent, niet de slug). We slaan het op
         # onder een private key zodat write_records het kan resolven.
         record["_parent_roo_id"] = str(parent_roo_id)
+    if parent_org_id:
+        # Voor organisatieonderdelen kennen we de parent's slug rechtstreeks
+        # uit de XML-ancestry. _resolve_parents pakt deze key direct over.
+        record["_parent_org_id"] = parent_org_id
     record["names"] = [name_entry]
     if contact:
         record["contact"] = contact
@@ -414,7 +473,8 @@ def merge_yaml(existing: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
                 by_id[src.get("id")] = dict(src)
             merged["sources"] = list(by_id.values())
         elif key.startswith("_"):
-            # Private key (sub_folder, slug, parent_roo_id): altijd vervangen.
+            # Private key (sub_folder, slug, parent_roo_id, parent_org_id):
+            # altijd vervangen.
             merged[key] = value
         else:
             if value is not None or key not in merged:
@@ -463,7 +523,10 @@ def _resolve_parents(records: Iterable[dict[str, Any]]) -> None:
 
     for record in records:
         parent_roo_id = record.pop("_parent_roo_id", None)
-        if parent_roo_id and parent_roo_id in by_roo_id:
+        parent_org_id = record.pop("_parent_org_id", None)
+        if parent_org_id:
+            record["parent_id"] = parent_org_id
+        elif parent_roo_id and parent_roo_id in by_roo_id:
             record["parent_id"] = by_roo_id[parent_roo_id]
         elif "parent_id" not in record:
             record["parent_id"] = None

@@ -3,6 +3,7 @@ type: agentschap
 identifiers:
   oin: '00000004000000062000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10123
+  roo_id: '66101'
 classification: agentschap
 parent_id: null
 names:
@@ -16,7 +17,7 @@ valid_from: '1984-01-01'
 valid_until: null
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  url: https://organisaties.overheid.nl/66101/
   retrieved: '2026-05-09'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public

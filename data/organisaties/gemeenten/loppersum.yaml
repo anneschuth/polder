@@ -3,6 +3,7 @@ type: gemeente
 identifiers:
   oin: 00000001009962475000
   kvk: 01180449
+  roo_id: '28617'
 classification: gemeente
 parent_id: null
 names:
@@ -17,7 +18,7 @@ valid_from: '1900-01-01'
 valid_until: '2021-07-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  url: https://organisaties.overheid.nl/28617/
   retrieved: '2026-05-09'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public

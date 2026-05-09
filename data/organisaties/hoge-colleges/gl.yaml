@@ -1,5 +1,7 @@
 id: org:hoge-college-gl
 type: hoge-college
+identifiers:
+  roo_id: '312'
 classification: hoge-college
 parent_id: null
 names:
@@ -14,5 +16,5 @@ valid_from: '1815-08-24'
 valid_until: '2023-06-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/archive/exportOO.xml
+  url: https://organisaties.overheid.nl/312/
   retrieved: '2026-05-09'

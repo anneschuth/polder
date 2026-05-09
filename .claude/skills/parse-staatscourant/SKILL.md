@@ -1,65 +1,93 @@
 ---
 name: parse-staatscourant
-description: Parse een Staatscourant-publicatie (XML met KB-tekst) naar Membership-proposals met evidence_snippet als verifieerbare substring. Gebruik wanneer de gebruiker zegt 'parse staatscourant', 'verwerk KB', 'extract benoemingen', 'lees besluittekst', or in English 'parse staatscourant', 'extract appointments', 'process KB document', of een Staatscourant-XML aanlevert.
-version: 0.1.0
+description: Parse een Staatscourant-publicatie (KB-XML) naar Membership-proposals met evidence_snippet als verifieerbare substring. Gebruik wanneer de gebruiker zegt 'parse staatscourant', 'verwerk KB', 'extract benoemingen', 'lees besluittekst', of in English 'parse staatscourant', 'extract appointments', 'process KB document', of een Staatscourant-XML aanlevert.
+version: 0.2.0
+triggers:
+  - parse staatscourant
+  - verwerk KB
+  - extract benoemingen
+  - lees besluittekst
+  - parse staatscourant
+  - extract appointments
+  - process KB document
 ---
 
 # parse-staatscourant
 
 ## Doel
 
-Lees een Staatscourant-publicatie (XML met vrije besluittekst van de Koninklijke Bibliotheek) en zet deze om in Membership-proposals voor het Polder-databestand. Eén proposal per benoeming, ontslag of verlenging.
+Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl) en zet de tekst om in Membership-proposals voor Polder. Eén proposal per benoeming, ontslag of verlenging in het KB.
 
 ## Input
 
-- Pad naar een XML-bestand, of een XML-string in het geheugen.
+- Pad naar een XML-bestand, of een XML-string in geheugen.
+- Format: KOOP SRU-response, of een export van zoek.officielebekendmakingen.nl.
 - Optioneel: publicatiedatum en bron-URL als die niet uit het XML komen.
 
 ## Output
 
-JSON-array met proposals. Elk proposal heeft:
+JSON-array met proposals, één per benoeming of ontslag. Elk proposal heeft:
 
-- `person_name` (string)
-- `existing_person_id` (string of null)
-- `organization_id` (string)
-- `post_id` (string)
-- `role` (string)
-- `start_date` (ISO 8601 of null)
-- `end_date` (ISO 8601 of null)
-- `decision_reference` (string, bijv. "Stcrt. 2026, 12345")
-- `confidence` (float 0-1)
-- `confidence_reasoning` (string)
-- `evidence_snippet` (string)
+- `person_name` (string): naam zoals in het KB, met titulering en initialen.
+- `existing_person_id` (string of null): polder-slug bij match, anders null.
+- `organization_id` (string): slug van de organisatie waar het KB op slaat.
+- `post_id` (string): slug van de post (bijv. `post:sg-min-bzk`).
+- `role` (string): tekst zoals "Secretaris-Generaal van het Ministerie van BZK".
+- `start_date` (ISO 8601): ingangsdatum van de benoeming.
+- `end_date` (ISO 8601 of null): null voor benoeming, datum voor ontslag.
+- `decision_reference` (string): KB-nummer plus datum, bijv. "KB nr. 2026-001234, 15 april 2026".
+- `staatscourant_url` (string): URL naar de publicatie.
+- `confidence` (float, 0 tot 1).
+- `confidence_reasoning` (string): welke signalen meetelden.
+- `evidence_snippet` (string): letterlijke substring uit het KB-XML met de feiten.
+
+## Stappen voor de LLM
+
+1. Laad XML met `lxml.etree`. Zoek `<gegevens>`, `<tekst>` of `<vrijetekst>` elementen voor de besluitinhoud. Onderwerp staat in `<onderwerp>`, datum in `<datum>` of `<publicatiedatum>`.
+2. Identificeer per KB welke organisatie het betreft. Lees titel, onderwerp en eerste alinea. Match tegen `data/organisaties/` op naam of afkorting.
+3. Voor elke benoeming of ontslag in de tekst:
+   - Extract persoonsnaam (titulering, voornamen of initialen, achternaam).
+   - Extract functie (Secretaris-Generaal, Directeur-Generaal, plaatsvervangend SG, ...).
+   - Extract ingangsdatum: zoek "per <datum>" of "met ingang van <datum>".
+   - Extract KB-referentie: zoek "bij koninklijk besluit van <datum>, nr. <nummer>".
+4. Match `organization_id` en `post_id` aan bestaande records. Lees `data/organisaties/` en `data/posten/` voor de slug-tabel. Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`.
+5. Bouw het proposal. Confidence-rubriek:
+   - Volledige naam plus expliciete functie plus expliciete datum plus KB-referentie: 0.95 of hoger.
+   - Naam ambigu (twee of meer matches in `data/personen/`): maximaal 0.7, forceert review.
+   - KB-referentie ontbreekt of post niet matchbaar: maximaal 0.6.
+6. Substring-check vóór output: `assert evidence_snippet in raw_xml_text`. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
 
 ## Harde regels
 
-1. `evidence_snippet` MOET een letterlijke substring zijn van de bron-tekst. Voer een pre-output substring-check uit in code; faal hard als de check false retourneert.
-2. Schrijf NOOIT direct naar `data/`. Output gaat naar `data/_staging/staatscourant-YYYY-MM-DD.json`.
-3. Two-source rule: een proposal mag alleen automatisch door als er een tweede onafhankelijke bron is, of als `confidence` minimaal 0.98 is en er een review-window van 7 dagen geldt.
-4. `confidence_reasoning` is verplicht en specifiek: noem welke signalen meetelden (expliciete datum, expliciete post-ID, naamoverlap met bestaand persoon).
+1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van het XML. Validator faalt anders.
+2. **Two-source rule.** Een proposal merget alleen automatisch als `confidence` minimaal 0.98 is plus een 7-daags review-window. Anders is een tweede onafhankelijke bron vereist.
+3. **Staging-only.** Schrijf naar `data/_staging/staatscourant-YYYY-MM-DD.json`. Nooit direct naar `data/organisaties/`, `data/personen/` of `data/posten/`.
+4. **Confidence per proposal** als float in [0, 1] met expliciete `confidence_reasoning`.
+5. Geen BSN, geen geboortedatum, geen privé-contactgegevens in een proposal. Alleen jaartal in `birth.year` als die elders al vaststaat.
 
 ## Voorbeeld
 
-Input: `stcrt-2026-12345.xml` met regel "Met ingang van 1 juni 2026 wordt benoemd tot directeur Bestuur en Organisatie van het ministerie van BZK: drs. P. de Vries."
+Zie `example_input.xml` voor een KB-fragment, en `example_output.json` voor het bijbehorende proposal. De `evidence_snippet` in het output-bestand is letterlijk te vinden in de input.
 
-Output:
+## Aanroep in workflow
 
-```json
-[{
-  "person_name": "P. de Vries",
-  "existing_person_id": null,
-  "organization_id": "org:bzk",
-  "post_id": "post:bzk-directeur-bestuur-organisatie",
-  "role": "directeur",
-  "start_date": "2026-06-01",
-  "end_date": null,
-  "decision_reference": "Stcrt. 2026, 12345",
-  "confidence": 0.94,
-  "confidence_reasoning": "Expliciete datum, expliciete post, naam matcht geen bestaand persoon.",
-  "evidence_snippet": "Met ingang van 1 juni 2026 wordt benoemd tot directeur Bestuur en Organisatie van het ministerie van BZK: drs. P. de Vries."
-}]
+```yaml
+- uses: anthropics/claude-code-action@v1
+  with:
+    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+    prompt: |
+      Lees alle nieuwe KB's uit _cache/staatscourant/ en parse met de
+      parse-staatscourant skill. Schrijf proposals naar
+      data/_staging/staatscourant-{date}.json.
+    claude_args: "--model claude-haiku-4-5 --max-turns 10"
+```
+
+## Aanroep vanuit Claude Code CLI
+
+```bash
+claude "Gebruik parse-staatscourant op _cache/staatscourant/stcrt-2026-12345.xml en schrijf naar data/_staging/staatscourant-2026-05-09.json"
 ```
 
 ## Status
 
-Stub. Implementatie volgt in week 5 van de roadmap.
+Actief, versie 0.2.0. Tweede skill na review-pr-diff.

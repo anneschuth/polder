@@ -1,0 +1,21 @@
+id: org:onderdeel-bedrijfsvoering
+type: organisatieonderdeel
+identifiers:
+  roo_id: '111736'
+classification: organisatieonderdeel
+parent_id: org:onderdeel-bck
+names:
+- value: Bedrijfsvoering
+  valid_from: '1900-01-01'
+- value: Bedrijfsvoering
+  valid_from: '2018-11-01'
+  valid_until: '2021-01-01'
+contact:
+  website: https://www.overijssel.nl
+  email: bvsecretariaat@overijssel.nl
+valid_from: '1900-01-01'
+valid_until: '2021-01-01'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/111736/
+  retrieved: '2026-05-09'

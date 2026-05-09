@@ -4,7 +4,7 @@ Polder volgt een Popolo-achtig graafmodel met vijf classes: Organization, Person
 
 ## Organization
 
-Een overheidsorganisatie. Ministeries, ZBO's, agentschappen, RWT's, hoge colleges, gemeenten, provincies, waterschappen, gemeenschappelijke regelingen, adviescolleges, inspecties, rechterlijke macht, politie/OM en Caribisch Nederland.
+Een overheidsorganisatie. Ministeries, ZBO's, agentschappen, RWT's, hoge colleges, gemeenten, provincies, waterschappen, gemeenschappelijke regelingen, adviescolleges, inspecties, rechterlijke macht, politie/OM, Caribisch Nederland en organisatieonderdelen (directies, divisies, afdelingen, bureaus binnen een ministerie of uitvoerende dienst).
 
 Velden: `id`, `type`, `identifiers` (oin, tooi, wikidata, roo_id, kvk), `classification`, `parent_id`, `names[]` met `valid_from`, `contact`, `valid_from`, `valid_until`, `sources[]`.
 
@@ -32,6 +32,31 @@ sources:
     url: https://organisaties.overheid.nl/9632/
     retrieved: 2026-05-08
     fields: [names, classification, parent_id, contact]
+```
+
+### Organisatieonderdeel
+
+ROO levert ~1650 directies, divisies, afdelingen en bureaus binnen ministeries, agentschappen en uitvoerende diensten. We modelleren deze als top-level Organization-records met `type: organisatieonderdeel` en een `parent_id` naar de enclosing organisatie. Geen aparte class, geen embedded sub-record: dat zou Person- en Mandaat-relaties onnodig ingewikkeld maken (een ABD-directeur zit op een directie, niet op het ministerie zelf).
+
+De parent komt rechtstreeks uit de XML-ancestry in `exportOO.xml` waar onderdelen als geneste `<organisatie>` onder hun moeder staan. Records landen in `data/organisaties/organisatieonderdelen/`. Onderdelen kunnen zelf weer onderdelen onder zich hebben (een afdeling binnen een directie); de boom is meerlagig.
+
+```yaml
+id: org:onderdeel-dpmo
+type: organisatieonderdeel
+identifiers:
+  roo_id: "29754690"
+classification: organisatieonderdeel
+parent_id: org:agentschap-dji
+names:
+  - value: Directie Personeel, Management en Organisatie-ontwikkeling
+    abbr: DPMO
+    valid_from: 1900-01-01
+valid_from: 1900-01-01
+valid_until: null
+sources:
+  - id: roo
+    url: https://organisaties.overheid.nl/29754690/
+    retrieved: 2026-05-09
 ```
 
 ## Person

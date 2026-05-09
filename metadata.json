@@ -1,0 +1,61 @@
+{
+  "title": "Polder",
+  "description_html": "Wie regeert Nederland, in YAML, dagelijks bijgewerkt. Een git-versioned, CC0-gelicenseerde dataset van Nederlandse overheidsorganisaties, posten, personen en mandaten.",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "ROO, TK OData, EK, Logius COR, Wikidata, AR RWT, ORI",
+  "source_url": "https://github.com/anneschuth/polder",
+  "about": "Polder op GitHub",
+  "about_url": "https://github.com/anneschuth/polder",
+  "extra_css_urls": [],
+  "databases": {
+    "polder": {
+      "title": "Polder dataset",
+      "description": "SQLite-build van de YAML-bron in data/. Tabellen volgen een Popolo-achtig graafmodel.",
+      "source": "https://github.com/anneschuth/polder",
+      "source_url": "https://github.com/anneschuth/polder",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "tables": {
+        "organisaties": {
+          "title": "Organisaties",
+          "description": "Overheidsorganisaties: ministeries, ZBO's, agentschappen, gemeenten, provincies, waterschappen.",
+          "label_column": "id",
+          "sort_desc": "valid_from",
+          "facets": ["type", "classification"],
+          "size": 50
+        },
+        "personen": {
+          "title": "Personen",
+          "description": "Natuurlijke personen met een mandaat in een overheidsorganisatie. Alleen publieke functionarissen, conform AVG-cut-off uit docs/avg-grenzen.md.",
+          "label_column": "name_full",
+          "sort": "name_family",
+          "facets": ["gender"],
+          "size": 50
+        },
+        "posten": {
+          "title": "Posten",
+          "description": "Functies binnen een organisatie. Een post kan over de tijd door verschillende personen worden bekleed.",
+          "label_column": "label",
+          "sort_desc": "valid_from",
+          "facets": ["classification", "organization_id"],
+          "size": 50
+        },
+        "mandaten": {
+          "title": "Mandaten",
+          "description": "Membership van een persoon in een post bij een organisatie, met expliciete start- en einddatum.",
+          "sort_desc": "start_date",
+          "facets": ["role", "organization_id"],
+          "size": 50
+        },
+        "sources": {
+          "title": "Sources",
+          "description": "Per record de bron-URL en retrieved-datum. Volgt de twee-bron-regel voor benoemingen.",
+          "sort_desc": "retrieved",
+          "facets": ["source_id"],
+          "size": 50
+        }
+      }
+    }
+  }
+}
