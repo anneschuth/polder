@@ -1,5 +1,9 @@
 id: org:waterschap-noorderzijlvest
 type: waterschap
+identifiers:
+  oin: 00000001808174071000
+  kvk: '50130994'
+  tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0647
 classification: waterschap
 parent_id: null
 names:
@@ -14,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

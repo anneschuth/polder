@@ -14,10 +14,8 @@ import pytest
 
 STUB_MODULES = [
     "tooi",
-    "logius_cor",
     "koop_sru",
     "abd_organogrammen",
-    "open_raadsinformatie",
     "kiesraad",
 ]
 

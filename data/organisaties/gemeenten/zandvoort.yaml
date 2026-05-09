@@ -1,5 +1,9 @@
 id: org:gemeente-zandvoort
 type: gemeente
+identifiers:
+  oin: 00000001001509962000
+  kvk: '34363858'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0473
 classification: gemeente
 parent_id: null
 names:
@@ -15,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

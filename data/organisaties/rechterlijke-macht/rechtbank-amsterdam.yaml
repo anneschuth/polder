@@ -1,5 +1,8 @@
 id: org:rechtbank-amsterdam
 type: rechterlijke-instantie
+identifiers:
+  oin: '00000004000000025000'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10018
 classification: rechterlijke-instantie
 parent_id: null
 names:
@@ -13,3 +16,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

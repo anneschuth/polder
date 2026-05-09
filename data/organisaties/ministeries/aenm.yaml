@@ -1,5 +1,10 @@
 id: org:min-aenm
 type: ministerie
+identifiers:
+  wikidata: Q127256306
+  oin: 00000003953209700000
+  kvk: '95320970'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1162
 classification: ministerie
 parent_id: null
 names:
@@ -15,3 +20,11 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q127256306
+  retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

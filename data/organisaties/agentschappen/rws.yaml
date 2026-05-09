@@ -1,5 +1,9 @@
 id: org:agentschap-rws
 type: agentschap
+identifiers:
+  oin: 00000001821699180000
+  kvk: '27364178'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10004
 classification: agentschap
 parent_id: null
 names:
@@ -14,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

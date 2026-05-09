@@ -1,5 +1,9 @@
 id: org:gemeente-purmerend
 type: gemeente
+identifiers:
+  oin: 00000001001801582000
+  kvk: '37162503'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0439
 classification: gemeente
 parent_id: null
 names:
@@ -15,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

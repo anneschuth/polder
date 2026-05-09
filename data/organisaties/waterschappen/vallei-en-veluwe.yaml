@@ -1,5 +1,9 @@
 id: org:waterschap-vallei-en-veluwe
 type: waterschap
+identifiers:
+  oin: 00000001852310274000
+  kvk: '56804636'
+  tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0662
 classification: waterschap
 parent_id: null
 names:
@@ -14,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

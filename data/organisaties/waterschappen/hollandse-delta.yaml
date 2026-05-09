@@ -1,5 +1,9 @@
 id: org:waterschap-hollandse-delta
 type: waterschap
+identifiers:
+  oin: 00000001813361576000
+  kvk: '52605825'
+  tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0655
 classification: waterschap
 parent_id: null
 names:
@@ -14,3 +18,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

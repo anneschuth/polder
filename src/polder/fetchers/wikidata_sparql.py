@@ -90,7 +90,7 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
 """,
     "gemeente": """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
-  ?item wdt:P31 wd:Q11424093 .
+  ?item wdt:P31 wd:Q2039348 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
   OPTIONAL { ?item wdt:P9947 ?oin }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }
@@ -106,7 +106,7 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
 """,
     "waterschap": """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
-  ?item wdt:P31 wd:Q1502044 .
+  ?item wdt:P31 wd:Q702081 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
   OPTIONAL { ?item wdt:P9947 ?oin }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "nl,en". }

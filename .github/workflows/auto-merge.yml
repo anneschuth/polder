@@ -1,0 +1,115 @@
+# Auto-merge voor PR's met label `auto-merge`.
+#
+# Wat doet het:
+#   Wanneer een PR het label `auto-merge` heeft, geen `needs-review` label,
+#   en gemaakt is door de daily-update workflow (github-actions[bot]),
+#   zet deze workflow auto-merge aan met squash-strategy. GitHub voltooit
+#   de merge zodra alle required checks (zoals validate.yml) groen zijn.
+#
+# Triggers:
+#   - pull_request: opened, labeled, synchronize
+#   - pull_request_review: submitted (re-evaluatie na review)
+#   - check_suite: completed (re-evaluatie zodra checks klaar zijn)
+#
+# Veiligheidsnet:
+#   - Alleen PR's van github-actions[bot] worden auto-gemerged.
+#   - Aanwezigheid van label `needs-review` blokkeert auto-merge.
+#   - Squash-merge, niet rebase, om historie compact te houden.
+
+name: auto-merge
+
+on:
+  pull_request:
+    types: [opened, labeled, synchronize, reopened]
+  pull_request_review:
+    types: [submitted]
+  check_suite:
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto_merge:
+    name: auto_merge
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'check_suite' || github.event.check_suite.conclusion == 'success' }}
+    steps:
+      - name: Resolve target PR
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          if [ "$EVENT_NAME" = "pull_request" ] || [ "$EVENT_NAME" = "pull_request_review" ]; then
+            PR_NUMBER="${{ github.event.pull_request.number }}"
+            PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          else
+            # check_suite: zoek PR's gekoppeld aan deze suite via head_sha
+            HEAD_SHA="${{ github.event.check_suite.head_sha }}"
+            PR_JSON=$(gh api "repos/${REPO}/commits/${HEAD_SHA}/pulls" --jq '.[0] // {}')
+            PR_NUMBER=$(echo "$PR_JSON" | jq -r '.number // empty')
+            PR_AUTHOR=$(echo "$PR_JSON" | jq -r '.user.login // empty')
+          fi
+
+          if [ -z "$PR_NUMBER" ]; then
+            echo "Geen PR gevonden, niets te doen."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          LABELS=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json labels --jq '[.labels[].name] | join(",")')
+
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "pr_author=$PR_AUTHOR" >> "$GITHUB_OUTPUT"
+          echo "labels=$LABELS" >> "$GITHUB_OUTPUT"
+          echo "PR #$PR_NUMBER door $PR_AUTHOR met labels: $LABELS"
+
+      - name: Gate on author and labels
+        id: gate
+        if: ${{ steps.pr.outputs.skip != 'true' }}
+        env:
+          PR_AUTHOR: ${{ steps.pr.outputs.pr_author }}
+          LABELS: ${{ steps.pr.outputs.labels }}
+        run: |
+          set -euo pipefail
+
+          if [ "$PR_AUTHOR" != "github-actions[bot]" ]; then
+            echo "PR is niet van github-actions[bot] (auteur: $PR_AUTHOR). Geen auto-merge."
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          case ",${LABELS}," in
+            *,auto-merge,*) ;;
+            *)
+              echo "Geen auto-merge label aanwezig. Skip."
+              echo "proceed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+              ;;
+          esac
+
+          case ",${LABELS}," in
+            *,needs-review,*)
+              echo "needs-review label aanwezig, blokkeer auto-merge."
+              echo "proceed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+              ;;
+          esac
+
+          echo "proceed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Enable auto-merge
+        if: ${{ steps.pr.outputs.skip != 'true' && steps.gate.outputs.proceed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ steps.pr.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+          echo "Activeer auto-merge (squash) voor PR #$PR_NUMBER"
+          gh pr merge "$PR_NUMBER" --repo "$REPO" --auto --squash

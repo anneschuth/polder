@@ -1,7 +1,22 @@
-# STUB: Daily update pipeline. De claude-review job activeert pas zodra de
-# ANTHROPIC_API_KEY repository-secret is gezet. Tot die tijd faalt die job
-# silent (success: false in de step) of wordt overgeslagen.
-name: Daily update
+# Daily update pipeline voor de polder-dataset.
+#
+# Wat doet het:
+#   1. fetch          - draait alle deterministische fetchers, valideert,
+#                       en berekent diff.json plus proposals.json.
+#   2. pr             - opent een PR via peter-evans/create-pull-request.
+#                       Label is auto-merge of needs-review op basis van diff.
+#   3. claude-review  - laat claude-code-action de PR-body genereren en
+#                       als comment posten. Skipt als ANTHROPIC_API_KEY
+#                       niet gezet is.
+#
+# Triggers:
+#   - cron 05:17 UTC dagelijks
+#   - workflow_dispatch (handmatig via Actions-tab)
+#
+# Vereiste secrets:
+#   - ANTHROPIC_API_KEY (optioneel; zonder skip claude-review)
+
+name: daily-update
 
 on:
   schedule:
@@ -11,11 +26,14 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  issues: write
+  issues: read
 
 jobs:
   fetch:
+    name: fetch
     runs-on: ubuntu-latest
+    outputs:
+      diff_label: ${{ steps.label.outputs.diff_label }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,28 +47,97 @@ jobs:
         run: uv sync
 
       - name: Fetch ROO
+        continue-on-error: true
         run: uv run polder-fetch-roo
+
+      - name: Fetch Logius COR
+        continue-on-error: true
+        run: uv run python -m polder.fetchers.logius_cor
+
+      - name: Fetch Wikidata orgs
+        continue-on-error: true
+        run: uv run polder-fetch-wikidata --orgs
+
+      - name: Fetch Tweede Kamer OData
+        continue-on-error: true
+        run: uv run polder-fetch-tk-odata
+
+      - name: Fetch Eerste Kamer scrape
+        continue-on-error: true
+        run: uv run polder-fetch-ek-scrape
+
+      - name: Fetch Algemene Rekenkamer RWT-lijst
+        continue-on-error: true
+        run: uv run polder-fetch-ar-rwt
 
       - name: Validate
         run: uv run polder-validate
 
       - name: Compute diff
-        run: uv run polder-diff > diff.json || true
+        continue-on-error: true
+        run: |
+          uv run polder-diff \
+            --cache _cache \
+            --data data \
+            --out diff.json \
+            --proposals proposals.json
 
-      - name: Upload diff artifact
+      - name: Determine PR label
+        id: label
+        run: |
+          uv run python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          diff_path = Path("diff.json")
+          if not diff_path.exists():
+              label = "needs-review"
+          else:
+              try:
+                  diffs = json.loads(diff_path.read_text(encoding="utf-8") or "[]")
+              except json.JSONDecodeError:
+                  diffs = []
+
+              def confidence_ok(entry: dict) -> bool:
+                  after = entry.get("after") or {}
+                  for source in after.get("sources", []) or []:
+                      conf = source.get("confidence")
+                      if conf is not None and conf < 0.95:
+                          return False
+                  return True
+
+              has_high_stakes = any(d.get("high_stakes") for d in diffs)
+              all_confident = all(confidence_ok(d) for d in diffs)
+              label = "auto-merge" if all_confident and not has_high_stakes else "needs-review"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as fh:
+              fh.write(f"diff_label={label}\n")
+          print(f"diff_label={label}")
+          PY
+
+      - name: Upload diff artifacts
         uses: actions/upload-artifact@v4
         with:
           name: diff
-          path: diff.json
+          path: |
+            diff.json
+            proposals.json
           if-no-files-found: warn
           retention-days: 14
 
   pr:
+    name: pr
     needs: fetch
+    if: success()
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
+    outputs:
+      pr_number: ${{ steps.cpr.outputs.pull-request-number }}
+      pr_url: ${{ steps.cpr.outputs.pull-request-url }}
+      pr_branch: ${{ steps.branch.outputs.branch }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,31 +147,58 @@ jobs:
         with:
           name: diff
 
+      - name: Compute date
+        id: date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Compute branch name
+        id: branch
+        run: echo "branch=daily-update/${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+
       - name: Create pull request
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: daily-update/${{ github.run_id }}
-          title: "Daily update ${{ github.run_id }}"
+          branch: ${{ steps.branch.outputs.branch }}
+          base: main
+          title: "Daily update ${{ steps.date.outputs.date }}"
           body: |
-            Automated daily update. Zie diff.json voor details.
-          labels: needs-review
-          commit-message: "chore: daily update ${{ github.run_id }}"
+            Automated daily update voor ${{ steps.date.outputs.date }}.
+
+            De PR-body wordt zo aangevuld door de claude-review job met een
+            samenvatting van diff.json. Tot die comment is geplaatst is dit
+            een placeholder.
+
+            Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          labels: ${{ needs.fetch.outputs.diff_label }}
+          commit-message: "chore: daily update ${{ steps.date.outputs.date }}"
+          delete-branch: true
 
   claude-review:
+    name: claude-review
     needs: pr
-    if: success()
+    if: ${{ success() && needs.pr.outputs.pr_number != '' && secrets.ANTHROPIC_API_KEY != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
       pull-requests: write
-      issues: write
+      issues: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Download diff artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: diff
 
       - name: Run Claude Code review
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: "Gebruik de review-pr-diff skill om een Nederlandstalige PR-body te genereren uit diff.json en post die als comment op de zojuist aangemaakte PR."
+          prompt: |
+            Gebruik de review-pr-diff skill om uit diff.json (en proposals.json
+            indien aanwezig) een Nederlandstalige PR-body te genereren.
+            Post de gegenereerde markdown als comment op PR #${{ needs.pr.outputs.pr_number }}
+            in repo ${{ github.repository }}. Niet de PR-titel of -labels wijzigen.
           claude_args: "--model claude-haiku-4-5 --max-turns 8"

@@ -1,33 +1,175 @@
 """Fetcher voor Open Raadsinformatie (gemeentelijke bestuurders en raadsleden).
 
 Bron: Open Raadsinformatie (ORI), Open State Foundation.
-Endpoint: https://api.openraadsinformatie.nl/v1/elastic/
-Formaat: Elasticsearch query DSL als POST-body, response in Popolo ODS-vormgeving.
-Update: gestaag (afhankelijk van per-gemeente publicatiekadans, meestal weken).
+Endpoint: https://api.openraadsinformatie.nl/v1/elastic/<index>/_search
+Formaat: Elasticsearch query DSL als POST-body, response in Popolo-achtige
+records (Person + Membership + Organization).
+Update: gestaag (afhankelijk van per-gemeente publicatiekadans, weken-cyclus).
 Licentie: open (Open State Foundation publiceert onder open licentie).
-Dekking: 265+ Nederlandse gemeenten, met wethouders, raadsleden, fracties,
-commissies en agendapunten/besluiten.
+Dekking: 310+ Nederlandse gemeenten en stadsdelen, met wethouders, raadsleden,
+fracties, commissies en agendapunten.
 
-Tracking issue: https://github.com/anneschuth/polder/issues/TODO-open-raadsinformatie
+ORI-indices zijn per gemeente (`ori_utrecht`, `ori_amsterdam_zuid`, ...). Niet
+alle gemeenten gebruiken hetzelfde data-schema: Utrecht (iBabs) levert keurige
+`@type: Person`/`@type: Membership` records met `role`-veld; Amsterdam levert
+ruwe documenten zonder `@type`. Deze fetcher targets de Popolo-stijl indices.
+
+Tracking issue: https://github.com/anneschuth/polder/issues/16
 """
 
 from __future__ import annotations
 
+import argparse
+import json
+import logging
+import re
 import sys
+import time
+import unicodedata
+import uuid
+from datetime import date
+from pathlib import Path
 from typing import Any
 
 import httpx
+import yaml
+
+logger = logging.getLogger("polder.fetchers.open_raadsinformatie")
 
 __all__ = [
     "ORI_ELASTIC_BASE",
+    "PAGE_SIZE",
+    "RATE_LIMIT_DELAY",
+    "ROLE_TO_CLASSIFICATION",
+    "SOURCE_ID",
+    "build_mandaat",
+    "ensure_org_and_posts",
     "fetch_persons_for_gemeente",
     "main",
+    "ori_index_for_gemeente",
+    "parse_person",
+    "person_to_polder_record",
     "search",
+    "slugify_person",
 ]
 
 ORI_ELASTIC_BASE = "https://api.openraadsinformatie.nl/v1/elastic"
 HTTP_TIMEOUT = 60.0
+PAGE_SIZE = 500
+RATE_LIMIT_DELAY = 0.5  # seconden tussen requests (2 req/sec).
+SOURCE_ID = "open_raadsinformatie"
 USER_AGENT = "polder/0.0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
+
+# Mapping van ORI-rolnaam (zoals in `Membership.role`) naar polder
+# post-classificatie. Rollen die geen gemeentelijk mandaat representeren
+# (Member, Voorzitter zonder context, Gastspreker, ...) worden geskipt.
+ROLE_TO_CLASSIFICATION: dict[str, str] = {
+    "Raadslid": "raadslid",
+    "Wethouder": "wethouder",
+    "Burgemeester": "burgemeester",
+    "Gemeentesecretaris": "gemeentesecretaris",
+    "Raadsgriffier": "griffier",
+    "Griffier": "griffier",
+}
+
+
+# ---------------------------------------------------------------------------
+# Slug helpers
+# ---------------------------------------------------------------------------
+
+
+def _ascii_lower(value: str) -> str:
+    decomposed = unicodedata.normalize("NFKD", value)
+    return decomposed.encode("ascii", "ignore").decode("ascii").lower()
+
+
+_TUSSENVOEGSELS = frozenset(
+    {
+        "van",
+        "der",
+        "den",
+        "de",
+        "het",
+        "te",
+        "ten",
+        "ter",
+        "op",
+        "in",
+        "aan",
+        "bij",
+        "tot",
+        "uit",
+        "voor",
+        "vd",
+        "vdr",
+        "von",
+        "le",
+        "la",
+        "du",
+        "el",
+        "al",
+    }
+)
+
+
+def _strip_tussenvoegsels(family: str) -> str:
+    base = _ascii_lower(family or "")
+    base = re.sub(r"[^a-z0-9\s-]+", " ", base)
+    parts = [p for p in re.split(r"\s+", base) if p]
+    family_parts = [p for p in parts if p not in _TUSSENVOEGSELS] or parts
+    family_slug = "-".join(family_parts)
+    return re.sub(r"-+", "-", family_slug).strip("-")
+
+
+def _initials_slug(initials: str) -> str:
+    if not initials:
+        return ""
+    cleaned = _ascii_lower(initials)
+    return re.sub(r"[^a-z0-9]+", "", cleaned)
+
+
+def slugify_person(family: str, initials: str, ori_id: str) -> str:
+    """Bouw stabiele slug `<family>-<initials>-<ori_id>`.
+
+    ORI heeft geen geboortedatum, dus we gebruiken de ORI-numerieke id als
+    laatste segment. Dat is stabiel zolang ORI de id niet wijzigt en uniek
+    binnen de polder-namespace (ORI-id's zijn 7-cijferig en globaal uniek).
+    """
+    family_slug = _strip_tussenvoegsels(family)
+    init_slug = _initials_slug(initials)
+    pieces = [p for p in (family_slug, init_slug, str(ori_id)) if p]
+    return "-".join(pieces)
+
+
+# ---------------------------------------------------------------------------
+# ORI index resolution
+# ---------------------------------------------------------------------------
+
+
+def _normalize_gemeente_slug(value: str) -> str:
+    """`gemeente-utrecht`, `org:gemeente-utrecht`, `utrecht` → `utrecht`."""
+    if value.startswith("org:"):
+        value = value.split(":", 1)[1]
+    if value.startswith("gemeente-"):
+        value = value[len("gemeente-") :]
+    return value
+
+
+def ori_index_for_gemeente(gemeente_slug: str) -> str:
+    """Map polder-gemeente-slug naar ORI-index naam.
+
+    ORI gebruikt soms `_`, soms `-` als woordscheider in indexnamen
+    (`ori_baarle_nassau` versus `ori_alphen-chaam`). De API accepteert beide
+    vormen via wildcard, dus we gebruiken `ori_<slug>*` als alias.
+    """
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    # Probeer eerst exacte (hyphen) match, val terug op underscore.
+    return f"ori_{bare}*"
+
+
+# ---------------------------------------------------------------------------
+# HTTP / search
+# ---------------------------------------------------------------------------
 
 
 def search(
@@ -35,60 +177,666 @@ def search(
     body: dict[str, Any],
     *,
     timeout: float = HTTP_TIMEOUT,
+    client: httpx.Client | None = None,
 ) -> dict[str, Any]:
     """Voer een Elasticsearch _search uit op de ORI-API.
 
     Args:
-        index: bijv. ``"ori_*"`` of ``"ori_persons"``.
+        index: bijv. ``"ori_utrecht"`` of ``"ori_*"``.
         body: ES query DSL als dict.
-
-    TODO:
-    - Paginatie via ``search_after`` of ``from``/``size``.
-    - Retry met backoff bij 5xx.
+        client: optionele httpx-client voor connection-reuse en rate limiting.
     """
     url = f"{ORI_ELASTIC_BASE}/{index}/_search"
-    response = httpx.post(
-        url,
-        json=body,
-        headers={"User-Agent": USER_AGENT, "Content-Type": "application/json"},
-        timeout=timeout,
-    )
+    headers = {"User-Agent": USER_AGENT, "Content-Type": "application/json"}
+    if client is not None:
+        response = client.post(url, json=body, headers=headers, timeout=timeout)
+    else:
+        response = httpx.post(url, json=body, headers=headers, timeout=timeout)
     response.raise_for_status()
     return response.json()
 
 
-def fetch_persons_for_gemeente(gemeente_id: str) -> list[dict[str, Any]]:
-    """Haal alle personen (raadsleden, wethouders, burgemeester) voor een gemeente op.
+def _scan_all(
+    index: str,
+    query: dict[str, Any],
+    *,
+    page_size: int = PAGE_SIZE,
+    client: httpx.Client | None = None,
+    rate_limit_delay: float = RATE_LIMIT_DELAY,
+) -> list[dict[str, Any]]:
+    """Haal alle hits op via `from`/`size` paginatie tot `total`."""
+    hits: list[dict[str, Any]] = []
+    body = {"size": page_size, "from": 0, "query": query, "sort": ["_doc"]}
+    while True:
+        response = search(index, body, client=client)
+        page = response.get("hits", {}).get("hits", [])
+        if not page:
+            break
+        hits.extend(page)
+        if len(page) < page_size:
+            break
+        body["from"] = body["from"] + page_size  # type: ignore[operator]
+        # ES staat default max 10000 from+size toe.
+        if body["from"] >= 10000:
+            logger.warning("Bereikt max ES from=10000 voor index %s; stop met scrollen", index)
+            break
+        if rate_limit_delay:
+            time.sleep(rate_limit_delay)
+    return hits
 
-    Args:
-        gemeente_id: Popolo organisation-id zoals ORI die hanteert,
-            bijv. ``"ori_amsterdam"``.
 
-    TODO:
-    - Filter ES-query op ``has_organization.id``.
-    - Map Popolo-velden naar polder-records:
-      - person.name -> polder personen.<slug>.naam
-      - membership.role -> polder mandaat met post-classificatie
-        (raadslid, wethouder, burgemeester, commissielid).
-      - membership.start_date / end_date -> valid_from / valid_until.
-    - Geboortedatum: jaartal-only enforcen (polder schema-regel #6).
-    - Burgemeester-mandaten cross-checken met ROO (autoritatief voor benoeming).
+# ---------------------------------------------------------------------------
+# Cache
+# ---------------------------------------------------------------------------
+
+
+def _cache_path(gemeente_slug: str, today: str, cache_dir: Path) -> Path:
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    return cache_dir / f"{bare}-{today}.json"
+
+
+def _load_cache(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        with path.open("r", encoding="utf-8") as fh:
+            return json.load(fh)
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("Cache lezen mislukt %s: %s", path, exc)
+        return None
+
+
+def _save_cache(path: Path, data: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as fh:
+        json.dump(data, fh)
+
+
+# ---------------------------------------------------------------------------
+# Parsing
+# ---------------------------------------------------------------------------
+
+
+def _today() -> str:
+    return date.today().isoformat()
+
+
+def _ori_url(ori_id: str) -> str:
+    return f"https://id.openraadsinformatie.nl/{ori_id}"
+
+
+def _split_name(raw_name: str) -> tuple[str, str]:
+    """Splits ORI `name` veld in (family, given).
+
+    ORI levert namen meestal als `Schilderman, Susanne` (achternaam, voornaam),
+    maar soms als `Susanne Schilderman` of zelfs vol met initialen
+    (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is.
     """
-    raise NotImplementedError("ORI persons fetcher nog niet geimplementeerd.")
+    raw = (raw_name or "").strip()
+    if "," in raw:
+        family, given = raw.split(",", 1)
+        return family.strip(), given.strip()
+    # `G.C. (Gerrit) Achternaam` — laatste woord = achternaam.
+    parts = raw.split()
+    if not parts:
+        return "", ""
+    family = parts[-1]
+    given = " ".join(parts[:-1]).strip()
+    return family, given
 
 
-def main() -> int:
-    """CLI entrypoint. Niet geïmplementeerd."""
-    # TODO:
-    # 1. CLI-args: --gemeente <slug-of-id> of --all (let op: 265+ gemeenten = veel calls).
-    # 2. Lees ROO-gemeenten als autoritatieve lijst van te scrapen gemeenten.
-    # 3. fetch_persons_for_gemeente per gemeente -> map -> schrijf naar
-    #    data/personen/ en data/mandaten/<gemeente>/.
-    # 4. Wethouders-mandaten: vereisen post-records onder data/posten/<gemeente>/.
-    # Zie: https://github.com/anneschuth/polder/issues/TODO-open-raadsinformatie
-    print("polder.fetchers.open_raadsinformatie: not yet implemented", file=sys.stderr)
-    return 1
+def _initials_from_given(given: str) -> str:
+    """`Susanne` → `S.`; `Marie-Antoinette` → `M.A.`; `(Gerrit)` → ''."""
+    if not given:
+        return ""
+    cleaned = re.sub(r"\(.*?\)", " ", given)  # haal `(roepnaam)` weg
+    cleaned = unicodedata.normalize("NFKD", cleaned).encode("ascii", "ignore").decode("ascii")
+    # Pak eerste letter van elk woord/koppelteken-segment.
+    tokens = re.split(r"[\s\-]+", cleaned)
+    letters = [t[0].upper() for t in tokens if t and t[0].isalpha()]
+    if not letters:
+        return ""
+    return "".join(f"{ch}." for ch in letters)
 
 
-if __name__ == "__main__":
+def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
+    """Map ORI-Person source dict naar polder-personenrecord (zonder mandaten).
+
+    Returnt ``None`` als de persoon onbruikbaar is (geen achternaam, geen id).
+    """
+    ori_id = str(raw.get("@id") or raw.get("id") or "").strip()
+    if not ori_id:
+        return None
+    raw_name = raw.get("name") or ""
+    family_explicit = (raw.get("family_name") or "").strip()
+    family_split, given_split = _split_name(raw_name)
+    family = family_explicit or family_split
+    given = given_split
+    if not family:
+        return None
+    initials = _initials_from_given(given)
+
+    slug = slugify_person(family, initials, ori_id)
+    if not slug:
+        return None
+
+    full = f"{given} {family}".strip() if given else family
+    name_block: dict[str, Any] = {
+        "full": full,
+        "family": family,
+    }
+    if given:
+        name_block["given"] = given
+    if initials:
+        name_block["initials"] = initials
+
+    record: dict[str, Any] = {
+        "id": f"person:{slug}",
+        "identifiers": {},
+        "name": name_block,
+    }
+    return record
+
+
+def build_mandaat(
+    *,
+    raw_membership: dict[str, Any],
+    gemeente_slug: str,
+    today: str | None = None,
+) -> dict[str, Any] | None:
+    """Map een ORI Membership naar polder-mandaat.
+
+    Skipt rollen die geen polder-classificatie hebben (zie
+    ``ROLE_TO_CLASSIFICATION``).
+    """
+    role = (raw_membership.get("role") or "").strip()
+    classification = ROLE_TO_CLASSIFICATION.get(role)
+    if classification is None:
+        return None
+    today_str = today or _today()
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    org_id = f"org:gemeente-{bare}"
+    post_id = f"post:{classification}-gemeente-{bare}"
+    membership_id = str(raw_membership.get("@id") or raw_membership.get("id") or "")
+    role_label = f"{role} gemeente {bare.replace('-', ' ').title()}"
+    source_url = (
+        _ori_url(membership_id) if membership_id else f"{ORI_ELASTIC_BASE}/ori_{bare}/_search"
+    )
+    return {
+        "id": str(uuid.uuid4()),
+        "organization_id": org_id,
+        "post_id": post_id,
+        "role": role_label,
+        # ORI Membership heeft geen start_date in elastic. Gebruik vandaag als
+        # ondergrens; downstream-fetchers (Allmanak, Kiesraad) kunnen dit
+        # verbeteren via merge.
+        "start_date": today_str,
+        "end_date": None,
+        "sources": [
+            {
+                "id": SOURCE_ID,
+                "url": source_url,
+                "retrieved": today_str,
+            }
+        ],
+    }
+
+
+def person_to_polder_record(
+    person_raw: dict[str, Any],
+    memberships_raw: list[dict[str, Any]],
+    *,
+    gemeente_slug: str,
+    today: str | None = None,
+) -> dict[str, Any] | None:
+    """Combineer Person + Memberships tot een polder-record."""
+    record = parse_person(person_raw)
+    if record is None:
+        return None
+    today_str = today or _today()
+    ori_id = str(person_raw.get("@id") or person_raw.get("id") or "")
+
+    mandaten: list[dict[str, Any]] = []
+    for ms in memberships_raw:
+        mandaat = build_mandaat(
+            raw_membership=ms, gemeente_slug=gemeente_slug, today=today_str
+        )
+        if mandaat is not None:
+            mandaten.append(mandaat)
+    if not mandaten:
+        # Geen polder-relevant mandaat → laat persoon weg.
+        return None
+    record["mandaten"] = mandaten
+    record["sources"] = [
+        {
+            "id": SOURCE_ID,
+            "url": _ori_url(ori_id),
+            "retrieved": today_str,
+        }
+    ]
+    return record
+
+
+# ---------------------------------------------------------------------------
+# Fetch
+# ---------------------------------------------------------------------------
+
+
+def fetch_persons_for_gemeente(
+    gemeente_slug: str,
+    *,
+    cache_dir: Path | None = None,
+    today: str | None = None,
+    client: httpx.Client | None = None,
+    use_cache: bool = True,
+) -> list[dict[str, Any]]:
+    """Haal Person + Membership records voor één gemeente op.
+
+    Returnt een lijst van dicts met keys ``person`` en ``memberships`` (lijst).
+    Caching: response wordt per gemeente per dag in
+    ``_cache/ori/<gemeente>-<date>.json`` gezet.
+    """
+    today_str = today or _today()
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    index = ori_index_for_gemeente(gemeente_slug)
+
+    cache_path = (
+        _cache_path(bare, today_str, cache_dir) if cache_dir is not None else None
+    )
+    cached = _load_cache(cache_path) if use_cache and cache_path else None
+    if cached is not None:
+        logger.info("Cache hit voor %s (%s)", bare, cache_path)
+        return cached.get("results") or []
+
+    persons = _scan_all(index, {"term": {"@type": "Person"}}, client=client)
+    memberships = _scan_all(index, {"term": {"@type": "Membership"}}, client=client)
+
+    # Index memberships op `member` (= person ORI-id).
+    by_member: dict[str, list[dict[str, Any]]] = {}
+    for hit in memberships:
+        src = hit.get("_source") or {}
+        member_id = str(src.get("member") or "")
+        if not member_id:
+            continue
+        by_member.setdefault(member_id, []).append(src)
+
+    results: list[dict[str, Any]] = []
+    for hit in persons:
+        src = hit.get("_source") or {}
+        ori_id = str(src.get("@id") or hit.get("_id") or "")
+        if not ori_id:
+            continue
+        if "@id" not in src:
+            src = {**src, "@id": ori_id}
+        results.append(
+            {
+                "person": src,
+                "memberships": by_member.get(ori_id, []),
+            }
+        )
+
+    if cache_path is not None:
+        _save_cache(cache_path, {"gemeente": bare, "date": today_str, "results": results})
+
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Bootstrap posts
+# ---------------------------------------------------------------------------
+
+
+_POST_LABELS: dict[str, str] = {
+    "raadslid": "Lid van de gemeenteraad",
+    "wethouder": "Wethouder",
+    "burgemeester": "Burgemeester",
+    "gemeentesecretaris": "Gemeentesecretaris",
+    "griffier": "Raadsgriffier",
+}
+
+
+def ensure_org_and_posts(
+    data_root: Path,
+    gemeente_slug: str,
+    *,
+    today: str | None = None,
+    dry_run: bool = False,
+) -> list[Path]:
+    """Schrijf post-records voor `<role>-gemeente-<slug>` als ze nog niet
+    bestaan. De org-yaml zelf wordt aangemaakt door de ROO-fetcher; we doen
+    hier alleen posts.
+    """
+    today_str = today or _today()
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    org_id = f"org:gemeente-{bare}"
+    posts_dir = data_root / "posten" / "gemeenten" / bare
+    written: list[Path] = []
+
+    for classification, label in _POST_LABELS.items():
+        post_id = f"post:{classification}-gemeente-{bare}"
+        path = posts_dir / f"{classification}.yaml"
+        if path.exists():
+            continue
+        record = {
+            "id": post_id,
+            "organization_id": org_id,
+            "label": f"{label} {bare.replace('-', ' ').title()}",
+            "classification": classification,
+            "valid_from": "1900-01-01",
+            "valid_until": None,
+        }
+        if dry_run:
+            logger.info("DRY-RUN zou post schrijven: %s", path)
+            written.append(path)
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding="utf-8") as fh:
+            yaml.safe_dump(record, fh, sort_keys=False, allow_unicode=True)
+        written.append(path)
+    # `today_str` wordt nu niet in posts geschreven (post.schema kent geen
+    # sources), maar laat hem als parameter staan voor symmetrie met andere
+    # ensure_*-functies.
+    _ = today_str
+    return written
+
+
+# ---------------------------------------------------------------------------
+# Write / merge persons
+# ---------------------------------------------------------------------------
+
+
+def _has_active_mandaat(record: dict[str, Any]) -> bool:
+    for mandaat in record.get("mandaten") or []:
+        if mandaat.get("end_date") is None:
+            return True
+    return False
+
+
+def _target_path(out_dir: Path, record: dict[str, Any]) -> Path:
+    slug = record["id"].split(":", 1)[1]
+    sub = "current" if _has_active_mandaat(record) else "historisch"
+    return out_dir / sub / f"{slug}.yaml"
+
+
+def _merge_sources(
+    existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
+) -> list[dict[str, Any]]:
+    by_id: dict[str, dict[str, Any]] = {}
+    for src in existing or []:
+        if isinstance(src, dict) and src.get("id"):
+            by_id[src["id"]] = dict(src)
+    for src in new or []:
+        if isinstance(src, dict) and src.get("id"):
+            by_id[src["id"]] = dict(src)
+    return list(by_id.values())
+
+
+def _merge_mandaten(
+    existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
+) -> list[dict[str, Any]]:
+    by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for mandaat in existing or []:
+        if not isinstance(mandaat, dict):
+            continue
+        key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
+        by_key[key] = dict(mandaat)
+    for mandaat in new or []:
+        key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
+        if key in by_key:
+            merged = dict(by_key[key])
+            # Behoud bestaand id (uuid).
+            kept_id = by_key[key].get("id")
+            merged.update(mandaat)
+            if kept_id:
+                merged["id"] = kept_id
+            merged["sources"] = _merge_sources(
+                by_key[key].get("sources"), mandaat.get("sources")
+            )
+            by_key[key] = merged
+        else:
+            by_key[key] = dict(mandaat)
+    return sorted(by_key.values(), key=lambda m: m.get("start_date", ""))
+
+
+def merge_person(existing: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
+    """Idempotente merge: bestaande velden behouden, ORI-velden aanvullen."""
+    if not existing:
+        return dict(new)
+    merged: dict[str, Any] = dict(existing)
+    for key, value in new.items():
+        if key == "identifiers":
+            ids = dict(merged.get("identifiers") or {})
+            for k, v in (value or {}).items():
+                if v is not None and v != "":
+                    ids[k] = v
+                elif k not in ids:
+                    ids[k] = v
+            merged["identifiers"] = ids
+        elif key == "sources":
+            merged["sources"] = _merge_sources(merged.get("sources"), value)
+        elif key == "mandaten":
+            merged["mandaten"] = _merge_mandaten(merged.get("mandaten"), value)
+        elif key == "name":
+            current = dict(merged.get("name") or {})
+            for nk, nv in (value or {}).items():
+                if nv:
+                    current[nk] = nv
+            merged["name"] = current
+        else:
+            if value is not None or key not in merged:
+                merged[key] = value
+    return merged
+
+
+def _ordered_for_dump(record: dict[str, Any]) -> dict[str, Any]:
+    order = ["id", "identifiers", "name", "birth", "gender", "mandaten", "sources"]
+    out: dict[str, Any] = {}
+    for k in order:
+        if k in record:
+            out[k] = record[k]
+    for k, v in record.items():
+        if k not in out:
+            out[k] = v
+    return out
+
+
+def write_person(
+    record: dict[str, Any],
+    out_dir: Path,
+    *,
+    dry_run: bool = False,
+) -> Path:
+    target = _target_path(out_dir, record)
+    slug = record["id"].split(":", 1)[1]
+    sibling_dir = "historisch" if target.parent.name == "current" else "current"
+    sibling = out_dir / sibling_dir / f"{slug}.yaml"
+
+    existing: dict[str, Any] = {}
+    if target.exists():
+        with target.open("r", encoding="utf-8") as fh:
+            existing = yaml.safe_load(fh) or {}
+    elif sibling.exists():
+        with sibling.open("r", encoding="utf-8") as fh:
+            existing = yaml.safe_load(fh) or {}
+
+    merged = merge_person(existing, record)
+    merged = _ordered_for_dump(merged)
+    # Strip lege `identifiers`.
+    if not merged.get("identifiers"):
+        merged.pop("identifiers", None)
+
+    if dry_run:
+        print(f"DRY-RUN zou schrijven: {target}", file=sys.stderr)
+        return target
+
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with target.open("w", encoding="utf-8") as fh:
+        yaml.safe_dump(merged, fh, sort_keys=False, default_flow_style=False, allow_unicode=True)
+    if sibling.exists() and sibling != target:
+        sibling.unlink()
+    return target
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+
+def _build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="polder-fetch-ori",
+        description=(
+            "Haal raadsleden, wethouders, burgemeesters en gemeentesecretarissen "
+            "uit Open Raadsinformatie en schrijf polder-personenrecords."
+        ),
+    )
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument(
+        "--gemeente",
+        type=str,
+        help="Gemeente-slug (`utrecht`, `gemeente-utrecht`, of `org:gemeente-utrecht`).",
+    )
+    group.add_argument(
+        "--all",
+        action="store_true",
+        help="Doe alle gemeenten in data/organisaties/gemeenten/ (350+ calls; traag).",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Max aantal personen per gemeente (testen).",
+    )
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=Path("data/personen"),
+        help="Output-directory voor personen (default: data/personen).",
+    )
+    parser.add_argument(
+        "--data-root",
+        type=Path,
+        default=Path("data"),
+        help="Root van data/ voor post-bootstrap (default: data).",
+    )
+    parser.add_argument(
+        "--cache-dir",
+        type=Path,
+        default=Path("_cache/ori"),
+        help="Cache-directory (default: _cache/ori).",
+    )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Negeer en overschrijf cache.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Schrijf niets, log alleen.",
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+    )
+    return parser
+
+
+def _gemeente_slugs_from_data(data_root: Path) -> list[str]:
+    gem_dir = data_root / "organisaties" / "gemeenten"
+    if not gem_dir.exists():
+        return []
+    return sorted(p.stem for p in gem_dir.glob("*.yaml"))
+
+
+def _process_gemeente(
+    gemeente_slug: str,
+    *,
+    out_dir: Path,
+    data_root: Path,
+    cache_dir: Path,
+    use_cache: bool,
+    dry_run: bool,
+    limit: int | None,
+    today: str,
+    client: httpx.Client | None,
+) -> tuple[int, int]:
+    bare = _normalize_gemeente_slug(gemeente_slug)
+    logger.info("ORI-fetch voor gemeente %s", bare)
+    ensure_org_and_posts(data_root, bare, today=today, dry_run=dry_run)
+
+    raw = fetch_persons_for_gemeente(
+        bare,
+        cache_dir=cache_dir,
+        today=today,
+        client=client,
+        use_cache=use_cache,
+    )
+    if limit is not None:
+        raw = raw[:limit]
+
+    n_current = 0
+    n_historisch = 0
+    for entry in raw:
+        record = person_to_polder_record(
+            entry["person"], entry.get("memberships") or [], gemeente_slug=bare, today=today
+        )
+        if record is None:
+            continue
+        target = write_person(record, out_dir, dry_run=dry_run)
+        if target.parent.name == "current":
+            n_current += 1
+        else:
+            n_historisch += 1
+    return n_current, n_historisch
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = _build_parser()
+    args = parser.parse_args(argv)
+    logging.basicConfig(
+        level=logging.DEBUG if args.verbose else logging.INFO,
+        format="%(asctime)s %(name)s %(levelname)s %(message)s",
+    )
+    today = _today()
+
+    if args.all:
+        gemeenten = _gemeente_slugs_from_data(args.data_root)
+        if not gemeenten:
+            print("Geen gemeenten gevonden in data/organisaties/gemeenten/", file=sys.stderr)
+            return 1
+    else:
+        gemeenten = [args.gemeente]
+
+    total_c = total_h = 0
+    with httpx.Client(timeout=HTTP_TIMEOUT, headers={"User-Agent": USER_AGENT}) as client:
+        for slug in gemeenten:
+            try:
+                c, h = _process_gemeente(
+                    slug,
+                    out_dir=args.out,
+                    data_root=args.data_root,
+                    cache_dir=args.cache_dir,
+                    use_cache=not args.no_cache,
+                    dry_run=args.dry_run,
+                    limit=args.limit,
+                    today=today,
+                    client=client,
+                )
+            except httpx.HTTPError as exc:
+                logger.error("ORI-fetch faalde voor %s: %s", slug, exc)
+                continue
+            total_c += c
+            total_h += h
+            time.sleep(RATE_LIMIT_DELAY)
+
+    print(
+        f"Wrote {total_c} current + {total_h} historisch persoon-records to {args.out}",
+        file=sys.stderr,
+    )
+    return 0
+
+
+if __name__ == "__main__":  # pragma: no cover
     raise SystemExit(main())

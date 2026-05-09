@@ -1,5 +1,9 @@
 id: org:prov-ge
 type: provincie
+identifiers:
+  oin: 00000001001825100000
+  kvk: '51468751'
+  tooi: https://identifier.overheid.nl/tooi/id/provincie/pv25
 classification: provincie
 parent_id: null
 names:
@@ -15,3 +19,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/archive/exportOO.xml
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
