@@ -1,0 +1,70 @@
+[
+  {
+    "type": "person_post",
+    "person_name": "drs. M. de Boer",
+    "post_id": "post:sg-min-bzk",
+    "classification": "abd-tmg",
+    "bron_pagina_nummer": 1,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.82,
+    "evidence": "bovenste box op pagina 1, label 'Secretaris-Generaal'"
+  },
+  {
+    "type": "org_structure",
+    "parent_id": "org:min-bzk",
+    "child_name": "DG Bestuur en Wonen",
+    "bron_pagina_nummer": 1,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.94,
+    "evidence": "eerste DG-box links onder de SG, pagina 1"
+  },
+  {
+    "type": "person_post",
+    "person_name": "mr. K. Jansen",
+    "post_id": "post:dg-bestuur-wonen-min-bzk",
+    "classification": "abd-tmg",
+    "bron_pagina_nummer": 1,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.78,
+    "evidence": "DG-box links, pagina 1, naam onder titel"
+  },
+  {
+    "type": "org_structure",
+    "parent_id": "org:min-bzk-dg-bestuur-wonen",
+    "child_name": "Directie Wonen",
+    "bron_pagina_nummer": 1,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.9,
+    "evidence": "subbox links onder DG Bestuur en Wonen, pagina 1"
+  },
+  {
+    "type": "person_post",
+    "person_name": "drs. P. van Dijk",
+    "post_id": "post:directeur-wonen-min-bzk",
+    "classification": "abd-directeur",
+    "bron_pagina_nummer": 1,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.74,
+    "evidence": "subbox 'Directie Wonen', pagina 1"
+  },
+  {
+    "type": "person_post",
+    "person_name": "ing. S. Bakker",
+    "post_id": "post:afdelingshoofd-ict-beleid-min-bzk",
+    "classification": "abd-afdelingshoofd",
+    "bron_pagina_nummer": 2,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.7,
+    "evidence": "rij onder DG Overheidsorganisatie, pagina 2"
+  },
+  {
+    "type": "person_post",
+    "person_name": "drs. F. Hassan",
+    "post_id": "post:projectleider-digitale-identiteit-min-bzk",
+    "classification": "abd-projectleider",
+    "bron_pagina_nummer": 2,
+    "bron_url": "https://www.rijksoverheid.nl/.../organogram-bzk-2026-04.pdf",
+    "confidence": 0.68,
+    "evidence": "tweede box op pagina 2, label 'Projectleider Digitale Identiteit'"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "matched_id": "person:jansen-jp-1965",
+  "proposed_id": null,
+  "confidence": 0.92,
+  "reasoning": "Family exact (1.0) + initials J.P. exact (1.0) + role-context match (boost 0.05). Geen birthyear in input, dus birth-score blijft 0.5 en final confidence is gecapped op 0.85 plus context-boost.",
+  "alternative_candidates": [
+    {
+      "id": "person:jansen-h-1958",
+      "score": 0.62,
+      "reason": "Family match maar initials verschillen (H. vs J.P.)."
+    }
+  ]
+}

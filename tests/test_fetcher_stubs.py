@@ -15,7 +15,6 @@ import pytest
 STUB_MODULES = [
     "tooi",
     "koop_sru",
-    "abd_organogrammen",
     "kiesraad",
 ]
 
