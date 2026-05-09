@@ -83,6 +83,25 @@ def _slugify(value: str) -> str:
     return cleaned.strip("-")
 
 
+def _normalize_id(raw_id: str | None, prefix: str) -> str | None:
+    """Normaliseer een `org:`/`post:`/`person:` id naar lowercase ascii. Strip
+    ongeldige characters. Faal-veilig: returns None als raw leeg is.
+    """
+    if not raw_id:
+        return None
+    s = raw_id.strip()
+    if not s:
+        return None
+    if s.startswith(f"{prefix}:"):
+        body = s[len(prefix) + 1 :]
+    else:
+        body = s
+    body = _slugify(body)
+    if not body:
+        return None
+    return f"{prefix}:{body}"
+
+
 def _today_iso() -> str:
     return date.today().isoformat()
 
@@ -130,20 +149,36 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
     Als geboortejaar ontbreekt, vervalt het achtervoegsel. Initialen op basis
     van eerste letters van given-names voor de familienaam.
     """
-    parts = [p for p in re.split(r"\s+", name_full.strip()) if p]
+    import secrets
+
+    # Strip parenthese-bijnaam ('A. (Abdeluheb) Choho' -> 'A. Choho').
+    cleaned = re.sub(r"\([^)]*\)", "", name_full).strip()
+    parts = [p for p in re.split(r"\s+", cleaned) if p]
     if not parts:
         return ""
     family = parts[-1]
     given_parts = parts[:-1]
     # Strip honorifics zoals 'drs.', 'dr.', 'mr.' uit de given-parts.
     given_parts = [p for p in given_parts if not p.lower().endswith(".")]
-    initials = "".join(p[0].lower() for p in given_parts if p)
+    # Bouw initialen uit eerste letter van elke given-part, maar alleen
+    # alfabetische karakters meenemen (haakjes en cijfers wegfilteren).
+    initials_chars = []
+    for p in given_parts:
+        if p and p[0].isalpha():
+            initials_chars.append(p[0].lower())
+    initials = "".join(initials_chars)
     family_slug = _slugify(family)
+    if not family_slug:
+        return ""
     pieces = [family_slug]
     if initials:
         pieces.append(initials)
     if birth_year is not None:
         pieces.append(str(birth_year))
+    else:
+        # Schema-eis: slug eindigt op 4-cijferig jaar, 7+-cijferig extern ID,
+        # of 8-hex UUID-fallback. Zonder geboortejaar gebruiken we 8 random hex.
+        pieces.append(secrets.token_hex(4))
     return "-".join(p for p in pieces if p)
 
 
@@ -288,8 +323,9 @@ def plan_apply(
         chain = proposal.get("organization_chain") or proposal.get(
             "organization_chain_inferred", []
         )
-        target_org_id = proposal.get("organization_id") or proposal.get(
-            "resolved_organization_id"
+        target_org_id = _normalize_id(
+            proposal.get("organization_id") or proposal.get("resolved_organization_id"),
+            "org",
         )
 
         chain_actions, chain_skip_reasons = _plan_chain(
@@ -324,7 +360,7 @@ def plan_apply(
             continue
 
         # --- Stap 2: post aanmaken indien nodig ---
-        post_id = proposal.get("post_id")
+        post_id = _normalize_id(proposal.get("post_id"), "post")
         if not post_id:
             skipped.append(
                 SkippedProposal(proposal=proposal, reasons=["geen post_id in proposal"])
@@ -410,9 +446,12 @@ def _plan_chain(
     available = set(existing)
     parent_id: str | None = None
     for entry in chain:
-        slug = entry.get("slug_proposal")
+        slug = _normalize_id(entry.get("slug_proposal"), "org")
         if not slug:
             return [], [f"chain-entry zonder slug_proposal: {entry}"]
+        # Sync de slug terug zodat _build_org_record en parent-tracking
+        # consistent zijn.
+        entry["slug_proposal"] = slug
         if slug in available:
             parent_id = slug
             continue
@@ -730,9 +769,22 @@ def load_resolved_input(input_path: Path) -> list[dict[str, Any]]:
         paths = sorted(input_path.glob("*.resolved.json"))
     else:
         paths = [input_path]
+    import logging
+
+    log = logging.getLogger("polder.apply")
     for p in paths:
-        with p.open(encoding="utf-8") as f:
-            data = json.load(f)
+        try:
+            if p.stat().st_size == 0:
+                log.warning("skip lege resolved-file: %s", p)
+                continue
+            with p.open(encoding="utf-8") as f:
+                data = json.load(f)
+        except json.JSONDecodeError as exc:
+            log.warning("skip corrupte JSON %s: %s", p, exc)
+            continue
+        except OSError as exc:
+            log.warning("kan %s niet lezen: %s", p, exc)
+            continue
         if not isinstance(data, list):
             continue
         for entry in data:
