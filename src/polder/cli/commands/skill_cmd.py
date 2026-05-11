@@ -1,15 +1,21 @@
 """`polder skill <name>` commands.
 
-Wrappers rond de bash-runners onder `scripts/`. Iedere subcommand is een
-dunne `subprocess`-call; geen Python-port van de skill-logica.
+Roepen Claude Code skills aan via `polder.llm.runner.run_skill`. Geen
+subprocess naar shell-scripts; geen `bash` afhankelijkheid.
+
+Output-pad-conventies (default `data/_staging/<bron>-<key>-<datum>.json`)
+kwamen voorheen uit `scripts/parse_*_local.sh`. Die conventies zijn hier
+geport zodat callers byte-identieke output-paden krijgen.
+
+Pre-filters (`polder.llm.prefilters`) draaien voor de `parse-*`-skills:
+input zonder personeels-signaal levert direct `[]` op zonder LLM-call.
 """
 
 from __future__ import annotations
 
 import json
+import logging
 import re
-import shutil
-import subprocess
 import unicodedata
 from datetime import date
 from pathlib import Path
@@ -17,11 +23,17 @@ from typing import Annotated
 
 import typer
 
+from polder.llm import prefilters
+from polder.llm.runner import run_skill
+from polder.llm.session import RATE_LIMIT_EXIT_CODE
+
+logger = logging.getLogger("polder.cli.skill")
+
 app = typer.Typer(
     name="skill",
     no_args_is_help=True,
     add_completion=False,
-    help="Roep een Claude Code skill aan via de scripts/-runners.",
+    help="Roep een Claude Code skill aan via de in-process runner.",
 )
 
 
@@ -30,21 +42,31 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
-def _scripts_dir() -> Path:
-    return _repo_root() / "scripts"
+def _staging_dir() -> Path:
+    return _repo_root() / "data" / "_staging"
 
 
-def _run(cmd: list[str]) -> None:
-    typer.echo(f"+ {' '.join(cmd)}", err=True)
-    proc = subprocess.run(cmd, check=False)
-    raise typer.Exit(code=proc.returncode)
+def _today() -> str:
+    return date.today().isoformat()
 
 
-def _ensure_bash() -> str:
-    bash = shutil.which("bash")
-    if not bash:
-        raise typer.BadParameter("bash niet gevonden in PATH.")
-    return bash
+def _exit_for_result(result) -> None:
+    """Map een SkillResult op een typer.Exit."""
+    if result.rate_limited:
+        typer.echo("rate-limit gedetecteerd, output NIET geschreven", err=True)
+        raise typer.Exit(code=RATE_LIMIT_EXIT_CODE)
+    if result.is_error:
+        typer.echo(f"skill-fout: {result.error_message}", err=True)
+        raise typer.Exit(code=1)
+
+
+def _write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+
+
+def _write_empty_array(path: Path) -> None:
+    _write_text(path, "[]\n")
 
 
 @app.command("review-diff")
@@ -56,12 +78,11 @@ def review_diff(
     ] = None,
 ) -> None:
     """Genereer een PR-body markdown uit een diff.json."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "review_pr_diff_local.sh"
-    cmd = [bash, str(script), str(diff_path)]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    if output is None:
+        output = _repo_root() / "dist" / "pr-body.md"
+    result = run_skill("review-pr-diff", diff_path, output=output)
+    _exit_for_result(result)
+    typer.echo(f"PR-body geschreven naar {output}", err=True)
 
 
 @app.command("parse-staatscourant")
@@ -69,16 +90,23 @@ def parse_staatscourant(
     xml_path: Annotated[Path, typer.Argument(help="KB/Staatscourant XML-bestand.")],
     output: Annotated[
         Path | None,
-        typer.Argument(help="Output JSON-pad (default: data/_staging/staatscourant-<datum>.json)."),
+        typer.Argument(help="Output JSON-pad (default: data/_staging/staatscourant-<key>-<datum>.json)."),
     ] = None,
 ) -> None:
     """Parse een Staatscourant-XML naar Membership-proposals."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "parse_staatscourant_local.sh"
-    cmd = [bash, str(script), str(xml_path)]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    if output is None:
+        base = xml_path.stem
+        output = _staging_dir() / f"staatscourant-{base}-{_today()}.json"
+
+    xml_text = xml_path.read_text(encoding="utf-8")
+    if not prefilters.staatscourant_has_signal(xml_text):
+        _write_empty_array(output)
+        typer.echo(f"pre-filter skip (geen-benoeming): {output}", err=True)
+        return
+
+    result = run_skill("parse-staatscourant", xml_path, output=output)
+    _exit_for_result(result)
+    typer.echo(f"proposals geschreven naar {output}", err=True)
 
 
 @app.command("parse-abd-nieuws")
@@ -86,36 +114,47 @@ def parse_abd_nieuws(
     html_path: Annotated[Path, typer.Argument(help="ABD-nieuwsbericht HTML-bestand.")],
     output: Annotated[
         Path | None,
-        typer.Argument(help="Output JSON-pad (default: data/_staging/abd-nieuws-<datum>.json)."),
+        typer.Argument(help="Output JSON-pad (default: data/_staging/abd-nieuws-<key>-<datum>.json)."),
     ] = None,
 ) -> None:
     """Parse een ABD-nieuwsbericht naar Membership-proposals."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "parse_abd_nieuws_local.sh"
-    cmd = [bash, str(script), str(html_path)]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    if output is None:
+        base = html_path.stem
+        output = _staging_dir() / f"abd-nieuws-{base}-{_today()}.json"
+
+    html_text = html_path.read_text(encoding="utf-8")
+    if not prefilters.abd_nieuws_has_signal(html_text):
+        _write_empty_array(output)
+        typer.echo(f"pre-filter skip (geen-benoeming-marker): {output}", err=True)
+        return
+
+    result = run_skill("parse-abd-nieuws", html_path, output=output)
+    _exit_for_result(result)
+    typer.echo(f"proposals geschreven naar {output}", err=True)
 
 
 @app.command("parse-organogram")
 def parse_organogram(
     pdf_path: Annotated[Path, typer.Argument(help="ABD organogram-PDF.")],
-    ministerie: Annotated[
-        str, typer.Argument(help="Ministerie-slug, bv `min-bzk`.")
-    ],
+    ministerie: Annotated[str, typer.Argument(help="Ministerie-slug, bv `min-bzk`.")],
     output: Annotated[
         Path | None,
         typer.Argument(help="Output JSON-pad (default: data/_staging/organogram-<min>-<datum>.json)."),
     ] = None,
 ) -> None:
     """Parse een ABD-organogram-PDF naar mandaat-proposals."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "parse_organogram_local.sh"
-    cmd = [bash, str(script), str(pdf_path), ministerie]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    if output is None:
+        output = _staging_dir() / f"organogram-{ministerie}-{_today()}.json"
+
+    abs_pdf = pdf_path.resolve()
+    prompt = (
+        f"Ministerie: {ministerie}\n"
+        f"PDF-pad: {abs_pdf}\n\n"
+        f"Lees de PDF met de Read-tool en parse het organogram volgens de skill-instructies."
+    )
+    result = run_skill("parse-organogram", prompt, output=output)
+    _exit_for_result(result)
+    typer.echo(f"proposals geschreven naar {output}", err=True)
 
 
 @app.command("entity-resolution")
@@ -126,12 +165,12 @@ def entity_resolution(
     ] = None,
 ) -> None:
     """Run de entity-resolution skill op een input-JSON."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "run_skill.sh"
-    cmd = [bash, str(script), "entity-resolution", str(input_path)]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    result = run_skill("entity-resolution", input_path, output=output)
+    _exit_for_result(result)
+    if output is None:
+        typer.echo(result.text)
+    else:
+        typer.echo(f"output geschreven naar {output}", err=True)
 
 
 def _name_filename_slug(name: str) -> str:
@@ -209,16 +248,11 @@ def lookup_person(
             "organization": organization,
         },
         "candidates": candidates,
-        "retrieved": date.today().isoformat(),
+        "retrieved": _today(),
     }
 
     if out is None:
-        out = (
-            _repo_root()
-            / "data"
-            / "_staging"
-            / f"lookup-{_name_filename_slug(name)}.json"
-        )
+        out = _staging_dir() / f"lookup-{_name_filename_slug(name)}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", encoding="utf-8") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=2)
@@ -239,9 +273,11 @@ def resolve_staging(
     ] = None,
 ) -> None:
     """Match staging-proposals aan bestaande records in `data/`."""
-    bash = _ensure_bash()
-    script = _scripts_dir() / "resolve_staging_local.sh"
-    cmd = [bash, str(script), str(input_path)]
-    if output is not None:
-        cmd.append(str(output))
-    _run(cmd)
+    if output is None:
+        output = input_path.with_suffix("").with_suffix(".resolved.json")
+        if input_path.suffix == ".json":
+            output = input_path.parent / f"{input_path.stem}.resolved.json"
+
+    result = run_skill("resolve-staging-proposals", input_path, output=output)
+    _exit_for_result(result)
+    typer.echo(f"resolved naar {output}", err=True)

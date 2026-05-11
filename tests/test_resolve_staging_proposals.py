@@ -154,4 +154,4 @@ def test_cli_has_resolve_staging_subcommand() -> None:
     )
     content = cli_file.read_text(encoding="utf-8")
     assert '"resolve-staging"' in content
-    assert "resolve_staging_local.sh" in content
+    assert "resolve-staging-proposals" in content

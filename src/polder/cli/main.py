@@ -23,6 +23,7 @@ import typer
 
 from polder.cli.commands import (
     apply_staging_cmd,
+    backfill_cmd,
     build_cmd,
     daily_cmd,
     diff_cmd,
@@ -81,6 +82,7 @@ list_app.command("mandaten")(list_cmd.list_mandaten)
 
 app.add_typer(fetch_cmd.app, name="fetch")
 app.add_typer(skill_cmd.app, name="skill")
+app.add_typer(backfill_cmd.app, name="backfill")
 
 
 # ---------------------------------------------------------------------------

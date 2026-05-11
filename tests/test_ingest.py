@@ -25,6 +25,7 @@ from polder.ingest import (
     RATE_LIMIT_EXIT_CODE,
     IngestBudget,
     IngestResult,
+    SkillRunResult,
     commit_changes,
     estimate_cost,
     format_dry_run_summary,
@@ -464,10 +465,16 @@ def test_estimate_cost_parse_plus_resolve() -> None:
 
 @pytest.fixture
 def cache_with_5_html(mini_root: Path) -> Path:
-    """5 fake HTML-files in abd-nieuws cache zonder staging-output."""
+    """5 fake HTML-files in abd-nieuws cache zonder staging-output.
+
+    Inhoud bevat 'directeur' zodat het pre-filter de file niet wegfiltert.
+    """
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(5):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>",
+            encoding="utf-8",
+        )
     return mini_root
 
 
@@ -511,14 +518,14 @@ def test_ingest_source_dry_run_zero_budget_plans_nothing(
 
 def test_ingest_source_real_run_stops_at_budget(cache_with_5_html: Path) -> None:
     """Met cap=2 mag de runner maar 2x worden aangeroepen."""
-    calls: list[list[str]] = []
+    calls: list[dict] = []
 
-    def fake_runner(cmd: list[str]) -> int:
-        calls.append(cmd)
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
+        calls.append({"skill_name": skill_name, "input": input_payload, "output": output})
         # Schrijf de output-staging-file aan zodat result.parsed += 1.
-        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-        out_path.write_text("[]", encoding="utf-8")
-        return 0
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     budget = IngestBudget(max_claude_calls=2)
     result = ingest_source(
@@ -685,13 +692,13 @@ def test_ingest_source_parallel_real_run_uses_pool(mini_root: Path) -> None:
 
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(8):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
     active = 0
     max_active = 0
     lock = threading.Lock()
 
-    def fake_runner(cmd: list[str]) -> int:
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
         nonlocal active, max_active
         with lock:
             active += 1
@@ -700,9 +707,9 @@ def test_ingest_source_parallel_real_run_uses_pool(mini_root: Path) -> None:
         time.sleep(0.05)
         with lock:
             active -= 1
-        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-        out_path.write_text("[]", encoding="utf-8")
-        return 0
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     result = ingest_source(
         "abd-nieuws",
@@ -727,17 +734,17 @@ def test_ingest_source_parallel_respects_budget(mini_root: Path) -> None:
     """Met cap=3 en parallel=4 worden er nog steeds maar 3 jobs gedraaid."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(6):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
-    calls: list[list[str]] = []
+    calls: list[dict] = []
     lock = __import__("threading").Lock()
 
-    def fake_runner(cmd: list[str]) -> int:
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
         with lock:
-            calls.append(cmd)
-        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-        out_path.write_text("[]", encoding="utf-8")
-        return 0
+            calls.append({"skill_name": skill_name, "output": output})
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     budget = IngestBudget(max_claude_calls=3)
     result = ingest_source(
@@ -768,28 +775,27 @@ def test_ingest_source_parallel_exception_in_one_does_not_stop_others(
 
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(5):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
     parse_calls = 0
     parse_lock = threading.Lock()
 
-    def fake_runner(cmd: list[str]) -> int:
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
         nonlocal parse_calls
-        # Tel alleen parse-calls (parse_abd_nieuws_local.sh in cmd[1]).
-        if "parse_abd_nieuws_local.sh" in " ".join(cmd):
+        if skill_name == "parse-abd-nieuws":
             with parse_lock:
                 parse_calls += 1
-            out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-            if "news-02" in str(out_path):
+            if "news-02" in str(output):
                 raise RuntimeError("fake claude crash op news-02")
-            out_path.write_text("[]", encoding="utf-8")
-            return 0
+            Path(output).parent.mkdir(parents=True, exist_ok=True)
+            Path(output).write_text("[]", encoding="utf-8")
+            return SkillRunResult(ok=True, exit_code=0)
         # resolve-call: schrijf .resolved.json companion.
-        if "resolve_staging_local.sh" in " ".join(cmd):
-            staging_path = Path(cmd[-1])
-            staging_path.with_suffix(".resolved.json").write_text("[]")
-            return 0
-        return 0
+        if skill_name == "resolve-staging-proposals":
+            Path(output).parent.mkdir(parents=True, exist_ok=True)
+            Path(output).write_text("[]", encoding="utf-8")
+            return SkillRunResult(ok=True, exit_code=0)
+        return SkillRunResult(ok=True, exit_code=0)
 
     result = ingest_source(
         "abd-nieuws",
@@ -918,34 +924,28 @@ def test_dry_run_summary_uses_explicit_model_string() -> None:
     assert "Sonnet 4.6" not in output
 
 
-def test_ingest_source_passes_model_to_runner_via_module_state(
+def test_ingest_source_passes_model_to_runner(
     mini_root: Path,
 ) -> None:
-    """`model=` argument wordt via module-level state doorgegeven aan
-    `_default_runner`, die het op zijn beurt via subprocess-env aan
-    scripts/run_skill.sh doorgeeft.
+    """`model=` argument wordt als keyword-arg aan elke skill-runner-call
+    doorgegeven.
 
-    Deze test inspecteert `polder.ingest._CURRENT_MODEL` tijdens de call;
-    parallelle workers zien dezelfde waarde omdat alle workers in één
-    `ingest_source`-call hetzelfde model gebruiken.
+    Parse + resolve op één HTML-input geeft twee runner-calls; beide moeten
+    hetzelfde model zien.
     """
-    from polder import ingest as _ingest_mod
-
     cache = mini_root / "_cache" / "abd-nieuws"
-    (cache / "news-01.html").write_text("<html/>", encoding="utf-8")
+    (cache / "news-01.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
     seen_model: list[str | None] = []
 
-    def fake_runner(cmd: list[str]) -> int:
-        seen_model.append(_ingest_mod._CURRENT_MODEL)
-        cmd_str = " ".join(cmd)
-        if "parse_abd_nieuws_local.sh" in cmd_str:
-            out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-            out_path.write_text("[]", encoding="utf-8")
-        elif "resolve_staging_local.sh" in cmd_str:
-            staging_path = Path(cmd[-1])
-            staging_path.with_suffix(".resolved.json").write_text("[]")
-        return 0
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
+        seen_model.append(model)
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        if skill_name == "parse-abd-nieuws":
+            Path(output).write_text("[]", encoding="utf-8")
+        elif skill_name == "resolve-staging-proposals":
+            Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     ingest_source(
         "abd-nieuws",
@@ -961,8 +961,6 @@ def test_ingest_source_passes_model_to_runner_via_module_state(
 
     # Parse + resolve = twee runner-calls, beide met hetzelfde model.
     assert seen_model == ["claude-opus-4-7", "claude-opus-4-7"]
-    # Na de call is _CURRENT_MODEL gerestored naar None.
-    assert _ingest_mod._CURRENT_MODEL is None
 
 
 def test_ingest_source_aborts_on_rate_limit(mini_root: Path) -> None:
@@ -970,20 +968,20 @@ def test_ingest_source_aborts_on_rate_limit(mini_root: Path) -> None:
     verder, resolve overgeslagen."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(5):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
     call_count = 0
 
-    def fake_runner(cmd: list[str]) -> int:
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
         nonlocal call_count
         call_count += 1
-        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
         # Tweede call retourneert rate-limit code; die file wordt NIET
         # geschreven (zoals run_skill.sh ook niet schrijft bij rate-limit).
         if call_count == 2:
-            return RATE_LIMIT_EXIT_CODE
-        out_path.write_text("[]", encoding="utf-8")
-        return 0
+            return SkillRunResult(ok=False, exit_code=RATE_LIMIT_EXIT_CODE)
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     result = ingest_source(
         "abd-nieuws",
@@ -1010,18 +1008,18 @@ def test_ingest_source_no_abort_on_rate_limit_keeps_going(
     """Met `abort_on_rate_limit=False` gaat de pipeline door na exit 99."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(3):
-        (cache / f"news-{i:02d}.html").write_text("<html/>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
 
     call_count = 0
 
-    def fake_runner(cmd: list[str]) -> int:
+    def fake_runner(skill_name, input_payload, *, output, model=None, **_):
         nonlocal call_count
         call_count += 1
         if call_count == 1:
-            return RATE_LIMIT_EXIT_CODE
-        out_path = next(Path(c) for c in cmd if c.endswith(".json"))
-        out_path.write_text("[]", encoding="utf-8")
-        return 0
+            return SkillRunResult(ok=False, exit_code=RATE_LIMIT_EXIT_CODE)
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        Path(output).write_text("[]", encoding="utf-8")
+        return SkillRunResult(ok=True, exit_code=0)
 
     result = ingest_source(
         "abd-nieuws",

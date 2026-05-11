@@ -75,33 +75,63 @@ COST_LOOKUP_FACTOR = 0.5
 
 @dataclass
 class IngestBudget:
-    """Hard cap op LLM-calls per pipeline-run.
+    """Hard cap op LLM-calls + dollarkosten per pipeline-run.
 
-    `max_claude_calls=None` betekent unlimited. `consume()` telt verbruikte
-    calls bij elkaar op zodat `check()` weet of er nog budget is. De
-    kosten-schatting volgt het modelnummer in `consume()`.
+    `max_claude_calls=None` en `max_cost_usd=None` betekenen unlimited.
+    `consume()` boekt één call, optioneel met de werkelijke kosten en
+    token-counts uit een SkillResult. Caller checkt na elke job of er nog
+    ruimte is via `check()`.
     """
 
     max_claude_calls: int | None = None
+    max_cost_usd: float | None = None
     used_calls: int = 0
     cost_estimate_usd: float = 0.0
+    cost_actual_usd: float = 0.0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cache_read_tokens: int = 0
+    cache_creation_tokens: int = 0
 
     def check(self) -> bool:
         """True als er nog ruimte is voor minstens één call."""
-        if self.max_claude_calls is None:
-            return True
-        return self.used_calls < self.max_claude_calls
+        if self.max_claude_calls is not None and self.used_calls >= self.max_claude_calls:
+            return False
+        if self.max_cost_usd is not None and self.cost_actual_usd >= self.max_cost_usd:
+            return False
+        return True
 
     def remaining(self) -> int | None:
         if self.max_claude_calls is None:
             return None
         return max(0, self.max_claude_calls - self.used_calls)
 
-    def consume(self, n: int = 1, *, model: str = DEFAULT_MODEL) -> None:
-        """Boek `n` calls op het verbruik en werk de kostenschatting bij."""
+    def consume(
+        self,
+        n: int = 1,
+        *,
+        model: str = DEFAULT_MODEL,
+        actual_cost_usd: float | None = None,
+        input_tokens: int = 0,
+        output_tokens: int = 0,
+        cache_read_tokens: int = 0,
+        cache_creation_tokens: int = 0,
+    ) -> None:
+        """Boek `n` calls op het verbruik.
+
+        Als `actual_cost_usd` meegegeven wordt (door een SkillResult) telt
+        die op `cost_actual_usd`. De schatting `cost_estimate_usd` blijft een
+        rough estimate voor dry-run/UX-doeleinden.
+        """
         self.used_calls += n
         per_call = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
         self.cost_estimate_usd += n * per_call
+        if actual_cost_usd is not None:
+            self.cost_actual_usd += actual_cost_usd
+        self.input_tokens += input_tokens
+        self.output_tokens += output_tokens
+        self.cache_read_tokens += cache_read_tokens
+        self.cache_creation_tokens += cache_creation_tokens
 
 
 def estimate_cost(*, parse_jobs: int, resolve_jobs: int, model: str = DEFAULT_MODEL) -> float:
@@ -304,53 +334,89 @@ def plan_resolve(staging_dir: Path, *, source: Source | None = None) -> list[Pat
 
 
 # ---------------------------------------------------------------------------
-# Subprocess-callers (one per stap, mocked in tests)
+# Skill-invocation (in-process via polder.llm, geen subprocess naar bash)
 # ---------------------------------------------------------------------------
 
 
-SubprocessRunner = Callable[[list[str]], int]
+# Een SkillRunner krijgt (skill_name, input_payload, output_path, model) en
+# retourneert een SkillResult-achtige tuple (rate_limited, is_error, cost_usd,
+# input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens).
+# Productie-implementatie roept polder.llm.runner.run_skill aan; tests
+# kunnen een mock injecteren.
+SkillRunner = Callable[..., "SkillRunResult"]
 
 
-# Module-local "current model" gelezen door _default_runner. Wordt door
-# `ingest_source` gezet voor de hele fase (alle parallelle workers gebruiken
-# hetzelfde model). Geen env-mutaties dus geen race-conditions.
-_CURRENT_MODEL: str | None = None
+@dataclass
+class SkillRunResult:
+    """Compacte adapter rond polder.llm.session.SkillResult voor ingest."""
+
+    ok: bool
+    exit_code: int
+    cost_usd: float = 0.0
+    input_tokens: int = 0
+    output_tokens: int = 0
+    cache_read_tokens: int = 0
+    cache_creation_tokens: int = 0
 
 
-def _default_runner(cmd: list[str]) -> int:
-    """Default runner: print + run + return exit-code.
+def _default_skill_runner(
+    skill_name: str,
+    input_payload: str | Path,
+    *,
+    output: Path,
+    model: str | None,
+    use_cache: bool = True,
+) -> SkillRunResult:
+    """Default: roep polder.llm.runner.run_skill aan.
 
-    Geeft `POLDER_CLAUDE_MODEL` als env-var mee aan de subprocess. Het
-    sub-shell-script (scripts/run_skill.sh, scripts/parse_*_local.sh) leest
-    die env-var en geeft hem door aan `claude --model`.
+    Vertaalt het SkillResult naar (ok, exit_code) plus telemetrie zodat
+    `IngestBudget.consume` echte cijfers krijgt.
     """
-    logger.info("+ %s", " ".join(cmd))
-    print("+ " + " ".join(cmd), file=sys.stderr, flush=True)
-    env = os.environ.copy()
-    if _CURRENT_MODEL is not None:
-        env["POLDER_CLAUDE_MODEL"] = _CURRENT_MODEL
-    proc = subprocess.run(cmd, check=False, env=env)
-    return proc.returncode
+    from polder.llm.runner import run_skill
+
+    logger.info("skill=%s input=%s output=%s", skill_name, input_payload, output)
+    result = run_skill(
+        skill_name,
+        input_payload,
+        model=model,
+        output=output,
+        use_cache=use_cache,
+    )
+    if result.rate_limited:
+        return SkillRunResult(
+            ok=False,
+            exit_code=RATE_LIMIT_EXIT_CODE,
+            cost_usd=result.cost_usd,
+            input_tokens=result.input_tokens,
+            output_tokens=result.output_tokens,
+            cache_read_tokens=result.cache_read_tokens,
+            cache_creation_tokens=result.cache_creation_tokens,
+        )
+    if result.is_error:
+        return SkillRunResult(
+            ok=False,
+            exit_code=1,
+            cost_usd=result.cost_usd,
+            input_tokens=result.input_tokens,
+            output_tokens=result.output_tokens,
+            cache_read_tokens=result.cache_read_tokens,
+            cache_creation_tokens=result.cache_creation_tokens,
+        )
+    return SkillRunResult(
+        ok=True,
+        exit_code=0,
+        cost_usd=result.cost_usd,
+        input_tokens=result.input_tokens,
+        output_tokens=result.output_tokens,
+        cache_read_tokens=result.cache_read_tokens,
+        cache_creation_tokens=result.cache_creation_tokens,
+    )
 
 
-def _scripts_dir(repo_root: Path) -> Path:
-    return repo_root / "scripts"
-
-
-def _run_with_model(cmd: list[str], runner: SubprocessRunner, model: str | None) -> int:
-    """Roep `runner` aan met model-context.
-
-    Voor de default runner: subprocess krijgt `POLDER_CLAUDE_MODEL` via
-    `subprocess.run(env=...)`. Geen mutatie van de huidige proces-env, dus
-    parallelle workers in een ThreadPoolExecutor stappen elkaar niet op de
-    tenen. `_CURRENT_MODEL` wordt op één plek gezet (in `ingest_source`,
-    voor de hele fase) en gelezen door `_default_runner`.
-
-    Test-mock-runners zien het model in `_CURRENT_MODEL`. Als ze de env
-    willen inspecteren kunnen ze `polder.ingest._CURRENT_MODEL` lezen
-    of het via een eigen wrapper meekijken.
-    """
-    return runner(cmd)
+def _empty_array(path: Path) -> None:
+    """Schrijf `[]\\n` zoals de oude bash pre-filters deden."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("[]\n", encoding="utf-8")
 
 
 def run_parse_job(
@@ -358,56 +424,63 @@ def run_parse_job(
     source: Source,
     *,
     repo_root: Path,
-    runner: SubprocessRunner = _default_runner,
+    runner: SkillRunner = _default_skill_runner,
     model: str | None = None,
-) -> tuple[bool, int]:
-    """Roep de juiste parse-skill aan via de bestaande bash-runner.
+) -> SkillRunResult:
+    """Roep de juiste parse-skill aan in-process via polder.llm.runner.
 
-    Retourneert `(ok, exit_code)`. `ok` is True als de skill een output-bestand
-    heeft geschreven met exit-code 0. `exit_code == RATE_LIMIT_EXIT_CODE` is
-    het signaal dat de claude-API rate-limit heeft gestuurd; aanroepers (ingest)
-    interpreteren dat als reden om de hele fase te stoppen.
+    Retourneert een `SkillRunResult` (oude tuple `(ok, exit_code)` zit erin
+    onder dezelfde namen). Pre-filters (`abd_nieuws_has_signal`,
+    `staatscourant_has_signal`) draaien voor de LLM-call; bij negatief
+    signaal wordt `[]` weggeschreven en geen LLM aangeroepen.
     """
-    scripts = _scripts_dir(repo_root)
-    if source == "abd-nieuws":
-        script = scripts / "parse_abd_nieuws_local.sh"
-        cmd = ["bash", str(script), str(job.input_path), str(job.output_path)]
-    elif source == "staatscourant":
-        script = scripts / "parse_staatscourant_local.sh"
-        cmd = ["bash", str(script), str(job.input_path), str(job.output_path)]
-    elif source == "organogram":
-        script = scripts / "parse_organogram_local.sh"
-        ministerie = job.extra_args[0] if job.extra_args else "unknown"
-        cmd = [
-            "bash",
-            str(script),
-            str(job.input_path),
-            ministerie,
-            str(job.output_path),
-        ]
-    else:
-        raise ValueError(f"onbekende bron: {source}")
+    del repo_root  # niet langer nodig, behouden voor signature-compat met tests
+
+    from polder.llm import prefilters
+
     job.output_path.parent.mkdir(parents=True, exist_ok=True)
-    code = _run_with_model(cmd, runner, model)
-    return code == 0, code
+
+    if source == "abd-nieuws":
+        html = job.input_path.read_text(encoding="utf-8")
+        if not prefilters.abd_nieuws_has_signal(html):
+            _empty_array(job.output_path)
+            return SkillRunResult(ok=True, exit_code=0)
+        return runner("parse-abd-nieuws", job.input_path, output=job.output_path, model=model)
+
+    if source == "staatscourant":
+        xml = job.input_path.read_text(encoding="utf-8")
+        if not prefilters.staatscourant_has_signal(xml):
+            _empty_array(job.output_path)
+            return SkillRunResult(ok=True, exit_code=0)
+        return runner("parse-staatscourant", job.input_path, output=job.output_path, model=model)
+
+    if source == "organogram":
+        ministerie = job.extra_args[0] if job.extra_args else "unknown"
+        abs_pdf = job.input_path.resolve()
+        prompt = (
+            f"Ministerie: {ministerie}\n"
+            f"PDF-pad: {abs_pdf}\n\n"
+            f"Lees de PDF met de Read-tool en parse het organogram volgens de skill-instructies."
+        )
+        return runner("parse-organogram", prompt, output=job.output_path, model=model)
+
+    raise ValueError(f"onbekende bron: {source}")
 
 
 def run_resolve_job(
     staging_path: Path,
     *,
     repo_root: Path,
-    runner: SubprocessRunner = _default_runner,
+    runner: SkillRunner = _default_skill_runner,
     model: str | None = None,
-) -> tuple[bool, int]:
-    """Roep de resolve-skill aan. Retourneert `(ok, exit_code)`.
+) -> SkillRunResult:
+    """Roep de resolve-skill aan. Retourneert een SkillRunResult.
 
     `exit_code == RATE_LIMIT_EXIT_CODE` betekent: rate-limit, fase afbreken.
     """
-    scripts = _scripts_dir(repo_root)
-    script = scripts / "resolve_staging_local.sh"
-    cmd = ["bash", str(script), str(staging_path)]
-    code = _run_with_model(cmd, runner, model)
-    return code == 0, code
+    del repo_root  # niet langer nodig
+    output = staging_path.parent / f"{staging_path.stem}.resolved.json"
+    return runner("resolve-staging-proposals", staging_path, output=output, model=model)
 
 
 # ---------------------------------------------------------------------------
@@ -523,7 +596,7 @@ def ingest_source(
     threshold: float = 0.85,
     dry_run: bool = False,
     limit: int | None = None,
-    runner: SubprocessRunner = _default_runner,
+    runner: SkillRunner = _default_skill_runner,
     budget: IngestBudget | None = None,
     parallel: int = 5,
     model: str = DEFAULT_MODEL,
@@ -531,28 +604,27 @@ def ingest_source(
 ) -> IngestResult:
     """Run parse -> resolve -> apply -> validate voor één bron.
 
-    `dry_run=True` slaat alle subprocess-calls en de echte schrijf-acties over;
-    de result-velden tonen wat de run zou hebben gedaan, inclusief geschatte
+    `dry_run=True` slaat de LLM-calls en de echte schrijf-acties over; de
+    result-velden tonen wat de run zou hebben gedaan, inclusief geschatte
     LLM-kosten in USD.
 
-    `budget` legt een hard cap op LLM-calls. Zodra `budget.check()` False
-    teruggeeft stopt de fase met `budget_hit=True` op het result. In dry-run
-    wordt het budget ook geconsumeerd zodat een `ingest_all` over meerdere
-    bronnen de cap correct doorrekent.
+    `budget` legt een hard cap op LLM-calls en (optioneel) op kosten in USD.
+    Zodra `budget.check()` False teruggeeft stopt de fase met `budget_hit=True`
+    op het result. In dry-run wordt het budget ook geconsumeerd zodat een
+    `ingest_all` over meerdere bronnen de cap correct doorrekent.
 
     `parallel` (default 5) bepaalt het aantal worker-threads voor de parse-
-    en resolve-fase. Iedere worker doet `subprocess.run` op de claude-binary,
-    dus de threads wachten vrijwel volledig op IO; `ThreadPoolExecutor` is
-    daardoor goedkoper dan `ProcessPoolExecutor`. De apply-fase blijft single-
-    threaded omdat die naar `data/` schrijft.
+    en resolve-fase. Iedere worker draait een `SkillSession` (lange-leef
+    `claude -p` stream-json proces) en wacht vooral op IO; `ThreadPoolExecutor`
+    is daardoor goedkoper dan `ProcessPoolExecutor`. De apply-fase blijft
+    single-threaded omdat die naar `data/` schrijft.
 
-    `model` wordt via env-var `POLDER_CLAUDE_MODEL` doorgegeven aan de
-    skill-runners. Default Haiku 4.5; vision-skills overrulen zelf naar Opus.
+    `model` wordt doorgegeven aan `polder.llm.runner.run_skill` en eindigt op
+    `claude -p --model`. Default Haiku 4.5; vision-skills overrulen zelf naar
+    Opus (zie `MODEL_OVERRIDES` in `polder.llm.session`).
 
     `abort_on_rate_limit` (default True): zodra één parse- of resolve-job
     `RATE_LIMIT_EXIT_CODE` retourneert breekt de pipeline de huidige fase af.
-    Voorkomt dat een rate-limited claude oneindig garbage als JSON blijft
-    stagen tot het reset-window om 22:00 Europe/Amsterdam.
     """
     if parallel < 1:
         raise ValueError(f"parallel moet >= 1 zijn, kreeg {parallel}")
@@ -561,31 +633,22 @@ def ingest_source(
     data_dir = data_dir or (repo_root / "data")
     schemas_dir = schemas_dir or (repo_root / "schemas")
 
-    # Zet het module-level "current model" zodat _default_runner het via
-    # subprocess-env kan doorgeven aan scripts/run_skill.sh. Restoren aan
-    # het einde zodat tests geen state lekken naar elkaar.
-    global _CURRENT_MODEL
-    _previous_model = _CURRENT_MODEL
-    _CURRENT_MODEL = model
-    try:
-        return _ingest_source_impl(
-            source,
-            repo_root=repo_root,
-            cache_root=cache_root,
-            staging_dir=staging_dir,
-            data_dir=data_dir,
-            schemas_dir=schemas_dir,
-            threshold=threshold,
-            dry_run=dry_run,
-            limit=limit,
-            runner=runner,
-            budget=budget,
-            parallel=parallel,
-            model=model,
-            abort_on_rate_limit=abort_on_rate_limit,
-        )
-    finally:
-        _CURRENT_MODEL = _previous_model
+    return _ingest_source_impl(
+        source,
+        repo_root=repo_root,
+        cache_root=cache_root,
+        staging_dir=staging_dir,
+        data_dir=data_dir,
+        schemas_dir=schemas_dir,
+        threshold=threshold,
+        dry_run=dry_run,
+        limit=limit,
+        runner=runner,
+        budget=budget,
+        parallel=parallel,
+        model=model,
+        abort_on_rate_limit=abort_on_rate_limit,
+    )
 
 
 def _ingest_source_impl(
@@ -599,7 +662,7 @@ def _ingest_source_impl(
     threshold: float,
     dry_run: bool,
     limit: int | None,
-    runner: SubprocessRunner,
+    runner: SkillRunner,
     budget: IngestBudget | None,
     parallel: int,
     model: str,
@@ -673,15 +736,21 @@ def _ingest_source_impl(
                 for future in as_completed(futures):
                     job = futures[future]
                     try:
-                        ok, code = future.result()
+                        outcome = future.result()
                     except Exception as exc:
                         logger.error("parse-job %s gefaald: %s", job.input_path, exc)
-                        ok, code = False, 1
-                    if code == RATE_LIMIT_EXIT_CODE:
+                        outcome = SkillRunResult(ok=False, exit_code=1)
+                    if budget is not None:
+                        budget.cost_actual_usd += outcome.cost_usd
+                        budget.input_tokens += outcome.input_tokens
+                        budget.output_tokens += outcome.output_tokens
+                        budget.cache_read_tokens += outcome.cache_read_tokens
+                        budget.cache_creation_tokens += outcome.cache_creation_tokens
+                    if outcome.exit_code == RATE_LIMIT_EXIT_CODE:
                         rate_limit_seen = True
                         result.parse_failed += 1
                         continue
-                    if ok and job.output_path.exists():
+                    if outcome.ok and job.output_path.exists():
                         result.parsed += 1
                     else:
                         result.parse_failed += 1
@@ -764,15 +833,21 @@ def _ingest_source_impl(
                 for future in as_completed(futures):
                     staging_path = futures[future]
                     try:
-                        ok, code = future.result()
+                        outcome = future.result()
                     except Exception as exc:
                         logger.error("resolve-job %s gefaald: %s", staging_path, exc)
-                        ok, code = False, 1
-                    if code == RATE_LIMIT_EXIT_CODE:
+                        outcome = SkillRunResult(ok=False, exit_code=1)
+                    if budget is not None:
+                        budget.cost_actual_usd += outcome.cost_usd
+                        budget.input_tokens += outcome.input_tokens
+                        budget.output_tokens += outcome.output_tokens
+                        budget.cache_read_tokens += outcome.cache_read_tokens
+                        budget.cache_creation_tokens += outcome.cache_creation_tokens
+                    if outcome.exit_code == RATE_LIMIT_EXIT_CODE:
                         rate_limit_seen = True
                         result.resolve_failed += 1
                         continue
-                    if ok and staging_path.with_suffix(".resolved.json").exists():
+                    if outcome.ok and staging_path.with_suffix(".resolved.json").exists():
                         result.resolved += 1
                     else:
                         result.resolve_failed += 1
@@ -842,7 +917,7 @@ def ingest_all(
     threshold: float = 0.85,
     dry_run: bool = False,
     limit: int | None = None,
-    runner: SubprocessRunner = _default_runner,
+    runner: SkillRunner = _default_skill_runner,
     budget: IngestBudget | None = None,
     parallel: int = 5,
     model: str = DEFAULT_MODEL,
@@ -953,7 +1028,7 @@ def format_dry_run_summary(
 def run_build(
     *,
     repo_root: Path,
-    runner: SubprocessRunner = _default_runner,
+    runner: SkillRunner = _default_skill_runner,
 ) -> bool:
     """Run `polder build all` via subprocess. Retourneert True bij exit 0."""
     cmd = ["uv", "run", "polder", "build", "all"]
