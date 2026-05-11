@@ -568,3 +568,77 @@ def test_cli_dry_run(
 def test_cli_requires_gemeente_or_all(monkeypatch: pytest.MonkeyPatch):
     with pytest.raises(SystemExit):
         main([])
+
+
+# ---------------------------------------------------------------------------
+# Dedup-tests (Bos-Coenraad-patroon: zelfde persoon, meerdere ORI-IDs)
+# ---------------------------------------------------------------------------
+
+
+def test_dedup_merges_same_family_given_in_same_org():
+    """Twee records voor 'Joep Bos-Coenraad' in dezelfde org -> 1 record."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record_a = {
+        "id": "person:bos-coenraad-j-5482024",
+        "name": {"family": "Bos-Coenraad", "given": "Joep", "initials": "J."},
+        "mandaten": [
+            {
+                "organization_id": "org:gemeente-utrecht",
+                "post_id": "post:raadslid-utrecht",
+                "role": "raadslid",
+                "start_date": "2014-03-19",
+            }
+        ],
+        "sources": [{"id": "ori", "url": "https://id.openraadsinformatie.nl/5482024"}],
+    }
+    record_b = {
+        "id": "person:bos-coenraad-j-7770655",
+        "name": {"family": "Bos-Coenraad", "given": "Joep", "initials": "J."},
+        "mandaten": [
+            {
+                "organization_id": "org:gemeente-utrecht",
+                "post_id": "post:raadslid-utrecht",
+                "role": "raadslid",
+                "start_date": "2022-03-30",
+            }
+        ],
+        "sources": [{"id": "ori", "url": "https://id.openraadsinformatie.nl/7770655"}],
+    }
+
+    deduped = dedup_records_for_gemeente([record_a, record_b], "org:gemeente-utrecht")
+    assert len(deduped) == 1
+    winner = deduped[0]
+    # Twee mandaten samengevoegd
+    assert len(winner["mandaten"]) == 2
+
+
+def test_dedup_keeps_different_persons_separate():
+    """Zelfde family, andere given-name -> blijven gescheiden."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record_a = {
+        "id": "person:doedens-b-2866445",
+        "name": {"family": "Doedens", "given": "Berend", "initials": "B."},
+        "sources": [{"id": "ori", "url": "https://x"}],
+    }
+    record_b = {
+        "id": "person:doedens-c-9999",
+        "name": {"family": "Doedens", "given": "Christine", "initials": "C."},
+        "sources": [{"id": "ori", "url": "https://y"}],
+    }
+    deduped = dedup_records_for_gemeente([record_a, record_b], "org:gemeente-utrecht")
+    assert len(deduped) == 2
+
+
+def test_dedup_skipt_records_zonder_given():
+    """Records zonder given-name worden niet gededupt (key ontbreekt)."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record = {
+        "id": "person:onbekend-9999",
+        "name": {"family": "Onbekend", "initials": "X."},
+        "sources": [{"id": "ori", "url": "https://x"}],
+    }
+    deduped = dedup_records_for_gemeente([record], "org:gemeente-utrecht")
+    assert len(deduped) == 1

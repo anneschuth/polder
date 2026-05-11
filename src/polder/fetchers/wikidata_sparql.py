@@ -1015,10 +1015,10 @@ def normalize_org_name(name: str | None) -> str:
 
 
 def _normalize_initials(value: str | None) -> str:
-    if not value:
-        return ""
-    cleaned = _ascii_lower(value)
-    return re.sub(r"[^a-z0-9]+", "", cleaned)
+    """Compact-vorm voor matching-keys. Zie polder.lib.initials.compact_initials."""
+    from polder.lib.initials import compact_initials
+
+    return compact_initials(value)
 
 
 def _normalize_family(value: str | None) -> str:

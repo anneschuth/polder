@@ -84,20 +84,16 @@ CATEGORIES: dict[str, Category] = {
     "no_sources_persons": Category(
         "no_sources_persons", "error", "Persoon zonder sources[] entry."
     ),
+    # Geen `no_sources_posts`: posts zijn afgeleide entiteiten zonder eigen bron.
+    # Het schema vereist geen sources op posts.
     "source_no_url_orgs": Category(
         "source_no_url_orgs", "error", "Source-entry in organisatie zonder url."
-    ),
-    "source_no_url_posts": Category(
-        "source_no_url_posts", "error", "Source-entry in post zonder url."
     ),
     "source_no_url_persons": Category(
         "source_no_url_persons", "error", "Source-entry in persoon zonder url."
     ),
     "source_no_retrieved_orgs": Category(
         "source_no_retrieved_orgs", "error", "Source-entry in organisatie zonder retrieved-datum."
-    ),
-    "source_no_retrieved_posts": Category(
-        "source_no_retrieved_posts", "error", "Source-entry in post zonder retrieved-datum."
     ),
     "source_no_retrieved_persons": Category(
         "source_no_retrieved_persons", "error", "Source-entry in persoon zonder retrieved-datum."
@@ -156,11 +152,6 @@ CATEGORIES: dict[str, Category] = {
         "Persoon heeft death.year vóór een end_date, of overleden persoon heeft actief mandaat.",
     ),
     # Review: mogelijk legitiem, vraagt om menselijke check
-    "no_sources_posts": Category(
-        "no_sources_posts",
-        "review",
-        "Post zonder sources[] entry. Vaak structureel (posts zijn afgeleid).",
-    ),
     "mandaat_after_age_100": Category(
         "mandaat_after_age_100",
         "review",
@@ -374,8 +365,9 @@ def run_audit(
 
     _check_birth_year(persons, findings)
     _check_sources(orgs, "orgs", findings)
-    _check_sources(posts, "posts", findings)
     _check_sources(persons, "persons", findings)
+    # Posts hebben geen sources volgens schema: ze zijn afgeleid uit
+    # mandaten en organisaties. _check_sources slaan we daarom over.
     _check_person_name(persons, findings)
     _check_placeholders(orgs, "orgs", findings)
     _check_placeholders(posts, "posts", findings)

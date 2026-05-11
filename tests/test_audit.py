@@ -583,7 +583,6 @@ def test_categories_dict_covers_known_categories() -> None:
         "implausible_birth_year",
         "birth_year_not_int",
         "no_sources_persons",
-        "no_sources_posts",
         "no_sources_orgs",
         "confidence_out_of_range",
         "mandaat_org_post_mismatch",

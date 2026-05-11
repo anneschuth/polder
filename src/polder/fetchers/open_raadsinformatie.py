@@ -645,6 +645,68 @@ def _ordered_for_dump(record: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def _dedup_key(record: dict[str, Any], organization_id: str | None) -> tuple[str, str, str] | None:
+    """Bouw dedup-sleutel `(family, given-lower, organization_id)`.
+
+    Twee records met dezelfde sleutel zijn waarschijnlijk dezelfde persoon
+    (zelfde familienaam + voornaam in dezelfde gemeente).
+
+    Returnt None als één van de drie velden ontbreekt; dat record is niet
+    deduplicate-baar.
+    """
+    name = record.get("name") or {}
+    family = (name.get("family") or "").strip().lower()
+    given = (name.get("given") or "").strip().lower()
+    if not family or not given or not organization_id:
+        return None
+    return (family, given, organization_id)
+
+
+def dedup_records_for_gemeente(
+    records: list[dict[str, Any]],
+    organization_id: str,
+) -> list[dict[str, Any]]:
+    """Merge records met dezelfde (family, given) binnen één gemeente.
+
+    Voorkomt het Bos-Coenraad-patroon (3 ORI-IDs voor dezelfde persoon).
+    Behoudt de slug van het record met de meeste mandaten / langste initialen
+    (zie `_choose_winner`). Loser-IDs gaan in identifiers.aliases.
+    """
+    if not records:
+        return []
+    groups: dict[tuple[str, str, str], list[dict[str, Any]]] = {}
+    untouched: list[dict[str, Any]] = []
+    for rec in records:
+        key = _dedup_key(rec, organization_id)
+        if key is None:
+            untouched.append(rec)
+            continue
+        groups.setdefault(key, []).append(rec)
+
+    result: list[dict[str, Any]] = list(untouched)
+    for group in groups.values():
+        if len(group) == 1:
+            result.append(group[0])
+            continue
+        group.sort(key=_record_score, reverse=True)
+        winner = group[0]
+        for loser in group[1:]:
+            winner = merge_person(winner, loser)
+        result.append(winner)
+    return result
+
+
+def _record_score(rec: dict[str, Any]) -> tuple[int, int, int, int]:
+    """Hoger = beter. Voor dedup-winner-selectie."""
+    name = rec.get("name") or {}
+    return (
+        1 if (rec.get("birth") or {}).get("year") else 0,
+        len(str(name.get("initials") or "")),
+        len(rec.get("mandaten") or []),
+        len(rec.get("sources") or []),
+    )
+
+
 def write_person(
     record: dict[str, Any],
     out_dir: Path,
@@ -773,14 +835,29 @@ def _process_gemeente(
     if limit is not None:
         raw = raw[:limit]
 
-    n_current = 0
-    n_historisch = 0
+    organization_id = f"org:gemeente-{bare}" if not bare.startswith("gemeente-") else f"org:{bare}"
+    records: list[dict[str, Any]] = []
     for entry in raw:
         record = person_to_polder_record(
             entry["person"], entry.get("memberships") or [], gemeente_slug=bare, today=today
         )
-        if record is None:
-            continue
+        if record is not None:
+            records.append(record)
+
+    # Dedup: meerdere ORI-IDs voor dezelfde persoon (zelfde family+given+org)
+    # mergen tot één record. Voorkomt het Bos-Coenraad-patroon waar één
+    # politicus 3 aparte records kreeg.
+    before = len(records)
+    records = dedup_records_for_gemeente(records, organization_id)
+    if before != len(records):
+        logger.info(
+            "ORI dedup voor %s: %d -> %d records (%d duplicates gemerged)",
+            bare, before, len(records), before - len(records),
+        )
+
+    n_current = 0
+    n_historisch = 0
+    for record in records:
         write_person(record, out_dir, dry_run=dry_run)
         if _has_active_mandaat(record):
             n_current += 1

@@ -177,14 +177,10 @@ def _normalize_gender(value: str | None) -> str | None:
 
 
 def _normalize_initials(value: str | None) -> str | None:
-    """`M.P.`, `M.P`, `M P`, `MP` → `M.P.` (matches schema regex `^([A-Z]\\.)+$`)."""
-    if not value:
-        return None
-    cleaned = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
-    letters = re.findall(r"[A-Za-z]", cleaned)
-    if not letters:
-        return None
-    return "".join(f"{ch.upper()}." for ch in letters)
+    """Re-export van polder.lib.initials.format_initials voor backwards-compat."""
+    from polder.lib.initials import format_initials
+
+    return format_initials(value)
 
 
 def _full_name(persoon: Persoon) -> str:
