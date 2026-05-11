@@ -311,6 +311,38 @@ def _normalize_given(given: str) -> tuple[str, str | None, str | None]:
     return nickname, initials_hint, tussenvoegsel
 
 
+def _strip_family_from_name(name_string: str, family: str) -> str:
+    """Geef het stuk van `name_string` terug dat NIET de family is.
+
+    Voor 2024+ gecombineerde achternamen (zoals `family='Mulder de Vries'`)
+    werkt simpele space-splits niet — we moeten de hele family-string uit
+    name strippen. Dit retourneert wat overblijft, typisch given+tussenvoegsel
+    + eventuele parens.
+
+    Handelt ook de ORI comma-form `'Schilderman, Susanne'` af.
+    """
+    if not name_string or not family:
+        return name_string
+    raw = name_string.strip()
+
+    if "," in raw:
+        fam_part, given_part = raw.split(",", 1)
+        return given_part.strip()
+
+    # Probeer family aan het eind weg te strippen. Hou rekening met
+    # whitespace variaties en case.
+    fam_match = re.search(rf"\b{re.escape(family)}\b\s*$", raw, re.IGNORECASE)
+    if fam_match:
+        return raw[: fam_match.start()].strip()
+
+    # Family is niet aan het eind (ORI-comma-vorm met family-eerst zou hier
+    # komen, of een fout). Probeer family overal in de string weg te halen.
+    stripped = re.sub(rf"\b{re.escape(family)}\b", "", raw, flags=re.IGNORECASE).strip()
+    if stripped:
+        return stripped
+    return raw
+
+
 def _extract_tussenvoegsel(name_string: str, family: str) -> str | None:
     """Geef het tussenvoegsel terug dat tussen de roepnaam en `family` zit in `name_string`.
 
@@ -452,8 +484,17 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
         return None
     raw_name = raw.get("name") or ""
     family_explicit = (raw.get("family_name") or "").strip()
-    family_split, given_split = _split_name(raw_name)
-    family = family_explicit or family_split
+
+    # Als ORI een expliciete family_name levert (sorteer-key), gebruiken we die
+    # autoritatief. Dat is cruciaal voor 2024+ gecombineerde achternamen zoals
+    # 'Mulder de Vries' waar onze comma/space-split het niet kan raden.
+    if family_explicit:
+        family = family_explicit
+        given_split = _strip_family_from_name(raw_name, family_explicit)
+    else:
+        family_split, given_split = _split_name(raw_name)
+        family = family_split
+
     if not family:
         return None
 

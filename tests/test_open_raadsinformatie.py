@@ -818,3 +818,116 @@ def test_extract_tussenvoegsel_handles_apostroph_prefix():
     assert _extract_tussenvoegsel("Piet de Vries", "Vries") == "de"
     assert _extract_tussenvoegsel("Anna van der Burg", "Burg") == "van der"
     assert _extract_tussenvoegsel("Susanne Schilderman", "Schilderman") is None
+
+
+# ---------------------------------------------------------------------------
+# Tussenvoegsel-extractie: uitgebreide matrix
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "name,family,expected_tussenvoegsel",
+    [
+        # Klassieke patronen
+        ("Anna de Vries", "Vries", "de"),
+        ("Anna van der Berg", "Berg", "van der"),
+        ("Anna van den Bosch", "Bosch", "van den"),
+        ("Anna op de Beek", "Beek", "op de"),
+        ("Anne in 't Veld", "Veld", "in 't"),
+        ("Hugo van 't Hoff", "Hoff", "van 't"),
+        ("Anna ter Beek", "Beek", "ter"),
+        ("Anna ten Hoeve", "Hoeve", "ten"),
+        # Geen tussenvoegsel
+        ("Anna Vries", "Vries", None),
+        ("Susanne Schilderman", "Schilderman", None),
+        # Tussenvoegsel in family (niet apart extracten)
+        ("Anna de Vries", "de Vries", None),
+        ("Anne in 't Veld", "in 't Veld", None),
+        # Hyphen-family met tussenvoegsel ervoor
+        ("Anna van der Berg-Smit", "Berg-Smit", "van der"),
+        ("Pieter de Vries-Jansen", "Vries-Jansen", "de"),
+        # Hyphen-family zonder tussenvoegsel (oude huwelijksconventie)
+        ("Anna Mulder-Roelofs", "Mulder-Roelofs", None),
+        # 2024+ gecombineerde achternaam (zonder hyphen)
+        ("Anna Mulder de Vries", "Mulder de Vries", None),
+        ("Anna de Vries Mulder", "de Vries Mulder", None),
+        ("Anna van der Berg Mulder", "van der Berg Mulder", None),
+        # 2024+ gecombineerd MET expliciet tussenvoegsel in name
+        ("Anna van der Berg de Vries", "Berg de Vries", "van der"),
+        # Edge cases
+        ("", "Vries", None),
+        ("Anna Vries", "", None),
+        ("Anna", "Anna", None),
+    ],
+)
+def test_extract_tussenvoegsel_matrix(
+    name: str, family: str, expected_tussenvoegsel: str | None
+) -> None:
+    from polder.fetchers.open_raadsinformatie import _extract_tussenvoegsel
+
+    assert _extract_tussenvoegsel(name, family) == expected_tussenvoegsel
+
+
+@pytest.mark.parametrize(
+    "raw_name,family_name,expected_given,expected_tussen,expected_family",
+    [
+        # ORI-patroon: comma + tussenvoegsel achteraan
+        ("Weperen, A.M. (Alies) van", "Weperen", "Alies", "van", "Weperen"),
+        ("Berg, J.P. (Jan) van der", "Berg", "Jan", "van der", "Berg"),
+        ("Veld, A. (Anne) in 't", "Veld", "Anne", "in 't", "Veld"),
+        # ORI-patroon zonder comma (full display-form)
+        ("Henk van der Linden", "Linden", "Henk", "van der", "Linden"),
+        ("Anna de Vries", "Vries", "Anna", "de", "Vries"),
+        # ORI-patroon: comma, geen tussenvoegsel
+        ("Schilderman, Susanne", "Schilderman", "Susanne", None, "Schilderman"),
+        # 2024+ gecombineerde family-name
+        ("Anna Mulder de Vries", "Mulder de Vries", "Anna", None, "Mulder de Vries"),
+        # Comma + nickname + tussenvoegsel
+        ("Hofweegen, M.M.J. (Marjon) van", "Hofweegen", "Marjon", "van", "Hofweegen"),
+    ],
+)
+def test_parse_person_name_matrix(
+    raw_name: str,
+    family_name: str,
+    expected_given: str,
+    expected_tussen: str | None,
+    expected_family: str,
+) -> None:
+    """Volledige integratie: ORI-input → parse_person → name-record."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "test-1", "name": raw_name, "family_name": family_name}
+    rec = parse_person(raw)
+    assert rec is not None
+    name = rec["name"]
+    assert name["family"] == expected_family
+    assert name.get("given") == expected_given
+    assert name.get("tussenvoegsel") == expected_tussen
+
+
+def test_parse_person_full_includes_tussenvoegsel() -> None:
+    """`full` is `<given> <tussenvoegsel> <family>` in display-volgorde."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "1", "name": "Henk van der Linden", "family_name": "Linden"}
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["full"] == "Henk van der Linden"
+
+
+def test_parse_person_2024_compound_name_no_tussenvoegsel() -> None:
+    """2024+ kind met gecombineerde achternaam zonder hyphen: tussenvoegsel
+    blijft None want de hele samenstelling is family."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "1",
+        "name": "Anna Mulder de Vries",
+        "family_name": "Mulder de Vries",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Mulder de Vries"
+    assert rec["name"]["given"] == "Anna"
+    assert "tussenvoegsel" not in rec["name"]
+    assert rec["name"]["full"] == "Anna Mulder de Vries"
