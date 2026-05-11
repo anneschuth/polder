@@ -18,6 +18,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q126540368#P39
     retrieved: '2026-05-09'
   end_date: '2025-06-03'
+- id: mandate-post-minister-min-ezk-2024-07-02
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001708, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+  confidence: 0.95
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q126540368

@@ -21,6 +21,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q1891886#P39
     retrieved: '2026-05-09'
   end_date: '2025-06-03'
+- id: mandate-post-staatssecretaris-min-bzk-2024-07-02
+  organization_id: org:min-bzk
+  post_id: post:staatssecretaris-min-bzk
+  role: Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22511
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001712, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22511
+  confidence: 0.88
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ae84ff71-2c47-4509-9daa-5a4c76981f6a)

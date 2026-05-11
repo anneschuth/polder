@@ -104,9 +104,7 @@ class IngestBudget:
         self.cost_estimate_usd += n * per_call
 
 
-def estimate_cost(
-    *, parse_jobs: int, resolve_jobs: int, model: str = DEFAULT_MODEL
-) -> float:
+def estimate_cost(*, parse_jobs: int, resolve_jobs: int, model: str = DEFAULT_MODEL) -> float:
     """Schatting voor full-run kosten gegeven aantal parse + resolve jobs."""
     per_call = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
     parse_cost = parse_jobs * per_call
@@ -210,9 +208,7 @@ def _existing_staging_keys(staging_dir: Path, prefix: str) -> set[str]:
     return keys
 
 
-def _plan_abd_nieuws(
-    cache_root: Path, staging_dir: Path, *, limit: int | None
-) -> ParsePlan:
+def _plan_abd_nieuws(cache_root: Path, staging_dir: Path, *, limit: int | None) -> ParsePlan:
     plan = ParsePlan(source="abd-nieuws")
     src_dir = cache_root / "abd-nieuws"
     if not src_dir.exists():
@@ -229,9 +225,7 @@ def _plan_abd_nieuws(
     return plan
 
 
-def _plan_staatscourant(
-    cache_root: Path, staging_dir: Path, *, limit: int | None
-) -> ParsePlan:
+def _plan_staatscourant(cache_root: Path, staging_dir: Path, *, limit: int | None) -> ParsePlan:
     plan = ParsePlan(source="staatscourant")
     src_dir = cache_root / "staatscourant"
     if not src_dir.exists():
@@ -250,9 +244,7 @@ def _plan_staatscourant(
     return plan
 
 
-def _plan_organogram(
-    cache_root: Path, staging_dir: Path, *, limit: int | None
-) -> ParsePlan:
+def _plan_organogram(cache_root: Path, staging_dir: Path, *, limit: int | None) -> ParsePlan:
     plan = ParsePlan(source="organogram")
     src_dir = cache_root / "abd-organogrammen"
     if not src_dir.exists():
@@ -345,9 +337,7 @@ def _scripts_dir(repo_root: Path) -> Path:
     return repo_root / "scripts"
 
 
-def _run_with_model(
-    cmd: list[str], runner: SubprocessRunner, model: str | None
-) -> int:
+def _run_with_model(cmd: list[str], runner: SubprocessRunner, model: str | None) -> int:
     """Roep `runner` aan met model-context.
 
     Voor de default runner: subprocess krijgt `POLDER_CLAUDE_MODEL` via
@@ -461,9 +451,7 @@ def run_apply(
                 skipped.append(
                     SkippedProposal(
                         proposal=action.source_proposal,
-                        reasons=[
-                            f"confidence {action.confidence:.2f} < drempel {threshold:.2f}"
-                        ],
+                        reasons=[f"confidence {action.confidence:.2f} < drempel {threshold:.2f}"],
                     )
                 )
         actions = kept
@@ -512,9 +500,7 @@ def _safe_load_resolved(staging_dir: Path, *, source: Source) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 
-def _count_needs_review(
-    proposals: list[dict], *, threshold: float
-) -> int:
+def _count_needs_review(proposals: list[dict], *, threshold: float) -> int:
     """Tel proposals die boven `threshold` zitten maar als 'needs-review'
     staan gemarkeerd."""
     n = 0
@@ -627,9 +613,7 @@ def _ingest_source_impl(
     per_call_cost = COST_PER_CALL_USD.get(model, COST_PARSE_USD)
 
     # Stap 1: parse-plan
-    plan = plan_parse(
-        source, cache_root=cache_root, staging_dir=staging_dir, limit=limit
-    )
+    plan = plan_parse(source, cache_root=cache_root, staging_dir=staging_dir, limit=limit)
     if dry_run:
         if budget is not None and budget.max_claude_calls is not None:
             remaining = budget.remaining() or 0
@@ -647,8 +631,7 @@ def _ingest_source_impl(
             if planned_parse < plan.count:
                 result.budget_hit = True
                 result.notes.append(
-                    f"[dry-run] budget-cap stopt parse na {planned_parse} "
-                    f"van {plan.count} jobs"
+                    f"[dry-run] budget-cap stopt parse na {planned_parse} van {plan.count} jobs"
                 )
     else:
         # Bepaal vooraf welke jobs binnen het budget vallen — dan submit alleen
@@ -692,9 +675,7 @@ def _ingest_source_impl(
                     try:
                         ok, code = future.result()
                     except Exception as exc:
-                        logger.error(
-                            "parse-job %s gefaald: %s", job.input_path, exc
-                        )
+                        logger.error("parse-job %s gefaald: %s", job.input_path, exc)
                         ok, code = False, 1
                     if code == RATE_LIMIT_EXIT_CODE:
                         rate_limit_seen = True
@@ -785,9 +766,7 @@ def _ingest_source_impl(
                     try:
                         ok, code = future.result()
                     except Exception as exc:
-                        logger.error(
-                            "resolve-job %s gefaald: %s", staging_path, exc
-                        )
+                        logger.error("resolve-job %s gefaald: %s", staging_path, exc)
                         ok, code = False, 1
                     if code == RATE_LIMIT_EXIT_CODE:
                         rate_limit_seen = True
@@ -827,9 +806,7 @@ def _ingest_source_impl(
                 actions = [a for a in actions if a.confidence >= threshold]
                 result.applied = len(actions)
                 result.skipped = len(skipped)
-                result.needs_review = _count_needs_review(
-                    proposals, threshold=threshold
-                )
+                result.needs_review = _count_needs_review(proposals, threshold=threshold)
                 result.notes.append(
                     f"[dry-run] apply: {len(actions)} auto-mergeable boven "
                     f"threshold {threshold:.2f}, "
@@ -837,9 +814,7 @@ def _ingest_source_impl(
                 )
     else:
         try:
-            applied, skipped = run_apply(
-                staging_dir, data_dir=data_dir, threshold=threshold
-            )
+            applied, skipped = run_apply(staging_dir, data_dir=data_dir, threshold=threshold)
             result.applied = applied
             result.skipped = skipped
         except Exception as exc:
@@ -853,9 +828,7 @@ def _ingest_source_impl(
         result.notes.append("[dry-run] validate overgeslagen")
     else:
         try:
-            result.validate_ok = run_validate(
-                data_dir=data_dir, schemas_dir=schemas_dir
-            )
+            result.validate_ok = run_validate(data_dir=data_dir, schemas_dir=schemas_dir)
         except Exception as exc:
             result.validate_ok = False
             result.notes.append(f"validate-error: {exc}")
@@ -932,8 +905,7 @@ def format_dry_run_summary(
     for r in results:
         lines.append(f"[{r.source}]")
         lines.append(
-            f"  Phase 1 parse: {r.parsed} jobs, "
-            f"~${r.parse_cost_estimate_usd:.2f} ({model})"
+            f"  Phase 1 parse: {r.parsed} jobs, ~${r.parse_cost_estimate_usd:.2f} ({model})"
         )
         lines.append(
             f"  Phase 2 resolve: {r.resolved} staging-files unresolved, "
@@ -968,9 +940,7 @@ def format_dry_run_summary(
             f"Budget cap: {budget.used_calls}/{budget.max_claude_calls} "
             f"calls gepland (~${budget.cost_estimate_usd:.2f})."
         )
-    lines.append(
-        f"Totaal: {total_applied} auto-mergeable, {total_review} needs-review."
-    )
+    lines.append(f"Totaal: {total_applied} auto-mergeable, {total_review} needs-review.")
     lines.append("Run zonder --dry-run om de pipeline echt te starten.")
     return "\n".join(lines)
 

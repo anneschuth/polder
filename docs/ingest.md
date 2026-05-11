@@ -141,6 +141,56 @@ result = ingest_source("abd-nieuws", repo_root=Path("."), budget=budget)
 print(budget.used_calls, budget.cost_estimate_usd)
 ```
 
+## Modelkeuze (`--model`)
+
+Default is `claude-haiku-4-5`. Sonnet 4.6 was eerder default maar tikt vaak
+de daily rate-limit aan en is 5x duurder; Haiku haalt voor extraction-skills
+vergelijkbare nauwkeurigheid. De vision-skill `parse-organogram` overruled
+zelf naar Opus 4.7 omdat een hierarchisch organogram met Haiku te onstabiel is.
+
+```bash
+# Default: Haiku 4.5
+uv run polder ingest --source abd-nieuws --commit
+
+# Forceer Opus voor één run
+uv run polder ingest --model claude-opus-4-7 --source abd-nieuws --limit 10
+```
+
+`POLDER_CLAUDE_MODEL` is de onderliggende env-var die naar `scripts/run_skill.sh`
+en `scripts/parse_*_local.sh` gaat.
+
+## Pre-filter
+
+Voor `abd-nieuws` en `staatscourant` skipt een lichte regex-check de
+LLM-call als de input geen benoemings-marker bevat:
+
+| bron           | wat wordt gecheckt                              |
+| -------------- | ----------------------------------------------- |
+| abd-nieuws     | strip-HTML body op markers als `wordt benoemd`, |
+|                | `directeur`, `secretaris-generaal`, etc.        |
+| staatscourant  | KB-titel (`officiele-titel`/`citeertitel`/etc.) |
+|                | op `benoeming`, `ontslag`, `verlenging`, etc.   |
+
+Pre-filter-skips schrijven `[]` naar de staging-output zodat de file als
+"verwerkt" telt voor de volgende `plan_parse`. Bespaart ~30-50% van de calls
+in een typische ABD-feed.
+
+## Rate-limit afbreken (`--abort-on-rate-limit`)
+
+Als `claude --print` een rate-limit-melding teruggeeft (`Claude AI usage limit
+reached`, HTTP 429, of soortgelijk), retourneert `scripts/run_skill.sh` exit
+99 zonder de output naar staging te schrijven. `polder ingest` interpreteert
+exit 99 als signaal om de huidige fase af te breken en de overige bronnen
+over te slaan. Apply + validate van de getroffen bron draaien wel nog op het
+reeds gestagete materiaal.
+
+Zet uit met `--no-abort-on-rate-limit` als je per ongeluk een rate-limited
+sessie wilt blijven proberen (niet aanbevolen; je krijgt corrupt JSON en
+verspilt tokens).
+
+De daily rate-limit van Sonnet 4.6 reset om 22:00 Europe/Amsterdam. Tussendoor
+schakel je over op Haiku of Opus.
+
 ## Kostenraming
 
 `polder.ingest.estimate_cost(parse_jobs, resolve_jobs)` retourneert een ruwe
@@ -154,7 +204,9 @@ schatting in USD. Aannames per modelfamilie:
 
 Resolve-jobs rekenen ~1.5x mee omdat `lookup-person` regelmatig binnen de
 resolve-skill wordt aangeroepen. Voor 50 parse + 50 resolve zit je rond
-$2.20.
+$0.45 met Haiku (was $2.20 met Sonnet). Een full-run over 2906 abd-nieuws +
+568 staatscourant zit met pre-filter (~40% skip) + Haiku rond $10.50; met
+Sonnet was dat ~$87.
 
 `--dry-run` print een per-bron breakdown plus totaal:
 
@@ -162,19 +214,22 @@ $2.20.
 Ingest dry-run analyse:
 
 [abd-nieuws]
-  Phase 1 parse: 2906 jobs, ~$72.65 (Sonnet 4.6)
-  Phase 2 resolve: 12 staging-files unresolved, ~$0.45
+  Phase 1 parse: 2906 jobs, ~$14.53 (claude-haiku-4-5)
+  Phase 2 resolve: 12 staging-files unresolved, ~$0.09
   Phase 3 apply: ~28 records auto-mergeable boven threshold 0.85, ~12 needs-review
 
 [staatscourant]
-  Phase 1 parse: 568 jobs, ~$14.20 (Sonnet 4.6)
+  Phase 1 parse: 568 jobs, ~$2.84 (claude-haiku-4-5)
   Phase 2 resolve: 0 staging-files unresolved, ~$0.00
   Phase 3 apply: ~6 records auto-mergeable boven threshold 0.85, ~3 needs-review
 
-Totale geschatte kosten: ~$87.30. Wall-clock parallel=5: ~3.5-6.5 uur.
+Totale geschatte kosten: ~$17.46. Wall-clock parallel=5: ~3.5-6.5 uur.
 Totaal: 34 auto-mergeable, 15 needs-review.
 Run zonder --dry-run om de pipeline echt te starten.
 ```
+
+Met pre-filter (~30-50% skip) zakt de werkelijke kost richting ~$10. Gebruik
+`--limit` of `--max-claude-calls` voor de eerste runs om het te bewaken.
 
 Combineer met `--max-claude-calls` om te zien wat een budget zou opleveren:
 

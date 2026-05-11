@@ -76,9 +76,7 @@ def mini_root(tmp_path: Path) -> Path:
                 {"value": "Binnenlandse Zaken en Koninkrijksrelaties", "valid_from": "2010-10-14"}
             ],
             "valid_from": "2010-10-14",
-            "sources": [
-                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
         },
     )
     return root
@@ -247,9 +245,7 @@ def test_run_apply_filtert_records_onder_threshold(mini_root: Path) -> None:
     (staging / "abd-nieuws-x.resolved.json").write_text(json.dumps(payload))
 
     # threshold 0.90: alleen Hoog Confident door.
-    applied, skipped = run_apply(
-        staging, data_dir=mini_root / "data", threshold=0.90
-    )
+    applied, skipped = run_apply(staging, data_dir=mini_root / "data", threshold=0.90)
     assert applied >= 1  # nieuwe persoon + post + mandaat tellen apart
     assert skipped >= 1
 
@@ -317,9 +313,7 @@ def test_commit_changes_committeert_en_pusht(
         return FakeProc(0)
 
     monkeypatch.setattr("polder.ingest.subprocess.run", fake_run)
-    sha = commit_changes(
-        "Daily ingest test", repo_root=mini_root, push=True, branch="main"
-    )
+    sha = commit_changes("Daily ingest test", repo_root=mini_root, push=True, branch="main")
     assert sha == "abcdef1234567890"
     # Verifieer dat add, commit en push allemaal zijn geroepen.
     flat = [" ".join(c) for c in calls]
@@ -343,9 +337,7 @@ def test_ingest_cli_help() -> None:
     assert "--threshold" in result.stdout
 
 
-def test_ingest_cli_dry_run(
-    mini_root: Path, monkeypatch: pytest.MonkeyPatch
-) -> None:
+def test_ingest_cli_dry_run(mini_root: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Dry-run mag GEEN subprocess-calls maken."""
     monkeypatch.chdir(mini_root)
     # Voeg twee abd-nieuws HTMLs toe.
@@ -371,9 +363,7 @@ def test_ingest_cli_dry_run(
         return_value=mini_root,
     ):
         runner = CliRunner()
-        result = runner.invoke(
-            app, ["ingest", "--source", "abd-nieuws", "--dry-run"]
-        )
+        result = runner.invoke(app, ["ingest", "--source", "abd-nieuws", "--dry-run"])
 
     assert result.exit_code == 0, result.stdout
     assert forbidden_calls == []
@@ -403,12 +393,8 @@ def test_ingest_cli_validate_failure_blokkeert_commit(
         build_called.append(True)
         return True
 
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
-    )
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.run_build", fake_build
-    )
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source)
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.run_build", fake_build)
 
     with patch(
         "polder.cli.commands.ingest_cmd._repo_root",
@@ -577,12 +563,8 @@ def _make_result(
 
 def test_dry_run_summary_has_per_source_breakdown_and_cost() -> None:
     results = [
-        _make_result(
-            "abd-nieuws", parsed=2906, resolved=12, applied=28, needs_review=12
-        ),
-        _make_result(
-            "staatscourant", parsed=568, resolved=0, applied=6, needs_review=3
-        ),
+        _make_result("abd-nieuws", parsed=2906, resolved=12, applied=28, needs_review=12),
+        _make_result("staatscourant", parsed=568, resolved=0, applied=6, needs_review=3),
     ]
     output = format_dry_run_summary(results, threshold=0.85)
     assert "[abd-nieuws]" in output
@@ -599,9 +581,7 @@ def test_dry_run_summary_has_per_source_breakdown_and_cost() -> None:
 
 
 def test_dry_run_summary_with_budget_includes_cap_line() -> None:
-    results = [
-        _make_result("abd-nieuws", parsed=10, resolved=0, applied=0, needs_review=0)
-    ]
+    results = [_make_result("abd-nieuws", parsed=10, resolved=0, applied=0, needs_review=0)]
     budget = IngestBudget(max_claude_calls=10)
     budget.consume(10)
     output = format_dry_run_summary(results, threshold=0.85, budget=budget)
@@ -661,19 +641,11 @@ def test_cli_per_source_commits_zijn_apart(
     def fake_build(**kwargs):
         return True
 
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
-    )
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.commit_changes", fake_commit
-    )
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.run_build", fake_build
-    )
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source)
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.commit_changes", fake_commit)
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.run_build", fake_build)
 
-    with patch(
-        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
-    ):
+    with patch("polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root):
         runner = CliRunner()
         result = runner.invoke(
             app,
@@ -868,17 +840,11 @@ def test_ingest_cli_parallel_flag_doorgegeven(
 
     def fake_ingest_source(source, **kwargs):
         captured["parallel"] = kwargs.get("parallel")
-        return IngestResult(
-            source=source, parsed=0, resolved=0, applied=0, validate_ok=True
-        )
+        return IngestResult(source=source, parsed=0, resolved=0, applied=0, validate_ok=True)
 
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
-    )
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source)
 
-    with patch(
-        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
-    ):
+    with patch("polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root):
         cli = CliRunner()
         result = cli.invoke(
             app,
@@ -905,9 +871,7 @@ def test_cli_max_claude_calls_zero_dry_run_plant_niets(
     for i in range(3):
         (cache / f"x-{i}.html").write_text("<html/>")
 
-    with patch(
-        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
-    ):
+    with patch("polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root):
         runner = CliRunner()
         result = runner.invoke(
             app,
@@ -949,9 +913,7 @@ def test_dry_run_summary_uses_explicit_model_string() -> None:
             parse_cost_estimate_usd=10 * COST_PARSE_USD,
         )
     ]
-    output = format_dry_run_summary(
-        results, threshold=0.85, model="claude-opus-4-7"
-    )
+    output = format_dry_run_summary(results, threshold=0.85, model="claude-opus-4-7")
     assert "claude-opus-4-7" in output
     assert "Sonnet 4.6" not in output
 
@@ -1100,17 +1062,11 @@ def test_ingest_cli_model_flag_doorgegeven(
     def fake_ingest_source(source, **kwargs):
         captured["model"] = kwargs.get("model")
         captured["abort_on_rate_limit"] = kwargs.get("abort_on_rate_limit")
-        return IngestResult(
-            source=source, parsed=0, resolved=0, applied=0, validate_ok=True
-        )
+        return IngestResult(source=source, parsed=0, resolved=0, applied=0, validate_ok=True)
 
-    monkeypatch.setattr(
-        "polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source
-    )
+    monkeypatch.setattr("polder.cli.commands.ingest_cmd.ingest_source", fake_ingest_source)
 
-    with patch(
-        "polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root
-    ):
+    with patch("polder.cli.commands.ingest_cmd._repo_root", return_value=mini_root):
         cli = CliRunner()
         result = cli.invoke(
             app,
@@ -1142,9 +1098,9 @@ def _scripts_dir() -> Path:
 def test_parse_abd_nieuws_pre_filter_skipt_zonder_marker(tmp_path: Path) -> None:
     """HTML zonder benoeming-markers -> wrapper schrijft `[]` zonder claude-call.
 
-    We zetten POLDER_CLAUDE_MODEL niet, maar mocken `claude` niet — als de
-    wrapper toch een claude-call zou doen zou de test falen omdat `claude` ofwel
-    niet bestaat ofwel een echte API-call zou doen.
+    We zetten POLDER_CLAUDE_MODEL niet en mocken `claude` ook niet. Als de
+    wrapper toch een claude-call zou doen, zou de test falen omdat `claude`
+    ofwel niet bestaat ofwel een echte API-call zou doen.
     """
     html = tmp_path / "no-markers.html"
     html.write_text(
@@ -1158,8 +1114,7 @@ def test_parse_abd_nieuws_pre_filter_skipt_zonder_marker(tmp_path: Path) -> None
     # pre-filter moet dit alsnog overleven door claude niet aan te roepen.
     env = {"PATH": "/usr/bin:/bin"}
     proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"),
-         str(html), str(out)],
+        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"), str(html), str(out)],
         check=False,
         capture_output=True,
         text=True,
@@ -1186,20 +1141,19 @@ def test_parse_abd_nieuws_pre_filter_doorgaat_met_marker(tmp_path: Path) -> None
     stub_dir.mkdir()
     stub = stub_dir / "claude"
     stub.write_text(
-        '#!/usr/bin/env bash\n'
-        'cat >/dev/null\n'  # leesinput
+        "#!/usr/bin/env bash\n"
+        "cat >/dev/null\n"  # leesinput
         'echo \'[{"person_name":"stub"}]\'\n',
         encoding="utf-8",
     )
     stub.chmod(0o755)
 
     env = os.environ.copy()
-    env["PATH"] = f"{stub_dir}:{env.get('PATH','')}"
+    env["PATH"] = f"{stub_dir}:{env.get('PATH', '')}"
     env["CLAUDE_BIN"] = str(stub)
 
     proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"),
-         str(html), str(out)],
+        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"), str(html), str(out)],
         check=False,
         capture_output=True,
         text=True,
@@ -1219,15 +1173,14 @@ def test_parse_staatscourant_pre_filter_skipt_zonder_marker(
     xml = tmp_path / "kb.xml"
     xml.write_text(
         '<?xml version="1.0"?>'
-        '<root><officiele-titel>Mandaatbesluit Belastingdienst 2026</officiele-titel>'
-        '<body>...</body></root>',
+        "<root><officiele-titel>Mandaatbesluit Belastingdienst 2026</officiele-titel>"
+        "<body>...</body></root>",
         encoding="utf-8",
     )
     out = tmp_path / "out.json"
 
     proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_staatscourant_local.sh"),
-         str(xml), str(out)],
+        ["bash", str(_scripts_dir() / "parse_staatscourant_local.sh"), str(xml), str(out)],
         check=False,
         capture_output=True,
         text=True,
@@ -1246,8 +1199,8 @@ def test_run_skill_detects_rate_limit_in_output(tmp_path: Path) -> None:
     stub_dir.mkdir()
     stub = stub_dir / "claude"
     stub.write_text(
-        '#!/usr/bin/env bash\n'
-        'cat >/dev/null\n'
+        "#!/usr/bin/env bash\n"
+        "cat >/dev/null\n"
         'echo "Claude AI usage limit reached. Try again later."\n',
         encoding="utf-8",
     )
@@ -1272,8 +1225,7 @@ def test_run_skill_detects_rate_limit_in_output(tmp_path: Path) -> None:
     env["CLAUDE_BIN"] = str(stub)
 
     proc = subprocess.run(
-        ["bash", str(scripts_dst / "run_skill.sh"),
-         "stub-skill", str(input_file), str(out)],
+        ["bash", str(scripts_dst / "run_skill.sh"), "stub-skill", str(input_file), str(out)],
         check=False,
         capture_output=True,
         text=True,
@@ -1281,10 +1233,7 @@ def test_run_skill_detects_rate_limit_in_output(tmp_path: Path) -> None:
     )
 
     assert proc.returncode == RATE_LIMIT_EXIT_CODE, (
-        f"verwachtte {RATE_LIMIT_EXIT_CODE}, kreeg {proc.returncode}\n"
-        f"stderr={proc.stderr}"
+        f"verwachtte {RATE_LIMIT_EXIT_CODE}, kreeg {proc.returncode}\nstderr={proc.stderr}"
     )
     # Output-file mag NIET de rate-limit-tekst bevatten.
-    assert not out.exists() or "usage limit" not in out.read_text(
-        encoding="utf-8"
-    )
+    assert not out.exists() or "usage limit" not in out.read_text(encoding="utf-8")

@@ -33,6 +33,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q120640170#P39
     retrieved: '2026-05-09'
   end_date: '2026-02-23'
+- id: mandate-post-minister-min-lvvn-2024-07-02
+  organization_id: org:min-lvvn
+  post_id: post:minister-min-lvvn
+  role: Minister van Landbouw, Visserij, Voedselzekerheid en Natuur
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001708, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+  confidence: 0.97
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ed5b0339-d627-4d4e-8d65-4a9eb88cb6b0)

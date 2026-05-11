@@ -53,6 +53,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q101579497#P39
     retrieved: '2026-05-09'
   end_date: '2025-06-19'
+- id: mandate-post-staatssecretaris-min-vws-2024-07-02
+  organization_id: org:min-vws
+  post_id: post:staatssecretaris-min-vws
+  role: Staatssecretaris van Volksgezondheid, Welzijn en Sport
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22522
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001722, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22522
+  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(27b46aa9-1f94-490e-9cc1-ea7f49f84639)

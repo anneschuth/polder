@@ -72,8 +72,7 @@ def _print_result(result: IngestResult, *, dry_run: bool) -> None:
             err=True,
         )
         typer.echo(
-            f"  Apply:    {result.applied} records aangemaakt, "
-            f"{result.skipped} skipped",
+            f"  Apply:    {result.applied} records aangemaakt, {result.skipped} skipped",
             err=True,
         )
         if result.validate_ok is True:
@@ -237,14 +236,9 @@ def ingest(
         # kleinere, reviewbare commits; één rollback raakt de andere bronnen niet.
         if not dry_run and commit and result.applied > 0:
             needs_review_label = (
-                f" ({result.needs_review} needs-review)"
-                if result.needs_review
-                else ""
+                f" ({result.needs_review} needs-review)" if result.needs_review else ""
             )
-            message = (
-                f"Daily ingest {s} {today}: "
-                f"+{result.applied} records{needs_review_label}"
-            )
+            message = f"Daily ingest {s} {today}: +{result.applied} records{needs_review_label}"
             sha = commit_changes(
                 message,
                 repo_root=repo_root,
@@ -314,8 +308,7 @@ def ingest(
 
     if not commit:
         typer.echo(
-            f"Klaar: {total_applied} records, build ok. "
-            "Niet gecommit (geen --commit).",
+            f"Klaar: {total_applied} records, build ok. Niet gecommit (geen --commit).",
             err=True,
         )
         raise typer.Exit(code=0)

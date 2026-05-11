@@ -60,7 +60,7 @@ if ! command -v "$CLAUDE_BIN" >/dev/null 2>&1; then
   fi
 fi
 
-# Default model: Haiku 4.5 — een orde van grootte goedkoper dan Sonnet 4.6 en
+# Default model: Haiku 4.5. Een orde van grootte goedkoper dan Sonnet 4.6 en
 # voor de parse/resolve-skills vrijwel even accuraat. Aanroepers die een sterker
 # model nodig hebben (bv. parse_organogram_local.sh voor PDF-vision) zetten
 # POLDER_CLAUDE_MODEL voor de aanroep.
