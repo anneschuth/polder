@@ -548,10 +548,19 @@ def _resolve_parents(records: Iterable[dict[str, Any]]) -> None:
     for record in records:
         parent_roo_id = record.pop("_parent_roo_id", None)
         parent_org_id = record.pop("_parent_org_id", None)
+        own_id = record.get("id")
+        candidate: str | None = None
         if parent_org_id:
-            record["parent_id"] = parent_org_id
+            candidate = parent_org_id
         elif parent_roo_id and parent_roo_id in by_roo_id:
-            record["parent_id"] = by_roo_id[parent_roo_id]
+            candidate = by_roo_id[parent_roo_id]
+        if candidate == own_id:
+            # Self-loop: ROO levert soms een onderdeel waarvan de parent
+            # naar zichzelf resolveert. Behandel als "geen parent".
+            logger.debug("Skip self-loop parent_id voor %s", own_id)
+            candidate = None
+        if candidate is not None:
+            record["parent_id"] = candidate
         elif "parent_id" not in record:
             record["parent_id"] = None
 

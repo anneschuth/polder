@@ -679,7 +679,14 @@ def _normalize_initials_compact(initials: str | None) -> str:
 
 
 def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -> None:
-    """Detecteer cycli in parent_id-keten."""
+    """Detecteer cycli in parent_id-keten.
+
+    Rapporteert elke cycle één keer, gefingerprint op de gesorteerde set van
+    knopen in de cycle zelf (niet op approach-paden die naar de cycle leiden).
+    Zo krijgen we voor `A -> B -> C -> C` één finding op {C} (self-loop), niet
+    drie findings op A, B en C.
+    """
+    reported: set[frozenset[str]] = set()
     for start in org_parent:
         seen = []
         current = start
@@ -688,9 +695,16 @@ def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -
             seen.append(current)
             current = org_parent[current]
             if current in seen:
-                cycle = " -> ".join(seen[seen.index(current):] + [current])
+                cycle_nodes = seen[seen.index(current):] + [current]
+                fingerprint = frozenset(cycle_nodes)
+                if fingerprint in reported:
+                    break
+                reported.add(fingerprint)
+                cycle_str = " -> ".join(cycle_nodes)
+                # Key is alphabetisch eerste knoop in de cycle voor stabiliteit
+                key = sorted(fingerprint)[0]
                 findings.append(
-                    Finding("cyclic_parent_org", start, f"cycle from {start}: {cycle}")
+                    Finding("cyclic_parent_org", key, f"cycle: {cycle_str}")
                 )
                 break
             steps += 1
