@@ -833,7 +833,14 @@ def _check_mandate_length(persons: list[tuple[Path, dict]], findings: list[Findi
 def _check_mandate_evidence(
     persons: list[tuple[Path, dict]], findings: list[Finding]
 ) -> None:
-    """Apply-staging mandaten moeten een appointment of evidence_snippet hebben."""
+    """Apply-staging mandaten moeten verifieerbare evidence hebben.
+
+    Acceptabel:
+    - `appointment` veld (besluit-info), of
+    - `evidence_snippet` in een source, of
+    - source.url die naar een externe bron verwijst (URL bevat een geldig
+      domein, niet `example.invalid` of leeg).
+    """
     for p, d in persons:
         pid = d.get("id", p.name)
         for m in d.get("mandaten") or []:
@@ -841,6 +848,7 @@ def _check_mandate_evidence(
                 continue
             applied = False
             has_evidence = False
+            has_valid_url = False
             for src in m.get("sources") or []:
                 if not isinstance(src, dict):
                     continue
@@ -849,7 +857,15 @@ def _check_mandate_evidence(
                     applied = True
                 if src.get("evidence_snippet"):
                     has_evidence = True
-            if applied and not has_evidence and not m.get("appointment"):
+                url = src.get("url") or ""
+                if (
+                    isinstance(url, str)
+                    and url.startswith("http")
+                    and "example.invalid" not in url
+                    and "example.com" not in url
+                ):
+                    has_valid_url = True
+            if applied and not has_evidence and not m.get("appointment") and not has_valid_url:
                 mid = m.get("id", "?")
                 findings.append(
                     Finding(

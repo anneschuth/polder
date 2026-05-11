@@ -452,17 +452,16 @@ def test_detects_mandaat_no_sources(fake_data: Path) -> None:
 
 
 def test_detects_mandaat_evidence_missing(fake_data: Path) -> None:
-    """Apply-staging mandaat zonder appointment + zonder evidence_snippet."""
+    """Apply-staging mandaat zonder appointment + zonder valid URL = evidence-loos."""
     m = _good_mandate()
     m["sources"] = [
         {
             "id": "staatscourant",
-            "url": "https://x",
+            "url": "https://example.invalid",  # geen echte bron
             "retrieved": "2026-01-01",
             "fields": ["applied_via:apply-staging"],
         }
     ]
-    # geen appointment, geen evidence_snippet in source
     _write_person(
         fake_data,
         "ev-i-1980",
@@ -477,6 +476,33 @@ def test_detects_mandaat_evidence_missing(fake_data: Path) -> None:
 
     report = run_audit(fake_data, today="2026-05-11")
     assert "mandaat_evidence_missing" in _categories_in(report)
+
+
+def test_evidence_check_accepts_valid_url(fake_data: Path) -> None:
+    """Apply-staging mandaat MET een valid URL is OK, ook zonder appointment."""
+    m = _good_mandate()
+    m["sources"] = [
+        {
+            "id": "abd_nieuws",
+            "url": "https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/01/X",
+            "retrieved": "2026-01-01",
+            "fields": ["applied_via:apply-staging"],
+        }
+    ]
+    _write_person(
+        fake_data,
+        "ok-i-1980",
+        {
+            "id": "person:ok-i-1980",
+            "name": {"family": "Ok", "initials": "I."},
+            "birth": {"year": 1980},
+            "mandaten": [m],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "mandaat_evidence_missing" not in _categories_in(report)
 
 
 def test_verified_findings_are_filtered(fake_data: Path, tmp_path: Path) -> None:
