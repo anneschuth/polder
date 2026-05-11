@@ -591,9 +591,16 @@ def _check_bsn(items: list[tuple[Path, dict]], label: str, findings: list[Findin
 def _check_quasi_dup_persons(
     persons: list[tuple[Path, dict]], findings: list[Finding]
 ) -> None:
-    """Drie quasi-dup-checks: family+birth, family-only, initials-prefix."""
+    """Drie quasi-dup-checks: family+birth, family-only, initials-prefix.
+
+    Voor `family_no_birth` zijn we strenger geworden: alleen rapporteren als
+    er échte ambiguïteit is over of records dezelfde persoon zijn. Vier
+    duidelijk-verschillende voornamen onder dezelfde family triggert niets
+    (zes verschillende Janssens in een gemeenteraad zijn duidelijk
+    verschillende personen).
+    """
     # Indexen
-    by_family: dict[str, list[tuple[str, str | None, int | None]]] = defaultdict(list)
+    by_family: dict[str, list[tuple[str, str | None, str | None, int | None]]] = defaultdict(list)
     for p, d in persons:
         name = d.get("name") or {}
         birth = d.get("birth") or {}
@@ -601,8 +608,9 @@ def _check_quasi_dup_persons(
         if not family:
             continue
         initials = name.get("initials")
+        given = name.get("given")
         y = birth.get("year") if isinstance(birth.get("year"), int) else None
-        by_family[str(family).lower()].append((p.name, initials, y))
+        by_family[str(family).lower()].append((p.name, initials, given, y))
 
     for family, entries in by_family.items():
         if len(entries) < 2:
@@ -610,7 +618,7 @@ def _check_quasi_dup_persons(
 
         # 1. family + birth-year: zelfde sleutel
         fam_year_groups: dict[int, list[tuple[str, str | None]]] = defaultdict(list)
-        for fname, initials, y in entries:
+        for fname, initials, _given, y in entries:
             if y is not None:
                 fam_year_groups[y].append((fname, initials))
         for y, group in fam_year_groups.items():
@@ -625,42 +633,100 @@ def _check_quasi_dup_persons(
                     )
                 )
 
-        # 2. family-only met minstens een record zonder birth-year
-        without_year = [(f, i) for f, i, y in entries if y is None]
-        with_year = [(f, i) for f, i, y in entries if y is not None]
-        if without_year and (with_year or len(without_year) > 1):
-            files = sorted({f for f, _, _ in entries})
-            key = f"{family}|{'|'.join(files)}"
-            desc = ", ".join(f"{f} (initials={i!r})" for f, i, _ in entries[:4])
-            findings.append(
-                Finding(
-                    "quasi_dup_family_no_birth",
-                    key,
-                    f"({family!r}, mixed birth): {len(entries)} records -> {desc}",
+        # 2. family-only met ambigue voornamen.
+        # Voor records waar minstens 1 geen birth-year heeft EN minstens 1 paar
+        # ambigue is (zelfde given, prefix-match, of een ervan zonder given).
+        # Zonder ambiguïteit (alle voornamen duidelijk verschillend) niet rapporteren.
+        without_year = [e for e in entries if e[3] is None]
+        if without_year:
+            ambiguous_pair = _find_ambiguous_given_pair(entries)
+            if ambiguous_pair:
+                files = sorted({e[0] for e in entries})
+                key = f"{family}|{'|'.join(files)}"
+                desc = ", ".join(
+                    f"{f} (initials={i!r}, given={g!r})" for f, i, g, _ in entries[:4]
                 )
-            )
+                findings.append(
+                    Finding(
+                        "quasi_dup_family_no_birth",
+                        key,
+                        f"({family!r}, mixed birth): {len(entries)} records -> {desc}",
+                    )
+                )
 
-        # 3. initials-prefix-conflict: A's initialen zijn prefix van B's, of vice versa
-        # Stripte initials van punten + lowercase voor vergelijking.
+        # 3. initials-prefix-conflict: A's initialen zijn prefix van B's, of vice versa.
+        # Skip als de given-names duidelijk verschillen (geen prefix-match).
         normalized = [
-            (fname, _normalize_initials_compact(initials))
-            for fname, initials, _ in entries
+            (fname, _normalize_initials_compact(initials), given)
+            for fname, initials, given, _ in entries
             if initials
         ]
-        for i, (fa, ia) in enumerate(normalized):
-            for fb, ib in normalized[i + 1 :]:
+        for i, (fa, ia, ga) in enumerate(normalized):
+            for fb, ib, gb in normalized[i + 1 :]:
                 if not ia or not ib or ia == ib:
                     continue
-                if ia.startswith(ib) or ib.startswith(ia):
-                    files = sorted([fa, fb])
-                    key = f"{family}|{'|'.join(files)}"
-                    findings.append(
-                        Finding(
-                            "quasi_dup_initials_prefix",
-                            key,
-                            f"({family!r}): {fa} (initials={ia!r}) vs {fb} (initials={ib!r})",
-                        )
+                if not (ia.startswith(ib) or ib.startswith(ia)):
+                    continue
+                # Initialen-prefix-match. Maar als beide given-names bekend zijn
+                # en duidelijk verschillen, is het waarschijnlijk geen dup.
+                if ga and gb and not _given_names_compatible(ga, gb):
+                    continue
+                files = sorted([fa, fb])
+                key = f"{family}|{'|'.join(files)}"
+                findings.append(
+                    Finding(
+                        "quasi_dup_initials_prefix",
+                        key,
+                        f"({family!r}): {fa} (initials={ia!r}) vs {fb} (initials={ib!r})",
                     )
+                )
+
+
+def _given_compact(given: str | None) -> str:
+    if not given:
+        return ""
+    return re.sub(r"[^a-z]+", "", given.lower())
+
+
+def _given_names_compatible(a: str, b: str) -> bool:
+    """True als a en b waarschijnlijk dezelfde voornaam beschrijven.
+
+    Compatibel:
+    - Exact gelijk na normalisatie.
+    - Een is prefix van de ander (bv. "W." vs "Wopke", "Wim" vs "Wim H.").
+    """
+    ca = _given_compact(a)
+    cb = _given_compact(b)
+    if not ca or not cb:
+        return True  # onbekend = mogelijk compatibel
+    if ca == cb:
+        return True
+    if ca.startswith(cb) or cb.startswith(ca):
+        return True
+    return False
+
+
+def _find_ambiguous_given_pair(
+    entries: list[tuple[str, str | None, str | None, int | None]],
+) -> tuple[str, str] | None:
+    """Geef een paar (fname_a, fname_b) terug dat ambigue is qua voornaam.
+
+    Ambigu = zelfde compact-given, of prefix-match, of een ervan heeft geen
+    given-name. Records zonder family-name filtert _check_quasi_dup_persons
+    al weg, dus die zien we hier niet.
+    """
+    from itertools import combinations
+
+    for (fa, _ia, ga, _ya), (fb, _ib, gb, _yb) in combinations(entries, 2):
+        ca = _given_compact(ga)
+        cb = _given_compact(gb)
+        if not ca or not cb:
+            return (fa, fb)
+        if ca == cb:
+            return (fa, fb)
+        if ca.startswith(cb) or cb.startswith(ca):
+            return (fa, fb)
+    return None
 
 
 def _normalize_initials_compact(initials: str | None) -> str:
