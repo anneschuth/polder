@@ -271,26 +271,54 @@ def _ori_url(ori_id: str) -> str:
     return f"https://id.openraadsinformatie.nl/{ori_id}"
 
 
-def _normalize_given(given: str) -> str:
-    """Extracteer de bruikbare voornaam uit ORI-given-strings.
+def _normalize_given(given: str) -> tuple[str, str | None, str | None]:
+    """Extracteer (given, initials_hint, tussenvoegsel) uit ORI-given-strings.
 
-    ORI levert vaak `'P. (Paul)'` (initialen + roepnaam tussen haakjes), of
-    `'M.J. (Mike)'`. Voor matching is de roepnaam waardevoller dan de
-    initialen-vorm. Voor andere patronen: laat ongemoeid.
+    ORI levert vaak samengestelde given-strings die meerdere stukjes informatie
+    bevatten. We splitsen ze in drie velden zodat we niets verliezen:
 
-    - `'P. (Paul)'` → `'Paul'`
-    - `'M.J. (Mike)'` → `'Mike'`
-    - `'Paul'` → `'Paul'`
-    - `'P.'` → `'P.'`
+    - `'L.S. (Larissa)'` → `('Larissa', 'L.S.', None)`
+    - `'P. (Paul)'` → `('Paul', 'P.', None)`
+    - `'A.M. (Alies) van'` → `('Alies', 'A.M.', 'van')`
+    - `'Paul'` → `('Paul', None, None)`
+    - `'P.'` → `('P.', None, None)` (geen roepnaam, given blijft initialen)
+
+    Initials_hint is alleen niet-None als de input een expliciete
+    initialen-vorm bevatte (een token met punten of meerdere hoofdletters).
+    Het tussenvoegsel is alles wat na de haakjes nog over blijft.
     """
     if not given:
-        return given
-    m = re.search(r"\(([^)]+)\)", given)
-    if m:
-        nickname = m.group(1).strip()
-        if nickname and len(nickname) > 1:
-            return nickname
-    return given.strip()
+        return given, None, None
+    raw = given.strip()
+    if not raw:
+        return raw, None, None
+
+    m = re.search(r"\(([^)]+)\)", raw)
+    if not m:
+        return raw, None, None
+
+    nickname = m.group(1).strip()
+    if not nickname or len(nickname) <= 1:
+        return raw, None, None
+
+    prefix = raw[: m.start()].strip()
+    suffix = raw[m.end() :].strip()
+
+    # `prefix` zou typisch initialen zijn, bv "L.S." of "A.M.".
+    # Vereis tenminste één punt zodat we 'Wietse (Wietse)' niet als
+    # initialen-vorm interpreteren. Het schema-pattern is `^([A-Z]\.)+$`
+    # (alleen hoofdletters + punten), dus we maken zelf ook die vorm.
+    initials_hint: str | None = None
+    if prefix and re.fullmatch(r"(?:[A-Za-zÀ-ÿ]\.)+", prefix):
+        # Normaliseer naar `M.P.` formaat (uppercase + punten).
+        letters = re.findall(r"[A-Za-zÀ-ÿ]", prefix)
+        if letters:
+            initials_hint = "".join(f"{ch.upper()}." for ch in letters)
+
+    # `suffix` is typisch een tussenvoegsel ("van", "de", "van der").
+    tussenvoegsel = suffix or None
+
+    return nickname, initials_hint, tussenvoegsel
 
 
 def _split_name(raw_name: str) -> tuple[str, str]:
@@ -298,20 +326,20 @@ def _split_name(raw_name: str) -> tuple[str, str]:
 
     ORI levert namen meestal als `Schilderman, Susanne` (achternaam, voornaam),
     maar soms als `Susanne Schilderman` of zelfs vol met initialen
-    (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is en
-    normaliseren `'P. (Paul)'`-patronen naar de roepnaam.
+    (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is.
+    Roepnaam-normalisatie + initials-hint gebeurt in `parse_person`.
     """
     raw = (raw_name or "").strip()
     if "," in raw:
         family, given = raw.split(",", 1)
-        return family.strip(), _normalize_given(given.strip())
+        return family.strip(), given.strip()
     # `G.C. (Gerrit) Achternaam` — laatste woord = achternaam.
     parts = raw.split()
     if not parts:
         return "", ""
     family = parts[-1]
     given = " ".join(parts[:-1]).strip()
-    return family, _normalize_given(given)
+    return family, given
 
 
 _EMAIL_ROLE_PREFIXES = (
@@ -388,9 +416,14 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     family_explicit = (raw.get("family_name") or "").strip()
     family_split, given_split = _split_name(raw_name)
     family = family_explicit or family_split
-    given = given_split
     if not family:
         return None
+
+    # Splits given in (roepnaam, initials_hint, tussenvoegsel).
+    # Voor 'L.S. (Larissa)' levert dit ('Larissa', 'L.S.', None) op.
+    # Voor 'A.M. (Alies) van' levert dit ('Alies', 'A.M.', 'van') op.
+    given, initials_hint, tussenvoegsel = _normalize_given(given_split)
+
     # Fallback voor records waar ORI alleen family levert (zoals Haas-4580272):
     # probeer de voornaam uit de functionele raads-email te extraheren.
     if not given:
@@ -398,19 +431,29 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
         given_from_email, _ = _name_from_email(email, family)
         if given_from_email:
             given = given_from_email
-    initials = _initials_from_given(given)
+
+    # Initials: prefer de expliciete hint uit ORI (bv. 'L.S.') boven het
+    # afgeleide initialen-uit-roepnaam (bv. 'L.'). Dat behoudt informatie.
+    initials = initials_hint or _initials_from_given(given)
 
     slug = slugify_person(family, initials, ori_id)
     if not slug:
         return None
 
-    full = f"{given} {family}".strip() if given else family
+    # Bouw full-name: roepnaam + tussenvoegsel + family.
+    parts_full = [p for p in (given, tussenvoegsel, family) if p]
+    full = " ".join(parts_full) if parts_full else family
     name_block: dict[str, Any] = {
         "full": full,
         "family": family,
     }
     if given:
-        name_block["given"] = given
+        # Behoud tussenvoegsel in `given` als die er is, zodat we het niet
+        # verliezen bij doorrij naar andere fetchers.
+        if tussenvoegsel:
+            name_block["given"] = f"{given} {tussenvoegsel}"
+        else:
+            name_block["given"] = given
     if initials:
         name_block["initials"] = initials
 

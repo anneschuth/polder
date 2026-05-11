@@ -691,13 +691,13 @@ def test_parse_person_skips_email_if_family_mismatch():
     assert rec["name"].get("given") is None
 
 
-def test_split_name_extracts_nickname_from_parentheses():
-    """`Smeulders, P. (Paul)` → family='Smeulders', given='Paul'."""
+def test_split_name_keeps_parens_for_normalize():
+    """`_split_name` raakt parens niet aan; dat doet `_normalize_given`."""
     from polder.fetchers.open_raadsinformatie import _split_name
 
     family, given = _split_name("Smeulders, P. (Paul)")
     assert family == "Smeulders"
-    assert given == "Paul"
+    assert given == "P. (Paul)"
 
 
 def test_split_name_keeps_given_when_no_parens():
@@ -716,3 +716,68 @@ def test_split_name_handles_initials_only():
     family, given = _split_name("Smeulders, P.")
     assert family == "Smeulders"
     assert given == "P."
+
+
+def test_normalize_given_returns_nickname_initials_and_tussenvoegsel():
+    """`L.S. (Larissa)` → ('Larissa', 'L.S.', None)."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("L.S. (Larissa)")
+    assert given == "Larissa"
+    assert initials == "L.S."
+    assert tussen is None
+
+
+def test_normalize_given_extracts_tussenvoegsel():
+    """`A.M. (Alies) van` → ('Alies', 'A.M.', 'van')."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("A.M. (Alies) van")
+    assert given == "Alies"
+    assert initials == "A.M."
+    assert tussen == "van"
+
+
+def test_normalize_given_without_parens():
+    """Plain voornaam blijft ongemoeid."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("Susanne")
+    assert given == "Susanne"
+    assert initials is None
+    assert tussen is None
+
+
+def test_parse_person_preserves_initials_from_parens():
+    """Volledige integratie: ORI `name='Vlieger, L.S. (Larissa)'` → record met
+    given='Larissa' EN initials='L.S.' (NIET 'L.')."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "6065963",
+        "name": "Vlieger, L.S. (Larissa)",
+        "family_name": "Vlieger",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Vlieger"
+    assert rec["name"]["given"] == "Larissa"
+    assert rec["name"]["initials"] == "L.S."  # NIET 'L.'
+    assert rec["name"]["full"] == "Larissa Vlieger"
+
+
+def test_parse_person_preserves_tussenvoegsel():
+    """ORI `name='Weperen, A.M. (Alies) van'` → given houdt 'van', initials='A.M.'."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "7775658",
+        "name": "Weperen, A.M. (Alies) van",
+        "family_name": "Weperen",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Weperen"
+    assert rec["name"]["given"] == "Alies van"
+    assert rec["name"]["initials"] == "A.M."
+    assert rec["name"]["full"] == "Alies van Weperen"
