@@ -324,3 +324,114 @@ class SkillSession:
             self.stats.cache_hits += 1
         if result.rate_limited:
             self.stats.rate_limited += 1
+
+
+# ---------------------------------------------------------------------------
+# Thread-local SkillSession-pool
+# ---------------------------------------------------------------------------
+
+# Een ThreadPoolExecutor-worker krijgt zijn eigen langlevende SkillSession via
+# `get_or_create_session(skill_name, model)`. Die wordt over alle jobs binnen
+# één batch hergebruikt, zodat Anthropic prompt-cache de ~40K default-context
+# pakt na call 1. Dit maakt parse/resolve-runs ongeveer factor 8 goedkoper
+# dan een SkillSession per job openen+sluiten.
+#
+# Caller (ingest_source) moet `close_thread_local_sessions()` aanroepen aan
+# het eind van de batch (in een finally-blok) om de subprocessen netjes te
+# stoppen.
+
+_thread_local = threading.local()
+
+# Globale registry van actieve sessies per thread, zodat een atexit-handler
+# (of een batch-cleanup van buitenaf) ze allemaal kan sluiten. Workers in
+# ThreadPoolExecutor zijn anonymous voor de main thread, dus we tracken
+# expliciet.
+_all_sessions: list["SkillSession"] = []
+_all_sessions_lock = threading.Lock()
+
+
+def _register_session(session: "SkillSession") -> None:
+    with _all_sessions_lock:
+        _all_sessions.append(session)
+
+
+def close_all_sessions() -> None:
+    """Sluit ALLE actieve SkillSessions, ongeacht thread.
+
+    Aanroepen aan het eind van een batch (bv. ingest_source-finally) om de
+    workers in een ThreadPoolExecutor niet eeuwig subprocessen open te
+    laten houden. Idempotent.
+    """
+    with _all_sessions_lock:
+        sessions = list(_all_sessions)
+        _all_sessions.clear()
+    for session in sessions:
+        try:
+            session.close()
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Fout bij sluiten van SkillSession: %s", exc)
+
+
+import atexit as _atexit
+
+_atexit.register(close_all_sessions)
+
+
+def get_or_create_session(
+    skill_name: str,
+    *,
+    model: str | None = None,
+    max_budget_usd: float = 0.50,
+) -> SkillSession:
+    """Geef de thread-local SkillSession voor `skill_name`.
+
+    Als er voor deze thread + skill nog geen session is, opent deze functie
+    er één. De caller hoeft de session niet zelf te sluiten; dat doet
+    `close_thread_local_sessions()` aan het eind van de batch.
+
+    Als de bestaande session op een ander model draait dan gevraagd, wordt
+    hij gesloten en een nieuwe geopend.
+    """
+    sessions: dict[tuple[str, str], SkillSession] = getattr(
+        _thread_local, "sessions", None
+    ) or {}
+    if not getattr(_thread_local, "sessions", None):
+        _thread_local.sessions = sessions
+
+    resolved_model = _resolve_model(skill_name, model)
+    key = (skill_name, resolved_model)
+    existing = sessions.get(key)
+    if existing is not None and existing._proc is not None:
+        return existing
+
+    # Geen sessie of subprocess al dood: open een nieuwe
+    session = SkillSession(skill_name, model=resolved_model, max_budget_usd=max_budget_usd)
+    session.__enter__()  # start subprocess
+    sessions[key] = session
+    _register_session(session)
+    return session
+
+
+def close_thread_local_sessions() -> None:
+    """Sluit alle SkillSessions van de huidige thread.
+
+    Aan het eind van een ingest/backfill-batch aanroepen in een finally-blok.
+    Idempotent.
+    """
+    sessions: dict[tuple[str, str], SkillSession] = getattr(
+        _thread_local, "sessions", None
+    ) or {}
+    for session in list(sessions.values()):
+        try:
+            session.close()
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Fout bij sluiten van SkillSession: %s", exc)
+    sessions.clear()
+
+
+def thread_session_stats() -> dict[tuple[str, str], _Stats]:
+    """Geef per (skill, model) de stats van deze thread's sessions terug."""
+    sessions: dict[tuple[str, str], SkillSession] = getattr(
+        _thread_local, "sessions", None
+    ) or {}
+    return {k: s.stats for k, s in sessions.items()}

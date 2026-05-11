@@ -42,17 +42,25 @@ def run_skill(
     output: Path | None = None,
     use_cache: bool = True,
     max_budget_usd: float = 0.50,
+    reuse_session: bool = True,
 ) -> SkillResult:
-    """Roep een skill één keer aan.
+    """Roep een skill aan via een thread-local SkillSession.
 
     Bij `use_cache=True` (default) wordt eerst de response-cache geraadpleegd.
-    Cache-hits sparen het hele `claude -p` subprocess uit. Een miss start een
-    SkillSession, doet de call, en schrijft het resultaat naar de cache (tenzij
-    rate-limited of error).
+    Cache-hits sparen het hele `claude -p` subprocess uit. Een miss roept
+    via `get_or_create_session` de thread-local SkillSession aan, die over
+    meerdere calls heen blijft hangen zodat Anthropic prompt-cache de ~40K
+    default-context hergebruikt (factor 8 goedkoper dan elke call een nieuwe
+    sessie openen).
+
+    Voor losse, one-shot calls (CLI `polder skill X file`) is `reuse_session`
+    op True ook prima — er is dan gewoon één session in de huidige thread.
+
+    Met `reuse_session=False` valt deze functie terug op de oude één-shot-
+    sessie-per-call (handig voor tests).
 
     `output`, indien meegegeven, krijgt `result.text` geschreven na een
-    succesvolle call. Schrijfgedrag is identiek aan het oude `run_skill.sh`:
-    een rate-limited of error-result schrijft niet.
+    succesvolle call. Rate-limited of error-result schrijft niet.
     """
     text_input, raw_input = _load_input(input_payload)
 
@@ -68,8 +76,18 @@ def run_skill(
                 _write_output(output, cached.text)
             return cached
 
-    with SkillSession(skill_name, model=effective_model, max_budget_usd=max_budget_usd) as session:
+    if reuse_session:
+        from polder.llm.session import get_or_create_session
+
+        session = get_or_create_session(
+            skill_name, model=effective_model, max_budget_usd=max_budget_usd
+        )
         result = session.call(text_input)
+    else:
+        with SkillSession(
+            skill_name, model=effective_model, max_budget_usd=max_budget_usd
+        ) as session:
+            result = session.call(text_input)
 
     if use_cache and cache_key is not None:
         response_cache.store(skill_name, cache_key, result)

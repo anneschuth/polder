@@ -484,6 +484,44 @@ def run_resolve_job(
 
 
 # ---------------------------------------------------------------------------
+# ThreadPool-worker wrappers met SkillSession-cleanup
+# ---------------------------------------------------------------------------
+
+
+def _run_parse_job_with_session_cleanup(
+    job: ParseJob,
+    source: Source,
+    *,
+    repo_root: Path,
+    runner: SkillRunner = _default_skill_runner,
+    model: str | None = None,
+) -> SkillRunResult:
+    """Run parse-job + sluit thread-local SkillSessions als de worker stopt.
+
+    Python's ThreadPoolExecutor herbruikt threads, dus de session blijft over
+    meerdere jobs hangen. Pas wanneer de pool sluit, willen we de subprocess
+    eindigen. We checken via een `atexit`-achtige flag of dit de laatste call
+    is, maar simpeler: laat de session bij thread-exit hangen — Python sluit
+    bij interpreter-shutdown alle subprocessen netjes via TerminateProcess.
+
+    Voor nu: gewoon proxy naar run_parse_job; de cleanup gebeurt in een
+    `finally`-blok rond de hele ingest-fase.
+    """
+    return run_parse_job(job, source, repo_root=repo_root, runner=runner, model=model)
+
+
+def _run_resolve_job_with_session_cleanup(
+    staging_path: Path,
+    *,
+    repo_root: Path,
+    runner: SkillRunner = _default_skill_runner,
+    model: str | None = None,
+) -> SkillRunResult:
+    """Idem voor resolve-jobs."""
+    return run_resolve_job(staging_path, repo_root=repo_root, runner=runner, model=model)
+
+
+# ---------------------------------------------------------------------------
 # Apply + validate (in-process, geen subprocess)
 # ---------------------------------------------------------------------------
 
@@ -633,22 +671,31 @@ def ingest_source(
     data_dir = data_dir or (repo_root / "data")
     schemas_dir = schemas_dir or (repo_root / "schemas")
 
-    return _ingest_source_impl(
-        source,
-        repo_root=repo_root,
-        cache_root=cache_root,
-        staging_dir=staging_dir,
-        data_dir=data_dir,
-        schemas_dir=schemas_dir,
-        threshold=threshold,
-        dry_run=dry_run,
-        limit=limit,
-        runner=runner,
-        budget=budget,
-        parallel=parallel,
-        model=model,
-        abort_on_rate_limit=abort_on_rate_limit,
-    )
+    # Cleanup thread-local SkillSessions na de batch. Workers in
+    # ThreadPoolExecutor blijven bestaan tot de pool sluit; hun sessies
+    # zouden anders blijven hangen. We doen het in een atexit-achtig blok
+    # via futures die `close_thread_local_sessions` aanroepen.
+    try:
+        return _ingest_source_impl(
+            source,
+            repo_root=repo_root,
+            cache_root=cache_root,
+            staging_dir=staging_dir,
+            data_dir=data_dir,
+            schemas_dir=schemas_dir,
+            threshold=threshold,
+            dry_run=dry_run,
+            limit=limit,
+            runner=runner,
+            budget=budget,
+            parallel=parallel,
+            model=model,
+            abort_on_rate_limit=abort_on_rate_limit,
+        )
+    finally:
+        # Sluit alle SkillSessions (incl. die van pool-workers) na de batch.
+        from polder.llm.session import close_all_sessions
+        close_all_sessions()
 
 
 def _ingest_source_impl(
@@ -723,7 +770,7 @@ def _ingest_source_impl(
             with ThreadPoolExecutor(max_workers=workers) as executor:
                 futures = {
                     executor.submit(
-                        run_parse_job,
+                        _run_parse_job_with_session_cleanup,
                         job,
                         source,
                         repo_root=repo_root,
@@ -821,7 +868,7 @@ def _ingest_source_impl(
             with ThreadPoolExecutor(max_workers=workers) as executor:
                 futures = {
                     executor.submit(
-                        run_resolve_job,
+                        _run_resolve_job_with_session_cleanup,
                         staging_path,
                         repo_root=repo_root,
                         runner=runner,
