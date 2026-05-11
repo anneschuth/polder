@@ -1264,3 +1264,59 @@ def test_enrich_abd_tmg_writes_sg_post(
     assert any(m["post_id"] == "post:sg-min-fin" for m in person["mandaten"])
     assert stats["bootstrapped_posts"] == 1
     assert stats["new_persons"] == 1
+
+
+# ---------------------------------------------------------------------------
+# Regression: family_birth fallback mag geen verkeerde Q-id koppelen bij naamgenoten
+# ---------------------------------------------------------------------------
+
+
+def test_match_personen_skips_family_birth_when_multiple_candidates() -> None:
+    """Twee Wikidata-personen met dezelfde family+birth: geen koppeling.
+
+    Regressie: ervoor werd Emiel van Dijk (1985) gekoppeld aan Jimmy Dijk's
+    Q-id Q28861260 omdat de family_birth fallback de eerste match nam zonder
+    te checken of er meer kandidaten waren.
+    """
+    from polder.fetchers.wikidata_sparql import build_person_index, match_personen
+
+    rows = [
+        {"qid": "Q28861260", "family": "Dijk", "initials": "J.P.", "birthyear": 1985},
+        {"qid": "Q99999999", "family": "Dijk", "initials": "E.", "birthyear": 1985},
+    ]
+    index = build_person_index(rows)
+
+    # Polder-record voor Emiel zonder Wikidata-id, met initialen die niet
+    # exact matchen op één van beide rows (in productie kan dit gebeuren als
+    # de Wikidata-row de initialen mist).
+    record = {
+        "id": "person:dijk-e-1985",
+        "identifiers": {},
+        "name": {"family": "Dijk", "initials": "X.X."},
+        "birth": {"year": 1985},
+    }
+    matches = match_personen([record], index)
+    assert matches == [], (
+        "Met twee kandidaten op (Dijk, 1985) mag geen Q-id gekoppeld worden"
+    )
+
+
+def test_match_personen_family_birth_works_when_unique_candidate() -> None:
+    """Eén Wikidata-kandidaat op (family, birth): wel koppelen."""
+    from polder.fetchers.wikidata_sparql import build_person_index, match_personen
+
+    rows = [
+        {"qid": "Q12345", "family": "Klaverblad", "initials": "M.", "birthyear": 1972},
+    ]
+    index = build_person_index(rows)
+
+    record = {
+        "id": "person:klaverblad-1972",
+        "identifiers": {},
+        "name": {"family": "Klaverblad", "initials": "X.X."},
+        "birth": {"year": 1972},
+    }
+    matches = match_personen([record], index)
+    assert len(matches) == 1
+    assert matches[0][2] == "family_birth"
+    assert matches[0][1]["qid"] == "Q12345"

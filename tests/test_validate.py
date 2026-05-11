@@ -92,7 +92,7 @@ def make_post(post_id: str = "post:test", org_id: str = "org:test", **overrides)
 
 
 def make_person(
-    person_id: str = "person:test",
+    person_id: str = "person:test-1970",
     *,
     mandaten: list | None = None,
     **overrides,
@@ -218,7 +218,7 @@ def test_unknown_org_in_inline_mandaat(data_dir: Path, schemas_dir: Path) -> Non
     write_yaml(data_dir / "organisaties" / "a.yaml", make_org("org:bestaand"))
     write_yaml(data_dir / "posten" / "p.yaml", make_post("post:p1", org_id="org:bestaand"))
     person = make_person(
-        "person:test",
+        "person:test-1970",
         mandaten=[
             make_inline_mandaat(
                 org_id="org:nietbestaand",
@@ -236,7 +236,7 @@ def test_all_refs_resolved_no_error(data_dir: Path, schemas_dir: Path) -> None:
     write_yaml(data_dir / "organisaties" / "a.yaml", make_org("org:bestaand"))
     write_yaml(data_dir / "posten" / "p.yaml", make_post("post:p1", org_id="org:bestaand"))
     person = make_person(
-        "person:test",
+        "person:test-1970",
         mandaten=[
             make_inline_mandaat(
                 org_id="org:bestaand",
@@ -413,7 +413,7 @@ def test_inline_mandaat_zonder_sources_zou_via_schema_error_geven(
     data_dir: Path, schemas_dir: Path
 ) -> None:
     person = make_person(
-        "person:test",
+        "person:test-1970",
         mandaten=[
             {
                 "id": "01900000-0000-0000-0000-000000000099",
@@ -434,7 +434,7 @@ def test_check_inline_mandaat_sources_unit(tmp_path: Path) -> None:
     from polder.validate import Record
 
     person = make_person(
-        "person:test",
+        "person:test-1970",
         mandaten=[make_inline_mandaat(sources=[])],
     )
     rec = Record(

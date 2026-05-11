@@ -32,6 +32,7 @@ from polder.cli.commands import (
     fetch_cmd,
     ingest_cmd,
     list_cmd,
+    search_cmd,
     serve_cmd,
     show_cmd,
     skill_cmd,
@@ -91,6 +92,7 @@ app.add_typer(backfill_cmd.app, name="backfill")
 # ---------------------------------------------------------------------------
 
 app.command("show")(show_cmd.show)
+app.command("search")(search_cmd.search)
 app.command("export")(export_cmd.export)
 app.command("validate")(validate_cmd.validate)
 app.command("audit")(audit_cmd.audit)

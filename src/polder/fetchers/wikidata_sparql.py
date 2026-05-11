@@ -1058,10 +1058,19 @@ def build_org_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]
     return {"by_oin": by_oin, "by_name": by_name}
 
 
-def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    """Bouw een lookup-index voor personen: (tkid → row) en ((family, initials, birthyear) → row)."""
+def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
+    """Bouw een lookup-index voor personen.
+
+    Drie views:
+    - `by_tkid`: tk_persoon_id -> row (één-op-één)
+    - `by_natural`: (family, initials, birthyear) -> row (één-op-één,
+      eerste-wint bij conflict)
+    - `by_family_birth`: (family, birthyear) -> list[row] (collectie zodat de
+      caller kan zien of er meerdere kandidaten zijn voordat hij koppelt)
+    """
     by_tkid: dict[str, dict[str, Any]] = {}
     by_natural: dict[tuple[str, str, int], dict[str, Any]] = {}
+    by_family_birth: dict[tuple[str, int], list[dict[str, Any]]] = {}
     for row in rows:
         tkid = row.get("tkid")
         if tkid:
@@ -1070,9 +1079,14 @@ def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, An
         initials = _normalize_initials(row.get("initials"))
         birthyear = row.get("birthyear")
         if family and birthyear:
-            key = (family, initials, int(birthyear))
-            by_natural.setdefault(key, row)
-    return {"by_tkid": by_tkid, "by_natural": by_natural}
+            yr = int(birthyear)
+            by_natural.setdefault((family, initials, yr), row)
+            by_family_birth.setdefault((family, yr), []).append(row)
+    return {
+        "by_tkid": by_tkid,
+        "by_natural": by_natural,
+        "by_family_birth": by_family_birth,
+    }
 
 
 def _record_org_name(record: dict[str, Any]) -> str | None:
@@ -1142,6 +1156,7 @@ def match_personen(
     matches: list[tuple[dict[str, Any], dict[str, Any], str]] = []
     by_tkid = index["by_tkid"]
     by_natural = index["by_natural"]
+    by_family_birth = index.get("by_family_birth", {})
     for record in records:
         if (record.get("identifiers") or {}).get("wikidata"):
             continue
@@ -1154,14 +1169,26 @@ def match_personen(
             initials = _normalize_initials(name.get("initials"))
             birth = (record.get("birth") or {}).get("year")
             if family and birth is not None:
-                key = (family, initials, int(birth))
-                row = by_natural.get(key)
+                yr = int(birth)
+                row = by_natural.get((family, initials, yr))
                 method = "natural"
                 if row is None and initials:
-                    # Probeer zonder initialen (Wikidata heeft die vaak niet).
-                    key2 = (family, "", int(birth))
-                    row = by_natural.get(key2)
-                    method = "family_birth"
+                    # Family + birth-year fallback. Alleen koppelen als er
+                    # PRECIES ÉÉN Wikidata-kandidaat is met die (family, year);
+                    # anders zou een naamgenoot een verkeerde Q-id krijgen
+                    # (zoals Dijk-1985: Emiel vs Jimmy beide bestaan).
+                    candidates = by_family_birth.get((family, yr), [])
+                    if len(candidates) == 1:
+                        row = candidates[0]
+                        method = "family_birth"
+                    elif len(candidates) > 1:
+                        logger.debug(
+                            "Skip family_birth match voor %s: %d kandidaten op (%s, %d)",
+                            record.get("id"),
+                            len(candidates),
+                            family,
+                            yr,
+                        )
         if row is None:
             continue
         matches.append((record, row, method))

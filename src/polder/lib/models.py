@@ -29,6 +29,7 @@ OrgType = Literal[
     "politie",
     "openbaar-ministerie",
     "caribisch-openbaar-lichaam",
+    "organisatieonderdeel",
 ]
 
 PostClassification = Literal[
