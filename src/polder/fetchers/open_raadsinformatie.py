@@ -274,18 +274,14 @@ def _ori_url(ori_id: str) -> str:
 def _normalize_given(given: str) -> tuple[str, str | None, str | None]:
     """Extracteer (given, initials_hint, tussenvoegsel) uit ORI-given-strings.
 
-    ORI levert vaak samengestelde given-strings die meerdere stukjes informatie
-    bevatten. We splitsen ze in drie velden zodat we niets verliezen:
+    ORI levert samengestelde given-strings die meerdere stukjes informatie
+    bevatten. We splitsen in drie:
 
     - `'L.S. (Larissa)'` → `('Larissa', 'L.S.', None)`
     - `'P. (Paul)'` → `('Paul', 'P.', None)`
     - `'A.M. (Alies) van'` → `('Alies', 'A.M.', 'van')`
     - `'Paul'` → `('Paul', None, None)`
     - `'P.'` → `('P.', None, None)` (geen roepnaam, given blijft initialen)
-
-    Initials_hint is alleen niet-None als de input een expliciete
-    initialen-vorm bevatte (een token met punten of meerdere hoofdletters).
-    Het tussenvoegsel is alles wat na de haakjes nog over blijft.
     """
     if not given:
         return given, None, None
@@ -304,21 +300,63 @@ def _normalize_given(given: str) -> tuple[str, str | None, str | None]:
     prefix = raw[: m.start()].strip()
     suffix = raw[m.end() :].strip()
 
-    # `prefix` zou typisch initialen zijn, bv "L.S." of "A.M.".
-    # Vereis tenminste één punt zodat we 'Wietse (Wietse)' niet als
-    # initialen-vorm interpreteren. Het schema-pattern is `^([A-Z]\.)+$`
-    # (alleen hoofdletters + punten), dus we maken zelf ook die vorm.
     initials_hint: str | None = None
     if prefix and re.fullmatch(r"(?:[A-Za-zÀ-ÿ]\.)+", prefix):
-        # Normaliseer naar `M.P.` formaat (uppercase + punten).
         letters = re.findall(r"[A-Za-zÀ-ÿ]", prefix)
         if letters:
             initials_hint = "".join(f"{ch.upper()}." for ch in letters)
 
-    # `suffix` is typisch een tussenvoegsel ("van", "de", "van der").
     tussenvoegsel = suffix or None
 
     return nickname, initials_hint, tussenvoegsel
+
+
+def _extract_tussenvoegsel(name_string: str, family: str) -> str | None:
+    """Geef het tussenvoegsel terug dat tussen de roepnaam en `family` zit in `name_string`.
+
+    ORI levert `name='A.M. (Alies) van Weperen'` en `family_name='Weperen'`. De
+    "van" zit tussen "(Alies)" en "Weperen". Strategie: zoek de positie van
+    `family` in `name_string` en kijk wat ervoor staat, voorbij de roepnaam.
+
+    Returns None als geen plausibel tussenvoegsel gevonden.
+    """
+    if not name_string or not family:
+        return None
+    # Vind family in de string (case-insensitive, woord-grens).
+    fam_match = re.search(rf"\b{re.escape(family)}\b", name_string, re.IGNORECASE)
+    if not fam_match:
+        return None
+    before_family = name_string[: fam_match.start()].strip()
+    if not before_family:
+        return None
+
+    # Strip optionele "(roepnaam)" en initialen-prefix.
+    before_family = re.sub(r"\([^)]+\)", " ", before_family)
+    before_family = re.sub(r"(?:[A-Za-zÀ-ÿ]\.)+", " ", before_family)  # initialen
+    before_family = re.sub(r"\s+", " ", before_family).strip()
+
+    # Strip eventuele resterende voornaam-tokens. Heuristiek: alle tokens die
+    # KLEIN beginnen blijven over (tussenvoegsels), tokens die HOOFDLETTERS
+    # bevatten zijn voornamen die toch nog tussen haakjes-eraan-gestript moeten
+    # worden. Hou alleen kleine-letter-tokens en common multi-word-tussenvoegsels.
+    tokens = before_family.split()
+    if not tokens:
+        return None
+    # Pak tail van tokens die kleine-letter of apostrof beginnen.
+    tail: list[str] = []
+    for tok in reversed(tokens):
+        if not tok:
+            continue
+        first = tok[0]
+        # Tussenvoegsels beginnen met kleine letter ("van", "de"), of met
+        # apostrof ("'t", "'s").
+        if first.islower() or first in ("'", "‘"):
+            tail.insert(0, tok)
+        else:
+            break
+    if not tail:
+        return None
+    return " ".join(tail)
 
 
 def _split_name(raw_name: str) -> tuple[str, str]:
@@ -419,21 +457,30 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     if not family:
         return None
 
-    # Splits given in (roepnaam, initials_hint, tussenvoegsel).
-    # Voor 'L.S. (Larissa)' levert dit ('Larissa', 'L.S.', None) op.
-    # Voor 'A.M. (Alies) van' levert dit ('Alies', 'A.M.', 'van') op.
-    given, initials_hint, tussenvoegsel = _normalize_given(given_split)
+    # Splits given in (roepnaam, initials_hint, tussenvoegsel-uit-parens).
+    given, initials_hint, tussenvoegsel_from_given = _normalize_given(given_split)
+
+    # Aanvullende detectie: ORI levert vaak `family_name='Weperen'` (zonder
+    # tussenvoegsel) en `name='A.M. (Alies) van Weperen'` (met tussenvoegsel).
+    # Diff de twee om "van" te vinden.
+    tussenvoegsel_from_name = _extract_tussenvoegsel(raw_name, family)
+    tussenvoegsel = tussenvoegsel_from_given or tussenvoegsel_from_name
+
+    # Als de space-split van `name` het tussenvoegsel in `given` heeft gegooid
+    # (bv. `name='Henk van der Linden'`, family_name='Linden' → given_split
+    # was 'Henk van der'), strip dat tussenvoegsel-deel weg uit `given`.
+    if given and tussenvoegsel and given.lower().endswith(tussenvoegsel.lower()):
+        stripped = given[: -len(tussenvoegsel)].strip()
+        if stripped:
+            given = stripped
 
     # Fallback voor records waar ORI alleen family levert (zoals Haas-4580272):
-    # probeer de voornaam uit de functionele raads-email te extraheren.
     if not given:
         email = (raw.get("email") or "").strip()
         given_from_email, _ = _name_from_email(email, family)
         if given_from_email:
             given = given_from_email
 
-    # Initials: prefer de expliciete hint uit ORI (bv. 'L.S.') boven het
-    # afgeleide initialen-uit-roepnaam (bv. 'L.'). Dat behoudt informatie.
     initials = initials_hint or _initials_from_given(given)
 
     slug = slugify_person(family, initials, ori_id)
@@ -447,13 +494,10 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
         "full": full,
         "family": family,
     }
+    if tussenvoegsel:
+        name_block["tussenvoegsel"] = tussenvoegsel
     if given:
-        # Behoud tussenvoegsel in `given` als die er is, zodat we het niet
-        # verliezen bij doorrij naar andere fetchers.
-        if tussenvoegsel:
-            name_block["given"] = f"{given} {tussenvoegsel}"
-        else:
-            name_block["given"] = given
+        name_block["given"] = given
     if initials:
         name_block["initials"] = initials
 

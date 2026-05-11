@@ -767,7 +767,7 @@ def test_parse_person_preserves_initials_from_parens():
 
 
 def test_parse_person_preserves_tussenvoegsel():
-    """ORI `name='Weperen, A.M. (Alies) van'` → given houdt 'van', initials='A.M.'."""
+    """ORI `name='Weperen, A.M. (Alies) van'` → tussenvoegsel='van', given='Alies'."""
     from polder.fetchers.open_raadsinformatie import parse_person
 
     raw = {
@@ -778,6 +778,43 @@ def test_parse_person_preserves_tussenvoegsel():
     rec = parse_person(raw)
     assert rec is not None
     assert rec["name"]["family"] == "Weperen"
-    assert rec["name"]["given"] == "Alies van"
+    assert rec["name"]["given"] == "Alies"
+    assert rec["name"]["tussenvoegsel"] == "van"
     assert rec["name"]["initials"] == "A.M."
     assert rec["name"]["full"] == "Alies van Weperen"
+
+
+def test_parse_person_tussenvoegsel_from_name_diff():
+    """ORI `name='Henk van der Linden'` + `family_name='Linden'`: tussenvoegsel='van der'."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999991",
+        "name": "Henk van der Linden",
+        "family_name": "Linden",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Linden"
+    assert rec["name"]["tussenvoegsel"] == "van der"
+    assert rec["name"]["given"] == "Henk"
+
+
+def test_parse_person_no_tussenvoegsel_when_none():
+    """`Schilderman, Susanne` heeft geen tussenvoegsel."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "1", "name": "Schilderman, Susanne", "family_name": "Schilderman"}
+    rec = parse_person(raw)
+    assert rec is not None
+    assert "tussenvoegsel" not in rec["name"]
+
+
+def test_extract_tussenvoegsel_handles_apostroph_prefix():
+    """`'t` en `'s` zijn ook tussenvoegsels (in 't, 's)."""
+    from polder.fetchers.open_raadsinformatie import _extract_tussenvoegsel
+
+    assert _extract_tussenvoegsel("Anna in 't Veld", "Veld") == "in 't"
+    assert _extract_tussenvoegsel("Piet de Vries", "Vries") == "de"
+    assert _extract_tussenvoegsel("Anna van der Burg", "Burg") == "van der"
+    assert _extract_tussenvoegsel("Susanne Schilderman", "Schilderman") is None

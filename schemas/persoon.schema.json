@@ -27,7 +27,14 @@
       "required": ["full", "family"],
       "properties": {
         "full": { "type": "string" },
-        "family": { "type": "string" },
+        "family": {
+          "type": "string",
+          "description": "Achternaam zonder tussenvoegsel. Voor sortering en slug-vorming. Voor 'Alies van Weperen' is dit 'Weperen'."
+        },
+        "tussenvoegsel": {
+          "type": "string",
+          "description": "Tussenvoegsel zoals 'van', 'de', 'van der', 'op de', 'in 't'. Geen vaste lijst; afgeleid uit bron-data."
+        },
         "given": { "type": "string" },
         "initials": {
           "type": "string",
