@@ -23,6 +23,7 @@ import typer
 
 from polder.cli.commands import (
     apply_staging_cmd,
+    audit_cmd,
     backfill_cmd,
     build_cmd,
     daily_cmd,
@@ -92,6 +93,7 @@ app.add_typer(backfill_cmd.app, name="backfill")
 app.command("show")(show_cmd.show)
 app.command("export")(export_cmd.export)
 app.command("validate")(validate_cmd.validate)
+app.command("audit")(audit_cmd.audit)
 app.command("diff")(diff_cmd.diff)
 app.command("build")(build_cmd.build)
 app.command("serve")(serve_cmd.serve)
