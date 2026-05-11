@@ -1487,3 +1487,45 @@ def test_parse_birth_year_skips_implausible() -> None:
 
     assert _parse_birth_year_from_description("ouwe Romein (1500-1100)") is None  # te oud
     assert _parse_birth_year_from_description("futuristic (2099-)") is None  # te jong
+
+
+def test_reconciliation_batch_handles_multiple_queries(monkeypatch) -> None:
+    """Een batch van 3 queries levert 3 result-lijsten terug, in volgorde."""
+    from polder.fetchers import wikidata_sparql as ws
+
+    fake_response_data = {
+        "q0": {"result": [{"id": "Q1", "name": "A", "description": "(1980)"}]},
+        "q1": {"result": []},
+        "q2": {"result": [{"id": "Q3", "name": "C", "description": "(1990-2020)"}]},
+    }
+
+    class FakeResp:
+        status_code = 200
+        def raise_for_status(self): pass
+        def json(self): return fake_response_data
+
+    class FakeClient:
+        def __init__(self, **kwargs): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def post(self, *args, **kwargs): return FakeResp()
+
+    monkeypatch.setattr(ws, "httpx", type("M", (), {"Client": FakeClient, "HTTPError": Exception}))
+
+    queries = [
+        ("Adams", "Douglas", None),
+        ("Onbekend", "X", None),
+        ("Smit", "Willem", None),
+    ]
+    results = ws.reconciliation_lookup_persons_batch(queries)
+    assert len(results) == 3
+    assert results[0][0]["qid"] == "Q1"
+    assert results[0][0]["birth_year"] == 1980
+    assert results[1] == []
+    assert results[2][0]["qid"] == "Q3"
+
+
+def test_reconciliation_batch_handles_empty_input() -> None:
+    from polder.fetchers.wikidata_sparql import reconciliation_lookup_persons_batch
+
+    assert reconciliation_lookup_persons_batch([]) == []

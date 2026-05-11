@@ -255,11 +255,12 @@ def fetch_enrich_wikidata(
 
     stats = enrich_ori_records(data, limit=limit, dry_run=dry_run)
     typer.echo("=== Wikidata-enrichment ===")
-    typer.echo(f"  kandidaten:     {stats.candidates}")
-    typer.echo(f"  verrijkt:       {stats.enriched}")
-    typer.echo(f"  geen-match:     {stats.no_matches}")
-    typer.echo(f"  ambigu (>1):    {stats.ambiguous}")
-    typer.echo(f"  fouten:         {stats.errors}")
+    typer.echo(f"  kandidaten:       {stats.candidates}")
+    typer.echo(f"  verrijkt:         {stats.enriched}")
+    typer.echo(f"  geen-match:       {stats.no_matches}")
+    typer.echo(f"  ambigu (>1):      {stats.ambiguous}")
+    typer.echo(f"  implausibele age: {stats.implausible_age}")
+    typer.echo(f"  fouten:           {stats.errors}")
 
 
 @app.command("kiesraad")

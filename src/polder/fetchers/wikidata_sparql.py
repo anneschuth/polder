@@ -967,7 +967,12 @@ def lookup_person_by_name(
 
 # Wikidata Reconciliation API endpoint. Documentatie:
 # https://www.wikidata.org/wiki/Wikidata:Tools/OpenRefine/Editing/Reconciliation_API
-RECONCILIATION_ENDPOINT = "https://wikidata.reconci.link/nl/api"
+# We gebruiken de wmcloud-host direct (skip 307-redirect van reconci.link).
+RECONCILIATION_ENDPOINT = "https://wikidata-reconciliation.wmcloud.org/nl/api"
+
+# Max queries per batch-POST. De API zelf accepteert er meer maar bij grotere
+# batches groeit de kans op timeouts. 25 is een goede sweet-spot.
+RECONCILIATION_BATCH_SIZE = 25
 
 
 def reconciliation_lookup_person(
@@ -1024,7 +1029,11 @@ def reconciliation_lookup_person(
         return []
 
     result = data.get("q0") or {}
-    candidates = result.get("result") or []
+    return _parse_reconciliation_candidates(result.get("result") or [])
+
+
+def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, Any]]:
+    """Map Reconciliation-result-records naar onze standaard-vorm."""
     rows: list[dict[str, Any]] = []
     for cand in candidates:
         qid = cand.get("id")
@@ -1040,6 +1049,74 @@ def reconciliation_lookup_person(
             }
         )
     return rows
+
+
+def reconciliation_lookup_persons_batch(
+    queries: list[tuple[str, str | None, str | None]],
+    *,
+    timeout: float = 30.0,
+) -> list[list[dict[str, Any]]]:
+    """Batch-lookup: meerdere personen in één POST naar de Reconciliation API.
+
+    Input: lijst van (family, given, initials)-tuples. Output: lijst van
+    kandidaten-lijsten in dezelfde volgorde. Empty list per query bij geen
+    match. Voor batches > RECONCILIATION_BATCH_SIZE wordt automatisch
+    opgedeeld.
+
+    Bij netwerk-error: lege lijsten voor de hele batch (graceful degradation).
+    """
+    if not queries:
+        return []
+
+    results: list[list[dict[str, Any]]] = []
+
+    for chunk_start in range(0, len(queries), RECONCILIATION_BATCH_SIZE):
+        chunk = queries[chunk_start : chunk_start + RECONCILIATION_BATCH_SIZE]
+        payload: dict[str, dict[str, Any]] = {}
+        for i, (family, given, initials) in enumerate(chunk):
+            parts = []
+            if given:
+                parts.append(given)
+            elif initials:
+                parts.append(initials)
+            parts.append(family)
+            query_text = " ".join(p for p in parts if p).strip()
+            if not query_text:
+                continue
+            payload[f"q{i}"] = {
+                "query": query_text,
+                "type": "Q5",
+                "limit": 25,
+            }
+
+        if not payload:
+            results.extend([] for _ in chunk)
+            continue
+
+        try:
+            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+                response = client.post(
+                    RECONCILIATION_ENDPOINT,
+                    data={"queries": json.dumps(payload)},
+                    headers={"User-Agent": USER_AGENT},
+                )
+                response.raise_for_status()
+                data = response.json()
+        except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+            logger.warning(
+                "Reconciliation API batch faalde (chunk start=%d, size=%d): %s",
+                chunk_start,
+                len(chunk),
+                exc,
+            )
+            results.extend([] for _ in chunk)
+            continue
+
+        for i in range(len(chunk)):
+            result = data.get(f"q{i}") or {}
+            results.append(_parse_reconciliation_candidates(result.get("result") or []))
+
+    return results
 
 
 _BIRTH_YEAR_RX = re.compile(r"\((\d{4})(?:[\-–—][^)]*)?\)")
@@ -1061,7 +1138,12 @@ def _parse_birth_year_from_description(description: str) -> int | None:
         return None
     try:
         year = int(match.group(1))
-        if 1700 <= year <= 2030:
+        # Plausibele bovengrens: dit jaar + 1 (voor jaartal-overgangen aan het
+        # einde van het jaar). Ondergrens 1700 is een conservatieve start
+        # voor de Republiek der Verenigde Nederlanden.
+        from datetime import date as _date_class
+
+        if 1700 <= year <= _date_class.today().year + 1:
             return year
     except (ValueError, TypeError):
         pass

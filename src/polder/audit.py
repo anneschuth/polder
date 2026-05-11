@@ -73,7 +73,7 @@ CATEGORIES: dict[str, Category] = {
     "implausible_birth_year": Category(
         "implausible_birth_year",
         "error",
-        "Geboortejaar buiten plausibele range (< 1700 of > 2010).",
+        "Geboortejaar buiten plausibele range (< 1700 of jonger dan 14 jaar).",
     ),
     "birth_year_not_int": Category(
         "birth_year_not_int", "error", "Geboortejaar is geen integer."
@@ -489,6 +489,11 @@ def _check_mandaat(
 
 
 def _check_birth_year(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    # Plausibele bovengrens: vandaag - 14 jaar (jongste mogelijke politiek-actieve
+    # leeftijd met marge). Ondergrens 1700 (vroege Nederlandse Republiek; ouder
+    # is bijna zeker dataset-corruptie of een verkeerde verwerking van een
+    # eeuwoud Wikidata-feit).
+    max_year = date.today().year - 14
     for p, d in persons:
         birth = d.get("birth")
         if not isinstance(birth, dict) or birth.get("year") is None:
@@ -498,7 +503,7 @@ def _check_birth_year(persons: list[tuple[Path, dict]], findings: list[Finding])
         if not isinstance(y, int):
             findings.append(Finding("birth_year_not_int", pid, f"{p.name}: birth.year={y!r}"))
             continue
-        if y < 1700 or y > 2010:
+        if y < 1700 or y > max_year:
             findings.append(Finding("implausible_birth_year", pid, f"{p.name}: birth.year={y}"))
 
 

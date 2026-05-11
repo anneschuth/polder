@@ -76,6 +76,28 @@ def test_enrich_record_no_birth_year(ori_record: dict):
     assert reason == "no_birth_year"
 
 
+def test_enrich_record_implausible_age(ori_record: dict):
+    """Match met birth-year 1879 (19e-eeuws) wordt afgewezen voor ORI-raadslid."""
+    with patch(
+        "polder.fetchers.wikidata_enrich.lookup_person_by_name",
+        return_value=[{"qid": "Q123", "label": "Willem Smit", "birth_year": 1879}],
+    ):
+        ok, reason = enrich_record(ori_record)
+    assert not ok
+    assert reason == "implausible_age"
+
+
+def test_enrich_record_accepts_plausible_age(ori_record: dict):
+    """Match met birth-year 1970 wordt geaccepteerd."""
+    with patch(
+        "polder.fetchers.wikidata_enrich.lookup_person_by_name",
+        return_value=[{"qid": "Q123", "label": "Willem Smit", "birth_year": 1970}],
+    ):
+        ok, reason = enrich_record(ori_record)
+    assert ok
+    assert reason == "enriched"
+
+
 def test_enrich_record_ambiguous(ori_record: dict):
     """Twee kandidaten met birth-year = skip (zou verkeerde kunnen koppelen)."""
     with patch(
@@ -120,9 +142,10 @@ def test_enrich_ori_records_loops_and_counts(tmp_path: Path):
         yaml.safe_dump(rec, sort_keys=False), encoding="utf-8"
     )
 
+    # enrich_ori_records gebruikt nu de batch-API in plaats van per-record.
     with patch(
-        "polder.fetchers.wikidata_enrich.lookup_person_by_name",
-        return_value=[{"qid": "Q123", "label": "W. Smit", "birth_year": 1970}],
+        "polder.fetchers.wikidata_sparql.reconciliation_lookup_persons_batch",
+        return_value=[[{"qid": "Q123", "label": "W. Smit", "birth_year": 1970}]],
     ):
         stats = enrich_ori_records(data)
 
