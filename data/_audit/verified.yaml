@@ -1,0 +1,31 @@
+# Geverifieerde audit-findings.
+#
+# Elke entry zegt: "we hebben deze finding bekeken, geen actie nodig".
+# `polder audit` filtert verified entries standaard uit de output.
+# `polder audit --include-verified` toont ze alsnog.
+#
+# Schema:
+#   verified:
+#     - category: <category-name>      # zie polder audit --explain
+#       key:      <stable-key>          # exacte key uit de finding
+#       note:     <korte uitleg>
+#       verified_at: YYYY-MM-DD
+#       verified_by: <github-username>
+verified:
+  - category: quasi_dup_family_birth
+    key: "van dijk|1975"
+    note: "Otwin (O.E.T.) en Inge (I.) zijn verschillende personen, beide TK-leden."
+    verified_at: 2026-05-11
+    verified_by: anneschuth
+
+  - category: quasi_dup_family_birth
+    key: "van dijk|1971"
+    note: "Diederik (D.J.H.) en Jasper (J.J.) zijn verschillende personen, beide politici."
+    verified_at: 2026-05-11
+    verified_by: anneschuth
+
+  - category: start_in_future
+    key: "person:hasken-a-04ce72ac|mandate-post-kwartiermaker-directeur-screeningsdiensten-justis-2026-07-01"
+    note: "Alvin Hasken: aangekondigde benoeming per 2026-07-01 (ABD-nieuwsbericht 2026-05-08)."
+    verified_at: 2026-05-11
+    verified_by: anneschuth
