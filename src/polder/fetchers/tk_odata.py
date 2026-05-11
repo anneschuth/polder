@@ -303,11 +303,20 @@ def person_to_polder_record(
 def fetch_persons_with_fractiezetels(
     api: TKApi,
     *,
-    since: date = TK_DATA_START,
+    since: date | None = TK_DATA_START,
     limit: int | None = None,
     today: str | None = None,
+    include_persons_without_mandaten: bool = False,
 ) -> list[dict[str, Any]]:
     """Haal personen op die een fractiezetel hebben (gehad) sinds ``since``.
+
+    ``since=None`` haalt de volledige historie binnen (alle zetels, geen
+    datum-filter). Met de default 2008-09-01 wordt oud-historie afgesneden.
+
+    ``include_persons_without_mandaten``: als True, schrijven we ook
+    persoon-records waarvan alle zetels weggefilterd zijn. Default False:
+    geen verweesde persoon-records meer (anders krijg je ~100 records van
+    oud-Kamerleden zonder mandaten).
 
     Returnt een lijst polder-records (al via ``person_to_polder_record`` gemapt).
     """
@@ -321,6 +330,7 @@ def fetch_persons_with_fractiezetels(
     personen: list[Persoon] = api.get_personen(filter=persoon_filter, max_items=limit)
 
     records: list[dict[str, Any]] = []
+    skipped_no_mandates = 0
     for persoon in personen:
         # Per persoon: alle FractieZetelPersoon-records (zetels in tijd).
         zetel_filter = FractieZetelPersoon.create_filter()
@@ -335,7 +345,8 @@ def fetch_persons_with_fractiezetels(
                 logger.debug("Geen fractie voor zetel %s: %s", zetel.id, exc)
                 continue
             # Filter op since: skip zetels die volledig voor since liggen.
-            if zetel.tot_en_met is not None and zetel.tot_en_met < since:
+            # Met since=None laten we alles staan.
+            if since is not None and zetel.tot_en_met is not None and zetel.tot_en_met < since:
                 continue
             mandaten.append(
                 build_mandaat(
@@ -346,10 +357,20 @@ def fetch_persons_with_fractiezetels(
                 )
             )
 
+        if not mandaten and not include_persons_without_mandaten:
+            skipped_no_mandates += 1
+            continue
+
         record = person_to_polder_record(persoon, mandaten, today=today_str)
         if record is None:
             continue
         records.append(record)
+    if skipped_no_mandates:
+        logger.info(
+            "TK fetcher: %d persoon-records geskipt (geen zetels binnen since=%s)",
+            skipped_no_mandates,
+            since,
+        )
     return records
 
 
@@ -592,6 +613,22 @@ def _build_parser() -> argparse.ArgumentParser:
         help=f"Ondergrens (ISO date). Default: {TK_DATA_START.isoformat()}",
     )
     parser.add_argument(
+        "--all-history",
+        action="store_true",
+        help=(
+            "Haal alle TK-historie binnen (overschrijft --since=None). "
+            "Levert duizenden extra oude zetels op."
+        ),
+    )
+    parser.add_argument(
+        "--include-persons-without-mandaten",
+        action="store_true",
+        help=(
+            "Schrijf ook persoon-records waarvan alle zetels weggefilterd zijn. "
+            "Default: skip (anders krijg je verweesde records van oud-Kamerleden)."
+        ),
+    )
+    parser.add_argument(
         "--limit",
         type=int,
         default=None,
@@ -637,7 +674,13 @@ def main(argv: list[str] | None = None) -> int:
     api = TKApi(verbose=args.verbose)
     ensure_org_and_post(args.data_root, dry_run=args.dry_run)
 
-    records = fetch_persons_with_fractiezetels(api, since=args.since, limit=args.limit)
+    effective_since: date | None = None if args.all_history else args.since
+    records = fetch_persons_with_fractiezetels(
+        api,
+        since=effective_since,
+        limit=args.limit,
+        include_persons_without_mandaten=args.include_persons_without_mandaten,
+    )
 
     n_current = 0
     n_historisch = 0
