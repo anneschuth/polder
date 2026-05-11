@@ -642,3 +642,77 @@ def test_dedup_skipt_records_zonder_given():
     }
     deduped = dedup_records_for_gemeente([record], "org:gemeente-utrecht")
     assert len(deduped) == 1
+
+
+def test_parse_person_extracts_given_from_email_when_missing():
+    """ORI levert soms alleen family. Email-local-part vult voornaam aan."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "4580272",
+        "name": "Haas",
+        "family_name": "Haas",
+        "email": "guus.haas@gemeenteraadkerkrade.nl",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Haas"
+    assert rec["name"].get("given") == "Guus"
+    assert rec["name"].get("initials") == "G."
+
+
+def test_parse_person_email_role_prefix_stripped():
+    """Email met `raadslid.<voornaam>.<family>` patroon wordt correct geparsed."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999",
+        "name": "Vlampijp",
+        "family_name": "Vlampijp",
+        "email": "raadslid.gerrion.vlampijp@example.nl",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"].get("given") == "Gerrion"
+
+
+def test_parse_person_skips_email_if_family_mismatch():
+    """Als de family in de email niet matched aan onze family, gebruik die niet."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999",
+        "name": "Bakker",
+        "family_name": "Bakker",
+        "email": "raadslid.henk.smit@example.nl",  # email zegt 'smit', niet 'bakker'
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"].get("given") is None
+
+
+def test_split_name_extracts_nickname_from_parentheses():
+    """`Smeulders, P. (Paul)` → family='Smeulders', given='Paul'."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Smeulders, P. (Paul)")
+    assert family == "Smeulders"
+    assert given == "Paul"
+
+
+def test_split_name_keeps_given_when_no_parens():
+    """Normaal patroon ongemoeid laten."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Schilderman, Susanne")
+    assert family == "Schilderman"
+    assert given == "Susanne"
+
+
+def test_split_name_handles_initials_only():
+    """Geen roepnaam tussen haakjes → laat de initialen-vorm staan."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Smeulders, P.")
+    assert family == "Smeulders"
+    assert given == "P."

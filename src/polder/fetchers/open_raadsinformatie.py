@@ -271,24 +271,95 @@ def _ori_url(ori_id: str) -> str:
     return f"https://id.openraadsinformatie.nl/{ori_id}"
 
 
+def _normalize_given(given: str) -> str:
+    """Extracteer de bruikbare voornaam uit ORI-given-strings.
+
+    ORI levert vaak `'P. (Paul)'` (initialen + roepnaam tussen haakjes), of
+    `'M.J. (Mike)'`. Voor matching is de roepnaam waardevoller dan de
+    initialen-vorm. Voor andere patronen: laat ongemoeid.
+
+    - `'P. (Paul)'` → `'Paul'`
+    - `'M.J. (Mike)'` → `'Mike'`
+    - `'Paul'` → `'Paul'`
+    - `'P.'` → `'P.'`
+    """
+    if not given:
+        return given
+    m = re.search(r"\(([^)]+)\)", given)
+    if m:
+        nickname = m.group(1).strip()
+        if nickname and len(nickname) > 1:
+            return nickname
+    return given.strip()
+
+
 def _split_name(raw_name: str) -> tuple[str, str]:
     """Splits ORI `name` veld in (family, given).
 
     ORI levert namen meestal als `Schilderman, Susanne` (achternaam, voornaam),
     maar soms als `Susanne Schilderman` of zelfs vol met initialen
-    (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is.
+    (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is en
+    normaliseren `'P. (Paul)'`-patronen naar de roepnaam.
     """
     raw = (raw_name or "").strip()
     if "," in raw:
         family, given = raw.split(",", 1)
-        return family.strip(), given.strip()
+        return family.strip(), _normalize_given(given.strip())
     # `G.C. (Gerrit) Achternaam` — laatste woord = achternaam.
     parts = raw.split()
     if not parts:
         return "", ""
     family = parts[-1]
     given = " ".join(parts[:-1]).strip()
-    return family, given
+    return family, _normalize_given(given)
+
+
+_EMAIL_ROLE_PREFIXES = (
+    "raadslid.",
+    "wethouder.",
+    "burgemeester.",
+    "gemeentesecretaris.",
+    "griffier.",
+    "fractievoorzitter.",
+)
+
+
+def _name_from_email(email: str | None, family: str) -> tuple[str | None, str | None]:
+    """Extracteer (given, family_hint) uit een functionele raads-email.
+
+    ORI levert vaak `email='raadslid.gerrion.vanelmpt@roerdalen.nl'`. Het
+    local-part bevat `<rol>.<voornaam>.<familienaam>` of `<voornaam>.<familienaam>`.
+    Voor records waar `family_name` ontbreekt of de `name` 1 woord is, geeft
+    deze helper een goede gok voor de voornaam.
+
+    Retourneert (given, family_hint). family_hint is alleen niet-None als de
+    email een family-naam bevat die NIET overeenkomt met de aangeleverde
+    family (signaleert dat onze family-extractie er mogelijk naast zit).
+    """
+    if not email or "@" not in email:
+        return None, None
+    local = email.split("@", 1)[0].lower()
+    for prefix in _EMAIL_ROLE_PREFIXES:
+        if local.startswith(prefix):
+            local = local[len(prefix):]
+            break
+    if "." not in local:
+        return None, None
+    parts = [p for p in local.split(".") if p]
+    if len(parts) < 2:
+        return None, None
+    # Heuristiek: laatste segment is family (na dropoff role-prefix), eerste is given.
+    # Voor 'vanderlinden' of 'van-der-linden' patronen: blijft 1 woord.
+    given_guess = parts[0].capitalize()
+    family_guess = parts[-1]
+    # Strip dubbele family-deeltjes ("vanderlinden" → "Linden" als family al die vorm heeft)
+    # Skip: verzin geen complexe normalisatie. We retourneren alleen given.
+    family_norm = family.lower().replace(" ", "").replace("-", "")
+    if family_norm and family_norm not in family_guess.lower():
+        # Mismatch: family in email is anders dan onze family. Niet vertrouwen op
+        # given-guess want dit kan een geheel andere persoon zijn.
+        return None, None
+    return given_guess, None
 
 
 def _initials_from_given(given: str) -> str:
@@ -320,6 +391,13 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     given = given_split
     if not family:
         return None
+    # Fallback voor records waar ORI alleen family levert (zoals Haas-4580272):
+    # probeer de voornaam uit de functionele raads-email te extraheren.
+    if not given:
+        email = (raw.get("email") or "").strip()
+        given_from_email, _ = _name_from_email(email, family)
+        if given_from_email:
+            given = given_from_email
     initials = _initials_from_given(given)
 
     slug = slugify_person(family, initials, ori_id)
