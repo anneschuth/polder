@@ -1831,7 +1831,13 @@ def build_bewindspersoon_records(
 
     Output is een tussenrepresentatie waarin we per persoon-Q-id alle
     mandaten verzamelen. De caller mergt deze met bestaande YAML's.
+
+    P39-statements zonder P580 (start-tijd) worden overgeslagen. Dat zijn
+    incomplete Wikidata-statements waar we vroeger een sentinel-datum
+    `1945-01-01` op plakten, wat tot data-rommel leidde. Per fetcher-run
+    loggen we het aantal als INFO-melding.
     """
+    skipped_no_start: list[str] = []
     by_person: dict[str, dict[str, Any]] = {}
     posts_seen: dict[str, dict[str, Any]] = {}
     for row in rows:
@@ -1882,6 +1888,10 @@ def build_bewindspersoon_records(
         if ministry_slug is None:
             # Onbekend ministerie; sla het mandaat over (we loggen via caller).
             continue
+        start = row.get("start")
+        if not start:
+            skipped_no_start.append(f"{qid}#{row.get('role_qid')}")
+            continue
         post_id, post_label, classification = _post_id_for_role(
             row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
         )
@@ -1891,14 +1901,14 @@ def build_bewindspersoon_records(
             "classification": classification,
             "organization_id": organization_id,
             "role_kind": role_kind,
-            "valid_from": row.get("start") or "1945-01-01",
+            "valid_from": start,
         }
         mandaat = {
-            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, start),
             "organization_id": organization_id,
             "post_id": post_id,
             "role": post_label,
-            "start_date": row.get("start") or "1945-01-01",
+            "start_date": start,
             "sources": [
                 {
                     "id": SOURCE_ID,
@@ -1912,6 +1922,14 @@ def build_bewindspersoon_records(
         else:
             mandaat["end_date"] = None
         person_record["mandaten"].append(mandaat)
+    if skipped_no_start:
+        sample = ", ".join(skipped_no_start[:5])
+        suffix = f" (sample: {sample})" if sample else ""
+        logger.info(
+            "Wikidata: %d P39-statement(s) overgeslagen wegens ontbrekende P580%s",
+            len(skipped_no_start),
+            suffix,
+        )
     return {"persons": by_person, "posts": posts_seen}
 
 
@@ -1924,7 +1942,11 @@ def build_abd_tmg_records(
     """Aggregeer ABD-TMG SPARQL-rijen.
 
     role_type_qid bepaalt of het SG (Q2003810) of DG (Q126658544) is.
+
+    P39-statements zonder P580 worden overgeslagen; zie
+    `build_bewindspersoon_records` voor de rationale.
     """
+    skipped_no_start: list[str] = []
     by_person: dict[str, dict[str, Any]] = {}
     posts_seen: dict[str, dict[str, Any]] = {}
     for row in rows:
@@ -1974,6 +1996,10 @@ def build_abd_tmg_records(
         )
         if ministry_slug is None:
             continue
+        start = row.get("start")
+        if not start:
+            skipped_no_start.append(f"{qid}#{row.get('role_qid')}")
+            continue
         post_id, post_label, classification = _post_id_for_role(
             row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
         )
@@ -1983,14 +2009,14 @@ def build_abd_tmg_records(
             "classification": classification,
             "organization_id": organization_id,
             "role_kind": role_kind,
-            "valid_from": row.get("start") or "1945-01-01",
+            "valid_from": start,
         }
         mandaat = {
-            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, start),
             "organization_id": organization_id,
             "post_id": post_id,
             "role": post_label,
-            "start_date": row.get("start") or "1945-01-01",
+            "start_date": start,
             "end_date": row.get("end"),
             "sources": [
                 {
@@ -2001,6 +2027,14 @@ def build_abd_tmg_records(
             ],
         }
         person_record["mandaten"].append(mandaat)
+    if skipped_no_start:
+        sample = ", ".join(skipped_no_start[:5])
+        suffix = f" (sample: {sample})" if sample else ""
+        logger.info(
+            "Wikidata ABD-TMG: %d P39-statement(s) overgeslagen wegens ontbrekende P580%s",
+            len(skipped_no_start),
+            suffix,
+        )
     return {"persons": by_person, "posts": posts_seen}
 
 

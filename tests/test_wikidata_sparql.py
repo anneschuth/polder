@@ -1320,3 +1320,55 @@ def test_match_personen_family_birth_works_when_unique_candidate() -> None:
     assert len(matches) == 1
     assert matches[0][2] == "family_birth"
     assert matches[0][1]["qid"] == "Q12345"
+
+
+def test_build_bewindspersoon_records_skipt_mandate_zonder_start() -> None:
+    """Regressie: vroeger plakte de fetcher start_date='1945-01-01' bij missing P580."""
+    from polder.fetchers.wikidata_sparql import build_bewindspersoon_records
+
+    rows = [
+        {
+            "person_qid": "Q105773583",
+            "label": "Mikal Tseggai",
+            "family": "Tseggai",
+            "initials": "M.",
+            "birthyear": 1995,
+            "ministry_qid": "Q1075",  # min-ocw
+            "role_qid": "Q15729678",
+            "role_label": "minister van Onderwijs, Cultuur en Wetenschap",
+            "start": None,  # geen P580: dit was de bug-trigger
+            "end": None,
+        },
+        {
+            # Tweede rij MET P580: moet wel doorkomen.
+            "person_qid": "Q57792",
+            "label": "Mark Rutte",
+            "family": "Rutte",
+            "initials": "M.",
+            "birthyear": 1967,
+            "ministry_qid": "Q1075",
+            "role_qid": "Q83307",
+            "role_label": "minister-president van Nederland",
+            "start": "2010-10-14",
+            "end": "2024-07-02",
+        },
+    ]
+    result = build_bewindspersoon_records(
+        rows,
+        "minister",
+        ministry_qid_to_slug={"Q1075": "min-ocw"},
+        today="2026-05-11",
+    )
+    persons = result["persons"]
+    # Tseggai mag in 'persons' staan (we maken het persoon-record), maar zonder
+    # mandaten (de mandate-zonder-start moet geskipt zijn).
+    tseggai = persons.get("Q105773583")
+    if tseggai is not None:
+        assert tseggai.get("mandaten") == [], (
+            f"Verwachtte 0 mandaten voor Tseggai, kreeg {tseggai.get('mandaten')!r}"
+        )
+    # Rutte moet WEL een mandaat hebben.
+    rutte = persons.get("Q57792")
+    assert rutte is not None
+    assert len(rutte.get("mandaten") or []) == 1
+    assert rutte["mandaten"][0]["start_date"] == "2010-10-14"
