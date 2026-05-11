@@ -101,7 +101,7 @@ def enrich_record(record: dict[str, Any], today: str | None = None) -> tuple[boo
     if not family or not given:
         return False, "no_given"
 
-    candidates = lookup_person_by_name(family, given=given)
+    candidates = lookup_person_by_name(family, given=given, endpoint="auto")
     if not candidates:
         return False, "no_matches"
 

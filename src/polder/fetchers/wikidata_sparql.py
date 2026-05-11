@@ -85,17 +85,48 @@ __all__ = [
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 QLEVER_ENDPOINT = "https://qlever.cs.uni-freiburg.de/api/wikidata"
 
-# Korte alias voor de twee endpoints die we ondersteunen. CLI/skill-laag gebruikt
+# Korte alias voor de endpoints die we ondersteunen. CLI/skill-laag gebruikt
 # de alias; lagere helpers verwachten een URL. ``resolve_endpoint`` vertaalt.
-Endpoint = Literal["wdqs", "qlever"]
+# `auto`: probeer QLever eerst (sneller), val terug op WDQS bij timeout/5xx.
+Endpoint = Literal["wdqs", "qlever", "auto"]
 _ENDPOINT_URLS: dict[str, str] = {
     "wdqs": SPARQL_ENDPOINT,
     "qlever": QLEVER_ENDPOINT,
 }
+_AUTO_FALLBACK_CHAIN: tuple[str, ...] = ("qlever", "wdqs")
+
+# Process-level circuit breaker: na N opeenvolgende failures op een endpoint
+# slaan we hem over tot het einde van de run. Voorkomt dat een hele enrich-loop
+# bij elke record dezelfde timeout-wait incasseert.
+_ENDPOINT_FAILURE_COUNT: dict[str, int] = {}
+_ENDPOINT_CIRCUIT_THRESHOLD = 3
+
+
+def _endpoint_is_circuit_broken(alias: str) -> bool:
+    return _ENDPOINT_FAILURE_COUNT.get(alias, 0) >= _ENDPOINT_CIRCUIT_THRESHOLD
+
+
+def _mark_endpoint_failure(alias: str) -> None:
+    _ENDPOINT_FAILURE_COUNT[alias] = _ENDPOINT_FAILURE_COUNT.get(alias, 0) + 1
+
+
+def _mark_endpoint_success(alias: str) -> None:
+    _ENDPOINT_FAILURE_COUNT[alias] = 0
+
+
+def reset_endpoint_circuits() -> None:
+    """Reset alle circuit-breakers. Voor tests of nieuwe runs."""
+    _ENDPOINT_FAILURE_COUNT.clear()
 
 
 def resolve_endpoint(endpoint: str) -> str:
-    """Vertaal een endpoint-alias (`wdqs`/`qlever`) of volledige URL naar een URL."""
+    """Vertaal een endpoint-alias (`wdqs`/`qlever`) of volledige URL naar een URL.
+
+    `auto` wordt op aliasniveau bewaard; query_sparql interpreteert hem zelf
+    en doorloopt de fallback-keten.
+    """
+    if endpoint == "auto":
+        return endpoint
     if endpoint in _ENDPOINT_URLS:
         return _ENDPOINT_URLS[endpoint]
     return endpoint
@@ -563,12 +594,15 @@ def query_sparql(
 ) -> list[dict[str, Any]]:
     """Voer een SPARQL-query uit en geef de bindings terug als lijst van dicts.
 
-    Cached responses landen onder ``cache_dir/<hash>.json``. Met ``use_cache=False``
-    wordt de cache genegeerd en altijd opnieuw opgehaald.
+    Cached responses landen onder ``cache_dir/<hash>.json``.
 
-    Bij HTTP 429 of 503 wachten we (Retry-After-header indien aanwezig, anders
-    exponentiele backoff) en proberen we opnieuw, tot ``max_retries`` pogingen.
+    Endpoint:
+    - URL of `qlever`/`wdqs`: één endpoint, retry binnen die endpoint.
+    - `auto`: probeer QLever eerst (sneller), val terug op WDQS bij
+      timeout/5xx. Cache-check gebeurt vóór elke endpoint-poging zodat
+      een hit-bestand de keten kort sluit.
     """
+    # Cache-check (idem voor "auto" en losse endpoints)
     cache_path: Path | None = None
     if cache_dir is not None:
         cache_dir.mkdir(parents=True, exist_ok=True)
@@ -579,10 +613,45 @@ def query_sparql(
                 payload = json.load(fh)
             return list(payload.get("results", {}).get("bindings", []))
 
+    if endpoint == "auto":
+        last_exc: Exception | None = None
+        for alias in _AUTO_FALLBACK_CHAIN:
+            if _endpoint_is_circuit_broken(alias):
+                logger.debug("Skip endpoint %s (circuit broken)", alias)
+                continue
+            try:
+                result = query_sparql(
+                    query,
+                    timeout=min(timeout, 15.0),
+                    cache_dir=cache_dir,
+                    use_cache=use_cache,
+                    client=client,
+                    max_retries=1,
+                    endpoint=alias,
+                    request_interval=request_interval,
+                )
+                _mark_endpoint_success(alias)
+                return result
+            except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+                last_exc = exc
+                _mark_endpoint_failure(alias)
+                logger.warning(
+                    "Endpoint %s faalde (%s), val terug op volgende in keten",
+                    alias,
+                    type(exc).__name__,
+                )
+        if last_exc:
+            raise last_exc
+        raise httpx.HTTPError("auto-keten leverde geen response")
+
     if request_interval is None:
         request_interval = (
             QLEVER_REQUEST_INTERVAL if "qlever" in endpoint else MIN_REQUEST_INTERVAL
         )
+
+    # Endpoint-alias vertalen naar URL
+    if endpoint in _ENDPOINT_URLS:
+        endpoint = _ENDPOINT_URLS[endpoint]
 
     headers = {
         "Accept": "application/sparql-results+json",
@@ -817,7 +886,7 @@ def lookup_person_by_name(
     initials: str | None = None,
     given: str | None = None,
     *,
-    endpoint: Endpoint | str = "qlever",
+    endpoint: Endpoint | str = "auto",
     cache_dir: Path | None = None,
 ) -> list[dict[str, Any]]:
     """Zoek personen in Wikidata op naam.
@@ -827,18 +896,50 @@ def lookup_person_by_name(
 
     Strategie:
 
-    1. SPARQL met FILTER op rdfs:label van de family-naam, beperkt via
-       ``P31 wd:Q5`` (mens). ``given`` of het eerste initiaal versmalt verder.
-    2. Geen birthyear-property is vereist; de waarde mag ``None`` blijven.
+    1. SPARQL met FILTER op rdfs:label, beperkt via P31 wd:Q5 (mens). Default
+       endpoint is `auto`: QLever eerst, dan WDQS. Cache wordt geraadpleegd
+       voor elke poging.
+    2. Als beide SPARQL-endpoints falen, probeert deze helper de Wikidata
+       Reconciliation API als laatste fallback (`reconciliation_lookup_person`).
 
     Caller-side scoring (zoals naam-overeenkomst en context-fit) gebeurt buiten
     deze helper. Hier doen we alleen de I/O en parsing.
     """
     if not family or not family.strip():
         raise ValueError("family is verplicht voor lookup_person_by_name")
-    endpoint_url = resolve_endpoint(endpoint)
+    # Voor person-lookup proberen we ALLEEN QLever via SPARQL. WDQS heeft een
+    # te scherpe limiet op label-FILTER queries (timeout op de meeste calls)
+    # en is niet geschikt voor deze vorm van zoekopdracht. Bij QLever-failure
+    # gaan we direct naar de Reconciliation API. Bij circuit-broken QLever
+    # slaan we SPARQL helemaal over en gaan direct naar Reconciliation.
+    if endpoint == "auto":
+        if _endpoint_is_circuit_broken("qlever"):
+            return reconciliation_lookup_person(family, given=given, initials=initials)
+        endpoint_url = QLEVER_ENDPOINT
+    else:
+        endpoint_url = resolve_endpoint(endpoint)
     query = _build_lookup_person_query(family, given, initials)
-    bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint_url)
+    try:
+        # Korte timeout en geen retries: bij QLever-down willen we snel
+        # de circuit breaker triggeren en doorschakelen naar Reconciliation.
+        bindings = query_sparql(
+            query,
+            cache_dir=cache_dir,
+            endpoint=endpoint_url,
+            max_retries=0,
+            timeout=5.0,
+        )
+        _mark_endpoint_success("qlever")
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        _mark_endpoint_failure("qlever")
+        logger.warning(
+            "SPARQL-lookup faalde voor (%s, %s), val terug op Reconciliation API: %s",
+            family,
+            given,
+            type(exc).__name__,
+        )
+        return reconciliation_lookup_person(family, given=given, initials=initials)
+
     rows: list[dict[str, Any]] = []
     seen: set[str] = set()
     for b in bindings:
@@ -862,6 +963,109 @@ def lookup_person_by_name(
             }
         )
     return rows
+
+
+# Wikidata Reconciliation API endpoint. Documentatie:
+# https://www.wikidata.org/wiki/Wikidata:Tools/OpenRefine/Editing/Reconciliation_API
+RECONCILIATION_ENDPOINT = "https://wikidata.reconci.link/nl/api"
+
+
+def reconciliation_lookup_person(
+    family: str,
+    *,
+    given: str | None = None,
+    initials: str | None = None,
+    timeout: float = 15.0,
+) -> list[dict[str, Any]]:
+    """Fallback-lookup via OpenRefine Reconciliation API.
+
+    Werkt fundamenteel anders dan SPARQL: POST een JSON-batch met queries,
+    krijg per query een lijst kandidaten terug. We doen één query per call
+    omdat onze caller per-record werkt.
+
+    Retourneert dezelfde vorm als `lookup_person_by_name`:
+    `{qid, label, birth_year, description}`. `birth_year` is altijd None
+    (Reconciliation API levert die niet direct; vereist een tweede call).
+
+    Bij netwerk-error: lege lijst (failure mode is fall-through naar
+    "geen kandidaten"). Het is een laatste-redmiddel; we blokkeren een
+    enrich-run niet als ook deze faalt.
+    """
+    query_parts = [family]
+    if given:
+        query_parts.insert(0, given)
+    elif initials:
+        query_parts.insert(0, initials)
+    query_text = " ".join(query_parts).strip()
+    if not query_text:
+        return []
+
+    payload = {
+        "q0": {
+            "query": query_text,
+            "type": "Q5",  # mens
+            "limit": 25,
+        }
+    }
+    # OpenRefine reconciliation v0.2 verwacht een form-encoded body waarbij
+    # `queries` een JSON-string is.
+    form_data = {"queries": json.dumps(payload)}
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            response = client.post(
+                RECONCILIATION_ENDPOINT,
+                data=form_data,
+                headers={"User-Agent": USER_AGENT},
+            )
+            response.raise_for_status()
+            data = response.json()
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        logger.warning("Reconciliation API faalde: %s", exc)
+        return []
+
+    result = data.get("q0") or {}
+    candidates = result.get("result") or []
+    rows: list[dict[str, Any]] = []
+    for cand in candidates:
+        qid = cand.get("id")
+        if not qid or not qid.startswith("Q"):
+            continue
+        description = cand.get("description") or ""
+        rows.append(
+            {
+                "qid": qid,
+                "label": cand.get("name"),
+                "birth_year": _parse_birth_year_from_description(description),
+                "description": description,
+            }
+        )
+    return rows
+
+
+_BIRTH_YEAR_RX = re.compile(r"\((\d{4})(?:[\-–—][^)]*)?\)")
+
+
+def _parse_birth_year_from_description(description: str) -> int | None:
+    """Probeer een geboortejaar te extraheren uit een Reconciliation-description.
+
+    Voorbeelden:
+    - `"Nederlands ondernemer (1946-2025)"` → 1946
+    - `"Nederlands voetballer (1904–1979)"` → 1904 (em-dash)
+    - `"politicus uit Suriname (1897–1960)"` → 1897
+    - `"Nederlandse politicus"` → None (geen jaartal)
+    """
+    if not description:
+        return None
+    match = _BIRTH_YEAR_RX.search(description)
+    if not match:
+        return None
+    try:
+        year = int(match.group(1))
+        if 1700 <= year <= 2030:
+            return year
+    except (ValueError, TypeError):
+        pass
+    return None
 
 
 def parse_bewindspersoon_bindings(

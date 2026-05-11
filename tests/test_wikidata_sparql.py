@@ -1372,3 +1372,118 @@ def test_build_bewindspersoon_records_skipt_mandate_zonder_start() -> None:
     assert rutte is not None
     assert len(rutte.get("mandaten") or []) == 1
     assert rutte["mandaten"][0]["start_date"] == "2010-10-14"
+
+
+# ---------------------------------------------------------------------------
+# Fallback-keten: auto -> qlever -> wdqs -> reconciliation
+# ---------------------------------------------------------------------------
+
+
+def test_resolve_endpoint_auto_passthrough() -> None:
+    """resolve_endpoint geeft 'auto' ongewijzigd terug; de keten zelf doet de
+    URL-resolutie."""
+    from polder.fetchers.wikidata_sparql import resolve_endpoint
+
+    assert resolve_endpoint("auto") == "auto"
+    assert resolve_endpoint("qlever").endswith("/api/wikidata")
+    assert resolve_endpoint("wdqs").endswith("/sparql")
+
+
+def test_query_sparql_auto_falls_back_on_first_endpoint_failure(monkeypatch) -> None:
+    """auto-keten: qlever faalt met timeout, wdqs lukt -> resultaat van wdqs."""
+    import httpx
+    from polder.fetchers import wikidata_sparql as ws
+
+    calls: list[str] = []
+
+    def fake_inner_query(query, *, timeout, cache_dir, use_cache, client, max_retries, endpoint, request_interval):  # noqa: ARG001
+        calls.append(endpoint)
+        if endpoint == "qlever":
+            raise httpx.ConnectTimeout("simulated qlever down")
+        if endpoint == "wdqs":
+            return [{"person": {"value": "http://www.wikidata.org/entity/Q42"}, "label": {"value": "Test"}}]
+        raise AssertionError(f"unexpected endpoint {endpoint}")
+
+    # Wikkel: vervang query_sparql door een spy die alleen voor de inner-calls
+    # (alias != "auto") fake-data teruggeeft.
+    real_query_sparql = ws.query_sparql
+
+    def spy(query, **kwargs):
+        endpoint = kwargs.get("endpoint", "wdqs")
+        if endpoint == "auto":
+            return real_query_sparql(query, **kwargs)
+        return fake_inner_query(query, **kwargs)
+
+    monkeypatch.setattr(ws, "query_sparql", spy)
+
+    result = real_query_sparql("SELECT * WHERE { ?s ?p ?o }", endpoint="auto")
+    assert "qlever" in calls
+    assert "wdqs" in calls
+    assert len(result) == 1
+
+
+def test_reconciliation_lookup_person_returns_candidates(monkeypatch) -> None:
+    """Reconciliation API parses correct: returnt kandidaten met qid + label."""
+    from polder.fetchers import wikidata_sparql as ws
+
+    fake_response_data = {
+        "q0": {
+            "result": [
+                {"id": "Q42", "name": "Douglas Adams", "description": "British author"},
+                {"id": "P1", "name": "should be skipped (not Q)", "description": ""},
+            ]
+        }
+    }
+
+    class FakeResp:
+        status_code = 200
+        def raise_for_status(self):
+            pass
+        def json(self):
+            return fake_response_data
+
+    class FakeClient:
+        def __init__(self, **kwargs):
+            pass
+        def __enter__(self):
+            return self
+        def __exit__(self, *a):
+            return False
+        def post(self, *args, **kwargs):
+            return FakeResp()
+
+    monkeypatch.setattr(ws, "httpx", type("M", (), {"Client": FakeClient, "HTTPError": Exception}))
+
+    candidates = ws.reconciliation_lookup_person("Adams", given="Douglas")
+    assert len(candidates) == 1
+    assert candidates[0]["qid"] == "Q42"
+    assert candidates[0]["label"] == "Douglas Adams"
+
+
+# ---------------------------------------------------------------------------
+# Birth-year parsing uit reconciliation-description
+# ---------------------------------------------------------------------------
+
+
+def test_parse_birth_year_extracts_first_year() -> None:
+    from polder.fetchers.wikidata_sparql import _parse_birth_year_from_description
+
+    assert _parse_birth_year_from_description("Nederlands ondernemer (1946-2025)") == 1946
+    assert _parse_birth_year_from_description("Nederlands voetballer (1904–1979)") == 1904  # em-dash
+    assert _parse_birth_year_from_description("politicus (1897—1960)") == 1897  # em-dash
+    assert _parse_birth_year_from_description("Nederlands persoon (1985)") == 1985
+
+
+def test_parse_birth_year_returns_none_when_absent() -> None:
+    from polder.fetchers.wikidata_sparql import _parse_birth_year_from_description
+
+    assert _parse_birth_year_from_description("Nederlandse politicus") is None
+    assert _parse_birth_year_from_description("") is None
+    assert _parse_birth_year_from_description(None) is None  # type: ignore[arg-type]
+
+
+def test_parse_birth_year_skips_implausible() -> None:
+    from polder.fetchers.wikidata_sparql import _parse_birth_year_from_description
+
+    assert _parse_birth_year_from_description("ouwe Romein (1500-1100)") is None  # te oud
+    assert _parse_birth_year_from_description("futuristic (2099-)") is None  # te jong
