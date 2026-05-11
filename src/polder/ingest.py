@@ -1,19 +1,19 @@
 """End-to-end staging-pipeline voor polder.
 
-Eén entrypoint dat per bron alle stappen doorloopt die anders met de hand of
-met aparte scripts moeten worden gedraaid:
+Eén entrypoint dat per bron alle stappen doorloopt:
 
 1. Parse: nieuwe HTML/XML/PDF in `_cache/<bron>/` -> `data/_staging/<bron>-<key>.json`
-   via de bestaande `scripts/parse_*_local.sh` runners (claude -p Sonnet).
+   via `polder.llm.runner.run_skill`. Pre-filters (`polder.llm.prefilters`)
+   skippen input zonder personeels-signaal.
 2. Resolve: staging-files zonder `.resolved.json` companion -> `.resolved.json`
-   via `scripts/resolve_staging_local.sh`.
+   via dezelfde runner.
 3. Apply: `polder apply-staging data/_staging/ --apply --threshold T`.
 4. Validate: `polder.validate.run_all_checks`.
-5. (Build/commit/push delegeert de caller — zie `cli/commands/ingest_cmd.py`.)
+5. Build/commit/push delegeert de caller (zie `cli/commands/ingest_cmd.py`).
 
-`ingest_source` is pure plan-bouw plus subprocess-aanroepen. Geen LLM-logica
-in dit bestand zelf — die zit in de skill-runners onder `scripts/`. Subprocess-
-calls zijn geïsoleerd zodat tests ze kunnen mocken.
+De LLM-call zelf draait in-process via `polder.llm.session.SkillSession`,
+een lange-leef `claude -p` stream-json proces per worker-thread dat
+Anthropic's prompt-cache hergebruikt over alle calls binnen één run.
 """
 
 from __future__ import annotations

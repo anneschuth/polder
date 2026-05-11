@@ -1085,153 +1085,69 @@ def test_ingest_cli_model_flag_doorgegeven(
 
 
 # ---------------------------------------------------------------------------
-# Pre-filter wrappers (parse_abd_nieuws_local.sh / parse_staatscourant_local.sh)
+# Pre-filters: abd_nieuws + staatscourant
 # ---------------------------------------------------------------------------
 
 
-def _scripts_dir() -> Path:
-    return Path(__file__).resolve().parent.parent / "scripts"
+def test_parse_abd_nieuws_pre_filter_skipt_zonder_marker() -> None:
+    """HTML zonder benoeming-marker -> filter retourneert False."""
+    from polder.llm.prefilters import abd_nieuws_has_signal
 
-
-def test_parse_abd_nieuws_pre_filter_skipt_zonder_marker(tmp_path: Path) -> None:
-    """HTML zonder benoeming-markers -> wrapper schrijft `[]` zonder claude-call.
-
-    We zetten POLDER_CLAUDE_MODEL niet en mocken `claude` ook niet. Als de
-    wrapper toch een claude-call zou doen, zou de test falen omdat `claude`
-    ofwel niet bestaat ofwel een echte API-call zou doen.
-    """
-    html = tmp_path / "no-markers.html"
-    html.write_text(
+    html = (
         "<html><body><h1>Vacature voor stagiair</h1>"
-        "<p>We zoeken iemand voor een vacature.</p></body></html>",
-        encoding="utf-8",
+        "<p>We zoeken iemand voor een vacature.</p></body></html>"
     )
-    out = tmp_path / "out.json"
-
-    # Sabotage: zet PATH leeg zodat een echte claude-call zou crashen. Het
-    # pre-filter moet dit alsnog overleven door claude niet aan te roepen.
-    env = {"PATH": "/usr/bin:/bin"}
-    proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"), str(html), str(out)],
-        check=False,
-        capture_output=True,
-        text=True,
-        env=env,
-    )
-
-    assert proc.returncode == 0, f"stderr={proc.stderr}"
-    assert out.read_text(encoding="utf-8").strip() == "[]"
-    assert "pre-filter skip" in proc.stderr
+    assert abd_nieuws_has_signal(html) is False
 
 
-def test_parse_abd_nieuws_pre_filter_doorgaat_met_marker(tmp_path: Path) -> None:
-    """HTML mét marker triggert claude-call. We mocken claude met een stub."""
-    html = tmp_path / "wel-marker.html"
-    html.write_text(
+def test_parse_abd_nieuws_pre_filter_doorgaat_met_marker() -> None:
+    """HTML mét marker -> filter retourneert True."""
+    from polder.llm.prefilters import abd_nieuws_has_signal
+
+    html = (
         "<html><body><p>Per 1 januari 2026 wordt mw. Jansen "
-        "benoemd tot directeur Beleid bij min-bzk.</p></body></html>",
-        encoding="utf-8",
+        "benoemd tot directeur Beleid bij min-bzk.</p></body></html>"
     )
-    out = tmp_path / "out.json"
-
-    # Stub claude die altijd een vaste JSON-array print.
-    stub_dir = tmp_path / "stub-bin"
-    stub_dir.mkdir()
-    stub = stub_dir / "claude"
-    stub.write_text(
-        "#!/usr/bin/env bash\n"
-        "cat >/dev/null\n"  # leesinput
-        'echo \'[{"person_name":"stub"}]\'\n',
-        encoding="utf-8",
-    )
-    stub.chmod(0o755)
-
-    env = os.environ.copy()
-    env["PATH"] = f"{stub_dir}:{env.get('PATH', '')}"
-    env["CLAUDE_BIN"] = str(stub)
-
-    proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_abd_nieuws_local.sh"), str(html), str(out)],
-        check=False,
-        capture_output=True,
-        text=True,
-        env=env,
-    )
-
-    assert proc.returncode == 0, f"stderr={proc.stderr}"
-    text = out.read_text(encoding="utf-8")
-    assert "stub" in text
-    assert "pre-filter skip" not in proc.stderr
+    assert abd_nieuws_has_signal(html) is True
 
 
-def test_parse_staatscourant_pre_filter_skipt_zonder_marker(
-    tmp_path: Path,
-) -> None:
-    """KB-XML met titel die niets met benoeming te maken heeft -> skip."""
-    xml = tmp_path / "kb.xml"
-    xml.write_text(
+def test_parse_staatscourant_pre_filter_skipt_zonder_marker() -> None:
+    """XML-titel zonder benoeming-trefwoord -> filter retourneert False."""
+    from polder.llm.prefilters import staatscourant_has_signal
+
+    xml = (
         '<?xml version="1.0"?>'
-        "<root><officiele-titel>Mandaatbesluit Belastingdienst 2026</officiele-titel>"
-        "<body>...</body></root>",
-        encoding="utf-8",
+        "<root><intitule>Mandaatbesluit Belastingdienst 2026</intitule>"
+        "<body>...</body></root>"
     )
-    out = tmp_path / "out.json"
-
-    proc = subprocess.run(
-        ["bash", str(_scripts_dir() / "parse_staatscourant_local.sh"), str(xml), str(out)],
-        check=False,
-        capture_output=True,
-        text=True,
-        env={"PATH": "/usr/bin:/bin"},
-    )
-
-    assert proc.returncode == 0, f"stderr={proc.stderr}"
-    assert out.read_text(encoding="utf-8").strip() == "[]"
-    assert "pre-filter skip" in proc.stderr
+    assert staatscourant_has_signal(xml) is False
 
 
-def test_run_skill_detects_rate_limit_in_output(tmp_path: Path) -> None:
-    """run_skill.sh zet exit 99 wanneer claude rate-limit-tekst output."""
-    # Stub claude die de rate-limit-string print.
-    stub_dir = tmp_path / "stub-bin"
-    stub_dir.mkdir()
-    stub = stub_dir / "claude"
-    stub.write_text(
-        "#!/usr/bin/env bash\n"
-        "cat >/dev/null\n"
-        'echo "Claude AI usage limit reached. Try again later."\n',
-        encoding="utf-8",
-    )
-    stub.chmod(0o755)
+def test_run_skill_detects_rate_limit_in_output() -> None:
+    """SkillSession._parse_result mapt 429 / 'rate limit'-tekst op rate_limited=True."""
+    from polder.llm.session import SkillSession
 
-    # Maak een minimale skill-dir zodat run_skill.sh de SKILL.md vindt.
-    repo_root = tmp_path / "repo"
-    skill_dir = repo_root / ".claude" / "skills" / "stub-skill"
-    skill_dir.mkdir(parents=True)
-    (skill_dir / "SKILL.md").write_text("dummy", encoding="utf-8")
+    session = SkillSession.__new__(SkillSession)
+    session.model = "claude-haiku-4-5"
 
-    # Kopieer run_skill.sh naar de fake repo zodat REPO_ROOT klopt.
-    scripts_dst = repo_root / "scripts"
-    scripts_dst.mkdir()
-    shutil.copy(_scripts_dir() / "run_skill.sh", scripts_dst / "run_skill.sh")
+    # Event met api_error_status=429
+    event_429 = {
+        "type": "result",
+        "result": "",
+        "is_error": True,
+        "api_error_status": 429,
+        "usage": {},
+    }
+    result = session._parse_result(event_429)
+    assert result.rate_limited is True
 
-    input_file = tmp_path / "in.txt"
-    input_file.write_text("hoi", encoding="utf-8")
-    out = tmp_path / "out.json"
-
-    env = os.environ.copy()
-    env["CLAUDE_BIN"] = str(stub)
-
-    proc = subprocess.run(
-        ["bash", str(scripts_dst / "run_skill.sh"), "stub-skill", str(input_file), str(out)],
-        check=False,
-        capture_output=True,
-        text=True,
-        env=env,
-    )
-
-    assert proc.returncode == RATE_LIMIT_EXIT_CODE, (
-        f"verwachtte {RATE_LIMIT_EXIT_CODE}, kreeg {proc.returncode}\nstderr={proc.stderr}"
-    )
-    # Output-file mag NIET de rate-limit-tekst bevatten.
-    assert not out.exists() or "usage limit" not in out.read_text(encoding="utf-8")
+    # Event met rate-limit-tekst in result
+    event_text = {
+        "type": "result",
+        "result": "Claude AI usage limit reached. Try again later.",
+        "is_error": False,
+        "api_error_status": None,
+        "usage": {},
+    }
+    result = session._parse_result(event_text)
+    assert result.rate_limited is True

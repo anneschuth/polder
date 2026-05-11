@@ -109,9 +109,14 @@ polder skill parse-organogram organogram.pdf min-bzk [output.json]
 polder skill entity-resolution input.json [output.json]
 ```
 
-Alle skills zijn wrappers rond `scripts/*.sh`; ze gebruiken je lokale Claude
-Code subscription. Schrijven nooit direct naar `data/`, alleen naar
+Alle skills draaien in-process via `polder.llm.runner`, die `claude -p
+--input-format stream-json` op je lokale Claude Code subscription
+aanroept. Schrijven nooit direct naar `data/`, alleen naar
 `data/_staging/`.
+
+`polder backfill abd-nieuws` en `polder backfill staatscourant` draaien een
+skill op alle reeds gedownloade cache-input. Handig na een schema- of
+skill-tweak om de hele historie opnieuw door de nieuwste skill te halen.
 
 ## `polder daily-update`
 

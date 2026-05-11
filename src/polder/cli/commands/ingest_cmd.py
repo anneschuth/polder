@@ -1,8 +1,8 @@
-"""`polder ingest` command — end-to-end staging-pipeline.
+"""`polder ingest` command, end-to-end staging-pipeline.
 
 Eén commando dat per bron parse -> resolve -> apply -> validate doorloopt en
 optioneel ook build, commit en push afhandelt. Bedoeld voor dagelijkse
-automatische runs (CI of `scripts/ingest_local.sh`).
+automatische runs (CI of lokaal).
 
 De zware logica zit in `polder.ingest`; dit bestand levert alleen de typer-
 binding plus een Nederlandstalige stdout-samenvatting.

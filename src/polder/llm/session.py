@@ -121,9 +121,10 @@ class SkillSession:
         skill_name: str,
         *,
         model: str | None = None,
-        max_budget_usd: float = 0.10,
+        max_budget_usd: float = 0.50,
         fallback_model: str | None = "claude-sonnet-4-6",
         claude_bin: str = "claude",
+        allow_tools: bool = False,
         extra_args: list[str] | None = None,
     ) -> None:
         self.skill_name = skill_name
@@ -131,6 +132,10 @@ class SkillSession:
         self.max_budget_usd = max_budget_usd
         self.fallback_model = fallback_model
         self.claude_bin = claude_bin
+        # Default: geen tools, model produceert direct response. Parse-organogram
+        # heeft Read-tool nodig om de PDF te lezen en zet daarom allow_tools=True
+        # via MODEL_OVERRIDES of expliciet bij constructie.
+        self.allow_tools = allow_tools or skill_name == "parse-organogram"
         self.extra_args = list(extra_args or [])
         self._skill_path = _skill_path(skill_name)
         self._proc: subprocess.Popen[str] | None = None
@@ -157,6 +162,8 @@ class SkillSession:
             "--permission-mode",
             "bypassPermissions",
         ]
+        if not self.allow_tools:
+            cmd += ["--tools", ""]
         if self.fallback_model:
             cmd += ["--fallback-model", self.fallback_model]
         cmd += self.extra_args

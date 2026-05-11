@@ -41,7 +41,7 @@ def run_skill(
     model: str | None = None,
     output: Path | None = None,
     use_cache: bool = True,
-    max_budget_usd: float = 0.10,
+    max_budget_usd: float = 0.50,
 ) -> SkillResult:
     """Roep een skill één keer aan.
 

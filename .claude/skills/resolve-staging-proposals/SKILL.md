@@ -76,7 +76,7 @@ polder skill resolve-staging data/_staging/abd-nieuws-2026-04.json
 # Output: data/_staging/abd-nieuws-2026-04.resolved.json
 ```
 
-Of direct via script: `bash scripts/resolve_staging_local.sh data/_staging/abd-nieuws-2026-04.json`.
+Output landt in `data/_staging/abd-nieuws-2026-04.resolved.json` naast het input-bestand.
 
 ## Status
 
