@@ -86,6 +86,7 @@ _SUBAPPS: dict[str, tuple[str, str]] = {
     "fetch": ("polder.cli.commands.fetch_cmd", "app"),
     "skill": ("polder.cli.commands.skill_cmd", "app"),
     "backfill": ("polder.cli.commands.backfill_cmd", "app"),
+    "lookup": ("polder.cli.commands.lookup_cmd", "app"),
 }
 
 _LIST_COMMANDS: dict[str, tuple[str, str]] = {
