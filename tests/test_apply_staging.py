@@ -125,10 +125,10 @@ def _kewal_proposal() -> dict[str, Any]:
         "resolved_organization_level": "directie",
         "resolved_post_id": None,
         "resolved_person_id": None,
-        "resolution_confidence": {"organization": 0.85, "post": 0.0, "person": 0.0},
+        "resolution_confidence": {"organization": 0.85, "post": 0.85, "person": 0.85},
         "resolution_notes": "Afdeling niet gevonden, geklommen.",
         "propose_post_creation": True,
-        "merge_recommendation": "needs-review",
+        "merge_recommendation": "auto-merge",
         "birth_year": 1975,
     }
 
@@ -522,3 +522,89 @@ def test_load_resolved_input_directory(tmp_path: Path) -> None:
     assert names == ["A", "B"]
     # Source-filename meta moet aanwezig zijn.
     assert all("_source_filename" in i for i in items)
+
+
+# ---------------------------------------------------------------------------
+# Regression: contract met resolver
+# ---------------------------------------------------------------------------
+
+
+def test_skip_when_merge_recommendation_needs_review(mini_polder: Path) -> None:
+    """`needs-review` of `skip` mag nooit door apply heen, ook bij high confidence."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "needs-review"
+    p["confidence"] = 0.99  # high proposal-confidence mag dit niet overrulen
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("needs-review" in r for s in skipped for r in s.reasons)
+
+
+def test_skip_when_merge_recommendation_skip(mini_polder: Path) -> None:
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "skip"
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("skip" in r for s in skipped for r in s.reasons)
+
+
+def test_filename_strips_org_prefix(mini_polder: Path) -> None:
+    """Een chain-entry `slug_proposal=org:foo` mag NIET tot bestand `org:foo.yaml` leiden."""
+    p = _kewal_proposal()
+    actions, _ = plan_apply([p], mini_polder / "data")
+    create_orgs = [a for a in actions if a.type == "create-org"]
+    assert create_orgs, "verwacht een create-org actie"
+    for a in create_orgs:
+        assert ":" not in a.target_path.name, (
+            f"filename mag geen ':' bevatten, kreeg: {a.target_path.name}"
+        )
+
+
+def test_skip_when_role_empty(mini_polder: Path) -> None:
+    p = _kewal_proposal()
+    p["role"] = ""
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("role" in r for s in skipped for r in s.reasons)
+
+
+def test_skip_when_no_public_source_url(mini_polder: Path) -> None:
+    p = _kewal_proposal()
+    p["abd_nieuws_url"] = "_cache/local/path.pdf"
+    p.pop("staatscourant_url", None)
+    p.pop("organogram_pdf", None)
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("publieke bron-URL" in r for s in skipped for r in s.reasons)
+
+
+def test_skip_when_no_start_date(mini_polder: Path) -> None:
+    p = _kewal_proposal()
+    p["start_date"] = None
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("start_date" in r for s in skipped for r in s.reasons)
+
+
+def test_datetime_start_date_normalised(mini_polder: Path) -> None:
+    """`start_date: '2022-01-01T00:00:00'` moet `2022-01-01` worden in mandaat-id en velden."""
+    _write_yaml(
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
+        {
+            "id": "person:kewal-s-1975",
+            "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},
+            "birth": {"year": 1975},
+            "mandaten": [],
+            "sources": [
+                {"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}
+            ],
+        },
+    )
+    p = _kewal_proposal()
+    p["resolved_person_id"] = "person:kewal-s-1975"
+    p["start_date"] = "2022-01-01T00:00:00"
+    actions, _ = plan_apply([p], mini_polder / "data")
+    appends = [a for a in actions if a.type == "append-mandaat"]
+    assert appends, "verwacht een append-mandaat actie"
+    mandate = appends[0].record["mandaten"][-1]
+    assert mandate["start_date"] == "2022-01-01"
+    assert "T" not in mandate["id"]

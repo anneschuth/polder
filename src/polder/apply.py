@@ -168,10 +168,23 @@ def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str, str]:
 def _parse_iso_date(value: str | None) -> date | None:
     if not value:
         return None
+    s = str(value)
+    if "T" in s:
+        s = s.split("T", 1)[0]
     try:
-        return date.fromisoformat(str(value))
+        return date.fromisoformat(s)
     except ValueError:
         return None
+
+
+def _normalize_date_string(value: str | None) -> str | None:
+    """Strip een eventuele datetime-tail (T00:00:00) van een ISO-datum-string."""
+    if not value:
+        return value
+    s = str(value)
+    if "T" in s:
+        return s.split("T", 1)[0]
+    return s
 
 
 def _dates_valid(start: str | None, end: str | None) -> bool:
@@ -468,12 +481,57 @@ def plan_apply(
             )
             continue
 
-        role = str(proposal.get("role", ""))
+        # Honoreer `merge_recommendation` van de resolver als die gezet is.
+        # De resolver heeft daarin al de inhoudelijke confidence-check gedaan
+        # (org/post/person ieder ≥ 0.85, geen ambiguïteit); apply hoeft die
+        # logica dus niet te dupliceren.
+        rec = proposal.get("merge_recommendation")
+        if rec is not None and rec != "auto-merge":
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=[f"merge_recommendation={rec!r} (geen auto-merge)"],
+                )
+            )
+            continue
+
+        role = str(proposal.get("role", "")).strip()
+        if not role:
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen role in proposal (verplicht voor mandaat)"],
+                )
+            )
+            continue
         if _is_red_avg(role):
             skipped.append(
                 SkippedProposal(
                     proposal=proposal,
                     reasons=["rood-AVG niveau (geen merge in data/)"],
+                )
+            )
+            continue
+
+        # Een fatsoenlijke bron-URL is verplicht; placeholders en lokale
+        # cache-paden mogen nooit in een mandaat-source-url terechtkomen.
+        source_url = _detect_source_url(proposal)
+        if not source_url or not str(source_url).startswith(("http://", "https://")):
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen publieke bron-URL (http/https) in proposal"],
+                )
+            )
+            continue
+
+        # start_date verplicht: een mandaat zonder start-datum vervalt anders
+        # naar `today`, wat een onzin-datum is voor een retro-actief mandaat.
+        if not proposal.get("start_date"):
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen start_date in proposal"],
                 )
             )
             continue
@@ -618,11 +676,12 @@ def _plan_chain(
         if parent_id is None and entry.get("level") != "ministerie":
             return [], [f"chain {slug}: parent ontbreekt"]
         record = _build_org_record(entry=entry, parent_id=parent_id, proposal=proposal)
+        slug_body = slug.removeprefix("org:onderdeel-").removeprefix("org:")
         path = (
             data_dir
             / "organisaties"
             / "organisatieonderdelen"
-            / f"{slug.removeprefix('org:onderdeel-')}.yaml"
+            / f"{slug_body}.yaml"
         )
         actions.append(
             ApplyAction(
@@ -679,7 +738,7 @@ def _build_post_record(
     classification: str,
     start_date: str | None,
 ) -> dict[str, Any]:
-    valid_from = start_date or _today_iso()
+    valid_from = _normalize_date_string(start_date) or _today_iso()
     record = {
         "id": post_id,
         "organization_id": organization_id,
@@ -857,13 +916,15 @@ def _build_mandaat(
     today = _today_iso()
     source_id = _detect_source_id(proposal)
     source_url = _detect_source_url(proposal) or "https://example.invalid"
+    start_date = _normalize_date_string(proposal.get("start_date")) or today
+    end_date = _normalize_date_string(proposal.get("end_date"))
     mandaat = {
-        "id": f"mandate-{_slugify(post_id)}-{proposal.get('start_date') or today}",
+        "id": f"mandate-{_slugify(post_id)}-{start_date}",
         "organization_id": organization_id,
         "post_id": post_id,
         "role": proposal.get("role", ""),
-        "start_date": proposal.get("start_date") or today,
-        "end_date": proposal.get("end_date"),
+        "start_date": start_date,
+        "end_date": end_date,
         "sources": [
             {
                 "id": source_id,
