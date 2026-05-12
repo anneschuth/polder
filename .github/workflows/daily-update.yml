@@ -29,6 +29,26 @@ permissions:
   issues: read
 
 jobs:
+  # Gate-job: secrets mogen niet in een job-level `if`-expressie. We zetten ze
+  # eerst om naar een output zodat downstream-jobs een gewone string-vergelijking
+  # kunnen doen.
+  gate:
+    name: gate
+    runs-on: ubuntu-latest
+    outputs:
+      has_anthropic_key: ${{ steps.check.outputs.has_key }}
+    steps:
+      - name: Check secrets
+        id: check
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_key=false" >> "$GITHUB_OUTPUT"
+          fi
+
   fetch:
     name: fetch
     runs-on: ubuntu-latest
@@ -176,8 +196,8 @@ jobs:
 
   claude-review:
     name: claude-review
-    needs: pr
-    if: ${{ success() && needs.pr.outputs.pr_number != '' && secrets.ANTHROPIC_API_KEY != '' }}
+    needs: [pr, gate]
+    if: ${{ success() && needs.pr.outputs.pr_number != '' && needs.gate.outputs.has_anthropic_key == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -205,16 +225,14 @@ jobs:
 
   ingest:
     name: ingest
-    needs: pr
+    needs: [pr, gate]
     # Alleen op cron en handmatige dispatch, niet op pull_request (te kostelijk).
     # Skipt zichzelf als ANTHROPIC_API_KEY niet is gezet.
-    if: |
-      ${{
-        success()
+    if: >-
+      ${{ success()
         && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
-        && secrets.ANTHROPIC_API_KEY != ''
-        && needs.pr.outputs.pr_branch != ''
-      }}
+        && needs.gate.outputs.has_anthropic_key == 'true'
+        && needs.pr.outputs.pr_branch != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

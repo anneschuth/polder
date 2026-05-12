@@ -11,7 +11,7 @@ import yaml
 from rich.console import Console
 from rich.table import Table
 
-from polder.lib import Polder
+from polder.lib.quick_lookup import load_by_id
 
 
 def _resolve_root(data: Path | None) -> Path:
@@ -25,7 +25,18 @@ def _resolve_root(data: Path | None) -> Path:
     )
 
 
-def _lookup(p: Polder, id: str) -> Any | None:
+def _lookup_fast(root: Path, id: str) -> Any | None:
+    """Direct file-read voor person/org/post. Voor mandaten of onbekende
+    slug-vormen valt de caller terug op de volledige Polder-loader."""
+    return load_by_id(root / "data", id)
+
+
+def _lookup_full(root: Path, id: str) -> Any | None:
+    """Volledige dataset-load — alleen nodig voor mandaten (UUID) of als de
+    fast-path geen pad oplevert."""
+    from polder.lib import Polder
+
+    p = Polder.local(root)
     if id.startswith("org:"):
         return p.organisaties.get(id)
     if id.startswith("person:"):
@@ -84,8 +95,9 @@ def show(
 ) -> None:
     """Toon een entiteit in detail."""
     root = _resolve_root(data)
-    p = Polder.local(root)
-    obj = _lookup(p, id)
+    obj = _lookup_fast(root, id)
+    if obj is None and not id.startswith(("person:", "post:", "org:")):
+        obj = _lookup_full(root, id)
     if obj is None:
         typer.echo(f"Niet gevonden: {id}", err=True)
         raise typer.Exit(code=1)
@@ -111,7 +123,10 @@ def show(
                     f"  {m.start_date} -> {m.end_date or 'open'}  {m.post_id}  {m.role}"
                 )
         elif id.startswith("post:"):
+            from polder.lib import Polder
+
             console.print("\n[bold]mandaten op deze post:[/bold]")
+            p = Polder.local(root)
             for m in p.mandaten.for_post(id):
                 console.print(
                     f"  {m.start_date} -> {m.end_date or 'open'}  {m.person_id}  {m.role}"

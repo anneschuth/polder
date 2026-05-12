@@ -45,10 +45,12 @@ __all__ = [
     "CACHE_DIR",
     "MINISTERIES",
     "RIJKSOVERHEID_BASE",
+    "SHARED_ORGANOGRAM",
     "STAGING_DIR",
     "MinisterieResult",
     "OrganogramAsset",
     "build_manifest",
+    "discover_organisatie_subpath",
     "discover_organogram_assets",
     "discover_publicatie_links",
     "discover_subpages",
@@ -72,23 +74,32 @@ USER_AGENT = (
 
 # Mapping van interne ministerie-slug (data/organisaties/ministeries/<slug>.yaml)
 # naar rijksoverheid.nl URL-slug. URL-slug heeft "ministerie-van-" prefix.
-# TODO: synchroniseer dynamisch met ROO-records voor ministeries i.p.v. hardcoded.
+#
+# Niet elk kabinet-ministerie heeft een eigen rijksoverheid.nl-pagina: rijksoverheid
+# loopt achter op de departementale herindeling. AENM, KGG en VRO delen hun pagina
+# met respectievelijk JenV, EZK en BZK. Die staan in SHARED_ORGANOGRAM hieronder
+# en worden niet apart gescrapt.
 MINISTERIES: dict[str, str] = {
     "min-az": "ministerie-van-algemene-zaken",
-    "min-aenm": "ministerie-van-asiel-en-migratie",
     "min-bzk": "ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
     "min-bz": "ministerie-van-buitenlandse-zaken",
     "min-def": "ministerie-van-defensie",
-    "min-ezk": "ministerie-van-economische-zaken",
+    "min-ezk": "ministerie-van-economische-zaken-en-klimaat",
     "min-fin": "ministerie-van-financien",
     "min-ienw": "ministerie-van-infrastructuur-en-waterstaat",
     "min-jenv": "ministerie-van-justitie-en-veiligheid",
-    "min-kgg": "ministerie-van-klimaat-en-groene-groei",
     "min-lvvn": "ministerie-van-landbouw-visserij-voedselzekerheid-en-natuur",
     "min-ocw": "ministerie-van-onderwijs-cultuur-en-wetenschap",
     "min-szw": "ministerie-van-sociale-zaken-en-werkgelegenheid",
     "min-vws": "ministerie-van-volksgezondheid-welzijn-en-sport",
-    "min-vro": "ministerie-van-volkshuisvesting-en-ruimtelijke-ordening",
+}
+
+# Ministeries die rijksoverheid.nl niet apart publiceert. Het organogram waar
+# hun ABD onder valt staat op de pagina van het ministerie hier rechts.
+SHARED_ORGANOGRAM: dict[str, str] = {
+    "min-aenm": "min-jenv",
+    "min-kgg": "min-ezk",
+    "min-vro": "min-bzk",
 }
 
 # Asset-extensies die we zien als organogram-bron.
@@ -129,6 +140,7 @@ class MinisterieResult:
     assets: list[OrganogramAsset] = field(default_factory=list)
     inline_text: str | None = None
     directie_subpages: list[str] = field(default_factory=list)
+    shared_with: str | None = None
     error: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
@@ -140,6 +152,7 @@ class MinisterieResult:
             "assets": [a.to_dict() for a in self.assets],
             "inline_text": self.inline_text,
             "directie_subpages": list(self.directie_subpages),
+            "shared_with": self.shared_with,
             "error": self.error,
         }
 
@@ -152,6 +165,36 @@ class MinisterieResult:
 def organisatie_url(url_slug: str) -> str:
     """Bouw de canonical organisatiepagina-URL voor een rijksoverheid url-slug."""
     return f"{RIJKSOVERHEID_BASE}/ministeries/{url_slug}/organisatie"
+
+
+def ministerie_root_url(url_slug: str) -> str:
+    """Bouw de root ministerie-URL (zonder /organisatie)."""
+    return f"{RIJKSOVERHEID_BASE}/ministeries/{url_slug}"
+
+
+def discover_organisatie_subpath(html: str, *, base_url: str) -> str | None:
+    """Zoek op de root ministerie-pagina de link naar 'Organisatie'.
+
+    Sommige ministeries gebruiken `/organisatie-<afk>` in plaats van het canonieke
+    `/organisatie` (zo heeft IenW bijvoorbeeld `/organisatie-ienw`). Deze functie
+    leest de root-pagina en geeft de URL terug die in de navigatie als "Organisatie"
+    gelabeld staat. Returnt None als geen match.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    base_path = urlparse(base_url).path.rstrip("/")
+    for a in soup.find_all("a", href=True):
+        text = (a.get_text(" ") or "").strip().lower()
+        if text != "organisatie":
+            continue
+        href = str(a["href"]).strip()
+        if not href:
+            continue
+        full = urljoin(base_url, href)
+        full_path = urlparse(full).path.rstrip("/")
+        # Alleen sub-paths onder dit ministerie accepteren.
+        if full_path.startswith(base_path + "/"):
+            return full
+    return None
 
 
 def _is_asset_url(url: str) -> bool:
@@ -435,6 +478,26 @@ def extract_inline_text(html: str) -> str | None:
 # ---------------------------------------------------------------------------
 
 
+def _discover_alt_organisatie_url(
+    url_slug: str,
+    *,
+    cache_root: Path | None,
+    ministerie_slug: str,
+    today: str,
+    client: httpx.Client | None,
+) -> str | None:
+    """Fallback: lees de root ministerie-pagina en vind de organisatie-link."""
+    root = ministerie_root_url(url_slug)
+    cache_path = None
+    if cache_root is not None:
+        cache_path = _cache_dir_for(cache_root, ministerie_slug) / f"root-{today}.html"
+    try:
+        root_html = _fetch_html(root, cache_path=cache_path, client=client)
+    except httpx.HTTPError:
+        return None
+    return discover_organisatie_subpath(root_html, base_url=root)
+
+
 def resolve_publicatie_assets(
     publicatie_urls: list[str],
     *,
@@ -490,8 +553,32 @@ def scrape_ministerie(
             client=client,
         )
     except httpx.HTTPError as exc:
-        result.error = f"organisatie-fetch failed: {exc}"
-        return result
+        # Canonieke /organisatie gaf een fout. Probeer de root en zoek daar de
+        # "Organisatie"-link (IenW heeft bijvoorbeeld /organisatie-ienw).
+        alt_url = _discover_alt_organisatie_url(
+            url_slug,
+            cache_root=cache_root,
+            ministerie_slug=ministerie_slug,
+            today=today_str,
+            client=client,
+        )
+        if alt_url is None:
+            result.error = f"organisatie-fetch failed: {exc}"
+            return result
+        try:
+            organisatie_html = _fetch_html(
+                alt_url,
+                cache_path=(
+                    _cache_dir_for(cache_root, ministerie_slug) / f"organisatie-{today_str}.html"
+                    if cache_root is not None
+                    else None
+                ),
+                client=client,
+            )
+        except httpx.HTTPError as exc2:
+            result.error = f"organisatie-fetch failed: {exc2}"
+            return result
+        result.organisatie_url = alt_url
 
     organogram_root, _ = discover_subpages(organisatie_html, base_url=result.organisatie_url)
     result.organogram_subpage_url = organogram_root
@@ -675,13 +762,17 @@ def main(argv: list[str] | None = None) -> int:
     if not args.all and args.ministerie is None:
         parser.error("Geef --ministerie <slug> of --all op.")
 
+    known = set(MINISTERIES) | set(SHARED_ORGANOGRAM)
     if args.ministerie is not None:
-        if args.ministerie not in MINISTERIES:
+        if args.ministerie not in known:
             parser.error(
                 f"Onbekende ministerie-slug: {args.ministerie!r}. "
-                f"Bekend: {', '.join(sorted(MINISTERIES))}"
+                f"Bekend: {', '.join(sorted(known))}"
             )
-        targets: dict[str, str] = {args.ministerie: MINISTERIES[args.ministerie]}
+        if args.ministerie in SHARED_ORGANOGRAM:
+            targets: dict[str, str] = {}
+        else:
+            targets = {args.ministerie: MINISTERIES[args.ministerie]}
     else:
         targets = dict(MINISTERIES)
 
@@ -720,6 +811,24 @@ def main(argv: list[str] | None = None) -> int:
                     len(result.directie_subpages),
                 )
             results.append(result)
+
+    # Voeg shared-organogram-stubs toe bij --all, óf wanneer expliciet om een
+    # shared-ministerie is gevraagd. Geen netwerk: alleen een verwijzing.
+    if args.all or (args.ministerie in SHARED_ORGANOGRAM):
+        shared_slugs = (
+            SHARED_ORGANOGRAM if args.all else {args.ministerie: SHARED_ORGANOGRAM[args.ministerie]}
+        )
+        for slug, parent_slug in shared_slugs.items():
+            parent_url_slug = MINISTERIES[parent_slug]
+            results.append(
+                MinisterieResult(
+                    ministerie_slug=slug,
+                    url_slug=parent_url_slug,
+                    organisatie_url=organisatie_url(parent_url_slug),
+                    shared_with=parent_slug,
+                )
+            )
+            logger.info("%s: shared organogram met %s", slug, parent_slug)
 
     manifest = build_manifest(results, today=today_str)
     target = write_manifest(manifest, staging_dir=args.staging_dir, today=today_str)

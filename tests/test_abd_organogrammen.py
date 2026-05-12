@@ -15,12 +15,15 @@ import pytest
 from polder.fetchers import abd_organogrammen as mod
 from polder.fetchers.abd_organogrammen import (
     MINISTERIES,
+    SHARED_ORGANOGRAM,
     OrganogramAsset,
     build_manifest,
+    discover_organisatie_subpath,
     discover_organogram_assets,
     discover_publicatie_links,
     discover_subpages,
     extract_inline_text,
+    ministerie_root_url,
     organisatie_url,
     scrape_ministerie,
     write_manifest,
@@ -47,13 +50,22 @@ def test_organisatie_url_bouwt_canonical_url():
 
 
 def test_ministeries_mapping_dekt_minimaal_dertien_ministeries():
-    # Per 2026 bestaan er ~15 ministeries; mapping mag iets minder bevatten als
-    # een ministerie geen organogram-pagina heeft, maar de bulk moet erin.
-    assert len(MINISTERIES) >= 13
+    # Per 2026 bestaan er ~15 kabinet-ministeries. Sommige delen hun
+    # rijksoverheid.nl-organogram met een ander ministerie en zitten in
+    # SHARED_ORGANOGRAM in plaats van MINISTERIES. Samen moeten ze dekken.
+    assert len(MINISTERIES) + len(SHARED_ORGANOGRAM) >= 13
     # Sleutels gebruiken de interne `min-<afk>` slug-conventie.
     assert all(slug.startswith("min-") for slug in MINISTERIES)
-    # Waarden zijn rijksoverheid url-slugs met `ministerie-van-` prefix.
+    assert all(slug.startswith("min-") for slug in SHARED_ORGANOGRAM)
+    # Waarden van MINISTERIES zijn rijksoverheid url-slugs met `ministerie-van-` prefix.
     assert all(url_slug.startswith("ministerie-van-") for url_slug in MINISTERIES.values())
+    # SHARED_ORGANOGRAM verwijst alleen naar slugs die wel in MINISTERIES staan.
+    for parent_slug in SHARED_ORGANOGRAM.values():
+        assert parent_slug in MINISTERIES, (
+            f"shared organogram-parent {parent_slug} moet in MINISTERIES staan"
+        )
+    # MINISTERIES en SHARED_ORGANOGRAM zijn disjoint.
+    assert not (set(MINISTERIES) & set(SHARED_ORGANOGRAM))
 
 
 # ---------------------------------------------------------------------------
@@ -138,6 +150,25 @@ def test_extract_inline_text_geeft_none_op_lege_html():
 
 
 # ---------------------------------------------------------------------------
+# Organisatie-subpath discovery (IenW outlier)
+# ---------------------------------------------------------------------------
+
+
+def test_discover_organisatie_subpath_vindt_organisatie_ienw():
+    html = _load("ienw-root.html")
+    base = ministerie_root_url("ministerie-van-infrastructuur-en-waterstaat")
+    url = discover_organisatie_subpath(html, base_url=base)
+    assert url is not None
+    assert url.endswith("/organisatie-ienw")
+
+
+def test_discover_organisatie_subpath_geeft_none_zonder_match():
+    html = "<html><body><a href='/elders'>Elders</a></body></html>"
+    base = ministerie_root_url("ministerie-van-fictief")
+    assert discover_organisatie_subpath(html, base_url=base) is None
+
+
+# ---------------------------------------------------------------------------
 # Mocked end-to-end via fake httpx.Client
 # ---------------------------------------------------------------------------
 
@@ -160,13 +191,21 @@ class _FakeResponse:
 class _FakeClient:
     """Minimale stand-in voor httpx.Client met URL-routing fixtures."""
 
-    def __init__(self, routes: dict[str, str], pdf_bytes: bytes = b"%PDF-1.4 fake\n"):
+    def __init__(
+        self,
+        routes: dict[str, str],
+        pdf_bytes: bytes = b"%PDF-1.4 fake\n",
+        status_overrides: dict[str, int] | None = None,
+    ):
         self.routes = routes
         self.pdf_bytes = pdf_bytes
+        self.status_overrides = status_overrides or {}
         self.calls: list[str] = []
 
     def get(self, url: str, **_kwargs: Any) -> _FakeResponse:
         self.calls.append(url)
+        if url in self.status_overrides:
+            return _FakeResponse("", status_code=self.status_overrides[url])
         if url in self.routes:
             return _FakeResponse(self.routes[url])
         # Voor download-asset: serveer fake bytes.
@@ -224,6 +263,29 @@ def test_scrape_ministerie_geen_dubbele_assets(tmp_path: Path):
     )
     urls = [a.url for a in result.assets]
     assert len(urls) == len(set(urls)), f"duplicate URLs in assets: {urls}"
+
+
+def test_scrape_ministerie_valt_terug_op_organisatie_subpath(tmp_path: Path):
+    """IenW heeft /organisatie-ienw in plaats van /organisatie."""
+    base = "https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat"
+    routes = {
+        base: _load("ienw-root.html"),
+        f"{base}/organisatie-ienw": _load("ienw-organisatie.html"),
+        # Sub-organogram-URL die de fixture aankondigt: leeg, zodat we de
+        # fallback-flow testen zonder PDF-discovery.
+        f"{base}/organisatie-ienw/organogram": "<html><body></body></html>",
+    }
+    status_overrides = {f"{base}/organisatie": 404}
+    client = _FakeClient(routes, status_overrides=status_overrides)
+    result = scrape_ministerie(
+        "min-ienw",
+        "ministerie-van-infrastructuur-en-waterstaat",
+        cache_root=tmp_path,
+        client=client,  # type: ignore[arg-type]
+        today="2026-05-09",
+    )
+    assert result.error is None, f"expected fallback to succeed, got: {result.error}"
+    assert result.organisatie_url.endswith("/organisatie-ienw")
 
 
 def test_scrape_ministerie_handelt_404_op_organisatie_af(tmp_path: Path):
@@ -308,6 +370,33 @@ def test_cli_onbekende_ministerie_slug_faalt(capsys: pytest.CaptureFixture[str])
 def test_cli_zonder_ministerie_of_all_faalt():
     with pytest.raises(SystemExit):
         mod.main([])
+
+
+def test_cli_shared_organogram_slug_is_geldig_en_schrijft_stub(
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+):
+    """min-aenm/min-kgg/min-vro hebben geen eigen pagina maar moeten wel
+    in het manifest als shared_with-record verschijnen."""
+    rc = mod.main(
+        [
+            "--ministerie",
+            "min-aenm",
+            "--cache-root",
+            str(tmp_path / "_cache"),
+            "--staging-dir",
+            str(tmp_path / "_staging"),
+        ]
+    )
+    assert rc == 0
+    manifests = list((tmp_path / "_staging").glob("abd-manifest-*.json"))
+    assert len(manifests) == 1
+    payload = json.loads(manifests[0].read_text(encoding="utf-8"))
+    entries = payload["ministeries"]
+    assert len(entries) == 1
+    assert entries[0]["ministerie_slug"] == "min-aenm"
+    assert entries[0]["shared_with"] == "min-jenv"
+    assert entries[0]["assets"] == []
 
 
 def test_cli_end_to_end_met_fake_client(

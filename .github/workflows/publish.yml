@@ -97,10 +97,30 @@ jobs:
             dist/csv/*.csv
           fail_on_unmatched_files: false
 
+  # Gate-job: secrets mogen niet in een job-level `if`-expressie. We zetten ze
+  # eerst om naar een output zodat downstream-jobs een gewone string-vergelijking
+  # kunnen doen.
+  gate:
+    name: gate
+    runs-on: ubuntu-latest
+    outputs:
+      has_datasette_token: ${{ steps.check.outputs.has_token }}
+    steps:
+      - name: Check secrets
+        id: check
+        env:
+          DATASETTE_CLOUD_TOKEN: ${{ secrets.DATASETTE_CLOUD_TOKEN }}
+        run: |
+          if [ -n "$DATASETTE_CLOUD_TOKEN" ]; then
+            echo "has_token=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_token=false" >> "$GITHUB_OUTPUT"
+          fi
+
   datasette-cloud:
     name: datasette-cloud
-    needs: build
-    if: ${{ success() && secrets.DATASETTE_CLOUD_TOKEN != '' }}
+    needs: [build, gate]
+    if: ${{ success() && needs.gate.outputs.has_datasette_token == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

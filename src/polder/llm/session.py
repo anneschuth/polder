@@ -132,10 +132,13 @@ class SkillSession:
         self.max_budget_usd = max_budget_usd
         self.fallback_model = fallback_model
         self.claude_bin = claude_bin
-        # Default: geen tools, model produceert direct response. Parse-organogram
-        # heeft Read-tool nodig om de PDF te lezen en zet daarom allow_tools=True
-        # via MODEL_OVERRIDES of expliciet bij constructie.
-        self.allow_tools = allow_tools or skill_name == "parse-organogram"
+        # Default: geen tools, model produceert direct response. Skills die
+        # tools nodig hebben staan hier expliciet.
+        # - parse-organogram: Read-tool voor de PDF.
+        # - lookup-person: Bash voor `polder show/search/lookup wikidata`,
+        #   WebFetch en WebSearch voor externe bronnen.
+        _TOOLED_SKILLS = {"parse-organogram", "lookup-person"}
+        self.allow_tools = allow_tools or skill_name in _TOOLED_SKILLS
         self.extra_args = list(extra_args or [])
         self._skill_path = _skill_path(skill_name)
         self._proc: subprocess.Popen[str] | None = None

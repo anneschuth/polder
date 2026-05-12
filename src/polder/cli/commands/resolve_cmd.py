@@ -49,6 +49,36 @@ def resolve(
             ),
         ),
     ] = False,
+    enrich_llm: Annotated[
+        bool,
+        typer.Option(
+            "--enrich-llm",
+            help=(
+                "Bij person-resolution onder 0.95 confidence: roep de "
+                "`lookup-person` skill aan voor disambigueren / birth_year "
+                "ophalen / nieuwe persoon voorstellen. Kost geld; gebruik "
+                "--max-cost-usd om te begrenzen."
+            ),
+        ),
+    ] = False,
+    max_cost_usd: Annotated[
+        float,
+        typer.Option(
+            "--max-cost-usd",
+            help="Hard budget-cap voor de LLM-enrich-pass (USD).",
+        ),
+    ] = 1.0,
+    quote_or_die: Annotated[
+        bool,
+        typer.Option(
+            "--quote-or-die/--no-quote-or-die",
+            help=(
+                "Verifieer evidence_snippet door de source-URL te fetchen en "
+                "substring-match te doen. Strict; alleen allowed hosts "
+                "(wikidata, wikipedia, rijksoverheid). Default: aan."
+            ),
+        ),
+    ] = True,
     verbose: Annotated[
         bool,
         typer.Option("-v", "--verbose", help="Verbose logging."),
@@ -109,11 +139,19 @@ def resolve(
     typer.echo(f"\nResolve {len(files)} staging-files...")
 
     n_proposals = 0
-    recs = Counter()
-    person_matched = 0
-    person_unmatched = 0
     n_files_written = 0
+    all_resolved: list[dict] = []
+    llm_stats = None
 
+    if enrich_llm:
+        from polder.resolve.llm_enrich import EnrichStats
+
+        llm_stats = EnrichStats()
+        typer.echo(
+            f"LLM-enrich aan (skill=lookup-person, max-cost=${max_cost_usd:.2f})."
+        )
+
+    budget_remaining = max_cost_usd
     for path in files:
         try:
             data_raw = json.loads(path.read_text(encoding="utf-8"))
@@ -130,14 +168,37 @@ def resolve(
             result = resolve_proposal(proposal, idx, enricher=enricher)
             resolved.append(result)
             n_proposals += 1
-            recs[result["merge_recommendation"]] += 1
-            if result.get("resolved_person_id"):
-                person_matched += 1
-            elif result["merge_recommendation"] != "skip":
-                person_unmatched += 1
 
         if not resolved:
             continue
+
+        if enrich_llm and budget_remaining > 0:
+            from polder.resolve.llm_enrich import enrich_resolved
+
+            verifier = None
+            if quote_or_die:
+                from polder.resolve.quote_or_die import make_verifier
+
+                verifier = make_verifier()
+
+            resolved, file_stats = enrich_resolved(
+                resolved,
+                max_cost_usd=budget_remaining,
+                quote_or_die_check=verifier,
+            )
+            budget_remaining = max(0.0, budget_remaining - file_stats.total_cost_usd)
+            assert llm_stats is not None
+            llm_stats.candidates += file_stats.candidates
+            llm_stats.skipped_budget += file_stats.skipped_budget
+            llm_stats.skill_calls += file_stats.skill_calls
+            llm_stats.cache_hits += file_stats.cache_hits
+            llm_stats.rate_limited += file_stats.rate_limited
+            llm_stats.skill_errors += file_stats.skill_errors
+            llm_stats.matched_existing += file_stats.matched_existing
+            llm_stats.created_new += file_stats.created_new
+            llm_stats.no_match += file_stats.no_match
+            llm_stats.quote_or_die_rejected += file_stats.quote_or_die_rejected
+            llm_stats.total_cost_usd += file_stats.total_cost_usd
 
         out_path = path.parent / (path.stem + ".resolved.json")
         out_path.write_text(
@@ -145,6 +206,17 @@ def resolve(
             encoding="utf-8",
         )
         n_files_written += 1
+        all_resolved.extend(resolved)
+
+    recs: Counter = Counter()
+    person_matched = 0
+    person_unmatched = 0
+    for r in all_resolved:
+        recs[r.get("merge_recommendation", "skip")] += 1
+        if r.get("resolved_person_id"):
+            person_matched += 1
+        elif r.get("merge_recommendation") != "skip":
+            person_unmatched += 1
 
     typer.echo("")
     typer.echo(f"=== Resolve klaar ===")
@@ -155,3 +227,17 @@ def resolve(
     typer.echo(f"  skip:             {recs.get('skip', 0)}")
     typer.echo(f"  person-matched:   {person_matched}")
     typer.echo(f"  person-unmatched: {person_unmatched}")
+    if llm_stats is not None:
+        typer.echo("")
+        typer.echo("=== LLM-enrich ===")
+        typer.echo(f"  candidates:         {llm_stats.candidates}")
+        typer.echo(f"  skill-calls:        {llm_stats.skill_calls}")
+        typer.echo(f"  cache-hits:         {llm_stats.cache_hits}")
+        typer.echo(f"  matched-existing:   {llm_stats.matched_existing}")
+        typer.echo(f"  created-new:        {llm_stats.created_new}")
+        typer.echo(f"  no-match:           {llm_stats.no_match}")
+        typer.echo(f"  quote-or-die-rej:   {llm_stats.quote_or_die_rejected}")
+        typer.echo(f"  rate-limited:       {llm_stats.rate_limited}")
+        typer.echo(f"  errors:             {llm_stats.skill_errors}")
+        typer.echo(f"  skipped-budget:     {llm_stats.skipped_budget}")
+        typer.echo(f"  total-cost-usd:     ${llm_stats.total_cost_usd:.4f}")
