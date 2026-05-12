@@ -249,6 +249,27 @@ def test_resolve_proposal_post_matched_via_org_classification(polder_index) -> N
     assert "matched_by_org_classification" in (result.get("resolution_notes") or "")
 
 
+def test_resolve_proposal_post_prefers_canonical_min_suffix(polder_index) -> None:
+    """Bij meerdere keyword-matches kiest de resolver de slug met canonical
+    ``-min-<afk>``-suffix. Voorkomt dat apply een verzonnen alternatief
+    aanmaakt naast een al-bestaande canonical post (zoals een tijdelijke
+    ``post:minister-president-az`` naast ``post:minister-president-min-az``).
+    """
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "R.A.A. Jetten",
+        "organization_id": "org:ministerie-az",
+        "post_id": "post:nieuwe-verzonnen-slug",
+        "role": "Minister-President en Minister belast met de leiding van het Ministerie van Algemene Zaken",
+        "start_date": "2026-02-23",
+        "staatscourant_url": "https://example.org/stcrt-2026-8174",
+        "confidence": 0.99,
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["resolved_post_id"] == "post:minister-president-min-az"
+
+
 def test_resolve_proposal_post_role_keyword_disambiguates(polder_index) -> None:
     """Onder eenzelfde ministerie bestaan zowel minister- als staatssecretaris-
     posts (beide classification=bewindspersoon). De role-keyword in de proposal

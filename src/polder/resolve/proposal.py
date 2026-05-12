@@ -169,6 +169,19 @@ def _resolve_post(
                 ]
                 if len(refined) == 1:
                     return PostMatch(refined[0], 0.90, "matched_by_org_classification")
+                if len(refined) > 1:
+                    # Meerdere keyword-matches: prefer de slug die expliciet de
+                    # ministerie-suffix bevat (canonical conventie:
+                    # `post:<rol>-min-<afk>`). Anders een verzonnen variant
+                    # zoals `post:minister-president-az` zou hier blijven
+                    # hangen en apply zou m onbedoeld aanmaken.
+                    min_suffix = org_id.removeprefix("org:")
+                    if min_suffix.startswith("min-"):
+                        with_suffix = [p for p in refined if p.endswith(f"-{min_suffix}")]
+                        if len(with_suffix) == 1:
+                            return PostMatch(
+                                with_suffix[0], 0.90, "matched_by_org_classification"
+                            )
         if len(candidates) == 1:
             return PostMatch(candidates[0], 0.90, "matched_by_org_classification")
 
