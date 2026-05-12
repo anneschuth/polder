@@ -442,9 +442,12 @@ def enrich_resolved(
 
         payload = _build_payload(proposal, bucket, data_dir=data_dir)
 
-        # Soms gaat de eerste call om met is_error (subprocess kapot, transient
-        # Anthropic-error, of korte rate-limit). Eén retry met een fresh
-        # session is bijna altijd genoeg om door te kunnen.
+        # KRITIEK: SESSION PER CALL voor lookup-person.
+        # De stream-json sessie houdt user-messages cumulatief in context.
+        # Als de skill bij case N van slag raakt ("this is the fourth empty
+        # payload in a row, I'm stopping here") zien alle volgende cases
+        # die corruptie ook. We sluiten daarom expliciet na elke call.
+        # Verlies van prompt-cache-winst is acceptabel: correctness > kosten.
         attempts = 0
         result = None
         while attempts < 2:
@@ -475,6 +478,11 @@ def enrich_resolved(
                 result.is_error, result.rate_limited, (err_msg or "<none>")[:160],
             )
             _reset_session_for_skill(skill_name)
+
+        # Sluit altijd de session na deze call (succesvol of niet).
+        # Zo blijft de volgende case onafhankelijk; geen accumulerende
+        # user-message-context die de skill verwart.
+        _reset_session_for_skill(skill_name)
 
         if result is None:
             continue  # exception-pad
