@@ -30,7 +30,7 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 
 ## Output
 
-**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad — schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor read-only lookups (`polder search`, `polder show`).
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad. Schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor read-only lookups (`polder search`, `polder show`).
 
 JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Elk proposal in de array heeft:
 

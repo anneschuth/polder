@@ -29,7 +29,7 @@ Optioneel: ministerie-slug en peildatum, indien niet uit metadata afleidbaar.
 
 ## Output
 
-**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad — schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor `Read` (PDF) en `polder search` (slug-lookup).
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad. Schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor `Read` (PDF) en `polder search` (slug-lookup).
 
 JSON-array met proposals. Twee soorten, beide met `bron_pagina_nummer`, `bron_url` en `evidence`:
 

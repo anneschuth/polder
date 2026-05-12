@@ -28,7 +28,7 @@ Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl)
 
 **ALLEEN JSON-array als laatste output, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming of ontslag. Geen introductietekst, geen samenvatting, geen markdown-fences, geen "Next step:"-suggesties. Alleen de array.
 
-**Schrijf zelf geen bestanden.** De runner vangt jouw stdout op en schrijft die naar het juiste pad. Als je Bash gebruikt voor `polder search`, dat is read-only en prima — maar gebruik nooit `Write` of `>` om JSON naar disk te zetten, en noem geen output-pad in je antwoord.
+**Schrijf zelf geen bestanden.** De runner vangt jouw stdout op en schrijft die naar het juiste pad. Gebruik nooit `Write` of `>` om JSON naar disk te zetten, en noem geen output-pad in je antwoord.
 
 Elk proposal heeft:
 

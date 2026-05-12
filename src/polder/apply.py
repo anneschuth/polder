@@ -108,6 +108,57 @@ def _today_iso() -> str:
     return date.today().isoformat()
 
 
+def _resolved_org_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical organization_id uit een proposal.
+
+    De resolver vult ``resolved_organization_id`` met de canonical slug
+    (bv. ``org:min-jenv``) waar de raw slug ``org:ministerie-van-justitie-
+    en-veiligheid`` zou zijn. We geven de resolved variant voorrang **mits**
+    de raw slug óók verwijst naar dezelfde org-keten — anders heeft de
+    resolver naar een mindere-specifieke parent geklommen ("ik kon de
+    afdeling niet vinden, ik gok directie") en moet apply met de raw werken
+    zodat de chain-creatie de ontbrekende child kan aanmaken.
+
+    Heuristiek: gebruik resolved als (a) er geen raw is, of (b) raw is
+    canonical, of (c) raw resolved is via een ALIAS naar resolved. Voor
+    chain-klim-gevallen wijst raw naar iets dat resolved NIET als alias
+    heeft; daar valt apply terug op raw.
+    """
+    raw = _normalize_id(proposal.get("organization_id"), "org")
+    resolved = _normalize_id(proposal.get("resolved_organization_id"), "org")
+    if resolved is None:
+        return raw
+    if raw is None or raw == resolved:
+        return resolved
+    method = (proposal.get("resolution_notes") or "").split(";", 1)[0]
+    if "proposal_id_exact" in method or "proposal_id_via_alias" in method:
+        return resolved
+    return raw
+
+
+def _resolved_post_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical post_id uit een proposal.
+
+    Geef ``resolved_post_id`` voorrang als die er is — de resolver matcht
+    fuzzy (``post:minister-defensie`` → ``post:minister-min-def``) en alleen
+    de canonical slug bestaat in ``data/posten/``. Val terug op raw als de
+    resolver niets vond.
+    """
+    return _normalize_id(
+        proposal.get("resolved_post_id") or proposal.get("post_id"),
+        "post",
+    )
+
+
+def _resolved_person_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical person_id uit een proposal. Zie _resolved_org_id."""
+    raw = proposal.get("resolved_person_id") or proposal.get("existing_person_id")
+    if not raw:
+        return None
+    s = str(raw).strip()
+    return s or None
+
+
 def _detect_source_id(proposal: dict[str, Any], fallback: str = "abd_nieuws") -> str:
     """Leid een polder source-id af uit URL-velden of staging-filename hint."""
     if proposal.get("abd_nieuws_url"):
@@ -575,10 +626,7 @@ def plan_apply(
         chain = proposal.get("organization_chain") or proposal.get(
             "organization_chain_inferred", []
         )
-        target_org_id = _normalize_id(
-            proposal.get("organization_id") or proposal.get("resolved_organization_id"),
-            "org",
-        )
+        target_org_id = _resolved_org_id(proposal)
 
         # Consistentie-check vóór create-org: als de proposal zowel een chain
         # als een `organization_id` levert, moet de laatste chain-entry
@@ -638,7 +686,7 @@ def plan_apply(
             continue
 
         # --- Stap 2: post aanmaken indien nodig ---
-        post_id = _normalize_id(proposal.get("post_id"), "post")
+        post_id = _resolved_post_id(proposal)
         if not post_id:
             skipped.append(
                 SkippedProposal(proposal=proposal, reasons=["geen post_id in proposal"])
@@ -889,18 +937,15 @@ def _plan_close_mandate(
     if date_skip is not None:
         return SkippedProposal(proposal=proposal, reasons=[date_skip])
 
-    post_id = _normalize_id(proposal.get("post_id"), "post")
+    post_id = _resolved_post_id(proposal)
     if not post_id:
         return SkippedProposal(
             proposal=proposal, reasons=["close-mandaat: geen post_id in proposal"]
         )
 
-    target_org_id = _normalize_id(
-        proposal.get("organization_id") or proposal.get("resolved_organization_id"),
-        "org",
-    )
+    target_org_id = _resolved_org_id(proposal)
 
-    resolved_id = proposal.get("resolved_person_id") or proposal.get("existing_person_id")
+    resolved_id = _resolved_person_id(proposal)
     if not resolved_id:
         return SkippedProposal(
             proposal=proposal,
