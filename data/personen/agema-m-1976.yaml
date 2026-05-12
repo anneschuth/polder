@@ -52,13 +52,19 @@ mandaten:
   post_id: post:minister-min-vws
   role: Minister van Volksgezondheid, Welzijn en Sport
   start_date: '2024-07-02'
-  end_date: null
+  end_date: '2026-02-23'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-script
   appointment:
     decision: Besluit nr. 2024001708, 2 juli 2024
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502

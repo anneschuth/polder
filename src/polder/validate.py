@@ -357,8 +357,18 @@ def check_overlapping_mandaten(idx: Index) -> list[ValidationIssue]:
 def _overlaps(
     a_start: date, a_end: date | None, b_start: date, b_end: date | None
 ) -> bool:
+    """True als twee mandate-perioden elkaar overlappen.
+
+    Nederlandse staatsrechtelijke conventie: een kabinetswissel gebeurt op
+    één kalenderdatum waarbij oude bewindspersoon 's ochtends nog
+    functioneert en de nieuwe vanaf de middag. We modelleren dit als
+    ``end_date_oud == start_date_nieuw`` en beschouwen dat NIET als
+    overlap. Alles wat langer dan één dag duurt is wel een overlap.
+    """
     a_end_eff = a_end or date.max
     b_end_eff = b_end or date.max
+    if a_end == b_start or b_end == a_start:
+        return False
     return a_start <= b_end_eff and b_start <= a_end_eff
 
 
