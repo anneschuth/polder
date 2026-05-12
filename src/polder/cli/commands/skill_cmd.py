@@ -90,7 +90,9 @@ def parse_staatscourant(
     xml_path: Annotated[Path, typer.Argument(help="KB/Staatscourant XML-bestand.")],
     output: Annotated[
         Path | None,
-        typer.Argument(help="Output JSON-pad (default: data/_staging/staatscourant-<key>-<datum>.json)."),
+        typer.Argument(
+            help="Output JSON-pad (default: data/_staging/staatscourant-<key>-<datum>.json)."
+        ),
     ] = None,
 ) -> None:
     """Parse een Staatscourant-XML naar Membership-proposals."""
@@ -114,7 +116,9 @@ def parse_abd_nieuws(
     html_path: Annotated[Path, typer.Argument(help="ABD-nieuwsbericht HTML-bestand.")],
     output: Annotated[
         Path | None,
-        typer.Argument(help="Output JSON-pad (default: data/_staging/abd-nieuws-<key>-<datum>.json)."),
+        typer.Argument(
+            help="Output JSON-pad (default: data/_staging/abd-nieuws-<key>-<datum>.json)."
+        ),
     ] = None,
 ) -> None:
     """Parse een ABD-nieuwsbericht naar Membership-proposals."""
@@ -135,23 +139,72 @@ def parse_abd_nieuws(
 
 @app.command("parse-organogram")
 def parse_organogram(
-    pdf_path: Annotated[Path, typer.Argument(help="ABD organogram-PDF.")],
     ministerie: Annotated[str, typer.Argument(help="Ministerie-slug, bv `min-bzk`.")],
+    pdf_path: Annotated[
+        Path | None,
+        typer.Argument(help="ABD organogram-PDF (vision-modus). Laat weg bij --from-manifest."),
+    ] = None,
+    from_manifest: Annotated[
+        Path | None,
+        typer.Option(
+            "--from-manifest",
+            help=(
+                "Pad naar een abd-manifest-<datum>.json. Gebruikt inline_text "
+                "van de gekozen ministerie-entry (tekstmodus, voor ministeries "
+                "zonder PDF zoals OCW)."
+            ),
+        ),
+    ] = None,
     output: Annotated[
         Path | None,
-        typer.Argument(help="Output JSON-pad (default: data/_staging/organogram-<min>-<datum>.json)."),
+        typer.Option(
+            "--out",
+            help="Output JSON-pad (default: data/_staging/organogram-<min>-<datum>.json).",
+        ),
     ] = None,
 ) -> None:
-    """Parse een ABD-organogram-PDF naar mandaat-proposals."""
+    """Parse een ABD-organogram (PDF-vision of inline-text uit manifest)."""
     if output is None:
         output = _staging_dir() / f"organogram-{ministerie}-{_today()}.json"
 
-    abs_pdf = pdf_path.resolve()
-    prompt = (
-        f"Ministerie: {ministerie}\n"
-        f"PDF-pad: {abs_pdf}\n\n"
-        f"Lees de PDF met de Read-tool en parse het organogram volgens de skill-instructies."
-    )
+    if (pdf_path is None) == (from_manifest is None):
+        raise typer.BadParameter(
+            "Geef óf een PDF-pad (vision-modus) óf --from-manifest (tekstmodus), "
+            "niet allebei en niet geen van beide."
+        )
+
+    if pdf_path is not None:
+        abs_pdf = pdf_path.resolve()
+        prompt = (
+            f"Ministerie: {ministerie}\n"
+            f"PDF-pad: {abs_pdf}\n\n"
+            f"Lees de PDF met de Read-tool en parse het organogram "
+            f"volgens de skill-instructies."
+        )
+    else:
+        manifest = json.loads(from_manifest.read_text(encoding="utf-8"))
+        entry = next(
+            (m for m in manifest.get("ministeries", []) if m["ministerie_slug"] == ministerie),
+            None,
+        )
+        if entry is None:
+            raise typer.BadParameter(
+                f"Ministerie {ministerie!r} niet gevonden in manifest {from_manifest}."
+            )
+        inline_text = entry.get("inline_text") or ""
+        if not inline_text.strip():
+            raise typer.BadParameter(
+                f"Manifest-entry voor {ministerie} heeft lege inline_text; geen tekstmodus mogelijk."
+            )
+        bron_url = entry.get("organogram_subpage_url") or entry.get("organisatie_url") or ""
+        prompt = (
+            f"Ministerie: {ministerie}\n"
+            f"Bron-URL: {bron_url}\n"
+            f"Modus: tekstmodus (inline_text uit ABD-manifest).\n\n"
+            f"INLINE_TEXT (gebruik dit als de bron; evidence MOET een letterlijke "
+            f"substring van deze tekst zijn):\n\n{inline_text}"
+        )
+
     result = run_skill("parse-organogram", prompt, output=output)
     _exit_for_result(result)
     typer.echo(f"proposals geschreven naar {output}", err=True)
@@ -214,9 +267,7 @@ def lookup_person(
     ] = None,
     out: Annotated[
         Path | None,
-        typer.Option(
-            "--out", help="Output JSON-pad (default: data/_staging/lookup-<naam>.json)."
-        ),
+        typer.Option("--out", help="Output JSON-pad (default: data/_staging/lookup-<naam>.json)."),
     ] = None,
     endpoint: Annotated[
         str,
