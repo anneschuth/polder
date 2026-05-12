@@ -26,7 +26,7 @@ Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl)
 
 ## Output
 
-JSON-array met proposals, één per benoeming of ontslag. Elk proposal heeft:
+**ALLEEN JSON-array, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming of ontslag. Geen introductietekst, geen samenvatting, geen markdown-fences, geen verklaring. Alleen de array. Elk proposal heeft:
 
 - `person_name` (string): naam zoals in het KB, met titulering en initialen.
 - `existing_person_id` (string of null): polder-slug bij match, anders null.
