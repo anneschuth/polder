@@ -11,7 +11,7 @@ mandaten:
 - id: wd-974b04d3e5f7
   organization_id: org:min-bzk
   post_id: post:minister-min-bzk
-  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
   start_date: '2025-08-22'
   sources:
   - id: wikidata
@@ -31,7 +31,7 @@ mandaten:
 - id: wd-43a3f6a467b4
   organization_id: org:min-jenv
   post_id: post:minister-min-jenv
-  role: Nederlands minister van Justitie en Veiligheid
+  role: Minister van Justitie en Veiligheid
   start_date: '2024-07-02'
   sources:
   - id: wikidata
@@ -43,29 +43,12 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-schoof-script
-  end_date: '2026-02-23'
-- id: mandate-post-minister-min-jenv-2024-07-02
-  organization_id: org:min-jenv
-  post_id: post:minister-min-jenv
-  role: Minister van Justitie en Veiligheid
-  start_date: '2024-07-02'
-  end_date: '2026-02-23'
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-schoof-script
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.95
+  end_date: '2026-02-23'
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q111051482

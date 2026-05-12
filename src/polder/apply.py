@@ -209,18 +209,20 @@ _MIN_PLAUSIBLE_YEAR = 1798
 _MAX_FUTURE_YEARS = 5
 
 
-def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str, str]:
+def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str]:
     """Canonical key voor mandaat-deduplicatie.
 
-    Identical (post_id, organization_id, start_date, end_date, role) is treated
-    as the same mandate regardless of source, decision_reference, or confidence.
+    Identical (post_id, organization_id, start_date, end_date) is treated as
+    het zelfde mandaat. Role staat NIET in de key: dezelfde benoeming kan
+    door Wikidata als "Nederlands minister van X" geschreven worden en door
+    Staatscourant als "Minister van X" — dat zijn niet twee mandaten, maar
+    twee bronnen voor één mandaat.
     """
     return (
         str(m.get("post_id") or ""),
         str(m.get("organization_id") or ""),
         str(m.get("start_date") or ""),
         str(m.get("end_date") or ""),
-        str(m.get("role") or ""),
     )
 
 
@@ -510,6 +512,7 @@ def plan_apply(
     from polder.resolve.matcher import PolderIndex
 
     polder_index = PolderIndex.load(data_dir)
+    _ensure_mzp_lookup(data_dir)
     org_ids = polder_index.org_ids
     org_aliases = polder_index.org_by_alias
     post_ids = _existing_post_ids(data_dir)
@@ -922,29 +925,74 @@ def _build_org_record(
     return record
 
 
-# Minister-zonder-portefeuille hangt staatsrechtelijk onder het ministerie
-# waaronder de portefeuille valt, niet onder "Kabinet" (org:onderdeel-bck)
-# zoals KB-skills soms voorstellen. Mapping op portefeuille-keyword:
-_MZP_PORTFOLIO_TO_MIN: list[tuple[str, str]] = [
-    ("buitenlandse-handel", "org:min-bz"),
-    ("asiel-en-migratie", "org:min-aenm"),
-    ("volkshuisvesting", "org:min-bzk"),
-    ("klimaat", "org:min-kgg"),
-    ("werk-en-participatie", "org:min-szw"),
-    ("langdurige-zorg", "org:min-vws"),
-]
-
-
 def _mzp_organization_for_post(post_id: str) -> str | None:
     """Voor een post:minister-zp-<portefeuille>-slug: het canonical
-    ministerie waaronder die portefeuille valt. None voor niet-MZP-posts."""
+    ministerie waaronder die portefeuille valt. None voor niet-MZP-posts
+    of voor portefeuilles waarvan we geen ministerie kennen.
+
+    Mapping: zoek in data/organisaties/ministeries/ of een van de
+    ministerie-naam-slugs voorkomt in de portefeuille-slug. Bv.
+    post:minister-zp-klimaat-en-groene-groei -> portfolio "klimaat-en-
+    groene-groei" -> ministerie-slug "klimaat-en-groene-groei" (min-kgg).
+    Deterministisch via de data, geen hardgecodeerde lijst nodig.
+    """
     if not post_id.startswith("post:minister-zp-"):
         return None
-    suffix = post_id.removeprefix("post:minister-zp-")
-    for trigger, org in _MZP_PORTFOLIO_TO_MIN:
-        if trigger in suffix:
-            return org
+    portfolio = post_id.removeprefix("post:minister-zp-")
+    for slug, oid in _MZP_MIN_LOOKUP:
+        if slug == portfolio or slug in portfolio:
+            return oid
     return None
+
+
+def _build_mzp_lookup(data_dir: Path) -> list[tuple[str, str]]:
+    """Bouw (ministerie-naam-slug, org_id)-paren uit data/organisaties/
+    ministeries/. Een portefeuille-slug matched een ministerie als de
+    ministerie-naam-slug gelijk is aan of substring van de portefeuille-
+    slug.
+
+    Volgorde: langste namen eerst zodat "klimaat-en-groene-groei" matched
+    op min-kgg en niet op het kortere "klimaat".
+    """
+    import yaml
+
+    ministries_dir = data_dir / "organisaties" / "ministeries"
+    if not ministries_dir.exists():
+        return []
+    pairs: list[tuple[str, str]] = []
+    for yp in ministries_dir.glob("*.yaml"):
+        try:
+            d = yaml.safe_load(yp.read_text(encoding="utf-8"))
+        except yaml.YAMLError:
+            continue
+        if not isinstance(d, dict) or not d.get("id"):
+            continue
+        oid = d["id"]
+        for n in d.get("names") or []:
+            if not isinstance(n, dict):
+                continue
+            val = n.get("value")
+            if not val:
+                continue
+            s = unicodedata.normalize("NFKD", str(val)).encode("ascii", "ignore").decode("ascii")
+            slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+            if slug:
+                pairs.append((slug, oid))
+    pairs.sort(key=lambda t: -len(t[0]))
+    return pairs
+
+
+# Lazy gevuld bij eerste lookup vanuit _ensure_mzp_lookup.
+_MZP_MIN_LOOKUP: list[tuple[str, str]] = []
+
+
+def _ensure_mzp_lookup(data_dir: Path) -> None:
+    """Vul _MZP_MIN_LOOKUP een keer voor de gegeven data_dir. Idempotent.
+    """
+    global _MZP_MIN_LOOKUP
+    if _MZP_MIN_LOOKUP:
+        return
+    _MZP_MIN_LOOKUP = _build_mzp_lookup(data_dir)
 
 
 def _build_post_record(
