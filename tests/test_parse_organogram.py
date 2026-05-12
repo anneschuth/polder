@@ -72,7 +72,7 @@ def test_skill_md_frontmatter_required_fields() -> None:
     fm = _parse_frontmatter(_read_skill_md())
     assert fm.get("name") == "parse-organogram"
     assert fm.get("description"), "description is verplicht"
-    assert fm.get("version") == "0.2.0", "version moet 0.2.0 zijn"
+    assert fm.get("version") == "0.3.0", "version moet 0.3.0 zijn"
 
 
 def test_skill_md_no_em_dashes() -> None:

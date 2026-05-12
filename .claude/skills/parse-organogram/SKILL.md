@@ -1,7 +1,7 @@
 ---
 name: parse-organogram
-description: Vision-analyse op organogram PDF of PNG, extract organisatiehierarchie en bemenste posten. Gebruik wanneer de gebruiker een organogram-afbeelding aanlevert of zegt 'parse organogram', 'extract organisatiestructuur', 'lees organogram', 'organogram naar JSON', or in English 'parse org chart', 'extract organisation structure', 'read organogram'.
-version: 0.2.0
+description: Vision- of HTML-tekstanalyse op een organogram, extract organisatiehierarchie en bemenste posten. Gebruik wanneer de gebruiker een organogram-afbeelding of inline organogram-tekst aanlevert of zegt 'parse organogram', 'extract organisatiestructuur', 'lees organogram', 'organogram naar JSON', or in English 'parse org chart', 'extract organisation structure', 'read organogram'.
+version: 0.3.0
 triggers:
   - parse organogram
   - extract organisatiestructuur
@@ -16,12 +16,16 @@ triggers:
 
 ## Doel
 
-Voer vision-analyse uit op een PDF of PNG van een ministerieel organogram en lever proposals voor de organisatiehierarchie (parent naar child) plus de personen op de zichtbare posten. Personen-extracties krijgen een lage confidence-cap omdat vision foutgevoelig is op kleine namen en initialen.
+Lever proposals voor de organisatiehierarchie (parent naar child) plus de personen op de zichtbare posten van een ministerieel organogram. Twee inputmodi: vision-analyse op een PDF of PNG, of tekstanalyse op de `inline_text` uit het ABD-manifest. Personen-extracties krijgen een confidence-cap omdat zowel vision als afgeknipte HTML-tekst foutgevoelig zijn op initialen.
 
 ## Input
 
-- Pad naar een PNG, JPG of PDF van een organogram.
-- Optioneel: ministerie-slug en peildatum, indien niet uit metadata afleidbaar.
+Eén van:
+
+- Pad naar een PNG, JPG of PDF van een organogram (vision-modus).
+- Een entry uit `data/_staging/abd-manifest-<datum>.json` waarvan `inline_text` is gevuld (tekstmodus). Sommige ministeries (AZ, DEF, OCW) publiceren geen organogram-PDF maar wel een HTML-pagina met directie-namen en personen.
+
+Optioneel: ministerie-slug en peildatum, indien niet uit metadata afleidbaar.
 
 ## Output
 
@@ -60,28 +64,43 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 
 ## Stappen voor de LLM
 
+### Vision-modus (PDF of PNG)
+
 1. Roep Claude vision aan via `anthropic.messages.create` met de afbeelding als image-content. Voor PDF: render eerst per pagina naar PNG (bijvoorbeeld via `pdf2image`), dan vision per pagina.
 2. Loop alle gedetecteerde boxen langs. Voor elke box:
    - Lees de titel-regel ("Directie X", "DG Bestuur", "Afdeling Beleid").
    - Lees de eventuele persoonsnaam onder de titel.
    - Volg de verbindingslijn omhoog naar de parent-box; de parent geeft `parent_id`.
-3. Map de titel naar `classification` uit `schemas/post.schema.json`:
-   - "Secretaris-Generaal", "SG", "plv. SG", "Directeur-Generaal", "DG", "Inspecteur-Generaal", "IG" naar `abd-tmg`.
-   - "Directeur", "plv. directeur", "Programmadirecteur" naar `abd-directeur`.
-   - "Afdelingshoofd", "Hoofd Afdeling X", "MT-lid", "clusterhoofd" naar `abd-afdelingshoofd`.
-   - "Projectleider", "Kwartiermaker" naar `abd-projectleider`.
-   - Onbekende titel: laat `classification` weg en flag voor handmatige review.
+3. Map de titel naar `classification` (zie mapping hieronder).
 4. Cap `confidence` voor elk `person_post` proposal op 0.85. Org-structuur mag hoger als de lijnen helder zijn.
-5. Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, secretariaat). Niet extracten, ook niet als ze in het organogram staan.
-6. Schrijf het resultaat naar `data/_staging/organogram-{ministerie}-{datum}.json`. Niet direct naar `data/organisaties/`, `data/personen/` of `data/posten/`.
+
+### Tekstmodus (inline_text uit manifest)
+
+1. Lees `inline_text` van de manifest-entry. Parse koppen en sub-koppen (h1/h2/h3 zijn al weg, maar woorden als "DG", "Directie", "Afdeling" markeren niveaus).
+2. Voor elk herkend kopje: maak een `org_structure`-proposal met `parent_id` op het bovenliggende niveau (root = `org:<ministerie-slug>`).
+3. Voor elke persoonsnaam direct na een kopje: maak een `person_post`-proposal. `evidence` MOET een letterlijke substring van `inline_text` zijn die de naam plus omringende context bevat (minimaal de zin waar de naam in staat). Geen substring, geen proposal.
+4. Map de titel naar `classification` (zie mapping hieronder).
+5. Cap `confidence` voor `person_post` op 0.85, voor `org_structure` op 0.90 als de hiërarchie eenduidig is.
+
+### Classification-mapping
+
+- "Secretaris-Generaal", "SG", "plv. SG", "Directeur-Generaal", "DG", "Inspecteur-Generaal", "IG" naar `abd-tmg`.
+- "Directeur", "plv. directeur", "Programmadirecteur" naar `abd-directeur`.
+- "Afdelingshoofd", "Hoofd Afdeling X", "MT-lid", "clusterhoofd" naar `abd-afdelingshoofd`.
+- "Projectleider", "Kwartiermaker" naar `abd-projectleider`.
+- Onbekende titel: laat `classification` weg en flag voor handmatige review.
+
+### Output schrijven
+
+Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, secretariaat). Niet extracten, ook niet als ze in de bron staan. Schrijf het resultaat naar `data/_staging/organogram-{ministerie}-{datum}.json`. Niet direct naar `data/organisaties/`, `data/personen/` of `data/posten/`.
 
 ## Harde regels
 
 1. **Staging-only.** Output ALTIJD onder `data/_staging/`. Nooit direct in `data/`.
-2. **Confidence-cap.** Personen uit vision: maximaal 0.85, ook bij heldere afbeelding. Vision blijft foutgevoelig.
-3. **Quote-or-die voor evidence.** `evidence` beschrijft de locatie in de afbeelding (bijvoorbeeld "blok rechts boven, pagina 2"). Geen evidence, geen proposal.
+2. **Confidence-cap.** Personen: maximaal 0.85, ook bij heldere bron. Vision en HTML-tekst blijven foutgevoelig op initialen.
+3. **Quote-or-die voor evidence.** Vision-modus: `evidence` beschrijft de locatie in de afbeelding (bijvoorbeeld "blok rechts boven, pagina 2"). Tekstmodus: `evidence` is een letterlijke substring van `inline_text`. Geen evidence, geen proposal.
 4. **Two-source rule.** Een organogram-extractie merget alleen met expliciete bevestiging uit een tweede bron (bijvoorbeeld een KB in de Staatscourant) of expliciete human review.
-5. **Geen rood-AVG.** Beleidsmedewerkers en juridisch ondersteunend personeel komen niet in proposals, ook niet als ze in de afbeelding zichtbaar zijn.
+5. **Geen rood-AVG.** Beleidsmedewerkers en juridisch ondersteunend personeel komen niet in proposals, ook niet als ze in de bron zichtbaar zijn.
 6. **Bron verplicht.** Elke proposal heeft `bron_pagina_nummer` en `bron_url`. Onleesbare regio: log een waarschuwing met paginanummer, geen gokken.
 
 ## Voorbeeld
