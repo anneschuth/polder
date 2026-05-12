@@ -1033,7 +1033,15 @@ def reconciliation_lookup_person(
 
 
 def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, Any]]:
-    """Map Reconciliation-result-records naar onze standaard-vorm."""
+    """Map Reconciliation-result-records naar onze standaard-vorm.
+
+    Reconciliation API levert birth_year niet direct. We extracten een ruwe
+    waarde uit de description ("Dutch politician (born 1973)"). Voor
+    kandidaten waar dat faalt: een EntityData-followup call op de eerste
+    drie kandidaten haalt P569 op. Drie is genoeg: de juiste persoon staat
+    typisch in top-3 van een name-lookup, en meer requests doen voor 25
+    kandidaten kost meer dan het oplost.
+    """
     rows: list[dict[str, Any]] = []
     for cand in candidates:
         qid = cand.get("id")
@@ -1048,7 +1056,54 @@ def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, A
                 "description": description,
             }
         )
+
+    # EntityData-followup voor top-3 zonder birth_year.
+    for row in rows[:3]:
+        if row.get("birth_year") is not None:
+            continue
+        year = _fetch_birth_year_from_entity(row["qid"])
+        if year is not None:
+            row["birth_year"] = year
+
     return rows
+
+
+def _fetch_birth_year_from_entity(qid: str, *, timeout: float = 10.0) -> int | None:
+    """Haal P569 (geboortedatum) op uit de Wikidata-entity-JSON.
+
+    De Reconciliation API geeft alleen qid + description + label terug. Voor
+    een doelgerichte birth-year lookup is een tweede call naar
+    ``Special:EntityData/<qid>.json`` nodig. Returnt None bij netwerk-error
+    of als P569 ontbreekt.
+    """
+    url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            response = client.get(url, headers={"User-Agent": USER_AGENT})
+            response.raise_for_status()
+            data = response.json()
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        logger.debug("EntityData fetch faalde voor %s: %s", qid, exc)
+        return None
+
+    entity = (data.get("entities") or {}).get(qid)
+    if not isinstance(entity, dict):
+        return None
+    for claim in entity.get("claims", {}).get("P569", []):
+        time_str = (
+            claim.get("mainsnak", {})
+            .get("datavalue", {})
+            .get("value", {})
+            .get("time")
+        )
+        if isinstance(time_str, str) and len(time_str) >= 5:
+            try:
+                # ISO datetime: "+1973-06-22T00:00:00Z" of "-0050-01-01T..."
+                year_str = time_str.lstrip("+-").split("-", 1)[0]
+                return int(year_str)
+            except (ValueError, IndexError):
+                continue
+    return None
 
 
 def reconciliation_lookup_persons_batch(
