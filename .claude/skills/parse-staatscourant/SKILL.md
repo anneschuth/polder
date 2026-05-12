@@ -54,17 +54,7 @@ Elk proposal heeft:
    - Extract functie (Secretaris-Generaal, Directeur-Generaal, plaatsvervangend SG, ...).
    - Extract ingangsdatum: zoek "per <datum>" of "met ingang van <datum>".
    - Extract KB-referentie: zoek "bij koninklijk besluit van <datum>, nr. <nummer>".
-4. Match `organization_id` en `post_id` aan bestaande records via `polder search` (Bash). **Verzin geen slugs**: een KB noemt "Ministerie van Defensie" — zoek de canonical slug op in plaats van `org:ministerie-defensie` te raden.
-
-   Concrete commando's (geef altijd `--json`, dat is de scripting-output):
-
-   ```bash
-   uv run polder search "Defensie" -t org --json
-   uv run polder search "minister Defensie" -t post --json
-   uv run polder search "staatssecretaris Financiën" -t post --json
-   ```
-
-   Voor ministeries volgt het slug-patroon `org:min-<afkorting>` (`org:min-def`, `org:min-fin`, `org:min-jenv`, `org:min-bzk`, `org:min-ocw`, `org:min-szw`, `org:min-vws`, `org:min-bz`, `org:min-ienw`, `org:min-lvvn`, `org:min-az`, `org:min-ezk`, `org:min-kgg`). Bewindspersoon-posts volgen `post:minister-<min-slug-suffix>` of `post:staatssecretaris-<min-slug-suffix>` (bv. `post:minister-min-def`, `post:staatssecretaris-min-fin`). Als zoek niets vindt, stel een nieuwe slug voor en flag dat in `confidence_reasoning`.
+4. Stel `organization_id` en `post_id` voor volgens de Polder-conventie. Voor ministeries: `org:min-<afkorting>` (bv. `org:min-def`, `org:min-fin`, `org:min-jenv`, `org:min-bzk`, `org:min-ocw`, `org:min-szw`, `org:min-vws`, `org:min-bz`, `org:min-ienw`, `org:min-lvvn`, `org:min-az`, `org:min-ezk`, `org:min-kgg`). Bewindspersoon-posts: `post:minister-min-<afkorting>` of `post:staatssecretaris-min-<afkorting>`. Een aliassen-fallback in de resolver matcht varianten zoals `org:ministerie-defensie` of `post:minister-defensie` ook op de canonical slug, dus exactheid is geen blocker, maar volg de conventie waar je hem kent.
 5. Bouw het proposal. Confidence-rubriek:
    - Volledige naam plus expliciete functie plus expliciete datum plus KB-referentie: 0.95 of hoger.
    - Naam ambigu (twee of meer matches in `data/personen/`): maximaal 0.7, forceert review.
