@@ -36,6 +36,25 @@ _SKILL_NAME = "lookup-person"
 _MIN_PERSON_CONF_FOR_AUTOMERGE = 0.95
 
 
+def _reset_session_for_skill(skill_name: str) -> None:
+    """Sluit de thread-local SkillSession voor `skill_name` zodat de volgende
+    call een fresh subprocess opent. Best-effort; faalt stilletjes als er
+    geen session is."""
+    try:
+        from polder.llm.session import _thread_local
+
+        sessions = getattr(_thread_local, "sessions", None) or {}
+        for key, session in list(sessions.items()):
+            if key[0] == skill_name:
+                try:
+                    session.close()
+                except Exception:  # noqa: BLE001
+                    pass
+                sessions.pop(key, None)
+    except Exception:  # noqa: BLE001
+        pass
+
+
 @dataclass
 class EnrichStats:
     """Telt wat de LLM-pass gedaan heeft. Wordt aan de CLI-output gehangen."""
@@ -400,7 +419,7 @@ def enrich_resolved(
     enriched: list[dict[str, Any]] = []
     budget_exhausted = False
 
-    for proposal in resolved:
+    for idx_proposal, proposal in enumerate(resolved):
         if not isinstance(proposal, dict):
             enriched.append(proposal)
             continue
@@ -414,6 +433,7 @@ def enrich_resolved(
             continue
 
         stats.candidates += 1
+        name = proposal.get("person_name") or "?"
 
         if budget_exhausted:
             stats.skipped_budget += 1
@@ -421,13 +441,43 @@ def enrich_resolved(
             continue
 
         payload = _build_payload(proposal, bucket, data_dir=data_dir)
-        try:
-            result = runner(skill_name, payload)
-        except Exception as exc:  # noqa: BLE001 — alle runner-failures opvangen
-            logger.warning("Skill-call faalde voor %s: %s", proposal.get("person_name"), exc)
-            stats.skill_errors += 1
-            enriched.append(proposal)
-            continue
+
+        # Soms gaat de eerste call om met is_error (subprocess kapot, transient
+        # Anthropic-error, of korte rate-limit). Eén retry met een fresh
+        # session is bijna altijd genoeg om door te kunnen.
+        attempts = 0
+        result = None
+        while attempts < 2:
+            attempts += 1
+            try:
+                result = runner(skill_name, payload)
+            except Exception as exc:  # noqa: BLE001
+                logger.warning(
+                    "[%d/%d] %s (%s): runner-exception (try %d) %s",
+                    idx_proposal + 1, len(resolved), name, bucket.mode, attempts, exc,
+                )
+                _reset_session_for_skill(skill_name)
+                if attempts >= 2:
+                    stats.skill_errors += 1
+                    enriched.append(proposal)
+                    result = None
+                    break
+                continue
+
+            if not getattr(result, "is_error", False) and not getattr(result, "rate_limited", False):
+                break
+
+            # Error of rate-limit: sluit session, retry met fresh subprocess.
+            err_msg = getattr(result, "error_message", None) or ""
+            logger.warning(
+                "[%d/%d] %s (%s): try %d failed (is_error=%s rate_limited=%s) msg=%s",
+                idx_proposal + 1, len(resolved), name, bucket.mode, attempts,
+                result.is_error, result.rate_limited, (err_msg or "<none>")[:160],
+            )
+            _reset_session_for_skill(skill_name)
+
+        if result is None:
+            continue  # exception-pad
 
         stats.skill_calls += 1
         if getattr(result, "cache_hit", False):
@@ -456,6 +506,10 @@ def enrich_resolved(
         parsed = _parse_skill_output(result.text)
         if parsed is None:
             stats.skill_errors += 1
+            logger.warning(
+                "[%d/%d] %s (%s): unparseable skill-output",
+                idx_proposal + 1, len(resolved), name, bucket.mode,
+            )
             enriched.append(proposal)
             continue
 
@@ -464,13 +518,19 @@ def enrich_resolved(
             url = parsed.get("evidence_source_url")
             if snippet and url and not quote_or_die_check(snippet, url):
                 logger.warning(
-                    "Quote-or-die-check faalde voor %s; resultaat verworpen.",
-                    proposal.get("person_name"),
+                    "[%d/%d] %s (%s): quote-or-die rejected",
+                    idx_proposal + 1, len(resolved), name, bucket.mode,
                 )
                 stats.quote_or_die_rejected += 1
                 enriched.append(proposal)
                 continue
 
+        outcome = parsed.get("outcome") or "?"
+        conf = parsed.get("confidence", 0)
+        logger.info(
+            "[%d/%d] %s (%s) -> %s conf=%.2f cost=$%.4f",
+            idx_proposal + 1, len(resolved), name, bucket.mode, outcome, float(conf), float(cost),
+        )
         enriched.append(_apply_skill_result(proposal, parsed, stats=stats))
 
     return enriched, stats
