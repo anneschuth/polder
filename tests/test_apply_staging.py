@@ -547,6 +547,31 @@ def test_skip_when_merge_recommendation_skip(mini_polder: Path) -> None:
     assert any("skip" in r for s in skipped for r in s.reasons)
 
 
+def test_combined_function_two_mandaten_one_person(mini_polder: Path) -> None:
+    """Twee proposals voor dezelfde nieuwe persoon (gecombineerde functie) → 1 record met 2 mandaten."""
+    # Eerste proposal: directeur bij BZK
+    p1 = _kewal_proposal()
+    p1["person_name"] = "Esther Wijker"
+    p1["organization_id"] = "org:onderdeel-directie-digitale-samenleving"
+    p1["organization_chain"] = []
+    p1["post_id"] = "post:directeur-x-min-bzk"
+    p1["role"] = "directeur Bestuursadvisering bij BZK"
+    p1["birth_year"] = 1957
+
+    # Tweede proposal: zelfde persoon, ander ministerie + andere post
+    p2 = dict(p1)
+    p2["post_id"] = "post:directeur-x-min-vro"
+    p2["role"] = "directeur Bestuursadvisering bij VRO"
+
+    actions, _ = plan_apply([p1, p2], mini_polder / "data")
+    create_persons = [a for a in actions if a.type == "create-person"]
+    assert len(create_persons) == 1, "verwacht één create-person, niet twee"
+    mandaten = create_persons[0].record["mandaten"]
+    assert len(mandaten) == 2, mandaten
+    post_ids = {m["post_id"] for m in mandaten}
+    assert post_ids == {"post:directeur-x-min-bzk", "post:directeur-x-min-vro"}
+
+
 def test_classification_word_boundary() -> None:
     """`ministerie` mag NIET als `minister` worden geclassificeerd."""
     from polder.apply import _classification_from_role

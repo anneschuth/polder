@@ -669,7 +669,12 @@ def plan_apply(
             post_id=post_id,
             confidence=confidence,
             pending_person_ids=pending_person_ids,
+            pending_create_actions=actions,
         )
+        if person_action_or_skip is None:
+            # Pending create-person record is gemuteerd met extra mandaat;
+            # geen nieuwe action te toevoegen.
+            continue
         if isinstance(person_action_or_skip, SkippedProposal):
             skipped.append(person_action_or_skip)
             continue
@@ -852,7 +857,8 @@ def _plan_person(
     post_id: str,
     confidence: float,
     pending_person_ids: set[str],
-) -> ApplyAction | SkippedProposal:
+    pending_create_actions: list[ApplyAction] | None = None,
+) -> ApplyAction | SkippedProposal | None:
     resolved_id = proposal.get("resolved_person_id")
     name_full = str(proposal.get("person_name", "")).strip()
     if not name_full:
@@ -930,6 +936,25 @@ def _plan_person(
         )
     person_id = f"person:{slug_body}"
     if person_id in pending_person_ids:
+        # Tweede proposal voor een persoon die we deze run nog aan het
+        # aanmaken zijn. In plaats van skip: mute het pending create-record
+        # zodat de nieuwe mandaat ook toegevoegd wordt. Dit dekt het
+        # gecombineerde-functie-patroon ("X benoemd bij BZK en VRO").
+        if pending_create_actions is not None:
+            for act in pending_create_actions:
+                if act.type == "create-person" and act.record.get("id") == person_id:
+                    new_record, _ = _append_mandaat(
+                        record=act.record,
+                        organization_id=target_org_id,
+                        post_id=post_id,
+                        proposal=proposal,
+                    )
+                    if new_record is not None:
+                        act.record = new_record
+                        act.reasons.append(
+                            f"extra mandaat {post_id} toegevoegd aan pending {person_id}"
+                        )
+                    return None  # geen nieuwe action — pending al gemuteerd
         return SkippedProposal(
             proposal=proposal,
             reasons=[f"person:{slug_body} al in deze run aangemaakt"],
