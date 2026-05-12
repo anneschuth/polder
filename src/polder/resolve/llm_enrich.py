@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -93,23 +94,121 @@ def _classify_proposal(proposal: dict[str, Any]) -> _BucketChoice | None:
             person_note = part.strip()
             break
 
+    candidate_ids = _extract_candidate_ids(person_note)
+    resolved_pid = proposal.get("resolved_person_id")
+
     if "no_match" in person_note or "no_family" in person_note:
         return _BucketChoice(mode="no_match")
     if "ambiguous_family" in person_note or "person-candidates" in person_note:
-        return _BucketChoice(mode="ambiguous_family")
+        cands = [{"id": cid} for cid in candidate_ids]
+        return _BucketChoice(mode="ambiguous_family", candidates=cands)
     if (
         "family_initials_no_year" in person_note
         or "family_unique" in person_note
         or "family_given" in person_note
     ):
-        return _BucketChoice(mode="year_fill")
+        # Een 'year_fill' is een sterke partial-match. resolved_person_id wijst
+        # naar de kandidaat die het code-pad koos; geef die expliciet mee zodat
+        # de skill weet welk record hij moet aanvullen of verwerpen.
+        cands: list[dict[str, Any]] = []
+        if isinstance(resolved_pid, str) and resolved_pid:
+            cands.append({"id": resolved_pid})
+        return _BucketChoice(mode="year_fill", candidates=cands)
     return None
 
 
-def _build_payload(proposal: dict[str, Any], bucket: _BucketChoice) -> str:
-    """Bouw de JSON-payload die naar de skill gaat. Minimal — alleen velden
-    die de skill nodig heeft, niet de hele resolved-dict.
-    """
+_CANDIDATE_RX = re.compile(r"person:[a-z][a-z0-9-]*-(?:[0-9]{4}|[0-9]{7,}|[0-9a-f]{8})")
+
+
+def _extract_candidate_ids(person_note: str) -> list[str]:
+    """Trek 'person:slug-...'-IDs uit een resolution_notes-segment."""
+    if not person_note:
+        return []
+    seen: list[str] = []
+    for hit in _CANDIDATE_RX.findall(person_note):
+        if hit not in seen:
+            seen.append(hit)
+    return seen
+
+
+def _enrich_candidate(candidate_id: str, *, data_dir: Path) -> dict[str, Any]:
+    """Laad een bestaand persoon-record voor de skill om uit te kiezen."""
+    from polder.lib.quick_lookup import load_by_id
+
+    record = load_by_id(data_dir, candidate_id)
+    if record is None:
+        return {"id": candidate_id, "not_found": True}
+
+    raw = record.model_dump(mode="json", exclude_none=True)
+    # Trim: alleen velden die de skill nodig heeft om identiteit te beoordelen.
+    return {
+        "id": raw.get("id"),
+        "name": raw.get("name"),
+        "birth": raw.get("birth"),
+        "gender": raw.get("gender"),
+        "identifiers": raw.get("identifiers"),
+        "mandaten": [
+            {
+                "post_id": m.get("post_id"),
+                "organization_id": m.get("organization_id"),
+                "role": m.get("role"),
+                "start_date": m.get("start_date"),
+                "end_date": m.get("end_date"),
+            }
+            for m in (raw.get("mandaten") or [])
+        ][:20],
+    }
+
+
+def _wikidata_candidates(name: str, role: str | None, org: str | None) -> list[dict[str, Any]]:
+    """Eén Wikidata-lookup voor de no_match-bucket. Best-effort; lege lijst
+    als de SPARQL- of reconciliation-call faalt of niets oplevert."""
+    try:
+        from polder.fetchers.wikidata_sparql import lookup_person_by_name
+        from polder.resolve.names import parse_person_name
+    except ImportError:
+        return []
+
+    parsed = parse_person_name(name)
+    if not parsed.family:
+        return []
+    try:
+        candidates = lookup_person_by_name(
+            parsed.family,
+            initials=parsed.initials,
+            given=parsed.given,
+        )
+    except Exception as exc:  # noqa: BLE001
+        logger.debug("Wikidata-lookup faalde voor %s: %s", name, exc)
+        return []
+
+    # Top-5 met meeste signal: liever met birth_year dan zonder.
+    candidates.sort(key=lambda c: (c.get("birth_year") is None, c.get("label") or ""))
+    return candidates[:5]
+
+
+def _build_payload(
+    proposal: dict[str, Any],
+    bucket: _BucketChoice,
+    *,
+    data_dir: Path,
+) -> str:
+    """Bouw de JSON-payload die naar de skill gaat. Single-turn: alle context
+    die de skill nodig heeft staat in de payload, geen tool-calls."""
+    enriched_candidates: list[dict[str, Any]] = []
+    for c in bucket.candidates:
+        cid = c.get("id") if isinstance(c, dict) else None
+        if cid:
+            enriched_candidates.append(_enrich_candidate(cid, data_dir=data_dir))
+
+    wikidata: list[dict[str, Any]] = []
+    if bucket.mode == "no_match":
+        wikidata = _wikidata_candidates(
+            proposal.get("person_name") or "",
+            proposal.get("role"),
+            proposal.get("resolved_organization_id") or proposal.get("organization_id"),
+        )
+
     payload = {
         "mode": bucket.mode,
         "proposal": {
@@ -123,32 +222,50 @@ def _build_payload(proposal: dict[str, Any], bucket: _BucketChoice) -> str:
             "staatscourant_url": proposal.get("staatscourant_url"),
             "evidence_snippet": proposal.get("evidence_snippet"),
         },
-        "candidates": bucket.candidates,
+        "candidates": enriched_candidates,
+        "wikidata_candidates": wikidata,
     }
     return json.dumps(payload, ensure_ascii=False)
 
 
+_JSON_FENCE_RX = re.compile(r"```(?:json)?\s*(\{.*?\})\s*```", re.DOTALL)
+
+
 def _parse_skill_output(text: str) -> dict[str, Any] | None:
-    """Verwacht puur JSON. Tolerant voor één markdown-fence omdat skills die
-    soms toch toevoegen."""
+    """Extract de JSON-output uit skill-text. Tolerant voor:
+
+    - bare JSON-object
+    - ```json …``` of ``` …``` fences (laatste wint als er meerdere zijn)
+    - system-reminders, leading prose, of bash-blokken voor de JSON
+    """
     text = text.strip()
-    if text.startswith("```"):
-        # Strip eerste regel (```json) en laatste ``` als die er staat.
-        lines = text.splitlines()
-        if lines and lines[0].startswith("```"):
-            lines = lines[1:]
-        if lines and lines[-1].strip() == "```":
-            lines = lines[:-1]
-        text = "\n".join(lines)
-    try:
-        parsed = json.loads(text)
-    except json.JSONDecodeError as exc:
-        logger.warning("Skill-output is geen geldige JSON: %s", exc)
-        return None
-    if not isinstance(parsed, dict):
+    candidates: list[str] = []
+
+    # Verzamel alle JSON-fence blokken; vaak prefix de skill een uitleg en
+    # sluit hij af met de echte output. Laatste fence wint.
+    candidates.extend(_JSON_FENCE_RX.findall(text))
+
+    # Fallback: heuristisch zoeken naar de eerste `{` na de laatste fence
+    # of in de hele text.
+    if not candidates:
+        start = text.find("{")
+        if start >= 0:
+            candidates.append(text[start:])
+
+    for raw in reversed(candidates):
+        try:
+            parsed = json.loads(raw)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(parsed, dict):
+            return parsed
         logger.warning("Skill-output is geen JSON-object: %r", type(parsed).__name__)
-        return None
-    return parsed
+
+    logger.warning(
+        "Skill-output bevat geen valide JSON-object (text-prefix: %r)",
+        text[:120],
+    )
+    return None
 
 
 def _apply_skill_result(
@@ -246,6 +363,7 @@ def enrich_resolved(
     runner: Any | None = None,
     skill_name: str = _SKILL_NAME,
     quote_or_die_check: Any | None = None,
+    data_dir: Path | None = None,
 ) -> tuple[list[dict[str, Any]], EnrichStats]:
     """Verrijk een resolved-lijst met LLM-output voor person-fallback.
 
@@ -264,6 +382,9 @@ def enrich_resolved(
         from polder.llm.runner import run_skill
 
         runner = run_skill
+
+    if data_dir is None:
+        data_dir = Path("data")
 
     stats = EnrichStats()
     enriched: list[dict[str, Any]] = []
@@ -289,7 +410,7 @@ def enrich_resolved(
             enriched.append(proposal)
             continue
 
-        payload = _build_payload(proposal, bucket)
+        payload = _build_payload(proposal, bucket, data_dir=data_dir)
         try:
             result = runner(skill_name, payload)
         except Exception as exc:  # noqa: BLE001 — alle runner-failures opvangen

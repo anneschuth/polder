@@ -1,7 +1,7 @@
 ---
 name: lookup-person
-description: Resolve een persoon-proposal die de code-only resolver niet kon matchen. Bedoeld voor de drie buckets uit `polder resolve` waar persoon-resolution faalt: `no_match` (familie niet in data/), `ambiguous_family` (meerdere kandidaten zelfde familienaam), en `family_initials_no_year` (match maar geen birth_year). Gebruik wanneer de gebruiker zegt 'lookup persoon', 'vind persoon', 'enrich proposal persoon', of een resolved-proposal aanlevert met `resolution_confidence.person < 0.85`.
-version: 0.1.0
+description: Resolve een persoon-proposal die de code-only resolver niet kon matchen. Drie modes uit `polder resolve`: `no_match` (familie onbekend), `ambiguous_family` (meerdere kandidaten zelfde familienaam), `year_fill` (match maar birth_year ontbreekt). Gebruik wanneer de gebruiker zegt 'lookup persoon', 'vind persoon', of een resolved-proposal aanlevert met `resolution_confidence.person < 0.85`.
+version: 0.3.0
 triggers:
   - lookup persoon
   - vind persoon polder
@@ -14,25 +14,34 @@ triggers:
 
 ## Doel
 
-De code-only resolver in `polder resolve` lost ~60% van persoon-matches op via
-deterministische family+initials+birth_year-matching. Voor de rest blijft één
-van drie problemen over:
-
-1. **`no_match`** — familienaam komt niet voor in `data/personen/`. Persoon is
-   nieuw voor polder; we moeten een birth_year vinden om een stabiele slug
-   `person:<family>-<initials>-<year>` te kunnen maken.
-2. **`ambiguous_family`** of `family_unique` met meerdere kandidaten — meerdere
-   bestaande records hebben dezelfde familienaam (Bakker, Jansen, van Dam). We
-   moeten kiezen of zeggen "geen van deze, nieuwe persoon".
-3. **`family_initials_no_year`** — match op family+initials is sterk, maar
-   birth_year ontbreekt zodat de match niet boven 0.95 confidence komt.
-
-Deze skill resolved één proposal-record per call. Output is een patch die
-`polder resolve --enrich-llm` terug in het `.resolved.json`-bestand merget.
-
-## Input
-
+`polder resolve --enrich-llm` voedt jou per onresolvable proposal een
 JSON-payload met:
+
+- de proposal (naam, rol, organisatie, evidence_snippet, bron-URL)
+- `candidates`: bestaande person-records die op familienaam of initialen
+  lijken te matchen (uit `data/personen/`). Hun mandaten, birth,
+  identifiers staan erbij. Genoeg om in 90% van de gevallen direct te
+  beslissen.
+- `wikidata_candidates`: top-5 Wikidata-hits op familienaam (alleen voor
+  `no_match`-mode), met qid, label, birth_year, description.
+
+Je hebt **Bash, WebFetch en WebSearch beschikbaar**, maar gebruik ze
+alleen als de payload écht onvoldoende is om te beslissen. Elke tool-call
+kost geld en tijd. Standaard: lees de payload, beslis, geef JSON terug.
+
+Beschikbare CLI-tools wanneer je tools nodig hebt:
+
+- `uv run polder show <id>` voor een bestaand record als de payload-trim
+  een veld mist.
+- `uv run polder lookup wikidata --name "<x>" [--role <x>] [--org <x>]`
+  voor een Wikidata-lookup buiten `no_match`-mode (waar hij al gedaan is).
+- `WebFetch` voor Wikipedia, rijksoverheid.nl, officielebekendmakingen,
+  ABD-site. Geen LinkedIn of sociale media.
+
+Output: precies één JSON-object in een ```json``` fence aan het eind.
+Geen "Let me fetch" zonder de fetch ook echt uit te voeren.
+
+## Input-schema
 
 ```json
 {
@@ -42,133 +51,123 @@ JSON-payload met:
     "role": "directeur Toezicht mbo bij de Inspectie van het Onderwijs",
     "organization_id": "org:inspectie-onderwijs-min-ocw",
     "organization_chain": [...],
+    "start_date": "2018-03-12",
     "abd_nieuws_url": "https://...",
     "staatscourant_url": null,
-    "evidence_snippet": "Esther Deursen wordt met ingang van 12 maart 2018 directeur..."
+    "evidence_snippet": "..."
   },
-  "candidates": [   // alleen voor ambiguous_family + year_fill
-    {"id": "person:bakker-m-7766715", "name": {"full": "Margriet Bakker", ...}, "birth": {"year": 1965}, "mandaten": [...]},
-    {"id": "person:bakker-w-6188553", "name": {"full": "Wim Bakker", ...}, "birth": null, "mandaten": [...]}
+  "candidates": [
+    {
+      "id": "person:bakker-m-7766715",
+      "name": {"full": "Margriet Bakker", "family": "Bakker", "given": "Margriet", "initials": "M."},
+      "birth": {"year": 1965},
+      "identifiers": {"wikidata": "Q...", "tk_persoon_id": "..."},
+      "mandaten": [{"post_id": "...", "organization_id": "...", "role": "...", "start_date": "...", "end_date": "..."}]
+    }
+  ],
+  "wikidata_candidates": [
+    {"qid": "Q102345678", "label": "Esther van Deursen", "birth_year": 1972, "description": "..."}
   ]
 }
 ```
 
-## Output
-
-JSON met de patch voor `.resolved.json`:
+## Output-schema (verplicht)
 
 ```json
 {
   "outcome": "matched_existing" | "create_new" | "no_match",
-  "chosen_person_id": "person:bakker-m-7766715",   // null als create_new of no_match
-  "new_person": {                                   // alleen bij create_new
+  "chosen_person_id": "person:bakker-m-7766715",
+  "new_person": {
     "name": {"family": "Deursen", "given": "Esther", "tussenvoegsel": "van"},
     "birth_year": 1972,
-    "wikidata_qid": "Q12345678"   // optioneel
+    "wikidata_qid": "Q102345678"
   },
   "confidence": 0.92,
-  "confidence_reasoning": "Wikidata Q12345678 'Esther van Deursen' heeft P39 'directeur bij Inspectie van het Onderwijs' tussen 2018-2024, matched op rol én organisatie. Familienaam, voornaam en jaartal komen overeen.",
-  "evidence_snippet": "Esther van Deursen (geboren 1972) is sinds 2018 directeur Toezicht mbo bij de Inspectie van het Onderwijs",
-  "evidence_source_url": "https://nl.wikipedia.org/wiki/Esther_van_Deursen"
+  "confidence_reasoning": "...",
+  "evidence_snippet": "...",
+  "evidence_source_url": "https://..."
 }
 ```
 
-## Stappen voor de LLM
+- `outcome: matched_existing` → vul `chosen_person_id`. `new_person` = null.
+- `outcome: create_new` → vul `new_person`. `chosen_person_id` = null.
+- `outcome: no_match` → beide null. Vul wel `confidence_reasoning`.
 
-### Mode 1: `no_match` — onbekende familie
+`evidence_snippet` + `evidence_source_url` zijn verplicht bij confidence
+≥ 0.85; ze worden caller-side gevalideerd (quote-or-die: snippet moet
+letterlijk in de URL-inhoud voorkomen).
 
-1. **Wikidata SPARQL eerst, gratis en snel.** Roep aan:
+## Beslis-policy per mode
 
-   ```bash
-   uv run polder lookup wikidata --name "Esther van Deursen" --role "directeur Toezicht mbo" --org "OCW"
-   ```
+### Mode 1: `no_match`
 
-   Output is JSON met kandidaten `{qid, label, birth_year, description}`.
+Familienaam komt niet in `data/personen/`. `candidates` is daarom leeg.
+`wikidata_candidates` heeft mogelijk hits.
 
-2. **Filter kandidaten op context-match.** Voor elke kandidaat met `birth_year`
-   plausibel (18-80 jaar oud op datum van het mandaat) én een `description` of
-   `label` die de organisatie/rol noemt, accepteer met `confidence ≥ 0.90`.
+Voor elke Wikidata-kandidaat:
 
-3. **Bij meerdere plausibele Wikidata-kandidaten** of bij `birth_year: null`:
-   ga naar Web-fetch.
+1. **Naam-match**: family-naam in `label` én voornaam of initiaal-prefix
+   in `label`. Beide vereist; alleen family is niet genoeg.
+2. **Leeftijd plausibel**: 18 ≤ (huidig_jaar − birth_year) ≤ 80 op
+   `start_date`. Buiten die range: andere persoon (homoniem).
+3. **Rol/org-fit**: noemt `description` de organisatie, het ministerie,
+   of een vergelijkbare functie? Geen verplichting maar wel een booster.
 
-4. **Web-search voor de naam + organisatie**:
+Als precies één kandidaat alle drie haalt: `create_new` met `birth_year`
+en `wikidata_qid` overgenomen, confidence 0.92-0.96. Anders `no_match`
+met confidence 0.0.
 
-   ```
-   WebSearch: "Esther van Deursen" Inspectie Onderwijs directeur
-   ```
+### Mode 2: `ambiguous_family`
 
-   Open de relevante hits (ABD-site, rijksoverheid.nl, Wikipedia, professionele
-   bio's). **Niet** LinkedIn-profielen openen (paywall, privacy-bezwaren).
+Meerdere bestaande records met dezelfde familienaam. `candidates` is
+gevuld met hun records inclusief mandaten.
 
-5. **Quote-or-die op birth_year**. De `evidence_snippet` moet een letterlijke
-   substring zijn van de inhoud van `evidence_source_url` die de geboortejaar
-   expliciet noemt of waar de leeftijd staat plus een datum waarop het
-   geschreven is.
+Voor elke kandidaat:
 
-6. **Output `create_new` met `confidence ≥ 0.90`** als zowel Wikidata of een
-   andere autoritatieve bron een birth_year geeft. Anders `no_match` met
-   `confidence: 0.0`.
+1. **Naam-match**: voornaam of initialen van de proposal komen overeen
+   met `candidate.name.given` of `candidate.name.initials`. Geen
+   voornaam-match → andere persoon.
+2. **Organisatie-fit**: heeft de kandidaat al een mandaat in
+   `proposal.organization_id` of een gerelateerde organisatie? Sterk
+   signaal (confidence 0.95+).
+3. **Tijd-overlap**: kandidaat had / heeft een mandaat dat tijdsmatig
+   logisch overgaat in de proposal (eindigt vóór `start_date`, of loopt
+   parallel). Sterk signaal.
 
-### Mode 2: `ambiguous_family` — kies of zeg "geen"
+Eén duidelijke winnaar: `matched_existing` met confidence 0.92-0.97.
+Twee kandidaten allebei plausibel: `no_match` (manual review). Geen
+kandidaat past: `no_match`; mogelijk `create_new` als
+`wikidata_candidates` een unieke hit oplevert.
 
-1. **Roep `polder show person:<id>` voor elke kandidaat** om de mandaten te
-   zien:
+### Mode 3: `year_fill`
 
-   ```bash
-   uv run polder show person:bakker-m-7766715 --history
-   uv run polder show person:bakker-w-6188553 --history
-   ```
+`candidates` heeft één entry: de partial-match kandidaat. Birth_year is
+mogelijk al gevuld (kijk naar `candidate.birth.year` én naar het slug-
+nummer in `candidate.id`). Doel: bevestigen dat het dezelfde persoon is
+en eventueel birth_year aanvullen.
 
-2. **Match-criteria, in volgorde van kracht:**
-   - Bestaand mandaat op `organization_id` of een zuster-org → zeer waarschijnlijk dezelfde persoon (confidence 0.95).
-   - Mandaat op een vergelijkbare rol-classificatie (allemaal "directeur" in
-     ministeries) plus voornaam-match in `name.given` of `name.full` → confidence 0.90.
-   - Alleen familienaam matched, geen verdere context → confidence 0.50, output `no_match`.
-
-3. **Bij twijfel: roep Wikidata aan** (zoals Mode 1 stap 1) om de proposal-naam
-   te verifiëren tegen wat Wikidata zegt over deze rol+organisatie. Als
-   Wikidata een andere geboortedatum heeft dan een kandidaat → andere persoon.
-
-4. **Output `matched_existing` met `chosen_person_id`** als één kandidaat
-   sterk wint. Anders `create_new` (als Wikidata een birth_year geeft) of
-   `no_match` (als alles onduidelijk blijft).
-
-### Mode 3: `year_fill` — birth_year aanvullen
-
-1. **`polder show person:<id> --history`** voor de partial-match kandidaat.
-2. **`polder lookup wikidata --name "<name>"`**, kruis op de identifiers van
-   de kandidaat (TK-id, Wikidata-qid in `identifiers`-blok) als die er zijn.
-3. **Web-fetch** voor een autoritatieve bron met geboortejaar of voldoende
-   leeftijdscontext.
-4. Output: `matched_existing` met `chosen_person_id = <id>` en `new_person.birth_year`
-   ingevuld zodat resolve het kan terugschrijven naar het bestaande record.
-
-## Beschikbare tools voor de LLM
-
-- **Bash** voor `polder` CLI-calls:
-  - `polder show <id> --history --format json` — bestaande persoon-context
-  - `polder search "<query>" --type person --limit 10` — ripgrep over data/personen/
-  - `polder lookup wikidata --name "<x>" [--role <x>] [--org <x>]` — Wikidata-SPARQL met fallback
-- **WebFetch** voor Wikipedia, rijksoverheid.nl, ABD-website, gemeente-sites.
-- **WebSearch** voor de eerste hits op de naam.
-
-Geen LinkedIn. Geen sociale media. Geen privé-bronnen. Geen paywall-content.
+1. Als `candidate.birth.year` aanwezig is **en** initialen/voornaam
+   matchen met de proposal: `matched_existing` met confidence 0.95+.
+2. Als initialen/voornaam mismatchen: `no_match` (andere persoon met
+   dezelfde familienaam).
+3. Als birth_year ontbreekt en geen externe bron in payload zou
+   ophelderen: `matched_existing` met de kandidaat en confidence 0.88
+   (best-effort), of `no_match` als de match zwak is.
 
 ## Harde regels
 
-1. **Quote-or-die op `birth_year`.** Je geeft alleen een birth_year terug als
-   je een `evidence_snippet` hebt dat een letterlijke substring is van
-   `evidence_source_url`. Geen paraphrase, geen "afgeleid uit context".
-2. **Geen geboortedag of -maand.** Alleen `birth_year`. Schema enforced.
-3. **Confidence eerlijk.** `confidence ≥ 0.95` betekent: "ik durf hier op te
-   gokken dat dit auto-merge-kwaliteit is". Lager = `needs-review`.
-4. **Bij twijfel: `no_match`.** Niet gokken. Een no_match is veel minder kostbaar
-   dan een verkeerde merge.
-5. **Bij privacy-grens (AVG-rood, BSN, prive-adres in een bron): direct
-   afbreken**, output `no_match` met reason `"avg_block"`.
-6. **Output alleen geldige JSON.** Geen extra tekst, geen markdown-fences, één
-   JSON-object per call.
+1. **Quote-or-die op birth_year.** `evidence_snippet` moet een letterlijke
+   substring zijn van de inhoud op `evidence_source_url`. Hij wordt
+   caller-side geverifieerd tegen een allowlist (Wikidata, Wikipedia,
+   rijksoverheid, officielebekendmakingen).
+2. **Geen geboortemaand/-dag.** Alleen `birth_year`.
+3. **Bij twijfel: `no_match`.** Een false-positive merge kost veel meer
+   dan een gemiste match.
+4. **AVG-grens**: geen prive-adres, geen BSN, geen sociale-media-bronnen.
+5. **Pure JSON-output aan het eind.** Eén JSON-object in een ```json```
+   fence. Eventuele tool-calls daarvoor zijn prima.
+6. **Tool-frugaal.** Bij elke tool-call vraag je je af: had ik dit ook
+   kunnen beslissen op alleen de payload? Zo ja: skip de tool.
 
 ## Voorbeeld
 
@@ -176,4 +175,5 @@ Zie `example_input.json` en `example_output.json`.
 
 ## Status
 
-Actief, versie 0.1.0. Eerste gebruiker is `polder resolve --enrich-llm`.
+Actief, versie 0.2.0. Single-turn na bevinding dat tools niet uitvoerbaar
+zijn binnen de stream-json sessie.
