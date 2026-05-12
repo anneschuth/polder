@@ -32,6 +32,7 @@ from polder.cli.commands import (
     fetch_cmd,
     ingest_cmd,
     list_cmd,
+    resolve_cmd,
     search_cmd,
     serve_cmd,
     show_cmd,
@@ -101,6 +102,7 @@ app.command("build")(build_cmd.build)
 app.command("serve")(serve_cmd.serve)
 app.command("daily-update")(daily_cmd.daily_update)
 app.command("apply-staging")(apply_staging_cmd.apply_staging)
+app.command("resolve")(resolve_cmd.resolve)
 app.command("ingest")(ingest_cmd.ingest)
 
 

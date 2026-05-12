@@ -49,10 +49,11 @@ def _norm_given(value: str | None) -> str:
 
 @dataclass
 class PolderIndex:
-    """In-memory persoon-index voor matching.
+    """In-memory index voor matching: personen + organisaties + posten.
 
     Niet hetzelfde als `Polder.local()` — die laadt door Pydantic (3s, slow).
-    Deze pakt yaml.safe_load + minimaal-veld-extract = ~150ms.
+    Deze pakt yaml.safe_load + minimaal-veld-extract = ~200ms voor alle drie
+    entity-types samen.
     """
 
     # Alle persoon-records, key = id
@@ -64,34 +65,64 @@ class PolderIndex:
     # family -> [person_id, ...]
     by_family: dict[str, list[str]] = field(default_factory=dict)
 
+    # Org/Post IDs voor existence-checks (sets, want we hoeven de records
+    # zelf niet vast te houden voor resolve-doel).
+    org_ids: set[str] = field(default_factory=set)
+    post_ids: set[str] = field(default_factory=set)
+    # post_id -> organization_id (om post/org-consistency te checken)
+    post_to_org: dict[str, str] = field(default_factory=dict)
+
     @classmethod
     def load(cls, data_dir: Path) -> "PolderIndex":
         idx = cls()
         persons_dir = data_dir / "personen"
-        if not persons_dir.exists():
-            return idx
-        for path in persons_dir.glob("*.yaml"):
-            try:
-                d = yaml.safe_load(path.read_text(encoding="utf-8"))
-            except yaml.YAMLError:
-                continue
-            if not isinstance(d, dict) or not d.get("id"):
-                continue
-            pid = d["id"]
-            idx.persons_by_id[pid] = d
-            name = d.get("name") or {}
-            family = _norm_family(name.get("family"))
-            given = _norm_given(name.get("given"))
-            initials = compact_initials(name.get("initials"))
-            year = (d.get("birth") or {}).get("year")
-            if family:
-                idx.by_family.setdefault(family, []).append(pid)
-                if initials and isinstance(year, int):
-                    idx.by_family_initials_year.setdefault(
-                        (family, initials, year), []
-                    ).append(pid)
-                if given:
-                    idx.by_family_given.setdefault((family, given), []).append(pid)
+        orgs_dir = data_dir / "organisaties"
+        posts_dir = data_dir / "posten"
+
+        if persons_dir.exists():
+            for path in persons_dir.glob("*.yaml"):
+                try:
+                    d = yaml.safe_load(path.read_text(encoding="utf-8"))
+                except yaml.YAMLError:
+                    continue
+                if not isinstance(d, dict) or not d.get("id"):
+                    continue
+                pid = d["id"]
+                idx.persons_by_id[pid] = d
+                name = d.get("name") or {}
+                family = _norm_family(name.get("family"))
+                given = _norm_given(name.get("given"))
+                initials = compact_initials(name.get("initials"))
+                year = (d.get("birth") or {}).get("year")
+                if family:
+                    idx.by_family.setdefault(family, []).append(pid)
+                    if initials and isinstance(year, int):
+                        idx.by_family_initials_year.setdefault(
+                            (family, initials, year), []
+                        ).append(pid)
+                    if given:
+                        idx.by_family_given.setdefault((family, given), []).append(pid)
+
+        if orgs_dir.exists():
+            for path in orgs_dir.rglob("*.yaml"):
+                try:
+                    d = yaml.safe_load(path.read_text(encoding="utf-8"))
+                except yaml.YAMLError:
+                    continue
+                if isinstance(d, dict) and d.get("id"):
+                    idx.org_ids.add(d["id"])
+
+        if posts_dir.exists():
+            for path in posts_dir.rglob("*.yaml"):
+                try:
+                    d = yaml.safe_load(path.read_text(encoding="utf-8"))
+                except yaml.YAMLError:
+                    continue
+                if isinstance(d, dict) and d.get("id"):
+                    idx.post_ids.add(d["id"])
+                    if d.get("organization_id"):
+                        idx.post_to_org[d["id"]] = d["organization_id"]
+
         return idx
 
 
