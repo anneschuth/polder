@@ -18,6 +18,19 @@ mandaten:
     fields:
     - applied_via:apply-staging
   confidence: 0.85
+- id: mandate-post-algemeen-directeur-nifp-2022-02-01
+  organization_id: org:onderdeel-nifp
+  post_id: post:algemeen-directeur-nifp
+  role: algemeen directeur
+  start_date: '2022-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.rijksoverheid.nl/onderwerpen/algemene-bestuursdienst/nieuws/2022/01/19/agaath-cleyndert-algemeen-directeur-nifp
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  confidence: 0.85
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/agaath-cleyndert-algemeen-directeur-toeslagen-bij-de-belastingdienst

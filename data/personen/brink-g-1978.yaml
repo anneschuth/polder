@@ -35,6 +35,22 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29cf50b2-5f6d-451b-b72d-ca78eb917548)
     retrieved: '2026-05-09'
+- id: mandate-post-minister-zonder-portefeuille-2026-02-23
+  organization_id: org:onderdeel-bck
+  post_id: post:minister-zonder-portefeuille
+  role: Minister zonder portefeuille (Asiel en Migratie); Vice-Minister-President
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000405, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+  confidence: 0.89
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(91cb13ed-c45f-4347-9453-8a997631c333)
