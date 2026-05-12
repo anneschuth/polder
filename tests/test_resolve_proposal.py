@@ -249,6 +249,39 @@ def test_resolve_proposal_post_matched_via_org_classification(polder_index) -> N
     assert "matched_by_org_classification" in (result.get("resolution_notes") or "")
 
 
+def test_resolve_proposal_minister_zonder_portefeuille_rewriter(polder_index) -> None:
+    """Minister-zonder-portefeuille met catch-all-slug wordt herschreven naar
+    een portefeuille-specifieke ``post:minister-zp-<X>``. Prefix-match vangt
+    naming-drift op (BHOH-hulp 2024 -> BHOH-samenwerking 2026 -> dezelfde
+    bestaande slug ``post:minister-zp-buitenlandse-handel``).
+    """
+    from polder.resolve.proposal import resolve_proposal
+
+    base = {
+        "person_name": "Test",
+        "organization_id": "org:min-bz",
+        "post_id": "post:minister-zonder-portefeuille",
+        "start_date": "2026-02-23",
+        "event_type": "benoeming",
+        "staatscourant_url": "https://example.org/stcrt",
+        "confidence": 0.95,
+    }
+    # Bestaand: post:minister-zp-buitenlandse-handel. Naming-drift moet
+    # naar dezelfde slug mappen.
+    r = resolve_proposal(
+        {**base, "role": "Minister zonder portefeuille (Buitenlandse Handel en Ontwikkelingssamenwerking)"},
+        polder_index,
+    )
+    assert r["resolved_post_id"] == "post:minister-zp-buitenlandse-handel"
+
+    # Niet-bestaand: apply mag canonical slug aanmaken.
+    r = resolve_proposal(
+        {**base, "role": "Minister zonder portefeuille (Klimaat en Groene Groei)"},
+        polder_index,
+    )
+    assert r["resolved_post_id"] == "post:minister-zp-klimaat-en-groene-groei"
+
+
 def test_resolve_proposal_post_prefers_canonical_min_suffix(polder_index) -> None:
     """Bij meerdere keyword-matches kiest de resolver de slug met canonical
     ``-min-<afk>``-suffix. Voorkomt dat apply een verzonnen alternatief

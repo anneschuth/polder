@@ -8,6 +8,8 @@ ongewijzigd werkt.
 
 from __future__ import annotations
 
+import re
+import unicodedata
 from dataclasses import dataclass
 from typing import Any, Callable
 
@@ -93,6 +95,36 @@ def _level_for_org(proposal: dict, org_id: str) -> str | None:
     return None
 
 
+# Detectie voor "Minister zonder portefeuille, belast met X" / "(X)" / "Minister
+# voor X" / "Minister belast met X". Match wordt gebruikt om een canonical slug
+# `post:minister-zp-<X-slug>` af te leiden, zodat zes naast elkaar zittende
+# ministers-zonder-portefeuille niet allemaal op één catch-all slug landen.
+_MZP_PATTERNS = [
+    re.compile(r"minister zonder portefeuille[^\w]+(?:belast met|\()\s*([^)\n;]+?)\s*(?:\)|;|$)", re.IGNORECASE),
+    re.compile(r"minister voor\s+([^,;)\n]+)", re.IGNORECASE),
+]
+
+
+def _extract_mzp_portfolio(role: str) -> str | None:
+    """Pak de portefeuille-naam uit een minister-zonder-portefeuille-role.
+
+    Returnt None als de role geen MZP is, anders bv. "Buitenlandse Handel en
+    Ontwikkelingssamenwerking".
+    """
+    for pat in _MZP_PATTERNS:
+        match = pat.search(role)
+        if match:
+            return match.group(1).strip()
+    return None
+
+
+def _mzp_slug(portfolio: str) -> str:
+    """Slugify een portefeuille-naam volgens post:minister-zp-<slug>-conventie."""
+    s = unicodedata.normalize("NFKD", portfolio).encode("ascii", "ignore").decode("ascii")
+    s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    return f"post:minister-zp-{s}"
+
+
 # Volgorde belangrijk: meest-specifieke keyword eerst. Anders slokt "minister"
 # de "vice-minister-president"-rol op.
 _ROLE_KEYWORDS: list[tuple[str, str]] = [
@@ -143,6 +175,32 @@ def _resolve_post(
 
     pid = proposal.get("post_id")
     role = str(proposal.get("role") or "").strip()
+
+    # Strategie 0: minister-zonder-portefeuille rewriter. Een raw slug
+    # `post:minister-zonder-portefeuille` of `post:minister-zp-<x>` is per
+    # zichzelf niet betrouwbaar (skill kiest vaak de catch-all). Leid de
+    # canonical slug af uit de portefeuille in `role`, want elke MZP staat
+    # per Nederlandse staatsrechtelijke praktijk op een eigen post.
+    portfolio = _extract_mzp_portfolio(role)
+    if portfolio:
+        canonical = _mzp_slug(portfolio)
+        if canonical in idx.post_ids:
+            return PostMatch(canonical, 0.95, "exact_via_mzp_portfolio")
+        # Probeer een prefix-match tegen bestaande MZP-slugs. Naming-drift
+        # ("Buitenlandse Handel en Ontwikkelingshulp" 2024 -> "...samen-
+        # werking" 2026) betekent dat hetzelfde portfolio met een net
+        # andere naam binnenkomt. Voor MZP-posts geldt: één post per
+        # portefeuille, ongeacht hernaming. Prefix matchen op de eerste
+        # twee betekeniswoorden vangt dit af.
+        portfolio_tokens = canonical.removeprefix("post:minister-zp-").split("-")
+        if len(portfolio_tokens) >= 2:
+            prefix = f"post:minister-zp-{portfolio_tokens[0]}-{portfolio_tokens[1]}"
+            for existing in idx.post_ids:
+                if existing.startswith(prefix):
+                    return PostMatch(existing, 0.90, "mzp_portfolio_prefix_match")
+        # Post bestaat nog niet en geen prefix-match; apply mag hem
+        # aanmaken met de canonical slug.
+        return PostMatch(canonical, 0.90, "creatable_mzp_portfolio")
 
     # Strategie 1: exact slug-match.
     if pid and pid in idx.post_ids:
