@@ -628,6 +628,22 @@ def plan_apply(
         )
         target_org_id = _resolved_org_id(proposal)
 
+        # Als de resolved_post_id naar een al-bestaande post wijst, neem de
+        # organization_id van die post als gezaghebbend over de chain-output.
+        # Voorbeeld: MZP-records komen binnen met org:onderdeel-bck als
+        # `organization_id` (skill verzon), maar de canonical post
+        # post:minister-zp-werk-en-participatie hoort onder org:min-szw.
+        # Zonder deze override maakt apply een duplicate mandaat aan onder
+        # de verkeerde org, want idempotency-key bevat organization_id.
+        existing_post_id = _resolved_post_id(proposal)
+        if existing_post_id and existing_post_id in polder_index.post_to_org:
+            post_org = polder_index.post_to_org[existing_post_id]
+            if post_org and post_org != target_org_id:
+                target_org_id = post_org
+                # Zonder een chain naar deze org gaat de chain-check er
+                # straks tegenaan klagen; leeg de chain.
+                chain = []
+
         # Consistentie-check vóór create-org: als de proposal zowel een chain
         # als een `organization_id` levert, moet de laatste chain-entry
         # overeenkomen met die `organization_id`. Anders is de chain óf
