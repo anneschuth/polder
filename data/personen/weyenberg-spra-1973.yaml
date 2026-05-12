@@ -52,13 +52,18 @@ mandaten:
   post_id: post:minister-min-fin
   role: Minister van Financiën
   start_date: '2024-01-11'
-  end_date: null
+  end_date: '2024-07-02'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2035
     retrieved: '2026-05-12'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22491
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
   appointment:
     decision: Besluit van 11 januari 2024 nr. 2024000040
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2035
