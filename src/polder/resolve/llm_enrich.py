@@ -311,8 +311,18 @@ def _apply_skill_result(
     if outcome == "create_new":
         new = skill_result.get("new_person") or {}
         birth_year = new.get("birth_year")
-        if isinstance(birth_year, int):
-            out["birth"] = {"year": birth_year}
+        # Een create_new zonder birth_year is geen valide create — onze
+        # slug-conventie person:<family>-<initials>-<year> vereist een
+        # jaar. Downgrade naar no_match zodat de operator handmatig de
+        # call kan maken (UUID-suffix of nader onderzoek).
+        if not isinstance(birth_year, int):
+            out["resolution_notes"] = _append_note(
+                out.get("resolution_notes", ""),
+                f"llm-enrich: create_new_without_birth_year_downgraded ({conf:.2f})",
+            )
+            stats.no_match += 1
+            return out
+        out["birth"] = {"year": birth_year}
         wikidata_qid = new.get("wikidata_qid")
         if wikidata_qid:
             out.setdefault("identifiers", {})["wikidata"] = wikidata_qid
@@ -431,6 +441,8 @@ def enrich_resolved(
             enriched.append(proposal)
             continue
 
+        # Cost = 0 bij disk-cache-hit (runner overschrijft) zodat het
+        # budget-cap niet getript wordt door uitgaven uit een eerdere run.
         cost = float(getattr(result, "cost_usd", 0.0))
         stats.total_cost_usd += cost
         if stats.total_cost_usd > max_cost_usd:

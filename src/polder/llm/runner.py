@@ -74,7 +74,11 @@ def run_skill(
             logger.debug("Cache hit voor skill=%s", skill_name)
             if output is not None and not cached.is_error and not cached.rate_limited:
                 _write_output(output, cached.text)
-            return cached
+            # Disk-cache-hit kost de huidige run niets; overschrijf cost_usd
+            # naar 0 zodat budget-caps en cost-rapportage correct zijn.
+            from dataclasses import replace
+
+            return replace(cached, cost_usd=0.0)
 
     if reuse_session:
         from polder.llm.session import get_or_create_session

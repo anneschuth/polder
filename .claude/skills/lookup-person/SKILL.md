@@ -90,7 +90,10 @@ Geen "Let me fetch" zonder de fetch ook echt uit te voeren.
 ```
 
 - `outcome: matched_existing` → vul `chosen_person_id`. `new_person` = null.
-- `outcome: create_new` → vul `new_person`. `chosen_person_id` = null.
+- `outcome: create_new` → vul `new_person` met een **geldige `birth_year`**
+  (int 1700-huidig jaar). Een create_new zonder birth_year is **geen
+  valide outcome** — de slug-conventie person:<family>-<initials>-<year>
+  vereist een jaar. Zonder birth_year: gebruik `no_match`.
 - `outcome: no_match` → beide null. Vul wel `confidence_reasoning`.
 
 `evidence_snippet` + `evidence_source_url` zijn verplicht bij confidence
