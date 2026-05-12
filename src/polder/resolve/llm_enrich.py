@@ -36,6 +36,33 @@ _SKILL_NAME = "lookup-person"
 _MIN_PERSON_CONF_FOR_AUTOMERGE = 0.95
 
 
+def _call_with_timeout(runner: Any, skill_name: str, payload: str, timeout_s: float = 180.0) -> Any:
+    """Roep `runner(skill_name, payload)` aan met een hard timeout.
+
+    Anthropic API kan tijdens een outage de stdout-read indefinitely blokkeren.
+    Deze wrapper rendert via een thread en abort als de timeout verstrijkt;
+    de caller behandelt dat als runner-exception.
+    """
+    import threading
+
+    result_holder: dict[str, Any] = {}
+
+    def target() -> None:
+        try:
+            result_holder["value"] = runner(skill_name, payload)
+        except Exception as exc:  # noqa: BLE001
+            result_holder["error"] = exc
+
+    thread = threading.Thread(target=target, daemon=True)
+    thread.start()
+    thread.join(timeout_s)
+    if thread.is_alive():
+        raise TimeoutError(f"runner call exceeded {timeout_s}s")
+    if "error" in result_holder:
+        raise result_holder["error"]
+    return result_holder["value"]
+
+
 def _reset_session_for_skill(skill_name: str) -> None:
     """Sluit de thread-local SkillSession voor `skill_name` zodat de volgende
     call een fresh subprocess opent. Best-effort; faalt stilletjes als er
@@ -475,7 +502,7 @@ def enrich_resolved(
         while attempts < 2:
             attempts += 1
             try:
-                result = runner(skill_name, payload)
+                result = _call_with_timeout(runner, skill_name, payload, timeout_s=180.0)
             except Exception as exc:  # noqa: BLE001
                 logger.warning(
                     "[%d/%d] %s (%s): runner-exception (try %d) %s",
