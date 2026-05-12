@@ -88,18 +88,31 @@ def _level_for_org(proposal: dict, org_id: str) -> str | None:
     return None
 
 
-def _resolve_post(proposal: dict, idx: PolderIndex, org_id: str | None) -> PostMatch:
-    """Match post-id."""
+def _resolve_post(
+    proposal: dict, idx: PolderIndex, org_id: str | None
+) -> PostMatch:
+    """Match post-id.
+
+    Een ontbrekende post in `data/` is nog steeds auto-mergeable mits apply
+    hem kan aanmaken: dat lukt als de `role` mapt op een schema-classification.
+    In dat geval is `creatable` waar en geeft apply zelf de post-creation door.
+    """
+    from polder.apply import _classification_from_role
+
     pid = proposal.get("post_id")
     if not pid:
         return PostMatch(None, 0.0, "no_post_id_in_proposal")
-    if pid not in idx.post_ids:
-        return PostMatch(None, 0.0, "not_in_data")
-    # Optionele check: hoort post bij de gevonden org?
-    post_org = idx.post_to_org.get(pid)
-    if org_id and post_org and post_org != org_id:
-        return PostMatch(pid, 0.70, "exact_but_org_mismatch")
-    return PostMatch(pid, 0.95, "exact")
+    if pid in idx.post_ids:
+        post_org = idx.post_to_org.get(pid)
+        if org_id and post_org and post_org != org_id:
+            return PostMatch(pid, 0.70, "exact_but_org_mismatch")
+        return PostMatch(pid, 0.95, "exact")
+    # Post niet in data. Acceptabel als de role een afleidbare classification
+    # heeft — dan maakt apply hem in deze run aan.
+    role = str(proposal.get("role") or "").strip()
+    if role and _classification_from_role(role) is not None:
+        return PostMatch(pid, 0.85, "creatable_from_role")
+    return PostMatch(None, 0.0, "not_in_data")
 
 
 def resolve_proposal(proposal: dict, idx: PolderIndex) -> dict:

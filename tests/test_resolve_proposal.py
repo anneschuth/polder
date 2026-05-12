@@ -150,14 +150,33 @@ def test_resolve_proposal_org_abbr_alias(polder_index) -> None:
 
 
 def test_resolve_proposal_post_not_in_data(polder_index) -> None:
-    """Onbekende post-id: resolved=None, propose_post_creation=True."""
+    """Onbekende post-id zonder bruikbare role: resolved=None, propose_post_creation=True."""
     from polder.resolve.proposal import resolve_proposal
 
     proposal = {
         "person_name": "Mark Rutte",
         "organization_id": "org:min-az",
         "post_id": "post:bestaat-niet",
+        "role": "iets onduidelijks zonder ABD-keyword",
     }
     result = resolve_proposal(proposal, polder_index)
     assert result["resolved_post_id"] is None
     assert result["propose_post_creation"] is True
+
+
+def test_resolve_proposal_post_creatable_from_role(polder_index) -> None:
+    """Onbekende post-id mét classifiable role: post-confidence 0.85, auto-merge mogelijk."""
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:min-az",
+        "post_id": "post:nieuwe-directeur-bij-az",
+        "role": "directeur Bedrijfsvoering",
+        "confidence": 0.95,
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["resolution_confidence"]["post"] == 0.85
+    assert result["resolved_post_id"] == "post:nieuwe-directeur-bij-az"
+    # Pas als persoon ook hoog scoort wordt het auto-merge; Rutte is matchbaar.
+    assert "creatable_from_role" in (result.get("resolution_notes") or "")
