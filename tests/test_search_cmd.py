@@ -141,3 +141,100 @@ def test_cli_invalid_regex_fails(fake_polder: Path) -> None:
         ["search", "(", "--regex", "--data", str(fake_polder)],
     )
     assert result.exit_code != 0
+
+
+# ---------------------------------------------------------------------------
+# Backend-parity: rg en python moeten dezelfde resultaten geven
+# ---------------------------------------------------------------------------
+
+
+def _result_ids(output: str) -> set[str]:
+    """Pluk record-IDs uit JSON-output."""
+    import json
+    data = json.loads(output)
+    return {r["id"] for r in data["results"]}
+
+
+def test_rg_and_python_find_same_ids_substring(fake_polder: Path) -> None:
+    """rg en python backends moeten identieke ID-sets vinden voor substring."""
+    import shutil
+    if not shutil.which("rg"):
+        pytest.skip("rg niet beschikbaar")
+    runner = CliRunner()
+    r_rg = runner.invoke(
+        app,
+        ["search", "Klaverblad", "--json", "--backend", "rg", "--data", str(fake_polder)],
+    )
+    r_py = runner.invoke(
+        app,
+        ["search", "Klaverblad", "--json", "--backend", "python", "--data", str(fake_polder)],
+    )
+    assert r_rg.exit_code == 0
+    assert r_py.exit_code == 0
+    assert _result_ids(r_rg.output) == _result_ids(r_py.output)
+
+
+def test_rg_and_python_find_same_ids_with_field(fake_polder: Path) -> None:
+    import shutil
+    if not shutil.which("rg"):
+        pytest.skip("rg niet beschikbaar")
+    runner = CliRunner()
+    r_rg = runner.invoke(
+        app,
+        ["search", "Klaver", "-f", "name.family", "--json", "--backend", "rg",
+         "--data", str(fake_polder)],
+    )
+    r_py = runner.invoke(
+        app,
+        ["search", "Klaver", "-f", "name.family", "--json", "--backend", "python",
+         "--data", str(fake_polder)],
+    )
+    assert r_rg.exit_code == 0
+    assert r_py.exit_code == 0
+    assert _result_ids(r_rg.output) == _result_ids(r_py.output)
+
+
+def test_rg_and_python_find_same_ids_regex_anchor(fake_polder: Path) -> None:
+    """`^org:min-` regex werkt in beide backends (rg: anchor wordt vertaald)."""
+    import shutil
+    if not shutil.which("rg"):
+        pytest.skip("rg niet beschikbaar")
+    runner = CliRunner()
+    r_rg = runner.invoke(
+        app,
+        ["search", r"^org:min-", "--regex", "--json", "--backend", "rg",
+         "--data", str(fake_polder)],
+    )
+    r_py = runner.invoke(
+        app,
+        ["search", r"^org:min-", "--regex", "--json", "--backend", "python",
+         "--data", str(fake_polder)],
+    )
+    assert r_rg.exit_code == 0
+    assert r_py.exit_code == 0
+    assert _result_ids(r_rg.output) == _result_ids(r_py.output)
+
+
+def test_cli_invalid_backend_fails(fake_polder: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        ["search", "test", "--backend", "elasticsearch", "--data", str(fake_polder)],
+    )
+    assert result.exit_code != 0
+
+
+def test_cli_json_output_format(fake_polder: Path) -> None:
+    """JSON-output is parseable en bevat results-key."""
+    import json
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        ["search", "Klaverblad", "--json", "--data", str(fake_polder)],
+    )
+    assert result.exit_code == 0
+    payload = json.loads(result.output)
+    assert payload["query"] == "Klaverblad"
+    assert "results" in payload
+    assert payload["backend"] in ("rg", "python")
+    assert isinstance(payload["results"], list)
