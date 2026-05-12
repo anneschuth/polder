@@ -164,6 +164,49 @@ def test_resolve_proposal_post_not_in_data(polder_index) -> None:
     assert result["propose_post_creation"] is True
 
 
+def test_resolve_proposal_enricher_fills_birth_year(polder_index) -> None:
+    """Een stub-enricher die een birth_year teruggeeft, zet `birth` in output en re-matched."""
+    from polder.resolve.proposal import resolve_proposal
+
+    def stub_enricher(name: str, hint: int | None) -> int | None:
+        assert name == "Marsmenneke Asdfqwer"
+        return 1985
+
+    proposal = {
+        "person_name": "Marsmenneke Asdfqwer",
+        "organization_id": "org:min-az",
+        "post_id": "post:minister-president-min-az",
+        "role": "minister",
+    }
+    result = resolve_proposal(proposal, polder_index, enricher=stub_enricher)
+    assert result.get("birth") == {"year": 1985}
+    assert result["resolution_confidence"]["person"] == 0.85
+    assert "creatable_new_person" in (result.get("resolution_notes") or "")
+
+
+def test_resolve_proposal_enricher_skipped_if_existing_hint(polder_index) -> None:
+    """Als de proposal al een birth.year heeft, raadpleeg de enricher niet."""
+    from polder.resolve.proposal import resolve_proposal
+
+    calls = []
+
+    def stub_enricher(name: str, hint: int | None) -> int | None:
+        calls.append((name, hint))
+        return 1900
+
+    proposal = {
+        "person_name": "Marsmenneke Asdfqwer",
+        "organization_id": "org:min-az",
+        "post_id": "post:minister-president-min-az",
+        "role": "minister",
+        "birth": {"year": 1980},
+    }
+    result = resolve_proposal(proposal, polder_index, enricher=stub_enricher)
+    assert calls == []
+    # `birth` blijft de oorspronkelijke 1980
+    assert result.get("birth") == {"year": 1980}
+
+
 def test_resolve_proposal_post_creatable_from_role(polder_index) -> None:
     """Onbekende post-id mét classifiable role: post-confidence 0.85, auto-merge mogelijk."""
     from polder.resolve.proposal import resolve_proposal

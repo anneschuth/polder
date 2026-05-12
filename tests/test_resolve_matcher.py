@@ -85,3 +85,22 @@ def test_match_person_nonexistent(polder_index) -> None:
     result = match_person("Marsmenneke Asdfqwer", idx=polder_index)
     assert result.person_id is None
     assert result.confidence == 0.0
+
+
+def test_match_person_creatable_new(polder_index) -> None:
+    """Onbekende family + birth_year = creatable; apply mag een nieuwe persoon maken."""
+    from polder.resolve.matcher import match_person
+
+    result = match_person("Marsmenneke Asdfqwer", idx=polder_index, birth_year=1980)
+    assert result.person_id is None
+    assert result.method == "creatable_new_person"
+    assert result.confidence == 0.85
+
+
+def test_match_person_no_creatable_without_year(polder_index) -> None:
+    """Zonder birth_year géén creatable; resolver verrijkt eerst via Wikidata."""
+    from polder.resolve.matcher import match_person
+
+    result = match_person("Marsmenneke Asdfqwer", idx=polder_index)
+    assert result.confidence == 0.0
+    assert result.method == "no_match"

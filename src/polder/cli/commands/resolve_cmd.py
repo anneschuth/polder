@@ -38,6 +38,17 @@ def resolve(
         Path,
         typer.Option("--data", help="Polder data-root."),
     ] = Path("data"),
+    enrich_wikidata: Annotated[
+        bool,
+        typer.Option(
+            "--enrich-wikidata/--no-enrich-wikidata",
+            help=(
+                "Bij no_match voor persoon: probeer Wikidata-lookup om "
+                "birth_year op te halen en alsnog een match of "
+                "creatable_new_person-status te krijgen."
+            ),
+        ),
+    ] = False,
     verbose: Annotated[
         bool,
         typer.Option("-v", "--verbose", help="Verbose logging."),
@@ -56,6 +67,13 @@ def resolve(
         logging.basicConfig(level=logging.DEBUG, format="%(levelname)s %(message)s")
     else:
         logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
+
+    enricher = None
+    if enrich_wikidata:
+        from polder.resolve.wikidata_enricher import make_wikidata_enricher
+
+        enricher = make_wikidata_enricher()
+        typer.echo("Wikidata-enrichment aan voor no-match-personen.")
 
     if not data.is_absolute():
         data = _repo_root() / data
@@ -109,7 +127,7 @@ def resolve(
         for proposal in data_raw:
             if not isinstance(proposal, dict):
                 continue
-            result = resolve_proposal(proposal, idx)
+            result = resolve_proposal(proposal, idx, enricher=enricher)
             resolved.append(result)
             n_proposals += 1
             recs[result["merge_recommendation"]] += 1

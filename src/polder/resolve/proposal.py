@@ -9,9 +9,14 @@ ongewijzigd werkt.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Callable
 
 from polder.resolve.matcher import PersonMatch, PolderIndex, match_person
+
+
+# Een enricher krijgt een (proposal_name, existing_birth_hint) en retourneert
+# een birth_year als hij er een kan vinden, of None. Default is geen enricher.
+PersonEnricher = Callable[[str, int | None], int | None]
 
 
 @dataclass(frozen=True)
@@ -115,7 +120,25 @@ def _resolve_post(
     return PostMatch(None, 0.0, "not_in_data")
 
 
-def resolve_proposal(proposal: dict, idx: PolderIndex) -> dict:
+def _extract_birth_hint(proposal: dict) -> int | None:
+    """Extract `birth.year` of `birth_year` uit een proposal."""
+    birth = proposal.get("birth")
+    if isinstance(birth, dict):
+        y = birth.get("year")
+        if isinstance(y, int):
+            return y
+    y = proposal.get("birth_year")
+    if isinstance(y, int):
+        return y
+    return None
+
+
+def resolve_proposal(
+    proposal: dict,
+    idx: PolderIndex,
+    *,
+    enricher: PersonEnricher | None = None,
+) -> dict:
     """Resolve één proposal. Retourneer enriched dict in apply-staging-format.
 
     Adds:
@@ -125,6 +148,12 @@ def resolve_proposal(proposal: dict, idx: PolderIndex) -> dict:
     - resolution_notes
     - propose_post_creation
     - merge_recommendation: 'auto-merge' | 'needs-review' | 'skip'
+    - birth (uit enricher, indien gevonden)
+
+    Argumenten:
+    - `enricher`: optionele callable die (name, existing_birth_hint) krijgt
+      en een birth_year retourneert. Gebruikt bij `no_match` om alsnog een
+      `creatable_new_person`-pad te openen.
     """
     out: dict[str, Any] = dict(proposal)
 
@@ -146,18 +175,27 @@ def resolve_proposal(proposal: dict, idx: PolderIndex) -> dict:
     org = _resolve_organization(proposal, idx)
     post = _resolve_post(proposal, idx, org.organization_id)
 
-    birth_hint = None
-    birth = proposal.get("birth")
-    if isinstance(birth, dict):
-        y = birth.get("year")
-        if isinstance(y, int):
-            birth_hint = y
+    name = proposal.get("person_name") or ""
+    birth_hint = _extract_birth_hint(proposal)
 
-    person = match_person(
-        proposal.get("person_name") or "",
-        idx=idx,
-        birth_year=birth_hint,
-    )
+    person = match_person(name, idx=idx, birth_year=birth_hint)
+
+    # Als geen match én een enricher beschikbaar is, probeer birth_year op te
+    # halen en re-match. Wikidata levert vaak een geboortejaar dat onze
+    # parser-skill mist; daarmee gaat een no_match naar creatable_new_person
+    # of zelfs een echte family_initials_year-match als de family wél in
+    # data/personen/ blijkt te staan onder een andere geboortedatum-variant.
+    if (
+        enricher is not None
+        and person.confidence < 0.85
+        and name
+        and birth_hint is None
+    ):
+        enriched_year = enricher(name, birth_hint)
+        if isinstance(enriched_year, int):
+            person = match_person(name, idx=idx, birth_year=enriched_year)
+            birth_hint = enriched_year
+            out["birth"] = {"year": enriched_year}
 
     notes = _format_notes(org, post, person)
 
@@ -185,16 +223,14 @@ def resolve_proposal(proposal: dict, idx: PolderIndex) -> dict:
 
 
 def _format_notes(org: OrgMatch, post: PostMatch, person: PersonMatch) -> str:
-    parts: list[str] = []
-    if org.method != "no_match":
-        parts.append(f"org: {org.method}")
-    if post.method not in ("no_match", "no_post_id_in_proposal"):
-        parts.append(f"post: {post.method}")
-    if person.method not in ("no_match", "no_family"):
-        parts.append(f"person: {person.method}")
+    parts: list[str] = [
+        f"org: {org.method}",
+        f"post: {post.method}",
+        f"person: {person.method}",
+    ]
     if person.candidates:
         parts.append(f"person-candidates: {','.join(person.candidates[:3])}")
-    return "; ".join(parts) or "no matches"
+    return "; ".join(parts)
 
 
 def _recommend_merge(

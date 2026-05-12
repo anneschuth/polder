@@ -292,4 +292,11 @@ def match_person(
     if len(family_ids) > 1:
         return PersonMatch(None, 0.0, "ambiguous_family", tuple(family_ids))
 
+    # 5. Family niet in data: nieuwe persoon aanmaakbaar, mits birth_year
+    # bekend is. Zonder birth_year kan apply geen deterministische slug
+    # vormen volgens de polder-conventie `<family>-<initials>-<jaartal>`.
+    # De resolver-laag verrijkt zo nodig vooraf via Wikidata.
+    if birth_year is not None:
+        return PersonMatch(None, 0.85, "creatable_new_person")
+
     return PersonMatch(None, 0.0, "no_match")
