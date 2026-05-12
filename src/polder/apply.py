@@ -16,7 +16,9 @@ from typing import Any, Literal
 
 import yaml
 
-ActionType = Literal["create-org", "create-post", "create-person", "append-mandaat"]
+ActionType = Literal[
+    "create-org", "create-post", "create-person", "append-mandaat", "close-mandaat"
+]
 
 # AVG-grenzen: rollen die niet in `data/` thuishoren conform docs/avg-grenzen.md
 RED_AVG_KEYWORDS = (
@@ -538,6 +540,26 @@ def plan_apply(
             )
             continue
 
+        # Detecteer close-mandaat: een ontslag-proposal heeft geen start_date
+        # (de bestaande start blijft staan) maar wel een end_date, en sluit
+        # een lopend mandaat. Apart pad: geen org/post aanmaken, alleen
+        # bestaand mandaat updaten.
+        is_close = (
+            not proposal.get("start_date") and _normalize_date_string(proposal.get("end_date"))
+        )
+        if is_close:
+            close_action_or_skip = _plan_close_mandate(
+                proposal=proposal,
+                data_dir=data_dir,
+                personen=personen,
+                confidence=confidence,
+            )
+            if isinstance(close_action_or_skip, SkippedProposal):
+                skipped.append(close_action_or_skip)
+            else:
+                actions.append(close_action_or_skip)
+            continue
+
         # start_date verplicht: een mandaat zonder start-datum vervalt anders
         # naar `today`, wat een onzin-datum is voor een retro-actief mandaat.
         if not proposal.get("start_date"):
@@ -848,6 +870,81 @@ def _build_post_record(
     return record
 
 
+def _plan_close_mandate(
+    *,
+    proposal: dict[str, Any],
+    data_dir: Path,
+    personen: list[tuple[Path, dict[str, Any]]],
+    confidence: float,
+) -> ApplyAction | SkippedProposal:
+    """Plan een close-mandaat-actie: zet end_date op een bestaand lopend mandaat.
+
+    Een ontslag-proposal komt hier terecht (start_date=None, end_date=datum).
+    Anders dan append-mandaat: geen org-chain-creatie, geen post-creatie, geen
+    nieuwe persoon. Alleen lookup-en-update op een bestaand record.
+    """
+    date_skip = _validate_mandaat_dates(
+        proposal.get("start_date"), proposal.get("end_date")
+    )
+    if date_skip is not None:
+        return SkippedProposal(proposal=proposal, reasons=[date_skip])
+
+    post_id = _normalize_id(proposal.get("post_id"), "post")
+    if not post_id:
+        return SkippedProposal(
+            proposal=proposal, reasons=["close-mandaat: geen post_id in proposal"]
+        )
+
+    target_org_id = _normalize_id(
+        proposal.get("organization_id") or proposal.get("resolved_organization_id"),
+        "org",
+    )
+
+    resolved_id = proposal.get("resolved_person_id") or proposal.get("existing_person_id")
+    if not resolved_id:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[
+                "close-mandaat: geen resolved_person_id; persoon eerst handmatig "
+                "matchen voordat een mandaat gesloten kan worden"
+            ],
+        )
+
+    match = next((p for p in personen if p[1].get("id") == resolved_id), None)
+    if match is None:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[f"resolved_person_id {resolved_id} niet gevonden in data/personen/"],
+        )
+
+    path, record = match
+    new_record, warnings, errors = _close_mandaat(
+        record=record,
+        organization_id=target_org_id,
+        post_id=post_id,
+        proposal=proposal,
+    )
+    if errors:
+        return SkippedProposal(proposal=proposal, reasons=errors)
+    if new_record is None:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=["close-mandaat: end_date al gezet en bron al genoteerd (idempotent)"],
+        )
+
+    reasons = [f"close mandaat op {resolved_id} (post={post_id})"]
+    for w in warnings:
+        reasons.append(f"waarschuwing: {w}")
+    return ApplyAction(
+        type="close-mandaat",
+        target_path=path,
+        record=new_record,
+        source_proposal=proposal,
+        confidence=confidence,
+        reasons=reasons,
+    )
+
+
 def _plan_person(
     *,
     proposal: dict[str, Any],
@@ -1026,6 +1123,98 @@ def _append_mandaat(
     new_record = dict(record)
     new_record["mandaten"] = [*mandaten, candidate]
     return new_record, warnings
+
+
+def _close_mandaat(
+    *,
+    record: dict[str, Any],
+    organization_id: str | None,
+    post_id: str,
+    proposal: dict[str, Any],
+) -> tuple[dict[str, Any] | None, list[str], list[str]]:
+    """Sluit een lopend mandaat op een persoon-record.
+
+    Vindt het mandaat met (post_id, organization_id?, end_date is None) en zet
+    er end_date op uit de proposal. Voegt de proposal-bron toe aan ``sources``.
+    Idempotent: als end_date al gelijk is aan de gevraagde datum (én de bron
+    al genoteerd), retourneert (None, [], []).
+
+    Retourneert (new_record, warnings, errors).
+      * new_record is None bij idempotent skip of bij niet-vinden van een
+        lopend mandaat. In dat laatste geval bevat ``errors`` de reden.
+      * warnings: niet-fatale notes (bv. meerdere lopende mandaten gevonden).
+      * errors: redenen waarom close niet kan landen (caller skipt dan).
+    """
+    end_date = _normalize_date_string(proposal.get("end_date"))
+    if not end_date:
+        return None, [], ["close-mandaat: geen end_date in proposal"]
+
+    mandaten = list(record.get("mandaten") or [])
+    candidates: list[tuple[int, dict[str, Any]]] = []
+    for idx, m in enumerate(mandaten):
+        if m.get("post_id") != post_id:
+            continue
+        if organization_id and m.get("organization_id") != organization_id:
+            continue
+        if m.get("end_date") not in (None, ""):
+            # Al gesloten: idempotency-check op exacte datum.
+            if _normalize_date_string(m.get("end_date")) == end_date:
+                candidates.append((idx, m))
+            continue
+        candidates.append((idx, m))
+
+    if not candidates:
+        return None, [], [
+            f"close-mandaat: geen lopend mandaat gevonden voor post_id={post_id}"
+        ]
+
+    warnings: list[str] = []
+    if len(candidates) > 1:
+        warnings.append(
+            f"meerdere mandaten met post_id={post_id} gevonden; "
+            "oudste open mandaat wordt gesloten"
+        )
+        # Pak het open mandaat met de vroegste start_date.
+        open_candidates = [(i, m) for i, m in candidates if not m.get("end_date")]
+        if not open_candidates:
+            return None, warnings, []  # alle al gesloten op deze datum: idempotent
+        open_candidates.sort(key=lambda t: t[1].get("start_date") or "")
+        target_idx, target = open_candidates[0]
+    else:
+        target_idx, target = candidates[0]
+
+    today = _today_iso()
+    source_id = _detect_source_id(proposal)
+    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    new_source = {
+        "id": source_id,
+        "url": source_url,
+        "retrieved": today,
+        "fields": ["end_date", "applied_via:apply-staging"],
+    }
+
+    # Idempotency: end_date staat al juist én bron is al genoteerd → skip.
+    sources = list(target.get("sources") or [])
+    bron_al_genoteerd = any(
+        s.get("id") == source_id and s.get("url") == source_url for s in sources
+    )
+    if target.get("end_date") and _normalize_date_string(target.get("end_date")) == end_date:
+        if bron_al_genoteerd:
+            return None, warnings, []
+        # Datum klopt, bron ontbreekt nog: alleen source toevoegen.
+        new_mandaat = dict(target)
+        new_mandaat["sources"] = [*sources, new_source]
+    else:
+        new_mandaat = dict(target)
+        new_mandaat["end_date"] = end_date
+        if not bron_al_genoteerd:
+            new_mandaat["sources"] = [*sources, new_source]
+
+    new_mandaten = list(mandaten)
+    new_mandaten[target_idx] = new_mandaat
+    new_record = dict(record)
+    new_record["mandaten"] = new_mandaten
+    return new_record, warnings, []
 
 
 def _build_mandaat(
