@@ -1,6 +1,7 @@
 id: person:yesilgoz-zegerius-d-1977
 identifiers:
   tk_persoon_id: 9ab41898-332f-4c08-a834-d58b4669c990
+  wikidata: Q28861002
 name:
   full: Dilan Yeşilgöz-Zegerius
   family: Yeşilgöz-Zegerius
@@ -10,6 +11,26 @@ birth:
   year: 1977
 gender: f
 mandaten:
+- id: wd-042081897cb3
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Minister van Justitie en Veiligheid
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
+    retrieved: '2026-05-09'
+  end_date: '2024-07-02'
+- id: wd-b47b431a2a6d
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-min-ezk
+  role: staatssecretaris van Economische Zaken en Klimaat
+  start_date: '2021-05-25'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
+    retrieved: '2026-05-09'
+  end_date: '2022-01-10'
 - id: 200d737c-a336-4010-8751-81ed764650f3
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -53,4 +74,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ab41898-332f-4c08-a834-d58b4669c990)
+  retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861002
   retrieved: '2026-05-09'

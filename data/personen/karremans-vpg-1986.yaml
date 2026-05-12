@@ -50,21 +50,18 @@ mandaten:
   end_date: null
 - id: wd-a3f8361489ff
   organization_id: org:min-vws
-  post_id: post:staatssecretaris-min-vws
-  role: staatssecretaris van Volksgezondheid, Welzijn en Sport
+  post_id: post:staatssecretaris-jeugd-preventie-sport-min-vws
+  role: Staatssecretaris Jeugd, Preventie en Sport
   start_date: '2024-07-02'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q101579497#P39
     retrieved: '2026-05-09'
-  end_date: '2025-06-19'
-- id: mandate-post-staatssecretaris-min-vws-2024-07-02
-  organization_id: org:min-vws
-  post_id: post:staatssecretaris-min-vws
-  role: Staatssecretaris van Volksgezondheid, Welzijn en Sport
-  start_date: '2024-07-02'
-  end_date: '2025-06-19'
-  sources:
+  - id: wikipedia
+    url: https://nl.wikipedia.org/wiki/Vincent_Karremans
+    retrieved: '2026-05-12'
+    fields:
+    - portefeuille
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22522
     retrieved: '2026-05-09'
@@ -76,10 +73,7 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-schoof-stas
-  appointment:
-    decision: Besluit nr. 2024001722, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22522
-  confidence: 0.95
+  end_date: '2025-06-19'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(27b46aa9-1f94-490e-9cc1-ea7f49f84639)

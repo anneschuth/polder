@@ -10,13 +10,19 @@ mandaten:
   post_id: post:staatssecretaris-min-ocw
   role: Staatssecretaris van Onderwijs, Cultuur en Wetenschap
   start_date: '2024-01-11'
-  end_date: null
+  end_date: '2024-07-02'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2034
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-rutte-iv
   appointment:
     decision: KB nr. 2024000039, 11 januari 2024
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2034

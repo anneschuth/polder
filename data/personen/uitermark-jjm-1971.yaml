@@ -32,14 +32,6 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q123174008#P39
     retrieved: '2026-05-09'
-  end_date: '2025-08-22'
-- id: mandate-post-minister-min-bzk-2024-07-02
-  organization_id: org:min-bzk
-  post_id: post:minister-min-bzk
-  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
-  start_date: '2024-07-02'
-  end_date: '2025-08-22'
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
@@ -51,10 +43,7 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-schoof-tussentijds
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.95
+  end_date: '2025-08-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3a24a34a-04ba-46ee-97a3-26267c000a8d)

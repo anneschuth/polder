@@ -44,14 +44,6 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q13815905#P39
     retrieved: '2026-05-09'
-  end_date: '2025-06-03'
-- id: mandate-post-minister-min-aenm-2024-07-02
-  organization_id: org:min-aenm
-  post_id: post:minister-min-aenm
-  role: Minister van Asiel en Migratie
-  start_date: '2024-07-02'
-  end_date: '2025-06-03'
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
@@ -63,10 +55,7 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-schoof-tussentijds
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.97
+  end_date: '2025-06-03'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fe1727e3-35bc-4b62-869b-be60b0c861f7)
