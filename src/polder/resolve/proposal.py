@@ -29,34 +29,53 @@ class PostMatch:
     method: str
 
 
+def _lookup_org(idx: PolderIndex, slug: str | None) -> str | None:
+    """Resolve een ruwe org-slug: eerst exact, daarna via name-alias."""
+    if not slug:
+        return None
+    if slug in idx.org_ids:
+        return slug
+    return idx.org_by_alias.get(slug)
+
+
 def _resolve_organization(proposal: dict, idx: PolderIndex) -> OrgMatch:
     """Probeer organization-id te resolven uit een proposal.
 
     Volgorde:
-    1. proposal.organization_id exists in data — 1.0
-    2. organization_chain[last].slug_proposal exists — 0.95 (chain-fallback)
-    3. organization_chain[*].slug_proposal exists, eerste hit — 0.85
+    1. proposal.organization_id exists (direct of via alias) — 1.0 / 0.92
+    2. organization_chain[last].slug_proposal — 0.95 / 0.88
+    3. organization_chain[*].slug_proposal — 0.85 / 0.80
     4. None
     """
-    org_id = proposal.get("organization_id")
-    if org_id and org_id in idx.org_ids:
-        # Bepaal level uit chain, indien aanwezig
-        level = _level_for_org(proposal, org_id)
-        return OrgMatch(org_id, 1.0, "proposal_id_exact", level)
+    raw_org = proposal.get("organization_id")
+    if raw_org:
+        if raw_org in idx.org_ids:
+            level = _level_for_org(proposal, raw_org)
+            return OrgMatch(raw_org, 1.0, "proposal_id_exact", level)
+        alias_hit = idx.org_by_alias.get(raw_org)
+        if alias_hit:
+            level = _level_for_org(proposal, alias_hit) or _level_for_org(proposal, raw_org)
+            return OrgMatch(alias_hit, 0.92, "proposal_id_via_alias", level)
 
     chain = proposal.get("organization_chain") or []
     # Eerst: laatste (meest-specifieke) chain-entry
     if chain and isinstance(chain[-1], dict):
         slug = chain[-1].get("slug_proposal")
-        if slug and slug in idx.org_ids:
-            return OrgMatch(slug, 0.95, "chain_last_exact", chain[-1].get("level"))
-    # Anders: eerste exact-match in de chain
+        resolved = _lookup_org(idx, slug)
+        if resolved:
+            method = "chain_last_exact" if resolved == slug else "chain_last_via_alias"
+            conf = 0.95 if resolved == slug else 0.88
+            return OrgMatch(resolved, conf, method, chain[-1].get("level"))
+    # Anders: eerste hit in de chain (via alias indien nodig)
     for entry in chain:
         if not isinstance(entry, dict):
             continue
         slug = entry.get("slug_proposal")
-        if slug and slug in idx.org_ids:
-            return OrgMatch(slug, 0.85, "chain_partial_exact", entry.get("level"))
+        resolved = _lookup_org(idx, slug)
+        if resolved:
+            method = "chain_partial_exact" if resolved == slug else "chain_partial_via_alias"
+            conf = 0.85 if resolved == slug else 0.80
+            return OrgMatch(resolved, conf, method, entry.get("level"))
 
     return OrgMatch(None, 0.0, "no_match", None)
 

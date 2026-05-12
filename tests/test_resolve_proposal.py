@@ -123,6 +123,32 @@ def test_resolve_proposal_preserves_original_fields(polder_index) -> None:
     assert result["source_identifier"] == "test-source"
 
 
+def test_resolve_proposal_org_via_name_alias(polder_index) -> None:
+    """Een verbose org-naam `org:ministerie-van-financien` matched op `org:min-fin`."""
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:ministerie-van-financien",
+        "post_id": "post:minister-min-fin",
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["resolved_organization_id"] == "org:min-fin"
+    assert "alias" in (result.get("resolution_notes") or "")
+
+
+def test_resolve_proposal_org_abbr_alias(polder_index) -> None:
+    """De afkortings-vorm `org:bzk` matched op `org:min-bzk`."""
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:bzk",
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["resolved_organization_id"] == "org:min-bzk"
+
+
 def test_resolve_proposal_post_not_in_data(polder_index) -> None:
     """Onbekende post-id: resolved=None, propose_post_creation=True."""
     from polder.resolve.proposal import resolve_proposal

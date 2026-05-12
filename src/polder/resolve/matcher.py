@@ -23,6 +23,41 @@ from polder.resolve.names import ParsedName, parse_person_name
 logger = logging.getLogger("polder.resolve.matcher")
 
 
+_ORG_NAME_DROP = (
+    "ministerie van",
+    "ministerie-van",
+    "ministerie",
+)
+
+
+def _slugify_org(raw: str | None) -> str | None:
+    """Slugify een org-naam naar `org:<slug>` zonder prefix-stripping."""
+    if not raw:
+        return None
+    s = unicodedata.normalize("NFKD", str(raw)).encode("ascii", "ignore").decode("ascii")
+    s = s.strip().lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    if not slug:
+        return None
+    return f"org:{slug}"
+
+
+def _org_alias_slug(raw: str | None) -> str | None:
+    """Slugify een org-naam, met `ministerie van` als prefix gestript.
+
+    Voor alias-lookup: zowel "Financiën" als "Ministerie van Financiën"
+    landen op `org:financien`.
+    """
+    if not raw:
+        return None
+    s = str(raw).strip().lower()
+    for prefix in _ORG_NAME_DROP:
+        if s.startswith(prefix + " "):
+            s = s[len(prefix) + 1 :].strip()
+            break
+    return _slugify_org(s)
+
+
 def _norm_family(value: str | None) -> str:
     """Lowercase ASCII zonder tussenvoegsels.
 
@@ -71,6 +106,9 @@ class PolderIndex:
     post_ids: set[str] = field(default_factory=set)
     # post_id -> organization_id (om post/org-consistency te checken)
     post_to_org: dict[str, str] = field(default_factory=dict)
+    # alias-slug -> canonical org_id. Vult vanuit names[*].value en abbr,
+    # zodat bv. `org:ministerie-van-financien` matched op `org:min-fin`.
+    org_by_alias: dict[str, str] = field(default_factory=dict)
 
     @classmethod
     def load(cls, data_dir: Path) -> "PolderIndex":
@@ -109,8 +147,39 @@ class PolderIndex:
                     d = yaml.safe_load(path.read_text(encoding="utf-8"))
                 except yaml.YAMLError:
                     continue
-                if isinstance(d, dict) and d.get("id"):
-                    idx.org_ids.add(d["id"])
+                if not isinstance(d, dict) or not d.get("id"):
+                    continue
+                oid = d["id"]
+                idx.org_ids.add(oid)
+                # Bouw alias-keys uit names[*].value en names[*].abbr. Voor
+                # ministeries voegen we óók de prefix-vorm toe zodat
+                # `org:ministerie-van-financien` -> `org:min-fin`.
+                is_ministerie = d.get("type") == "ministerie"
+                for n in d.get("names") or []:
+                    if not isinstance(n, dict):
+                        continue
+                    for raw in (n.get("value"), n.get("abbr")):
+                        if not raw:
+                            continue
+                        # Twee vormen registreren: de korte ("financien")
+                        # en, bij ministeries, ook de verbose ("ministerie-van-financien"
+                        # en "min-financien"). Daardoor matchen we beide
+                        # spelling-varianten op de canonical id.
+                        for candidate in (
+                            _org_alias_slug(raw),
+                            (
+                                _slugify_org(f"ministerie van {raw}")
+                                if is_ministerie
+                                else None
+                            ),
+                            (
+                                _slugify_org(f"min {raw}")
+                                if is_ministerie
+                                else None
+                            ),
+                        ):
+                            if candidate and candidate != oid:
+                                idx.org_by_alias.setdefault(candidate, oid)
 
         if posts_dir.exists():
             for path in posts_dir.rglob("*.yaml"):
