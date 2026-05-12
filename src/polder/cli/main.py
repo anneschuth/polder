@@ -72,6 +72,7 @@ _SINGLE_COMMANDS: dict[str, tuple[str, str]] = {
     "export": ("polder.cli.commands.export_cmd", "export"),
     "validate": ("polder.cli.commands.validate_cmd", "validate"),
     "audit": ("polder.cli.commands.audit_cmd", "audit"),
+    "dedup": ("polder.cli.commands.dedup_cmd", "dedup"),
     "diff": ("polder.cli.commands.diff_cmd", "diff"),
     "build": ("polder.cli.commands.build_cmd", "build"),
     "serve": ("polder.cli.commands.serve_cmd", "serve"),
