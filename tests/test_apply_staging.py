@@ -547,6 +547,25 @@ def test_skip_when_merge_recommendation_skip(mini_polder: Path) -> None:
     assert any("skip" in r for s in skipped for r in s.reasons)
 
 
+def test_classification_word_boundary() -> None:
+    """`ministerie` mag NIET als `minister` worden geclassificeerd."""
+    from polder.apply import _classification_from_role
+
+    # CISO bij een ministerie is geen bewindspersoon
+    assert _classification_from_role(
+        "Chief Information Security Officer (CISO) Rijk, ministerie van BZK"
+    ) is None
+    # minister-president blijft bewindspersoon
+    assert _classification_from_role("minister-president") == "bewindspersoon"
+    # directeur-generaal blijft abd-tmg
+    assert _classification_from_role("directeur-generaal Mobiliteit") == "abd-tmg"
+    # afdelingshoofd binnen een ministerie blijft afdelingshoofd
+    assert (
+        _classification_from_role("afdelingshoofd Bedrijfsvoering, ministerie X")
+        == "abd-afdelingshoofd"
+    )
+
+
 def test_chain_unknown_ministerie_skipped(mini_polder: Path) -> None:
     """Een chain met een onbekende ministerie-entry mag NIET tot create-org leiden.
 
@@ -574,6 +593,63 @@ def test_chain_unknown_ministerie_skipped(mini_polder: Path) -> None:
     assert any("ministerie" in r and "niet bekend" in r for r in reasons) or any(
         "mismatcht" in r for r in reasons
     )
+
+
+def test_chain_name_implies_wrong_parent_skipped(mini_polder: Path) -> None:
+    """Een chain die `Belastingdienst` onder BZK plaatst — terwijl die onder Financiën valt — wordt geweigerd."""
+    _write_yaml(
+        mini_polder / "data" / "organisaties" / "ministeries" / "fin.yaml",
+        {
+            "id": "org:min-fin",
+            "type": "ministerie",
+            "classification": "ministerie",
+            "parent_id": None,
+            "names": [{"value": "Financiën", "valid_from": "2010-10-14"}],
+            "valid_from": "2010-10-14",
+            "sources": [
+                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
+            ],
+        },
+    )
+    _write_yaml(
+        mini_polder / "data" / "organisaties" / "organisatieonderdelen" / "belastingdienst.yaml",
+        {
+            "id": "org:belastingdienst",
+            "type": "organisatieonderdeel",
+            "classification": "organisatieonderdeel",
+            "parent_id": "org:min-fin",
+            "names": [{"value": "Belastingdienst", "valid_from": "2010-01-01"}],
+            "valid_from": "2010-01-01",
+            "sources": [
+                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
+            ],
+        },
+    )
+    p = _kewal_proposal()
+    p["organization_id"] = "org:onderdeel-afdeling-x-min-bzk"
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "Ministerie van Binnenlandse Zaken",
+            "slug_proposal": "org:min-bzk",
+        },
+        {
+            "level": "organisatieonderdeel",
+            "name": "Belastingdienst",
+            "slug_proposal": "org:belastingdienst-min-bzk",
+        },
+        {
+            "level": "afdeling",
+            "name": "Afdeling X",
+            "slug_proposal": "org:onderdeel-afdeling-x-min-bzk",
+        },
+    ]
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    reasons = [r for s in skipped for r in s.reasons]
+    assert any(
+        "Belastingdienst" in r and "parent" in r and "verschilt" in r for r in reasons
+    ), reasons
 
 
 def test_chain_inconsistent_with_organization_id_skipped(mini_polder: Path) -> None:

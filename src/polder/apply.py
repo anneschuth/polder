@@ -130,10 +130,16 @@ def _detect_source_url(proposal: dict[str, Any]) -> str | None:
 
 
 def _classification_from_role(role: str) -> str | None:
-    """Map een role-string naar een post-classification, of None bij geen match."""
+    """Map een role-string naar een post-classification, of None bij geen match.
+
+    Gebruikt word-boundary regex zodat `"minister"` matched op
+    `"minister-president"` maar NIET op `"ministerie van X"`. Anders
+    krijgt een Chief Information Security Officer-rol bij een ministerie
+    onterecht `bewindspersoon` toegewezen.
+    """
     role_l = role.lower()
     for keyword, classification in ROLE_TO_CLASSIFICATION:
-        if keyword in role_l:
+        if re.search(rf"\b{re.escape(keyword)}\b", role_l):
             return classification
     return None
 
@@ -445,13 +451,14 @@ def plan_apply(
     skipped: list[SkippedProposal] = []
 
     # Snapshots van bestaande data voor lookups. `PolderIndex` lest al
-    # alle orgs en bouwt de alias-tabel; we gebruiken hem hier als single
-    # source of truth zodat resolver en apply dezelfde lookup-logica delen.
+    # alle orgs en bouwt de alias-tabel + parent-tracking; we gebruiken hem
+    # hier als single source of truth zodat resolver en apply dezelfde
+    # lookup-logica delen.
     from polder.resolve.matcher import PolderIndex
 
-    _index = PolderIndex.load(data_dir)
-    org_ids = set(_index.org_ids)
-    org_aliases = dict(_index.org_by_alias)
+    polder_index = PolderIndex.load(data_dir)
+    org_ids = polder_index.org_ids
+    org_aliases = polder_index.org_by_alias
     post_ids = _existing_post_ids(data_dir)
     personen = _existing_personen(data_dir)
 
@@ -582,7 +589,7 @@ def plan_apply(
             existing=org_ids | pending_org_ids,
             proposal=proposal,
             confidence=confidence,
-            org_aliases=org_aliases,
+            polder_index=polder_index,
         )
         if chain_skip_reasons:
             skipped.append(
@@ -680,27 +687,35 @@ def _plan_chain(
     existing: set[str],
     proposal: dict[str, Any],
     confidence: float,
-    org_aliases: dict[str, str] | None = None,
+    polder_index: Any = None,
 ) -> tuple[list[ApplyAction], list[str]]:
     """Bouw create-org acties voor elke chain-entry die nog niet bestaat.
 
     Retourneert (actions, skip_reasons). Bij skip_reasons is de proposal
     niet auto-mergeable.
 
-    Ministerie-niveau-entries leiden nooit tot een nieuw record: alle
-    ministeries staan al in `data/organisaties/ministeries/`. Een chain die
-    een onbekende ministerie noemt is per definitie een fout-parse — die
-    proposal slaan we over.
+    Drie hardingen tegen fout-geparste chains:
+    1. Ministerie-niveau-entries leiden nooit tot een nieuw record — alle
+       ministeries staan al in `data/organisaties/ministeries/`.
+    2. Als een chain-entry-naam matched op een bestaande org, moet de
+       chain-parent overeenkomen met de echte parent. `Belastingdienst`
+       als kind van BZK in de chain wordt afgewezen omdat de echte parent
+       `org:min-fin` is.
+    3. Slug-aliassen (`org:ministerie-van-financien` → `org:min-fin`)
+       worden via `PolderIndex.org_by_alias` opgelost.
 
-    `org_aliases` is een optionele lookup (`alias-slug -> canonical-id`) die
-    we hergebruiken vanuit `polder.resolve.matcher`. Wordt door
-    `plan_apply` 1× opgebouwd en hier doorgegeven.
+    `polder_index` is de `PolderIndex` van de resolver — wordt door
+    `plan_apply` 1× opgebouwd en hier hergebruikt.
     """
+    from polder.resolve.matcher import PolderIndex, _org_alias_slug
+
     actions: list[ApplyAction] = []
     if not chain:
         return actions, []
 
-    aliases = org_aliases or {}
+    idx: PolderIndex = polder_index or PolderIndex.load(data_dir)
+    aliases = idx.org_by_alias
+    parents = idx.org_parent
 
     # Volgorde top-down (ministerie -> directie -> afdeling). Voor elke nieuwe
     # entry moet de parent (vorige) bestaan of in dezelfde batch zijn.
@@ -714,6 +729,28 @@ def _plan_chain(
         # vinden we `org:ministerie-van-financien` terug als `org:min-fin`.
         if slug not in available and slug in aliases:
             slug = aliases[slug]
+        # Probeer ook name-based alias: voor `name="Belastingdienst"` met
+        # verzonnen slug `org:belastingdienst-min-bzk` vinden we de
+        # canonical `org:belastingdienst` via de naam.
+        canonical_by_name: str | None = None
+        if slug not in available:
+            name_slug = _org_alias_slug(entry.get("name"))
+            if name_slug:
+                canonical_by_name = aliases.get(name_slug) or (
+                    name_slug if name_slug in idx.org_ids else None
+                )
+        # Hiërarchie-validatie: als naam-alias een canonical oplevert die in
+        # data/ staat, controleer dat zijn echte parent overeenkomt met de
+        # chain-parent. Anders is de chain fout-geparset.
+        if canonical_by_name and canonical_by_name in parents:
+            real_parent = parents[canonical_by_name]
+            if real_parent is not None and parent_id is not None and real_parent != parent_id:
+                return [], [
+                    f"chain-entry naam {entry.get('name')!r} matched "
+                    f"{canonical_by_name!r}, maar diens parent {real_parent!r} "
+                    f"verschilt van chain-parent {parent_id!r}"
+                ]
+            slug = canonical_by_name
         # Sync de slug terug zodat _build_org_record en parent-tracking
         # consistent zijn.
         entry["slug_proposal"] = slug
