@@ -444,8 +444,14 @@ def plan_apply(
     actions: list[ApplyAction] = []
     skipped: list[SkippedProposal] = []
 
-    # Snapshots van bestaande data voor lookups.
-    org_ids = _existing_org_ids(data_dir)
+    # Snapshots van bestaande data voor lookups. `PolderIndex` lest al
+    # alle orgs en bouwt de alias-tabel; we gebruiken hem hier als single
+    # source of truth zodat resolver en apply dezelfde lookup-logica delen.
+    from polder.resolve.matcher import PolderIndex
+
+    _index = PolderIndex.load(data_dir)
+    org_ids = set(_index.org_ids)
+    org_aliases = dict(_index.org_by_alias)
     post_ids = _existing_post_ids(data_dir)
     personen = _existing_personen(data_dir)
 
@@ -545,12 +551,38 @@ def plan_apply(
             "org",
         )
 
+        # Consistentie-check vóór create-org: als de proposal zowel een chain
+        # als een `organization_id` levert, moet de laatste chain-entry
+        # overeenkomen met die `organization_id`. Anders is de chain óf
+        # fout-geparset (verkeerde hierarchie, zoals `min-bzk` boven `nvwa`)
+        # óf wijst hij naar een andere org dan de proposal claimt. Skip
+        # zodat we geen verkeerde parent-record aanmaken.
+        if chain and target_org_id:
+            last_slug = _normalize_id(
+                chain[-1].get("slug_proposal") if isinstance(chain[-1], dict) else None,
+                "org",
+            )
+            if last_slug and last_slug != target_org_id:
+                last_resolved = org_aliases.get(last_slug, last_slug)
+                if last_resolved != target_org_id:
+                    skipped.append(
+                        SkippedProposal(
+                            proposal=proposal,
+                            reasons=[
+                                f"chain[-1] {last_slug!r} mismatcht "
+                                f"organization_id {target_org_id!r}"
+                            ],
+                        )
+                    )
+                    continue
+
         chain_actions, chain_skip_reasons = _plan_chain(
             chain=chain,
             data_dir=data_dir,
             existing=org_ids | pending_org_ids,
             proposal=proposal,
             confidence=confidence,
+            org_aliases=org_aliases,
         )
         if chain_skip_reasons:
             skipped.append(
@@ -648,15 +680,27 @@ def _plan_chain(
     existing: set[str],
     proposal: dict[str, Any],
     confidence: float,
+    org_aliases: dict[str, str] | None = None,
 ) -> tuple[list[ApplyAction], list[str]]:
     """Bouw create-org acties voor elke chain-entry die nog niet bestaat.
 
     Retourneert (actions, skip_reasons). Bij skip_reasons is de proposal
     niet auto-mergeable.
+
+    Ministerie-niveau-entries leiden nooit tot een nieuw record: alle
+    ministeries staan al in `data/organisaties/ministeries/`. Een chain die
+    een onbekende ministerie noemt is per definitie een fout-parse — die
+    proposal slaan we over.
+
+    `org_aliases` is een optionele lookup (`alias-slug -> canonical-id`) die
+    we hergebruiken vanuit `polder.resolve.matcher`. Wordt door
+    `plan_apply` 1× opgebouwd en hier doorgegeven.
     """
     actions: list[ApplyAction] = []
     if not chain:
         return actions, []
+
+    aliases = org_aliases or {}
 
     # Volgorde top-down (ministerie -> directie -> afdeling). Voor elke nieuwe
     # entry moet de parent (vorige) bestaan of in dezelfde batch zijn.
@@ -666,14 +710,26 @@ def _plan_chain(
         slug = _normalize_id(entry.get("slug_proposal"), "org")
         if not slug:
             return [], [f"chain-entry zonder slug_proposal: {entry}"]
+        # Probeer alias-resolutie als de exacte slug niet bestaat. Hierdoor
+        # vinden we `org:ministerie-van-financien` terug als `org:min-fin`.
+        if slug not in available and slug in aliases:
+            slug = aliases[slug]
         # Sync de slug terug zodat _build_org_record en parent-tracking
         # consistent zijn.
         entry["slug_proposal"] = slug
         if slug in available:
             parent_id = slug
             continue
+        # Onbekende ministerie: dat hoort niet voor te komen — alle
+        # ministeries staan in `data/organisaties/ministeries/`. Een chain
+        # die hier komt is óf een typfout óf een verkeerd-geparsete hierarchie.
+        if entry.get("level") == "ministerie":
+            return [], [
+                f"chain-entry ministerie {slug!r} niet bekend in data/ "
+                "(typfout of verkeerd-geparsete hierarchie)"
+            ]
         # Nieuwe org: parent moet bekend zijn.
-        if parent_id is None and entry.get("level") != "ministerie":
+        if parent_id is None:
             return [], [f"chain {slug}: parent ontbreekt"]
         record = _build_org_record(entry=entry, parent_id=parent_id, proposal=proposal)
         slug_body = slug.removeprefix("org:onderdeel-").removeprefix("org:")

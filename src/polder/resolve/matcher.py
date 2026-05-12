@@ -109,6 +109,8 @@ class PolderIndex:
     # alias-slug -> canonical org_id. Vult vanuit names[*].value en abbr,
     # zodat bv. `org:ministerie-van-financien` matched op `org:min-fin`.
     org_by_alias: dict[str, str] = field(default_factory=dict)
+    # org_id -> parent_id, voor hiërarchie-validatie tijdens chain-resolve.
+    org_parent: dict[str, str | None] = field(default_factory=dict)
 
     @classmethod
     def load(cls, data_dir: Path) -> "PolderIndex":
@@ -151,6 +153,7 @@ class PolderIndex:
                     continue
                 oid = d["id"]
                 idx.org_ids.add(oid)
+                idx.org_parent[oid] = d.get("parent_id")
                 # Bouw alias-keys uit names[*].value en names[*].abbr. Voor
                 # ministeries voegen we óók de prefix-vorm toe zodat
                 # `org:ministerie-van-financien` -> `org:min-fin`.

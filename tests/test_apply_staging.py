@@ -547,6 +547,88 @@ def test_skip_when_merge_recommendation_skip(mini_polder: Path) -> None:
     assert any("skip" in r for s in skipped for r in s.reasons)
 
 
+def test_chain_unknown_ministerie_skipped(mini_polder: Path) -> None:
+    """Een chain met een onbekende ministerie-entry mag NIET tot create-org leiden.
+
+    Twee checks kunnen 'm vangen: de chain[-1]/organization_id-mismatch (als
+    de proposal een ander org_id heeft) of de explicit onbekend-ministerie-
+    check. Beide zijn acceptabel.
+    """
+    p = _kewal_proposal()
+    p["organization_id"] = "org:onderdeel-directie-x"
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "Ministerie van Bestaat-Niet",
+            "slug_proposal": "org:min-bestaat-niet",
+        },
+        {
+            "level": "directie",
+            "name": "Directie X",
+            "slug_proposal": "org:onderdeel-directie-x",
+        },
+    ]
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    reasons = [r for s in skipped for r in s.reasons]
+    assert any("ministerie" in r and "niet bekend" in r for r in reasons) or any(
+        "mismatcht" in r for r in reasons
+    )
+
+
+def test_chain_inconsistent_with_organization_id_skipped(mini_polder: Path) -> None:
+    """Een chain die naar een ander ministerie wijst dan `organization_id` impliceert."""
+    p = _kewal_proposal()
+    # organization_id zegt BZK, maar de chain plaatst de unit onder een
+    # ander ministerie — dat is de Esmeralda-NVWA-pattern in het echt.
+    p["organization_id"] = "org:nvwa-min-lvvn"
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "Ministerie van Binnenlandse Zaken",
+            "slug_proposal": "org:min-bzk",
+        },
+        {
+            "level": "afdeling",
+            "name": "Directie X",
+            "slug_proposal": "org:onderdeel-directie-x",
+        },
+    ]
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("mismatcht" in r for s in skipped for r in s.reasons)
+
+
+def test_chain_alias_resolves_ministerie_via_names(mini_polder: Path) -> None:
+    """Een ministerie-alias slug (`org:bzk`) hoort niet tot een create-org te leiden."""
+    p = _kewal_proposal()
+    # Een chain met de verbose alias `org:ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties`
+    # moet resolven naar `org:min-bzk` (al in mini-polder).
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+            "slug_proposal": "org:ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties",
+        },
+        {
+            "level": "directie",
+            "name": "directie Digitale Samenleving",
+            "slug_proposal": "org:onderdeel-directie-digitale-samenleving",
+        },
+        {
+            "level": "afdeling",
+            "name": "afdeling AI, Algoritmen, Data en Digitale Inclusie",
+            "slug_proposal": "org:onderdeel-afdeling-ai-algoritmen-data-digitale-inclusie-directie-digitale-samenleving",
+        },
+    ]
+    actions, _ = plan_apply([p], mini_polder / "data")
+    # Geen create-org voor het ministerie zelf — die staat al in data/.
+    create_orgs = [a for a in actions if a.type == "create-org"]
+    for a in create_orgs:
+        assert "min-bzk" not in str(a.target_path)
+        assert "binnenlandse-zaken" not in a.target_path.name
+
+
 def test_filename_strips_org_prefix(mini_polder: Path) -> None:
     """Een chain-entry `slug_proposal=org:foo` mag NIET tot bestand `org:foo.yaml` leiden."""
     p = _kewal_proposal()
