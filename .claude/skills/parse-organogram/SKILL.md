@@ -29,6 +29,8 @@ Optioneel: ministerie-slug en peildatum, indien niet uit metadata afleidbaar.
 
 ## Output
 
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad — schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor `Read` (PDF) en `polder search` (slug-lookup).
+
 JSON-array met proposals. Twee soorten, beide met `bron_pagina_nummer`, `bron_url` en `evidence`:
 
 Orgaanstructuur:
@@ -92,7 +94,7 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 
 ### Output schrijven
 
-Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, secretariaat). Niet extracten, ook niet als ze in de bron staan. Schrijf het resultaat naar `data/_staging/organogram-{ministerie}-{datum}.json`. Niet direct naar `data/organisaties/`, `data/personen/` of `data/posten/`.
+Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, secretariaat). Niet extracten, ook niet als ze in de bron staan. De runner schrijft de proposals automatisch naar `data/_staging/organogram-{ministerie}-{datum}.json`; jij produceert alleen de JSON-array op stdout.
 
 ## Harde regels
 

@@ -30,7 +30,9 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 
 ## Output
 
-**ALLEEN JSON-array, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Geen introductietekst, geen samenvatting, geen verklaring. Alleen de array. Elk proposal in de array heeft:
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad — schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor read-only lookups (`polder search`, `polder show`).
+
+JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Elk proposal in de array heeft:
 
 - `person_name` (string): naam zoals in het bericht, met titulering en initialen indien aanwezig.
 - `existing_person_id` (string of null): polder-slug bij match in `data/personen/`, anders null.
@@ -51,7 +53,15 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 ## Stappen voor de LLM
 
 1. Laad de HTML. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
-2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Match tegen `data/organisaties/` op naam of afkorting.
+2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Zoek de canonical slugs op via `polder search` (Bash):
+
+   ```bash
+   uv run polder search "Justitie en Veiligheid" -t org --json
+   uv run polder search "directeur-generaal Migratie" -t post --json
+   uv run polder search "DG Belastingdienst" -t org --json
+   ```
+
+   **Verzin geen slugs.** Voor ministeries volgt het patroon `org:min-<afkorting>` (`org:min-jenv`, `org:min-fin`, `org:min-bzk`, ...). Voor organisatieonderdelen zijn er bestaande slugs onder `data/organisaties/organisatieonderdelen/`; vind ze via search. Pas als zoek echt niets vindt, stel een nieuwe slug voor volgens de Polder-conventie en flag dat in `confidence_reasoning`.
 3. Zoek benoemings- en ontslagpatronen. ABD-berichten volgen meestal één van deze sjablonen:
    - **Standaard benoeming**: "X wordt [met ingang van <datum>] <functie> bij/onderdeel van <organisatieketen>. ... De benoeming gaat in op <datum>."
    - **Alternatief**: "X wordt <functie>, een <subunit> van de <parent> bij het ministerie van Y. De benoeming gaat in op <datum>."
