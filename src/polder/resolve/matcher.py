@@ -97,6 +97,10 @@ class PolderIndex:
     by_family_initials_year: dict[tuple[str, str, int], list[str]] = field(default_factory=dict)
     # (family, given_compact) -> [person_id, ...] (compact zonder accenten)
     by_family_given: dict[tuple[str, str], list[str]] = field(default_factory=dict)
+    # (family, birth_year) -> [person_id, ...]. Voor proposals zonder
+    # initials of waar de initials niet exact matchen, maar het geboortejaar
+    # wel uniek is binnen een familienaam.
+    by_family_year: dict[tuple[str, int], list[str]] = field(default_factory=dict)
     # family -> [person_id, ...]
     by_family: dict[str, list[str]] = field(default_factory=dict)
 
@@ -150,6 +154,7 @@ class PolderIndex:
                             idx.by_family_initials_year.setdefault(
                                 (family, ikey, year), []
                             ).append(pid)
+                        idx.by_family_year.setdefault((family, year), []).append(pid)
                     if given:
                         idx.by_family_given.setdefault((family, given), []).append(pid)
 
@@ -273,6 +278,17 @@ def match_person(
                 return PersonMatch(
                     None, 0.0, "ambiguous_family_initials_year", tuple(ids)
                 )
+
+    # 1b. family + birth_year (zonder initials-match). Veel data-records
+    # missen initials maar hebben wel het geboortejaar; voor een proposal
+    # die wel initials heeft maar geen letterlijke match, is een unieke
+    # family+year-treffer alsnog een sterk signaal.
+    if birth_year is not None:
+        ids = idx.by_family_year.get((family, birth_year), [])
+        if len(ids) == 1:
+            return PersonMatch(ids[0], 0.92, "family_year_unique")
+        if len(ids) > 1:
+            return PersonMatch(None, 0.0, "ambiguous_family_year", tuple(ids))
 
     # 2. family + given (exact compact-match)
     if parsed.given:

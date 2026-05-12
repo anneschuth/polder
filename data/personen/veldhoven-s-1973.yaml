@@ -55,6 +55,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q5090363#P39
     retrieved: '2026-05-09'
   end_date: '2021-07-19'
+- id: mandate-post-minister-zp-klimaat-en-groene-groei-2026-02-23
+  organization_id: org:min-kgg
+  post_id: post:minister-zp-klimaat-en-groene-groei
+  role: Minister zonder portefeuille (Klimaat en Groene Groei)
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000405, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+  confidence: 0.88
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9d2229a5-c46a-485a-9b82-315e270c3e9a)

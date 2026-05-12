@@ -152,8 +152,36 @@ def parse_person_name(name: str) -> ParsedName:
 
     # 3. Laatste token is family (na suffix-stripping). Tussenvoegsel-tokens
     # tussen given en family overslaan voor family-positie.
+    #
+    # Compound-namen met streepje en tussenvoegsels in het midden ("van
+    # Veldhoven-van der Meer", "Joosse - de Visser") splitsen op spaties
+    # niet correct: een naive tokens[-1] pakt alleen "Meer" of "Visser".
+    # Voor matching naar onze data willen we de meest-gebruikelijke vorm
+    # (Wikipedia/Wikidata-conventie), wat doorgaans het EERSTE segment
+    # is: "Veldhoven" of "Joosse". Als het laatste segment vóór de streep
+    # met een hoofdletter begint én ergens later een streep-vorm met
+    # tussenvoegsel volgt, pak dan dat eerste segment.
     family = _to_ascii_lower(tokens[-1])
     rest = tokens[:-1]
+
+    # Compound met streepje EN tussenvoegsels detecteren: "Veldhoven-van"
+    # met daarna "der Meer" is een meertraps achternaam (van Veldhoven-van
+    # der Meer). Pak in dat geval het eerste segment voor de streep als
+    # family. Streepjes tussen twee hoofdletters ("Gooiker-Loeffen") zijn
+    # gewoon compound family en blijven intact via tokens[-1].
+    for tok in tokens:
+        # Token vorm "Xxxx-yyy" waar yyy met kleine letter begint (tussen-
+        # voegsel-binnen-streep), gevolgd door extra tussenvoegsels: pak
+        # eerste segment.
+        if "-" in tok and tok[0].isupper():
+            head, _, tail = tok.partition("-")
+            if tail and tail[0].islower():
+                family = _to_ascii_lower(head)
+                rest = [
+                    t for t in tokens
+                    if t is not tok and not _looks_like_tussenvoegsel(t)
+                ]
+                break
 
     # 4. Given: nickname als die uit parens kwam, anders het eerste
     # niet-tussenvoegsel-token vóór family (als die geen initiaal was).
