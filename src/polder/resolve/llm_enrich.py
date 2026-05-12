@@ -88,11 +88,11 @@ def _classify_proposal(proposal: dict[str, Any]) -> _BucketChoice | None:
         return None  # niets te enrichen
 
     notes = proposal.get("resolution_notes") or ""
-    person_note = ""
-    for part in notes.split(";"):
-        if "person" in part:
-            person_note = part.strip()
-            break
+    # Verzamel ALLE segmenten die persoon-context bevatten. De resolver
+    # schrijft o.a. "person: ambiguous_family; person-candidates: person:X,person:Y"
+    # — die staan in aparte segmenten, dus we joinen ze terug bij elkaar.
+    person_segments = [s.strip() for s in notes.split(";") if "person" in s]
+    person_note = "; ".join(person_segments)
 
     candidate_ids = _extract_candidate_ids(person_note)
     resolved_pid = proposal.get("resolved_person_id")
