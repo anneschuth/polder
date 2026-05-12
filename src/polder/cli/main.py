@@ -10,35 +10,22 @@
 
 De oude `polder-fetch-*`, `polder-validate`, `polder-diff` en `polder-build`
 entrypoints in `pyproject.toml` blijven staan voor backwards-compatibility.
+
+Subcommand-modules worden lazy geïmporteerd. `polder show person:...`
+hoeft geen `bs4`/`lxml`/`httpx`/`pydantic`-fetchers te laden, dus die
+imports gebeuren pas als je `polder fetch ...` aanroept. Dat scheelt
+~100ms per call op de hot paths (show, search, list, validate).
 """
 
 from __future__ import annotations
 
 import logging
 import os
+import sys
 from pathlib import Path
 from typing import Annotated
 
 import typer
-
-from polder.cli.commands import (
-    apply_staging_cmd,
-    audit_cmd,
-    backfill_cmd,
-    build_cmd,
-    daily_cmd,
-    diff_cmd,
-    export_cmd,
-    fetch_cmd,
-    ingest_cmd,
-    list_cmd,
-    resolve_cmd,
-    search_cmd,
-    serve_cmd,
-    show_cmd,
-    skill_cmd,
-    validate_cmd,
-)
 
 app = typer.Typer(
     name="polder",
@@ -69,41 +56,125 @@ def _root(
 
 
 # ---------------------------------------------------------------------------
-# Sub-apps (typer-trees)
+# Lazy command registration
 # ---------------------------------------------------------------------------
+#
+# Importing every subcommand module up front pulls in bs4, lxml, httpx,
+# concurrent.futures and all fetcher modules — ~100ms on the hot paths.
+# We instead inspect argv and only register what the user asked for.
+# `--help` and unknown args fall back to "register everything" so that
+# typer can produce its full help text.
 
-list_app = typer.Typer(
-    name="list",
-    no_args_is_help=True,
-    help="Lijst entiteiten (organisaties, personen, posten, mandaten).",
-)
-app.add_typer(list_app, name="list")
-list_app.command("organisaties")(list_cmd.list_organisaties)
-list_app.command("personen")(list_cmd.list_personen)
-list_app.command("posten")(list_cmd.list_posten)
-list_app.command("mandaten")(list_cmd.list_mandaten)
+_SINGLE_COMMANDS: dict[str, tuple[str, str]] = {
+    # name on app -> (module path, attribute)
+    "show": ("polder.cli.commands.show_cmd", "show"),
+    "search": ("polder.cli.commands.search_cmd", "search"),
+    "export": ("polder.cli.commands.export_cmd", "export"),
+    "validate": ("polder.cli.commands.validate_cmd", "validate"),
+    "audit": ("polder.cli.commands.audit_cmd", "audit"),
+    "diff": ("polder.cli.commands.diff_cmd", "diff"),
+    "build": ("polder.cli.commands.build_cmd", "build"),
+    "serve": ("polder.cli.commands.serve_cmd", "serve"),
+    "daily-update": ("polder.cli.commands.daily_cmd", "daily_update"),
+    "apply-staging": ("polder.cli.commands.apply_staging_cmd", "apply_staging"),
+    "resolve": ("polder.cli.commands.resolve_cmd", "resolve"),
+    "ingest": ("polder.cli.commands.ingest_cmd", "ingest"),
+}
 
-app.add_typer(fetch_cmd.app, name="fetch")
-app.add_typer(skill_cmd.app, name="skill")
-app.add_typer(backfill_cmd.app, name="backfill")
+_SUBAPPS: dict[str, tuple[str, str]] = {
+    # name on app -> (module path, app attribute)
+    "fetch": ("polder.cli.commands.fetch_cmd", "app"),
+    "skill": ("polder.cli.commands.skill_cmd", "app"),
+    "backfill": ("polder.cli.commands.backfill_cmd", "app"),
+}
+
+_LIST_COMMANDS: dict[str, tuple[str, str]] = {
+    "organisaties": ("polder.cli.commands.list_cmd", "list_organisaties"),
+    "personen": ("polder.cli.commands.list_cmd", "list_personen"),
+    "posten": ("polder.cli.commands.list_cmd", "list_posten"),
+    "mandaten": ("polder.cli.commands.list_cmd", "list_mandaten"),
+}
 
 
-# ---------------------------------------------------------------------------
-# Single-shot commands
-# ---------------------------------------------------------------------------
+def _register_single(name: str) -> None:
+    import importlib
 
-app.command("show")(show_cmd.show)
-app.command("search")(search_cmd.search)
-app.command("export")(export_cmd.export)
-app.command("validate")(validate_cmd.validate)
-app.command("audit")(audit_cmd.audit)
-app.command("diff")(diff_cmd.diff)
-app.command("build")(build_cmd.build)
-app.command("serve")(serve_cmd.serve)
-app.command("daily-update")(daily_cmd.daily_update)
-app.command("apply-staging")(apply_staging_cmd.apply_staging)
-app.command("resolve")(resolve_cmd.resolve)
-app.command("ingest")(ingest_cmd.ingest)
+    mod_path, attr = _SINGLE_COMMANDS[name]
+    mod = importlib.import_module(mod_path)
+    app.command(name)(getattr(mod, attr))
+
+
+def _register_subapp(name: str) -> None:
+    import importlib
+
+    mod_path, attr = _SUBAPPS[name]
+    mod = importlib.import_module(mod_path)
+    app.add_typer(getattr(mod, attr), name=name)
+
+
+_list_app: typer.Typer | None = None
+
+
+def _register_list_app(only: str | None = None) -> None:
+    """Bouw de `polder list <subject>` boom. Met `only="personen"` wordt
+    alleen dat ene leaf-command geladen — niet de hele list_cmd module."""
+    global _list_app
+    import importlib
+
+    if _list_app is None:
+        _list_app = typer.Typer(
+            name="list",
+            no_args_is_help=True,
+            help="Lijst entiteiten (organisaties, personen, posten, mandaten).",
+        )
+        app.add_typer(_list_app, name="list")
+
+    targets = [only] if only and only in _LIST_COMMANDS else list(_LIST_COMMANDS)
+    seen_mods: dict[str, object] = {}
+    for sub in targets:
+        mod_path, attr = _LIST_COMMANDS[sub]
+        mod = seen_mods.get(mod_path)
+        if mod is None:
+            mod = importlib.import_module(mod_path)
+            seen_mods[mod_path] = mod
+        _list_app.command(sub)(getattr(mod, attr))
+
+
+def _register_all() -> None:
+    for name in _SINGLE_COMMANDS:
+        _register_single(name)
+    for name in _SUBAPPS:
+        _register_subapp(name)
+    _register_list_app()
+
+
+def _register_for_argv(argv: list[str]) -> None:
+    """Bekijk argv[1:] en registreer alleen wat nodig is.
+
+    Onbekende of help-achtige aanroepen krijgen de volledige boom.
+    """
+    args = [a for a in argv[1:] if not a.startswith("-")]
+    if not args:
+        _register_all()
+        return
+
+    first = args[0]
+    if first == "list":
+        sub = args[1] if len(args) > 1 else None
+        _register_list_app(only=sub)
+        return
+    if first in _SUBAPPS:
+        _register_subapp(first)
+        return
+    if first in _SINGLE_COMMANDS:
+        _register_single(first)
+        return
+
+    # Unknown command: let typer produce its full error.
+    _register_all()
+
+
+_register_for_argv(sys.argv)
 
 
 # ---------------------------------------------------------------------------
