@@ -7,6 +7,7 @@ Importeer `Polder` als ingang naar de dataset:
 """
 
 from polder.lib.dataset import Polder
+from polder.lib.initials import compact_initials, format_initials, merge_initials
 from polder.lib.models import (
     Appointment,
     Birth,
@@ -46,4 +47,7 @@ __all__ = [
     "PostRepo",
     "Repo",
     "Source",
+    "compact_initials",
+    "format_initials",
+    "merge_initials",
 ]

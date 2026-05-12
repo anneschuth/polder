@@ -1,7 +1,9 @@
 id: person:boog-3366898
 name:
-  full: Boog
+  full: E Boog
   family: Boog
+  given: E
+  initials: E.
 mandaten:
 - id: 71a12ebc-f851-4c97-883f-222165ab9078
   organization_id: org:gemeente-diemen
@@ -17,3 +19,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366898
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q179150
+  retrieved: '2026-05-11'
+birth:
+  year: 1935
+identifiers:
+  wikidata: Q179150

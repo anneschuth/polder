@@ -33,6 +33,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q123174040#P39
     retrieved: '2026-05-09'
   end_date: '2025-08-22'
+- id: mandate-post-minister-min-bz-2024-07-02
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Minister van Buitenlandse Zaken
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001708, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2109eb16-0536-4adb-a32c-38022e10564e)

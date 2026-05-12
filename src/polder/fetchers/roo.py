@@ -548,12 +548,45 @@ def _resolve_parents(records: Iterable[dict[str, Any]]) -> None:
     for record in records:
         parent_roo_id = record.pop("_parent_roo_id", None)
         parent_org_id = record.pop("_parent_org_id", None)
+        own_id = record.get("id")
+        candidate: str | None = None
         if parent_org_id:
-            record["parent_id"] = parent_org_id
+            candidate = parent_org_id
         elif parent_roo_id and parent_roo_id in by_roo_id:
-            record["parent_id"] = by_roo_id[parent_roo_id]
+            candidate = by_roo_id[parent_roo_id]
+        if candidate == own_id:
+            # Self-loop: ROO levert soms een onderdeel waarvan de parent
+            # naar zichzelf resolveert. Behandel als "geen parent".
+            logger.debug("Skip self-loop parent_id voor %s", own_id)
+            candidate = None
+        if candidate is not None:
+            record["parent_id"] = candidate
         elif "parent_id" not in record:
             record["parent_id"] = None
+
+
+def _existing_tooi_to_path(out_dir: Path) -> dict[str, Path]:
+    """Bouw index `tooi-id -> bestaand pad` over álle subfolders.
+
+    Gebruikt om te voorkomen dat een organisatieonderdeel-record geschreven
+    wordt als er al een echte (gemeente/ministerie/zbo) record met dezelfde
+    TOOI-id bestaat. Anders zou dezelfde fysieke organisatie als zowel
+    `gemeenten/groningen.yaml` als `organisatieonderdelen/groningen.yaml`
+    eindigen.
+    """
+    index: dict[str, Path] = {}
+    if not out_dir.exists():
+        return index
+    for path in out_dir.rglob("*.yaml"):
+        try:
+            with path.open("r", encoding="utf-8") as fh:
+                data = yaml.safe_load(fh) or {}
+        except yaml.YAMLError:
+            continue
+        tooi = (data.get("identifiers") or {}).get("tooi")
+        if tooi:
+            index.setdefault(tooi, path)
+    return index
 
 
 def write_records(
@@ -562,9 +595,17 @@ def write_records(
     *,
     dry_run: bool = False,
 ) -> int:
-    """Schrijf records als YAML onder `out_dir/<sub_folder>/<slug>.yaml`."""
+    """Schrijf records als YAML onder `out_dir/<sub_folder>/<slug>.yaml`.
+
+    Een record van type `organisatieonderdeel` wordt overgeslagen als er al
+    een record in een andere subfolder is met dezelfde TOOI-id; dat
+    voorkomt dat een gemeente als zowel `gemeenten/X.yaml` als
+    `organisatieonderdelen/X.yaml` eindigt.
+    """
     _resolve_parents(records)
+    tooi_index = _existing_tooi_to_path(out_dir)
     n_written = 0
+    n_skipped_duplicate = 0
     for record in records:
         sub_folder = record.get("_sub_folder")
         slug = record.get("_slug")
@@ -575,6 +616,21 @@ def write_records(
         target = target_dir / f"{slug}.yaml"
 
         clean = _strip_private(record)
+
+        tooi = (clean.get("identifiers") or {}).get("tooi")
+        if (
+            sub_folder == "organisatieonderdelen"
+            and tooi
+            and tooi in tooi_index
+            and tooi_index[tooi] != target
+        ):
+            logger.info(
+                "Skip organisatieonderdeel %s: tooi-id al in %s",
+                target.relative_to(out_dir),
+                tooi_index[tooi].relative_to(out_dir),
+            )
+            n_skipped_duplicate += 1
+            continue
 
         if target.exists():
             try:
@@ -601,7 +657,14 @@ def write_records(
                 default_flow_style=False,
                 allow_unicode=True,
             )
+        if tooi:
+            tooi_index[tooi] = target
         n_written += 1
+    if n_skipped_duplicate:
+        logger.info(
+            "ROO write: %d organisatieonderdelen overgeslagen wegens TOOI-duplicate",
+            n_skipped_duplicate,
+        )
     return n_written
 
 

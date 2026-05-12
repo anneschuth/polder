@@ -2,8 +2,9 @@ id: person:die-bv-6728801
 name:
   full: B.L.Y. van van Die
   family: van Die
-  given: B.L.Y. van
+  given: B.L.Y.
   initials: B.V.
+  tussenvoegsel: van
 mandaten:
 - id: 50697cfd-dd71-465d-8e4c-0e2c8d19837f
   organization_id: org:gemeente-zevenaar
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6728801
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q29574
+  retrieved: '2026-05-11'
+birth:
+  year: 1938
+identifiers:
+  wikidata: Q29574

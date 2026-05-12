@@ -2,8 +2,9 @@ id: person:groot-ad-4681413
 name:
   full: A.A.H.G. de Groot
   family: Groot
-  given: A.A.H.G. de
+  given: A.A.H.G.
   initials: A.D.
+  tussenvoegsel: de
 mandaten:
 - id: afd4d5ab-8bc3-418b-a1fa-c820f45ca6d6
   organization_id: org:gemeente-laarbeek
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4681413
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q117280282
+  retrieved: '2026-05-11'
+birth:
+  year: 1953
+identifiers:
+  wikidata: Q117280282

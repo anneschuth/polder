@@ -2,8 +2,9 @@ id: person:vries-pd-7769373
 name:
   full: Peter de Vries
   family: Vries
-  given: Peter de
+  given: Peter
   initials: P.D.
+  tussenvoegsel: de
 mandaten:
 - id: e429500b-ab3a-4e90-af5f-11787487be71
   organization_id: org:gemeente-assen
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769373
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1944867
+  retrieved: '2026-05-11'
+birth:
+  year: 1956
+identifiers:
+  wikidata: Q1944867

@@ -1,9 +1,10 @@
 id: person:hopmans-dg-7761813
 name:
-  full: D.P.E  (Dominique), Griffie Hopmans
+  full: Dominique , Griffie Hopmans
   family: Hopmans
-  given: D.P.E  (Dominique), Griffie
-  initials: D.G.
+  given: Dominique
+  initials: D.
+  tussenvoegsel: ', Griffie'
 mandaten:
 - id: 4728c726-c689-42fa-9c09-de25a6e6b7ba
   organization_id: org:gemeente-bergen-op-zoom
@@ -14,6 +15,16 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7761814
+    retrieved: '2026-05-09'
+- id: 458c638b-f1c3-49d6-9380-1b1796278fba
+  organization_id: org:gemeente-bergen-op-zoom
+  post_id: post:wethouder-gemeente-bergen-op-zoom
+  role: Wethouder gemeente Bergen Op Zoom
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2866604
     retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie

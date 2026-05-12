@@ -2,8 +2,9 @@ id: person:dijk-rv-5559154
 name:
   full: R.  van Dijk
   family: Dijk
-  given: R.  van
+  given: R.
   initials: R.V.
+  tussenvoegsel: van
 mandaten:
 - id: 26736b30-23d2-4f21-87f2-d3468a052dd2
   organization_id: org:gemeente-noordwijk
@@ -29,3 +30,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559154
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q39073987
+  retrieved: '2026-05-11'
+birth:
+  year: 2002
+identifiers:
+  wikidata: Q39073987

@@ -130,10 +130,16 @@ def _detect_source_url(proposal: dict[str, Any]) -> str | None:
 
 
 def _classification_from_role(role: str) -> str | None:
-    """Map een role-string naar een post-classification, of None bij geen match."""
+    """Map een role-string naar een post-classification, of None bij geen match.
+
+    Gebruikt word-boundary regex zodat `"minister"` matched op
+    `"minister-president"` maar NIET op `"ministerie van X"`. Anders
+    krijgt een Chief Information Security Officer-rol bij een ministerie
+    onterecht `bewindspersoon` toegewezen.
+    """
     role_l = role.lower()
     for keyword, classification in ROLE_TO_CLASSIFICATION:
-        if keyword in role_l:
+        if re.search(rf"\b{re.escape(keyword)}\b", role_l):
             return classification
     return None
 
@@ -168,10 +174,23 @@ def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str, str]:
 def _parse_iso_date(value: str | None) -> date | None:
     if not value:
         return None
+    s = str(value)
+    if "T" in s:
+        s = s.split("T", 1)[0]
     try:
-        return date.fromisoformat(str(value))
+        return date.fromisoformat(s)
     except ValueError:
         return None
+
+
+def _normalize_date_string(value: str | None) -> str | None:
+    """Strip een eventuele datetime-tail (T00:00:00) van een ISO-datum-string."""
+    if not value:
+        return value
+    s = str(value)
+    if "T" in s:
+        return s.split("T", 1)[0]
+    return s
 
 
 def _dates_valid(start: str | None, end: str | None) -> bool:
@@ -431,8 +450,15 @@ def plan_apply(
     actions: list[ApplyAction] = []
     skipped: list[SkippedProposal] = []
 
-    # Snapshots van bestaande data voor lookups.
-    org_ids = _existing_org_ids(data_dir)
+    # Snapshots van bestaande data voor lookups. `PolderIndex` lest al
+    # alle orgs en bouwt de alias-tabel + parent-tracking; we gebruiken hem
+    # hier als single source of truth zodat resolver en apply dezelfde
+    # lookup-logica delen.
+    from polder.resolve.matcher import PolderIndex
+
+    polder_index = PolderIndex.load(data_dir)
+    org_ids = polder_index.org_ids
+    org_aliases = polder_index.org_by_alias
     post_ids = _existing_post_ids(data_dir)
     personen = _existing_personen(data_dir)
 
@@ -468,12 +494,57 @@ def plan_apply(
             )
             continue
 
-        role = str(proposal.get("role", ""))
+        # Honoreer `merge_recommendation` van de resolver als die gezet is.
+        # De resolver heeft daarin al de inhoudelijke confidence-check gedaan
+        # (org/post/person ieder ≥ 0.85, geen ambiguïteit); apply hoeft die
+        # logica dus niet te dupliceren.
+        rec = proposal.get("merge_recommendation")
+        if rec is not None and rec != "auto-merge":
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=[f"merge_recommendation={rec!r} (geen auto-merge)"],
+                )
+            )
+            continue
+
+        role = str(proposal.get("role", "")).strip()
+        if not role:
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen role in proposal (verplicht voor mandaat)"],
+                )
+            )
+            continue
         if _is_red_avg(role):
             skipped.append(
                 SkippedProposal(
                     proposal=proposal,
                     reasons=["rood-AVG niveau (geen merge in data/)"],
+                )
+            )
+            continue
+
+        # Een fatsoenlijke bron-URL is verplicht; placeholders en lokale
+        # cache-paden mogen nooit in een mandaat-source-url terechtkomen.
+        source_url = _detect_source_url(proposal)
+        if not source_url or not str(source_url).startswith(("http://", "https://")):
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen publieke bron-URL (http/https) in proposal"],
+                )
+            )
+            continue
+
+        # start_date verplicht: een mandaat zonder start-datum vervalt anders
+        # naar `today`, wat een onzin-datum is voor een retro-actief mandaat.
+        if not proposal.get("start_date"):
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=["geen start_date in proposal"],
                 )
             )
             continue
@@ -487,12 +558,38 @@ def plan_apply(
             "org",
         )
 
+        # Consistentie-check vóór create-org: als de proposal zowel een chain
+        # als een `organization_id` levert, moet de laatste chain-entry
+        # overeenkomen met die `organization_id`. Anders is de chain óf
+        # fout-geparset (verkeerde hierarchie, zoals `min-bzk` boven `nvwa`)
+        # óf wijst hij naar een andere org dan de proposal claimt. Skip
+        # zodat we geen verkeerde parent-record aanmaken.
+        if chain and target_org_id:
+            last_slug = _normalize_id(
+                chain[-1].get("slug_proposal") if isinstance(chain[-1], dict) else None,
+                "org",
+            )
+            if last_slug and last_slug != target_org_id:
+                last_resolved = org_aliases.get(last_slug, last_slug)
+                if last_resolved != target_org_id:
+                    skipped.append(
+                        SkippedProposal(
+                            proposal=proposal,
+                            reasons=[
+                                f"chain[-1] {last_slug!r} mismatcht "
+                                f"organization_id {target_org_id!r}"
+                            ],
+                        )
+                    )
+                    continue
+
         chain_actions, chain_skip_reasons = _plan_chain(
             chain=chain,
             data_dir=data_dir,
             existing=org_ids | pending_org_ids,
             proposal=proposal,
             confidence=confidence,
+            polder_index=polder_index,
         )
         if chain_skip_reasons:
             skipped.append(
@@ -572,7 +669,12 @@ def plan_apply(
             post_id=post_id,
             confidence=confidence,
             pending_person_ids=pending_person_ids,
+            pending_create_actions=actions,
         )
+        if person_action_or_skip is None:
+            # Pending create-person record is gemuteerd met extra mandaat;
+            # geen nieuwe action te toevoegen.
+            continue
         if isinstance(person_action_or_skip, SkippedProposal):
             skipped.append(person_action_or_skip)
             continue
@@ -590,15 +692,35 @@ def _plan_chain(
     existing: set[str],
     proposal: dict[str, Any],
     confidence: float,
+    polder_index: Any = None,
 ) -> tuple[list[ApplyAction], list[str]]:
     """Bouw create-org acties voor elke chain-entry die nog niet bestaat.
 
     Retourneert (actions, skip_reasons). Bij skip_reasons is de proposal
     niet auto-mergeable.
+
+    Drie hardingen tegen fout-geparste chains:
+    1. Ministerie-niveau-entries leiden nooit tot een nieuw record — alle
+       ministeries staan al in `data/organisaties/ministeries/`.
+    2. Als een chain-entry-naam matched op een bestaande org, moet de
+       chain-parent overeenkomen met de echte parent. `Belastingdienst`
+       als kind van BZK in de chain wordt afgewezen omdat de echte parent
+       `org:min-fin` is.
+    3. Slug-aliassen (`org:ministerie-van-financien` → `org:min-fin`)
+       worden via `PolderIndex.org_by_alias` opgelost.
+
+    `polder_index` is de `PolderIndex` van de resolver — wordt door
+    `plan_apply` 1× opgebouwd en hier hergebruikt.
     """
+    from polder.resolve.matcher import PolderIndex, _org_alias_slug
+
     actions: list[ApplyAction] = []
     if not chain:
         return actions, []
+
+    idx: PolderIndex = polder_index or PolderIndex.load(data_dir)
+    aliases = idx.org_by_alias
+    parents = idx.org_parent
 
     # Volgorde top-down (ministerie -> directie -> afdeling). Voor elke nieuwe
     # entry moet de parent (vorige) bestaan of in dezelfde batch zijn.
@@ -608,21 +730,56 @@ def _plan_chain(
         slug = _normalize_id(entry.get("slug_proposal"), "org")
         if not slug:
             return [], [f"chain-entry zonder slug_proposal: {entry}"]
+        # Probeer alias-resolutie als de exacte slug niet bestaat. Hierdoor
+        # vinden we `org:ministerie-van-financien` terug als `org:min-fin`.
+        if slug not in available and slug in aliases:
+            slug = aliases[slug]
+        # Probeer ook name-based alias: voor `name="Belastingdienst"` met
+        # verzonnen slug `org:belastingdienst-min-bzk` vinden we de
+        # canonical `org:belastingdienst` via de naam.
+        canonical_by_name: str | None = None
+        if slug not in available:
+            name_slug = _org_alias_slug(entry.get("name"))
+            if name_slug:
+                canonical_by_name = aliases.get(name_slug) or (
+                    name_slug if name_slug in idx.org_ids else None
+                )
+        # Hiërarchie-validatie: als naam-alias een canonical oplevert die in
+        # data/ staat, controleer dat zijn echte parent overeenkomt met de
+        # chain-parent. Anders is de chain fout-geparset.
+        if canonical_by_name and canonical_by_name in parents:
+            real_parent = parents[canonical_by_name]
+            if real_parent is not None and parent_id is not None and real_parent != parent_id:
+                return [], [
+                    f"chain-entry naam {entry.get('name')!r} matched "
+                    f"{canonical_by_name!r}, maar diens parent {real_parent!r} "
+                    f"verschilt van chain-parent {parent_id!r}"
+                ]
+            slug = canonical_by_name
         # Sync de slug terug zodat _build_org_record en parent-tracking
         # consistent zijn.
         entry["slug_proposal"] = slug
         if slug in available:
             parent_id = slug
             continue
+        # Onbekende ministerie: dat hoort niet voor te komen — alle
+        # ministeries staan in `data/organisaties/ministeries/`. Een chain
+        # die hier komt is óf een typfout óf een verkeerd-geparsete hierarchie.
+        if entry.get("level") == "ministerie":
+            return [], [
+                f"chain-entry ministerie {slug!r} niet bekend in data/ "
+                "(typfout of verkeerd-geparsete hierarchie)"
+            ]
         # Nieuwe org: parent moet bekend zijn.
-        if parent_id is None and entry.get("level") != "ministerie":
+        if parent_id is None:
             return [], [f"chain {slug}: parent ontbreekt"]
         record = _build_org_record(entry=entry, parent_id=parent_id, proposal=proposal)
+        slug_body = slug.removeprefix("org:onderdeel-").removeprefix("org:")
         path = (
             data_dir
             / "organisaties"
             / "organisatieonderdelen"
-            / f"{slug.removeprefix('org:onderdeel-')}.yaml"
+            / f"{slug_body}.yaml"
         )
         actions.append(
             ApplyAction(
@@ -679,7 +836,7 @@ def _build_post_record(
     classification: str,
     start_date: str | None,
 ) -> dict[str, Any]:
-    valid_from = start_date or _today_iso()
+    valid_from = _normalize_date_string(start_date) or _today_iso()
     record = {
         "id": post_id,
         "organization_id": organization_id,
@@ -700,7 +857,8 @@ def _plan_person(
     post_id: str,
     confidence: float,
     pending_person_ids: set[str],
-) -> ApplyAction | SkippedProposal:
+    pending_create_actions: list[ApplyAction] | None = None,
+) -> ApplyAction | SkippedProposal | None:
     resolved_id = proposal.get("resolved_person_id")
     name_full = str(proposal.get("person_name", "")).strip()
     if not name_full:
@@ -778,6 +936,25 @@ def _plan_person(
         )
     person_id = f"person:{slug_body}"
     if person_id in pending_person_ids:
+        # Tweede proposal voor een persoon die we deze run nog aan het
+        # aanmaken zijn. In plaats van skip: mute het pending create-record
+        # zodat de nieuwe mandaat ook toegevoegd wordt. Dit dekt het
+        # gecombineerde-functie-patroon ("X benoemd bij BZK en VRO").
+        if pending_create_actions is not None:
+            for act in pending_create_actions:
+                if act.type == "create-person" and act.record.get("id") == person_id:
+                    new_record, _ = _append_mandaat(
+                        record=act.record,
+                        organization_id=target_org_id,
+                        post_id=post_id,
+                        proposal=proposal,
+                    )
+                    if new_record is not None:
+                        act.record = new_record
+                        act.reasons.append(
+                            f"extra mandaat {post_id} toegevoegd aan pending {person_id}"
+                        )
+                    return None  # geen nieuwe action — pending al gemuteerd
         return SkippedProposal(
             proposal=proposal,
             reasons=[f"person:{slug_body} al in deze run aangemaakt"],
@@ -857,13 +1034,15 @@ def _build_mandaat(
     today = _today_iso()
     source_id = _detect_source_id(proposal)
     source_url = _detect_source_url(proposal) or "https://example.invalid"
+    start_date = _normalize_date_string(proposal.get("start_date")) or today
+    end_date = _normalize_date_string(proposal.get("end_date"))
     mandaat = {
-        "id": f"mandate-{_slugify(post_id)}-{proposal.get('start_date') or today}",
+        "id": f"mandate-{_slugify(post_id)}-{start_date}",
         "organization_id": organization_id,
         "post_id": post_id,
         "role": proposal.get("role", ""),
-        "start_date": proposal.get("start_date") or today,
-        "end_date": proposal.get("end_date"),
+        "start_date": start_date,
+        "end_date": end_date,
         "sources": [
             {
                 "id": source_id,

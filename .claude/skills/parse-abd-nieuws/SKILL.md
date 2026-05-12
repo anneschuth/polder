@@ -14,6 +14,10 @@ triggers:
 
 # parse-abd-nieuws
 
+## Instructie: OUTPUT ENKEL JSON
+
+Je gaat een ABD-nieuwsbericht (HTML) in een membership-proposal omzetten. De ENIGE output die je moet produceren is een JSON-array. **GEEN inleiding, GEEN analyse, GEEN verklaring, GEEN samenvatting**. Alleen het JSON, startend met `[` en eindigend met `]`.
+
 ## Doel
 
 Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML) en zet de tekst om in Membership-proposals voor Polder. Eén proposal per benoeming, ontslag of verlenging in het bericht. ABD plaatst benoemingen vaak voor het KB in de Staatscourant, dus deze skill is een early-warning bron.
@@ -26,7 +30,7 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 
 ## Output
 
-JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Elk proposal heeft:
+**ALLEEN JSON-array, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Geen introductietekst, geen samenvatting, geen verklaring. Alleen de array. Elk proposal in de array heeft:
 
 - `person_name` (string): naam zoals in het bericht, met titulering en initialen indien aanwezig.
 - `existing_person_id` (string of null): polder-slug bij match in `data/personen/`, anders null.
@@ -46,13 +50,18 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 
 ## Stappen voor de LLM
 
-1. Laad de HTML met `BeautifulSoup` of vergelijkbaar. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
-2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix in de URL-slug. Match tegen `data/organisaties/` op naam of afkorting (`JenV`, `IenW`, `OCW`, `BZK`, `VRO`, `Belastingdienst`, ...).
-3. Per benoeming of ontslag in de tekst:
-   - Extract persoonsnaam. ABD gebruikt zelden titulering, dus vaak alleen voornaam plus achternaam.
-   - Extract functie. Let op samenstellingen zoals "kwartiermaker/directeur" en "plaatsvervangend directeur".
-   - Extract ingangsdatum: zoek "De benoeming gaat in op <datum>", "per <datum>", "met ingang van <datum>".
-   - Extract KB-referentie als die in het bericht staat (vaak in de laatste alinea).
+1. Laad de HTML. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
+2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Match tegen `data/organisaties/` op naam of afkorting.
+3. Zoek benoemings- en ontslagpatronen. ABD-berichten volgen meestal één van deze sjablonen:
+   - **Standaard benoeming**: "X wordt [met ingang van <datum>] <functie> bij/onderdeel van <organisatieketen>. ... De benoeming gaat in op <datum>."
+   - **Alternatief**: "X wordt <functie>, een <subunit> van de <parent> bij het ministerie van Y. De benoeming gaat in op <datum>."
+   - **Ontslagmelding**: "X neemt afscheid / vertrekt per <datum>. X wordt opgevolgd door Y."
+   - **Verlenging**: "X wordt herbenoemd / verlengd als <functie> voor <periode>."
+4. Per benoeming of ontslag in de tekst:
+   - Extract persoonsnaam (volledige naam, zelden titulering).
+   - Extract functie. Let op samenstellingen zoals "kwartiermaker/directeur", "waarnemend pSG", "plaatsvervangend directeur".
+   - Extract ingangsdatum: zoek "De benoeming gaat in op <datum>", "per <datum>", "met ingang van <datum>", of bepaal uit context.
+   - Extract KB-referentie als die in het bericht staat (meestal laatste alinea).
 4. **Identificeer organisatie-niveaus.** Berichten beschrijven vaak een keten van top naar diepst:
    - "ministerie van X" (top, level `ministerie`).
    - "directoraat-generaal Y" of "DG Y" (level `directoraat-generaal`, organisatieonderdeel).
@@ -143,3 +152,21 @@ claude "Gebruik parse-abd-nieuws op _cache/abd-nieuws/marleen-heijster-afdelings
 ## Status
 
 Actief, versie 0.4.0. Vierde skill in Polder, na review-pr-diff, parse-staatscourant en parse-organogram. Nieuw in 0.4.0: confidence-vloer 0.85 bij vier expliciete kernfeiten, cap 0.94 zonder staatscourant_url, en expliciete verzwarende factor voor "voorlopig"-formuleringen. Nieuw in 0.3.0: `organization_chain` met expliciete niveau-keten en `organization_id` op diepste genoemde niveau.
+
+## KRITIEK: OUTPUT ENKEL JSON, GEEN MARKDOWN
+
+Je eindresultaat moet **zuiver JSON zijn, zonder markdown code blocks**. Dus NIET:
+
+```
+```json
+[...]
+```
+```
+
+Maar dit (start direct met `[`):
+
+```
+[...]
+```
+
+WICHTIG: Geen ` ```json `, geen ` ``` ` eromheen. Geen inleiding. Geen samenvatt. Alleen de array, eerste karakter `[`, laatste karakter `]`.

@@ -2,8 +2,9 @@ id: person:bree-jv-3823552
 name:
   full: J. van Bree
   family: Bree
-  given: J. van
+  given: J.
   initials: J.V.
+  tussenvoegsel: van
 mandaten:
 - id: 85e1d995-dfc1-4e19-a459-049f35ae7003
   organization_id: org:gemeente-geldrop-mierlo
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823552
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q55418115
+  retrieved: '2026-05-11'
+birth:
+  year: 1927
+identifiers:
+  wikidata: Q55418115

@@ -2,8 +2,9 @@ id: person:kate-rt-5420640
 name:
   full: Robert ten Kate
   family: Kate
-  given: Robert ten
+  given: Robert
   initials: R.T.
+  tussenvoegsel: ten
 mandaten:
 - id: add18830-b7bd-4c3c-94d2-9f69719068b9
   organization_id: org:gemeente-nederweert
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5420640
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q7346267
+  retrieved: '2026-05-11'
+birth:
+  year: 1929
+identifiers:
+  wikidata: Q7346267

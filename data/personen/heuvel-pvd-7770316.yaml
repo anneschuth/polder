@@ -2,8 +2,9 @@ id: person:heuvel-pvd-7770316
 name:
   full: Peter van den Heuvel
   family: Heuvel
-  given: Peter van den
+  given: Peter
   initials: P.V.D.
+  tussenvoegsel: van den
 mandaten:
 - id: ae2b8f5a-7aaf-4091-aeb5-50f5afb97e6c
   organization_id: org:gemeente-lansingerland
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7770316
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q124705217
+  retrieved: '2026-05-11'
+birth:
+  year: 1942
+identifiers:
+  wikidata: Q124705217

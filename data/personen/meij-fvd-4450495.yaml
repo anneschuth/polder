@@ -2,8 +2,9 @@ id: person:meij-fvd-4450495
 name:
   full: Frank van der Meij
   family: Meij
-  given: Frank van der
+  given: Frank
   initials: F.V.D.
+  tussenvoegsel: van der
 mandaten:
 - id: 846c6dc2-df4b-465c-9ee1-c4b472d961fd
   organization_id: org:gemeente-houten
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4450495
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q130497679
+  retrieved: '2026-05-11'
+birth:
+  year: 1966
+identifiers:
+  wikidata: Q130497679

@@ -1,9 +1,10 @@
 id: person:doorn-p-5481766
 name:
-  full: Peter Doorn
+  full: Peter van Doorn
   family: Doorn
   given: Peter
   initials: P.
+  tussenvoegsel: van
 mandaten:
 - id: 3fe3be63-31af-4864-900f-45c546d3a67b
   organization_id: org:gemeente-nijmegen
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481766
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q75466683
+  retrieved: '2026-05-11'
+birth:
+  year: 1974
+identifiers:
+  wikidata: Q75466683

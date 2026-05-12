@@ -30,7 +30,7 @@ Slugs zijn lowercase, kebab-case, ASCII. Stable id's volgen het patroon `person:
 Elke PR met wijzigingen in `data/` moet door schema-validatie:
 
 ```bash
-make validate
+uv run polder validate
 ```
 
 CI draait dezelfde validatie. Een rode CI is een blocker.
@@ -42,7 +42,7 @@ Polder respecteert de AVG-cut-off uit `docs/avg-grenzen.md`. Toevoegingen van pe
 ## Tests
 
 ```bash
-make test
+uv run pytest
 ```
 
 Voor wijzigingen in fetchers of parsers: voeg een test toe met een fixture in `tests/fixtures/`. Geen synthetische LLM-output als fixture, gebruik een echte response-snippet.
@@ -52,8 +52,8 @@ Voor wijzigingen in fetchers of parsers: voeg een test toe met een fixture in `t
 Python 3.12 of nieuwer. Type hints overal. Ruff voor formatting en linting:
 
 ```bash
-make format
-make lint
+uv run ruff format src tests
+uv run ruff check src tests
 ```
 
 Geen onnodige abstracties, geen frameworks zonder duidelijke meerwaarde.

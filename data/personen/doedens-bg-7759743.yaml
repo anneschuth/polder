@@ -1,9 +1,10 @@
 id: person:doedens-bg-7759743
 name:
-  full: B.R.  (Berend) Griffie Doedens
+  full: Berend Griffie Doedens
   family: Doedens
-  given: B.R.  (Berend) Griffie
-  initials: B.G.
+  given: Berend
+  initials: B.R.
+  tussenvoegsel: Griffie
 mandaten:
 - id: 336253bf-1f57-4f53-bc5b-c9a52ed31ff0
   organization_id: org:gemeente-bergen-op-zoom
@@ -14,6 +15,16 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7759744
+    retrieved: '2026-05-09'
+- id: 6e008bb8-3d45-4644-b481-b3c15e06af37
+  organization_id: org:gemeente-bergen-op-zoom
+  post_id: post:wethouder-gemeente-bergen-op-zoom
+  role: Wethouder gemeente Bergen Op Zoom
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2866446
     retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie

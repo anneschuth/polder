@@ -222,6 +222,47 @@ def fetch_tooi(
     _delegate(tooi.main, _common_argv(cache, out, limit, dry_run, verbose) + extra)
 
 
+@app.command("enrich-wikidata")
+def fetch_enrich_wikidata(
+    data: Annotated[Path, typer.Option(help="Polder data-root.")] = Path("data"),
+    limit: Annotated[
+        int | None,
+        typer.Option("--limit", help="Max aantal kandidaten (testen)."),
+    ] = None,
+    dry_run: Annotated[
+        bool,
+        typer.Option("--dry-run", help="Niets schrijven, alleen tellen."),
+    ] = False,
+    verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
+) -> None:
+    """Verrijk ORI-persoon-records met Wikidata-birth-year.
+
+    Loopt door `data/personen/*.yaml`, vindt records die uit ORI komen
+    (alleen `open_raadsinformatie`-source) zonder birth.year. Doet een
+    SPARQL-lookup op (family, given) in Wikidata. Als er PRECIES EEN match
+    met birth-year is, vult de fetcher dat in plus de wikidata-Q-id.
+
+    Bij meerdere matches: skip (voorkomt verkeerde Q-id-koppeling).
+    """
+    import logging
+
+    if verbose:
+        logging.basicConfig(level=logging.DEBUG)
+    else:
+        logging.basicConfig(level=logging.INFO)
+
+    from polder.fetchers.wikidata_enrich import enrich_ori_records
+
+    stats = enrich_ori_records(data, limit=limit, dry_run=dry_run)
+    typer.echo("=== Wikidata-enrichment ===")
+    typer.echo(f"  kandidaten:       {stats.candidates}")
+    typer.echo(f"  verrijkt:         {stats.enriched}")
+    typer.echo(f"  geen-match:       {stats.no_matches}")
+    typer.echo(f"  ambigu (>1):      {stats.ambiguous}")
+    typer.echo(f"  implausibele age: {stats.implausible_age}")
+    typer.echo(f"  fouten:           {stats.errors}")
+
+
 @app.command("kiesraad")
 def fetch_kiesraad(
     cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(

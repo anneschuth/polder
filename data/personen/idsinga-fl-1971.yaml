@@ -59,6 +59,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q106119773#P39
     retrieved: '2026-05-09'
   end_date: '2024-11-01'
+- id: mandate-post-staatssecretaris-min-fin-2024-07-02
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: Staatssecretaris van Financiën
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22515
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001715, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22515
+  confidence: 0.92
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7954eb2c-1bf5-42af-80dc-85f29b367db0)

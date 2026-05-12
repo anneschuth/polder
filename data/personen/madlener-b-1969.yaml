@@ -45,6 +45,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q545023#P39
     retrieved: '2026-05-09'
   end_date: '2025-06-03'
+- id: mandate-post-minister-min-ienw-2024-07-02
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Minister van Infrastructuur en Waterstaat
+  start_date: '2024-07-02'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2024001708, 2 juli 2024
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7c43c8c2-1958-496c-8060-b0f3bf652992)

@@ -21,11 +21,14 @@ Per bron (`abd-nieuws`, `staatscourant`, `organogram`):
 1. **Parse**. Scan `_cache/<bron>/` op input-files die nog geen
    `data/_staging/<bron>-<key>.json` hebben. Voor abd-nieuws en staatscourant
    filtert een deterministisch voorfilter eerst HTML/XML zonder benoemings-
-   markers eruit (zie *Pre-filter* hieronder); de rest gaat naar
-   `scripts/parse_<bron>_local.sh` met claude `-p` Haiku 4.5 als default.
-2. **Resolve**. Voor elke `<bron>-*.json` zonder `.resolved.json` companion roep
-   `scripts/resolve_staging_local.sh` aan.
-3. **Apply**. `polder.apply.plan_apply` + `execute_apply` met de gekozen
+   markers eruit (zie *Pre-filter* hieronder). De rest gaat via
+   `polder.llm.runner.run_skill` naar de parse-skill. De runner houdt per
+   worker-thread één `claude -p --input-format stream-json` proces open en
+   hergebruikt Anthropic's prompt-cache binnen die sessie.
+2. **Resolve**. Voor elke `<bron>-*.json` zonder `.resolved.json` companion
+   roept de pipeline `polder.llm.runner.run_skill` aan voor `resolve-staging`.
+   Zelfde sessie-mechanisme.
+3. **Apply**. `polder.apply.plan_apply` plus `execute_apply` met de gekozen
    threshold. Records onder de drempel komen op de skip-stack.
 4. **Validate**. `polder.validate.run_all_checks`. Bij errors stopt de pipeline
    en wordt er niet gebouwd, gecommit of gepusht.
@@ -49,7 +52,7 @@ Daarna eenmalig over alle bronnen:
 ## Gebruik
 
 ```bash
-# Dry-run: laat zien wat zou gebeuren, geen subprocess-calls.
+# Dry-run: laat zien wat zou gebeuren, geen LLM-calls.
 uv run polder ingest --dry-run
 
 # Eén bron, hogere drempel, lokaal toepassen, niet committen.
@@ -64,11 +67,9 @@ uv run polder ingest --source abd-nieuws --limit 50 --commit
 
 ## Parallel uitvoeren (`--parallel`)
 
-Parse en resolve draaien per default met 5 worker-threads. Iedere thread doet
-één `subprocess.run` op de claude-binary; omdat de Python-thread vrijwel alleen
-op IO wacht is een `ThreadPoolExecutor` daarvoor genoeg en goedkoper dan een
-`ProcessPoolExecutor`. De apply-fase blijft single-threaded omdat die naar
-`data/` schrijft.
+Parse en resolve draaien per default met 5 worker-threads. Elke thread houdt
+zijn eigen `SkillSession` (één `claude -p` proces) en doet daar achter elkaar
+calls op. De apply-fase blijft single-threaded omdat die naar `data/` schrijft.
 
 ```bash
 # Snelle sanity-check met klein budget en 8 parallelle workers.
@@ -78,19 +79,27 @@ uv run polder ingest --parallel 8 --max-claude-calls 500 --dry-run
 uv run polder ingest --parallel 5 --commit
 ```
 
-Voor de eerste full-run over 2906 abd-nieuws HTMLs (sequentieel ~24 uur, ~30s
-per parse-call): met `--parallel 8` zit je rond 3.5 uur. Verhoog niet ongebreid;
-elke worker schiet een claude-subproces aan en je ANTHROPIC-rate-limit zit
-rond 5-10 concurrent calls. Boven 8 zie je throttling-errors.
+Voor de eerste full-run over 2906 abd-nieuws HTMLs: met `--parallel 8` zit je
+rond 3.5 uur. Verhoog niet ongebreid; elke worker houdt een claude-subproces
+open en je rate-limit zit rond 5-10 concurrent sessies. Boven 8 zie je
+throttling.
 
-Budget-cap blijft scherp: jobs die buiten `--max-claude-calls` vallen worden
-vooraf weggeknipt, niet halverwege gestopt. Geen race-conditions op de teller.
+Budget-cap blijft scherp: jobs die buiten `--max-claude-calls` of
+`--max-cost-usd` vallen worden vooraf weggeknipt, niet halverwege gestopt. Geen
+race-conditions op de teller.
+
+## Response-cache
+
+Skill-responses worden gecached in `_cache/llm-responses/`. Cache-key bevat de
+sha256 van de bijhorende SKILL.md, dus skill-tweaks invalideren automatisch.
+Zie `docs/lokaal-draaien.md` voor het handmatig legen van een cache-bucket.
 
 ## Idempotentie
 
 Een tweede run zonder nieuwe input doet niets. `plan_parse` skipt files met
-bestaande staging-output en `plan_resolve` skipt files met een
-`.resolved.json` companion. `apply-staging` is intrinsiek idempotent.
+bestaande staging-output, `plan_resolve` skipt files met een `.resolved.json`
+companion, en de response-cache vangt herhaalde calls met identieke input op
+nul kosten. `apply-staging` is intrinsiek idempotent.
 
 ## Failure-modes
 
@@ -100,7 +109,7 @@ bestaande staging-output en `plan_resolve` skipt files met een
   Geen build, geen commit, exit-code 2.
 - Validate fail: pipeline stopt globaal, geen build/commit/push, exit-code 2.
 - Build fail: geen commit, exit-code 3.
-- Niets gewijzigd in `data/` + `dist/` na apply: `commit_changes` returnt
+- Niets gewijzigd in `data/` plus `dist/` na apply: `commit_changes` returnt
   `None`, geen lege commit.
 
 ## CI-integratie
@@ -108,38 +117,92 @@ bestaande staging-output en `plan_resolve` skipt files met een
 `.github/workflows/daily-update.yml` heeft een aparte job `ingest` die na de
 fetch-job draait. De job:
 
-- Skipt zichzelf als `secrets.ANTHROPIC_API_KEY` leeg is.
-- Skipt op `pull_request`-triggers (te kostelijk).
 - Draait alleen op cron en `workflow_dispatch`.
+- Skipt op `pull_request`-triggers (te kostelijk).
 - Pusht naar de `daily-update/<run-id>` branch die de fetch-job al gebruikte.
 
-## Budget-cap (`--max-claude-calls`)
+## Budget-caps
 
-Hard plafond op het totaal aantal LLM-calls (parse + resolve, alle bronnen
-samen). Default unlimited.
+Twee plafonds, beide hard:
 
 ```bash
-# nooit meer dan 100 LLM-calls deze run
+# Cap op aantal LLM-calls (parse + resolve, alle bronnen samen).
 uv run polder ingest --max-claude-calls 100
 
-# helemaal uitschakelen (apply + validate draaien wel)
+# Cap op echte USD-kosten gerekend uit stream-json token-counts.
+uv run polder ingest --max-cost-usd 5.0
+
+# Helemaal uit (apply + validate draaien wel).
 uv run polder ingest --max-claude-calls 0
 ```
 
-Zodra de teller op het maximum staat stopt de huidige fase voor de huidige
-bron en gaat de pipeline door naar apply met wat er al staat. Het result
-heeft dan `budget_hit=True`. Andere bronnen verderop in de run worden ook
-gecapt; het budget is gedeeld over de hele invocatie.
+`--max-cost-usd` gebruikt de echte input/output/cache-read/cache-write tokens
+uit elke `claude -p --output-format stream-json` call. `IngestBudget.cost_actual_usd`
+is dus geen schatting meer maar een running total uit de daadwerkelijke
+responses. Zodra een teller de cap raakt stopt de huidige fase netjes, gaat
+door naar apply met wat er al staat, en zet `budget_hit=True` op het result.
+Andere bronnen verderop in de run worden ook gecapt; beide budgetten zijn
+gedeeld over de hele invocatie.
+
+Live geverifieerd in een recente run: call 1 kost $0.018 (cache-write), call 2
+kost $0.022 met 36K cache-read tokens. Daarna stabiliseert het.
 
 Programmeerinterface:
 
 ```python
 from polder.ingest import IngestBudget, ingest_source
 
-budget = IngestBudget(max_claude_calls=50)
+budget = IngestBudget(max_claude_calls=50, max_cost_usd=2.5)
 result = ingest_source("abd-nieuws", repo_root=Path("."), budget=budget)
-print(budget.used_calls, budget.cost_estimate_usd)
+print(budget.used_calls, budget.cost_actual_usd)
 ```
+
+## Modelkeuze (`--model`)
+
+Default is `claude-haiku-4-5`. Sonnet 4.6 tikt vaak de daily rate-limit aan en
+is 5x duurder; Haiku haalt voor extraction-skills vergelijkbare nauwkeurigheid.
+De vision-skill `parse-organogram` overruled zelf naar Opus 4.7 omdat een
+hierarchisch organogram met Haiku te onstabiel is.
+
+```bash
+# Default: Haiku 4.5
+uv run polder ingest --source abd-nieuws --commit
+
+# Forceer Opus voor één run
+uv run polder ingest --model claude-opus-4-7 --source abd-nieuws --limit 10
+```
+
+## Pre-filter
+
+Voor `abd-nieuws` en `staatscourant` skipt een lichte regex-check de LLM-call
+als de input geen benoemings-marker bevat:
+
+| bron           | wat wordt gecheckt                              |
+| -------------- | ----------------------------------------------- |
+| abd-nieuws     | strip-HTML body op markers als `wordt benoemd`, |
+|                | `directeur`, `secretaris-generaal`, etc.        |
+| staatscourant  | KB-titel (`officiele-titel`/`citeertitel`/etc.) |
+|                | op `benoeming`, `ontslag`, `verlenging`, etc.   |
+
+Geïmplementeerd in `polder.llm.prefilters.abd_nieuws_has_signal` en
+`staatscourant_has_signal`. Pre-filter-skips schrijven `[]` naar de
+staging-output zodat de file als "verwerkt" telt voor de volgende
+`plan_parse`. Bespaart ~30-50% van de calls in een typische ABD-feed.
+
+## Rate-limit afbreken (`--abort-on-rate-limit`)
+
+Als `claude -p` een rate-limit-melding teruggeeft (`Claude AI usage limit
+reached`, HTTP 429, of soortgelijk), retourneert de runner een specifieke
+foutcode en `polder ingest` breekt de huidige fase af zodat de overige bronnen
+worden overgeslagen. Apply plus validate van de getroffen bron draaien wel nog
+op het reeds gestagete materiaal.
+
+Zet uit met `--no-abort-on-rate-limit` als je per ongeluk een rate-limited
+sessie wilt blijven proberen (niet aanbevolen; je krijgt corrupt JSON en
+verspilt tokens).
+
+De daily rate-limit van Sonnet 4.6 reset om 22:00 Europe/Amsterdam. Tussendoor
+schakel je over op Haiku of Opus.
 
 ## Kostenraming
 
@@ -153,8 +216,10 @@ schatting in USD. Aannames per modelfamilie:
 | `opus-4-7`   | 0.10               |
 
 Resolve-jobs rekenen ~1.5x mee omdat `lookup-person` regelmatig binnen de
-resolve-skill wordt aangeroepen. Voor 50 parse + 50 resolve zit je rond
-$2.20.
+resolve-skill wordt aangeroepen. Sessie-hergebruik plus prompt-caching drukt
+de effectieve cost per call binnen één run flink naar beneden; de raming
+hierboven is een conservatieve bovengrens. De `IngestBudget.cost_actual_usd`
+tijdens en na de run is de echte stand.
 
 `--dry-run` print een per-bron breakdown plus totaal:
 
@@ -162,28 +227,27 @@ $2.20.
 Ingest dry-run analyse:
 
 [abd-nieuws]
-  Phase 1 parse: 2906 jobs, ~$72.65 (Sonnet 4.6)
-  Phase 2 resolve: 12 staging-files unresolved, ~$0.45
+  Phase 1 parse: 2906 jobs, ~$14.53 (claude-haiku-4-5)
+  Phase 2 resolve: 12 staging-files unresolved, ~$0.09
   Phase 3 apply: ~28 records auto-mergeable boven threshold 0.85, ~12 needs-review
 
 [staatscourant]
-  Phase 1 parse: 568 jobs, ~$14.20 (Sonnet 4.6)
+  Phase 1 parse: 568 jobs, ~$2.84 (claude-haiku-4-5)
   Phase 2 resolve: 0 staging-files unresolved, ~$0.00
   Phase 3 apply: ~6 records auto-mergeable boven threshold 0.85, ~3 needs-review
 
-Totale geschatte kosten: ~$87.30. Wall-clock parallel=5: ~3.5-6.5 uur.
+Totale geschatte kosten: ~$17.46. Wall-clock parallel=5: ~3.5-6.5 uur.
 Totaal: 34 auto-mergeable, 15 needs-review.
 Run zonder --dry-run om de pipeline echt te starten.
 ```
 
-Combineer met `--max-claude-calls` om te zien wat een budget zou opleveren:
+Met pre-filter (~30-50% skip) plus sessie-caching zakt de werkelijke kost
+nog verder. Gebruik `--limit`, `--max-claude-calls` of `--max-cost-usd` voor
+de eerste runs om het te bewaken.
 
 ```bash
 uv run polder ingest --dry-run --max-claude-calls 200
 ```
-
-Begin met `--limit 50` of `--limit 100` om de kosten van de eerste runs per
-bron te beperken; `--max-claude-calls` cap't over alle bronnen.
 
 ## Reproductie
 

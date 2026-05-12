@@ -568,3 +568,366 @@ def test_cli_dry_run(
 def test_cli_requires_gemeente_or_all(monkeypatch: pytest.MonkeyPatch):
     with pytest.raises(SystemExit):
         main([])
+
+
+# ---------------------------------------------------------------------------
+# Dedup-tests (Bos-Coenraad-patroon: zelfde persoon, meerdere ORI-IDs)
+# ---------------------------------------------------------------------------
+
+
+def test_dedup_merges_same_family_given_in_same_org():
+    """Twee records voor 'Joep Bos-Coenraad' in dezelfde org -> 1 record."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record_a = {
+        "id": "person:bos-coenraad-j-5482024",
+        "name": {"family": "Bos-Coenraad", "given": "Joep", "initials": "J."},
+        "mandaten": [
+            {
+                "organization_id": "org:gemeente-utrecht",
+                "post_id": "post:raadslid-utrecht",
+                "role": "raadslid",
+                "start_date": "2014-03-19",
+            }
+        ],
+        "sources": [{"id": "ori", "url": "https://id.openraadsinformatie.nl/5482024"}],
+    }
+    record_b = {
+        "id": "person:bos-coenraad-j-7770655",
+        "name": {"family": "Bos-Coenraad", "given": "Joep", "initials": "J."},
+        "mandaten": [
+            {
+                "organization_id": "org:gemeente-utrecht",
+                "post_id": "post:raadslid-utrecht",
+                "role": "raadslid",
+                "start_date": "2022-03-30",
+            }
+        ],
+        "sources": [{"id": "ori", "url": "https://id.openraadsinformatie.nl/7770655"}],
+    }
+
+    deduped = dedup_records_for_gemeente([record_a, record_b], "org:gemeente-utrecht")
+    assert len(deduped) == 1
+    winner = deduped[0]
+    # Twee mandaten samengevoegd
+    assert len(winner["mandaten"]) == 2
+
+
+def test_dedup_keeps_different_persons_separate():
+    """Zelfde family, andere given-name -> blijven gescheiden."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record_a = {
+        "id": "person:doedens-b-2866445",
+        "name": {"family": "Doedens", "given": "Berend", "initials": "B."},
+        "sources": [{"id": "ori", "url": "https://x"}],
+    }
+    record_b = {
+        "id": "person:doedens-c-9999",
+        "name": {"family": "Doedens", "given": "Christine", "initials": "C."},
+        "sources": [{"id": "ori", "url": "https://y"}],
+    }
+    deduped = dedup_records_for_gemeente([record_a, record_b], "org:gemeente-utrecht")
+    assert len(deduped) == 2
+
+
+def test_dedup_skipt_records_zonder_given():
+    """Records zonder given-name worden niet gededupt (key ontbreekt)."""
+    from polder.fetchers.open_raadsinformatie import dedup_records_for_gemeente
+
+    record = {
+        "id": "person:onbekend-9999",
+        "name": {"family": "Onbekend", "initials": "X."},
+        "sources": [{"id": "ori", "url": "https://x"}],
+    }
+    deduped = dedup_records_for_gemeente([record], "org:gemeente-utrecht")
+    assert len(deduped) == 1
+
+
+def test_parse_person_extracts_given_from_email_when_missing():
+    """ORI levert soms alleen family. Email-local-part vult voornaam aan."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "4580272",
+        "name": "Haas",
+        "family_name": "Haas",
+        "email": "guus.haas@gemeenteraadkerkrade.nl",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Haas"
+    assert rec["name"].get("given") == "Guus"
+    assert rec["name"].get("initials") == "G."
+
+
+def test_parse_person_email_role_prefix_stripped():
+    """Email met `raadslid.<voornaam>.<family>` patroon wordt correct geparsed."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999",
+        "name": "Vlampijp",
+        "family_name": "Vlampijp",
+        "email": "raadslid.gerrion.vlampijp@example.nl",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"].get("given") == "Gerrion"
+
+
+def test_parse_person_skips_email_if_family_mismatch():
+    """Als de family in de email niet matched aan onze family, gebruik die niet."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999",
+        "name": "Bakker",
+        "family_name": "Bakker",
+        "email": "raadslid.henk.smit@example.nl",  # email zegt 'smit', niet 'bakker'
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"].get("given") is None
+
+
+def test_split_name_keeps_parens_for_normalize():
+    """`_split_name` raakt parens niet aan; dat doet `_normalize_given`."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Smeulders, P. (Paul)")
+    assert family == "Smeulders"
+    assert given == "P. (Paul)"
+
+
+def test_split_name_keeps_given_when_no_parens():
+    """Normaal patroon ongemoeid laten."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Schilderman, Susanne")
+    assert family == "Schilderman"
+    assert given == "Susanne"
+
+
+def test_split_name_handles_initials_only():
+    """Geen roepnaam tussen haakjes → laat de initialen-vorm staan."""
+    from polder.fetchers.open_raadsinformatie import _split_name
+
+    family, given = _split_name("Smeulders, P.")
+    assert family == "Smeulders"
+    assert given == "P."
+
+
+def test_normalize_given_returns_nickname_initials_and_tussenvoegsel():
+    """`L.S. (Larissa)` → ('Larissa', 'L.S.', None)."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("L.S. (Larissa)")
+    assert given == "Larissa"
+    assert initials == "L.S."
+    assert tussen is None
+
+
+def test_normalize_given_extracts_tussenvoegsel():
+    """`A.M. (Alies) van` → ('Alies', 'A.M.', 'van')."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("A.M. (Alies) van")
+    assert given == "Alies"
+    assert initials == "A.M."
+    assert tussen == "van"
+
+
+def test_normalize_given_without_parens():
+    """Plain voornaam blijft ongemoeid."""
+    from polder.fetchers.open_raadsinformatie import _normalize_given
+
+    given, initials, tussen = _normalize_given("Susanne")
+    assert given == "Susanne"
+    assert initials is None
+    assert tussen is None
+
+
+def test_parse_person_preserves_initials_from_parens():
+    """Volledige integratie: ORI `name='Vlieger, L.S. (Larissa)'` → record met
+    given='Larissa' EN initials='L.S.' (NIET 'L.')."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "6065963",
+        "name": "Vlieger, L.S. (Larissa)",
+        "family_name": "Vlieger",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Vlieger"
+    assert rec["name"]["given"] == "Larissa"
+    assert rec["name"]["initials"] == "L.S."  # NIET 'L.'
+    assert rec["name"]["full"] == "Larissa Vlieger"
+
+
+def test_parse_person_preserves_tussenvoegsel():
+    """ORI `name='Weperen, A.M. (Alies) van'` → tussenvoegsel='van', given='Alies'."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "7775658",
+        "name": "Weperen, A.M. (Alies) van",
+        "family_name": "Weperen",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Weperen"
+    assert rec["name"]["given"] == "Alies"
+    assert rec["name"]["tussenvoegsel"] == "van"
+    assert rec["name"]["initials"] == "A.M."
+    assert rec["name"]["full"] == "Alies van Weperen"
+
+
+def test_parse_person_tussenvoegsel_from_name_diff():
+    """ORI `name='Henk van der Linden'` + `family_name='Linden'`: tussenvoegsel='van der'."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "9999991",
+        "name": "Henk van der Linden",
+        "family_name": "Linden",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Linden"
+    assert rec["name"]["tussenvoegsel"] == "van der"
+    assert rec["name"]["given"] == "Henk"
+
+
+def test_parse_person_no_tussenvoegsel_when_none():
+    """`Schilderman, Susanne` heeft geen tussenvoegsel."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "1", "name": "Schilderman, Susanne", "family_name": "Schilderman"}
+    rec = parse_person(raw)
+    assert rec is not None
+    assert "tussenvoegsel" not in rec["name"]
+
+
+def test_extract_tussenvoegsel_handles_apostroph_prefix():
+    """`'t` en `'s` zijn ook tussenvoegsels (in 't, 's)."""
+    from polder.fetchers.open_raadsinformatie import _extract_tussenvoegsel
+
+    assert _extract_tussenvoegsel("Anna in 't Veld", "Veld") == "in 't"
+    assert _extract_tussenvoegsel("Piet de Vries", "Vries") == "de"
+    assert _extract_tussenvoegsel("Anna van der Burg", "Burg") == "van der"
+    assert _extract_tussenvoegsel("Susanne Schilderman", "Schilderman") is None
+
+
+# ---------------------------------------------------------------------------
+# Tussenvoegsel-extractie: uitgebreide matrix
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "name,family,expected_tussenvoegsel",
+    [
+        # Klassieke patronen
+        ("Anna de Vries", "Vries", "de"),
+        ("Anna van der Berg", "Berg", "van der"),
+        ("Anna van den Bosch", "Bosch", "van den"),
+        ("Anna op de Beek", "Beek", "op de"),
+        ("Anne in 't Veld", "Veld", "in 't"),
+        ("Hugo van 't Hoff", "Hoff", "van 't"),
+        ("Anna ter Beek", "Beek", "ter"),
+        ("Anna ten Hoeve", "Hoeve", "ten"),
+        # Geen tussenvoegsel
+        ("Anna Vries", "Vries", None),
+        ("Susanne Schilderman", "Schilderman", None),
+        # Tussenvoegsel in family (niet apart extracten)
+        ("Anna de Vries", "de Vries", None),
+        ("Anne in 't Veld", "in 't Veld", None),
+        # Hyphen-family met tussenvoegsel ervoor
+        ("Anna van der Berg-Smit", "Berg-Smit", "van der"),
+        ("Pieter de Vries-Jansen", "Vries-Jansen", "de"),
+        # Hyphen-family zonder tussenvoegsel (oude huwelijksconventie)
+        ("Anna Mulder-Roelofs", "Mulder-Roelofs", None),
+        # 2024+ gecombineerde achternaam (zonder hyphen)
+        ("Anna Mulder de Vries", "Mulder de Vries", None),
+        ("Anna de Vries Mulder", "de Vries Mulder", None),
+        ("Anna van der Berg Mulder", "van der Berg Mulder", None),
+        # 2024+ gecombineerd MET expliciet tussenvoegsel in name
+        ("Anna van der Berg de Vries", "Berg de Vries", "van der"),
+        # Edge cases
+        ("", "Vries", None),
+        ("Anna Vries", "", None),
+        ("Anna", "Anna", None),
+    ],
+)
+def test_extract_tussenvoegsel_matrix(
+    name: str, family: str, expected_tussenvoegsel: str | None
+) -> None:
+    from polder.fetchers.open_raadsinformatie import _extract_tussenvoegsel
+
+    assert _extract_tussenvoegsel(name, family) == expected_tussenvoegsel
+
+
+@pytest.mark.parametrize(
+    "raw_name,family_name,expected_given,expected_tussen,expected_family",
+    [
+        # ORI-patroon: comma + tussenvoegsel achteraan
+        ("Weperen, A.M. (Alies) van", "Weperen", "Alies", "van", "Weperen"),
+        ("Berg, J.P. (Jan) van der", "Berg", "Jan", "van der", "Berg"),
+        ("Veld, A. (Anne) in 't", "Veld", "Anne", "in 't", "Veld"),
+        # ORI-patroon zonder comma (full display-form)
+        ("Henk van der Linden", "Linden", "Henk", "van der", "Linden"),
+        ("Anna de Vries", "Vries", "Anna", "de", "Vries"),
+        # ORI-patroon: comma, geen tussenvoegsel
+        ("Schilderman, Susanne", "Schilderman", "Susanne", None, "Schilderman"),
+        # 2024+ gecombineerde family-name
+        ("Anna Mulder de Vries", "Mulder de Vries", "Anna", None, "Mulder de Vries"),
+        # Comma + nickname + tussenvoegsel
+        ("Hofweegen, M.M.J. (Marjon) van", "Hofweegen", "Marjon", "van", "Hofweegen"),
+    ],
+)
+def test_parse_person_name_matrix(
+    raw_name: str,
+    family_name: str,
+    expected_given: str,
+    expected_tussen: str | None,
+    expected_family: str,
+) -> None:
+    """Volledige integratie: ORI-input → parse_person → name-record."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "test-1", "name": raw_name, "family_name": family_name}
+    rec = parse_person(raw)
+    assert rec is not None
+    name = rec["name"]
+    assert name["family"] == expected_family
+    assert name.get("given") == expected_given
+    assert name.get("tussenvoegsel") == expected_tussen
+
+
+def test_parse_person_full_includes_tussenvoegsel() -> None:
+    """`full` is `<given> <tussenvoegsel> <family>` in display-volgorde."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {"@id": "1", "name": "Henk van der Linden", "family_name": "Linden"}
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["full"] == "Henk van der Linden"
+
+
+def test_parse_person_2024_compound_name_no_tussenvoegsel() -> None:
+    """2024+ kind met gecombineerde achternaam zonder hyphen: tussenvoegsel
+    blijft None want de hele samenstelling is family."""
+    from polder.fetchers.open_raadsinformatie import parse_person
+
+    raw = {
+        "@id": "1",
+        "name": "Anna Mulder de Vries",
+        "family_name": "Mulder de Vries",
+    }
+    rec = parse_person(raw)
+    assert rec is not None
+    assert rec["name"]["family"] == "Mulder de Vries"
+    assert rec["name"]["given"] == "Anna"
+    assert "tussenvoegsel" not in rec["name"]
+    assert rec["name"]["full"] == "Anna Mulder de Vries"

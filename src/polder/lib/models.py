@@ -29,6 +29,7 @@ OrgType = Literal[
     "politie",
     "openbaar-ministerie",
     "caribisch-openbaar-lichaam",
+    "organisatieonderdeel",
 ]
 
 PostClassification = Literal[
@@ -113,6 +114,7 @@ class PersonIdentifiers(_Base):
 class PersonName(_Base):
     full: str
     family: str
+    tussenvoegsel: str | None = None
     given: str | None = None
     initials: str | None = None
     honorifics_pre: list[str] | None = None

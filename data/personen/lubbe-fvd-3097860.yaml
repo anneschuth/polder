@@ -2,8 +2,9 @@ id: person:lubbe-fvd-3097860
 name:
   full: Frank van der Lubbe
   family: Lubbe
-  given: Frank van der
+  given: Frank
   initials: F.V.D.
+  tussenvoegsel: van der
 mandaten:
 - id: f78a1f8c-bb4b-4f8e-966c-08118a9235ef
   organization_id: org:gemeente-bunnik
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3097860
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q65426467
+  retrieved: '2026-05-11'
+birth:
+  year: 1946
+identifiers:
+  wikidata: Q65426467

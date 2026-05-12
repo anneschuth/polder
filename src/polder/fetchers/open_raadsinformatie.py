@@ -271,12 +271,133 @@ def _ori_url(ori_id: str) -> str:
     return f"https://id.openraadsinformatie.nl/{ori_id}"
 
 
+def _normalize_given(given: str) -> tuple[str, str | None, str | None]:
+    """Extracteer (given, initials_hint, tussenvoegsel) uit ORI-given-strings.
+
+    ORI levert samengestelde given-strings die meerdere stukjes informatie
+    bevatten. We splitsen in drie:
+
+    - `'L.S. (Larissa)'` → `('Larissa', 'L.S.', None)`
+    - `'P. (Paul)'` → `('Paul', 'P.', None)`
+    - `'A.M. (Alies) van'` → `('Alies', 'A.M.', 'van')`
+    - `'Paul'` → `('Paul', None, None)`
+    - `'P.'` → `('P.', None, None)` (geen roepnaam, given blijft initialen)
+    """
+    if not given:
+        return given, None, None
+    raw = given.strip()
+    if not raw:
+        return raw, None, None
+
+    m = re.search(r"\(([^)]+)\)", raw)
+    if not m:
+        return raw, None, None
+
+    nickname = m.group(1).strip()
+    if not nickname or len(nickname) <= 1:
+        return raw, None, None
+
+    prefix = raw[: m.start()].strip()
+    suffix = raw[m.end() :].strip()
+
+    initials_hint: str | None = None
+    if prefix and re.fullmatch(r"(?:[A-Za-zÀ-ÿ]\.)+", prefix):
+        letters = re.findall(r"[A-Za-zÀ-ÿ]", prefix)
+        if letters:
+            initials_hint = "".join(f"{ch.upper()}." for ch in letters)
+
+    tussenvoegsel = suffix or None
+
+    return nickname, initials_hint, tussenvoegsel
+
+
+def _strip_family_from_name(name_string: str, family: str) -> str:
+    """Geef het stuk van `name_string` terug dat NIET de family is.
+
+    Voor 2024+ gecombineerde achternamen (zoals `family='Mulder de Vries'`)
+    werkt simpele space-splits niet — we moeten de hele family-string uit
+    name strippen. Dit retourneert wat overblijft, typisch given+tussenvoegsel
+    + eventuele parens.
+
+    Handelt ook de ORI comma-form `'Schilderman, Susanne'` af.
+    """
+    if not name_string or not family:
+        return name_string
+    raw = name_string.strip()
+
+    if "," in raw:
+        fam_part, given_part = raw.split(",", 1)
+        return given_part.strip()
+
+    # Probeer family aan het eind weg te strippen. Hou rekening met
+    # whitespace variaties en case.
+    fam_match = re.search(rf"\b{re.escape(family)}\b\s*$", raw, re.IGNORECASE)
+    if fam_match:
+        return raw[: fam_match.start()].strip()
+
+    # Family is niet aan het eind (ORI-comma-vorm met family-eerst zou hier
+    # komen, of een fout). Probeer family overal in de string weg te halen.
+    stripped = re.sub(rf"\b{re.escape(family)}\b", "", raw, flags=re.IGNORECASE).strip()
+    if stripped:
+        return stripped
+    return raw
+
+
+def _extract_tussenvoegsel(name_string: str, family: str) -> str | None:
+    """Geef het tussenvoegsel terug dat tussen de roepnaam en `family` zit in `name_string`.
+
+    ORI levert `name='A.M. (Alies) van Weperen'` en `family_name='Weperen'`. De
+    "van" zit tussen "(Alies)" en "Weperen". Strategie: zoek de positie van
+    `family` in `name_string` en kijk wat ervoor staat, voorbij de roepnaam.
+
+    Returns None als geen plausibel tussenvoegsel gevonden.
+    """
+    if not name_string or not family:
+        return None
+    # Vind family in de string (case-insensitive, woord-grens).
+    fam_match = re.search(rf"\b{re.escape(family)}\b", name_string, re.IGNORECASE)
+    if not fam_match:
+        return None
+    before_family = name_string[: fam_match.start()].strip()
+    if not before_family:
+        return None
+
+    # Strip optionele "(roepnaam)" en initialen-prefix.
+    before_family = re.sub(r"\([^)]+\)", " ", before_family)
+    before_family = re.sub(r"(?:[A-Za-zÀ-ÿ]\.)+", " ", before_family)  # initialen
+    before_family = re.sub(r"\s+", " ", before_family).strip()
+
+    # Strip eventuele resterende voornaam-tokens. Heuristiek: alle tokens die
+    # KLEIN beginnen blijven over (tussenvoegsels), tokens die HOOFDLETTERS
+    # bevatten zijn voornamen die toch nog tussen haakjes-eraan-gestript moeten
+    # worden. Hou alleen kleine-letter-tokens en common multi-word-tussenvoegsels.
+    tokens = before_family.split()
+    if not tokens:
+        return None
+    # Pak tail van tokens die kleine-letter of apostrof beginnen.
+    tail: list[str] = []
+    for tok in reversed(tokens):
+        if not tok:
+            continue
+        first = tok[0]
+        # Tussenvoegsels beginnen met kleine letter ("van", "de"), of met
+        # apostrof ("'t", "'s").
+        if first.islower() or first in ("'", "‘"):
+            tail.insert(0, tok)
+        else:
+            break
+    if not tail:
+        return None
+    return " ".join(tail)
+
+
 def _split_name(raw_name: str) -> tuple[str, str]:
     """Splits ORI `name` veld in (family, given).
 
     ORI levert namen meestal als `Schilderman, Susanne` (achternaam, voornaam),
     maar soms als `Susanne Schilderman` of zelfs vol met initialen
     (`G.C. (Gerrit) Weerheim`). We pakken de comma-vorm als die er is.
+    Roepnaam-normalisatie + initials-hint gebeurt in `parse_person`.
     """
     raw = (raw_name or "").strip()
     if "," in raw:
@@ -289,6 +410,54 @@ def _split_name(raw_name: str) -> tuple[str, str]:
     family = parts[-1]
     given = " ".join(parts[:-1]).strip()
     return family, given
+
+
+_EMAIL_ROLE_PREFIXES = (
+    "raadslid.",
+    "wethouder.",
+    "burgemeester.",
+    "gemeentesecretaris.",
+    "griffier.",
+    "fractievoorzitter.",
+)
+
+
+def _name_from_email(email: str | None, family: str) -> tuple[str | None, str | None]:
+    """Extracteer (given, family_hint) uit een functionele raads-email.
+
+    ORI levert vaak `email='raadslid.gerrion.vanelmpt@roerdalen.nl'`. Het
+    local-part bevat `<rol>.<voornaam>.<familienaam>` of `<voornaam>.<familienaam>`.
+    Voor records waar `family_name` ontbreekt of de `name` 1 woord is, geeft
+    deze helper een goede gok voor de voornaam.
+
+    Retourneert (given, family_hint). family_hint is alleen niet-None als de
+    email een family-naam bevat die NIET overeenkomt met de aangeleverde
+    family (signaleert dat onze family-extractie er mogelijk naast zit).
+    """
+    if not email or "@" not in email:
+        return None, None
+    local = email.split("@", 1)[0].lower()
+    for prefix in _EMAIL_ROLE_PREFIXES:
+        if local.startswith(prefix):
+            local = local[len(prefix):]
+            break
+    if "." not in local:
+        return None, None
+    parts = [p for p in local.split(".") if p]
+    if len(parts) < 2:
+        return None, None
+    # Heuristiek: laatste segment is family (na dropoff role-prefix), eerste is given.
+    # Voor 'vanderlinden' of 'van-der-linden' patronen: blijft 1 woord.
+    given_guess = parts[0].capitalize()
+    family_guess = parts[-1]
+    # Strip dubbele family-deeltjes ("vanderlinden" → "Linden" als family al die vorm heeft)
+    # Skip: verzin geen complexe normalisatie. We retourneren alleen given.
+    family_norm = family.lower().replace(" ", "").replace("-", "")
+    if family_norm and family_norm not in family_guess.lower():
+        # Mismatch: family in email is anders dan onze family. Niet vertrouwen op
+        # given-guess want dit kan een geheel andere persoon zijn.
+        return None, None
+    return given_guess, None
 
 
 def _initials_from_given(given: str) -> str:
@@ -315,22 +484,59 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
         return None
     raw_name = raw.get("name") or ""
     family_explicit = (raw.get("family_name") or "").strip()
-    family_split, given_split = _split_name(raw_name)
-    family = family_explicit or family_split
-    given = given_split
+
+    # Als ORI een expliciete family_name levert (sorteer-key), gebruiken we die
+    # autoritatief. Dat is cruciaal voor 2024+ gecombineerde achternamen zoals
+    # 'Mulder de Vries' waar onze comma/space-split het niet kan raden.
+    if family_explicit:
+        family = family_explicit
+        given_split = _strip_family_from_name(raw_name, family_explicit)
+    else:
+        family_split, given_split = _split_name(raw_name)
+        family = family_split
+
     if not family:
         return None
-    initials = _initials_from_given(given)
+
+    # Splits given in (roepnaam, initials_hint, tussenvoegsel-uit-parens).
+    given, initials_hint, tussenvoegsel_from_given = _normalize_given(given_split)
+
+    # Aanvullende detectie: ORI levert vaak `family_name='Weperen'` (zonder
+    # tussenvoegsel) en `name='A.M. (Alies) van Weperen'` (met tussenvoegsel).
+    # Diff de twee om "van" te vinden.
+    tussenvoegsel_from_name = _extract_tussenvoegsel(raw_name, family)
+    tussenvoegsel = tussenvoegsel_from_given or tussenvoegsel_from_name
+
+    # Als de space-split van `name` het tussenvoegsel in `given` heeft gegooid
+    # (bv. `name='Henk van der Linden'`, family_name='Linden' → given_split
+    # was 'Henk van der'), strip dat tussenvoegsel-deel weg uit `given`.
+    if given and tussenvoegsel and given.lower().endswith(tussenvoegsel.lower()):
+        stripped = given[: -len(tussenvoegsel)].strip()
+        if stripped:
+            given = stripped
+
+    # Fallback voor records waar ORI alleen family levert (zoals Haas-4580272):
+    if not given:
+        email = (raw.get("email") or "").strip()
+        given_from_email, _ = _name_from_email(email, family)
+        if given_from_email:
+            given = given_from_email
+
+    initials = initials_hint or _initials_from_given(given)
 
     slug = slugify_person(family, initials, ori_id)
     if not slug:
         return None
 
-    full = f"{given} {family}".strip() if given else family
+    # Bouw full-name: roepnaam + tussenvoegsel + family.
+    parts_full = [p for p in (given, tussenvoegsel, family) if p]
+    full = " ".join(parts_full) if parts_full else family
     name_block: dict[str, Any] = {
         "full": full,
         "family": family,
     }
+    if tussenvoegsel:
+        name_block["tussenvoegsel"] = tussenvoegsel
     if given:
         name_block["given"] = given
     if initials:
@@ -645,6 +851,68 @@ def _ordered_for_dump(record: dict[str, Any]) -> dict[str, Any]:
     return out
 
 
+def _dedup_key(record: dict[str, Any], organization_id: str | None) -> tuple[str, str, str] | None:
+    """Bouw dedup-sleutel `(family, given-lower, organization_id)`.
+
+    Twee records met dezelfde sleutel zijn waarschijnlijk dezelfde persoon
+    (zelfde familienaam + voornaam in dezelfde gemeente).
+
+    Returnt None als één van de drie velden ontbreekt; dat record is niet
+    deduplicate-baar.
+    """
+    name = record.get("name") or {}
+    family = (name.get("family") or "").strip().lower()
+    given = (name.get("given") or "").strip().lower()
+    if not family or not given or not organization_id:
+        return None
+    return (family, given, organization_id)
+
+
+def dedup_records_for_gemeente(
+    records: list[dict[str, Any]],
+    organization_id: str,
+) -> list[dict[str, Any]]:
+    """Merge records met dezelfde (family, given) binnen één gemeente.
+
+    Voorkomt het Bos-Coenraad-patroon (3 ORI-IDs voor dezelfde persoon).
+    Behoudt de slug van het record met de meeste mandaten / langste initialen
+    (zie `_choose_winner`). Loser-IDs gaan in identifiers.aliases.
+    """
+    if not records:
+        return []
+    groups: dict[tuple[str, str, str], list[dict[str, Any]]] = {}
+    untouched: list[dict[str, Any]] = []
+    for rec in records:
+        key = _dedup_key(rec, organization_id)
+        if key is None:
+            untouched.append(rec)
+            continue
+        groups.setdefault(key, []).append(rec)
+
+    result: list[dict[str, Any]] = list(untouched)
+    for group in groups.values():
+        if len(group) == 1:
+            result.append(group[0])
+            continue
+        group.sort(key=_record_score, reverse=True)
+        winner = group[0]
+        for loser in group[1:]:
+            winner = merge_person(winner, loser)
+        result.append(winner)
+    return result
+
+
+def _record_score(rec: dict[str, Any]) -> tuple[int, int, int, int]:
+    """Hoger = beter. Voor dedup-winner-selectie."""
+    name = rec.get("name") or {}
+    return (
+        1 if (rec.get("birth") or {}).get("year") else 0,
+        len(str(name.get("initials") or "")),
+        len(rec.get("mandaten") or []),
+        len(rec.get("sources") or []),
+    )
+
+
 def write_person(
     record: dict[str, Any],
     out_dir: Path,
@@ -773,14 +1041,29 @@ def _process_gemeente(
     if limit is not None:
         raw = raw[:limit]
 
-    n_current = 0
-    n_historisch = 0
+    organization_id = f"org:gemeente-{bare}" if not bare.startswith("gemeente-") else f"org:{bare}"
+    records: list[dict[str, Any]] = []
     for entry in raw:
         record = person_to_polder_record(
             entry["person"], entry.get("memberships") or [], gemeente_slug=bare, today=today
         )
-        if record is None:
-            continue
+        if record is not None:
+            records.append(record)
+
+    # Dedup: meerdere ORI-IDs voor dezelfde persoon (zelfde family+given+org)
+    # mergen tot één record. Voorkomt het Bos-Coenraad-patroon waar één
+    # politicus 3 aparte records kreeg.
+    before = len(records)
+    records = dedup_records_for_gemeente(records, organization_id)
+    if before != len(records):
+        logger.info(
+            "ORI dedup voor %s: %d -> %d records (%d duplicates gemerged)",
+            bare, before, len(records), before - len(records),
+        )
+
+    n_current = 0
+    n_historisch = 0
+    for record in records:
         write_person(record, out_dir, dry_run=dry_run)
         if _has_active_mandaat(record):
             n_current += 1

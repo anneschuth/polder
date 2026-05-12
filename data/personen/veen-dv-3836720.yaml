@@ -2,8 +2,9 @@ id: person:veen-dv-3836720
 name:
   full: D. van Veen
   family: Veen
-  given: D. van
+  given: D.
   initials: D.V.
+  tussenvoegsel: van
 mandaten:
 - id: f3e18979-c0a6-4ef5-9321-7360f8f8d1ee
   organization_id: org:gemeente-gorinchem
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836720
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q19118828
+  retrieved: '2026-05-11'
+birth:
+  year: 1965
+identifiers:
+  wikidata: Q19118828

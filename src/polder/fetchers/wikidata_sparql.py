@@ -85,17 +85,48 @@ __all__ = [
 SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
 QLEVER_ENDPOINT = "https://qlever.cs.uni-freiburg.de/api/wikidata"
 
-# Korte alias voor de twee endpoints die we ondersteunen. CLI/skill-laag gebruikt
+# Korte alias voor de endpoints die we ondersteunen. CLI/skill-laag gebruikt
 # de alias; lagere helpers verwachten een URL. ``resolve_endpoint`` vertaalt.
-Endpoint = Literal["wdqs", "qlever"]
+# `auto`: probeer QLever eerst (sneller), val terug op WDQS bij timeout/5xx.
+Endpoint = Literal["wdqs", "qlever", "auto"]
 _ENDPOINT_URLS: dict[str, str] = {
     "wdqs": SPARQL_ENDPOINT,
     "qlever": QLEVER_ENDPOINT,
 }
+_AUTO_FALLBACK_CHAIN: tuple[str, ...] = ("qlever", "wdqs")
+
+# Process-level circuit breaker: na N opeenvolgende failures op een endpoint
+# slaan we hem over tot het einde van de run. Voorkomt dat een hele enrich-loop
+# bij elke record dezelfde timeout-wait incasseert.
+_ENDPOINT_FAILURE_COUNT: dict[str, int] = {}
+_ENDPOINT_CIRCUIT_THRESHOLD = 3
+
+
+def _endpoint_is_circuit_broken(alias: str) -> bool:
+    return _ENDPOINT_FAILURE_COUNT.get(alias, 0) >= _ENDPOINT_CIRCUIT_THRESHOLD
+
+
+def _mark_endpoint_failure(alias: str) -> None:
+    _ENDPOINT_FAILURE_COUNT[alias] = _ENDPOINT_FAILURE_COUNT.get(alias, 0) + 1
+
+
+def _mark_endpoint_success(alias: str) -> None:
+    _ENDPOINT_FAILURE_COUNT[alias] = 0
+
+
+def reset_endpoint_circuits() -> None:
+    """Reset alle circuit-breakers. Voor tests of nieuwe runs."""
+    _ENDPOINT_FAILURE_COUNT.clear()
 
 
 def resolve_endpoint(endpoint: str) -> str:
-    """Vertaal een endpoint-alias (`wdqs`/`qlever`) of volledige URL naar een URL."""
+    """Vertaal een endpoint-alias (`wdqs`/`qlever`) of volledige URL naar een URL.
+
+    `auto` wordt op aliasniveau bewaard; query_sparql interpreteert hem zelf
+    en doorloopt de fallback-keten.
+    """
+    if endpoint == "auto":
+        return endpoint
     if endpoint in _ENDPOINT_URLS:
         return _ENDPOINT_URLS[endpoint]
     return endpoint
@@ -563,12 +594,15 @@ def query_sparql(
 ) -> list[dict[str, Any]]:
     """Voer een SPARQL-query uit en geef de bindings terug als lijst van dicts.
 
-    Cached responses landen onder ``cache_dir/<hash>.json``. Met ``use_cache=False``
-    wordt de cache genegeerd en altijd opnieuw opgehaald.
+    Cached responses landen onder ``cache_dir/<hash>.json``.
 
-    Bij HTTP 429 of 503 wachten we (Retry-After-header indien aanwezig, anders
-    exponentiele backoff) en proberen we opnieuw, tot ``max_retries`` pogingen.
+    Endpoint:
+    - URL of `qlever`/`wdqs`: één endpoint, retry binnen die endpoint.
+    - `auto`: probeer QLever eerst (sneller), val terug op WDQS bij
+      timeout/5xx. Cache-check gebeurt vóór elke endpoint-poging zodat
+      een hit-bestand de keten kort sluit.
     """
+    # Cache-check (idem voor "auto" en losse endpoints)
     cache_path: Path | None = None
     if cache_dir is not None:
         cache_dir.mkdir(parents=True, exist_ok=True)
@@ -579,10 +613,45 @@ def query_sparql(
                 payload = json.load(fh)
             return list(payload.get("results", {}).get("bindings", []))
 
+    if endpoint == "auto":
+        last_exc: Exception | None = None
+        for alias in _AUTO_FALLBACK_CHAIN:
+            if _endpoint_is_circuit_broken(alias):
+                logger.debug("Skip endpoint %s (circuit broken)", alias)
+                continue
+            try:
+                result = query_sparql(
+                    query,
+                    timeout=min(timeout, 15.0),
+                    cache_dir=cache_dir,
+                    use_cache=use_cache,
+                    client=client,
+                    max_retries=1,
+                    endpoint=alias,
+                    request_interval=request_interval,
+                )
+                _mark_endpoint_success(alias)
+                return result
+            except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+                last_exc = exc
+                _mark_endpoint_failure(alias)
+                logger.warning(
+                    "Endpoint %s faalde (%s), val terug op volgende in keten",
+                    alias,
+                    type(exc).__name__,
+                )
+        if last_exc:
+            raise last_exc
+        raise httpx.HTTPError("auto-keten leverde geen response")
+
     if request_interval is None:
         request_interval = (
             QLEVER_REQUEST_INTERVAL if "qlever" in endpoint else MIN_REQUEST_INTERVAL
         )
+
+    # Endpoint-alias vertalen naar URL
+    if endpoint in _ENDPOINT_URLS:
+        endpoint = _ENDPOINT_URLS[endpoint]
 
     headers = {
         "Accept": "application/sparql-results+json",
@@ -817,7 +886,7 @@ def lookup_person_by_name(
     initials: str | None = None,
     given: str | None = None,
     *,
-    endpoint: Endpoint | str = "qlever",
+    endpoint: Endpoint | str = "auto",
     cache_dir: Path | None = None,
 ) -> list[dict[str, Any]]:
     """Zoek personen in Wikidata op naam.
@@ -827,18 +896,50 @@ def lookup_person_by_name(
 
     Strategie:
 
-    1. SPARQL met FILTER op rdfs:label van de family-naam, beperkt via
-       ``P31 wd:Q5`` (mens). ``given`` of het eerste initiaal versmalt verder.
-    2. Geen birthyear-property is vereist; de waarde mag ``None`` blijven.
+    1. SPARQL met FILTER op rdfs:label, beperkt via P31 wd:Q5 (mens). Default
+       endpoint is `auto`: QLever eerst, dan WDQS. Cache wordt geraadpleegd
+       voor elke poging.
+    2. Als beide SPARQL-endpoints falen, probeert deze helper de Wikidata
+       Reconciliation API als laatste fallback (`reconciliation_lookup_person`).
 
     Caller-side scoring (zoals naam-overeenkomst en context-fit) gebeurt buiten
     deze helper. Hier doen we alleen de I/O en parsing.
     """
     if not family or not family.strip():
         raise ValueError("family is verplicht voor lookup_person_by_name")
-    endpoint_url = resolve_endpoint(endpoint)
+    # Voor person-lookup proberen we ALLEEN QLever via SPARQL. WDQS heeft een
+    # te scherpe limiet op label-FILTER queries (timeout op de meeste calls)
+    # en is niet geschikt voor deze vorm van zoekopdracht. Bij QLever-failure
+    # gaan we direct naar de Reconciliation API. Bij circuit-broken QLever
+    # slaan we SPARQL helemaal over en gaan direct naar Reconciliation.
+    if endpoint == "auto":
+        if _endpoint_is_circuit_broken("qlever"):
+            return reconciliation_lookup_person(family, given=given, initials=initials)
+        endpoint_url = QLEVER_ENDPOINT
+    else:
+        endpoint_url = resolve_endpoint(endpoint)
     query = _build_lookup_person_query(family, given, initials)
-    bindings = query_sparql(query, cache_dir=cache_dir, endpoint=endpoint_url)
+    try:
+        # Korte timeout en geen retries: bij QLever-down willen we snel
+        # de circuit breaker triggeren en doorschakelen naar Reconciliation.
+        bindings = query_sparql(
+            query,
+            cache_dir=cache_dir,
+            endpoint=endpoint_url,
+            max_retries=0,
+            timeout=5.0,
+        )
+        _mark_endpoint_success("qlever")
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        _mark_endpoint_failure("qlever")
+        logger.warning(
+            "SPARQL-lookup faalde voor (%s, %s), val terug op Reconciliation API: %s",
+            family,
+            given,
+            type(exc).__name__,
+        )
+        return reconciliation_lookup_person(family, given=given, initials=initials)
+
     rows: list[dict[str, Any]] = []
     seen: set[str] = set()
     for b in bindings:
@@ -862,6 +963,191 @@ def lookup_person_by_name(
             }
         )
     return rows
+
+
+# Wikidata Reconciliation API endpoint. Documentatie:
+# https://www.wikidata.org/wiki/Wikidata:Tools/OpenRefine/Editing/Reconciliation_API
+# We gebruiken de wmcloud-host direct (skip 307-redirect van reconci.link).
+RECONCILIATION_ENDPOINT = "https://wikidata-reconciliation.wmcloud.org/nl/api"
+
+# Max queries per batch-POST. De API zelf accepteert er meer maar bij grotere
+# batches groeit de kans op timeouts. 25 is een goede sweet-spot.
+RECONCILIATION_BATCH_SIZE = 25
+
+
+def reconciliation_lookup_person(
+    family: str,
+    *,
+    given: str | None = None,
+    initials: str | None = None,
+    timeout: float = 15.0,
+) -> list[dict[str, Any]]:
+    """Fallback-lookup via OpenRefine Reconciliation API.
+
+    Werkt fundamenteel anders dan SPARQL: POST een JSON-batch met queries,
+    krijg per query een lijst kandidaten terug. We doen één query per call
+    omdat onze caller per-record werkt.
+
+    Retourneert dezelfde vorm als `lookup_person_by_name`:
+    `{qid, label, birth_year, description}`. `birth_year` is altijd None
+    (Reconciliation API levert die niet direct; vereist een tweede call).
+
+    Bij netwerk-error: lege lijst (failure mode is fall-through naar
+    "geen kandidaten"). Het is een laatste-redmiddel; we blokkeren een
+    enrich-run niet als ook deze faalt.
+    """
+    query_parts = [family]
+    if given:
+        query_parts.insert(0, given)
+    elif initials:
+        query_parts.insert(0, initials)
+    query_text = " ".join(query_parts).strip()
+    if not query_text:
+        return []
+
+    payload = {
+        "q0": {
+            "query": query_text,
+            "type": "Q5",  # mens
+            "limit": 25,
+        }
+    }
+    # OpenRefine reconciliation v0.2 verwacht een form-encoded body waarbij
+    # `queries` een JSON-string is.
+    form_data = {"queries": json.dumps(payload)}
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            response = client.post(
+                RECONCILIATION_ENDPOINT,
+                data=form_data,
+                headers={"User-Agent": USER_AGENT},
+            )
+            response.raise_for_status()
+            data = response.json()
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        logger.warning("Reconciliation API faalde: %s", exc)
+        return []
+
+    result = data.get("q0") or {}
+    return _parse_reconciliation_candidates(result.get("result") or [])
+
+
+def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, Any]]:
+    """Map Reconciliation-result-records naar onze standaard-vorm."""
+    rows: list[dict[str, Any]] = []
+    for cand in candidates:
+        qid = cand.get("id")
+        if not qid or not qid.startswith("Q"):
+            continue
+        description = cand.get("description") or ""
+        rows.append(
+            {
+                "qid": qid,
+                "label": cand.get("name"),
+                "birth_year": _parse_birth_year_from_description(description),
+                "description": description,
+            }
+        )
+    return rows
+
+
+def reconciliation_lookup_persons_batch(
+    queries: list[tuple[str, str | None, str | None]],
+    *,
+    timeout: float = 30.0,
+) -> list[list[dict[str, Any]]]:
+    """Batch-lookup: meerdere personen in één POST naar de Reconciliation API.
+
+    Input: lijst van (family, given, initials)-tuples. Output: lijst van
+    kandidaten-lijsten in dezelfde volgorde. Empty list per query bij geen
+    match. Voor batches > RECONCILIATION_BATCH_SIZE wordt automatisch
+    opgedeeld.
+
+    Bij netwerk-error: lege lijsten voor de hele batch (graceful degradation).
+    """
+    if not queries:
+        return []
+
+    results: list[list[dict[str, Any]]] = []
+
+    for chunk_start in range(0, len(queries), RECONCILIATION_BATCH_SIZE):
+        chunk = queries[chunk_start : chunk_start + RECONCILIATION_BATCH_SIZE]
+        payload: dict[str, dict[str, Any]] = {}
+        for i, (family, given, initials) in enumerate(chunk):
+            parts = []
+            if given:
+                parts.append(given)
+            elif initials:
+                parts.append(initials)
+            parts.append(family)
+            query_text = " ".join(p for p in parts if p).strip()
+            if not query_text:
+                continue
+            payload[f"q{i}"] = {
+                "query": query_text,
+                "type": "Q5",
+                "limit": 25,
+            }
+
+        if not payload:
+            results.extend([] for _ in chunk)
+            continue
+
+        try:
+            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+                response = client.post(
+                    RECONCILIATION_ENDPOINT,
+                    data={"queries": json.dumps(payload)},
+                    headers={"User-Agent": USER_AGENT},
+                )
+                response.raise_for_status()
+                data = response.json()
+        except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+            logger.warning(
+                "Reconciliation API batch faalde (chunk start=%d, size=%d): %s",
+                chunk_start,
+                len(chunk),
+                exc,
+            )
+            results.extend([] for _ in chunk)
+            continue
+
+        for i in range(len(chunk)):
+            result = data.get(f"q{i}") or {}
+            results.append(_parse_reconciliation_candidates(result.get("result") or []))
+
+    return results
+
+
+_BIRTH_YEAR_RX = re.compile(r"\((\d{4})(?:[\-–—][^)]*)?\)")
+
+
+def _parse_birth_year_from_description(description: str) -> int | None:
+    """Probeer een geboortejaar te extraheren uit een Reconciliation-description.
+
+    Voorbeelden:
+    - `"Nederlands ondernemer (1946-2025)"` → 1946
+    - `"Nederlands voetballer (1904–1979)"` → 1904 (em-dash)
+    - `"politicus uit Suriname (1897–1960)"` → 1897
+    - `"Nederlandse politicus"` → None (geen jaartal)
+    """
+    if not description:
+        return None
+    match = _BIRTH_YEAR_RX.search(description)
+    if not match:
+        return None
+    try:
+        year = int(match.group(1))
+        # Plausibele bovengrens: dit jaar + 1 (voor jaartal-overgangen aan het
+        # einde van het jaar). Ondergrens 1700 is een conservatieve start
+        # voor de Republiek der Verenigde Nederlanden.
+        from datetime import date as _date_class
+
+        if 1700 <= year <= _date_class.today().year + 1:
+            return year
+    except (ValueError, TypeError):
+        pass
+    return None
 
 
 def parse_bewindspersoon_bindings(
@@ -1015,10 +1301,10 @@ def normalize_org_name(name: str | None) -> str:
 
 
 def _normalize_initials(value: str | None) -> str:
-    if not value:
-        return ""
-    cleaned = _ascii_lower(value)
-    return re.sub(r"[^a-z0-9]+", "", cleaned)
+    """Compact-vorm voor matching-keys. Zie polder.lib.initials.compact_initials."""
+    from polder.lib.initials import compact_initials
+
+    return compact_initials(value)
 
 
 def _normalize_family(value: str | None) -> str:
@@ -1058,10 +1344,19 @@ def build_org_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]
     return {"by_oin": by_oin, "by_name": by_name}
 
 
-def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    """Bouw een lookup-index voor personen: (tkid → row) en ((family, initials, birthyear) → row)."""
+def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
+    """Bouw een lookup-index voor personen.
+
+    Drie views:
+    - `by_tkid`: tk_persoon_id -> row (één-op-één)
+    - `by_natural`: (family, initials, birthyear) -> row (één-op-één,
+      eerste-wint bij conflict)
+    - `by_family_birth`: (family, birthyear) -> list[row] (collectie zodat de
+      caller kan zien of er meerdere kandidaten zijn voordat hij koppelt)
+    """
     by_tkid: dict[str, dict[str, Any]] = {}
     by_natural: dict[tuple[str, str, int], dict[str, Any]] = {}
+    by_family_birth: dict[tuple[str, int], list[dict[str, Any]]] = {}
     for row in rows:
         tkid = row.get("tkid")
         if tkid:
@@ -1070,9 +1365,14 @@ def build_person_index(rows: Iterable[dict[str, Any]]) -> dict[str, dict[str, An
         initials = _normalize_initials(row.get("initials"))
         birthyear = row.get("birthyear")
         if family and birthyear:
-            key = (family, initials, int(birthyear))
-            by_natural.setdefault(key, row)
-    return {"by_tkid": by_tkid, "by_natural": by_natural}
+            yr = int(birthyear)
+            by_natural.setdefault((family, initials, yr), row)
+            by_family_birth.setdefault((family, yr), []).append(row)
+    return {
+        "by_tkid": by_tkid,
+        "by_natural": by_natural,
+        "by_family_birth": by_family_birth,
+    }
 
 
 def _record_org_name(record: dict[str, Any]) -> str | None:
@@ -1142,6 +1442,7 @@ def match_personen(
     matches: list[tuple[dict[str, Any], dict[str, Any], str]] = []
     by_tkid = index["by_tkid"]
     by_natural = index["by_natural"]
+    by_family_birth = index.get("by_family_birth", {})
     for record in records:
         if (record.get("identifiers") or {}).get("wikidata"):
             continue
@@ -1154,14 +1455,26 @@ def match_personen(
             initials = _normalize_initials(name.get("initials"))
             birth = (record.get("birth") or {}).get("year")
             if family and birth is not None:
-                key = (family, initials, int(birth))
-                row = by_natural.get(key)
+                yr = int(birth)
+                row = by_natural.get((family, initials, yr))
                 method = "natural"
                 if row is None and initials:
-                    # Probeer zonder initialen (Wikidata heeft die vaak niet).
-                    key2 = (family, "", int(birth))
-                    row = by_natural.get(key2)
-                    method = "family_birth"
+                    # Family + birth-year fallback. Alleen koppelen als er
+                    # PRECIES ÉÉN Wikidata-kandidaat is met die (family, year);
+                    # anders zou een naamgenoot een verkeerde Q-id krijgen
+                    # (zoals Dijk-1985: Emiel vs Jimmy beide bestaan).
+                    candidates = by_family_birth.get((family, yr), [])
+                    if len(candidates) == 1:
+                        row = candidates[0]
+                        method = "family_birth"
+                    elif len(candidates) > 1:
+                        logger.debug(
+                            "Skip family_birth match voor %s: %d kandidaten op (%s, %d)",
+                            record.get("id"),
+                            len(candidates),
+                            family,
+                            yr,
+                        )
         if row is None:
             continue
         matches.append((record, row, method))
@@ -1804,7 +2117,13 @@ def build_bewindspersoon_records(
 
     Output is een tussenrepresentatie waarin we per persoon-Q-id alle
     mandaten verzamelen. De caller mergt deze met bestaande YAML's.
+
+    P39-statements zonder P580 (start-tijd) worden overgeslagen. Dat zijn
+    incomplete Wikidata-statements waar we vroeger een sentinel-datum
+    `1945-01-01` op plakten, wat tot data-rommel leidde. Per fetcher-run
+    loggen we het aantal als INFO-melding.
     """
+    skipped_no_start: list[str] = []
     by_person: dict[str, dict[str, Any]] = {}
     posts_seen: dict[str, dict[str, Any]] = {}
     for row in rows:
@@ -1855,6 +2174,10 @@ def build_bewindspersoon_records(
         if ministry_slug is None:
             # Onbekend ministerie; sla het mandaat over (we loggen via caller).
             continue
+        start = row.get("start")
+        if not start:
+            skipped_no_start.append(f"{qid}#{row.get('role_qid')}")
+            continue
         post_id, post_label, classification = _post_id_for_role(
             row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
         )
@@ -1864,14 +2187,14 @@ def build_bewindspersoon_records(
             "classification": classification,
             "organization_id": organization_id,
             "role_kind": role_kind,
-            "valid_from": row.get("start") or "1945-01-01",
+            "valid_from": start,
         }
         mandaat = {
-            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, start),
             "organization_id": organization_id,
             "post_id": post_id,
             "role": post_label,
-            "start_date": row.get("start") or "1945-01-01",
+            "start_date": start,
             "sources": [
                 {
                     "id": SOURCE_ID,
@@ -1885,6 +2208,14 @@ def build_bewindspersoon_records(
         else:
             mandaat["end_date"] = None
         person_record["mandaten"].append(mandaat)
+    if skipped_no_start:
+        sample = ", ".join(skipped_no_start[:5])
+        suffix = f" (sample: {sample})" if sample else ""
+        logger.info(
+            "Wikidata: %d P39-statement(s) overgeslagen wegens ontbrekende P580%s",
+            len(skipped_no_start),
+            suffix,
+        )
     return {"persons": by_person, "posts": posts_seen}
 
 
@@ -1897,7 +2228,11 @@ def build_abd_tmg_records(
     """Aggregeer ABD-TMG SPARQL-rijen.
 
     role_type_qid bepaalt of het SG (Q2003810) of DG (Q126658544) is.
+
+    P39-statements zonder P580 worden overgeslagen; zie
+    `build_bewindspersoon_records` voor de rationale.
     """
+    skipped_no_start: list[str] = []
     by_person: dict[str, dict[str, Any]] = {}
     posts_seen: dict[str, dict[str, Any]] = {}
     for row in rows:
@@ -1947,6 +2282,10 @@ def build_abd_tmg_records(
         )
         if ministry_slug is None:
             continue
+        start = row.get("start")
+        if not start:
+            skipped_no_start.append(f"{qid}#{row.get('role_qid')}")
+            continue
         post_id, post_label, classification = _post_id_for_role(
             row.get("role_label"), row.get("role_qid"), ministry_slug, role_kind
         )
@@ -1956,14 +2295,14 @@ def build_abd_tmg_records(
             "classification": classification,
             "organization_id": organization_id,
             "role_kind": role_kind,
-            "valid_from": row.get("start") or "1945-01-01",
+            "valid_from": start,
         }
         mandaat = {
-            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, row.get("start")),
+            "id": _mandaat_id(qid, row["role_qid"], ministry_slug, start),
             "organization_id": organization_id,
             "post_id": post_id,
             "role": post_label,
-            "start_date": row.get("start") or "1945-01-01",
+            "start_date": start,
             "end_date": row.get("end"),
             "sources": [
                 {
@@ -1974,6 +2313,14 @@ def build_abd_tmg_records(
             ],
         }
         person_record["mandaten"].append(mandaat)
+    if skipped_no_start:
+        sample = ", ".join(skipped_no_start[:5])
+        suffix = f" (sample: {sample})" if sample else ""
+        logger.info(
+            "Wikidata ABD-TMG: %d P39-statement(s) overgeslagen wegens ontbrekende P580%s",
+            len(skipped_no_start),
+            suffix,
+        )
     return {"persons": by_person, "posts": posts_seen}
 
 

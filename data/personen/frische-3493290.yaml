@@ -1,7 +1,9 @@
 id: person:frische-3493290
 name:
-  full: Frische
+  full: G Frische
   family: Frische
+  given: G
+  initials: G.
 mandaten:
 - id: 2c150ad3-3337-4506-83f3-e2f99774fa22
   organization_id: org:gemeente-echt-susteren
@@ -17,3 +19,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3493290
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q999975
+  retrieved: '2026-05-11'
+birth:
+  year: 1929
+identifiers:
+  wikidata: Q999975

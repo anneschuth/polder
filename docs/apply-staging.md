@@ -85,9 +85,3 @@ post + start_date) leidt dat niet tot duplicate-mandaten.
 # Full-batch over alle resolved bestanden in data/_staging/
 polder apply-staging data/_staging/ --apply
 ```
-
-Of via de bash-runner:
-
-```bash
-./scripts/apply_staging_local.sh data/_staging/ --apply
-```

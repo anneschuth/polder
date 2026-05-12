@@ -132,23 +132,6 @@ De oude losse scripts (`polder-fetch-roo`, `polder-validate`, `polder-build`,
 ...) blijven werken voor backwards-compatibility, maar nieuwe code gebruikt
 `polder <subcommand>`.
 
-## Make-targets
-
-`make` is een dunne wrapper rond de CLI:
-
-```bash
-make sync           # uv sync
-make fetch          # polder fetch all
-make fetch-roo      # polder fetch roo
-make validate       # polder validate
-make diff           # polder diff
-make build          # polder build all
-make serve          # polder serve
-make daily-update   # polder daily-update
-make ingest         # polder ingest (zonder commit/push)
-make ingest-commit  # polder ingest --commit --push
-```
-
 ## Ingest: dagelijkse staging-pipeline
 
 `polder ingest` draait per bron parse, resolve, apply, validate, build, commit
@@ -175,8 +158,8 @@ volledige uitleg en voorbeelden per skill.
 
 ## Reproduceerbaarheid
 
-Elke run is een `polder`-commando of een script in `scripts/`. Geen ad-hoc
-shell-loops, geen handmatige stappen, geen UI-clicks.
+Alles draait via `uv run polder ...`. Geen losse shell-scripts, geen
+ad-hoc loops, geen UI-clicks.
 
 | Operatie | Commando |
 |---|---|
@@ -186,8 +169,8 @@ shell-loops, geen handmatige stappen, geen UI-clicks.
 | Skills lokaal | `polder skill <skill-naam> <input>` |
 | Apply-staging dry-run | `polder apply-staging data/_staging/` |
 | Apply-staging echt | `polder apply-staging data/_staging/ --apply` |
-| ABD-organogrammen op alle PDFs | `bash scripts/parse_organogram_all.sh` |
-| Staatscourant-backfill | `bash scripts/backfill_staatscourant.sh --since 2024-01-01` |
+| ABD-nieuws-backfill | `polder backfill abd-nieuws --since 2024-01-01` |
+| Staatscourant-backfill | `polder backfill staatscourant --since 2024-01-01` |
 | Validatie | `polder validate` |
 | Datasette lokaal | `polder serve` |
 

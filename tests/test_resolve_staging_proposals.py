@@ -131,16 +131,11 @@ def test_example_output_no_em_dashes() -> None:
     assert "—" not in raw
 
 
-def test_resolve_staging_script_exists_and_executable() -> None:
-    script = (
-        Path(__file__).resolve().parent.parent
-        / "scripts"
-        / "resolve_staging_local.sh"
-    )
-    assert script.is_file()
-    import os
+def test_resolve_staging_runner_is_importable() -> None:
+    """De resolve-staging skill draait via polder.llm.runner.run_skill."""
+    from polder.llm.runner import run_skill
 
-    assert os.access(script, os.X_OK), "resolve_staging_local.sh moet executable zijn"
+    assert callable(run_skill)
 
 
 def test_cli_has_resolve_staging_subcommand() -> None:
@@ -154,4 +149,4 @@ def test_cli_has_resolve_staging_subcommand() -> None:
     )
     content = cli_file.read_text(encoding="utf-8")
     assert '"resolve-staging"' in content
-    assert "resolve_staging_local.sh" in content
+    assert "resolve-staging-proposals" in content

@@ -23,6 +23,8 @@ import typer
 
 from polder.cli.commands import (
     apply_staging_cmd,
+    audit_cmd,
+    backfill_cmd,
     build_cmd,
     daily_cmd,
     diff_cmd,
@@ -30,6 +32,8 @@ from polder.cli.commands import (
     fetch_cmd,
     ingest_cmd,
     list_cmd,
+    resolve_cmd,
+    search_cmd,
     serve_cmd,
     show_cmd,
     skill_cmd,
@@ -81,6 +85,7 @@ list_app.command("mandaten")(list_cmd.list_mandaten)
 
 app.add_typer(fetch_cmd.app, name="fetch")
 app.add_typer(skill_cmd.app, name="skill")
+app.add_typer(backfill_cmd.app, name="backfill")
 
 
 # ---------------------------------------------------------------------------
@@ -88,13 +93,16 @@ app.add_typer(skill_cmd.app, name="skill")
 # ---------------------------------------------------------------------------
 
 app.command("show")(show_cmd.show)
+app.command("search")(search_cmd.search)
 app.command("export")(export_cmd.export)
 app.command("validate")(validate_cmd.validate)
+app.command("audit")(audit_cmd.audit)
 app.command("diff")(diff_cmd.diff)
 app.command("build")(build_cmd.build)
 app.command("serve")(serve_cmd.serve)
 app.command("daily-update")(daily_cmd.daily_update)
 app.command("apply-staging")(apply_staging_cmd.apply_staging)
+app.command("resolve")(resolve_cmd.resolve)
 app.command("ingest")(ingest_cmd.ingest)
 
 

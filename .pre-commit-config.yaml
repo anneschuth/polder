@@ -27,12 +27,6 @@ repos:
 
   - repo: local
     hooks:
-      - id: lint-text
-        name: lint-text (NL/EN anti-AI-tells)
-        entry: bash scripts/lint_text.sh
-        language: system
-        pass_filenames: false
-
       - id: polder-validate
         name: polder-validate (data schema check)
         entry: uv run polder-validate

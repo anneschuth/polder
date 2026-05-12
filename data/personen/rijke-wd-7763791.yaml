@@ -2,8 +2,9 @@ id: person:rijke-wd-7763791
 name:
   full: Wim de Rijke
   family: Rijke
-  given: Wim de
+  given: Wim
   initials: W.D.
+  tussenvoegsel: de
 mandaten:
 - id: 1b62b4fc-1051-49e2-9f37-829ef16ac808
   organization_id: org:gemeente-houten
@@ -19,3 +20,10 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7763791
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2412136
+  retrieved: '2026-05-11'
+birth:
+  year: 1958
+identifiers:
+  wikidata: Q2412136
