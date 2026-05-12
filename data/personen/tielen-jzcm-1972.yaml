@@ -23,6 +23,22 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0498fc02-ad8f-4df2-a346-423ebee9842e)
     retrieved: '2026-05-09'
+- id: mandate-post-staatssecretaris-min-ocw-2026-02-23
+  organization_id: org:min-ocw
+  post_id: post:staatssecretaris-min-ocw
+  role: Staatssecretaris van Onderwijs, Cultuur en Wetenschap
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8184
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000409, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8184
+  confidence: 0.96
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(97ffe642-648f-4dab-a0e8-0720e96e3e35)

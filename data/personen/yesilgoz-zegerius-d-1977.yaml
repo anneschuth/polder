@@ -34,6 +34,22 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e0e798db-dfdb-46ff-beaf-b4e76cf5231e)
     retrieved: '2026-05-09'
+- id: mandate-post-minister-min-def-2026-02-23
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Minister van Defensie
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000405, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ab41898-332f-4c08-a834-d58b4669c990)
