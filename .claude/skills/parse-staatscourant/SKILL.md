@@ -26,7 +26,11 @@ Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl)
 
 ## Output
 
-**ALLEEN JSON-array, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming of ontslag. Geen introductietekst, geen samenvatting, geen markdown-fences, geen verklaring. Alleen de array. Elk proposal heeft:
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming of ontslag. Geen introductietekst, geen samenvatting, geen markdown-fences, geen "Next step:"-suggesties. Alleen de array.
+
+**Schrijf zelf geen bestanden.** De runner vangt jouw stdout op en schrijft die naar het juiste pad. Als je Bash gebruikt voor `polder search`, dat is read-only en prima — maar gebruik nooit `Write` of `>` om JSON naar disk te zetten, en noem geen output-pad in je antwoord.
+
+Elk proposal heeft:
 
 - `person_name` (string): naam zoals in het KB, met titulering en initialen.
 - `existing_person_id` (string of null): polder-slug bij match, anders null.
@@ -50,7 +54,17 @@ Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl)
    - Extract functie (Secretaris-Generaal, Directeur-Generaal, plaatsvervangend SG, ...).
    - Extract ingangsdatum: zoek "per <datum>" of "met ingang van <datum>".
    - Extract KB-referentie: zoek "bij koninklijk besluit van <datum>, nr. <nummer>".
-4. Match `organization_id` en `post_id` aan bestaande records. Lees `data/organisaties/` en `data/posten/` voor de slug-tabel. Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`.
+4. Match `organization_id` en `post_id` aan bestaande records via `polder search` (Bash). **Verzin geen slugs**: een KB noemt "Ministerie van Defensie" — zoek de canonical slug op in plaats van `org:ministerie-defensie` te raden.
+
+   Concrete commando's (geef altijd `--json`, dat is de scripting-output):
+
+   ```bash
+   uv run polder search "Defensie" -t org --json
+   uv run polder search "minister Defensie" -t post --json
+   uv run polder search "staatssecretaris Financiën" -t post --json
+   ```
+
+   Voor ministeries volgt het slug-patroon `org:min-<afkorting>` (`org:min-def`, `org:min-fin`, `org:min-jenv`, `org:min-bzk`, `org:min-ocw`, `org:min-szw`, `org:min-vws`, `org:min-bz`, `org:min-ienw`, `org:min-lvvn`, `org:min-az`, `org:min-ezk`, `org:min-kgg`). Bewindspersoon-posts volgen `post:minister-<min-slug-suffix>` of `post:staatssecretaris-<min-slug-suffix>` (bv. `post:minister-min-def`, `post:staatssecretaris-min-fin`). Als zoek niets vindt, stel een nieuwe slug voor en flag dat in `confidence_reasoning`.
 5. Bouw het proposal. Confidence-rubriek:
    - Volledige naam plus expliciete functie plus expliciete datum plus KB-referentie: 0.95 of hoger.
    - Naam ambigu (twee of meer matches in `data/personen/`): maximaal 0.7, forceert review.

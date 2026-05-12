@@ -93,30 +93,90 @@ def _level_for_org(proposal: dict, org_id: str) -> str | None:
     return None
 
 
+# Volgorde belangrijk: meest-specifieke keyword eerst. Anders slokt "minister"
+# de "vice-minister-president"-rol op.
+_ROLE_KEYWORDS: list[tuple[str, str]] = [
+    ("vice-minister-president", "vice-minister-president"),
+    ("minister-president", "minister-president"),
+    ("staatssecretaris", "staatssecretaris"),
+    ("plaatsvervangend secretaris-generaal", "psg"),
+    ("secretaris-generaal", "sg"),
+    ("directeur-generaal", "dg"),
+    ("inspecteur-generaal", "ig"),
+    ("afdelingshoofd", "afdelingshoofd"),
+    ("directeur", "directeur"),
+    ("minister", "minister"),
+]
+
+
+def _post_keyword_for_role(role: str) -> str | None:
+    """Pak de canonical post-id-keyword die bij een role-string hoort.
+
+    Voorbeelden:
+      "Minister van Defensie"              -> "minister"
+      "Staatssecretaris van Financiën"     -> "staatssecretaris"
+      "Vice-Minister-President, Minister"  -> "vice-minister-president"
+    """
+    rl = role.lower()
+    for needle, keyword in _ROLE_KEYWORDS:
+        if needle in rl:
+            return keyword
+    return None
+
+
 def _resolve_post(
     proposal: dict, idx: PolderIndex, org_id: str | None
 ) -> PostMatch:
-    """Match post-id.
+    """Match post-id in vier oplopende strategieën:
 
-    Een ontbrekende post in `data/` is nog steeds auto-mergeable mits apply
-    hem kan aanmaken: dat lukt als de `role` mapt op een schema-classification.
-    In dat geval is `creatable` waar en geeft apply zelf de post-creation door.
+    1. Exact: ``post:X`` zit letterlijk in ``data/posten/``.
+    2. Org + classification: als de skill een verzonnen slug levert maar er
+       is precies één post met dezelfde classification onder de geresolveerde
+       organisatie. Voor bewindspersoon-posts werkt dit altijd (één
+       ``post:minister-min-X`` per ministerie), voor andere classifications
+       alleen als er geen ambiguïteit is.
+    3. Creatable: ``role`` mapt op een schema-classification, dus apply kan
+       de post zelf aanmaken in deze run.
+    4. Geen match.
     """
     from polder.apply import _classification_from_role
 
     pid = proposal.get("post_id")
-    if not pid:
-        return PostMatch(None, 0.0, "no_post_id_in_proposal")
-    if pid in idx.post_ids:
+    role = str(proposal.get("role") or "").strip()
+
+    # Strategie 1: exact slug-match.
+    if pid and pid in idx.post_ids:
         post_org = idx.post_to_org.get(pid)
         if org_id and post_org and post_org != org_id:
             return PostMatch(pid, 0.70, "exact_but_org_mismatch")
         return PostMatch(pid, 0.95, "exact")
-    # Post niet in data. Acceptabel als de role een afleidbare classification
-    # heeft — dan maakt apply hem in deze run aan.
-    role = str(proposal.get("role") or "").strip()
-    if role and _classification_from_role(role) is not None:
+
+    classification = _classification_from_role(role) if role else None
+
+    # Strategie 2: fuzzy via (org, classification) met role-keyword als sub-
+    # discriminator. Bewindspersoon-posts bestaan in twee smaken onder elk
+    # ministerie (minister + staatssecretaris); classification alleen is dan
+    # ambigu. We filteren de kandidaten op de role-keyword die in de canonical
+    # post-id terugkomt, bv. "minister" matcht "post:minister-min-def" maar
+    # niet "post:staatssecretaris-min-def".
+    if org_id and classification:
+        candidates = idx.posts_by_org_class.get((org_id, classification), [])
+        if role:
+            keyword = _post_keyword_for_role(role)
+            if keyword:
+                refined = [
+                    p for p in candidates if f":{keyword}-" in p or p.endswith(f":{keyword}")
+                ]
+                if len(refined) == 1:
+                    return PostMatch(refined[0], 0.90, "matched_by_org_classification")
+        if len(candidates) == 1:
+            return PostMatch(candidates[0], 0.90, "matched_by_org_classification")
+
+    # Strategie 3: creatable. Apply maakt de post zelf aan.
+    if pid and classification:
         return PostMatch(pid, 0.85, "creatable_from_role")
+    if not pid:
+        return PostMatch(None, 0.0, "no_post_id_in_proposal")
     return PostMatch(None, 0.0, "not_in_data")
 
 

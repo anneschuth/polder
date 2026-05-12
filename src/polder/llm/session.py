@@ -137,7 +137,16 @@ class SkillSession:
         # - parse-organogram: Read-tool voor de PDF.
         # - lookup-person: Bash voor `polder show/search/lookup wikidata`,
         #   WebFetch en WebSearch voor externe bronnen.
-        _TOOLED_SKILLS = {"parse-organogram", "lookup-person"}
+        # - parse-staatscourant / parse-abd-nieuws: Bash voor `polder search`
+        #   zodat de skill canonical org/post-slugs kan opzoeken in plaats
+        #   van ze te raden (anders krijg je hallucinaties als
+        #   `post:minister-defensie` waar `post:minister-min-def` bestaat).
+        _TOOLED_SKILLS = {
+            "parse-organogram",
+            "lookup-person",
+            "parse-staatscourant",
+            "parse-abd-nieuws",
+        }
         self.allow_tools = allow_tools or skill_name in _TOOLED_SKILLS
         self.extra_args = list(extra_args or [])
         self._skill_path = _skill_path(skill_name)

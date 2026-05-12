@@ -106,6 +106,10 @@ class PolderIndex:
     post_ids: set[str] = field(default_factory=set)
     # post_id -> organization_id (om post/org-consistency te checken)
     post_to_org: dict[str, str] = field(default_factory=dict)
+    # (organization_id, classification) -> [post_id, ...]. Voor fuzzy post-
+    # resolution wanneer de skill een verzonnen slug levert ("post:minister-
+    # defensie") en we alsnog de canonical post willen vinden via org+rol.
+    posts_by_org_class: dict[tuple[str, str], list[str]] = field(default_factory=dict)
     # alias-slug -> canonical org_id. Vult vanuit names[*].value en abbr,
     # zodat bv. `org:ministerie-van-financien` matched op `org:min-fin`.
     org_by_alias: dict[str, str] = field(default_factory=dict)
@@ -164,14 +168,26 @@ class PolderIndex:
                     for raw in (n.get("value"), n.get("abbr")):
                         if not raw:
                             continue
-                        # Twee vormen registreren: de korte ("financien")
-                        # en, bij ministeries, ook de verbose ("ministerie-van-financien"
-                        # en "min-financien"). Daardoor matchen we beide
-                        # spelling-varianten op de canonical id.
+                        # Meerdere vormen registreren zodat we alle spelling-
+                        # varianten van een ministerie-naam matchen op de
+                        # canonical id. Voorbeelden voor min-fin:
+                        #   "financien"                          (kort)
+                        #   "ministerie-van-financien"           (verbose, met "van")
+                        #   "ministerie-financien"               (verbose, zonder "van")
+                        #   "min-financien"                      (afgekorte verbose)
+                        # Ook werkt dit voor de abbr (BZK, FIN, OCW, ...):
+                        #   "bzk" -> "ministerie-bzk", "min-bzk"
+                        # Skills produceren typisch "org:ministerie-<abbr>" of
+                        # "org:ministerie-<woord>"; alles wat hier landt resolved.
                         for candidate in (
                             _org_alias_slug(raw),
                             (
                                 _slugify_org(f"ministerie van {raw}")
+                                if is_ministerie
+                                else None
+                            ),
+                            (
+                                _slugify_org(f"ministerie {raw}")
                                 if is_ministerie
                                 else None
                             ),
@@ -192,8 +208,14 @@ class PolderIndex:
                     continue
                 if isinstance(d, dict) and d.get("id"):
                     idx.post_ids.add(d["id"])
-                    if d.get("organization_id"):
-                        idx.post_to_org[d["id"]] = d["organization_id"]
+                    org_id = d.get("organization_id")
+                    classification = d.get("classification")
+                    if org_id:
+                        idx.post_to_org[d["id"]] = org_id
+                        if classification:
+                            idx.posts_by_org_class.setdefault(
+                                (org_id, classification), []
+                            ).append(d["id"])
 
         return idx
 

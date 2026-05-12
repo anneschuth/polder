@@ -223,3 +223,48 @@ def test_resolve_proposal_post_creatable_from_role(polder_index) -> None:
     assert result["resolved_post_id"] == "post:nieuwe-directeur-bij-az"
     # Pas als persoon ook hoog scoort wordt het auto-merge; Rutte is matchbaar.
     assert "creatable_from_role" in (result.get("resolution_notes") or "")
+
+
+def test_resolve_proposal_post_matched_via_org_classification(polder_index) -> None:
+    """Skill-verzonnen post-slug matcht via (org, classification, role-keyword)
+    op de canonical post-id. Voorbeeld: parse-staatscourant produceert vaak
+    ``post:minister-defensie`` waar in data ``post:minister-min-def`` staat.
+    """
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "R.P. Brekelmans",
+        "organization_id": "org:ministerie-defensie",  # ook een verzin
+        "post_id": "post:minister-defensie",
+        "role": "Minister van Defensie",
+        "end_date": "2026-02-23",
+        "staatscourant_url": "https://example.org/stcrt-2026-8175",
+        "confidence": 0.94,
+    }
+    result = resolve_proposal(proposal, polder_index)
+
+    assert result["resolved_organization_id"] == "org:min-def"
+    assert result["resolved_post_id"] == "post:minister-min-def"
+    assert result["resolution_confidence"]["post"] >= 0.90
+    assert "matched_by_org_classification" in (result.get("resolution_notes") or "")
+
+
+def test_resolve_proposal_post_role_keyword_disambiguates(polder_index) -> None:
+    """Onder eenzelfde ministerie bestaan zowel minister- als staatssecretaris-
+    posts (beide classification=bewindspersoon). De role-keyword in de proposal
+    moet bepalen welke kandidaat geselecteerd wordt.
+    """
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "G.P. Tuinman",
+        "organization_id": "org:ministerie-defensie",
+        "post_id": "post:staatssecretaris-defensie",
+        "role": "Staatssecretaris van Defensie",
+        "end_date": "2026-02-23",
+        "staatscourant_url": "https://example.org/stcrt-2026-8175",
+        "confidence": 0.93,
+    }
+    result = resolve_proposal(proposal, polder_index)
+
+    assert result["resolved_post_id"] == "post:staatssecretaris-min-def"
