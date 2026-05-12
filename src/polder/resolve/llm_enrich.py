@@ -228,22 +228,44 @@ def _build_payload(
             proposal.get("resolved_organization_id") or proposal.get("organization_id"),
         )
 
+    # Organogram-proposals (type: person_post) gebruiken `evidence` ipv
+    # `evidence_snippet`, en hebben geen `role` of `start_date`. Map die
+    # zodat de skill toch context heeft om mee te werken.
+    proposal_type = proposal.get("type") or ""
+    is_organogram = proposal_type == "person_post"
+
     payload = {
         "mode": bucket.mode,
+        "proposal_type": proposal_type or "staatscourant_or_abd",
         "proposal": {
             "person_name": proposal.get("person_name"),
-            "role": proposal.get("role"),
+            "role": proposal.get("role")
+            or proposal.get("classification")
+            or (proposal.get("post_id") or "").replace("post:", "").replace("-", " "),
             "organization_id": proposal.get("resolved_organization_id")
             or proposal.get("organization_id"),
             "organization_chain": proposal.get("organization_chain"),
+            "post_id": proposal.get("post_id"),
+            "classification": proposal.get("classification"),
             "start_date": proposal.get("start_date"),
             "abd_nieuws_url": proposal.get("abd_nieuws_url"),
             "staatscourant_url": proposal.get("staatscourant_url"),
-            "evidence_snippet": proposal.get("evidence_snippet"),
+            "bron_url": proposal.get("bron_url"),
+            "evidence_snippet": proposal.get("evidence_snippet")
+            or proposal.get("evidence"),
         },
         "candidates": enriched_candidates,
         "wikidata_candidates": wikidata,
     }
+    if is_organogram:
+        payload["note_to_skill"] = (
+            "Dit is een ORGANOGRAM-proposal: extract uit een ABD-organogram-PDF. "
+            "Er is geen Staatscourant/ABD-tekst, alleen een rubriek-extract. "
+            "Met alleen naam + post_id + classification kun je in de meeste gevallen "
+            "alleen `no_match` of `matched_existing` produceren als Wikidata of "
+            "candidates uitsluitsel geven. Geen create_new zonder geverifieerde "
+            "birth_year."
+        )
     return json.dumps(payload, ensure_ascii=False)
 
 
