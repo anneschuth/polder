@@ -643,6 +643,14 @@ def plan_apply(
                 # Zonder een chain naar deze org gaat de chain-check er
                 # straks tegenaan klagen; leeg de chain.
                 chain = []
+        elif existing_post_id:
+            # Post bestaat nog niet maar is een MZP-slug: leid het canonical
+            # ministerie af. Voorkomt dat apply de portefeuille onder de
+            # chain-fallback org:onderdeel-bck plaatst.
+            mzp_org = _mzp_organization_for_post(existing_post_id)
+            if mzp_org:
+                target_org_id = mzp_org
+                chain = []
 
         # Consistentie-check vóór create-org: als de proposal zowel een chain
         # als een `organization_id` levert, moet de laatste chain-entry
@@ -914,6 +922,31 @@ def _build_org_record(
     return record
 
 
+# Minister-zonder-portefeuille hangt staatsrechtelijk onder het ministerie
+# waaronder de portefeuille valt, niet onder "Kabinet" (org:onderdeel-bck)
+# zoals KB-skills soms voorstellen. Mapping op portefeuille-keyword:
+_MZP_PORTFOLIO_TO_MIN: list[tuple[str, str]] = [
+    ("buitenlandse-handel", "org:min-bz"),
+    ("asiel-en-migratie", "org:min-aenm"),
+    ("volkshuisvesting", "org:min-bzk"),
+    ("klimaat", "org:min-kgg"),
+    ("werk-en-participatie", "org:min-szw"),
+    ("langdurige-zorg", "org:min-vws"),
+]
+
+
+def _mzp_organization_for_post(post_id: str) -> str | None:
+    """Voor een post:minister-zp-<portefeuille>-slug: het canonical
+    ministerie waaronder die portefeuille valt. None voor niet-MZP-posts."""
+    if not post_id.startswith("post:minister-zp-"):
+        return None
+    suffix = post_id.removeprefix("post:minister-zp-")
+    for trigger, org in _MZP_PORTFOLIO_TO_MIN:
+        if trigger in suffix:
+            return org
+    return None
+
+
 def _build_post_record(
     *,
     post_id: str,
@@ -922,6 +955,13 @@ def _build_post_record(
     classification: str,
     start_date: str | None,
 ) -> dict[str, Any]:
+    # MZP-posts: override de chain-org met het canonical ministerie.
+    # Skills geven vaak "org:kabinet" / "org:onderdeel-bck" mee, maar de
+    # post hoort onder het portefeuille-ministerie.
+    mzp_org = _mzp_organization_for_post(post_id)
+    if mzp_org:
+        organization_id = mzp_org
+
     valid_from = _normalize_date_string(start_date) or _today_iso()
     record = {
         "id": post_id,
