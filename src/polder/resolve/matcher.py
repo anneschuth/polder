@@ -17,7 +17,7 @@ from pathlib import Path
 
 import yaml
 
-from polder.lib.initials import compact_initials
+from polder.lib.initials import compact_initials, compact_initials_loose
 from polder.resolve.names import ParsedName, parse_person_name
 
 logger = logging.getLogger("polder.resolve.matcher")
@@ -136,14 +136,20 @@ class PolderIndex:
                 name = d.get("name") or {}
                 family = _norm_family(name.get("family"))
                 given = _norm_given(name.get("given"))
-                initials = compact_initials(name.get("initials"))
+                raw_init = name.get("initials")
+                initials = compact_initials(raw_init)
+                initials_loose = compact_initials_loose(raw_init)
                 year = (d.get("birth") or {}).get("year")
                 if family:
                     idx.by_family.setdefault(family, []).append(pid)
-                    if initials and isinstance(year, int):
-                        idx.by_family_initials_year.setdefault(
-                            (family, initials, year), []
-                        ).append(pid)
+                    if isinstance(year, int):
+                        # Index op zowel strict als loose key zodat
+                        # "S.Th.M." in data matched met "S.T.M." in proposal
+                        # en omgekeerd.
+                        for ikey in {initials, initials_loose} - {""}:
+                            idx.by_family_initials_year.setdefault(
+                                (family, ikey, year), []
+                            ).append(pid)
                     if given:
                         idx.by_family_given.setdefault((family, given), []).append(pid)
 
@@ -251,14 +257,22 @@ def match_person(
 
     family = parsed.family  # al lowercase ASCII via parse_person_name
 
-    # 1. family + initials + birth_year
+    # 1. family + initials + birth_year. Probeer zowel de strict-vorm als
+    # de digraph-collapsed loose-vorm (S.Th.M. <-> S.T.M.). De index zelf
+    # bevat beide varianten per record.
     if parsed.initials and birth_year is not None:
-        key = (family, parsed.initials, birth_year)
-        ids = idx.by_family_initials_year.get(key, [])
-        if len(ids) == 1:
-            return PersonMatch(ids[0], 0.98, "family_initials_year")
-        if len(ids) > 1:
-            return PersonMatch(None, 0.0, "ambiguous_family_initials_year", tuple(ids))
+        seen: set[str] = set()
+        for ikey in (parsed.initials, parsed.initials_loose):
+            if not ikey or ikey in seen:
+                continue
+            seen.add(ikey)
+            ids = idx.by_family_initials_year.get((family, ikey, birth_year), [])
+            if len(ids) == 1:
+                return PersonMatch(ids[0], 0.98, "family_initials_year")
+            if len(ids) > 1:
+                return PersonMatch(
+                    None, 0.0, "ambiguous_family_initials_year", tuple(ids)
+                )
 
     # 2. family + given (exact compact-match)
     if parsed.given:

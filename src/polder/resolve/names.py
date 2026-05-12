@@ -14,7 +14,7 @@ import re
 import unicodedata
 from dataclasses import dataclass
 
-from polder.lib.initials import compact_initials
+from polder.lib.initials import compact_initials, compact_initials_loose
 
 
 # Honorific-tokens die als prefix vóór de eigenlijke naam staan ("drs.", "mr.").
@@ -48,6 +48,7 @@ class ParsedName:
     family: str
     given: str | None
     initials: str | None  # compact-vorm zonder punten, bv. "mp"
+    initials_loose: str | None = None  # digraph-collapsed ("S.Th.M." -> "stm")
 
 
 def _to_ascii_lower(value: str) -> str:
@@ -115,7 +116,7 @@ def parse_person_name(name: str) -> ParsedName:
        nickname uit parens).
     """
     if not name or not name.strip():
-        return ParsedName("", None, None)
+        return ParsedName("", None, None, None)
 
     raw = name.strip()
 
@@ -134,18 +135,20 @@ def parse_person_name(name: str) -> ParsedName:
     if not tokens:
         family = ""
         given = _to_ascii_lower(nickname) if nickname else None
-        return ParsedName(family, given, None)
+        return ParsedName(family, given, None, None)
 
     # 2. Initialen-tokens vooraan verzamelen.
     initials_tokens: list[str] = []
     while tokens and _is_initials_token(tokens[0]):
         initials_tokens.append(tokens.pop(0))
-    initials_compact = compact_initials("".join(initials_tokens)) or None
+    initials_raw = "".join(initials_tokens)
+    initials_compact = compact_initials(initials_raw) or None
+    initials_loose = compact_initials_loose(initials_raw) or None
 
     if not tokens:
         # Alleen initialen, geen family in input
         given = _to_ascii_lower(nickname) if nickname else None
-        return ParsedName("", given, initials_compact)
+        return ParsedName("", given, initials_compact, initials_loose)
 
     # 3. Laatste token is family (na suffix-stripping). Tussenvoegsel-tokens
     # tussen given en family overslaan voor family-positie.
@@ -165,4 +168,4 @@ def parse_person_name(name: str) -> ParsedName:
         else:
             given = None
 
-    return ParsedName(family, given, initials_compact)
+    return ParsedName(family, given, initials_compact, initials_loose)

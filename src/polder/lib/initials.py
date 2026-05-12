@@ -51,6 +51,34 @@ def compact_initials(value: str | None) -> str:
     return "".join(letters).lower()
 
 
+def compact_initials_loose(value: str | None) -> str:
+    """Compact-vorm waarbij Nederlandse digraph-initialen tot één letter
+    worden ingekort.
+
+    Nederlandse naam-conventie laat "Th" of "Ph" als één klank tellen:
+    "Theo" wordt soms als "Th." geschreven, soms als "T.". Onze data en
+    KB-bronnen wisselen daarin. Voor matching gebruiken we deze vorm als
+    secundaire key:
+
+      compact_initials("S.Th.M.")        -> "sthm"   (strict)
+      compact_initials_loose("S.Th.M.")  -> "stm"    (digraph-collapsed)
+      compact_initials("S.T.M.")         -> "stm"    (al stm)
+      compact_initials_loose("S.T.M.")   -> "stm"    (geen digraph, gelijk)
+
+    Match-strategieen kunnen beide keys proberen om data-of-bron-drift af
+    te vangen zonder valse positives op compleet andere initialen.
+    """
+    if not value:
+        return ""
+    cleaned = _to_ascii(value)
+    # Knip "h" direct na een hoofdletter weg ("Th" -> "T", "Ph" -> "P", "Ch"
+    # -> "C", "Jh" -> "J"). Doe dit voor letter-extractie zodat zowel
+    # "S.Th.M." als "STh M" naar "stm" collapsen.
+    collapsed = re.sub(r"([A-Z])h", r"\1", cleaned)
+    letters = re.findall(r"[A-Za-z]", collapsed)
+    return "".join(letters).lower()
+
+
 def merge_initials(a: str | None, b: str | None) -> str | None:
     """Combineer twee initialen-strings, kies de meest informatieve.
 
