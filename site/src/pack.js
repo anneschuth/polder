@@ -3,6 +3,8 @@ import { isActiveOn } from "./util.js";
 
 const NODE_W = 130;
 const NODE_H = 36;
+const COMPOUND_W = 200;
+const COMPOUND_H = 52;
 const ZOOM_MS = 700;
 const GRID_THRESHOLD = 12;
 const GRID_COLS = 10;
@@ -99,7 +101,9 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
     const focusDepth = focusNode ? focusNode.depth : 0;
     const sp = spacingForDepth(focusDepth);
-    const layout = d3.tree().nodeSize([NODE_W + sp.sibling, NODE_H + sp.level]);
+    // Bij compound-nodes (post met persoon inline) gebruiken we COMPOUND_W
+    // als sibling-spacing zodat tegels niet overlappen.
+    const layout = d3.tree().nodeSize([COMPOUND_W + sp.sibling, COMPOUND_H + sp.level]);
     layout(rootHierarchy);
     wrapWideRows(rootHierarchy, sp);
 
@@ -146,9 +150,9 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
     enter
       .append("rect")
-      .attr("width", NODE_W)
+      .attr("width", (d) => nodeWidth(d))
       .attr("height", (d) => nodeHeight(d))
-      .attr("x", -NODE_W / 2)
+      .attr("x", (d) => -nodeWidth(d) / 2)
       .attr("y", (d) => -nodeHeight(d) / 2)
       .attr("rx", 6)
       .attr("ry", 6);
@@ -179,14 +183,16 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     merged.attr("transform", (d) => `translate(${d.x},${d.y})`);
     merged
       .select("rect")
+      .attr("width", (d) => nodeWidth(d))
       .attr("height", (d) => nodeHeight(d))
+      .attr("x", (d) => -nodeWidth(d) / 2)
       .attr("y", (d) => -nodeHeight(d) / 2);
     // Hoofdlabel: bij compound iets omhoog, anders gecentreerd.
     merged.select("text.node-label").each(function (d) {
       const sub = compoundPersonName(d);
       const el = d3.select(this);
       if (sub !== null) {
-        el.attr("y", -8).text(truncate(d.data.label || "", 22));
+        el.attr("y", -9).text(truncate(d.data.label || "", 28));
       } else {
         el.attr("y", 0).text(truncate(d.data.label || "", 18));
       }
@@ -195,7 +201,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     merged.select("text.node-subline").each(function (d) {
       const sub = compoundPersonName(d);
       if (sub === null) return;
-      d3.select(this).attr("y", 12).text(truncate(sub, 22));
+      d3.select(this).attr("y", 11).text(truncate(sub, 28));
     });
   }
 
@@ -208,8 +214,12 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     return active[0].person_label || active[0].person_id || null;
   }
 
+  function nodeWidth(d) {
+    return compoundPersonName(d) !== null ? COMPOUND_W : NODE_W;
+  }
+
   function nodeHeight(d) {
-    return compoundPersonName(d) !== null ? NODE_H * 1.5 : NODE_H;
+    return compoundPersonName(d) !== null ? COMPOUND_H : NODE_H;
   }
 
   function nodeKindClass(d) {
