@@ -69,12 +69,13 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 ### Vision-modus (PDF of PNG)
 
 1. Roep Claude vision aan via `anthropic.messages.create` met de afbeelding als image-content. Voor PDF: render eerst per pagina naar PNG (bijvoorbeeld via `pdf2image`), dan vision per pagina.
-2. Loop alle gedetecteerde boxen langs. Voor elke box:
-   - Lees de titel-regel ("Directie X", "DG Bestuur", "Afdeling Beleid").
+2. Loop alle gedetecteerde boxen langs. **Ga zo diep als de afbeelding gaat** — niveaus ministerie -> DG -> directie -> afdeling -> team zijn ALLE relevant. Een organogram toont vaak meer dan alleen DG/directie; sla afdelingen niet over. Voor elke box:
+   - Lees de titel-regel ("Directie X", "DG Bestuur", "Afdeling Beleid", "Cluster Y", "Team Z").
    - Lees de eventuele persoonsnaam onder de titel.
    - Volg de verbindingslijn omhoog naar de parent-box; de parent geeft `parent_id`.
 3. Map de titel naar `classification` (zie mapping hieronder).
 4. Cap `confidence` voor elk `person_post` proposal op 0.85. Org-structuur mag hoger als de lijnen helder zijn.
+5. **Afdeling-niveau verplicht waar het bestaat in de bron.** Als de bron afdelingen toont onder een directie (zelfs zonder eigen persoon-naam), produceer dan toch een `org_structure`-record voor elke afdeling met de directie als `parent_id`. Liever 50 afdeling-records met `confidence: 0.85` dan een platte boom met alleen 17 directies.
 
 ### Tekstmodus (inline_text uit manifest)
 
