@@ -1,8 +1,10 @@
 import { loadJSON } from "./fetcher.js";
 
-const PAD = 6;
-const ZOOM_MS = 750;
-const FADE_MS = 240;
+const NODE_W = 130;
+const NODE_H = 36;
+const LEVEL_H = 90;
+const SIBLING_GAP = 12;
+const ZOOM_MS = 700;
 
 export function createChart(container, rootData, onCrumbChange) {
   const width = container.clientWidth;
@@ -11,54 +13,98 @@ export function createChart(container, rootData, onCrumbChange) {
   const svg = d3
     .select(container)
     .append("svg")
-    .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
     .attr("width", width)
     .attr("height", height);
 
-  const g = svg.append("g");
+  const viewport = svg.append("g").attr("class", "viewport");
+  const linkLayer = viewport.append("g").attr("class", "links");
+  const nodeLayer = viewport.append("g").attr("class", "nodes");
 
-  let root = layout(rootData, Math.min(width, height));
-  let focus = root;
-  let view;
+  let rootHierarchy;
+  let focusNode;
 
-  render();
-  zoomTo([focus.x, focus.y, focus.r * 2]);
+  redraw();
+  centerOn(rootHierarchy, true);
   emitCrumb();
 
-  svg.on("click", () => zoom(null, root));
+  svg.on("click", () => {
+    focusNode = rootHierarchy;
+    centerOn(rootHierarchy);
+    applyFade();
+    emitCrumb();
+  });
 
-  function layout(data, size) {
-    const hierarchy = d3
-      .hierarchy(data)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
-      .sort((a, b) => b.value - a.value);
-    return d3.pack().size([size, size]).padding(PAD)(hierarchy);
+  function redraw() {
+    rootHierarchy = d3.hierarchy(rootData);
+
+    const layout = d3.tree().nodeSize([NODE_W + SIBLING_GAP, LEVEL_H]);
+    layout(rootHierarchy);
+
+    if (!focusNode) focusNode = rootHierarchy;
+    else {
+      const refreshed = rootHierarchy.find((n) => nodeId(n) === nodeId(focusNode));
+      focusNode = refreshed || rootHierarchy;
+    }
+
+    renderLinks();
+    renderNodes();
+    applyFade();
   }
 
-  function render() {
-    g.selectAll("*").remove();
-    const descendants = root.descendants().slice(1); // skip synthetic root
+  function renderLinks() {
+    const links = linkLayer
+      .selectAll("path.link")
+      .data(rootHierarchy.links(), (d) => `${nodeId(d.source)}->${nodeId(d.target)}`);
+    links.exit().remove();
+    links
+      .enter()
+      .append("path")
+      .attr("class", "link")
+      .merge(links)
+      .attr("d", (d) => linkPath(d.source, d.target));
+  }
 
-    g.selectAll("circle.node")
-      .data(descendants, (d) => nodeId(d))
-      .join("circle")
+  function renderNodes() {
+    const nodes = nodeLayer
+      .selectAll("g.node")
+      .data(rootHierarchy.descendants(), (d) => nodeId(d));
+    nodes.exit().remove();
+
+    const enter = nodes
+      .enter()
+      .append("g")
       .attr("class", (d) => `node ${nodeKindClass(d)}`)
       .attr("data-id", (d) => nodeId(d))
+      .style("cursor", "pointer")
       .on("click", (event, d) => {
         event.stopPropagation();
         handleClick(d);
       });
 
-    g.selectAll("text.label")
-      .data(descendants, (d) => nodeId(d))
-      .join("text")
-      .attr("class", "label")
-      .text((d) => d.data.label || "");
+    enter
+      .append("rect")
+      .attr("width", NODE_W)
+      .attr("height", NODE_H)
+      .attr("x", -NODE_W / 2)
+      .attr("y", -NODE_H / 2)
+      .attr("rx", 6)
+      .attr("ry", 6);
 
-    applyFocusFade();
+    enter
+      .append("text")
+      .attr("class", "node-label")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .text((d) => truncate(d.data.label || "", 18));
+
+    const merged = enter.merge(nodes);
+    merged.attr("class", (d) => `node ${nodeKindClass(d)}`);
+    merged.attr("transform", (d) => `translate(${d.x},${d.y})`);
+    merged.select("text.node-label").text((d) => truncate(d.data.label || "", 18));
   }
 
   function nodeKindClass(d) {
+    if (d.depth === 0) return "root";
     if (d.data.kind === "ministerie" || d.data.type === "ministerie") return "ministerie";
     if (d.children && d.children.length) return "onderdeel";
     return "leaf";
@@ -76,11 +122,10 @@ export function createChart(container, rootData, onCrumbChange) {
         for (const key of ["names", "valid_from", "valid_until", "type", "classification"]) {
           if (subtree[key] !== undefined) d.data[key] = subtree[key];
         }
-        root = layout(rootData, Math.min(width, height));
-        const next = root.find((n) => nodeId(n) === d.data.id) || root;
-        focus = next;
-        render();
-        zoom(null, next);
+        redraw();
+        const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
+        focusNode = target;
+        centerOn(target);
         emitCrumb();
         return;
       } catch (err) {
@@ -88,61 +133,51 @@ export function createChart(container, rootData, onCrumbChange) {
         return;
       }
     }
-    zoom(null, d === focus ? (d.parent || root) : d);
-  }
-
-  function zoom(event, target) {
-    focus = target;
+    focusNode = d;
+    centerOn(d);
+    applyFade();
     emitCrumb();
-    const transition = svg
-      .transition()
-      .duration(ZOOM_MS)
-      .tween("zoom", () => {
-        const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
-        return (t) => zoomTo(i(t));
-      });
-    transition.on("end", applyFocusFade);
-    applyFocusFade();
   }
 
-  function zoomTo(v) {
-    view = v;
-    const k = Math.min(width, height) / v[2];
-    g.selectAll("circle.node").attr(
-      "transform",
-      (d) => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`,
-    );
-    g.selectAll("circle.node").attr("r", (d) => d.r * k);
-    g.selectAll("text.label")
-      .attr("transform", (d) => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`)
-      .attr("font-size", (d) => Math.max(9, Math.min(16, d.r * k * 0.22)));
+  function centerOn(target, instant = false) {
+    const subtreeNodes = target.descendants();
+    const xs = subtreeNodes.map((n) => n.x);
+    const ys = subtreeNodes.map((n) => n.y);
+    const minX = Math.min(...xs) - NODE_W / 2 - 20;
+    const maxX = Math.max(...xs) + NODE_W / 2 + 20;
+    const minY = Math.min(...ys) - NODE_H / 2 - 20;
+    const maxY = Math.max(...ys) + NODE_H / 2 + 20;
+    const subW = Math.max(maxX - minX, NODE_W * 3);
+    const subH = Math.max(maxY - minY, NODE_H * 3);
+    const scale = Math.min(width / subW, height / subH, 1.5);
+    const tx = width / 2 - ((minX + maxX) / 2) * scale;
+    const ty = height / 2 - ((minY + maxY) / 2) * scale;
+    const transform = `translate(${tx},${ty}) scale(${scale})`;
+    if (instant) {
+      viewport.attr("transform", transform);
+    } else {
+      viewport.transition().duration(ZOOM_MS).attr("transform", transform);
+    }
   }
 
-  function applyFocusFade() {
+  function applyFade() {
     const focusSet = new Set();
-    let cur = focus;
+    focusNode.each((n) => focusSet.add(n));
+    let cur = focusNode;
     while (cur) {
       focusSet.add(cur);
       cur = cur.parent;
     }
-    focus.each((n) => focusSet.add(n));
-
-    g.selectAll("circle.node").classed("faded", (d) => !focusSet.has(d));
-    g.selectAll("text.label")
-      .classed("faded", (d) => !focusSet.has(d))
-      .style("display", (d) => labelVisible(d, focusSet) ? null : "none");
-  }
-
-  function labelVisible(d, focusSet) {
-    if (!focusSet.has(d)) return false;
-    const k = Math.min(width, height) / view[2];
-    return d.r * k > 18;
+    nodeLayer.selectAll("g.node").classed("faded", (d) => !focusSet.has(d));
+    linkLayer
+      .selectAll("path.link")
+      .classed("faded", (d) => !focusSet.has(d.source) || !focusSet.has(d.target));
   }
 
   function emitCrumb() {
     if (!onCrumbChange) return;
     const trail = [];
-    let cur = focus;
+    let cur = focusNode;
     while (cur) {
       trail.unshift({
         id: cur.data.id || null,
@@ -151,12 +186,32 @@ export function createChart(container, rootData, onCrumbChange) {
       });
       cur = cur.parent;
     }
-    onCrumbChange(trail, (target) => zoom(null, target));
+    onCrumbChange(trail, (target) => {
+      focusNode = target;
+      centerOn(target);
+      applyFade();
+      emitCrumb();
+    });
   }
 
   return {
     focusRoot() {
-      zoom(null, root);
+      focusNode = rootHierarchy;
+      centerOn(rootHierarchy);
+      applyFade();
+      emitCrumb();
     },
   };
+}
+
+function linkPath(source, target) {
+  const sy = source.y + NODE_H / 2;
+  const ty = target.y - NODE_H / 2;
+  const my = (sy + ty) / 2;
+  return `M${source.x},${sy} C${source.x},${my} ${target.x},${my} ${target.x},${ty}`;
+}
+
+function truncate(s, n) {
+  if (s.length <= n) return s;
+  return s.slice(0, n - 1) + "…";
 }

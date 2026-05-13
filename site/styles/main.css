@@ -87,48 +87,54 @@ main {
   color: var(--fg-muted);
 }
 
-circle.node {
-  cursor: pointer;
-  stroke-width: 1px;
-  transition: opacity 240ms ease, fill 240ms ease;
+g.node rect {
+  stroke-width: 1.5px;
+  transition: opacity 240ms ease, stroke 240ms ease, fill 240ms ease;
 }
 
-circle.node.ministerie {
+g.node.root rect {
+  fill: #0d1b2a;
+  stroke: var(--accent);
+}
+
+g.node.ministerie rect {
   fill: #1f2a44;
   stroke: var(--ring-ministerie);
 }
 
-circle.node.onderdeel {
+g.node.onderdeel rect {
   fill: #1a2235;
   stroke: var(--ring-onderdeel);
 }
 
-circle.node.leaf {
+g.node.leaf rect {
   fill: #161b22;
   stroke: var(--ring-leaf);
 }
 
-circle.node.faded {
+g.node:hover rect {
+  stroke-width: 2.5px;
+}
+
+g.node.faded {
   opacity: var(--fade);
 }
 
-circle.node:hover {
-  stroke-width: 2px;
-}
-
-text.label {
+text.node-label {
   pointer-events: none;
   fill: var(--fg);
-  font-size: 11px;
-  text-anchor: middle;
-  dominant-baseline: middle;
+  font-size: 12px;
+  font-weight: 500;
   user-select: none;
-  paint-order: stroke;
-  stroke: var(--bg);
-  stroke-width: 3px;
-  stroke-linejoin: round;
 }
 
-text.label.faded {
+path.link {
+  fill: none;
+  stroke: #3a4660;
+  stroke-width: 1.2px;
+  transition: opacity 240ms ease;
+}
+
+path.link.faded {
   opacity: var(--fade);
 }
