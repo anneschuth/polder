@@ -1,0 +1,15 @@
+id: org:onderdeel-sg-min-az
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-az
+names:
+- value: Secretaris-generaal Cluster
+  abbr: SG
+  valid_from: '1900-01-01'
+  valid_until: null
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: rijksoverheid_organogram
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-az
+  retrieved: '2026-05-13'

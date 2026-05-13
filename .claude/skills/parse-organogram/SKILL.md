@@ -95,17 +95,28 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 
 ### Hiërarchie-patroon ministeries
 
-Een Nederlands ministerie heeft een vaste top-laag die in elk organogram terugkomt. Volg dit patroon strict, niet de visuele layout:
+Een Nederlands ministerie heeft een vaste top-laag die in elk organogram terugkomt. Volg dit patroon strict, niet de visuele layout. **Audit-check** (`ministerie_direct_onderdeel`, `ministerie_direct_post`) handhaaft deze regels.
 
-1. `org:min-<x>` is de root.
-2. Bewindspersonen-posten (`post:minister-min-<x>`, `post:staatssecretaris-min-<x>`, eventuele MZP-posten) hangen DIRECT onder `org:min-<x>`. Geen tussenliggend organisatieonderdeel.
-3. `org:onderdeel-sg-min-<x>` (Secretaris-generaal Cluster, classification `organisatieonderdeel`) hangt onder `org:min-<x>`. Hier komt `post:sg-min-<x>` (SG) en `post:plv-sg-min-<x>` (plv-SG).
-4. ALLE DG's, het Bureau ABD, AIVD, eventuele programma-DG's en clusters (Bestuursondersteuning, Mensen en Middelen) hangen onder `org:onderdeel-sg-min-<x>`, NIET direct onder `org:min-<x>`.
-5. Onder elke DG hangen de directies (`org:onderdeel-directie-<x>-min-<y>`), onder de directies hangen de afdelingen.
+Direct onder `org:min-<x>` mag:
+1. Bewindspersonen-posten (`post:minister-min-<x>`, `post:staatssecretaris-min-<x>`, MZP-posten met `classification: bewindspersoon`).
+2. De SG-cluster (`org:onderdeel-sg-min-<x>`, type `organisatieonderdeel`).
+3. ZBO's, agentschappen, RWT's, adviescolleges, inspecties, hoge-colleges — maar die hebben hun eigen `type`-veld (niet `organisatieonderdeel`). Dus DJI hoort als `type: agentschap` te zijn, niet `organisatieonderdeel`.
 
-Concreet voor BZK (zie `_cache/organogrammen/bzk-2026-organogram.pdf` als referentie-voorbeeld): SG Vincent Roozen en plv-SG Mark de Boer staan tussen de bewindspersonen-strook en de DG-rij; DGDOO, DGKR, DG VHB, DG RO, DG VBR, DG OBDR, DG AIVD, DG ABD hebben SG-cluster als parent.
+Direct onder `org:min-<x>` mag NIET:
+- Andere posten dan `classification: bewindspersoon`. Geen SG-posten, geen DG-posten, geen directeur- of afdelingshoofd-posten. Die horen onder hun organisatieonderdeel.
+- Andere `organisatieonderdeel`-records dan de SG-cluster. DG's, directies, programma-DG's, clusters Bestuursondersteuning/Mensen-en-Middelen hangen ALLEMAAL onder de SG-cluster.
 
-In tekstmodus is dit niet altijd visueel zichtbaar. Default-aanname dan: nieuwe org_structure-records met `classification: abd-tmg` (DG/IG) krijgen `parent_id: org:onderdeel-sg-min-<x>`, tenzij de tekst expliciet anders zegt.
+Hiërarchie onder SG-cluster:
+- `post:sg-min-<x>` en `post:plv-sg-min-<x>` hebben `organization_id: org:onderdeel-sg-min-<x>`.
+- DG's (`org:onderdeel-dg-<naam>-min-<x>`), Bureau ABD, AIVD, programma-DG's, clusters Bestuursondersteuning/Mensen-en-Middelen hebben `parent_id: org:onderdeel-sg-min-<x>`.
+- Onder elke DG hangen directies (`org:onderdeel-directie-<naam>-min-<x>`); onder directies eventueel afdelingen.
+
+Concreet voor BZK (zie `_cache/organogrammen/bzk-2026-organogram.pdf`): SG Vincent Roozen en plv-SG Mark de Boer staan tussen de bewindspersonen-strook en de DG-rij. DGDOO, DGKR, DG VHB, DG RO, DG VBR, DG OBDR, DG AIVD, DG ABD hebben SG-cluster als parent. Geen enkel ander record dan deze hangt direct onder `org:min-bzk`.
+
+In tekstmodus is dit niet altijd visueel zichtbaar. Default-aanname:
+- Nieuwe `org_structure`-records met `classification: abd-tmg` (DG/IG/SG) en parent niet expliciet aangegeven → `parent_id: org:onderdeel-sg-min-<x>` (DG/IG) of `parent_id: org:min-<x>` (alleen de SG-cluster zelf).
+- Nieuwe `person_post`-records met `classification: abd-tmg` voor een SG of plv-SG → `organization_id: org:onderdeel-sg-min-<x>`.
+- Nieuwe `person_post`-records met `classification: abd-directeur` of `abd-afdelingshoofd` → `organization_id` van het directie- of afdeling-onderdeel, NIET van het ministerie zelf.
 
 ### Output schrijven
 
