@@ -141,6 +141,68 @@ _ROLE_KEYWORDS: list[tuple[str, str]] = [
 ]
 
 
+# Compatible post-keywords per role-keyword. Een mandate-role "directeur-
+# generaal X" mag NOOIT matchen op een post:psg- (plaatsvervangend
+# secretaris-generaal) of post:wpsg- (waarnemend). Strikter dan een
+# substring-check op de slug, voorkomt verkeerde matches waar de enige
+# kandidaat onder een org+classification de verkeerde sub-rol is.
+_COMPATIBLE_POST_KEYWORDS: dict[str, set[str]] = {
+    "minister-president": {"minister-president"},
+    "vice-minister-president": {"vice-minister-president"},
+    "minister": {"minister"},
+    "staatssecretaris": {"staatssecretaris"},
+    "psg": {"psg"},  # plaatsvervangend SG
+    "sg": {"sg"},
+    "dg": {"dg"},  # directeur-generaal én programma-DG (geen ABD-conventie voor "programma-DG-slug")
+    "pdg": {"pdg"},  # plaatsvervangend DG, aparte functie
+    "ig": {"ig"},
+    "directeur": {"directeur"},
+    "afdelingshoofd": {"afdelingshoofd"},
+}
+
+# Volgorde: meest-specifieke prefix eerst zodat "minister-president-min-az"
+# niet als "minister" parseert.
+_POST_SLUG_PREFIXES: list[tuple[str, str]] = [
+    ("vice-minister-president", "vice-minister-president"),
+    ("minister-president", "minister-president"),
+    ("waarnemend-psg-", "wpsg"),
+    ("waarnemend-sg-", "wsg"),
+    ("waarnemend-pdg-", "wpdg"),
+    ("waarnemend-dg-", "wdg"),
+    ("plaatsvervangend-psg-", "psg"),
+    ("plaatsvervangend-sg-", "psg"),
+    ("plaatsvervangend-dg-", "pdg"),
+    ("psg-", "psg"),
+    ("pdg-", "pdg"),
+    ("dg-", "dg"),
+    ("sg-", "sg"),
+    ("ig-", "ig"),
+    ("staatssecretaris-", "staatssecretaris"),
+    ("raadadviseur-", "raadadviseur"),
+    ("afdelingshoofd-", "afdelingshoofd"),
+    ("directeur-", "directeur"),
+    ("minister-", "minister"),
+]
+
+
+def _post_slug_keyword(post_id: str) -> str | None:
+    """Pak het canonical keyword uit een post-slug.
+
+    Voorbeelden:
+      post:minister-min-def              -> "minister"
+      post:psg-min-vws                   -> "psg"
+      post:waarnemend-psg-min-ezk        -> "wpsg"
+      post:directeur-bpz-min-lnv         -> "directeur"
+    """
+    if not post_id.startswith("post:"):
+        return None
+    body = post_id.removeprefix("post:")
+    for prefix, kw in _POST_SLUG_PREFIXES:
+        if body.startswith(prefix):
+            return kw
+    return None
+
+
 def _post_keyword_for_role(role: str) -> str | None:
     """Pak de canonical post-id-keyword die bij een role-string hoort.
 
@@ -222,8 +284,9 @@ def _resolve_post(
         if role:
             keyword = _post_keyword_for_role(role)
             if keyword:
+                allowed = _COMPATIBLE_POST_KEYWORDS.get(keyword, {keyword})
                 refined = [
-                    p for p in candidates if f":{keyword}-" in p or p.endswith(f":{keyword}")
+                    p for p in candidates if _post_slug_keyword(p) in allowed
                 ]
                 if len(refined) == 1:
                     return PostMatch(refined[0], 0.90, "matched_by_org_classification")
@@ -254,7 +317,13 @@ def _resolve_post(
                                 return PostMatch(
                                     shortest, 0.88, "matched_by_org_classification"
                                 )
-        if len(candidates) == 1:
+        # Geen role-keyword (of geen match): één-kandidaat-fallback is alleen
+        # veilig als er geen keyword is om te checken. Met keyword maar geen
+        # compatible kandidaat: val door naar creatable, niet blind matchen
+        # op de toevallig enige post onder (org, classification).
+        if role and _post_keyword_for_role(role) is not None:
+            pass  # forceer fallback naar creatable
+        elif len(candidates) == 1:
             return PostMatch(candidates[0], 0.90, "matched_by_org_classification")
 
     # Strategie 3: creatable. Apply maakt de post zelf aan.
