@@ -1,29 +1,66 @@
 id: person:kempen-v-91012059
 name:
-  full: E.J. (Erik Jan) van Kempen
+  full: Erik Jan van Kempen
   family: Kempen
-  given: E.J. van
-  initials: E.V.
+  given: Erik Jan
+  initials: E.J.
+  tussenvoegsel: van
 mandaten:
 - id: mandate-post-programma-dg-omgevingswet-min-bzk-2018-03-01
-  organization_id: org:min-bzk
+  organization_id: org:onderdeel-sg-min-bzk
   post_id: post:programma-dg-omgevingswet-min-bzk
   role: programma-directeur-generaal Omgevingswet bij het ministerie van Binnenlandse
     Zaken en Koninkrijksrelaties
   start_date: '2018-03-01'
-  end_date: null
+  end_date: '2022-10-09'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/02/23/erik-jan-van-kempen-programma-directeur-generaal-omgevingswet-bij-bzk
     retrieved: '2026-05-13'
     fields:
     - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/07/erik-jan-van-kempen-consultant-bij-abdtopconsult
+    retrieved: '2026-05-13'
+    fields:
+    - end_date
   appointment:
     decision: ABD-nieuwsbericht 2018-02-23
   confidence: 0.91
+- id: mandate-post-consultant-abdtopconsult-min-bzk-2022-10-10
+  organization_id: org:onderdeel-abdtopconsult
+  post_id: post:consultant-abdtopconsult-min-bzk
+  role: consultant bij ABDTOPConsult
+  start_date: '2022-10-10'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/07/erik-jan-van-kempen-consultant-bij-abdtopconsult
+    retrieved: '2026-05-13'
+  appointment:
+    decision: ABD-nieuwsbericht 2022-10-07
+  confidence: 0.95
+- id: mandate-post-dg-landelijk-gebied-stikstof-min-lvvn-2022-11-01
+  organization_id: org:onderdeel-dg-landelijk-gebied-stikstof-min-lvvn
+  post_id: post:dg-landelijk-gebied-stikstof-min-lvvn
+  role: waarnemend directeur-generaal Landelijk gebied en Stikstof bij het ministerie
+    van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2022-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/24/erik-jan-van-kempen-waarnemend-directeur-generaal-landelijk-gebied-en-stikstof-bij-lnv
+    retrieved: '2026-05-13'
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-24
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/02/23/erik-jan-van-kempen-programma-directeur-generaal-omgevingswet-bij-bzk
   retrieved: '2026-05-13'
-  fields:
-  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/07/erik-jan-van-kempen-consultant-bij-abdtopconsult
+  retrieved: '2026-05-13'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/24/erik-jan-van-kempen-waarnemend-directeur-generaal-landelijk-gebied-en-stikstof-bij-lnv
+  retrieved: '2026-05-13'
