@@ -114,6 +114,17 @@ g.node.category-flat rect {
   stroke: #b48ee0;
 }
 
+g.node.post rect {
+  fill: #1b2b1b;
+  stroke: #7fd28a;
+  stroke-dasharray: 2 2;
+}
+
+g.node.person rect {
+  fill: #2d2419;
+  stroke: #e5b95a;
+}
+
 g.node.ministerie rect {
   fill: #1f2a44;
   stroke: var(--ring-ministerie);
@@ -248,4 +259,85 @@ path.link.faded {
 .overlay-list .muted {
   color: var(--fg-muted);
   font-size: 12px;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(420px, 92vw);
+  background: var(--bg-elev);
+  border-left: 1px solid #2c3340;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.4);
+}
+
+.side-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2c3340;
+  gap: 12px;
+}
+
+.side-header h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.side-header .muted {
+  color: var(--fg-muted);
+  font-size: 12px;
+}
+
+.mandaten-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 12px 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.mandaten-timeline li {
+  padding: 10px 0;
+  border-left: 2px solid #2c3340;
+  padding-left: 12px;
+  margin-bottom: 4px;
+}
+
+.mandaat-role {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.muted.small {
+  font-size: 11px;
+  color: var(--fg-muted);
+}
+
+.sources {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sources a {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 2px 6px;
+  background: rgba(88, 166, 255, 0.1);
+  border-radius: 4px;
+}
+
+.sources a:hover {
+  text-decoration: underline;
 }

@@ -7,7 +7,7 @@ const SIBLING_GAP = 12;
 const ZOOM_MS = 700;
 
 export function createChart(container, rootData, onCrumbChange, options = {}) {
-  const { onFlatTile } = options;
+  const { onFlatTile, onPerson } = options;
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -36,7 +36,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   });
 
   function redraw() {
-    rootHierarchy = d3.hierarchy(rootData);
+    rootHierarchy = d3.hierarchy(rootData, childrenAccessor);
 
     const layout = d3.tree().nodeSize([NODE_W + SIBLING_GAP, LEVEL_H]);
     layout(rootHierarchy);
@@ -109,6 +109,8 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     if (d.data.kind === "bestuurslaag") return "bestuurslaag";
     if (d.data.kind === "category-flat") return "category-flat";
     if (d.data.kind === "category-tree") return "category-tree";
+    if (d.data.kind === "person") return "person";
+    if (d.data.kind === "post") return "post";
     if (d.data.kind === "ministerie" || d.data.type === "ministerie") return "ministerie";
     if (d.children && d.children.length) return "onderdeel";
     return "leaf";
@@ -123,10 +125,15 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       onFlatTile(d);
       return;
     }
+    if (d.data.kind === "person" && onPerson) {
+      onPerson(d);
+      return;
+    }
     if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
       try {
         const subtree = await loadJSON(d.data.bundle);
         d.data.children = subtree.children || [];
+        d.data.posten = subtree.posten || [];
         for (const key of ["names", "valid_from", "valid_until", "type", "classification"]) {
           if (subtree[key] !== undefined) d.data[key] = subtree[key];
         }
@@ -209,6 +216,30 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       applyFade();
       emitCrumb();
     },
+  };
+}
+
+function childrenAccessor(d) {
+  // Voor org-nodes: gewone children + posten (elk een eigen subtree).
+  // Voor post-nodes: mandaten worden persoon-leaves.
+  if (d.kind === "post") {
+    return (d.mandaten || []).map(mandaatToPersonNode);
+  }
+  const out = [];
+  if (d.children) out.push(...d.children);
+  if (d.posten) out.push(...d.posten);
+  return out.length ? out : null;
+}
+
+function mandaatToPersonNode(m) {
+  return {
+    id: `mandaat:${m.id || `${m.person_id}-${m.start_date || ""}`}`,
+    kind: "person",
+    label: m.person_label || m.person_id || "?",
+    person_id: m.person_id,
+    role: m.role,
+    start_date: m.start_date,
+    end_date: m.end_date,
   };
 }
 

@@ -1,6 +1,7 @@
 import { loadJSON } from "./fetcher.js";
 import { createChart } from "./pack.js";
 import { openFlatOverlay } from "./overlay.js";
+import { openPersonPanel } from "./panel.js";
 
 const container = document.getElementById("chart");
 const breadcrumbEl = document.getElementById("breadcrumb");
@@ -24,7 +25,10 @@ const breadcrumbEl = document.getElementById("breadcrumb");
     })),
   };
 
-  createChart(container, root, renderBreadcrumb, { onFlatTile: handleFlatTile });
+  createChart(container, root, renderBreadcrumb, {
+    onFlatTile: handleFlatTile,
+    onPerson: (node) => openPersonPanel(node.data.person_id),
+  });
 })();
 
 function tileToNode(tile) {

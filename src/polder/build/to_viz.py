@@ -88,6 +88,8 @@ def _render_org_tree(
     root_id: str,
     adjacency: dict[str, list[str]],
     orgs_by_id: dict[str, dict[str, Any]],
+    posten_by_org: dict[str, list[dict[str, Any]]] | None = None,
+    mandaten_by_post: dict[str, list[dict[str, Any]]] | None = None,
 ) -> dict[str, Any] | None:
     """Recursief opbouwen van geneste tree-struct voor d3.hierarchy."""
     rec = orgs_by_id.get(root_id)
@@ -95,9 +97,12 @@ def _render_org_tree(
         return None
     children: list[dict[str, Any]] = []
     for child_id in adjacency.get(root_id, []):
-        child = _render_org_tree(child_id, adjacency, orgs_by_id)
+        child = _render_org_tree(
+            child_id, adjacency, orgs_by_id, posten_by_org, mandaten_by_post
+        )
         if child is not None:
             children.append(child)
+    posten = _render_posten(rec["id"], posten_by_org, mandaten_by_post)
     return {
         "id": rec["id"],
         "kind": "org",
@@ -108,7 +113,44 @@ def _render_org_tree(
         "names": rec.get("names") or [],
         "valid_from": rec.get("valid_from"),
         "valid_until": rec.get("valid_until"),
+        "posten": posten,
         "children": children,
+    }
+
+
+def _render_posten(
+    org_id: str,
+    posten_by_org: dict[str, list[dict[str, Any]]] | None,
+    mandaten_by_post: dict[str, list[dict[str, Any]]] | None,
+) -> list[dict[str, Any]]:
+    if posten_by_org is None or mandaten_by_post is None:
+        return []
+    out: list[dict[str, Any]] = []
+    for post in posten_by_org.get(org_id, []):
+        mandaten = mandaten_by_post.get(post["id"], [])
+        out.append(
+            {
+                "id": post["id"],
+                "kind": "post",
+                "label": post.get("label") or post["id"],
+                "classification": post.get("classification"),
+                "valid_from": post.get("valid_from"),
+                "valid_until": post.get("valid_until"),
+                "mandaten": [_render_mandaat(m) for m in mandaten],
+            }
+        )
+    return out
+
+
+def _render_mandaat(entry: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": entry.get("mandaat_id"),
+        "person_id": entry["person_id"],
+        "person_label": entry["person_label"],
+        "person_birth_year": entry.get("person_birth_year"),
+        "role": entry.get("role"),
+        "start_date": entry.get("start_date"),
+        "end_date": entry.get("end_date"),
     }
 
 
@@ -170,9 +212,13 @@ def _tree_tile(
     orgs_by_id: dict[str, dict[str, Any]],
     data_out: Path,
     kind: str,
+    posten_by_org: dict[str, list[dict[str, Any]]] | None = None,
+    mandaten_by_post: dict[str, list[dict[str, Any]]] | None = None,
 ) -> dict[str, Any] | None:
     """Schrijf org/<slug>.json en geef tegel-metadata terug."""
-    tree = _render_org_tree(org["id"], adjacency, orgs_by_id)
+    tree = _render_org_tree(
+        org["id"], adjacency, orgs_by_id, posten_by_org, mandaten_by_post
+    )
     if tree is None:
         return None
     slug = _slug_from_id(org["id"])
@@ -228,6 +274,81 @@ def _group_by_bestuurslaag(tiles: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return layers
 
 
+def _index_posten_and_personen(
+    data_dir: Path,
+    data_out: Path,
+) -> tuple[dict[str, list[dict[str, Any]]], dict[str, list[dict[str, Any]]]]:
+    """Bouw posten-per-org en mandaten-per-post indexen, en schrijf person-bundles.
+
+    Mandaten met `post_id` zonder bijhorende post-file krijgen een gesynthetiseerde
+    post-record met `classification = 'overig'` zodat hun mandaten in de boom
+    blijven verschijnen.
+    """
+    posten_records = list(_load_records(data_dir / "posten"))
+    posten_by_id: dict[str, dict[str, Any]] = {
+        p["id"]: p for p in posten_records if p.get("id")
+    }
+    posten_by_org: dict[str, list[dict[str, Any]]] = {}
+    for post in posten_records:
+        org_id = post.get("organization_id")
+        if org_id:
+            posten_by_org.setdefault(org_id, []).append(post)
+
+    mandaten_by_post: dict[str, list[dict[str, Any]]] = {}
+    for persoon in _load_records(data_dir / "personen"):
+        pid = persoon.get("id")
+        name = persoon.get("name") or {}
+        person_label = name.get("full") or pid or ""
+        birth = (persoon.get("birth") or {}).get("year")
+        mandaten = persoon.get("mandaten") or []
+        if not mandaten or not pid:
+            continue
+
+        _write_json(
+            data_out / "person" / f"{_slug_from_id(pid)}.json",
+            {
+                "id": pid,
+                "name": name,
+                "birth_year": birth,
+                "gender": persoon.get("gender"),
+                "identifiers": persoon.get("identifiers") or {},
+                "mandaten": mandaten,
+            },
+        )
+
+        for mandaat in mandaten:
+            if not isinstance(mandaat, dict):
+                continue
+            post_id = mandaat.get("post_id")
+            if not post_id:
+                continue
+            if post_id not in posten_by_id:
+                posten_by_id[post_id] = {
+                    "id": post_id,
+                    "organization_id": mandaat.get("organization_id"),
+                    "label": mandaat.get("role") or post_id,
+                    "classification": "overig",
+                    "valid_from": None,
+                    "valid_until": None,
+                }
+                org_id = mandaat.get("organization_id")
+                if org_id:
+                    posten_by_org.setdefault(org_id, []).append(posten_by_id[post_id])
+            mandaten_by_post.setdefault(post_id, []).append(
+                {
+                    "mandaat_id": mandaat.get("id"),
+                    "person_id": pid,
+                    "person_label": person_label,
+                    "person_birth_year": birth,
+                    "role": mandaat.get("role"),
+                    "start_date": mandaat.get("start_date"),
+                    "end_date": mandaat.get("end_date"),
+                }
+            )
+
+    return posten_by_org, mandaten_by_post
+
+
 def build_viz(data_dir: Path, out_dir: Path) -> None:
     """Genereer JSON-bundels naar `out_dir/data/`."""
     data_out = out_dir / "data"
@@ -240,17 +361,35 @@ def build_viz(data_dir: Path, out_dir: Path) -> None:
     for org in orgs:
         orgs_by_type.setdefault(org.get("type") or "", []).append(org)
 
+    posten_by_org, mandaten_by_post = _index_posten_and_personen(data_dir, data_out)
+
     tiles: list[dict[str, Any]] = []
 
     for ministerie in sorted(orgs_by_type.get("ministerie", []), key=_short_label):
-        tile = _tree_tile(ministerie, adjacency, orgs_by_id, data_out, "ministerie")
+        tile = _tree_tile(
+            ministerie,
+            adjacency,
+            orgs_by_id,
+            data_out,
+            "ministerie",
+            posten_by_org,
+            mandaten_by_post,
+        )
         if tile is not None:
             tiles.append(tile)
 
     for org_type, cat_id, cat_label in CATEGORY_TREE_TYPES:
         members: list[dict[str, Any]] = []
         for org in sorted(orgs_by_type.get(org_type, []), key=_short_label):
-            tile = _tree_tile(org, adjacency, orgs_by_id, data_out, "category-member")
+            tile = _tree_tile(
+                org,
+                adjacency,
+                orgs_by_id,
+                data_out,
+                "category-member",
+                posten_by_org,
+                mandaten_by_post,
+            )
             if tile is not None:
                 members.append(tile)
         if not members:
