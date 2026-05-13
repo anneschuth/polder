@@ -9,11 +9,15 @@ landen in latere milestones (M3/M4).
 from __future__ import annotations
 
 import json
+import shutil
 from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+SITE_SOURCE_DIR = REPO_ROOT / "site"
 
 
 def _walk_yaml(root: Path) -> Iterator[Path]:
@@ -158,3 +162,22 @@ def build_viz(data_dir: Path, out_dir: Path) -> None:
         "tiles": tiles,
     }
     _write_json(data_out / "index.json", index)
+
+    _copy_site_assets(out_dir)
+
+
+def _copy_site_assets(out_dir: Path) -> None:
+    """Kopieer site/ source-bestanden naar out_dir voor self-contained publish."""
+    if not SITE_SOURCE_DIR.exists():
+        return
+    for entry in ("index.html", "src", "styles", "vendor"):
+        src = SITE_SOURCE_DIR / entry
+        if not src.exists():
+            continue
+        dest = out_dir / entry
+        if src.is_dir():
+            if dest.exists():
+                shutil.rmtree(dest)
+            shutil.copytree(src, dest)
+        else:
+            shutil.copy2(src, dest)
