@@ -378,6 +378,8 @@ def run_audit(
     _check_mandate_length(persons, findings)
     _check_mandate_evidence(persons, findings)
     _check_post_parent_level(orgs, posts, findings)
+    _check_ministerie_direct_children(orgs, findings)
+    _check_ministerie_direct_posts(posts, findings)
 
     report = AuditReport(findings=findings)
 
@@ -983,6 +985,77 @@ def _check_post_parent_level(
                     f"verwacht: {sorted(expected)}",
                 )
             )
+
+
+def _check_ministerie_direct_children(
+    orgs: list[tuple[Path, dict]],
+    findings: list[Finding],
+) -> None:
+    """Onder ``org:min-<x>`` hangt alleen de SG-cluster als organisatieonderdeel.
+
+    De officiele rijksoverheid-organogrammen tonen onder elk ministerie
+    twee dingen: bewindspersonen-posten (via mandaten, niet via parent_id)
+    en de SG-cluster (``org:onderdeel-sg-<x>``). Alle DG's, directies en
+    afdelingen hangen onder de SG-cluster, niet direct onder het ministerie.
+
+    Uitzonderingen die NIET als organisatieonderdeel onder een ministerie
+    horen maar als eigen organisatie-type: ZBO's, agentschappen, RWT's,
+    adviescolleges, inspecties, hoge-colleges. Die worden hier niet geflagd
+    want hun ``type`` is anders dan ``organisatieonderdeel``.
+
+    Conservatieve check: review-finding, geen error. Bestaande data kan
+    legitieme uitzonderingen bevatten (programma-directies, tijdelijke
+    commissies).
+    """
+    for path, d in orgs:
+        if d.get("type") != "organisatieonderdeel":
+            continue
+        org_id = d.get("id")
+        parent_id = d.get("parent_id") or ""
+        if not org_id or not parent_id.startswith("org:min-"):
+            continue
+        # Uitzondering: SG-cluster mag direct onder het ministerie hangen.
+        if org_id.startswith("org:onderdeel-sg-"):
+            continue
+        findings.append(
+            Finding(
+                "ministerie_direct_onderdeel",
+                org_id,
+                f"{path.name}: {org_id} hangt direct onder {parent_id}; "
+                f"verwacht is parent=org:onderdeel-sg-<x> (SG-cluster). "
+                f"Uitzondering: reclassificeer naar zbo/agentschap/adviescollege "
+                f"als de organisatie eigenstandig is.",
+            )
+        )
+
+
+def _check_ministerie_direct_posts(
+    posts: list[tuple[Path, dict]],
+    findings: list[Finding],
+) -> None:
+    """Posten direct op ``org:min-<x>`` zijn alleen bewindspersoon-posten.
+
+    Andere posten (SG, DG, directeur, afdelingshoofd) horen onder hun
+    eigen organisatieonderdeel. Resolver heeft soms ABD-posten op het
+    ministerie zelf geplaatst — die wijzen op een data-fout.
+    """
+    for path, d in posts:
+        org_id = d.get("organization_id") or ""
+        cls = d.get("classification") or ""
+        pid = d.get("id")
+        if not org_id.startswith("org:min-"):
+            continue
+        if cls == "bewindspersoon":
+            continue
+        findings.append(
+            Finding(
+                "ministerie_direct_post",
+                pid or path.name,
+                f"{path.name}: {pid} ({cls}) heeft organization_id={org_id}; "
+                f"alleen bewindspersoon-posten horen direct op een ministerie. "
+                f"Verplaats deze post naar het juiste organisatieonderdeel.",
+            )
+        )
 
 
 def summary(report: AuditReport) -> tuple[int, int]:
