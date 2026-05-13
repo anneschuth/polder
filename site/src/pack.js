@@ -333,6 +333,59 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       .attr("class", "link")
       .merge(links)
       .attr("d", (d) => pathFn(d.source, d.target));
+
+    // Ministerie-mode: teken een extra verticale "trunk" die door de SG-tiles
+    // heen loopt en zo de visuele connectie maakt tussen bewindspersonen-rij
+    // (boven) en DG-rij (onder). Door _hidden=true op de SG-org-anchor wordt
+    // die niet als losse tile gerenderd, maar de hierarchy-links eindigen
+    // wel op die anchor — wat een afgekapte lijn geeft. Deze trunk overrult
+    // dat visueel.
+    linkLayer.selectAll("path.trunk").remove();
+    if (viewMode === "ministerie") {
+      const trunk = computeTrunk();
+      if (trunk) {
+        linkLayer
+          .append("path")
+          .attr("class", "link trunk")
+          .attr("d", trunk);
+      }
+    }
+  }
+
+  function computeTrunk() {
+    // Verticale "stam" op x=0 die door de SG-rij heen loopt, van de
+    // bewindspersonen-rij naar de DG-rij. Plus horizontale aftakkingen
+    // naar SG en plv-SG (die links en rechts van de stam staan).
+    const visible = rootHierarchy
+      .descendants()
+      .filter((d) => Number.isFinite(d.x) && Number.isFinite(d.y) && !d.data._hidden);
+    if (visible.length === 0) return null;
+    const bewinds = visible.filter(
+      (d) => d.data && d.data.kind === "post" && d.data.classification === "bewindspersoon",
+    );
+    const sgPosts = visible.filter(
+      (d) =>
+        d.data &&
+        d.data.kind === "post" &&
+        typeof d.data.id === "string" &&
+        /^post:(plv-)?sg-/.test(d.data.id),
+    );
+    const dgs = visible.filter(
+      (d) =>
+        d.data &&
+        d.data.kind !== "post" &&
+        typeof d.data.id === "string" &&
+        /^org:onderdeel-/.test(d.data.id),
+    );
+    if (bewinds.length === 0 || dgs.length === 0) return null;
+    const trunkTop = Math.max(...bewinds.map((b) => b.y)) + NODE_H / 2;
+    const trunkBottom = Math.min(...dgs.map((d) => d.y)) - NODE_H / 2;
+    let path = `M0,${trunkTop} V${trunkBottom}`;
+    // Horizontale aftakkingen van de stam naar SG/plv-SG tiles.
+    for (const sg of sgPosts) {
+      path += ` M0,${sg.y} H${sg.x}`;
+    }
+    return path;
   }
 
   function renderNodes() {
