@@ -27,11 +27,18 @@ body {
 }
 
 header {
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-bottom: 1px solid var(--bg-elev);
   display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 header h1 {
@@ -44,6 +51,97 @@ header h1 {
   margin: 0;
   color: var(--fg-muted);
   font-size: 13px;
+}
+
+.search-wrap {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid #2c3340;
+  border-radius: 6px;
+  color: var(--fg);
+  font-size: 13px;
+}
+
+#search:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-elev);
+  border: 1px solid #2c3340;
+  border-radius: 6px;
+  max-height: 360px;
+  overflow-y: auto;
+  z-index: 60;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.search-result {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.search-result:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.search-result strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.search-result .kind-tag {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--fg-muted);
+  align-self: flex-start;
+}
+
+#timebar {
+  padding: 8px 20px;
+  border-bottom: 1px solid var(--bg-elev);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#timeslider {
+  flex: 1;
+  accent-color: var(--accent);
+}
+
+#timelabel {
+  font-size: 12px;
+  color: var(--fg-muted);
+  min-width: 80px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+g.node.inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+path.link.inactive {
+  opacity: 0;
 }
 
 main {

@@ -1,4 +1,5 @@
 import { loadJSON } from "./fetcher.js";
+import { isActiveOn } from "./util.js";
 
 const NODE_W = 130;
 const NODE_H = 36;
@@ -7,7 +8,8 @@ const SIBLING_GAP = 12;
 const ZOOM_MS = 700;
 
 export function createChart(container, rootData, onCrumbChange, options = {}) {
-  const { onFlatTile, onPerson } = options;
+  const { onFlatTile, onPerson, onFocusChange } = options;
+  let date = options.date != null ? options.date : Date.now();
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -28,12 +30,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   centerOn(rootHierarchy, true);
   emitCrumb();
 
-  svg.on("click", () => {
-    focusNode = rootHierarchy;
-    centerOn(rootHierarchy);
-    applyFade();
-    emitCrumb();
-  });
+  svg.on("click", () => focusOn(rootHierarchy));
 
   function redraw() {
     rootHierarchy = d3.hierarchy(rootData, childrenAccessor);
@@ -139,19 +136,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
         }
         redraw();
         const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
-        focusNode = target;
-        centerOn(target);
-        emitCrumb();
+        focusOn(target);
         return;
       } catch (err) {
         console.error("bundle load failed", err);
         return;
       }
     }
-    focusNode = d;
-    centerOn(d);
-    applyFade();
-    emitCrumb();
+    focusOn(d);
   }
 
   function centerOn(target, instant = false) {
@@ -183,10 +175,24 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       focusSet.add(cur);
       cur = cur.parent;
     }
-    nodeLayer.selectAll("g.node").classed("faded", (d) => !focusSet.has(d));
+    nodeLayer
+      .selectAll("g.node")
+      .classed("faded", (d) => !focusSet.has(d))
+      .classed("inactive", (d) => !nodeActive(d));
     linkLayer
       .selectAll("path.link")
-      .classed("faded", (d) => !focusSet.has(d.source) || !focusSet.has(d.target));
+      .classed("faded", (d) => !focusSet.has(d.source) || !focusSet.has(d.target))
+      .classed("inactive", (d) => !nodeActive(d.target));
+  }
+
+  function nodeActive(d) {
+    const data = d.data;
+    if (data.kind === "person") return isActiveOn(data, date);
+    if (data.kind === "post") return isActiveOn(data, date);
+    if (data.valid_from !== undefined || data.valid_until !== undefined) {
+      return isActiveOn(data, date);
+    }
+    return true;
   }
 
   function emitCrumb() {
@@ -201,20 +207,85 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       });
       cur = cur.parent;
     }
-    onCrumbChange(trail, (target) => {
-      focusNode = target;
-      centerOn(target);
-      applyFade();
-      emitCrumb();
-    });
+    onCrumbChange(trail, (target) => focusOn(target));
+  }
+
+  function focusOn(target) {
+    focusNode = target;
+    centerOn(target);
+    applyFade();
+    emitCrumb();
+    if (onFocusChange) onFocusChange(target);
+  }
+
+  async function focusByPath(pathStr) {
+    if (!pathStr) return;
+    const segments = pathStr.split("/").filter(Boolean);
+    let cur = rootHierarchy;
+    for (const seg of segments) {
+      const fullId = seg.startsWith("layer:")
+        ? seg
+        : seg.startsWith("cat:")
+          ? seg
+          : seg.startsWith("post:") || seg.startsWith("person:") || seg.startsWith("org:")
+            ? seg
+            : `org:${seg}`;
+      let next = cur.find ? cur.find((n) => nodeId(n) === fullId) : null;
+      if (!next) {
+        const child = (cur.data.children || []).find((c) => c.id === fullId);
+        if (!child) break;
+        if (child.bundle && (!child.children || child.children.length === 0)) {
+          try {
+            const subtree = await loadJSON(child.bundle);
+            child.children = subtree.children || [];
+            child.posten = subtree.posten || [];
+            redraw();
+            next = rootHierarchy.find((n) => nodeId(n) === fullId);
+          } catch (err) {
+            console.error(err);
+            break;
+          }
+        }
+      }
+      if (!next) break;
+      cur = next;
+    }
+    if (cur && cur !== rootHierarchy) focusOn(cur);
+  }
+
+  async function focusById(id) {
+    let found = rootHierarchy.find((n) => nodeId(n) === id);
+    if (found) {
+      focusOn(found);
+      return;
+    }
+    // Try to load any bundle that might contain this id; scan top-level tiles.
+    const candidates = rootHierarchy.descendants().filter((n) => n.data.bundle);
+    for (const cand of candidates) {
+      if (!cand.data.children || cand.data.children.length === 0) {
+        try {
+          const subtree = await loadJSON(cand.data.bundle);
+          cand.data.children = subtree.children || [];
+          cand.data.posten = subtree.posten || [];
+        } catch (e) {
+          continue;
+        }
+      }
+    }
+    redraw();
+    found = rootHierarchy.find((n) => nodeId(n) === id);
+    if (found) focusOn(found);
   }
 
   return {
     focusRoot() {
-      focusNode = rootHierarchy;
-      centerOn(rootHierarchy);
+      focusOn(rootHierarchy);
+    },
+    focusById,
+    focusByPath,
+    setDate(ms) {
+      date = ms;
       applyFade();
-      emitCrumb();
     },
   };
 }
