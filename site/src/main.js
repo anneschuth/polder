@@ -25,6 +25,7 @@ let rootData = null;
       id: layer.id,
       label: layer.label,
       kind: "bestuurslaag",
+      _collapsed: true,
       children: layer.tile_ids
         .map((tid) => tilesById.get(tid))
         .filter(Boolean)
@@ -107,6 +108,8 @@ function tileToNode(tile) {
         label_full: m.label_full,
         bundle: m.bundle,
         type: m.org_type,
+        valid_from: m.valid_from,
+        valid_until: m.valid_until,
         children: [],
         _descendant_org_count: m.descendant_org_count,
       })),
@@ -129,6 +132,8 @@ function tileToNode(tile) {
     label_full: tile.label_full,
     bundle: tile.bundle,
     type: tile.kind === "ministerie" ? "ministerie" : undefined,
+    valid_from: tile.valid_from,
+    valid_until: tile.valid_until,
     children: [],
     _descendant_org_count: tile.descendant_org_count,
   };

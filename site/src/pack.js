@@ -3,9 +3,23 @@ import { isActiveOn } from "./util.js";
 
 const NODE_W = 130;
 const NODE_H = 36;
-const LEVEL_H = 90;
-const SIBLING_GAP = 12;
 const ZOOM_MS = 700;
+const GRID_THRESHOLD = 12;
+const GRID_COLS = 10;
+
+// Sibling-gap en level-height groeien met focus-diepte: bij root staan
+// onderdelen dicht op elkaar; bij inzoom op een directie krijgen kinderen
+// meer lucht.
+const COMPACT = { sibling: 4, level: 56 };
+const SPACIOUS = { sibling: 24, level: 110 };
+
+function spacingForDepth(depth) {
+  const t = Math.min(1, depth / 4);
+  return {
+    sibling: COMPACT.sibling + (SPACIOUS.sibling - COMPACT.sibling) * t,
+    level: COMPACT.level + (SPACIOUS.level - COMPACT.level) * t,
+  };
+}
 
 export function createChart(container, rootData, onCrumbChange, options = {}) {
   const { onFlatTile, onPerson, onFocusChange } = options;
@@ -26,17 +40,56 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   let rootHierarchy;
   let focusNode;
 
+  const zoomBehavior = d3
+    .zoom()
+    .scaleExtent([0.1, 2.5])
+    .filter((event) => {
+      if (event.type === "mousedown" && event.target.closest("g.node")) return false;
+      return !event.button;
+    })
+    .on("zoom", (event) => {
+      viewport.attr("transform", event.transform);
+    });
+  svg.call(zoomBehavior);
+
   redraw();
   centerOn(rootHierarchy, true);
   emitCrumb();
 
   svg.on("click", () => focusOn(rootHierarchy));
 
+  function childrenAccessor(d) {
+    if (d._collapsed) return null;
+    if (d.kind === "post") {
+      const items = (d.mandaten || [])
+        .filter((m) => isActiveOn(m, date))
+        .map(mandaatToPersonNode);
+      return items.length ? items : null;
+    }
+    const out = [];
+    if (d.children) {
+      for (const c of d.children) {
+        if (hasOwnDates(c) && !isActiveOn(c, date)) continue;
+        out.push(c);
+      }
+    }
+    if (d.posten) {
+      for (const p of d.posten) {
+        if (hasOwnDates(p) && !isActiveOn(p, date)) continue;
+        out.push(p);
+      }
+    }
+    return out.length ? out : null;
+  }
+
   function redraw() {
     rootHierarchy = d3.hierarchy(rootData, childrenAccessor);
 
-    const layout = d3.tree().nodeSize([NODE_W + SIBLING_GAP, LEVEL_H]);
+    const focusDepth = focusNode ? focusNode.depth : 0;
+    const sp = spacingForDepth(focusDepth);
+    const layout = d3.tree().nodeSize([NODE_W + sp.sibling, NODE_H + sp.level]);
     layout(rootHierarchy);
+    wrapWideRows(rootHierarchy, sp);
 
     if (!focusNode) focusNode = rootHierarchy;
     else {
@@ -132,6 +185,13 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       onPerson(d);
       return;
     }
+    if (d.data.kind === "bestuurslaag" || d.data.kind === "category-tree") {
+      d.data._collapsed = !d.data._collapsed;
+      redraw();
+      const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
+      focusOn(target);
+      return;
+    }
     if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
       try {
         const subtree = await loadJSON(d.data.bundle);
@@ -162,15 +222,13 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     const maxY = Math.max(...ys) + NODE_H / 2 + 20;
     const subW = Math.max(maxX - minX, NODE_W * 3);
     const subH = Math.max(maxY - minY, NODE_H * 3);
-    const scale = Math.min(width / subW, height / subH, 1.5);
+    const fit = Math.min(width / subW, height / subH);
+    const scale = Math.max(0.2, Math.min(fit, 1.5));
     const tx = width / 2 - ((minX + maxX) / 2) * scale;
     const ty = height / 2 - ((minY + maxY) / 2) * scale;
-    const transform = `translate(${tx},${ty}) scale(${scale})`;
-    if (instant) {
-      viewport.attr("transform", transform);
-    } else {
-      viewport.transition().duration(ZOOM_MS).attr("transform", transform);
-    }
+    const transform = d3.zoomIdentity.translate(tx, ty).scale(scale);
+    const sel = instant ? svg : svg.transition().duration(ZOOM_MS);
+    sel.call(zoomBehavior.transform, transform);
   }
 
   function applyFade() {
@@ -217,11 +275,17 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   }
 
   function focusOn(target) {
+    const targetId = target && target.data && target.data.id;
     focusNode = target;
-    centerOn(target);
+    redraw();
+    if (targetId) {
+      const refreshed = rootHierarchy.find((n) => nodeId(n) === targetId);
+      if (refreshed) focusNode = refreshed;
+    }
+    centerOn(focusNode);
     applyFade();
     emitCrumb();
-    if (onFocusChange) onFocusChange(target);
+    if (onFocusChange) onFocusChange(focusNode);
   }
 
   async function focusByPath(pathStr) {
@@ -291,21 +355,38 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     focusByPath,
     setDate(ms) {
       date = ms;
-      applyFade();
+      redraw();
     },
   };
 }
 
-function childrenAccessor(d) {
-  // Voor org-nodes: gewone children + posten (elk een eigen subtree).
-  // Voor post-nodes: mandaten worden persoon-leaves.
-  if (d.kind === "post") {
-    return (d.mandaten || []).map(mandaatToPersonNode);
-  }
-  const out = [];
-  if (d.children) out.push(...d.children);
-  if (d.posten) out.push(...d.posten);
-  return out.length ? out : null;
+function wrapWideRows(root, sp) {
+  root.each((node) => {
+    const kids = node.children;
+    if (!kids || kids.length <= GRID_THRESHOLD) return;
+    if (kids.some((c) => c.children && c.children.length)) return;
+    const cols = GRID_COLS;
+    const colW = NODE_W + sp.sibling;
+    const rowH = NODE_H + Math.max(8, sp.level * 0.4);
+    const startX = node.x - ((cols - 1) * colW) / 2;
+    const baseY = kids[0].y;
+    kids.forEach((c, i) => {
+      const row = Math.floor(i / cols);
+      const col = i % cols;
+      c.x = startX + col * colW;
+      c.y = baseY + row * rowH;
+    });
+  });
+}
+
+
+function hasOwnDates(d) {
+  return (
+    d.valid_from !== undefined ||
+    d.valid_until !== undefined ||
+    d.start_date !== undefined ||
+    d.end_date !== undefined
+  );
 }
 
 function mandaatToPersonNode(m) {

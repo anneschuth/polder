@@ -54,6 +54,19 @@ def _slug_from_id(org_id: str) -> str:
     return org_id.split(":", 1)[-1]
 
 
+def _normalize_dates(rec: dict[str, Any]) -> None:
+    """Swap omgekeerde valid_from/valid_until paren in-place.
+
+    Polder-data bevat een paar tientallen records waar valid_from > valid_until.
+    Die zijn ergens fout ingelezen of dubbel ge-fetched. Tot upstream gefixt is
+    swappen we ze hier zodat de viewer klopt.
+    """
+    vf = rec.get("valid_from")
+    vu = rec.get("valid_until")
+    if vf and vu and vf > vu:
+        rec["valid_from"], rec["valid_until"] = vu, vf
+
+
 def _short_label(rec: dict[str, Any]) -> str:
     """Pak een korte label uit names[]: voorkeur voor `abbr`, anders `value`."""
     names = rec.get("names") or []
@@ -355,6 +368,8 @@ def build_viz(data_dir: Path, out_dir: Path) -> None:
     data_out.mkdir(parents=True, exist_ok=True)
 
     orgs = list(_load_records(data_dir / "organisaties"))
+    for org in orgs:
+        _normalize_dates(org)
     orgs_by_id: dict[str, dict[str, Any]] = {o["id"]: o for o in orgs if o.get("id")}
     adjacency = _build_adjacency(orgs)
     orgs_by_type: dict[str, list[dict[str, Any]]] = {}

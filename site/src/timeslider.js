@@ -13,15 +13,13 @@ export function initTimeSlider(onChange) {
   slider.value = String(initial);
   label.textContent = labelFor(initial);
 
-  let debounce;
+  let hashTimer;
   slider.addEventListener("input", () => {
     const v = Number(slider.value);
     label.textContent = labelFor(v);
-    clearTimeout(debounce);
-    debounce = setTimeout(() => {
-      setState({ date: toISODate(v) }, true);
-      onChange(v);
-    }, 60);
+    onChange(v);
+    clearTimeout(hashTimer);
+    hashTimer = setTimeout(() => setState({ date: toISODate(v) }, true), 200);
   });
 
   return {
