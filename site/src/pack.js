@@ -95,6 +95,12 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       .attr("dominant-baseline", "middle")
       .text((d) => truncate(d.data.label || "", 18));
 
+    enter.on("mouseenter", (event, d) => {
+      if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
+        loadJSON(d.data.bundle).catch(() => {});
+      }
+    });
+
     const merged = enter.merge(nodes);
     merged.attr("class", (d) => `node ${nodeKindClass(d)}`);
     merged.attr("transform", (d) => `translate(${d.x},${d.y})`);
