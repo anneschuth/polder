@@ -1,4 +1,5 @@
 :root {
+  /* Dark theme (default — bestaande look) */
   --bg: #0f1419;
   --bg-elev: #161b22;
   --fg: #e6edf3;
@@ -8,6 +9,63 @@
   --ring-onderdeel: #7aa2ff;
   --ring-leaf: #b8c5ff;
   --fade: 0.12;
+
+  /* Node-specific kleuren (dark) */
+  --node-ministerie-fill: #1f2a44;
+  --node-ministerie-stroke: #4f7eff;
+  --node-onderdeel-fill: #1a2235;
+  --node-onderdeel-stroke: #7aa2ff;
+  --node-leaf-fill: #161b22;
+  --node-leaf-stroke: #b8c5ff;
+  --node-post-fill: #1b2b1b;
+  --node-post-stroke: #7fd28a;
+  --node-person-fill: #2d2419;
+  --node-person-stroke: #e5b95a;
+  --node-bestuurslaag-fill: #142235;
+  --node-bestuurslaag-stroke: #6f85b8;
+  --node-category-tree-fill: #1a2238;
+  --node-category-tree-stroke: #7aa2ff;
+  --node-category-flat-fill: #1d1c2f;
+  --node-category-flat-stroke: #b48ee0;
+  --node-root-fill: #0d1b2a;
+  --link-stroke: #4f7eff;
+  --text-on-fill: #e6edf3;
+}
+
+:root[data-theme="light"] {
+  /* Light theme — BZK-organogram-stijl: wit op donkerblauw voor bewindslagen,
+     wit met blauwe rand voor onderdelen. */
+  --bg: #ffffff;
+  --bg-elev: #f0f4fa;
+  --fg: #1a3552;
+  --fg-muted: #5a7494;
+  --accent: #0058a3;
+  --ring-ministerie: #003e6b;
+  --ring-onderdeel: #0058a3;
+  --ring-leaf: #6a9cc7;
+  --fade: 0.18;
+
+  /* Node-kleuren: bewindspersoon-niveau (minister, stas) = donkerblauwe pil
+     met witte tekst, conform officieel rijksoverheid-organogram. */
+  --node-ministerie-fill: #003e6b;
+  --node-ministerie-stroke: #003e6b;
+  --node-onderdeel-fill: #ffffff;
+  --node-onderdeel-stroke: #0058a3;
+  --node-leaf-fill: #ffffff;
+  --node-leaf-stroke: #6a9cc7;
+  --node-post-fill: #003e6b;
+  --node-post-stroke: #003e6b;
+  --node-person-fill: #f9d24d;
+  --node-person-stroke: #d4a017;
+  --node-bestuurslaag-fill: #e6eef7;
+  --node-bestuurslaag-stroke: #0058a3;
+  --node-category-tree-fill: #f0f4fa;
+  --node-category-tree-stroke: #0058a3;
+  --node-category-flat-fill: #f5edff;
+  --node-category-flat-stroke: #7a4ba8;
+  --node-root-fill: #003e6b;
+  --link-stroke: #0058a3;
+  --text-on-fill: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -57,6 +115,22 @@ header h1 {
   flex: 1;
   max-width: 480px;
   position: relative;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--fg-muted);
+  color: var(--fg);
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 #search {
@@ -191,50 +265,50 @@ g.node rect {
 }
 
 g.node.root rect {
-  fill: #0d1b2a;
+  fill: var(--node-root-fill);
   stroke: var(--accent);
 }
 
 g.node.bestuurslaag rect {
-  fill: #142235;
-  stroke: #6f85b8;
+  fill: var(--node-bestuurslaag-fill);
+  stroke: var(--node-bestuurslaag-stroke);
   stroke-dasharray: 4 3;
 }
 
 g.node.category-tree rect {
-  fill: #1a2238;
-  stroke: #7aa2ff;
+  fill: var(--node-category-tree-fill);
+  stroke: var(--node-category-tree-stroke);
   stroke-dasharray: 2 2;
 }
 
 g.node.category-flat rect {
-  fill: #1d1c2f;
-  stroke: #b48ee0;
+  fill: var(--node-category-flat-fill);
+  stroke: var(--node-category-flat-stroke);
 }
 
 g.node.post rect {
-  fill: #1b2b1b;
-  stroke: #7fd28a;
+  fill: var(--node-post-fill);
+  stroke: var(--node-post-stroke);
   stroke-dasharray: 2 2;
 }
 
 g.node.person rect {
-  fill: #2d2419;
-  stroke: #e5b95a;
+  fill: var(--node-person-fill);
+  stroke: var(--node-person-stroke);
 }
 
 g.node.ministerie rect {
-  fill: #1f2a44;
+  fill: var(--node-ministerie-fill);
   stroke: var(--ring-ministerie);
 }
 
 g.node.onderdeel rect {
-  fill: #1a2235;
+  fill: var(--node-onderdeel-fill);
   stroke: var(--ring-onderdeel);
 }
 
 g.node.leaf rect {
-  fill: #161b22;
+  fill: var(--node-leaf-fill);
   stroke: var(--ring-leaf);
 }
 
@@ -254,11 +328,19 @@ text.node-label {
   user-select: none;
 }
 
+/* Light theme: tekst in donkerblauwe fills wordt wit. */
+:root[data-theme="light"] g.node.ministerie text.node-label,
+:root[data-theme="light"] g.node.post text.node-label,
+:root[data-theme="light"] g.node.root text.node-label {
+  fill: var(--text-on-fill);
+}
+
 path.link {
   fill: none;
-  stroke: #3a4660;
+  stroke: var(--link-stroke);
   stroke-width: 1.2px;
   transition: opacity 240ms ease;
+  opacity: 0.4;
 }
 
 path.link.faded {

@@ -13,6 +13,25 @@ let chartApi = null;
 let searchApi = null;
 let rootData = null;
 
+// Theme-toggle: persist via localStorage. Default volgt prefers-color-scheme.
+(function initTheme() {
+  const stored = localStorage.getItem("polder-theme");
+  const prefersLight =
+    !stored && window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+  const theme = stored || (prefersLight ? "light" : "dark");
+  if (theme === "light") document.documentElement.dataset.theme = "light";
+  const btn = document.getElementById("theme-toggle");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const cur = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+      const next = cur === "light" ? "dark" : "light";
+      if (next === "light") document.documentElement.dataset.theme = "light";
+      else delete document.documentElement.dataset.theme;
+      localStorage.setItem("polder-theme", next);
+    });
+  }
+})();
+
 (async function bootstrap() {
   const index = await loadJSON("index.json");
   const tilesById = new Map(index.tiles.map((t) => [t.id, t]));
