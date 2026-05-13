@@ -1163,24 +1163,25 @@ def _plan_person(
         )
 
     # Nieuwe persoon. Eis: confidence >= 0.85 (al gechecked) EN
-    # geen kandidaat-conflict.
-    family = _name_record(name_full).get("family", "")
-    candidates = [p for _, p in personen if _person_family_match(p, family)]
-
-    if birth_year is None and len(candidates) > 0:
-        return SkippedProposal(
-            proposal=proposal,
-            reasons=[
-                f"geen geboortejaar bekend en {len(candidates)} familienaam-kandidaat(en) in data/personen/"
-            ],
-        )
-
+    # geen exact-slug-conflict. _person_slug bevat een hash-suffix uit de
+    # volledige naam, dus verschillende personen met dezelfde familienaam
+    # krijgen verschillende slugs. Familienaam-collision alleen is dus geen
+    # blokker meer; alleen exact-slug-collision telt.
     slug_body = _person_slug(name_full, birth_year)
     if not slug_body:
         return SkippedProposal(
             proposal=proposal, reasons=["kan geen persoon-slug afleiden"]
         )
     person_id = f"person:{slug_body}"
+    existing_with_same_slug = any(p.get("id") == person_id for _, p in personen)
+    if existing_with_same_slug:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[
+                f"persoon-slug {person_id} bestaat al; "
+                "vermoedelijk dezelfde persoon (anders is hash-collisie)"
+            ],
+        )
     if person_id in pending_person_ids:
         # Tweede proposal voor een persoon die we deze run nog aan het
         # aanmaken zijn. In plaats van skip: mute het pending create-record

@@ -1,0 +1,15 @@
+id: org:dg-migratie
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-jenv
+names:
+- value: Migratie
+  valid_from: '2026-05-13'
+valid_from: '2026-05-13'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/esther-pijs-directeur-generaal-migratie-bij-jenv
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging

@@ -181,8 +181,15 @@ def test_skip_red_avg(mini_polder: Path) -> None:
     assert any("AVG" in r for r in skipped[0].reasons)
 
 
-def test_skip_person_when_no_birthyear_and_conflict(mini_polder: Path) -> None:
-    # Bestaande persoon met dezelfde familienaam toevoegen.
+def test_create_person_even_with_familyname_collision(mini_polder: Path) -> None:
+    """Familienaam-collision blokkeert geen create-person meer.
+
+    _person_slug bevat een hash-suffix uit de full-name, dus twee personen
+    met dezelfde familienaam krijgen verschillende slugs. Alleen exact-
+    slug-collision blokkeert. Dit is een bewuste loosening voor ABD-records
+    waar veel namen niet op Wikidata staan maar wel via een gezaghebbend
+    KB benoemd worden.
+    """
     _write_yaml(
         mini_polder / "data" / "personen" / "kewal-x.yaml",
         {
@@ -195,11 +202,9 @@ def test_skip_person_when_no_birthyear_and_conflict(mini_polder: Path) -> None:
     )
     p = _kewal_proposal()
     p.pop("birth_year", None)
-    actions, skipped = plan_apply([p], mini_polder / "data")
+    actions, _ = plan_apply([p], mini_polder / "data")
     types = [a.type for a in actions]
-    # Org + post moet door, persoon moet skip.
-    assert "create-person" not in types
-    assert any("kandidaat" in r or "geboortejaar" in r for s in skipped for r in s.reasons)
+    assert "create-person" in types
 
 
 def test_only_high_confidence_filter(mini_polder: Path) -> None:

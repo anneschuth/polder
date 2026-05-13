@@ -1,0 +1,26 @@
+id: person:bend-avd-ce5b105a
+name:
+  full: Aernout van der Bend
+  family: Bend
+  given: Aernout van der
+  initials: A.V.D.
+mandaten:
+- id: mandate-post-directeur-niwo-2024-01-01
+  organization_id: org:zbo-niwo
+  post_id: post:directeur-niwo
+  role: directeur
+  start_date: '2024-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/10/aernout-van-der-bend-directeur-nationale-en-internationale-wegvervoer-organisatie
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/10/aernout-van-der-bend-directeur-nationale-en-internationale-wegvervoer-organisatie
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging

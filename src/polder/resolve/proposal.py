@@ -240,6 +240,20 @@ def _resolve_post(
                             return PostMatch(
                                 with_suffix[0], 0.90, "matched_by_org_classification"
                             )
+                        # Meerdere posten eindigen op -min-X (bv hoofd-post en
+                        # een sub-portefeuille als staatssecretaris-tweede-).
+                        # Voor een generiek role-label ("Staatssecretaris van
+                        # Defensie", "Minister van X") wint de kortste slug —
+                        # dat is de hoofdpost zonder portefeuille-prefix.
+                        if with_suffix:
+                            shortest = min(with_suffix, key=len)
+                            longer_count = sum(
+                                1 for p in with_suffix if len(p) > len(shortest)
+                            )
+                            if longer_count == len(with_suffix) - 1:
+                                return PostMatch(
+                                    shortest, 0.88, "matched_by_org_classification"
+                                )
         if len(candidates) == 1:
             return PostMatch(candidates[0], 0.90, "matched_by_org_classification")
 
@@ -371,6 +385,11 @@ def _recommend_merge(
 
     Auto-merge: alle drie velden ≥ 0.85 én proposal-confidence ≥ 0.85 (als
     aanwezig) én geen ambiguïteit.
+
+    Speciaal pad voor ABD-records: person no_match maar org en post sterk
+    geresolveerd. Dan is dit een echte benoeming waar de persoon nog niet
+    in de polder-database staat. Apply kan create-person triggeren met
+    UUID-suffix slug. Markeer als auto-merge.
     """
     proposal_conf = proposal.get("confidence")
     if isinstance(proposal_conf, (int, float)) and proposal_conf < 0.85:
@@ -378,6 +397,14 @@ def _recommend_merge(
 
     if "ambiguous" in person.method:
         return "needs-review"
+
+    # Person no_match maar org en post stevig: nieuwe persoon aanmaken.
+    if (
+        person.method == "no_match"
+        and org.confidence >= 0.85
+        and post.confidence >= 0.85
+    ):
+        return "auto-merge"
 
     # Alle drie velden moeten ≥ 0.85 zijn
     if org.confidence < 0.85 or post.confidence < 0.85 or person.confidence < 0.85:

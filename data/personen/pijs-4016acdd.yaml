@@ -1,0 +1,28 @@
+id: person:pijs-4016acdd
+name:
+  full: Drs. E.W.E. (Esther) Pijs
+  family: Pijs
+  given: E.W.E.
+  initials: E.
+mandaten:
+- id: mandate-post-waarnemend-psg-min-ezk-2022-04-01
+  organization_id: org:min-ezk
+  post_id: post:waarnemend-psg-min-ezk
+  role: programma-directeur-generaal Groningen en Ondergrond
+  start_date: '2022-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-25
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging
