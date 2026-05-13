@@ -41,6 +41,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
   let rootHierarchy;
   let focusNode;
+  let viewMode = "tree";
 
   const zoomBehavior = d3
     .zoom()
@@ -95,8 +96,6 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     }
     return out.length ? out : null;
   }
-
-  let viewMode = "tree";
 
   function redraw() {
     rootHierarchy = d3.hierarchy(rootData, childrenAccessor);
@@ -477,7 +476,10 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   }
 
   function centerOn(target, instant = false) {
-    const subtreeNodes = target.descendants();
+    const subtreeNodes = target
+      .descendants()
+      .filter((n) => Number.isFinite(n.x) && Number.isFinite(n.y) && !n.data._hidden);
+    if (subtreeNodes.length === 0) return;
     const xs = subtreeNodes.map((n) => n.x);
     const ys = subtreeNodes.map((n) => n.y);
     const minX = Math.min(...xs) - NODE_W / 2 - 20;
