@@ -132,10 +132,16 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     // top-level). Detectie: focusNode is een ministerie OF rootHierarchy
     // heeft precies één descendant met kind=ministerie en die is geladen.
     if (!focusNode) return null;
-    const candidate =
-      focusNode.data && (focusNode.data.kind === "ministerie" || focusNode.data.type === "ministerie")
-        ? focusNode
-        : null;
+    // Loop omhoog via parents om te zien of focus binnen een ministerie zit.
+    let cur = focusNode;
+    let candidate = null;
+    while (cur) {
+      if (cur.data && (cur.data.kind === "ministerie" || cur.data.type === "ministerie")) {
+        candidate = cur;
+        break;
+      }
+      cur = cur.parent;
+    }
     if (!candidate) return null;
     // Refresh: huidige rootHierarchy heeft een verse boom; pak de
     // overeenkomende node erin op id.
@@ -150,19 +156,20 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
   function layoutMinisterieOrganogram(min, root) {
     // Zone-coordinaten. Origin (0,0) is centrum van de bewindspersonen-rij.
+    // Verticale spacing strak conform officieel BZK-organogram.
     const ROW_BW = 0;
-    const ROW_SG = 160;
-    const ROW_CLUSTERS = 320;
-    const ROW_DG = 540;
-    const BW_W = 220;
-    const BW_GAP = 24;
-    const SG_W = 220;
-    const SG_GAP = 60;
+    const ROW_SG = 90;
+    const ROW_CLUSTERS = 170;
+    const ROW_DG = 260;
+    const BW_W = 240;
+    const BW_GAP = 16;
+    const SG_W = 240;
+    const SG_GAP = 12;
     const CL_W = 220;
-    const CL_GAP = 30;
+    const CL_GAP = 18;
     const DG_W = 200;
-    const DG_GAP = 18;
-    const DIR_ROW_H = 28;
+    const DG_GAP = 12;
+    const DIR_ROW_H = 22;
 
     // Reset alle node-posities; later overschrijven we wat wel zichtbaar is.
     root.each((n) => {
@@ -170,9 +177,9 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       n.y = NaN;
     });
 
-    // Ministerie zelf staat centraal, ver boven de bewindspersonen.
+    // Ministerie zelf staat centraal, vlak boven de bewindspersonen.
     min.x = 0;
-    min.y = -120;
+    min.y = -70;
 
     // Bewindspersonen-posten direct onder het ministerie.
     const bewinds = min.children
@@ -196,8 +203,12 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
     let dgs = [];
     if (sgOrg) {
+      // SG-org-tile zelf verbergen — het koppel SG + plv-SG vertegenwoordigt
+      // 'm. Lijnen van ministerie naar DG's lopen straks via SG-post als
+      // visuele kop.
       sgOrg.x = 0;
-      sgOrg.y = (ROW_BW + ROW_SG) / 2 - 50;
+      sgOrg.y = (ROW_SG + ROW_DG) / 2;
+      sgOrg.data._hidden = true;
 
       // SG en plv-SG posten zitten als 'post'-children onder sgOrg.
       const sgPosts = sgOrg.children
@@ -232,7 +243,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
         const items = (c.children || []).filter((k) => k.data);
         items.forEach((item, j) => {
           item.x = c.x;
-          item.y = c.y + 50 + j * DIR_ROW_H;
+          item.y = c.y + 36 + j * DIR_ROW_H;
         });
       });
 
@@ -283,7 +294,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       // Directies als verticale lijst onder de DG.
       dgDirs.forEach((dir, j) => {
         dir.x = dg.x;
-        dir.y = dg.y + 50 + j * DIR_ROW_H;
+        dir.y = dg.y + 36 + j * DIR_ROW_H;
         // Eventuele afdelingen onder directies: zelfde kolom, verder naar onder.
         const sub = dir.children ? dir.children.filter((k) => k.data) : [];
         sub.forEach((s, k) => {
@@ -308,7 +319,8 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
         Number.isFinite(l.source.y) &&
         Number.isFinite(l.target.x) &&
         Number.isFinite(l.target.y) &&
-        !l.target.data._hidden,
+        !l.target.data._hidden &&
+        !l.source.data._hidden,
     );
     const links = linkLayer
       .selectAll("path.link")
