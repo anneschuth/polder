@@ -379,8 +379,17 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     );
     if (bewinds.length === 0 || dgs.length === 0) return null;
     const trunkTop = Math.max(...bewinds.map((b) => b.y)) + NODE_H / 2;
-    const trunkBottom = Math.min(...dgs.map((d) => d.y)) - NODE_H / 2;
-    let path = `M0,${trunkTop} V${trunkBottom}`;
+    const dgTop = Math.min(...dgs.map((d) => d.y)) - NODE_H / 2;
+    // Horizontale balk vlak boven DG-rij waar alle DG-aftakkingen op uitkomen.
+    const dgBarY = dgTop - 10;
+    const dgXs = dgs.map((d) => d.x);
+    const dgMinX = Math.min(...dgXs);
+    const dgMaxX = Math.max(...dgXs);
+    let path = `M0,${trunkTop} V${dgBarY}`;
+    path += ` M${dgMinX},${dgBarY} H${dgMaxX}`;
+    for (const dg of dgs) {
+      path += ` M${dg.x},${dgBarY} V${dgTop}`;
+    }
     // Horizontale aftakkingen van de stam naar SG/plv-SG tiles.
     for (const sg of sgPosts) {
       path += ` M0,${sg.y} H${sg.x}`;
