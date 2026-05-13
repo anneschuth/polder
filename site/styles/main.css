@@ -97,6 +97,23 @@ g.node.root rect {
   stroke: var(--accent);
 }
 
+g.node.bestuurslaag rect {
+  fill: #142235;
+  stroke: #6f85b8;
+  stroke-dasharray: 4 3;
+}
+
+g.node.category-tree rect {
+  fill: #1a2238;
+  stroke: #7aa2ff;
+  stroke-dasharray: 2 2;
+}
+
+g.node.category-flat rect {
+  fill: #1d1c2f;
+  stroke: #b48ee0;
+}
+
 g.node.ministerie rect {
   fill: #1f2a44;
   stroke: var(--ring-ministerie);
@@ -137,4 +154,98 @@ path.link {
 
 path.link.faded {
   opacity: var(--fade);
+}
+
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.overlay-panel {
+  background: var(--bg-elev);
+  border: 1px solid #2c3340;
+  border-radius: 10px;
+  width: min(560px, 92vw);
+  height: min(720px, 86vh);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+.overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #2c3340;
+}
+
+.overlay-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.overlay-close {
+  background: none;
+  border: none;
+  color: var(--fg-muted);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.overlay-close:hover {
+  color: var(--fg);
+}
+
+.overlay-filter {
+  margin: 12px 16px 8px;
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid #2c3340;
+  border-radius: 6px;
+  color: var(--fg);
+  font-size: 13px;
+}
+
+.overlay-filter:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.overlay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.overlay-list li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.overlay-list li:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.overlay-list strong {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.overlay-list .muted {
+  color: var(--fg-muted);
+  font-size: 12px;
 }

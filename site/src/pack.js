@@ -6,7 +6,8 @@ const LEVEL_H = 90;
 const SIBLING_GAP = 12;
 const ZOOM_MS = 700;
 
-export function createChart(container, rootData, onCrumbChange) {
+export function createChart(container, rootData, onCrumbChange, options = {}) {
+  const { onFlatTile } = options;
   const width = container.clientWidth;
   const height = container.clientHeight;
 
@@ -105,6 +106,9 @@ export function createChart(container, rootData, onCrumbChange) {
 
   function nodeKindClass(d) {
     if (d.depth === 0) return "root";
+    if (d.data.kind === "bestuurslaag") return "bestuurslaag";
+    if (d.data.kind === "category-flat") return "category-flat";
+    if (d.data.kind === "category-tree") return "category-tree";
     if (d.data.kind === "ministerie" || d.data.type === "ministerie") return "ministerie";
     if (d.children && d.children.length) return "onderdeel";
     return "leaf";
@@ -115,6 +119,10 @@ export function createChart(container, rootData, onCrumbChange) {
   }
 
   async function handleClick(d) {
+    if (d.data.kind === "category-flat" && onFlatTile) {
+      onFlatTile(d);
+      return;
+    }
     if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
       try {
         const subtree = await loadJSON(d.data.bundle);

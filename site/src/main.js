@@ -1,32 +1,78 @@
 import { loadJSON } from "./fetcher.js";
 import { createChart } from "./pack.js";
+import { openFlatOverlay } from "./overlay.js";
 
 const container = document.getElementById("chart");
 const breadcrumbEl = document.getElementById("breadcrumb");
 
 (async function bootstrap() {
   const index = await loadJSON("index.json");
+  const tilesById = new Map(index.tiles.map((t) => [t.id, t]));
 
-  // Synthesise a fake root containing the tiles as direct children. Each tile
-  // keeps its `bundle` pointer so a click can lazy-load the real subtree.
   const root = {
     id: "_root",
     label: "Overheid",
-    children: index.tiles.map((tile) => ({
-      id: tile.id,
-      kind: tile.kind,
-      label: tile.label,
-      label_full: tile.label_full,
-      bundle: tile.bundle,
-      type: tile.kind === "ministerie" ? "ministerie" : undefined,
-      // empty children = lazy; populated by handleClick after fetch
-      children: [],
-      _descendant_org_count: tile.descendant_org_count,
+    kind: "root",
+    children: (index.layers || []).map((layer) => ({
+      id: layer.id,
+      label: layer.label,
+      kind: "bestuurslaag",
+      children: layer.tile_ids
+        .map((tid) => tilesById.get(tid))
+        .filter(Boolean)
+        .map(tileToNode),
     })),
   };
 
-  createChart(container, root, renderBreadcrumb);
+  createChart(container, root, renderBreadcrumb, { onFlatTile: handleFlatTile });
 })();
+
+function tileToNode(tile) {
+  if (tile.kind === "category-tree") {
+    return {
+      id: tile.id,
+      kind: "category-tree",
+      label: tile.label,
+      _count: tile.count,
+      children: (tile.members || []).map((m) => ({
+        id: m.id,
+        kind: "category-member",
+        label: m.label,
+        label_full: m.label_full,
+        bundle: m.bundle,
+        type: m.org_type,
+        children: [],
+        _descendant_org_count: m.descendant_org_count,
+      })),
+    };
+  }
+  if (tile.kind === "category-flat") {
+    return {
+      id: tile.id,
+      kind: "category-flat",
+      label: tile.label,
+      bundle: tile.bundle,
+      _count: tile.count,
+      children: [],
+    };
+  }
+  return {
+    id: tile.id,
+    kind: tile.kind,
+    label: tile.label,
+    label_full: tile.label_full,
+    bundle: tile.bundle,
+    type: tile.kind === "ministerie" ? "ministerie" : undefined,
+    children: [],
+    _descendant_org_count: tile.descendant_org_count,
+  };
+}
+
+async function handleFlatTile(node) {
+  if (!node.data.bundle) return;
+  const data = await loadJSON(node.data.bundle);
+  openFlatOverlay(data);
+}
 
 function renderBreadcrumb(trail, navigate) {
   breadcrumbEl.innerHTML = "";
