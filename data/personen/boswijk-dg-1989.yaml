@@ -24,6 +24,22 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2f7e1b04-8b27-46e4-8675-4a46b27550e7)
     retrieved: '2026-05-09'
+- id: mandate-post-staatssecretaris-min-def-2026-02-23
+  organization_id: org:min-def
+  post_id: post:staatssecretaris-min-def
+  role: Staatssecretaris van Defensie
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officialebekendmakingen.nl/stcrt-2026-8187
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000412, 23 februari 2026
+    staatscourant_url: https://zoek.officialebekendmakingen.nl/stcrt-2026-8187
+  confidence: 0.98
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1e8aa099-9c94-432d-bff7-ac9fe20ff3ff)

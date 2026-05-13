@@ -11,12 +11,17 @@ mandaten:
 - id: wd-5cf6a3bbcb18
   organization_id: org:min-bz
   post_id: post:minister-min-bz
-  role: Nederlands minister van Buitenlandse Zaken
+  role: Minister van Buitenlandse Zaken
   start_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q64399772#P39
     retrieved: '2026-05-09'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
   end_date: null
 sources:
 - id: wikidata

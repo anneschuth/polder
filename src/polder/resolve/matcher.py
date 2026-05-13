@@ -17,7 +17,7 @@ from pathlib import Path
 
 import yaml
 
-from polder.lib.initials import compact_initials
+from polder.lib.initials import compact_initials, compact_initials_loose
 from polder.resolve.names import ParsedName, parse_person_name
 
 logger = logging.getLogger("polder.resolve.matcher")
@@ -97,6 +97,10 @@ class PolderIndex:
     by_family_initials_year: dict[tuple[str, str, int], list[str]] = field(default_factory=dict)
     # (family, given_compact) -> [person_id, ...] (compact zonder accenten)
     by_family_given: dict[tuple[str, str], list[str]] = field(default_factory=dict)
+    # (family, birth_year) -> [person_id, ...]. Voor proposals zonder
+    # initials of waar de initials niet exact matchen, maar het geboortejaar
+    # wel uniek is binnen een familienaam.
+    by_family_year: dict[tuple[str, int], list[str]] = field(default_factory=dict)
     # family -> [person_id, ...]
     by_family: dict[str, list[str]] = field(default_factory=dict)
 
@@ -106,6 +110,10 @@ class PolderIndex:
     post_ids: set[str] = field(default_factory=set)
     # post_id -> organization_id (om post/org-consistency te checken)
     post_to_org: dict[str, str] = field(default_factory=dict)
+    # (organization_id, classification) -> [post_id, ...]. Voor fuzzy post-
+    # resolution wanneer de skill een verzonnen slug levert ("post:minister-
+    # defensie") en we alsnog de canonical post willen vinden via org+rol.
+    posts_by_org_class: dict[tuple[str, str], list[str]] = field(default_factory=dict)
     # alias-slug -> canonical org_id. Vult vanuit names[*].value en abbr,
     # zodat bv. `org:ministerie-van-financien` matched op `org:min-fin`.
     org_by_alias: dict[str, str] = field(default_factory=dict)
@@ -132,14 +140,21 @@ class PolderIndex:
                 name = d.get("name") or {}
                 family = _norm_family(name.get("family"))
                 given = _norm_given(name.get("given"))
-                initials = compact_initials(name.get("initials"))
+                raw_init = name.get("initials")
+                initials = compact_initials(raw_init)
+                initials_loose = compact_initials_loose(raw_init)
                 year = (d.get("birth") or {}).get("year")
                 if family:
                     idx.by_family.setdefault(family, []).append(pid)
-                    if initials and isinstance(year, int):
-                        idx.by_family_initials_year.setdefault(
-                            (family, initials, year), []
-                        ).append(pid)
+                    if isinstance(year, int):
+                        # Index op zowel strict als loose key zodat
+                        # "S.Th.M." in data matched met "S.T.M." in proposal
+                        # en omgekeerd.
+                        for ikey in {initials, initials_loose} - {""}:
+                            idx.by_family_initials_year.setdefault(
+                                (family, ikey, year), []
+                            ).append(pid)
+                        idx.by_family_year.setdefault((family, year), []).append(pid)
                     if given:
                         idx.by_family_given.setdefault((family, given), []).append(pid)
 
@@ -164,14 +179,26 @@ class PolderIndex:
                     for raw in (n.get("value"), n.get("abbr")):
                         if not raw:
                             continue
-                        # Twee vormen registreren: de korte ("financien")
-                        # en, bij ministeries, ook de verbose ("ministerie-van-financien"
-                        # en "min-financien"). Daardoor matchen we beide
-                        # spelling-varianten op de canonical id.
+                        # Meerdere vormen registreren zodat we alle spelling-
+                        # varianten van een ministerie-naam matchen op de
+                        # canonical id. Voorbeelden voor min-fin:
+                        #   "financien"                          (kort)
+                        #   "ministerie-van-financien"           (verbose, met "van")
+                        #   "ministerie-financien"               (verbose, zonder "van")
+                        #   "min-financien"                      (afgekorte verbose)
+                        # Ook werkt dit voor de abbr (BZK, FIN, OCW, ...):
+                        #   "bzk" -> "ministerie-bzk", "min-bzk"
+                        # Skills produceren typisch "org:ministerie-<abbr>" of
+                        # "org:ministerie-<woord>"; alles wat hier landt resolved.
                         for candidate in (
                             _org_alias_slug(raw),
                             (
                                 _slugify_org(f"ministerie van {raw}")
+                                if is_ministerie
+                                else None
+                            ),
+                            (
+                                _slugify_org(f"ministerie {raw}")
                                 if is_ministerie
                                 else None
                             ),
@@ -192,8 +219,14 @@ class PolderIndex:
                     continue
                 if isinstance(d, dict) and d.get("id"):
                     idx.post_ids.add(d["id"])
-                    if d.get("organization_id"):
-                        idx.post_to_org[d["id"]] = d["organization_id"]
+                    org_id = d.get("organization_id")
+                    classification = d.get("classification")
+                    if org_id:
+                        idx.post_to_org[d["id"]] = org_id
+                        if classification:
+                            idx.posts_by_org_class.setdefault(
+                                (org_id, classification), []
+                            ).append(d["id"])
 
         return idx
 
@@ -229,14 +262,33 @@ def match_person(
 
     family = parsed.family  # al lowercase ASCII via parse_person_name
 
-    # 1. family + initials + birth_year
+    # 1. family + initials + birth_year. Probeer zowel de strict-vorm als
+    # de digraph-collapsed loose-vorm (S.Th.M. <-> S.T.M.). De index zelf
+    # bevat beide varianten per record.
     if parsed.initials and birth_year is not None:
-        key = (family, parsed.initials, birth_year)
-        ids = idx.by_family_initials_year.get(key, [])
+        seen: set[str] = set()
+        for ikey in (parsed.initials, parsed.initials_loose):
+            if not ikey or ikey in seen:
+                continue
+            seen.add(ikey)
+            ids = idx.by_family_initials_year.get((family, ikey, birth_year), [])
+            if len(ids) == 1:
+                return PersonMatch(ids[0], 0.98, "family_initials_year")
+            if len(ids) > 1:
+                return PersonMatch(
+                    None, 0.0, "ambiguous_family_initials_year", tuple(ids)
+                )
+
+    # 1b. family + birth_year (zonder initials-match). Veel data-records
+    # missen initials maar hebben wel het geboortejaar; voor een proposal
+    # die wel initials heeft maar geen letterlijke match, is een unieke
+    # family+year-treffer alsnog een sterk signaal.
+    if birth_year is not None:
+        ids = idx.by_family_year.get((family, birth_year), [])
         if len(ids) == 1:
-            return PersonMatch(ids[0], 0.98, "family_initials_year")
+            return PersonMatch(ids[0], 0.92, "family_year_unique")
         if len(ids) > 1:
-            return PersonMatch(None, 0.0, "ambiguous_family_initials_year", tuple(ids))
+            return PersonMatch(None, 0.0, "ambiguous_family_year", tuple(ids))
 
     # 2. family + given (exact compact-match)
     if parsed.given:

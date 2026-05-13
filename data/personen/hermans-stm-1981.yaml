@@ -52,13 +52,19 @@ mandaten:
 - id: wd-2589130faabe
   organization_id: org:min-ienw
   post_id: post:minister-min-ienw
-  role: Nederlands minister van Infrastructuur en Waterstaat
+  role: Minister van Infrastructuur en Waterstaat
   start_date: '2025-06-03'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28860996#P39
     retrieved: '2026-05-09'
-  end_date: '2026-02-23'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-23052
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-tussentijds
+  end_date: '2025-06-19'
 - id: wd-5a05f0215323
   organization_id: org:min-vws
   post_id: post:minister-min-vws
@@ -78,7 +84,13 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28860996#P39
     retrieved: '2026-05-09'
-  end_date: '2026-02-23'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-31152
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-tussentijds
+  end_date: '2025-09-05'
 - id: wd-693a43790ecb
   organization_id: org:min-kgg
   post_id: post:minister-min-kgg
@@ -88,23 +100,18 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28860996#P39
     retrieved: '2026-05-09'
-  end_date: '2026-02-23'
-- id: mandate-post-minister-min-kgg-2024-07-02
-  organization_id: org:min-kgg
-  post_id: post:minister-min-kgg
-  role: Minister van Klimaat en Groene Groei
-  start_date: '2024-07-02'
-  end_date: null
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.95
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-script
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8663b71-f92b-4d2b-a06b-f78dba168d98)

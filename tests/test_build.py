@@ -10,7 +10,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from polder.build import build_csv, build_datapackage, build_sqlite
+from polder.build import build_csv, build_datapackage, build_sqlite, build_viz
 
 
 def _write_yaml(path: Path, data: dict | list) -> None:
@@ -208,6 +208,118 @@ def test_build_datapackage_produces_valid_json(fixture_data: Path, tmp_path: Pat
     organisaties = next(r for r in descriptor["resources"] if r["name"] == "organisaties")
     field_names = {f["name"] for f in organisaties["schema"]["fields"]}
     assert {"id", "type", "name", "oin"} <= field_names
+
+
+@pytest.fixture
+def viz_fixture_data(tmp_path: Path) -> Path:
+    """Mini-polder: 2 ministeries, één met 2 onderdelen genest."""
+    data_dir = tmp_path / "data"
+    _write_yaml(
+        data_dir / "organisaties" / "ministeries" / "min-bzk.yaml",
+        {
+            "id": "org:min-bzk",
+            "type": "ministerie",
+            "classification": "ministerie",
+            "parent_id": None,
+            "names": [{"value": "Binnenlandse Zaken en Koninkrijksrelaties", "abbr": "BZK"}],
+            "valid_from": "1798-08-12",
+            "valid_until": None,
+            "sources": [{"id": "roo", "url": "https://example", "retrieved": "2026-05-08"}],
+        },
+    )
+    _write_yaml(
+        data_dir / "organisaties" / "ministeries" / "min-fin.yaml",
+        {
+            "id": "org:min-fin",
+            "type": "ministerie",
+            "classification": "ministerie",
+            "parent_id": None,
+            "names": [{"value": "Financien", "abbr": "FIN"}],
+            "valid_from": "1798-01-01",
+            "valid_until": None,
+            "sources": [{"id": "roo", "url": "https://example", "retrieved": "2026-05-08"}],
+        },
+    )
+    _write_yaml(
+        data_dir / "organisaties" / "organisatieonderdelen" / "dgdoo.yaml",
+        {
+            "id": "org:onderdeel-dgdoo",
+            "type": "organisatieonderdeel",
+            "classification": "organisatieonderdeel",
+            "parent_id": "org:min-bzk",
+            "names": [
+                {
+                    "value": "Directoraat-Generaal Digitalisering en Overheidsorganisatie",
+                    "abbr": "DGDOO",
+                }
+            ],
+            "valid_from": "2020-01-01",
+            "valid_until": None,
+            "sources": [{"id": "roo", "url": "https://example", "retrieved": "2026-05-08"}],
+        },
+    )
+    _write_yaml(
+        data_dir / "organisaties" / "organisatieonderdelen" / "dir-digi.yaml",
+        {
+            "id": "org:onderdeel-dir-digi",
+            "type": "organisatieonderdeel",
+            "classification": "organisatieonderdeel",
+            "parent_id": "org:onderdeel-dgdoo",
+            "names": [{"value": "Directie Digitale Overheid", "abbr": "DDO"}],
+            "valid_from": "2021-01-01",
+            "valid_until": None,
+            "sources": [{"id": "roo", "url": "https://example", "retrieved": "2026-05-08"}],
+        },
+    )
+    return data_dir
+
+
+def test_build_viz_writes_index_and_bundles(viz_fixture_data: Path, tmp_path: Path) -> None:
+    out_dir = tmp_path / "site"
+    build_viz(viz_fixture_data, out_dir)
+
+    index_path = out_dir / "data" / "index.json"
+    assert index_path.exists()
+    with index_path.open(encoding="utf-8") as fh:
+        index = json.load(fh)
+
+    assert index["schema_version"] == 1
+    tile_ids = {t["id"] for t in index["tiles"]}
+    assert tile_ids == {"org:min-bzk", "org:min-fin"}
+
+    bzk_tile = next(t for t in index["tiles"] if t["id"] == "org:min-bzk")
+    assert bzk_tile["kind"] == "ministerie"
+    assert bzk_tile["label"] == "BZK"
+    assert bzk_tile["descendant_org_count"] == 2  # DGDOO + DDO
+    assert bzk_tile["bundle"] == "org/min-bzk.json"
+
+    fin_tile = next(t for t in index["tiles"] if t["id"] == "org:min-fin")
+    assert fin_tile["descendant_org_count"] == 0
+
+
+def test_build_viz_nests_onderdelen_under_ministerie(
+    viz_fixture_data: Path, tmp_path: Path
+) -> None:
+    out_dir = tmp_path / "site"
+    build_viz(viz_fixture_data, out_dir)
+
+    bundle_path = out_dir / "data" / "org" / "min-bzk.json"
+    assert bundle_path.exists()
+    with bundle_path.open(encoding="utf-8") as fh:
+        tree = json.load(fh)
+
+    assert tree["id"] == "org:min-bzk"
+    assert tree["kind"] == "org"
+    assert len(tree["children"]) == 1
+
+    dgdoo = tree["children"][0]
+    assert dgdoo["id"] == "org:onderdeel-dgdoo"
+    assert dgdoo["label"] == "DGDOO"
+    assert len(dgdoo["children"]) == 1
+
+    ddo = dgdoo["children"][0]
+    assert ddo["id"] == "org:onderdeel-dir-digi"
+    assert ddo["children"] == []
 
 
 def test_root_datapackage_json_is_valid() -> None:

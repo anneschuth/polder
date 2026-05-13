@@ -9,7 +9,7 @@ __pycache__/
 # dist/ bevat naast Python-build ook lokale runner-output:
 # dist/pr-body.md (review-pr-diff skill) en dist/pr-label.txt.
 dist/
-build/
+/build/
 *.egg-info/
 *.egg
 .pytest_cache/

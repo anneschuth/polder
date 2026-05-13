@@ -115,6 +115,23 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q28860866#P39
     retrieved: '2026-05-09'
   end_date: null
+- id: mandate-post-minister-president-min-az-2026-02-23
+  organization_id: org:min-az
+  post_id: post:minister-president-min-az
+  role: Minister-President en Minister belast met de leiding van het Ministerie van
+    Algemene Zaken
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8174/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000401, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8174/
+  confidence: 0.99
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(49be3576-cea3-46c0-87eb-89beb108248d)

@@ -16,7 +16,9 @@ from typing import Any, Literal
 
 import yaml
 
-ActionType = Literal["create-org", "create-post", "create-person", "append-mandaat"]
+ActionType = Literal[
+    "create-org", "create-post", "create-person", "append-mandaat", "close-mandaat"
+]
 
 # AVG-grenzen: rollen die niet in `data/` thuishoren conform docs/avg-grenzen.md
 RED_AVG_KEYWORDS = (
@@ -106,6 +108,57 @@ def _today_iso() -> str:
     return date.today().isoformat()
 
 
+def _resolved_org_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical organization_id uit een proposal.
+
+    De resolver vult ``resolved_organization_id`` met de canonical slug
+    (bv. ``org:min-jenv``) waar de raw slug ``org:ministerie-van-justitie-
+    en-veiligheid`` zou zijn. We geven de resolved variant voorrang **mits**
+    de raw slug óók verwijst naar dezelfde org-keten — anders heeft de
+    resolver naar een mindere-specifieke parent geklommen ("ik kon de
+    afdeling niet vinden, ik gok directie") en moet apply met de raw werken
+    zodat de chain-creatie de ontbrekende child kan aanmaken.
+
+    Heuristiek: gebruik resolved als (a) er geen raw is, of (b) raw is
+    canonical, of (c) raw resolved is via een ALIAS naar resolved. Voor
+    chain-klim-gevallen wijst raw naar iets dat resolved NIET als alias
+    heeft; daar valt apply terug op raw.
+    """
+    raw = _normalize_id(proposal.get("organization_id"), "org")
+    resolved = _normalize_id(proposal.get("resolved_organization_id"), "org")
+    if resolved is None:
+        return raw
+    if raw is None or raw == resolved:
+        return resolved
+    method = (proposal.get("resolution_notes") or "").split(";", 1)[0]
+    if "proposal_id_exact" in method or "proposal_id_via_alias" in method:
+        return resolved
+    return raw
+
+
+def _resolved_post_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical post_id uit een proposal.
+
+    Geef ``resolved_post_id`` voorrang als die er is — de resolver matcht
+    fuzzy (``post:minister-defensie`` → ``post:minister-min-def``) en alleen
+    de canonical slug bestaat in ``data/posten/``. Val terug op raw als de
+    resolver niets vond.
+    """
+    return _normalize_id(
+        proposal.get("resolved_post_id") or proposal.get("post_id"),
+        "post",
+    )
+
+
+def _resolved_person_id(proposal: dict[str, Any]) -> str | None:
+    """Pak de canonical person_id uit een proposal. Zie _resolved_org_id."""
+    raw = proposal.get("resolved_person_id") or proposal.get("existing_person_id")
+    if not raw:
+        return None
+    s = str(raw).strip()
+    return s or None
+
+
 def _detect_source_id(proposal: dict[str, Any], fallback: str = "abd_nieuws") -> str:
     """Leid een polder source-id af uit URL-velden of staging-filename hint."""
     if proposal.get("abd_nieuws_url"):
@@ -156,18 +209,20 @@ _MIN_PLAUSIBLE_YEAR = 1798
 _MAX_FUTURE_YEARS = 5
 
 
-def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str, str]:
+def _mandaat_key(m: dict[str, Any]) -> tuple[str, str, str, str]:
     """Canonical key voor mandaat-deduplicatie.
 
-    Identical (post_id, organization_id, start_date, end_date, role) is treated
-    as the same mandate regardless of source, decision_reference, or confidence.
+    Identical (post_id, organization_id, start_date, end_date) is treated as
+    het zelfde mandaat. Role staat NIET in de key: dezelfde benoeming kan
+    door Wikidata als "Nederlands minister van X" geschreven worden en door
+    Staatscourant als "Minister van X" — dat zijn niet twee mandaten, maar
+    twee bronnen voor één mandaat.
     """
     return (
         str(m.get("post_id") or ""),
         str(m.get("organization_id") or ""),
         str(m.get("start_date") or ""),
         str(m.get("end_date") or ""),
-        str(m.get("role") or ""),
     )
 
 
@@ -270,10 +325,12 @@ def _is_red_avg(role: str) -> bool:
 def _person_slug(name_full: str, birth_year: int | None) -> str:
     """Genereer een persoon-slug volgens conventie `<family>-<initials>-<birthyear>`.
 
-    Als geboortejaar ontbreekt, vervalt het achtervoegsel. Initialen op basis
-    van eerste letters van given-names voor de familienaam.
+    Als geboortejaar ontbreekt, vervalt het achtervoegsel en wordt een
+    deterministische 8-hex-suffix gebruikt op basis van de volledige naam.
+    Zo krijgt dezelfde naam in twee runs dezelfde slug — voorkomt dat een
+    re-resolve duplicaten maakt voor anonieme ABD-personen.
     """
-    import secrets
+    import hashlib
 
     # Strip parenthese-bijnaam ('A. (Abdeluheb) Choho' -> 'A. Choho').
     cleaned = re.sub(r"\([^)]*\)", "", name_full).strip()
@@ -301,8 +358,11 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
         pieces.append(str(birth_year))
     else:
         # Schema-eis: slug eindigt op 4-cijferig jaar, 7+-cijferig extern ID,
-        # of 8-hex UUID-fallback. Zonder geboortejaar gebruiken we 8 random hex.
-        pieces.append(secrets.token_hex(4))
+        # of 8-hex UUID-fallback. Zonder geboortejaar: deterministische
+        # SHA1-hash van de cleaned full name (8 hex chars). Idempotent over
+        # runs.
+        digest = hashlib.sha1(cleaned.lower().encode("utf-8")).hexdigest()
+        pieces.append(digest[:8])
     return "-".join(p for p in pieces if p)
 
 
@@ -457,6 +517,7 @@ def plan_apply(
     from polder.resolve.matcher import PolderIndex
 
     polder_index = PolderIndex.load(data_dir)
+    _ensure_mzp_lookup(data_dir)
     org_ids = polder_index.org_ids
     org_aliases = polder_index.org_by_alias
     post_ids = _existing_post_ids(data_dir)
@@ -538,6 +599,26 @@ def plan_apply(
             )
             continue
 
+        # Detecteer close-mandaat: een ontslag-proposal heeft geen start_date
+        # (de bestaande start blijft staan) maar wel een end_date, en sluit
+        # een lopend mandaat. Apart pad: geen org/post aanmaken, alleen
+        # bestaand mandaat updaten.
+        is_close = (
+            not proposal.get("start_date") and _normalize_date_string(proposal.get("end_date"))
+        )
+        if is_close:
+            close_action_or_skip = _plan_close_mandate(
+                proposal=proposal,
+                data_dir=data_dir,
+                personen=personen,
+                confidence=confidence,
+            )
+            if isinstance(close_action_or_skip, SkippedProposal):
+                skipped.append(close_action_or_skip)
+            else:
+                actions.append(close_action_or_skip)
+            continue
+
         # start_date verplicht: een mandaat zonder start-datum vervalt anders
         # naar `today`, wat een onzin-datum is voor een retro-actief mandaat.
         if not proposal.get("start_date"):
@@ -553,10 +634,31 @@ def plan_apply(
         chain = proposal.get("organization_chain") or proposal.get(
             "organization_chain_inferred", []
         )
-        target_org_id = _normalize_id(
-            proposal.get("organization_id") or proposal.get("resolved_organization_id"),
-            "org",
-        )
+        target_org_id = _resolved_org_id(proposal)
+
+        # Als de resolved_post_id naar een al-bestaande post wijst, neem de
+        # organization_id van die post als gezaghebbend over de chain-output.
+        # Voorbeeld: MZP-records komen binnen met org:onderdeel-bck als
+        # `organization_id` (skill verzon), maar de canonical post
+        # post:minister-zp-werk-en-participatie hoort onder org:min-szw.
+        # Zonder deze override maakt apply een duplicate mandaat aan onder
+        # de verkeerde org, want idempotency-key bevat organization_id.
+        existing_post_id = _resolved_post_id(proposal)
+        if existing_post_id and existing_post_id in polder_index.post_to_org:
+            post_org = polder_index.post_to_org[existing_post_id]
+            if post_org and post_org != target_org_id:
+                target_org_id = post_org
+                # Zonder een chain naar deze org gaat de chain-check er
+                # straks tegenaan klagen; leeg de chain.
+                chain = []
+        elif existing_post_id:
+            # Post bestaat nog niet maar is een MZP-slug: leid het canonical
+            # ministerie af. Voorkomt dat apply de portefeuille onder de
+            # chain-fallback org:onderdeel-bck plaatst.
+            mzp_org = _mzp_organization_for_post(existing_post_id)
+            if mzp_org:
+                target_org_id = mzp_org
+                chain = []
 
         # Consistentie-check vóór create-org: als de proposal zowel een chain
         # als een `organization_id` levert, moet de laatste chain-entry
@@ -616,7 +718,7 @@ def plan_apply(
             continue
 
         # --- Stap 2: post aanmaken indien nodig ---
-        post_id = _normalize_id(proposal.get("post_id"), "post")
+        post_id = _resolved_post_id(proposal)
         if not post_id:
             skipped.append(
                 SkippedProposal(proposal=proposal, reasons=["geen post_id in proposal"])
@@ -635,6 +737,46 @@ def plan_apply(
                     )
                 )
                 continue
+
+            # ABD-directeur/-afdelingshoofd hoort onder een directie of
+            # organisatieonderdeel, geen ministerie direct. Als de skill
+            # geen chain leverde en target_org_id wijst naar een ministerie,
+            # synthesize een placeholder-organisatieonderdeel uit de role-
+            # string zodat de hiërarchie consistent blijft.
+            if (
+                classification in {"abd-directeur", "abd-afdelingshoofd"}
+                and target_org_id
+                and target_org_id.startswith("org:min-")
+                and target_org_id in org_ids
+            ):
+                placeholder = _synthesize_org_unit_from_role(
+                    role=role,
+                    parent_id=target_org_id,
+                    start_date=proposal.get("start_date"),
+                    proposal=proposal,
+                )
+                if placeholder is not None:
+                    placeholder_path = (
+                        data_dir / "organisaties" / "organisatieonderdelen"
+                        / f"{placeholder['id'].split(':', 1)[1].removeprefix('onderdeel-')}.yaml"
+                    )
+                    if placeholder["id"] not in (org_ids | pending_org_ids):
+                        actions.append(
+                            ApplyAction(
+                                type="create-org",
+                                target_path=placeholder_path,
+                                record=placeholder,
+                                source_proposal=proposal,
+                                confidence=confidence,
+                                reasons=[
+                                    f"synthesized organisatieonderdeel voor "
+                                    f"{classification}-post onder {target_org_id}"
+                                ],
+                            )
+                        )
+                        pending_org_ids.add(placeholder["id"])
+                    target_org_id = placeholder["id"]
+
             post_record = _build_post_record(
                 post_id=post_id,
                 organization_id=target_org_id or "",
@@ -828,6 +970,161 @@ def _build_org_record(
     return record
 
 
+def _mzp_organization_for_post(post_id: str) -> str | None:
+    """Voor een post:minister-zp-<portefeuille>-slug: het canonical
+    ministerie waaronder die portefeuille valt. None voor niet-MZP-posts
+    of voor portefeuilles waarvan we geen ministerie kennen.
+
+    Mapping: zoek in data/organisaties/ministeries/ of een van de
+    ministerie-naam-slugs voorkomt in de portefeuille-slug. Bv.
+    post:minister-zp-klimaat-en-groene-groei -> portfolio "klimaat-en-
+    groene-groei" -> ministerie-slug "klimaat-en-groene-groei" (min-kgg).
+    Deterministisch via de data, geen hardgecodeerde lijst nodig.
+    """
+    if not post_id.startswith("post:minister-zp-"):
+        return None
+    portfolio = post_id.removeprefix("post:minister-zp-")
+    for slug, oid in _MZP_MIN_LOOKUP:
+        if slug == portfolio or slug in portfolio:
+            return oid
+    return None
+
+
+def _build_mzp_lookup(data_dir: Path) -> list[tuple[str, str]]:
+    """Bouw (ministerie-naam-slug, org_id)-paren uit data/organisaties/
+    ministeries/. Een portefeuille-slug matched een ministerie als de
+    ministerie-naam-slug gelijk is aan of substring van de portefeuille-
+    slug.
+
+    Volgorde: langste namen eerst zodat "klimaat-en-groene-groei" matched
+    op min-kgg en niet op het kortere "klimaat".
+    """
+    import yaml
+
+    ministries_dir = data_dir / "organisaties" / "ministeries"
+    if not ministries_dir.exists():
+        return []
+    pairs: list[tuple[str, str]] = []
+    for yp in ministries_dir.glob("*.yaml"):
+        try:
+            d = yaml.safe_load(yp.read_text(encoding="utf-8"))
+        except yaml.YAMLError:
+            continue
+        if not isinstance(d, dict) or not d.get("id"):
+            continue
+        oid = d["id"]
+        for n in d.get("names") or []:
+            if not isinstance(n, dict):
+                continue
+            val = n.get("value")
+            if not val:
+                continue
+            s = unicodedata.normalize("NFKD", str(val)).encode("ascii", "ignore").decode("ascii")
+            slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+            if slug:
+                pairs.append((slug, oid))
+    pairs.sort(key=lambda t: -len(t[0]))
+    return pairs
+
+
+# Lazy gevuld bij eerste lookup vanuit _ensure_mzp_lookup.
+_MZP_MIN_LOOKUP: list[tuple[str, str]] = []
+
+
+def _ensure_mzp_lookup(data_dir: Path) -> None:
+    """Vul _MZP_MIN_LOOKUP een keer voor de gegeven data_dir. Idempotent.
+    """
+    global _MZP_MIN_LOOKUP
+    if _MZP_MIN_LOOKUP:
+        return
+    _MZP_MIN_LOOKUP = _build_mzp_lookup(data_dir)
+
+
+def _synthesize_org_unit_from_role(
+    *,
+    role: str,
+    parent_id: str,
+    start_date: str | None,
+    proposal: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Bouw een placeholder-organisatieonderdeel uit een role-string.
+
+    Voor abd-directeur/-afdelingshoofd-records waar de skill geen
+    organization_chain leverde maar de role wel een directie/afdeling
+    noemt, maak een tussenliggend org-onderdeel onder het ministerie.
+
+    Mapping op rol-prefix in het label:
+      "directeur concerndirectie X" -> org-onderdeel "concerndirectie X"
+      "directeur X"                  -> org-onderdeel "directie X"
+      "afdelingshoofd X"             -> org-onderdeel "afdeling X"
+      "directoraat-generaal X" / "DG X" -> org-onderdeel "dg X"
+
+    Returns None als er geen tussenliggend niveau af te leiden is.
+    """
+    if not role or not parent_id:
+        return None
+    min_suffix = parent_id.removeprefix("org:")
+    if not min_suffix.startswith("min-"):
+        return None
+
+    role_clean = role.strip()
+    unit_kind: str | None = None
+    rest: str | None = None
+
+    # Volgorde: meest-specifieke prefix eerst zodat "directeur concerndirectie X"
+    # niet als plain "directeur X" parseert.
+    for prefix, kind in (
+        ("directeur concerndirectie ", "concerndirectie"),
+        ("directeur directie ", "directie"),
+        ("directeur-generaal ", "dg"),
+        ("directeur generaal ", "dg"),
+        ("dg ", "dg"),
+        ("inspecteur-generaal ", "ig"),
+        ("afdelingshoofd ", "afdeling"),
+        ("directeur ", "directie"),
+    ):
+        if role_clean.lower().startswith(prefix):
+            rest = role_clean[len(prefix):].strip()
+            unit_kind = kind
+            break
+
+    if not rest or not unit_kind:
+        return None
+
+    # Knip alles vanaf de eerste komma of "ministerie van" af — dat zijn
+    # context-suffixen, geen onderdeel-naam.
+    rest = re.split(r",|\s+ministerie van\b", rest, maxsplit=1, flags=re.IGNORECASE)[0].strip()
+    if not rest:
+        return None
+
+    raw = f"{unit_kind} {rest}"
+    s = unicodedata.normalize("NFKD", raw).encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    if not slug:
+        return None
+    org_id = f"org:onderdeel-{slug}-{min_suffix}"
+    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    source_id = _detect_source_id(proposal)
+    valid_from = _normalize_date_string(start_date) or _today_iso()
+    return {
+        "id": org_id,
+        "type": "organisatieonderdeel",
+        "classification": "organisatieonderdeel",
+        "parent_id": parent_id,
+        "names": [{"value": raw[0].upper() + raw[1:], "valid_from": valid_from}],
+        "valid_from": valid_from,
+        "valid_until": None,
+        "sources": [
+            {
+                "id": source_id,
+                "url": source_url,
+                "retrieved": _today_iso(),
+                "fields": ["synthesized_from_role"],
+            }
+        ],
+    }
+
+
 def _build_post_record(
     *,
     post_id: str,
@@ -836,6 +1133,13 @@ def _build_post_record(
     classification: str,
     start_date: str | None,
 ) -> dict[str, Any]:
+    # MZP-posts: override de chain-org met het canonical ministerie.
+    # Skills geven vaak "org:kabinet" / "org:onderdeel-bck" mee, maar de
+    # post hoort onder het portefeuille-ministerie.
+    mzp_org = _mzp_organization_for_post(post_id)
+    if mzp_org:
+        organization_id = mzp_org
+
     valid_from = _normalize_date_string(start_date) or _today_iso()
     record = {
         "id": post_id,
@@ -846,6 +1150,78 @@ def _build_post_record(
         "valid_until": None,
     }
     return record
+
+
+def _plan_close_mandate(
+    *,
+    proposal: dict[str, Any],
+    data_dir: Path,
+    personen: list[tuple[Path, dict[str, Any]]],
+    confidence: float,
+) -> ApplyAction | SkippedProposal:
+    """Plan een close-mandaat-actie: zet end_date op een bestaand lopend mandaat.
+
+    Een ontslag-proposal komt hier terecht (start_date=None, end_date=datum).
+    Anders dan append-mandaat: geen org-chain-creatie, geen post-creatie, geen
+    nieuwe persoon. Alleen lookup-en-update op een bestaand record.
+    """
+    date_skip = _validate_mandaat_dates(
+        proposal.get("start_date"), proposal.get("end_date")
+    )
+    if date_skip is not None:
+        return SkippedProposal(proposal=proposal, reasons=[date_skip])
+
+    post_id = _resolved_post_id(proposal)
+    if not post_id:
+        return SkippedProposal(
+            proposal=proposal, reasons=["close-mandaat: geen post_id in proposal"]
+        )
+
+    target_org_id = _resolved_org_id(proposal)
+
+    resolved_id = _resolved_person_id(proposal)
+    if not resolved_id:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[
+                "close-mandaat: geen resolved_person_id; persoon eerst handmatig "
+                "matchen voordat een mandaat gesloten kan worden"
+            ],
+        )
+
+    match = next((p for p in personen if p[1].get("id") == resolved_id), None)
+    if match is None:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[f"resolved_person_id {resolved_id} niet gevonden in data/personen/"],
+        )
+
+    path, record = match
+    new_record, warnings, errors = _close_mandaat(
+        record=record,
+        organization_id=target_org_id,
+        post_id=post_id,
+        proposal=proposal,
+    )
+    if errors:
+        return SkippedProposal(proposal=proposal, reasons=errors)
+    if new_record is None:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=["close-mandaat: end_date al gezet en bron al genoteerd (idempotent)"],
+        )
+
+    reasons = [f"close mandaat op {resolved_id} (post={post_id})"]
+    for w in warnings:
+        reasons.append(f"waarschuwing: {w}")
+    return ApplyAction(
+        type="close-mandaat",
+        target_path=path,
+        record=new_record,
+        source_proposal=proposal,
+        confidence=confidence,
+        reasons=reasons,
+    )
 
 
 def _plan_person(
@@ -917,24 +1293,25 @@ def _plan_person(
         )
 
     # Nieuwe persoon. Eis: confidence >= 0.85 (al gechecked) EN
-    # geen kandidaat-conflict.
-    family = _name_record(name_full).get("family", "")
-    candidates = [p for _, p in personen if _person_family_match(p, family)]
-
-    if birth_year is None and len(candidates) > 0:
-        return SkippedProposal(
-            proposal=proposal,
-            reasons=[
-                f"geen geboortejaar bekend en {len(candidates)} familienaam-kandidaat(en) in data/personen/"
-            ],
-        )
-
+    # geen exact-slug-conflict. _person_slug bevat een hash-suffix uit de
+    # volledige naam, dus verschillende personen met dezelfde familienaam
+    # krijgen verschillende slugs. Familienaam-collision alleen is dus geen
+    # blokker meer; alleen exact-slug-collision telt.
     slug_body = _person_slug(name_full, birth_year)
     if not slug_body:
         return SkippedProposal(
             proposal=proposal, reasons=["kan geen persoon-slug afleiden"]
         )
     person_id = f"person:{slug_body}"
+    existing_with_same_slug = any(p.get("id") == person_id for _, p in personen)
+    if existing_with_same_slug:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[
+                f"persoon-slug {person_id} bestaat al; "
+                "vermoedelijk dezelfde persoon (anders is hash-collisie)"
+            ],
+        )
     if person_id in pending_person_ids:
         # Tweede proposal voor een persoon die we deze run nog aan het
         # aanmaken zijn. In plaats van skip: mute het pending create-record
@@ -1007,9 +1384,43 @@ def _append_mandaat(
         organization_id=organization_id, post_id=post_id, proposal=proposal
     )
     new_key = _mandaat_key(candidate)
-    for m in mandaten:
+    candidate_start = candidate.get("start_date")
+    candidate_end = candidate.get("end_date")
+    for i, m in enumerate(mandaten):
         if _mandaat_key(m) == new_key:
             return None, warnings
+        # Soft idempotency: same (post, org, start) maar verschillende
+        # end_date. Vrijwel altijd zijn dat dezelfde mandaten met in de
+        # ene bron geen einddatum en in de andere wel. Niet duplicate
+        # toevoegen; in plaats daarvan source mergen in het bestaande.
+        if (
+            m.get("post_id") == candidate.get("post_id")
+            and m.get("organization_id") == candidate.get("organization_id")
+            and m.get("start_date") == candidate_start
+            and (m.get("end_date") or "") != (candidate_end or "")
+        ):
+            new_record = dict(record)
+            new_mandaten = list(mandaten)
+            merged = dict(m)
+            sources = list(merged.get("sources") or [])
+            existing_keys = {
+                (s.get("id"), s.get("url")) for s in sources if isinstance(s, dict)
+            }
+            for src in candidate.get("sources") or []:
+                if isinstance(src, dict):
+                    key = (src.get("id"), src.get("url"))
+                    if key not in existing_keys:
+                        sources.append(src)
+                        existing_keys.add(key)
+            merged["sources"] = sources
+            new_mandaten[i] = merged
+            new_record["mandaten"] = new_mandaten
+            warnings.append(
+                "merged-into-existing-mandate: bestaande "
+                f"({m.get('start_date')}..{m.get('end_date')}) behouden, "
+                f"nieuwe source toegevoegd"
+            )
+            return new_record, warnings
     fuzzy = _fuzzy_duplicate_mandaat(
         mandaten,
         post_id=post_id,
@@ -1026,6 +1437,98 @@ def _append_mandaat(
     new_record = dict(record)
     new_record["mandaten"] = [*mandaten, candidate]
     return new_record, warnings
+
+
+def _close_mandaat(
+    *,
+    record: dict[str, Any],
+    organization_id: str | None,
+    post_id: str,
+    proposal: dict[str, Any],
+) -> tuple[dict[str, Any] | None, list[str], list[str]]:
+    """Sluit een lopend mandaat op een persoon-record.
+
+    Vindt het mandaat met (post_id, organization_id?, end_date is None) en zet
+    er end_date op uit de proposal. Voegt de proposal-bron toe aan ``sources``.
+    Idempotent: als end_date al gelijk is aan de gevraagde datum (én de bron
+    al genoteerd), retourneert (None, [], []).
+
+    Retourneert (new_record, warnings, errors).
+      * new_record is None bij idempotent skip of bij niet-vinden van een
+        lopend mandaat. In dat laatste geval bevat ``errors`` de reden.
+      * warnings: niet-fatale notes (bv. meerdere lopende mandaten gevonden).
+      * errors: redenen waarom close niet kan landen (caller skipt dan).
+    """
+    end_date = _normalize_date_string(proposal.get("end_date"))
+    if not end_date:
+        return None, [], ["close-mandaat: geen end_date in proposal"]
+
+    mandaten = list(record.get("mandaten") or [])
+    candidates: list[tuple[int, dict[str, Any]]] = []
+    for idx, m in enumerate(mandaten):
+        if m.get("post_id") != post_id:
+            continue
+        if organization_id and m.get("organization_id") != organization_id:
+            continue
+        if m.get("end_date") not in (None, ""):
+            # Al gesloten: idempotency-check op exacte datum.
+            if _normalize_date_string(m.get("end_date")) == end_date:
+                candidates.append((idx, m))
+            continue
+        candidates.append((idx, m))
+
+    if not candidates:
+        return None, [], [
+            f"close-mandaat: geen lopend mandaat gevonden voor post_id={post_id}"
+        ]
+
+    warnings: list[str] = []
+    if len(candidates) > 1:
+        warnings.append(
+            f"meerdere mandaten met post_id={post_id} gevonden; "
+            "oudste open mandaat wordt gesloten"
+        )
+        # Pak het open mandaat met de vroegste start_date.
+        open_candidates = [(i, m) for i, m in candidates if not m.get("end_date")]
+        if not open_candidates:
+            return None, warnings, []  # alle al gesloten op deze datum: idempotent
+        open_candidates.sort(key=lambda t: t[1].get("start_date") or "")
+        target_idx, target = open_candidates[0]
+    else:
+        target_idx, target = candidates[0]
+
+    today = _today_iso()
+    source_id = _detect_source_id(proposal)
+    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    new_source = {
+        "id": source_id,
+        "url": source_url,
+        "retrieved": today,
+        "fields": ["end_date", "applied_via:apply-staging"],
+    }
+
+    # Idempotency: end_date staat al juist én bron is al genoteerd → skip.
+    sources = list(target.get("sources") or [])
+    bron_al_genoteerd = any(
+        s.get("id") == source_id and s.get("url") == source_url for s in sources
+    )
+    if target.get("end_date") and _normalize_date_string(target.get("end_date")) == end_date:
+        if bron_al_genoteerd:
+            return None, warnings, []
+        # Datum klopt, bron ontbreekt nog: alleen source toevoegen.
+        new_mandaat = dict(target)
+        new_mandaat["sources"] = [*sources, new_source]
+    else:
+        new_mandaat = dict(target)
+        new_mandaat["end_date"] = end_date
+        if not bron_al_genoteerd:
+            new_mandaat["sources"] = [*sources, new_source]
+
+    new_mandaten = list(mandaten)
+    new_mandaten[target_idx] = new_mandaat
+    new_record = dict(record)
+    new_record["mandaten"] = new_mandaten
+    return new_record, warnings, []
 
 
 def _build_mandaat(

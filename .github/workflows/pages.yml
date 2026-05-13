@@ -1,0 +1,65 @@
+# Publiceert de statische polder-org-chart naar GitHub Pages.
+#
+# Bouwt dist/site/ via `polder build viz` en deployt naar Pages bij elke
+# main-merge en handmatig via workflow_dispatch.
+#
+# Eenmalige setup: repo-settings -> Pages -> Source = "GitHub Actions".
+
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "src/polder/build/**"
+      - "site/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Build viz bundles + site
+        run: uv run polder build viz
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

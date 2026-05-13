@@ -182,6 +182,13 @@ CATEGORIES: dict[str, Category] = {
         "review",
         "Mandaat van meer dan 30 jaar als enkele entry. Mogelijk een vergeten end_date.",
     ),
+    "post_parent_level_mismatch": Category(
+        "post_parent_level_mismatch",
+        "review",
+        "Post-classification past niet bij parent-organisatie-type. Een "
+        "abd-directeur hoort onder een directie of agentschap, geen "
+        "ministerie. Bewindspersonen onder ministeries.",
+    ),
 }
 
 
@@ -382,6 +389,7 @@ def run_audit(
     _check_dead_persons(persons, findings)
     _check_mandate_length(persons, findings)
     _check_mandate_evidence(persons, findings)
+    _check_post_parent_level(orgs, posts, findings)
 
     report = AuditReport(findings=findings)
 
@@ -937,6 +945,67 @@ def _check_mandate_evidence(
                         f"{p.name}: {mid}",
                     )
                 )
+
+
+# Welke parent-types verwachten we per post-classification. ABD-directeur
+# en -afdelingshoofd horen onder een organisatieonderdeel (directie,
+# afdeling, agentschap), niet rechtstreeks onder een ministerie. SG/DG
+# (abd-tmg) mogen wel direct onder een ministerie. Bewindspersonen onder
+# ministerie. Lijst is conservatief; warnings, geen errors.
+_EXPECTED_PARENT_TYPES: dict[str, set[str]] = {
+    "abd-tmg": {"ministerie", "agentschap", "zbo", "rwt", "hoge-college", "organisatieonderdeel"},
+    "abd-directeur": {
+        "organisatieonderdeel", "agentschap", "zbo", "rwt", "hoge-college",
+        "inspectie", "adviescollege",
+    },
+    "abd-afdelingshoofd": {"organisatieonderdeel", "inspectie", "agentschap"},
+    "abd-projectleider": {"organisatieonderdeel", "ministerie", "agentschap", "zbo"},
+    "bewindspersoon": {"ministerie"},
+}
+
+
+def _check_post_parent_level(
+    orgs: list[tuple[Path, dict]],
+    posts: list[tuple[Path, dict]],
+    findings: list[Finding],
+) -> None:
+    """Post-classification moet bij het organisatie-type passen.
+
+    Een ``abd-directeur`` hoort onder een directie/organisatieonderdeel,
+    geen ministerie direct. ``abd-afdelingshoofd`` hoort onder een
+    afdeling of directie. ``bewindspersoon`` hoort onder een ministerie.
+
+    Mismatch is een review-finding (geen error): bestaande data kan
+    historische uitzonderingen bevatten.
+    """
+    org_type: dict[str, str] = {}
+    for _, d in orgs:
+        oid = d.get("id")
+        if not oid:
+            continue
+        org_type[oid] = (
+            d.get("type") or d.get("classification") or "unknown"
+        )
+
+    for p, d in posts:
+        pid = d.get("id")
+        cls = d.get("classification")
+        org_id = d.get("organization_id")
+        if not pid or not cls or not org_id:
+            continue
+        expected = _EXPECTED_PARENT_TYPES.get(cls)
+        if not expected:
+            continue
+        actual = org_type.get(org_id, "unknown")
+        if actual not in expected:
+            findings.append(
+                Finding(
+                    "post_parent_level_mismatch",
+                    f"{pid}|{actual}",
+                    f"{p.name}: {pid} ({cls}) onder {org_id} (type={actual}), "
+                    f"verwacht: {sorted(expected)}",
+                )
+            )
 
 
 def summary(report: AuditReport) -> tuple[int, int]:

@@ -36,18 +36,24 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0dd67aa7-a539-4cc0-b962-c04df71cd0ae)
     retrieved: '2026-05-09'
-- id: mandate-post-staatssecretaris-min-ocw-2026-05-09
+- id: mandate-post-staatssecretaris-min-ocw-2024-07-02
   organization_id: org:min-ocw
   post_id: post:staatssecretaris-min-ocw
   role: Staatssecretaris van Onderwijs, Cultuur en Wetenschap
-  start_date: '2026-05-09'
-  end_date: null
+  start_date: '2024-07-02'
+  end_date: '2026-02-23'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22514
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8184
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-kabinetswissel
   appointment:
     decision: KB nr. 2024001714, 2 juli 2024
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22514

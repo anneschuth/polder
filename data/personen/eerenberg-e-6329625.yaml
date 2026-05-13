@@ -15,6 +15,22 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6329626
     retrieved: '2026-05-09'
+- id: mandate-post-staatssecretaris-min-fin-2026-02-23
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: Staatssecretaris van Financiën
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8185/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000410, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8185/
+  confidence: 0.95
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6329625

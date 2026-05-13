@@ -76,12 +76,17 @@ mandaten:
 - id: wd-4bc9668e7275
   organization_id: org:min-bzk
   post_id: post:minister-min-bzk
-  role: Nederlands minister van Binnenlandse Zaken en Koninkrijksrelaties
+  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
   start_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q94234#P39
     retrieved: '2026-05-09'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
   end_date: null
 sources:
 - id: tk_odata

@@ -13,6 +13,7 @@ na de call gestored.
 from __future__ import annotations
 
 import logging
+import re
 from pathlib import Path
 
 from polder.llm import cache as response_cache
@@ -73,7 +74,7 @@ def run_skill(
         if cached is not None:
             logger.debug("Cache hit voor skill=%s", skill_name)
             if output is not None and not cached.is_error and not cached.rate_limited:
-                _write_output(output, cached.text)
+                _write_output(output, cached.text, skill_name=skill_name)
             # Disk-cache-hit kost de huidige run niets; overschrijf cost_usd
             # naar 0 zodat budget-caps en cost-rapportage correct zijn.
             from dataclasses import replace
@@ -97,7 +98,7 @@ def run_skill(
         response_cache.store(skill_name, cache_key, result)
 
     if output is not None and not result.is_error and not result.rate_limited:
-        _write_output(output, result.text)
+        _write_output(output, result.text, skill_name=skill_name)
 
     return result
 
@@ -109,6 +110,53 @@ def _effective_model(skill_name: str, model: str | None) -> str:
     return _resolve_model(skill_name, model)
 
 
-def _write_output(path: Path, text: str) -> None:
+# Skills die JSON moeten leveren (vs. markdown zoals review-pr-diff). Voor deze
+# skills strippen we eventuele markdown-fences of inleidende prose voordat we
+# de output naar disk schrijven, zodat downstream-consumers (resolver, apply,
+# tests) altijd kale JSON zien — ongeacht of het model zich aan de SKILL.md
+# "ALLEEN JSON"-instructie houdt.
+_JSON_SKILLS: frozenset[str] = frozenset(
+    {
+        "parse-staatscourant",
+        "parse-abd-nieuws",
+        "parse-organogram",
+        "resolve-staging-proposals",
+        "entity-resolution",
+        "lookup-person",
+    }
+)
+
+_FENCE_RE = re.compile(
+    r"```(?:json|JSON)?\s*\n(?P<body>.*?)\n```",
+    re.DOTALL,
+)
+
+
+def _extract_json_payload(text: str) -> str:
+    # Best-effort: lever kale JSON. Strategieën, in volgorde:
+    #   1. Hele tekst is al kale JSON ([ of {).
+    #   2. Eerste ```json ... ``` block uitpakken.
+    #   3. Eerste top-level [ ... ] of { ... } in de tekst pakken.
+    # Faalt alles, geef de originele tekst terug zodat de fout opvalt in de
+    # downstream JSON-parser in plaats van hier stilletjes te raden.
+    stripped = text.strip()
+    if stripped.startswith(("[", "{")):
+        return stripped + ("\n" if not stripped.endswith("\n") else "")
+
+    fence = _FENCE_RE.search(stripped)
+    if fence is not None:
+        return fence.group("body").strip() + "\n"
+
+    for opener, closer in (("[", "]"), ("{", "}")):
+        start = stripped.find(opener)
+        end = stripped.rfind(closer)
+        if start != -1 and end > start:
+            return stripped[start : end + 1] + "\n"
+
+    return text
+
+
+def _write_output(path: Path, text: str, *, skill_name: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    payload = _extract_json_payload(text) if skill_name in _JSON_SKILLS else text
+    path.write_text(payload, encoding="utf-8")

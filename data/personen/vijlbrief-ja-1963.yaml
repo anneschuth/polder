@@ -38,12 +38,17 @@ mandaten:
 - id: wd-d52c20ca2843
   organization_id: org:min-szw
   post_id: post:minister-min-szw
-  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  role: Minister van Sociale Zaken en Werkgelegenheid
   start_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q83779218#P39
     retrieved: '2026-05-09'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
   end_date: null
 - id: wd-8ad6253eb925
   organization_id: org:min-ezk
@@ -57,7 +62,7 @@ mandaten:
   end_date: '2024-07-02'
 - id: wd-adf0aa942919
   organization_id: org:min-fin
-  post_id: post:staatssecretaris-min-fin
+  post_id: post:staatssecretaris-fiscaliteit-min-fin
   role: staatssecretaris van Financiën
   start_date: '2020-01-29'
   sources:

@@ -38,13 +38,24 @@ mandaten:
 - id: wd-845bd221a097
   organization_id: org:min-fin
   post_id: post:minister-min-fin
-  role: Nederlands minister van Financiën
+  role: Minister van Financiën
   start_date: '2024-07-02'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q106119762#P39
     retrieved: '2026-05-09'
-  end_date: null
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-script
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-09'
+    fields:
+    - applied_via:apply-staging
+  end_date: '2026-02-23'
 - id: wd-e08e3c60b31b
   organization_id: org:min-ezk
   post_id: post:minister-min-ezk
@@ -55,22 +66,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q106119762#P39
     retrieved: '2026-05-09'
   end_date: '2025-06-18'
-- id: mandate-post-minister-min-fin-2024-07-02
+- id: mandate-post-minister-min-fin-2026-02-23
   organization_id: org:min-fin
   post_id: post:minister-min-fin
   role: Minister van Financiën
-  start_date: '2024-07-02'
+  start_date: '2026-02-23'
   end_date: null
   sources:
   - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-    retrieved: '2026-05-09'
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
     fields:
     - applied_via:apply-staging
   appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.95
+    decision: KB nr. 2026000405, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+  confidence: 0.93
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a3b17348-54cf-4bca-82d4-e62bd46c2fbc)

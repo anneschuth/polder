@@ -1033,7 +1033,15 @@ def reconciliation_lookup_person(
 
 
 def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, Any]]:
-    """Map Reconciliation-result-records naar onze standaard-vorm."""
+    """Map Reconciliation-result-records naar onze standaard-vorm.
+
+    Reconciliation API levert birth_year niet direct. We extracten een ruwe
+    waarde uit de description ("Dutch politician (born 1973)"). Voor
+    kandidaten waar dat faalt: een EntityData-followup call op de eerste
+    drie kandidaten haalt P569 op. Drie is genoeg: de juiste persoon staat
+    typisch in top-3 van een name-lookup, en meer requests doen voor 25
+    kandidaten kost meer dan het oplost.
+    """
     rows: list[dict[str, Any]] = []
     for cand in candidates:
         qid = cand.get("id")
@@ -1048,7 +1056,54 @@ def _parse_reconciliation_candidates(candidates: list[dict]) -> list[dict[str, A
                 "description": description,
             }
         )
+
+    # EntityData-followup voor top-3 zonder birth_year.
+    for row in rows[:3]:
+        if row.get("birth_year") is not None:
+            continue
+        year = _fetch_birth_year_from_entity(row["qid"])
+        if year is not None:
+            row["birth_year"] = year
+
     return rows
+
+
+def _fetch_birth_year_from_entity(qid: str, *, timeout: float = 10.0) -> int | None:
+    """Haal P569 (geboortedatum) op uit de Wikidata-entity-JSON.
+
+    De Reconciliation API geeft alleen qid + description + label terug. Voor
+    een doelgerichte birth-year lookup is een tweede call naar
+    ``Special:EntityData/<qid>.json`` nodig. Returnt None bij netwerk-error
+    of als P569 ontbreekt.
+    """
+    url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+            response = client.get(url, headers={"User-Agent": USER_AGENT})
+            response.raise_for_status()
+            data = response.json()
+    except (httpx.HTTPError, json.JSONDecodeError, ValueError) as exc:
+        logger.debug("EntityData fetch faalde voor %s: %s", qid, exc)
+        return None
+
+    entity = (data.get("entities") or {}).get(qid)
+    if not isinstance(entity, dict):
+        return None
+    for claim in entity.get("claims", {}).get("P569", []):
+        time_str = (
+            claim.get("mainsnak", {})
+            .get("datavalue", {})
+            .get("value", {})
+            .get("time")
+        )
+        if isinstance(time_str, str) and len(time_str) >= 5:
+            try:
+                # ISO datetime: "+1973-06-22T00:00:00Z" of "-0050-01-01T..."
+                year_str = time_str.lstrip("+-").split("-", 1)[0]
+                return int(year_str)
+            except (ValueError, IndexError):
+                continue
+    return None
 
 
 def reconciliation_lookup_persons_batch(
@@ -1989,6 +2044,73 @@ def _ministry_qid_to_slug(
     return _ministry_slug_from_label(role_label)
 
 
+_MZP_MARKER_PATTERNS = [
+    # "Minister zonder portefeuille (Buitenlandse Handel en Ontwikkelings-
+    # samenwerking)" — Stcrt-conventie.
+    re.compile(r"minister zonder portefeuille\s*\(\s*([^)]+?)\s*\)", re.IGNORECASE),
+    # "Minister zonder portefeuille, belast met Asiel en Migratie" — Stcrt-
+    # alternatief.
+    re.compile(r"minister zonder portefeuille[^a-z]+belast met\s+([^,;\n]+)", re.IGNORECASE),
+    # "Minister voor Buitenlandse Handel en Ontwikkelingshulp" — Wikidata-
+    # vorm voor MZP. Niet gebruiken voor "Minister van X" want dat is een
+    # gewone departement-minister.
+    re.compile(r"minister voor\s+([^,;\n]+)", re.IGNORECASE),
+]
+
+
+def _mzp_slug_from_role(role_label: str | None) -> str | None:
+    """Detecteer of een role-label een minister-zonder-portefeuille is en
+    leid de canonical portefeuille-slug deterministisch af.
+
+    De skill levert al de portefeuille-naam in het role-label. We hoeven
+    geen statische lijst van portefeuilles te onderhouden: extract de naam
+    via regex en slugify hem.
+
+    Voorbeelden:
+      "Minister zonder portefeuille (Buitenlandse Handel en Ontwikkelings-
+       samenwerking)" -> "buitenlandse-handel-en-ontwikkelingssamenwerking"
+      "Minister voor Asiel en Migratie" -> "asiel-en-migratie"
+      "Minister van Defensie" -> None (gewone departement-minister)
+    """
+    if not role_label:
+        return None
+    for pat in _MZP_MARKER_PATTERNS:
+        m = pat.search(role_label)
+        if not m:
+            continue
+        portfolio = m.group(1).strip()
+        if not portfolio:
+            continue
+        # Slugify: NFKD-ASCII, lowercase, niet-alfanumeriek -> "-".
+        s = unicodedata.normalize("NFKD", portfolio).encode("ascii", "ignore").decode("ascii")
+        slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+        return slug or None
+    return None
+
+
+def _mzp_slug_from_unmatched_portfolio(
+    role_label: str | None,
+    ministry_slug: str | None,
+) -> str | None:
+    """Wikidata schrijft soms "Minister van X" terwijl X geen echt ministerie
+    is (Werk en Participatie, Langdurige Zorg, etc. zijn portefeuilles binnen
+    een MZP-rol). Als ministry_slug is None (LABEL_FRAGMENTS_TO_SLUG kon
+    geen ministerie afleiden) en het label past wel "Minister van X" of
+    "Minister voor X", dan is dit een MZP-portefeuille zonder departement.
+
+    Slugify de portefeuille uit het label en retourneer hem.
+    """
+    if not role_label or ministry_slug is not None:
+        return None
+    m = re.search(r"^[Mm]inister\s+(?:van|voor)\s+(.+)$", role_label.strip())
+    if not m:
+        return None
+    portfolio = m.group(1).strip()
+    s = unicodedata.normalize("NFKD", portfolio).encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    return slug or None
+
+
 def _post_id_for_role(
     role_label: str | None,
     role_qid: str | None,
@@ -2003,6 +2125,19 @@ def _post_id_for_role(
         # Minister-president is een aparte post.
         if role_qid == "Q3058109":
             return ("post:minister-president", "Minister-president van Nederland", "bewindspersoon")
+        # Minister-zonder-portefeuille: detecteer via expliciete MZP-marker
+        # OF via portefeuille-naam die niet overeenkomt met een bestaand
+        # ministerie (Wikidata schrijft "Minister van Werk en Participatie"
+        # terwijl er geen ministerie van W&P bestaat -- toch MZP).
+        mzp_slug = _mzp_slug_from_role(role_label) or _mzp_slug_from_unmatched_portfolio(
+            role_label, ministry_slug
+        )
+        if mzp_slug:
+            return (
+                f"post:minister-zp-{mzp_slug}",
+                role_label or f"Minister zonder portefeuille ({mzp_slug})",
+                "bewindspersoon",
+            )
         if ministry_slug:
             return (
                 f"post:minister-{ministry_slug}",

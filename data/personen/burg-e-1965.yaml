@@ -33,6 +33,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q2084799#P39
     retrieved: '2026-05-09'
   end_date: '2023-10-30'
+- id: mandate-post-staatssecretaris-min-bzk-2026-02-24
+  organization_id: org:min-bzk
+  post_id: post:staatssecretaris-min-bzk
+  role: Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2026-02-24'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8182
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2026000408, 23 februari 2026
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8182
+  confidence: 0.92
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ad900f22-2dd0-4525-bb71-96550fa7985f)

@@ -37,23 +37,34 @@ mandaten:
     retrieved: '2026-05-09'
 - id: wd-11f047c0ded6
   organization_id: org:min-szw
-  post_id: post:minister-min-szw
-  role: Minister van Werk en Participatie
+  post_id: post:minister-zp-werk-en-participatie
+  role: Minister zonder portefeuille (Werk en Participatie)
   start_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28861067#P39
     retrieved: '2026-05-09'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
   end_date: null
 - id: wd-3cd651d11a64
   organization_id: org:min-ienw
   post_id: post:staatssecretaris-min-ienw
-  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  role: Staatssecretaris van Infrastructuur en Waterstaat
   start_date: '2025-06-19'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28861067#P39
     retrieved: '2026-05-09'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:apply-staging
   end_date: '2026-02-23'
 sources:
 - id: tk_odata

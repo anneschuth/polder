@@ -1,0 +1,28 @@
+id: person:konyali-e-86ddc107
+name:
+  full: Ertaç Konyali
+  family: Konyali
+  given: Ertaç
+  initials: E.
+mandaten:
+- id: mandate-post-afdelingshoofd-talentwerkt-belastingdienst-2025-06-01
+  organization_id: org:afdeling-talentwerkt-directie-organisatie-personeel
+  post_id: post:afdelingshoofd-talentwerkt-belastingdienst
+  role: afdelingshoofd TalentWerkt!
+  start_date: '2025-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/21/ertac-konyali-afdelingshoofd-talentwerkt-bij-de-bij-de-directie-organisatie--personeel-van-de-belastingdienst
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-21
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/21/ertac-konyali-afdelingshoofd-talentwerkt-bij-de-bij-de-directie-organisatie--personeel-van-de-belastingdienst
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging

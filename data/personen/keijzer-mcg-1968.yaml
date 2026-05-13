@@ -76,7 +76,7 @@ mandaten:
 - id: wd-710d376b47eb
   organization_id: org:min-szw
   post_id: post:minister-min-szw
-  role: Nederlands minister van Sociale Zaken en Werkgelegenheid
+  role: Minister van Sociale Zaken en Werkgelegenheid
   start_date: '2025-08-22'
   sources:
   - id: wikidata
@@ -102,23 +102,18 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q94229#P39
     retrieved: '2026-05-09'
-  end_date: '2026-02-23'
-- id: mandate-post-minister-min-vro-2024-07-02
-  organization_id: org:min-vro
-  post_id: post:minister-min-vro
-  role: Minister van Volkshuisvesting en Ruimtelijke Ordening
-  start_date: '2024-07-02'
-  end_date: null
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.97
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-script
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8c5a8186-8f46-4bca-956d-06d4fa521635)

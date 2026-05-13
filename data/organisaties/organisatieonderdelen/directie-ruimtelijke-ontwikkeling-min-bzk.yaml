@@ -1,0 +1,15 @@
+id: org:onderdeel-directie-ruimtelijke-ontwikkeling-min-bzk
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-bzk
+names:
+- value: Directie Ruimtelijke Ontwikkeling
+  valid_from: '2024-02-26'
+valid_from: '2024-02-26'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/
+  retrieved: '2026-05-13'
+  fields:
+  - synthesized_from_role

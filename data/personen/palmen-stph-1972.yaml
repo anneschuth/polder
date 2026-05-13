@@ -27,13 +27,18 @@ mandaten:
     retrieved: '2026-05-09'
 - id: wd-0605ac1f5b8b
   organization_id: org:min-fin
-  post_id: post:staatssecretaris-min-fin
-  role: staatssecretaris Fiscaliteit en Belastingdienst
+  post_id: post:staatssecretaris-toeslagen-min-fin
+  role: Staatssecretaris voor Toeslagen en Douane
   start_date: '2024-12-12'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q123174045#P39
     retrieved: '2026-05-09'
+  - id: wikipedia
+    url: https://nl.wikipedia.org/wiki/Sandra_Palmen-Schlangen
+    retrieved: '2026-05-12'
+    fields:
+    - portefeuille
   end_date: '2025-08-22'
 sources:
 - id: tk_odata

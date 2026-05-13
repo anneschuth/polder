@@ -40,13 +40,34 @@ mandaten:
 - id: wd-378e59288858
   organization_id: org:min-ienw
   post_id: post:staatssecretaris-min-ienw
-  role: Nederlands staatssecretaris van Infrastructuur en Waterstaat
+  role: Staatssecretaris van Infrastructuur en Waterstaat
   start_date: '2021-08-10'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q2481353#P39
     retrieved: '2026-05-09'
   end_date: '2022-01-10'
+- id: mandate-post-minister-min-fin-2024-01-11
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Minister van Financiën
+  start_date: '2024-01-11'
+  end_date: '2024-07-02'
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2035
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22491
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+  appointment:
+    decision: Besluit van 11 januari 2024 nr. 2024000040
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2035
+  confidence: 0.96
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d1bb566e-a111-43b7-8856-273ebac1f753)

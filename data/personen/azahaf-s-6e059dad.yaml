@@ -1,0 +1,28 @@
+id: person:azahaf-s-6e059dad
+name:
+  full: Somia Azahaf
+  family: Azahaf
+  given: Somia
+  initials: S.
+mandaten:
+- id: mandate-post-directeur-consumenten-acm-2026-08-01
+  organization_id: org:zbo-acm
+  post_id: post:directeur-consumenten-acm
+  role: directeur Consumenten bij de Autoriteit Consument & Markt (ACM)
+  start_date: '2026-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/04/20/somia-azahaf-directeur-consumenten-bij-de-autoriteit-consument--markt
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-04-20
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/04/20/somia-azahaf-directeur-consumenten-bij-de-autoriteit-consument--markt
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging

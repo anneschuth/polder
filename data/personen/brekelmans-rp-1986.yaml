@@ -50,7 +50,7 @@ mandaten:
 - id: wd-7aeee284d2a7
   organization_id: org:min-bz
   post_id: post:minister-min-bz
-  role: Nederlands minister van Buitenlandse Zaken
+  role: Minister van Buitenlandse Zaken
   start_date: '2025-08-22'
   sources:
   - id: wikidata
@@ -60,29 +60,24 @@ mandaten:
 - id: wd-151267616c31
   organization_id: org:min-def
   post_id: post:minister-min-def
-  role: Nederlands minister van Defensie
+  role: Minister van Defensie
   start_date: '2024-07-02'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q106119770#P39
     retrieved: '2026-05-09'
-  end_date: '2026-02-23'
-- id: mandate-post-minister-min-def-2024-07-02
-  organization_id: org:min-def
-  post_id: post:minister-min-def
-  role: Minister van Defensie
-  start_date: '2024-07-02'
-  end_date: null
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
-  appointment:
-    decision: Besluit nr. 2024001708, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-  confidence: 0.97
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:apply-staging
+  end_date: '2026-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e5c4753f-d2d8-4a4a-ae9d-62118892a731)

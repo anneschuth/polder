@@ -10,30 +10,25 @@ birth:
 mandaten:
 - id: wd-a795f1a83d00
   organization_id: org:min-fin
-  post_id: post:staatssecretaris-min-fin
+  post_id: post:staatssecretaris-toeslagen-min-fin
   role: Staatssecretaris voor Toeslagen en Douane
   start_date: '2024-07-02'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q123176473#P39
     retrieved: '2026-05-09'
-  end_date: '2024-11-15'
-- id: mandate-post-staatssecretaris-min-fin-2024-07-02
-  organization_id: org:min-fin
-  post_id: post:staatssecretaris-min-fin
-  role: Staatssecretaris van Financiën
-  start_date: '2024-07-02'
-  end_date: null
-  sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22516
     retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
-  appointment:
-    decision: KB nr. 2024001716, 2 juli 2024
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22516
-  confidence: 0.92
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-38964
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-stas
+  end_date: '2024-11-15'
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q123176473

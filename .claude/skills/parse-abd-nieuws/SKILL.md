@@ -30,7 +30,9 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 
 ## Output
 
-**ALLEEN JSON-array, geen andere tekst.** Output is een JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Geen introductietekst, geen samenvatting, geen verklaring. Alleen de array. Elk proposal in de array heeft:
+**ALLEEN JSON-array als laatste output, geen andere tekst.** Geen introductie, geen samenvatting, geen markdown-fences, geen "Next step:". De runner vangt jouw stdout op en schrijft die naar het juiste pad. Schrijf zelf geen bestanden met `Write` en noem geen output-pad in je antwoord. Tools zijn alleen voor read-only lookups (`polder search`, `polder show`).
+
+JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondiging. Elk proposal in de array heeft:
 
 - `person_name` (string): naam zoals in het bericht, met titulering en initialen indien aanwezig.
 - `existing_person_id` (string of null): polder-slug bij match in `data/personen/`, anders null.
@@ -51,7 +53,7 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 ## Stappen voor de LLM
 
 1. Laad de HTML. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
-2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Match tegen `data/organisaties/` op naam of afkorting.
+2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Stel slugs voor volgens de Polder-conventie: ministeries als `org:min-<afkorting>` (`org:min-jenv`, `org:min-fin`, `org:min-bzk`, ...), DG/directie/afdeling als `org:onderdeel-<slug>-min-<min-slug>`. De resolver matcht varianten (`ministerie-X`, `minister-X`) achteraf op de canonical slug, dus exactheid is geen blocker; volg de conventie waar je hem kent.
 3. Zoek benoemings- en ontslagpatronen. ABD-berichten volgen meestal één van deze sjablonen:
    - **Standaard benoeming**: "X wordt [met ingang van <datum>] <functie> bij/onderdeel van <organisatieketen>. ... De benoeming gaat in op <datum>."
    - **Alternatief**: "X wordt <functie>, een <subunit> van de <parent> bij het ministerie van Y. De benoeming gaat in op <datum>."
@@ -65,12 +67,14 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 4. **Identificeer organisatie-niveaus.** Berichten beschrijven vaak een keten van top naar diepst:
    - "ministerie van X" (top, level `ministerie`).
    - "directoraat-generaal Y" of "DG Y" (level `directoraat-generaal`, organisatieonderdeel).
-   - "directie Z" (level `directie`).
+   - "directie Z" of "concerndirectie Z" (level `directie`).
    - "afdeling W" (level `afdeling`, het diepst).
    Extract alle niveaus die het bericht letterlijk noemt en bouw `organization_chain` als array van top naar diepst. Per entry een slug-voorstel volgens de Polder-conventie:
    - Ministerie: `org:min-<slug>` (bestaat al, ROO).
    - DG, directie, afdeling: `org:onderdeel-<slug>-min-<min-slug>` of korter `org:onderdeel-<slug>` als die slug al bestaat in `data/organisaties/organisatieonderdelen/`.
    `organization_id` is altijd de slug van het diepste niveau in `organization_chain`. Geen automatische verbreding: als het bericht alleen "directeur Wonen" zegt, is `organization_id` directie-niveau; bij "afdelingshoofd Beleid Wonen" is het afdeling-niveau.
+
+   **Chain is verplicht voor abd-classification-rollen.** Voor `directeur`, `afdelingshoofd`, `secretaris-generaal`, `directeur-generaal`, `inspecteur-generaal`: lever ALTIJD minimaal 2 chain-entries (ministerie + één tussenliggend organisatieonderdeel). Een directeur hoort onder een directie of agentschap, geen ministerie direct. Als de bron het tussenliggende niveau niet expliciet noemt: leid het af uit de role-string ("directeur concerndirectie Mens en Organisatie" -> concerndirectie als chain[1] met slug `org:onderdeel-concerndirectie-mens-en-organisatie-min-<min>`). Een chain met alleen ministerie + organization_id=ministerie is fout voor deze classifications.
 5. Bouw `event_type`. Heuristieken:
    - Titel of tekst noemt "benoemd", "wordt directeur", "wordt DG": `benoeming`.
    - "neemt afscheid", "vertrekt", "wordt opgevolgd": `ontslag`.
