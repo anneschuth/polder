@@ -82,10 +82,7 @@ def test_resolve_endpoint_aliassen():
     assert ws.resolve_endpoint("qlever") == ws.QLEVER_ENDPOINT
     assert ws.resolve_endpoint("wdqs") == ws.SPARQL_ENDPOINT
     # URL passthrough.
-    assert (
-        ws.resolve_endpoint("https://example.org/sparql")
-        == "https://example.org/sparql"
-    )
+    assert ws.resolve_endpoint("https://example.org/sparql") == "https://example.org/sparql"
 
 
 # ---------------------------------------------------------------------------
@@ -105,9 +102,7 @@ def test_lookup_person_by_name_rutte_geeft_qid_en_jaar(
     def fake_query_sparql(query: str, **kwargs: Any) -> list[dict[str, Any]]:
         captured["query"] = query
         captured["endpoint"] = kwargs.get("endpoint")
-        return list(
-            RUTTE_RESPONSE.get("results", {}).get("bindings", [])
-        )
+        return list(RUTTE_RESPONSE.get("results", {}).get("bindings", []))
 
     monkeypatch.setattr(ws, "query_sparql", fake_query_sparql)
 
@@ -136,17 +131,13 @@ def test_lookup_person_by_name_rutte_geeft_qid_en_jaar(
     assert "Rutte" in captured["query"]
 
 
-def test_lookup_person_by_name_kewal_leeg(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-):
+def test_lookup_person_by_name_kewal_leeg(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
     monkeypatch.setattr(ws, "QLEVER_REQUEST_INTERVAL", 0.0)
     monkeypatch.setattr(
         ws, "query_sparql", lambda *a, **k: list(EMPTY_RESPONSE["results"]["bindings"])
     )
-    rows = ws.lookup_person_by_name(
-        "Kewal", initials="S.", given="Suzie", cache_dir=tmp_path / "c"
-    )
+    rows = ws.lookup_person_by_name("Kewal", initials="S.", given="Suzie", cache_dir=tmp_path / "c")
     assert rows == []
 
 
@@ -157,9 +148,7 @@ def test_lookup_person_by_name_lege_family_raised():
         ws.lookup_person_by_name("   ")
 
 
-def test_lookup_person_by_name_dedupliceert_qid(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-):
+def test_lookup_person_by_name_dedupliceert_qid(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     """Twee bindings met hetzelfde person-URI → één kandidaat."""
     payload = {
         "head": {"vars": ["person", "label"]},
@@ -183,9 +172,7 @@ def test_lookup_person_by_name_dedupliceert_qid(
         },
     }
     monkeypatch.setattr(ws, "MIN_REQUEST_INTERVAL", 0.0)
-    monkeypatch.setattr(
-        ws, "query_sparql", lambda *a, **k: list(payload["results"]["bindings"])
-    )
+    monkeypatch.setattr(ws, "query_sparql", lambda *a, **k: list(payload["results"]["bindings"]))
     rows = ws.lookup_person_by_name("Rutte", cache_dir=tmp_path / "c")
     assert len(rows) == 1
     assert rows[0]["qid"] == "Q57792"
@@ -196,9 +183,7 @@ def test_lookup_person_by_name_dedupliceert_qid(
 # ---------------------------------------------------------------------------
 
 
-def test_cli_lookup_person_schrijft_staging(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-):
+def test_cli_lookup_person_schrijft_staging(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     """De CLI schrijft een JSON-bestand met de kandidaten naar de --out-pad."""
     from typer.testing import CliRunner
 
@@ -232,9 +217,7 @@ def test_cli_lookup_person_schrijft_staging(
     assert data["candidates"][0]["birth_year"] == 1967
 
 
-def test_cli_lookup_person_lege_naam_faalt(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-):
+def test_cli_lookup_person_lege_naam_faalt(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     from typer.testing import CliRunner
 
     from polder.cli.commands import skill_cmd

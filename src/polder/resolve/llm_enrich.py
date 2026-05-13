@@ -50,7 +50,7 @@ def _call_with_timeout(runner: Any, skill_name: str, payload: str, timeout_s: fl
     def target() -> None:
         try:
             result_holder["value"] = runner(skill_name, payload)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             result_holder["error"] = exc
 
     thread = threading.Thread(target=target, daemon=True)
@@ -75,10 +75,10 @@ def _reset_session_for_skill(skill_name: str) -> None:
             if key[0] == skill_name:
                 try:
                     session.close()
-                except Exception:  # noqa: BLE001
+                except Exception:
                     pass
                 sessions.pop(key, None)
-    except Exception:  # noqa: BLE001
+    except Exception:
         pass
 
 
@@ -224,7 +224,7 @@ def _wikidata_candidates(name: str, role: str | None, org: str | None) -> list[d
             initials=parsed.initials,
             given=parsed.given,
         )
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         logger.debug("Wikidata-lookup faalde voor %s: %s", name, exc)
         return []
 
@@ -278,8 +278,7 @@ def _build_payload(
             "abd_nieuws_url": proposal.get("abd_nieuws_url"),
             "staatscourant_url": proposal.get("staatscourant_url"),
             "bron_url": proposal.get("bron_url"),
-            "evidence_snippet": proposal.get("evidence_snippet")
-            or proposal.get("evidence"),
+            "evidence_snippet": proposal.get("evidence_snippet") or proposal.get("evidence"),
         },
         "candidates": enriched_candidates,
         "wikidata_candidates": wikidata,
@@ -503,10 +502,15 @@ def enrich_resolved(
             attempts += 1
             try:
                 result = _call_with_timeout(runner, skill_name, payload, timeout_s=180.0)
-            except Exception as exc:  # noqa: BLE001
+            except Exception as exc:
                 logger.warning(
                     "[%d/%d] %s (%s): runner-exception (try %d) %s",
-                    idx_proposal + 1, len(resolved), name, bucket.mode, attempts, exc,
+                    idx_proposal + 1,
+                    len(resolved),
+                    name,
+                    bucket.mode,
+                    attempts,
+                    exc,
                 )
                 _reset_session_for_skill(skill_name)
                 if attempts >= 2:
@@ -516,15 +520,23 @@ def enrich_resolved(
                     break
                 continue
 
-            if not getattr(result, "is_error", False) and not getattr(result, "rate_limited", False):
+            if not getattr(result, "is_error", False) and not getattr(
+                result, "rate_limited", False
+            ):
                 break
 
             # Error of rate-limit: sluit session, retry met fresh subprocess.
             err_msg = getattr(result, "error_message", None) or ""
             logger.warning(
                 "[%d/%d] %s (%s): try %d failed (is_error=%s rate_limited=%s) msg=%s",
-                idx_proposal + 1, len(resolved), name, bucket.mode, attempts,
-                result.is_error, result.rate_limited, (err_msg or "<none>")[:160],
+                idx_proposal + 1,
+                len(resolved),
+                name,
+                bucket.mode,
+                attempts,
+                result.is_error,
+                result.rate_limited,
+                (err_msg or "<none>")[:160],
             )
             _reset_session_for_skill(skill_name)
 
@@ -565,7 +577,10 @@ def enrich_resolved(
             stats.skill_errors += 1
             logger.warning(
                 "[%d/%d] %s (%s): unparseable skill-output",
-                idx_proposal + 1, len(resolved), name, bucket.mode,
+                idx_proposal + 1,
+                len(resolved),
+                name,
+                bucket.mode,
             )
             enriched.append(proposal)
             continue
@@ -576,7 +591,10 @@ def enrich_resolved(
             if snippet and url and not quote_or_die_check(snippet, url):
                 logger.warning(
                     "[%d/%d] %s (%s): quote-or-die rejected",
-                    idx_proposal + 1, len(resolved), name, bucket.mode,
+                    idx_proposal + 1,
+                    len(resolved),
+                    name,
+                    bucket.mode,
                 )
                 stats.quote_or_die_rejected += 1
                 enriched.append(proposal)
@@ -586,7 +604,13 @@ def enrich_resolved(
         conf = parsed.get("confidence", 0)
         logger.info(
             "[%d/%d] %s (%s) -> %s conf=%.2f cost=$%.4f",
-            idx_proposal + 1, len(resolved), name, bucket.mode, outcome, float(conf), float(cost),
+            idx_proposal + 1,
+            len(resolved),
+            name,
+            bucket.mode,
+            outcome,
+            float(conf),
+            float(cost),
         )
         enriched.append(_apply_skill_result(proposal, parsed, stats=stats))
 

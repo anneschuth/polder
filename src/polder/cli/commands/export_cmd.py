@@ -18,9 +18,7 @@ def _resolve_root(data: Path | None) -> Path:
     cwd = Path.cwd()
     if (cwd / "data").exists():
         return cwd
-    raise typer.BadParameter(
-        f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven."
-    )
+    raise typer.BadParameter(f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven.")
 
 
 def _dump_csv(rows: list[dict], path: Path) -> None:
@@ -46,16 +44,16 @@ def export(
 ) -> None:
     """Exporteer alle entiteiten naar `out`. Voor MVP alleen csv en json."""
     if target not in {"csv", "json"}:
-        raise typer.BadParameter(
-            f"Onbekend target {target!r}. MVP ondersteunt: csv, json."
-        )
+        raise typer.BadParameter(f"Onbekend target {target!r}. MVP ondersteunt: csv, json.")
     root = _resolve_root(data)
     p = Polder.local(root)
 
     out.mkdir(parents=True, exist_ok=True)
 
     repos = {
-        "organisaties": [o.model_dump(mode="json", exclude_none=True) for o in p.organisaties.all()],
+        "organisaties": [
+            o.model_dump(mode="json", exclude_none=True) for o in p.organisaties.all()
+        ],
         "personen": [x.model_dump(mode="json", exclude_none=True) for x in p.personen.all()],
         "posten": [x.model_dump(mode="json", exclude_none=True) for x in p.posten.all()],
         "mandaten": [m.model_dump(mode="json", exclude_none=True) for m in p.mandaten.all()],
@@ -64,16 +62,16 @@ def export(
     if target == "json":
         for name, rows in repos.items():
             path = out / f"{name}.json"
-            path.write_text(json.dumps(rows, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+            path.write_text(
+                json.dumps(rows, ensure_ascii=False, indent=2, default=str), encoding="utf-8"
+            )
             typer.echo(f"wrote {path} ({len(rows)} rows)")
     else:  # csv
         for name, rows in repos.items():
             # Flatten one level: only top-level scalar fields go into CSV.
             flat = []
             for row in rows:
-                flat.append(
-                    {k: v for k, v in row.items() if not isinstance(v, (dict, list))}
-                )
+                flat.append({k: v for k, v in row.items() if not isinstance(v, (dict, list))})
             path = out / f"{name}.csv"
             _dump_csv(flat, path)
             typer.echo(f"wrote {path} ({len(flat)} rows)")

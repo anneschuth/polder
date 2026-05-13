@@ -8,10 +8,7 @@ from pathlib import Path
 import yaml
 
 SKILL_DIR = (
-    Path(__file__).resolve().parent.parent
-    / ".claude"
-    / "skills"
-    / "resolve-staging-proposals"
+    Path(__file__).resolve().parent.parent / ".claude" / "skills" / "resolve-staging-proposals"
 )
 
 REQUIRED_RESOLVED_FIELDS = {
@@ -120,7 +117,7 @@ def test_example_output_preserves_input_fields() -> None:
     inp = json.loads((SKILL_DIR / "example_input.json").read_text(encoding="utf-8"))
     out = json.loads((SKILL_DIR / "example_output.json").read_text(encoding="utf-8"))
     assert len(inp) == len(out)
-    for inp_entry, out_entry in zip(inp, out):
+    for inp_entry, out_entry in zip(inp, out, strict=False):
         for key, value in inp_entry.items():
             assert key in out_entry, f"input-veld {key} ontbreekt in output"
             assert out_entry[key] == value, f"input-veld {key} is gewijzigd"

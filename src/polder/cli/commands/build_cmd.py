@@ -23,12 +23,10 @@ def build(
         str,
         typer.Argument(help="sqlite | csv | datapackage | all"),
     ] = "all",
-    data_dir: Annotated[
-        Path, typer.Option("--data-dir", help="Source-of-truth data/-pad.")
-    ] = Path("data"),
-    dist_dir: Annotated[
-        Path, typer.Option("--dist-dir", help="Output dist/-pad.")
-    ] = Path("dist"),
+    data_dir: Annotated[Path, typer.Option("--data-dir", help="Source-of-truth data/-pad.")] = Path(
+        "data"
+    ),
+    dist_dir: Annotated[Path, typer.Option("--dist-dir", help="Output dist/-pad.")] = Path("dist"),
 ) -> None:
     """Bouw `dist/polder.db`, `dist/csv/`, en/of `dist/datapackage.json`."""
     if target not in VALID_TARGETS:

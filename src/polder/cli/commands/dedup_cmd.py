@@ -52,9 +52,7 @@ def dedup_record(record: dict[str, Any]) -> tuple[dict[str, Any], int]:
         seen.add(k)
         merged = dict(m)
         merged_sources = list(merged.get("sources") or [])
-        existing_src_keys = {
-            _src_key(s) for s in merged_sources if isinstance(s, dict)
-        }
+        existing_src_keys = {_src_key(s) for s in merged_sources if isinstance(s, dict)}
         for dup_i in groups[k][1:]:
             for src in mandaten[dup_i].get("sources") or []:
                 if isinstance(src, dict) and _src_key(src) not in existing_src_keys:

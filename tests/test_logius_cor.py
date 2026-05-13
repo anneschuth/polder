@@ -89,7 +89,10 @@ def test_build_index_primary_only_in_name_index() -> None:
     assert set(index["by_kvk"].keys()) == {"50200097", "27365323", "30280353"}
     # De sub-OIN "...Volkshuisvesting en Ruimtelijke Ordening" mag NIET
     # in de name-index zitten (geen tooi, geen typecode).
-    assert "binnenlandse zaken en koninkrijksrelaties - volkshuisvesting en ruimtelijke ordening" not in index["by_name"]
+    assert (
+        "binnenlandse zaken en koninkrijksrelaties - volkshuisvesting en ruimtelijke ordening"
+        not in index["by_name"]
+    )
     # Maar het primaire BZK-record wel.
     assert (
         index["by_name"]["binnenlandse zaken en koninkrijksrelaties"]["oin"]

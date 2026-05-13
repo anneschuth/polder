@@ -139,7 +139,9 @@ def main(argv: list[str] | None = None) -> int:
 
     diffs, proposals = compute_diff(args.cache, args.data)
 
-    args.out.write_text(json.dumps(diffs, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+    args.out.write_text(
+        json.dumps(diffs, indent=2, ensure_ascii=False, default=str), encoding="utf-8"
+    )
     args.proposals.write_text(
         json.dumps(proposals, indent=2, ensure_ascii=False, default=str), encoding="utf-8"
     )

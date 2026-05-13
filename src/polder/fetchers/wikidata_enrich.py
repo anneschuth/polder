@@ -229,7 +229,7 @@ def enrich_ori_records(
 
         try:
             results = reconciliation_lookup_persons_batch(queries)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.warning("Batch %d-%d faalde: %s", batch_start, batch_start + len(batch), exc)
             stats.errors += len(batch)
             continue

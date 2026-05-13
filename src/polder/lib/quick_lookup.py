@@ -26,7 +26,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
-    from polder.lib.models import Mandaat, Organisatie, Persoon, Post
+    pass
 
 
 def _rg_find_id(search_dir: Path, id: str) -> Path | None:

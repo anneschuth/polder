@@ -74,9 +74,7 @@ OIN_CSV_URL = "https://oinregister.logius.nl/oinregister.csv"
 OIN_PUBPROXY_URL = "https://oinregister.logius.nl/pubproxy/organisations/public"
 COR_API_BASE = "https://oinregister.logius.nl/api/v1/"
 SOURCE_ID = "logius_cor"
-USER_AGENT = (
-    "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
-)
+USER_AGENT = "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 HTTP_TIMEOUT = 60.0
 PAGE_SIZE = 100  # API hard-cap
 MIN_REQUEST_INTERVAL = 0.2  # weest aardig voor de pubproxy
@@ -528,9 +526,7 @@ def enrich_organisations(
         elif method == "name":
             stats["matched_name"] += 1
         if dry_run:
-            logger.info(
-                "DRY-RUN %s ← oin=%s (%s)", record.get("id"), row.get("oin"), method
-            )
+            logger.info("DRY-RUN %s ← oin=%s (%s)", record.get("id"), row.get("oin"), method)
         else:
             _write_yaml(path, merged)
         stats["written"] += 1
@@ -582,9 +578,7 @@ def _build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Negeer bestaande cache en haal het register opnieuw op.",
     )
-    parser.add_argument(
-        "-v", "--verbose", action="store_true", help="Verbose logging."
-    )
+    parser.add_argument("-v", "--verbose", action="store_true", help="Verbose logging.")
     return parser
 
 

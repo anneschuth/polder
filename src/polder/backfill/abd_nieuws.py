@@ -17,7 +17,7 @@ from pathlib import Path
 
 from polder.llm import cache as response_cache
 from polder.llm import prefilters
-from polder.llm.session import RATE_LIMIT_EXIT_CODE, SkillSession
+from polder.llm.session import SkillSession
 
 logger = logging.getLogger("polder.backfill.abd_nieuws")
 
@@ -111,9 +111,7 @@ def _process_one(
 
     if use_cache:
         raw = html.encode("utf-8")
-        key = response_cache.cache_key(
-            "parse-abd-nieuws", skill_hash, session.model, raw
-        )
+        key = response_cache.cache_key("parse-abd-nieuws", skill_hash, session.model, raw)
         cached = response_cache.lookup("parse-abd-nieuws", key)
         if cached is not None and not cached.is_error and not cached.rate_limited:
             output.parent.mkdir(parents=True, exist_ok=True)
@@ -138,9 +136,7 @@ def _process_one(
 
     if use_cache:
         raw = html.encode("utf-8")
-        key = response_cache.cache_key(
-            "parse-abd-nieuws", skill_hash, session.model, raw
-        )
+        key = response_cache.cache_key("parse-abd-nieuws", skill_hash, session.model, raw)
         response_cache.store("parse-abd-nieuws", key, result)
     deltas.parsed = 1
     return "ok", deltas
@@ -169,9 +165,7 @@ def backfill(
     cache_dir = repo_root / "_cache" / "abd-nieuws"
     staging_dir = repo_root / "data" / "_staging"
 
-    candidates = list_candidates(
-        cache_dir, since=since, until=until, pattern=pattern, limit=limit
-    )
+    candidates = list_candidates(cache_dir, since=since, until=until, pattern=pattern, limit=limit)
     result = BackfillResult(source="abd-nieuws", total_candidates=len(candidates))
     if not candidates:
         result.notes.append(f"Geen kandidaten in {cache_dir}")

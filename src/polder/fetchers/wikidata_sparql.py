@@ -130,11 +130,13 @@ def resolve_endpoint(endpoint: str) -> str:
     if endpoint in _ENDPOINT_URLS:
         return _ENDPOINT_URLS[endpoint]
     return endpoint
-USER_AGENT = (
-    "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
-)
+
+
+USER_AGENT = "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 HTTP_TIMEOUT = 180.0
-MIN_REQUEST_INTERVAL = 2.0  # seconden tussen calls (Wikimedia rate-limit; conservatief tijdens outages)
+MIN_REQUEST_INTERVAL = (
+    2.0  # seconden tussen calls (Wikimedia rate-limit; conservatief tijdens outages)
+)
 QLEVER_REQUEST_INTERVAL = 0.2  # QLever heeft geen agressieve throttle
 SOURCE_ID = "wikidata"
 
@@ -191,7 +193,8 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
 # QLever-varianten: zelfde Q-classes maar met expliciete PREFIX-declaraties
 # en `rdfs:label` met taal-filter (QLever ondersteunt geen wikibase:label-service).
 ORG_QUERIES_QLEVER: dict[str, str] = {
-    "ministerie": _QLEVER_PREFIXES + """
+    "ministerie": _QLEVER_PREFIXES
+    + """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   ?item wdt:P31 wd:Q3143387 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
@@ -199,7 +202,8 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
 }
 """,
-    "gemeente": _QLEVER_PREFIXES + """
+    "gemeente": _QLEVER_PREFIXES
+    + """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   ?item wdt:P31 wd:Q2039348 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
@@ -207,7 +211,8 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
 }
 """,
-    "provincie": _QLEVER_PREFIXES + """
+    "provincie": _QLEVER_PREFIXES
+    + """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   ?item wdt:P31 wd:Q134390 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
@@ -215,7 +220,8 @@ SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "nl") }
 }
 """,
-    "waterschap": _QLEVER_PREFIXES + """
+    "waterschap": _QLEVER_PREFIXES
+    + """
 SELECT ?item ?itemLabel ?abbr ?oin WHERE {
   ?item wdt:P31 wd:Q702081 .
   OPTIONAL { ?item wdt:P1813 ?abbr }
@@ -336,7 +342,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # QLever ondersteunt geen wikibase:label-service; we gebruiken rdfs:label met taal-filter.
 BEWINDSPERSOON_QUERIES_QLEVER: dict[str, str] = {
-    "minister": _QLEVER_BW_PREFIXES + """
+    "minister": _QLEVER_BW_PREFIXES
+    + """
 SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
   VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
   ?role wdt:P1001 ?jurisdiction .
@@ -358,7 +365,8 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?mini
   FILTER(!BOUND(?start) || ?start >= "1945-01-01T00:00:00Z"^^xsd:dateTime)
 }
 """,
-    "staatssecretaris": _QLEVER_BW_PREFIXES + """
+    "staatssecretaris": _QLEVER_BW_PREFIXES
+    + """
 SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
   VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
   ?role wdt:P1001 ?jurisdiction .
@@ -379,7 +387,9 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?mini
 """,
 }
 
-ABD_TMG_QUERY_QLEVER = _QLEVER_BW_PREFIXES + """
+ABD_TMG_QUERY_QLEVER = (
+    _QLEVER_BW_PREFIXES
+    + """
 SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?ministry ?ministryLabel ?start ?end WHERE {
   VALUES ?jurisdiction { wd:Q55 wd:Q29999 }
   ?role wdt:P1001 ?jurisdiction .
@@ -398,6 +408,7 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel ?role ?roleLabel ?mini
   FILTER(!BOUND(?end))
 }
 """
+)
 
 
 # ---------------------------------------------------------------------------
@@ -432,25 +443,25 @@ MINISTRY_QID_TO_SLUG: dict[str, str] = {
     "Q127256306": "min-aenm",
     # Bekende historische voorgangers / opvolgers (post-1945) → huidig equivalent.
     # Bewust conservatief; alleen waar de mapping ondubbelzinnig is.
-    "Q1064819": "min-ienw",   # Verkeer en Waterstaat → I&W
-    "Q1818236": "min-ienw",   # Verkeer en Waterstaat (oud) → I&W
-    "Q1063531": "min-ienw",   # VROM (deel) → I&W
-    "Q1782184": "min-ienw",   # VenW oud
-    "Q2630990": "min-vws",    # WVC → VWS
-    "Q2630999": "min-vws",    # WVC variant
-    "Q1769526": "min-szw",    # Sociale Zaken oud
-    "Q1782183": "min-ocw",    # OCenW
-    "Q1782177": "min-ocw",    # O&W oud
-    "Q1782182": "min-ezk",    # Economische Zaken oud (single name)
-    "Q1782180": "min-ezk",    # Economische Zaken (alias)
-    "Q1769528": "min-bz",     # BuZa oud
-    "Q1037517": "min-fin",    # Financien (alias)
-    "Q1782178": "min-jenv",   # Justitie oud
-    "Q1769527": "min-jenv",   # Justitie alias
-    "Q1782181": "min-lvvn",   # Landbouw oud
-    "Q1782185": "min-lvvn",   # LNV
-    "Q1782179": "min-bzk",    # BiZa oud
-    "Q1782176": "min-def",    # Defensie alias
+    "Q1064819": "min-ienw",  # Verkeer en Waterstaat → I&W
+    "Q1818236": "min-ienw",  # Verkeer en Waterstaat (oud) → I&W
+    "Q1063531": "min-ienw",  # VROM (deel) → I&W
+    "Q1782184": "min-ienw",  # VenW oud
+    "Q2630990": "min-vws",  # WVC → VWS
+    "Q2630999": "min-vws",  # WVC variant
+    "Q1769526": "min-szw",  # Sociale Zaken oud
+    "Q1782183": "min-ocw",  # OCenW
+    "Q1782177": "min-ocw",  # O&W oud
+    "Q1782182": "min-ezk",  # Economische Zaken oud (single name)
+    "Q1782180": "min-ezk",  # Economische Zaken (alias)
+    "Q1769528": "min-bz",  # BuZa oud
+    "Q1037517": "min-fin",  # Financien (alias)
+    "Q1782178": "min-jenv",  # Justitie oud
+    "Q1769527": "min-jenv",  # Justitie alias
+    "Q1782181": "min-lvvn",  # Landbouw oud
+    "Q1782185": "min-lvvn",  # LNV
+    "Q1782179": "min-bzk",  # BiZa oud
+    "Q1782176": "min-def",  # Defensie alias
     # Min-pres / Algemene Zaken: Q3058109 is de positie zelf (niet een ministerie).
     "Q939757": "min-az",
 }
@@ -487,7 +498,10 @@ def load_ministry_qid_map(data_root: Path) -> dict[str, str]:
             mapping[qid] = slug
     return mapping
 
-PERSON_QUERY_QLEVER = _QLEVER_PREFIXES + """
+
+PERSON_QUERY_QLEVER = (
+    _QLEVER_PREFIXES
+    + """
 SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
   ?person wdt:P39 wd:Q18887908 .
   OPTIONAL { ?person wdt:P9213 ?tkid }
@@ -499,6 +513,7 @@ SELECT ?person ?personLabel ?tkid ?birthyear ?familyLabel WHERE {
   OPTIONAL { ?person rdfs:label ?personLabel . FILTER(LANG(?personLabel) = "nl") }
 }
 """
+)
 
 
 # ---------------------------------------------------------------------------
@@ -645,9 +660,7 @@ def query_sparql(
         raise httpx.HTTPError("auto-keten leverde geen response")
 
     if request_interval is None:
-        request_interval = (
-            QLEVER_REQUEST_INTERVAL if "qlever" in endpoint else MIN_REQUEST_INTERVAL
-        )
+        request_interval = QLEVER_REQUEST_INTERVAL if "qlever" in endpoint else MIN_REQUEST_INTERVAL
 
     # Endpoint-alias vertalen naar URL
     if endpoint in _ENDPOINT_URLS:
@@ -686,7 +699,9 @@ def query_sparql(
             backoff = min(backoff * 2, 120.0)
             continue
         if response.status_code in (429, 502, 503, 504):
-            retry_after = response.headers.get("retry-after") if hasattr(response, "headers") else None
+            retry_after = (
+                response.headers.get("retry-after") if hasattr(response, "headers") else None
+            )
             try:
                 wait = float(retry_after) if retry_after else backoff
             except (TypeError, ValueError):
@@ -867,7 +882,9 @@ def _build_lookup_person_query(
                 f'CONTAINS(LCASE(?label), LCASE("{_escape_sparql_literal(first_letter)}"))'
             )
     label_filter_clause = " && ".join(label_filters)
-    return _QLEVER_PREFIXES + f"""PREFIX schema: <http://schema.org/>
+    return (
+        _QLEVER_PREFIXES
+        + f"""PREFIX schema: <http://schema.org/>
 SELECT ?person ?label ?birthyear ?description WHERE {{
   ?person wdt:P31 wd:Q5 .
   ?person rdfs:label ?label .
@@ -879,6 +896,7 @@ SELECT ?person ?label ?birthyear ?description WHERE {{
 }}
 LIMIT 25
 """
+    )
 
 
 def lookup_person_by_name(
@@ -1090,12 +1108,7 @@ def _fetch_birth_year_from_entity(qid: str, *, timeout: float = 10.0) -> int | N
     if not isinstance(entity, dict):
         return None
     for claim in entity.get("claims", {}).get("P569", []):
-        time_str = (
-            claim.get("mainsnak", {})
-            .get("datavalue", {})
-            .get("value", {})
-            .get("time")
-        )
+        time_str = claim.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("time")
         if isinstance(time_str, str) and len(time_str) >= 5:
             try:
                 # ISO datetime: "+1973-06-22T00:00:00Z" of "-0050-01-01T..."
@@ -1647,8 +1660,9 @@ def _build_name_variants(
     officials = [r for r in raw if r["prop"] == "official"]
     shorts = [r for r in raw if r["prop"] == "short"]
 
-    def overlap(a_from: str | None, a_until: str | None,
-                b_from: str | None, b_until: str | None) -> bool:
+    def overlap(
+        a_from: str | None, a_until: str | None, b_from: str | None, b_until: str | None
+    ) -> bool:
         # Behandel onbekende grenzen als open: "" -> very early / very late.
         # End-dates zijn half-open (exclusive): A's end == B's start telt niet
         # als overlap (anders koppelt EZ-short aan EZK-official op 2017-10-26).
@@ -1697,8 +1711,7 @@ def _build_name_variants(
         # Zoek een matching short. Om collision te vermijden bij meerdere
         # officials met overlappende short: de eerste hit is genoeg.
         for sh in shorts:
-            if overlap(off["valid_from"], off["valid_until"],
-                       sh["valid_from"], sh["valid_until"]):
+            if overlap(off["valid_from"], off["valid_until"], sh["valid_from"], sh["valid_until"]):
                 entry["abbr"] = sh["value"]
                 break
         entries.append(entry)
@@ -1796,10 +1809,7 @@ def merge_names_into_record(
             if "valid_from" not in existing_entry and wd.get("valid_from"):
                 existing_entry["valid_from"] = wd["valid_from"]
                 changed = True
-            if (
-                "valid_until" not in existing_entry
-                and wd.get("valid_until") is not None
-            ):
+            if "valid_until" not in existing_entry and wd.get("valid_until") is not None:
                 existing_entry["valid_until"] = wd["valid_until"]
                 changed = True
             continue
@@ -2230,7 +2240,9 @@ def _ensure_post(
     return True
 
 
-def _mandaat_id(person_qid: str, role_qid: str, ministry_slug: str | None, start: str | None) -> str:
+def _mandaat_id(
+    person_qid: str, role_qid: str, ministry_slug: str | None, start: str | None
+) -> str:
     """Deterministisch mandaat-id zodat re-runs idempotent zijn."""
     payload = "|".join([person_qid, role_qid, ministry_slug or "", start or ""])
     h = hashlib.sha1(payload.encode("utf-8")).hexdigest()[:12]
@@ -2278,9 +2290,7 @@ def build_bewindspersoon_records(
             # (vooroorlogse ministers), slaan we het over — past niet bij
             # 1945-heden backfill.
             continue
-        slug, name_block = person_id_from_label(
-            person_label, family, None, birthyear, qid
-        )
+        slug, name_block = person_id_from_label(person_label, family, None, birthyear, qid)
         person_record = by_person.setdefault(
             qid,
             {
@@ -2387,9 +2397,7 @@ def build_abd_tmg_records(
             continue
         if birthyear < _MIN_BIRTH_YEAR:
             continue
-        slug, name_block = person_id_from_label(
-            person_label, family, None, birthyear, qid
-        )
+        slug, name_block = person_id_from_label(person_label, family, None, birthyear, qid)
         person_record = by_person.setdefault(
             qid,
             {
@@ -2630,9 +2638,7 @@ def enrich_organisations(
             post_match_records.setdefault(qid, []).append((path, merged))
         # Voor records die al een wikidata-id hadden, voeg ze ook toe aan de
         # name-history pool — die hebben de Q-id immers al.
-        already_added_paths = {
-            p for entries in post_match_records.values() for p, _ in entries
-        }
+        already_added_paths = {p for entries in post_match_records.values() for p, _ in entries}
         for path, rec in records:
             qid = (rec.get("identifiers") or {}).get("wikidata")
             if qid and path not in already_added_paths:
@@ -2640,11 +2646,7 @@ def enrich_organisations(
         stats[org_type] = cat_stats
 
         # Naam-historie verwerking (per category, alleen als gevraagd).
-        if (
-            include_name_history
-            and org_type in name_history_categories
-            and post_match_records
-        ):
+        if include_name_history and org_type in name_history_categories and post_match_records:
             history = fetch_name_history(
                 list(post_match_records.keys()),
                 cache_dir=cache_dir,
@@ -2847,9 +2849,7 @@ def _merge_into_existing_person(
     return merged
 
 
-def _person_target_path(
-    person_root: Path, record: dict[str, Any]
-) -> Path:
+def _person_target_path(person_root: Path, record: dict[str, Any]) -> Path:
     """Personen liggen vlak onder ``person_root``."""
     slug = record["id"][len("person:") :]
     return person_root / f"{slug}.yaml"
@@ -3005,9 +3005,7 @@ def enrich_abd_tmg(
         return {"rows": 0, "error": 1}
 
     rows = parse_abd_tmg_bindings(bindings)
-    bundle = build_abd_tmg_records(
-        rows, ministry_qid_to_slug=ministry_qid_to_slug, today=today_str
-    )
+    bundle = build_abd_tmg_records(rows, ministry_qid_to_slug=ministry_qid_to_slug, today=today_str)
     stats = {
         "rows": len(rows),
         "persons": 0,

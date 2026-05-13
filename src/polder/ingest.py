@@ -695,6 +695,7 @@ def ingest_source(
     finally:
         # Sluit alle SkillSessions (incl. die van pool-workers) na de batch.
         from polder.llm.session import close_all_sessions
+
         close_all_sessions()
 
 

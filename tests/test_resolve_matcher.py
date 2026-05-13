@@ -11,7 +11,6 @@ from pathlib import Path
 
 import pytest
 
-
 # Ground-truth-cases uit echte resolved-staging-files.
 # Format: (proposal_name, expected_person_id).
 # Deze cases moeten code-only matchen, zonder LLM-fallback.
@@ -42,9 +41,7 @@ def polder_index():
 
 
 @pytest.mark.parametrize("name,expected_person_id", PERSON_MATCH_CASES)
-def test_match_person_ground_truth(
-    polder_index, name: str, expected_person_id: str
-) -> None:
+def test_match_person_ground_truth(polder_index, name: str, expected_person_id: str) -> None:
     from polder.resolve.matcher import match_person
 
     result = match_person(name, idx=polder_index)

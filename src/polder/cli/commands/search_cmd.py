@@ -31,9 +31,7 @@ def _resolve_root(data: Path | None) -> Path:
     cwd = Path.cwd()
     if (cwd / "data").exists():
         return cwd
-    raise typer.BadParameter(
-        f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven."
-    )
+    raise typer.BadParameter(f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven.")
 
 
 def _entity_label_from_path(rel_path: str) -> str:
@@ -179,7 +177,9 @@ def _search_with_rg(
         first_line = lines[0]
         field = _matched_field_path(first_line) or "?"
         # Knip `key: ` prefix uit value
-        value = first_line.split(":", 1)[1].strip().strip("'\"") if ":" in first_line else first_line
+        value = (
+            first_line.split(":", 1)[1].strip().strip("'\"") if ":" in first_line else first_line
+        )
         results.append((entity, record_id, field, value))
         if len(lines) > 1:
             results.append(("", "", f"+{len(lines) - 1} velden", ""))

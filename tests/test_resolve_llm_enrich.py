@@ -3,11 +3,9 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-import pytest
-
-from polder.resolve.llm_enrich import EnrichStats, enrich_resolved
+from polder.resolve.llm_enrich import enrich_resolved
 
 
 @dataclass

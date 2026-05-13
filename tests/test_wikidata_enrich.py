@@ -9,7 +9,6 @@ import pytest
 import yaml
 
 from polder.fetchers.wikidata_enrich import (
-    EnrichStats,
     enrich_ori_records,
     enrich_record,
 )
@@ -20,9 +19,7 @@ def ori_record() -> dict:
     return {
         "id": "person:smit-w-1234567",
         "name": {"family": "Smit", "given": "Willem", "initials": "W."},
-        "sources": [
-            {"id": "open_raadsinformatie", "url": "https://x", "retrieved": "2026-01-01"}
-        ],
+        "sources": [{"id": "open_raadsinformatie", "url": "https://x", "retrieved": "2026-01-01"}],
     }
 
 
@@ -134,9 +131,7 @@ def test_enrich_ori_records_loops_and_counts(tmp_path: Path):
     rec = {
         "id": "person:smit-w-9999",
         "name": {"family": "Smit", "given": "Willem"},
-        "sources": [
-            {"id": "open_raadsinformatie", "url": "https://x", "retrieved": "2026-01-01"}
-        ],
+        "sources": [{"id": "open_raadsinformatie", "url": "https://x", "retrieved": "2026-01-01"}],
     }
     (data / "personen" / "smit-w-9999.yaml").write_text(
         yaml.safe_dump(rec, sort_keys=False), encoding="utf-8"

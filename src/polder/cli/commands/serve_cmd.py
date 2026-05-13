@@ -10,12 +10,10 @@ import typer
 
 
 def serve(
-    db: Annotated[
-        Path, typer.Option(help="Pad naar de polder.db SQLite-database.")
-    ] = Path("dist/polder.db"),
-    metadata: Annotated[
-        Path, typer.Option(help="Pad naar metadata.json.")
-    ] = Path("metadata.json"),
+    db: Annotated[Path, typer.Option(help="Pad naar de polder.db SQLite-database.")] = Path(
+        "dist/polder.db"
+    ),
+    metadata: Annotated[Path, typer.Option(help="Pad naar metadata.json.")] = Path("metadata.json"),
     port: Annotated[int, typer.Option(help="Poort om op te luisteren.")] = 8001,
     host: Annotated[str, typer.Option(help="Host-binding.")] = "127.0.0.1",
 ) -> None:

@@ -6,7 +6,6 @@ from pathlib import Path
 from unittest.mock import patch
 
 import httpx
-import pytest
 
 from polder.resolve.quote_or_die import make_verifier
 
@@ -46,10 +45,13 @@ def test_accepts_when_snippet_in_fetched_body(tmp_path: Path) -> None:
 
     verify = make_verifier(cache_dir=tmp_path)
     with patch("polder.resolve.quote_or_die.httpx.Client", _Client):
-        assert verify(
-            "Esther van Deursen (geboren 1972, Amsterdam)",
-            "https://www.wikidata.org/wiki/Q1",
-        ) is True
+        assert (
+            verify(
+                "Esther van Deursen (geboren 1972, Amsterdam)",
+                "https://www.wikidata.org/wiki/Q1",
+            )
+            is True
+        )
 
 
 def test_rejects_when_snippet_not_in_body(tmp_path: Path) -> None:
@@ -76,10 +78,13 @@ def test_rejects_when_snippet_not_in_body(tmp_path: Path) -> None:
 
     verify = make_verifier(cache_dir=tmp_path)
     with patch("polder.resolve.quote_or_die.httpx.Client", _Client):
-        assert verify(
-            "fictieve claim die niet in de tekst staat",
-            "https://www.wikidata.org/wiki/Q1",
-        ) is False
+        assert (
+            verify(
+                "fictieve claim die niet in de tekst staat",
+                "https://www.wikidata.org/wiki/Q1",
+            )
+            is False
+        )
 
 
 def test_normalizes_accents_and_whitespace(tmp_path: Path) -> None:
@@ -107,10 +112,13 @@ def test_normalizes_accents_and_whitespace(tmp_path: Path) -> None:
     verify = make_verifier(cache_dir=tmp_path)
     with patch("polder.resolve.quote_or_die.httpx.Client", _Client):
         # Snippet met accent en extra whitespace moet matchen op kale body.
-        assert verify(
-            "André  van der   Berg geboren 1965",
-            "https://nl.wikipedia.org/wiki/X",
-        ) is True
+        assert (
+            verify(
+                "André  van der   Berg geboren 1965",
+                "https://nl.wikipedia.org/wiki/X",
+            )
+            is True
+        )
 
 
 def test_cache_avoids_second_fetch(tmp_path: Path) -> None:

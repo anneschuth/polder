@@ -129,8 +129,11 @@ def test_match_record_finds_existing_zbo(tmp_path: Path) -> None:
             "id": "org:zbo-cbs",
             "type": "zbo",
             "names": [
-                {"value": "Centraal Bureau voor de Statistiek", "abbr": "CBS",
-                 "valid_from": "1899-01-09"},
+                {
+                    "value": "Centraal Bureau voor de Statistiek",
+                    "abbr": "CBS",
+                    "valid_from": "1899-01-09",
+                },
             ],
             "valid_from": "1899-01-09",
             "valid_until": None,
@@ -160,8 +163,11 @@ def test_apply_records_updates_existing_and_creates_new(tmp_path: Path) -> None:
             "type": "zbo",
             "classification": "zbo",
             "names": [
-                {"value": "Centraal Bureau voor de Statistiek", "abbr": "CBS",
-                 "valid_from": "1899-01-09"},
+                {
+                    "value": "Centraal Bureau voor de Statistiek",
+                    "abbr": "CBS",
+                    "valid_from": "1899-01-09",
+                },
             ],
             "valid_from": "1899-01-09",
             "valid_until": None,

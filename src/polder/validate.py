@@ -223,26 +223,18 @@ def check_referential_integrity(
         if rec.category == "organisaties":
             parent = data.get("parent_id")
             if isinstance(parent, str) and parent not in idx.org_ids:
-                issues.append(
-                    _ref_issue(rec.path, "parent_id", parent, "organisatie")
-                )
+                issues.append(_ref_issue(rec.path, "parent_id", parent, "organisatie"))
         elif rec.category == "posten":
             org = data.get("organization_id")
             if isinstance(org, str) and org not in idx.org_ids:
-                issues.append(
-                    _ref_issue(rec.path, "organization_id", org, "organisatie")
-                )
+                issues.append(_ref_issue(rec.path, "organization_id", org, "organisatie"))
         elif rec.category == "mandaten":
             issues.extend(_check_mandaat_refs(rec.path, data, idx, prefix=""))
         elif rec.category == "personen":
             for i, mandaat in enumerate(data.get("mandaten") or []):
                 if not isinstance(mandaat, dict):
                     continue
-                issues.extend(
-                    _check_mandaat_refs(
-                        rec.path, mandaat, idx, prefix=f"mandaten[{i}]."
-                    )
-                )
+                issues.extend(_check_mandaat_refs(rec.path, mandaat, idx, prefix=f"mandaten[{i}]."))
         elif rec.category == "events":
             for i, org in enumerate(data.get("affected_org_ids") or []):
                 if isinstance(org, str) and org not in idx.org_ids:
@@ -354,9 +346,7 @@ def check_overlapping_mandaten(idx: Index) -> list[ValidationIssue]:
     return issues
 
 
-def _overlaps(
-    a_start: date, a_end: date | None, b_start: date, b_end: date | None
-) -> bool:
+def _overlaps(a_start: date, a_end: date | None, b_start: date, b_end: date | None) -> bool:
     """True als twee mandate-perioden elkaar overlappen.
 
     Nederlandse staatsrechtelijke conventie: een kabinetswissel gebeurt op
@@ -473,7 +463,7 @@ _ABD_ROLE_KEYWORDS = (
 
 
 def check_role_classification_mismatch(
-    records: Iterable[Record], idx: "Index"
+    records: Iterable[Record], idx: Index
 ) -> list[ValidationIssue]:
     """Een mandaat met ABD-rol mag niet wijzen naar bewindspersoon-post.
 
@@ -492,7 +482,7 @@ def check_role_classification_mismatch(
         for m in data.get("mandaten") or []:
             if not isinstance(m, dict):
                 continue
-            role = str(m.get("role") or "").lower()
+            role = str(m.get("role") or "")
             post_id = m.get("post_id")
             if not role or not post_id:
                 continue
@@ -502,8 +492,19 @@ def check_role_classification_mismatch(
             classification = post.get("classification")
             if classification != "bewindspersoon":
                 continue
+            # Primary-keyword check: alleen aan het BEGIN van de role-string
+            # telt als primaire rol. Een "Minister zonder portefeuille; Vice-
+            # Minister-President" heeft minister-zonder-portefeuille als
+            # primair, niet de secundaire vice-MP. "raadadviseur ... bij het
+            # Kabinet Minister-President" begint met "raadadviseur" en is
+            # dus ABD.
+            cleaned = (
+                re.sub(r"^(?:(?:drs?|mr|ir|prof|dr)\.?\s+)+", "", role, flags=re.IGNORECASE)
+                .strip()
+                .lower()
+            )
             for kw in _ABD_ROLE_KEYWORDS:
-                if kw in role:
+                if cleaned.startswith(kw):
                     issues.append(
                         ValidationIssue(
                             severity="error",

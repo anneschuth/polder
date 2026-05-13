@@ -47,9 +47,7 @@ SRU_ENDPOINT = "https://repository.overheid.nl/sru"
 DEFAULT_RECORD_SCHEMA = "gzd"
 CACHE_DIR = Path("_cache/staatscourant")
 HTTP_TIMEOUT = 90.0
-USER_AGENT = (
-    "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
-)
+USER_AGENT = "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 PAGE_SIZE = 100
 
 NAMESPACES = {

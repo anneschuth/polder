@@ -16,7 +16,12 @@ def test_lookup_wikidata_returns_candidates_as_json() -> None:
     with patch(
         "polder.fetchers.wikidata_sparql.lookup_person_by_name",
         return_value=[
-            {"qid": "Q57792", "label": "Mark Rutte", "birth_year": 1967, "description": "Nederlands politicus"},
+            {
+                "qid": "Q57792",
+                "label": "Mark Rutte",
+                "birth_year": 1967,
+                "description": "Nederlands politicus",
+            },
         ],
     ):
         result = runner.invoke(app, ["lookup", "wikidata", "--name", "Mark Rutte"])

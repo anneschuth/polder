@@ -54,9 +54,7 @@ def mini_polder(tmp_path: Path) -> Path:
                 {"value": "Binnenlandse Zaken en Koninkrijksrelaties", "valid_from": "2010-10-14"}
             ],
             "valid_from": "2010-10-14",
-            "sources": [
-                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
         },
     )
     _write_yaml(
@@ -70,9 +68,7 @@ def mini_polder(tmp_path: Path) -> Path:
             "type": "organisatieonderdeel",
             "classification": "organisatieonderdeel",
             "parent_id": "org:min-bzk",
-            "names": [
-                {"value": "Directie Digitale Samenleving", "valid_from": "2020-01-01"}
-            ],
+            "names": [{"value": "Directie Digitale Samenleving", "valid_from": "2020-01-01"}],
             "valid_from": "2020-01-01",
             "valid_until": None,
             "sources": [
@@ -195,9 +191,7 @@ def test_create_person_even_with_familyname_collision(mini_polder: Path) -> None
         {
             "id": "person:kewal-x-1900",
             "name": {"full": "Andere Kewal", "family": "Kewal"},
-            "sources": [
-                {"id": "test", "url": "https://example.org/x", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "test", "url": "https://example.org/x", "retrieved": "2026-05-09"}],
         },
     )
     p = _kewal_proposal()
@@ -210,17 +204,13 @@ def test_create_person_even_with_familyname_collision(mini_polder: Path) -> None
 def test_only_high_confidence_filter(mini_polder: Path) -> None:
     p = _kewal_proposal()
     p["confidence"] = 0.90
-    actions, skipped = plan_apply(
-        [p], mini_polder / "data", only_high_confidence=True
-    )
+    actions, skipped = plan_apply([p], mini_polder / "data", only_high_confidence=True)
     assert actions == []
     assert skipped
 
 
 def test_skip_persons_flag(mini_polder: Path) -> None:
-    actions, _skipped = plan_apply(
-        [_kewal_proposal()], mini_polder / "data", skip_persons=True
-    )
+    actions, _skipped = plan_apply([_kewal_proposal()], mini_polder / "data", skip_persons=True)
     types = [a.type for a in actions]
     assert "create-person" not in types
     assert "create-org" in types
@@ -420,9 +410,7 @@ def test_skip_invalid_date_order_existing_person(mini_polder: Path) -> None:
 
     actions, skipped = plan_apply([p], mini_polder / "data")
     assert all(a.type != "append-mandaat" for a in actions)
-    assert any(
-        "ongeldige datum-volgorde" in r for s in skipped for r in s.reasons
-    ), skipped
+    assert any("ongeldige datum-volgorde" in r for s in skipped for r in s.reasons), skipped
 
 
 def test_skip_invalid_date_order_new_person(mini_polder: Path) -> None:
@@ -433,9 +421,7 @@ def test_skip_invalid_date_order_new_person(mini_polder: Path) -> None:
 
     actions, skipped = plan_apply([p], mini_polder / "data")
     assert all(a.type != "create-person" for a in actions)
-    assert any(
-        "ongeldige datum-volgorde" in r for s in skipped for r in s.reasons
-    ), skipped
+    assert any("ongeldige datum-volgorde" in r for s in skipped for r in s.reasons), skipped
 
 
 def test_skip_implausible_date(mini_polder: Path) -> None:
@@ -445,9 +431,7 @@ def test_skip_implausible_date(mini_polder: Path) -> None:
     p["end_date"] = None
     actions, skipped = plan_apply([p], mini_polder / "data")
     assert all(a.type != "create-person" for a in actions)
-    assert any(
-        "redelijk bereik" in r for s in skipped for r in s.reasons
-    ), skipped
+    assert any("redelijk bereik" in r for s in skipped for r in s.reasons), skipped
 
 
 def test_fuzzy_duplicate_writes_with_warning(mini_polder: Path) -> None:
@@ -512,9 +496,7 @@ def test_competing_proposals_keep_highest_confidence(mini_polder: Path) -> None:
     create_persons = [a for a in actions if a.type == "create-person"]
     assert len(create_persons) == 1
     assert create_persons[0].confidence == 0.95
-    assert any(
-        "concurrerende proposal" in r for s in skipped for r in s.reasons
-    ), skipped
+    assert any("concurrerende proposal" in r for s in skipped for r in s.reasons), skipped
 
 
 def test_load_resolved_input_directory(tmp_path: Path) -> None:
@@ -582,9 +564,12 @@ def test_classification_word_boundary() -> None:
     from polder.apply import _classification_from_role
 
     # CISO bij een ministerie is geen bewindspersoon
-    assert _classification_from_role(
-        "Chief Information Security Officer (CISO) Rijk, ministerie van BZK"
-    ) is None
+    assert (
+        _classification_from_role(
+            "Chief Information Security Officer (CISO) Rijk, ministerie van BZK"
+        )
+        is None
+    )
     # minister-president blijft bewindspersoon
     assert _classification_from_role("minister-president") == "bewindspersoon"
     # directeur-generaal blijft abd-tmg
@@ -636,9 +621,7 @@ def test_chain_name_implies_wrong_parent_skipped(mini_polder: Path) -> None:
             "parent_id": None,
             "names": [{"value": "Financiën", "valid_from": "2010-10-14"}],
             "valid_from": "2010-10-14",
-            "sources": [
-                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
         },
     )
     _write_yaml(
@@ -650,9 +633,7 @@ def test_chain_name_implies_wrong_parent_skipped(mini_polder: Path) -> None:
             "parent_id": "org:min-fin",
             "names": [{"value": "Belastingdienst", "valid_from": "2010-01-01"}],
             "valid_from": "2010-01-01",
-            "sources": [
-                {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
         },
     )
     p = _kewal_proposal()
@@ -742,9 +723,9 @@ def test_filename_strips_org_prefix(mini_polder: Path) -> None:
     create_orgs = [a for a in actions if a.type == "create-org"]
     assert create_orgs, "verwacht een create-org actie"
     for a in create_orgs:
-        assert ":" not in a.target_path.name, (
-            f"filename mag geen ':' bevatten, kreeg: {a.target_path.name}"
-        )
+        assert (
+            ":" not in a.target_path.name
+        ), f"filename mag geen ':' bevatten, kreeg: {a.target_path.name}"
 
 
 def test_skip_when_role_empty(mini_polder: Path) -> None:
@@ -782,9 +763,7 @@ def test_datetime_start_date_normalised(mini_polder: Path) -> None:
             "name": {"full": "Suzie Kewal", "family": "Kewal", "given": "Suzie"},
             "birth": {"year": 1975},
             "mandaten": [],
-            "sources": [
-                {"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}
-            ],
+            "sources": [{"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}],
         },
     )
     p = _kewal_proposal()

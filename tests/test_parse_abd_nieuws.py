@@ -136,9 +136,9 @@ def test_example_output_confidence_in_range_and_capped() -> None:
         assert 0.0 <= confidence <= 1.0
         # v0.4.0 two-source rule: zonder staatscourant_url cap 0.94.
         if not proposal.get("staatscourant_url"):
-            assert confidence <= 0.94, (
-                "Two-source rule v0.4.0: zonder staatscourant_url moet confidence <= 0.94 zijn."
-            )
+            assert (
+                confidence <= 0.94
+            ), "Two-source rule v0.4.0: zonder staatscourant_url moet confidence <= 0.94 zijn."
 
 
 def test_example_output_floor_when_four_facts_explicit() -> None:

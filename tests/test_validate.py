@@ -100,9 +100,7 @@ def make_person(
     base: dict = {
         "id": person_id,
         "name": {"full": "Test Persoon", "family": "Persoon"},
-        "sources": [
-            {"id": "roo", "url": "https://example.org/p", "retrieved": "2026-05-01"}
-        ],
+        "sources": [{"id": "roo", "url": "https://example.org/p", "retrieved": "2026-05-01"}],
     }
     if mandaten is not None:
         base["mandaten"] = mandaten
@@ -129,9 +127,7 @@ def make_inline_mandaat(
     if end is not None:
         base["end_date"] = end
     if sources is None:
-        sources = [
-            {"id": "roo", "url": "https://example.org/m", "retrieved": "2026-05-01"}
-        ]
+        sources = [{"id": "roo", "url": "https://example.org/m", "retrieved": "2026-05-01"}]
     base["sources"] = sources
     return base
 
@@ -246,9 +242,7 @@ def test_all_refs_resolved_no_error(data_dir: Path, schemas_dir: Path) -> None:
     )
     write_yaml(data_dir / "personen" / "x.yaml", person)
     issues = run_all_checks(data_dir, schemas_dir)
-    assert all(i.severity != "error" for i in issues), [
-        (i.field, i.message) for i in issues
-    ]
+    assert all(i.severity != "error" for i in issues), [(i.field, i.message) for i in issues]
 
 
 def test_check_referential_integrity_unit() -> None:
@@ -271,9 +265,7 @@ def test_bsn_pattern_caught(data_dir: Path, schemas_dir: Path) -> None:
     assert bsn_errors[0].severity == "error"
 
 
-def test_bsn_pattern_does_not_fire_on_postcode_or_kvk(
-    data_dir: Path, schemas_dir: Path
-) -> None:
+def test_bsn_pattern_does_not_fire_on_postcode_or_kvk(data_dir: Path, schemas_dir: Path) -> None:
     # 8-cijferig KvK is geen 9-cijferige hit.
     org = make_org()
     org["identifiers"] = {"kvk": "12345678"}
@@ -508,9 +500,7 @@ def test_exit_code_clean() -> None:
 def test_exit_code_with_warnings_only(tmp_path: Path) -> None:
     from polder.validate import ValidationIssue
 
-    only_warn = [
-        ValidationIssue(severity="warning", path=tmp_path / "x", field=None, message="m")
-    ]
+    only_warn = [ValidationIssue(severity="warning", path=tmp_path / "x", field=None, message="m")]
     assert exit_code(only_warn, strict=True) == 2
     # Spec: warnings-only is exit 2, ook zonder strict.
     assert exit_code(only_warn, strict=False) == 2

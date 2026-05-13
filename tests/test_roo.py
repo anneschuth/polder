@@ -181,10 +181,7 @@ def test_parse_organisatie_reads_tooi_attribute():
     node = etree.fromstring(ATTR_TOOI_XML)
     record = roo.parse_organisatie(node)
     assert record is not None
-    assert (
-        record["identifiers"]["tooi"]
-        == "https://identifier.overheid.nl/tooi/id/oorg/oorg12350"
-    )
+    assert record["identifiers"]["tooi"] == "https://identifier.overheid.nl/tooi/id/oorg/oorg12350"
     # `roo_id` komt uit `systeemId` van de organisatie-node zelf.
     assert record["identifiers"]["roo_id"] == "5445"
 
@@ -352,8 +349,16 @@ def test_merge_yaml_preserves_local_wikidata():
         "valid_from": "2010-10-14",
         "valid_until": None,
         "sources": [
-            {"id": "roo", "url": "https://organisaties.overheid.nl/9632/", "retrieved": "2026-01-01"},
-            {"id": "wikidata", "url": "https://www.wikidata.org/wiki/Q1727053", "retrieved": "2026-01-01"},
+            {
+                "id": "roo",
+                "url": "https://organisaties.overheid.nl/9632/",
+                "retrieved": "2026-01-01",
+            },
+            {
+                "id": "wikidata",
+                "url": "https://www.wikidata.org/wiki/Q1727053",
+                "retrieved": "2026-01-01",
+            },
         ],
     }
     new = {
@@ -374,7 +379,11 @@ def test_merge_yaml_preserves_local_wikidata():
         "valid_from": "2010-10-14",
         "valid_until": None,
         "sources": [
-            {"id": "roo", "url": "https://organisaties.overheid.nl/9632/", "retrieved": "2026-05-09"},
+            {
+                "id": "roo",
+                "url": "https://organisaties.overheid.nl/9632/",
+                "retrieved": "2026-05-09",
+            },
         ],
     }
     merged = roo.merge_yaml(existing, new)

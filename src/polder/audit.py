@@ -44,18 +44,10 @@ class Category:
 # `polder audit --explain` en bepaalt de sortering van de CLI-output.
 CATEGORIES: dict[str, Category] = {
     # Errors: structurele data-bugs
-    "yaml_parse_error": Category(
-        "yaml_parse_error", "error", "Bestand is geen geldig YAML."
-    ),
-    "dup_id_orgs": Category(
-        "dup_id_orgs", "error", "Twee organisatie-records met dezelfde ID."
-    ),
-    "dup_id_posts": Category(
-        "dup_id_posts", "error", "Twee post-records met dezelfde ID."
-    ),
-    "dup_id_persons": Category(
-        "dup_id_persons", "error", "Twee person-records met dezelfde ID."
-    ),
+    "yaml_parse_error": Category("yaml_parse_error", "error", "Bestand is geen geldig YAML."),
+    "dup_id_orgs": Category("dup_id_orgs", "error", "Twee organisatie-records met dezelfde ID."),
+    "dup_id_posts": Category("dup_id_posts", "error", "Twee post-records met dezelfde ID."),
+    "dup_id_persons": Category("dup_id_persons", "error", "Twee person-records met dezelfde ID."),
     "start_after_end": Category(
         "start_after_end",
         "error",
@@ -75,12 +67,8 @@ CATEGORIES: dict[str, Category] = {
         "error",
         "Geboortejaar buiten plausibele range (< 1700 of jonger dan 14 jaar).",
     ),
-    "birth_year_not_int": Category(
-        "birth_year_not_int", "error", "Geboortejaar is geen integer."
-    ),
-    "no_sources_orgs": Category(
-        "no_sources_orgs", "error", "Organisatie zonder sources[] entry."
-    ),
+    "birth_year_not_int": Category("birth_year_not_int", "error", "Geboortejaar is geen integer."),
+    "no_sources_orgs": Category("no_sources_orgs", "error", "Organisatie zonder sources[] entry."),
     "no_sources_persons": Category(
         "no_sources_persons", "error", "Persoon zonder sources[] entry."
     ),
@@ -441,9 +429,7 @@ def _check_mandaat(
     key = f"{pid}|{mid}"
 
     if isinstance(s, str) and isinstance(e, str) and s > e:
-        findings.append(
-            Finding("start_after_end", key, f"{p.name}: {mid} start={s} end={e}")
-        )
+        findings.append(Finding("start_after_end", key, f"{p.name}: {mid} start={s} end={e}"))
 
     if isinstance(s, str) and s > today:
         findings.append(Finding("start_in_future", key, f"{p.name}: {mid} start={s}"))
@@ -556,9 +542,7 @@ def _check_placeholders(
         if isinstance(d.get("name"), dict):
             for nk, nv in d["name"].items():
                 if isinstance(nv, str) and PLACEHOLDER_RX.match(nv.strip()):
-                    findings.append(
-                        Finding(cat, f"{rid}|name.{nk}", f"{p.name}: name.{nk}={nv!r}")
-                    )
+                    findings.append(Finding(cat, f"{rid}|name.{nk}", f"{p.name}: name.{nk}={nv!r}"))
 
 
 def _scan_for_bsn(value: object, path: str = "") -> list[tuple[str, str]]:
@@ -601,9 +585,7 @@ def _check_bsn(items: list[tuple[Path, dict]], label: str, findings: list[Findin
             )
 
 
-def _check_quasi_dup_persons(
-    persons: list[tuple[Path, dict]], findings: list[Finding]
-) -> None:
+def _check_quasi_dup_persons(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
     """Drie quasi-dup-checks: family+birth, family-only, initials-prefix.
 
     Voor `family_no_birth` zijn we strenger geworden: alleen rapporteren als
@@ -656,9 +638,7 @@ def _check_quasi_dup_persons(
             if ambiguous_pair:
                 files = sorted({e[0] for e in entries})
                 key = f"{family}|{'|'.join(files)}"
-                desc = ", ".join(
-                    f"{f} (initials={i!r}, given={g!r})" for f, i, g, _ in entries[:4]
-                )
+                desc = ", ".join(f"{f} (initials={i!r}, given={g!r})" for f, i, g, _ in entries[:4])
                 findings.append(
                     Finding(
                         "quasi_dup_family_no_birth",
@@ -766,7 +746,7 @@ def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -
             seen.append(current)
             current = org_parent[current]
             if current in seen:
-                cycle_nodes = seen[seen.index(current):] + [current]
+                cycle_nodes = seen[seen.index(current) :] + [current]
                 fingerprint = frozenset(cycle_nodes)
                 if fingerprint in reported:
                     break
@@ -774,16 +754,12 @@ def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -
                 cycle_str = " -> ".join(cycle_nodes)
                 # Key is alphabetisch eerste knoop in de cycle voor stabiliteit
                 key = sorted(fingerprint)[0]
-                findings.append(
-                    Finding("cyclic_parent_org", key, f"cycle: {cycle_str}")
-                )
+                findings.append(Finding("cyclic_parent_org", key, f"cycle: {cycle_str}"))
                 break
             steps += 1
 
 
-def _check_successor_predecessor(
-    orgs: list[tuple[Path, dict]], findings: list[Finding]
-) -> None:
+def _check_successor_predecessor(orgs: list[tuple[Path, dict]], findings: list[Finding]) -> None:
     """Bidirectionele consistentie: X.successor_id=Y <=> Y.predecessor_id bevat X."""
     by_id: dict[str, dict] = {}
     for _, d in orgs:
@@ -901,9 +877,7 @@ def _check_mandate_length(persons: list[tuple[Path, dict]], findings: list[Findi
                 )
 
 
-def _check_mandate_evidence(
-    persons: list[tuple[Path, dict]], findings: list[Finding]
-) -> None:
+def _check_mandate_evidence(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
     """Apply-staging mandaten moeten verifieerbare evidence hebben.
 
     Acceptabel:
@@ -955,8 +929,13 @@ def _check_mandate_evidence(
 _EXPECTED_PARENT_TYPES: dict[str, set[str]] = {
     "abd-tmg": {"ministerie", "agentschap", "zbo", "rwt", "hoge-college", "organisatieonderdeel"},
     "abd-directeur": {
-        "organisatieonderdeel", "agentschap", "zbo", "rwt", "hoge-college",
-        "inspectie", "adviescollege",
+        "organisatieonderdeel",
+        "agentschap",
+        "zbo",
+        "rwt",
+        "hoge-college",
+        "inspectie",
+        "adviescollege",
     },
     "abd-afdelingshoofd": {"organisatieonderdeel", "inspectie", "agentschap"},
     "abd-projectleider": {"organisatieonderdeel", "ministerie", "agentschap", "zbo"},
@@ -983,9 +962,7 @@ def _check_post_parent_level(
         oid = d.get("id")
         if not oid:
             continue
-        org_type[oid] = (
-            d.get("type") or d.get("classification") or "unknown"
-        )
+        org_type[oid] = d.get("type") or d.get("classification") or "unknown"
 
     for p, d in posts:
         pid = d.get("id")

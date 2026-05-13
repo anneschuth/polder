@@ -10,11 +10,11 @@ from __future__ import annotations
 
 import re
 import unicodedata
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any
 
 from polder.resolve.matcher import PersonMatch, PolderIndex, match_person
-
 
 # Een enricher krijgt een (proposal_name, existing_birth_hint) en retourneert
 # een birth_year als hij er een kan vinden, of None. Default is geen enricher.
@@ -100,7 +100,10 @@ def _level_for_org(proposal: dict, org_id: str) -> str | None:
 # `post:minister-zp-<X-slug>` af te leiden, zodat zes naast elkaar zittende
 # ministers-zonder-portefeuille niet allemaal op één catch-all slug landen.
 _MZP_PATTERNS = [
-    re.compile(r"minister zonder portefeuille[^\w]+(?:belast met|\()\s*([^)\n;]+?)\s*(?:\)|;|$)", re.IGNORECASE),
+    re.compile(
+        r"minister zonder portefeuille[^\w]+(?:belast met|\()\s*([^)\n;]+?)\s*(?:\)|;|$)",
+        re.IGNORECASE,
+    ),
     re.compile(r"minister voor\s+([^,;)\n]+)", re.IGNORECASE),
 ]
 
@@ -153,7 +156,9 @@ _COMPATIBLE_POST_KEYWORDS: dict[str, set[str]] = {
     "staatssecretaris": {"staatssecretaris"},
     "psg": {"psg"},  # plaatsvervangend SG
     "sg": {"sg"},
-    "dg": {"dg"},  # directeur-generaal én programma-DG (geen ABD-conventie voor "programma-DG-slug")
+    "dg": {
+        "dg"
+    },  # directeur-generaal én programma-DG (geen ABD-conventie voor "programma-DG-slug")
     "pdg": {"pdg"},  # plaatsvervangend DG, aparte functie
     "ig": {"ig"},
     "directeur": {"directeur"},
@@ -218,9 +223,7 @@ def _post_keyword_for_role(role: str) -> str | None:
     return None
 
 
-def _resolve_post(
-    proposal: dict, idx: PolderIndex, org_id: str | None
-) -> PostMatch:
+def _resolve_post(proposal: dict, idx: PolderIndex, org_id: str | None) -> PostMatch:
     """Match post-id in vier oplopende strategieën:
 
     1. Exact: ``post:X`` zit letterlijk in ``data/posten/``.
@@ -285,9 +288,7 @@ def _resolve_post(
             keyword = _post_keyword_for_role(role)
             if keyword:
                 allowed = _COMPATIBLE_POST_KEYWORDS.get(keyword, {keyword})
-                refined = [
-                    p for p in candidates if _post_slug_keyword(p) in allowed
-                ]
+                refined = [p for p in candidates if _post_slug_keyword(p) in allowed]
                 if len(refined) == 1:
                     return PostMatch(refined[0], 0.90, "matched_by_org_classification")
                 if len(refined) > 1:
@@ -300,9 +301,7 @@ def _resolve_post(
                     if min_suffix.startswith("min-"):
                         with_suffix = [p for p in refined if p.endswith(f"-{min_suffix}")]
                         if len(with_suffix) == 1:
-                            return PostMatch(
-                                with_suffix[0], 0.90, "matched_by_org_classification"
-                            )
+                            return PostMatch(with_suffix[0], 0.90, "matched_by_org_classification")
                         # Meerdere posten eindigen op -min-X (bv hoofd-post en
                         # een sub-portefeuille als staatssecretaris-tweede-).
                         # Voor een generiek role-label ("Staatssecretaris van
@@ -310,13 +309,9 @@ def _resolve_post(
                         # dat is de hoofdpost zonder portefeuille-prefix.
                         if with_suffix:
                             shortest = min(with_suffix, key=len)
-                            longer_count = sum(
-                                1 for p in with_suffix if len(p) > len(shortest)
-                            )
+                            longer_count = sum(1 for p in with_suffix if len(p) > len(shortest))
                             if longer_count == len(with_suffix) - 1:
-                                return PostMatch(
-                                    shortest, 0.88, "matched_by_org_classification"
-                                )
+                                return PostMatch(shortest, 0.88, "matched_by_org_classification")
         # Geen role-keyword (of geen match): één-kandidaat-fallback is alleen
         # veilig als er geen keyword is om te checken. Met keyword maar geen
         # compatible kandidaat: val door naar creatable, niet blind matchen
@@ -399,12 +394,7 @@ def resolve_proposal(
     # parser-skill mist; daarmee gaat een no_match naar creatable_new_person
     # of zelfs een echte family_initials_year-match als de family wél in
     # data/personen/ blijkt te staan onder een andere geboortedatum-variant.
-    if (
-        enricher is not None
-        and person.confidence < 0.85
-        and name
-        and birth_hint is None
-    ):
+    if enricher is not None and person.confidence < 0.85 and name and birth_hint is None:
         enriched_year = enricher(name, birth_hint)
         if isinstance(enriched_year, int):
             person = match_person(name, idx=idx, birth_year=enriched_year)
@@ -413,9 +403,7 @@ def resolve_proposal(
 
     notes = _format_notes(org, post, person)
 
-    propose_post_creation = (
-        post.post_id is None and bool(proposal.get("post_id"))
-    )
+    propose_post_creation = post.post_id is None and bool(proposal.get("post_id"))
 
     rec = _recommend_merge(org, post, person, proposal)
 
@@ -447,9 +435,7 @@ def _format_notes(org: OrgMatch, post: PostMatch, person: PersonMatch) -> str:
     return "; ".join(parts)
 
 
-def _recommend_merge(
-    org: OrgMatch, post: PostMatch, person: PersonMatch, proposal: dict
-) -> str:
+def _recommend_merge(org: OrgMatch, post: PostMatch, person: PersonMatch, proposal: dict) -> str:
     """Bepaal `merge_recommendation`.
 
     Auto-merge: alle drie velden ≥ 0.85 én proposal-confidence ≥ 0.85 (als
@@ -468,11 +454,7 @@ def _recommend_merge(
         return "needs-review"
 
     # Person no_match maar org en post stevig: nieuwe persoon aanmaken.
-    if (
-        person.method == "no_match"
-        and org.confidence >= 0.85
-        and post.confidence >= 0.85
-    ):
+    if person.method == "no_match" and org.confidence >= 0.85 and post.confidence >= 0.85:
         return "auto-merge"
 
     # Alle drie velden moeten ≥ 0.85 zijn

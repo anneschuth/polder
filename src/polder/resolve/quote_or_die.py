@@ -39,9 +39,7 @@ _ALLOWED_HOSTS: frozenset[str] = frozenset(
     }
 )
 
-_USER_AGENT = (
-    "polder/0.1 (https://github.com/anneschuth/polder; quote-or-die verifier)"
-)
+_USER_AGENT = "polder/0.1 (https://github.com/anneschuth/polder; quote-or-die verifier)"
 
 _TAG_RX = re.compile(r"<[^>]+>")
 _WS_RX = re.compile(r"\s+")
@@ -67,7 +65,9 @@ def _fetch(url: str, *, cache_dir: Path, timeout: float) -> str | None:
     if path.exists():
         return path.read_text(encoding="utf-8", errors="replace")
     try:
-        with httpx.Client(timeout=timeout, follow_redirects=True, headers={"User-Agent": _USER_AGENT}) as client:
+        with httpx.Client(
+            timeout=timeout, follow_redirects=True, headers={"User-Agent": _USER_AGENT}
+        ) as client:
             response = client.get(url)
             response.raise_for_status()
             body = response.text

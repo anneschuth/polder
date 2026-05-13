@@ -9,15 +9,9 @@ import typer
 
 
 def validate(
-    data: Annotated[
-        Path, typer.Option(help="Data directory om te valideren.")
-    ] = Path("data"),
-    schemas: Annotated[
-        Path, typer.Option(help="Schemas directory.")
-    ] = Path("schemas"),
-    strict: Annotated[
-        bool, typer.Option(help="Exit non-zero ook bij alleen warnings.")
-    ] = False,
+    data: Annotated[Path, typer.Option(help="Data directory om te valideren.")] = Path("data"),
+    schemas: Annotated[Path, typer.Option(help="Schemas directory.")] = Path("schemas"),
+    strict: Annotated[bool, typer.Option(help="Exit non-zero ook bij alleen warnings.")] = False,
 ) -> None:
     """Valideer YAML-records tegen JSON Schema en cross-record regels."""
     from polder.validate import count_files, exit_code, print_report, run_all_checks

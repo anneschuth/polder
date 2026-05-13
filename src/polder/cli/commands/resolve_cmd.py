@@ -125,10 +125,7 @@ def resolve(
     if target.is_file():
         files = [target]
     else:
-        files = sorted(
-            f for f in target.glob("*.json")
-            if not f.name.endswith(".resolved.json")
-        )
+        files = sorted(f for f in target.glob("*.json") if not f.name.endswith(".resolved.json"))
         if not overwrite:
             files = [f for f in files if not (f.parent / (f.stem + ".resolved.json")).exists()]
 
@@ -147,9 +144,7 @@ def resolve(
         from polder.resolve.llm_enrich import EnrichStats
 
         llm_stats = EnrichStats()
-        typer.echo(
-            f"LLM-enrich aan (skill=lookup-person, max-cost=${max_cost_usd:.2f})."
-        )
+        typer.echo(f"LLM-enrich aan (skill=lookup-person, max-cost=${max_cost_usd:.2f}).")
 
     budget_remaining = max_cost_usd
     for path in files:
@@ -219,7 +214,7 @@ def resolve(
             person_unmatched += 1
 
     typer.echo("")
-    typer.echo(f"=== Resolve klaar ===")
+    typer.echo("=== Resolve klaar ===")
     typer.echo(f"  files geschreven: {n_files_written}")
     typer.echo(f"  proposals:        {n_proposals}")
     typer.echo(f"  auto-merge:       {recs.get('auto-merge', 0)}")

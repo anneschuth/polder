@@ -108,9 +108,7 @@ def test_ori_index_uit_org_id():
 def test_ori_index_met_streepje():
     # ORI gebruikt zowel `ori_alphen-chaam_*` als `ori_alphen_chaam_*` in de
     # praktijk; we leveren beide als komma-separated lijst aan ES.
-    assert ori_index_for_gemeente("alphen-chaam") == (
-        "ori_alphen-chaam*,ori_alphen_chaam*"
-    )
+    assert ori_index_for_gemeente("alphen-chaam") == ("ori_alphen-chaam*,ori_alphen_chaam*")
 
 
 # ---------------------------------------------------------------------------
@@ -230,12 +228,8 @@ def test_build_mandaat_skip_gastspreker():
 
 
 def test_build_mandaat_uniek_id():
-    a = build_mandaat(
-        raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht"
-    )
-    b = build_mandaat(
-        raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht"
-    )
+    a = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
+    b = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
     assert a is not None and b is not None
     assert a["id"] != b["id"]
 
@@ -370,13 +364,19 @@ def test_fetch_persons_for_gemeente_cache_roundtrip(tmp_path: Path):
     client = _FakeClient(persons, memberships)
     # Eerste call vult de cache.
     fetch_persons_for_gemeente(
-        "utrecht", cache_dir=tmp_path, today="2026-05-09", client=client  # type: ignore[arg-type]
+        "utrecht",
+        cache_dir=tmp_path,
+        today="2026-05-09",
+        client=client,  # type: ignore[arg-type]
     )
     n_calls_first = len(client.calls)
     assert n_calls_first >= 2  # persons + memberships query
     # Tweede call: cache hit, geen extra HTTP-calls.
     fetch_persons_for_gemeente(
-        "utrecht", cache_dir=tmp_path, today="2026-05-09", client=client  # type: ignore[arg-type]
+        "utrecht",
+        cache_dir=tmp_path,
+        today="2026-05-09",
+        client=client,  # type: ignore[arg-type]
     )
     assert len(client.calls) == n_calls_first
 
@@ -478,7 +478,11 @@ def test_merge_person_behoudt_bestaande_identifiers():
         "identifiers": {"wikidata": "Q999"},
         "name": {"full": "Susanne Schilderman", "family": "Schilderman"},
         "sources": [
-            {"id": "wikidata", "url": "https://www.wikidata.org/wiki/Q999", "retrieved": "2025-01-01"}
+            {
+                "id": "wikidata",
+                "url": "https://www.wikidata.org/wiki/Q999",
+                "retrieved": "2025-01-01",
+            }
         ],
     }
     new = _record(active=True)

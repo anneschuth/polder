@@ -69,9 +69,7 @@ def test_parse_news_sitemap_geeft_entries_met_datum_en_lastmod() -> None:
     entries = parse_news_sitemap(_load("news-sitemap.xml"))
     assert len(entries) >= 5
     first = entries[0]
-    assert first.url.startswith(
-        "https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/"
-    )
+    assert first.url.startswith("https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/")
     assert first.article_date == "2026-05-08"
     assert first.lastmod is not None and first.lastmod.startswith("2026-")
     assert first.slug
@@ -206,10 +204,7 @@ def test_fetch_article_caches_html_idempotent(tmp_path: Path) -> None:
         path1 = fetch_article(ARTICLE_URL, cache_dir=tmp_path, client=client)
         # Tweede call moet uit de cache komen, geen netwerk-fout zelfs als we de
         # mock 'breken' door de route te verwijderen.
-    expected = (
-        tmp_path
-        / "esther-pijs-directeur-generaal-migratie-bij-jenv-2026-05-08.html"
-    )
+    expected = tmp_path / "esther-pijs-directeur-generaal-migratie-bij-jenv-2026-05-08.html"
     assert path1 == expected
     assert path1.exists()
     assert path1.read_text(encoding="utf-8") == html_payload

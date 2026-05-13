@@ -439,7 +439,7 @@ def _name_from_email(email: str | None, family: str) -> tuple[str | None, str | 
     local = email.split("@", 1)[0].lower()
     for prefix in _EMAIL_ROLE_PREFIXES:
         if local.startswith(prefix):
-            local = local[len(prefix):]
+            local = local[len(prefix) :]
             break
     if "." not in local:
         return None, None
@@ -610,9 +610,7 @@ def person_to_polder_record(
 
     mandaten: list[dict[str, Any]] = []
     for ms in memberships_raw:
-        mandaat = build_mandaat(
-            raw_membership=ms, gemeente_slug=gemeente_slug, today=today_str
-        )
+        mandaat = build_mandaat(raw_membership=ms, gemeente_slug=gemeente_slug, today=today_str)
         if mandaat is not None:
             mandaten.append(mandaat)
     if not mandaten:
@@ -652,9 +650,7 @@ def fetch_persons_for_gemeente(
     bare = _normalize_gemeente_slug(gemeente_slug)
     index = ori_index_for_gemeente(gemeente_slug)
 
-    cache_path = (
-        _cache_path(bare, today_str, cache_dir) if cache_dir is not None else None
-    )
+    cache_path = _cache_path(bare, today_str, cache_dir) if cache_dir is not None else None
     cached = _load_cache(cache_path) if use_cache and cache_path else None
     if cached is not None:
         logger.info("Cache hit voor %s (%s)", bare, cache_path)
@@ -800,9 +796,7 @@ def _merge_mandaten(
             merged.update(mandaat)
             if kept_id:
                 merged["id"] = kept_id
-            merged["sources"] = _merge_sources(
-                by_key[key].get("sources"), mandaat.get("sources")
-            )
+            merged["sources"] = _merge_sources(by_key[key].get("sources"), mandaat.get("sources"))
             by_key[key] = merged
         else:
             by_key[key] = dict(mandaat)
@@ -1058,7 +1052,10 @@ def _process_gemeente(
     if before != len(records):
         logger.info(
             "ORI dedup voor %s: %d -> %d records (%d duplicates gemerged)",
-            bare, before, len(records), before - len(records),
+            bare,
+            before,
+            len(records),
+            before - len(records),
         )
 
     n_current = 0

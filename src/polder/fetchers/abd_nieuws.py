@@ -299,19 +299,13 @@ def _fetch_sitemap_text(
 ) -> str:
     if cache_dir is not None:
         cache_dir.mkdir(parents=True, exist_ok=True)
-        slug = (
-            urlparse(url).path.strip("/").replace("/", "_").removesuffix(".xml")
-            or "sitemap"
-        )
+        slug = urlparse(url).path.strip("/").replace("/", "_").removesuffix(".xml") or "sitemap"
         cached = cache_dir / f"{slug}.xml"
         if cached.exists():
             return cached.read_text(encoding="utf-8")
     text = _http_get(url, client=client)
     if cache_dir is not None:
-        slug = (
-            urlparse(url).path.strip("/").replace("/", "_").removesuffix(".xml")
-            or "sitemap"
-        )
+        slug = urlparse(url).path.strip("/").replace("/", "_").removesuffix(".xml") or "sitemap"
         (cache_dir / f"{slug}.xml").write_text(text, encoding="utf-8")
     return text
 
@@ -397,9 +391,7 @@ def parse_index_metadata(html: str) -> dict[str, Any]:
     body_text = soup.get_text(" ", strip=False)
     m = _NIEUWSBERICHT_DATE_RE.search(body_text)
     if m:
-        out["article_date"] = (
-            f"{m.group('year')}-{m.group('month')}-{m.group('day')}"
-        )
+        out["article_date"] = f"{m.group('year')}-{m.group('month')}-{m.group('day')}"
 
     return out
 

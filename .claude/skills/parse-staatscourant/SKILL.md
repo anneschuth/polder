@@ -35,7 +35,7 @@ Elk proposal heeft:
 - `person_name` (string): naam zoals in het KB, met titulering en initialen.
 - `existing_person_id` (string of null): polder-slug bij match, anders null.
 - `organization_id` (string): slug van de organisatie waar het KB op slaat.
-- `post_id` (string): slug van de post (bijv. `post:sg-min-bzk`).
+- `post_id` (string): slug van de post (bijv. `post:sg-min-bzk`). **NOOIT** een ABD-functie (raadadviseur, directeur, afdelingshoofd, SG, DG, IG, kwartiermaker, projectleider) mappen op `post:minister-*` of `post:staatssecretaris-*`. Een ambtenaar is geen bewindspersoon.
 - `role` (string): tekst zoals "Secretaris-Generaal van het Ministerie van BZK".
 - `start_date` (ISO 8601): ingangsdatum van de benoeming.
 - `end_date` (ISO 8601 of null): null voor benoeming, datum voor ontslag.

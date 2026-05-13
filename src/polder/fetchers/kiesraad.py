@@ -44,9 +44,7 @@ DATA_OVERHEID_API = "https://data.overheid.nl/data/api/3/action"
 KIESRAAD_AUTHORITY = "http://standaarden.overheid.nl/owms/terms/Kiesraad"
 CACHE_DIR = Path("_cache/kiesraad")
 HTTP_TIMEOUT = 60.0
-USER_AGENT = (
-    "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
-)
+USER_AGENT = "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 PAGE_SIZE = 200
 
 

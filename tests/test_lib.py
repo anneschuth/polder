@@ -41,9 +41,7 @@ def mini_polder(tmp_path: Path) -> Path:
             }
         ],
         "valid_from": "2010-10-14",
-        "sources": [
-            {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-        ],
+        "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
         "identifiers": {"wikidata": "Q1727053"},
     }
     (root / "data" / "organisaties" / "ministeries" / "bzk.yaml").write_text(
@@ -57,9 +55,7 @@ def mini_polder(tmp_path: Path) -> Path:
         "parent_id": "org:min-bzk",
         "names": [{"value": "RvIG", "valid_from": "2014-01-01"}],
         "valid_from": "2014-01-01",
-        "sources": [
-            {"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}
-        ],
+        "sources": [{"id": "roo", "url": "https://example.org/roo", "retrieved": "2026-05-09"}],
     }
     (root / "data" / "organisaties" / "agentschappen" / "rvig.yaml").write_text(
         yaml.safe_dump(org_rvig, sort_keys=False), encoding="utf-8"
@@ -98,9 +94,7 @@ def mini_polder(tmp_path: Path) -> Path:
                 ],
             }
         ],
-        "sources": [
-            {"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}
-        ],
+        "sources": [{"id": "abd", "url": "https://example.org/abd", "retrieved": "2026-05-09"}],
     }
     (root / "data" / "personen" / "jansen-jp-1965.yaml").write_text(
         yaml.safe_dump(persoon, sort_keys=False), encoding="utf-8"

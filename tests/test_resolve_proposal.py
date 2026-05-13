@@ -269,7 +269,10 @@ def test_resolve_proposal_minister_zonder_portefeuille_rewriter(polder_index) ->
     # Bestaand: post:minister-zp-buitenlandse-handel. Naming-drift moet
     # naar dezelfde slug mappen.
     r = resolve_proposal(
-        {**base, "role": "Minister zonder portefeuille (Buitenlandse Handel en Ontwikkelingssamenwerking)"},
+        {
+            **base,
+            "role": "Minister zonder portefeuille (Buitenlandse Handel en Ontwikkelingssamenwerking)",
+        },
         polder_index,
     )
     assert r["resolved_post_id"] == "post:minister-zp-buitenlandse-handel"

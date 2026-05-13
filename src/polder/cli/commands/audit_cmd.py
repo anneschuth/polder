@@ -96,6 +96,7 @@ def audit(
         return
 
     by_cat = report.by_category()
+
     # Sort: severity (error voor review), dan alfabetisch
     def _sort_key(cat: str) -> tuple[int, str]:
         sev = CATEGORIES.get(cat).severity if cat in CATEGORIES else "error"
@@ -110,8 +111,7 @@ def audit(
         categories = [category]
     if severity is not None:
         categories = [
-            c for c in categories
-            if c in CATEGORIES and CATEGORIES[c].severity == severity
+            c for c in categories if c in CATEGORIES and CATEGORIES[c].severity == severity
         ]
         if not categories:
             typer.echo(f"Geen findings met severity '{severity}'.")

@@ -16,7 +16,6 @@ from dataclasses import dataclass
 
 from polder.lib.initials import compact_initials, compact_initials_loose
 
-
 # Honorific-tokens die als prefix vóór de eigenlijke naam staan ("drs.", "mr.").
 # Lowercase, met optionele trailing punt.
 HONORIFIC_PREFIXES = {
@@ -36,8 +35,17 @@ HONORIFIC_PREFIXES = {
 # "BSc", "PhD").
 HONORIFIC_SUFFIX_MAX_LEN = 4
 HONORIFIC_SUFFIX_GRADES = {
-    "msc", "mba", "bsc", "phd", "ma", "ba", "llm", "llb",
-    "mscba", "msca", "emba",
+    "msc",
+    "mba",
+    "bsc",
+    "phd",
+    "ma",
+    "ba",
+    "llm",
+    "llb",
+    "mscba",
+    "msca",
+    "emba",
 }
 
 
@@ -58,9 +66,7 @@ def _to_ascii_lower(value: str) -> str:
 
 def _is_initials_token(token: str) -> bool:
     """`M.P.` of `M.` is een initialen-token."""
-    return bool(token) and token.endswith(".") and all(
-        c.isalpha() or c == "." for c in token
-    )
+    return bool(token) and token.endswith(".") and all(c.isalpha() or c == "." for c in token)
 
 
 def _strip_honorific_prefixes(tokens: list[str]) -> list[str]:
@@ -177,10 +183,7 @@ def parse_person_name(name: str) -> ParsedName:
             head, _, tail = tok.partition("-")
             if tail and tail[0].islower():
                 family = _to_ascii_lower(head)
-                rest = [
-                    t for t in tokens
-                    if t is not tok and not _looks_like_tussenvoegsel(t)
-                ]
+                rest = [t for t in tokens if t is not tok and not _looks_like_tussenvoegsel(t)]
                 break
 
     # 4. Given: nickname als die uit parens kwam, anders het eerste

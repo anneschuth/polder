@@ -61,9 +61,9 @@ def test_ministeries_mapping_dekt_minimaal_dertien_ministeries():
     assert all(url_slug.startswith("ministerie-van-") for url_slug in MINISTERIES.values())
     # SHARED_ORGANOGRAM verwijst alleen naar slugs die wel in MINISTERIES staan.
     for parent_slug in SHARED_ORGANOGRAM.values():
-        assert parent_slug in MINISTERIES, (
-            f"shared organogram-parent {parent_slug} moet in MINISTERIES staan"
-        )
+        assert (
+            parent_slug in MINISTERIES
+        ), f"shared organogram-parent {parent_slug} moet in MINISTERIES staan"
     # MINISTERIES en SHARED_ORGANOGRAM zijn disjoint.
     assert not (set(MINISTERIES) & set(SHARED_ORGANOGRAM))
 

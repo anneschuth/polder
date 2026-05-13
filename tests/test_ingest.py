@@ -7,9 +7,7 @@ zodat tests offline draaien en geen LLM-tokens verbranden.
 from __future__ import annotations
 
 import json
-import os
 import shutil
-import subprocess
 from pathlib import Path
 from unittest.mock import patch
 
@@ -692,7 +690,9 @@ def test_ingest_source_parallel_real_run_uses_pool(mini_root: Path) -> None:
 
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(8):
-        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+        )
 
     active = 0
     max_active = 0
@@ -734,7 +734,9 @@ def test_ingest_source_parallel_respects_budget(mini_root: Path) -> None:
     """Met cap=3 en parallel=4 worden er nog steeds maar 3 jobs gedraaid."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(6):
-        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+        )
 
     calls: list[dict] = []
     lock = __import__("threading").Lock()
@@ -775,7 +777,9 @@ def test_ingest_source_parallel_exception_in_one_does_not_stop_others(
 
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(5):
-        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+        )
 
     parse_calls = 0
     parse_lock = threading.Lock()
@@ -934,7 +938,9 @@ def test_ingest_source_passes_model_to_runner(
     hetzelfde model zien.
     """
     cache = mini_root / "_cache" / "abd-nieuws"
-    (cache / "news-01.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+    (cache / "news-01.html").write_text(
+        "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+    )
 
     seen_model: list[str | None] = []
 
@@ -968,7 +974,9 @@ def test_ingest_source_aborts_on_rate_limit(mini_root: Path) -> None:
     verder, resolve overgeslagen."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(5):
-        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+        )
 
     call_count = 0
 
@@ -1008,7 +1016,9 @@ def test_ingest_source_no_abort_on_rate_limit_keeps_going(
     """Met `abort_on_rate_limit=False` gaat de pipeline door na exit 99."""
     cache = mini_root / "_cache" / "abd-nieuws"
     for i in range(3):
-        (cache / f"news-{i:02d}.html").write_text("<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8")
+        (cache / f"news-{i:02d}.html").write_text(
+            "<html><body>directeur Jansen wordt benoemd</body></html>", encoding="utf-8"
+        )
 
     call_count = 0
 

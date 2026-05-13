@@ -29,9 +29,9 @@ def test_main_returns_exit_code_one(name: str, capsys: pytest.CaptureFixture[str
     assert rc == 1, f"{name}.main() moet 1 teruggeven, kreeg {rc!r}"
     captured = capsys.readouterr()
     combined = captured.out + captured.err
-    assert "not yet implemented" in combined.lower(), (
-        f"{name}.main() moet 'not yet implemented' melden, kreeg: {combined!r}"
-    )
+    assert (
+        "not yet implemented" in combined.lower()
+    ), f"{name}.main() moet 'not yet implemented' melden, kreeg: {combined!r}"
 
 
 @pytest.mark.parametrize("name", STUB_MODULES)

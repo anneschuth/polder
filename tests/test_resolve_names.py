@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import pytest
 
-
 # Cases uit echte resolved-staging-files. Format:
 #   (proposal_name, expected_family, expected_given_or_nickname, expected_initials_compact)
 #

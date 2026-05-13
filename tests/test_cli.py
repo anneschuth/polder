@@ -41,9 +41,7 @@ def mini_polder(tmp_path: Path) -> Path:
                 "type": "ministerie",
                 "classification": "ministerie",
                 "parent_id": None,
-                "names": [
-                    {"value": "BZK", "abbr": "BZK", "valid_from": "2010-10-14"}
-                ],
+                "names": [{"value": "BZK", "abbr": "BZK", "valid_from": "2010-10-14"}],
                 "valid_from": "2010-10-14",
                 "sources": [
                     {
@@ -129,17 +127,13 @@ def test_list_organisaties_table(mini_polder: Path) -> None:
 
 
 def test_list_organisaties_filter_type(mini_polder: Path) -> None:
-    code, out = _run(
-        ["list", "organisaties", "--type", "ministerie", "--data", str(mini_polder)]
-    )
+    code, out = _run(["list", "organisaties", "--type", "ministerie", "--data", str(mini_polder)])
     assert code == 0
     assert "org:min-bzk" in out
 
 
 def test_list_organisaties_json(mini_polder: Path) -> None:
-    code, out = _run(
-        ["list", "organisaties", "--format", "json", "--data", str(mini_polder)]
-    )
+    code, out = _run(["list", "organisaties", "--format", "json", "--data", str(mini_polder)])
     assert code == 0
     parsed = json.loads(out)
     assert any(o["id"] == "org:min-bzk" for o in parsed)
@@ -158,9 +152,7 @@ def test_list_posten(mini_polder: Path) -> None:
 
 
 def test_list_mandaten(mini_polder: Path) -> None:
-    code, out = _run(
-        ["list", "mandaten", "--format", "json", "--data", str(mini_polder)]
-    )
+    code, out = _run(["list", "mandaten", "--format", "json", "--data", str(mini_polder)])
     assert code == 0
     rows = json.loads(out)
     assert any(r["post_id"] == "post:sg-min-bzk" for r in rows)
@@ -178,9 +170,7 @@ def test_show_not_found(mini_polder: Path) -> None:
 
 
 def test_show_person_history(mini_polder: Path) -> None:
-    code, out = _run(
-        ["show", "person:jansen-jp-1965", "--history", "--data", str(mini_polder)]
-    )
+    code, out = _run(["show", "person:jansen-jp-1965", "--history", "--data", str(mini_polder)])
     assert code == 0
     assert "Secretaris-generaal" in out or "post:sg-min-bzk" in out
 
@@ -332,9 +322,7 @@ def test_fetch_tk_dry_run_delegates(tmp_path: Path) -> None:
         return 0
 
     with patch("polder.fetchers.tk_odata.main", side_effect=fake_main):
-        code, _out = _run(
-            ["fetch", "tk", "--dry-run", "--cache", str(tmp_path / "_cache")]
-        )
+        code, _out = _run(["fetch", "tk", "--dry-run", "--cache", str(tmp_path / "_cache")])
 
     assert code == 0
     assert "--dry-run" in captured["argv"]
@@ -356,9 +344,7 @@ def test_fetch_all_runs_all_deterministic_fetchers(tmp_path: Path) -> None:
     # Vervang de fetcher-tabel met stubs.
     stub_table = [(name, make_stub(name)) for name, _ in fetch_cmd.DETERMINISTIC_FETCHERS]
     with patch.object(fetch_cmd, "DETERMINISTIC_FETCHERS", new=stub_table):
-        code, _out = _run(
-            ["fetch", "all", "--dry-run", "--cache", str(tmp_path / "_cache")]
-        )
+        code, _out = _run(["fetch", "all", "--dry-run", "--cache", str(tmp_path / "_cache")])
 
     assert code == 0
     assert called == [name for name, _ in stub_table]

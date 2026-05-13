@@ -272,9 +272,7 @@ def _date_in_plausible_range(value: str | None) -> bool:
     return d.year <= max_year
 
 
-def _validate_mandaat_dates(
-    start: str | None, end: str | None
-) -> str | None:
+def _validate_mandaat_dates(start: str | None, end: str | None) -> str | None:
     """Retourneer een Nederlandse skip-reden of None als datums OK zijn."""
     if not _dates_valid(start, end):
         return f"ongeldige datum-volgorde: start_date {start} na end_date {end}"
@@ -428,6 +426,62 @@ def _existing_post_ids(data_dir: Path) -> set[str]:
     return ids
 
 
+def _existing_posts(data_dir: Path) -> dict[str, dict[str, Any]]:
+    """Map post_id -> post-record (voor classification-checks)."""
+    out: dict[str, dict[str, Any]] = {}
+    for path in _iter_yaml(data_dir / "posten"):
+        rec = _load_yaml(path)
+        pid = rec.get("id")
+        if isinstance(pid, str):
+            out[pid] = rec
+    return out
+
+
+# ABD-rol-keywords die NOOIT bij een bewindspersoon-classification horen.
+# Een raadadviseur, directeur, afdelingshoofd of secretaris-generaal is per
+# definitie ambtenaar, geen minister of staatssecretaris.
+_ABD_ROLE_KEYWORDS = (
+    "raadadviseur",
+    "afdelingshoofd",
+    "secretaris-generaal",
+    "directeur-generaal",
+    "inspecteur-generaal",
+    "directeur",
+    "kwartiermaker",
+    "projectleider",
+    "consultant",
+    "waarnemend secretaris-generaal",
+    "waarnemend directeur-generaal",
+    "plaatsvervangend secretaris-generaal",
+    "plaatsvervangend directeur-generaal",
+)
+
+# Honorifics die we van een role-string strippen om bij de primaire rol-
+# aanduiding te komen ("drs. directeur X" -> "directeur X").
+_ROLE_HONORIFIC_RE = re.compile(r"^(?:(?:drs?|mr|ir|prof|dr)\.?\s+)+", re.IGNORECASE)
+
+
+def _primary_abd_role_keyword(role: str) -> str | None:
+    """Pak de PRIMAIRE rol-keyword aan het begin van een role-string.
+
+    "raadadviseur Economie en Bedrijfsleven bij het Kabinet Minister-
+    President" -> "raadadviseur" (begin van string, niet "minister-
+    president" in subclause).
+    "Minister zonder portefeuille (Asiel en Migratie); Vice-Minister-
+    President" -> None (primair is bewindspersoon, niet ABD).
+
+    Returns None als geen ABD-keyword aan begin. Substring-match elders
+    in de string telt niet als primair.
+    """
+    if not role:
+        return None
+    cleaned = _ROLE_HONORIFIC_RE.sub("", role).strip().lower()
+    for kw in _ABD_ROLE_KEYWORDS:
+        if cleaned.startswith(kw):
+            return kw
+    return None
+
+
 def _existing_personen(data_dir: Path) -> list[tuple[Path, dict[str, Any]]]:
     out: list[tuple[Path, dict[str, Any]]] = []
     for path in _iter_yaml(data_dir / "personen"):
@@ -521,6 +575,7 @@ def plan_apply(
     org_ids = polder_index.org_ids
     org_aliases = polder_index.org_by_alias
     post_ids = _existing_post_ids(data_dir)
+    post_lookup = _existing_posts(data_dir)
     personen = _existing_personen(data_dir)
 
     # Pending-IDs binnen deze run zodat opvolgende proposals weten dat we al
@@ -534,9 +589,7 @@ def plan_apply(
     # Pre-pass: collapse proposals that target the same (post_id, person_name,
     # start_date) into the single highest-confidence one. This protects single-
     # seat posts from being filled by multiple competing proposals in one run.
-    resolved_proposals, conflict_skips = _dedupe_competing_proposals(
-        resolved_proposals
-    )
+    resolved_proposals, conflict_skips = _dedupe_competing_proposals(resolved_proposals)
     skipped.extend(conflict_skips)
 
     for raw in resolved_proposals:
@@ -548,9 +601,7 @@ def plan_apply(
             skipped.append(
                 SkippedProposal(
                     proposal=proposal,
-                    reasons=[
-                        f"confidence {confidence:.2f} < drempel {confidence_floor:.2f}"
-                    ],
+                    reasons=[f"confidence {confidence:.2f} < drempel {confidence_floor:.2f}"],
                 )
             )
             continue
@@ -587,6 +638,30 @@ def plan_apply(
             )
             continue
 
+        # ABD-rol mag nooit naar een bewindspersoon-classified post wijzen.
+        # Voorkomt dat "raadadviseur bij het Kabinet Minister-President"
+        # per ongeluk gemapped wordt op post:minister-president-min-az
+        # (zoals voor Wedage-Mol gebeurde). Check op primaire rol-keyword
+        # aan het begin van de string (na honorifics), niet ergens in een
+        # subclause als context.
+        proposed_post = _resolved_post_id(proposal)
+        if proposed_post:
+            post_record = post_lookup.get(proposed_post)
+            if post_record and post_record.get("classification") == "bewindspersoon":
+                conflict_kw = _primary_abd_role_keyword(role)
+                if conflict_kw:
+                    skipped.append(
+                        SkippedProposal(
+                            proposal=proposal,
+                            reasons=[
+                                f"ABD-rol {conflict_kw!r} mapt naar bewindspersoon-post "
+                                f"{proposed_post}; geweigerd door apply (role-classification "
+                                "mismatch). Skill moet correctere post_id leveren."
+                            ],
+                        )
+                    )
+                    continue
+
         # Een fatsoenlijke bron-URL is verplicht; placeholders en lokale
         # cache-paden mogen nooit in een mandaat-source-url terechtkomen.
         source_url = _detect_source_url(proposal)
@@ -603,8 +678,8 @@ def plan_apply(
         # (de bestaande start blijft staan) maar wel een end_date, en sluit
         # een lopend mandaat. Apart pad: geen org/post aanmaken, alleen
         # bestaand mandaat updaten.
-        is_close = (
-            not proposal.get("start_date") and _normalize_date_string(proposal.get("end_date"))
+        is_close = not proposal.get("start_date") and _normalize_date_string(
+            proposal.get("end_date")
         )
         if is_close:
             close_action_or_skip = _plan_close_mandate(
@@ -694,9 +769,7 @@ def plan_apply(
             polder_index=polder_index,
         )
         if chain_skip_reasons:
-            skipped.append(
-                SkippedProposal(proposal=proposal, reasons=chain_skip_reasons)
-            )
+            skipped.append(SkippedProposal(proposal=proposal, reasons=chain_skip_reasons))
             continue
         for act in chain_actions:
             actions.append(act)
@@ -704,9 +777,7 @@ def plan_apply(
             reasons.append(f"chain-org {act.record['id']}")
 
         # Verifieer dat target-org bestaat of zal worden aangemaakt.
-        if target_org_id and target_org_id not in (
-            org_ids | pending_org_ids
-        ):
+        if target_org_id and target_org_id not in (org_ids | pending_org_ids):
             skipped.append(
                 SkippedProposal(
                     proposal=proposal,
@@ -720,9 +791,7 @@ def plan_apply(
         # --- Stap 2: post aanmaken indien nodig ---
         post_id = _resolved_post_id(proposal)
         if not post_id:
-            skipped.append(
-                SkippedProposal(proposal=proposal, reasons=["geen post_id in proposal"])
-            )
+            skipped.append(SkippedProposal(proposal=proposal, reasons=["geen post_id in proposal"]))
             continue
 
         if post_id not in (post_ids | pending_post_ids):
@@ -731,9 +800,7 @@ def plan_apply(
                 skipped.append(
                     SkippedProposal(
                         proposal=proposal,
-                        reasons=[
-                            f"post-classification niet afleidbaar uit role '{role[:60]}...'"
-                        ],
+                        reasons=[f"post-classification niet afleidbaar uit role '{role[:60]}...'"],
                     )
                 )
                 continue
@@ -757,7 +824,9 @@ def plan_apply(
                 )
                 if placeholder is not None:
                     placeholder_path = (
-                        data_dir / "organisaties" / "organisatieonderdelen"
+                        data_dir
+                        / "organisaties"
+                        / "organisatieonderdelen"
                         / f"{placeholder['id'].split(':', 1)[1].removeprefix('onderdeel-')}.yaml"
                     )
                     if placeholder["id"] not in (org_ids | pending_org_ids):
@@ -917,12 +986,7 @@ def _plan_chain(
             return [], [f"chain {slug}: parent ontbreekt"]
         record = _build_org_record(entry=entry, parent_id=parent_id, proposal=proposal)
         slug_body = slug.removeprefix("org:onderdeel-").removeprefix("org:")
-        path = (
-            data_dir
-            / "organisaties"
-            / "organisatieonderdelen"
-            / f"{slug_body}.yaml"
-        )
+        path = data_dir / "organisaties" / "organisatieonderdelen" / f"{slug_body}.yaml"
         actions.append(
             ApplyAction(
                 type="create-org",
@@ -930,9 +994,7 @@ def _plan_chain(
                 record=record,
                 source_proposal=proposal,
                 confidence=confidence,
-                reasons=[
-                    f"chain-entry {entry.get('level')} {entry.get('name')}"
-                ],
+                reasons=[f"chain-entry {entry.get('level')} {entry.get('name')}"],
             )
         )
         available.add(slug)
@@ -1032,8 +1094,7 @@ _MZP_MIN_LOOKUP: list[tuple[str, str]] = []
 
 
 def _ensure_mzp_lookup(data_dir: Path) -> None:
-    """Vul _MZP_MIN_LOOKUP een keer voor de gegeven data_dir. Idempotent.
-    """
+    """Vul _MZP_MIN_LOOKUP een keer voor de gegeven data_dir. Idempotent."""
     global _MZP_MIN_LOOKUP
     if _MZP_MIN_LOOKUP:
         return
@@ -1084,7 +1145,7 @@ def _synthesize_org_unit_from_role(
         ("directeur ", "directie"),
     ):
         if role_clean.lower().startswith(prefix):
-            rest = role_clean[len(prefix):].strip()
+            rest = role_clean[len(prefix) :].strip()
             unit_kind = kind
             break
 
@@ -1165,9 +1226,7 @@ def _plan_close_mandate(
     Anders dan append-mandaat: geen org-chain-creatie, geen post-creatie, geen
     nieuwe persoon. Alleen lookup-en-update op een bestaand record.
     """
-    date_skip = _validate_mandaat_dates(
-        proposal.get("start_date"), proposal.get("end_date")
-    )
+    date_skip = _validate_mandaat_dates(proposal.get("start_date"), proposal.get("end_date"))
     if date_skip is not None:
         return SkippedProposal(proposal=proposal, reasons=[date_skip])
 
@@ -1243,9 +1302,7 @@ def _plan_person(
     # Validate the mandate dates before doing any persoon-resolution. Invalid
     # dates poison the whole action: skip the proposal completely so we never
     # create a persoon with a broken mandate or mutate an existing persoon.
-    date_skip = _validate_mandaat_dates(
-        proposal.get("start_date"), proposal.get("end_date")
-    )
+    date_skip = _validate_mandaat_dates(proposal.get("start_date"), proposal.get("end_date"))
     if date_skip is not None:
         return SkippedProposal(proposal=proposal, reasons=[date_skip])
 
@@ -1299,9 +1356,7 @@ def _plan_person(
     # blokker meer; alleen exact-slug-collision telt.
     slug_body = _person_slug(name_full, birth_year)
     if not slug_body:
-        return SkippedProposal(
-            proposal=proposal, reasons=["kan geen persoon-slug afleiden"]
-        )
+        return SkippedProposal(proposal=proposal, reasons=["kan geen persoon-slug afleiden"])
     person_id = f"person:{slug_body}"
     existing_with_same_slug = any(p.get("id") == person_id for _, p in personen)
     if existing_with_same_slug:
@@ -1380,9 +1435,7 @@ def _append_mandaat(
     """
     warnings: list[str] = []
     mandaten = list(record.get("mandaten") or [])
-    candidate = _build_mandaat(
-        organization_id=organization_id, post_id=post_id, proposal=proposal
-    )
+    candidate = _build_mandaat(organization_id=organization_id, post_id=post_id, proposal=proposal)
     new_key = _mandaat_key(candidate)
     candidate_start = candidate.get("start_date")
     candidate_end = candidate.get("end_date")
@@ -1403,9 +1456,7 @@ def _append_mandaat(
             new_mandaten = list(mandaten)
             merged = dict(m)
             sources = list(merged.get("sources") or [])
-            existing_keys = {
-                (s.get("id"), s.get("url")) for s in sources if isinstance(s, dict)
-            }
+            existing_keys = {(s.get("id"), s.get("url")) for s in sources if isinstance(s, dict)}
             for src in candidate.get("sources") or []:
                 if isinstance(src, dict):
                     key = (src.get("id"), src.get("url"))
@@ -1478,9 +1529,7 @@ def _close_mandaat(
         candidates.append((idx, m))
 
     if not candidates:
-        return None, [], [
-            f"close-mandaat: geen lopend mandaat gevonden voor post_id={post_id}"
-        ]
+        return None, [], [f"close-mandaat: geen lopend mandaat gevonden voor post_id={post_id}"]
 
     warnings: list[str] = []
     if len(candidates) > 1:
@@ -1586,9 +1635,7 @@ def _build_person_record(
     if birth_year is not None:
         record["birth"] = {"year": birth_year}
     record["mandaten"] = [
-        _build_mandaat(
-            organization_id=organization_id, post_id=post_id, proposal=proposal
-        )
+        _build_mandaat(organization_id=organization_id, post_id=post_id, proposal=proposal)
     ]
     record["sources"] = [
         {

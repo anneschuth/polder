@@ -26,7 +26,7 @@ import logging
 import re
 import subprocess
 import threading
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from types import TracebackType
 from typing import Self
@@ -181,7 +181,7 @@ class SkillSession:
     def __enter__(self) -> Self:
         cmd = self._build_cmd()
         logger.debug("Starting SkillSession: %s", " ".join(cmd))
-        self._proc = subprocess.Popen(  # noqa: S603
+        self._proc = subprocess.Popen(
             cmd,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
@@ -355,11 +355,11 @@ _thread_local = threading.local()
 # (of een batch-cleanup van buitenaf) ze allemaal kan sluiten. Workers in
 # ThreadPoolExecutor zijn anonymous voor de main thread, dus we tracken
 # expliciet.
-_all_sessions: list["SkillSession"] = []
+_all_sessions: list[SkillSession] = []
 _all_sessions_lock = threading.Lock()
 
 
-def _register_session(session: "SkillSession") -> None:
+def _register_session(session: SkillSession) -> None:
     with _all_sessions_lock:
         _all_sessions.append(session)
 
@@ -377,7 +377,7 @@ def close_all_sessions() -> None:
     for session in sessions:
         try:
             session.close()
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.warning("Fout bij sluiten van SkillSession: %s", exc)
 
 
@@ -401,9 +401,7 @@ def get_or_create_session(
     Als de bestaande session op een ander model draait dan gevraagd, wordt
     hij gesloten en een nieuwe geopend.
     """
-    sessions: dict[tuple[str, str], SkillSession] = getattr(
-        _thread_local, "sessions", None
-    ) or {}
+    sessions: dict[tuple[str, str], SkillSession] = getattr(_thread_local, "sessions", None) or {}
     if not getattr(_thread_local, "sessions", None):
         _thread_local.sessions = sessions
 
@@ -427,20 +425,16 @@ def close_thread_local_sessions() -> None:
     Aan het eind van een ingest/backfill-batch aanroepen in een finally-blok.
     Idempotent.
     """
-    sessions: dict[tuple[str, str], SkillSession] = getattr(
-        _thread_local, "sessions", None
-    ) or {}
+    sessions: dict[tuple[str, str], SkillSession] = getattr(_thread_local, "sessions", None) or {}
     for session in list(sessions.values()):
         try:
             session.close()
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             logger.warning("Fout bij sluiten van SkillSession: %s", exc)
     sessions.clear()
 
 
 def thread_session_stats() -> dict[tuple[str, str], _Stats]:
     """Geef per (skill, model) de stats van deze thread's sessions terug."""
-    sessions: dict[tuple[str, str], SkillSession] = getattr(
-        _thread_local, "sessions", None
-    ) or {}
+    sessions: dict[tuple[str, str], SkillSession] = getattr(_thread_local, "sessions", None) or {}
     return {k: s.stats for k, s in sessions.items()}

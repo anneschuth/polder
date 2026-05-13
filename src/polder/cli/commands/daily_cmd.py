@@ -18,7 +18,7 @@ import json
 import logging
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import typer
@@ -37,7 +37,7 @@ def _run_subcommand(label: str, args: list[str], *, fail_soft: bool) -> int:
     die crasht) niet de andere stappen meeneemt.
     """
     typer.echo(f"[{label}]  polder {' '.join(args)}", err=True)
-    proc = subprocess.run(  # noqa: S603
+    proc = subprocess.run(
         [sys.executable, "-m", "polder", *args],
         check=False,
         cwd=_repo_root(),
@@ -91,7 +91,7 @@ def daily_update() -> None:
 
     typer.echo("=== polder daily-update ===")
     typer.echo(f"repo:  {root}")
-    typer.echo(f"datum: {datetime.now(timezone.utc).isoformat(timespec='seconds')}")
+    typer.echo(f"datum: {datetime.now(UTC).isoformat(timespec='seconds')}")
     typer.echo("")
 
     fetchers = [
@@ -115,8 +115,17 @@ def daily_update() -> None:
     typer.echo("[diff] polder diff")
     _run_subcommand(
         "diff",
-        ["diff", "--cache", "_cache", "--data", "data", "--out", "diff.json",
-         "--proposals", "proposals.json"],
+        [
+            "diff",
+            "--cache",
+            "_cache",
+            "--data",
+            "data",
+            "--out",
+            "diff.json",
+            "--proposals",
+            "proposals.json",
+        ],
         fail_soft=True,
     )
     typer.echo("")

@@ -20,7 +20,6 @@ from polder.llm.session import (
     SkillSession,
 )
 
-
 # ---------------------------------------------------------------------------
 # Fake Popen
 # ---------------------------------------------------------------------------
@@ -33,7 +32,7 @@ class _StdoutPipe:
         self._lines = list(lines)
         self._pos = 0
 
-    def __iter__(self) -> "_StdoutPipe":
+    def __iter__(self) -> _StdoutPipe:
         return self
 
     def __next__(self) -> str:
@@ -66,7 +65,7 @@ class _StdinPipe(io.StringIO):
 class FakePopen:
     """Minimal subprocess.Popen-stand-in voor tests."""
 
-    instances: list["FakePopen"] = []
+    instances: list[FakePopen] = []
 
     def __init__(
         self,

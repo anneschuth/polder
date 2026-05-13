@@ -38,7 +38,7 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 - `existing_person_id` (string of null): polder-slug bij match in `data/personen/`, anders null.
 - `organization_id` (string): slug van het diepste organisatie-niveau dat in het bericht genoemd wordt (afdeling boven directie boven DG boven ministerie). Verbreed niet automatisch.
 - `organization_chain` (array): hiërarchische keten vanaf ministerie naar afdeling. Elke entry is `{level, name, slug_proposal}`. Levels: `ministerie`, `directoraat-generaal`, `directie`, `afdeling`. Alleen niveaus die letterlijk in het bericht voorkomen, in volgorde van top naar diepst.
-- `post_id` (string): slug van de post (bijv. `post:dg-migratie-min-jenv` of `post:afdelingshoofd-beleid-wonen-min-vro`). Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`.
+- `post_id` (string): slug van de post (bijv. `post:dg-migratie-min-jenv` of `post:afdelingshoofd-beleid-wonen-min-vro`). Stel een nieuwe slug voor als er geen match is, en flag dat in `confidence_reasoning`. **NOOIT** een ABD-functie (raadadviseur, directeur, afdelingshoofd, SG, DG, IG, kwartiermaker, projectleider) mappen op een post die begint met `post:minister-` of `post:staatssecretaris-` of `post:vice-minister-`. Een raadadviseur "bij het Kabinet Minister-President" is geen minister-president maar een ambtenaar; gebruik een nieuwe slug zoals `post:raadadviseur-<portefeuille>-min-az`.
 - `role` (string): functie zoals "afdelingshoofd Beleid Wonen, Directie Wonen, ministerie van VRO".
 - `start_date` (ISO 8601 of null): ingangsdatum van de benoeming, expliciet uit "per <datum>" of "met ingang van <datum>".
 - `end_date` (ISO 8601 of null): null bij benoeming, datum bij ontslag of einde verlenging.

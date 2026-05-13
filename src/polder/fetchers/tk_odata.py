@@ -139,9 +139,7 @@ def slugify_person(
     elif fallback_uuid is not None:
         cleaned = fallback_uuid.strip().lower().replace("-", "")
         if len(cleaned) < 8 or not _HEX8_RE.match(cleaned[:8]):
-            raise ValueError(
-                "fallback_uuid moet minstens 8 hex-tekens bevatten (0-9a-f)"
-            )
+            raise ValueError("fallback_uuid moet minstens 8 hex-tekens bevatten (0-9a-f)")
         suffix = cleaned[:8]
     else:
         raise ValueError("geboortejaar of fallback_uuid vereist voor slugify_person")

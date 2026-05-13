@@ -77,12 +77,8 @@ def _delegate(fn: Callable[[list[str]], int], argv: list[str]) -> None:
 
 @app.command("roo")
 def fetch_roo(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
-    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path(
-        "data/organisaties"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
+    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/organisaties"),
     limit: Annotated[int | None, typer.Option(help="Max records (voor testen).")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
@@ -93,9 +89,7 @@ def fetch_roo(
 
 @app.command("tk")
 def fetch_tk(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -107,9 +101,7 @@ def fetch_tk(
 
 @app.command("ek")
 def fetch_ek(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -121,9 +113,7 @@ def fetch_ek(
 
 @app.command("logius")
 def fetch_logius(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -135,9 +125,7 @@ def fetch_logius(
 
 @app.command("wikidata")
 def fetch_wikidata(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -149,12 +137,8 @@ def fetch_wikidata(
 
 @app.command("ar-rwt")
 def fetch_ar_rwt(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
-    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path(
-        "data/organisaties/rwt"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
+    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/organisaties/rwt"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
@@ -165,12 +149,8 @@ def fetch_ar_rwt(
 
 @app.command("koop")
 def fetch_koop(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
-    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path(
-        "data/_staging"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
+    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/_staging"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
@@ -181,9 +161,7 @@ def fetch_koop(
 
 @app.command("ori")
 def fetch_ori(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -195,12 +173,8 @@ def fetch_ori(
 
 @app.command("tooi")
 def fetch_tooi(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
-    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path(
-        "data/organisaties"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
+    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/organisaties"),
     scheme: Annotated[
         str, typer.Option(help="TOOI-scheme (ministeries, gemeenten, provincies, ...).")
     ] = "ministeries",
@@ -265,9 +239,7 @@ def fetch_enrich_wikidata(
 
 @app.command("kiesraad")
 def fetch_kiesraad(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/personen"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -279,9 +251,7 @@ def fetch_kiesraad(
 
 @app.command("abd")
 def fetch_abd(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("_cache/abd"),
     limit: Annotated[int | None, typer.Option(help="Max records.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
@@ -297,9 +267,7 @@ def fetch_abd_nieuws(
         str | None,
         typer.Option(help="Ondergrens artikel-datum (ISO `YYYY-MM-DD`)."),
     ] = None,
-    cache: Annotated[Path, typer.Option(help="Cache-root (default: _cache).")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-root (default: _cache).")] = Path("_cache"),
     cache_dir: Annotated[
         Path | None,
         typer.Option(help="Override volledige cache-pad (default: <cache>/abd-nieuws)."),
@@ -307,15 +275,11 @@ def fetch_abd_nieuws(
     limit: Annotated[int | None, typer.Option(help="Max artikelen.")] = None,
     deep: Annotated[
         bool,
-        typer.Option(
-            "--deep", help="Forceer sitemap-index walk voor backfill tot 2010."
-        ),
+        typer.Option("--deep", help="Forceer sitemap-index walk voor backfill tot 2010."),
     ] = False,
     no_articles: Annotated[
         bool,
-        typer.Option(
-            "--no-articles", help="Skip artikel-downloads; alleen index.json."
-        ),
+        typer.Option("--no-articles", help="Skip artikel-downloads; alleen index.json."),
     ] = False,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
@@ -363,9 +327,7 @@ DETERMINISTIC_FETCHERS: list[tuple[str, Callable[[list[str]], int]]] = [
 
 @app.command("all")
 def fetch_all(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path(
-        "_cache"
-    ),
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
     limit: Annotated[int | None, typer.Option(help="Max records per fetcher.")] = None,
     dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
     verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,

@@ -20,9 +20,7 @@ def _resolve_root(data: Path | None) -> Path:
     cwd = Path.cwd()
     if (cwd / "data").exists():
         return cwd
-    raise typer.BadParameter(
-        f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven."
-    )
+    raise typer.BadParameter(f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven.")
 
 
 def _lookup_fast(root: Path, id: str) -> Any | None:
@@ -88,8 +86,12 @@ def _render_links(obj: Any, console: Console) -> None:
 
 def show(
     id: Annotated[str, typer.Argument(help="ID, bv `org:min-bzk` of `person:rutte-...`.")],
-    history: Annotated[bool, typer.Option(help="Toon mandaat-historie waar van toepassing.")] = False,
-    links: Annotated[bool, typer.Option(help="Toon deep-links naar externe systemen (tkconv, Wikidata, ROO).")] = False,
+    history: Annotated[
+        bool, typer.Option(help="Toon mandaat-historie waar van toepassing.")
+    ] = False,
+    links: Annotated[
+        bool, typer.Option(help="Toon deep-links naar externe systemen (tkconv, Wikidata, ROO).")
+    ] = False,
     format: Annotated[str, typer.Option(help="table | json | yaml")] = "table",
     data: Annotated[Path | None, typer.Option(help="Polder root.")] = None,
 ) -> None:
@@ -103,10 +105,16 @@ def show(
         raise typer.Exit(code=1)
 
     if format == "json":
-        typer.echo(json.dumps(obj.model_dump(mode="json", exclude_none=True), ensure_ascii=False, indent=2))
+        typer.echo(
+            json.dumps(obj.model_dump(mode="json", exclude_none=True), ensure_ascii=False, indent=2)
+        )
         return
     if format == "yaml":
-        typer.echo(yaml.safe_dump(obj.model_dump(mode="json", exclude_none=True), sort_keys=False, allow_unicode=True))
+        typer.echo(
+            yaml.safe_dump(
+                obj.model_dump(mode="json", exclude_none=True), sort_keys=False, allow_unicode=True
+            )
+        )
         return
 
     console = Console()
@@ -119,9 +127,7 @@ def show(
         if id.startswith("person:"):
             console.print("\n[bold]mandaten:[/bold]")
             for m in obj.mandaten or []:
-                console.print(
-                    f"  {m.start_date} -> {m.end_date or 'open'}  {m.post_id}  {m.role}"
-                )
+                console.print(f"  {m.start_date} -> {m.end_date or 'open'}  {m.post_id}  {m.role}")
         elif id.startswith("post:"):
             from polder.lib import Polder
 

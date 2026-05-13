@@ -18,7 +18,7 @@ from pathlib import Path
 import yaml
 
 from polder.lib.initials import compact_initials, compact_initials_loose
-from polder.resolve.names import ParsedName, parse_person_name
+from polder.resolve.names import parse_person_name
 
 logger = logging.getLogger("polder.resolve.matcher")
 
@@ -121,7 +121,7 @@ class PolderIndex:
     org_parent: dict[str, str | None] = field(default_factory=dict)
 
     @classmethod
-    def load(cls, data_dir: Path) -> "PolderIndex":
+    def load(cls, data_dir: Path) -> PolderIndex:
         idx = cls()
         persons_dir = data_dir / "personen"
         orgs_dir = data_dir / "organisaties"
@@ -151,9 +151,9 @@ class PolderIndex:
                         # "S.Th.M." in data matched met "S.T.M." in proposal
                         # en omgekeerd.
                         for ikey in {initials, initials_loose} - {""}:
-                            idx.by_family_initials_year.setdefault(
-                                (family, ikey, year), []
-                            ).append(pid)
+                            idx.by_family_initials_year.setdefault((family, ikey, year), []).append(
+                                pid
+                            )
                         idx.by_family_year.setdefault((family, year), []).append(pid)
                     if given:
                         idx.by_family_given.setdefault((family, given), []).append(pid)
@@ -192,21 +192,9 @@ class PolderIndex:
                         # "org:ministerie-<woord>"; alles wat hier landt resolved.
                         for candidate in (
                             _org_alias_slug(raw),
-                            (
-                                _slugify_org(f"ministerie van {raw}")
-                                if is_ministerie
-                                else None
-                            ),
-                            (
-                                _slugify_org(f"ministerie {raw}")
-                                if is_ministerie
-                                else None
-                            ),
-                            (
-                                _slugify_org(f"min {raw}")
-                                if is_ministerie
-                                else None
-                            ),
+                            (_slugify_org(f"ministerie van {raw}") if is_ministerie else None),
+                            (_slugify_org(f"ministerie {raw}") if is_ministerie else None),
+                            (_slugify_org(f"min {raw}") if is_ministerie else None),
                         ):
                             if candidate and candidate != oid:
                                 idx.org_by_alias.setdefault(candidate, oid)
@@ -224,9 +212,9 @@ class PolderIndex:
                     if org_id:
                         idx.post_to_org[d["id"]] = org_id
                         if classification:
-                            idx.posts_by_org_class.setdefault(
-                                (org_id, classification), []
-                            ).append(d["id"])
+                            idx.posts_by_org_class.setdefault((org_id, classification), []).append(
+                                d["id"]
+                            )
 
         return idx
 
@@ -275,9 +263,7 @@ def match_person(
             if len(ids) == 1:
                 return PersonMatch(ids[0], 0.98, "family_initials_year")
             if len(ids) > 1:
-                return PersonMatch(
-                    None, 0.0, "ambiguous_family_initials_year", tuple(ids)
-                )
+                return PersonMatch(None, 0.0, "ambiguous_family_initials_year", tuple(ids))
 
     # 1b. family + birth_year (zonder initials-match). Veel data-records
     # missen initials maar hebben wel het geboortejaar; voor een proposal

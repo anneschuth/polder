@@ -189,9 +189,7 @@ class Organisatie(_Base):
 
 
 class Persoon(_Base):
-    id: str = Field(
-        pattern=r"^person:([a-z][a-z0-9-]*-)?([0-9]{4}|[0-9]{7,}|[0-9a-f]{8})$"
-    )
+    id: str = Field(pattern=r"^person:([a-z][a-z0-9-]*-)?([0-9]{4}|[0-9]{7,}|[0-9a-f]{8})$")
     identifiers: PersonIdentifiers | None = None
     name: PersonName
     birth: Birth | None = None

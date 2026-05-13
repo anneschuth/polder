@@ -40,13 +40,10 @@ def _print_plan(
     if actions:
         typer.echo("Zou aanmaken / aanpassen:")
         for a in actions:
-            typer.echo(
-                f"  {_icon(a.type)} {a.target_path}  [{a.type}, conf={a.confidence:.2f}]"
-            )
+            typer.echo(f"  {_icon(a.type)} {a.target_path}  [{a.type}, conf={a.confidence:.2f}]")
             if a.type == "create-org":
                 typer.echo(
-                    f"    parent: {a.record.get('parent_id')}, "
-                    f"type: {a.record.get('type')}"
+                    f"    parent: {a.record.get('parent_id')}, " f"type: {a.record.get('type')}"
                 )
             elif a.type == "create-post":
                 typer.echo(
@@ -56,8 +53,7 @@ def _print_plan(
             elif a.type == "create-person":
                 man = a.record.get("mandaten") or []
                 typer.echo(
-                    f"    name: {a.record.get('name', {}).get('full')}, "
-                    f"{len(man)} mandaat"
+                    f"    name: {a.record.get('name', {}).get('full')}, " f"{len(man)} mandaat"
                 )
             elif a.type == "append-mandaat":
                 man = a.record.get("mandaten") or []
@@ -71,9 +67,7 @@ def _print_plan(
     if skipped:
         typer.echo("Zou skippen:")
         for s in skipped:
-            label = s.proposal.get("person_name") or s.proposal.get(
-                "post_id", "<unknown>"
-            )
+            label = s.proposal.get("person_name") or s.proposal.get("post_id", "<unknown>")
             typer.echo(f"  - {label}")
             for r in s.reasons:
                 typer.echo(f"    > {r}")
@@ -81,10 +75,7 @@ def _print_plan(
         typer.echo("Zou skippen:")
         typer.echo("  (geen)")
     typer.echo("")
-    typer.echo(
-        f"{len(actions)} records auto-mergeable, "
-        f"{len(skipped)} needs-review/skip."
-    )
+    typer.echo(f"{len(actions)} records auto-mergeable, " f"{len(skipped)} needs-review/skip.")
 
 
 def apply_staging(
@@ -104,9 +95,7 @@ def apply_staging(
         bool,
         typer.Option(help="Alleen confidence >= 0.95 toepassen."),
     ] = False,
-    data: Annotated[
-        Path, typer.Option(help="Polder data root.")
-    ] = Path("data"),
+    data: Annotated[Path, typer.Option(help="Polder data root.")] = Path("data"),
 ) -> None:
     """Pas resolver-output automatisch toe op `data/`. Default is dry-run."""
     if not input.exists():

@@ -301,9 +301,7 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     abbr = _findtext(node, "afkorting", "abbreviation")
     # ROO-XML zet `systeemId` als attribuut; tests gebruiken een `<id>` child.
     # Beide zijn geldige bronnen voor `roo_id`.
-    roo_id = _attr_systeemid(node) or _findtext(
-        node, "id", "rooid", "roo_id", "identifier"
-    )
+    roo_id = _attr_systeemid(node) or _findtext(node, "id", "rooid", "roo_id", "identifier")
     # TOOI-URI staat als attribute `resourceIdentifierTOOI` op de organisatie-
     # node zelf. We lezen alleen het attribute van deze node, niet van nested
     # children (bijv. `<relatieMetMinisterie>` heeft ook een TOOI-attribute en
@@ -337,9 +335,7 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
         if ancestor is not None:
             ancestor_type = _findtext(ancestor, "type", "soort", "organisatietype")
             ancestor_mapping = roo_type_to_internal(ancestor_type)
-            ancestor_name = _findtext(
-                ancestor, "naam", "name", "officielenaam"
-            )
+            ancestor_name = _findtext(ancestor, "naam", "name", "officielenaam")
             ancestor_abbr = _findtext(ancestor, "afkorting", "abbreviation")
             if ancestor_mapping is not None and ancestor_name:
                 _, _, ancestor_prefix = ancestor_mapping
@@ -359,9 +355,7 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     org_id = build_id(prefix, slug)
 
     # Source-URL per organisatie indien roo_id beschikbaar.
-    source_url = (
-        f"https://organisaties.overheid.nl/{roo_id}/" if roo_id else PRIMARY_URL
-    )
+    source_url = f"https://organisaties.overheid.nl/{roo_id}/" if roo_id else PRIMARY_URL
 
     identifiers: dict[str, Any] = {}
     if oin:

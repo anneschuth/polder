@@ -23,9 +23,7 @@ def _resolve_root(data: Path | None) -> Path:
     cwd = Path.cwd()
     if (cwd / "data").exists():
         return cwd
-    raise typer.BadParameter(
-        f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven."
-    )
+    raise typer.BadParameter(f"Geen data/ in {cwd}. Gebruik --data om een polder-root op te geven.")
 
 
 def _render(rows: list[dict[str, Any]], columns: list[str], format: str) -> None:
@@ -52,9 +50,7 @@ def _render(rows: list[dict[str, Any]], columns: list[str], format: str) -> None
 
 def list_organisaties(
     type: Annotated[str | None, typer.Option(help="Filter op organisatietype.")] = None,
-    classification: Annotated[
-        str | None, typer.Option(help="Filter op classification.")
-    ] = None,
+    classification: Annotated[str | None, typer.Option(help="Filter op classification.")] = None,
     format: Annotated[OutputFormat, typer.Option(help="table | json | csv")] = "table",
     data: Annotated[Path | None, typer.Option(help="Polder root.")] = None,
 ) -> None:
@@ -84,9 +80,7 @@ def list_personen(
     classification: Annotated[
         str | None, typer.Option(help="Filter personen met mandaat van die classification.")
     ] = None,
-    current: Annotated[
-        bool, typer.Option(help="Alleen personen met >= 1 lopend mandaat.")
-    ] = False,
+    current: Annotated[bool, typer.Option(help="Alleen personen met >= 1 lopend mandaat.")] = False,
     format: Annotated[OutputFormat, typer.Option(help="table | json | csv")] = "table",
     data: Annotated[Path | None, typer.Option(help="Polder root.")] = None,
 ) -> None:

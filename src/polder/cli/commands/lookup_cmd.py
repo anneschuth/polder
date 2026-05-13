@@ -35,12 +35,18 @@ def _normalize_for_age_filter(year: int) -> bool:
 
 @app.command("wikidata")
 def lookup_wikidata(
-    name: Annotated[str, typer.Option(help="Volledige naam zoals in de bron, bv 'Esther van Deursen'.")],
-    role: Annotated[str | None, typer.Option(help="Optionele rol-context voor de skill om in te wegen.")] = None,
+    name: Annotated[
+        str, typer.Option(help="Volledige naam zoals in de bron, bv 'Esther van Deursen'.")
+    ],
+    role: Annotated[
+        str | None, typer.Option(help="Optionele rol-context voor de skill om in te wegen.")
+    ] = None,
     org: Annotated[str | None, typer.Option(help="Optionele organisatie-context.")] = None,
     plausible_age_only: Annotated[
         bool,
-        typer.Option(help="Filter kandidaten op leeftijd 18-80; default uit, skill kan zelf kiezen."),
+        typer.Option(
+            help="Filter kandidaten op leeftijd 18-80; default uit, skill kan zelf kiezen."
+        ),
     ] = False,
     cache_dir: Annotated[Path | None, typer.Option(help="Cache-dir voor SPARQL-results.")] = None,
 ) -> None:

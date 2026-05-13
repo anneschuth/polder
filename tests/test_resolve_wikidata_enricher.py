@@ -40,9 +40,7 @@ def test_enricher_returns_year_for_unique_plausible(tmp_path: Path) -> None:
         {"qid": "Q1", "label": "Evelyn Geurtsen", "birth_year": 1975, "description": "ambtenaar"},
     ]
     enricher = make_wikidata_enricher(cache_dir=tmp_path)
-    with patch(
-        "polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake
-    ):
+    with patch("polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake):
         assert enricher("Evelyn Geurtsen", None) == 1975
 
 
@@ -51,12 +49,15 @@ def test_enricher_skips_implausible_age(tmp_path: Path) -> None:
     from polder.resolve.wikidata_enricher import make_wikidata_enricher
 
     fake = [
-        {"qid": "Q1", "label": "Evelyn Geurtsen", "birth_year": 1942, "description": "historische persoon"},
+        {
+            "qid": "Q1",
+            "label": "Evelyn Geurtsen",
+            "birth_year": 1942,
+            "description": "historische persoon",
+        },
     ]
     enricher = make_wikidata_enricher(cache_dir=tmp_path)
-    with patch(
-        "polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake
-    ):
+    with patch("polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake):
         # 1942 valt buiten het 18-80-window in 2026 (84 jaar oud).
         assert enricher("Evelyn Geurtsen", None) is None
 
@@ -70,9 +71,7 @@ def test_enricher_skips_ambiguous_candidates(tmp_path: Path) -> None:
         {"qid": "Q2", "label": "Jan Jansen", "birth_year": 1980, "description": "y"},
     ]
     enricher = make_wikidata_enricher(cache_dir=tmp_path)
-    with patch(
-        "polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake
-    ):
+    with patch("polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake):
         assert enricher("Jan Jansen", None) is None
 
 
@@ -84,9 +83,7 @@ def test_enricher_skips_label_mismatch(tmp_path: Path) -> None:
         {"qid": "Q1", "label": "Evelyn Janssen", "birth_year": 1975, "description": "x"},
     ]
     enricher = make_wikidata_enricher(cache_dir=tmp_path)
-    with patch(
-        "polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake
-    ):
+    with patch("polder.resolve.wikidata_enricher.lookup_person_by_name", return_value=fake):
         assert enricher("Evelyn Geurtsen", None) is None
 
 
