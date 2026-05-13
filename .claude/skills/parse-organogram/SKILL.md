@@ -93,6 +93,20 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 - "Projectleider", "Kwartiermaker" naar `abd-projectleider`.
 - Onbekende titel: laat `classification` weg en flag voor handmatige review.
 
+### Hiërarchie-patroon ministeries
+
+Een Nederlands ministerie heeft een vaste top-laag die in elk organogram terugkomt. Volg dit patroon strict, niet de visuele layout:
+
+1. `org:min-<x>` is de root.
+2. Bewindspersonen-posten (`post:minister-min-<x>`, `post:staatssecretaris-min-<x>`, eventuele MZP-posten) hangen DIRECT onder `org:min-<x>`. Geen tussenliggend organisatieonderdeel.
+3. `org:onderdeel-sg-min-<x>` (Secretaris-generaal Cluster, classification `organisatieonderdeel`) hangt onder `org:min-<x>`. Hier komt `post:sg-min-<x>` (SG) en `post:plv-sg-min-<x>` (plv-SG).
+4. ALLE DG's, het Bureau ABD, AIVD, eventuele programma-DG's en clusters (Bestuursondersteuning, Mensen en Middelen) hangen onder `org:onderdeel-sg-min-<x>`, NIET direct onder `org:min-<x>`.
+5. Onder elke DG hangen de directies (`org:onderdeel-directie-<x>-min-<y>`), onder de directies hangen de afdelingen.
+
+Concreet voor BZK (zie `_cache/organogrammen/bzk-2026-organogram.pdf` als referentie-voorbeeld): SG Vincent Roozen en plv-SG Mark de Boer staan tussen de bewindspersonen-strook en de DG-rij; DGDOO, DGKR, DG VHB, DG RO, DG VBR, DG OBDR, DG AIVD, DG ABD hebben SG-cluster als parent.
+
+In tekstmodus is dit niet altijd visueel zichtbaar. Default-aanname dan: nieuwe org_structure-records met `classification: abd-tmg` (DG/IG) krijgen `parent_id: org:onderdeel-sg-min-<x>`, tenzij de tekst expliciet anders zegt.
+
 ### Output schrijven
 
 Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, secretariaat). Niet extracten, ook niet als ze in de bron staan. De runner schrijft de proposals automatisch naar `data/_staging/organogram-{ministerie}-{datum}.json`; jij produceert alleen de JSON-array op stdout.
