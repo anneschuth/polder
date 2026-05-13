@@ -452,6 +452,74 @@ def check_bsn_patterns(records: Iterable[Record]) -> list[ValidationIssue]:
     return issues
 
 
+# ABD-rol-keywords die NOOIT bij een bewindspersoon-classification horen.
+# Een raadadviseur, directeur, afdelingshoofd of secretaris-generaal is per
+# definitie ambtenaar, geen minister of staatssecretaris.
+_ABD_ROLE_KEYWORDS = (
+    "raadadviseur",
+    "afdelingshoofd",
+    "directeur",
+    "secretaris-generaal",
+    "directeur-generaal",
+    "inspecteur-generaal",
+    "consultant",
+    "kwartiermaker",
+    "projectleider",
+    "plaatsvervangend secretaris-generaal",
+    "plaatsvervangend directeur-generaal",
+    "waarnemend secretaris-generaal",
+    "waarnemend directeur-generaal",
+)
+
+
+def check_role_classification_mismatch(
+    records: Iterable[Record], idx: "Index"
+) -> list[ValidationIssue]:
+    """Een mandaat met ABD-rol mag niet wijzen naar bewindspersoon-post.
+
+    Voorbeeld: role "raadadviseur Economie en Bedrijfsleven bij het Kabinet
+    Minister-President" mapt soms per ongeluk naar post:minister-president-
+    min-az (classification bewindspersoon). Dat is een skill- of resolve-
+    bug; raadadviseurs zijn ambtenaren, geen bewindspersonen.
+    """
+    issues: list[ValidationIssue] = []
+    for rec in records:
+        if rec.category != "personen":
+            continue
+        data = rec.data
+        if not isinstance(data, dict):
+            continue
+        for m in data.get("mandaten") or []:
+            if not isinstance(m, dict):
+                continue
+            role = str(m.get("role") or "").lower()
+            post_id = m.get("post_id")
+            if not role or not post_id:
+                continue
+            post = idx.posts.get(post_id)
+            if not isinstance(post, dict):
+                continue
+            classification = post.get("classification")
+            if classification != "bewindspersoon":
+                continue
+            for kw in _ABD_ROLE_KEYWORDS:
+                if kw in role:
+                    issues.append(
+                        ValidationIssue(
+                            severity="error",
+                            path=rec.path,
+                            field=f"mandaten[].post_id={post_id}",
+                            message=(
+                                f"ABD-rol {kw!r} maps naar bewindspersoon-post "
+                                f"{post_id}. Een raadadviseur/directeur/etc. "
+                                "kan geen minister of staatssecretaris zijn."
+                            ),
+                        )
+                    )
+                    break
+    return issues
+
+
 def _walk_strings(value: Any, path: str) -> Iterator[tuple[str, str]]:
     if isinstance(value, str):
         yield path, value
@@ -486,6 +554,7 @@ def run_all_checks(
     issues.extend(check_future_valid_until(records, today=today))
     issues.extend(check_birth_year_only(records))
     issues.extend(check_bsn_patterns(records))
+    issues.extend(check_role_classification_mismatch(records, idx))
 
     return issues
 

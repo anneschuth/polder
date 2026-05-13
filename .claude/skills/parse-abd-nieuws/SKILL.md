@@ -67,12 +67,14 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 4. **Identificeer organisatie-niveaus.** Berichten beschrijven vaak een keten van top naar diepst:
    - "ministerie van X" (top, level `ministerie`).
    - "directoraat-generaal Y" of "DG Y" (level `directoraat-generaal`, organisatieonderdeel).
-   - "directie Z" (level `directie`).
+   - "directie Z" of "concerndirectie Z" (level `directie`).
    - "afdeling W" (level `afdeling`, het diepst).
    Extract alle niveaus die het bericht letterlijk noemt en bouw `organization_chain` als array van top naar diepst. Per entry een slug-voorstel volgens de Polder-conventie:
    - Ministerie: `org:min-<slug>` (bestaat al, ROO).
    - DG, directie, afdeling: `org:onderdeel-<slug>-min-<min-slug>` of korter `org:onderdeel-<slug>` als die slug al bestaat in `data/organisaties/organisatieonderdelen/`.
    `organization_id` is altijd de slug van het diepste niveau in `organization_chain`. Geen automatische verbreding: als het bericht alleen "directeur Wonen" zegt, is `organization_id` directie-niveau; bij "afdelingshoofd Beleid Wonen" is het afdeling-niveau.
+
+   **Chain is verplicht voor abd-classification-rollen.** Voor `directeur`, `afdelingshoofd`, `secretaris-generaal`, `directeur-generaal`, `inspecteur-generaal`: lever ALTIJD minimaal 2 chain-entries (ministerie + één tussenliggend organisatieonderdeel). Een directeur hoort onder een directie of agentschap, geen ministerie direct. Als de bron het tussenliggende niveau niet expliciet noemt: leid het af uit de role-string ("directeur concerndirectie Mens en Organisatie" -> concerndirectie als chain[1] met slug `org:onderdeel-concerndirectie-mens-en-organisatie-min-<min>`). Een chain met alleen ministerie + organization_id=ministerie is fout voor deze classifications.
 5. Bouw `event_type`. Heuristieken:
    - Titel of tekst noemt "benoemd", "wordt directeur", "wordt DG": `benoeming`.
    - "neemt afscheid", "vertrekt", "wordt opgevolgd": `ontslag`.

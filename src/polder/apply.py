@@ -737,6 +737,46 @@ def plan_apply(
                     )
                 )
                 continue
+
+            # ABD-directeur/-afdelingshoofd hoort onder een directie of
+            # organisatieonderdeel, geen ministerie direct. Als de skill
+            # geen chain leverde en target_org_id wijst naar een ministerie,
+            # synthesize een placeholder-organisatieonderdeel uit de role-
+            # string zodat de hiërarchie consistent blijft.
+            if (
+                classification in {"abd-directeur", "abd-afdelingshoofd"}
+                and target_org_id
+                and target_org_id.startswith("org:min-")
+                and target_org_id in org_ids
+            ):
+                placeholder = _synthesize_org_unit_from_role(
+                    role=role,
+                    parent_id=target_org_id,
+                    start_date=proposal.get("start_date"),
+                    proposal=proposal,
+                )
+                if placeholder is not None:
+                    placeholder_path = (
+                        data_dir / "organisaties" / "organisatieonderdelen"
+                        / f"{placeholder['id'].split(':', 1)[1].removeprefix('onderdeel-')}.yaml"
+                    )
+                    if placeholder["id"] not in (org_ids | pending_org_ids):
+                        actions.append(
+                            ApplyAction(
+                                type="create-org",
+                                target_path=placeholder_path,
+                                record=placeholder,
+                                source_proposal=proposal,
+                                confidence=confidence,
+                                reasons=[
+                                    f"synthesized organisatieonderdeel voor "
+                                    f"{classification}-post onder {target_org_id}"
+                                ],
+                            )
+                        )
+                        pending_org_ids.add(placeholder["id"])
+                    target_org_id = placeholder["id"]
+
             post_record = _build_post_record(
                 post_id=post_id,
                 organization_id=target_org_id or "",
@@ -998,6 +1038,91 @@ def _ensure_mzp_lookup(data_dir: Path) -> None:
     if _MZP_MIN_LOOKUP:
         return
     _MZP_MIN_LOOKUP = _build_mzp_lookup(data_dir)
+
+
+def _synthesize_org_unit_from_role(
+    *,
+    role: str,
+    parent_id: str,
+    start_date: str | None,
+    proposal: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Bouw een placeholder-organisatieonderdeel uit een role-string.
+
+    Voor abd-directeur/-afdelingshoofd-records waar de skill geen
+    organization_chain leverde maar de role wel een directie/afdeling
+    noemt, maak een tussenliggend org-onderdeel onder het ministerie.
+
+    Mapping op rol-prefix in het label:
+      "directeur concerndirectie X" -> org-onderdeel "concerndirectie X"
+      "directeur X"                  -> org-onderdeel "directie X"
+      "afdelingshoofd X"             -> org-onderdeel "afdeling X"
+      "directoraat-generaal X" / "DG X" -> org-onderdeel "dg X"
+
+    Returns None als er geen tussenliggend niveau af te leiden is.
+    """
+    if not role or not parent_id:
+        return None
+    min_suffix = parent_id.removeprefix("org:")
+    if not min_suffix.startswith("min-"):
+        return None
+
+    role_clean = role.strip()
+    unit_kind: str | None = None
+    rest: str | None = None
+
+    # Volgorde: meest-specifieke prefix eerst zodat "directeur concerndirectie X"
+    # niet als plain "directeur X" parseert.
+    for prefix, kind in (
+        ("directeur concerndirectie ", "concerndirectie"),
+        ("directeur directie ", "directie"),
+        ("directeur-generaal ", "dg"),
+        ("directeur generaal ", "dg"),
+        ("dg ", "dg"),
+        ("inspecteur-generaal ", "ig"),
+        ("afdelingshoofd ", "afdeling"),
+        ("directeur ", "directie"),
+    ):
+        if role_clean.lower().startswith(prefix):
+            rest = role_clean[len(prefix):].strip()
+            unit_kind = kind
+            break
+
+    if not rest or not unit_kind:
+        return None
+
+    # Knip alles vanaf de eerste komma of "ministerie van" af — dat zijn
+    # context-suffixen, geen onderdeel-naam.
+    rest = re.split(r",|\s+ministerie van\b", rest, maxsplit=1, flags=re.IGNORECASE)[0].strip()
+    if not rest:
+        return None
+
+    raw = f"{unit_kind} {rest}"
+    s = unicodedata.normalize("NFKD", raw).encode("ascii", "ignore").decode("ascii")
+    slug = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+    if not slug:
+        return None
+    org_id = f"org:onderdeel-{slug}-{min_suffix}"
+    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    source_id = _detect_source_id(proposal)
+    valid_from = _normalize_date_string(start_date) or _today_iso()
+    return {
+        "id": org_id,
+        "type": "organisatieonderdeel",
+        "classification": "organisatieonderdeel",
+        "parent_id": parent_id,
+        "names": [{"value": raw[0].upper() + raw[1:], "valid_from": valid_from}],
+        "valid_from": valid_from,
+        "valid_until": None,
+        "sources": [
+            {
+                "id": source_id,
+                "url": source_url,
+                "retrieved": _today_iso(),
+                "fields": ["synthesized_from_role"],
+            }
+        ],
+    }
 
 
 def _build_post_record(
