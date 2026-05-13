@@ -1,0 +1,29 @@
+id: person:koesveld-ev-18df7ebb
+name:
+  full: Ernst van Koesveld
+  family: Koesveld
+  given: Ernst van
+  initials: E.V.
+mandaten:
+- id: mandate-post-plaatsvervangend-secretaris-generaal-min-vws-2019-10-01
+  organization_id: org:min-vws
+  post_id: post:plaatsvervangend-secretaris-generaal-min-vws
+  role: directeur-generaal Langdurige Zorg, Ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2019-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/27/ernst-van-koesveld-directeur-generaal-langdurige-zorg-bij-vws
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-09-27
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/27/ernst-van-koesveld-directeur-generaal-langdurige-zorg-bij-vws
+  retrieved: '2026-05-13'
+  fields:
+  - applied_via:apply-staging

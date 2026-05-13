@@ -325,10 +325,12 @@ def _is_red_avg(role: str) -> bool:
 def _person_slug(name_full: str, birth_year: int | None) -> str:
     """Genereer een persoon-slug volgens conventie `<family>-<initials>-<birthyear>`.
 
-    Als geboortejaar ontbreekt, vervalt het achtervoegsel. Initialen op basis
-    van eerste letters van given-names voor de familienaam.
+    Als geboortejaar ontbreekt, vervalt het achtervoegsel en wordt een
+    deterministische 8-hex-suffix gebruikt op basis van de volledige naam.
+    Zo krijgt dezelfde naam in twee runs dezelfde slug — voorkomt dat een
+    re-resolve duplicaten maakt voor anonieme ABD-personen.
     """
-    import secrets
+    import hashlib
 
     # Strip parenthese-bijnaam ('A. (Abdeluheb) Choho' -> 'A. Choho').
     cleaned = re.sub(r"\([^)]*\)", "", name_full).strip()
@@ -356,8 +358,11 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
         pieces.append(str(birth_year))
     else:
         # Schema-eis: slug eindigt op 4-cijferig jaar, 7+-cijferig extern ID,
-        # of 8-hex UUID-fallback. Zonder geboortejaar gebruiken we 8 random hex.
-        pieces.append(secrets.token_hex(4))
+        # of 8-hex UUID-fallback. Zonder geboortejaar: deterministische
+        # SHA1-hash van de cleaned full name (8 hex chars). Idempotent over
+        # runs.
+        digest = hashlib.sha1(cleaned.lower().encode("utf-8")).hexdigest()
+        pieces.append(digest[:8])
     return "-".join(p for p in pieces if p)
 
 
