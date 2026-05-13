@@ -61,10 +61,13 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   function childrenAccessor(d) {
     if (d._collapsed) return null;
     if (d.kind === "post") {
-      const items = (d.mandaten || [])
-        .filter((m) => isActiveOn(m, date))
-        .map(mandaatToPersonNode);
-      return items.length ? items : null;
+      const activeMandaten = (d.mandaten || []).filter((m) => isActiveOn(m, date));
+      // Compound rendering: bij exact 1 lopend mandaat tonen we de persoon
+      // inline in de post-tile (zie renderNodes); geen children-list nodig.
+      // Bij meerdere mandaten (zeldzaam: tijdelijke overdracht) tonen we
+      // ze nog wel als losse person-children.
+      if (activeMandaten.length <= 1) return null;
+      return activeMandaten.map(mandaatToPersonNode);
     }
     const out = [];
     if (d.children) {
@@ -144,9 +147,9 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     enter
       .append("rect")
       .attr("width", NODE_W)
-      .attr("height", NODE_H)
+      .attr("height", (d) => nodeHeight(d))
       .attr("x", -NODE_W / 2)
-      .attr("y", -NODE_H / 2)
+      .attr("y", (d) => -nodeHeight(d) / 2)
       .attr("rx", 6)
       .attr("ry", 6);
 
@@ -157,6 +160,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       .attr("dominant-baseline", "middle")
       .text((d) => truncate(d.data.label || "", 18));
 
+    // Tweede regel voor compound posts (post met 1 active mandate inline).
+    enter
+      .filter((d) => compoundPersonName(d) !== null)
+      .append("text")
+      .attr("class", "node-label node-subline")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle");
+
     enter.on("mouseenter", (event, d) => {
       if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
         loadJSON(d.data.bundle).catch(() => {});
@@ -166,7 +177,39 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     const merged = enter.merge(nodes);
     merged.attr("class", (d) => `node ${nodeKindClass(d)}`);
     merged.attr("transform", (d) => `translate(${d.x},${d.y})`);
-    merged.select("text.node-label").text((d) => truncate(d.data.label || "", 18));
+    merged
+      .select("rect")
+      .attr("height", (d) => nodeHeight(d))
+      .attr("y", (d) => -nodeHeight(d) / 2);
+    // Hoofdlabel: bij compound iets omhoog, anders gecentreerd.
+    merged.select("text.node-label").each(function (d) {
+      const sub = compoundPersonName(d);
+      const el = d3.select(this);
+      if (sub !== null) {
+        el.attr("y", -8).text(truncate(d.data.label || "", 22));
+      } else {
+        el.attr("y", 0).text(truncate(d.data.label || "", 18));
+      }
+    });
+    // Subline (persoon-naam) bij compound.
+    merged.select("text.node-subline").each(function (d) {
+      const sub = compoundPersonName(d);
+      if (sub === null) return;
+      d3.select(this).attr("y", 12).text(truncate(sub, 22));
+    });
+  }
+
+  function compoundPersonName(d) {
+    // Geeft de persoonsnaam terug als deze post precies één actief
+    // mandaat heeft op de huidige datum. Anders null.
+    if (!d.data || d.data.kind !== "post") return null;
+    const active = (d.data.mandaten || []).filter((m) => isActiveOn(m, date));
+    if (active.length !== 1) return null;
+    return active[0].person_label || active[0].person_id || null;
+  }
+
+  function nodeHeight(d) {
+    return compoundPersonName(d) !== null ? NODE_H * 1.5 : NODE_H;
   }
 
   function nodeKindClass(d) {
@@ -193,6 +236,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     if (d.data.kind === "person" && onPerson) {
       onPerson(d);
       return;
+    }
+    // Compound post-tile (bewindspersoon inline): klik opent persoon-panel.
+    if (d.data.kind === "post" && onPerson) {
+      const active = (d.data.mandaten || []).filter((m) => isActiveOn(m, date));
+      if (active.length === 1 && active[0].person_id) {
+        onPerson({ data: { person_id: active[0].person_id } });
+        return;
+      }
     }
     if (d.data.kind === "bestuurslaag" || d.data.kind === "category-tree") {
       d.data._collapsed = !d.data._collapsed;
