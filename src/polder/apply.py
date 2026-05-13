@@ -1253,9 +1253,43 @@ def _append_mandaat(
         organization_id=organization_id, post_id=post_id, proposal=proposal
     )
     new_key = _mandaat_key(candidate)
-    for m in mandaten:
+    candidate_start = candidate.get("start_date")
+    candidate_end = candidate.get("end_date")
+    for i, m in enumerate(mandaten):
         if _mandaat_key(m) == new_key:
             return None, warnings
+        # Soft idempotency: same (post, org, start) maar verschillende
+        # end_date. Vrijwel altijd zijn dat dezelfde mandaten met in de
+        # ene bron geen einddatum en in de andere wel. Niet duplicate
+        # toevoegen; in plaats daarvan source mergen in het bestaande.
+        if (
+            m.get("post_id") == candidate.get("post_id")
+            and m.get("organization_id") == candidate.get("organization_id")
+            and m.get("start_date") == candidate_start
+            and (m.get("end_date") or "") != (candidate_end or "")
+        ):
+            new_record = dict(record)
+            new_mandaten = list(mandaten)
+            merged = dict(m)
+            sources = list(merged.get("sources") or [])
+            existing_keys = {
+                (s.get("id"), s.get("url")) for s in sources if isinstance(s, dict)
+            }
+            for src in candidate.get("sources") or []:
+                if isinstance(src, dict):
+                    key = (src.get("id"), src.get("url"))
+                    if key not in existing_keys:
+                        sources.append(src)
+                        existing_keys.add(key)
+            merged["sources"] = sources
+            new_mandaten[i] = merged
+            new_record["mandaten"] = new_mandaten
+            warnings.append(
+                "merged-into-existing-mandate: bestaande "
+                f"({m.get('start_date')}..{m.get('end_date')}) behouden, "
+                f"nieuwe source toegevoegd"
+            )
+            return new_record, warnings
     fuzzy = _fuzzy_duplicate_mandaat(
         mandaten,
         post_id=post_id,
