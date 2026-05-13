@@ -1,9 +1,12 @@
 id: person:bat-d-9756ab4f
 name:
-  full: J. de Bat
+  full: Jo-Annes de Bat
   family: Bat
-  given: J. de
-  initials: J.D.
+  given: Jo-Annes
+  initials: J.
+  tussenvoegsel: de
+birth:
+  year: 1980
 mandaten:
 - id: mandate-post-staatssecretaris-min-ezk-2026-02-23
   organization_id: org:min-ezk
@@ -27,3 +30,9 @@ sources:
   retrieved: '2026-05-13'
   fields:
   - applied_via:apply-staging
+- id: eerste_kamer
+  url: https://www.eerstekamer.nl/persoon/j_de_bat_cda
+  retrieved: '2026-05-13'
+  fields:
+  - name.given
+  - birth.year
