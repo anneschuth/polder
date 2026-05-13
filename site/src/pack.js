@@ -76,6 +76,15 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     if (d.posten) {
       for (const p of d.posten) {
         if (hasOwnDates(p) && !isActiveOn(p, date)) continue;
+        // Filter posts zonder lopend mandaat op de huidige datum. Een
+        // post:minister-min-X die historisch open staat maar nu niet
+        // bemand wordt, hoort niet als lege box in de tree. Posten met
+        // mandaten die ALLE buiten het datum-window vallen worden ook
+        // gefilterd.
+        const mandaten = p.mandaten || [];
+        if (mandaten.length === 0) continue;
+        const activeCount = mandaten.filter((m) => isActiveOn(m, date)).length;
+        if (activeCount === 0) continue;
         out.push(p);
       }
     }
