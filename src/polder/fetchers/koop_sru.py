@@ -265,15 +265,40 @@ def search(
             _write_xml(meta_target, record_xml, dry_run=dry_run)
             # Daarnaast: de echte besluit-XML downloaden via gzd:itemUrl.
             # Skip stcrt-files zonder gzd:itemUrl en KB-records die geen XML hebben.
+            # Met retry-on-429 (exponential backoff) want repository.overheid.nl
+            # rate-limit op individuele XML-downloads.
             item_url = meta.get("url")
             target = _cache_path_for(identifier, modified=meta["modified"], base=base)
             if item_url and not dry_run and not target.exists():
-                try:
-                    response = _http_get(item_url, timeout=timeout, client=client)
-                    response.raise_for_status()
-                    _write_xml(target, response.content, dry_run=dry_run)
-                except httpx.HTTPError as exc:
-                    logger.warning("Kon besluit-XML voor %s niet ophalen: %s", identifier, exc)
+                import time as _time
+
+                for attempt in range(5):
+                    try:
+                        response = _http_get(item_url, timeout=timeout, client=client)
+                        if response.status_code == 429:
+                            wait = 2**attempt
+                            logger.debug(
+                                "429 op %s, wachten %ds (attempt %d/5)",
+                                identifier,
+                                wait,
+                                attempt + 1,
+                            )
+                            _time.sleep(wait)
+                            continue
+                        response.raise_for_status()
+                        _write_xml(target, response.content, dry_run=dry_run)
+                        break
+                    except httpx.HTTPError as exc:
+                        if attempt == 4:
+                            logger.warning(
+                                "Kon besluit-XML voor %s niet ophalen na 5 pogingen: %s",
+                                identifier,
+                                exc,
+                            )
+                        else:
+                            _time.sleep(2**attempt)
+                # Throttle tussen records om rate-limit te ontwijken.
+                _time.sleep(0.1)
             written.append(target)
             if len(written) >= max_records:
                 break
