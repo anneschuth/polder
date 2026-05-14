@@ -94,6 +94,13 @@ def audit_main(
             help="Toon ook geverifieerde findings (zijn standaard uitgefilterd).",
         ),
     ] = False,
+    show_keys: Annotated[
+        bool,
+        typer.Option(
+            "--show-keys",
+            help="Toon de finding-key (handig voor `polder audit verify`).",
+        ),
+    ] = False,
 ) -> None:
     """Run diepe data-audit op `data/`."""
     if ctx.invoked_subcommand is not None:
@@ -163,7 +170,10 @@ def audit_main(
         if explain and cat_meta:
             typer.echo(f"  → {cat_meta.help}")
         for item in items[:max_per_category]:
-            typer.echo(f"  {item.message}")
+            if show_keys:
+                typer.echo(f"  [{item.key}] {item.message}")
+            else:
+                typer.echo(f"  {item.message}")
         if len(items) > max_per_category:
             typer.echo(f"  ... +{len(items) - max_per_category} meer")
         typer.echo("")
