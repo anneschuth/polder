@@ -1,6 +1,6 @@
 # Polder
 
-> Wie regeert Nederland, in YAML, dagelijks bijgewerkt.
+> **P**ublieke **O**verheid: **L**eden, **D**ienstverbanden, **E**enheden, **R**ollen. Wie regeert Nederland, in YAML, dagelijks bijgewerkt.
 
 Polder is een git-versioned, CC0-gelicenseerde dataset van Nederlandse overheidsorganisaties, posten, personen en mandaten. De source-of-truth is plain YAML, gevalideerd met JSON Schema, en gepubliceerd als Datasette plus Frictionless Data Package. Een GitHub Actions workflow draait dagelijks fetchers, opent een PR en logt elke wijziging als git commit. History is permanent.
 
