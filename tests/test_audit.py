@@ -24,7 +24,7 @@ def fake_data(tmp_path: Path) -> Path:
 
     org = {
         "id": "org:min-test",
-        "type": "ministeries",
+        "type": "ministerie",
         "names": [{"value": "Test", "lang": "nl"}],
         "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
     }
@@ -36,6 +36,7 @@ def fake_data(tmp_path: Path) -> Path:
         "id": "post:minister-min-test",
         "organization_id": "org:min-test",
         "label": "Minister van Test",
+        "classification": "bewindspersoon",
         "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
     }
     (data / "posten" / "minister-min-test.yaml").write_text(
