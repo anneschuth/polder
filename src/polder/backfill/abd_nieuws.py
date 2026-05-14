@@ -62,9 +62,11 @@ def list_candidates(
     Voor abd-nieuws is dat een goede proxy voor scrape-datum.
 
     Als ``staging_dir`` is gegeven worden HTMLs waarvan vandaag al een
-    non-empty staging-file bestaat ook gefilterd — anders zou een retry-loop
-    met --limit telkens dezelfde alfabetisch-eerste records pakken en geen
-    progressie maken in de overige cache.
+    non-empty (>3 byte) staging-file bestaat ook gefilterd — anders zou een
+    retry-loop met --limit telkens dezelfde alfabetisch-eerste records
+    pakken en geen progressie maken in de overige cache. Lege `[]`-files
+    tellen niet als "klaar" — die kunnen van een gefaalde parse komen en
+    moeten opnieuw langs de prefilter (en eventueel de skill).
     """
     if not cache_dir.exists():
         return []
@@ -92,10 +94,10 @@ def list_candidates(
         unstaged: list[Path] = []
         for p in paths:
             output = staging_dir / f"abd-nieuws-{p.stem}-{today_iso}.json"
-            # Skip alles wat vandaag al een staging-file heeft (met content
-            # of prefilter-skip-`[]`). Voorkomt dat een retry-loop telkens
-            # dezelfde records pakt.
-            if output.exists():
+            # Skip alleen wanneer de today-file substantieel is (>3 byte).
+            # Een lege `[]` kan een prefilter-skip zijn, maar net zo goed
+            # een gefaalde LLM-parse — die mag opnieuw worden geprobeerd.
+            if output.exists() and output.stat().st_size > 3:
                 continue
             unstaged.append(p)
         paths = unstaged

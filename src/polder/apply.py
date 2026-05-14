@@ -344,7 +344,11 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
     initials_chars = []
     for p in given_parts:
         if p and p[0].isalpha():
-            initials_chars.append(p[0].lower())
+            # ASCII-fold (Ä -> a) en filter naar [a-z] om slug-regex te
+            # respecteren. Diakrieten zoals umlauts mogen niet in een slug.
+            ascii_first = _slugify(p[0])
+            if ascii_first:
+                initials_chars.append(ascii_first[0])
     initials = "".join(initials_chars)
     family_slug = _slugify(family)
     if not family_slug:
