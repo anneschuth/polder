@@ -1,6 +1,7 @@
 id: person:hagen-kb-1987
 identifiers:
   tk_persoon_id: 425ddb12-0b71-44b6-9875-70b075dc99f7
+  wikidata: Q105750199
 name:
   full: Kiki Hagen
   family: Hagen
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e925ff59-9483-452a-88e7-dbd02ee5e5b2)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(425ddb12-0b71-44b6-9875-70b075dc99f7)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q105750199
+  retrieved: '2026-05-13'

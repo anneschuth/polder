@@ -71,7 +71,7 @@ def export(
             # Flatten one level: only top-level scalar fields go into CSV.
             flat = []
             for row in rows:
-                flat.append({k: v for k, v in row.items() if not isinstance(v, (dict, list))})
+                flat.append({k: v for k, v in row.items() if not isinstance(v, dict | list)})
             path = out / f"{name}.csv"
             _dump_csv(flat, path)
             typer.echo(f"wrote {path} ({len(flat)} rows)")

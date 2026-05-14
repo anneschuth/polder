@@ -1,0 +1,30 @@
+id: person:veldhuis-aj-1947
+identifiers:
+  tk_persoon_id: 1adbe210-1038-4557-8d1d-1707e4928d5c
+name:
+  full: Jan te Veldhuis
+  family: te Veldhuis
+  given: Jan
+  initials: A.J.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1947
+gender: m
+mandaten:
+- id: e84ff15c-ccb5-4e78-ad62-f86e6ebb3e07
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1982-09-16'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9e6552e1-c783-4f57-922c-2d9639f1cc53)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1adbe210-1038-4557-8d1d-1707e4928d5c)
+  retrieved: '2026-05-13'

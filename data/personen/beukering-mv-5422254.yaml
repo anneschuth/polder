@@ -1,10 +1,14 @@
 id: person:beukering-mv-5422254
+identifiers:
+  wikidata: Q28860879
 name:
   full: Marijke van Beukering
   family: Beukering
-  given: Marijke
+  given: Marijke van
   initials: M.V.
   tussenvoegsel: van
+birth:
+  year: 1971
 mandaten:
 - id: 35919a6d-540d-4d36-b181-fa7204d0f849
   organization_id: org:gemeente-nieuwegein
@@ -16,7 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5422256
     retrieved: '2026-05-09'
+- id: f14efd0a-b4ee-4d44-bceb-ea7c3bc6984d
+  organization_id: org:gemeente-nieuwegein
+  post_id: post:burgemeester-gemeente-nieuwegein
+  role: Burgemeester gemeente Nieuwegein
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5422256
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5422254
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28860879
+  retrieved: '2026-05-13'

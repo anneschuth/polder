@@ -2,7 +2,7 @@ id: person:bakel-mv-5199872
 name:
   full: Maarten van Bakel
   family: Bakel
-  given: Maarten
+  given: Maarten van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199874
     retrieved: '2026-05-09'
+- id: b32c798f-9c5b-44a3-8043-38009d202756
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199874
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199872
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

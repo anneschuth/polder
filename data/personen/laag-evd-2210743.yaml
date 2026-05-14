@@ -2,7 +2,7 @@ id: person:laag-evd-2210743
 name:
   full: Edwin van der Laag
   family: Laag
-  given: Edwin
+  given: Edwin van der
   initials: E.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2210745
     retrieved: '2026-05-09'
+- id: 5b454564-441c-4a25-bb6d-156ca71d4f06
+  organization_id: org:gemeente-ameland
+  post_id: post:raadslid-gemeente-ameland
+  role: Raadslid gemeente Ameland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2210745
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2210743
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

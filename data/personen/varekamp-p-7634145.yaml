@@ -1,9 +1,13 @@
 id: person:varekamp-p-7634145
+identifiers:
+  wikidata: Q137593137
 name:
   full: Pieter Varekamp
   family: Varekamp
   given: Pieter
   initials: P.
+birth:
+  year: 1942
 mandaten:
 - id: 68cfc69e-bf0f-4909-a0ef-71ee9e77ae52
   organization_id: org:gemeente-wassenaar
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7669546
     retrieved: '2026-05-09'
+- id: 8f10e495-80ba-4cd8-aff9-249b30215e75
+  organization_id: org:gemeente-wassenaar
+  post_id: post:wethouder-gemeente-wassenaar
+  role: Wethouder gemeente Wassenaar
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7669546
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7634145
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q137593137
   retrieved: '2026-05-11'
-birth:
-  year: 1942
-identifiers:
-  wikidata: Q137593137

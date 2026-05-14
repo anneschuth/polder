@@ -1,6 +1,7 @@
 id: person:meeuwis-clm-1964
 identifiers:
   tk_persoon_id: 2b7cd8fb-28c1-4530-af89-6711c4878cfa
+  wikidata: Q2393568
 name:
   full: Cees Meeuwis
   family: Meeuwis
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3fa662d8-60fb-4229-877f-bf5ff45e0fc6)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2b7cd8fb-28c1-4530-af89-6711c4878cfa)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2393568
+  retrieved: '2026-05-13'

@@ -1,9 +1,13 @@
 id: person:mulder-m-5905101
+identifiers:
+  wikidata: Q15872928
 name:
   full: M.J. Mulder
   family: Mulder
   given: M.J.
   initials: M.
+birth:
+  year: 1939
 mandaten:
 - id: f3442c08-58ee-4ef5-99ae-f9c2ecc633e8
   organization_id: org:gemeente-overbetuwe
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5905103
     retrieved: '2026-05-09'
+- id: ab0025b5-414d-401a-a823-a55c7e56bbf3
+  organization_id: org:gemeente-overbetuwe
+  post_id: post:raadslid-gemeente-overbetuwe
+  role: Raadslid gemeente Overbetuwe
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5905103
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5905101
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q15872928
   retrieved: '2026-05-11'
-birth:
-  year: 1939
-identifiers:
-  wikidata: Q15872928

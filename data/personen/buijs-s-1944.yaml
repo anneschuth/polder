@@ -1,0 +1,30 @@
+id: person:buijs-s-1944
+identifiers:
+  tk_persoon_id: 0356a06c-4305-4cf3-b442-9a09bfa3572a
+name:
+  full: Siem Buijs
+  family: Buijs
+  given: Siem
+  initials: S.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1944
+gender: m
+mandaten:
+- id: ac2c7021-a7b8-4d10-95bc-a6b17401835b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(19e84e07-1d2b-418a-8d85-0d93ea7de99e)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0356a06c-4305-4cf3-b442-9a09bfa3572a)
+  retrieved: '2026-05-13'

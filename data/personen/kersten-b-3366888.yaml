@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366889
     retrieved: '2026-05-09'
+- id: ea4642db-3c93-42b5-b006-cbf2fb06d281
+  organization_id: org:gemeente-diemen
+  post_id: post:griffier-gemeente-diemen
+  role: Griffier gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3366889
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366888
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q108756904
+  retrieved: '2026-05-13'
+birth:
+  year: 1968
+identifiers:
+  wikidata: Q108756904

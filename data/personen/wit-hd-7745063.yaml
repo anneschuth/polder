@@ -2,7 +2,7 @@ id: person:wit-hd-7745063
 name:
   full: Hilde de Wit
   family: Wit
-  given: Hilde
+  given: Hilde de
   initials: H.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7745064
     retrieved: '2026-05-09'
+- id: 46712a5b-1ca3-446c-9a20-05613c22bb61
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7745064
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7745063
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

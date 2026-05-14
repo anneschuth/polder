@@ -1,10 +1,14 @@
 id: person:oosten-pv-6598300
+identifiers:
+  wikidata: Q63436590
 name:
   full: P. van Oosten
   family: Oosten
-  given: P.
+  given: P. van
   initials: P.V.
   tussenvoegsel: van
+birth:
+  year: 1973
 mandaten:
 - id: 83e73450-5adf-4cfb-9afb-a39cd222a5c4
   organization_id: org:gemeente-westland
@@ -32,14 +36,30 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: fc34be77-55fd-472d-82a2-444006ecee4b
+  organization_id: org:gemeente-west
+  post_id: post:griffier-gemeente-west
+  role: Griffier gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598302
+    retrieved: '2026-05-13'
+- id: 4b54456a-470e-49b2-bfa0-7544459fef3f
+  organization_id: org:gemeente-westland
+  post_id: post:griffier-gemeente-westland
+  role: Griffier gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598302
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598300
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q63436590
   retrieved: '2026-05-11'
-birth:
-  year: 1973
-identifiers:
-  wikidata: Q63436590

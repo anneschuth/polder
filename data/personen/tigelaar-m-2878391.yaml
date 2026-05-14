@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: ecf97fbb-ad97-47bc-9ea0-80e99ec001fe
+  organization_id: org:gemeente-berkelland
+  post_id: post:griffier-gemeente-berkelland
+  role: Griffier gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7139066
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878391
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

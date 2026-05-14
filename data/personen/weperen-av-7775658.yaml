@@ -2,8 +2,8 @@ id: person:weperen-av-7775658
 name:
   full: Alies van Weperen
   family: Weperen
-  given: Alies
-  initials: A.M.
+  given: Alies van
+  initials: A.V.
   tussenvoegsel: van
 mandaten:
 - id: 58ec1ff4-935b-4a5f-82ea-2ac07cdd0e78
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7775660
     retrieved: '2026-05-09'
+- id: fd78d75f-76b4-4870-afdc-6de119e4bcc8
+  organization_id: org:gemeente-dantumadiel
+  post_id: post:raadslid-gemeente-dantumadiel
+  role: Raadslid gemeente Dantumadiel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7775660
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7775658
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

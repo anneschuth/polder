@@ -11,18 +11,6 @@ birth:
   year: 1964
 gender: m
 mandaten:
-- id: 60f62406-5ae0-44e8-b7ec-fe43255daca4
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor BRINK
-  start_date: '2012-03-20'
-  end_date: '2012-09-19'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(eca6d1ce-2eee-411c-b96b-d8b23c9c0fdb)
-    retrieved: '2026-05-09'
 - id: 41a7b0ee-c579-48d5-9116-b55204d83c31
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dc569ed6-09e6-4d65-8389-729980a98766)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 60f62406-5ae0-44e8-b7ec-fe43255daca4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor BRINK
+  start_date: '2012-03-20'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(eca6d1ce-2eee-411c-b96b-d8b23c9c0fdb)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fdda013d-4d31-437b-a3d2-d388b3251915)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1312207
   retrieved: '2026-05-09'

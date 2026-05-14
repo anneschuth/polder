@@ -1,0 +1,28 @@
+id: person:bruls-hmf-1966
+identifiers:
+  tk_persoon_id: ab8725cf-3c98-4977-95a5-6b6219e89135
+name:
+  full: Hubert Bruls
+  family: Bruls
+  given: Hubert
+  initials: H.M.F.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: de2907aa-ffc6-4b33-8b21-25d02f5f1cce
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2005-10-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(48b6e6b7-a67a-4cf9-87b5-00d802500fd0)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ab8725cf-3c98-4977-95a5-6b6219e89135)
+  retrieved: '2026-05-13'

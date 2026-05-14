@@ -11,38 +11,6 @@ birth:
   year: 1977
 gender: f
 mandaten:
-- id: wd-042081897cb3
-  organization_id: org:min-jenv
-  post_id: post:minister-min-jenv
-  role: Minister van Justitie en Veiligheid
-  start_date: '2022-01-10'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q28861002#P39
-    retrieved: '2026-05-09'
-  end_date: '2024-07-02'
-- id: wd-b47b431a2a6d
-  organization_id: org:min-ezk
-  post_id: post:staatssecretaris-klimaat-energie-min-ezk
-  role: Staatssecretaris voor Klimaat en Energie
-  start_date: '2021-05-25'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q28861002#P39
-    retrieved: '2026-05-09'
-  end_date: '2022-01-10'
-- id: 200d737c-a336-4010-8751-81ed764650f3
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2023-12-06'
-  end_date: '2026-02-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0fb4c192-5fc6-4188-9dc7-af5c86f5c6b8)
-    retrieved: '2026-05-09'
 - id: 2b657342-083b-4134-b566-b1ff11480182
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -54,7 +22,49 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e0e798db-dfdb-46ff-beaf-b4e76cf5231e)
+    retrieved: '2026-05-13'
+- id: wd-b47b431a2a6d
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-klimaat-energie-min-ezk
+  role: Staatssecretaris voor Klimaat en Energie
+  start_date: '2021-05-25'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
     retrieved: '2026-05-09'
+  end_date: '2022-01-10'
+- id: wd-b47b431a2a6d
+  organization_id: org:min-ezk
+  post_id: post:staatssecretaris-min-ezk
+  role: staatssecretaris van Economische Zaken en Klimaat
+  start_date: '2021-05-25'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
+    retrieved: '2026-05-13'
+  end_date: '2022-01-10'
+- id: wd-042081897cb3
+  organization_id: org:min-jenv
+  post_id: post:minister-min-jenv
+  role: Minister van Justitie en Veiligheid
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
+    retrieved: '2026-05-13'
+  end_date: '2024-07-02'
+- id: 200d737c-a336-4010-8751-81ed764650f3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0fb4c192-5fc6-4188-9dc7-af5c86f5c6b8)
+    retrieved: '2026-05-13'
 - id: mandate-post-minister-min-def-2026-02-23
   organization_id: org:min-def
   post_id: post:minister-min-def
@@ -67,6 +77,9 @@ mandaten:
     retrieved: '2026-05-12'
     fields:
     - applied_via:apply-staging
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861002#P39
+    retrieved: '2026-05-13'
   appointment:
     decision: KB nr. 2026000405, 23 februari 2026
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
@@ -74,7 +87,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ab41898-332f-4c08-a834-d58b4669c990)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q28861002
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

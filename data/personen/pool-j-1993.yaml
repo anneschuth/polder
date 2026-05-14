@@ -1,6 +1,7 @@
 id: person:pool-j-1993
 identifiers:
   tk_persoon_id: 71b17b6c-08c9-4ae7-90cc-292603765c24
+  wikidata: Q123176049
 name:
   full: Joeri Pool
   family: Pool
@@ -23,8 +24,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(94230488-f0c4-4f0c-a548-3366887127ef)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71b17b6c-08c9-4ae7-90cc-292603765c24)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176049
+  retrieved: '2026-05-13'

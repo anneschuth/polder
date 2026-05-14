@@ -2,7 +2,7 @@ id: person:heer-cd-4450596
 name:
   full: C. de Heer
   family: Heer
-  given: C.
+  given: C. de
   initials: C.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7205478
     retrieved: '2026-05-09'
+- id: bba46f67-eefe-42f4-ad10-c61529ce07fd
+  organization_id: org:gemeente-houten
+  post_id: post:raadslid-gemeente-houten
+  role: Raadslid gemeente Houten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7205478
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4450596
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

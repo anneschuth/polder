@@ -2,7 +2,7 @@ id: person:berg-avd-6597981
 name:
   full: André van den Berg
   family: Berg
-  given: André
+  given: André van den
   initials: A.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -26,7 +26,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6597983
     retrieved: '2026-05-09'
+- id: 2ea54392-02b4-4062-8112-c534b77507c2
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6597983
+    retrieved: '2026-05-13'
+- id: 767ffa91-2e7a-460a-8e49-26f1326771e9
+  organization_id: org:gemeente-westland
+  post_id: post:raadslid-gemeente-westland
+  role: Raadslid gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6597983
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6597981
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

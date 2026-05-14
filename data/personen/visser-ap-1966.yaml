@@ -1,0 +1,30 @@
+id: person:visser-ap-1966
+identifiers:
+  tk_persoon_id: 5998351c-66da-46c8-bd34-c604f595ed38
+name:
+  full: Arno Visser
+  family: Visser
+  given: Arno
+  initials: A.P.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: 03f47688-a82e-4f78-b0cd-8efe215026b2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-06-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2bcc55a1-0a6b-46fd-9e45-3bd8138098a5)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5998351c-66da-46c8-bd34-c604f595ed38)
+  retrieved: '2026-05-13'

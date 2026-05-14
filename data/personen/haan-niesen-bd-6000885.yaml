@@ -2,7 +2,7 @@ id: person:haan-niesen-bd-6000885
 name:
   full: B. de Haan-Niesen
   family: Haan-Niesen
-  given: B.
+  given: B. de
   initials: B.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000887
     retrieved: '2026-05-09'
+- id: 934891aa-530b-4419-8283-df8219466783
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6000887
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000885
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -1,0 +1,28 @@
+id: person:oven-gjw-1948
+identifiers:
+  tk_persoon_id: a9351cc4-25bf-4761-8ba4-185d29344ef4
+name:
+  full: Gerrit-Jan van Oven
+  family: van Oven
+  given: Gerrit-Jan
+  initials: G.J.W.
+birth:
+  year: 1948
+gender: m
+mandaten:
+- id: 7b936b55-8f69-448b-92a9-03916db42329
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-09-10'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c3a6cdbf-756f-4818-9a2a-b04cb2d7a493)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a9351cc4-25bf-4761-8ba4-185d29344ef4)
+  retrieved: '2026-05-13'

@@ -1,6 +1,7 @@
 id: person:hamer-mi-1958
 identifiers:
   tk_persoon_id: fcdd8eba-ce4c-40ad-b68e-4fe542abd6b3
+  wikidata: Q1830398
 name:
   full: Mariëtte Hamer
   family: Hamer
@@ -12,6 +13,18 @@ birth:
   year: 1958
 gender: f
 mandaten:
+- id: bfa2f344-874f-493e-b6de-dd044d50bb63
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1998-05-19'
+  end_date: '2004-11-09'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3a9ed872-7aa6-4161-b90c-aa660b27036a)
+    retrieved: '2026-05-13'
 - id: 37477a5a-189a-4e71-810d-f9a08520d73d
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -23,8 +36,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(583e690e-83d8-4ad8-abba-71260b162caa)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fcdd8eba-ce4c-40ad-b68e-4fe542abd6b3)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1830398
+  retrieved: '2026-05-13'

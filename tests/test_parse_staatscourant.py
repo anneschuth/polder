@@ -92,7 +92,7 @@ def test_example_output_has_required_fields() -> None:
 def test_example_output_confidence_in_range() -> None:
     data = json.loads((SKILL_DIR / "example_output.json").read_text(encoding="utf-8"))
     confidence = data[0]["confidence"]
-    assert isinstance(confidence, (int, float))
+    assert isinstance(confidence, int | float)
     assert 0.0 <= float(confidence) <= 1.0
 
 

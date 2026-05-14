@@ -1,0 +1,23 @@
+id: org:onderdeel-alkmaar
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132235'
+  oin: 00000001001721926000
+  kvk: '62255398'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0361
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Alkmaar
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132235/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

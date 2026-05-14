@@ -1162,7 +1162,7 @@ def test_enrich_organisations_with_name_history(tmp_path: Path, monkeypatch: pyt
 
     def fake_query(query: str, **_: Any) -> list[dict[str, Any]]:
         # Naam-historie: query bevat p:P1448. Org-query: SELECT ?item.
-        if "p:P1448" in query or "P1448" in query and "p:" in query:
+        if "p:P1448" in query or ("P1448" in query and "p:" in query):
             return list(NAME_HISTORY_RESPONSE_EZK["results"]["bindings"])
         if "wdt:P31 wd:Q3143387" in query:  # ministerie-class
             return list(org_response["results"]["bindings"])
@@ -1502,7 +1502,7 @@ def test_parse_birth_year_extracts_first_year() -> None:
 
     assert _parse_birth_year_from_description("Nederlands ondernemer (1946-2025)") == 1946
     assert (
-        _parse_birth_year_from_description("Nederlands voetballer (1904–1979)") == 1904
+        _parse_birth_year_from_description("Nederlands voetballer (1904–1979)") == 1904  # noqa: RUF001
     )  # em-dash
     assert _parse_birth_year_from_description("politicus (1897—1960)") == 1897  # em-dash
     assert _parse_birth_year_from_description("Nederlands persoon (1985)") == 1985

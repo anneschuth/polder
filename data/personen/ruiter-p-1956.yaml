@@ -1,0 +1,28 @@
+id: person:ruiter-p-1956
+identifiers:
+  tk_persoon_id: 9bc24fcf-34c4-48e6-a906-fa323029ba6a
+name:
+  full: Pieter de Ruiter
+  family: de Ruiter
+  given: Pieter
+  initials: P.
+birth:
+  year: 1956
+gender: m
+mandaten:
+- id: eca82ee2-6258-480a-8acc-a110daf5c529
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2002-05-23'
+  end_date: '2005-09-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d5d83bc7-801c-4035-97eb-287ad01befd5)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9bc24fcf-34c4-48e6-a906-fa323029ba6a)
+  retrieved: '2026-05-13'

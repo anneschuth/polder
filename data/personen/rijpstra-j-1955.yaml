@@ -1,0 +1,28 @@
+id: person:rijpstra-j-1955
+identifiers:
+  tk_persoon_id: 9392c539-6128-41d4-b578-b48eb6f1e4ba
+name:
+  full: Jan Rijpstra
+  family: Rijpstra
+  given: Jan
+  initials: J.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: e486e2d0-9ba8-4b07-abab-74fb2ca5e292
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-05-16'
+  end_date: '2005-04-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(936882ae-e5fa-434d-ab6c-98d90e853f36)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9392c539-6128-41d4-b578-b48eb6f1e4ba)
+  retrieved: '2026-05-13'

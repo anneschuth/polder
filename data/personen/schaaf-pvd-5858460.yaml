@@ -1,10 +1,14 @@
 id: person:schaaf-pvd-5858460
+identifiers:
+  wikidata: Q124736763
 name:
   full: Pieter van der Schaaf
   family: Schaaf
-  given: Pieter
+  given: Pieter van der
   initials: P.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1984
 mandaten:
 - id: b3327315-ddc6-43a8-98bf-a8fdcd692a94
   organization_id: org:gemeente-opsterland
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5858462
     retrieved: '2026-05-09'
+- id: e65e2e32-20e3-4cae-8e3a-d2f583cae762
+  organization_id: org:gemeente-opsterland
+  post_id: post:raadslid-gemeente-opsterland
+  role: Raadslid gemeente Opsterland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5858462
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5858460
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q124736763
   retrieved: '2026-05-11'
-birth:
-  year: 1984
-identifiers:
-  wikidata: Q124736763

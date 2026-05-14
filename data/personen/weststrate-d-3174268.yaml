@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 18329f83-2f3d-4d84-bee1-d12fbb8cdce8
+  organization_id: org:gemeente-buren
+  post_id: post:griffier-gemeente-buren
+  role: Griffier gemeente Buren
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3174270
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3174268
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

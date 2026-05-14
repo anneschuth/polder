@@ -2,7 +2,7 @@ id: person:ewijk-av-5864733
 name:
   full: A.  van Ewijk
   family: Ewijk
-  given: A.
+  given: A.  van
   initials: A.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864735
     retrieved: '2026-05-09'
+- id: f5a60be4-5a7f-4d7e-b40d-c98b7223679f
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864735
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864733
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

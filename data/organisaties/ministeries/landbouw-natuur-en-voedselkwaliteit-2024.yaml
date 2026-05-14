@@ -2,6 +2,8 @@ id: org:min-landbouw-natuur-en-voedselkwaliteit-2024
 type: ministerie
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/hv_33909618
+  oin: 00000001858272854000
+  kvk: '70338574'
 classification: ministerie
 parent_id: null
 names:
@@ -11,10 +13,15 @@ names:
   valid_until: '2024-07-01'
 valid_from: '2017-10-26'
 valid_until: '2024-07-01'
-successor_id: org:min-lvvn
-predecessor_id:
-- org:min-ezk
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/hv_33909618
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin
+successor_id: org:min-lvvn
+predecessor_id:
+- org:min-ezk

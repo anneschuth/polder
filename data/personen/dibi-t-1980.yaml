@@ -1,6 +1,7 @@
 id: person:dibi-t-1980
 identifiers:
   tk_persoon_id: 61301ff2-ae21-47e0-8172-fcd86e249062
+  wikidata: Q2832395
 name:
   full: Tofik Dibi
   family: Dibi
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(27150679-8a30-47d6-9d6a-f58bae67611a)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(61301ff2-ae21-47e0-8172-fcd86e249062)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2832395
+  retrieved: '2026-05-13'

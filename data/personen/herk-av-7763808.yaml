@@ -1,10 +1,14 @@
 id: person:herk-av-7763808
+identifiers:
+  wikidata: Q29565108
 name:
   full: A.C. van Herk
   family: Herk
-  given: A.C.
+  given: A.C. van
   initials: A.V.
   tussenvoegsel: van
+birth:
+  year: 1946
 mandaten:
 - id: 87333837-762d-4df9-8654-3b0c26910b85
   organization_id: org:gemeente-krimpenerwaard
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780781
     retrieved: '2026-05-09'
+- id: 1f525377-3e2d-4489-9e3a-57c0f3368176
+  organization_id: org:gemeente-krimpenerwaard
+  post_id: post:raadslid-gemeente-krimpenerwaard
+  role: Raadslid gemeente Krimpenerwaard
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7780781
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7763808
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q29565108
   retrieved: '2026-05-11'
-birth:
-  year: 1946
-identifiers:
-  wikidata: Q29565108

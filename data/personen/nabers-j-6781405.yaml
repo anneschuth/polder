@@ -1,9 +1,13 @@
 id: person:nabers-j-6781405
+identifiers:
+  wikidata: Q56509292
 name:
   full: Jan Nabers
   family: Nabers
   given: Jan
   initials: J.
+birth:
+  year: 1940
 mandaten:
 - id: 0b270c9d-7795-45d7-9d74-a2a25da7cc89
   organization_id: org:gemeente-zwolle
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781407
     retrieved: '2026-05-09'
+- id: dde289cb-d56b-498d-bb80-0bd0b585d6c9
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781407
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781405
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q56509292
   retrieved: '2026-05-11'
-birth:
-  year: 1940
-identifiers:
-  wikidata: Q56509292

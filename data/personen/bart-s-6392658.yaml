@@ -1,9 +1,13 @@
 id: person:bart-s-6392658
+identifiers:
+  wikidata: Q3960294
 name:
   full: S. Bart
   family: Bart
   given: S.
   initials: S.
+birth:
+  year: 1932
 mandaten:
 - id: a59e755c-53a0-4118-a402-60237ce384f4
   organization_id: org:gemeente-velsen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6392660
     retrieved: '2026-05-09'
+- id: fc1e685f-d3b0-44d1-933b-787e0ade314f
+  organization_id: org:gemeente-velsen
+  post_id: post:raadslid-gemeente-velsen
+  role: Raadslid gemeente Velsen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6392660
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6392658
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3960294
   retrieved: '2026-05-11'
-birth:
-  year: 1932
-identifiers:
-  wikidata: Q3960294

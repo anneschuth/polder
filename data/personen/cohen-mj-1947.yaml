@@ -11,18 +11,16 @@ birth:
   year: 1947
 gender: m
 mandaten:
-- id: c1266259-c4b2-42a9-b217-5fdd6d79920a
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2012-02-20'
-  end_date: '2012-02-28'
-  appointment:
-    decision: TK-installatie
+- id: wd-70c16c308bc5
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '1998-08-03'
   sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(653918cf-7913-438c-af39-6aec02c461d0)
-    retrieved: '2026-05-09'
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q381657#P39
+    retrieved: '2026-05-13'
+  end_date: '2001-01-01'
 - id: f0107cf3-25bb-451a-b8d1-a1114d5cac04
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,21 +32,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9c79a6ee-d546-4708-af18-5c2798848016)
-    retrieved: '2026-05-09'
-- id: wd-70c16c308bc5
-  organization_id: org:min-jenv
-  post_id: post:staatssecretaris-min-jenv
-  role: staatssecretaris van Justitie en Veiligheid
-  start_date: '1998-08-03'
+    retrieved: '2026-05-13'
+- id: c1266259-c4b2-42a9-b217-5fdd6d79920a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2012-02-20'
+  end_date: '2012-02-28'
+  appointment:
+    decision: TK-installatie
   sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q381657#P39
-    retrieved: '2026-05-09'
-  end_date: '2001-01-01'
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(653918cf-7913-438c-af39-6aec02c461d0)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1fdf1475-c4bb-4175-835e-4e2785b6826b)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q381657
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

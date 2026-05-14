@@ -1,0 +1,42 @@
+id: person:stuger-of-1969
+identifiers:
+  tk_persoon_id: 9c2fc1ce-1540-4f2c-9a79-1f4f966eeed2
+name:
+  full: Olaf Frederik Stuger
+  family: Stuger
+  given: Olaf Frederik
+  initials: O.F.
+  honorifics_pre:
+  - drs
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: 5c92ac66-1081-4b18-b347-61cea36e7776
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2006-09-21'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1f0373a3-8016-4ba2-86c8-fbce28211379)
+    retrieved: '2026-05-13'
+- id: a83c08ce-db1b-4775-ad20-3885352a5ae9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(af5cbfef-4dc9-4e01-8503-71f5c7ebf1a6)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9c2fc1ce-1540-4f2c-9a79-1f4f966eeed2)
+  retrieved: '2026-05-13'

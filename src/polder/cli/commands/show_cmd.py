@@ -50,7 +50,7 @@ def _render_table(obj: Any, console: Console) -> None:
     table.add_column("veld")
     table.add_column("waarde")
     for k, v in data.items():
-        if isinstance(v, (dict, list)):
+        if isinstance(v, dict | list):
             v = yaml.safe_dump(v, sort_keys=False, allow_unicode=True).strip()
         table.add_row(str(k), str(v))
     console.print(table)

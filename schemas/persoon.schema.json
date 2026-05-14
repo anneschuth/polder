@@ -38,7 +38,7 @@
         "given": { "type": "string" },
         "initials": {
           "type": "string",
-          "pattern": "^([A-Z]\\.)+$"
+          "pattern": "^([A-ZÀ-ÖØ-Þ]\\.)+$"
         },
         "honorifics_pre": {
           "type": "array",

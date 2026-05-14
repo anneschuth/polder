@@ -1,6 +1,7 @@
 id: person:uppelschoten-na-1944
 identifiers:
   tk_persoon_id: df73a8e4-c1a8-4c04-927d-732864dc4a09
+  wikidata: Q123176051
 name:
   full: Nico Uppelschoten
   family: Uppelschoten
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b88262b0-46c5-4531-a2eb-b4b0a4a9c73b)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(df73a8e4-c1a8-4c04-927d-732864dc4a09)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176051
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:twuijver-fv-7757652
 name:
   full: Floor van Twuijver
   family: Twuijver
-  given: Floor
+  given: Floor van
   initials: F.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7760187
     retrieved: '2026-05-09'
+- id: c8947004-9e14-47f0-99aa-1218fc5bec2b
+  organization_id: org:gemeente-utrecht
+  post_id: post:raadslid-gemeente-utrecht
+  role: Raadslid gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7760187
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7757652
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

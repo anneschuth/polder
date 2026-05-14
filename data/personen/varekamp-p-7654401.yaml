@@ -1,9 +1,13 @@
 id: person:varekamp-p-7654401
+identifiers:
+  wikidata: Q137593137
 name:
   full: Pieter Varekamp
   family: Varekamp
   given: Pieter
   initials: P.
+birth:
+  year: 1942
 mandaten:
 - id: 1aded079-30ba-46ae-9375-c128f78a0f0e
   organization_id: org:gemeente-voorschoten
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7669493
     retrieved: '2026-05-09'
+- id: 9c3dab99-314a-4920-a8f6-4c58d651a6e5
+  organization_id: org:gemeente-voorschoten
+  post_id: post:wethouder-gemeente-voorschoten
+  role: Wethouder gemeente Voorschoten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7669493
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7654401
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q137593137
   retrieved: '2026-05-11'
-birth:
-  year: 1942
-identifiers:
-  wikidata: Q137593137

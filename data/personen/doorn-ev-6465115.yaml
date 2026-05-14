@@ -2,7 +2,7 @@ id: person:doorn-ev-6465115
 name:
   full: E.P.A. van Doorn
   family: Doorn
-  given: E.P.A.
+  given: E.P.A. van
   initials: E.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6465117
     retrieved: '2026-05-09'
+- id: cadafdf2-666c-425a-aa53-583a529753ae
+  organization_id: org:gemeente-vught
+  post_id: post:raadslid-gemeente-vught
+  role: Raadslid gemeente Vught
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6465117
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6465115
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

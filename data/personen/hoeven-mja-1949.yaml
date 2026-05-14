@@ -19,8 +19,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q544127#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2007-02-22'
+- id: 0e9f4a4d-36ed-4553-893f-6e488bf950bb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0abfdd25-459d-49b6-b361-e78196696462)
+    retrieved: '2026-05-13'
 - id: wd-82486ca6c33a
   organization_id: org:min-ezk
   post_id: post:minister-min-ezk
@@ -29,12 +41,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q544127#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-10-14'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6e91bcea-c1c7-4ab4-b4c6-0954e1900ae9)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q544127
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

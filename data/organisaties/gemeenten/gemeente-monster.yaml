@@ -2,6 +2,7 @@ id: org:gemeente-monster
 type: gemeente
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0562
+  wikidata: Q35025189
 classification: gemeente
 parent_id: null
 names:
@@ -10,8 +11,11 @@ names:
   valid_until: '2003-12-31'
 valid_from: '1900-01-01'
 valid_until: '2003-12-31'
-successor_id: org:gemeente-westland
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0562
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q35025189
+  retrieved: '2026-05-13'
+successor_id: org:gemeente-westland

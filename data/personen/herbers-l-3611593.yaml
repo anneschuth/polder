@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3611595
     retrieved: '2026-05-09'
+- id: ec45f037-8421-4e95-834f-a5d604cb539d
+  organization_id: org:gemeente-emmen
+  post_id: post:raadslid-gemeente-emmen
+  role: Raadslid gemeente Emmen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3611595
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3611593
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q23069724
+  retrieved: '2026-05-13'
+birth:
+  year: 1963
+identifiers:
+  wikidata: Q23069724

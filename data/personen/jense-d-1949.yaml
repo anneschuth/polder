@@ -1,0 +1,28 @@
+id: person:jense-d-1949
+identifiers:
+  tk_persoon_id: 06abc4dc-c035-4ad4-aab5-f01bd8c7cab3
+name:
+  full: Dick Jense
+  family: Jense
+  given: Dick
+  initials: D.
+birth:
+  year: 1949
+gender: m
+mandaten:
+- id: 0b8602f8-c318-441e-8659-f49e832e39c6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LN
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f3ac5c4b-b412-44fa-9bf2-3ef684d20fcb)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(06abc4dc-c035-4ad4-aab5-f01bd8c7cab3)
+  retrieved: '2026-05-13'

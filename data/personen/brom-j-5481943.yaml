@@ -1,9 +1,13 @@
 id: person:brom-j-5481943
+identifiers:
+  wikidata: Q19325220
 name:
   full: John Brom
   family: Brom
   given: John
   initials: J.
+birth:
+  year: 1934
 mandaten:
 - id: 5697a12c-37c7-4f7a-a7c4-a96422e957eb
   organization_id: org:gemeente-nijmegen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5481944
     retrieved: '2026-05-09'
+- id: 640f66c8-3bc6-4b86-8308-3e667bda1b9a
+  organization_id: org:gemeente-nijmegen
+  post_id: post:wethouder-gemeente-nijmegen
+  role: Wethouder gemeente Nijmegen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5481944
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481943
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q19325220
   retrieved: '2026-05-11'
-birth:
-  year: 1934
-identifiers:
-  wikidata: Q19325220

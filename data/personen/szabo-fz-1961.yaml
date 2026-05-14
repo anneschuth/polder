@@ -11,6 +11,18 @@ birth:
   year: 1961
 gender: m
 mandaten:
+- id: 5c30282b-8122-45c6-82a4-215c79e97180
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-06-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c6338598-310a-47f5-b463-4fe4f24e8bc9)
+    retrieved: '2026-05-13'
 - id: wd-05a155746c25
   organization_id: org:min-bzk
   post_id: post:staatssecretaris-min-bzk
@@ -19,23 +31,23 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1891886#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22511
-    retrieved: '2026-05-09'
-    fields:
-    - applied_via:apply-staging
+    retrieved: '2026-05-13'
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
     retrieved: '2026-05-12'
     fields:
     - end_date
     - applied_via:close-schoof-script
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22511
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
   end_date: '2025-06-01'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ae84ff71-2c47-4509-9daa-5a4c76981f6a)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1891886
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -1,0 +1,28 @@
+id: person:blaauw-jd-1941
+identifiers:
+  tk_persoon_id: 25c8296b-6481-406b-af8d-a9bb8606104f
+name:
+  full: Jan Blaauw
+  family: Blaauw
+  given: Jan
+  initials: J.D.
+birth:
+  year: 1941
+gender: m
+mandaten:
+- id: 1a1f8656-511e-4c75-9b30-fd88a5bfd168
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-07-26'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7401430e-02dd-4b82-9d8c-2b2b63aefc9a)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(25c8296b-6481-406b-af8d-a9bb8606104f)
+  retrieved: '2026-05-13'

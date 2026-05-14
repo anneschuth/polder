@@ -13,18 +13,30 @@ birth:
   year: 1956
 gender: m
 mandaten:
-- id: 752b0ab2-cd1e-4012-a1a5-9e081009f684
+- id: 9e42e713-3e61-4a0b-a8f0-88589cb455ce
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
   role: Kamerlid voor CDA
-  start_date: '2010-06-17'
-  end_date: '2010-10-13'
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
   appointment:
     decision: TK-installatie
   sources:
   - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e880d52-5222-421f-8512-8a4e0b1f1dfe)
-    retrieved: '2026-05-09'
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dcebaf82-cb2a-44f5-8e34-72543251af65)
+    retrieved: '2026-05-13'
+- id: fa8ffa39-15b5-4582-b960-9df55dd49366
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a597c81d-2967-4546-82d2-6f698e1f0e56)
+    retrieved: '2026-05-13'
 - id: wd-df98787fc182
   organization_id: org:min-bz
   post_id: post:minister-min-bz
@@ -33,7 +45,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q554116#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-10-14'
 - id: wd-d19e4a37e4fa
   organization_id: org:min-bz
@@ -45,6 +57,28 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q554116#P39
     retrieved: '2026-05-09'
   end_date: '2010-10-14'
+- id: wd-d19e4a37e4fa
+  organization_id: org:min-bz
+  post_id: post:minister-zp-ontwikkelingssamenwerking
+  role: Minister voor Ontwikkelingssamenwerking
+  start_date: '2010-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q554116#P39
+    retrieved: '2026-05-13'
+  end_date: '2010-10-14'
+- id: 752b0ab2-cd1e-4012-a1a5-9e081009f684
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-06-17'
+  end_date: '2010-10-13'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e880d52-5222-421f-8512-8a4e0b1f1dfe)
+    retrieved: '2026-05-13'
 - id: wd-270fc4d37285
   organization_id: org:min-ezk
   post_id: post:minister-min-ezk
@@ -53,12 +87,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q554116#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2012-11-05'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fae5c0ff-a1bd-46a9-bd09-69528db0bfb9)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q554116
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

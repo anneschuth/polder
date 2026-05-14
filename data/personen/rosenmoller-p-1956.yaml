@@ -11,6 +11,18 @@ birth:
   year: 1956
 gender: m
 mandaten:
+- id: c4a00c0d-4669-4974-a266-a7852dd4bf0a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '1998-09-14'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(239a0a1d-c322-43b8-97cc-75d3214ad3d8)
+    retrieved: '2026-05-13'
 - id: 955daef7-d458-4bae-8ac2-4b73d4459019
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -22,14 +34,14 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/p_rosenmoller_groenlinks_pvda
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(74662d5d-d07e-4843-b64f-9f9597a5a560)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/p_rosenmoller_groenlinks_pvda
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2120911
   retrieved: '2026-05-09'

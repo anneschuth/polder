@@ -23,10 +23,56 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q2846783#P39
     retrieved: '2026-05-09'
   end_date: '2003-05-27'
+- id: wd-7187b6c057fb
+  organization_id: org:min-jenv
+  post_id: post:minister-zp-vreemdelingenzaken-en-integratie
+  role: Minister voor Vreemdelingenzaken en Integratie
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2846783#P39
+    retrieved: '2026-05-13'
+  end_date: '2003-05-27'
+- id: 50ba4b3c-65d3-402b-93a0-db9fc3e97760
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(59cc7710-e5b6-452a-a587-df60c64b1ad9)
+    retrieved: '2026-05-13'
+- id: 15c53dcf-eb28-473e-bf5f-e034a9dc6178
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2003-05-27'
+  end_date: '2005-06-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(24c07223-32f4-4b60-83b9-0e7dec123471)
+    retrieved: '2026-05-13'
+- id: ac77ec5c-1f45-4ab9-8d07-9a3a6ee90d88
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Nawijn
+  start_date: '2005-06-23'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e213ecf5-bfea-4cd0-85e9-ee943f66ef65)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(dc2f6e9a-325f-409d-ba43-b2a8bb3100ca)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2846783
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

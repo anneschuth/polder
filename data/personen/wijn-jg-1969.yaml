@@ -13,16 +13,6 @@ birth:
   year: 1969
 gender: m
 mandaten:
-- id: wd-fe61dfcbcdb0
-  organization_id: org:min-ezk
-  post_id: post:minister-min-ezk
-  role: Minister van Economische Zaken en Klimaat
-  start_date: '2006-07-07'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q350223#P39
-    retrieved: '2026-05-09'
-  end_date: '2007-02-22'
 - id: wd-07c44f3698e3
   organization_id: org:min-ezk
   post_id: post:staatssecretaris-min-ezk
@@ -31,7 +21,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q350223#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2003-05-27'
 - id: wd-4c272015b88c
   organization_id: org:min-fin
@@ -41,12 +31,34 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q350223#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2006-07-07'
+- id: wd-fe61dfcbcdb0
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2006-07-07'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q350223#P39
+    retrieved: '2026-05-13'
+  end_date: '2007-02-22'
+- id: 3ad7aaa7-c197-4b16-b918-b3a2bdad4e3f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(11dc5274-8efa-4cb2-bebf-bf8689a6bf5f)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(462182c9-d552-4406-b85a-246c2b5d0e79)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q350223
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

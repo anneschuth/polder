@@ -1,9 +1,13 @@
 id: person:meijer-r-5471672
+identifiers:
+  wikidata: Q22237138
 name:
   full: Rik Meijer
   family: Meijer
   given: Rik
   initials: R.
+birth:
+  year: 1963
 mandaten:
 - id: 9a7d18db-89f2-4628-9e01-782a348b18cb
   organization_id: org:gemeente-nijkerk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5471673
     retrieved: '2026-05-09'
+- id: c7056292-75ad-4b54-a0df-cfb40b684f4d
+  organization_id: org:gemeente-nijkerk
+  post_id: post:raadslid-gemeente-nijkerk
+  role: Raadslid gemeente Nijkerk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5471673
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5471672
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q22237138
   retrieved: '2026-05-11'
-birth:
-  year: 1963
-identifiers:
-  wikidata: Q22237138

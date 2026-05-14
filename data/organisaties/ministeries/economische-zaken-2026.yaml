@@ -2,6 +2,9 @@ id: org:min-economische-zaken-2026
 type: ministerie
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/hv_22300580
+  wikidata: Q2986560
+  oin: 00000001003214369000
+  kvk: '52813150'
 classification: ministerie
 parent_id: null
 names:
@@ -11,10 +14,18 @@ names:
   valid_until: '2026-02-22'
 valid_from: '2024-07-02'
 valid_until: '2026-02-22'
-successor_id: org:min-ezk
-predecessor_id:
-- org:min-economische-zaken-en-klimaat-2024
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/hv_22300580
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2986560
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin
+successor_id: org:min-ezk
+predecessor_id:
+- org:min-economische-zaken-en-klimaat-2024

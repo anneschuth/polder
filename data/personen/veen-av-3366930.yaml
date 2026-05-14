@@ -2,7 +2,7 @@ id: person:veen-av-3366930
 name:
   full: A.N. van Veen
   family: Veen
-  given: A.N.
+  given: A.N. van
   initials: A.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366932
     retrieved: '2026-05-09'
+- id: d766e05d-90d1-4f63-9020-d885ada0b4e8
+  organization_id: org:gemeente-diemen
+  post_id: post:raadslid-gemeente-diemen
+  role: Raadslid gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3366932
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366930
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

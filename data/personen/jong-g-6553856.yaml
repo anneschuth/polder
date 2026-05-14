@@ -1,9 +1,13 @@
 id: person:jong-g-6553856
+identifiers:
+  wikidata: Q5549159
 name:
   full: Geert de Jong
   family: de Jong
   given: Geert
   initials: G.
+birth:
+  year: 1951
 mandaten:
 - id: 48ee92e5-0c12-45a2-8c85-096e2601347d
   organization_id: org:gemeente-westerkwartier
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553858
     retrieved: '2026-05-09'
+- id: e0c8be0e-e817-4ba2-8024-7ad87405ee43
+  organization_id: org:gemeente-westerkwartier
+  post_id: post:raadslid-gemeente-westerkwartier
+  role: Raadslid gemeente Westerkwartier
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553858
+    retrieved: '2026-05-13'
+- id: ecf60abc-26e0-4b0f-9f43-48ab78a87457
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553858
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553856
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q5549159
   retrieved: '2026-05-11'
-birth:
-  year: 1951
-identifiers:
-  wikidata: Q5549159

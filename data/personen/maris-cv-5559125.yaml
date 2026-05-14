@@ -2,7 +2,7 @@ id: person:maris-cv-5559125
 name:
   full: Chris van Maris
   family: Maris
-  given: Chris
+  given: Chris van
   initials: C.V.
   tussenvoegsel: van
 mandaten:
@@ -26,7 +26,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5559127
     retrieved: '2026-05-09'
+- id: 6df87c3d-538b-4ebf-bd59-e7f49676f02f
+  organization_id: org:gemeente-noord
+  post_id: post:raadslid-gemeente-noord
+  role: Raadslid gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559127
+    retrieved: '2026-05-13'
+- id: b895577f-bec1-4d05-9a61-58af85eceab9
+  organization_id: org:gemeente-noordwijk
+  post_id: post:raadslid-gemeente-noordwijk
+  role: Raadslid gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559127
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559125
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

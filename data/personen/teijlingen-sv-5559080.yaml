@@ -2,7 +2,7 @@ id: person:teijlingen-sv-5559080
 name:
   full: Suzanne van Teijlingen
   family: Teijlingen
-  given: Suzanne
+  given: Suzanne van
   initials: S.V.
   tussenvoegsel: van
 mandaten:
@@ -26,7 +26,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5559082
     retrieved: '2026-05-09'
+- id: dc80a801-2fa2-4f05-a7a1-732a6d9832cf
+  organization_id: org:gemeente-noord
+  post_id: post:raadslid-gemeente-noord
+  role: Raadslid gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559082
+    retrieved: '2026-05-13'
+- id: 19d62f94-3c58-4a16-8800-5a0726aedf0b
+  organization_id: org:gemeente-noordwijk
+  post_id: post:raadslid-gemeente-noordwijk
+  role: Raadslid gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559082
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559080
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

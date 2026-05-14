@@ -2,7 +2,7 @@ id: person:ven-hvd-5604618
 name:
   full: Hans van de Ven
   family: Ven
-  given: Hans
+  given: Hans van de
   initials: H.V.D.
   tussenvoegsel: van de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5604620
     retrieved: '2026-05-09'
+- id: 5f2dc4cf-7762-4120-838c-26c3b51910af
+  organization_id: org:gemeente-oirschot
+  post_id: post:raadslid-gemeente-oirschot
+  role: Raadslid gemeente Oirschot
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5604620
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5604618
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -22,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(21a5d06c-2dc7-417a-970b-6e3fe0c4c6a3)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: fc5fc226-022f-4499-971f-5b6e5d916237
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2026-05-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0d063a43-f6fc-4b8c-aeff-9255c0040966)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(afc7a846-0edb-4172-a6ac-f924caf1b69b)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q123175905
   retrieved: '2026-05-09'

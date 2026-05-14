@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3580351
     retrieved: '2026-05-09'
+- id: 0436f11e-cc80-4c83-9a54-4b4480cc757c
+  organization_id: org:gemeente-elburg
+  post_id: post:burgemeester-gemeente-elburg
+  role: Burgemeester gemeente Elburg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3580351
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3580349
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q47079673
+  retrieved: '2026-05-13'
+birth:
+  year: 1977
+identifiers:
+  wikidata: Q47079673

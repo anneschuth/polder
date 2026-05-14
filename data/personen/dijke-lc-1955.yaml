@@ -1,0 +1,28 @@
+id: person:dijke-lc-1955
+identifiers:
+  tk_persoon_id: be68a5ae-5b1f-43d0-9397-87ba631502ec
+name:
+  full: Leen van Dijke
+  family: van Dijke
+  given: Leen
+  initials: L.C.
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: a7624b08-cba1-419f-a30e-57568a075d08
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2001-03-13'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c9f0093e-52ff-4652-a3a1-13311b3fec57)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(be68a5ae-5b1f-43d0-9397-87ba631502ec)
+  retrieved: '2026-05-13'

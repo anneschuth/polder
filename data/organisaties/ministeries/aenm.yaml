@@ -11,17 +11,20 @@ parent_id: null
 names:
 - value: Asiel en Migratie
   abbr: AenM
+  valid_from: '1900-01-01'
+  valid_until: '2026-02-23'
+- value: Asiel en Migratie
+  abbr: AenM
   valid_from: '2024-07-02'
   valid_until: '2026-02-23'
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-asiel-en-migratie
-valid_from: '2024-07-02'
+valid_from: '1900-01-01'
 valid_until: '2026-02-23'
-successor_id: org:min-jenv
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/29481986/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q127256306
   retrieved: '2026-05-09'
@@ -33,3 +36,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1162
   retrieved: '2026-05-09'
+successor_id: org:min-jenv

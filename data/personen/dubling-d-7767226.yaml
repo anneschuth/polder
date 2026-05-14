@@ -1,9 +1,13 @@
 id: person:dubling-d-7767226
+identifiers:
+  wikidata: Q7815663
 name:
   full: D. Dubling
   family: Dubling
   given: D.
   initials: D.
+birth:
+  year: 1930
 mandaten:
 - id: ed297170-8ca2-47ef-8113-dffd1a096564
   organization_id: org:gemeente-weststellingwerf
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767227
     retrieved: '2026-05-09'
+- id: b57a5277-238f-4402-982c-d57604eb4dfa
+  organization_id: org:gemeente-weststellingwerf
+  post_id: post:raadslid-gemeente-weststellingwerf
+  role: Raadslid gemeente Weststellingwerf
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767227
+    retrieved: '2026-05-13'
+- id: f6c44aa0-d7cb-4cb2-84c9-8d694e4d7d57
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767227
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767226
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q7815663
   retrieved: '2026-05-11'
-birth:
-  year: 1930
-identifiers:
-  wikidata: Q7815663

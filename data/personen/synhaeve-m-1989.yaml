@@ -11,18 +11,6 @@ birth:
   year: 1989
 gender: f
 mandaten:
-- id: ed3fb68f-b461-4509-897f-653ad245dec6
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor D66
-  start_date: '2025-11-12'
-  end_date: null
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(08009167-8108-418d-bc65-8c3b72e73405)
-    retrieved: '2026-05-09'
 - id: 0fbb5481-85f0-42b0-b535-8c89380236ba
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a9d73042-e03a-4eb3-aed7-b009f162e7a5)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: ed3fb68f-b461-4509-897f-653ad245dec6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2025-11-12'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(08009167-8108-418d-bc65-8c3b72e73405)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(14642402-bfc5-4471-9246-7fb6742a35e8)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q123175965
   retrieved: '2026-05-09'

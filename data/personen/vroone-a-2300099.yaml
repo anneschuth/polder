@@ -3,7 +3,7 @@ name:
   full: Beau Vroone
   family: Vroone
   given: Beau
-  initials: B.
+  initials: A.
 mandaten:
 - id: 28398991-a10f-4e34-bb3b-571b9dcd11e2
   organization_id: org:gemeente-arnhem
@@ -15,7 +15,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2300101
     retrieved: '2026-05-09'
+- id: c599d168-e3d4-4f26-904b-9e3e6b92b3b0
+  organization_id: org:gemeente-arnhem
+  post_id: post:raadslid-gemeente-arnhem
+  role: Raadslid gemeente Arnhem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2300101
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2300099
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

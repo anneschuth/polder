@@ -1,0 +1,23 @@
+id: org:onderdeel-maastricht
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132357'
+  oin: '00000001001737442000'
+  kvk: '51488744'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0935
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Maastricht
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132357/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

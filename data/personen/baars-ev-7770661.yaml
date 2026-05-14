@@ -2,7 +2,7 @@ id: person:baars-ev-7770661
 name:
   full: Edo van Baars
   family: Baars
-  given: Edo
+  given: Edo van
   initials: E.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770662
     retrieved: '2026-05-09'
+- id: 199241cd-9416-4afc-b3c5-5dc72a157a1c
+  organization_id: org:gemeente-nijmegen
+  post_id: post:raadslid-gemeente-nijmegen
+  role: Raadslid gemeente Nijmegen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7770662
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7770661
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

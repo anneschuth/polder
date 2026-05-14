@@ -2,7 +2,7 @@ id: person:hoof-mv-5481838
 name:
   full: Michiel van Hoof
   family: Hoof
-  given: Michiel
+  given: Michiel van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5481840
     retrieved: '2026-05-09'
+- id: 7dfa232e-8b09-4feb-8658-1932690651b9
+  organization_id: org:gemeente-nijmegen
+  post_id: post:raadslid-gemeente-nijmegen
+  role: Raadslid gemeente Nijmegen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5481840
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481838
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -1,0 +1,28 @@
+id: person:schultz-haegen-mh-1970
+identifiers:
+  tk_persoon_id: 7d18cd31-fc19-4020-a60f-b136526f9e5f
+name:
+  full: Melanie Schultz van Haegen
+  family: Schultz van Haegen
+  given: Melanie
+  initials: M.H.
+birth:
+  year: 1970
+gender: f
+mandaten:
+- id: f30bf101-6240-46f9-bdbb-e3686b07bf4b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cda17824-c7e5-489e-a31a-33bd1019c2c2)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7d18cd31-fc19-4020-a60f-b136526f9e5f)
+  retrieved: '2026-05-13'

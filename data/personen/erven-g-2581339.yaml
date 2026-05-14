@@ -1,9 +1,13 @@
 id: person:erven-g-2581339
+identifiers:
+  wikidata: Q2050420
 name:
   full: G. Erven
   family: Erven
   given: G.
   initials: G.
+birth:
+  year: 1944
 mandaten:
 - id: 514d700d-6197-4b4c-86d8-67e146212c6b
   organization_id: org:gemeente-beek
@@ -21,14 +25,20 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 5a45d439-e1c1-4b11-8c60-7fbc8d6a0776
+  organization_id: org:gemeente-beek
+  post_id: post:griffier-gemeente-beek
+  role: Griffier gemeente Beek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2581341
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2581339
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2050420
   retrieved: '2026-05-11'
-birth:
-  year: 1944
-identifiers:
-  wikidata: Q2050420

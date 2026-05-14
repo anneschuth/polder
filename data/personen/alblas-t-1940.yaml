@@ -1,0 +1,28 @@
+id: person:alblas-t-1940
+identifiers:
+  tk_persoon_id: 0357e8c8-13c1-48eb-b64f-0e0635d299ab
+name:
+  full: Tonny Alblas
+  family: Alblas
+  given: Tonny
+  initials: T.
+birth:
+  year: 1940
+gender: m
+mandaten:
+- id: a7ee4906-e459-4e77-99c1-8964a56a1498
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f631ff6c-0524-467d-a833-364b7eb1b910)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0357e8c8-13c1-48eb-b64f-0e0635d299ab)
+  retrieved: '2026-05-13'

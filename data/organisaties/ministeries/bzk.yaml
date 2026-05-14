@@ -11,19 +11,21 @@ parent_id: null
 names:
 - value: Binnenlandse Zaken en Koninkrijksrelaties
   abbr: BZK
+  valid_from: '1900-01-01'
+  valid_until: '2022-07-01'
+- value: Binnenlandse Zaken en Koninkrijksrelaties
+  abbr: BZK
   valid_from: '2022-07-01'
   valid_until: null
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties
   email: contactpersoonwoo@minbzk.nl
-valid_from: '2022-07-01'
-valid_until: null
-predecessor_id:
-- org:min-vro
+valid_from: '1900-01-01'
+valid_until: '2022-07-01'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/9632/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2491421
   retrieved: '2026-05-09'
@@ -35,3 +37,5 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
   retrieved: '2026-05-09'
+predecessor_id:
+- org:min-vro

@@ -13,6 +13,18 @@ birth:
   year: 1958
 gender: m
 mandaten:
+- id: 49c8a010-8f4a-4ec7-83f7-1f1e57b99e33
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1997-11-11'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a10db1b5-ef94-4dfd-be5e-1484cfa04008)
+    retrieved: '2026-05-13'
 - id: wd-934e1dfe9963
   organization_id: org:min-bz
   post_id: post:minister-os-min-bz
@@ -23,6 +35,16 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q3023616#P39
     retrieved: '2026-05-09'
   end_date: '2010-02-23'
+- id: wd-934e1dfe9963
+  organization_id: org:min-bz
+  post_id: post:minister-zp-ontwikkelingssamenwerking
+  role: Minister voor Ontwikkelingssamenwerking
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q3023616#P39
+    retrieved: '2026-05-13'
+  end_date: '2010-02-23'
 - id: wd-2b0fa859afea
   organization_id: org:min-bz
   post_id: post:minister-min-bz
@@ -31,12 +53,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q3023616#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2017-10-26'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(bd57935a-842e-497d-9f6f-e74bc61836a0)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3023616
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

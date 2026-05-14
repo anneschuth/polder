@@ -11,6 +11,16 @@ birth:
   year: 1975
 gender: m
 mandaten:
+- id: wd-e787383778f8
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Minister van Financiën
+  start_date: '2017-10-26'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q14520235#P39
+    retrieved: '2026-05-13'
+  end_date: '2022-01-10'
 - id: 62d2a965-d111-435c-8963-1b4557741197
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,7 +32,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3f96533c-d497-4296-b17d-e76626e4f37b)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: wd-53359a3563ce
   organization_id: org:min-bz
   post_id: post:minister-min-bz
@@ -31,22 +41,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q14520235#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2023-09-01'
-- id: wd-e787383778f8
-  organization_id: org:min-fin
-  post_id: post:minister-min-fin
-  role: Minister van Financiën
-  start_date: '2017-10-26'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q14520235#P39
-    retrieved: '2026-05-09'
-  end_date: '2022-01-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(bf8eb79e-5034-4882-a4c5-413baba477d5)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q14520235
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

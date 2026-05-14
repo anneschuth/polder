@@ -2,7 +2,7 @@ id: person:klaauw-mvd-7280446
 name:
   full: M.D. van der Klaauw
   family: Klaauw
-  given: M.D.
+  given: M.D. van der
   initials: M.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7280447
     retrieved: '2026-05-09'
+- id: 93d5cb01-67e9-404f-bf58-2e3c1e1ba6c5
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7280447
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7280446
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

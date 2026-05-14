@@ -1,9 +1,13 @@
 id: person:bijvoet-d-7775625
+identifiers:
+  wikidata: Q2282298
 name:
   full: D. Bijvoet
   family: Bijvoet
   given: D.
   initials: D.
+birth:
+  year: 1966
 mandaten:
 - id: 6ea962d5-014c-4211-8a28-f6df977abfc5
   organization_id: org:gemeente-culemborg
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7775626
     retrieved: '2026-05-09'
+- id: 60c863e2-1485-4b9c-bba7-6cc56f169d5d
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7775626
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7775625
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2282298
   retrieved: '2026-05-11'
-birth:
-  year: 1966
-identifiers:
-  wikidata: Q2282298

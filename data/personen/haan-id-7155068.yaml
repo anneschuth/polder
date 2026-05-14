@@ -2,7 +2,7 @@ id: person:haan-id-7155068
 name:
   full: Ilse  de Haan
   family: Haan
-  given: Ilse
+  given: Ilse  de
   initials: I.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7701029
     retrieved: '2026-05-09'
+- id: 008b230e-3142-4154-a940-7f485759dd89
+  organization_id: org:gemeente-elburg
+  post_id: post:griffier-gemeente-elburg
+  role: Griffier gemeente Elburg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7701029
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7155068
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

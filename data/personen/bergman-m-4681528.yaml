@@ -1,9 +1,13 @@
 id: person:bergman-m-4681528
+identifiers:
+  wikidata: Q2533208
 name:
   full: M.J.A. Bergman
   family: Bergman
   given: M.J.A.
   initials: M.
+birth:
+  year: 1945
 mandaten:
 - id: 976f50ec-6ee3-49ef-998c-bb50df3a7d87
   organization_id: org:gemeente-laarbeek
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7174504
     retrieved: '2026-05-09'
+- id: 70f3bcca-e154-4820-92cc-70865fd7877f
+  organization_id: org:gemeente-laarbeek
+  post_id: post:raadslid-gemeente-laarbeek
+  role: Raadslid gemeente Laarbeek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7174504
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4681528
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2533208
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:schaaf-nvd-6781337
 name:
   full: Niels van der Schaaf
   family: Schaaf
-  given: Niels
+  given: Niels van der
   initials: N.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781339
     retrieved: '2026-05-09'
+- id: 2b3fa9df-0d32-4f13-a4b2-8f109d085175
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781339
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781337
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

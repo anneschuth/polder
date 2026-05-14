@@ -1,0 +1,30 @@
+id: person:verbugt-pjl-1957
+identifiers:
+  tk_persoon_id: ebda115e-15b1-4491-a8b9-1ff307201b95
+name:
+  full: Nelly Verbugt
+  family: Verbugt
+  given: Nelly
+  initials: P.J.L.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1957
+gender: f
+mandaten:
+- id: a0d83776-ac89-4ef5-b6d0-288d5414376b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-07-26'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4c029cd4-7397-4d99-a751-1c5e150ee70d)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ebda115e-15b1-4491-a8b9-1ff307201b95)
+  retrieved: '2026-05-13'

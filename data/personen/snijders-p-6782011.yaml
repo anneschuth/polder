@@ -1,9 +1,13 @@
 id: person:snijders-p-6782011
+identifiers:
+  wikidata: Q2848444
 name:
   full: Peter Snijders
   family: Snijders
   given: Peter
   initials: P.
+birth:
+  year: 1937
 mandaten:
 - id: 08d7dcb3-a4f0-4a9b-a275-f8fbc2532e3d
   organization_id: org:gemeente-zwolle
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7215744
     retrieved: '2026-05-09'
+- id: 0edaec18-ba2a-4d56-b4ed-a66c71010169
+  organization_id: org:gemeente-zwolle
+  post_id: post:burgemeester-gemeente-zwolle
+  role: Burgemeester gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7215744
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6782011
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2848444
   retrieved: '2026-05-11'
-birth:
-  year: 1937
-identifiers:
-  wikidata: Q2848444

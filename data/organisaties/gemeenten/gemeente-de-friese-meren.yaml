@@ -2,6 +2,7 @@ id: org:gemeente-de-friese-meren
 type: gemeente
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1921
+  wikidata: Q2114866
 classification: gemeente
 parent_id: null
 names:
@@ -10,11 +11,14 @@ names:
   valid_until: '2015-06-30'
 valid_from: '2014-01-01'
 valid_until: '2015-06-30'
-predecessor_id:
-- org:gemeente-gaasterlan-sleat
-- org:gemeente-lemsterland
-- org:gemeente-skarsterlan
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm1921
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2114866
+  retrieved: '2026-05-13'
+predecessor_id:
+- org:gemeente-gaasterlan-sleat
+- org:gemeente-lemsterland
+- org:gemeente-skarsterlan

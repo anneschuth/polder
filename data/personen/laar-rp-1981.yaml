@@ -1,6 +1,7 @@
 id: person:laar-rp-1981
 identifiers:
   tk_persoon_id: 0c33030f-88e2-44c8-803d-6dd7c58c1378
+  wikidata: Q13786091
 name:
   full: Roelof van Laar
   family: van Laar
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dd68284e-e69f-4352-9365-6dba7f8bab22)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0c33030f-88e2-44c8-803d-6dd7c58c1378)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q13786091
+  retrieved: '2026-05-13'

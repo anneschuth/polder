@@ -13,6 +13,50 @@ birth:
   year: 1960
 gender: m
 mandaten:
+- id: 7162e78c-a8d0-4bb7-9627-f05685ac57d0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1998-05-19'
+  end_date: '2002-07-21'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c32e855e-058a-46ba-9caf-9828ee41dea1)
+    retrieved: '2026-05-13'
+- id: wd-0a6d3de36956
+  organization_id: org:min-bz
+  post_id: post:staatssecretaris-europese-zaken-min-bz
+  role: staatssecretaris van Buitenlandse Zaken
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2287217#P39
+    retrieved: '2026-05-09'
+  end_date: '2006-07-07'
+- id: wd-0a6d3de36956
+  organization_id: org:min-bz
+  post_id: post:staatssecretaris-min-bz
+  role: staatssecretaris van Buitenlandse Zaken
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2287217#P39
+    retrieved: '2026-05-13'
+  end_date: '2006-07-07'
+- id: f0ef7c84-2211-425a-bba3-8538908ce74b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a99fa955-870c-4829-b2d2-213e44277e09)
+    retrieved: '2026-05-13'
 - id: aa167e81-8a65-4b01-ab70-2c90e087e0d4
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,21 +68,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a383cd40-aa4d-4b45-8bb9-3e774c636685)
-    retrieved: '2026-05-09'
-- id: wd-0a6d3de36956
-  organization_id: org:min-bz
-  post_id: post:staatssecretaris-europese-zaken-min-bz
-  role: staatssecretaris van Buitenlandse Zaken
-  start_date: '2002-07-22'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q2287217#P39
-    retrieved: '2026-05-09'
-  end_date: '2006-07-07'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5cb04ec8-d8e1-4ed5-a248-2b0dd57683e1)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2287217
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

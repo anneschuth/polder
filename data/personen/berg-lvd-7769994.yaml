@@ -1,10 +1,14 @@
 id: person:berg-lvd-7769994
+identifiers:
+  wikidata: Q16438923
 name:
   full: Lisa van den Berg
   family: Berg
-  given: Lisa
+  given: Lisa van den
   initials: L.V.D.
   tussenvoegsel: van den
+birth:
+  year: 1978
 mandaten:
 - id: 4de6a74f-2257-447c-a9cc-ef174311a179
   organization_id: org:gemeente-gouda
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769995
     retrieved: '2026-05-09'
+- id: a41bda78-89ba-4be0-83b5-c5014ed5b1d3
+  organization_id: org:gemeente-gouda
+  post_id: post:raadslid-gemeente-gouda
+  role: Raadslid gemeente Gouda
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769995
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769994
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q16438923
   retrieved: '2026-05-11'
-birth:
-  year: 1978
-identifiers:
-  wikidata: Q16438923

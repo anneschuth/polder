@@ -1,9 +1,13 @@
 id: person:brouwer-r-5559007
+identifiers:
+  wikidata: Q124815709
 name:
   full: R. Brouwer
   family: Brouwer
   given: R.
   initials: R.
+birth:
+  year: 1935
 mandaten:
 - id: 9cf4a699-81d0-481e-a11a-2eca4aa4a6c8
   organization_id: org:gemeente-noordwijk
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5559009
     retrieved: '2026-05-09'
+- id: 01559693-0746-4d64-83c6-70d695a806ca
+  organization_id: org:gemeente-noord
+  post_id: post:raadslid-gemeente-noord
+  role: Raadslid gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559009
+    retrieved: '2026-05-13'
+- id: 0e7b3e66-9f31-4f09-9654-c7302791bf91
+  organization_id: org:gemeente-noordwijk
+  post_id: post:raadslid-gemeente-noordwijk
+  role: Raadslid gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559009
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559007
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q124815709
   retrieved: '2026-05-11'
-birth:
-  year: 1935
-identifiers:
-  wikidata: Q124815709

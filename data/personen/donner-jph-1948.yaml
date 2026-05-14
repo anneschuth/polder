@@ -13,16 +13,6 @@ birth:
   year: 1948
 gender: m
 mandaten:
-- id: wd-acd1e4732cf6
-  organization_id: org:min-bzk
-  post_id: post:minister-min-bzk
-  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
-  start_date: '2010-10-14'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q983081#P39
-    retrieved: '2026-05-09'
-  end_date: '2011-12-16'
 - id: wd-c0f199c8ecee
   organization_id: org:min-jenv
   post_id: post:minister-min-jenv
@@ -31,8 +21,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q983081#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2006-09-21'
+- id: cc52fd69-6bef-4cda-bf3a-be8a5ef66d8f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f2a48830-bdf1-41f1-acff-727704d923e8)
+    retrieved: '2026-05-13'
 - id: wd-0c0ccd215548
   organization_id: org:min-szw
   post_id: post:minister-min-szw
@@ -41,12 +43,22 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q983081#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-10-14'
+- id: wd-acd1e4732cf6
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2010-10-14'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q983081#P39
+    retrieved: '2026-05-13'
+  end_date: '2011-12-16'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(00e0e3d2-57b8-4775-84e4-49d18c017841)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q983081
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

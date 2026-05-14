@@ -2,7 +2,7 @@ id: person:moorsel-bv-7758723
 name:
   full: B.  van Moorsel
   family: Moorsel
-  given: B.
+  given: B.  van
   initials: B.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758724
     retrieved: '2026-05-09'
+- id: 686604ac-5918-491c-8ab1-8a5eca6d1e81
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7758724
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7758723
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

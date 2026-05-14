@@ -1,0 +1,30 @@
+id: person:hermans-mjlm-1974
+identifiers:
+  tk_persoon_id: 000e2d6c-bb18-4736-b669-91a3a28af99c
+name:
+  full: Max Hermans
+  family: Hermans
+  given: Max
+  initials: M.J.L.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1974
+gender: m
+mandaten:
+- id: f921c556-7f01-448e-8656-adf8d87b0e33
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a424ad60-72eb-4ba1-8130-77cdf7c1574e)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(000e2d6c-bb18-4736-b669-91a3a28af99c)
+  retrieved: '2026-05-13'

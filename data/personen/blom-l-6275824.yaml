@@ -1,9 +1,13 @@
 id: person:blom-l-6275824
+identifiers:
+  wikidata: Q136469539
 name:
   full: Leo Blom
   family: Blom
   given: Leo
   initials: L.
+birth:
+  year: 1929
 mandaten:
 - id: 56781ae6-aad9-4927-a971-4ba0ee56052a
   organization_id: org:gemeente-teylingen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6275826
     retrieved: '2026-05-09'
+- id: 0999c188-39e9-4f4f-b6ed-fcf4ba5563a6
+  organization_id: org:gemeente-teylingen
+  post_id: post:raadslid-gemeente-teylingen
+  role: Raadslid gemeente Teylingen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6275826
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6275824
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q136469539
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q136469539

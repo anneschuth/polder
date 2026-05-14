@@ -1,0 +1,30 @@
+id: person:kortenhorst-jthm-1961
+identifiers:
+  tk_persoon_id: 73e29045-f580-43b3-9902-5f8fec109591
+name:
+  full: Jules Kortenhorst
+  family: Kortenhorst
+  given: Jules
+  initials: J.T.H.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: d84b17e6-d0e7-4b75-b7d4-32697ea6d686
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2008-01-23'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(19d973d5-b5e4-403d-9d7a-f65fff746611)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(73e29045-f580-43b3-9902-5f8fec109591)
+  retrieved: '2026-05-13'

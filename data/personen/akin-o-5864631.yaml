@@ -1,9 +1,13 @@
 id: person:akin-o-5864631
+identifiers:
+  wikidata: Q19664942
 name:
   full: O. Akin
   family: Akin
   given: O.
   initials: O.
+birth:
+  year: 1934
 mandaten:
 - id: eef9607d-1429-4a41-9df6-adde554968a6
   organization_id: org:gemeente-oss
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864633
     retrieved: '2026-05-09'
+- id: aaa930a2-3e8f-4d77-8cc9-e8b4e82f37dd
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864633
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864631
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q19664942
   retrieved: '2026-05-11'
-birth:
-  year: 1934
-identifiers:
-  wikidata: Q19664942

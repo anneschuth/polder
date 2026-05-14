@@ -2,7 +2,7 @@ id: person:haas-rd-5200092
 name:
   full: Ronny de Haas
   family: Haas
-  given: Ronny
+  given: Ronny de
   initials: R.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5200093
     retrieved: '2026-05-09'
+- id: 778eebbd-e9c3-4181-961a-dfbaadd640ff
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5200093
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5200092
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -11,6 +11,62 @@ birth:
   year: 1952
 gender: m
 mandaten:
+- id: wd-1d65dcc49535
+  organization_id: org:min-vro
+  post_id: post:minister-min-vro
+  role: Minister van Volkshuisvesting, Ruimtelijke Ordening en Milieu
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q732818#P39
+    retrieved: '2026-05-13'
+  end_date: '2003-05-27'
+- id: wd-7ad7b3ff2b4f
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Minister van Defensie
+  start_date: '2002-12-12'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q732818#P39
+    retrieved: '2026-05-13'
+  end_date: '2007-02-22'
+- id: 0b6b2d58-9b11-4c36-8c6f-bf5580bf4558
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(26c49261-ee90-4188-8078-d4a51deb9e87)
+    retrieved: '2026-05-13'
+- id: 3de775ca-29cc-45a9-87ee-e7252f7fa574
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-11-30'
+  end_date: '2003-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e52083a-7272-4e8c-a06d-5ef2a60cd2d0)
+    retrieved: '2026-05-13'
+- id: 306cfddf-4675-4a95-bafd-696eea7e609a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2007-02-23'
+  end_date: '2003-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(210218a5-d4a2-47de-a9d0-6d52af987555)
+    retrieved: '2026-05-13'
 - id: wd-56cf1cb8d046
   organization_id: org:min-szw
   post_id: post:minister-min-szw
@@ -19,7 +75,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q732818#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2012-11-05'
 - id: wd-046537452eb7
   organization_id: org:min-ezk
@@ -29,18 +85,8 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q732818#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2017-10-26'
-- id: wd-7ad7b3ff2b4f
-  organization_id: org:min-def
-  post_id: post:minister-min-def
-  role: Minister van Defensie
-  start_date: '2002-12-12'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q732818#P39
-    retrieved: '2026-05-09'
-  end_date: '2007-02-22'
 - id: wd-135541dd0afc
   organization_id: org:min-def
   post_id: post:minister-min-def
@@ -49,22 +95,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q732818#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2022-01-10'
-- id: wd-1d65dcc49535
-  organization_id: org:min-vro
-  post_id: post:minister-min-vro
-  role: Minister van Volkshuisvesting, Ruimtelijke Ordening en Milieu
-  start_date: '2002-07-22'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q732818#P39
-    retrieved: '2026-05-09'
-  end_date: '2003-05-27'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(106805cc-d387-4481-b068-825dc0d6de44)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q732818
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

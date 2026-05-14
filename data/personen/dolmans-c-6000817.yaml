@@ -1,9 +1,13 @@
 id: person:dolmans-c-6000817
+identifiers:
+  wikidata: Q121526194
 name:
   full: C. Dolmans
   family: Dolmans
   given: C.
   initials: C.
+birth:
+  year: 1955
 mandaten:
 - id: 30097752-ac83-4d4a-b35e-79d6bef65c27
   organization_id: org:gemeente-rijswijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000819
     retrieved: '2026-05-09'
+- id: 503c22bc-eefa-4532-bf39-bd6bb898f5d6
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6000819
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000817
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q121526194
   retrieved: '2026-05-11'
-birth:
-  year: 1955
-identifiers:
-  wikidata: Q121526194

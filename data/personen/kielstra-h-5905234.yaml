@@ -1,8 +1,8 @@
 id: person:kielstra-h-5905234
 name:
-  full: H.J. Kielstra
+  full: Hans Kielstra
   family: Kielstra
-  given: H.J.
+  given: Hans
   initials: H.
 mandaten:
 - id: 6d65f6b2-b8ab-44ee-ba3c-080c0444bf0a
@@ -15,7 +15,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5905236
     retrieved: '2026-05-09'
+- id: 3b29aec5-8656-4b75-b089-32f124df54e2
+  organization_id: org:gemeente-overbetuwe
+  post_id: post:raadslid-gemeente-overbetuwe
+  role: Raadslid gemeente Overbetuwe
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5905236
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5905234
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

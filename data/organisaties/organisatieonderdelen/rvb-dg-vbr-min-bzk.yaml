@@ -1,5 +1,9 @@
 id: org:onderdeel-rvb-min-bzk
 type: organisatieonderdeel
+identifiers:
+  oin: 00000001856305765000
+  kvk: '65890604'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10124
 classification: organisatieonderdeel
 parent_id: org:onderdeel-dg-vbr-min-bzk
 names:
@@ -16,3 +20,8 @@ sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/evert-galama-afdelingshoofd-en-kwartiermaker-planning-werkvoorbereiding-en-administratie-bij-het-rijksvastgoedbedrijf
   retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

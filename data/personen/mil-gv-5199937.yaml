@@ -2,7 +2,7 @@ id: person:mil-gv-5199937
 name:
   full: Gerard van Mil
   family: Mil
-  given: Gerard
+  given: Gerard van
   initials: G.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199939
     retrieved: '2026-05-09'
+- id: 04e985a3-2f73-4722-913f-45ec08c93a28
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199939
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199937
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

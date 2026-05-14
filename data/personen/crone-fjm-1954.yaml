@@ -12,6 +12,18 @@ birth:
   year: 1954
 gender: m
 mandaten:
+- id: 94a2fca4-66d3-4250-8606-c6e49cb4fe35
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1994-05-17'
+  end_date: '2007-11-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2127c287-02c3-4c3b-a47a-b00966d16b49)
+    retrieved: '2026-05-13'
 - id: 5dcac5cb-7bbd-4a8c-801b-04a9bb929c21
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -23,11 +35,11 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/drs_f_j_m_crone_groenlinks_pvda
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(63b667df-670a-46eb-a70e-533c70656ac1)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/drs_f_j_m_crone_groenlinks_pvda
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

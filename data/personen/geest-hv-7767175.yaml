@@ -1,10 +1,14 @@
 id: person:geest-hv-7767175
+identifiers:
+  wikidata: Q96950281
 name:
   full: Henk van Geest
   family: Geest
-  given: Henk
+  given: Henk van
   initials: H.V.
   tussenvoegsel: van
+birth:
+  year: 1952
 mandaten:
 - id: 6ef496bc-edbc-44ca-94b2-7debe65efdf0
   organization_id: org:gemeente-westland
@@ -26,14 +30,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767176
     retrieved: '2026-05-09'
+- id: 2050be80-0545-49bb-874b-5b8553405199
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767176
+    retrieved: '2026-05-13'
+- id: 682e09a4-879a-4270-8e34-e0a4db1528bc
+  organization_id: org:gemeente-westland
+  post_id: post:raadslid-gemeente-westland
+  role: Raadslid gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767176
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767175
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q96950281
   retrieved: '2026-05-11'
-birth:
-  year: 1952
-identifiers:
-  wikidata: Q96950281

@@ -11,54 +11,6 @@ birth:
   year: 1986
 gender: m
 mandaten:
-- id: 0fe8334f-8041-4408-b68d-ce0dac7d884e
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GroenLinks-PvdA
-  start_date: '2025-11-03'
-  end_date: null
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f05d02aa-899d-4904-878b-9b44b77e9653)
-    retrieved: '2026-05-09'
-- id: a28765d9-ce09-407d-ac66-4838472123d2
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GroenLinks-PvdA
-  start_date: '2023-12-06'
-  end_date: '2025-11-02'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b1170759-3b13-435b-9a62-a9c59337a198)
-    retrieved: '2026-05-09'
-- id: 831d829d-c904-49e9-8b20-fc3927a98bf1
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GroenLinks-PvdA
-  start_date: '2023-10-27'
-  end_date: '2023-12-05'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(57b9d63b-3e0c-44f1-aa25-23b28bc766d5)
-    retrieved: '2026-05-09'
-- id: 1284cc02-b893-4e3c-bfde-d5980ca74129
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GL
-  start_date: '2015-05-12'
-  end_date: '2023-10-26'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(43d8e7d1-f792-4414-a62a-ec79ba2f814e)
-    retrieved: '2026-05-09'
 - id: a08cdcf3-bd24-4c09-b7dd-bed73caad3fe
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -70,11 +22,59 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(165190f1-a00b-4394-afee-39b3d2a5d6bd)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 1284cc02-b893-4e3c-bfde-d5980ca74129
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2015-05-12'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(43d8e7d1-f792-4414-a62a-ec79ba2f814e)
+    retrieved: '2026-05-13'
+- id: 831d829d-c904-49e9-8b20-fc3927a98bf1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(57b9d63b-3e0c-44f1-aa25-23b28bc766d5)
+    retrieved: '2026-05-13'
+- id: a28765d9-ce09-407d-ac66-4838472123d2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-12-06'
+  end_date: '2025-11-02'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b1170759-3b13-435b-9a62-a9c59337a198)
+    retrieved: '2026-05-13'
+- id: 0fe8334f-8041-4408-b68d-ce0dac7d884e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2025-11-03'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f05d02aa-899d-4904-878b-9b44b77e9653)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0d036fcf-a456-4798-9b76-3f44eb74a451)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2354753
   retrieved: '2026-05-09'

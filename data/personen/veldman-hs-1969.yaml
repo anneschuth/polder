@@ -1,6 +1,7 @@
 id: person:veldman-hs-1969
 identifiers:
   tk_persoon_id: 0442fb6c-8441-4292-a275-5f701a223cfc
+  wikidata: Q17351519
 name:
   full: Hayke Veldman
   family: Veldman
@@ -12,18 +13,6 @@ birth:
   year: 1969
 gender: m
 mandaten:
-- id: 8ede8060-1cdc-4419-a884-7639f3021a0c
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2017-10-31'
-  end_date: '2021-03-30'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a03a9465-cde8-421f-a964-2dcb0c22e7db)
-    retrieved: '2026-05-09'
 - id: d12008a4-b2d0-4377-b972-29f40ce3bd4f
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -35,8 +24,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2ea1b265-be1c-4935-b70e-7d30efe96637)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 8ede8060-1cdc-4419-a884-7639f3021a0c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-10-31'
+  end_date: '2021-03-30'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a03a9465-cde8-421f-a964-2dcb0c22e7db)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0442fb6c-8441-4292-a275-5f701a223cfc)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q17351519
+  retrieved: '2026-05-13'

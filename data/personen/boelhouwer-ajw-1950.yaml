@@ -13,6 +13,18 @@ birth:
   year: 1950
 gender: m
 mandaten:
+- id: 542bc023-fdec-4a05-9d12-fce556cde1ce
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a0a0705b-a633-44cd-8109-0b27078a0bad)
+    retrieved: '2026-05-13'
 - id: 5120e430-fda6-4397-9b9a-1a04c3dfd53b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,11 +36,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ae6a4ba9-ac7e-4d73-9b85-6a47bc021152)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0144c49c-859b-4a54-a109-e969c76e6a33)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2408164
   retrieved: '2026-05-09'

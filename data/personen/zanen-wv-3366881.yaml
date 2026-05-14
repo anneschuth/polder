@@ -2,7 +2,7 @@ id: person:zanen-wv-3366881
 name:
   full: W. van Zanen
   family: Zanen
-  given: W.
+  given: W. van
   initials: W.V.
   tussenvoegsel: van
 mandaten:
@@ -22,7 +22,24 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: abaae8a0-f3bd-4829-aec7-bb321ee66911
+  organization_id: org:gemeente-diemen
+  post_id: post:griffier-gemeente-diemen
+  role: Griffier gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3366883
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366881
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q88312529
+  retrieved: '2026-05-13'
+birth:
+  year: 1963
+identifiers:
+  wikidata: Q88312529

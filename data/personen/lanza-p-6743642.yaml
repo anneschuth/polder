@@ -1,9 +1,13 @@
 id: person:lanza-p-6743642
+identifiers:
+  wikidata: Q94626561
 name:
   full: P. Lanza
   family: Lanza
   given: P.
   initials: P.
+birth:
+  year: 1933
 mandaten:
 - id: 41dbd336-e0a3-47da-89c6-a95e0f2e8ea2
   organization_id: org:gemeente-zoetermeer
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743644
     retrieved: '2026-05-09'
+- id: d8e46e3b-428a-4456-8611-096308871fd2
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:raadslid-gemeente-zoetermeer
+  role: Raadslid gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743644
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743642
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q94626561
   retrieved: '2026-05-11'
-birth:
-  year: 1933
-identifiers:
-  wikidata: Q94626561

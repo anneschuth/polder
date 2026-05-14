@@ -1,0 +1,30 @@
+id: person:wagner-hc-1963
+identifiers:
+  tk_persoon_id: 1a03fc6b-8c65-4d96-9f47-2b72553e8372
+name:
+  full: Hans Wagner
+  family: Wagner
+  given: Hans
+  initials: H.C.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1963
+gender: m
+mandaten:
+- id: 39937f6e-b01c-44e8-aa15-cb715a6ce11f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-05-31'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fdfdfe4f-a94a-4ccc-841b-b1878d4640a1)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1a03fc6b-8c65-4d96-9f47-2b72553e8372)
+  retrieved: '2026-05-13'

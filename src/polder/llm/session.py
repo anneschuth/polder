@@ -141,7 +141,7 @@ class SkillSession:
         # parse-staatscourant en parse-abd-nieuws hebben GEEN tools nodig: de
         # resolver lost slug-hallucinaties (ministerie-X -> min-X, minister-X
         # -> minister-min-X) achteraf op via fuzzy-match in
-        # PolderIndex.posts_by_org_class. Skills tools geven kost 20-50× zoveel
+        # PolderIndex.posts_by_org_class. Skills tools geven kost 20-50x zoveel
         # tijd (tool-call-roundtrips per record) en levert geen extra waarde.
         _TOOLED_SKILLS = {"parse-organogram", "lookup-person"}
         self.allow_tools = allow_tools or skill_name in _TOOLED_SKILLS
@@ -381,7 +381,7 @@ def close_all_sessions() -> None:
             logger.warning("Fout bij sluiten van SkillSession: %s", exc)
 
 
-import atexit as _atexit
+import atexit as _atexit  # noqa: E402
 
 _atexit.register(close_all_sessions)
 

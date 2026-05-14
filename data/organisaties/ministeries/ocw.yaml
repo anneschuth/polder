@@ -11,17 +11,21 @@ parent_id: null
 names:
 - value: Onderwijs, Cultuur en Wetenschap
   abbr: OCW
+  valid_from: '1900-01-01'
+  valid_until: '2025-06-13'
+- value: Onderwijs, Cultuur en Wetenschap
+  abbr: OCW
   valid_from: '2025-06-13'
   valid_until: null
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-onderwijs-cultuur-en-wetenschap
   email: ocw@rijksdienstCN.com
-valid_from: '2025-06-13'
-valid_until: null
+valid_from: '1900-01-01'
+valid_until: '2025-06-13'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/71852/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1049362
   retrieved: '2026-05-09'

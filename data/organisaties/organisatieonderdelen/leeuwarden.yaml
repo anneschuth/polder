@@ -1,0 +1,23 @@
+id: org:onderdeel-leeuwarden
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132337'
+  oin: 00000001001903664000
+  kvk: '59734817'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0080
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Leeuwarden
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132337/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

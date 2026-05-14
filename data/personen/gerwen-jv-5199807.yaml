@@ -2,7 +2,7 @@ id: person:gerwen-jv-5199807
 name:
   full: Johan van Gerwen
   family: Gerwen
-  given: Johan
+  given: Johan van
   initials: J.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199809
     retrieved: '2026-05-09'
+- id: 6eff4e88-33aa-40ed-ad68-b027e95f69e2
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199809
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199807
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

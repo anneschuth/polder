@@ -1,9 +1,13 @@
 id: person:bosch-w-3432766
+identifiers:
+  wikidata: Q7335116
 name:
   full: W.R. Bosch
   family: Bosch
   given: W.R.
   initials: W.
+birth:
+  year: 1938
 mandaten:
 - id: 4acf8d8b-2836-4dde-8983-e1e5330dc914
   organization_id: org:gemeente-duiven
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3432768
     retrieved: '2026-05-09'
+- id: b0db7045-ec2a-41a0-ac5a-9b8e538316f1
+  organization_id: org:gemeente-duiven
+  post_id: post:griffier-gemeente-duiven
+  role: Griffier gemeente Duiven
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3432768
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3432766
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q7335116
   retrieved: '2026-05-11'
-birth:
-  year: 1938
-identifiers:
-  wikidata: Q7335116

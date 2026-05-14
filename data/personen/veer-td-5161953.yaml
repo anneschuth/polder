@@ -2,7 +2,7 @@ id: person:veer-td-5161953
 name:
   full: Theo de Veer
   family: Veer
-  given: Theo
+  given: Theo de
   initials: T.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5161955
     retrieved: '2026-05-09'
+- id: 6b74887f-fec3-43ad-86ad-e1fdedaafa13
+  organization_id: org:gemeente-maashorst
+  post_id: post:raadslid-gemeente-maashorst
+  role: Raadslid gemeente Maashorst
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5161955
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5161953
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

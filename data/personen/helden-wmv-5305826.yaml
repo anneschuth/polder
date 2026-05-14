@@ -2,7 +2,7 @@ id: person:helden-wmv-5305826
 name:
   full: Wethouder Maarten  van Helden
   family: Helden
-  given: Wethouder Maarten
+  given: Wethouder Maarten  van
   initials: W.M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5305828
     retrieved: '2026-05-09'
+- id: b3e95c5b-f63e-4321-827a-e4fc2ee4ca8e
+  organization_id: org:gemeente-molenlanden
+  post_id: post:wethouder-gemeente-molenlanden
+  role: Wethouder gemeente Molenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5305828
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5305826
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

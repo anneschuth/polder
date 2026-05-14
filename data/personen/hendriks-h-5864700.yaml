@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 1d71dac4-432f-4dd5-99c7-2b70704a1434
+  organization_id: org:gemeente-oss
+  post_id: post:griffier-gemeente-oss
+  role: Griffier gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864702
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864700
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

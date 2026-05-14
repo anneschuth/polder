@@ -11,18 +11,6 @@ birth:
   year: 1964
 gender: f
 mandaten:
-- id: 01c7c9b2-0e92-4397-b7ad-73013ebc5fcc
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2023-12-06'
-  end_date: '2025-09-04'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f4cab680-a3ce-43d8-ba76-fa13aaff7da0)
-    retrieved: '2026-05-09'
 - id: a1baa542-1e0c-4a89-aaf3-d1c30f4c759c
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,7 +22,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dda8675e-0ffc-494d-82ae-e19d0c30d27e)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: wd-6405d9aa1a44
   organization_id: org:min-fin
   post_id: post:staatssecretaris-toeslagen-min-fin
@@ -45,10 +33,32 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q1532558#P39
     retrieved: '2026-05-09'
   end_date: '2024-07-02'
+- id: wd-6405d9aa1a44
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: Staatssecretaris voor Toeslagen en Douane
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1532558#P39
+    retrieved: '2026-05-13'
+  end_date: '2024-07-02'
+- id: 01c7c9b2-0e92-4397-b7ad-73013ebc5fcc
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2025-09-04'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f4cab680-a3ce-43d8-ba76-fa13aaff7da0)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8d002bc-ea6c-4f57-b36e-38415b205e09)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1532558
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

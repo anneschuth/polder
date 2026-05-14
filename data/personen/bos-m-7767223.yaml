@@ -1,9 +1,13 @@
 id: person:bos-m-7767223
+identifiers:
+  wikidata: Q12734822
 name:
   full: Marcel Bos
   family: Bos
   given: Marcel
   initials: M.
+birth:
+  year: 1982
 mandaten:
 - id: 3b4ce782-dccd-4c3a-8b96-c76c8546b986
   organization_id: org:gemeente-weststellingwerf
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767224
     retrieved: '2026-05-09'
+- id: 38b9319d-e99d-4a15-aca0-fc79d143b2c6
+  organization_id: org:gemeente-weststellingwerf
+  post_id: post:raadslid-gemeente-weststellingwerf
+  role: Raadslid gemeente Weststellingwerf
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767224
+    retrieved: '2026-05-13'
+- id: 1322c0df-08b3-4cbb-a769-d1d525d2c5f3
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7767224
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767223
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q12734822
   retrieved: '2026-05-11'
-birth:
-  year: 1982
-identifiers:
-  wikidata: Q12734822

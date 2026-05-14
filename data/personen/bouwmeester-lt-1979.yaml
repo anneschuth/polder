@@ -11,30 +11,6 @@ birth:
   year: 1979
 gender: f
 mandaten:
-- id: 8166ecf1-3065-4d50-9a30-f54120bbe3ad
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2016-06-10'
-  end_date: '2017-03-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0cb024b5-ef7e-4791-85ce-f8c7dd65d3d2)
-    retrieved: '2026-05-09'
-- id: 35ba14e3-3d93-4cfb-bc5a-feda39600a07
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2013-09-03'
-  end_date: '2016-02-18'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(755ecdcd-dfef-4350-aa3d-99a48a719ed3)
-    retrieved: '2026-05-09'
 - id: 76aa9734-6b78-416e-b692-dc68b7473520
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -46,11 +22,35 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ca97484e-d42c-4df9-85a5-b445c18990da)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 35ba14e3-3d93-4cfb-bc5a-feda39600a07
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2013-09-03'
+  end_date: '2016-02-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(755ecdcd-dfef-4350-aa3d-99a48a719ed3)
+    retrieved: '2026-05-13'
+- id: 8166ecf1-3065-4d50-9a30-f54120bbe3ad
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2016-06-10'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0cb024b5-ef7e-4791-85ce-f8c7dd65d3d2)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cfd07390-25a9-4fdb-bced-8a463530bf51)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q510398
   retrieved: '2026-05-09'

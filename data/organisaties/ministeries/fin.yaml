@@ -11,17 +11,21 @@ parent_id: null
 names:
 - value: Financiën
   abbr: Fin
+  valid_from: '1900-01-01'
+  valid_until: '2021-12-07'
+- value: Financiën
+  abbr: Fin
   valid_from: '2021-12-07'
   valid_until: null
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-financien
   email: woo@minfin.nl t.a.v. de Woo-contactpersoon
-valid_from: '2021-12-07'
-valid_until: null
+valid_from: '1900-01-01'
+valid_until: '2021-12-07'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/68820/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1037511
   retrieved: '2026-05-09'

@@ -1,9 +1,13 @@
 id: person:boerboom-j-6743458
+identifiers:
+  wikidata: Q86738544
 name:
   full: J.J. Boerboom
   family: Boerboom
   given: J.J.
   initials: J.
+birth:
+  year: 1926
 mandaten:
 - id: 697a74fd-cae4-48e2-8da4-cda2bc18c4f4
   organization_id: org:gemeente-zoetermeer
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743460
     retrieved: '2026-05-09'
+- id: bafb1bec-a146-4726-a61c-cf3e6e306da7
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:raadslid-gemeente-zoetermeer
+  role: Raadslid gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743460
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743458
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q86738544
+  retrieved: '2026-05-13'

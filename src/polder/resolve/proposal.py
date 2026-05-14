@@ -447,7 +447,7 @@ def _recommend_merge(org: OrgMatch, post: PostMatch, person: PersonMatch, propos
     UUID-suffix slug. Markeer als auto-merge.
     """
     proposal_conf = proposal.get("confidence")
-    if isinstance(proposal_conf, (int, float)) and proposal_conf < 0.85:
+    if isinstance(proposal_conf, int | float) and proposal_conf < 0.85:
         return "needs-review"
 
     if "ambiguous" in person.method:

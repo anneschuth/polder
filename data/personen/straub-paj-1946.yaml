@@ -1,0 +1,28 @@
+id: person:straub-paj-1946
+identifiers:
+  tk_persoon_id: b014f1f3-8606-4969-b2b8-81cd5fa9696f
+name:
+  full: Piet Straub
+  family: Straub
+  given: Piet
+  initials: P.A.J.
+birth:
+  year: 1946
+gender: m
+mandaten:
+- id: 6491dc48-104d-416a-b77e-7bdeb998d2c3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7eb1ac41-0a5a-4198-b577-78e2584c3506)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b014f1f3-8606-4969-b2b8-81cd5fa9696f)
+  retrieved: '2026-05-13'

@@ -1,0 +1,28 @@
+id: person:orgu-f-1968
+identifiers:
+  tk_persoon_id: f5077045-0988-4ac1-bc08-266fe523692b
+name:
+  full: Fadime Örgü
+  family: Örgü
+  given: Fadime
+  initials: F.
+birth:
+  year: 1968
+gender: f
+mandaten:
+- id: d0deabea-94c8-480c-928e-3b0449c84e2d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(ba5760b2-3dc8-4189-92c1-b5dafa1f961a)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f5077045-0988-4ac1-bc08-266fe523692b)
+  retrieved: '2026-05-13'

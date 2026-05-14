@@ -2,7 +2,7 @@ id: person:boogaard-avd-3045386
 name:
   full: Aik van den Boogaard
   family: Boogaard
-  given: Aik
+  given: Aik van den
   initials: A.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3045388
     retrieved: '2026-05-09'
+- id: fdefc5f6-e3d1-41f0-b438-9be348f2e0c1
+  organization_id: org:gemeente-boxtel
+  post_id: post:raadslid-gemeente-boxtel
+  role: Raadslid gemeente Boxtel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3045388
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3045386
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

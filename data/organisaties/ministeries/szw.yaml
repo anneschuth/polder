@@ -11,17 +11,21 @@ parent_id: null
 names:
 - value: Sociale Zaken en Werkgelegenheid
   abbr: SZW
+  valid_from: '1900-01-01'
+  valid_until: '2020-02-01'
+- value: Sociale Zaken en Werkgelegenheid
+  abbr: SZW
   valid_from: '2020-02-01'
   valid_until: null
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-sociale-zaken-en-werkgelegenheid
   email: contactpersoonwoo@minszw.nl
-valid_from: '2020-02-01'
-valid_until: null
+valid_from: '1900-01-01'
+valid_until: '2020-02-01'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/19087/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1049328
   retrieved: '2026-05-09'

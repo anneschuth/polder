@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: f2851aac-f825-49a1-a080-c6f9727d64dc
+  organization_id: org:gemeente-roerdalen
+  post_id: post:burgemeester-gemeente-roerdalen
+  role: Burgemeester gemeente Roerdalen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6019719
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6019717
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

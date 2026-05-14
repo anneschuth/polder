@@ -2,7 +2,7 @@ id: person:cuijk-wv-7762589
 name:
   full: Willem van Cuijk
   family: Cuijk
-  given: Willem
+  given: Willem van
   initials: W.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770480
     retrieved: '2026-05-09'
+- id: 0ab22f82-6906-4e05-a2f5-2a2fcc1bc141
+  organization_id: org:gemeente-maashorst
+  post_id: post:raadslid-gemeente-maashorst
+  role: Raadslid gemeente Maashorst
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7770480
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7762589
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

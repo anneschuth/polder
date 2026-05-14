@@ -13,6 +13,18 @@ birth:
   year: 1960
 gender: f
 mandaten:
+- id: 4b6b2625-81ef-4fc6-8660-fcbc0b45b5e1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '1998-05-19'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(33b55193-9b4f-462a-8843-6c667d6558e8)
+    retrieved: '2026-05-13'
 - id: a7516cdb-ed8f-409f-a735-0a49116f1c28
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -24,14 +36,14 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/f_karimi_groenlinks_pvda
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(73c9795b-60a6-4ede-ba9e-231b4b58b3ff)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/f_karimi_groenlinks_pvda
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q114246
   retrieved: '2026-05-09'

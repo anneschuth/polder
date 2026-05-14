@@ -11,43 +11,6 @@ birth:
   year: 1986
 gender: m
 mandaten:
-- id: 0e085b77-38ff-4f62-8625-899810baaf23
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2025-11-12'
-  end_date: '2026-02-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4401e6cd-b68e-404c-a95a-a5008c0e1635)
-    retrieved: '2026-05-09'
-- id: wd-daed13672bf0
-  organization_id: org:min-ezk
-  post_id: post:minister-min-ezk
-  role: Minister van Economische Zaken en Klimaat
-  start_date: '2025-06-19'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q101579497#P39
-    retrieved: '2026-05-09'
-  end_date: '2026-02-23'
-- id: wd-6f110e72acc8
-  organization_id: org:min-ienw
-  post_id: post:minister-min-ienw
-  role: Minister van Infrastructuur en Waterstaat
-  start_date: '2026-02-23'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q101579497#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
-    retrieved: '2026-05-12'
-    fields:
-    - applied_via:apply-staging
-  end_date: null
 - id: wd-a3f8361489ff
   organization_id: org:min-vws
   post_id: post:staatssecretaris-jeugd-preventie-sport-min-vws
@@ -74,10 +37,62 @@ mandaten:
     - end_date
     - applied_via:close-schoof-stas
   end_date: '2025-06-19'
+- id: wd-a3f8361489ff
+  organization_id: org:min-vws
+  post_id: post:staatssecretaris-min-vws
+  role: staatssecretaris van Volksgezondheid, Welzijn en Sport
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q101579497#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22522
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  end_date: '2025-06-19'
+- id: wd-daed13672bf0
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2025-06-19'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q101579497#P39
+    retrieved: '2026-05-13'
+  end_date: '2026-02-23'
+- id: 0e085b77-38ff-4f62-8625-899810baaf23
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4401e6cd-b68e-404c-a95a-a5008c0e1635)
+    retrieved: '2026-05-13'
+- id: wd-6f110e72acc8
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Minister van Infrastructuur en Waterstaat
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q101579497#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-12'
+    fields:
+    - applied_via:apply-staging
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(27b46aa9-1f94-490e-9cc1-ea7f49f84639)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q101579497
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:leeuwen-mv-6329505
 name:
   full: Maud van Leeuwen
   family: Leeuwen
-  given: Maud
+  given: Maud van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -22,7 +22,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 2a1d9471-f2a5-4ee4-904e-6166aa93d8ae
+  organization_id: org:gemeente-utrecht
+  post_id: post:griffier-gemeente-utrecht
+  role: Griffier gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6329506
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6329505
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

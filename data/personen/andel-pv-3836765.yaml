@@ -2,7 +2,7 @@ id: person:andel-pv-3836765
 name:
   full: P van Andel
   family: Andel
-  given: P
+  given: P van
   initials: P.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836766
     retrieved: '2026-05-09'
+- id: 20c8d21a-ba9f-4328-bcde-98cb38a4c5c6
+  organization_id: org:gemeente-gorinchem
+  post_id: post:raadslid-gemeente-gorinchem
+  role: Raadslid gemeente Gorinchem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3836766
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836765
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

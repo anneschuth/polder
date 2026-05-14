@@ -1,10 +1,14 @@
 id: person:beer-cd-5481853
+identifiers:
+  wikidata: Q112524367
 name:
   full: Cees de Beer
   family: Beer
-  given: Cees
+  given: Cees de
   initials: C.D.
   tussenvoegsel: de
+birth:
+  year: 1960
 mandaten:
 - id: 1771eddb-8a37-471b-9265-2aa19989e351
   organization_id: org:gemeente-nijmegen
@@ -16,7 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5481855
     retrieved: '2026-05-09'
+- id: b5a7ca7f-cd56-43ca-9a2b-9f46d529dd75
+  organization_id: org:gemeente-nijmegen
+  post_id: post:raadslid-gemeente-nijmegen
+  role: Raadslid gemeente Nijmegen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5481855
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481853
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112524367
+  retrieved: '2026-05-13'

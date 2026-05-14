@@ -2,7 +2,7 @@ id: person:regt-kjd-4005513
 name:
   full: Klaas Jan de Regt
   family: Regt
-  given: Klaas Jan
+  given: Klaas Jan de
   initials: K.J.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7626910
     retrieved: '2026-05-09'
+- id: 9b6ae662-32fc-4c9b-9d0e-c279c3f38701
+  organization_id: org:gemeente-harlingen
+  post_id: post:griffier-gemeente-harlingen
+  role: Raadsgriffier gemeente Harlingen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7626910
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4005513
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

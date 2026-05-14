@@ -10,18 +10,6 @@ birth:
   year: 1950
 gender: m
 mandaten:
-- id: c1662c42-fd5d-454f-9e99-f011eb47ed7d
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor CDA
-  start_date: '2010-10-26'
-  end_date: '2012-09-19'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bc57041d-5503-4e70-b889-30f98a706872)
-    retrieved: '2026-05-09'
 - id: 5aaa28ac-345f-4e39-b89e-a61054db4b30
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -33,8 +21,20 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e4387649-312d-4ee9-9d8e-dd6198012c7f)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: c1662c42-fd5d-454f-9e99-f011eb47ed7d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-10-26'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bc57041d-5503-4e70-b889-30f98a706872)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(36b52dc3-d754-477c-a01c-47dce35e9fdc)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

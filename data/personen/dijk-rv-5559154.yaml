@@ -1,10 +1,14 @@
 id: person:dijk-rv-5559154
+identifiers:
+  wikidata: Q39073987
 name:
   full: R.  van Dijk
   family: Dijk
-  given: R.
+  given: R.  van
   initials: R.V.
   tussenvoegsel: van
+birth:
+  year: 2002
 mandaten:
 - id: 26736b30-23d2-4f21-87f2-d3468a052dd2
   organization_id: org:gemeente-noordwijk
@@ -26,14 +30,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5559156
     retrieved: '2026-05-09'
+- id: 65ce0747-c740-4d53-a5c3-9b5caf8972c9
+  organization_id: org:gemeente-noord
+  post_id: post:griffier-gemeente-noord
+  role: Griffier gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559156
+    retrieved: '2026-05-13'
+- id: 66a90c6c-d80c-44a0-b589-167a09a9b1a3
+  organization_id: org:gemeente-noordwijk
+  post_id: post:griffier-gemeente-noordwijk
+  role: Griffier gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559156
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559154
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q39073987
   retrieved: '2026-05-11'
-birth:
-  year: 2002
-identifiers:
-  wikidata: Q39073987

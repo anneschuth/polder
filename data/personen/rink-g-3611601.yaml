@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3611603
     retrieved: '2026-05-09'
+- id: c1768c89-00f8-4a9b-b0d0-882d83925402
+  organization_id: org:gemeente-emmen
+  post_id: post:wethouder-gemeente-emmen
+  role: Wethouder gemeente Emmen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3611603
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3611601
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123719680
+  retrieved: '2026-05-13'
+birth:
+  year: 1992
+identifiers:
+  wikidata: Q123719680

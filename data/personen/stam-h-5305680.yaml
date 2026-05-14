@@ -1,9 +1,13 @@
 id: person:stam-h-5305680
+identifiers:
+  wikidata: Q112450766
 name:
   full: H. Stam
   family: Stam
   given: H.
   initials: H.
+birth:
+  year: 1935
 mandaten:
 - id: 5e0d1fd9-824a-445d-b44e-2dbe12d58f8e
   organization_id: org:gemeente-molenlanden
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5305682
     retrieved: '2026-05-09'
+- id: 326753a4-4b81-45d4-969f-0b1cc1e46744
+  organization_id: org:gemeente-molenlanden
+  post_id: post:raadslid-gemeente-molenlanden
+  role: Raadslid gemeente Molenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5305682
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5305680
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q112450766
   retrieved: '2026-05-11'
-birth:
-  year: 1935
-identifiers:
-  wikidata: Q112450766

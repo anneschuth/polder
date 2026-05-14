@@ -2,7 +2,7 @@ id: person:balkom-gv-3493284
 name:
   full: Guus van Balkom
   family: Balkom
-  given: Guus
+  given: Guus van
   initials: G.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3493286
     retrieved: '2026-05-09'
+- id: 4e8badd7-49ef-4755-bca6-dd17bd6a17b4
+  organization_id: org:gemeente-echt
+  post_id: post:gemeentesecretaris-gemeente-echt
+  role: Gemeentesecretaris gemeente Echt
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3493286
+    retrieved: '2026-05-13'
+- id: 0f24b311-cf85-4bd2-92fa-bcdf3c211dd4
+  organization_id: org:gemeente-echt-susteren
+  post_id: post:gemeentesecretaris-gemeente-echt-susteren
+  role: Gemeentesecretaris gemeente Echt Susteren
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3493286
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3493284
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

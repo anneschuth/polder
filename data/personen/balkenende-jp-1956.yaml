@@ -21,7 +21,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q133386#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-10-14'
 - id: wd-bc72b3b2d5d8
   organization_id: org:min-az
@@ -31,12 +31,24 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q133386#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-10-14'
+- id: 3cb3e1eb-340e-44c3-b10d-0abe3ced3d6c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5dfba425-9118-49ad-af4e-c92c54f374e6)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1544b81c-2e57-4e7f-86c0-f190ae8e073c)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q133386
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

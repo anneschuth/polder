@@ -1,0 +1,30 @@
+id: person:schonewille-f-1969
+identifiers:
+  tk_persoon_id: 1440d5ea-c116-4a1b-b8e0-bc50c0a3be0a
+name:
+  full: Freddy Schonewille
+  family: Schonewille
+  given: Freddy
+  initials: F.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1969
+gender: m
+mandaten:
+- id: fecd3c06-fa68-4834-9971-0b85b8a4e673
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5be7fd34-c171-4062-a4c2-05e0d8918dd2)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1440d5ea-c116-4a1b-b8e0-bc50c0a3be0a)
+  retrieved: '2026-05-13'

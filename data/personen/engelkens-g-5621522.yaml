@@ -1,9 +1,13 @@
 id: person:engelkens-g-5621522
+identifiers:
+  wikidata: Q38275383
 name:
   full: G. Engelkens
   family: Engelkens
   given: G.
   initials: G.
+birth:
+  year: 1939
 mandaten:
 - id: d2cd795a-1532-45eb-be85-117bed724a19
   organization_id: org:gemeente-oldambt
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774450
     retrieved: '2026-05-09'
+- id: 959839b1-af89-4e54-b819-2b48113c556b
+  organization_id: org:gemeente-oldambt
+  post_id: post:raadslid-gemeente-oldambt
+  role: Raadslid gemeente Oldambt
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7774450
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5621522
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q38275383
   retrieved: '2026-05-11'
-birth:
-  year: 1939
-identifiers:
-  wikidata: Q38275383

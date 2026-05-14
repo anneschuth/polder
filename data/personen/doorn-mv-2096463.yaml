@@ -2,7 +2,7 @@ id: person:doorn-mv-2096463
 name:
   full: Marike van Doorn
   family: Doorn
-  given: Marike
+  given: Marike van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2096465
     retrieved: '2026-05-09'
+- id: 47404b5b-1b37-4751-b74e-177b7d94ba89
+  organization_id: org:gemeente-almelo
+  post_id: post:raadslid-gemeente-almelo
+  role: Raadslid gemeente Almelo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2096465
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2096463
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

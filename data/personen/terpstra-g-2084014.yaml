@@ -1,9 +1,13 @@
 id: person:terpstra-g-2084014
+identifiers:
+  wikidata: Q97397152
 name:
   full: G. Terpstra
   family: Terpstra
   given: G.
   initials: G.
+birth:
+  year: 1960
 mandaten:
 - id: 646ed661-b6b5-40c5-a81a-acb6e456f6fb
   organization_id: org:gemeente-achtkarspelen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2084016
     retrieved: '2026-05-09'
+- id: 9ffd8def-ca2e-421b-8e32-4e0796548e9d
+  organization_id: org:gemeente-achtkarspelen
+  post_id: post:raadslid-gemeente-achtkarspelen
+  role: Raadslid gemeente Achtkarspelen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2084016
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2084014
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q97397152
   retrieved: '2026-05-11'
-birth:
-  year: 1960
-identifiers:
-  wikidata: Q97397152

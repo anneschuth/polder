@@ -1,0 +1,28 @@
+id: person:balemans-erm-1961
+identifiers:
+  tk_persoon_id: 6b539471-3782-4011-bc8e-fc0800e75ccf
+name:
+  full: Eric Balemans
+  family: Balemans
+  given: Eric
+  initials: E.R.M.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: 1d31e56f-4ca3-48ba-9951-e00bd4fd2c17
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-06-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(43b3b50d-de6b-428b-b930-6d5d9787fda7)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6b539471-3782-4011-bc8e-fc0800e75ccf)
+  retrieved: '2026-05-13'

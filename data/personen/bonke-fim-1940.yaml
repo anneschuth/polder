@@ -1,0 +1,28 @@
+id: person:bonke-fim-1940
+identifiers:
+  tk_persoon_id: f6a537f3-1f2b-4ec5-a668-733bff9b5144
+name:
+  full: Felix Ignatius Maria Bonke
+  family: Bonke
+  given: Felix Ignatius Maria
+  initials: F.I.M.
+birth:
+  year: 1940
+gender: m
+mandaten:
+- id: 276186a2-ea6d-417e-8fae-1aa171ce23d8
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(93ff90bf-1ab2-412f-aaea-8a056556756c)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f6a537f3-1f2b-4ec5-a668-733bff9b5144)
+  retrieved: '2026-05-13'

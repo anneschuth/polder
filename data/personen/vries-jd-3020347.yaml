@@ -2,7 +2,7 @@ id: person:vries-jd-3020347
 name:
   full: Jan de de Vries
   family: de Vries
-  given: Jan
+  given: Jan de
   initials: J.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3020349
     retrieved: '2026-05-09'
+- id: 52a46746-8615-4132-a8a9-1349930b73a5
+  organization_id: org:gemeente-borne
+  post_id: post:raadslid-gemeente-borne
+  role: Raadslid gemeente Borne
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3020349
+    retrieved: '2026-05-13'
+- id: 908553b4-d46c-4146-bcb0-f3da68038d28
+  organization_id: org:gemeente-born
+  post_id: post:raadslid-gemeente-born
+  role: Raadslid gemeente Born
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3020349
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3020347
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

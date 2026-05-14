@@ -1,9 +1,13 @@
 id: person:martens-r-4941234
+identifiers:
+  wikidata: Q7347387
 name:
   full: Robert Martens
   family: Martens
   given: Robert
   initials: R.
+birth:
+  year: 1947
 mandaten:
 - id: bfccf14b-0a27-4602-b464-c00a8f232af5
   organization_id: org:gemeente-leudal
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4941235
     retrieved: '2026-05-09'
+- id: 02c1ac35-605c-4661-8035-c259de247e8d
+  organization_id: org:gemeente-leudal
+  post_id: post:wethouder-gemeente-leudal
+  role: Wethouder gemeente Leudal
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4941235
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4941234
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q7347387
   retrieved: '2026-05-11'
-birth:
-  year: 1947
-identifiers:
-  wikidata: Q7347387

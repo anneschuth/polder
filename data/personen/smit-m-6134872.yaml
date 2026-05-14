@@ -1,9 +1,13 @@
 id: person:smit-m-6134872
+identifiers:
+  wikidata: Q2346142
 name:
   full: M Smit
   family: Smit
   given: M
   initials: M.
+birth:
+  year: 1943
 mandaten:
 - id: e2743c4e-96c8-49e4-b492-e63ddca26a06
   organization_id: org:gemeente-schiermonnikoog
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6134874
     retrieved: '2026-05-09'
+- id: f49ce902-f890-4717-b1ac-f7f824ce8bc7
+  organization_id: org:gemeente-schiermonnikoog
+  post_id: post:raadslid-gemeente-schiermonnikoog
+  role: Raadslid gemeente Schiermonnikoog
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6134874
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6134872
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2346142
   retrieved: '2026-05-11'
-birth:
-  year: 1943
-identifiers:
-  wikidata: Q2346142

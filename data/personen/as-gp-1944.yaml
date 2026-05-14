@@ -1,0 +1,40 @@
+id: person:as-gp-1944
+identifiers:
+  tk_persoon_id: e09e343b-09a0-4930-a43b-6b615002ddda
+name:
+  full: Gerard Van As
+  family: Van As
+  given: Gerard
+  initials: G.P.
+birth:
+  year: 1944
+gender: m
+mandaten:
+- id: 1599d2fa-81ba-4976-8900-45cb72f7e822
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Nawijn
+  start_date: '2006-08-17'
+  end_date: '2006-09-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b2c42d59-cad7-4a9f-90a9-7d620d2ae183)
+    retrieved: '2026-05-13'
+- id: 5c5da84a-9269-4812-8d0c-cb4dc856819a
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2004-10-05'
+  end_date: '2006-08-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d4c93ab1-f589-4e6e-bd03-a77ecf0b003b)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e09e343b-09a0-4930-a43b-6b615002ddda)
+  retrieved: '2026-05-13'

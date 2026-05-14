@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: f8452da5-bd01-4a17-b6ca-cfc274d407de
+  organization_id: org:gemeente-amstelveen
+  post_id: post:griffier-gemeente-amstelveen
+  role: Griffier gemeente Amstelveen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2236582
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2236581
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

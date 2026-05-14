@@ -1,6 +1,7 @@
 id: person:kuiken-ah-1977
 identifiers:
   tk_persoon_id: 4c3e51e6-9f1e-49cc-a919-f74a8c88343e
+  wikidata: Q2629616
 name:
   full: Attje Kuiken
   family: Kuiken
@@ -12,54 +13,6 @@ birth:
   year: 1977
 gender: f
 mandaten:
-- id: 1a58194f-65df-4962-a80b-8e88eaa65554
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GroenLinks-PvdA
-  start_date: '2023-10-27'
-  end_date: '2023-12-05'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(181b3f76-9514-4a56-bc84-27204fc81ac7)
-    retrieved: '2026-05-09'
-- id: aae08acf-7cda-4efc-88c7-58a588d66563
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2022-04-22'
-  end_date: '2023-10-26'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8b389433-64bd-44e7-9bfd-c6123b0e90f0)
-    retrieved: '2026-05-09'
-- id: 256e7323-fa14-4da5-b552-424ecba73433
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2016-12-12'
-  end_date: '2022-04-21'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3dab91f6-e486-4c65-96ef-94754253b988)
-    retrieved: '2026-05-09'
-- id: 3782d264-8646-4a68-b494-9a59b445a670
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2010-05-11'
-  end_date: '2016-12-11'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7401ebeb-f3a6-4770-8c9a-1dff30166ab7)
-    retrieved: '2026-05-09'
 - id: b3a21f08-ae5a-4537-85a9-69dafc75ae7a
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -71,8 +24,59 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(eb1fcf3b-a790-4a7c-870b-1d48bb5e909e)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 3782d264-8646-4a68-b494-9a59b445a670
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2010-05-11'
+  end_date: '2016-12-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7401ebeb-f3a6-4770-8c9a-1dff30166ab7)
+    retrieved: '2026-05-13'
+- id: 256e7323-fa14-4da5-b552-424ecba73433
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2016-12-12'
+  end_date: '2022-04-21'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3dab91f6-e486-4c65-96ef-94754253b988)
+    retrieved: '2026-05-13'
+- id: aae08acf-7cda-4efc-88c7-58a588d66563
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2022-04-22'
+  end_date: '2023-10-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8b389433-64bd-44e7-9bfd-c6123b0e90f0)
+    retrieved: '2026-05-13'
+- id: 1a58194f-65df-4962-a80b-8e88eaa65554
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(181b3f76-9514-4a56-bc84-27204fc81ac7)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4c3e51e6-9f1e-49cc-a919-f74a8c88343e)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2629616
+  retrieved: '2026-05-13'

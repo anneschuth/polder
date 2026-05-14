@@ -1,0 +1,30 @@
+id: person:mosterd-a-1949
+identifiers:
+  tk_persoon_id: 78e601a5-7dbf-4dce-9c86-077aa840760a
+name:
+  full: Aart Mosterd
+  family: Mosterd
+  given: Aart
+  initials: A.
+  honorifics_pre:
+  - dr
+birth:
+  year: 1949
+gender: m
+mandaten:
+- id: 3fd78ff5-823d-470b-bfdd-84a84508f887
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(841d7a5b-79b2-4c12-84ea-d30881050019)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(78e601a5-7dbf-4dce-9c86-077aa840760a)
+  retrieved: '2026-05-13'

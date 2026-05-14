@@ -11,6 +11,16 @@ birth:
   year: 1965
 gender: m
 mandaten:
+- id: wd-8d5841fa9ab9
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2084799#P39
+    retrieved: '2026-05-13'
+  end_date: '2023-10-30'
 - id: 877b9693-a1f6-4211-8697-5f1d4d3098fb
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,17 +32,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d8d989d8-e518-47ec-bfb3-1018c0299078)
-    retrieved: '2026-05-09'
-- id: wd-8d5841fa9ab9
-  organization_id: org:min-jenv
-  post_id: post:staatssecretaris-min-jenv
-  role: staatssecretaris van Justitie en Veiligheid
-  start_date: '2022-01-10'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q2084799#P39
-    retrieved: '2026-05-09'
-  end_date: '2023-10-30'
+    retrieved: '2026-05-13'
 - id: mandate-post-staatssecretaris-min-bzk-2026-02-24
   organization_id: org:min-bzk
   post_id: post:staatssecretaris-min-bzk
@@ -52,7 +52,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ad900f22-2dd0-4525-bb71-96550fa7985f)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2084799
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -1,10 +1,24 @@
 id: person:pieters-r-3401533
+identifiers:
+  wikidata: Q2803254
 name:
   full: Richard Pieters
   family: Pieters
   given: Richard
   initials: R.
+birth:
+  year: 1929
 mandaten:
+- id: wd-add5a680c0c3
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Nederlands minister van Defensie
+  start_date: '1980-08-25'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2803254#P39
+    retrieved: '2026-05-13'
+  end_date: '1981-09-11'
 - id: 103374f6-be5f-48fd-a115-a7881969234d
   organization_id: org:gemeente-druten
   post_id: post:raadslid-gemeente-druten
@@ -15,14 +29,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7782837
     retrieved: '2026-05-09'
+- id: 9937ac71-4f50-425c-ad64-000570e19c9b
+  organization_id: org:gemeente-druten
+  post_id: post:raadslid-gemeente-druten
+  role: Raadslid gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7782837
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3401533
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2803254
-  retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q2803254
+  retrieved: '2026-05-13'

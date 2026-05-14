@@ -1,0 +1,30 @@
+id: person:winsen-bpj-1943
+identifiers:
+  tk_persoon_id: b0529a9b-45e9-4909-84a0-1afcf1152465
+name:
+  full: Bart van Winsen
+  family: van Winsen
+  given: Bart
+  initials: B.P.J.
+  honorifics_pre:
+  - drs
+birth:
+  year: 1943
+gender: m
+mandaten:
+- id: eb8a7481-f97e-47bf-bcbe-23a633d774a2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(742d416c-1fd1-413e-984c-b1bec399b96b)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b0529a9b-45e9-4909-84a0-1afcf1152465)
+  retrieved: '2026-05-13'

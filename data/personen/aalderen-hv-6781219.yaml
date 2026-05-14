@@ -2,7 +2,7 @@ id: person:aalderen-hv-6781219
 name:
   full: Hettie van Aalderen
   family: Aalderen
-  given: Hettie
+  given: Hettie van
   initials: H.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781221
     retrieved: '2026-05-09'
+- id: b4a7b51a-5642-4ccc-a355-20b6aa50001d
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781221
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781219
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

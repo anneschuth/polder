@@ -2,7 +2,7 @@ id: person:eijk-jvd-5242751
 name:
   full: Jacob van der Eijk
   family: Eijk
-  given: Jacob
+  given: Jacob van der
   initials: J.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5242753
     retrieved: '2026-05-09'
+- id: da43c5e9-9ef9-4f17-b4b5-0fea71920844
+  organization_id: org:gemeente-midden-delfland
+  post_id: post:raadslid-gemeente-midden-delfland
+  role: Raadslid gemeente Midden Delfland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5242753
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5242751
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

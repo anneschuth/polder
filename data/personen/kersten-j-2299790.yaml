@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2299792
     retrieved: '2026-05-09'
+- id: 2bd7638c-5055-460a-9a59-d3bc1505286c
+  organization_id: org:gemeente-arnhem
+  post_id: post:griffier-gemeente-arnhem
+  role: Raadsgriffier gemeente Arnhem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2299792
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2299790
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q133789961
+  retrieved: '2026-05-13'
+birth:
+  year: 1957
+identifiers:
+  wikidata: Q133789961

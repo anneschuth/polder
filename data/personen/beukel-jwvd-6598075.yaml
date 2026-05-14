@@ -2,7 +2,7 @@ id: person:beukel-jwvd-6598075
 name:
   full: Jan-Willem van den Beukel
   family: Beukel
-  given: Jan-Willem
+  given: Jan-Willem van den
   initials: J.W.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -26,7 +26,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6598077
     retrieved: '2026-05-09'
+- id: 1a5b7f5b-5a3e-42f5-b49c-b708ddcf217a
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598077
+    retrieved: '2026-05-13'
+- id: eabeaa29-032f-4eb2-9008-d863232fcac1
+  organization_id: org:gemeente-westland
+  post_id: post:raadslid-gemeente-westland
+  role: Raadslid gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598077
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598075
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

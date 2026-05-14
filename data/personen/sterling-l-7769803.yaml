@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769805
     retrieved: '2026-05-09'
+- id: 1a84d54c-52cd-40ce-93b2-2461b918d53a
+  organization_id: org:gemeente-diemen
+  post_id: post:raadslid-gemeente-diemen
+  role: Raadslid gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769805
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769803
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q128667
+  retrieved: '2026-05-13'
+birth:
+  year: 1986
+identifiers:
+  wikidata: Q128667

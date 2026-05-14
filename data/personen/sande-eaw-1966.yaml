@@ -1,0 +1,28 @@
+id: person:sande-eaw-1966
+identifiers:
+  tk_persoon_id: c885162d-52bb-489d-9192-84523ffb1732
+name:
+  full: Ed van der Sande
+  family: van der Sande
+  given: Ed
+  initials: E.A.W.
+birth:
+  year: 1966
+gender: m
+mandaten:
+- id: acf62784-181d-4195-a24c-a2ab0d5883c1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2005-06-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8593123d-0cd8-4d9a-8b12-f416ac2ecea1)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c885162d-52bb-489d-9192-84523ffb1732)
+  retrieved: '2026-05-13'

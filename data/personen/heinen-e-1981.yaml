@@ -11,18 +11,6 @@ birth:
   year: 1981
 gender: m
 mandaten:
-- id: da012fc9-b7c8-43d2-81c3-1888037ac3df
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2025-11-12'
-  end_date: '2026-02-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(06eca4e1-b57a-4573-8e8b-b2d608665aa6)
-    retrieved: '2026-05-09'
 - id: 15bdcb24-8403-472d-8dcc-0788c36a7de4
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,7 +22,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(97c801dd-aca9-443d-a7ce-a4744c48b5d2)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: wd-845bd221a097
   organization_id: org:min-fin
   post_id: post:minister-min-fin
@@ -43,13 +31,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q106119762#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-schoof-script
+    retrieved: '2026-05-13'
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
     retrieved: '2026-05-09'
@@ -64,8 +46,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q106119762#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2025-06-18'
+- id: da012fc9-b7c8-43d2-81c3-1888037ac3df
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(06eca4e1-b57a-4573-8e8b-b2d608665aa6)
+    retrieved: '2026-05-13'
 - id: mandate-post-minister-min-fin-2026-02-23
   organization_id: org:min-fin
   post_id: post:minister-min-fin
@@ -85,7 +79,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a3b17348-54cf-4bca-82d4-e62bd46c2fbc)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q106119762
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

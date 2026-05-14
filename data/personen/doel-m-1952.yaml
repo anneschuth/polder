@@ -1,0 +1,28 @@
+id: person:doel-m-1952
+identifiers:
+  tk_persoon_id: befd91b8-cb53-48a0-9a2c-8cdf53ecc2de
+name:
+  full: Theo van den Doel
+  family: van den Doel
+  given: Theo
+  initials: M.
+birth:
+  year: 1952
+gender: m
+mandaten:
+- id: 31657d0b-275b-4e2d-b1c5-6e358ba7cf68
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-09-04'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(10ef6929-0341-4327-afd5-a4607a824c47)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(befd91b8-cb53-48a0-9a2c-8cdf53ecc2de)
+  retrieved: '2026-05-13'

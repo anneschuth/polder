@@ -2,7 +2,7 @@ id: person:buul-lv-5865115
 name:
   full: L.  van Van Buul
   family: Van Buul
-  given: L.
+  given: L.  van
   initials: L.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7627339
     retrieved: '2026-05-09'
+- id: dccce340-5c69-417d-944d-fac9b4a5aaf3
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7627339
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5865115
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

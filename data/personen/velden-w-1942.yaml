@@ -1,0 +1,28 @@
+id: person:velden-w-1942
+identifiers:
+  tk_persoon_id: b1c03f68-322d-4b39-9de3-b387c77cb1dd
+name:
+  full: Willem van der Velden
+  family: van der Velden
+  given: Willem
+  initials: W.
+birth:
+  year: 1942
+gender: m
+mandaten:
+- id: b87a6dc9-d695-4289-a494-a266ea92919c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-07-26'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6eb8da57-41be-4923-88f0-d4143cbd35ad)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b1c03f68-322d-4b39-9de3-b387c77cb1dd)
+  retrieved: '2026-05-13'

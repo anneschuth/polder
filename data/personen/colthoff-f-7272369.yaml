@@ -1,8 +1,8 @@
 id: person:colthoff-f-7272369
 name:
-  full: Frans Colthoff
+  full: F Colthoff
   family: Colthoff
-  given: Frans
+  given: F
   initials: F.
 mandaten:
 - id: b278eadc-b993-4256-b2c8-a9113e34bc95
@@ -15,7 +15,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7272371
     retrieved: '2026-05-09'
+- id: 770c5d3c-ac63-48b2-b4b0-2a64be6c422d
+  organization_id: org:gemeente-soest
+  post_id: post:raadslid-gemeente-soest
+  role: Raadslid gemeente Soest
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7272371
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7272369
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

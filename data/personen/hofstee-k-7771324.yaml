@@ -1,9 +1,13 @@
 id: person:hofstee-k-7771324
+identifiers:
+  wikidata: Q2198034
 name:
-  full: K. Hofstee
+  full: Kevin Hofstee
   family: Hofstee
-  given: K.
+  given: Kevin
   initials: K.
+birth:
+  year: 1936
 mandaten:
 - id: d3d82b82-8095-48c3-aa77-2ded5c007eab
   organization_id: org:gemeente-weststellingwerf
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7771325
     retrieved: '2026-05-09'
+- id: 19d69be1-3efa-4598-9ec0-82cd51a65fc0
+  organization_id: org:gemeente-weststellingwerf
+  post_id: post:raadslid-gemeente-weststellingwerf
+  role: Raadslid gemeente Weststellingwerf
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7771325
+    retrieved: '2026-05-13'
+- id: d613194d-b3d0-4ad5-95d0-45971e52d4ee
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7771325
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7771324
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2198034
   retrieved: '2026-05-11'
-birth:
-  year: 1936
-identifiers:
-  wikidata: Q2198034

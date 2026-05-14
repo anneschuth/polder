@@ -1,9 +1,13 @@
 id: person:fortuyn-s-4744083
+identifiers:
+  wikidata: Q311697
 name:
   full: Simon Fortuyn
   family: Fortuyn
   given: Simon
   initials: S.
+birth:
+  year: 1948
 mandaten:
 - id: 7d093c32-20d7-4947-96d4-e3c09140783d
   organization_id: org:gemeente-lansingerland
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4744087
     retrieved: '2026-05-09'
+- id: 4d98220d-a3f3-4829-808e-9fb5d9df7429
+  organization_id: org:gemeente-lansingerland
+  post_id: post:wethouder-gemeente-lansingerland
+  role: Wethouder gemeente Lansingerland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4744087
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4744083
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q311697
   retrieved: '2026-05-11'
-birth:
-  year: 1948
-identifiers:
-  wikidata: Q311697

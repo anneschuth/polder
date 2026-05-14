@@ -1,8 +1,8 @@
 id: person:kasteel-t-2878244
 name:
-  full: Timo Kasteel
+  full: T. Kasteel
   family: Kasteel
-  given: Timo
+  given: T.
   initials: T.
 mandaten:
 - id: 96cfba38-e51a-44d4-a486-fb3cbb62a280
@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878245
     retrieved: '2026-05-09'
+- id: 80b601ee-a2b2-4849-8a12-3b35c75f07d8
+  organization_id: org:gemeente-berkelland
+  post_id: post:raadslid-gemeente-berkelland
+  role: Raadslid gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2878245
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878244
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2313554
+  retrieved: '2026-05-13'
+birth:
+  year: 1928
+identifiers:
+  wikidata: Q2313554

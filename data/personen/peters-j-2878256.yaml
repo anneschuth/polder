@@ -1,8 +1,8 @@
 id: person:peters-j-2878256
 name:
-  full: Jan Peters
+  full: J. Peters
   family: Peters
-  given: Jan
+  given: J.
   initials: J.
 mandaten:
 - id: 348f38a6-c2db-4e5e-aeea-4d5e0f91f755
@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878257
     retrieved: '2026-05-09'
+- id: cae89300-39bd-4301-b79c-08492713a5e6
+  organization_id: org:gemeente-berkelland
+  post_id: post:raadslid-gemeente-berkelland
+  role: Raadslid gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2878257
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878256
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q243005
+  retrieved: '2026-05-13'
+birth:
+  year: 1926
+identifiers:
+  wikidata: Q243005

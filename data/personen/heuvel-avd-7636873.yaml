@@ -2,7 +2,7 @@ id: person:heuvel-avd-7636873
 name:
   full: A. van den Heuvel
   family: Heuvel
-  given: A.
+  given: A. van den
   initials: A.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780819
     retrieved: '2026-05-09'
+- id: f60ae06e-4f30-4f0f-9ebc-235d89b8d0e1
+  organization_id: org:gemeente-krimpenerwaard
+  post_id: post:raadslid-gemeente-krimpenerwaard
+  role: Raadslid gemeente Krimpenerwaard
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7780819
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7636873
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

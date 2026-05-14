@@ -1,0 +1,30 @@
+id: person:nijs-adsm-1961
+identifiers:
+  tk_persoon_id: 8497cd8f-4125-416f-97b1-1eef1bccfd11
+name:
+  full: Annette Nijs
+  family: Nijs
+  given: Annette
+  initials: A.D.S.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1961
+gender: f
+mandaten:
+- id: a54487ff-71be-439e-a326-684b2afa11ef
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d74b0a2e-6ae3-4147-96af-1a6cbe4c5b24)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8497cd8f-4125-416f-97b1-1eef1bccfd11)
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:berg-lvd-2034936
 name:
   full: Leo van den Berg
   family: Berg
-  given: Leo
+  given: Leo van den
   initials: L.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -16,7 +16,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2034940
     retrieved: '2026-05-09'
+- id: 4b776317-ab38-4807-975b-b3d60d27c1d9
+  organization_id: org:gemeente-aalten
+  post_id: post:raadslid-gemeente-aalten
+  role: Raadslid gemeente Aalten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2034940
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2034936
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112366692
+  retrieved: '2026-05-13'
+birth:
+  year: 1948
+identifiers:
+  wikidata: Q112366692

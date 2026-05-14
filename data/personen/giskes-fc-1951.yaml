@@ -1,0 +1,30 @@
+id: person:giskes-fc-1951
+identifiers:
+  tk_persoon_id: bc152475-94aa-4a89-a790-f76f3a7485fe
+name:
+  full: Francine Giskes
+  family: Giskes
+  given: Francine
+  initials: F.C.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1951
+gender: f
+mandaten:
+- id: 0cedb9a3-27c3-4675-abe6-a023c90f1c00
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '1994-05-17'
+  end_date: '2004-07-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3973c38e-6251-41f9-88ad-ebcc22775e3e)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(bc152475-94aa-4a89-a790-f76f3a7485fe)
+  retrieved: '2026-05-13'

@@ -1,9 +1,13 @@
 id: person:hoorn-g-1952870
+identifiers:
+  wikidata: Q2115125
 name:
   full: G. Hoorn
   family: Hoorn
   given: G.
   initials: G.
+birth:
+  year: 1949
 mandaten:
 - id: 9b7f6475-5082-4fbd-ba11-3f0c9df9b61f
   organization_id: org:gemeente-steenwijkerland
@@ -15,14 +19,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1952871
     retrieved: '2026-05-09'
+- id: 1cf4ec29-1a89-4e80-a007-1475e6ebe346
+  organization_id: org:gemeente-steenwijk
+  post_id: post:raadslid-gemeente-steenwijk
+  role: Raadslid gemeente Steenwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1952871
+    retrieved: '2026-05-13'
+- id: 55877ec4-5170-478b-b98d-bf04d4dbb57e
+  organization_id: org:gemeente-steenwijkerland
+  post_id: post:raadslid-gemeente-steenwijkerland
+  role: Raadslid gemeente Steenwijkerland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1952871
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1952870
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2115125
   retrieved: '2026-05-11'
-birth:
-  year: 1949
-identifiers:
-  wikidata: Q2115125

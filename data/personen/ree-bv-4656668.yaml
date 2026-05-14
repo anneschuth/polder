@@ -2,7 +2,7 @@ id: person:ree-bv-4656668
 name:
   full: B.J.  van Ree
   family: Ree
-  given: B.J.
+  given: B.J.  van
   initials: B.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7786488
     retrieved: '2026-05-09'
+- id: 40a535de-1f43-496b-bf69-f17cc078637f
+  organization_id: org:gemeente-krimpenerwaard
+  post_id: post:raadslid-gemeente-krimpenerwaard
+  role: Raadslid gemeente Krimpenerwaard
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7786488
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4656668
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

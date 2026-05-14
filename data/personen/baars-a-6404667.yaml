@@ -1,9 +1,13 @@
 id: person:baars-a-6404667
+identifiers:
+  wikidata: Q111363308
 name:
   full: A. Baars
   family: Baars
   given: A.
   initials: A.
+birth:
+  year: 1954
 mandaten:
 - id: efbc75e2-ed2a-460b-81b0-2d250fb5c1c3
   organization_id: org:gemeente-vijfheerenlanden
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6404669
     retrieved: '2026-05-09'
+- id: 8abc80f8-9166-4c8f-9f18-e73f71c025ce
+  organization_id: org:gemeente-vijfheerenlanden
+  post_id: post:raadslid-gemeente-vijfheerenlanden
+  role: Raadslid gemeente Vijfheerenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6404669
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6404667
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q111363308
   retrieved: '2026-05-11'
-birth:
-  year: 1954
-identifiers:
-  wikidata: Q111363308

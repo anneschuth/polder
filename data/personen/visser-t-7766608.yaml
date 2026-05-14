@@ -1,9 +1,13 @@
 id: person:visser-t-7766608
+identifiers:
+  wikidata: Q1858305
 name:
   full: T. Visser
   family: Visser
   given: T.
   initials: T.
+birth:
+  year: 1929
 mandaten:
 - id: fe7d590a-84d3-4e9d-8b39-43346c82fac2
   organization_id: org:gemeente-molenlanden
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7776022
     retrieved: '2026-05-09'
+- id: 4fc58e71-ef88-4ce8-87b5-01181e5afc7a
+  organization_id: org:gemeente-molenlanden
+  post_id: post:raadslid-gemeente-molenlanden
+  role: Raadslid gemeente Molenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7776022
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7766608
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1858305
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q1858305

@@ -10,18 +10,6 @@ birth:
   year: 1973
 gender: f
 mandaten:
-- id: e8a772cc-af3c-4304-b71c-85e190def2ee
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2017-03-23'
-  end_date: '2018-09-12'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(35e2f60d-b8a7-42ad-b82e-6eb9d34d4c7b)
-    retrieved: '2026-05-09'
 - id: b4fdb519-f452-4ffb-8cbf-f37d3c23112b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -33,8 +21,20 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e5ea47b9-9bd5-4333-befa-aa8f4f1d9778)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: e8a772cc-af3c-4304-b71c-85e190def2ee
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2017-03-23'
+  end_date: '2018-09-12'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(35e2f60d-b8a7-42ad-b82e-6eb9d34d4c7b)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(70af2625-600a-4ff6-bfe5-52b2ca26b437)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:horst-kt-7760159
 name:
   full: K. ter Horst
   family: Horst
-  given: K.
+  given: K. ter
   initials: K.T.
   tussenvoegsel: ter
 mandaten:
@@ -16,7 +16,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7760160
     retrieved: '2026-05-09'
+- id: 054e3d70-07f1-43f8-8da2-056a60ce23f5
+  organization_id: org:gemeente-steenwijk
+  post_id: post:raadslid-gemeente-steenwijk
+  role: Raadslid gemeente Steenwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7760160
+    retrieved: '2026-05-13'
+- id: a3260c2e-1cb9-4a5d-bf7f-8b4589b655c2
+  organization_id: org:gemeente-steenwijkerland
+  post_id: post:raadslid-gemeente-steenwijkerland
+  role: Raadslid gemeente Steenwijkerland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7760160
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7760159
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

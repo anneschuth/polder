@@ -22,17 +22,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(962bbd85-51dd-424d-bca4-53dead963a31)
-    retrieved: '2026-05-09'
-- id: wd-5d8b32d2c785
-  organization_id: org:min-ienw
-  post_id: post:minister-min-ienw
-  role: Minister van Infrastructuur en Waterstaat
-  start_date: '2021-08-31'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q1397858#P39
-    retrieved: '2026-05-09'
-  end_date: '2022-01-10'
+    retrieved: '2026-05-13'
 - id: wd-a70683204a2d
   organization_id: org:min-def
   post_id: post:staatssecretaris-min-def
@@ -41,12 +31,22 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1397858#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2021-08-31'
+- id: wd-5d8b32d2c785
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Minister van Infrastructuur en Waterstaat
+  start_date: '2021-08-31'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1397858#P39
+    retrieved: '2026-05-13'
+  end_date: '2022-01-10'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c955972d-2702-4d28-8461-262072218f3f)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1397858
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

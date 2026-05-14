@@ -1,10 +1,14 @@
 id: person:linde-pvd-6247292
+identifiers:
+  wikidata: Q6149327
 name:
   full: Peter van de Linde
   family: Linde
-  given: Peter
+  given: Peter van de
   initials: P.V.D.
   tussenvoegsel: van de
+birth:
+  year: 1946
 mandaten:
 - id: 5cdcc8e1-4a10-4ae5-9f54-772f3ad814ef
   organization_id: org:gemeente-terschelling
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7453730
     retrieved: '2026-05-09'
+- id: 33c8436c-4999-4532-9c54-d111fb35b15d
+  organization_id: org:gemeente-terschelling
+  post_id: post:raadslid-gemeente-terschelling
+  role: Raadslid gemeente Terschelling
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7453730
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6247292
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q6149327
   retrieved: '2026-05-11'
-birth:
-  year: 1946
-identifiers:
-  wikidata: Q6149327

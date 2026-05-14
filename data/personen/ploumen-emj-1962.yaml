@@ -13,18 +13,26 @@ birth:
   year: 1962
 gender: f
 mandaten:
-- id: b0c55e23-e45c-41eb-b58c-28ae7b503234
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor PvdA
-  start_date: '2021-01-14'
-  end_date: '2022-04-21'
-  appointment:
-    decision: TK-installatie
+- id: wd-2528d0335707
+  organization_id: org:min-bz
+  post_id: post:minister-zp-buitenlandse-handel
+  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
+  start_date: '2012-11-05'
   sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(357af58f-f4aa-4c9d-b271-abcbb74de6e5)
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q459509#P39
     retrieved: '2026-05-09'
+  end_date: '2017-10-26'
+- id: wd-2528d0335707
+  organization_id: org:min-bz
+  post_id: post:minister-zp-buitenlandse-handel-en-ontwikkelingshulp
+  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
+  start_date: '2012-11-05'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q459509#P39
+    retrieved: '2026-05-13'
+  end_date: '2017-10-26'
 - id: 3ab20399-8357-4acc-b907-f8bab3aaef31
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -36,21 +44,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b39d44fb-bb2a-4dc2-8f93-943b33adb786)
-    retrieved: '2026-05-09'
-- id: wd-2528d0335707
-  organization_id: org:min-bz
-  post_id: post:minister-zp-buitenlandse-handel
-  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
-  start_date: '2012-11-05'
+    retrieved: '2026-05-13'
+- id: b0c55e23-e45c-41eb-b58c-28ae7b503234
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2021-01-14'
+  end_date: '2022-04-21'
+  appointment:
+    decision: TK-installatie
   sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q459509#P39
-    retrieved: '2026-05-09'
-  end_date: '2017-10-26'
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(357af58f-f4aa-4c9d-b271-abcbb74de6e5)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(16be6093-7884-4d00-ae31-70dc7062f57a)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q459509
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

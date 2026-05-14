@@ -1,0 +1,28 @@
+id: person:smulders-hjc-1942
+identifiers:
+  tk_persoon_id: 06b39000-be23-4531-a893-fce5061f468e
+name:
+  full: Henricus Josephus Clemens Smulders
+  family: Smulders
+  given: Henricus Josephus Clemens
+  initials: H.J.C.
+birth:
+  year: 1942
+gender: m
+mandaten:
+- id: 46b0ab99-9b9b-4311-80f0-eebba6239780
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3a66bf23-e66d-43df-8d26-3b4360086a36)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(06b39000-be23-4531-a893-fce5061f468e)
+  retrieved: '2026-05-13'

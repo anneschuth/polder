@@ -2,7 +2,7 @@ id: person:dieren-jv-6781329
 name:
   full: Joost van Dieren
   family: Dieren
-  given: Joost
+  given: Joost van
   initials: J.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781331
     retrieved: '2026-05-09'
+- id: eade75ca-964a-4fac-9637-7ef1229bea2e
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781331
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781329
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

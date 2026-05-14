@@ -199,7 +199,7 @@ def _flatten(value: Any, prefix: str = "") -> Iterable[tuple[str, str]]:
     if isinstance(value, str):
         yield prefix, value
         return
-    if isinstance(value, (int, float, bool)):
+    if isinstance(value, int | float | bool):
         yield prefix, str(value)
         return
     if isinstance(value, dict):

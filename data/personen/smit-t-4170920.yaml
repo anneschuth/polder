@@ -1,9 +1,13 @@
 id: person:smit-t-4170920
+identifiers:
+  wikidata: Q1858024
 name:
   full: Theo Smit
   family: Smit
   given: Theo
   initials: T.
+birth:
+  year: 1951
 mandaten:
 - id: 8549365e-76eb-4e46-b978-5e2da66b73ea
   organization_id: org:gemeente-heiloo
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4170921
     retrieved: '2026-05-09'
+- id: d1abb8bc-fecf-4891-8b9c-22e74ed7194c
+  organization_id: org:gemeente-heiloo
+  post_id: post:raadslid-gemeente-heiloo
+  role: Raadslid gemeente Heiloo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4170921
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4170920
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1858024
   retrieved: '2026-05-11'
-birth:
-  year: 1951
-identifiers:
-  wikidata: Q1858024

@@ -2,7 +2,7 @@ id: person:akker-vdrvd-5864871
 name:
   full: van den, Roger van den Akker
   family: Akker
-  given: van den, Roger
+  given: van den, Roger van den
   initials: V.D.R.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864873
     retrieved: '2026-05-09'
+- id: 00549f8e-e643-4dfc-aac7-8a934c441b8c
+  organization_id: org:gemeente-oss
+  post_id: post:griffier-gemeente-oss
+  role: Griffier gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864873
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864871
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

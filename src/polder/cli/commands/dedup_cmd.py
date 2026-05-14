@@ -45,7 +45,7 @@ def dedup_record(record: dict[str, Any]) -> tuple[dict[str, Any], int]:
         return record, 0
     kept: list[dict[str, Any]] = []
     seen: set[tuple[str, str, str, str]] = set()
-    for i, m in enumerate(mandaten):
+    for _i, m in enumerate(mandaten):
         k = _key(m)
         if k in seen:
             continue

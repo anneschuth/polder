@@ -1,9 +1,13 @@
 id: person:engels-a-6299047
+identifiers:
+  wikidata: Q1122322
 name:
   full: A. Engels
   family: Engels
   given: A.
   initials: A.
+birth:
+  year: 1938
 mandaten:
 - id: 4e5c5b3c-5bfe-4205-bc41-02ce2fac556e
   organization_id: org:gemeente-twenterand
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6299049
     retrieved: '2026-05-09'
+- id: 265f7689-ba69-48a2-96cd-a946b89b2fd2
+  organization_id: org:gemeente-twenterand
+  post_id: post:raadslid-gemeente-twenterand
+  role: Raadslid gemeente Twenterand
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6299049
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6299047
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1122322
   retrieved: '2026-05-11'
-birth:
-  year: 1938
-identifiers:
-  wikidata: Q1122322

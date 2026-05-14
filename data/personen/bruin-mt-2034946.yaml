@@ -2,7 +2,7 @@ id: person:bruin-mt-2034946
 name:
   full: Margo ten Bruin
   family: Bruin
-  given: Margo
+  given: Margo ten
   initials: M.T.
   tussenvoegsel: ten
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2034949
     retrieved: '2026-05-09'
+- id: 7fafdd40-0ef5-4197-ae36-3b8ed40b3b62
+  organization_id: org:gemeente-aalten
+  post_id: post:raadslid-gemeente-aalten
+  role: Raadslid gemeente Aalten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2034949
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2034946
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

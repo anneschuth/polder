@@ -1,9 +1,13 @@
 id: person:bakker-h-5169784
+identifiers:
+  wikidata: Q113811659
 name:
   full: H.N. Bakker
   family: Bakker
   given: H.N.
   initials: H.
+birth:
+  year: 1947
 mandaten:
 - id: 4a376853-d3e6-458f-94b3-16c226b6a782
   organization_id: org:gemeente-medemblik
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5169785
     retrieved: '2026-05-09'
+- id: e984ba4b-0724-413c-bc35-9cd68a2ef142
+  organization_id: org:gemeente-medemblik
+  post_id: post:raadslid-gemeente-medemblik
+  role: Raadslid gemeente Medemblik
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5169785
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5169784
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q113811659
+  retrieved: '2026-05-13'

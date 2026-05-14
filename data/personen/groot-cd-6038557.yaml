@@ -2,7 +2,7 @@ id: person:groot-cd-6038557
 name:
   full: Carla de Groot
   family: Groot
-  given: Carla
+  given: Carla de
   initials: C.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6038559
     retrieved: '2026-05-09'
+- id: d6f59172-fb77-424c-94f8-a354a80369f2
+  organization_id: org:gemeente-roermond
+  post_id: post:raadslid-gemeente-roermond
+  role: Raadslid gemeente Roermond
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6038559
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6038557
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

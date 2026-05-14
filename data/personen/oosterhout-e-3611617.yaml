@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3611619
     retrieved: '2026-05-09'
+- id: 1fc0202c-cdd1-4e0c-a979-b71a725468ad
+  organization_id: org:gemeente-emmen
+  post_id: post:burgemeester-gemeente-emmen
+  role: Burgemeester gemeente Emmen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3611619
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3611617
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1351766
+  retrieved: '2026-05-13'
+birth:
+  year: 1961
+identifiers:
+  wikidata: Q1351766

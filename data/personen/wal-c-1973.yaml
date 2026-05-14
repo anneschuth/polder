@@ -11,6 +11,16 @@ birth:
   year: 1973
 gender: f
 mandaten:
+- id: wd-815cc1d32fca
+  organization_id: org:min-lvvn
+  post_id: post:minister-zp-natuur-en-stikstof
+  role: minister voor Natuur en Stikstof
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q44082843#P39
+    retrieved: '2026-05-13'
+  end_date: '2024-07-02'
 - id: 03104476-9bf3-4349-85d5-9cbc7eae163b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,21 +32,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8080c8e7-de7a-4590-aadb-699f45f0254e)
-    retrieved: '2026-05-09'
-- id: wd-815cc1d32fca
-  organization_id: org:min-lvvn
-  post_id: post:minister-zp-natuur-en-stikstof
-  role: minister voor Natuur en Stikstof
-  start_date: '2022-01-10'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q44082843#P39
-    retrieved: '2026-05-09'
-  end_date: '2024-07-02'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1e5fb811-ea58-4239-8404-ade3e8fcd480)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q44082843
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7217811
     retrieved: '2026-05-09'
+- id: 5a03814f-e8b6-4ab3-81a3-dc25fb7f7cce
+  organization_id: org:gemeente-aalten
+  post_id: post:burgemeester-gemeente-aalten
+  role: Burgemeester gemeente Aalten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7217811
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2035029
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q3056496
+  retrieved: '2026-05-13'
+birth:
+  year: 1961
+identifiers:
+  wikidata: Q3056496

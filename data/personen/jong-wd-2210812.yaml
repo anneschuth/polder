@@ -2,7 +2,7 @@ id: person:jong-wd-2210812
 name:
   full: William de Jong
   family: Jong
-  given: William
+  given: William de
   initials: W.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7775446
     retrieved: '2026-05-09'
+- id: 78dfe759-3771-48cc-a92f-ed1fb1c9e472
+  organization_id: org:gemeente-ameland
+  post_id: post:raadslid-gemeente-ameland
+  role: Raadslid gemeente Ameland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7775446
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2210812
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q23014930
+  retrieved: '2026-05-13'
+birth:
+  year: 1950
+identifiers:
+  wikidata: Q23014930

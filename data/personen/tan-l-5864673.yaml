@@ -1,9 +1,13 @@
 id: person:tan-l-5864673
+identifiers:
+  wikidata: Q2419755
 name:
   full: L. Tan
   family: Tan
   given: L.
   initials: L.
+birth:
+  year: 1966
 mandaten:
 - id: f69048d1-914a-41cb-bf87-55bde209e8cf
   organization_id: org:gemeente-oss
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864675
     retrieved: '2026-05-09'
+- id: 98aac2c8-24f1-4770-b36a-9e09efdaa4f3
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864675
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864673
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2419755
   retrieved: '2026-05-11'
-birth:
-  year: 1966
-identifiers:
-  wikidata: Q2419755

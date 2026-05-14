@@ -1,10 +1,14 @@
 id: person:mast-evd-3432773
+identifiers:
+  wikidata: Q3718945
 name:
   full: E. van der Mast
   family: Mast
-  given: E.
+  given: E. van der
   initials: E.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1948
 mandaten:
 - id: a111242d-e85e-438d-8372-fd3ecd4b2a08
   organization_id: org:gemeente-duiven
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3432775
     retrieved: '2026-05-09'
+- id: 84c54c0e-f3b3-4953-8221-cce155effb3a
+  organization_id: org:gemeente-duiven
+  post_id: post:raadslid-gemeente-duiven
+  role: Raadslid gemeente Duiven
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3432775
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3432773
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3718945
   retrieved: '2026-05-11'
-birth:
-  year: 1948
-identifiers:
-  wikidata: Q3718945

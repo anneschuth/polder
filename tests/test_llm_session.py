@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import io
 import json
-from typing import Any
+from typing import Any, ClassVar
 
 import pytest
 
@@ -65,7 +65,7 @@ class _StdinPipe(io.StringIO):
 class FakePopen:
     """Minimal subprocess.Popen-stand-in voor tests."""
 
-    instances: list[FakePopen] = []
+    instances: ClassVar[list[FakePopen]] = []
 
     def __init__(
         self,
@@ -89,7 +89,7 @@ class FakePopen:
         self.killed = False
         FakePopen.instances.append(self)
 
-    _next_stdout_lines: list[str] = []
+    _next_stdout_lines: ClassVar[list[str]] = []
 
     @classmethod
     def set_stdout(cls, lines: list[str]) -> None:
@@ -399,7 +399,7 @@ def test_two_calls_same_session(patch_popen: type[FakePopen]) -> None:
 
     assert r1.text == "first"
     assert r2.text == "second"
-    lines_written = [l for l in stdin_content.split("\n") if l]
+    lines_written = [line for line in stdin_content.split("\n") if line]
     assert len(lines_written) == 2
     assert json.loads(lines_written[0])["message"]["content"] == "alpha"
     assert json.loads(lines_written[1])["message"]["content"] == "beta"

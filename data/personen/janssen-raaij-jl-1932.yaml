@@ -1,0 +1,30 @@
+id: person:janssen-raaij-jl-1932
+identifiers:
+  tk_persoon_id: 3bdaa3ed-828a-415f-843b-d237fcdde6f2
+name:
+  full: James Leonard Janssen van Raaij
+  family: Janssen van Raaij
+  given: James Leonard
+  initials: J.L.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1932
+gender: m
+mandaten:
+- id: 90d7efe7-965e-498f-8c46-6a2d449c5944
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(110a7d23-7146-4b92-b204-6a808addd291)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3bdaa3ed-828a-415f-843b-d237fcdde6f2)
+  retrieved: '2026-05-13'

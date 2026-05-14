@@ -2,7 +2,7 @@ id: person:kok-fd-6329512
 name:
   full: Frank de Kok
   family: Kok
-  given: Frank
+  given: Frank de
   initials: F.D.
   tussenvoegsel: de
 mandaten:
@@ -22,7 +22,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 0293575d-22a5-4ac6-a3d1-fa44f271106b
+  organization_id: org:gemeente-utrecht
+  post_id: post:griffier-gemeente-utrecht
+  role: Griffier gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6329513
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6329512
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

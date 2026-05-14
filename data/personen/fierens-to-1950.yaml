@@ -1,0 +1,28 @@
+id: person:fierens-to-1950
+identifiers:
+  tk_persoon_id: 54eefc7d-a1a7-41ce-9b3b-27efee004691
+name:
+  full: Thea Fierens
+  family: Fierens
+  given: Thea
+  initials: T.O.
+birth:
+  year: 1950
+gender: f
+mandaten:
+- id: 719edd5a-be06-4665-a69f-d39a21cdd477
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0d0cc119-f93f-4eef-a540-9b2fca12c4b3)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(54eefc7d-a1a7-41ce-9b3b-27efee004691)
+  retrieved: '2026-05-13'

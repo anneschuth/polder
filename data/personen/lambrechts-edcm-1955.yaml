@@ -1,0 +1,42 @@
+id: person:lambrechts-edcm-1955
+identifiers:
+  tk_persoon_id: b71f368f-30ba-4688-b1a6-797f99422af0
+name:
+  full: Ursie Lambrechts
+  family: Lambrechts
+  given: Ursie
+  initials: E.D.C.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1955
+gender: f
+mandaten:
+- id: 5e555426-3d4b-4706-b987-767824483b3e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2003-06-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3c95b91d-f47f-48c9-89ad-bea86e8ec3dd)
+    retrieved: '2026-05-13'
+- id: 66904243-eeb0-4482-90ae-3ebcf3640794
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '1994-05-17'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(61d56b1e-5dea-4688-a6e9-c9773974c748)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b71f368f-30ba-4688-b1a6-797f99422af0)
+  retrieved: '2026-05-13'

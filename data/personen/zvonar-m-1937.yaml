@@ -1,0 +1,28 @@
+id: person:zvonar-m-1937
+identifiers:
+  tk_persoon_id: b2abb0be-998f-41aa-a2da-d940b6b53d00
+name:
+  full: Miloslav Zvonar
+  family: Zvonar
+  given: Miloslav
+  initials: M.
+birth:
+  year: 1937
+gender: m
+mandaten:
+- id: 4c530cc2-9b63-4bf0-b76a-471ebdb91c40
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1945cff8-02ba-44aa-94a0-f0f45e97f9bd)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b2abb0be-998f-41aa-a2da-d940b6b53d00)
+  retrieved: '2026-05-13'

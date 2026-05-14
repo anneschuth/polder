@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2839082
     retrieved: '2026-05-09'
+- id: 8ba227d4-bc36-4885-84c1-33a7575dfa40
+  organization_id: org:gemeente-beesel
+  post_id: post:raadslid-gemeente-beesel
+  role: Raadslid gemeente Beesel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2839082
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2839080
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28421940
+  retrieved: '2026-05-13'
+birth:
+  year: 1981
+identifiers:
+  wikidata: Q28421940

@@ -1,0 +1,30 @@
+id: person:hirsi-ali-a-1969
+identifiers:
+  tk_persoon_id: 4fa4be17-5d15-41c4-8a0c-86e117ddbec1
+name:
+  full: Ayaan Hirsi Ali
+  family: Hirsi Ali
+  given: Ayaan
+  initials: A.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1969
+gender: f
+mandaten:
+- id: aec0b2dc-486f-4581-9d06-e4f7072086e1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2006-05-16'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b12651c0-b453-4759-8fcd-12a7409dd083)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4fa4be17-5d15-41c4-8a0c-86e117ddbec1)
+  retrieved: '2026-05-13'

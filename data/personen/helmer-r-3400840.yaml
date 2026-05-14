@@ -1,9 +1,13 @@
 id: person:helmer-r-3400840
+identifiers:
+  wikidata: Q27299900
 name:
   full: R. Helmer
   family: Helmer
   given: R.
   initials: R.
+birth:
+  year: 1926
 mandaten:
 - id: 7e21d9aa-0c98-41a4-886e-1c3174be62ce
   organization_id: org:gemeente-druten
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400841
     retrieved: '2026-05-09'
+- id: 112b3066-24a9-418c-b49d-c07fb97ef95b
+  organization_id: org:gemeente-druten
+  post_id: post:burgemeester-gemeente-druten
+  role: Burgemeester gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3400841
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400840
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q27299900
   retrieved: '2026-05-11'
-birth:
-  year: 1926
-identifiers:
-  wikidata: Q27299900

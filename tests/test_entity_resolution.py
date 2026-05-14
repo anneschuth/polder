@@ -97,7 +97,7 @@ def test_example_output_has_required_fields() -> None:
 def test_example_output_confidence_in_range() -> None:
     data = _read_output()
     confidence = data["confidence"]
-    assert isinstance(confidence, (int, float))
+    assert isinstance(confidence, int | float)
     assert 0.0 <= float(confidence) <= 1.0
 
 

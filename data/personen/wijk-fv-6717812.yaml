@@ -2,7 +2,7 @@ id: person:wijk-fv-6717812
 name:
   full: Femke van Wijk
   family: Wijk
-  given: Femke
+  given: Femke van
   initials: F.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6717814
     retrieved: '2026-05-09'
+- id: 46c9f9b7-f64a-49a4-8be3-c641f7221f0a
+  organization_id: org:gemeente-zeewolde
+  post_id: post:raadslid-gemeente-zeewolde
+  role: Raadslid gemeente Zeewolde
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6717814
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6717812
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

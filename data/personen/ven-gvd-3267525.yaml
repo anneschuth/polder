@@ -1,10 +1,14 @@
 id: person:ven-gvd-3267525
+identifiers:
+  wikidata: Q84497471
 name:
   full: G.A. van de Ven
   family: Ven
-  given: G.A.
+  given: G.A. van de
   initials: G.V.D.
   tussenvoegsel: van de
+birth:
+  year: 1986
 mandaten:
 - id: 7fd01f62-818d-4b5d-ab23-cca4cc053a36
   organization_id: org:gemeente-culemborg
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3267527
     retrieved: '2026-05-09'
+- id: 4ae08806-6067-4b9f-ba78-da27845bef08
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3267527
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3267525
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q84497471
   retrieved: '2026-05-11'
-birth:
-  year: 1986
-identifiers:
-  wikidata: Q84497471

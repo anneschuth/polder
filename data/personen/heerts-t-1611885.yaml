@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1611889
     retrieved: '2026-05-09'
+- id: 323100b0-b3ef-44b0-9ec0-2581c07c7889
+  organization_id: org:gemeente-apeldoorn
+  post_id: post:burgemeester-gemeente-apeldoorn
+  role: Burgemeester gemeente Apeldoorn
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1611889
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1611885
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1845937
+  retrieved: '2026-05-13'
+birth:
+  year: 1966
+identifiers:
+  wikidata: Q1845937

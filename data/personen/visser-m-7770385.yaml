@@ -1,9 +1,13 @@
 id: person:visser-m-7770385
+identifiers:
+  wikidata: Q604267
 name:
   full: M.N. Visser
   family: Visser
   given: M.N.
   initials: M.
+birth:
+  year: 1928
 mandaten:
 - id: 76e8422e-556c-48d1-836d-ad7ab44c7e7a
   organization_id: org:gemeente-lelystad
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770387
     retrieved: '2026-05-09'
+- id: d76cdd36-ceb7-4645-a9a7-d9002222b346
+  organization_id: org:gemeente-lelystad
+  post_id: post:raadslid-gemeente-lelystad
+  role: Raadslid gemeente Lelystad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7770387
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7770385
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q604267
   retrieved: '2026-05-11'
-birth:
-  year: 1928
-identifiers:
-  wikidata: Q604267

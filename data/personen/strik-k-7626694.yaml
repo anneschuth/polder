@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7704502
     retrieved: '2026-05-09'
+- id: 230f8263-a95b-4c38-80ac-7614d2ffd980
+  organization_id: org:gemeente-boxtel
+  post_id: post:raadslid-gemeente-boxtel
+  role: Raadslid gemeente Boxtel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7704502
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7626694
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1795591
+  retrieved: '2026-05-13'
+birth:
+  year: 1958
+identifiers:
+  wikidata: Q1795591

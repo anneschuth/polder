@@ -13,6 +13,18 @@ birth:
   year: 1960
 gender: f
 mandaten:
+- id: bb7e4b0a-361a-4747-96a9-9aeb007c5a56
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2006-05-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(057831ee-e425-4a4a-a95f-4382bce66839)
+    retrieved: '2026-05-13'
 - id: 850f5798-7fef-4053-a97b-370e3f624a1b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,11 +36,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2cd5f3b5-f6e5-4be3-af6c-c3c671614f7b)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a4074721-5d4d-444a-bb98-1ddbc592a78a)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2300495
   retrieved: '2026-05-09'

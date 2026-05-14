@@ -1,6 +1,7 @@
 id: person:hoogland-d-1984
 identifiers:
   tk_persoon_id: f0ff5ae5-e0e8-4a26-af3a-93c8b5947dc4
+  wikidata: Q501711
 name:
   full: Duco Hoogland
   family: Hoogland
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c98ce983-662f-4cc7-8f4e-8c461e336e3e)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f0ff5ae5-e0e8-4a26-af3a-93c8b5947dc4)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q501711
+  retrieved: '2026-05-13'

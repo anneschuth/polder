@@ -4,6 +4,7 @@ name:
   family: Rakt
   initials: V.D.
   tussenvoegsel: van de
+  given: van de
 mandaten:
 - id: d6c8f040-93cf-4655-b274-ab320e5ba136
   organization_id: org:gemeente-druten
@@ -15,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400898
     retrieved: '2026-05-09'
+- id: 38bb7bb0-be8d-4cb3-80f2-aa3cc1384af3
+  organization_id: org:gemeente-druten
+  post_id: post:raadslid-gemeente-druten
+  role: Raadslid gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3400898
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400896
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

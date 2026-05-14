@@ -16,4 +16,9 @@ valid_until: '2018-11-15'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/13313/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: ar_rwt
+  url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
+  retrieved: '2026-05-13'
+  fields:
+  - rwt-status

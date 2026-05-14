@@ -1,0 +1,30 @@
+id: person:dekker-fa-1946
+identifiers:
+  tk_persoon_id: 2a28aa60-adf5-41ee-82c2-146579c15c0a
+name:
+  full: Fred Dekker
+  family: Dekker
+  given: Fred
+  initials: F.A.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1946
+gender: m
+mandaten:
+- id: 26b3ca75-7fcd-4083-ae90-2101123aee21
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(978374a4-fff1-45b0-8e27-20fa6248f7b8)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2a28aa60-adf5-41ee-82c2-146579c15c0a)
+  retrieved: '2026-05-13'

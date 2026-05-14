@@ -1,9 +1,13 @@
 id: person:bats-r-1952883
+identifiers:
+  wikidata: Q2612099
 name:
   full: Rob Bats
   family: Bats
   given: Rob
   initials: R.
+birth:
+  year: 1962
 mandaten:
 - id: f6515d82-25d7-4f88-aea2-50f12e95709c
   organization_id: org:gemeente-steenwijkerland
@@ -21,7 +25,30 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 8a3577b2-fdf4-46f0-a887-6af19748835b
+  organization_id: org:gemeente-steenwijk
+  post_id: post:burgemeester-gemeente-steenwijk
+  role: Burgemeester gemeente Steenwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1952884
+    retrieved: '2026-05-13'
+- id: 1776d6fd-807b-4485-a6b7-cdbed7285772
+  organization_id: org:gemeente-steenwijkerland
+  post_id: post:burgemeester-gemeente-steenwijkerland
+  role: Burgemeester gemeente Steenwijkerland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1952884
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1952883
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2612099
+  retrieved: '2026-05-13'

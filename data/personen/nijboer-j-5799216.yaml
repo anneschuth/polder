@@ -1,9 +1,13 @@
 id: person:nijboer-j-5799216
+identifiers:
+  wikidata: Q65851361
 name:
   full: J. Nijboer
   family: Nijboer
   given: J.
   initials: J.
+birth:
+  year: 1951
 mandaten:
 - id: 6b5ee7d1-b055-443a-b304-8d221aeb22d9
   organization_id: org:gemeente-ooststellingwerf
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7444206
     retrieved: '2026-05-09'
+- id: 67eee63a-7062-4d52-8fac-68ef5c50663c
+  organization_id: org:gemeente-ooststellingwerf
+  post_id: post:wethouder-gemeente-ooststellingwerf
+  role: Wethouder gemeente Ooststellingwerf
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7444206
+    retrieved: '2026-05-13'
+- id: 891b9141-36c1-47a5-b236-5332d1002454
+  organization_id: org:gemeente-oost
+  post_id: post:wethouder-gemeente-oost
+  role: Wethouder gemeente Oost
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7444206
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5799216
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q65851361
   retrieved: '2026-05-11'
-birth:
-  year: 1951
-identifiers:
-  wikidata: Q65851361

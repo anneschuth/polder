@@ -10,6 +10,18 @@ birth:
   year: 1960
 gender: f
 mandaten:
+- id: 0a5d42f5-2a6c-41a1-82e7-9552a3960a2c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2002-05-23'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f924a29c-9648-479c-adae-65a264e5687e)
+    retrieved: '2026-05-13'
 - id: 66117283-69b3-4ea1-85c6-908e1bc7901c
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -21,11 +33,11 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/j_c_huizinga_heringa_christenunie
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(33b35dd6-43ac-43d8-b609-d8e9b1989089)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/j_c_huizinga_heringa_christenunie
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

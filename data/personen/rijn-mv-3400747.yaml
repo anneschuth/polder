@@ -1,10 +1,14 @@
 id: person:rijn-mv-3400747
+identifiers:
+  wikidata: Q2754166
 name:
   full: M.A. van Rijn
   family: Rijn
-  given: M.A.
+  given: M.A. van
   initials: M.V.
   tussenvoegsel: van
+birth:
+  year: 1929
 mandaten:
 - id: 84c40d5b-64a2-47db-93ad-8b8a4a2bcadf
   organization_id: org:gemeente-druten
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400749
     retrieved: '2026-05-09'
+- id: 78068668-4116-4615-bf5e-bd5ba0b3cb9b
+  organization_id: org:gemeente-druten
+  post_id: post:raadslid-gemeente-druten
+  role: Raadslid gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3400749
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400747
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2754166
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q2754166

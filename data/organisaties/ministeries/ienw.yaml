@@ -11,6 +11,10 @@ parent_id: null
 names:
 - value: Infrastructuur en Waterstaat
   abbr: IenW
+  valid_from: '1900-01-01'
+  valid_until: '2018-01-01'
+- value: Infrastructuur en Waterstaat
+  abbr: IenW
   valid_from: '2010-10-14'
   valid_until: '2018-01-01'
 - value: Ministerie van Infrastructuur en Milieu
@@ -20,14 +24,12 @@ names:
 contact:
   website: www.minienw.nl
   email: contactpersoonwoo@minienw.nl
-valid_from: '2010-10-14'
+valid_from: '1900-01-01'
 valid_until: '2018-01-01'
-predecessor_id:
-- org:min-infrastructuur-en-milieu-2017
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/112773/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2188136
   retrieved: '2026-05-09'
@@ -39,3 +41,5 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
   retrieved: '2026-05-09'
+predecessor_id:
+- org:min-infrastructuur-en-milieu-2017

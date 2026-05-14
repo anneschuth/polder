@@ -117,8 +117,7 @@ def resolve(
     typer.echo(f"Index laden uit {data}...")
     idx = PolderIndex.load(data)
     typer.echo(
-        f"  {len(idx.persons_by_id)} persons, {len(idx.org_ids)} orgs, "
-        f"{len(idx.post_ids)} posts"
+        f"  {len(idx.persons_by_id)} persons, {len(idx.org_ids)} orgs, {len(idx.post_ids)} posts"
     )
 
     # Verzamel files

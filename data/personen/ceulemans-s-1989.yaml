@@ -1,6 +1,7 @@
 id: person:ceulemans-s-1989
 identifiers:
   tk_persoon_id: 1a02adff-bc47-4d06-bc1e-fec2d3ed193d
+  wikidata: Q123176183
 name:
   full: Simon Ceulemans
   family: Ceulemans
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5b6fc281-299a-495e-93e8-f2b140a7b390)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1a02adff-bc47-4d06-bc1e-fec2d3ed193d)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176183
+  retrieved: '2026-05-13'

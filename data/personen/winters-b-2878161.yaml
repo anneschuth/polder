@@ -1,8 +1,8 @@
 id: person:winters-b-2878161
 name:
-  full: Bouke Winters
+  full: B.R. Winters
   family: Winters
-  given: Bouke
+  given: B.R.
   initials: B.
 mandaten:
 - id: 47b952b4-7920-4bb8-9ac6-a3692a33a98d
@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878163
     retrieved: '2026-05-09'
+- id: 4b7c704e-41c9-4654-8ab1-aa16bf328a0a
+  organization_id: org:gemeente-berkelland
+  post_id: post:raadslid-gemeente-berkelland
+  role: Raadslid gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2878163
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878161
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q7376407
+  retrieved: '2026-05-13'
+birth:
+  year: 1942
+identifiers:
+  wikidata: Q7376407

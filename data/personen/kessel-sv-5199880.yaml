@@ -2,7 +2,7 @@ id: person:kessel-sv-5199880
 name:
   full: Stefan van Kessel
   family: Kessel
-  given: Stefan
+  given: Stefan van
   initials: S.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199882
     retrieved: '2026-05-09'
+- id: 9e10f818-f36d-43fe-b4ac-a16b47bee22e
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199882
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199880
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

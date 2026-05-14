@@ -1,9 +1,13 @@
 id: person:laan-j-6553964
+identifiers:
+  wikidata: Q111363366
 name:
   full: Jan van der Laan
   family: van der Laan
   given: Jan
   initials: J.
+birth:
+  year: 1970
 mandaten:
 - id: 047eba09-485b-4557-ad49-2cb5e4e8aa23
   organization_id: org:gemeente-westerkwartier
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553966
     retrieved: '2026-05-09'
+- id: 277031c4-36e5-46c1-a4cb-bc4240cf235b
+  organization_id: org:gemeente-westerkwartier
+  post_id: post:raadslid-gemeente-westerkwartier
+  role: Raadslid gemeente Westerkwartier
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553966
+    retrieved: '2026-05-13'
+- id: 7a163aaa-7d1e-4e60-b3ef-1154e19ec845
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553966
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553964
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q111363366
   retrieved: '2026-05-11'
-birth:
-  year: 1970
-identifiers:
-  wikidata: Q111363366

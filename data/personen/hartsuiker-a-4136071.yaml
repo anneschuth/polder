@@ -1,9 +1,13 @@
 id: person:hartsuiker-a-4136071
+identifiers:
+  wikidata: Q65178503
 name:
   full: Age Hartsuiker
   family: Hartsuiker
   given: Age
   initials: A.
+birth:
+  year: 1957
 mandaten:
 - id: 3b0fb728-a696-465a-965a-8f3362c1a6e4
   organization_id: org:gemeente-heerenveen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4136073
     retrieved: '2026-05-09'
+- id: f5275b36-5139-4934-9a2a-2c5f48666662
+  organization_id: org:gemeente-heerenveen
+  post_id: post:raadslid-gemeente-heerenveen
+  role: Raadslid gemeente Heerenveen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4136073
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4136071
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q65178503
   retrieved: '2026-05-11'
-birth:
-  year: 1957
-identifiers:
-  wikidata: Q65178503

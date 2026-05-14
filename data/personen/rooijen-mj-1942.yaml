@@ -13,6 +13,38 @@ birth:
   year: 1942
 gender: m
 mandaten:
+- id: wd-fe02823f5fe3
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-tweede-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '1973-12-21'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2801440#P39
+    retrieved: '2026-05-09'
+  end_date: '1977-10-14'
+- id: wd-fe02823f5fe3
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '1973-12-21'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2801440#P39
+    retrieved: '2026-05-13'
+  end_date: '1977-10-14'
+- id: 9470c838-3125-4bf7-a7ae-82e82ddc00b6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '1977-11-01'
+  end_date: '1980-08-20'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6f02456b-1a9f-4914-b99f-4cd90ee0af39)
+    retrieved: '2026-05-13'
 - id: d5f3ba75-6ced-46d9-8523-ea04710788c7
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,7 +56,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3bb98595-6a08-4f4a-8087-44708eb71f74)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: 42574787-0b06-4344-b598-347ee1b17dd4
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -36,24 +68,14 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
-    retrieved: '2026-05-09'
-- id: wd-fe02823f5fe3
-  organization_id: org:min-fin
-  post_id: post:staatssecretaris-tweede-min-fin
-  role: staatssecretaris van Financiën
-  start_date: '1973-12-21'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q2801440#P39
-    retrieved: '2026-05-09'
-  end_date: '1977-10-14'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cfb17042-9f10-4e44-99f4-358bad067455)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/drs_m_j_van_rooijen_50plus
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2801440
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

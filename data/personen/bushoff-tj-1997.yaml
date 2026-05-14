@@ -11,18 +11,6 @@ birth:
   year: 1997
 gender: m
 mandaten:
-- id: a6f9dff2-7bdb-46a2-bbe5-94ca5e5a77cf
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GroenLinks-PvdA
-  start_date: '2023-10-27'
-  end_date: null
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8562a918-14a3-4863-b29c-47cbe6f3b33d)
-    retrieved: '2026-05-09'
 - id: 0c893318-cf12-49e3-b4c7-9ab34605af40
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b2bf7fa3-320a-4dc9-9f7b-e6fe960aa7f8)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: a6f9dff2-7bdb-46a2-bbe5-94ca5e5a77cf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GroenLinks-PvdA
+  start_date: '2023-10-27'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8562a918-14a3-4863-b29c-47cbe6f3b33d)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a824c21d-055a-49ed-a060-a1c7af3262df)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q105835852
   retrieved: '2026-05-09'

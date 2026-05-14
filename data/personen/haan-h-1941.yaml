@@ -1,0 +1,30 @@
+id: person:haan-h-1941
+identifiers:
+  tk_persoon_id: 7f16c575-b0de-4b50-9b99-6d7371198613
+name:
+  full: Henk de Haan
+  family: de Haan
+  given: Henk
+  initials: H.
+  honorifics_pre:
+  - prof. dr.
+birth:
+  year: 1941
+gender: m
+mandaten:
+- id: 1c2852cd-3263-4ff8-9ec1-dea157aab88f
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(efbeb31b-9739-49c9-bfc6-0e3f9246556f)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7f16c575-b0de-4b50-9b99-6d7371198613)
+  retrieved: '2026-05-13'
