@@ -1,0 +1,30 @@
+id: person:geluk-jm-1950
+identifiers:
+  tk_persoon_id: b9b3bfd8-a05f-42d8-8a75-fe7805d739a6
+name:
+  full: Jan Geluk
+  family: Geluk
+  given: Jan
+  initials: J.M.
+  honorifics_pre:
+  - ing.
+birth:
+  year: 1950
+gender: m
+mandaten:
+- id: cf6ff7cf-8e4c-4524-8374-ebd4c127ba39
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-10-16'
+  end_date: '2005-06-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6556a2c8-26eb-4dd7-96e2-513911e3e443)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b9b3bfd8-a05f-42d8-8a75-fe7805d739a6)
+  retrieved: '2026-05-13'

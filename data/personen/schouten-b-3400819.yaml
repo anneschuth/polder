@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400820
     retrieved: '2026-05-09'
+- id: 57f5f069-2bad-4c2c-a6f2-b331fe036b44
+  organization_id: org:gemeente-druten
+  post_id: post:wethouder-gemeente-druten
+  role: Wethouder gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3400820
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400819
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q62517923
+  retrieved: '2026-05-13'
+birth:
+  year: 1963
+identifiers:
+  wikidata: Q62517923

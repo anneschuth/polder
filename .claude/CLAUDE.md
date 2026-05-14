@@ -40,6 +40,35 @@ Project: `polder`. Een git-versioned, CC0-gelicenseerde dataset van Nederlandse 
 - Auto-merge alleen als alle wijzigingen `confidence ≥ 0.95` hebben en geen "rood"-veld raken.
 - Anders label `needs-review` en wachten op handmatige merge.
 
+## Audit-bevindingen reviewen
+
+`polder audit` rapporteert categorieën zoals `quasi_dup_family_birth`,
+`start_after_end`, `mandaat_org_post_mismatch` etc. Wanneer een finding
+een **legitiem geval** is (twee echt-verschillende personen met dezelfde
+familienaam + geboortejaar, een aangekondigde benoeming in de toekomst,
+een verleende uitzondering op de hiërarchie-regel) is dat geen bug —
+markeer die expliciet als geverifieerd.
+
+Mechanisme: `data/_audit/verified.yaml` met entries van
+`{category, key, note, verified_at, verified_by}`. `polder audit` filtert
+geverifieerde findings standaard uit (toon ze met `--include-verified`).
+
+CLI om te markeren:
+
+```bash
+polder audit verify <category> <key> --note "korte uitleg"
+```
+
+Voorbeelden:
+- `polder audit verify quasi_dup_family_birth "van dijk|1971" --note "Diederik en Jasper zijn verschillende politici"`
+- `polder audit verify start_in_future "person:foo-1980|mandate-bar-2026-09-01" --note "aangekondigde benoeming via ABD-nieuws"`
+
+Werkwijze: **niet alles als geverifieerd wegklikken** — onderzoek elke
+finding eerst. Echte duplicaten of fouten in de data moeten gefixt
+worden (mandaat verplaatsen, person merge via aparte tool, datum
+corrigeren). Alleen wat na onderzoek een legitiem geval blijkt krijgt
+een verified-entry met onderbouwing in de `note`.
+
 ## Tasktracking
 
 Gebruik GitHub Issues op `anneschuth/polder` als bron-van-waarheid voor takentracking. Niet Claude's TaskCreate-tool of losse plan-files.

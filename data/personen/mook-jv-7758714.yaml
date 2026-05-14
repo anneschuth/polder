@@ -2,7 +2,7 @@ id: person:mook-jv-7758714
 name:
   full: J.J.L.T.  van Mook
   family: Mook
-  given: J.J.L.T.
+  given: J.J.L.T.  van
   initials: J.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758715
     retrieved: '2026-05-09'
+- id: d37b982c-66d2-4a19-8b9b-bb601d290de0
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7758715
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7758714
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

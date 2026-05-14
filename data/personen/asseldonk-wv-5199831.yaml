@@ -2,7 +2,7 @@ id: person:asseldonk-wv-5199831
 name:
   full: Wern van Asseldonk
   family: Asseldonk
-  given: Wern
+  given: Wern van
   initials: W.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199833
     retrieved: '2026-05-09'
+- id: bb81767a-ac18-489a-ae22-08dd4e9b2b7c
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199833
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199831
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

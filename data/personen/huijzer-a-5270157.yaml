@@ -1,9 +1,13 @@
 id: person:huijzer-a-5270157
+identifiers:
+  wikidata: Q1812015
 name:
   full: A. Huijzer
   family: Huijzer
   given: A.
   initials: A.
+birth:
+  year: 1946
 mandaten:
 - id: f4db6ec2-a24e-45df-a018-0dab7e2ccea1
   organization_id: org:gemeente-moerdijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5270159
     retrieved: '2026-05-09'
+- id: d8372bad-c14f-47f8-b5b3-69ccdd890e3b
+  organization_id: org:gemeente-moerdijk
+  post_id: post:raadslid-gemeente-moerdijk
+  role: Raadslid gemeente Moerdijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5270159
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5270157
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1812015
   retrieved: '2026-05-11'
-birth:
-  year: 1946
-identifiers:
-  wikidata: Q1812015

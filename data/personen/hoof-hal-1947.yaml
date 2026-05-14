@@ -11,16 +11,6 @@ birth:
   year: 1947
 gender: m
 mandaten:
-- id: wd-8634d3f34f5e
-  organization_id: org:min-szw
-  post_id: post:staatssecretaris-min-szw
-  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
-  start_date: '2004-06-17'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q2199513#P39
-    retrieved: '2026-05-09'
-  end_date: '2007-02-22'
 - id: wd-96d74cbf6ab8
   organization_id: org:min-def
   post_id: post:staatssecretaris-min-def
@@ -29,12 +19,34 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q2199513#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2002-07-22'
+- id: 36273473-0fdb-4864-b312-c71811adff03
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-05-23'
+  end_date: '2002-07-21'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a645ad4e-c017-4c20-a958-4103097be427)
+    retrieved: '2026-05-13'
+- id: wd-8634d3f34f5e
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2004-06-17'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2199513#P39
+    retrieved: '2026-05-13'
+  end_date: '2007-02-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cf632611-6361-4334-8e73-e08dd56d5706)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2199513
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

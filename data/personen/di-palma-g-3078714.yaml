@@ -1,9 +1,13 @@
 id: person:di-palma-g-3078714
+identifiers:
+  wikidata: Q52912263
 name:
   full: G. Di Palma
   family: Di Palma
   given: G.
   initials: G.
+birth:
+  year: 1944
 mandaten:
 - id: 4d13f784-9aed-4a6f-b36a-394195841c0c
   organization_id: org:gemeente-brunssum
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3078716
     retrieved: '2026-05-09'
+- id: 5e2d434e-9094-46c0-989a-060e27ad3d8e
+  organization_id: org:gemeente-brunssum
+  post_id: post:raadslid-gemeente-brunssum
+  role: Raadslid gemeente Brunssum
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3078716
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3078714
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q52912263
   retrieved: '2026-05-11'
-birth:
-  year: 1944
-identifiers:
-  wikidata: Q52912263

@@ -1,0 +1,30 @@
+id: person:egerschot-e-1977
+identifiers:
+  tk_persoon_id: 5434f6c8-7f54-4e5d-8fb9-c1047122fcd2
+name:
+  full: Eske van Egerschot
+  family: van Egerschot
+  given: Eske
+  initials: E.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1977
+gender: f
+mandaten:
+- id: 7c014e58-038c-4856-8794-ee4f41fa53c1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2004-04-06'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(77c570c1-9a42-4747-97ac-2a7b28b6eadd)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(5434f6c8-7f54-4e5d-8fb9-c1047122fcd2)
+  retrieved: '2026-05-13'

@@ -1,9 +1,13 @@
 id: person:vos-h-5798990
+identifiers:
+  wikidata: Q2286703
 name:
   full: H. Vos
   family: Vos
   given: H.
   initials: H.
+birth:
+  year: 1943
 mandaten:
 - id: 94b87880-1158-426e-ac98-97833e6a90f7
   organization_id: org:gemeente-ooststellingwerf
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5798992
     retrieved: '2026-05-09'
+- id: fe267c34-3d83-4934-9f12-a1343fa8b272
+  organization_id: org:gemeente-ooststellingwerf
+  post_id: post:raadslid-gemeente-ooststellingwerf
+  role: Raadslid gemeente Ooststellingwerf
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5798992
+    retrieved: '2026-05-13'
+- id: ff851465-495b-4c58-8301-1f9c96fff67e
+  organization_id: org:gemeente-oost
+  post_id: post:raadslid-gemeente-oost
+  role: Raadslid gemeente Oost
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5798992
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5798990
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2286703
   retrieved: '2026-05-11'
-birth:
-  year: 1943
-identifiers:
-  wikidata: Q2286703

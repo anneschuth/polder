@@ -1,9 +1,13 @@
 id: person:kuipers-j-3986193
+identifiers:
+  wikidata: Q2094362
 name:
   full: John Kuipers
   family: Kuipers
   given: John
   initials: J.
+birth:
+  year: 1937
 mandaten:
 - id: a99057af-d8df-43a5-9375-353db37f90d9
   organization_id: org:gemeente-harderwijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7164378
     retrieved: '2026-05-09'
+- id: 71a92fec-39ab-4dab-b8cc-a061b4dbed83
+  organization_id: org:gemeente-harderwijk
+  post_id: post:raadslid-gemeente-harderwijk
+  role: Raadslid gemeente Harderwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7164378
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3986193
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2094362
   retrieved: '2026-05-11'
-birth:
-  year: 1937
-identifiers:
-  wikidata: Q2094362

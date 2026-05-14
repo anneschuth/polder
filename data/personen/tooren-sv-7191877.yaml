@@ -2,7 +2,7 @@ id: person:tooren-sv-7191877
 name:
   full: S.H.J. van Tooren
   family: Tooren
-  given: S.H.J.
+  given: S.H.J. van
   initials: S.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7191878
     retrieved: '2026-05-09'
+- id: 5eb87a9a-5137-45e8-960e-35419f921b67
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7191878
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7191877
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

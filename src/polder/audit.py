@@ -477,7 +477,7 @@ def _check_mandaat(
         )
 
     c = m.get("confidence")
-    if isinstance(c, (int, float)) and (c < 0 or c > 1):
+    if isinstance(c, int | float) and (c < 0 or c > 1):
         findings.append(Finding("confidence_out_of_range", key, f"{p.name}: confidence={c}"))
 
     if not (m.get("sources") or []):
@@ -748,7 +748,7 @@ def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -
             seen.append(current)
             current = org_parent[current]
             if current in seen:
-                cycle_nodes = seen[seen.index(current) :] + [current]
+                cycle_nodes = [*seen[seen.index(current) :], current]
                 fingerprint = frozenset(cycle_nodes)
                 if fingerprint in reported:
                     break

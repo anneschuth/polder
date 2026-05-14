@@ -2,7 +2,7 @@ id: person:gijssel-av-2878134
 name:
   full: A.K. van Gijssel
   family: Gijssel
-  given: A.K.
+  given: A.K. van
   initials: A.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878136
     retrieved: '2026-05-09'
+- id: 0f5c80eb-80a0-4877-9caf-1b4bef79cfa9
+  organization_id: org:gemeente-berkelland
+  post_id: post:wethouder-gemeente-berkelland
+  role: Wethouder gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2878136
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878134
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176060
+  retrieved: '2026-05-13'
+birth:
+  year: 1969
+identifiers:
+  wikidata: Q123176060

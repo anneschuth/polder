@@ -1,0 +1,30 @@
+id: person:graaf-thc-1957
+identifiers:
+  tk_persoon_id: 23371eb4-0cca-4cd1-a23d-c71071699a74
+name:
+  full: Thom de Graaf
+  family: de Graaf
+  given: Thom
+  initials: T.H.C.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1957
+gender: m
+mandaten:
+- id: d0e886a9-10c5-4cb2-b8e5-1bebbecf0350
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '1994-05-17'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(98c440f7-534a-4741-9c54-f7aa41ff1d6b)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(23371eb4-0cca-4cd1-a23d-c71071699a74)
+  retrieved: '2026-05-13'

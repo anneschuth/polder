@@ -1,10 +1,14 @@
 id: person:meer-mvd-6743654
+identifiers:
+  wikidata: Q2201564
 name:
   full: M.C.  van der Meer
   family: Meer
-  given: M.C.
+  given: M.C.  van der
   initials: M.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1955
 mandaten:
 - id: 960eb1d6-3959-4d67-9fec-f94f49b448f8
   organization_id: org:gemeente-zoetermeer
@@ -26,14 +30,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7771426
     retrieved: '2026-05-09'
+- id: 15f79b29-1269-4b68-ba07-d6018e8c2a0b
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:wethouder-gemeente-zoetermeer
+  role: Wethouder gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743655
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743654
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2201564
   retrieved: '2026-05-11'
-birth:
-  year: 1955
-identifiers:
-  wikidata: Q2201564

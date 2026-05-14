@@ -375,12 +375,18 @@ def _default_skill_runner(
     from polder.llm.runner import run_skill
 
     logger.info("skill=%s input=%s output=%s", skill_name, input_payload, output)
+    # Skills die tools gebruiken (Read, Bash, WebFetch) hebben per call een
+    # schone subprocess nodig; session-reuse na een tool-call leidt tot
+    # is_error=True bij de volgende job in dezelfde thread.
+    _TOOL_HEAVY_SKILLS = {"parse-organogram", "lookup-person"}
+    reuse_session = skill_name not in _TOOL_HEAVY_SKILLS
     result = run_skill(
         skill_name,
         input_payload,
         model=model,
         output=output,
         use_cache=use_cache,
+        reuse_session=reuse_session,
     )
     if result.rate_limited:
         return SkillRunResult(

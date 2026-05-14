@@ -16,7 +16,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q135009707#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2026-02-23'
 - id: wd-bad58cd69c47
   organization_id: org:min-ienw
@@ -26,9 +26,15 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q135009707#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-13'
+    fields:
+    - end_date
+    - applied_via:apply-staging
   end_date: '2026-02-23'
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q135009707
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

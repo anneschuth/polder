@@ -1,0 +1,28 @@
+id: person:ra-akr-440ba3f3
+name:
+  full: Adrie Kerkvliet RE RA
+  family: RA
+  given: Adrie Kerkvliet RE
+  initials: A.K.R.
+mandaten:
+- id: mandate-post-algemeen-directeur-auditdienst-rijk-min-fin-2018-03-01
+  organization_id: org:agentschap-auditdienst-rijk-min-fin
+  post_id: post:algemeen-directeur-auditdienst-rijk-min-fin
+  role: algemeen directeur Auditdienst Rijk bij het ministerie van Financiën
+  start_date: '2018-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/01/26/adrie-kerkvliet-algemeen-directeur-auditdienst-rijk-bij-financien
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-01-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/01/26/adrie-kerkvliet-algemeen-directeur-auditdienst-rijk-bij-financien
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

@@ -2,7 +2,7 @@ id: person:balvert-jd-3432808
 name:
   full: J.C.W.H. den Balvert
   family: Balvert
-  given: J.C.W.H.
+  given: J.C.W.H. den
   initials: J.D.
   tussenvoegsel: den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3432810
     retrieved: '2026-05-09'
+- id: 4613ec70-6359-4f73-b87a-46fc31cfdc3b
+  organization_id: org:gemeente-duiven
+  post_id: post:raadslid-gemeente-duiven
+  role: Raadslid gemeente Duiven
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3432810
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3432808
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:baak-mv-5905025
 name:
   full: M.J.  van Baak
   family: Baak
-  given: M.J.
+  given: M.J.  van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5905027
     retrieved: '2026-05-09'
+- id: 379f8668-65fc-45d0-bc0b-9e5b90bac846
+  organization_id: org:gemeente-overbetuwe
+  post_id: post:raadslid-gemeente-overbetuwe
+  role: Raadslid gemeente Overbetuwe
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5905027
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5905025
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

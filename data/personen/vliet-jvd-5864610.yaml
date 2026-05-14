@@ -1,10 +1,14 @@
 id: person:vliet-jvd-5864610
+identifiers:
+  wikidata: Q2190644
 name:
   full: J van der Vliet
   family: Vliet
-  given: J
+  given: J van der
   initials: J.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1942
 mandaten:
 - id: fa7a9542-4f1b-4590-9f6d-4d6379bc3e5a
   organization_id: org:gemeente-oss
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864612
     retrieved: '2026-05-09'
+- id: 4f31b291-04e0-48d9-834b-0062e7d8da9d
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864612
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864610
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2190644
   retrieved: '2026-05-11'
-birth:
-  year: 1942
-identifiers:
-  wikidata: Q2190644

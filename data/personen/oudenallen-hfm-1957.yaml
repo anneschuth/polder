@@ -1,0 +1,28 @@
+id: person:oudenallen-hfm-1957
+identifiers:
+  tk_persoon_id: 1c2c824e-72e7-4879-afa9-bf3a2ca9001c
+name:
+  full: Gonny van Oudenallen
+  family: van Oudenallen
+  given: Gonny
+  initials: H.F.M.
+birth:
+  year: 1957
+gender: f
+mandaten:
+- id: 72613377-a169-4d6b-86d8-470656ffcf6e
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep van Oudenallen
+  start_date: '2006-07-07'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a404a2a1-f30e-4785-ba02-7df4e24f6eb7)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(1c2c824e-72e7-4879-afa9-bf3a2ca9001c)
+  retrieved: '2026-05-13'

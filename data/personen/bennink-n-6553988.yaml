@@ -1,9 +1,13 @@
 id: person:bennink-n-6553988
+identifiers:
+  wikidata: Q2187961
 name:
   full: Natasja Bennink
   family: Bennink
   given: Natasja
   initials: N.
+birth:
+  year: 1974
 mandaten:
 - id: fdd16bc6-ab2b-41ac-a20f-8e4c287ba8c3
   organization_id: org:gemeente-westerkwartier
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553990
     retrieved: '2026-05-09'
+- id: b6a3ae24-e12f-4529-adf0-6cc3d851dc62
+  organization_id: org:gemeente-westerkwartier
+  post_id: post:raadslid-gemeente-westerkwartier
+  role: Raadslid gemeente Westerkwartier
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553990
+    retrieved: '2026-05-13'
+- id: cac3d56b-8ba9-423e-a795-8d6b1b5594ec
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553990
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553988
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2187961
   retrieved: '2026-05-11'
-birth:
-  year: 1974
-identifiers:
-  wikidata: Q2187961

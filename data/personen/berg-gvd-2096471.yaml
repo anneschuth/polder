@@ -2,7 +2,7 @@ id: person:berg-gvd-2096471
 name:
   full: Gosé van der Berg
   family: Berg
-  given: Gosé
+  given: Gosé van der
   initials: G.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2096473
     retrieved: '2026-05-09'
+- id: c5ac9e61-86d4-4576-8f04-b8818461c8f8
+  organization_id: org:gemeente-almelo
+  post_id: post:raadslid-gemeente-almelo
+  role: Raadslid gemeente Almelo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2096473
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2096471
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q116591368
+  retrieved: '2026-05-13'
+birth:
+  year: 1973
+identifiers:
+  wikidata: Q116591368

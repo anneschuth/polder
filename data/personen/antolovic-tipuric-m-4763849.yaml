@@ -1,9 +1,13 @@
 id: person:antolovic-tipuric-m-4763849
+identifiers:
+  wikidata: Q117858308
 name:
   full: Mirka Antolovic-Tipuric
   family: Antolovic-Tipuric
   given: Mirka
   initials: M.
+birth:
+  year: 1981
 mandaten:
 - id: c270681b-4c67-4bd3-94fd-3a54a449f766
   organization_id: org:gemeente-leeuwarden
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4763851
     retrieved: '2026-05-09'
+- id: 2c31b0b6-d918-46df-8bf1-89d23d335926
+  organization_id: org:gemeente-leeuwarden
+  post_id: post:raadslid-gemeente-leeuwarden
+  role: Raadslid gemeente Leeuwarden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4763851
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4763849
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q117858308
+  retrieved: '2026-05-13'

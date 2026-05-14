@@ -13,6 +13,30 @@ birth:
   year: 1971
 gender: m
 mandaten:
+- id: 78cfb637-b342-48e1-a280-f986ec4b6c84
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2006-09-24'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d83527c2-f24e-40a0-af6e-f52c8417d093)
+    retrieved: '2026-05-13'
+- id: b7fcfdab-4921-45bd-a886-f53370484df4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Eerdmans-van Schijndel
+  start_date: '2006-09-25'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c9320cf0-b225-4bc9-8d8d-089258b162ce)
+    retrieved: '2026-05-13'
 - id: 5a147305-651e-474c-9ad0-adc019e65217
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,11 +48,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bd4358f2-2eac-4843-9eb0-5e378cf6c5ac)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c6e26bd3-724f-45d3-93af-ef431e6fcd42)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2350960
   retrieved: '2026-05-09'

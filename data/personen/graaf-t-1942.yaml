@@ -1,0 +1,28 @@
+id: person:graaf-t-1942
+identifiers:
+  tk_persoon_id: 32213786-2250-4405-8897-6f7bed9d8006
+name:
+  full: Theo de Graaf
+  family: de Graaf
+  given: Theo
+  initials: T.
+birth:
+  year: 1942
+gender: m
+mandaten:
+- id: 0bd2639f-f1f1-45e3-9a1e-1dc9f5360472
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29c09780-6daa-4a79-8c65-006cfd34f320)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(32213786-2250-4405-8897-6f7bed9d8006)
+  retrieved: '2026-05-13'

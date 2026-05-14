@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7141362
     retrieved: '2026-05-09'
+- id: 60abb6ed-fef9-4ec3-aac4-010a9f3de4ae
+  organization_id: org:gemeente-beuningen
+  post_id: post:raadslid-gemeente-beuningen
+  role: Raadslid gemeente Beuningen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7141362
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7141360
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q76700917
+  retrieved: '2026-05-13'
+birth:
+  year: 2000
+identifiers:
+  wikidata: Q76700917

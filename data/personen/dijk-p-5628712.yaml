@@ -1,10 +1,14 @@
 id: person:dijk-p-5628712
+identifiers:
+  wikidata: Q124260851
 name:
   full: Piet van Dijk
   family: Dijk
   given: Piet
   initials: P.
   tussenvoegsel: van
+birth:
+  year: 1934
 mandaten:
 - id: fede3ee3-39e8-46b8-9333-c54eba8444eb
   organization_id: org:gemeente-lelystad
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5628714
     retrieved: '2026-05-09'
+- id: 00d5da1e-e0bc-4239-9d1a-26356855cc61
+  organization_id: org:gemeente-lelystad
+  post_id: post:wethouder-gemeente-lelystad
+  role: Wethouder gemeente Lelystad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5628714
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5628712
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q124260851
   retrieved: '2026-05-11'
-birth:
-  year: 1934
-identifiers:
-  wikidata: Q124260851

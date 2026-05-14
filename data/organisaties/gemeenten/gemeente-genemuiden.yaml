@@ -2,6 +2,7 @@ id: org:gemeente-genemuiden
 type: gemeente
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0154
+  wikidata: Q2511725
 classification: gemeente
 parent_id: null
 names:
@@ -10,8 +11,11 @@ names:
   valid_until: '2000-12-31'
 valid_from: '1900-01-01'
 valid_until: '2000-12-31'
-successor_id: org:gemeente-zwartewaterland
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0154
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2511725
+  retrieved: '2026-05-13'
+successor_id: org:gemeente-zwartewaterland

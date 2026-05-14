@@ -11,17 +11,21 @@ parent_id: null
 names:
 - value: Volksgezondheid, Welzijn en Sport
   abbr: VWS
+  valid_from: '1900-01-01'
+  valid_until: '2021-01-01'
+- value: Volksgezondheid, Welzijn en Sport
+  abbr: VWS
   valid_from: '2021-01-01'
   valid_until: null
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport
   email: contactpersoonwoo@minvws.nl
-valid_from: '2021-01-01'
-valid_until: null
+valid_from: '1900-01-01'
+valid_until: '2021-01-01'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/8591/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1056190
   retrieved: '2026-05-09'

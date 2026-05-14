@@ -1,9 +1,13 @@
 id: person:vogels-j-6019702
+identifiers:
+  wikidata: Q23008763
 name:
   full: John Vogels
   family: Vogels
   given: John
   initials: J.
+birth:
+  year: 1932
 mandaten:
 - id: 5422989b-6f3c-413c-b093-c90a780f3a7b
   organization_id: org:gemeente-roerdalen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6019704
     retrieved: '2026-05-09'
+- id: a7d7c5b6-328c-4e7d-9f44-b92fedf037ca
+  organization_id: org:gemeente-roerdalen
+  post_id: post:raadslid-gemeente-roerdalen
+  role: Raadslid gemeente Roerdalen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6019704
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6019702
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q23008763
   retrieved: '2026-05-11'
-birth:
-  year: 1932
-identifiers:
-  wikidata: Q23008763

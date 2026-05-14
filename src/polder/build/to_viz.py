@@ -110,9 +110,7 @@ def _render_org_tree(
         return None
     children: list[dict[str, Any]] = []
     for child_id in adjacency.get(root_id, []):
-        child = _render_org_tree(
-            child_id, adjacency, orgs_by_id, posten_by_org, mandaten_by_post
-        )
+        child = _render_org_tree(child_id, adjacency, orgs_by_id, posten_by_org, mandaten_by_post)
         if child is not None:
             children.append(child)
     posten = _render_posten(rec["id"], posten_by_org, mandaten_by_post)
@@ -229,9 +227,7 @@ def _tree_tile(
     mandaten_by_post: dict[str, list[dict[str, Any]]] | None = None,
 ) -> dict[str, Any] | None:
     """Schrijf org/<slug>.json en geef tegel-metadata terug."""
-    tree = _render_org_tree(
-        org["id"], adjacency, orgs_by_id, posten_by_org, mandaten_by_post
-    )
+    tree = _render_org_tree(org["id"], adjacency, orgs_by_id, posten_by_org, mandaten_by_post)
     if tree is None:
         return None
     slug = _slug_from_id(org["id"])
@@ -298,9 +294,7 @@ def _index_posten_and_personen(
     blijven verschijnen.
     """
     posten_records = list(_load_records(data_dir / "posten"))
-    posten_by_id: dict[str, dict[str, Any]] = {
-        p["id"]: p for p in posten_records if p.get("id")
-    }
+    posten_by_id: dict[str, dict[str, Any]] = {p["id"]: p for p in posten_records if p.get("id")}
     posten_by_org: dict[str, list[dict[str, Any]]] = {}
     for post in posten_records:
         org_id = post.get("organization_id")

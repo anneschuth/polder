@@ -1,0 +1,28 @@
+id: person:ruiten-jhs-1931
+identifiers:
+  tk_persoon_id: e521a1a8-3aa8-4b6c-9797-1f3fd4e11daa
+name:
+  full: Johannes Hendricus Simon van Ruiten
+  family: van Ruiten
+  given: Johannes Hendricus Simon
+  initials: J.H.S.
+birth:
+  year: 1931
+gender: m
+mandaten:
+- id: 36911d09-13ef-4efc-82cb-baa53e9bbd9d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c89deb1c-bb3c-4e84-9aec-79dda90d3f1c)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e521a1a8-3aa8-4b6c-9797-1f3fd4e11daa)
+  retrieved: '2026-05-13'

@@ -21,7 +21,24 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 18b3cc5c-c85a-4bb6-898e-78c887fa7d7d
+  organization_id: org:gemeente-culemborg
+  post_id: post:burgemeester-gemeente-culemborg
+  role: Burgemeester gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3267652
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3267651
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q82761
+  retrieved: '2026-05-13'
+birth:
+  year: 1970
+identifiers:
+  wikidata: Q82761

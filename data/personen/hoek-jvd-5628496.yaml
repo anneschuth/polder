@@ -2,7 +2,7 @@ id: person:hoek-jvd-5628496
 name:
   full: J.J.P. van der Hoek
   family: Hoek
-  given: J.J.P.
+  given: J.J.P. van der
   initials: J.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5628498
     retrieved: '2026-05-09'
+- id: 30cd3ee7-4129-4349-aa67-0532d83f436c
+  organization_id: org:gemeente-lelystad
+  post_id: post:raadslid-gemeente-lelystad
+  role: Raadslid gemeente Lelystad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5628498
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5628496
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:geelen-bv-7763922
 name:
   full: Bianca van Geelen
   family: Geelen
-  given: Bianca
+  given: Bianca van
   initials: B.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7766493
     retrieved: '2026-05-09'
+- id: 78d3d735-a57e-4a16-a0db-40e935756541
+  organization_id: org:gemeente-lingewaard
+  post_id: post:raadslid-gemeente-lingewaard
+  role: Raadslid gemeente Lingewaard
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7766493
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7763922
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

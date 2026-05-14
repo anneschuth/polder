@@ -13,16 +13,6 @@ birth:
   year: 1955
 gender: m
 mandaten:
-- id: wd-8d54eae8876b
-  organization_id: org:min-def
-  post_id: post:minister-min-def
-  role: Minister van Defensie
-  start_date: '1998-08-03'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q2320629#P39
-    retrieved: '2026-05-09'
-  end_date: '2002-07-22'
 - id: wd-3e1ff1e4edde
   organization_id: org:min-szw
   post_id: post:staatssecretaris-min-szw
@@ -31,12 +21,34 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q2320629#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '1998-08-03'
+- id: wd-8d54eae8876b
+  organization_id: org:min-def
+  post_id: post:minister-min-def
+  role: Minister van Defensie
+  start_date: '1998-08-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2320629#P39
+    retrieved: '2026-05-13'
+  end_date: '2002-07-22'
+- id: 40d4e765-eb7b-439c-9b30-d7cd2a9a64d0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-05-23'
+  end_date: '2004-04-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9782b49b-3faa-461b-b0ac-b62e76d44c5d)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(3e7b61a3-048a-4b41-b652-aea9afb0c6c3)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2320629
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

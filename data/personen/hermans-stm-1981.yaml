@@ -13,30 +13,6 @@ birth:
   year: 1981
 gender: f
 mandaten:
-- id: 7869c100-bf86-4baa-b5e7-81cf5806b914
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2023-12-06'
-  end_date: '2024-07-01'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b0e48cc4-10dd-419e-8e22-cbd3d6893941)
-    retrieved: '2026-05-09'
-- id: 7bc31010-8bda-49b2-a8d2-c3baef9a70db
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2022-01-11'
-  end_date: '2023-12-05'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2a3fccee-3645-4144-b227-d87805694f30)
-    retrieved: '2026-05-09'
 - id: 0adf79b5-04b9-4346-b7a1-27906642e570
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -48,49 +24,31 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1ebfea5f-b1dd-4a65-aedb-186e9dfdd8d2)
-    retrieved: '2026-05-09'
-- id: wd-2589130faabe
-  organization_id: org:min-ienw
-  post_id: post:minister-min-ienw
-  role: Minister van Infrastructuur en Waterstaat
-  start_date: '2025-06-03'
+    retrieved: '2026-05-13'
+- id: 7bc31010-8bda-49b2-a8d2-c3baef9a70db
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2022-01-11'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
   sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q28860996#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-23052
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-schoof-tussentijds
-  end_date: '2025-06-19'
-- id: wd-5a05f0215323
-  organization_id: org:min-vws
-  post_id: post:minister-min-vws
-  role: minister van Volksgezondheid, Welzijn en Sport
-  start_date: '2026-02-23'
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2a3fccee-3645-4144-b227-d87805694f30)
+    retrieved: '2026-05-13'
+- id: 7869c100-bf86-4baa-b5e7-81cf5806b914
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
   sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q28860996#P39
-    retrieved: '2026-05-09'
-  end_date: null
-- id: wd-8755e24cd784
-  organization_id: org:min-ocw
-  post_id: post:minister-min-ocw
-  role: minister van Onderwijs, Cultuur en Wetenschap
-  start_date: '2025-08-22'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q28860996#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-31152
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-schoof-tussentijds
-  end_date: '2025-09-05'
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b0e48cc4-10dd-419e-8e22-cbd3d6893941)
+    retrieved: '2026-05-13'
 - id: wd-693a43790ecb
   organization_id: org:min-kgg
   post_id: post:minister-min-kgg
@@ -99,23 +57,65 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28860996#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-    retrieved: '2026-05-09'
-    fields:
-    - applied_via:apply-staging
+    retrieved: '2026-05-13'
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
     retrieved: '2026-05-12'
     fields:
     - end_date
     - applied_via:close-schoof-script
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
   end_date: '2026-02-23'
+- id: wd-2589130faabe
+  organization_id: org:min-ienw
+  post_id: post:minister-min-ienw
+  role: Minister van Infrastructuur en Waterstaat
+  start_date: '2025-06-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-23052
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-tussentijds
+  end_date: '2025-06-19'
+- id: wd-8755e24cd784
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: minister van Onderwijs, Cultuur en Wetenschap
+  start_date: '2025-08-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2025-31152
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:close-schoof-tussentijds
+  end_date: '2025-09-05'
+- id: wd-5a05f0215323
+  organization_id: org:min-vws
+  post_id: post:minister-min-vws
+  role: minister van Volksgezondheid, Welzijn en Sport
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28860996#P39
+    retrieved: '2026-05-13'
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8663b71-f92b-4d2b-a06b-f78dba168d98)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q28860996
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

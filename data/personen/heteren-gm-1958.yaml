@@ -1,0 +1,30 @@
+id: person:heteren-gm-1958
+identifiers:
+  tk_persoon_id: 6ff2e8e6-a37c-4e94-be3a-2309c71967b6
+name:
+  full: Godelieve Maria van Heteren
+  family: van Heteren
+  given: Godelieve Maria
+  initials: G.M.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1958
+gender: f
+mandaten:
+- id: d9c3c56e-5819-400b-b970-d72ad185c7b9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-10-17'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8538a161-b127-409d-8f86-57435a8ef3fc)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6ff2e8e6-a37c-4e94-be3a-2309c71967b6)
+  retrieved: '2026-05-13'

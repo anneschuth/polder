@@ -1,0 +1,30 @@
+id: person:heemst-ep-1952
+identifiers:
+  tk_persoon_id: 63b50818-1dba-46cb-ae21-cc3b5567a1b1
+name:
+  full: Peter van Heemst
+  family: van Heemst
+  given: Peter
+  initials: E.P.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1952
+gender: m
+mandaten:
+- id: a51ad7cd-65e5-49cd-bdc8-4c6466dc2d9b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1991-09-10'
+  end_date: '2006-05-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b97d8fd5-eb35-4c25-802e-7dc0fd3db802)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(63b50818-1dba-46cb-ae21-cc3b5567a1b1)
+  retrieved: '2026-05-13'

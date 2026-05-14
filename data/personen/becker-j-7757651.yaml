@@ -1,9 +1,13 @@
 id: person:becker-j-7757651
+identifiers:
+  wikidata: Q123176022
 name:
   full: Jelmer Becker
   family: Becker
   given: Jelmer
   initials: J.
+birth:
+  year: 2001
 mandaten:
 - id: c86b5259-af12-464e-b997-748c0ec5800e
   organization_id: org:gemeente-utrecht
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758974
     retrieved: '2026-05-09'
+- id: 55970d49-28ee-4fd4-9ea6-2123dcdb8a56
+  organization_id: org:gemeente-utrecht
+  post_id: post:raadslid-gemeente-utrecht
+  role: Raadslid gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7758974
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7757651
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123176022
+  retrieved: '2026-05-13'

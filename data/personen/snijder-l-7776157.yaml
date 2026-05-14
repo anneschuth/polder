@@ -1,9 +1,13 @@
 id: person:snijder-l-7776157
+identifiers:
+  wikidata: Q2848444
 name:
   full: L. Snijder
   family: Snijder
   given: L.
   initials: L.
+birth:
+  year: 1937
 mandaten:
 - id: db511286-4bf3-4d2e-906f-86055c059bc7
   organization_id: org:gemeente-overbetuwe
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7776158
     retrieved: '2026-05-09'
+- id: dd686d2e-8f3d-4b09-9ee8-92e588aacde8
+  organization_id: org:gemeente-overbetuwe
+  post_id: post:raadslid-gemeente-overbetuwe
+  role: Raadslid gemeente Overbetuwe
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7776158
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7776157
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2848444
   retrieved: '2026-05-11'
-birth:
-  year: 1937
-identifiers:
-  wikidata: Q2848444

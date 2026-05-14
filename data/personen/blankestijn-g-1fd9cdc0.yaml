@@ -1,0 +1,28 @@
+id: person:blankestijn-g-1fd9cdc0
+name:
+  full: Gerard Blankestijn
+  family: Blankestijn
+  given: Gerard
+  initials: G.
+mandaten:
+- id: mandate-post-algemeen-directeur-midden-en-kleinbedrijf-belastingdienst-min-fin-2018-12-01
+  organization_id: org:onderdeel-mkb-belastingdienst-min-fin
+  post_id: post:algemeen-directeur-midden-en-kleinbedrijf-belastingdienst-min-fin
+  role: algemeen directeur Midden en Kleinbedrijf bij de Belastingdienst
+  start_date: '2018-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/agaath-cleyndert-algemeen-directeur-toeslagen-bij-de-belastingdienst
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-23
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/agaath-cleyndert-algemeen-directeur-toeslagen-bij-de-belastingdienst
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

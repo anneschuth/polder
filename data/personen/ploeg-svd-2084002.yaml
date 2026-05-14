@@ -2,7 +2,7 @@ id: person:ploeg-svd-2084002
 name:
   full: S. van der Ploeg
   family: Ploeg
-  given: S.
+  given: S. van der
   initials: S.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2084004
     retrieved: '2026-05-09'
+- id: 97b326af-bd3d-49b3-ba51-27e3b6054df8
+  organization_id: org:gemeente-achtkarspelen
+  post_id: post:raadslid-gemeente-achtkarspelen
+  role: Raadslid gemeente Achtkarspelen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2084004
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2084002
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

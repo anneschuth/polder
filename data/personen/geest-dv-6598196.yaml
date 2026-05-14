@@ -2,7 +2,7 @@ id: person:geest-dv-6598196
 name:
   full: Don van Geest
   family: Geest
-  given: Don
+  given: Don van
   initials: D.V.
   tussenvoegsel: van
 mandaten:
@@ -26,7 +26,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6598197
     retrieved: '2026-05-09'
+- id: 374cbcaa-f694-48b5-9abb-02ad667168ff
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598197
+    retrieved: '2026-05-13'
+- id: c16081f2-5ac7-459c-ac01-6b27c11d2d32
+  organization_id: org:gemeente-westland
+  post_id: post:raadslid-gemeente-westland
+  role: Raadslid gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598197
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598196
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

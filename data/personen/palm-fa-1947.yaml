@@ -1,0 +1,30 @@
+id: person:palm-fa-1947
+identifiers:
+  tk_persoon_id: 2c7850ce-a1e0-453c-b91e-4744083cddf7
+name:
+  full: Frederik Albert Palm
+  family: Palm
+  given: Frederik Albert
+  initials: F.A.
+  honorifics_pre:
+  - drs
+birth:
+  year: 1947
+gender: m
+mandaten:
+- id: 9c5f5c8d-b2f6-4e4a-99d8-28d337e9a861
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9613b42c-fbc8-436e-9871-e7fa20628007)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2c7850ce-a1e0-453c-b91e-4744083cddf7)
+  retrieved: '2026-05-13'

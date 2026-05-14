@@ -1,9 +1,13 @@
 id: person:lunshof-a-7773984
+identifiers:
+  wikidata: Q4022913
 name:
   full: A. Lunshof
   family: Lunshof
   given: A.
   initials: A.
+birth:
+  year: 1945
 mandaten:
 - id: ce8cf5a9-da43-4dbc-bf1f-b071091f069b
   organization_id: org:gemeente-harderwijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7773986
     retrieved: '2026-05-09'
+- id: 979905e9-4a7a-4696-a47f-dcbdf8dcdbd4
+  organization_id: org:gemeente-harderwijk
+  post_id: post:raadslid-gemeente-harderwijk
+  role: Raadslid gemeente Harderwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7773986
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7773984
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q4022913
   retrieved: '2026-05-11'
-birth:
-  year: 1945
-identifiers:
-  wikidata: Q4022913

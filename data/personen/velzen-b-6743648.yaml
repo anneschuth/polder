@@ -1,9 +1,13 @@
 id: person:velzen-b-6743648
+identifiers:
+  wikidata: Q13441918
 name:
   full: B.G. Velzen
   family: Velzen
   given: B.G.
   initials: B.
+birth:
+  year: 1933
 mandaten:
 - id: 37af7f9b-988d-42d2-858a-72abdb08dd7b
   organization_id: org:gemeente-zoetermeer
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743649
     retrieved: '2026-05-09'
+- id: 2e793af0-4f9a-46ed-a71b-3e7f9b5d4027
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:wethouder-gemeente-zoetermeer
+  role: Wethouder gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743649
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743648
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q13441918
   retrieved: '2026-05-11'
-birth:
-  year: 1933
-identifiers:
-  wikidata: Q13441918

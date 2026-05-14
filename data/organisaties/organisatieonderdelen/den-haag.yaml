@@ -1,0 +1,23 @@
+id: org:onderdeel-den-haag
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132297'
+  oin: 00000001002308836000
+  kvk: '27370927'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0518
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Den Haag
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132297/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

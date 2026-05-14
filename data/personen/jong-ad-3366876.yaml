@@ -1,10 +1,14 @@
 id: person:jong-ad-3366876
+identifiers:
+  wikidata: Q10665
 name:
   full: A.S. de Jong
   family: Jong
-  given: A.S.
+  given: A.S. de
   initials: A.D.
   tussenvoegsel: de
+birth:
+  year: 1941
 mandaten:
 - id: c2c9a87e-48bc-4a58-8916-c94e938a1cf9
   organization_id: org:gemeente-diemen
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366878
     retrieved: '2026-05-09'
+- id: b1f4b284-d28a-4952-8d9f-ddeb89b113ee
+  organization_id: org:gemeente-diemen
+  post_id: post:raadslid-gemeente-diemen
+  role: Raadslid gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3366878
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366876
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q10665
   retrieved: '2026-05-11'
-birth:
-  year: 1941
-identifiers:
-  wikidata: Q10665

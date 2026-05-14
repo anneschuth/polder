@@ -233,7 +233,7 @@ def test_skill_output_with_markdown_fence_parses() -> None:
         text='```json\n{"outcome":"no_match","confidence":0.2}\n```',
     )
     runner, _ = _make_runner(skill)
-    out, stats = enrich_resolved([proposal], runner=runner)
+    _out, stats = enrich_resolved([proposal], runner=runner)
     assert stats.no_match == 1
     assert stats.skill_errors == 0
 

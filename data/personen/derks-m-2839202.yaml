@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7277265
     retrieved: '2026-05-09'
+- id: 1077abcd-b782-4c36-a47d-4d8e96a808e0
+  organization_id: org:gemeente-beesel
+  post_id: post:burgemeester-gemeente-beesel
+  role: Burgemeester gemeente Beesel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7277265
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2839202
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q134961395
+  retrieved: '2026-05-13'
+birth:
+  year: 1982
+identifiers:
+  wikidata: Q134961395

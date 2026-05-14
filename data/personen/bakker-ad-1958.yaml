@@ -1,0 +1,40 @@
+id: person:bakker-ad-1958
+identifiers:
+  tk_persoon_id: bc76a0fb-c59b-491c-a447-d6d90e1e2713
+name:
+  full: Bert Bakker
+  family: Bakker
+  given: Bert
+  initials: A.D.
+birth:
+  year: 1958
+gender: m
+mandaten:
+- id: a1ee3b72-02b6-4226-965c-b0ab203845d3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2006-04-18'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(28b9a1fd-8e53-4675-8682-f0dd70b5328c)
+    retrieved: '2026-05-13'
+- id: cecc1ef9-9d81-45a6-92c7-d9c182e61aca
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '1994-05-17'
+  end_date: '2006-04-17'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4c8095b9-df8f-4d3b-9424-947381cd377a)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(bc76a0fb-c59b-491c-a447-d6d90e1e2713)
+  retrieved: '2026-05-13'

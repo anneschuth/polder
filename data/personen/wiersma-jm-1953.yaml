@@ -1,0 +1,28 @@
+id: person:wiersma-jm-1953
+identifiers:
+  tk_persoon_id: 89b648cf-c3cb-4ac1-8d0e-9ec021a401dc
+name:
+  full: Harmen Wiersma
+  family: Wiersma
+  given: Harmen
+  initials: J.M.
+birth:
+  year: 1953
+gender: m
+mandaten:
+- id: 41a665e7-9fd6-40a7-95b3-ee86752f1c17
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0a2c430e-0bd7-42fa-8fe5-12c2847310d6)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(89b648cf-c3cb-4ac1-8d0e-9ec021a401dc)
+  retrieved: '2026-05-13'

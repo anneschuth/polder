@@ -1,10 +1,14 @@
 id: person:belt-rvd-6256573
+identifiers:
+  wikidata: Q63882551
 name:
   full: R. van de Belt
   family: Belt
-  given: R.
+  given: R. van de
   initials: R.V.D.
   tussenvoegsel: van de
+birth:
+  year: 1971
 mandaten:
 - id: 4097bb29-8c64-46f7-a681-124574c13116
   organization_id: org:gemeente-texel
@@ -16,7 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6256574
     retrieved: '2026-05-09'
+- id: 4477dc21-8aa2-41d1-8302-b4c42e510bd7
+  organization_id: org:gemeente-texel
+  post_id: post:wethouder-gemeente-texel
+  role: Wethouder gemeente Texel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6256574
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6256573
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q63882551
+  retrieved: '2026-05-13'

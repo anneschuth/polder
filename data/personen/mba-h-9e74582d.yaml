@@ -1,0 +1,28 @@
+id: person:mba-h-9e74582d
+name:
+  full: Mr. drs. A. (Albert) Hazelhoff MBA
+  family: MBA
+  given: A. Hazelhoff
+  initials: A.H.
+mandaten:
+- id: mandate-post-algemeen-directeur-cjib-min-jenv-2018-07-01
+  organization_id: org:agentschap-cjib
+  post_id: post:algemeen-directeur-cjib-min-jenv
+  role: algemeen directeur Centraal Justitieel Incassobureau (CJIB), ministerie van Justitie en Veiligheid
+  start_date: '2018-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/09/albert-hazelhoff-algemeen-directeur-centraal-justitieel-incassobureau
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-05-09
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/09/albert-hazelhoff-algemeen-directeur-centraal-justitieel-incassobureau
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

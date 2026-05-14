@@ -144,7 +144,7 @@ def test_store_creates_cache_directory(fake_repo: Path) -> None:
 
 
 def test_cache_file_is_valid_json_with_unicode(fake_repo: Path) -> None:
-    result = SkillResult(text="benoeming van een lid – àéîõü 中文", model="m")
+    result = SkillResult(text="benoeming van een lid – àéîõü 中文", model="m")  # noqa: RUF001
     cache_mod.store("parse-abd-nieuws", "k", result)
 
     cache_file = cache_mod.cache_root() / "parse-abd-nieuws" / "k.json"
@@ -154,7 +154,7 @@ def test_cache_file_is_valid_json_with_unicode(fake_repo: Path) -> None:
     assert "中文" in raw
     # Valide JSON
     parsed = json.loads(raw)
-    assert parsed["text"] == "benoeming van een lid – àéîõü 中文"
+    assert parsed["text"] == "benoeming van een lid – àéîõü 中文"  # noqa: RUF001
 
 
 def test_lookup_handles_corrupt_cache_file(fake_repo: Path) -> None:

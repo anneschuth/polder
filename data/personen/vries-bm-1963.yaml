@@ -1,0 +1,30 @@
+id: person:vries-bm-1963
+identifiers:
+  tk_persoon_id: 78cd5516-759f-4e18-9ee4-8f0b4b3e94c6
+name:
+  full: Bibi de Vries
+  family: de Vries
+  given: Bibi
+  initials: B.M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1963
+gender: f
+mandaten:
+- id: 9792d90d-da71-49c7-bbb4-c76e58b351e3
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1994-05-17'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(8cff5d06-a933-4db6-9e9f-b655018c04f9)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(78cd5516-759f-4e18-9ee4-8f0b4b3e94c6)
+  retrieved: '2026-05-13'

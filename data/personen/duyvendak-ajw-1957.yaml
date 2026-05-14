@@ -1,6 +1,7 @@
 id: person:duyvendak-ajw-1957
 identifiers:
   tk_persoon_id: f5858d16-a19b-43cb-b25a-43bd596864f0
+  wikidata: Q2160402
 name:
   full: Wijnand Duyvendak
   family: Duyvendak
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0434dce5-3b3b-4f7c-bad9-d135509198a9)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(f5858d16-a19b-43cb-b25a-43bd596864f0)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2160402
+  retrieved: '2026-05-13'

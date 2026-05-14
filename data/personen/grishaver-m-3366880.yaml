@@ -1,9 +1,13 @@
 id: person:grishaver-m-3366880
+identifiers:
+  wikidata: Q217735
 name:
   full: M. Grishaver
   family: Grishaver
   given: M.
   initials: M.
+birth:
+  year: 1926
 mandaten:
 - id: bc9ced89-f61c-4de8-ac62-4052d6d354b3
   organization_id: org:gemeente-diemen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366884
     retrieved: '2026-05-09'
+- id: 430bbec3-bedf-4e2d-8369-f068abbd36f6
+  organization_id: org:gemeente-diemen
+  post_id: post:raadslid-gemeente-diemen
+  role: Raadslid gemeente Diemen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3366884
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366880
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q217735
   retrieved: '2026-05-11'
-birth:
-  year: 1926
-identifiers:
-  wikidata: Q217735

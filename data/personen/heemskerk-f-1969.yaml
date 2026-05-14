@@ -13,6 +13,18 @@ birth:
   year: 1969
 gender: m
 mandaten:
+- id: 35d9bd51-4b62-4825-bf0f-ed4206b3cf95
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(55d78737-54be-4d7c-83d4-c83e3da59993)
+    retrieved: '2026-05-13'
 - id: wd-63803df6db25
   organization_id: org:min-ezk
   post_id: post:staatssecretaris-min-ezk
@@ -21,12 +33,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q2797147#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2010-02-23'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(4a09deb6-7ed5-4164-a35f-b56471238f86)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2797147
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

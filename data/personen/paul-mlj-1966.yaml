@@ -1,6 +1,7 @@
 id: person:paul-mlj-1966
 identifiers:
   tk_persoon_id: 0e34f732-337a-4339-961f-8c18d68e714d
+  wikidata: Q106119765
 name:
   full: Mariëlle Paul
   family: Paul
@@ -12,18 +13,6 @@ birth:
   year: 1966
 gender: f
 mandaten:
-- id: da698937-2810-48f1-82c9-1a29d0b91216
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor VVD
-  start_date: '2023-12-06'
-  end_date: '2024-07-01'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c69c95b7-5005-421e-8c85-60ae242ebb8a)
-    retrieved: '2026-05-09'
 - id: 5e0eecb2-c449-4fe5-ac02-0da3ec41a49e
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -35,7 +24,19 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0dd67aa7-a539-4cc0-b962-c04df71cd0ae)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: da698937-2810-48f1-82c9-1a29d0b91216
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2023-12-06'
+  end_date: '2024-07-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c69c95b7-5005-421e-8c85-60ae242ebb8a)
+    retrieved: '2026-05-13'
 - id: mandate-post-staatssecretaris-min-ocw-2024-07-02
   organization_id: org:min-ocw
   post_id: post:staatssecretaris-min-ocw
@@ -61,4 +62,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0e34f732-337a-4339-961f-8c18d68e714d)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q106119765
+  retrieved: '2026-05-13'

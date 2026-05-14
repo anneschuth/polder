@@ -1,10 +1,14 @@
 id: person:poel-mvd-6699683
+identifiers:
+  wikidata: Q64062165
 name:
   full: M van der Poel
   family: Poel
-  given: M
+  given: M van der
   initials: M.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1957
 mandaten:
 - id: fd31092b-220d-47e9-af44-c11c82126c86
   organization_id: org:gemeente-woensdrecht
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7220010
     retrieved: '2026-05-09'
+- id: def117ab-d3f0-41c5-9ecd-766a8a00aae2
+  organization_id: org:gemeente-woensdrecht
+  post_id: post:wethouder-gemeente-woensdrecht
+  role: Wethouder gemeente Woensdrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7220010
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6699683
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q64062165
   retrieved: '2026-05-11'
-birth:
-  year: 1957
-identifiers:
-  wikidata: Q64062165

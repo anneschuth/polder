@@ -1,9 +1,13 @@
 id: person:postma-j-5169793
+identifiers:
+  wikidata: Q22237224
 name:
   full: J. Postma
   family: Postma
   given: J.
   initials: J.
+birth:
+  year: 1933
 mandaten:
 - id: 05367912-cefa-4a05-ad35-648ed05f84f7
   organization_id: org:gemeente-medemblik
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5169794
     retrieved: '2026-05-09'
+- id: 3a1b08c6-e0cf-44cb-9a79-c7889f4b1b3d
+  organization_id: org:gemeente-medemblik
+  post_id: post:raadslid-gemeente-medemblik
+  role: Raadslid gemeente Medemblik
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5169794
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5169793
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q22237224
   retrieved: '2026-05-11'
-birth:
-  year: 1933
-identifiers:
-  wikidata: Q22237224

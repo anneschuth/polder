@@ -1,0 +1,29 @@
+id: person:nagel-vd-1c831f2f
+name:
+  full: G.A. (Arjan) van der Nagel
+  family: Nagel
+  given: G.A. van der
+  initials: G.V.D.
+mandaten:
+- id: mandate-post-directeur-pieter-baan-centrum-nifp-min-jenv-2020-09-01
+  organization_id: org:nifp-dji-min-jenv
+  post_id: post:directeur-pieter-baan-centrum-nifp-min-jenv
+  role: directeur Pieter Baan Centrum van het NIFP bij de Dienst Justitiële Inrichtingen
+    bij het ministerie van Justitie en Veiligheid
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/arjan-van-den-nagel-directeur-pieter-baan-centrum-bij-jenv
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-04
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/arjan-van-den-nagel-directeur-pieter-baan-centrum-bij-jenv
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

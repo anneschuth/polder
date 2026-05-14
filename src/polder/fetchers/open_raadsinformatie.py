@@ -326,7 +326,7 @@ def _strip_family_from_name(name_string: str, family: str) -> str:
     raw = name_string.strip()
 
     if "," in raw:
-        fam_part, given_part = raw.split(",", 1)
+        _fam_part, given_part = raw.split(",", 1)
         return given_part.strip()
 
     # Probeer family aan het eind weg te strippen. Hou rekening met
@@ -382,7 +382,7 @@ def _extract_tussenvoegsel(name_string: str, family: str) -> str | None:
         first = tok[0]
         # Tussenvoegsels beginnen met kleine letter ("van", "de"), of met
         # apostrof ("'t", "'s").
-        if first.islower() or first in ("'", "‘"):
+        if first.islower() or first in ("'", "‘"):  # noqa: RUF001
             tail.insert(0, tok)
         else:
             break

@@ -2,6 +2,7 @@ id: org:gemeente-sneek
 type: gemeente
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0091
+  wikidata: Q1911287
 classification: gemeente
 parent_id: null
 names:
@@ -10,8 +11,11 @@ names:
   valid_until: '2010-12-31'
 valid_from: '1900-01-01'
 valid_until: '2010-12-31'
-successor_id: org:gemeente-sudwest-fryslan
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0091
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q1911287
+  retrieved: '2026-05-13'
+successor_id: org:gemeente-sudwest-fryslan

@@ -25,7 +25,34 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2827986
     retrieved: '2026-05-09'
+- id: 1efeeb50-ef0f-4682-bb9c-05e6374b863f
+  organization_id: org:gemeente-beek
+  post_id: post:raadslid-gemeente-beek
+  role: Raadslid gemeente Beek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2827986
+    retrieved: '2026-05-13'
+- id: 78be50ea-18b6-482a-8c9d-855c0a33ae93
+  organization_id: org:gemeente-beekdaelen
+  post_id: post:raadslid-gemeente-beekdaelen
+  role: Raadslid gemeente Beekdaelen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2827986
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2827982
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112526776
+  retrieved: '2026-05-13'
+birth:
+  year: 1953
+identifiers:
+  wikidata: Q112526776

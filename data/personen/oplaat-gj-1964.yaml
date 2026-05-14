@@ -11,6 +11,18 @@ birth:
   year: 1964
 gender: m
 mandaten:
+- id: f6bf4983-0089-4aa7-8b09-625d6ddc5723
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-07-26'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(de07d7d7-682f-4f7d-918a-3f44c5dea60d)
+    retrieved: '2026-05-13'
 - id: 363d89d1-e43f-4d07-8f8d-c84cf2c3d114
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -22,14 +34,14 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/g_j_oplaat_bbb
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(23a1f302-f834-4aba-a6a7-a7b77d62ea66)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/g_j_oplaat_bbb
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2035262
   retrieved: '2026-05-09'

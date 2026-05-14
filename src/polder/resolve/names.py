@@ -102,7 +102,7 @@ def _looks_like_tussenvoegsel(token: str) -> bool:
     if not token:
         return False
     first = token[0]
-    return first.islower() or first in ("'", "‘")
+    return first.islower() or first in ("'", "‘")  # noqa: RUF001
 
 
 _PARENS_RX = re.compile(r"\(([^)]+)\)")

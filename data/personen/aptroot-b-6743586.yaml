@@ -1,9 +1,13 @@
 id: person:aptroot-b-6743586
+identifiers:
+  wikidata: Q123175939
 name:
   full: B.W. Aptroot
   family: Aptroot
   given: B.W.
   initials: B.
+birth:
+  year: 1977
 mandaten:
 - id: e39db5c5-0527-4874-9d2b-22f6935a670a
   organization_id: org:gemeente-zoetermeer
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743588
     retrieved: '2026-05-09'
+- id: d810c381-9b89-4e69-8af4-99b2fbfdd64b
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:raadslid-gemeente-zoetermeer
+  role: Raadslid gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743588
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743586
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123175939
+  retrieved: '2026-05-13'

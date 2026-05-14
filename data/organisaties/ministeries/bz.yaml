@@ -11,16 +11,19 @@ parent_id: null
 names:
 - value: Buitenlandse Zaken
   abbr: BZ
+  valid_from: '1900-01-01'
+- value: Buitenlandse Zaken
+  abbr: BZ
   valid_from: '1798-03-12'
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken
   email: woo@minbuza.nl
-valid_from: '1798-03-12'
+valid_from: '1900-01-01'
 valid_until: null
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/2515/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1037495
   retrieved: '2026-05-09'

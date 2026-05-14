@@ -2,6 +2,9 @@ id: org:gemeente-maasdonk
 type: gemeente
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1671
+  wikidata: Q9851
+  oin: '00000001001160746000'
+  kvk: '50617117'
 classification: gemeente
 parent_id: null
 names:
@@ -14,3 +17,11 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm1671
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q9851
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

@@ -1,0 +1,30 @@
+id: person:douma-k-1961
+identifiers:
+  tk_persoon_id: d6ee0736-4a8f-4f04-a7ee-81764d2ca6bf
+name:
+  full: Kris Douma
+  family: Douma
+  given: Kris
+  initials: K.
+  honorifics_pre:
+  - drs.
+birth:
+  year: 1961
+gender: m
+mandaten:
+- id: fe9fba1c-32de-4b2c-ae12-1135c0d63700
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1974c262-9bd6-46e2-a77e-2d558fd542eb)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d6ee0736-4a8f-4f04-a7ee-81764d2ca6bf)
+  retrieved: '2026-05-13'

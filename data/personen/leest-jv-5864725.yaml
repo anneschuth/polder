@@ -2,7 +2,7 @@ id: person:leest-jv-5864725
 name:
   full: J.A.G. van Leest
   family: Leest
-  given: J.A.G.
+  given: J.A.G. van
   initials: J.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864727
     retrieved: '2026-05-09'
+- id: f118adbb-501e-428f-851f-c6f57dbb85a8
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864727
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864725
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

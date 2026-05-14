@@ -1,9 +1,13 @@
 id: person:pollmann-p-6728722
+identifiers:
+  wikidata: Q2791337
 name:
   full: Peter Pollmann
   family: Pollmann
   given: Peter
   initials: P.
+birth:
+  year: 1951
 mandaten:
 - id: 2a6c955b-0353-46c9-afbd-69b0a64b7d91
   organization_id: org:gemeente-zevenaar
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6728724
     retrieved: '2026-05-09'
+- id: fe86d6e6-f6a3-4e44-9ce7-bb0c18d56765
+  organization_id: org:gemeente-zevenaar
+  post_id: post:raadslid-gemeente-zevenaar
+  role: Raadslid gemeente Zevenaar
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6728724
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6728722
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2791337
   retrieved: '2026-05-11'
-birth:
-  year: 1951
-identifiers:
-  wikidata: Q2791337

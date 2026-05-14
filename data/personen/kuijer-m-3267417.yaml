@@ -1,9 +1,13 @@
 id: person:kuijer-m-3267417
+identifiers:
+  wikidata: Q434729
 name:
   full: M. Kuijer
   family: Kuijer
   given: M.
   initials: M.
+birth:
+  year: 1959
 mandaten:
 - id: 5dfed7b2-f47f-4448-bbd3-83df5180053d
   organization_id: org:gemeente-culemborg
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3267419
     retrieved: '2026-05-09'
+- id: 8017ffd6-b5d1-49de-85c5-ba318ad03833
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3267419
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3267417
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q434729
   retrieved: '2026-05-11'
-birth:
-  year: 1959
-identifiers:
-  wikidata: Q434729

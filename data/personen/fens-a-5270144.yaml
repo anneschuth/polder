@@ -1,9 +1,13 @@
 id: person:fens-a-5270144
+identifiers:
+  wikidata: Q2540802
 name:
   full: A.C.M. Fens
   family: Fens
   given: A.C.M.
   initials: A.
+birth:
+  year: 1929
 mandaten:
 - id: 0895bf22-0303-4423-9bbb-df11796ac794
   organization_id: org:gemeente-moerdijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5270146
     retrieved: '2026-05-09'
+- id: 4be59588-e3b3-4886-a377-55a11f4416f8
+  organization_id: org:gemeente-moerdijk
+  post_id: post:raadslid-gemeente-moerdijk
+  role: Raadslid gemeente Moerdijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5270146
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5270144
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2540802
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q2540802

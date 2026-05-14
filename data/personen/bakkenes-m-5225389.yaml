@@ -1,9 +1,13 @@
 id: person:bakkenes-m-5225389
+identifiers:
+  wikidata: Q7372543
 name:
   full: M Bakkenes
   family: Bakkenes
   given: M
   initials: M.
+birth:
+  year: 1990
 mandaten:
 - id: 60cf7186-238a-44a1-9924-534fdc7fcad2
   organization_id: org:gemeente-meppel
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5225391
     retrieved: '2026-05-09'
+- id: 7d15c606-870e-4ab7-a161-0fd313d36770
+  organization_id: org:gemeente-meppel
+  post_id: post:raadslid-gemeente-meppel
+  role: Raadslid gemeente Meppel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5225391
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5225389
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q7372543
+  retrieved: '2026-05-13'

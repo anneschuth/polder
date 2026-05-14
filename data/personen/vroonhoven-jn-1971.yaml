@@ -12,42 +12,18 @@ birth:
   year: 1971
 gender: f
 mandaten:
-- id: 6c08be34-aec5-4229-978d-322359a0e66b
+- id: 322cbd86-d6cd-481b-847c-433cf5206770
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
-  role: Kamerlid voor Nieuw Sociaal Contract
-  start_date: '2025-09-02'
-  end_date: '2025-11-11'
+  role: Kamerlid voor CDA
+  start_date: '2002-05-23'
+  end_date: '2008-04-27'
   appointment:
     decision: TK-installatie
   sources:
   - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29efe746-8955-4664-bc2c-60c6c87f1e7d)
-    retrieved: '2026-05-09'
-- id: 11bb8f8b-f55a-42a7-a641-fe4ae15b8d8c
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor Nieuw Sociaal Contract
-  start_date: '2025-04-19'
-  end_date: '2025-09-02'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0edff80e-078d-4646-8716-d66cce226e7c)
-    retrieved: '2026-05-09'
-- id: b13ef3a0-5358-49c0-9b90-5f2282adb643
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor Nieuw Sociaal Contract
-  start_date: '2023-12-06'
-  end_date: '2025-04-18'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c24e298-3bd6-4fcf-b4d4-bdcae51e00d3)
-    retrieved: '2026-05-09'
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0831e48e-6607-459a-abce-9b8571366e3f)
+    retrieved: '2026-05-13'
 - id: 442e6d3c-04c2-4012-86d0-cea3e7a5ff2b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -59,8 +35,44 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d7ddca4e-4592-4eb4-9e16-4ddf2722a52b)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: b13ef3a0-5358-49c0-9b90-5f2282adb643
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2023-12-06'
+  end_date: '2025-04-18'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c24e298-3bd6-4fcf-b4d4-bdcae51e00d3)
+    retrieved: '2026-05-13'
+- id: 11bb8f8b-f55a-42a7-a641-fe4ae15b8d8c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2025-04-19'
+  end_date: '2025-09-02'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0edff80e-078d-4646-8716-d66cce226e7c)
+    retrieved: '2026-05-13'
+- id: 6c08be34-aec5-4229-978d-322359a0e66b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Nieuw Sociaal Contract
+  start_date: '2025-09-02'
+  end_date: '2025-11-11'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29efe746-8955-4664-bc2c-60c6c87f1e7d)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9ba1fdd9-e6ac-4659-bd45-1ffc08aa6ed5)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

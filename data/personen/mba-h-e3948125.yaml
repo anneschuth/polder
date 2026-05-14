@@ -1,0 +1,28 @@
+id: person:mba-h-e3948125
+name:
+  full: D.A. (Ditte) Hak MBA
+  family: MBA
+  given: D.A. Hak
+  initials: D.H.
+mandaten:
+- id: mandate-post-dg-toeslagen-min-fin-2020-08-01
+  organization_id: org:onderdeel-dgtsl
+  post_id: post:dg-toeslagen-min-fin
+  role: directeur-generaal Toeslagen, ministerie van Financiën
+  start_date: '2020-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/ditte-hak-directeur-generaal-toeslagen-bij-financien
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-20
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/ditte-hak-directeur-generaal-toeslagen-bij-financien
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

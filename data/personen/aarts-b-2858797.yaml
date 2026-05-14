@@ -1,9 +1,13 @@
 id: person:aarts-b-2858797
+identifiers:
+  wikidata: Q112380521
 name:
   full: Bas Aarts
   family: Aarts
   given: Bas
   initials: B.
+birth:
+  year: 1961
 mandaten:
 - id: 70af7e50-41c4-4b01-a307-23e44e27bff2
   organization_id: org:gemeente-bergeijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2858799
     retrieved: '2026-05-09'
+- id: d753d45e-f7a1-4652-951d-cbbd1d688b88
+  organization_id: org:gemeente-bergeijk
+  post_id: post:raadslid-gemeente-bergeijk
+  role: Raadslid gemeente Bergeijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2858799
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2858797
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q112380521
   retrieved: '2026-05-11'
-birth:
-  year: 1961
-identifiers:
-  wikidata: Q112380521

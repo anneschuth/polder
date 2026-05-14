@@ -1,9 +1,13 @@
 id: person:timmer-s-3986082
+identifiers:
+  wikidata: Q107503827
 name:
   full: Sandra Timmer
   family: Timmer
   given: Sandra
   initials: S.
+birth:
+  year: 1964
 mandaten:
 - id: 6486c46b-51a0-4a77-9312-128ea26e37c6
   organization_id: org:gemeente-harderwijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3986084
     retrieved: '2026-05-09'
+- id: ba376e18-4fc6-4bab-804d-3cff09faa6e1
+  organization_id: org:gemeente-harderwijk
+  post_id: post:raadslid-gemeente-harderwijk
+  role: Raadslid gemeente Harderwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3986084
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3986082
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q107503827
   retrieved: '2026-05-11'
-birth:
-  year: 1964
-identifiers:
-  wikidata: Q107503827

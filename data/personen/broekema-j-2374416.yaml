@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2374417
     retrieved: '2026-05-09'
+- id: 0c679da3-2967-415e-a9e9-3a7428ddd845
+  organization_id: org:gemeente-assen
+  post_id: post:wethouder-gemeente-assen
+  role: Wethouder gemeente Assen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2374417
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2374416
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q84565371
+  retrieved: '2026-05-13'
+birth:
+  year: 1981
+identifiers:
+  wikidata: Q84565371

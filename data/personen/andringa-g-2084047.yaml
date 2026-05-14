@@ -1,9 +1,13 @@
 id: person:andringa-g-2084047
+identifiers:
+  wikidata: Q64033251
 name:
   full: G. Andringa
   family: Andringa
   given: G.
   initials: G.
+birth:
+  year: 1948
 mandaten:
 - id: 5d7a82da-d6b5-4cf3-a2c0-9619fe33cf8b
   organization_id: org:gemeente-achtkarspelen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2084051
     retrieved: '2026-05-09'
+- id: 7394ba76-6fa7-4eb7-92f9-e5a9495435f7
+  organization_id: org:gemeente-achtkarspelen
+  post_id: post:griffier-gemeente-achtkarspelen
+  role: Raadsgriffier gemeente Achtkarspelen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2084051
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2084047
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q64033251
   retrieved: '2026-05-11'
-birth:
-  year: 1948
-identifiers:
-  wikidata: Q64033251

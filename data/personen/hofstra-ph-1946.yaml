@@ -1,0 +1,30 @@
+id: person:hofstra-ph-1946
+identifiers:
+  tk_persoon_id: 988876c9-a5dc-471c-9488-6fbcbf37d857
+name:
+  full: Pieter Hofstra
+  family: Hofstra
+  given: Pieter
+  initials: P.H.
+  honorifics_pre:
+  - ir.
+birth:
+  year: 1946
+gender: m
+mandaten:
+- id: 0f9a3bcf-306f-4cc9-b842-9b01922cdbc2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1994-09-08'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e3704c76-c51f-4ccc-96f6-3d24df3727be)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(988876c9-a5dc-471c-9488-6fbcbf37d857)
+  retrieved: '2026-05-13'

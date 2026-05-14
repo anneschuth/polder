@@ -1,17 +1,34 @@
-id: org:ws-reest-en-wieden
+id: org:waterschap-reest-en-wieden
 type: waterschap
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0648
+  wikidata: Q2802070
+  roo_id: '21171'
+  oin: 00000001808373894000
+  kvk: '50618466'
 classification: waterschap
 parent_id: null
 names:
 - value: Reest en Wieden
   valid_from: '1900-01-01'
   valid_until: '2015-12-31'
+contact:
+  website: http://www.wdodelta.nl
 valid_from: '1900-01-01'
 valid_until: '2015-12-31'
-successor_id: org:waterschap-wdodelta
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0648
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2802070
+  retrieved: '2026-05-13'
+- id: roo
+  url: https://organisaties.overheid.nl/21171/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin
+successor_id: org:waterschap-wdodelta

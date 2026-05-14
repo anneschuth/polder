@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769789
     retrieved: '2026-05-09'
+- id: 83a3e096-a4fe-4004-8414-ccceef56cdc3
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769789
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769788
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q30072579
+  retrieved: '2026-05-13'
+birth:
+  year: 1963
+identifiers:
+  wikidata: Q30072579

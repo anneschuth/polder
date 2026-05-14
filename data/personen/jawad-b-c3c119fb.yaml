@@ -1,0 +1,28 @@
+id: person:jawad-b-c3c119fb
+name:
+  full: Besim Jawad
+  family: Jawad
+  given: Besim
+  initials: B.
+mandaten:
+- id: mandate-post-directeur-particulieren-belastingdienst-min-fin-2020-03-15
+  organization_id: org:onderdeel-particulieren-min-fin
+  post_id: post:directeur-particulieren-belastingdienst-min-fin
+  role: directeur Particulieren bij de Belastingdienst van het ministerie van Financiën
+  start_date: '2020-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/21/besim-jawad-directeur-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-02-21
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/21/besim-jawad-directeur-particulieren-bij-de-belastingdienst
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

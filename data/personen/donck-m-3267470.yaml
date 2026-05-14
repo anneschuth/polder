@@ -1,9 +1,13 @@
 id: person:donck-m-3267470
+identifiers:
+  wikidata: Q14503542
 name:
   full: M. Donck
   family: Donck
   given: M.
   initials: M.
+birth:
+  year: 1933
 mandaten:
 - id: 1a15afd5-c7a3-4e19-b62d-ccbbb13a7de5
   organization_id: org:gemeente-culemborg
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3267472
     retrieved: '2026-05-09'
+- id: 93eeb6e0-005b-4fd1-ae8f-8198a1508513
+  organization_id: org:gemeente-culemborg
+  post_id: post:raadslid-gemeente-culemborg
+  role: Raadslid gemeente Culemborg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3267472
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3267470
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q14503542
   retrieved: '2026-05-11'
-birth:
-  year: 1933
-identifiers:
-  wikidata: Q14503542

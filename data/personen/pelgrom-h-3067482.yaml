@@ -1,9 +1,13 @@
 id: person:pelgrom-h-3067482
+identifiers:
+  wikidata: Q83286356
 name:
   full: Han Pelgrom
   family: Pelgrom
   given: Han
   initials: H.
+birth:
+  year: 1939
 mandaten:
 - id: 3b79d865-a4e1-49a8-9b33-c5d44d4e5178
   organization_id: org:gemeente-bronckhorst
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3067484
     retrieved: '2026-05-09'
+- id: 2d70c850-8829-4a76-acbb-a9dbe6c5ac8e
+  organization_id: org:gemeente-bronckhorst
+  post_id: post:raadslid-gemeente-bronckhorst
+  role: Raadslid gemeente Bronckhorst
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3067484
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3067482
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q83286356
   retrieved: '2026-05-11'
-birth:
-  year: 1939
-identifiers:
-  wikidata: Q83286356

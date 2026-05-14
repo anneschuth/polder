@@ -1,9 +1,13 @@
 id: person:smits-j-6019729
+identifiers:
+  wikidata: Q2346142
 name:
   full: Jan Smits
   family: Smits
   given: Jan
   initials: J.
+birth:
+  year: 1943
 mandaten:
 - id: 0fc12623-2f89-4513-a0d2-3e3c49928b42
   organization_id: org:gemeente-roerdalen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6019731
     retrieved: '2026-05-09'
+- id: 9029b998-cd35-4fbd-a344-6b8652fb3ceb
+  organization_id: org:gemeente-roerdalen
+  post_id: post:wethouder-gemeente-roerdalen
+  role: Wethouder gemeente Roerdalen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6019731
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6019729
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2346142
   retrieved: '2026-05-11'
-birth:
-  year: 1943
-identifiers:
-  wikidata: Q2346142

@@ -1,9 +1,13 @@
 id: person:timmer-h-5225440
+identifiers:
+  wikidata: Q97515323
 name:
   full: H. Timmer
   family: Timmer
   given: H.
   initials: H.
+birth:
+  year: 1959
 mandaten:
 - id: 94a37026-a6b9-44f2-b794-53ce1d64e7e3
   organization_id: org:gemeente-meppel
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5225442
     retrieved: '2026-05-09'
+- id: 249493d3-67ac-4e8c-8f65-1e30e63579c4
+  organization_id: org:gemeente-meppel
+  post_id: post:raadslid-gemeente-meppel
+  role: Raadslid gemeente Meppel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5225442
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5225440
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q97515323
   retrieved: '2026-05-11'
-birth:
-  year: 1959
-identifiers:
-  wikidata: Q97515323

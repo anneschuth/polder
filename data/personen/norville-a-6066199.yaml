@@ -16,10 +16,9 @@ mandaten:
     url: https://id.openraadsinformatie.nl/6066200
     retrieved: '2026-05-09'
 - id: mandate-post-plaatsvervangend-secretaris-generaal-min-vws-2019-10-01
-  organization_id: org:min-vws
+  organization_id: org:onderdeel-sg-min-vws
   post_id: post:plaatsvervangend-secretaris-generaal-min-vws
-  role: plaatsvervangend secretaris-generaal, ministerie van Volksgezondheid, Welzijn
-    en Sport
+  role: plaatsvervangend secretaris-generaal, ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2019-10-01'
   end_date: null
   sources:
@@ -31,6 +30,19 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2019-08-16
   confidence: 0.92
+- id: mandate-post-plaatsvervangend-secretaris-generaal-ministerie-van-volksgezondheid-welzijn-en-sport-2019-10-01
+  organization_id: org:onderdeel-sg-min-vws
+  post_id: post:plaatsvervangend-secretaris-generaal-ministerie-van-volksgezondheid-welzijn-en-sport
+  role: Plaatsvervangend secretaris-generaal
+  start_date: '2019-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/16/abigail-norville-plaatsvervangend-secretaris-generaal-bij-vws
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  confidence: 0.85
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6066199

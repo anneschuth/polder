@@ -1,0 +1,40 @@
+id: person:lazrak-a-1948
+identifiers:
+  tk_persoon_id: 31ddf263-4936-487f-9469-58f1f8d4b720
+name:
+  full: Ali Lazrak
+  family: Lazrak
+  given: Ali
+  initials: A.
+birth:
+  year: 1948
+gender: m
+mandaten:
+- id: 48e22970-b0aa-471e-a4d4-45cc46051680
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Lazrak
+  start_date: '2004-02-04'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f9d936fb-12e0-4c5e-9b16-5389c7f74e44)
+    retrieved: '2026-05-13'
+- id: bec4e2bf-21ce-4f56-875b-e613fd9d63a1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor SP
+  start_date: '2002-05-23'
+  end_date: '2004-02-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d2257280-fefe-4ec0-862c-e36225805ec5)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(31ddf263-4936-487f-9469-58f1f8d4b720)
+  retrieved: '2026-05-13'

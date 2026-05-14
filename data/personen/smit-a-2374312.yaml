@@ -1,9 +1,13 @@
 id: person:smit-a-2374312
+identifiers:
+  wikidata: Q4704833
 name:
   full: Albert Smit
   family: Smit
   given: Albert
   initials: A.
+birth:
+  year: 1929
 mandaten:
 - id: 28a9d536-fecd-4903-b045-117569902d47
   organization_id: org:gemeente-assen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2374314
     retrieved: '2026-05-09'
+- id: 191e7339-da2c-41c8-9c77-27752cbb1eb3
+  organization_id: org:gemeente-assen
+  post_id: post:wethouder-gemeente-assen
+  role: Wethouder gemeente Assen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2374314
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2374312
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q4704833
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q4704833

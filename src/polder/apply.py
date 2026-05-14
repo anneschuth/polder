@@ -344,7 +344,11 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
     initials_chars = []
     for p in given_parts:
         if p and p[0].isalpha():
-            initials_chars.append(p[0].lower())
+            # ASCII-fold (Ä -> a) en filter naar [a-z] om slug-regex te
+            # respecteren. Diakrieten zoals umlauts mogen niet in een slug.
+            ascii_first = _slugify(p[0])
+            if ascii_first:
+                initials_chars.append(ascii_first[0])
     initials = "".join(initials_chars)
     family_slug = _slugify(family)
     if not family_slug:
@@ -921,7 +925,7 @@ def _plan_chain(
        worden via `PolderIndex.org_by_alias` opgelost.
 
     `polder_index` is de `PolderIndex` van de resolver — wordt door
-    `plan_apply` 1× opgebouwd en hier hergebruikt.
+    `plan_apply` 1x opgebouwd en hier hergebruikt.
     """
     from polder.resolve.matcher import PolderIndex, _org_alias_slug
 
@@ -1534,8 +1538,7 @@ def _close_mandaat(
     warnings: list[str] = []
     if len(candidates) > 1:
         warnings.append(
-            f"meerdere mandaten met post_id={post_id} gevonden; "
-            "oudste open mandaat wordt gesloten"
+            f"meerdere mandaten met post_id={post_id} gevonden; oudste open mandaat wordt gesloten"
         )
         # Pak het open mandaat met de vroegste start_date.
         open_candidates = [(i, m) for i, m in candidates if not m.get("end_date")]

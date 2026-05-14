@@ -1,0 +1,23 @@
+id: org:onderdeel-zwolle
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132404'
+  oin: 00000001001900249000
+  kvk: 08218173
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0193
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Zwolle
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132404/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

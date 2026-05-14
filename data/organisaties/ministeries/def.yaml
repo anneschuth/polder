@@ -11,17 +11,21 @@ parent_id: null
 names:
 - value: Defensie
   abbr: Def
+  valid_from: '1900-01-01'
+  valid_until: '2018-08-01'
+- value: Defensie
+  abbr: Def
   valid_from: '2018-08-01'
   valid_until: null
 contact:
   website: www.defensie.nl
   email: woo@mindef.nl
-valid_from: '2018-08-01'
-valid_until: null
+valid_from: '1900-01-01'
+valid_until: '2018-08-01'
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/4958/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2119820
   retrieved: '2026-05-09'

@@ -1,9 +1,13 @@
 id: person:arends-b-6598024
+identifiers:
+  wikidata: Q58766840
 name:
   full: B.R. Arends
   family: Arends
   given: B.R.
   initials: B.
+birth:
+  year: 1966
 mandaten:
 - id: bd1245b4-4585-43f4-a3b0-cc8e8c3f48f4
   organization_id: org:gemeente-westland
@@ -31,7 +35,30 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 3f1dbc15-5487-4812-8197-1aa1e33cd9aa
+  organization_id: org:gemeente-west
+  post_id: post:burgemeester-gemeente-west
+  role: Burgemeester gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598026
+    retrieved: '2026-05-13'
+- id: 7f2d9b76-5911-434f-b113-8d040b0be9b2
+  organization_id: org:gemeente-westland
+  post_id: post:burgemeester-gemeente-westland
+  role: Burgemeester gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6598026
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598024
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q58766840
+  retrieved: '2026-05-13'

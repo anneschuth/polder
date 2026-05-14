@@ -1,9 +1,13 @@
 id: person:weterings-m-6000861
+identifiers:
+  wikidata: Q2992267
 name:
   full: M. Weterings
   family: Weterings
   given: M.
   initials: M.
+birth:
+  year: 1938
 mandaten:
 - id: 34d6a690-ab54-481e-940b-3c3dc8197c5a
   organization_id: org:gemeente-rijswijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000863
     retrieved: '2026-05-09'
+- id: 776bae97-8b3b-46ba-9d5d-368e33335e3f
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6000863
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000861
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2992267
   retrieved: '2026-05-11'
-birth:
-  year: 1938
-identifiers:
-  wikidata: Q2992267

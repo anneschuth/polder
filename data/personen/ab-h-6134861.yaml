@@ -1,9 +1,13 @@
 id: person:ab-h-6134861
+identifiers:
+  wikidata: Q109861641
 name:
   full: H.H. AB
   family: AB
   given: H.H.
   initials: H.
+birth:
+  year: 1954
 mandaten:
 - id: 80332c6c-1998-4612-ae9b-7db60ec9bf0b
   organization_id: org:gemeente-schiermonnikoog
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6134863
     retrieved: '2026-05-09'
+- id: 026d9426-7644-40d0-bf04-79156e3d458a
+  organization_id: org:gemeente-schiermonnikoog
+  post_id: post:raadslid-gemeente-schiermonnikoog
+  role: Raadslid gemeente Schiermonnikoog
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6134863
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6134861
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q109861641
+  retrieved: '2026-05-13'

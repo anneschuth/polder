@@ -1,10 +1,14 @@
 id: person:berg-jvd-6404559
+identifiers:
+  wikidata: Q112394823
 name:
   full: J.C.A. van den Berg
   family: Berg
-  given: J.C.A.
+  given: J.C.A. van den
   initials: J.V.D.
   tussenvoegsel: van den
+birth:
+  year: 1944
 mandaten:
 - id: a0452406-201c-4541-9f26-56a177f7192f
   organization_id: org:gemeente-vijfheerenlanden
@@ -16,7 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6404561
     retrieved: '2026-05-09'
+- id: ed38f5a2-cc7b-4bb8-a530-55020df38ac2
+  organization_id: org:gemeente-vijfheerenlanden
+  post_id: post:raadslid-gemeente-vijfheerenlanden
+  role: Raadslid gemeente Vijfheerenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6404561
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6404559
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112394823
+  retrieved: '2026-05-13'

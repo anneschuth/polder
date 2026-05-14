@@ -1,0 +1,42 @@
+id: person:luchtenveld-r-1956
+identifiers:
+  tk_persoon_id: fb725ac8-131e-47eb-a3e7-a3b29a560e2a
+name:
+  full: Ruud Luchtenveld
+  family: Luchtenveld
+  given: Ruud
+  initials: R.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1956
+gender: m
+mandaten:
+- id: 0c1a2fab-0c86-42e7-9db1-3765358273e1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-06-03'
+  end_date: '2006-06-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c267a201-b9d8-48bd-95ac-7443b8daca44)
+    retrieved: '2026-05-13'
+- id: 5853c0a2-cdbb-4d22-a3bb-8b3464f29df4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-07-26'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e1c572d3-855c-4f0c-b5d9-dc6692777c86)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fb725ac8-131e-47eb-a3e7-a3b29a560e2a)
+  retrieved: '2026-05-13'

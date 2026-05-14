@@ -2,7 +2,7 @@ id: person:helvert-mv-3493338
 name:
   full: Marjo van Helvert
   family: Helvert
-  given: Marjo
+  given: Marjo van
   initials: M.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3493340
     retrieved: '2026-05-09'
+- id: 54db8e08-829b-4caa-86fa-b3ff3d7ac076
+  organization_id: org:gemeente-echt
+  post_id: post:raadslid-gemeente-echt
+  role: Raadslid gemeente Echt
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3493340
+    retrieved: '2026-05-13'
+- id: 7d8aebf9-3622-4167-9274-d61ffba0b7b9
+  organization_id: org:gemeente-echt-susteren
+  post_id: post:raadslid-gemeente-echt-susteren
+  role: Raadslid gemeente Echt Susteren
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3493340
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3493338
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

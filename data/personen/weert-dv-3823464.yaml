@@ -2,7 +2,7 @@ id: person:weert-dv-3823464
 name:
   full: D. van Weert
   family: Weert
-  given: D.
+  given: D. van
   initials: D.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,27 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3823468
     retrieved: '2026-05-09'
+- id: 3c8d07c8-ded0-460c-b6a1-a0d5e460fe1f
+  organization_id: org:gemeente-geldrop
+  post_id: post:raadslid-gemeente-geldrop
+  role: Raadslid gemeente Geldrop
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3823468
+    retrieved: '2026-05-13'
+- id: 971ac07a-942f-4ab4-9dff-ecc0f284858d
+  organization_id: org:gemeente-geldrop-mierlo
+  post_id: post:raadslid-gemeente-geldrop-mierlo
+  role: Raadslid gemeente Geldrop Mierlo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3823468
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823464
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

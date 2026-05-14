@@ -21,12 +21,36 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q3284544#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2002-07-22'
+- id: 368a6ece-d7a9-4579-b002-1d61d21ef460
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-05-23'
+  end_date: '2002-07-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b58ff19c-7cce-4f71-a0d0-1ed6bd66d947)
+    retrieved: '2026-05-13'
+- id: 9945615a-3b52-4021-a0f8-302a2462f1b6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-07-23'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(7aa3a686-9bdb-4474-859a-1e800cb77069)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c3879693-5700-4605-bffe-931bc819ad33)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3284544
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

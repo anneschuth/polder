@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: c0d53a3f-d8cf-4d3b-ac97-e055ad652787
+  organization_id: org:gemeente-oldebroek
+  post_id: post:griffier-gemeente-oldebroek
+  role: Griffier gemeente Oldebroek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5693258
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5693256
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

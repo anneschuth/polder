@@ -2,7 +2,7 @@ id: person:dijk-wv-4681409
 name:
   full: W.G.M. van Dijk
   family: Dijk
-  given: W.G.M.
+  given: W.G.M. van
   initials: W.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4681411
     retrieved: '2026-05-09'
+- id: 475be091-3cd7-401e-b0fd-a3e1c77b8e6a
+  organization_id: org:gemeente-laarbeek
+  post_id: post:raadslid-gemeente-laarbeek
+  role: Raadslid gemeente Laarbeek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4681411
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4681409
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

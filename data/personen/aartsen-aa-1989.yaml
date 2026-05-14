@@ -22,7 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e3e32f4b-ef10-4e92-8b5a-cde6b4667be1)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: wd-3cd651d11a64
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2025-06-19'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q28861067#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
+    retrieved: '2026-05-12'
+    fields:
+    - end_date
+    - applied_via:apply-staging
+  end_date: '2026-02-23'
 - id: 506508b9-84bc-4b4b-b173-7989964c0fb7
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,7 +50,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1b873ed3-be96-43c7-bb3b-a404e52ce2a1)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: wd-11f047c0ded6
   organization_id: org:min-szw
   post_id: post:minister-zp-werk-en-participatie
@@ -50,26 +66,20 @@ mandaten:
     fields:
     - applied_via:apply-staging
   end_date: null
-- id: wd-3cd651d11a64
-  organization_id: org:min-ienw
-  post_id: post:staatssecretaris-min-ienw
-  role: Staatssecretaris van Infrastructuur en Waterstaat
-  start_date: '2025-06-19'
+- id: wd-11f047c0ded6
+  organization_id: org:min-szw
+  post_id: post:minister-min-szw
+  role: Minister van Werk en Participatie
+  start_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28861067#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8175
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:apply-staging
-  end_date: '2026-02-23'
+    retrieved: '2026-05-13'
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(397c857a-fda0-414d-8fdc-8288cd3284aa)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q28861067
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

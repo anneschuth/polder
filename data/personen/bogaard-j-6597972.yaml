@@ -1,9 +1,13 @@
 id: person:bogaard-j-6597972
+identifiers:
+  wikidata: Q65426897
 name:
   full: Jan Bogaard
   family: Bogaard
   given: Jan
   initials: J.
+birth:
+  year: 1937
 mandaten:
 - id: b76f9ac4-a5e9-4262-ae78-27cd275165e2
   organization_id: org:gemeente-westland
@@ -25,7 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6597974
     retrieved: '2026-05-09'
+- id: 13d949de-b17c-484a-9d79-064f86a944ee
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6597974
+    retrieved: '2026-05-13'
+- id: 01fad66b-d964-4cd7-b295-1e60a2ebdbf8
+  organization_id: org:gemeente-westland
+  post_id: post:raadslid-gemeente-westland
+  role: Raadslid gemeente Westland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6597974
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6597972
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q65426897
+  retrieved: '2026-05-13'

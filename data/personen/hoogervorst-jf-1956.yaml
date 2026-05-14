@@ -13,6 +13,16 @@ birth:
   year: 1956
 gender: m
 mandaten:
+- id: wd-de089a87877f
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '1998-08-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q463659#P39
+    retrieved: '2026-05-13'
+  end_date: '2002-07-22'
 - id: wd-77a73a3f2341
   organization_id: org:min-fin
   post_id: post:minister-min-fin
@@ -21,7 +31,7 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q463659#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2003-05-27'
 - id: wd-99622790e958
   organization_id: org:min-ezk
@@ -31,8 +41,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q463659#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2003-05-27'
+- id: f3aa754b-d719-430b-ba29-ea9e15b4f882
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2aa9e8bd-3abf-4570-a486-61dc6f3ba0be)
+    retrieved: '2026-05-13'
 - id: wd-a6a5d46c7792
   organization_id: org:min-vws
   post_id: post:minister-min-vws
@@ -41,22 +63,12 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q463659#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2007-02-22'
-- id: wd-de089a87877f
-  organization_id: org:min-szw
-  post_id: post:staatssecretaris-min-szw
-  role: staatssecretaris van Sociale Zaken en Werkgelegenheid
-  start_date: '1998-08-03'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q463659#P39
-    retrieved: '2026-05-09'
-  end_date: '2002-07-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(27b6eea7-b816-4d7c-b7dd-7f982a10a8b7)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q463659
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

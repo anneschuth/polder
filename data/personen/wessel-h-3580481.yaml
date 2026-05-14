@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3580483
     retrieved: '2026-05-09'
+- id: 9e4fb94c-6103-4f6c-8108-8b1322b8399f
+  organization_id: org:gemeente-elburg
+  post_id: post:raadslid-gemeente-elburg
+  role: Raadslid gemeente Elburg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3580483
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3580481
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2263311
+  retrieved: '2026-05-13'
+birth:
+  year: 1937
+identifiers:
+  wikidata: Q2263311

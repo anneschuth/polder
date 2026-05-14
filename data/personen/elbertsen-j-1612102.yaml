@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1612109
     retrieved: '2026-05-09'
+- id: fe198cb5-5aac-4c8f-b660-9c918bf25c3f
+  organization_id: org:gemeente-apeldoorn
+  post_id: post:raadslid-gemeente-apeldoorn
+  role: Raadslid gemeente Apeldoorn
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1612110
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1612102
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861125
+  retrieved: '2026-05-13'
+birth:
+  year: 1973
+identifiers:
+  wikidata: Q28861125

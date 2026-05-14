@@ -2,7 +2,7 @@ id: person:hartog-dd-7767046
 name:
   full: D.M. den Hartog
   family: Hartog
-  given: D.M.
+  given: D.M. den
   initials: D.D.
   tussenvoegsel: den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7776363
     retrieved: '2026-05-09'
+- id: 9d57a826-606b-4986-93f6-af30348e8688
+  organization_id: org:gemeente-vijfheerenlanden
+  post_id: post:raadslid-gemeente-vijfheerenlanden
+  role: Raadslid gemeente Vijfheerenlanden
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7776363
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767046
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

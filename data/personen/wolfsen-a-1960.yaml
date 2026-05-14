@@ -1,0 +1,30 @@
+id: person:wolfsen-a-1960
+identifiers:
+  tk_persoon_id: d0c60fb3-e158-4625-9ad3-6e4576430bad
+name:
+  full: Aleid Wolfsen
+  family: Wolfsen
+  given: Aleid
+  initials: A.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1960
+gender: m
+mandaten:
+- id: da56bc2a-f3f9-40f9-9a0c-c3e05ba53798
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-05-23'
+  end_date: '2008-01-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5492ec0b-909a-49ef-b038-52e1adb2b58f)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(d0c60fb3-e158-4625-9ad3-6e4576430bad)
+  retrieved: '2026-05-13'

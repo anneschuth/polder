@@ -1,0 +1,30 @@
+id: person:tonkens-eh-1961
+identifiers:
+  tk_persoon_id: c0120388-9635-4b1a-8979-e715e4ae9335
+name:
+  full: Evelina Hendrika Tonkens
+  family: Tonkens
+  given: Evelina Hendrika
+  initials: E.H.
+  honorifics_pre:
+  - dr
+birth:
+  year: 1961
+gender: f
+mandaten:
+- id: da9f67fd-3f65-4f5c-b09e-949fc064d5a0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2002-05-23'
+  end_date: '2005-06-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b6db4863-2b6c-4f31-86c8-b2762c3f0880)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c0120388-9635-4b1a-8979-e715e4ae9335)
+  retrieved: '2026-05-13'

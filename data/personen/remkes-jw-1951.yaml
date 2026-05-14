@@ -11,6 +11,38 @@ birth:
   year: 1951
 gender: m
 mandaten:
+- id: wd-8aa793e23571
+  organization_id: org:min-vro
+  post_id: post:staatssecretaris-min-vro
+  role: staatssecretaris van Volkshuisvesting, Ruimtelijke Ordening en Milieubeheer
+  start_date: '1998-08-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q465538#P39
+    retrieved: '2026-05-13'
+  end_date: '2002-07-22'
+- id: wd-05e579e0ae2a
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2002-07-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q465538#P39
+    retrieved: '2026-05-13'
+  end_date: '2007-02-22'
+- id: c83673fb-65f6-4241-a794-82037877beb2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-01-30'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a275f585-ac52-469b-8d54-284230783c81)
+    retrieved: '2026-05-13'
 - id: 79d4497f-2d3e-4145-83ba-380b9568723b
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,31 +54,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(30f57bdb-0232-4bf0-bdc0-dddde9e305ad)
-    retrieved: '2026-05-09'
-- id: wd-05e579e0ae2a
-  organization_id: org:min-bzk
-  post_id: post:minister-min-bzk
-  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
-  start_date: '2002-07-22'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q465538#P39
-    retrieved: '2026-05-09'
-  end_date: '2007-02-22'
-- id: wd-8aa793e23571
-  organization_id: org:min-vro
-  post_id: post:staatssecretaris-min-vro
-  role: staatssecretaris van Volkshuisvesting, Ruimtelijke Ordening en Milieubeheer
-  start_date: '1998-08-03'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q465538#P39
-    retrieved: '2026-05-09'
-  end_date: '2002-07-22'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c9e1c52d-a742-46ac-93fd-b40da777b36a)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q465538
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

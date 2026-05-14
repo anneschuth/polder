@@ -11,6 +11,9 @@ parent_id: null
 names:
 - value: Economische Zaken en Klimaat
   abbr: EZK
+  valid_from: '1900-01-01'
+- value: Economische Zaken en Klimaat
+  abbr: EZK
   valid_from: '2010-10-14'
 - value: Ministerie van Economische Zaken
   valid_from: '2012-11-05'
@@ -19,15 +22,12 @@ names:
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-economische-zaken
   email: WooContactWJZ@minezk.nl
-valid_from: '2010-10-14'
+valid_from: '1900-01-01'
 valid_until: null
-predecessor_id:
-- org:min-economische-zaken-2026
-- org:min-kgg
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/10621/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2986560
   retrieved: '2026-05-09'
@@ -39,4 +39,7 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
   retrieved: '2026-05-09'
+predecessor_id:
+- org:min-economische-zaken-2026
+- org:min-kgg
 successor_id: org:min-landbouw-natuur-en-voedselkwaliteit-2024

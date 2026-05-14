@@ -11,18 +11,6 @@ birth:
   year: 1978
 gender: m
 mandaten:
-- id: caeac36c-e202-4f73-b884-06ef9f587d71
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor CDA
-  start_date: '2025-11-12'
-  end_date: '2026-02-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dc766c76-4ed7-4a90-b324-35ef17fd89df)
-    retrieved: '2026-05-09'
 - id: b08fbb84-bdde-49f6-b5f9-38d55450272a
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,7 +22,19 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29cf50b2-5f6d-451b-b72d-ca78eb917548)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: caeac36c-e202-4f73-b884-06ef9f587d71
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2025-11-12'
+  end_date: '2026-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(dc766c76-4ed7-4a90-b324-35ef17fd89df)
+    retrieved: '2026-05-13'
 - id: mandate-minister-zp-asiel-en-migratie-2026-02-23
   organization_id: org:min-aenm
   post_id: post:minister-zp-asiel-en-migratie
@@ -51,10 +51,20 @@ mandaten:
     decision: KB nr. 2026000405, 23 februari 2026
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
   confidence: 0.89
+- id: wd-0f4c4c72b201
+  organization_id: org:min-aenm
+  post_id: post:minister-min-aenm
+  role: minister van Asiel en Migratie
+  start_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q118256135#P39
+    retrieved: '2026-05-13'
+  end_date: null
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(91cb13ed-c45f-4347-9453-8a997631c333)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q118256135
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

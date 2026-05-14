@@ -11,17 +11,20 @@ parent_id: null
 names:
 - value: Volkshuisvesting en Ruimtelijke Ordening
   abbr: VRO
+  valid_from: '1900-01-01'
+  valid_until: '2026-02-23'
+- value: Volkshuisvesting en Ruimtelijke Ordening
+  abbr: VRO
   valid_from: '2024-07-02'
   valid_until: '2026-02-23'
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening
-valid_from: '2024-07-02'
+valid_from: '1900-01-01'
 valid_until: '2026-02-23'
-successor_id: org:min-bzk
 sources:
 - id: roo
   url: https://organisaties.overheid.nl/29481991/
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q95543594
   retrieved: '2026-05-09'
@@ -33,3 +36,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1171
   retrieved: '2026-05-09'
+successor_id: org:min-bzk

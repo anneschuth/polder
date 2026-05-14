@@ -11,18 +11,6 @@ birth:
   year: 1988
 gender: f
 mandaten:
-- id: 0eb33c9f-eb0c-4967-b3bc-b8f935c57e54
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor Groep Markuszower
-  start_date: '2026-01-20'
-  end_date: null
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a210929a-1e4e-4560-a22c-07cf3eb467d8)
-    retrieved: '2026-05-09'
 - id: 5a14f83c-83f1-475f-86d5-d701622193f8
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3476e26a-d4bf-490a-bb42-75d569059c09)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 0eb33c9f-eb0c-4967-b3bc-b8f935c57e54
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Markuszower
+  start_date: '2026-01-20'
+  end_date: null
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a210929a-1e4e-4560-a22c-07cf3eb467d8)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(45e9917b-95cc-428c-b8a0-9d50cff58a59)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q136554452
   retrieved: '2026-05-09'

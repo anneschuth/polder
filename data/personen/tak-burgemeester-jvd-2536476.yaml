@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 3fa83254-b872-4897-91c5-8440a4dae436
+  organization_id: org:gemeente-barneveld
+  post_id: post:burgemeester-gemeente-barneveld
+  role: Burgemeester gemeente Barneveld
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2536478
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2536476
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

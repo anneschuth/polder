@@ -2,7 +2,7 @@ id: person:broek-bvd-2839129
 name:
   full: B.N.P. van den Broek
   family: Broek
-  given: B.N.P.
+  given: B.N.P. van den
   initials: B.V.D.
   tussenvoegsel: van den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2839130
     retrieved: '2026-05-09'
+- id: bd4975ae-1ca6-435e-88bf-002bc8a5c957
+  organization_id: org:gemeente-beesel
+  post_id: post:raadslid-gemeente-beesel
+  role: Raadslid gemeente Beesel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2839130
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2839129
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

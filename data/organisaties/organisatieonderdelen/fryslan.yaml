@@ -1,0 +1,23 @@
+id: org:onderdeel-fryslan
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30474974'
+  oin: 00000001001032823000
+  kvk: 01178978
+  tooi: https://identifier.overheid.nl/tooi/id/provincie/pv21
+classification: organisatieonderdeel
+parent_id: org:gr-woningmarktregios
+names:
+- value: Fryslân
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30474974/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

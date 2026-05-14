@@ -1,0 +1,28 @@
+id: person:groenink-ej-1965
+identifiers:
+  tk_persoon_id: eae58835-9c60-4b4d-b891-9d4bb91912e2
+name:
+  full: Egbert-Jan Groenink
+  family: Groenink
+  given: Egbert-Jan
+  initials: E.J.
+birth:
+  year: 1965
+gender: m
+mandaten:
+- id: 69f8f70f-7043-4edd-b5f0-a1fc3843f698
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-06-04'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a63ce100-7a96-4cc8-adc4-11b831201f8c)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(eae58835-9c60-4b4d-b891-9d4bb91912e2)
+  retrieved: '2026-05-13'

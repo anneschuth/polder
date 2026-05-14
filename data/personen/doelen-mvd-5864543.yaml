@@ -2,7 +2,7 @@ id: person:doelen-mvd-5864543
 name:
   full: M.A.M.M. van der Doelen
   family: Doelen
-  given: M.A.M.M.
+  given: M.A.M.M. van der
   initials: M.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864545
     retrieved: '2026-05-09'
+- id: 81c0c6d8-ad8c-4b5a-99bf-55e3508fde12
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864545
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864543
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

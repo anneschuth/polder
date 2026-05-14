@@ -1,0 +1,30 @@
+id: person:fessem-wmm-1949
+identifiers:
+  tk_persoon_id: cddd1d26-7a8a-4c8b-95eb-e9511dce2922
+name:
+  full: Wilhelmus Michael Maria Van Fessem
+  family: Van Fessem
+  given: Wilhelmus Michael Maria
+  initials: W.M.M.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1949
+gender: m
+mandaten:
+- id: cbc0a958-7687-40d0-9907-c552de9be1fb
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9a87fa51-316a-44cf-b9c8-0ab4ac9de152)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cddd1d26-7a8a-4c8b-95eb-e9511dce2922)
+  retrieved: '2026-05-13'

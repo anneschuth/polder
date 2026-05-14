@@ -1,10 +1,14 @@
 id: person:vries-ed-2083973
+identifiers:
+  wikidata: Q3216137
 name:
   full: E.J. de Vries
   family: Vries
-  given: E.J.
+  given: E.J. de
   initials: E.D.
   tussenvoegsel: de
+birth:
+  year: 1929
 mandaten:
 - id: acb56860-8aae-4fa2-b83f-7fdb6f879059
   organization_id: org:gemeente-achtkarspelen
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2083977
     retrieved: '2026-05-09'
+- id: 51623d22-1c50-473f-90de-add92d3e6536
+  organization_id: org:gemeente-achtkarspelen
+  post_id: post:raadslid-gemeente-achtkarspelen
+  role: Raadslid gemeente Achtkarspelen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2083977
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2083973
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3216137
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q3216137

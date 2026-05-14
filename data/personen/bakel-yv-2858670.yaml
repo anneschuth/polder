@@ -2,7 +2,7 @@ id: person:bakel-yv-2858670
 name:
   full: Yentl van Bakel
   family: Bakel
-  given: Yentl
+  given: Yentl van
   initials: Y.V.
   tussenvoegsel: van
 mandaten:
@@ -22,7 +22,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: afe7eab3-104b-400a-8801-66a179ad7514
+  organization_id: org:gemeente-bergeijk
+  post_id: post:griffier-gemeente-bergeijk
+  role: Griffier gemeente Bergeijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2858672
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2858670
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

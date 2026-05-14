@@ -1,10 +1,14 @@
 id: person:bree-jv-3823552
+identifiers:
+  wikidata: Q55418115
 name:
   full: J. van Bree
   family: Bree
-  given: J.
+  given: J. van
   initials: J.V.
   tussenvoegsel: van
+birth:
+  year: 1927
 mandaten:
 - id: 85e1d995-dfc1-4e19-a459-049f35ae7003
   organization_id: org:gemeente-geldrop-mierlo
@@ -16,14 +20,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3823554
     retrieved: '2026-05-09'
+- id: 56839faa-f70e-4d69-9b77-b64c84a3085e
+  organization_id: org:gemeente-geldrop
+  post_id: post:burgemeester-gemeente-geldrop
+  role: Burgemeester gemeente Geldrop
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3823554
+    retrieved: '2026-05-13'
+- id: b32d29db-ab7a-44ac-bbd8-a2bd31d56b3e
+  organization_id: org:gemeente-geldrop-mierlo
+  post_id: post:burgemeester-gemeente-geldrop-mierlo
+  role: Burgemeester gemeente Geldrop Mierlo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3823554
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823552
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q55418115
   retrieved: '2026-05-11'
-birth:
-  year: 1927
-identifiers:
-  wikidata: Q55418115

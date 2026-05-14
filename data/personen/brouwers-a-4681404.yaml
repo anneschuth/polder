@@ -1,9 +1,13 @@
 id: person:brouwers-a-4681404
+identifiers:
+  wikidata: Q944323
 name:
   full: A.M. Brouwers
   family: Brouwers
   given: A.M.
   initials: A.
+birth:
+  year: 1940
 mandaten:
 - id: b72a880c-4893-4419-9ab7-ee8335eabe46
   organization_id: org:gemeente-laarbeek
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4681406
     retrieved: '2026-05-09'
+- id: bfd430af-2b51-4ceb-9a52-a2539e4c062e
+  organization_id: org:gemeente-laarbeek
+  post_id: post:raadslid-gemeente-laarbeek
+  role: Raadslid gemeente Laarbeek
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4681406
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4681404
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q944323
   retrieved: '2026-05-11'
-birth:
-  year: 1940
-identifiers:
-  wikidata: Q944323

@@ -2,7 +2,7 @@ id: person:keijzer-wd-7769977
 name:
   full: Wilco de Keijzer
   family: Keijzer
-  given: Wilco
+  given: Wilco de
   initials: W.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769978
     retrieved: '2026-05-09'
+- id: 24a1b74e-4124-474f-a421-8eab77692a6b
+  organization_id: org:gemeente-gouda
+  post_id: post:raadslid-gemeente-gouda
+  role: Raadslid gemeente Gouda
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769978
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769977
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

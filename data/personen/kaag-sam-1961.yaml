@@ -11,30 +11,36 @@ birth:
   year: 1961
 gender: f
 mandaten:
-- id: 46b1514a-2d75-4525-90db-02fe5ab5ee31
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor D66
-  start_date: '2021-09-28'
-  end_date: '2022-01-09'
-  appointment:
-    decision: TK-installatie
+- id: wd-5cdc90be12cb
+  organization_id: org:min-bz
+  post_id: post:minister-zp-buitenlandse-handel
+  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
+  start_date: '2017-10-26'
   sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2ce0c5da-c756-4d44-912c-05b755fd86b0)
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q15077856#P39
     retrieved: '2026-05-09'
-- id: 3acac7e7-851a-4e7e-8a9d-10ef0472095c
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor D66
-  start_date: '2021-05-25'
-  end_date: '2021-09-28'
-  appointment:
-    decision: TK-installatie
+  end_date: '2021-05-29'
+- id: wd-5cdc90be12cb
+  organization_id: org:min-bz
+  post_id: post:minister-zp-buitenlandse-handel-en-ontwikkelingshulp
+  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
+  start_date: '2017-10-26'
   sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b32ff371-6ed2-4391-802b-c30ebdcc60ae)
-    retrieved: '2026-05-09'
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q15077856#P39
+    retrieved: '2026-05-13'
+  end_date: '2021-05-29'
+- id: wd-6093f73e322b
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Minister van Buitenlandse Zaken
+  start_date: '2018-02-13'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q15077856#P39
+    retrieved: '2026-05-13'
+  end_date: '2018-03-07'
 - id: 9ecebcd2-6d8a-4e58-8255-6c05ea43b5a5
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -46,37 +52,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d07fa486-362c-4a2a-a0fd-2f9e57cd929f)
-    retrieved: '2026-05-09'
-- id: wd-49a6ed9dcfcb
-  organization_id: org:min-fin
-  post_id: post:minister-min-fin
-  role: Minister van Financiën
-  start_date: '2022-01-10'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q15077856#P39
-    retrieved: '2026-05-09'
-  end_date: '2024-01-07'
-- id: wd-6093f73e322b
-  organization_id: org:min-bz
-  post_id: post:minister-min-bz
-  role: Minister van Buitenlandse Zaken
-  start_date: '2018-02-13'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q15077856#P39
-    retrieved: '2026-05-09'
-  end_date: '2018-03-07'
-- id: wd-5cdc90be12cb
-  organization_id: org:min-bz
-  post_id: post:minister-zp-buitenlandse-handel
-  role: Minister voor Buitenlandse Handel en Ontwikkelingshulp
-  start_date: '2017-10-26'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q15077856#P39
-    retrieved: '2026-05-09'
-  end_date: '2021-05-29'
+    retrieved: '2026-05-13'
 - id: wd-3ff728cb9a62
   organization_id: org:min-bz
   post_id: post:minister-min-bz
@@ -85,12 +61,46 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q15077856#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2021-09-16'
+- id: 3acac7e7-851a-4e7e-8a9d-10ef0472095c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-05-25'
+  end_date: '2021-09-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b32ff371-6ed2-4391-802b-c30ebdcc60ae)
+    retrieved: '2026-05-13'
+- id: 46b1514a-2d75-4525-90db-02fe5ab5ee31
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2021-09-28'
+  end_date: '2022-01-09'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2ce0c5da-c756-4d44-912c-05b755fd86b0)
+    retrieved: '2026-05-13'
+- id: wd-49a6ed9dcfcb
+  organization_id: org:min-fin
+  post_id: post:minister-min-fin
+  role: Minister van Financiën
+  start_date: '2022-01-10'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q15077856#P39
+    retrieved: '2026-05-13'
+  end_date: '2024-01-07'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(64457f28-37b6-4948-860a-f28bc62b99ae)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q15077856
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

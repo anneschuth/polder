@@ -1,17 +1,35 @@
-id: org:ws-peel-en-maasvallei
+id: org:waterschap-peel-en-maasvallei
 type: waterschap
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0638
+  wikidata: Q11164426
+  roo_id: '21166'
+  oin: 00000001802305556000
+  kvk: '14129820'
 classification: waterschap
 parent_id: null
 names:
 - value: Peel en Maasvallei
   valid_from: '1900-01-01'
   valid_until: '2016-12-31'
+contact:
+  website: http://www.wpm.nl
+  email: info@WPM.nl
 valid_from: '1900-01-01'
 valid_until: '2016-12-31'
-successor_id: org:waterschap-limburg
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0638
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q11164426
+  retrieved: '2026-05-13'
+- id: roo
+  url: https://organisaties.overheid.nl/21166/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin
+successor_id: org:waterschap-limburg

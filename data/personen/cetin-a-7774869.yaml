@@ -1,9 +1,13 @@
 id: person:cetin-a-7774869
+identifiers:
+  wikidata: Q116001437
 name:
   full: Atilla Cetin
   family: Cetin
   given: Atilla
   initials: A.
+birth:
+  year: 1941
 mandaten:
 - id: ded1c0ff-54cc-4099-8cc5-9ed414159a4d
   organization_id: org:gemeente-wassenaar
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774871
     retrieved: '2026-05-09'
+- id: 5aa86171-46b8-4900-8b4a-6912a372fb00
+  organization_id: org:gemeente-wassenaar
+  post_id: post:raadslid-gemeente-wassenaar
+  role: Raadslid gemeente Wassenaar
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7774871
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7774869
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q116001437
   retrieved: '2026-05-11'
-birth:
-  year: 1941
-identifiers:
-  wikidata: Q116001437

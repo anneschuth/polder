@@ -2,7 +2,7 @@ id: person:vlieg-ad-5225384
 name:
   full: A de Vlieg
   family: Vlieg
-  given: A
+  given: A de
   initials: A.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5225386
     retrieved: '2026-05-09'
+- id: a213b440-0c3a-4f41-b947-69db8152eb22
+  organization_id: org:gemeente-meppel
+  post_id: post:raadslid-gemeente-meppel
+  role: Raadslid gemeente Meppel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5225386
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5225384
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

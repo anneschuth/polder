@@ -463,7 +463,7 @@ MINISTRY_QID_TO_SLUG: dict[str, str] = {
     "Q1782179": "min-bzk",  # BiZa oud
     "Q1782176": "min-def",  # Defensie alias
     # Min-pres / Algemene Zaken: Q3058109 is de positie zelf (niet een ministerie).
-    "Q939757": "min-az",
+    # (Q939757 zelf staat hierboven al onder de huidige ministeries.)
 }
 
 
@@ -1187,7 +1187,7 @@ def reconciliation_lookup_persons_batch(
     return results
 
 
-_BIRTH_YEAR_RX = re.compile(r"\((\d{4})(?:[\-–—][^)]*)?\)")
+_BIRTH_YEAR_RX = re.compile(r"\((\d{4})(?:[\-–—][^)]*)?\)")  # noqa: RUF001
 
 
 def _parse_birth_year_from_description(description: str) -> int | None:
@@ -1195,8 +1195,8 @@ def _parse_birth_year_from_description(description: str) -> int | None:
 
     Voorbeelden:
     - `"Nederlands ondernemer (1946-2025)"` → 1946
-    - `"Nederlands voetballer (1904–1979)"` → 1904 (em-dash)
-    - `"politicus uit Suriname (1897–1960)"` → 1897
+    - `"Nederlands voetballer (1904-1979)"` -> 1904 (em-dash)
+    - `"politicus uit Suriname (1897-1960)"` -> 1897
     - `"Nederlandse politicus"` → None (geen jaartal)
     """
     if not description:

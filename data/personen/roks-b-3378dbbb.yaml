@@ -1,0 +1,28 @@
+id: person:roks-b-3378dbbb
+name:
+  full: Berry Roks
+  family: Roks
+  given: Berry
+  initials: B.
+mandaten:
+- id: mandate-post-algemeen-directeur-mkb-belastingdienst-2021-06-24
+  organization_id: org:onderdeel-directie-mkb-belastingdienst-min-fin
+  post_id: post:algemeen-directeur-mkb-belastingdienst
+  role: algemeen directeur Midden- en Kleinbedrijf bij de Belastingdienst
+  start_date: '2021-06-24'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/06/24/berry-roks-algemeen-directeur-midden--en-kleinbedrijf-bij-de-belastingdienst
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-06-24
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/06/24/berry-roks-algemeen-directeur-midden--en-kleinbedrijf-bij-de-belastingdienst
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

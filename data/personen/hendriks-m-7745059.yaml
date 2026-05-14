@@ -1,20 +1,14 @@
 id: person:hendriks-m-7745059
+identifiers:
+  wikidata: Q130268935
 name:
   full: M. Hendriks
   family: Hendriks
   given: M.
   initials: M.
+birth:
+  year: 1978
 mandaten:
-- id: 7949b169-13ea-471e-9e54-220e42991fa2
-  organization_id: org:gemeente-oss
-  post_id: post:raadslid-gemeente-oss
-  role: Raadslid gemeente Oss
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7745060
-    retrieved: '2026-05-09'
 - id: mandate-post-afdelingshoofd-bestuur-rechtsstaat-dgkr-min-bzk-2026-05-01
   organization_id: org:onderdeel-dgkr
   post_id: post:afdelingshoofd-bestuur-rechtsstaat-dgkr-min-bzk
@@ -31,14 +25,30 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2026-04-23
   confidence: 0.9
+- id: 7949b169-13ea-471e-9e54-220e42991fa2
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7745060
+    retrieved: '2026-05-09'
+- id: a5a87b00-7483-4ff3-bbb9-51a461400e40
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7745060
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7745059
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q130268935
   retrieved: '2026-05-11'
-birth:
-  year: 1978
-identifiers:
-  wikidata: Q130268935

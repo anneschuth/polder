@@ -2,7 +2,7 @@ id: person:dijk-av-3580380
 name:
   full: Arie van Dijk
   family: Dijk
-  given: Arie
+  given: Arie van
   initials: A.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3580382
     retrieved: '2026-05-09'
+- id: 955ddf79-27d9-4f43-8d3d-dc55a71e04cf
+  organization_id: org:gemeente-elburg
+  post_id: post:raadslid-gemeente-elburg
+  role: Raadslid gemeente Elburg
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3580382
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3580380
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q4103217
+  retrieved: '2026-05-13'
+birth:
+  year: 1944
+identifiers:
+  wikidata: Q4103217

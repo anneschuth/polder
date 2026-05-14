@@ -1,9 +1,13 @@
 id: person:lukas-m-7781156
+identifiers:
+  wikidata: Q319849
 name:
   full: M. Lukas
   family: Lukas
   given: M.
   initials: M.
+birth:
+  year: 1969
 mandaten:
 - id: da8f9155-c9ba-453e-afc0-aaed5f7f6f8e
   organization_id: org:gemeente-twenterand
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7781158
     retrieved: '2026-05-09'
+- id: 9224f18e-a55a-4366-ae40-18961fa677af
+  organization_id: org:gemeente-twenterand
+  post_id: post:raadslid-gemeente-twenterand
+  role: Raadslid gemeente Twenterand
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7781158
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7781156
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q319849
   retrieved: '2026-05-11'
-birth:
-  year: 1969
-identifiers:
-  wikidata: Q319849

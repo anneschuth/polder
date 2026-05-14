@@ -16,20 +16,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q126540368#P39
-    retrieved: '2026-05-09'
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
-    retrieved: '2026-05-09'
-    fields:
-    - applied_via:apply-staging
+    retrieved: '2026-05-13'
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2025-23053
     retrieved: '2026-05-12'
     fields:
     - end_date
     - applied_via:close-schoof-tussentijds
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22502
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
   end_date: '2025-06-03'
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q126540368
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

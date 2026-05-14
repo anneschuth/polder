@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2096515
     retrieved: '2026-05-09'
+- id: 0f63e845-5411-451a-8576-5263c517f188
+  organization_id: org:gemeente-almelo
+  post_id: post:wethouder-gemeente-almelo
+  role: Wethouder gemeente Almelo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2096515
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2096513
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q117808007
+  retrieved: '2026-05-13'
+birth:
+  year: 1973
+identifiers:
+  wikidata: Q117808007

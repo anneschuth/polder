@@ -1,9 +1,13 @@
 id: person:jansen-b-6768810
+identifiers:
+  wikidata: Q108290180
 name:
   full: Bert Jansen
   family: Jansen
   given: Bert
   initials: B.
+birth:
+  year: 1946
 mandaten:
 - id: fecd30d6-72a3-4de7-a66e-4b413771cae5
   organization_id: org:gemeente-zutphen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6768812
     retrieved: '2026-05-09'
+- id: eb304c2e-3539-496e-ae1b-73e102052776
+  organization_id: org:gemeente-zutphen
+  post_id: post:raadslid-gemeente-zutphen
+  role: Raadslid gemeente Zutphen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6768812
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6768810
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q108290180
   retrieved: '2026-05-11'
-birth:
-  year: 1946
-identifiers:
-  wikidata: Q108290180

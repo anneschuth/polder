@@ -1,9 +1,13 @@
 id: person:geerdink-h-7761015
+identifiers:
+  wikidata: Q21553164
 name:
   full: Herman Geerdink
   family: Geerdink
   given: Herman
   initials: H.
+birth:
+  year: 1951
 mandaten:
 - id: c7732e8a-fca7-4050-b23e-0ad985d471f6
   organization_id: org:gemeente-almelo
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7761017
     retrieved: '2026-05-09'
+- id: 1a350ae1-0b38-4f3f-b6a2-93c1e864c18a
+  organization_id: org:gemeente-almelo
+  post_id: post:raadslid-gemeente-almelo
+  role: Raadslid gemeente Almelo
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7761017
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7761015
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q21553164
   retrieved: '2026-05-11'
-birth:
-  year: 1951
-identifiers:
-  wikidata: Q21553164

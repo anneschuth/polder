@@ -11,16 +11,6 @@ birth:
   year: 1947
 gender: m
 mandaten:
-- id: wd-42d97da37e6b
-  organization_id: org:min-bz
-  post_id: post:minister-min-bz
-  role: Minister van Buitenlandse Zaken
-  start_date: '1998-08-03'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q1366279#P39
-    retrieved: '2026-05-09'
-  end_date: '2002-07-22'
 - id: wd-f44236d1a69b
   organization_id: org:min-lvvn
   post_id: post:minister-min-lvvn
@@ -29,12 +19,58 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1366279#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '1998-08-03'
+- id: wd-42d97da37e6b
+  organization_id: org:min-bz
+  post_id: post:minister-min-bz
+  role: Minister van Buitenlandse Zaken
+  start_date: '1998-08-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1366279#P39
+    retrieved: '2026-05-13'
+  end_date: '2002-07-22'
+- id: 43e42b7a-5fef-4ab0-83d7-0c440e0f0f1b
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-05-23'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f33b3384-443c-4308-821b-077ca6430ff4)
+    retrieved: '2026-05-13'
+- id: db304881-4030-4e7f-a900-7a927b49789d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2003-05-27'
+  end_date: '2006-03-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1a14c099-8696-49b3-9108-570ae59612bf)
+    retrieved: '2026-05-13'
+- id: 5afb27e0-6188-4457-ae00-f7b47b82e191
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2006-03-08'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3a44e8f3-581c-4ef6-8c41-538301c989e5)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ca4011f2-81ac-44ea-81a2-d7ed0f2843a7)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1366279
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

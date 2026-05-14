@@ -1,0 +1,28 @@
+id: person:hoogendijk-fa-1933
+identifiers:
+  tk_persoon_id: 91d893dc-c2fb-4866-a80c-042da9a012ec
+name:
+  full: Ferdinand Alexander Hoogendijk
+  family: Hoogendijk
+  given: Ferdinand Alexander
+  initials: F.A.
+birth:
+  year: 1933
+gender: m
+mandaten:
+- id: ec886e98-d508-498b-b557-cbabe595cbd0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor LPF
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(9a3fbbb2-34fb-4450-9d1a-06f258f77bd1)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(91d893dc-c2fb-4866-a80c-042da9a012ec)
+  retrieved: '2026-05-13'

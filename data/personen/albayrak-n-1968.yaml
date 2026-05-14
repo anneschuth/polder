@@ -13,6 +13,28 @@ birth:
   year: 1968
 gender: f
 mandaten:
+- id: 8e95edaa-473d-49e0-9da9-ddc7eb3a5ee9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1998-05-19'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6b465227-734e-40ab-8c1a-4af7db2fb826)
+    retrieved: '2026-05-13'
+- id: wd-05d6e1ffda7e
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2007-02-22'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q459831#P39
+    retrieved: '2026-05-13'
+  end_date: '2010-02-23'
 - id: e4a62473-bbf0-44c1-a609-2f60324fc8ae
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,7 +46,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c8304223-0c0a-4bde-af6b-6927f5b7860c)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: e173439c-dc52-4ade-9be7-31b94108f5b7
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -36,21 +58,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(35af7239-72c9-4588-a38a-576b577c0b14)
-    retrieved: '2026-05-09'
-- id: wd-05d6e1ffda7e
-  organization_id: org:min-jenv
-  post_id: post:staatssecretaris-min-jenv
-  role: staatssecretaris van Justitie en Veiligheid
-  start_date: '2007-02-22'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q459831#P39
-    retrieved: '2026-05-09'
-  end_date: '2010-02-23'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(af6d5f33-b2d2-4301-9133-9037caf666ed)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q459831
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

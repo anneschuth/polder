@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 49354bfe-91fa-499e-a9bc-6a0db71d65f0
+  organization_id: org:gemeente-utrecht
+  post_id: post:griffier-gemeente-utrecht
+  role: Griffier gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6329875
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6329874
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

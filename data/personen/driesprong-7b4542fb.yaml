@@ -1,0 +1,29 @@
+id: person:driesprong-7b4542fb
+name:
+  full: Mr. drs. A. (Arjan) Driesprong
+  family: Driesprong
+  given: A.
+  initials: A.
+mandaten:
+- id: mandate-post-hoofdingenieur-directeur-west-nederland-zuid-rijkswaterstaat-min-ienw-2020-06-01
+  organization_id: org:onderdeel-west-nederland-zuid-rijkswaterstaat
+  post_id: post:hoofdingenieur-directeur-west-nederland-zuid-rijkswaterstaat-min-ienw
+  role: Hoofdingenieur-directeur West-Nederland Zuid bij Rijkswaterstaat bij het ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/03/arjan-driesprong-hoofdingenieur-directeur-west-nederland-zuid-bij-rijkswaterstaat
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/03/arjan-driesprong-hoofdingenieur-directeur-west-nederland-zuid-bij-rijkswaterstaat
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

@@ -21,6 +21,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2026-05-08
   confidence: 0.91
+- id: mandate-post-kwartiermaker-directeur-screeningsdiensten-justis-min-jenv-2026-07-01
+  organization_id: org:onderdeel-directie-screeningsdiensten-justis
+  post_id: post:kwartiermaker-directeur-screeningsdiensten-justis-min-jenv
+  role: kwartiermaker/directeur Screeningsdiensten, Justis, ministerie van Justitie
+    en Veiligheid
+  start_date: '2026-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/alvin-hasken-kwartiermaker-directeur-screeningsdiensten-bij-justis
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-05-08
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/alvin-hasken-kwartiermaker-directeur-screeningsdiensten-bij-justis

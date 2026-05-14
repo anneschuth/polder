@@ -2,7 +2,7 @@ id: person:willigen-kv-3836621
 name:
   full: K. van Willigen
   family: Willigen
-  given: K.
+  given: K. van
   initials: K.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836623
     retrieved: '2026-05-09'
+- id: c5ebbb43-59be-479d-8e10-212d64ec336a
+  organization_id: org:gemeente-gorinchem
+  post_id: post:raadslid-gemeente-gorinchem
+  role: Raadslid gemeente Gorinchem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3836623
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836621
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

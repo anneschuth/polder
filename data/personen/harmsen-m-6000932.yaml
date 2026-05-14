@@ -1,9 +1,13 @@
 id: person:harmsen-m-6000932
+identifiers:
+  wikidata: Q1977926
 name:
   full: M. Harmsen
   family: Harmsen
   given: M.
   initials: M.
+birth:
+  year: 1927
 mandaten:
 - id: 7e858f75-581f-456d-a526-6f6067ab417c
   organization_id: org:gemeente-rijswijk
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000934
     retrieved: '2026-05-09'
+- id: 10420ba6-1a3c-477e-bd02-aa68119cadc5
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6000934
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000932
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1977926
   retrieved: '2026-05-11'
-birth:
-  year: 1927
-identifiers:
-  wikidata: Q1977926

@@ -1,0 +1,28 @@
+id: person:dungen-vd-6e0c6fe9
+name:
+  full: Drs. B.E. (Bas) van den Dungen
+  family: Dungen
+  given: B.E. van den
+  initials: B.V.D.
+mandaten:
+- id: mandate-post-secretaris-generaal-min-fin-2020-03
+  organization_id: org:onderdeel-sg-min-fin
+  post_id: post:secretaris-generaal-min-fin
+  role: secretaris-generaal bij het ministerie van Financiën
+  start_date: 2020-03
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/12/20/bas-van-den-dungen-secretaris-generaal-financien
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-12-20
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/12/20/bas-van-den-dungen-secretaris-generaal-financien
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

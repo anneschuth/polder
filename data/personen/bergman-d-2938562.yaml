@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2938564
     retrieved: '2026-05-09'
+- id: 7202c791-8055-4708-a625-9bbf2285a7ec
+  organization_id: org:gemeente-beuningen
+  post_id: post:burgemeester-gemeente-beuningen
+  role: Burgemeester gemeente Beuningen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2938564
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2938562
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q58691315
+  retrieved: '2026-05-13'
+birth:
+  year: 1963
+identifiers:
+  wikidata: Q58691315

@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2210689
     retrieved: '2026-05-09'
+- id: 403c14ad-0593-47ed-a1e3-5b9b87be5201
+  organization_id: org:gemeente-ameland
+  post_id: post:griffier-gemeente-ameland
+  role: Griffier gemeente Ameland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2210689
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2210687
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112420943
+  retrieved: '2026-05-13'
+birth:
+  year: 1939
+identifiers:
+  wikidata: Q112420943

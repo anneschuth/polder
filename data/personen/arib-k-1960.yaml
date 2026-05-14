@@ -12,6 +12,18 @@ birth:
   year: 1960
 gender: f
 mandaten:
+- id: ab2b597e-3f59-4eb8-becb-1365dc64b681
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '1998-05-19'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(1c79d16d-731b-4e29-a324-cbf212cb3353)
+    retrieved: '2026-05-13'
 - id: 7866ace9-1539-466d-b88f-b28ed3d25124
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -23,8 +35,8 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(39748d0a-7861-4eac-9218-62942302dc24)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ec571f94-11b8-47d7-bb47-fd0d2d7c7f07)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

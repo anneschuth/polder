@@ -13,16 +13,6 @@ birth:
   year: 1952
 gender: m
 mandaten:
-- id: wd-682df83eae94
-  organization_id: org:min-ezk
-  post_id: post:minister-min-ezk
-  role: Minister van Economische Zaken en Klimaat
-  start_date: '2006-07-03'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q717674#P39
-    retrieved: '2026-05-09'
-  end_date: '2006-07-07'
 - id: wd-7c8aa0f83092
   organization_id: org:min-fin
   post_id: post:minister-min-fin
@@ -31,8 +21,20 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q717674#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2002-07-22'
+- id: aca25758-bf6a-41bf-85a0-0ee22e449cd2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-05-23'
+  end_date: '2003-05-26'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(3effe42c-f215-4f4d-b650-391d4158a770)
+    retrieved: '2026-05-13'
 - id: wd-9bea7542c9c6
   organization_id: org:min-fin
   post_id: post:minister-min-fin
@@ -41,12 +43,22 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q717674#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2007-02-22'
+- id: wd-682df83eae94
+  organization_id: org:min-ezk
+  post_id: post:minister-min-ezk
+  role: Minister van Economische Zaken en Klimaat
+  start_date: '2006-07-03'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q717674#P39
+    retrieved: '2026-05-13'
+  end_date: '2006-07-07'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(546b2fac-ce67-4bf0-9594-3710a78c1400)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q717674
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

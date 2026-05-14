@@ -1,9 +1,13 @@
 id: person:vries-j-6553903
+identifiers:
+  wikidata: Q13218944
 name:
   full: Johan de Vries
   family: de Vries
   given: Johan
   initials: J.
+birth:
+  year: 1947
 mandaten:
 - id: 16f55a80-3f20-4a54-844f-12b057d032e1
   organization_id: org:gemeente-westerkwartier
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553905
     retrieved: '2026-05-09'
+- id: b27b1572-f988-47f0-9ac4-8398ee723a74
+  organization_id: org:gemeente-westerkwartier
+  post_id: post:raadslid-gemeente-westerkwartier
+  role: Raadslid gemeente Westerkwartier
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553905
+    retrieved: '2026-05-13'
+- id: 230a7043-d130-409d-8b24-ee3bb438a293
+  organization_id: org:gemeente-west
+  post_id: post:raadslid-gemeente-west
+  role: Raadslid gemeente West
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6553905
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553903
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q13218944
   retrieved: '2026-05-11'
-birth:
-  year: 1947
-identifiers:
-  wikidata: Q13218944

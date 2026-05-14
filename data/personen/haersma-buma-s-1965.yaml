@@ -12,30 +12,6 @@ birth:
   year: 1965
 gender: m
 mandaten:
-- id: 18ba65ce-9158-429d-8f27-c5a4ab828355
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor CDA
-  start_date: '2019-05-21'
-  end_date: '2019-05-28'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(62b95a14-4f8a-49c2-9c6a-dc6e911a46f8)
-    retrieved: '2026-05-09'
-- id: 86040d7a-8094-4d9b-a917-856bcdcc6fc9
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor CDA
-  start_date: '2010-10-12'
-  end_date: '2019-05-20'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6f5aec00-613f-4a12-936a-52694c367510)
-    retrieved: '2026-05-09'
 - id: 2f846910-cebd-43ef-a79c-de02c3dfd92d
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -47,8 +23,32 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(808fcd50-a0dc-4f60-8b9d-c404a2eb5b2e)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 86040d7a-8094-4d9b-a917-856bcdcc6fc9
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2010-10-12'
+  end_date: '2019-05-20'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6f5aec00-613f-4a12-936a-52694c367510)
+    retrieved: '2026-05-13'
+- id: 18ba65ce-9158-429d-8f27-c5a4ab828355
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2019-05-21'
+  end_date: '2019-05-28'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(62b95a14-4f8a-49c2-9c6a-dc6e911a46f8)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ec273841-069f-408b-b434-8524904ae314)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

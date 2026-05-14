@@ -1,0 +1,42 @@
+id: person:laan-lw-1966
+identifiers:
+  tk_persoon_id: c7238f64-91aa-4b76-8c4d-54b072b22ff2
+name:
+  full: Lousewies van der Laan
+  family: van der Laan
+  given: Lousewies
+  initials: L.W.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1966
+gender: f
+mandaten:
+- id: 03075de5-0a5a-438b-9106-0fdbcd44c2e4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2006-02-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(22ddfe18-4ff5-461e-a74c-c71b642ba206)
+    retrieved: '2026-05-13'
+- id: aba4e12c-2b45-4891-a793-5bd3f07ecdc6
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2003-01-30'
+  end_date: '2006-02-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fd558de0-610b-47d5-a671-14a56ee4ae3c)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(c7238f64-91aa-4b76-8c4d-54b072b22ff2)
+  retrieved: '2026-05-13'

@@ -22,6 +22,42 @@ def _repo_root() -> Path:
     return Path(__file__).resolve().parents[4]
 
 
+def _strip_markdown_fences(text: str) -> str:
+    """Strip leading/trailing ```json ... ``` fences from LLM output."""
+    s = text.strip()
+    if s.startswith("```"):
+        # Drop opening fence (incl. optional language tag) up to the first newline.
+        nl = s.find("\n")
+        if nl != -1:
+            s = s[nl + 1 :]
+    if s.endswith("```"):
+        s = s[:-3].rstrip()
+    return s
+
+
+def _extract_json_payload(text: str) -> str:
+    """Best-effort: find the outermost JSON array or object in LLM output.
+
+    Handles three common malformations on top of pure JSON:
+    - wrapped in ```json ... ``` fences
+    - prefixed with chain-of-thought / preamble text before `[` or `{`
+    - trailing commentary after the JSON closes
+    """
+    s = _strip_markdown_fences(text)
+    first_bracket = s.find("[")
+    first_brace = s.find("{")
+    starts = [i for i in (first_bracket, first_brace) if i != -1]
+    if not starts:
+        return s
+    start = min(starts)
+    open_char = s[start]
+    close_char = "]" if open_char == "[" else "}"
+    end = s.rfind(close_char)
+    if end == -1 or end < start:
+        return s
+    return s[start : end + 1]
+
+
 def resolve(
     target: Annotated[
         Path,
@@ -117,8 +153,7 @@ def resolve(
     typer.echo(f"Index laden uit {data}...")
     idx = PolderIndex.load(data)
     typer.echo(
-        f"  {len(idx.persons_by_id)} persons, {len(idx.org_ids)} orgs, "
-        f"{len(idx.post_ids)} posts"
+        f"  {len(idx.persons_by_id)} persons, {len(idx.org_ids)} orgs, {len(idx.post_ids)} posts"
     )
 
     # Verzamel files
@@ -148,11 +183,18 @@ def resolve(
 
     budget_remaining = max_cost_usd
     for path in files:
+        raw_text = path.read_text(encoding="utf-8")
         try:
-            data_raw = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
-            typer.echo(f"  SKIP {path.name}: invalid JSON ({exc})", err=True)
-            continue
+            data_raw = json.loads(raw_text)
+        except json.JSONDecodeError:
+            # LLM output sometimes carries ```json ... ``` fences, chain-of-
+            # thought preamble, or trailing commentary. Best-effort extract
+            # the outermost JSON payload and retry before giving up.
+            try:
+                data_raw = json.loads(_extract_json_payload(raw_text))
+            except json.JSONDecodeError as exc:
+                typer.echo(f"  SKIP {path.name}: invalid JSON ({exc})", err=True)
+                continue
         if not isinstance(data_raw, list):
             continue
 

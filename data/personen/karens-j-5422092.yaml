@@ -1,9 +1,13 @@
 id: person:karens-j-5422092
+identifiers:
+  wikidata: Q3431793
 name:
   full: Jan Karens
   family: Karens
   given: Jan
   initials: J.
+birth:
+  year: 1943
 mandaten:
 - id: 219c0419-3a6c-44df-90d8-c55a16b70879
   organization_id: org:gemeente-nieuwegein
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5422094
     retrieved: '2026-05-09'
+- id: 7842ba70-efae-4e56-b2dc-ec8cb9225409
+  organization_id: org:gemeente-nieuwegein
+  post_id: post:griffier-gemeente-nieuwegein
+  role: Griffier gemeente Nieuwegein
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5422094
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5422092
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3431793
   retrieved: '2026-05-11'
-birth:
-  year: 1943
-identifiers:
-  wikidata: Q3431793

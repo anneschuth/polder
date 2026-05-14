@@ -1,9 +1,13 @@
 id: person:engels-j-5144655
+identifiers:
+  wikidata: Q42
 name:
   full: Jan Engels
   family: Engels
   given: Jan
   initials: J.
+birth:
+  year: 1952
 mandaten:
 - id: 890079f3-f342-4dc8-9e11-e957b31f667c
   organization_id: org:gemeente-losser
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5144657
     retrieved: '2026-05-09'
+- id: 1f999c97-ad24-4350-9d1d-788593361d55
+  organization_id: org:gemeente-losser
+  post_id: post:wethouder-gemeente-losser
+  role: Wethouder gemeente Losser
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5144657
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5144655
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q42
   retrieved: '2026-05-11'
-birth:
-  year: 1952
-identifiers:
-  wikidata: Q42

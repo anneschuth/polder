@@ -11,6 +11,42 @@ birth:
   year: 1963
 gender: m
 mandaten:
+- id: 8fa6e7ba-4901-4c41-ad4b-9246af12eef1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1998-08-25'
+  end_date: '2002-05-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(e75d1c20-6980-4bc3-8174-8ba886a933cf)
+    retrieved: '2026-05-13'
+- id: 820ab940-c6a8-431b-8e47-f349009394c0
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2002-07-26'
+  end_date: '2004-09-01'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(29ef7595-2eab-4de6-a3d3-5fd9ee56c507)
+    retrieved: '2026-05-13'
+- id: d8a2d4ba-e59a-4785-bd4f-7eae32fa5611
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor Groep Wilders
+  start_date: '2004-09-02'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0bb6c982-362a-49f6-8d92-cfdcca784b0e)
+    retrieved: '2026-05-13'
 - id: 39384683-2b6d-4d0e-ad06-add31c227be1
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,11 +58,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(2318e164-71e4-436e-a389-5c8907e14f5a)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6d33b9bc-7d3a-4a60-b2d7-c2b70cd11ab1)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q105338
   retrieved: '2026-05-09'

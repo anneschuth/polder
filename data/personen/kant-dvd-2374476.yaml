@@ -1,10 +1,14 @@
 id: person:kant-dvd-2374476
+identifiers:
+  wikidata: Q6098413
 name:
   full: D.  van de Kant
   family: Kant
-  given: D.
+  given: D.  van de
   initials: D.V.D.
   tussenvoegsel: van de
+birth:
+  year: 1949
 mandaten:
 - id: 6c80a7ce-657a-42d4-b4dd-baec375bc84c
   organization_id: org:gemeente-assen
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2374478
     retrieved: '2026-05-09'
+- id: 49aee899-7fe5-4e28-8cf9-7b30d42a2b79
+  organization_id: org:gemeente-assen
+  post_id: post:raadslid-gemeente-assen
+  role: Raadslid gemeente Assen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2374478
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2374476
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q6098413
   retrieved: '2026-05-11'
-birth:
-  year: 1949
-identifiers:
-  wikidata: Q6098413

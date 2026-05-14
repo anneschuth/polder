@@ -2,7 +2,7 @@ id: person:haan-cd-6781293
 name:
   full: Chanel  de Haan
   family: Haan
-  given: Chanel
+  given: Chanel  de
   initials: C.D.
   tussenvoegsel: de
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781295
     retrieved: '2026-05-09'
+- id: 83b2e461-7fa1-424d-8015-32943ae2489a
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781295
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781293
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 11d0c7b7-5062-44cf-995e-522b6b95b0f7
+  organization_id: org:gemeente-emmen
+  post_id: post:gemeentesecretaris-gemeente-emmen
+  role: Gemeentesecretaris gemeente Emmen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3611657
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3611655
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

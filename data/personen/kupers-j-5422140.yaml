@@ -1,9 +1,13 @@
 id: person:kupers-j-5422140
+identifiers:
+  wikidata: Q8039494
 name:
   full: Jan Kupers
   family: Kupers
   given: Jan
   initials: J.
+birth:
+  year: 1927
 mandaten:
 - id: 9e55393a-465e-4933-b0d2-6f01b3695033
   organization_id: org:gemeente-nieuwegein
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5422142
     retrieved: '2026-05-09'
+- id: 980aacc5-29b8-454d-a382-08d7ffc49dc7
+  organization_id: org:gemeente-nieuwegein
+  post_id: post:raadslid-gemeente-nieuwegein
+  role: Raadslid gemeente Nieuwegein
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5422142
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5422140
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q8039494
   retrieved: '2026-05-11'
-birth:
-  year: 1927
-identifiers:
-  wikidata: Q8039494

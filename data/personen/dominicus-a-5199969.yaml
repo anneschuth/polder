@@ -1,9 +1,13 @@
 id: person:dominicus-a-5199969
+identifiers:
+  wikidata: Q1238159
 name:
   full: Albert Dominicus
   family: Dominicus
   given: Albert
   initials: A.
+birth:
+  year: 1947
 mandaten:
 - id: 9caff3bc-ca6c-48a6-9495-7cdc59c9e8c4
   organization_id: org:gemeente-meierijstad
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199971
     retrieved: '2026-05-09'
+- id: ff99eae8-b94e-47ec-a614-3878ce6978f0
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5199971
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199969
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1238159
   retrieved: '2026-05-11'
-birth:
-  year: 1947
-identifiers:
-  wikidata: Q1238159

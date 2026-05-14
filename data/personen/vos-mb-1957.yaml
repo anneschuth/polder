@@ -1,0 +1,30 @@
+id: person:vos-mb-1957
+identifiers:
+  tk_persoon_id: 71950f9a-76a7-4911-a1b6-7be7149cbf26
+name:
+  full: Marijke Vos
+  family: Vos
+  given: Marijke
+  initials: M.B.
+  honorifics_pre:
+  - ir.
+birth:
+  year: 1957
+gender: f
+mandaten:
+- id: 724f4ac9-e522-483e-9a9b-c8ad7f1d5b30
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '1994-05-17'
+  end_date: '2006-05-24'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c3fa19df-74c4-4908-9bbc-c5704c853a40)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(71950f9a-76a7-4911-a1b6-7be7149cbf26)
+  retrieved: '2026-05-13'

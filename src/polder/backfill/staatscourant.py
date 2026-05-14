@@ -52,8 +52,15 @@ def list_candidates(
     until: str | None = None,
     pattern: str | None = None,
     limit: int | None = None,
+    staging_dir: Path | None = None,
 ) -> list[Path]:
-    """Verzamel XML-paden in `cache_dir` gefilterd op datum / regex / limit."""
+    """Verzamel XML-paden in `cache_dir` gefilterd op datum / regex / limit.
+
+    Als ``staging_dir`` is gegeven worden XMLs waarvan vandaag al een
+    non-empty (>3 byte) staging-file bestaat ook gefilterd. Lege `[]`-files
+    tellen niet als "klaar" — die kunnen van een gefaalde parse komen en
+    moeten opnieuw langs de prefilter (en eventueel de skill).
+    """
     if not cache_dir.exists():
         return []
     # Skip search-result-records (.sru.xml). Die zijn geen besluit-XMLs.
@@ -76,6 +83,19 @@ def list_candidates(
             filtered.append(p)
         paths = filtered
 
+    if staging_dir is not None:
+        today_iso = _date.today().isoformat()
+        unstaged: list[Path] = []
+        for p in paths:
+            output = staging_dir / f"staatscourant-{p.stem}-{today_iso}.json"
+            # Skip alleen wanneer de today-file substantieel is (>3 byte).
+            # Een lege `[]` kan een prefilter-skip zijn, maar net zo goed
+            # een gefaalde LLM-parse — die mag opnieuw worden geprobeerd.
+            if output.exists() and output.stat().st_size > 3:
+                continue
+            unstaged.append(p)
+        paths = unstaged
+
     if limit is not None and limit > 0:
         paths = paths[:limit]
     return paths
@@ -96,6 +116,12 @@ def _process_one(
 ) -> tuple[str, BackfillResult]:
     deltas = BackfillResult(source="staatscourant")
     output = _staging_path_for(staging_dir, xml_path)
+    # Idempotent: als de staging-file van vandaag al bestaat en niet-leeg
+    # is, beschouw als done. Voorkomt dat een retry-loop telkens dezelfde
+    # records opnieuw probeert na rate-limit.
+    if output.exists() and output.stat().st_size > 3:
+        deltas.cache_hits = 1
+        return "hit", deltas
     xml = xml_path.read_text(encoding="utf-8")
 
     if not prefilters.staatscourant_has_signal(xml):
@@ -153,7 +179,14 @@ def backfill(
     cache_dir = repo_root / "_cache" / "staatscourant"
     staging_dir = repo_root / "data" / "_staging"
 
-    candidates = list_candidates(cache_dir, since=since, until=until, pattern=pattern, limit=limit)
+    candidates = list_candidates(
+        cache_dir,
+        since=since,
+        until=until,
+        pattern=pattern,
+        limit=limit,
+        staging_dir=staging_dir,
+    )
     result = BackfillResult(source="staatscourant", total_candidates=len(candidates))
     if not candidates:
         result.notes.append(f"Geen kandidaten in {cache_dir}")

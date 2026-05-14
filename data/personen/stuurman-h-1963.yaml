@@ -1,0 +1,30 @@
+id: person:stuurman-h-1963
+identifiers:
+  tk_persoon_id: 139555f6-c84e-4356-b4ba-bc435d0f64f6
+name:
+  full: Hannie Stuurman
+  family: Stuurman
+  given: Hannie
+  initials: H.
+  honorifics_pre:
+  - mr.
+birth:
+  year: 1963
+gender: f
+mandaten:
+- id: 9a29e71a-086d-46e4-87a6-c4140d2ee48d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2003-01-30'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(6bfe3a61-f586-47b6-b7a5-35f8ff3d51e4)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(139555f6-c84e-4356-b4ba-bc435d0f64f6)
+  retrieved: '2026-05-13'

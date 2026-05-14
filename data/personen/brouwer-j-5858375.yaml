@@ -1,9 +1,13 @@
 id: person:brouwer-j-5858375
+identifiers:
+  wikidata: Q108476813
 name:
   full: Joke Brouwer
   family: Brouwer
   given: Joke
   initials: J.
+birth:
+  year: 1957
 mandaten:
 - id: 93dbe282-44b0-4e0e-87ff-cbedd7cc7c6c
   organization_id: org:gemeente-opsterland
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5858377
     retrieved: '2026-05-09'
+- id: 16cdcd7f-14d8-484a-807f-88417149209b
+  organization_id: org:gemeente-opsterland
+  post_id: post:raadslid-gemeente-opsterland
+  role: Raadslid gemeente Opsterland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5858377
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5858375
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q108476813
   retrieved: '2026-05-11'
-birth:
-  year: 1957
-identifiers:
-  wikidata: Q108476813

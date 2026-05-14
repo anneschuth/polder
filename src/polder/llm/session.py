@@ -42,6 +42,8 @@ DEFAULT_MODEL = "claude-haiku-4-5"
 
 MODEL_OVERRIDES: dict[str, str] = {
     "parse-organogram": "claude-opus-4-7",
+    "parse-abd-nieuws": "claude-sonnet-4-6",
+    "parse-staatscourant": "claude-sonnet-4-6",
 }
 
 
@@ -121,7 +123,7 @@ class SkillSession:
         skill_name: str,
         *,
         model: str | None = None,
-        max_budget_usd: float = 0.50,
+        max_budget_usd: float = 1000.0,
         fallback_model: str | None = "claude-sonnet-4-6",
         claude_bin: str = "claude",
         allow_tools: bool = False,
@@ -130,6 +132,14 @@ class SkillSession:
         self.skill_name = skill_name
         self.model = _resolve_model(skill_name, model)
         self.max_budget_usd = max_budget_usd
+        # Fallback mag niet gelijk zijn aan main; auto-promote als nodig.
+        if fallback_model == self.model:
+            if self.model == "claude-sonnet-4-6":
+                fallback_model = "claude-opus-4-7"
+            elif self.model == "claude-opus-4-7":
+                fallback_model = "claude-sonnet-4-6"
+            elif self.model == "claude-haiku-4-5":
+                fallback_model = "claude-sonnet-4-6"
         self.fallback_model = fallback_model
         self.claude_bin = claude_bin
         # Default: geen tools, model produceert direct response. Skills die
@@ -141,9 +151,9 @@ class SkillSession:
         # parse-staatscourant en parse-abd-nieuws hebben GEEN tools nodig: de
         # resolver lost slug-hallucinaties (ministerie-X -> min-X, minister-X
         # -> minister-min-X) achteraf op via fuzzy-match in
-        # PolderIndex.posts_by_org_class. Skills tools geven kost 20-50× zoveel
+        # PolderIndex.posts_by_org_class. Skills tools geven kost 20-50x zoveel
         # tijd (tool-call-roundtrips per record) en levert geen extra waarde.
-        _TOOLED_SKILLS = {"parse-organogram", "lookup-person"}
+        _TOOLED_SKILLS = {"parse-organogram", "lookup-person", "resolve-staging-proposals"}
         self.allow_tools = allow_tools or skill_name in _TOOLED_SKILLS
         self.extra_args = list(extra_args or [])
         self._skill_path = _skill_path(skill_name)
@@ -381,7 +391,7 @@ def close_all_sessions() -> None:
             logger.warning("Fout bij sluiten van SkillSession: %s", exc)
 
 
-import atexit as _atexit
+import atexit as _atexit  # noqa: E402
 
 _atexit.register(close_all_sessions)
 
@@ -390,7 +400,7 @@ def get_or_create_session(
     skill_name: str,
     *,
     model: str | None = None,
-    max_budget_usd: float = 0.50,
+    max_budget_usd: float = 1000.0,
 ) -> SkillSession:
     """Geef de thread-local SkillSession voor `skill_name`.
 

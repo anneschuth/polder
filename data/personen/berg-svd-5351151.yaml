@@ -1,10 +1,14 @@
 id: person:berg-svd-5351151
+identifiers:
+  wikidata: Q2216661
 name:
   full: Samuel van den Berg
   family: Berg
-  given: Samuel
+  given: Samuel van den
   initials: S.V.D.
   tussenvoegsel: van den
+birth:
+  year: 1934
 mandaten:
 - id: 1f9468df-c419-4373-aba4-dfc762339705
   organization_id: org:gemeente-montfoort
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5351159
     retrieved: '2026-05-09'
+- id: 00cebd44-48c1-448a-b57c-ddbf4e90cb0d
+  organization_id: org:gemeente-montfoort
+  post_id: post:raadslid-gemeente-montfoort
+  role: Raadslid gemeente Montfoort
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5351159
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5351151
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2216661
   retrieved: '2026-05-11'
-birth:
-  year: 1934
-identifiers:
-  wikidata: Q2216661

@@ -1,9 +1,13 @@
 id: person:fokke-h-7788532
+identifiers:
+  wikidata: Q29422195
 name:
   full: H. Fokke
   family: Fokke
   given: H.
   initials: H.
+birth:
+  year: 1955
 mandaten:
 - id: 905fb4ac-aefd-4b6c-8c38-b26bec00f915
   organization_id: org:gemeente-maastricht
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7788541
     retrieved: '2026-05-09'
+- id: 1163ec77-581b-4576-aec4-5a7c3ee28d1b
+  organization_id: org:gemeente-maastricht
+  post_id: post:raadslid-gemeente-maastricht
+  role: Raadslid gemeente Maastricht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7788542
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7788532
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q29422195
   retrieved: '2026-05-11'
-birth:
-  year: 1955
-identifiers:
-  wikidata: Q29422195

@@ -1,9 +1,13 @@
 id: person:cetin-a-7767083
+identifiers:
+  wikidata: Q116001437
 name:
   full: Atilla Cetin
   family: Cetin
   given: Atilla
   initials: A.
+birth:
+  year: 1941
 mandaten:
 - id: 35abd1a2-7f67-42cd-a59a-6153b79c2fbd
   organization_id: org:gemeente-voorschoten
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7785526
     retrieved: '2026-05-09'
+- id: 23fbd5a5-411c-461f-b701-c56e213ab34c
+  organization_id: org:gemeente-voorschoten
+  post_id: post:raadslid-gemeente-voorschoten
+  role: Raadslid gemeente Voorschoten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7785526
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767083
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q116001437
   retrieved: '2026-05-11'
-birth:
-  year: 1941
-identifiers:
-  wikidata: Q116001437

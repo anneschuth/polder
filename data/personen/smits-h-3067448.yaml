@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 90fe1864-924a-46aa-af3b-d48172c1d4bc
+  organization_id: org:gemeente-bronckhorst
+  post_id: post:griffier-gemeente-bronckhorst
+  role: Griffier gemeente Bronckhorst
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3067450
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3067448
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

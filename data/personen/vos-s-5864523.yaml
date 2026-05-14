@@ -1,9 +1,13 @@
 id: person:vos-s-5864523
+identifiers:
+  wikidata: Q2198454
 name:
   full: S. Vos
   family: Vos
   given: S.
   initials: S.
+birth:
+  year: 1931
 mandaten:
 - id: 42f55ce2-82e3-43ef-8c07-cb1428bd3045
   organization_id: org:gemeente-oss
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864525
     retrieved: '2026-05-09'
+- id: 1c2ff4b1-e291-4d93-9b4f-fe935a055610
+  organization_id: org:gemeente-oss
+  post_id: post:raadslid-gemeente-oss
+  role: Raadslid gemeente Oss
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5864525
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5864523
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2198454
   retrieved: '2026-05-11'
-birth:
-  year: 1931
-identifiers:
-  wikidata: Q2198454

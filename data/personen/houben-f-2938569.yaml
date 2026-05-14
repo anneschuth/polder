@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2938571
     retrieved: '2026-05-09'
+- id: 36d66d8f-c2e3-48b4-b642-c67bbcfef8d5
+  organization_id: org:gemeente-beuningen
+  post_id: post:wethouder-gemeente-beuningen
+  role: Wethouder gemeente Beuningen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2938571
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2938569
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q4545698
+  retrieved: '2026-05-13'
+birth:
+  year: 1946
+identifiers:
+  wikidata: Q4545698

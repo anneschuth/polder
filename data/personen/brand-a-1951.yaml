@@ -1,0 +1,28 @@
+id: person:brand-a-1951
+identifiers:
+  tk_persoon_id: 7412f70b-fa29-4797-8547-6ab604d0fe1b
+name:
+  full: Arie van den Brand
+  family: van den Brand
+  given: Arie
+  initials: A.
+birth:
+  year: 1951
+gender: m
+mandaten:
+- id: c531e94d-d11f-4fef-8ae5-24f612f75a17
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GL
+  start_date: '2002-05-23'
+  end_date: '2004-03-10'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f2c6abcb-08ed-407d-baff-783d897f4d99)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7412f70b-fa29-4797-8547-6ab604d0fe1b)
+  retrieved: '2026-05-13'

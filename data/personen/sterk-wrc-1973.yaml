@@ -13,6 +13,18 @@ birth:
   year: 1973
 gender: f
 mandaten:
+- id: d3960662-ca1d-4361-8e57-209b7b4fcb26
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2008-04-07'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b93ee231-628d-48ac-9991-2b3650497316)
+    retrieved: '2026-05-13'
 - id: b3333c68-fbb7-4c33-9200-9db01bdbc920
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,7 +36,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(283d0f9d-76dd-4398-aa83-fd21149a5544)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: mandate-minister-zp-langdurige-zorg-jeugd-en-sport-2026-02-23
   organization_id: org:min-vws
   post_id: post:minister-zp-langdurige-zorg-jeugd-en-sport
@@ -44,7 +56,7 @@ mandaten:
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(fa2e1d7e-0ec4-4f8f-aaee-7eeb41540457)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q6873597
   retrieved: '2026-05-09'

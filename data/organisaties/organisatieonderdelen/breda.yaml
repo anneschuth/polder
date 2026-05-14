@@ -1,0 +1,23 @@
+id: org:onderdeel-breda
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132280'
+  oin: '00000001001336071000'
+  kvk: '20169706'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0758
+classification: organisatieonderdeel
+parent_id: org:onderdeel-rvdk
+names:
+- value: Breda
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132280/
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-13'
+  fields:
+  - oin

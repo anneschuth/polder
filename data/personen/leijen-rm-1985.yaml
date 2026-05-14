@@ -1,6 +1,7 @@
 id: person:leijen-rm-1985
 identifiers:
   tk_persoon_id: 7a799770-dff0-40ef-9d63-c0a8ed5b0a7a
+  wikidata: Q136554638
 name:
   full: Robin van Leijen
   family: van Leijen
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(330d5600-6830-4ecc-9d5f-184a57621f62)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7a799770-dff0-40ef-9d63-c0a8ed5b0a7a)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q136554638
+  retrieved: '2026-05-13'

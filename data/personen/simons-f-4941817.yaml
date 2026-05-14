@@ -1,9 +1,13 @@
 id: person:simons-f-4941817
+identifiers:
+  wikidata: Q5056081
 name:
   full: Frank Simons
   family: Simons
   given: Frank
   initials: F.
+birth:
+  year: 1935
 mandaten:
 - id: d699a285-652b-4c45-ab56-49cc728b4c4d
   organization_id: org:gemeente-leudal
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7209516
     retrieved: '2026-05-09'
+- id: 41086012-379d-4f37-a4d5-444ca7698d8b
+  organization_id: org:gemeente-leudal
+  post_id: post:griffier-gemeente-leudal
+  role: Griffier gemeente Leudal
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7209516
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4941817
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q5056081
   retrieved: '2026-05-11'
-birth:
-  year: 1935
-identifiers:
-  wikidata: Q5056081

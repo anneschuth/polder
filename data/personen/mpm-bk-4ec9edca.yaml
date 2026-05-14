@@ -1,0 +1,29 @@
+id: person:mpm-bk-4ec9edca
+name:
+  full: Bamba Konté MPM
+  family: MPM
+  given: Bamba Konté
+  initials: B.K.
+mandaten:
+- id: mandate-post-directeur-organisatie-bedrijfsvoering-personeel-min-szw-2021-01-01
+  organization_id: org:onderdeel-directie-organisatie-min-szw
+  post_id: post:directeur-organisatie-bedrijfsvoering-personeel-min-szw
+  role: directeur Organisatie, Bedrijfsvoering en Personeel, Ministerie van Sociale
+    Zaken en Werkgelegenheid
+  start_date: '2021-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/bamba-konte-directeur-organisatie-bedrijfsvoering-en-personeel-bij-szw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-02
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/bamba-konte-directeur-organisatie-bedrijfsvoering-en-personeel-bij-szw
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

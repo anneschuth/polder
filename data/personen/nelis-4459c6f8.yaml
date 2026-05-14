@@ -1,0 +1,43 @@
+id: person:nelis-4459c6f8
+name:
+  full: Dr. A.P. (Annemiek) Nelis
+  family: Nelis
+  given: A.P.
+  initials: A.
+mandaten:
+- id: mandate-post-directeur-innovatie-kennis-en-strategie-min-jenv-2022-01-01
+  organization_id: org:onderdeel-directie-innovatie-kennis-en-strategie-min-jenv
+  post_id: post:directeur-innovatie-kennis-en-strategie-min-jenv
+  role: directeur Innovatie, Kennis en Strategie, ministerie van Justitie en Veiligheid
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/28/annemiek-nelis-directeur-innovatie-kennis--strategie-bij-jenv
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-28
+  confidence: 0.92
+- id: mandate-post-directeur-innovatie-kennis-strategie-min-jenv-2022-01-01
+  organization_id: org:onderdeel-innovatie-kennis-strategie-min-jenv
+  post_id: post:directeur-innovatie-kennis-strategie-min-jenv
+  role: directeur Innovatie, Kennis & Strategie, ministerie van Justitie en Veiligheid
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/28/annemiek-nelis-directeur-innovatie-kennis--strategie-bij-jenv
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-28
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/28/annemiek-nelis-directeur-innovatie-kennis--strategie-bij-jenv
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

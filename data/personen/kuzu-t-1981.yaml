@@ -11,66 +11,6 @@ birth:
   year: 1981
 gender: m
 mandaten:
-- id: 15782181-1cac-47fd-8da3-25606011086c
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor DENK
-  start_date: '2020-03-21'
-  end_date: '2023-12-05'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(063cee95-54d3-4972-b36f-b56da546965d)
-    retrieved: '2026-05-09'
-- id: b62bbc1c-fa7d-458a-8f9f-382a5d78be7d
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor DENK
-  start_date: '2018-09-04'
-  end_date: '2020-03-20'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4559bba3-3c95-49ef-a361-b220e4329a26)
-    retrieved: '2026-05-09'
-- id: 8d0b57b1-ec43-472b-be6c-69c72ac66d6c
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor DENK
-  start_date: '2018-04-24'
-  end_date: '2018-09-03'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(73c9d348-7fa7-4cdf-86e7-b44c0dec651a)
-    retrieved: '2026-05-09'
-- id: 97627733-36e8-4e77-ab84-1cadd12a92a4
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor DENK
-  start_date: '2017-03-23'
-  end_date: '2018-04-23'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b32d79e0-653b-4f67-9909-7985eec136fa)
-    retrieved: '2026-05-09'
-- id: 6c2d95ae-2ff6-4c77-9539-f30e19a41eaf
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GrKÖ
-  start_date: '2014-11-14'
-  end_date: '2017-03-22'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(40631960-ffaf-493d-be74-853964331e03)
-    retrieved: '2026-05-09'
 - id: 670fb8fd-ffa6-4c92-b39c-ed21095dddaa
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -82,11 +22,71 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(eeaa4ba1-722c-48c0-b703-0f326fd12867)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 6c2d95ae-2ff6-4c77-9539-f30e19a41eaf
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GrKÖ
+  start_date: '2014-11-14'
+  end_date: '2017-03-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(40631960-ffaf-493d-be74-853964331e03)
+    retrieved: '2026-05-13'
+- id: 97627733-36e8-4e77-ab84-1cadd12a92a4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2017-03-23'
+  end_date: '2018-04-23'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(b32d79e0-653b-4f67-9909-7985eec136fa)
+    retrieved: '2026-05-13'
+- id: 8d0b57b1-ec43-472b-be6c-69c72ac66d6c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2018-04-24'
+  end_date: '2018-09-03'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(73c9d348-7fa7-4cdf-86e7-b44c0dec651a)
+    retrieved: '2026-05-13'
+- id: b62bbc1c-fa7d-458a-8f9f-382a5d78be7d
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2018-09-04'
+  end_date: '2020-03-20'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4559bba3-3c95-49ef-a361-b220e4329a26)
+    retrieved: '2026-05-13'
+- id: 15782181-1cac-47fd-8da3-25606011086c
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor DENK
+  start_date: '2020-03-21'
+  end_date: '2023-12-05'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(063cee95-54d3-4972-b36f-b56da546965d)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(16596afa-9e56-4d0a-a715-f40592825937)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q616635
   retrieved: '2026-05-09'

@@ -1,9 +1,13 @@
 id: person:egberts-k-5456325
+identifiers:
+  wikidata: Q62559762
 name:
   full: K. Egberts
   family: Egberts
   given: K.
   initials: K.
+birth:
+  year: 1929
 mandaten:
 - id: 084470d6-5110-4687-85bd-804776f27388
   organization_id: org:gemeente-nieuwkoop
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5456327
     retrieved: '2026-05-09'
+- id: ee36c2f5-2c8d-4ad1-9e77-716def0feefa
+  organization_id: org:gemeente-nieuwkoop
+  post_id: post:raadslid-gemeente-nieuwkoop
+  role: Raadslid gemeente Nieuwkoop
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5456327
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5456325
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q62559762
   retrieved: '2026-05-11'
-birth:
-  year: 1929
-identifiers:
-  wikidata: Q62559762

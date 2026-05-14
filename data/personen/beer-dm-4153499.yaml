@@ -1,9 +1,13 @@
 id: person:beer-dm-4153499
+identifiers:
+  wikidata: Q123175899
 name:
   full: de, Martin Beer
   family: Beer
   given: de, Martin
   initials: D.M.
+birth:
+  year: 1980
 mandaten:
 - id: ad64d2d4-78cb-478e-925b-d16f442eeea8
   organization_id: org:gemeente-heerlen
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4153500
     retrieved: '2026-05-09'
+- id: 6c25188b-adf9-4941-a9ac-39e3fc408a70
+  organization_id: org:gemeente-heerlen
+  post_id: post:wethouder-gemeente-heerlen
+  role: Wethouder gemeente Heerlen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4153500
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4153499
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q123175899
+  retrieved: '2026-05-13'

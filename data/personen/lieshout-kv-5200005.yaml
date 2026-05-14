@@ -2,7 +2,7 @@ id: person:lieshout-kv-5200005
 name:
   full: Karel van Lieshout
   family: Lieshout
-  given: Karel
+  given: Karel van
   initials: K.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5200007
     retrieved: '2026-05-09'
+- id: ea401ca2-3810-48be-bc60-34653d44d197
+  organization_id: org:gemeente-meierijstad
+  post_id: post:raadslid-gemeente-meierijstad
+  role: Raadslid gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5200007
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5200005
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

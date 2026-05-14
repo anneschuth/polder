@@ -1,9 +1,13 @@
 id: person:appelman-jn-7763897
+identifiers:
+  wikidata: Q83778167
 name:
   full: Jan-Nico Appelman
   family: Appelman
   given: Jan-Nico
   initials: J.N.
+birth:
+  year: 1968
 mandaten:
 - id: 3fac14da-8a04-4f41-8e17-b5afc15993f0
   organization_id: org:gemeente-lelystad
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7766481
     retrieved: '2026-05-09'
+- id: 33e31316-04d7-4a30-870b-f79c24c66386
+  organization_id: org:gemeente-lelystad
+  post_id: post:wethouder-gemeente-lelystad
+  role: Wethouder gemeente Lelystad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7766481
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7763897
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q83778167
+  retrieved: '2026-05-13'

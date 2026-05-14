@@ -1,6 +1,7 @@
 id: person:dral-rm-1985
 identifiers:
   tk_persoon_id: baa28f24-4d3e-40fd-9cba-4fbdd5b1d175
+  wikidata: Q28861099
 name:
   full: Rosemarijn Dral
   family: Dral
@@ -21,8 +22,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(c7f8264c-1946-4184-90c6-f863b157ae14)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(baa28f24-4d3e-40fd-9cba-4fbdd5b1d175)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q28861099
+  retrieved: '2026-05-13'

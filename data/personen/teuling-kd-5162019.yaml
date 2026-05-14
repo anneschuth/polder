@@ -2,7 +2,7 @@ id: person:teuling-kd-5162019
 name:
   full: Kay den Teuling
   family: Teuling
-  given: Kay
+  given: Kay den
   initials: K.D.
   tussenvoegsel: den
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5162021
     retrieved: '2026-05-09'
+- id: 4f48b9ec-9bb6-422d-8e9c-0e85190a134d
+  organization_id: org:gemeente-maashorst
+  post_id: post:raadslid-gemeente-maashorst
+  role: Raadslid gemeente Maashorst
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5162021
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5162019
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

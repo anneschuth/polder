@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2300048
     retrieved: '2026-05-09'
+- id: 03864868-3bee-4524-bda5-eca175300742
+  organization_id: org:gemeente-arnhem
+  post_id: post:wethouder-gemeente-arnhem
+  role: Wethouder gemeente Arnhem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2300048
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2300047
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q18169519
+  retrieved: '2026-05-13'
+birth:
+  year: 1987
+identifiers:
+  wikidata: Q18169519

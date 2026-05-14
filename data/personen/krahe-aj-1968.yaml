@@ -1,0 +1,30 @@
+id: person:krahe-aj-1968
+identifiers:
+  tk_persoon_id: 22c5dace-48e9-422c-bc97-671c079fbd42
+name:
+  full: Guus Krähe
+  family: Krähe
+  given: Guus
+  initials: A.J.
+  honorifics_pre:
+  - ing
+birth:
+  year: 1968
+gender: m
+mandaten:
+- id: c77d59f1-f94f-43e1-a6e1-bea85a58fcca
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2006-05-17'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a919fd43-a875-41a9-aa71-9d916b07afda)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(22c5dace-48e9-422c-bc97-671c079fbd42)
+  retrieved: '2026-05-13'

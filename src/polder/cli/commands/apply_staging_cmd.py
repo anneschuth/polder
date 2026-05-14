@@ -42,9 +42,7 @@ def _print_plan(
         for a in actions:
             typer.echo(f"  {_icon(a.type)} {a.target_path}  [{a.type}, conf={a.confidence:.2f}]")
             if a.type == "create-org":
-                typer.echo(
-                    f"    parent: {a.record.get('parent_id')}, " f"type: {a.record.get('type')}"
-                )
+                typer.echo(f"    parent: {a.record.get('parent_id')}, type: {a.record.get('type')}")
             elif a.type == "create-post":
                 typer.echo(
                     f"    organization_id: {a.record.get('organization_id')}, "
@@ -52,9 +50,7 @@ def _print_plan(
                 )
             elif a.type == "create-person":
                 man = a.record.get("mandaten") or []
-                typer.echo(
-                    f"    name: {a.record.get('name', {}).get('full')}, " f"{len(man)} mandaat"
-                )
+                typer.echo(f"    name: {a.record.get('name', {}).get('full')}, {len(man)} mandaat")
             elif a.type == "append-mandaat":
                 man = a.record.get("mandaten") or []
                 typer.echo(f"    nieuw mandaat-totaal: {len(man)}")
@@ -75,7 +71,7 @@ def _print_plan(
         typer.echo("Zou skippen:")
         typer.echo("  (geen)")
     typer.echo("")
-    typer.echo(f"{len(actions)} records auto-mergeable, " f"{len(skipped)} needs-review/skip.")
+    typer.echo(f"{len(actions)} records auto-mergeable, {len(skipped)} needs-review/skip.")
 
 
 def apply_staging(

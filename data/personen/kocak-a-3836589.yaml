@@ -1,9 +1,13 @@
 id: person:kocak-a-3836589
+identifiers:
+  wikidata: Q5350572
 name:
   full: A. Koçak
   family: Koçak
   given: A.
   initials: A.
+birth:
+  year: 1931
 mandaten:
 - id: cf869983-5a36-44c1-ae2b-64e54d823919
   organization_id: org:gemeente-gorinchem
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836591
     retrieved: '2026-05-09'
+- id: 3987d7cf-3385-4c2c-b1d3-79d9f4684424
+  organization_id: org:gemeente-gorinchem
+  post_id: post:raadslid-gemeente-gorinchem
+  role: Raadslid gemeente Gorinchem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3836591
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836589
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q5350572
   retrieved: '2026-05-11'
-birth:
-  year: 1931
-identifiers:
-  wikidata: Q5350572

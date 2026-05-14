@@ -37,7 +37,27 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: 51ebc154-453b-4b9a-bc53-838a3efa5a2e
+  organization_id: org:gemeente-noord
+  post_id: post:burgemeester-gemeente-noord
+  role: Burgemeester gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559038
+    retrieved: '2026-05-13'
+- id: 946668ea-92f5-40eb-b364-30c52474d160
+  organization_id: org:gemeente-noordwijk
+  post_id: post:burgemeester-gemeente-noordwijk
+  role: Burgemeester gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5559038
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559037
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -2,7 +2,7 @@ id: person:veer-evd-6000918
 name:
   full: E. van der Veer
   family: Veer
-  given: E.
+  given: E. van der
   initials: E.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000920
     retrieved: '2026-05-09'
+- id: c2ca7abc-6947-4b34-bf74-14a1e5b19f8f
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6000920
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000918
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

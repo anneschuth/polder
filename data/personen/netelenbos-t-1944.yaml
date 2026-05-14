@@ -1,0 +1,28 @@
+id: person:netelenbos-t-1944
+identifiers:
+  tk_persoon_id: 9c8570b7-8beb-4c7c-a823-14a3c5d5fa58
+name:
+  full: Tine Netelenbos
+  family: Netelenbos
+  given: Tine
+  initials: T.
+birth:
+  year: 1944
+gender: f
+mandaten:
+- id: 910ab4de-ee71-4eda-8543-63e6f947f0de
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-05-23'
+  end_date: '2003-01-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a2b6fc8d-dbb3-4968-b2c1-980fb239e502)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9c8570b7-8beb-4c7c-a823-14a3c5d5fa58)
+  retrieved: '2026-05-13'

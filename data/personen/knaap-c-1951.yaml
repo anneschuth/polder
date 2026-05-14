@@ -19,12 +19,24 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1890942#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2007-12-18'
+- id: 0bebeb36-d86e-468a-b195-595eb04c53fa
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2006-11-30'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d88363a8-209d-4918-8026-5b66db1f76d0)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(6f00dff1-a8cd-4c68-ad4b-6ad1f9e1eb17)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1890942
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

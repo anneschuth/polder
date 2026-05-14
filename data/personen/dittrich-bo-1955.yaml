@@ -13,6 +13,30 @@ birth:
   year: 1955
 gender: m
 mandaten:
+- id: 03f15eac-4cda-4b5c-8172-afa120753cd1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '1994-05-17'
+  end_date: '2006-02-02'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(747c5eba-5614-4350-8a6b-a34c2b4a0894)
+    retrieved: '2026-05-13'
+- id: 66668f78-88ec-4272-93e0-310abd0b94ba
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor D66
+  start_date: '2006-02-03'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(a6b59267-1cbc-44e9-ab8e-54877c87668f)
+    retrieved: '2026-05-13'
 - id: dd3ddb98-2c06-4574-9aa5-1bf610c4903f
   organization_id: org:eerste-kamer
   post_id: post:senator
@@ -24,14 +48,14 @@ mandaten:
   sources:
   - id: ek_scrape
     url: https://www.eerstekamer.nl/persoon/mr_b_o_dittrich_d66
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(41d0849c-738c-47a9-80b4-8066a5c2727c)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: ek_scrape
   url: https://www.eerstekamer.nl/persoon/mr_b_o_dittrich_d66
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q442061
   retrieved: '2026-05-09'

@@ -1,9 +1,13 @@
 id: person:naber-j-4136190
+identifiers:
+  wikidata: Q56509292
 name:
   full: Jan Naber
   family: Naber
   given: Jan
   initials: J.
+birth:
+  year: 1940
 mandaten:
 - id: 02016882-fef5-4866-b593-d180b3aba46e
   organization_id: org:gemeente-heerenveen
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4136194
     retrieved: '2026-05-09'
+- id: 7ff4b9f0-a70b-4e00-a67d-a647f2bd1292
+  organization_id: org:gemeente-heerenveen
+  post_id: post:raadslid-gemeente-heerenveen
+  role: Raadslid gemeente Heerenveen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4136194
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4136190
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q56509292
   retrieved: '2026-05-11'
-birth:
-  year: 1940
-identifiers:
-  wikidata: Q56509292

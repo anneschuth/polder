@@ -13,6 +13,28 @@ birth:
   year: 1962
 gender: m
 mandaten:
+- id: de68ad9e-32ff-49de-a2e8-6b2934ee36a4
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor ChristenUnie
+  start_date: '2001-03-13'
+  end_date: '2007-02-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(0e0a1ebf-4616-438e-9025-0ecbc107611d)
+    retrieved: '2026-05-13'
+- id: wd-5d0858731c2f
+  organization_id: org:min-ocw
+  post_id: post:minister-min-ocw
+  role: minister van Onderwijs, Cultuur en Wetenschap
+  start_date: '2010-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q522624#P39
+    retrieved: '2026-05-13'
+  end_date: '2010-10-14'
 - id: 0fae9d6b-e82d-47c1-af44-40bcc026a0c1
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -24,21 +46,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(72824920-d38a-4201-977b-7739af80a0f0)
-    retrieved: '2026-05-09'
-- id: wd-5d0858731c2f
-  organization_id: org:min-ocw
-  post_id: post:minister-min-ocw
-  role: minister van Onderwijs, Cultuur en Wetenschap
-  start_date: '2010-02-23'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q522624#P39
-    retrieved: '2026-05-09'
-  end_date: '2010-10-14'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e4a25928-aee0-404b-9352-df96c8e4c9e1)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q522624
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

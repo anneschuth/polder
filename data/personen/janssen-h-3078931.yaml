@@ -1,9 +1,13 @@
 id: person:janssen-h-3078931
+identifiers:
+  wikidata: Q30223295
 name:
   full: H.J. Janssen
   family: Janssen
   given: H.J.
   initials: H.
+birth:
+  year: 1944
 mandaten:
 - id: cc00b57e-b813-4e4a-91a4-e304e407b41a
   organization_id: org:gemeente-brunssum
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7773647
     retrieved: '2026-05-09'
+- id: d825d6cc-898f-4c39-8173-b76dffbb33aa
+  organization_id: org:gemeente-brunssum
+  post_id: post:raadslid-gemeente-brunssum
+  role: Raadslid gemeente Brunssum
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7773647
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3078931
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q30223295
   retrieved: '2026-05-11'
-birth:
-  year: 1944
-identifiers:
-  wikidata: Q30223295

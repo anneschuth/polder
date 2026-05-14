@@ -1,0 +1,29 @@
+id: person:graft-bv-e60907b0
+name:
+  full: Bob van Graft
+  family: Graft
+  given: Bob van
+  initials: B.V.
+mandaten:
+- id: mandate-post-kwartiermaker-beoogd-directeur-ruimtelijke-informatie-dg-ruimtelijke-ordening-min-vro-2025-05-01
+  organization_id: org:onderdeel-directoraat-generaal-ruimtelijke-ordening-min-vro
+  post_id: post:kwartiermaker-beoogd-directeur-ruimtelijke-informatie-dg-ruimtelijke-ordening-min-vro
+  role: kwartiermaker/beoogd directeur Ruimtelijke Informatie, Directoraat-generaal
+    Ruimtelijke Ordening, ministerie van Volkshuisvesting en Ruimtelijke Ordening
+  start_date: '2025-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/08/bob-van-graft-kwartiermaker-beoogd-directeur-ruimtelijke-informatie-bij-vro
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-04-08
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/08/bob-van-graft-kwartiermaker-beoogd-directeur-ruimtelijke-informatie-bij-vro
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

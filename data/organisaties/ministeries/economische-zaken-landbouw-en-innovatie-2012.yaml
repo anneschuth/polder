@@ -2,6 +2,7 @@ id: org:min-economische-zaken-landbouw-en-innovatie-2012
 type: ministerie
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/hv_17252319
+  wikidata: Q42411692
 classification: ministerie
 parent_id: null
 names:
@@ -11,11 +12,14 @@ names:
   valid_until: '2012-12-31'
 valid_from: '2010-10-14'
 valid_until: '2012-12-31'
-successor_id: org:min-economische-zaken-2017
-predecessor_id:
-- org:min-economische-zaken
-- org:min-landbouw-natuur-en-voedselkwaliteit
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/hv_17252319
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q42411692
+  retrieved: '2026-05-13'
+successor_id: org:min-economische-zaken-2017
+predecessor_id:
+- org:min-economische-zaken
+- org:min-landbouw-natuur-en-voedselkwaliteit

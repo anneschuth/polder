@@ -2,6 +2,7 @@ id: org:min-infrastructuur-en-milieu-2017
 type: ministerie
 identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/hv_06784634
+  wikidata: Q2188136
 classification: ministerie
 parent_id: null
 names:
@@ -11,11 +12,14 @@ names:
   valid_until: '2017-12-31'
 valid_from: '2010-10-14'
 valid_until: '2017-12-31'
-successor_id: org:min-ienw
-predecessor_id:
-- org:min-verkeer-en-waterstaat
-- org:min-volkshuisvesting-ruimtelijke-ordening-en-milieubeheer
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/hv_06784634
   retrieved: '2026-05-09'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2188136
+  retrieved: '2026-05-13'
+successor_id: org:min-ienw
+predecessor_id:
+- org:min-verkeer-en-waterstaat
+- org:min-volkshuisvesting-ruimtelijke-ordening-en-milieubeheer

@@ -1,10 +1,14 @@
 id: person:putten-hvd-5420583
+identifiers:
+  wikidata: Q65178863
 name:
   full: H. van der Putten
   family: Putten
-  given: H.
+  given: H. van der
   initials: H.V.D.
   tussenvoegsel: van der
+birth:
+  year: 1940
 mandaten:
 - id: b85c50bc-a692-4e73-8187-63c2c0c77647
   organization_id: org:gemeente-nederweert
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5420585
     retrieved: '2026-05-09'
+- id: 11277a44-ba03-425d-aecb-67d8fa0291fc
+  organization_id: org:gemeente-nederweert
+  post_id: post:raadslid-gemeente-nederweert
+  role: Raadslid gemeente Nederweert
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5420585
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5420583
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q65178863
   retrieved: '2026-05-11'
-birth:
-  year: 1940
-identifiers:
-  wikidata: Q65178863

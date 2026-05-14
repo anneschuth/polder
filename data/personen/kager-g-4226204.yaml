@@ -21,7 +21,17 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
+- id: caec7a4b-de6e-4ad6-975c-68af991b3b82
+  organization_id: org:gemeente-hilversum
+  post_id: post:griffier-gemeente-hilversum
+  role: Griffier gemeente Hilversum
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4226206
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4226204
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

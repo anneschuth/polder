@@ -1,0 +1,30 @@
+id: person:lenards-jm-1955
+identifiers:
+  tk_persoon_id: e59ce6b1-7508-4e47-80b3-4dea7b1ab850
+name:
+  full: Janmarc Lenards
+  family: Lenards
+  given: Janmarc
+  initials: J.M.
+  honorifics_pre:
+  - mr
+birth:
+  year: 1955
+gender: m
+mandaten:
+- id: 061e72c7-5591-47e6-abb3-445ad06f48d2
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '2005-08-31'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f52ef76c-12ee-489f-9781-dcce8bd9f517)
+    retrieved: '2026-05-13'
+sources:
+- id: tk_odata
+  url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(e59ce6b1-7508-4e47-80b3-4dea7b1ab850)
+  retrieved: '2026-05-13'

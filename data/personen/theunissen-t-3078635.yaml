@@ -15,7 +15,24 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3078637
     retrieved: '2026-05-09'
+- id: 99d65a2d-4d2b-48b1-a1ea-e2116beb5066
+  organization_id: org:gemeente-brunssum
+  post_id: post:raadslid-gemeente-brunssum
+  role: Raadslid gemeente Brunssum
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3078637
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3078635
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112439851
+  retrieved: '2026-05-13'
+birth:
+  year: 1955
+identifiers:
+  wikidata: Q112439851

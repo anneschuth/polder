@@ -4,6 +4,7 @@ name:
   family: Dam
   initials: V.
   tussenvoegsel: van
+  given: van
 mandaten:
 - id: 5b84e7d6-4f0c-42ab-8f4e-b5fbe352c8ec
   organization_id: org:gemeente-druten
@@ -15,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400838
     retrieved: '2026-05-09'
+- id: 141d2840-c675-492f-8f97-3f1ba6c2c925
+  organization_id: org:gemeente-druten
+  post_id: post:wethouder-gemeente-druten
+  role: Wethouder gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3400838
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400837
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

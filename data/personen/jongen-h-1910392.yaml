@@ -1,9 +1,13 @@
 id: person:jongen-h-1910392
+identifiers:
+  wikidata: Q26243407
 name:
   full: H.W.M. Jongen
   family: Jongen
   given: H.W.M.
   initials: H.
+birth:
+  year: 1962
 mandaten:
 - id: f0bf9103-e178-486f-9a5a-0bf8e7e3baad
   organization_id: org:gemeente-maastricht
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910568
     retrieved: '2026-05-09'
+- id: 7dca4aaf-26b3-45f8-ae21-2c8db310484d
+  organization_id: org:gemeente-maastricht
+  post_id: post:raadslid-gemeente-maastricht
+  role: Raadslid gemeente Maastricht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/1910569
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1910392
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q26243407
   retrieved: '2026-05-11'
-birth:
-  year: 1962
-identifiers:
-  wikidata: Q26243407

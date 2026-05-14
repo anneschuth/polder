@@ -2,7 +2,7 @@ id: person:oort-kv-5200103
 name:
   full: Kevin van Oort
   family: Oort
-  given: Kevin
+  given: Kevin van
   initials: K.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5200105
     retrieved: '2026-05-09'
+- id: 515354f6-2981-4350-af3f-c7f499ad7feb
+  organization_id: org:gemeente-meierijstad
+  post_id: post:griffier-gemeente-meierijstad
+  role: Griffier gemeente Meierijstad
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5200105
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5200103
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

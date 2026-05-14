@@ -11,6 +11,31 @@ birth:
   year: 1987
 gender: f
 mandaten:
+- id: wd-9663bcff24c9
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-asiel-migratie-min-jenv
+  role: Staatssecretaris Asiel en Migratie
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q126643960#P39
+    retrieved: '2026-05-09'
+  end_date: '2025-06-03'
+- id: wd-9663bcff24c9
+  organization_id: org:min-jenv
+  post_id: post:staatssecretaris-min-jenv
+  role: staatssecretaris van Justitie en Veiligheid
+  start_date: '2024-07-02'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q126643960#P39
+    retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22509
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
+  end_date: '2025-06-03'
 - id: 3b2c6678-9a23-4601-8377-b9153f064c7c
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,21 +47,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fc41b429-e83c-4269-86a4-92b240736585)
-    retrieved: '2026-05-09'
-- id: wd-9663bcff24c9
-  organization_id: org:min-jenv
-  post_id: post:staatssecretaris-asiel-migratie-min-jenv
-  role: Staatssecretaris Asiel en Migratie
-  start_date: '2024-07-02'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q126643960#P39
-    retrieved: '2026-05-09'
-  end_date: '2025-06-03'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(a08790d3-915b-44d3-9556-6c53048917a0)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q126643960
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

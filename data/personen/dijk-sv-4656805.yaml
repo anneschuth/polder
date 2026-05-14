@@ -2,7 +2,7 @@ id: person:dijk-sv-4656805
 name:
   full: S. van Dijk
   family: Dijk
-  given: S.
+  given: S. van
   initials: S.V.
   tussenvoegsel: van
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774104
     retrieved: '2026-05-09'
+- id: 5b53a069-751c-4ddb-a77f-10c1a8e4d7c1
+  organization_id: org:gemeente-krimpenerwaard
+  post_id: post:griffier-gemeente-krimpenerwaard
+  role: Griffier gemeente Krimpenerwaard
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7774104
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4656805
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

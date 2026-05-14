@@ -11,18 +11,6 @@ birth:
   year: 1974
 gender: m
 mandaten:
-- id: 1b72ef12-4a11-4c7d-98ef-72bfaa1fb877
-  organization_id: org:tweede-kamer
-  post_id: post:kamerlid
-  role: Kamerlid voor GrKH
-  start_date: '2012-07-03'
-  end_date: '2012-09-19'
-  appointment:
-    decision: TK-installatie
-  sources:
-  - id: tk_odata
-    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f907ec57-2919-4595-96ab-40eba8f84983)
-    retrieved: '2026-05-09'
 - id: 2d2ba46a-9802-4500-be5f-a8dbea296826
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -34,11 +22,23 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(699b252c-62d8-480e-a7e6-e68c317b5383)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
+- id: 1b72ef12-4a11-4c7d-98ef-72bfaa1fb877
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor GrKH
+  start_date: '2012-07-03'
+  end_date: '2012-09-19'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f907ec57-2919-4595-96ab-40eba8f84983)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(cf664cd1-e731-49cd-8bf1-60e5fdb1e6e0)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2229075
   retrieved: '2026-05-09'

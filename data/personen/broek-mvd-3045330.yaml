@@ -2,7 +2,7 @@ id: person:broek-mvd-3045330
 name:
   full: Martin  van der Broek
   family: Broek
-  given: Martin
+  given: Martin  van der
   initials: M.V.D.
   tussenvoegsel: van der
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3045332
     retrieved: '2026-05-09'
+- id: 97291726-b0b1-480a-94a7-d1c33608e9ea
+  organization_id: org:gemeente-boxtel
+  post_id: post:raadslid-gemeente-boxtel
+  role: Raadslid gemeente Boxtel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3045332
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3045330
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

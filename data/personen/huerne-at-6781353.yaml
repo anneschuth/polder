@@ -2,7 +2,7 @@ id: person:huerne-at-6781353
 name:
   full: Anita  ter Huerne
   family: Huerne
-  given: Anita
+  given: Anita  ter
   initials: A.T.
   tussenvoegsel: ter
 mandaten:
@@ -16,7 +16,17 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6781354
     retrieved: '2026-05-09'
+- id: 0a6bed94-96fa-4897-9e09-17675c132016
+  organization_id: org:gemeente-zwolle
+  post_id: post:raadslid-gemeente-zwolle
+  role: Raadslid gemeente Zwolle
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6781354
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6781353
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

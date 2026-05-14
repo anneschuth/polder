@@ -1,10 +1,14 @@
 id: person:vogel-cd-6743706
+identifiers:
+  wikidata: Q125025
 name:
   full: C.M. de Vogel
   family: Vogel
-  given: C.M.
+  given: C.M. de
   initials: C.D.
   tussenvoegsel: de
+birth:
+  year: 1943
 mandaten:
 - id: f7971b96-fec1-4a91-b2af-56bc2967c4b1
   organization_id: org:gemeente-zoetermeer
@@ -16,14 +20,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743708
     retrieved: '2026-05-09'
+- id: fc3700de-01ef-4d01-a004-1f878d63e571
+  organization_id: org:gemeente-zoetermeer
+  post_id: post:raadslid-gemeente-zoetermeer
+  role: Raadslid gemeente Zoetermeer
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6743708
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6743706
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q125025
   retrieved: '2026-05-11'
-birth:
-  year: 1943
-identifiers:
-  wikidata: Q125025

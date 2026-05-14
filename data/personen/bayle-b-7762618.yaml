@@ -1,9 +1,13 @@
 id: person:bayle-b-7762618
+identifiers:
+  wikidata: Q46702526
 name:
   full: B. Baylé
   family: Baylé
   given: B.
   initials: B.
+birth:
+  year: 1926
 mandaten:
 - id: 37f2b8ed-014a-43f4-b000-61de08bd1201
   organization_id: org:gemeente-meppel
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774309
     retrieved: '2026-05-09'
+- id: 52cf9960-4173-494a-9737-d65b4f144adc
+  organization_id: org:gemeente-meppel
+  post_id: post:raadslid-gemeente-meppel
+  role: Raadslid gemeente Meppel
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7774309
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7762618
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q46702526
+  retrieved: '2026-05-13'

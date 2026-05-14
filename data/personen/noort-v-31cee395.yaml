@@ -1,0 +1,43 @@
+id: person:noort-v-31cee395
+name:
+  full: Drs. R.J.A. (Arjan) van Noort
+  family: Noort
+  given: R.J.A. van
+  initials: R.V.
+mandaten:
+- id: mandate-post-directeur-samenleving-en-integratie-min-szw-2021-06-01
+  organization_id: org:onderdeel-directie-samenleving-en-integratie-min-szw
+  post_id: post:directeur-samenleving-en-integratie-min-szw
+  role: directeur Samenleving en Integratie, ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/17/arjan-van-noort-directeur-samenleving-en-integratie-bij-szw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-17
+  confidence: 0.9
+- id: mandate-post-directeur-samenleving-integratie-min-szw-2021-06-01
+  organization_id: org:onderdeel-directie-samenleving-en-integratie-min-szw
+  post_id: post:directeur-samenleving-integratie-min-szw
+  role: directeur Samenleving en Integratie, Ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/17/arjan-van-noort-directeur-samenleving-en-integratie-bij-szw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/17/arjan-van-noort-directeur-samenleving-en-integratie-bij-szw
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

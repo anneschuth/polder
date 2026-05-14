@@ -24,7 +24,7 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(31b5d610-6d3b-480c-a5a5-aa03b0593538)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: wd-0605ac1f5b8b
   organization_id: org:min-fin
   post_id: post:staatssecretaris-toeslagen-min-fin
@@ -40,10 +40,20 @@ mandaten:
     fields:
     - portefeuille
   end_date: '2025-08-22'
+- id: wd-7f30969059ea
+  organization_id: org:min-fin
+  post_id: post:staatssecretaris-min-fin
+  role: staatssecretaris van Financiën
+  start_date: '2024-12-12'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q123174045#P39
+    retrieved: '2026-05-13'
+  end_date: '2025-08-22'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(61aaf80d-fccd-4596-8632-fc53d24e7502)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q123174045
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

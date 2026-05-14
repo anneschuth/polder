@@ -11,6 +11,18 @@ birth:
   year: 1966
 gender: f
 mandaten:
+- id: db7c3853-9f06-4981-84e8-951f5805e9db
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor CDA
+  start_date: '2005-07-27'
+  end_date: '2006-11-29'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(f5610f32-cde3-48ef-86a7-b5818d034f41)
+    retrieved: '2026-05-13'
 - id: 788986af-b7b8-4e48-80b1-123c53529575
   organization_id: org:tweede-kamer
   post_id: post:kamerlid
@@ -22,11 +34,11 @@ mandaten:
   sources:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(be636c87-5dc6-406a-ba4c-a9ccf8589809)
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ca7fecb3-8206-455c-a20b-9e2148b94cb9)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2190828
   retrieved: '2026-05-09'

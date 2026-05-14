@@ -19,12 +19,24 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q385703#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '1998-08-03'
+- id: 1f41fe3f-b0e5-4776-9618-b8e6c9e7e4f1
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor VVD
+  start_date: '1998-05-19'
+  end_date: '2003-12-15'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(d66177e5-dfe8-4af5-810c-d78b1b77def1)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b48e99ff-a379-43c3-96d9-38d0402fff61)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q385703
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'

@@ -1,9 +1,13 @@
 id: person:bamberg-g-5422192
+identifiers:
+  wikidata: Q41804135
 name:
   full: Guido Bamberg
   family: Bamberg
   given: Guido
   initials: G.
+birth:
+  year: 1970
 mandaten:
 - id: bb3e6ed3-7ab6-43b2-81d3-14d7da2ab99f
   organization_id: org:gemeente-nieuwegein
@@ -15,7 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5422193
     retrieved: '2026-05-09'
+- id: 10c6ce20-011c-4f8a-ae94-77fde50e11dc
+  organization_id: org:gemeente-nieuwegein
+  post_id: post:wethouder-gemeente-nieuwegein
+  role: Wethouder gemeente Nieuwegein
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5422193
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5422192
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q41804135
+  retrieved: '2026-05-13'

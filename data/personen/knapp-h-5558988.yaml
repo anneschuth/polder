@@ -1,9 +1,13 @@
 id: person:knapp-h-5558988
+identifiers:
+  wikidata: Q1259630
 name:
   full: Hans Knapp
   family: Knapp
   given: Hans
   initials: H.
+birth:
+  year: 1935
 mandaten:
 - id: 0fdfdc35-7df8-4f36-a4dd-6d2e0afca8fe
   organization_id: org:gemeente-noordwijk
@@ -25,14 +29,30 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5558990
     retrieved: '2026-05-09'
+- id: 515c1a96-ffd0-49c7-88c9-45649aea82b2
+  organization_id: org:gemeente-noord
+  post_id: post:raadslid-gemeente-noord
+  role: Raadslid gemeente Noord
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5558990
+    retrieved: '2026-05-13'
+- id: 83d52560-3953-4e94-96d5-e0cc8b3a0522
+  organization_id: org:gemeente-noordwijk
+  post_id: post:raadslid-gemeente-noordwijk
+  role: Raadslid gemeente Noordwijk
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5558990
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5558988
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1259630
   retrieved: '2026-05-11'
-birth:
-  year: 1935
-identifiers:
-  wikidata: Q1259630

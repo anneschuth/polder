@@ -163,7 +163,7 @@ def enrich_ori_records(
     """Loop door data/personen, verrijk ORI-records zonder birth-year.
 
     Werkt in batch-mode: per batch van `batch_size` records gaat één POST
-    naar de Reconciliation API. Dit is ongeveer 25× sneller dan per-record
+    naar de Reconciliation API. Dit is ongeveer 25x sneller dan per-record
     calls.
 
     `limit`: stop na N kandidaten (voor testen).

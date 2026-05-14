@@ -1,9 +1,13 @@
 id: person:mager-a-3836613
+identifiers:
+  wikidata: Q2062116
 name:
   full: A. Mager
   family: Mager
   given: A.
   initials: A.
+birth:
+  year: 1940
 mandaten:
 - id: a910e387-3f30-4386-bd66-24accc8b82b8
   organization_id: org:gemeente-gorinchem
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836615
     retrieved: '2026-05-09'
+- id: 09a9a724-1cdf-4974-8fbb-8085de76bb9f
+  organization_id: org:gemeente-gorinchem
+  post_id: post:wethouder-gemeente-gorinchem
+  role: Wethouder gemeente Gorinchem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3836615
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836613
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2062116
   retrieved: '2026-05-11'
-birth:
-  year: 1940
-identifiers:
-  wikidata: Q2062116

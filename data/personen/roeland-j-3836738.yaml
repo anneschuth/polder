@@ -1,9 +1,13 @@
 id: person:roeland-j-3836738
+identifiers:
+  wikidata: Q27104147
 name:
-  full: J.M. Roeland
+  full: Jacques Roeland
   family: Roeland
-  given: J.M.
+  given: Jacques
   initials: J.
+birth:
+  year: 1944
 mandaten:
 - id: e35ae388-d5dc-492d-97df-2cbd1b95f8b5
   organization_id: org:gemeente-gorinchem
@@ -15,14 +19,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836739
     retrieved: '2026-05-09'
+- id: db6966dd-1fa3-4905-9881-90e4255d174f
+  organization_id: org:gemeente-gorinchem
+  post_id: post:raadslid-gemeente-gorinchem
+  role: Raadslid gemeente Gorinchem
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3836739
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836738
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q27104147
   retrieved: '2026-05-11'
-birth:
-  year: 1944
-identifiers:
-  wikidata: Q27104147

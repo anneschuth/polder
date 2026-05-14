@@ -19,18 +19,8 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1889236#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '2000-03-24'
-- id: wd-0293ace3e4f6
-  organization_id: org:min-bzk
-  post_id: post:minister-min-bzk
-  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
-  start_date: '2000-03-24'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q1889236#P39
-    retrieved: '2026-05-09'
-  end_date: '2002-07-22'
 - id: wd-b47f4ee768c8
   organization_id: org:min-lvvn
   post_id: post:minister-min-lvvn
@@ -39,12 +29,34 @@ mandaten:
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q1889236#P39
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   end_date: '1999-06-08'
+- id: wd-0293ace3e4f6
+  organization_id: org:min-bzk
+  post_id: post:minister-min-bzk
+  role: Minister van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2000-03-24'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q1889236#P39
+    retrieved: '2026-05-13'
+  end_date: '2002-07-22'
+- id: ce69378d-8ce2-4d47-b466-17e51f039631
+  organization_id: org:tweede-kamer
+  post_id: post:kamerlid
+  role: Kamerlid voor PvdA
+  start_date: '2002-05-23'
+  end_date: '2002-07-22'
+  appointment:
+    decision: TK-installatie
+  sources:
+  - id: tk_odata
+    url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(bb2972b2-395f-4cda-8d18-f95131415d72)
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(2661b8bb-24e0-467e-b66e-a9215077d0c8)
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1889236
-  retrieved: '2026-05-09'
+  retrieved: '2026-05-13'
