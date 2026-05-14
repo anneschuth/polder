@@ -1,0 +1,45 @@
+id: person:schuurs-jensema-a-2584c45c
+name:
+  full: Alberta Schuurs-Jensema
+  family: Schuurs-Jensema
+  given: Alberta
+  initials: A.
+mandaten:
+- id: mandate-post-afdelingshoofd-mens-organisatie-belastingdienst-2024-11-01
+  organization_id: org:onderdeel-afdeling-mens-organisatie-min-bzk
+  post_id: post:afdelingshoofd-mens-organisatie-belastingdienst
+  role: afdelingshoofd Mens & Organisatie (M&O) binnen de directie Informatie Voorziening
+    (IV) van de Belastingdienst
+  start_date: '2024-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/07/alberta-schuurs-jensema-afdelingshoofd-mens--organisatie-bij-de-belastingdienst
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-10-07
+  confidence: 0.89
+- id: mandate-post-afdelingshoofd-mens-organisatie-informatie-voorziening-min-fin-2024-11-01
+  organization_id: org:onderdeel-mens-organisatie-informatie-voorziening-min-fin
+  post_id: post:afdelingshoofd-mens-organisatie-informatie-voorziening-min-fin
+  role: afdelingshoofd Mens & Organisatie (M&O) binnen de directie Informatie Voorziening
+    (IV) van de Belastingdienst
+  start_date: '2024-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/07/alberta-schuurs-jensema-afdelingshoofd-mens--organisatie-bij-de-belastingdienst
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-10-07
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/07/alberta-schuurs-jensema-afdelingshoofd-mens--organisatie-bij-de-belastingdienst
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

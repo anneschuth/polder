@@ -18,6 +18,38 @@ mandaten:
     fields:
     - applied_via:apply-staging
   confidence: 0.85
+- id: mandate-post-afdelingshoofd-toezicht-rail-maritiem-min-ienw-2025-04-01
+  organization_id: org:onderdeel-toezicht-rail-maritiem-min-ienw
+  post_id: post:afdelingshoofd-toezicht-rail-maritiem-min-ienw
+  role: afdelingshoofd Toezicht Rail en Maritiem, portefeuille Toezicht en Opsporing,
+    Inspectie Leefomgeving en Transport, ministerie van Infrastructuur en Waterstaat
+  start_date: '2025-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/21/agnes-wittink-afdelingshoofd-toezicht-rail-en-maritiem-bij-inspectie-leefomgeving-en-transport-bij-ienw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-21
+  confidence: 0.91
+- id: mandate-post-afdelingshoofd-toezicht-rail-en-maritiem-ilt-min-ienw-2025-04-01
+  organization_id: org:onderdeel-afdeling-toezicht-rail-en-maritiem-ilt-min-ienw
+  post_id: post:afdelingshoofd-toezicht-rail-en-maritiem-ilt-min-ienw
+  role: afdelingshoofd Toezicht Rail en Maritiem, portefeuille Toezicht en Opsporing,
+    Inspectie Leefomgeving en Transport, ministerie van Infrastructuur en Waterstaat
+  start_date: '2025-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/21/agnes-wittink-afdelingshoofd-toezicht-rail-en-maritiem-bij-inspectie-leefomgeving-en-transport-bij-ienw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-21
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.rijksoverheid.nl/actueel/nieuws/2025/03/21/agnes-wittink-afdelingshoofd-toezicht-rail-en-maritiem-bij-inspectie-leefomgeving-en-transport-bij-ienw

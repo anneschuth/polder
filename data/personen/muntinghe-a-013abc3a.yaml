@@ -1,0 +1,29 @@
+id: person:muntinghe-a-013abc3a
+name:
+  full: Ajold Muntinghe
+  family: Muntinghe
+  given: Ajold
+  initials: A.
+mandaten:
+- id: mandate-post-directeur-ppm-gpo-rws-min-ienw-2019-10-01
+  organization_id: org:onderdeel-directie-ppm-gpo-rws-min-ienw
+  post_id: post:directeur-ppm-gpo-rws-min-ienw
+  role: directeur Productie- en Projectmanagement Grote Projecten en Onderhoud, Rijkswaterstaat,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2019-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/02/ajold-muntinghe-directeur-productie--en-projectmanagement-bij-rijkswaterstaat
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-09-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/02/ajold-muntinghe-directeur-productie--en-projectmanagement-bij-rijkswaterstaat
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

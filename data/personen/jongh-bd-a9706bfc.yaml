@@ -1,0 +1,28 @@
+id: person:jongh-bd-a9706bfc
+name:
+  full: Bart de Jongh
+  family: Jongh
+  given: Bart de
+  initials: B.D.
+mandaten:
+- id: mandate-post-directeur-kennis-en-ontwikkeling-auditdienst-rijk-min-fin-2021-02-01
+  organization_id: org:onderdeel-auditdienst-rijk-min-fin
+  post_id: post:directeur-kennis-en-ontwikkeling-auditdienst-rijk-min-fin
+  role: directeur Kennis en Ontwikkeling, Auditdienst Rijk, ministerie van Financiën
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/14/bart-de-jongh-directeur-kennis-en-ontwikkeling-bij-de-auditdienst-rijk
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-01-14
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/14/bart-de-jongh-directeur-kennis-en-ontwikkeling-bij-de-auditdienst-rijk
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:sialino-keen-cfaaf4c9
+name:
+  full: D. (Dike) Sialino-Keen
+  family: Sialino-Keen
+  given: D.
+  initials: D.
+mandaten:
+- id: mandate-post-directeur-hrm-min-ienw-2019-06-01
+  organization_id: org:onderdeel-directie-hrm-bij-het-min-ienw
+  post_id: post:directeur-hrm-min-ienw
+  role: directeur HRM bij het ministerie van Infrastructuur en Waterstaat
+  start_date: '2019-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/27/dike-sialino-keen-directeur-hrm-bij-ienw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-03-27
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/27/dike-sialino-keen-directeur-hrm-bij-ienw
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

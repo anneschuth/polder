@@ -1,0 +1,28 @@
+id: person:kokje-c-867416c4
+name:
+  full: Conny Kokje
+  family: Kokje
+  given: Conny
+  initials: C.
+mandaten:
+- id: mandate-post-directeur-dfei-min-fin-2026-01-01
+  organization_id: org:onderdeel-dfei-min-fin
+  post_id: post:directeur-dfei-min-fin
+  role: directeur Dienst Financieel-Economische Integriteit, ministerie van Financiën
+  start_date: '2026-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/08/22/conny-kokje-directeur-dienst-financieel-economische-integriteit-bij-financien
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-08-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/08/22/conny-kokje-directeur-dienst-financieel-economische-integriteit-bij-financien
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

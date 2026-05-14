@@ -55,6 +55,22 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(4b11d848-2247-4349-97a7-e42aaa4ce84b)
     retrieved: '2026-05-13'
+- id: mandate-post-staatssecretaris-min-szw-2020-07-08
+  organization_id: org:min-szw
+  post_id: post:staatssecretaris-min-szw
+  role: Staatssecretaris van Sociale Zaken en Werkgelegenheid
+  start_date: '2020-07-08'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-38998
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2020001385, 8 juli 2020
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2020-38998
+  confidence: 0.94
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(581d8f64-6060-4cf0-b281-a46ad978cf0d)

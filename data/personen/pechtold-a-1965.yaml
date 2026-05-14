@@ -37,6 +37,21 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(cd911d12-63ca-4632-a254-a3336b8e9f2e)
     retrieved: '2026-05-13'
+- id: mandate-post-algemeen-directeur-cbr-2019-11-01
+  organization_id: org:zbo-cbr
+  post_id: post:algemeen-directeur-cbr
+  role: algemeen directeur bij het CBR
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/10/18/alexander-pechtold-algemeen-directeur-bij-het-cbr
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-10-18
+  confidence: 0.88
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(ddaff486-ef62-4200-aeb9-eeb4bedcc620)

@@ -1,0 +1,28 @@
+id: person:sumter-64ab1ef1
+name:
+  full: A. (Araya) Sumter
+  family: Sumter
+  given: A.
+  initials: A.
+mandaten:
+- id: mandate-post-directeur-werknemersregelingen-min-szw-2021-06-01
+  organization_id: org:onderdeel-directie-werknemersregelingen-min-szw
+  post_id: post:directeur-werknemersregelingen-min-szw
+  role: directeur Werknemersregelingen bij het ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/araya-sumter-directeur-werknemersregelingen-bij-het-ministerie-van-sociale-zaken-en-werkgelegenheid
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-08
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/araya-sumter-directeur-werknemersregelingen-bij-het-ministerie-van-sociale-zaken-en-werkgelegenheid
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

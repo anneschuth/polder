@@ -1,0 +1,29 @@
+id: person:jasiak-ee4a471e
+name:
+  full: Mr. dr. A. (Anna) Jasiak
+  family: Jasiak
+  given: A.
+  initials: A.
+mandaten:
+- id: mandate-post-afdelingshoofd-spoor-en-weg-hbjz-min-ienw-2022-02-01
+  organization_id: org:onderdeel-spoor-en-weg-hbjz-min-ienw
+  post_id: post:afdelingshoofd-spoor-en-weg-hbjz-min-ienw
+  role: afdelingshoofd Spoor en Weg bij de Hoofddirectie Bestuurlijke en Juridische
+    Zaken (HBJZ) van het ministerie van Infrastructuur en Waterstaat
+  start_date: '2022-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/20/anna-jasiak-afdelingshoofd-spoor-en-weg-bij-ienw
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-09-20
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/20/anna-jasiak-afdelingshoofd-spoor-en-weg-bij-ienw
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

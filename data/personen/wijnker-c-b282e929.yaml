@@ -1,0 +1,28 @@
+id: person:wijnker-c-b282e929
+name:
+  full: Charles Wijnker
+  family: Wijnker
+  given: Charles
+  initials: C.
+mandaten:
+- id: mandate-post-directeur-milieu-en-veiligheid-rivm-2021-10-25
+  organization_id: org:agentschap-rivm
+  post_id: post:directeur-milieu-en-veiligheid-rivm
+  role: directeur Milieu en Veiligheid bij het RIVM
+  start_date: '2021-10-25'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/28/charles-wijnker-directeur-milieu-en-veiligheid-bij-het-rivm
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-28
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/28/charles-wijnker-directeur-milieu-en-veiligheid-bij-het-rivm
+  retrieved: '2026-05-14'
+  fields:
+  - applied_via:apply-staging

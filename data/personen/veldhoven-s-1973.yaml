@@ -71,6 +71,22 @@ mandaten:
     url: https://www.wikidata.org/wiki/Q5090363#P39
     retrieved: '2026-05-13'
   end_date: null
+- id: mandate-post-staatssecretaris-min-ienw-2020-04-10
+  organization_id: org:min-ienw
+  post_id: post:staatssecretaris-min-ienw
+  role: Staatssecretaris van Infrastructuur en Waterstaat
+  start_date: '2020-04-10'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22579
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Besluit nr. 2020000770, 10 april 2020
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22579
+  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(9d2229a5-c46a-485a-9b82-315e270c3e9a)
