@@ -52,8 +52,13 @@ def list_candidates(
     until: str | None = None,
     pattern: str | None = None,
     limit: int | None = None,
+    staging_dir: Path | None = None,
 ) -> list[Path]:
-    """Verzamel XML-paden in `cache_dir` gefilterd op datum / regex / limit."""
+    """Verzamel XML-paden in `cache_dir` gefilterd op datum / regex / limit.
+
+    Als ``staging_dir`` is gegeven worden XMLs waarvan vandaag al een
+    non-empty staging-file bestaat ook gefilterd.
+    """
     if not cache_dir.exists():
         return []
     # Skip search-result-records (.sru.xml). Die zijn geen besluit-XMLs.
@@ -75,6 +80,17 @@ def list_candidates(
                 continue
             filtered.append(p)
         paths = filtered
+
+    if staging_dir is not None:
+        today_iso = _date.today().isoformat()
+        unstaged: list[Path] = []
+        for p in paths:
+            output = staging_dir / f"staatscourant-{p.stem}-{today_iso}.json"
+            # Skip alles met een today-staging-file (content of prefilter-`[]`).
+            if output.exists():
+                continue
+            unstaged.append(p)
+        paths = unstaged
 
     if limit is not None and limit > 0:
         paths = paths[:limit]
@@ -159,7 +175,14 @@ def backfill(
     cache_dir = repo_root / "_cache" / "staatscourant"
     staging_dir = repo_root / "data" / "_staging"
 
-    candidates = list_candidates(cache_dir, since=since, until=until, pattern=pattern, limit=limit)
+    candidates = list_candidates(
+        cache_dir,
+        since=since,
+        until=until,
+        pattern=pattern,
+        limit=limit,
+        staging_dir=staging_dir,
+    )
     result = BackfillResult(source="staatscourant", total_candidates=len(candidates))
     if not candidates:
         result.notes.append(f"Geen kandidaten in {cache_dir}")

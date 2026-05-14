@@ -54,11 +54,17 @@ def list_candidates(
     until: str | None = None,
     pattern: str | None = None,
     limit: int | None = None,
+    staging_dir: Path | None = None,
 ) -> list[Path]:
     """Verzamel HTML-paden in `cache_dir` filterd op datum / regex / limit.
 
     Datum-filter werkt op de file's modification-time (mtime) als ISO-string.
     Voor abd-nieuws is dat een goede proxy voor scrape-datum.
+
+    Als ``staging_dir`` is gegeven worden HTMLs waarvan vandaag al een
+    non-empty staging-file bestaat ook gefilterd — anders zou een retry-loop
+    met --limit telkens dezelfde alfabetisch-eerste records pakken en geen
+    progressie maken in de overige cache.
     """
     if not cache_dir.exists():
         return []
@@ -80,6 +86,19 @@ def list_candidates(
                 continue
             filtered.append(p)
         paths = filtered
+
+    if staging_dir is not None:
+        today_iso = _date.today().isoformat()
+        unstaged: list[Path] = []
+        for p in paths:
+            output = staging_dir / f"abd-nieuws-{p.stem}-{today_iso}.json"
+            # Skip alles wat vandaag al een staging-file heeft (met content
+            # of prefilter-skip-`[]`). Voorkomt dat een retry-loop telkens
+            # dezelfde records pakt.
+            if output.exists():
+                continue
+            unstaged.append(p)
+        paths = unstaged
 
     if limit is not None and limit > 0:
         paths = paths[:limit]
@@ -171,7 +190,14 @@ def backfill(
     cache_dir = repo_root / "_cache" / "abd-nieuws"
     staging_dir = repo_root / "data" / "_staging"
 
-    candidates = list_candidates(cache_dir, since=since, until=until, pattern=pattern, limit=limit)
+    candidates = list_candidates(
+        cache_dir,
+        since=since,
+        until=until,
+        pattern=pattern,
+        limit=limit,
+        staging_dir=staging_dir,
+    )
     result = BackfillResult(source="abd-nieuws", total_candidates=len(candidates))
     if not candidates:
         result.notes.append(f"Geen kandidaten in {cache_dir}")
