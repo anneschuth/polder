@@ -96,6 +96,12 @@ def _process_one(
 ) -> tuple[str, BackfillResult]:
     deltas = BackfillResult(source="staatscourant")
     output = _staging_path_for(staging_dir, xml_path)
+    # Idempotent: als de staging-file van vandaag al bestaat en niet-leeg
+    # is, beschouw als done. Voorkomt dat een retry-loop telkens dezelfde
+    # records opnieuw probeert na rate-limit.
+    if output.exists() and output.stat().st_size > 3:
+        deltas.cache_hits = 1
+        return "hit", deltas
     xml = xml_path.read_text(encoding="utf-8")
 
     if not prefilters.staatscourant_has_signal(xml):
