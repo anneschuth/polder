@@ -153,7 +153,7 @@ class SkillSession:
         # -> minister-min-X) achteraf op via fuzzy-match in
         # PolderIndex.posts_by_org_class. Skills tools geven kost 20-50x zoveel
         # tijd (tool-call-roundtrips per record) en levert geen extra waarde.
-        _TOOLED_SKILLS = {"parse-organogram", "lookup-person"}
+        _TOOLED_SKILLS = {"parse-organogram", "lookup-person", "resolve-staging-proposals"}
         self.allow_tools = allow_tools or skill_name in _TOOLED_SKILLS
         self.extra_args = list(extra_args or [])
         self._skill_path = _skill_path(skill_name)
