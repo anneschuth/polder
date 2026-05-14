@@ -121,7 +121,7 @@ class SkillSession:
         skill_name: str,
         *,
         model: str | None = None,
-        max_budget_usd: float = 0.50,
+        max_budget_usd: float = 1000.0,
         fallback_model: str | None = "claude-sonnet-4-6",
         claude_bin: str = "claude",
         allow_tools: bool = False,
@@ -390,7 +390,7 @@ def get_or_create_session(
     skill_name: str,
     *,
     model: str | None = None,
-    max_budget_usd: float = 0.50,
+    max_budget_usd: float = 1000.0,
 ) -> SkillSession:
     """Geef de thread-local SkillSession voor `skill_name`.
 

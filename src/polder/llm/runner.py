@@ -42,7 +42,7 @@ def run_skill(
     model: str | None = None,
     output: Path | None = None,
     use_cache: bool = True,
-    max_budget_usd: float = 0.50,
+    max_budget_usd: float = 1000.0,
     reuse_session: bool = True,
 ) -> SkillResult:
     """Roep een skill aan via een thread-local SkillSession.

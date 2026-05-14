@@ -258,10 +258,22 @@ def search(
             if not identifier:
                 logger.debug("Sla record zonder identifier over")
                 continue
-            target = _cache_path_for(identifier, modified=meta["modified"], base=base)
-            # Serialize alleen het record-fragment, niet de volledige feed.
+            # SRU-metadata-fragment cachen onder .sru.xml suffix.
+            meta_target = _cache_path_for(identifier, modified=meta["modified"], base=base)
+            meta_target = meta_target.with_suffix(".sru.xml")
             record_xml = etree.tostring(record, pretty_print=True, encoding="utf-8")
-            _write_xml(target, record_xml, dry_run=dry_run)
+            _write_xml(meta_target, record_xml, dry_run=dry_run)
+            # Daarnaast: de echte besluit-XML downloaden via gzd:itemUrl.
+            # Skip stcrt-files zonder gzd:itemUrl en KB-records die geen XML hebben.
+            item_url = meta.get("url")
+            target = _cache_path_for(identifier, modified=meta["modified"], base=base)
+            if item_url and not dry_run and not target.exists():
+                try:
+                    response = _http_get(item_url, timeout=timeout, client=client)
+                    response.raise_for_status()
+                    _write_xml(target, response.content, dry_run=dry_run)
+                except httpx.HTTPError as exc:
+                    logger.warning("Kon besluit-XML voor %s niet ophalen: %s", identifier, exc)
             written.append(target)
             if len(written) >= max_records:
                 break
