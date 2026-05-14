@@ -102,6 +102,12 @@ def _process_one(
     """Verwerk één HTML-file. Returns ("ok"|"skip"|"hit"|"fail"|"rate_limit", deltas)."""
     deltas = BackfillResult(source="abd-nieuws")
     output = _staging_path_for(staging_dir, html_path)
+    # Idempotent: als de staging-file van vandaag al bestaat en niet-leeg
+    # is, beschouw als done. Voorkomt dat een retry-loop telkens dezelfde
+    # records opnieuw probeert na rate-limit.
+    if output.exists() and output.stat().st_size > 3:
+        deltas.cache_hits = 1
+        return "hit", deltas
     html = html_path.read_text(encoding="utf-8")
 
     if not prefilters.abd_nieuws_has_signal(html):
