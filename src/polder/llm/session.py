@@ -42,6 +42,8 @@ DEFAULT_MODEL = "claude-haiku-4-5"
 
 MODEL_OVERRIDES: dict[str, str] = {
     "parse-organogram": "claude-opus-4-7",
+    "parse-abd-nieuws": "claude-sonnet-4-6",
+    "parse-staatscourant": "claude-sonnet-4-6",
 }
 
 
@@ -130,6 +132,14 @@ class SkillSession:
         self.skill_name = skill_name
         self.model = _resolve_model(skill_name, model)
         self.max_budget_usd = max_budget_usd
+        # Fallback mag niet gelijk zijn aan main; auto-promote als nodig.
+        if fallback_model == self.model:
+            if self.model == "claude-sonnet-4-6":
+                fallback_model = "claude-opus-4-7"
+            elif self.model == "claude-opus-4-7":
+                fallback_model = "claude-sonnet-4-6"
+            elif self.model == "claude-haiku-4-5":
+                fallback_model = "claude-sonnet-4-6"
         self.fallback_model = fallback_model
         self.claude_bin = claude_bin
         # Default: geen tools, model produceert direct response. Skills die
