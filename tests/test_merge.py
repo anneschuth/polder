@@ -1,0 +1,279 @@
+"""Tests voor `polder merge` (org/post/person)."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+import pytest
+import yaml
+from typer.testing import CliRunner
+
+from polder.cli.main import app
+
+
+def _write_yaml(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(yaml.safe_dump(payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+
+@pytest.fixture
+def mini_data(tmp_path: Path) -> Path:
+    """Mini-data met dup org + dup person + verwijzende mandate."""
+    root = tmp_path / "data"
+    # Canonical organisatie
+    _write_yaml(
+        root / "organisaties" / "organisatieonderdelen" / "aivd.yaml",
+        {
+            "id": "org:onderdeel-aivd",
+            "type": "organisatieonderdeel",
+            "classification": "organisatieonderdeel",
+            "parent_id": "org:min-bzk",
+            "names": [{"value": "AIVD", "valid_from": "1900-01-01"}],
+            "valid_from": "1900-01-01",
+            "sources": [{"id": "roo", "url": "https://x", "retrieved": "2026-01-01"}],
+        },
+    )
+    # Duplicate organisatie
+    _write_yaml(
+        root / "organisaties" / "organisatieonderdelen" / "aivd-min-bzk.yaml",
+        {
+            "id": "org:onderdeel-aivd-min-bzk",
+            "type": "organisatieonderdeel",
+            "classification": "organisatieonderdeel",
+            "parent_id": "org:min-bzk",
+            "names": [
+                {
+                    "value": "Algemene Inlichtingen- en Veiligheidsdienst (AIVD)",
+                    "valid_from": "2026-05-14",
+                }
+            ],
+            "valid_from": "2026-05-14",
+            "sources": [{"id": "abd_nieuws", "url": "https://y", "retrieved": "2026-05-14"}],
+        },
+    )
+    # Persoon met mandaat dat naar dup verwijst
+    _write_yaml(
+        root / "personen" / "schoof-1957.yaml",
+        {
+            "id": "person:schoof-1957",
+            "name": {"full": "Dick Schoof", "family": "Schoof", "given": "Dick"},
+            "mandaten": [
+                {
+                    "id": "m1",
+                    "organization_id": "org:onderdeel-aivd-min-bzk",  # naar dup!
+                    "post_id": "post:dg-aivd",
+                    "role": "directeur-generaal AIVD",
+                    "start_date": "2018-07-01",
+                    "end_date": "2020-04-30",
+                    "sources": [
+                        {"id": "abd_nieuws", "url": "https://z", "retrieved": "2026-05-14"}
+                    ],
+                }
+            ],
+            "sources": [{"id": "tk", "url": "https://tk/x", "retrieved": "2026-05-01"}],
+        },
+    )
+    return root
+
+
+def test_merge_org_dryrun_does_not_modify(mini_data: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "org",
+            "org:onderdeel-aivd-min-bzk",
+            "org:onderdeel-aivd",
+            "--data",
+            str(mini_data),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+    assert "Dry-run" in result.output
+
+    # Dup-file moet er nog zijn.
+    assert (mini_data / "organisaties" / "organisatieonderdelen" / "aivd-min-bzk.yaml").exists()
+    # Persoon-mandate moet nog naar dup wijzen.
+    person = yaml.safe_load(
+        (mini_data / "personen" / "schoof-1957.yaml").read_text(encoding="utf-8")
+    )
+    assert person["mandaten"][0]["organization_id"] == "org:onderdeel-aivd-min-bzk"
+
+
+def test_merge_org_apply_remaps_and_deletes(mini_data: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "org",
+            "org:onderdeel-aivd-min-bzk",
+            "org:onderdeel-aivd",
+            "--apply",
+            "--data",
+            str(mini_data),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+
+    # Dup-file weg.
+    assert not (mini_data / "organisaties" / "organisatieonderdelen" / "aivd-min-bzk.yaml").exists()
+    # Persoon-mandate naar canonical.
+    person = yaml.safe_load(
+        (mini_data / "personen" / "schoof-1957.yaml").read_text(encoding="utf-8")
+    )
+    assert person["mandaten"][0]["organization_id"] == "org:onderdeel-aivd"
+
+
+def test_merge_org_missing_dup_fails(mini_data: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "org",
+            "org:onderdeel-nonexistent",
+            "org:onderdeel-aivd",
+            "--data",
+            str(mini_data),
+        ],
+    )
+    assert result.exit_code != 0
+    assert "niet gevonden" in result.output
+
+
+def test_merge_org_same_id_fails(mini_data: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        ["merge", "org", "org:onderdeel-aivd", "org:onderdeel-aivd", "--data", str(mini_data)],
+    )
+    assert result.exit_code != 0
+
+
+def test_merge_org_wrong_prefix_fails(mini_data: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        ["merge", "org", "post:foo", "org:onderdeel-aivd", "--data", str(mini_data)],
+    )
+    assert result.exit_code != 0
+
+
+@pytest.fixture
+def mini_persons(tmp_path: Path) -> Path:
+    """Mini-data met twee person-records die dezelfde persoon zijn."""
+    root = tmp_path / "data"
+    _write_yaml(
+        root / "personen" / "kleijwegt-c-canonical.yaml",
+        {
+            "id": "person:kleijwegt-c-canonical",
+            "name": {"full": "Coert Kleijwegt", "family": "Kleijwegt", "given": "Coert"},
+            "mandaten": [
+                {
+                    "id": "m-canonical-1",
+                    "organization_id": "org:onderdeel-aivd",
+                    "post_id": "post:foo",
+                    "role": "X",
+                    "start_date": "2025-07-01",
+                    "end_date": None,
+                    "sources": [
+                        {"id": "abd", "url": "https://canonical-source", "retrieved": "2026-05-14"}
+                    ],
+                }
+            ],
+            "sources": [
+                {"id": "abd", "url": "https://canonical-source", "retrieved": "2026-05-14"}
+            ],
+        },
+    )
+    _write_yaml(
+        root / "personen" / "kleijwegt-dup.yaml",
+        {
+            "id": "person:kleijwegt-dup",
+            "name": {"full": "C. Kleijwegt", "family": "Kleijwegt", "given": "C."},
+            "mandaten": [
+                {
+                    "id": "m-dup-1",
+                    "organization_id": "org:onderdeel-aivd",
+                    "post_id": "post:bar",
+                    "role": "Y",
+                    "start_date": "2021-03-01",
+                    "end_date": None,
+                    "sources": [
+                        {"id": "abd", "url": "https://dup-source", "retrieved": "2026-05-14"}
+                    ],
+                }
+            ],
+            "sources": [{"id": "abd", "url": "https://dup-source", "retrieved": "2026-05-14"}],
+        },
+    )
+    return root
+
+
+def test_merge_person_combines_mandaten_and_sources(mini_persons: Path) -> None:
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "person",
+            "person:kleijwegt-dup",
+            "person:kleijwegt-c-canonical",
+            "--apply",
+            "--data",
+            str(mini_persons),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+
+    # Dup-file weg.
+    assert not (mini_persons / "personen" / "kleijwegt-dup.yaml").exists()
+    # Canonical heeft beide mandaten en beide sources.
+    canonical = yaml.safe_load(
+        (mini_persons / "personen" / "kleijwegt-c-canonical.yaml").read_text(encoding="utf-8")
+    )
+    mandate_ids = {m["id"] for m in canonical["mandaten"]}
+    assert mandate_ids == {"m-canonical-1", "m-dup-1"}
+    source_urls = {s["url"] for s in canonical["sources"]}
+    assert source_urls == {"https://canonical-source", "https://dup-source"}
+
+
+def test_merge_person_does_not_duplicate_existing_mandaat(mini_persons: Path) -> None:
+    """Als beide records hetzelfde mandate-id hebben, niet dupliceren."""
+    # Voeg een mandate met dezelfde id toe aan canonical.
+    canonical_path = mini_persons / "personen" / "kleijwegt-c-canonical.yaml"
+    data = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
+    data["mandaten"].append(
+        {
+            "id": "m-dup-1",  # Zelfde id als in dup!
+            "organization_id": "org:onderdeel-aivd",
+            "post_id": "post:other",
+            "role": "Z",
+            "start_date": "2020-01-01",
+            "end_date": None,
+            "sources": [],
+        }
+    )
+    canonical_path.write_text(yaml.safe_dump(data, sort_keys=False), encoding="utf-8")
+
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "person",
+            "person:kleijwegt-dup",
+            "person:kleijwegt-c-canonical",
+            "--apply",
+            "--data",
+            str(mini_persons),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+
+    canonical = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
+    mandate_ids = [m["id"] for m in canonical["mandaten"]]
+    # m-dup-1 hoort er één keer in (de bestaande), niet dubbel.
+    assert mandate_ids.count("m-dup-1") == 1
