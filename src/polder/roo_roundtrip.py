@@ -203,13 +203,21 @@ def _xml_org_id(org_node: etree._Element) -> str | None:
 
 
 def _load_yaml_index(data_dir: Path) -> dict[str, Path]:
-    """Bouw index `org:<slug>` → YAML-pad. Ook indexed by roo_id."""
+    """Bouw index `org:<slug>` → YAML-pad. Ook indexed by roo_id.
+
+    Verwacht `data_dir` te zijn `data/organisaties/`. Voor backwards-compat
+    bij eerdere callers met `data/` als arg, blijven we tolerant — we
+    parsen alle yamls onder de tree maar ignoren niet-org-records.
+    """
     out: dict[str, Path] = {}
     for path in data_dir.rglob("*.yaml"):
         try:
             with path.open("r", encoding="utf-8") as fh:
                 data = yaml.safe_load(fh) or {}
-        except yaml.YAMLError:
+        except yaml.YAMLError as exc:
+            import logging
+
+            logging.getLogger(__name__).warning("Kan yaml niet parsen: %s (%s)", path, exc)
             continue
         if not isinstance(data, dict):
             continue

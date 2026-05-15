@@ -34,12 +34,31 @@ from lxml import etree
 
 logger = logging.getLogger("polder.fetchers.roo")
 
-PRIMARY_URL = "https://organisaties.overheid.nl/archive/exportOO.xml"
+ROO_PUBLIC_BASE = "https://organisaties.overheid.nl"
+PRIMARY_URL = f"{ROO_PUBLIC_BASE}/archive/exportOO.xml"
 # Categorie-specifieke fallback (zelfde host, kleinere payload). Wordt alleen
 # gebruikt als de volledige export onbereikbaar is; sinds dit een echte URL is
 # (ipv de oude api-organisaties.overheid.nl die 404 gaf) levert hij ook XML.
-FALLBACK_URL = "https://organisaties.overheid.nl/archive/exportOO_ministeries.xml"
+FALLBACK_URL = f"{ROO_PUBLIC_BASE}/archive/exportOO_ministeries.xml"
 SOURCE_ID = "roo"
+
+
+def roo_org_url(roo_id: str | int | None, slug: str | None) -> str:
+    """Bouw een resolvende ROO-organisatie-URL.
+
+    De ROO-website eist een non-empty path-segment ná de roo_id. `/<roo_id>/`
+    zonder suffix geeft 404. Het maakt niet uit wát het suffix is — alleen
+    de roo_id telt voor de server (verifieerbaar: `curl /21849/x` → 200).
+    Polder gebruikt z'n eigen slug als suffix omdat die altijd
+    `[a-z0-9-]+` is en stabiel over runs.
+
+    Geen roo_id: fallback naar de export-URL.
+    """
+    if not roo_id:
+        return PRIMARY_URL
+    return f"{ROO_PUBLIC_BASE}/{roo_id}/{slug or 'x'}"
+
+
 HTTP_TIMEOUT = 60.0
 
 # ROO-type (lowercase, gestripped) → (interne type-enum, sub-folder, slug-prefix).
@@ -149,17 +168,21 @@ def slugify(name: str) -> str:
 
 
 def roo_type_to_internal(roo_type: str | None) -> tuple[str, str, str] | None:
-    """Map een ROO-type-string op (interne_type, sub_folder, slug_prefix)."""
+    """Map een ROO-type-string op (interne_type, sub_folder, slug_prefix).
+
+    Substring-fallback (bv. `"zelfstandig bestuursorgaan (ZBO)"`) probeert
+    de langste TYPE_MAP-key het eerst, zodat `"rechterlijke instantie"`
+    wint van `"rechtspraak"` als beide matchen — onafhankelijk van
+    dict-iteratie-volgorde.
+    """
     if not roo_type:
         return None
     key = roo_type.strip().lower()
     if key in TYPE_MAP:
         return TYPE_MAP[key]
-    # Probeer een paar substring-matches voor varianten als
-    # "Zelfstandig Bestuursorgaan (ZBO)".
-    for known, mapping in TYPE_MAP.items():
+    for known in sorted(TYPE_MAP, key=len, reverse=True):
         if known in key:
-            return mapping
+            return TYPE_MAP[known]
     return None
 
 
@@ -976,12 +999,7 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     slug = slugify(abbr) if abbr and len(abbr) <= 12 else slugify(name)
     org_id = build_id(prefix, slug)
 
-    # ROO-site eist een non-empty path-segment ná de roo_id; het pad
-    # `/{roo_id}/` (zonder suffix) geeft 404. We gebruiken de polder-slug
-    # als suffix: stabiel over runs en altijd `[a-z0-9-]+`. De inhoud
-    # van het suffix doet er niet toe — alleen de roo_id telt voor de
-    # ROO-server (verifieerbaar met `curl /21849/x` → 200).
-    source_url = f"https://organisaties.overheid.nl/{roo_id}/{slug}" if roo_id else PRIMARY_URL
+    source_url = roo_org_url(roo_id, slug)
 
     name_entry: dict[str, Any] = {"value": name}
     if abbr:
@@ -1156,9 +1174,7 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
     slug = slugify(citeertitel or titel)
     org_id = build_id("gr", slug)
 
-    # Zie organisatie-source_url-comment hierboven: ROO eist non-empty
-    # path-segment ná de roo_id. Slug komt uit de citeertitel/titel.
-    source_url = f"https://organisaties.overheid.nl/{sysid}/{slug}" if sysid else PRIMARY_URL
+    source_url = roo_org_url(sysid, slug)
 
     identifiers: dict[str, Any] = {}
     if sysid:

@@ -36,7 +36,6 @@ import re
 import sys
 import unicodedata
 from collections import defaultdict
-from collections.abc import Iterator
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -44,26 +43,48 @@ from typing import Any
 
 import yaml
 
+from polder.fetchers.roo import roo_org_url
+
 logger = logging.getLogger("polder.resolve_roo")
 
 SOURCE_ID = "roo"
 
 
 def _roo_org_url(parent_roo_id: str | None, parent_org_id: str | None) -> str:
-    """Bouw een resolvende ROO-URL voor een organisatie.
+    """Hergebruikt `polder.fetchers.roo.roo_org_url` met polder-slug uit
+    `parent_org_id`. Individuele medewerker-URLs bestaan NIET in ROO;
+    alle ROO-bron-URLs wijzen naar de org-pagina."""
+    slug = (
+        parent_org_id[len("org:") :] if parent_org_id and parent_org_id.startswith("org:") else ""
+    )
+    return roo_org_url(parent_roo_id, slug)
 
-    De ROO-website eist `/<roo_id>/<niet-leeg-segment>` — `/<roo_id>/` zonder
-    suffix geeft 404. We gebruiken de polder-slug (deel na `org:`) als
-    suffix omdat die altijd `[a-z0-9-]+` is en stabiel over runs.
-    Individuele medewerker-URLs bestaan NIET in ROO; we linken altijd naar
-    de org-pagina.
+
+def _atomic_write_yaml(path: Path, data: dict) -> None:
+    """Schrijf YAML atomically: tempfile in dezelfde directory + os.replace.
+
+    Voorkomt corrupte files bij crash halverwege en voorkomt no-op writes
+    als de inhoud byte-identiek is aan de bestaande file (scheelt git-noise
+    + filesystem mtime-churn).
     """
-    if not parent_roo_id:
-        return "https://organisaties.overheid.nl/"
-    slug = ""
-    if parent_org_id and parent_org_id.startswith("org:"):
-        slug = parent_org_id[len("org:") :]
-    return f"https://organisaties.overheid.nl/{parent_roo_id}/{slug or 'x'}"
+    import os
+    import tempfile
+
+    new_text = yaml.safe_dump(data, sort_keys=False, allow_unicode=True)
+    if path.exists() and path.read_text(encoding="utf-8") == new_text:
+        return  # geen wijziging
+    fd, tmp = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=str(path.parent))
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as fh:
+            fh.write(new_text)
+        os.replace(tmp, path)
+    except BaseException:
+        # Cleanup tempfile als os.replace nog niet plaatsgevonden heeft.
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
+        raise
 
 
 # ---------------------------------------------------------------------------
@@ -157,7 +178,8 @@ def build_index(data_dir: Path) -> PolderIndex:
             try:
                 with p.open("r", encoding="utf-8") as fh:
                     d = yaml.safe_load(fh) or {}
-            except yaml.YAMLError:
+            except yaml.YAMLError as exc:
+                logger.warning("Kan post-yaml niet parsen: %s (%s)", p, exc)
                 continue
             if not isinstance(d, dict):
                 continue
@@ -174,7 +196,8 @@ def build_index(data_dir: Path) -> PolderIndex:
             try:
                 with p.open("r", encoding="utf-8") as fh:
                     d = yaml.safe_load(fh) or {}
-            except yaml.YAMLError:
+            except yaml.YAMLError as exc:
+                logger.warning("Kan person-yaml niet parsen: %s (%s)", p, exc)
                 continue
             if not isinstance(d, dict):
                 continue
@@ -401,7 +424,11 @@ def create_mandaat(
 
     role = proposal.get("roo_functie_naam") or "Functie"
     src_url = _roo_org_url(proposal.get("parent_roo_id"), parent_org_id)
-    mandate_id = f"roo-{sysid}-{post_id.replace(':', '-')}" if sysid else f"roo-{post_id}-{start}"
+    # Mandate-id moet uniek zijn per (persoon, post, periode). Als ROO ooit
+    # een tweede medewerker met dezelfde sysid op dezelfde post (andere
+    # periode) levert, voorkomt `start` een collision.
+    post_slug = post_id.replace(":", "-")
+    mandate_id = f"roo-{sysid}-{post_slug}-{start}" if sysid else f"roo-{post_slug}-{start}"
     new_mandaat: dict[str, Any] = {
         "id": mandate_id,
         "organization_id": parent_org_id,
@@ -458,9 +485,9 @@ def resolve(
     idx = build_index(data_dir)
     stats = ResolutionStats()
     staging_proposals: list[dict] = []
-    # Track files we touched so we can write them once at the end.
-    dirty_post_files: dict[Path, dict] = {}
-    dirty_person_files: dict[Path, dict] = {}
+    # Track which paths we mutated; data zelf zit al in `idx.{posts,persons}_by_id`.
+    dirty_posts: set[Path] = set()
+    dirty_persons: set[Path] = set()
 
     for prop in proposals:
         org_id = prop.get("parent_org_id")
@@ -483,7 +510,7 @@ def resolve(
         # Lane 1: enrich post.
         if enrich_post(post_path, post_data, prop, today=today):
             stats.posts_enriched += 1
-            dirty_post_files[post_path] = post_data
+            dirty_posts.add(post_path)
 
         # Per-medewerker resolution (lanes 2 + 3).
         for med in prop.get("medewerkers") or []:
@@ -516,20 +543,21 @@ def resolve(
                 # Lane 2: bevestig huidigheid.
                 if confirm_mandaat(open_m, prop, med, today=today):
                     stats.mandaten_confirmed += 1
-                    dirty_person_files[person_path] = person_data
+                    dirty_persons.add(person_path)
             else:
                 # Lane 3: nieuwe mandaat.
                 if create_mandaat(person_data, prop, med, post_id, org_id, today=today):
                     stats.mandaten_created += 1
-                    dirty_person_files[person_path] = person_data
+                    dirty_persons.add(person_path)
 
     if not dry_run:
-        for path, data in dirty_post_files.items():
-            with path.open("w", encoding="utf-8") as fh:
-                yaml.safe_dump(data, fh, sort_keys=False, allow_unicode=True)
-        for path, data in dirty_person_files.items():
-            with path.open("w", encoding="utf-8") as fh:
-                yaml.safe_dump(data, fh, sort_keys=False, allow_unicode=True)
+        # Bouw één keer een path → data lookup uit de bestaande indices.
+        post_data_by_path = {p: d for p, d in idx.posts_by_id.values()}
+        person_data_by_path = {p: d for p, d in idx.persons_by_id.values()}
+        for path in dirty_posts:
+            _atomic_write_yaml(path, post_data_by_path[path])
+        for path in dirty_persons:
+            _atomic_write_yaml(path, person_data_by_path[path])
 
         if staging_proposals:
             staging_dir = data_dir / "_staging"
@@ -599,10 +627,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":  # pragma: no cover
     raise SystemExit(main())
-
-
-def _iter_proposals(payload: Any) -> Iterator[dict]:
-    if isinstance(payload, dict):
-        yield from payload.get("proposals") or []
-    elif isinstance(payload, list):
-        yield from payload
