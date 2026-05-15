@@ -1,0 +1,15 @@
+id: org:onderdeel-rws-ppo-min-ienw
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-rws
+names:
+- value: Programma's Projecten en Onderhoud
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

@@ -36,6 +36,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-01-11
   confidence: 0.92
+- id: mandate-post-directeur-ppg-rivm-2025-10-20
+  organization_id: org:onderdeel-ppg-rivm
+  post_id: post:directeur-ppg-rivm
+  role: directeur Preventieprogramma's en opschaling voor Publieke Gezondheid (PPG)
+    bij het Rijksinstituut voor Volksgezondheid en Milieu (RIVM)
+  start_date: '2025-10-20'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/08/26/danielle-schiet-directeur-preventieprogrammas-en-opschaling-voor-publieke-gezondheid-bij-rivm
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-08-26
+  confidence: 0.91
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/08/26/danielle-schiet-directeur-preventieprogrammas-en-opschaling-voor-publieke-gezondheid-bij-rivm

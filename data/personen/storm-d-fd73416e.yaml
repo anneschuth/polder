@@ -1,0 +1,45 @@
+id: person:storm-d-fd73416e
+name:
+  full: Diana Storm
+  family: Storm
+  given: Diana
+  initials: D.
+mandaten:
+- id: mandate-post-mt-lid-plaatsvervangend-directeur-bedrijfsvoering-ind-2024-10-01
+  organization_id: org:onderdeel-directie-bedrijfsvoering-ind
+  post_id: post:mt-lid-plaatsvervangend-directeur-bedrijfsvoering-ind
+  role: MT-lid en tevens plaatsvervangend directeur Bedrijfsvoering met focus op HR
+    bij de Immigratie- en Naturalisatiedienst (IND)
+  start_date: '2024-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/05/diana-storm-mt-lid-tevens-plaatsvervangend-directeur-bedrijfsvoering-bij-de-ind
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-07-05
+  confidence: 0.91
+- id: mandate-post-plaatsvervangend-directeur-bedrijfsvoering-ind-min-jenv-2024-10-01
+  organization_id: org:onderdeel-directie-bedrijfsvoering-ind
+  post_id: post:plaatsvervangend-directeur-bedrijfsvoering-ind-min-jenv
+  role: MT-lid tevens plaatsvervangend directeur Bedrijfsvoering met focus op HR bij
+    de Immigratie- en Naturalisatiedienst (IND), ministerie van Justitie en Veiligheid
+  start_date: '2024-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/05/diana-storm-mt-lid-tevens-plaatsvervangend-directeur-bedrijfsvoering-bij-de-ind
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-07-05
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/05/diana-storm-mt-lid-tevens-plaatsvervangend-directeur-bedrijfsvoering-bij-de-ind
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

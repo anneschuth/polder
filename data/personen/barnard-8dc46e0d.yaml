@@ -1,0 +1,29 @@
+id: person:barnard-8dc46e0d
+name:
+  full: Drs. H.P. (Herbert) Barnard
+  family: Barnard
+  given: H.P.
+  initials: H.
+mandaten:
+- id: mandate-post-directeur-programmadirectie-zjcn-min-vws-2020-01-01
+  organization_id: org:onderdeel-programmadirectie-zjcn-min-vws
+  post_id: post:directeur-programmadirectie-zjcn-min-vws
+  role: directeur programmadirectie Zorg en Jeugd Caribisch Nederland, ministerie
+    van Volksgezondheid, Welzijn en Sport
+  start_date: '2020-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/26/herbert-barnard-programmadirecteur-zorg-en-jeugd-caribisch-nederland-bij-vws
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-09-26
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/26/herbert-barnard-programmadirecteur-zorg-en-jeugd-caribisch-nederland-bij-vws
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

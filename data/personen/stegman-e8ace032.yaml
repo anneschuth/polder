@@ -1,0 +1,29 @@
+id: person:stegman-e8ace032
+name:
+  full: Mr. E. (Esther) Stegman
+  family: Stegman
+  given: E.
+  initials: E.
+mandaten:
+- id: mandate-post-directeur-informatievoorziening-en-systemen-rvig-min-bzk-2020-01-01
+  organization_id: org:onderdeel-directie-informatievoorziening-en-systemen-rvig-min-bzk
+  post_id: post:directeur-informatievoorziening-en-systemen-rvig-min-bzk
+  role: directeur Informatievoorziening en Systemen bij de Rijksdienst voor Identiteitsgegevens
+    (RvIG)
+  start_date: '2020-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/12/esther-stegman-directeur-informatievoorziening-en-systemen-bij-rvig
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-12
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/12/esther-stegman-directeur-informatievoorziening-en-systemen-bij-rvig
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

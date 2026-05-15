@@ -1,0 +1,30 @@
+id: person:venezia-740d0df4
+name:
+  full: Drs. G. (Glenda) Venezia
+  family: Venezia
+  given: G.
+  initials: G.
+mandaten:
+- id: mandate-post-directeur-hrm-fm-ibi-min-ienw-2020-08-01
+  organization_id: org:onderdeel-ibi-min-ienw
+  post_id: post:directeur-hrm-fm-ibi-min-ienw
+  role: directeur Human Resources Management en Facilitair Management, directie Integrale
+    Bedrijfsvoering Infrastructuur en Waterstaat, ministerie van Infrastructuur en
+    Waterstaat
+  start_date: '2020-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/16/glenda-venezia-directeur-hrm-en-fm-bij-ienw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-16
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/16/glenda-venezia-directeur-hrm-en-fm-bij-ienw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

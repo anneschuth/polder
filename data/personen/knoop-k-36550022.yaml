@@ -1,0 +1,30 @@
+id: person:knoop-k-36550022
+name:
+  full: Katinka Knoop
+  family: Knoop
+  given: Katinka
+  initials: K.
+mandaten:
+- id: mandate-post-directeur-estt-min-vws-2023-01-01
+  organization_id: org:onderdeel-estt-min-vws
+  post_id: post:directeur-estt-min-vws
+  role: directeur Directie Eenheid Secretariaten Tuchtcolleges voor de Gezondheidszorg
+    en Toetsingscommissies Euthanasie (ESTT), ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/katinka-knoop-directeur-estt-bij-vws
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/katinka-knoop-directeur-estt-bij-vws
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

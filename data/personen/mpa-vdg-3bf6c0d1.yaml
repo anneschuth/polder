@@ -1,0 +1,28 @@
+id: person:mpa-vdg-3bf6c0d1
+name:
+  full: Drs. I.A. (Isabel) van de Geer MPA
+  family: MPA
+  given: I.A. van de Geer
+  initials: I.V.D.G.
+mandaten:
+- id: mandate-post-afdelingshoofd-woningbouw-min-bzk-2020-05-25
+  organization_id: org:onderdeel-afdeling-woningbouw-min-bzk
+  post_id: post:afdelingshoofd-woningbouw-min-bzk
+  role: afdelingshoofd Woningbouw bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-05-25'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/24/isabel-van-de-geer-afdelingshoofd-woningbouw-bij-bzk
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-24
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/24/isabel-van-de-geer-afdelingshoofd-woningbouw-bij-bzk
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

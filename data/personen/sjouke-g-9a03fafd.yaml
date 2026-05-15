@@ -1,0 +1,28 @@
+id: person:sjouke-g-9a03fafd
+name:
+  full: Guus Sjouke
+  family: Sjouke
+  given: Guus
+  initials: G.
+mandaten:
+- id: mandate-post-directeur-consumenten-acm-2022-05-01
+  organization_id: org:zbo-acm
+  post_id: post:directeur-consumenten-acm
+  role: directeur Bedrijfsvoering en CIO, Autoriteit Consument & Markt
+  start_date: '2022-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/guus-sjouke-directeur-bedrijfsvoering-en-cio-bij-de-acm
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-11
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/guus-sjouke-directeur-bedrijfsvoering-en-cio-bij-de-acm
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

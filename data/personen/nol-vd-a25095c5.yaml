@@ -1,0 +1,29 @@
+id: person:nol-vd-a25095c5
+name:
+  full: Drs. H.D. (Henk) van der Nol
+  family: Nol
+  given: H.D. van der
+  initials: H.V.D.
+mandaten:
+- id: mandate-post-afdelingshoofd-programmamanagement-ilt-min-ienw-2019-10-15
+  organization_id: org:onderdeel-afdeling-programmamanagement-ilt-min-ienw
+  post_id: post:afdelingshoofd-programmamanagement-ilt-min-ienw
+  role: afdelingshoofd Programmamanagement, Inspectie Leefomgeving en Transport (ILT),
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2019-10-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/10/07/henk-van-der-nol-afdelingshoofd-programmamanagement-bij-de-ilt
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-10-07
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/10/07/henk-van-der-nol-afdelingshoofd-programmamanagement-bij-de-ilt
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

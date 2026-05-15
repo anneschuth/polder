@@ -1,0 +1,15 @@
+id: org:onderdeel-rivm-min-vws
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-vws
+names:
+- value: Rijksinstituut voor Volksgezondheid en Milieu (RIVM)
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/01/hans-brug-directeur-generaal-rivm-bij-vws
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

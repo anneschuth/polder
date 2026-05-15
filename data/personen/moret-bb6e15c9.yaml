@@ -1,0 +1,29 @@
+id: person:moret-bb6e15c9
+name:
+  full: E. (Els) Moret
+  family: Moret
+  given: E.
+  initials: E.
+mandaten:
+- id: mandate-post-plaatsvervangend-directeur-informatiemanagement-douane-min-fin-2022-12-15
+  organization_id: org:onderdeel-directie-informatiemanagement-douane-min-fin
+  post_id: post:plaatsvervangend-directeur-informatiemanagement-douane-min-fin
+  role: plaatsvervangend directeur Informatiemanagement bij de Douane bij het ministerie
+    van Financiën
+  start_date: '2022-12-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/14/els-moret-plaatsvervangend-directeur-informatiemanagement-douane
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-14
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/14/els-moret-plaatsvervangend-directeur-informatiemanagement-douane
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

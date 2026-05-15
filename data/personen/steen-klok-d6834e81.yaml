@@ -1,0 +1,29 @@
+id: person:steen-klok-d6834e81
+name:
+  full: Mr. H.S. (Hanneke) Steen-Klok
+  family: Steen-Klok
+  given: H.S.
+  initials: H.
+mandaten:
+- id: mandate-post-directeur-nbd-rws-min-ienw-2020-06-01
+  organization_id: org:onderdeel-nbd-rws-min-ienw
+  post_id: post:directeur-nbd-rws-min-ienw
+  role: directeur Nationale Bewegwijzeringsdienst bij Rijkswaterstaat bij het ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/30/hanneke-steen-klok-directeur-nationale-bewegwijzeringsdienst-bij-rijkswaterstaat
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-30
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/30/hanneke-steen-klok-directeur-nationale-bewegwijzeringsdienst-bij-rijkswaterstaat
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

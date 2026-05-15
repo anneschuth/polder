@@ -1,0 +1,28 @@
+id: person:landa-d-fd8e9864
+name:
+  full: Donna Landa
+  family: Landa
+  given: Donna
+  initials: D.
+mandaten:
+- id: mandate-post-directeur-bestuursondersteuning-min-jenv-2026-01-01
+  organization_id: org:onderdeel-directie-bestuursondersteuning-min-jenv
+  post_id: post:directeur-bestuursondersteuning-min-jenv
+  role: directeur Bestuursondersteuning, ministerie van Justitie en Veiligheid
+  start_date: '2026-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/17/donna-landa-directeur-bestuursondersteuning-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-10-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/17/donna-landa-directeur-bestuursondersteuning-bij-jenv
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

@@ -21,6 +21,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-10-10
   confidence: 0.9
+- id: mandate-post-plaatsvervangend-directeur-dienstencentrum-hoofd-klantadvies-min-jenv-2023-12-01
+  organization_id: org:onderdeel-dienstencentrum-hdbv-min-jenv
+  post_id: post:plaatsvervangend-directeur-dienstencentrum-hoofd-klantadvies-min-jenv
+  role: plaatsvervangend directeur Dienstencentrum / hoofd Klantadvies en Ondersteuning,
+    Dienstencentrum, Hoofddirectie Bedrijfsvoering, ministerie van Justitie en Veiligheid
+  start_date: '2023-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/10/10/bram-godefrooij-plaatsvervangend-directeur-dienstencentrum--hoofd-klantadvies-en-ondersteuning
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-10-10
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/10/10/bram-godefrooij-plaatsvervangend-directeur-dienstencentrum

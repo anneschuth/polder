@@ -1,0 +1,28 @@
+id: person:buitendijk-fc766130
+name:
+  full: Drs. G.J. (Gert-Jan) Buitendijk
+  family: Buitendijk
+  given: G.J.
+  initials: G.
+mandaten:
+- id: mandate-post-sg-min-az-2020-09-01
+  organization_id: org:min-az
+  post_id: post:sg-min-az
+  role: secretaris-generaal, ministerie van Algemene Zaken
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/08/gert-jan-buitendijk-secretaris-generaal-az
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-08
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/08/gert-jan-buitendijk-secretaris-generaal-az
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

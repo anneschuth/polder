@@ -1,0 +1,15 @@
+id: org:onderdeel-covid19-vaccinaties-min-vws
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-vws
+names:
+- value: COVID-19 Vaccinaties
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/drie-directeuren-vaccinaties-covid-19-bij-vws
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

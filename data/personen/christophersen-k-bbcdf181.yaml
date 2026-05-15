@@ -1,0 +1,45 @@
+id: person:christophersen-k-bbcdf181
+name:
+  full: Karin Christophersen
+  family: Christophersen
+  given: Karin
+  initials: K.
+mandaten:
+- id: mandate-post-algemeen-directeur-cap-belastingdienst-2025-11-01
+  organization_id: org:onderdeel-directie-cap-belastingdienst
+  post_id: post:algemeen-directeur-cap-belastingdienst
+  role: algemeen directeur Centrale Administratieve Processen bij de Belastingdienst
+    bij het ministerie van Financiën
+  start_date: '2025-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/27/karin-christophersen-algemeen-directeur-centrale-administratieve-processen-bij-de-belastingdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-10-27
+  confidence: 0.91
+- id: mandate-post-kwartiermaker-beoogd-directeur-transactiediensten-programmas-cap-belastingdienst-min-fin-2022-09-01
+  organization_id: org:onderdeel-directie-cap-belastingdienst-min-fin
+  post_id: post:kwartiermaker-beoogd-directeur-transactiediensten-programmas-cap-belastingdienst-min-fin
+  role: kwartiermaker/beoogd directeur Transactiediensten en Programma's bij de directie
+    Centraal Administratieve Processen van de Belastingdienst
+  start_date: '2022-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/07/05/karin-christophersen-kwartiermaker---beoogd-directeur-transactiediensten-en-programmas-bij-belastingdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-07-05
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/27/karin-christophersen-algemeen-directeur-centrale-administratieve-processen-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

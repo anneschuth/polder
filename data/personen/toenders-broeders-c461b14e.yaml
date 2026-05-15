@@ -1,0 +1,29 @@
+id: person:toenders-broeders-c461b14e
+name:
+  full: Drs. M. (Marie-Anne) Toenders-Broeders
+  family: Toenders-Broeders
+  given: M.
+  initials: M.
+mandaten:
+- id: mandate-post-landelijk-directeur-grote-ondernemingen-belastingdienst-min-fin-2021-09-15
+  organization_id: org:onderdeel-directie-grote-ondernemingen-belastingdienst-min-fin
+  post_id: post:landelijk-directeur-grote-ondernemingen-belastingdienst-min-fin
+  role: landelijk directeur bij de directie Grote Ondernemingen van de Belastingdienst,
+    ministerie van Financiën
+  start_date: '2021-09-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/18/marie-anne-toenders-landelijk-directeur-directie-grote-ondernemingen-bij-de-belastingdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-08-18
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/18/marie-anne-toenders-landelijk-directeur-directie-grote-ondernemingen-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

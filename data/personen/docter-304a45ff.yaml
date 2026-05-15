@@ -1,0 +1,28 @@
+id: person:docter-304a45ff
+name:
+  full: Mr. H. (Hans) Docter
+  family: Docter
+  given: H.
+  initials: H.
+mandaten:
+- id: mandate-post-psg-min-bz-2025-08-15
+  organization_id: org:min-bz
+  post_id: post:psg-min-bz
+  role: plaatsvervangend secretaris-generaal, ministerie van Buitenlandse Zaken
+  start_date: '2025-08-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/24/hans-docter-plaatsvervangend-secretaris-generaal-bz
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-01-24
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/24/hans-docter-plaatsvervangend-secretaris-generaal-bz
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

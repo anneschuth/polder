@@ -1,0 +1,28 @@
+id: person:mpa-k-65e1fcd8
+name:
+  full: Mr. M. (Marijke) Kaptein MPA
+  family: MPA
+  given: M. Kaptein
+  initials: M.K.
+mandaten:
+- id: mandate-post-directeur-toezicht-inspectie-szw-min-szw-2021-06-15
+  organization_id: org:onderdeel-inspectie-szw-min-szw
+  post_id: post:directeur-toezicht-inspectie-szw-min-szw
+  role: directeur Toezicht bij de Inspectie SZW, ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/22/marijke-kaptein-directeur-toezicht-bij-de-inspectie-szw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/22/marijke-kaptein-directeur-toezicht-bij-de-inspectie-szw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

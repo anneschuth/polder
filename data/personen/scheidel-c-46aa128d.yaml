@@ -20,6 +20,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-03-10
   confidence: 0.88
+- id: mandate-post-directeur-covid-19-vaccinaties-min-vws-2020-12-01
+  organization_id: org:onderdeel-programmadirectie-covid-19-min-vws
+  post_id: post:directeur-covid-19-vaccinaties-min-vws
+  role: directeur COVID-19 Vaccinaties, programmadirectie COVID-19, ministerie van
+    Volksgezondheid, Welzijn en Sport
+  start_date: '2020-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/drie-directeuren-vaccinaties-covid-19-bij-vws
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-02
+  confidence: 0.87
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/10/ciska-scheidel-directeur-veiligheidsregio-kennemerland-tevens-directeur-publieke-gezondheid-kennemerland

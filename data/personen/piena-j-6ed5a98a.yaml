@@ -1,0 +1,29 @@
+id: person:piena-j-6ed5a98a
+name:
+  full: Jildau Piena
+  family: Piena
+  given: Jildau
+  initials: J.
+mandaten:
+- id: mandate-post-directeur-md-rijk-pdg-abd-min-bzk-2025-12-01
+  organization_id: org:onderdeel-md-rijk-dgabd-min-bzk
+  post_id: post:directeur-md-rijk-pdg-abd-min-bzk
+  role: directeur MD Rijk / plaatsvervangend directeur-generaal Algemene Bestuursdienst,
+    ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2025-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/26/jildau-piena-directeur-md-rijk-en-plaatsvervangend-directeur-generaal-algemene-bestuursdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/26/jildau-piena-directeur-md-rijk-en-plaatsvervangend-directeur-generaal-algemene-bestuursdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

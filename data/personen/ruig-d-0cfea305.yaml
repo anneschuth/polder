@@ -1,0 +1,29 @@
+id: person:ruig-d-0cfea305
+name:
+  full: Drs. J.H.M. (Joost) de Ruig
+  family: Ruig
+  given: J.H.M. de
+  initials: J.D.
+mandaten:
+- id: mandate-post-hoofdingenieur-directeur-rws-nn-min-ienw-2020-07-01
+  organization_id: org:onderdeel-rws-nn-min-ienw
+  post_id: post:hoofdingenieur-directeur-rws-nn-min-ienw
+  role: hoofdingenieur-directeur Noord-Nederland bij Rijkswaterstaat bij het ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/22/joost-de-ruig-hoofdingenieur-directeur-noordnederland-bij-rijkswaterstaat
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/22/joost-de-ruig-hoofdingenieur-directeur-noordnederland-bij-rijkswaterstaat
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

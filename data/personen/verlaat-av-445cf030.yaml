@@ -1,0 +1,29 @@
+id: person:verlaat-av-445cf030
+name:
+  full: Andrea van 't Verlaat
+  family: Verlaat
+  given: Andrea van 't
+  initials: A.V.
+mandaten:
+- id: mandate-post-programmadirecteur-versterken-ketens-min-szw-2023-03-16
+  organization_id: org:onderdeel-programma-versterken-ketens-min-szw
+  post_id: post:programmadirecteur-versterken-ketens-min-szw
+  role: directeur van het programma Versterken Ketens binnen het ministerie van Sociale
+    Zaken en Werkgelegenheid
+  start_date: '2023-03-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/02/02/andrea-van-t-verlaat-programmadirecteur-versterken-ketens-bij-szw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-02-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/02/02/andrea-van-t-verlaat-programmadirecteur-versterken-ketens-bij-szw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
