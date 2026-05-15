@@ -1,0 +1,79 @@
+---
+import Base from '~/layouts/Base.astro';
+import MandaatTimeline from '~/components/MandaatTimeline.astro';
+import SourceList from '~/components/SourceList.astro';
+import { loadAll, personDisplayName, type Person } from '~/lib/data';
+
+export async function getStaticPaths() {
+  const { people } = loadAll();
+  return people.map((p) => ({
+    params: { slug: p.slug },
+    props: { person: p },
+  }));
+}
+
+interface Props {
+  person: Person;
+}
+
+const { person } = Astro.props;
+const name = personDisplayName(person);
+const honorifics = (person.name?.honorifics_pre ?? []).join(' ');
+const honorificsPost = (person.name?.honorifics_post ?? []).join(' ');
+const externals: { label: string; url: string }[] = [];
+const ids = person.identifiers ?? {};
+if (ids.wikidata) externals.push({ label: 'Wikidata', url: `https://www.wikidata.org/wiki/${ids.wikidata}` });
+if (ids.tk_id) externals.push({ label: 'Tweede Kamer', url: `https://www.tweedekamer.nl/kamerleden_en_commissies/alle_kamerleden/${ids.tk_id}` });
+if (ids.ek_id) externals.push({ label: 'Eerste Kamer', url: `https://www.eerstekamer.nl/persoon/${ids.ek_id}` });
+---
+<Base title={name} description={`Polder-record voor ${name}`}>
+  <article class="stack">
+    <header class="stack">
+      <p class="muted">Persoon · <code>{person.id}</code></p>
+      <h1>{honorifics && <span class="muted">{honorifics} </span>}{name}{honorificsPost && <span class="muted"> {honorificsPost}</span>}</h1>
+      <dl class="grid grid-2">
+        {person.birth?.year && (
+          <div>
+            <dt class="muted">Geboortejaar</dt>
+            <dd>{person.birth.year}</dd>
+          </div>
+        )}
+        {person.gender && (
+          <div>
+            <dt class="muted">Gender</dt>
+            <dd>{person.gender}</dd>
+          </div>
+        )}
+        {person.name?.family && (
+          <div>
+            <dt class="muted">Familienaam</dt>
+            <dd>{person.name.family}</dd>
+          </div>
+        )}
+        {person.name?.initials && (
+          <div>
+            <dt class="muted">Initialen</dt>
+            <dd>{person.name.initials}</dd>
+          </div>
+        )}
+      </dl>
+      {externals.length > 0 && (
+        <p>
+          {externals.map((e, i) => (
+            <>
+              {i > 0 && ' · '}
+              <a href={e.url} rel="external">{e.label}</a>
+            </>
+          ))}
+        </p>
+      )}
+    </header>
+
+    <section>
+      <h2>Mandaten</h2>
+      <MandaatTimeline mandaten={person.mandaten ?? []} />
+    </section>
+
+    <SourceList sources={person.sources} />
+  </article>
+</Base>

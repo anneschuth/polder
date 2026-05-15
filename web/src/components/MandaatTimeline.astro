@@ -1,0 +1,60 @@
+---
+import { loadAll, sortedMandates, currentName, currentAbbr, orgUrl, postUrl, type Mandate } from '~/lib/data';
+
+interface Props {
+  mandaten: Mandate[];
+}
+
+const { mandaten } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const data = loadAll();
+const sorted = sortedMandates(mandaten ?? []);
+---
+{sorted.length === 0 ? (
+  <p class="muted">Geen mandaten bekend.</p>
+) : (
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Rol</th>
+        <th>Organisatie</th>
+        <th>Post</th>
+        <th>Periode</th>
+      </tr>
+    </thead>
+    <tbody>
+      {sorted.map((m) => {
+        const org = data.orgById.get(m.organization_id);
+        const post = m.post_id ? data.postById.get(m.post_id) : null;
+        const isCurrent = !m.end_date;
+        const period = `${m.start_date ?? '?'} – ${m.end_date ?? 'heden'}`;
+        return (
+          <tr>
+            <td>
+              {m.role}
+              {isCurrent && <> <small class="muted">(lopend)</small></>}
+            </td>
+            <td>
+              {org ? (
+                <a href={orgUrl(org, base)}>
+                  {currentName(org)}
+                  {currentAbbr(org) && <span class="muted"> ({currentAbbr(org)})</span>}
+                </a>
+              ) : (
+                <span class="muted">{m.organization_id}</span>
+              )}
+            </td>
+            <td>
+              {post ? (
+                <a href={postUrl(post.slug, base)}>{post.label}</a>
+              ) : m.post_id ? (
+                <span class="muted">{m.post_id}</span>
+              ) : null}
+            </td>
+            <td>{period}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+)}

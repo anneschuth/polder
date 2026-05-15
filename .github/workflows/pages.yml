@@ -1,9 +1,15 @@
-# Publiceert de statische polder-org-chart naar GitHub Pages.
+# Publiceert de polder-site (Astro + D3-organogram) naar GitHub Pages
+# op https://anneschuth.nl/polder/.
 #
-# Bouwt dist/site/ via `polder build viz` en deployt naar Pages bij elke
-# main-merge en handmatig via workflow_dispatch.
+# Pipeline:
+# 1. polder build viz  -> JSON-bundels in dist/site/data/
+# 2. kopieer dist/site/data naar web/public/organogram/data/
+# 3. astro build       -> web/dist/ (5.5k persoon-pagina's + org/post/stats + organogram)
+# 4. deploy web/dist/ naar Pages
 #
-# Eenmalige setup: repo-settings -> Pages -> Source = "GitHub Actions".
+# Eenmalige setup: repo-settings -> Pages -> Source = "GitHub Actions",
+# Custom domain = anneschuth.nl. Astro's `base: '/polder'` zorgt voor de
+# subpath-routing.
 
 name: pages
 
@@ -14,7 +20,7 @@ on:
       - "data/**"
       - "schemas/**"
       - "src/polder/build/**"
-      - "site/**"
+      - "web/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -39,11 +45,32 @@ jobs:
         with:
           enable-cache: true
 
-      - name: Sync dependencies
+      - name: Sync polder dependencies
         run: uv sync
 
-      - name: Build viz bundles + site
+      - name: Build D3 viz bundles
         run: uv run polder build viz
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install Astro dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Install viz data under web/public/organogram/data
+        run: |
+          rm -rf web/public/organogram/data
+          mkdir -p web/public/organogram
+          cp -R dist/site/data web/public/organogram/data
+
+      - name: Build Astro site
+        working-directory: web
+        run: npm run build
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -51,7 +78,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/site
+          path: web/dist
 
   deploy:
     needs: build

@@ -1,0 +1,52 @@
+---
+import Base from '~/layouts/Base.astro';
+import { bestuurslagen } from '~/lib/stats';
+
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+const rows = bestuurslagen();
+const maxCurrent = Math.max(1, ...rows.map((r) => r.currentMandates));
+const maxTotal = Math.max(1, ...rows.map((r) => r.totalMandates));
+const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+const barColorAlt = 'var(--primitives-color-donkerblauw-500, #1d3a6d)';
+---
+<Base title="Bestuurslagen" description="Organisaties en mandaten per organisatie-type">
+  <article class="stack">
+    <header class="stack">
+      <h1>Bestuurslagen</h1>
+      <p class="muted">Aantal organisaties en mandaten per organisatie-type. Lopende mandaten = mandaten zonder <code>end_date</code>.</p>
+    </header>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th style="width: 6rem; text-align: right;">Orgs</th>
+          <th style="width: 6rem; text-align: right;">Lopend</th>
+          <th>Lopend (visueel)</th>
+          <th style="width: 6rem; text-align: right;">Totaal</th>
+          <th>Totaal (visueel)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => {
+          const pctCurrent = (r.currentMandates / maxCurrent) * 100;
+          const pctTotal = (r.totalMandates / maxTotal) * 100;
+          return (
+            <tr>
+              <td>{r.type}</td>
+              <td style="text-align: right;">{fmt(r.totalOrgs)}</td>
+              <td style="text-align: right;">{fmt(r.currentMandates)}</td>
+              <td>
+                <div style={`width: ${pctCurrent}%; min-width: 1px; height: 0.75rem; background: ${barColor};`}></div>
+              </td>
+              <td style="text-align: right;">{fmt(r.totalMandates)}</td>
+              <td>
+                <div style={`width: ${pctTotal}%; min-width: 1px; height: 0.75rem; background: ${barColorAlt};`}></div>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </article>
+</Base>

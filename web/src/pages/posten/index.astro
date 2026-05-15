@@ -1,0 +1,45 @@
+---
+import Base from '~/layouts/Base.astro';
+import { loadAll, postUrl } from '~/lib/data';
+
+const { posts, mandatesByPost } = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const indexed = posts
+  .map((p) => ({ p, holders: (mandatesByPost.get(p.id) ?? []).filter((m) => !m.mandate.end_date).length }))
+  .sort((a, b) => a.p.label.localeCompare(b.p.label, 'nl'));
+
+const byClass = new Map<string, typeof indexed>();
+for (const item of indexed) {
+  const k = item.p.classification ?? 'overig';
+  const arr = byClass.get(k) ?? [];
+  arr.push(item);
+  byClass.set(k, arr);
+}
+const classes = [...byClass.keys()].sort();
+---
+<Base title="Posten">
+  <h1>Posten</h1>
+  <p class="muted">{posts.length.toLocaleString('nl-NL')} posten, {classes.length} classificaties.</p>
+  <nav>
+    {classes.map((c, i) => (
+      <>
+        {i > 0 && ' · '}
+        <a href={`#class-${c}`}>{c} ({byClass.get(c)!.length})</a>
+      </>
+    ))}
+  </nav>
+  {classes.map((cls) => (
+    <section id={`class-${cls}`} class="stack">
+      <h2>{cls} <span class="muted">({byClass.get(cls)!.length})</span></h2>
+      <ul>
+        {byClass.get(cls)!.map(({ p, holders }) => (
+          <li>
+            <a href={postUrl(p.slug, base)}>{p.label}</a>
+            <span class="muted"> · {holders} lopend</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
