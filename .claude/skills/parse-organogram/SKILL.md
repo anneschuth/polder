@@ -69,7 +69,7 @@ Het `child_id` veld komt later via een aparte entity-resolution-skill of handmat
 ### Vision-modus (PDF of PNG)
 
 1. Roep Claude vision aan via `anthropic.messages.create` met de afbeelding als image-content. Voor PDF: render eerst per pagina naar PNG (bijvoorbeeld via `pdf2image`), dan vision per pagina.
-2. Loop alle gedetecteerde boxen langs. **Ga zo diep als de afbeelding gaat** — niveaus ministerie -> DG -> directie -> afdeling -> team zijn ALLE relevant. Een organogram toont vaak meer dan alleen DG/directie; sla afdelingen niet over. Voor elke box:
+2. Loop alle gedetecteerde boxen langs. **Ga zo diep als de afbeelding gaat**: niveaus ministerie -> DG -> directie -> afdeling -> team zijn ALLE relevant. Een organogram toont vaak meer dan alleen DG/directie; sla afdelingen niet over. Voor elke box:
    - Lees de titel-regel ("Directie X", "DG Bestuur", "Afdeling Beleid", "Cluster Y", "Team Z").
    - Lees de eventuele persoonsnaam onder de titel.
    - Volg de verbindingslijn omhoog naar de parent-box; de parent geeft `parent_id`.
@@ -100,7 +100,7 @@ Een Nederlands ministerie heeft een vaste top-laag die in elk organogram terugko
 Direct onder `org:min-<x>` mag:
 1. Bewindspersonen-posten (`post:minister-min-<x>`, `post:staatssecretaris-min-<x>`, MZP-posten met `classification: bewindspersoon`).
 2. De SG-cluster (`org:onderdeel-sg-min-<x>`, type `organisatieonderdeel`).
-3. ZBO's, agentschappen, RWT's, adviescolleges, inspecties, hoge-colleges — maar die hebben hun eigen `type`-veld (niet `organisatieonderdeel`). Dus DJI hoort als `type: agentschap` te zijn, niet `organisatieonderdeel`.
+3. ZBO's, agentschappen, RWT's, adviescolleges, inspecties, hoge-colleges, met hun eigen `type`-veld (niet `organisatieonderdeel`). Dus DJI hoort als `type: agentschap` te zijn, niet `organisatieonderdeel`.
 
 Direct onder `org:min-<x>` mag NIET:
 - Andere posten dan `classification: bewindspersoon`. Geen SG-posten, geen DG-posten, geen directeur- of afdelingshoofd-posten. Die horen onder hun organisatieonderdeel.
@@ -135,27 +135,10 @@ Skip rood-AVG-niveau posten (beleidsmedewerker, communicatiemedewerker, jurist, 
 
 Zie `example_image_description.md` voor een tekstuele beschrijving van een fictief BZK-organogram (echte PNG of PDF zit niet in de repo wegens omvang) en `example_output.json` voor de bijbehorende proposals.
 
-## Aanroep in workflow
+## Aanroep
 
-```yaml
-- uses: anthropics/claude-code-action@v1
-  with:
-    anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-    prompt: |
-      Lees alle PDF's in _cache/abd-organogrammen/ en parse met de
-      parse-organogram skill. Schrijf proposals naar
-      data/_staging/organogram-{ministerie}-{datum}.json.
-    claude_args: "--model claude-opus-4-7 --max-turns 15"
-```
-
-Vision werkt het best met opus, niet haiku.
-
-## Aanroep vanuit Claude Code CLI
+Vision werkt het best met opus, niet haiku. Vanuit Claude Code CLI:
 
 ```bash
 claude "Gebruik parse-organogram op _cache/abd-organogrammen/bzk-2026-04.pdf en schrijf naar data/_staging/organogram-bzk-2026-04.json"
 ```
-
-## Status
-
-Actief, versie 0.2.0.
