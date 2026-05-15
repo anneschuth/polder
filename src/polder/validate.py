@@ -413,11 +413,60 @@ def check_birth_year_only(records: Iterable[Record]) -> list[ValidationIssue]:
     return issues
 
 
+def _is_organisatie_bsn_safe_field(path_str: str) -> bool:
+    """Velden in organisatie-records waar 9 cijfers structureel kunnen
+    voorkomen zonder BSN-risico.
+
+    - identifiers.* — RSIN (9 cijfers per definitie), KvK, ICTU-codes etc.
+    - telefoonnummers — NL-nummers krijgen vaak een 9-cijferige interpretatie
+      als spaties weggevallen zijn (`040238777` is een Eindhoven-nr.)
+    - URLs naar publieke bronnen (woo, bestuurlijkeinformatie, wetten,
+      raadvanstate) bevatten path-IDs van 9 cijfers
+    - juridische referenties (wettelijke_grondslagen, kaderwet, classificaties,
+      evaluaties, doorlichtingen) verwijzen naar uitspraken/wetten met
+      kamerstuk-nummers en zaakcijfers
+    """
+    if path_str.startswith("identifiers."):
+        return True
+    if path_str.startswith("contact.phones"):
+        return True
+    if path_str.startswith("contact.contact_forms") or path_str.startswith(
+        "contact.internet_addresses"
+    ):
+        return True
+    if path_str.startswith("afspraak."):
+        return True
+    if path_str.startswith("woo."):
+        return True
+    if "wettelijke_grondslagen" in path_str:
+        return True
+    if path_str.startswith("kaderwet"):
+        return True
+    if path_str.startswith("evaluations") or path_str.startswith("doorlichtingen"):
+        return True
+    if path_str.startswith("classifications"):
+        return True
+    if path_str.startswith("gr_meta.bevoegdheden") or path_str.startswith(
+        "gr_meta.instellingsbesluiten"
+    ):
+        return True
+    return False
+
+
 def check_bsn_patterns(records: Iterable[Record]) -> list[ValidationIssue]:
-    """Scan alle string-waarden op 9-cijferige sequenties."""
+    """Scan alle string-waarden op 9-cijferige sequenties.
+
+    Uitzondering: in organisatie-records skippen we velden die structureel
+    9-cijferige sequenties bevatten zonder BSN-risico (identifiers, telefoon,
+    URLs naar publieke bronnen, juridische referenties). Zie
+    `_is_organisatie_bsn_safe_field`. Person-records worden onverkort
+    gescand.
+    """
     issues: list[ValidationIssue] = []
     for rec in records:
         for path_str, value in _walk_strings(rec.data, ""):
+            if rec.category == "organisaties" and _is_organisatie_bsn_safe_field(path_str):
+                continue
             if BSN_RE.search(value):
                 issues.append(
                     ValidationIssue(

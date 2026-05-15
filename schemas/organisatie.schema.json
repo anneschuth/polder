@@ -5,6 +5,74 @@
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "type", "names", "valid_from", "sources"],
+  "$defs": {
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Bezoekadres",
+            "Postadres",
+            "Woo-Adres",
+            "Vestigingsadres",
+            "Bezoekadres Omgevingsloket",
+            "Postadres Omgevingsloket"
+          ]
+        },
+        "toelichting": { "type": "string" },
+        "openbare_ruimte": { "type": "string" },
+        "huisnummer": { "type": "string" },
+        "huisnummer_toevoeging": { "type": "string" },
+        "postbus": { "type": "string" },
+        "postcode": { "type": "string" },
+        "woonplaats": { "type": "string" },
+        "provincie": { "type": "string" },
+        "regio": { "type": "string" },
+        "land": { "type": "string" }
+      }
+    },
+    "labeled_value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": { "type": "string" },
+        "label": { "type": "string" }
+      }
+    },
+    "grondslag": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "opschrift": { "type": "string" },
+        "referentie": { "type": "string" }
+      }
+    },
+    "org_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "naam": { "type": "string" },
+        "roo_id": { "type": "string" },
+        "tooi": { "type": "string", "format": "uri" },
+        "owms": { "type": "string", "format": "uri" },
+        "org_id": { "type": "string", "pattern": "^org:[a-z0-9-]+$" }
+      }
+    },
+    "evaluatieverslag": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "datum": { "type": "string", "format": "date" },
+        "kamerstuknummer": { "type": "string" },
+        "referentie": { "type": "string" },
+        "naam_rapport": { "type": "string" }
+      }
+    }
+  },
   "properties": {
     "id": {
       "type": "string",
@@ -31,22 +99,56 @@
         "organisatieonderdeel"
       ]
     },
+    "subtype": {
+      "type": "string",
+      "description": "ROO <subtype>, vrije tekst (bijv. 'directeur Portefeuillestrategie en Portefeuillemanagement')."
+    },
     "identifiers": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "oin": { "type": "string" },
         "tooi": { "type": "string", "format": "uri" },
+        "owms": { "type": "string", "format": "uri", "description": "ROO resourceIdentifierOWMS." },
         "wikidata": { "type": "string", "pattern": "^Q\\d+$" },
         "roo_id": { "type": "string" },
+        "organisatiecode": { "type": "string", "description": "ROO Organisatiecode (bijv. 'oorg12350')." },
         "kvk": { "type": ["string", "null"] },
-        "rsin": { "type": ["string", "null"] }
+        "rsin": { "type": ["string", "null"] },
+        "ictu": { "type": "string", "description": "ROO ICTU-code." },
+        "atu": { "type": "string", "description": "ROO ATU (administrative territorial unit)." },
+        "btw": { "type": "string", "description": "ROO btw-nummer." },
+        "loonheffing": { "type": "string", "description": "ROO Loonheffingennummer." }
       }
     },
     "classification": { "type": "string" },
+    "legal_form": {
+      "type": "string",
+      "description": "ROO <rechtsvorm>, bijv. 'Publiekrechtelijk - Onderdeel Staat der Nederlanden'."
+    },
+    "zbo_kind": {
+      "type": "string",
+      "description": "ROO <soortZbo>, bijv. 'Afzonderlijke zbo'."
+    },
+    "advisory_kind": {
+      "type": "string",
+      "description": "ROO <soortAdviescollege>, bijv. 'Permanent adviescollege'."
+    },
+    "subname": {
+      "type": "string",
+      "description": "ROO <subnaam>, langere of toelichtende variant van de officiële naam."
+    },
     "parent_id": {
       "type": ["string", "null"],
       "pattern": "^org:[a-z0-9-]+$"
+    },
+    "relation_to_ministerie": {
+      "$ref": "#/$defs/org_ref",
+      "description": "ROO <relatieMetMinisterie>, voor agentschappen/inspecties/zbo's."
+    },
+    "hoort_bij_gemeenschappelijke_regeling": {
+      "$ref": "#/$defs/org_ref",
+      "description": "ROO <hoortBijGemeenschappelijkeRegeling>, voor org-onderdelen van een GR."
     },
     "names": {
       "type": "array",
@@ -68,14 +170,267 @@
         }
       }
     },
+    "description": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ROO <organisatieBeschrijving>.",
+      "properties": {
+        "text": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "policy_areas": {
+      "type": "array",
+      "description": "ROO <beleidsterreinen>.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["naam"],
+        "properties": {
+          "naam": { "type": "string" },
+          "tooi": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "kaderwet": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "ROO <kaderwet>. Schema-shape varieert per org-type (kaderwetAdviescollege, etc.); we mirroren XML-structuur als geneste objecten."
+    },
+    "wettelijke_grondslagen": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/grondslag" }
+    },
+    "taken_en_bevoegdheden": {
+      "type": "string",
+      "description": "ROO <takenEnBevoegdheden>, vrije tekst met optionele URL."
+    },
+    "evaluations": {
+      "type": "array",
+      "description": "ROO <evaluatieverslagen>.",
+      "items": { "$ref": "#/$defs/evaluatieverslag" }
+    },
+    "doorlichtingen": {
+      "type": "array",
+      "description": "ROO <doorlichtingen>.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "datum": { "type": "string", "format": "date" },
+          "naam_rapport": { "type": "string" },
+          "referentie": { "type": "string" }
+        }
+      }
+    },
+    "classifications": {
+      "type": "array",
+      "description": "ROO <classificaties>: WNT-instelling, Woo, Overheidswerkgever, CAO, Pensioenfonds, Arbeidsvoorwaarden.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Woo",
+              "WNT-instelling",
+              "Overheidswerkgever",
+              "CAO",
+              "Pensioenfonds",
+              "Arbeidsvoorwaarden"
+            ]
+          },
+          "url": { "type": "string", "format": "uri" },
+          "value": { "type": "string" },
+          "wettelijke_grondslagen": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/grondslag" }
+          }
+        }
+      }
+    },
+    "woo": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "ROO <woo>: wooInformatie (urls, overzichtURL), wooIndex (documentLocatie[]), wooVerzoek, wooContactpersoon. Mirror XML-structuur."
+    },
+    "organogram_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "ROO <organogram><url>."
+    },
+    "afspraak": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ROO <afspraak>: alternatieve contact-route voor afspraken.",
+      "properties": {
+        "email": { "type": "string" },
+        "telefoonnummer": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "geography": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ROO <geografie>, alleen relevant voor gemeenten/provincies.",
+      "properties": {
+        "oppervlakte_km2": { "type": "number" },
+        "aantal_inwoners": { "type": "integer" },
+        "inwoners_per_km2": { "type": "number" },
+        "bevat_plaatsen": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "council": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ROO <raad>, voor gemeenten/provincies/waterschappen.",
+      "properties": {
+        "total_seats": { "type": "integer" },
+        "parties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["naam", "aantal_zetels"],
+            "properties": {
+              "naam": { "type": "string" },
+              "aantal_zetels": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+    "personnel": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "ROO <personeel>. Meestal leeg in huidige export; schema permissief tot we niet-lege samples zien."
+    },
+    "gr_meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "ROO <regeling> blok, alleen voor type=gemeenschappelijke-regeling.",
+      "properties": {
+        "citeertitel": { "type": "string" },
+        "doel": { "type": "string" },
+        "samenwerkingsvorm": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": { "type": "string" },
+            "afkorting": { "type": "string" }
+          }
+        },
+        "bevoegdheidsverkrijgingen": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regionaal_samenwerkingsorgaan": { "$ref": "#/$defs/org_ref" },
+        "bronhouder": { "$ref": "#/$defs/org_ref" },
+        "archiefzorgdrager": { "$ref": "#/$defs/org_ref" },
+        "taalcode": { "type": "string" },
+        "registratiehouder": { "type": "string" },
+        "deelnemende_organisaties": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/org_ref" }
+        },
+        "instellingsbesluiten": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "wettelijke_grondslagen": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/grondslag" }
+        },
+        "bevoegdheden": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kop_artikel": { "type": "string" },
+              "inhoud_artikel": { "type": "string" }
+            }
+          }
+        },
+        "datum_inwerkingtreding": { "type": "string", "format": "date" },
+        "datum_uitwerkingtreding": { "type": "string", "format": "date" },
+        "next_version": { "type": "string" },
+        "previous_version": { "type": "string" },
+        "afwijking_regeling": { "type": "string" },
+        "begrotings_datum": { "type": "string", "format": "date" }
+      }
+    },
     "contact": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
         "website": { "type": "string", "format": "uri" },
-        "bezoekadres": { "type": "string" },
-        "postadres": { "type": "string" },
-        "email": { "type": "string", "format": "email" }
+        "bezoekadres": {
+          "type": "string",
+          "description": "Legacy plain-string (deprecated). Voor nieuwe consumers: gebruik addresses[]."
+        },
+        "postadres": {
+          "type": "string",
+          "description": "Legacy plain-string (deprecated). Voor nieuwe consumers: gebruik addresses[]."
+        },
+        "email": { "type": "string", "format": "email" },
+        "addresses": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/address" }
+        },
+        "phones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["nummer"],
+            "properties": {
+              "nummer": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        },
+        "emails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["email"],
+            "properties": {
+              "email": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        },
+        "internet_addresses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["url"],
+            "properties": {
+              "url": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        },
+        "contact_forms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["url"],
+            "properties": {
+              "url": { "type": "string" },
+              "label": { "type": "string" }
+            }
+          }
+        }
       }
     },
     "valid_from": { "type": "string", "format": "date" },
@@ -84,6 +439,16 @@
         { "type": "string", "format": "date" },
         { "type": "null" }
       ]
+    },
+    "last_mutation": {
+      "type": "string",
+      "format": "date",
+      "description": "ROO <datumMutatie>: laatste wijziging in ROO."
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date",
+      "description": "ROO <datumTerVerificatie>: laatst geverifieerd door bronhouder."
     },
     "successor_id": {
       "oneOf": [
