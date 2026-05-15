@@ -62,3 +62,21 @@ def test_upgrade_record_no_name_block_returns_false():
     mod = _load()
     changed, _ = mod.upgrade_record({})
     assert changed is False
+
+
+def test_upgrade_record_extends_partial_initials():
+    """`P.A.` met `given='P.A.L.'` moet upgraden naar `P.A.L.` — twee
+    letters in initials is niet 'full' als given er meer heeft."""
+    mod = _load()
+    rec = {"name": {"family": "Dijkstra", "initials": "P.A.", "given": "P.A.L."}}
+    changed, new = mod.upgrade_record(rec)
+    assert changed is True
+    assert new == "P.A.L."
+
+
+def test_upgrade_record_skips_when_given_shorter_or_equal():
+    """`P.A.` met `given='P.A.'` is geen upgrade, returnt False."""
+    mod = _load()
+    rec = {"name": {"family": "Dijkstra", "initials": "P.A.", "given": "P.A."}}
+    changed, _ = mod.upgrade_record(rec)
+    assert changed is False

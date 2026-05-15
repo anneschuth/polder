@@ -45,22 +45,24 @@ def _full_init_from_text(text: str) -> str | None:
 
 
 def upgrade_record(data: dict) -> tuple[bool, str | None]:
-    """Geef (changed, new_initials) terug. Wijzigt `data` in-place."""
+    """Geef (changed, new_initials) terug. Wijzigt `data` in-place.
+
+    Werkt zowel als initials helemaal ontbreken als wanneer ze ingekort
+    zijn (bv. `P.A.` terwijl `given='P.A.L.'` verraadt dat de volle
+    reeks 3 letters is). De candidate uit `given` of `full` wint alleen
+    als die strict langer is dan de bestaande.
+    """
     name = data.get("name")
     if not isinstance(name, dict):
         return False, None
     current = (name.get("initials") or "").strip()
-    # Tel letters in current.
     current_letters = re.sub(r"[^A-Za-z]", "", current)
-    if len(current_letters) >= 2:
-        return False, None  # already full
 
     given = (name.get("given") or "").strip()
     full = (name.get("full") or "").strip()
 
     candidate = _full_init_from_text(given)
     if not candidate:
-        # Try first token of `full`.
         first_token = full.split()[0] if full else ""
         candidate = _full_init_from_text(first_token)
 
