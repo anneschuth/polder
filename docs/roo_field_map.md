@@ -59,6 +59,7 @@ Totaal velden: **129**.
 | 100.00% | 419 / 419 | `/geografie/inwoners` |
 | 100.00% | 412 / 412 | `/geografie/bevatPlaatsen` |
 | 100.00% | 411 / 411 | `/raad/totaalZetels` |
+| 100.00% | 396 / 396 | `/classificaties/classificatie/eindDatum` |
 | 100.00% | 375 / 375 | `/subnaam` |
 | 100.00% | 177 / 177 | `/soortZbo` |
 | 100.00% | 147 / 147 | `/adressen/adres/terAttentieVan` |
@@ -104,7 +105,6 @@ Totaal velden: **129**.
 | 99.78% | 3693 / 3701 | `/woo/wooIndex/documentLocatie/url` |
 | 99.78% | 895 / 897 | `/contact/contactformulieren/contactformulier/url` |
 | 99.77% | 866 / 868 | `/woo/wooInformatie/urls/overzichtURL` |
-| 99.75% | 395 / 396 | `/classificaties/classificatie/eindDatum` |
 | 99.73% | 726 / 728 | `/woo/wooInformatie/urls/url` |
 | 99.68% | 618 / 620 | `/adressen/adres/toelichting` |
 | 99.61% | 1011 / 1015 | `/startDatum` |
@@ -119,9 +119,9 @@ Totaal velden: **129**.
 | 99.14% | 7984 / 8053 | `/adressen/adres/woonplaats` |
 | 99.14% | 7935 / 8004 | `/adressen/adres/postcode` |
 | 99.01% | 13382 / 13516 | `/identificatiecodes/resourceIdentifier` |
+| 98.98% | 1932 / 1952 | `/contact/internetadressen/internetadres/url` |
 | 98.93% | 9516 / 9619 | `/deelnemendeOrganisaties/deelnemendeOrganisatie@systeemId` |
 | 98.93% | 9516 / 9619 | `/deelnemendeOrganisaties/deelnemendeOrganisatie/naam` |
-| 98.92% | 1931 / 1952 | `/contact/internetadressen/internetadres/url` |
 | 98.90% | 3152 / 3187 | `/adressen/adres/huisnummer` |
 | 98.86% | 3117 / 3153 | `/adressen/adres/postbus` |
 | 98.76% | 1750 / 1772 | `/contact/emailadressen/emailadres/email` |

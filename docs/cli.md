@@ -30,18 +30,20 @@ Top-level opties (gelden op alle subcommands):
 ## `polder fetch`
 
 ```
-polder fetch roo       # ROO exportOO.xml
-polder fetch tk        # Tweede Kamer OData
-polder fetch ek        # Eerste Kamer scrape
-polder fetch logius    # Logius CoR
-polder fetch wikidata  # Wikidata SPARQL
-polder fetch ar-rwt    # Algemene Rekenkamer RWT-register
-polder fetch koop      # KOOP SRU (Staatscourant)
-polder fetch ori       # Open Raadsinformatie
-polder fetch tooi      # TOOI thesaurus
-polder fetch kiesraad  # Kiesraad
-polder fetch abd       # ABD-organogrammen (PDF-cache)
-polder fetch all       # Alle deterministische fetchers
+polder fetch roo            # ROO exportOO.xml → data/organisaties/
+polder fetch roo-functies   # ROO functies + medewerkers → data/_staging/
+polder fetch tk             # Tweede Kamer OData
+polder fetch ek             # Eerste Kamer scrape
+polder fetch logius         # Logius CoR
+polder fetch wikidata       # Wikidata SPARQL
+polder fetch ar-rwt         # Algemene Rekenkamer RWT-register
+polder fetch koop           # KOOP SRU (Staatscourant)
+polder fetch ori            # Open Raadsinformatie
+polder fetch tooi           # TOOI thesaurus
+polder fetch kiesraad       # Kiesraad
+polder fetch abd            # ABD-organogrammen (PDF-cache)
+polder fetch abd-nieuws     # ABD-nieuws via algemenebestuursdienst.nl
+polder fetch all            # Alle deterministische fetchers
 ```
 
 Iedere subcommand accepteert dezelfde basis-flags:
@@ -58,6 +60,62 @@ zitten er niet in; die hebben aparte LLM-stappen via `polder skill ...`.
 ```
 polder fetch all --fail-fast      # stop bij eerste failure
 polder fetch all --limit 10       # smoke-test, weinig records
+```
+
+## `polder resolve-roo`
+
+ROO functies en medewerkers koppelen aan bestaande polder-posten en
+-personen. Drie auto-merge lanes (post enrichment, mandaat bevestiging,
+mandaat creation) volgens field-aware precedence (Staatscourant > ABD >
+ROO voor person↔post bindings; ROO canoniek voor administratieve
+metadata). Wat niet auto-mergeable is gaat naar
+`data/_staging/<input-stem>.unresolved.json` voor de
+`resolve-staging-proposals`-skill.
+
+```
+polder resolve-roo data/_staging/roo-functies-2026-05-15.json
+polder resolve-roo data/_staging/roo-functies-2026-05-15.json --dry-run
+polder resolve-roo data/_staging/roo-functies-2026-05-15.json --data data
+```
+
+Volledige ROO-pipeline:
+
+```
+polder fetch roo                                # 1. organisatie-records
+polder fetch roo-functies                       # 2. functie/medewerker-proposals
+polder resolve-roo data/_staging/roo-functies-*.json   # 3. auto-merge lanes
+polder roo-roundtrip --xml _cache/roo-export-*.xml \
+                     --data data/organisaties   # 4. verifieer superset-claim
+polder audit                                    # 5. roo_missing_org/field_drift
+```
+
+## `polder roo-roundtrip`
+
+Mechanisch bewijs dat polder een strict superset van ROO is: voor élk
+leaf-element in de ROO-XML check dat zijn waarde ergens in de
+bijbehorende YAML aanwezig is.
+
+```
+polder roo-roundtrip --xml _cache/roo-export-2026-05-15.xml \
+                     --data data/organisaties
+polder roo-roundtrip --xml ... --data ... --top 30
+polder roo-roundtrip --xml ... --data ... --emit-field-map docs/roo_field_map.md
+```
+
+## `polder audit`
+
+Diepe data-audit; categorieën die de schema-validator niet vangt
+(start_after_end, orphan_org_ref, quasi_dup_persons, single_seat_both_open
+etc.). ROO-superset-checks: `roo_missing_org`, `roo_field_drift`,
+`roo_stale_appointment` (vereist resolved staging-file).
+
+```
+polder audit                                    # alle findings
+polder audit --category roo_missing_org         # filter op categorie
+polder audit --category single_seat_both_open
+polder audit --include-verified                 # toon ook verified-entries
+polder audit --explain                          # leg categorieën uit
+polder audit verify <category> <key> --note "..."   # markeer als geverifieerd
 ```
 
 ## `polder build`
