@@ -413,6 +413,7 @@ _ADDRESS_FIELD_MAP: dict[str, str] = {
     "provincie": "provincie",
     "regio": "regio",
     "land": "land",
+    "terattentievan": "ter_attentie_van",
 }
 
 
@@ -529,6 +530,32 @@ def _extract_contact_block(node: etree._Element) -> dict[str, Any]:
     if forms:
         result["contact_forms"] = forms
 
+    sm_container = _direct_child(contact_node, "socialMedia")
+    socials = []
+    if sm_container is not None:
+        for sm in _direct_children(sm_container, "socialmedium"):
+            entry = {}
+            for tag, key in [
+                ("platform", "platform"),
+                ("gebruikersnaam", "gebruikersnaam"),
+                ("url", "url"),
+            ]:
+                v = _direct_text(sm, tag)
+                if v:
+                    entry[key] = v
+            if entry:
+                socials.append(entry)
+    if socials:
+        result["social_media"] = socials
+
+    fax = _direct_text(contact_node, "fax")
+    if fax:
+        result["fax"] = fax
+
+    beschrijving = _direct_text(contact_node, "beschrijving")
+    if beschrijving:
+        result["beschrijving"] = beschrijving
+
     return result
 
 
@@ -565,6 +592,9 @@ def _extract_classifications(node: etree._Element) -> list[dict[str, Any]]:
         text = _text(c)
         if text:
             entry["value"] = text
+        eind = _direct_text(c, "eindDatum")
+        if eind:
+            entry["eind_datum"] = eind
         grondslagen = _extract_grondslagen(_direct_child(c, "wettelijkeGrondslagen"))
         if grondslagen:
             entry["wettelijke_grondslagen"] = grondslagen
@@ -581,26 +611,42 @@ def _extract_geografie(node: etree._Element) -> dict[str, Any]:
     def _to_number(text: str | None) -> float | None:
         if not text:
             return None
-        # ROO gebruikt komma's voor decimalen (Dutch locale).
         try:
             return float(text.replace(",", "."))
         except ValueError:
             return None
 
-    opp = _to_number(_direct_text(g, "oppervlakte"))
-    if opp is not None:
-        out["oppervlakte_km2"] = opp
+    opp_node = _direct_child(g, "oppervlakte")
+    if opp_node is not None:
+        opp_raw = _text(opp_node)
+        if opp_raw:
+            out["oppervlakte"] = opp_raw
+        opp_eenheid = _attr_by_localname(opp_node, "eenheid")
+        if opp_eenheid:
+            out["oppervlakte_eenheid"] = opp_eenheid
+        opp_num = _to_number(opp_raw)
+        if opp_num is not None:
+            out["oppervlakte_km2"] = opp_num
     inw = _direct_text(g, "aantalInwoners")
     if inw:
         try:
             out["aantal_inwoners"] = int(inw)
         except ValueError:
             pass
-    dens = _to_number(_direct_text(g, "inwoners"))
-    if dens is not None:
-        out["inwoners_per_km2"] = dens
+    inw_node = _direct_child(g, "inwoners")
+    if inw_node is not None:
+        inw_raw = _text(inw_node)
+        if inw_raw:
+            out["inwoners"] = inw_raw
+        inw_eenheid = _attr_by_localname(inw_node, "eenheid")
+        if inw_eenheid:
+            out["inwoners_eenheid"] = inw_eenheid
+        inw_num = _to_number(inw_raw)
+        if inw_num is not None:
+            out["inwoners_per_km2"] = inw_num
     plaatsen_text = _direct_text(g, "bevatPlaatsen")
     if plaatsen_text:
+        out["bevat_plaatsen_raw"] = plaatsen_text
         plaatsen = [p.strip() for p in plaatsen_text.split(",") if p.strip()]
         if plaatsen:
             out["bevat_plaatsen"] = plaatsen
@@ -638,10 +684,16 @@ def _extract_council(node: etree._Element) -> dict[str, Any]:
 
 
 def _extract_org_ref(elem: etree._Element | None) -> dict[str, Any]:
+    """Extract org-referentie. ROO heeft twee shapes:
+    - Direct text: `<bronhouder p:systeemId="X">Heemstede</bronhouder>`
+    - Child <naam>: `<deelnemendeOrganisatie p:systeemId="X"><naam>Heemstede</naam>...`
+    Beide ondersteunen we; de `<naam>`-child wint als beide aanwezig zijn.
+    """
     if elem is None:
         return {}
     ref: dict[str, Any] = {}
-    text = _text(elem)
+    naam_child = _direct_text(elem, "naam")
+    text = naam_child or _text(elem)
     if text:
         ref["naam"] = text
     sysid = _attr_systeemid(elem)
@@ -1056,6 +1108,9 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     last_verified = _direct_text(node, "datumTerVerificatie")
     if last_verified:
         record["last_verified"] = last_verified
+    roo_start_datum = _direct_text(node, "startDatum")
+    if roo_start_datum:
+        record["roo_start_datum"] = roo_start_datum
 
     record["sources"] = [
         {
@@ -1089,10 +1144,9 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
     samen = _direct_child(node, "samenwerkingsvorm")
     samen_afkorting = _attr_by_localname(samen, "afkorting") if samen is not None else None
 
-    # GR-slug: gebruik de eigen titel/citeertitel, niet de samenwerkingsvorm-
-    # afkorting. Die afkorting (BVO, GR, RSO) is een type-aanduiding gedeeld
-    # door honderden regelingen — slug `gr-bvo` zou colliden voor elke
-    # bedrijfsvoeringsorganisatie. Citeertitel is per-regeling uniek.
+    # GR-slug: titel-gebaseerd. `parse_export` zal achteraf bij collisions
+    # een roo_id-suffix toevoegen (~290 regelingen hebben identieke titels —
+    # verschillende versies, zie nextVersion/previousVersion).
     slug = slugify(citeertitel or titel)
     org_id = build_id("gr", slug)
 
@@ -1153,10 +1207,45 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
 
     deelnemers = _direct_child(node, "deelnemendeOrganisaties")
     if deelnemers is not None:
-        refs = [_extract_org_ref(c) for c in deelnemers]
-        refs = [r for r in refs if r]
-        if refs:
-            gr_meta["deelnemende_organisaties"] = refs
+        entries = []
+        for d in deelnemers:
+            ref = _extract_org_ref(d)
+            entry = dict(ref)  # naam/roo_id/tooi/owms
+
+            for tag, key in [
+                ("toetredingsDatum", "toetredings_datum"),
+                ("uittredingsDatum", "uittredings_datum"),
+                ("verdeelsleutel", "verdeelsleutel"),
+            ]:
+                v = _direct_text(d, tag)
+                if v:
+                    entry[key] = v
+
+            # bestuursorganen — lijst van bestuursorgaan-elementen, elk met
+            # tekst (naam) en owms-attribute.
+            bo_container = _direct_child(d, "bestuursorganen")
+            if bo_container is not None:
+                bos = []
+                for bo in _direct_children(bo_container, "bestuursorgaan"):
+                    naam = _text(bo)
+                    owms = _attr_owms(bo)
+                    tooi = _attr_tooi(bo)
+                    item: dict[str, str] = {}
+                    if naam:
+                        item["naam"] = naam
+                    if owms:
+                        item["owms"] = owms
+                    if tooi:
+                        item["tooi"] = tooi
+                    if item:
+                        bos.append(item)
+                if bos:
+                    entry["bestuursorganen"] = bos
+
+            if entry:
+                entries.append(entry)
+        if entries:
+            gr_meta["deelnemende_organisaties"] = entries
 
     instell = _direct_child(node, "instellingsbesluiten")
     if instell is not None:
@@ -1187,14 +1276,27 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
     for tag, key in [
         ("datumInwerkingtreding", "datum_inwerkingtreding"),
         ("datumUitwerkingtreding", "datum_uitwerkingtreding"),
-        ("nextVersion", "next_version"),
-        ("previousVersion", "previous_version"),
         ("afwijkingRegeling", "afwijking_regeling"),
         ("begrotingsDatum", "begrotings_datum"),
+        ("startDatum", "start_datum"),
     ]:
         v = _direct_text(node, tag)
         if v:
             gr_meta[key] = v
+
+    # next_version / previous_version: object met systeemId-attribute + naam.
+    for tag, key in [("nextVersion", "next_version"), ("previousVersion", "previous_version")]:
+        elem = _direct_child(node, tag)
+        if elem is not None:
+            entry: dict[str, str] = {}
+            sysid_v = _attr_systeemid(elem)
+            if sysid_v:
+                entry["roo_id"] = sysid_v
+            naam = _text(elem)
+            if naam:
+                entry["naam"] = naam
+            if entry:
+                gr_meta[key] = entry
 
     record: dict[str, Any] = {
         "id": org_id,
@@ -1281,11 +1383,27 @@ def parse_export(path: Path, *, limit: int | None = None) -> list[dict[str, Any]
         records.append(record)
         if limit is not None and len(records) >= limit:
             return records
+    gr_records: list[dict[str, Any]] = []
     for node in reg_nodes:
         record = parse_gemeenschappelijke_regeling(node)
         if record is None:
             continue
-        records.append(record)
+        gr_records.append(record)
+
+    # GR slug-collision resolution: ~290 regelingen delen een titel met een
+    # andere (versies, fusies). Per slug-collision: voeg `-<roo_id>` toe aan
+    # álle records met die slug, zodat ze stabiel uit elkaar worden gehouden.
+    slug_counts: dict[str, int] = {}
+    for r in gr_records:
+        slug_counts[r["_slug"]] = slug_counts.get(r["_slug"], 0) + 1
+    for r in gr_records:
+        if slug_counts[r["_slug"]] > 1:
+            roo_id = (r.get("identifiers") or {}).get("roo_id")
+            if roo_id:
+                new_slug = f"{r['_slug']}-{roo_id}"
+                r["_slug"] = new_slug
+                r["id"] = build_id("gr", new_slug)
+        records.append(r)
         if limit is not None and len(records) >= limit:
             break
     return records

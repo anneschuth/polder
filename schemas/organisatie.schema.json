@@ -31,7 +31,8 @@
         "woonplaats": { "type": "string" },
         "provincie": { "type": "string" },
         "regio": { "type": "string" },
-        "land": { "type": "string" }
+        "land": { "type": "string" },
+        "ter_attentie_van": { "type": "string" }
       }
     },
     "labeled_value": {
@@ -244,6 +245,7 @@
           },
           "url": { "type": "string", "format": "uri" },
           "value": { "type": "string" },
+          "eind_datum": { "type": "string", "format": "date" },
           "wettelijke_grondslagen": {
             "type": "array",
             "items": { "$ref": "#/$defs/grondslag" }
@@ -276,12 +278,20 @@
       "additionalProperties": false,
       "description": "ROO <geografie>, alleen relevant voor gemeenten/provincies.",
       "properties": {
+        "oppervlakte": { "type": "string", "description": "Originele waarde uit ROO (NL-decimaal, bv. '54,56')." },
+        "oppervlakte_eenheid": { "type": "string" },
         "oppervlakte_km2": { "type": "number" },
         "aantal_inwoners": { "type": "integer" },
+        "inwoners": { "type": "string", "description": "Originele inwonerdichtheid-string." },
+        "inwoners_eenheid": { "type": "string" },
         "inwoners_per_km2": { "type": "number" },
         "bevat_plaatsen": {
           "type": "array",
           "items": { "type": "string" }
+        },
+        "bevat_plaatsen_raw": {
+          "type": "string",
+          "description": "Originele comma-separated string uit ROO."
         }
       }
     },
@@ -336,7 +346,31 @@
         "registratiehouder": { "type": "string" },
         "deelnemende_organisaties": {
           "type": "array",
-          "items": { "$ref": "#/$defs/org_ref" }
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "naam": { "type": "string" },
+              "roo_id": { "type": "string" },
+              "tooi": { "type": "string", "format": "uri" },
+              "owms": { "type": "string", "format": "uri" },
+              "toetredings_datum": { "type": "string", "format": "date" },
+              "uittredings_datum": { "type": "string", "format": "date" },
+              "verdeelsleutel": { "type": "string" },
+              "bestuursorganen": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "naam": { "type": "string" },
+                    "owms": { "type": "string", "format": "uri" },
+                    "tooi": { "type": "string", "format": "uri" }
+                  }
+                }
+              }
+            }
+          }
         },
         "instellingsbesluiten": {
           "type": "array",
@@ -359,10 +393,28 @@
         },
         "datum_inwerkingtreding": { "type": "string", "format": "date" },
         "datum_uitwerkingtreding": { "type": "string", "format": "date" },
-        "next_version": { "type": "string" },
-        "previous_version": { "type": "string" },
+        "next_version": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "roo_id": { "type": "string" },
+            "naam": { "type": "string" }
+          }
+        },
+        "previous_version": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "roo_id": { "type": "string" },
+            "naam": { "type": "string" }
+          }
+        },
         "afwijking_regeling": { "type": "string" },
-        "begrotings_datum": { "type": "string", "format": "date" }
+        "begrotings_datum": { "type": "string", "format": "date" },
+        "start_datum": {
+          "type": "string",
+          "description": "ROO <startDatum>: aanmaakdatum van het regeling-record."
+        }
       }
     },
     "contact": {
@@ -430,7 +482,21 @@
               "label": { "type": "string" }
             }
           }
-        }
+        },
+        "social_media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "platform": { "type": "string" },
+              "gebruikersnaam": { "type": "string" },
+              "url": { "type": "string" }
+            }
+          }
+        },
+        "fax": { "type": "string" },
+        "beschrijving": { "type": "string" }
       }
     },
     "valid_from": { "type": "string", "format": "date" },
@@ -449,6 +515,10 @@
       "type": "string",
       "format": "date",
       "description": "ROO <datumTerVerificatie>: laatst geverifieerd door bronhouder."
+    },
+    "roo_start_datum": {
+      "type": "string",
+      "description": "ROO <startDatum>: aanmaakdatum legale entity-record. Niet gebruikt als valid_from (vaak fout, zie roo.py docstring); wel hier bewaard voor reconstructie."
     },
     "successor_id": {
       "oneOf": [

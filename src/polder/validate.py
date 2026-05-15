@@ -434,6 +434,8 @@ def _is_organisatie_bsn_safe_field(path_str: str) -> bool:
         "contact.internet_addresses"
     ):
         return True
+    if path_str.startswith("contact.social_media"):
+        return True
     if path_str.startswith("afspraak."):
         return True
     if path_str.startswith("woo."):
