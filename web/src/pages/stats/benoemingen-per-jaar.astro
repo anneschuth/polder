@@ -1,0 +1,88 @@
+---
+import Base from '~/layouts/Base.astro';
+import { appointmentsPerYear } from '~/lib/stats';
+
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+const all = appointmentsPerYear();
+const currentYear = new Date().getFullYear();
+const minYear = currentYear - 29;
+const chartData = all.filter((y) => y.year >= minYear && y.year <= currentYear);
+
+const width = 900;
+const height = 320;
+const padLeft = 48;
+const padRight = 16;
+const padTop = 16;
+const padBottom = 40;
+const innerW = width - padLeft - padRight;
+const innerH = height - padTop - padBottom;
+
+const maxCount = Math.max(1, ...chartData.map((y) => y.count));
+const yearSpan = chartData.length || 1;
+const barW = innerW / yearSpan;
+const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+
+const yTicks = 4;
+const tickValues = Array.from({ length: yTicks + 1 }, (_, i) => Math.round((maxCount / yTicks) * i));
+---
+<Base title="Benoemingen per jaar" description="Histogram van mandaat-startdatums">
+  <article class="stack">
+    <header class="stack">
+      <h1>Benoemingen per jaar</h1>
+      <p class="muted">Aantal mandaten met een <code>start_date</code> per jaar. Chart toont laatste 30 jaar ({minYear}-{currentYear}).</p>
+    </header>
+
+    <section>
+      <h2>Chart</h2>
+      <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Benoemingen per jaar" style="max-width: 100%; height: auto;">
+        {tickValues.map((v) => {
+          const y = padTop + innerH - (v / maxCount) * innerH;
+          return (
+            <>
+              <line x1={padLeft} x2={width - padRight} y1={y} y2={y} stroke="#e5e5e5" stroke-width="1" />
+              <text x={padLeft - 6} y={y + 4} font-size="11" text-anchor="end" fill="#555">{fmt(v)}</text>
+            </>
+          );
+        })}
+        {chartData.map((d, i) => {
+          const h = (d.count / maxCount) * innerH;
+          const x = padLeft + i * barW;
+          const y = padTop + innerH - h;
+          return (
+            <rect x={x + 1} y={y} width={Math.max(1, barW - 2)} height={h} fill={barColor}>
+              <title>{d.year}: {fmt(d.count)}</title>
+            </rect>
+          );
+        })}
+        {chartData.map((d, i) => {
+          if (i % 5 !== 0 && i !== chartData.length - 1) return null;
+          const x = padLeft + i * barW + barW / 2;
+          return (
+            <text x={x} y={height - padBottom + 16} font-size="11" text-anchor="middle" fill="#555">{d.year}</text>
+          );
+        })}
+        <line x1={padLeft} x2={width - padRight} y1={padTop + innerH} y2={padTop + innerH} stroke="#999" stroke-width="1" />
+      </svg>
+    </section>
+
+    <section>
+      <h2>Alle jaren</h2>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Jaar</th>
+            <th style="text-align: right;">Benoemingen</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[...all].sort((a, b) => b.year - a.year).map((y) => (
+            <tr>
+              <td>{y.year}</td>
+              <td style="text-align: right;">{fmt(y.count)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  </article>
+</Base>

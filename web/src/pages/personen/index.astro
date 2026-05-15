@@ -1,0 +1,47 @@
+---
+import Base from '~/layouts/Base.astro';
+import { loadAll, personDisplayName, personUrl, isMandateCurrent } from '~/lib/data';
+
+const { people } = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const indexed = people
+  .map((p) => ({
+    p,
+    name: personDisplayName(p),
+    current: (p.mandaten ?? []).filter(isMandateCurrent).length,
+    total: (p.mandaten ?? []).length,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name, 'nl'));
+
+const byLetter = new Map<string, typeof indexed>();
+for (const item of indexed) {
+  const letter = (item.p.name?.family ?? item.name).charAt(0).toUpperCase();
+  const key = /[A-Z]/.test(letter) ? letter : '#';
+  const arr = byLetter.get(key) ?? [];
+  arr.push(item);
+  byLetter.set(key, arr);
+}
+const letters = [...byLetter.keys()].sort();
+---
+<Base title="Personen" description="Alle personen in polder">
+  <h1>Personen</h1>
+  <p class="muted">{indexed.length.toLocaleString('nl-NL')} personen.</p>
+  <nav>
+    {letters.map((l) => <a href={`#letter-${l}`}>{l}</a>).reduce((acc: any[], el, i) => i === 0 ? [el] : [...acc, ' · ', el], [])}
+  </nav>
+  {letters.map((letter) => (
+    <section id={`letter-${letter}`} class="stack">
+      <h2>{letter}</h2>
+      <ul>
+        {byLetter.get(letter)!.map(({ p, name, current, total }) => (
+          <li>
+            <a href={personUrl(p.slug, base)}>{name}</a>
+            {p.birth?.year && <span class="muted"> · {p.birth.year}</span>}
+            <span class="muted"> · {current} lopend / {total} totaal</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

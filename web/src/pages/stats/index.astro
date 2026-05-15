@@ -1,0 +1,140 @@
+---
+import Base from '~/layouts/Base.astro';
+import {
+  totals,
+  topMandatesPerPerson,
+  bestuurslagen,
+  appointmentsPerYear,
+  recordsPerSource,
+  postsByClassification,
+  postsByLabelPrefix,
+} from '~/lib/stats';
+import { personDisplayName, personUrl } from '~/lib/data';
+
+const t = totals();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+
+const top5 = topMandatesPerPerson(5);
+const lagen = bestuurslagen();
+const topLagen = lagen.slice(0, 3);
+const years = appointmentsPerYear();
+const lastYear = years.length ? years[years.length - 1] : null;
+const peakYear = years.length ? [...years].sort((a, b) => b.count - a.count)[0] : null;
+const sources = recordsPerSource();
+const topSources = sources.slice(0, 3);
+const labels = postsByLabelPrefix();
+const topLabels = labels.slice(0, 3);
+const classifications = postsByClassification();
+const topClassifications = classifications.slice(0, 3);
+---
+<Base title="Statistieken" description="Aggregaties over de polder-dataset">
+  <article class="stack">
+    <header class="stack">
+      <h1>Statistieken</h1>
+      <p class="muted">Aggregaties over de hele dataset.</p>
+    </header>
+
+    <section>
+      <h2>Totalen</h2>
+      <dl class="grid grid-2">
+        <div>
+          <dt class="muted">Personen</dt>
+          <dd><strong>{fmt(t.people)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Organisaties</dt>
+          <dd><strong>{fmt(t.orgs)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Posten</dt>
+          <dd><strong>{fmt(t.posts)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Mandaten</dt>
+          <dd><strong>{fmt(t.mandates)}</strong> ({fmt(t.currentMandates)} lopend)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="stack">
+      <h2><a href={`${base}/stats/mandaten-per-persoon/`}>Mandaten per persoon</a></h2>
+      <p class="muted">Top 50 personen op aantal mandaten, met onderscheid tussen totaal en lopend.</p>
+      <p>
+        Top 5:
+        {top5.map((row, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={personUrl(row.person.slug, base)}>{personDisplayName(row.person)}</a>
+            <span class="muted"> ({row.total})</span>
+          </>
+        ))}
+      </p>
+    </section>
+
+    <section class="stack">
+      <h2><a href={`${base}/stats/bestuurslagen/`}>Bestuurslagen</a></h2>
+      <p class="muted">Aantal organisaties en mandaten per organisatie-type.</p>
+      <p>
+        Meeste lopende mandaten in:
+        {topLagen.map((b, i) => (
+          <>
+            {i > 0 && ' · '}
+            <span>{b.type} <span class="muted">({fmt(b.currentMandates)})</span></span>
+          </>
+        ))}
+      </p>
+    </section>
+
+    <section class="stack">
+      <h2><a href={`${base}/stats/benoemingen-per-jaar/`}>Benoemingen per jaar</a></h2>
+      <p class="muted">Histogram van mandaat-startdatums.</p>
+      {peakYear && (
+        <p>
+          Piekjaar: <strong>{peakYear.year}</strong> met {fmt(peakYear.count)} benoemingen.
+          {lastYear && <> Laatst geregistreerd jaar: <strong>{lastYear.year}</strong> ({fmt(lastYear.count)}).</>}
+        </p>
+      )}
+    </section>
+
+    <section class="stack">
+      <h2><a href={`${base}/stats/bronnen/`}>Bronnen</a></h2>
+      <p class="muted">Records per fetcher-bron.</p>
+      <p>
+        Grootste bronnen:
+        {topSources.map((s, i) => (
+          <>
+            {i > 0 && ' · '}
+            <code>{s.id}</code>
+            <span class="muted"> ({fmt(s.records)})</span>
+          </>
+        ))}
+      </p>
+    </section>
+
+    <section class="stack">
+      <h2><a href={`${base}/stats/functies/`}>Functies</a></h2>
+      <p class="muted">Posten gegroepeerd op label-prefix en Popolo classification.</p>
+      <p>
+        Meest voorkomende labels:
+        {topLabels.map((b, i) => (
+          <>
+            {i > 0 && ' · '}
+            <span>{b.prefix} <span class="muted">({fmt(b.posts)})</span></span>
+          </>
+        ))}
+      </p>
+      {topClassifications.length > 0 && (
+        <p>
+          Classifications:
+          {topClassifications.map((b, i) => (
+            <>
+              {i > 0 && ' · '}
+              <span>{b.classification} <span class="muted">({fmt(b.posts)})</span></span>
+            </>
+          ))}
+        </p>
+      )}
+    </section>
+  </article>
+</Base>

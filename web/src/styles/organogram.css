@@ -1,0 +1,139 @@
+/*
+ * Polder organogram styling — vanilla NLDD.
+ *
+ * Only what D3 actually paints (SVG nodes, links, labels) plus a thin
+ * layer for the search dropdown and breadcrumb, which the viz JS still
+ * inserts as plain HTML. Everything else (overlay modal, person side
+ * panel) inherits browser default + NLDD tokens via cascade.
+ */
+
+/* # SVG: nodes and links */
+
+#chart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+g.node rect {
+  rx: 6;
+  ry: 6;
+  stroke-width: 1.5;
+}
+
+g.node.root rect,
+g.node.ministerie rect,
+g.node.post rect {
+  fill: var(--primitives-color-donkerblauw-500, #003e6b);
+  stroke: var(--primitives-color-donkerblauw-500, #003e6b);
+}
+
+g.node.bestuurslaag rect {
+  fill: var(--primitives-color-lintblauw-50, #e3effe);
+  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+  stroke-dasharray: 4 3;
+}
+
+g.node.category-tree rect {
+  fill: var(--primitives-color-lintblauw-25, #f0f7ff);
+  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+}
+
+g.node.category-flat rect {
+  fill: var(--primitives-color-coolgray-25, #f5f6f9);
+  stroke: var(--primitives-color-coolgray-400, #7f8da0);
+}
+
+g.node.onderdeel rect,
+g.node.leaf rect {
+  fill: #fff;
+  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+}
+
+g.node.person rect {
+  fill: var(--primitives-color-lintblauw-50, #e3effe);
+  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+}
+
+g.node:hover rect {
+  stroke-width: 2;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.08));
+}
+
+g.node.faded,
+g.node.inactive,
+path.link.faded,
+path.link.inactive {
+  opacity: 0.22;
+}
+
+text.node-label {
+  fill: var(--semantics-content-color, #1a1a1a);
+  font-family: inherit;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
+}
+
+g.node.root text.node-label,
+g.node.ministerie text.node-label,
+g.node.post text.node-label {
+  fill: #fff;
+}
+
+path.link {
+  fill: none;
+  stroke: var(--primitives-color-coolgray-300, #9aa5b5);
+  stroke-width: 1.25;
+  opacity: 0.7;
+}
+
+/* # Breadcrumb (HTML, not SVG) */
+
+#breadcrumb {
+  font-size: 0.875rem;
+  color: var(--semantics-content-secondary-color, #5a6473);
+}
+
+#breadcrumb .crumb {
+  cursor: pointer;
+  color: var(--primitives-color-lintblauw-500, #0058a3);
+  pointer-events: auto;
+}
+
+#breadcrumb .crumb:hover {
+  text-decoration: underline;
+}
+
+#breadcrumb .sep {
+  margin: 0 0.4em;
+  color: var(--primitives-color-coolgray-300, #9aa5b5);
+}
+
+/* # Search results dropdown (HTML rendered by search.js) */
+
+.search-result {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--primitives-color-coolgray-75, #e2e6eb);
+  cursor: pointer;
+}
+
+.search-result:last-child {
+  border-bottom: 0;
+}
+
+.search-result:hover,
+.search-result.active {
+  background: var(--primitives-color-lintblauw-25, #f0f7ff);
+}
+
+.search-result .kind-tag {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.05em 0.4em;
+  border-radius: 3px;
+  background: var(--primitives-color-coolgray-50, #ebeef2);
+  color: var(--semantics-content-secondary-color, #5a6473);
+  font-size: 0.75rem;
+  font-weight: 500;
+}

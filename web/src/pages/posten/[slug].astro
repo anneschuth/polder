@@ -1,0 +1,91 @@
+---
+import Base from '~/layouts/Base.astro';
+import SourceList from '~/components/SourceList.astro';
+import { loadAll, currentName, orgUrl, personUrl, personDisplayName, isMandateCurrent, type Post } from '~/lib/data';
+
+export async function getStaticPaths() {
+  const { posts } = loadAll();
+  return posts.map((p) => ({
+    params: { slug: p.slug },
+    props: { post: p },
+  }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const data = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const org = data.orgById.get(post.organization_id);
+const mandates = (data.mandatesByPost.get(post.id) ?? []).sort((a, b) => {
+  const ac = isMandateCurrent(a.mandate) ? 0 : 1;
+  const bc = isMandateCurrent(b.mandate) ? 0 : 1;
+  return ac - bc || (b.mandate.start_date ?? '').localeCompare(a.mandate.start_date ?? '');
+});
+const current = mandates.filter((m) => isMandateCurrent(m.mandate));
+const historical = mandates.filter((m) => !isMandateCurrent(m.mandate));
+---
+<Base title={post.label}>
+  <article class="stack">
+    <header class="stack">
+      <p class="muted">
+        Post
+        {org && (
+          <> bij <a href={orgUrl(org, base)}>{currentName(org)}</a></>
+        )}
+        · <code>{post.id}</code>
+      </p>
+      <h1>{post.label}</h1>
+      <dl class="grid grid-2">
+        {post.classification && (
+          <div><dt class="muted">Classificatie</dt><dd>{post.classification}</dd></div>
+        )}
+        {post.valid_from && (
+          <div><dt class="muted">Geldig vanaf</dt><dd>{post.valid_from}</dd></div>
+        )}
+        {post.valid_until && (
+          <div><dt class="muted">Geldig tot</dt><dd>{post.valid_until}</dd></div>
+        )}
+      </dl>
+    </header>
+
+    {current.length > 0 && (
+      <section>
+        <h2>Huidige bezetter{current.length > 1 ? 's' : ''} ({current.length})</h2>
+        <ul>
+          {current.map(({ person, mandate }) => (
+            <li>
+              <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
+              {mandate.start_date && <span class="muted"> · sinds {mandate.start_date}</span>}
+              {mandate.role && mandate.role !== post.label && <span class="muted"> · rol: {mandate.role}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {historical.length > 0 && (
+      <section>
+        <h2>Eerdere bezetters ({historical.length})</h2>
+        <table class="data">
+          <thead>
+            <tr><th>Persoon</th><th>Periode</th></tr>
+          </thead>
+          <tbody>
+            {historical.map(({ person, mandate }) => (
+              <tr>
+                <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
+                <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? '?'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )}
+
+    <SourceList sources={post.sources} />
+  </article>
+</Base>

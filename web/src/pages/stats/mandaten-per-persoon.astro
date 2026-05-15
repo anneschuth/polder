@@ -1,0 +1,52 @@
+---
+import Base from '~/layouts/Base.astro';
+import { topMandatesPerPerson } from '~/lib/stats';
+import { personDisplayName, personUrl } from '~/lib/data';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+const top = topMandatesPerPerson(50);
+const top5 = top.slice(0, 5);
+---
+<Base title="Mandaten per persoon" description="Top 50 personen op aantal mandaten">
+  <article class="stack">
+    <header class="stack">
+      <h1>Mandaten per persoon</h1>
+      <p class="muted">Top 50 personen, gesorteerd op aantal mandaten in de dataset. Lopend = mandaten zonder <code>end_date</code>.</p>
+      <p>
+        Top 5:
+        {top5.map((row, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={personUrl(row.person.slug, base)}>{personDisplayName(row.person)}</a>
+            <span class="muted"> ({row.total})</span>
+          </>
+        ))}
+      </p>
+    </header>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th style="width: 3rem;">#</th>
+          <th>Persoon</th>
+          <th style="width: 6rem; text-align: right;">Totaal</th>
+          <th style="width: 6rem; text-align: right;">Lopend</th>
+        </tr>
+      </thead>
+      <tbody>
+        {top.map((row, i) => (
+          <tr>
+            <td>{i + 1}</td>
+            <td>
+              <a href={personUrl(row.person.slug, base)}>{personDisplayName(row.person)}</a>
+              {row.person.birth?.year && <span class="muted"> · {row.person.birth.year}</span>}
+            </td>
+            <td style="text-align: right;">{fmt(row.total)}</td>
+            <td style="text-align: right;">{fmt(row.current)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </article>
+</Base>

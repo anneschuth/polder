@@ -1,0 +1,240 @@
+---
+import Base from '~/layouts/Base.astro';
+import { totals } from '~/lib/stats';
+
+const t = totals();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+
+const personYamlExample = `id: person:jansen-jp-1965
+identifiers:
+  wikidata: Q12345678
+name:
+  full: Jan Pieter Jansen
+  family: Jansen
+  initials: J.P.
+birth: { year: 1965 }
+mandaten:
+  - organization_id: org:min-bzk
+    post_id: post:sg-min-bzk
+    role: Secretaris-Generaal
+    start_date: 2022-09-01
+    end_date: null`;
+---
+<Base title="Polder" description="Open, machineleesbare dataset van de Nederlandse overheid">
+  <article class="stack">
+    <header class="stack">
+      <h1>Polder</h1>
+      <p class="acronym">
+        <strong>P</strong>ublieke <strong>O</strong>verheid:
+        <strong>L</strong>eden, <strong>D</strong>ienstverbanden,
+        <strong>E</strong>enheden, <strong>R</strong>ollen.
+      </p>
+      <p class="tagline">Wie regeert Nederland, in YAML, dagelijks bijgewerkt.</p>
+      <p>
+        Een open, machineleesbare dataset van Nederlandse overheidsorganisaties,
+        posten, personen en mandaten. CC0-gelicenseerd, source-of-truth in YAML,
+        gevalideerd met JSON Schema, gepubliceerd als Datasette en Frictionless
+        Data Package.
+      </p>
+    </header>
+
+    <section>
+      <h2>De dataset op dit moment</h2>
+      <dl class="grid grid-2">
+        <div>
+          <dt class="muted">Personen</dt>
+          <dd><strong>{fmt(t.people)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Organisaties</dt>
+          <dd><strong>{fmt(t.orgs)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Posten</dt>
+          <dd><strong>{fmt(t.posts)}</strong></dd>
+        </div>
+        <div>
+          <dt class="muted">Mandaten</dt>
+          <dd><strong>{fmt(t.mandates)}</strong> ({fmt(t.currentMandates)} lopend)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Waarom polder</h2>
+      <p>
+        Nederland heeft geen geconsolideerd, machineleesbaar register van wie
+        waar zit in de overheid met termijn-historie. Polder vult vier
+        specifieke gaten in het bestaande aanbod:
+      </p>
+      <ul>
+        <li>Een Popolo-achtig persoon-post-organisatie graafmodel met expliciete <code>start_date</code> en <code>end_date</code> per mandaat.</li>
+        <li>Eerste Kamer en ABD-management onder de Topmanagementgroep, die in geen enkele open feed gestructureerd staan.</li>
+        <li>Een NLP-pipeline op de Staatscourant-feed die benoemings-KB's parst naar gestructureerde Membership-proposals.</li>
+        <li>Een persistente identifier-crosswalk tussen OIN, KvK, RSIN, Wikidata-Q, TK-persoonId, ROO-id, TOOI-URI en stable slugs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Datamodel</h2>
+      <p>
+        Polder volgt de <a href="http://www.popoloproject.com/" rel="external">Popolo</a>
+        spec voor government-data: Person, Organization, Post, Membership.
+        Veldnamen blijven dicht bij Popolo waar dat redelijk is, met Nederlandse
+        domeintermen waar nodig (<code>bewindspersoon</code>, <code>dienstverband</code>).
+      </p>
+      <p>Een persoon-record ziet er ongeveer zo uit:</p>
+      <pre class="code-block"><code>{personYamlExample}</code></pre>
+      <p class="muted">
+        Volledige schema-definities staan in <code>schemas/</code> in de repo.
+      </p>
+    </section>
+
+    <section>
+      <h2>AVG-zones</h2>
+      <p>
+        Uitgangspunt is de ABRvS-doctrine sinds 31 januari 2018
+        (ECLI:NL:RVS:2018:314): namen mogen openbaar als de medewerker uit
+        hoofde van functie in de openbaarheid treedt. Polder hanteert drie
+        zones:
+      </p>
+      <dl class="zones">
+        <div class="zone zone-groen">
+          <dt><span class="dot" aria-hidden="true"></span> Groen, publiceren standaard</dt>
+          <dd>Bewindspersonen, Kamerleden TK en EK, CdK, gedeputeerden, statenleden, burgemeesters, wethouders, raadsleden, dijkgraven, DB- en AB-leden waterschap, voorzitters Hoge Colleges van Staat, RvB-leden ZBO's, ABD-Topmanagementgroep, rechters en raadsheren, gezaghebbers Caribisch Nederland, griffiers.</dd>
+        </div>
+        <div class="zone zone-geel">
+          <dt><span class="dot" aria-hidden="true"></span> Geel, alleen functionele gegevens</dt>
+          <dd>ABD-managers schaal 15 en 16 op directieniveau, inspecteurs-generaal, secretarissen van ZBO's en agentschappen, bestuurders en secretarissen van gemeenschappelijke regelingen. Alleen als de organisatie zelf de gegevens al publiek heeft gemaakt. Geen privé-contactgegevens.</dd>
+        </div>
+        <div class="zone zone-rood">
+          <dt><span class="dot" aria-hidden="true"></span> Rood, niet doen</dt>
+          <dd>Beleidsmedewerkers, juristen, communicatie, handhavers, dossierbehandelaars. Altijd uitgesloten: privé-contactgegevens, geboortedata (alleen jaar voor disambiguatie), BSN, WNT-salarisdata buiten publicatieplicht, foto's, bijzondere persoonsgegevens.</dd>
+        </div>
+      </dl>
+      <p class="muted">
+        Takedown-flow via een GitHub-issue-template met SLA van 14 dagen. Bij
+        bedreigde ambtsdragers is opt-out op verzoek mogelijk.
+      </p>
+    </section>
+
+    <section>
+      <h2>Bronnen</h2>
+      <p>Primaire feeds worden deterministisch opgehaald, zonder LLM:</p>
+      <ul>
+        <li><strong>ROO</strong> (KOOP): alle organisatietypes, bestuurders tot SG, DG, burgemeester, dijkgraaf. Dagelijkse <code>exportOO.xml</code>.</li>
+        <li><strong>TOOI</strong>: URI-stelsel en SKOS-vocabulaires voor alle overheidsorganisatietypes.</li>
+        <li><strong>TK OData</strong>: Tweede Kamer-personen, fracties, commissies, vanaf 2008-09-01, near-realtime via SyncFeed.</li>
+        <li><strong>KOOP SRU</strong>: Staatscourant en KB's, sinds 2009. Bron voor benoemings-parsing.</li>
+        <li><strong>Logius COR</strong>: OIN per organisatie, voor identifier-crosswalk.</li>
+        <li><strong>Wikidata</strong>: Q-id-crosswalk voor ministeries, provincies, gemeenten, waterschappen.</li>
+        <li><strong>Open Raadsinformatie</strong>: raadsleden en bestuurders van 265+ gemeenten in Popolo ODS.</li>
+        <li><strong>Kiesraad</strong>: verkiezingsuitslagen en kandidaatlijsten.</li>
+        <li><strong>Algemene Rekenkamer RWT</strong>: RWT-register, jaarlijks.</li>
+        <li><strong>Allmanak</strong> (Open State Foundation): secundaire bron, gefused met polder waar zinvol.</li>
+      </ul>
+      <p>
+        Daarnaast LLM-bronnen met guardrails (quote-or-die, two-source-rule):
+        Staatscourant benoemings-KB's, Eerste Kamer-pagina's, Rijksoverheid.nl
+        organogrammen, ABD-jaarverslagen. Proposals landen eerst in
+        <code>data/_staging/</code>, nooit direct in <code>data/</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Verkennen</h2>
+      <ul>
+        <li><a href={`${base}/personen/`}>Personen</a>, alle bewindspersonen, kamerleden, bestuurders, ambtenaren in de dataset</li>
+        <li><a href={`${base}/organisaties/`}>Organisaties</a>, ministeries, gemeenten, ZBO's, adviescolleges, en meer</li>
+        <li><a href={`${base}/posten/`}>Posten</a>, functies binnen organisaties</li>
+        <li><a href={`${base}/stats/`}>Statistieken</a>, overzichten en aggregaties</li>
+        <li><a href={`${base}/organogram/`}>Organogram</a>, interactieve visualisatie</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Bron en licentie</h2>
+      <p>
+        Source-of-truth: <a href="https://github.com/anneschuth/polder" rel="external">github.com/anneschuth/polder</a>.
+        Data onder CC0, code onder EUPL-1.2.
+      </p>
+    </section>
+  </article>
+
+  <style>
+    .acronym {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .acronym strong {
+      color: #1f4e79;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      font-style: italic;
+      margin: 0;
+      color: #333;
+    }
+    .code-block {
+      background: #f5f5f5;
+      border: 1px solid #e5e5e5;
+      border-radius: 4px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .code-block code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      white-space: pre;
+    }
+    .zones {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 0;
+    }
+    .zone {
+      border: 1px solid #e5e5e5;
+      border-left-width: 4px;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      background: #fafafa;
+    }
+    .zone dt {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .zone dd {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    .zone .dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .zone-groen { border-left-color: #2e7d32; }
+    .zone-groen .dot { background: #2e7d32; }
+    .zone-geel { border-left-color: #c79100; }
+    .zone-geel .dot { background: #f9a825; }
+    .zone-rood { border-left-color: #c62828; }
+    .zone-rood .dot { background: #c62828; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: #f0f0f0;
+      padding: 0.05rem 0.25rem;
+      border-radius: 3px;
+    }
+    .code-block code {
+      background: none;
+      padding: 0;
+    }
+  </style>
+</Base>

@@ -1,0 +1,23 @@
+---
+import type { Source } from '~/lib/data';
+
+interface Props {
+  sources?: Source[];
+}
+
+const { sources } = Astro.props;
+---
+{(sources ?? []).length > 0 && (
+  <section>
+    <h2>Bronnen</h2>
+    <ul>
+      {(sources ?? []).map((s) => (
+        <li>
+          {s.url ? <a href={s.url} rel="external">{s.id}</a> : s.id}
+          {s.retrieved && <span class="muted"> · opgehaald {s.retrieved}</span>}
+          {s.fields && s.fields.length > 0 && <span class="muted"> · velden: {s.fields.join(', ')}</span>}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

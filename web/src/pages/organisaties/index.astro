@@ -1,0 +1,43 @@
+---
+import Base from '~/layouts/Base.astro';
+import { loadAll, currentName, currentAbbr, orgUrl } from '~/lib/data';
+
+const { orgs, orgTypes } = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const byType = new Map<string, typeof orgs>();
+for (const o of orgs) {
+  const arr = byType.get(o.type) ?? [];
+  arr.push(o);
+  byType.set(o.type, arr);
+}
+const types = [...orgTypes].sort();
+---
+<Base title="Organisaties">
+  <h1>Organisaties</h1>
+  <p class="muted">{orgs.length.toLocaleString('nl-NL')} organisaties, {types.length} types.</p>
+  <nav>
+    {types.map((t, i) => (
+      <>
+        {i > 0 && ' · '}
+        <a href={`#type-${t}`}>{t} ({byType.get(t)!.length})</a>
+      </>
+    ))}
+  </nav>
+  {types.map((type) => {
+    const list = byType.get(type)!.sort((a, b) => currentName(a).localeCompare(currentName(b), 'nl'));
+    return (
+      <section id={`type-${type}`} class="stack">
+        <h2>{type} <span class="muted">({list.length})</span></h2>
+        <ul>
+          {list.map((o) => (
+            <li>
+              <a href={orgUrl(o, base)}>{currentName(o)}</a>
+              {currentAbbr(o) && <span class="muted"> ({currentAbbr(o)})</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  })}
+</Base>

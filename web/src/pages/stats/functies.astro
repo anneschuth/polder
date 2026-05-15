@@ -1,0 +1,78 @@
+---
+import Base from '~/layouts/Base.astro';
+import { postsByLabelPrefix, postsByClassification } from '~/lib/stats';
+
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+const labels = postsByLabelPrefix();
+const classifications = postsByClassification();
+const maxLabel = Math.max(1, ...labels.map((r) => r.posts));
+const maxClass = Math.max(1, ...classifications.map((r) => r.posts));
+const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+const barColorAlt = 'var(--primitives-color-donkerblauw-500, #1d3a6d)';
+---
+<Base title="Functies" description="Posten op label-prefix en Popolo classification">
+  <article class="stack">
+    <header class="stack">
+      <h1>Functies</h1>
+      <p class="muted">Posten gegroepeerd op label-prefix (Minister, Burgemeester, Afdelingshoofd, etc.) en op het Popolo <code>classification</code>-veld.</p>
+    </header>
+
+    <section class="stack">
+      <h2>Op label-prefix</h2>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Functie</th>
+            <th style="width: 7rem; text-align: right;">Posten</th>
+            <th style="width: 7rem; text-align: right;">Lopend</th>
+            <th>Verdeling</th>
+          </tr>
+        </thead>
+        <tbody>
+          {labels.map((r) => {
+            const pct = (r.posts / maxLabel) * 100;
+            return (
+              <tr>
+                <td>{r.prefix}</td>
+                <td style="text-align: right;">{fmt(r.posts)}</td>
+                <td style="text-align: right;">{fmt(r.currentHolders)}</td>
+                <td>
+                  <div style={`width: ${pct}%; min-width: 1px; height: 0.75rem; background: ${barColor};`}></div>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="stack">
+      <h2>Op Popolo classification</h2>
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Classification</th>
+            <th style="width: 7rem; text-align: right;">Posten</th>
+            <th style="width: 7rem; text-align: right;">Lopend</th>
+            <th>Verdeling</th>
+          </tr>
+        </thead>
+        <tbody>
+          {classifications.map((r) => {
+            const pct = (r.posts / maxClass) * 100;
+            return (
+              <tr>
+                <td><code>{r.classification}</code></td>
+                <td style="text-align: right;">{fmt(r.posts)}</td>
+                <td style="text-align: right;">{fmt(r.currentHolders)}</td>
+                <td>
+                  <div style={`width: ${pct}%; min-width: 1px; height: 0.75rem; background: ${barColorAlt};`}></div>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+  </article>
+</Base>

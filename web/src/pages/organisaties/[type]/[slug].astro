@@ -1,0 +1,125 @@
+---
+import Base from '~/layouts/Base.astro';
+import SourceList from '~/components/SourceList.astro';
+import { loadAll, currentName, currentAbbr, orgUrl, postUrl, personUrl, personDisplayName, isMandateCurrent, type Organization } from '~/lib/data';
+
+export async function getStaticPaths() {
+  const { orgs } = loadAll();
+  return orgs.map((o) => ({
+    params: { type: o.type, slug: o.slug },
+    props: { org: o },
+  }));
+}
+
+interface Props {
+  org: Organization;
+}
+
+const { org } = Astro.props;
+const data = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const parent = org.parent_id ? data.orgById.get(org.parent_id) : null;
+const children = (data.childrenByOrg.get(org.id) ?? []).sort((a, b) => currentName(a).localeCompare(currentName(b), 'nl'));
+const posts = (data.postsByOrg.get(org.id) ?? []).sort((a, b) => a.label.localeCompare(b.label, 'nl'));
+const mandates = (data.mandatesByOrg.get(org.id) ?? []).sort((a, b) => {
+  const ac = isMandateCurrent(a.mandate) ? 0 : 1;
+  const bc = isMandateCurrent(b.mandate) ? 0 : 1;
+  return ac - bc || (b.mandate.start_date ?? '').localeCompare(a.mandate.start_date ?? '');
+});
+const currentMandates = mandates.filter((m) => isMandateCurrent(m.mandate));
+const name = currentName(org);
+const abbr = currentAbbr(org);
+---
+<Base title={name} description={`${name} (${org.type})`}>
+  <article class="stack">
+    <header class="stack">
+      <p class="muted">
+        {org.type}
+        {parent && (
+          <> · onderdeel van <a href={orgUrl(parent, base)}>{currentName(parent)}</a></>
+        )}
+        · <code>{org.id}</code>
+      </p>
+      <h1>{name}{abbr && <span class="muted"> ({abbr})</span>}</h1>
+      <dl class="grid grid-2">
+        {org.classification && (
+          <div><dt class="muted">Classificatie</dt><dd>{org.classification}</dd></div>
+        )}
+        {org.valid_from && (
+          <div><dt class="muted">Geldig vanaf</dt><dd>{org.valid_from}</dd></div>
+        )}
+        {org.valid_until && (
+          <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}</dd></div>
+        )}
+        {org.contact?.website && (
+          <div><dt class="muted">Website</dt><dd><a href={org.contact.website} rel="external">{org.contact.website.replace(/^https?:\/\//, '')}</a></dd></div>
+        )}
+      </dl>
+      {org.identifiers && Object.keys(org.identifiers).length > 0 && (
+        <details>
+          <summary>Identifiers</summary>
+          <dl class="grid grid-2">
+            {Object.entries(org.identifiers).map(([k, v]) => (
+              <div><dt class="muted">{k}</dt><dd><code>{v}</code></dd></div>
+            ))}
+          </dl>
+        </details>
+      )}
+    </header>
+
+    {children.length > 0 && (
+      <section>
+        <h2>Onderdelen ({children.length})</h2>
+        <ul>
+          {children.map((c) => (
+            <li>
+              <a href={orgUrl(c, base)}>{currentName(c)}</a>
+              {currentAbbr(c) && <span class="muted"> ({currentAbbr(c)})</span>}
+              <span class="muted"> · {c.type}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {posts.length > 0 && (
+      <section>
+        <h2>Posten ({posts.length})</h2>
+        <ul>
+          {posts.map((p) => (
+            <li>
+              <a href={postUrl(p.slug, base)}>{p.label}</a>
+              {p.classification && <span class="muted"> · {p.classification}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {mandates.length > 0 && (
+      <section>
+        <h2>Mandaten ({mandates.length}, {currentMandates.length} lopend)</h2>
+        <table class="data">
+          <thead>
+            <tr><th>Persoon</th><th>Rol</th><th>Periode</th></tr>
+          </thead>
+          <tbody>
+            {mandates.slice(0, 200).map(({ person, mandate }) => (
+              <tr>
+                <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
+                <td>{mandate.role}{isMandateCurrent(mandate) && <> <small class="muted">(lopend)</small></>}</td>
+                <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? 'heden'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {mandates.length > 200 && (
+          <p class="muted">Eerste 200 van {mandates.length} mandaten getoond.</p>
+        )}
+      </section>
+    )}
+
+    <SourceList sources={org.sources} />
+  </article>
+</Base>

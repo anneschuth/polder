@@ -1,0 +1,60 @@
+---
+import Base from '~/layouts/Base.astro';
+import { recordsPerSource } from '~/lib/stats';
+
+const fmt = (n: number) => n.toLocaleString('nl-NL');
+const rows = recordsPerSource();
+const max = Math.max(1, ...rows.map((r) => r.records));
+const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+
+const SOURCE_URLS: Record<string, string> = {
+  roo: 'https://organisaties.overheid.nl/',
+  wikidata: 'https://www.wikidata.org/',
+  tk_odata: 'https://opendata.tweedekamer.nl/',
+  ek_scrape: 'https://www.eerstekamer.nl/',
+  koop_sru: 'https://repository.overheid.nl/sru',
+  staatscourant: 'https://zoek.officielebekendmakingen.nl/',
+  abd_nieuws: 'https://www.algemenebestuursdienst.nl/actueel/nieuws',
+  rijksoverheid: 'https://www.rijksoverheid.nl/',
+  rechtspraak: 'https://www.rechtspraak.nl/',
+  cbs: 'https://www.cbs.nl/',
+  kvk: 'https://www.kvk.nl/',
+  duo: 'https://duo.nl/',
+};
+---
+<Base title="Bronnen" description="Records per fetcher-bron">
+  <article class="stack">
+    <header class="stack">
+      <h1>Bronnen</h1>
+      <p class="muted">Aantal records (personen, organisaties, posten) met een verwijzing naar de bron. Eén record kan meerdere bronnen hebben.</p>
+    </header>
+
+    <table class="data">
+      <thead>
+        <tr>
+          <th>Bron</th>
+          <th style="width: 8rem; text-align: right;">Records</th>
+          <th>Verdeling</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => {
+          const pct = (r.records / max) * 100;
+          const url = SOURCE_URLS[r.id];
+          return (
+            <tr>
+              <td>
+                <code>{r.id}</code>
+                {url && <> · <a href={url} rel="external">bron</a></>}
+              </td>
+              <td style="text-align: right;">{fmt(r.records)}</td>
+              <td>
+                <div style={`width: ${pct}%; min-width: 1px; height: 0.75rem; background: ${barColor};`}></div>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </article>
+</Base>
