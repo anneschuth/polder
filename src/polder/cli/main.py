@@ -80,6 +80,7 @@ _SINGLE_COMMANDS: dict[str, tuple[str, str]] = {
     "resolve": ("polder.cli.commands.resolve_cmd", "resolve"),
     "ingest": ("polder.cli.commands.ingest_cmd", "ingest"),
     "roo-roundtrip": ("polder.cli.commands.roo_roundtrip_cmd", "roo_roundtrip"),
+    "resolve-roo": ("polder.cli.commands.resolve_roo_cmd", "resolve_roo"),
 }
 
 _SUBAPPS: dict[str, tuple[str, str]] = {
