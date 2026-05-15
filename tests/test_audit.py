@@ -597,8 +597,130 @@ def test_categories_dict_covers_known_categories() -> None:
         "successor_predecessor_mismatch",
         "dead_person_active_mandate",
         "mandaat_longer_than_30y",
+        "overlapping_open_mandates_different_orgs",
+        "single_seat_both_open",
     }
     for cat in expected:
         assert cat in CATEGORIES, f"Missing Category entry voor {cat}"
         assert CATEGORIES[cat].severity in ("error", "review")
         assert CATEGORIES[cat].help
+
+
+def test_detects_overlapping_open_mandates_different_orgs(fake_data: Path) -> None:
+    """Persoon met twee open mandaten bij niet-verwante ministeries."""
+    # Extra ministerie + post zodat we cross-org mandaten kunnen maken.
+    other_org = {
+        "id": "org:min-other",
+        "type": "ministerie",
+        "names": [{"value": "Other", "lang": "nl"}],
+        "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+    }
+    (fake_data / "organisaties" / "ministeries" / "min-other.yaml").write_text(
+        yaml.safe_dump(other_org, sort_keys=False), encoding="utf-8"
+    )
+    other_post = {
+        "id": "post:minister-min-other",
+        "organization_id": "org:min-other",
+        "label": "Minister van Other",
+        "classification": "bewindspersoon",
+        "seat_count": 1,
+        "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+    }
+    (fake_data / "posten" / "minister-min-other.yaml").write_text(
+        yaml.safe_dump(other_post, sort_keys=False), encoding="utf-8"
+    )
+    m1 = _good_mandate(start="2020-01-01", end=None)
+    m2 = {
+        **_good_mandate(start="2023-01-01", end=None),
+        "id": "m2",
+        "organization_id": "org:min-other",
+        "post_id": "post:minister-min-other",
+    }
+    _write_person(
+        fake_data,
+        "vergeten-i-1970",
+        {
+            "id": "person:vergeten-i-1970",
+            "name": {"family": "Vergeten", "initials": "I."},
+            "birth": {"year": 1970},
+            "mandaten": [m1, m2],
+            "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+        },
+    )
+
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "overlapping_open_mandates_different_orgs" in _categories_in(report)
+
+
+def test_detects_single_seat_both_open(fake_data: Path) -> None:
+    """Twee personen met beide open mandaat op dezelfde single-seat post."""
+    # De minister-post in fake_data is al single-seat (classification:
+    # bewindspersoon). Voeg twee personen toe die beide minister zijn.
+    # Voor de check moet de post seat_count=1 hebben.
+    post_path = fake_data / "posten" / "minister-min-test.yaml"
+    post_data = yaml.safe_load(post_path.read_text(encoding="utf-8"))
+    post_data["seat_count"] = 1
+    post_path.write_text(yaml.safe_dump(post_data, sort_keys=False), encoding="utf-8")
+
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "a-i-1970",
+        {
+            "id": "person:a-i-1970",
+            "name": {"family": "A", "initials": "I."},
+            "birth": {"year": 1970},
+            "mandaten": [m],
+            "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "b-i-1970",
+        {
+            "id": "person:b-i-1970",
+            "name": {"family": "B", "initials": "I."},
+            "birth": {"year": 1970},
+            "mandaten": [{**m, "id": "m2", "start_date": "2022-01-01"}],
+            "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+        },
+    )
+
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_check_skips_multi_seat_posts(fake_data: Path) -> None:
+    """Multi-seat posts (seat_count=null) worden niet geflagd ook al hebben twee
+    personen daarvoor een open mandaat."""
+    post_path = fake_data / "posten" / "minister-min-test.yaml"
+    post_data = yaml.safe_load(post_path.read_text(encoding="utf-8"))
+    post_data["seat_count"] = None
+    post_path.write_text(yaml.safe_dump(post_data, sort_keys=False), encoding="utf-8")
+
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "a-i-1970",
+        {
+            "id": "person:a-i-1970",
+            "name": {"family": "A", "initials": "I."},
+            "birth": {"year": 1970},
+            "mandaten": [m],
+            "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "b-i-1970",
+        {
+            "id": "person:b-i-1970",
+            "name": {"family": "B", "initials": "I."},
+            "birth": {"year": 1970},
+            "mandaten": [{**m, "id": "m2"}],
+            "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+        },
+    )
+
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" not in _categories_in(report)

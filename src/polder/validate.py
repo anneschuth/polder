@@ -296,31 +296,19 @@ def check_inline_mandaat_sources(records: Iterable[Record]) -> list[ValidationIs
     return issues
 
 
-# Posten die per definitie multi-seat zijn (gemeenteraad, provinciale staten,
-# AB-waterschap, dagelijks bestuur). Overlap is daar verwacht en geen issue.
-MULTI_SEAT_CLASSIFICATIONS = {
-    "raadslid",
-    "statenlid",
-    "kamerlid",
-    "ab-waterschap",
-    "db-waterschap",
-    "lid-hcs",
-    "rechter",
-    "wethouder",
-    "gedeputeerde",
-}
-
-
 def check_overlapping_mandaten(idx: Index) -> list[ValidationIssue]:
-    """Flag overlap op single-seat posts (seat_count <= 1) als WARNING."""
+    """Flag overlap op single-seat posts als WARNING.
+
+    Single-seat = ``post.seat_count == 1`` in de YAML. Posts met
+    ``seat_count: null`` of een hoger getal worden niet geflagd. De bron
+    is dus de YAML, niet een hardcoded classifications-lijst.
+    """
     issues: list[ValidationIssue] = []
     for post_id, entries in idx.post_mandaten.items():
         post = idx.posts.get(post_id)
-        seat_count = post.get("seat_count", 1) if isinstance(post, dict) else 1
-        classification = post.get("classification") if isinstance(post, dict) else None
-        if classification in MULTI_SEAT_CLASSIFICATIONS:
+        if not isinstance(post, dict):
             continue
-        if not isinstance(seat_count, int) or seat_count > 1:
+        if post.get("seat_count") != 1:
             continue
         ordered = sorted(entries, key=lambda t: t[0])
         for i in range(len(ordered)):
