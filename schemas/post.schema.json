@@ -46,9 +46,10 @@
       ]
     },
     "seat_count": {
-      "type": "integer",
-      "minimum": 1,
-      "default": 1
+      "oneOf": [
+        { "type": "integer", "minimum": 1 },
+        { "type": "null" }
+      ]
     },
     "valid_from": { "type": "string", "format": "date" },
     "valid_until": {

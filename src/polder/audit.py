@@ -177,6 +177,22 @@ CATEGORIES: dict[str, Category] = {
         "abd-directeur hoort onder een directie of agentschap, geen "
         "ministerie. Bewindspersonen onder ministeries.",
     ),
+    "overlapping_open_mandates_different_orgs": Category(
+        "overlapping_open_mandates_different_orgs",
+        "review",
+        "Persoon heeft twee open mandaten (end_date=null) bij organisaties "
+        "die niet in dezelfde parent-keten zitten. Vaak een vergeten "
+        "end_date op het eerste mandaat toen de persoon naar een nieuwe "
+        "functie ging. Soms legitiem (parallelle rollen).",
+    ),
+    "single_seat_both_open": Category(
+        "single_seat_both_open",
+        "review",
+        "Twee personen hebben beide een open mandaat (end_date=null) op "
+        "dezelfde single-seat post (bv. burgemeester, DG, directeur, SG). "
+        "Bijna altijd een vergeten end_date op de uitgaande ambtenaar, "
+        "of twee person-records voor dezelfde persoon (dup).",
+    ),
 }
 
 
@@ -380,6 +396,8 @@ def run_audit(
     _check_post_parent_level(orgs, posts, findings)
     _check_ministerie_direct_children(orgs, findings)
     _check_ministerie_direct_posts(posts, findings)
+    _check_overlapping_open_mandates(persons, org_parent, findings)
+    _check_single_seat_both_open(persons, posts, findings)
 
     report = AuditReport(findings=findings)
 
@@ -1054,6 +1072,123 @@ def _check_ministerie_direct_posts(
                 f"{path.name}: {pid} ({cls}) heeft organization_id={org_id}; "
                 f"alleen bewindspersoon-posten horen direct op een ministerie. "
                 f"Verplaats deze post naar het juiste organisatieonderdeel.",
+            )
+        )
+
+
+def _org_chain(org_id: str, org_parent: dict[str, str]) -> list[str]:
+    """Returns [org_id, parent, grandparent, ..., root]. Stops bij None of cyclus."""
+    chain: list[str] = []
+    seen: set[str] = set()
+    cur: str | None = org_id
+    while cur and cur not in seen:
+        chain.append(cur)
+        seen.add(cur)
+        cur = org_parent.get(cur)
+    return chain
+
+
+def _orgs_in_same_chain(a: str, b: str, org_parent: dict[str, str]) -> bool:
+    """True als a en b in dezelfde parent-keten zitten (een ancestor van de ander)."""
+    if a == b:
+        return True
+    return a in _org_chain(b, org_parent) or b in _org_chain(a, org_parent)
+
+
+def _check_overlapping_open_mandates(
+    persons: list[tuple[Path, dict]],
+    org_parent: dict[str, str],
+    findings: list[Finding],
+) -> None:
+    """Twee open mandaten bij niet-verwante organisaties is verdacht.
+
+    Patroon dat we vangen: persoon X heeft mandaat-1 (start=2020, end=null)
+    bij ministerie A en mandaat-2 (start=2023, end=null) bij ministerie B.
+    Vaak heeft de fetcher de eind-datum van het oude mandaat niet kunnen
+    afleiden uit de aankondiging van het nieuwe.
+
+    Skip: open mandaten bij organisaties in dezelfde parent-keten
+    (sub-onderdeel naast hoofd-onderdeel) — daar zijn parallelle rollen
+    realistisch.
+    """
+    for path, d in persons:
+        pid = d.get("id", path.name)
+        open_mandates = [
+            m
+            for m in d.get("mandaten") or []
+            if isinstance(m, dict) and m.get("end_date") is None and m.get("organization_id")
+        ]
+        if len(open_mandates) < 2:
+            continue
+        # Pair-wise check. Voor de meeste personen zijn dit 2 mandaten,
+        # dus geen kwadratische blow-up.
+        for i in range(len(open_mandates)):
+            for j in range(i + 1, len(open_mandates)):
+                a, b = open_mandates[i], open_mandates[j]
+                a_org = a["organization_id"]
+                b_org = b["organization_id"]
+                if _orgs_in_same_chain(a_org, b_org, org_parent):
+                    continue
+                # Stable key: sorted org-pair zodat we elke paar maar één keer flaggen.
+                key = f"{pid}|{min(a_org, b_org)}|{max(a_org, b_org)}"
+                findings.append(
+                    Finding(
+                        "overlapping_open_mandates_different_orgs",
+                        key,
+                        f"{path.name}: open mandate bij {a_org} (start={a.get('start_date')}) "
+                        f"en bij {b_org} (start={b.get('start_date')}); "
+                        f"check of eerste een vergeten end_date heeft",
+                    )
+                )
+
+
+def _check_single_seat_both_open(
+    persons: list[tuple[Path, dict]],
+    posts: list[tuple[Path, dict]],
+    findings: list[Finding],
+) -> None:
+    """Twee personen met beide een OPEN mandaat op dezelfde single-seat post.
+
+    Sterker patroon dan de validate-WARN voor algemene overlap: als beide
+    end_date=null is, kan er bijna nooit een legitieme verklaring zijn —
+    een van de twee is meestal een vergeten end_date of een dup-person.
+
+    Single-seat: ``post.seat_count == 1`` (expliciet in de YAML).
+    Posts met ``seat_count: null`` of ``> 1`` worden niet geflagd.
+    """
+    single_seat_posts: set[str] = set()
+    for _, d in posts:
+        pid = d.get("id")
+        if not pid:
+            continue
+        if d.get("seat_count") == 1:
+            single_seat_posts.add(pid)
+
+    open_holders: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
+    for path, d in persons:
+        pid = d.get("id", path.name)
+        for m in d.get("mandaten") or []:
+            if not isinstance(m, dict):
+                continue
+            if m.get("end_date") is not None:
+                continue
+            post_id = m.get("post_id")
+            if not post_id or post_id not in single_seat_posts:
+                continue
+            open_holders[post_id].append((pid, m.get("start_date") or "?", path.name))
+
+    for post_id, holders in open_holders.items():
+        if len(holders) < 2:
+            continue
+        # Stable key: post + sorted persons.
+        persons_sorted = sorted(holders, key=lambda t: t[0])
+        person_keys = "|".join(t[0] for t in persons_sorted)
+        descriptions = ", ".join(f"{t[0]} (start={t[1]})" for t in persons_sorted)
+        findings.append(
+            Finding(
+                "single_seat_both_open",
+                f"{post_id}|{person_keys}",
+                f"{post_id}: {len(holders)} personen met open mandaat — {descriptions}",
             )
         )
 
