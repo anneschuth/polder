@@ -26,6 +26,7 @@ from polder.fetchers import (
     logius_cor,
     open_raadsinformatie,
     roo,
+    roo_functies,
     tk_odata,
     tooi,
     wikidata_sparql,
@@ -85,6 +86,20 @@ def fetch_roo(
 ) -> None:
     """ROO: download exportOO.xml en schrijf organisatie-records."""
     _delegate(roo.main, _common_argv(cache, out, limit, dry_run, verbose))
+
+
+@app.command("roo-functies")
+def fetch_roo_functies(
+    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
+    out: Annotated[Path, typer.Option(help="Staging-directory.")] = Path("data/_staging"),
+    verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
+) -> None:
+    """ROO functies + medewerkers: schrijf naar staging-proposals (geen
+    auto-merge). Verwerken via `polder skill resolve-staging`."""
+    argv: list[str] = ["--cache", str(cache), "--out", str(out)]
+    if verbose:
+        argv.append("-v")
+    _delegate(roo_functies.main, argv)
 
 
 @app.command("tk")

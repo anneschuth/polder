@@ -211,9 +211,10 @@ CATEGORIES: dict[str, Category] = {
     "roo_stale_appointment": Category(
         "roo_stale_appointment",
         "review",
-        "ROO noemt een functionaris die volgens Staatscourant/ABD al uit "
-        "functie is. Phase 3 vult dit; voor nu placeholder-categorie zonder "
-        "actieve checker.",
+        "ROO noemt een medewerker die volgens polder al uit functie is "
+        "(end_date in mandaat). Vereist een geresolvde staging-file "
+        "(`polder fetch roo-functies` + `polder skill resolve-staging`); "
+        "checker leest `data/_staging/roo-functies-*.resolved.json`.",
     ),
 }
 
@@ -425,6 +426,8 @@ def run_audit(
     cache = _latest_roo_cache(data_dir.parent)
     if cache is not None:
         _check_roo_superset(orgs, cache, findings)
+    # Stale-appointment check leest een resolved staging-file (Phase 3).
+    _check_roo_stale_appointments(persons, data_dir / "_staging", findings)
 
     report = AuditReport(findings=findings)
 
@@ -1227,6 +1230,77 @@ def _latest_roo_cache(repo_root: Path) -> Path | None:
         return None
     candidates = sorted(cache_dir.glob("roo-export-*.xml"))
     return candidates[-1] if candidates else None
+
+
+def _check_roo_stale_appointments(
+    persons: list[tuple[Path, dict]],
+    staging_dir: Path,
+    findings: list[Finding],
+) -> None:
+    """Lees `data/_staging/roo-functies-*.resolved.json` en flag medewerkers
+    waarvan ROO ze nog actief noemt maar polder een `end_date` heeft.
+
+    Skipt stilletjes als geen resolved staging-file bestaat.
+    """
+    import json as _json
+
+    if not staging_dir.exists():
+        return
+    resolved_files = sorted(staging_dir.glob("roo-functies-*.resolved.json"))
+    if not resolved_files:
+        return
+    latest = resolved_files[-1]
+    try:
+        with latest.open("r", encoding="utf-8") as fh:
+            payload = _json.load(fh)
+    except (OSError, _json.JSONDecodeError):
+        return
+
+    proposals = payload.get("proposals") if isinstance(payload, dict) else payload
+    if not isinstance(proposals, list):
+        return
+
+    # Index polder-mandaten op (person_id, post_id) → end_date.
+    closed_mandaten: dict[tuple[str, str], str] = {}
+    for _, d in persons:
+        pid = d.get("id")
+        if not isinstance(pid, str):
+            continue
+        for m in d.get("mandaten") or []:
+            if not isinstance(m, dict):
+                continue
+            post = m.get("post_id")
+            end = m.get("end_date")
+            if isinstance(post, str) and isinstance(end, str):
+                closed_mandaten[(pid, post)] = end
+
+    for prop in proposals:
+        if not isinstance(prop, dict):
+            continue
+        post_id = prop.get("resolved_post_id")
+        if not isinstance(post_id, str):
+            continue
+        for med in prop.get("medewerkers") or []:
+            if not isinstance(med, dict):
+                continue
+            person_id = med.get("resolved_person_id")
+            if not isinstance(person_id, str):
+                continue
+            end = closed_mandaten.get((person_id, post_id))
+            if end is None:
+                continue
+            roo_end = med.get("end_date")
+            if roo_end and roo_end <= end:
+                # ROO weet ook dat de persoon weg is, geen drift.
+                continue
+            findings.append(
+                Finding(
+                    "roo_stale_appointment",
+                    f"{person_id}|{post_id}",
+                    f"ROO noemt {med.get('naam')!r} nog actief op {post_id}, "
+                    f"maar polder-mandaat heeft end_date={end}",
+                )
+            )
 
 
 def _check_roo_superset(

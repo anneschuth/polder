@@ -104,7 +104,8 @@ uv run polder fetch --help          # 12 fetch-subcommands
 uv run polder skill --help          # Claude Code skills
 
 # data ophalen
-uv run polder fetch roo             # ROO exportOO.xml
+uv run polder fetch roo             # ROO exportOO.xml → data/organisaties/
+uv run polder fetch roo-functies    # ROO functies + medewerkers → data/_staging/ (proposals, geen auto-merge)
 uv run polder fetch tk              # Tweede Kamer OData
 uv run polder fetch all             # alle deterministische fetchers
 

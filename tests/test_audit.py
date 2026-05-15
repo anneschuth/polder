@@ -799,3 +799,122 @@ def test_roo_audit_categories_registered() -> None:
     assert "roo_stale_appointment" in CATEGORIES
     assert CATEGORIES["roo_missing_org"].severity == "error"
     assert CATEGORIES["roo_field_drift"].severity == "review"
+
+
+def test_roo_stale_appointment_fires_when_polder_has_end_date(fake_data: Path) -> None:
+    """ROO listt nog actieve medewerker, polder heeft end_date → roo_stale_appointment."""
+    import json as _json
+
+    # Voeg een gesloten mandaat toe.
+    person_path = fake_data / "personen" / "fired-i-1970.yaml"
+    person_path.write_text(
+        yaml.safe_dump(
+            {
+                "id": "person:fired-i-1970",
+                "name": {"family": "Fired", "initials": "I."},
+                "birth": {"year": 1970},
+                "mandaten": [
+                    {
+                        "id": "m1",
+                        "organization_id": "org:min-test",
+                        "post_id": "post:minister-min-test",
+                        "role": "Minister",
+                        "start_date": "2020-01-01",
+                        "end_date": "2024-01-01",
+                        "confidence": 0.95,
+                        "sources": [
+                            {"id": "test", "url": "https://test", "retrieved": "2026-01-01"}
+                        ],
+                    }
+                ],
+                "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    # Schrijf een resolved staging-file die deze persoon nog actief noemt.
+    staging = fake_data / "_staging"
+    staging.mkdir()
+    (staging / "roo-functies-2026-05-15.resolved.json").write_text(
+        _json.dumps(
+            {
+                "proposals": [
+                    {
+                        "roo_functie_naam": "Minister",
+                        "resolved_post_id": "post:minister-min-test",
+                        "medewerkers": [
+                            {
+                                "naam": "dhr. I. Fired",
+                                "resolved_person_id": "person:fired-i-1970",
+                                # Geen end_date in ROO → ROO denkt nog actief.
+                            }
+                        ],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    report = run_audit(fake_data, today="2026-05-15")
+    stale = [f for f in report.findings if f.category == "roo_stale_appointment"]
+    assert stale, "Verwachtte roo_stale_appointment"
+    assert "person:fired-i-1970" in stale[0].key
+    assert "post:minister-min-test" in stale[0].key
+
+
+def test_roo_stale_appointment_skipped_when_roo_also_ended(fake_data: Path) -> None:
+    """ROO heeft eindDatum die niet later is dan polder → géén drift."""
+    import json as _json
+
+    person_path = fake_data / "personen" / "ok-i-1970.yaml"
+    person_path.write_text(
+        yaml.safe_dump(
+            {
+                "id": "person:ok-i-1970",
+                "name": {"family": "OK", "initials": "I."},
+                "birth": {"year": 1970},
+                "mandaten": [
+                    {
+                        "id": "m1",
+                        "organization_id": "org:min-test",
+                        "post_id": "post:minister-min-test",
+                        "role": "Minister",
+                        "start_date": "2020-01-01",
+                        "end_date": "2024-01-01",
+                        "confidence": 0.95,
+                        "sources": [
+                            {"id": "test", "url": "https://test", "retrieved": "2026-01-01"}
+                        ],
+                    }
+                ],
+                "sources": [{"id": "test", "url": "https://test", "retrieved": "2026-01-01"}],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    staging = fake_data / "_staging"
+    staging.mkdir()
+    (staging / "roo-functies-2026-05-15.resolved.json").write_text(
+        _json.dumps(
+            {
+                "proposals": [
+                    {
+                        "resolved_post_id": "post:minister-min-test",
+                        "medewerkers": [
+                            {
+                                "resolved_person_id": "person:ok-i-1970",
+                                "end_date": "2023-12-31",  # eerder dan polder
+                            }
+                        ],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    report = run_audit(fake_data, today="2026-05-15")
+    assert "roo_stale_appointment" not in _categories_in(report)
