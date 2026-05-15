@@ -131,8 +131,12 @@ def test_default_model_constant() -> None:
     assert DEFAULT_MODEL == "claude-haiku-4-5"
 
 
-def test_constructor_uses_default_for_unknown_skill(patch_popen: type[FakePopen]) -> None:
-    s = SkillSession("parse-abd-nieuws")
+def test_constructor_uses_default_for_skill_without_override(
+    patch_popen: type[FakePopen],
+) -> None:
+    # review-pr-diff bestaat als skill maar staat niet in MODEL_OVERRIDES,
+    # dus moet hij op DEFAULT_MODEL (Haiku 4.5) draaien.
+    s = SkillSession("review-pr-diff")
     assert s.model == DEFAULT_MODEL
 
 
@@ -152,7 +156,7 @@ def test_constructor_explicit_model_wins(patch_popen: type[FakePopen]) -> None:
 
 
 def test_build_cmd_contains_expected_flags(patch_popen: type[FakePopen]) -> None:
-    s = SkillSession("parse-abd-nieuws", max_budget_usd=0.42, fallback_model="claude-sonnet-4-6")
+    s = SkillSession("parse-abd-nieuws", max_budget_usd=0.42, fallback_model="claude-opus-4-7")
     cmd = s._build_cmd()
 
     assert cmd[0] == "claude"
@@ -165,12 +169,13 @@ def test_build_cmd_contains_expected_flags(patch_popen: type[FakePopen]) -> None
     skill_path = cmd[cmd.index("--system-prompt-file") + 1]
     assert skill_path.endswith("parse-abd-nieuws/SKILL.md")
     assert "--model" in cmd
-    assert cmd[cmd.index("--model") + 1] == DEFAULT_MODEL
+    # parse-abd-nieuws zit in MODEL_OVERRIDES → Sonnet, niet de default Haiku
+    assert cmd[cmd.index("--model") + 1] == MODEL_OVERRIDES["parse-abd-nieuws"]
     assert "--no-session-persistence" in cmd
     assert "--max-budget-usd" in cmd
     assert cmd[cmd.index("--max-budget-usd") + 1] == "0.42"
     assert "--fallback-model" in cmd
-    assert cmd[cmd.index("--fallback-model") + 1] == "claude-sonnet-4-6"
+    assert cmd[cmd.index("--fallback-model") + 1] == "claude-opus-4-7"
     assert "--disable-slash-commands" in cmd
 
 

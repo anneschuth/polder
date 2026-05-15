@@ -89,6 +89,67 @@ def abd_nieuws_has_signal(html: str) -> bool:
     return bool(_ABD_NIEUWS_PATTERNS.search(text))
 
 
+_TWITTER_DESC_RE = re.compile(
+    r'<meta\s+name="twitter:description"\s+content="([^"]*)"',
+    re.IGNORECASE,
+)
+
+_CANONICAL_RE = re.compile(
+    r'<link[^>]+rel="canonical"[^>]+href="([^"]+)"',
+    re.IGNORECASE,
+)
+
+# Staatscourant-URL die soms in de body staat als `<a href="...">`. We pakken
+# alle KOOP-officielebekendmakingen-links zodat de skill `staatscourant_url`
+# kan invullen — `html_to_text` gooit `<a href>`-attributen weg.
+_STAATSCOURANT_URL_RE = re.compile(
+    r'href="(https?://[^"]*officielebekendmakingen[^"]*stcrt[^"]*)"',
+    re.IGNORECASE,
+)
+
+# Footer-marker waar de ABD-pagina overgaat van artikel-content naar
+# site-navigatie ("Service Downloads Abonneren Vacatures ..."). Knip de body
+# daar af om ~300 bytes aan boilerplate per bericht te besparen.
+_ABD_FOOTER_MARKER = "Service Downloads Abonneren"
+
+
+def extract_abd_payload(html: str) -> str:
+    """ABD-HTML naar een compacte plain-text payload voor de LLM-call.
+
+    Combineert canonical-URL, `<meta name="twitter:description">` (de
+    gegarandeerde kern-zin van de benoeming), en de body uit `html_to_text`.
+    Footer-boilerplate wordt afgekapt op de eerste site-navigatie-marker.
+    Evt. Staatscourant-link uit `<a href>` wordt apart gezet (html_to_text
+    gooit attributen weg). Geen Unicode-normalisatie of whitespace-collapse:
+    de evidence-substring-assert moet hierop nog steeds slagen.
+    """
+    canonical_match = _CANONICAL_RE.search(html)
+    canonical = canonical_match.group(1).strip() if canonical_match else ""
+
+    desc_match = _TWITTER_DESC_RE.search(html)
+    desc = desc_match.group(1).strip() if desc_match else ""
+
+    stcrt_urls = sorted(set(_STAATSCOURANT_URL_RE.findall(html)))
+
+    body = html_to_text(html)
+    footer_idx = body.find(_ABD_FOOTER_MARKER)
+    if footer_idx > 0:
+        body = body[:footer_idx].rstrip()
+
+    parts = [
+        "CANONICAL_URL:",
+        canonical,
+        "",
+        "TWITTER_DESCRIPTION:",
+        desc,
+        "",
+    ]
+    if stcrt_urls:
+        parts += ["STAATSCOURANT_URLS:", *stcrt_urls, ""]
+    parts += ["BODY:", body]
+    return "\n".join(parts)
+
+
 def staatscourant_has_signal(xml: str) -> bool:
     """True als een Staatscourant XML waarschijnlijk een personeels-besluit is.
 

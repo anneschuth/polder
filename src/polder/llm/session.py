@@ -94,6 +94,10 @@ class SkillResult:
     rate_limited: bool = False
     is_error: bool = False
     error_message: str | None = None
+    response_cache_hit: bool = False
+    """True als runner.run_skill dit resultaat uit de disk-response-cache haalde
+    in plaats van een LLM-call te doen. Onderscheid van Anthropic prompt-cache
+    via cache_read_tokens — die zegt iets over een wél gemaakte LLM-call."""
 
     @property
     def cache_hit(self) -> bool:

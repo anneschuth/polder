@@ -50,7 +50,7 @@ def test_skill_md_frontmatter_required_fields() -> None:
     fm = _parse_frontmatter(_read_skill_md())
     assert fm.get("name") == "parse-abd-nieuws"
     assert fm.get("description")
-    assert fm.get("version") == "0.4.0"
+    assert fm.get("version") == "0.5.0"
     assert isinstance(fm.get("triggers"), list)
     assert len(fm["triggers"]) >= 3
 
