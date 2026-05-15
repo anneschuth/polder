@@ -37,6 +37,21 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(56c9adfa-c7a2-4202-a467-4fa2fa62434d)
     retrieved: '2026-05-13'
+- id: mandate-post-directeur-strategie-en-internationaal-ap-2024-09-01
+  organization_id: org:adviescollege-ap
+  post_id: post:directeur-strategie-en-internationaal-ap
+  role: directeur Strategie en Internationaal, Autoriteit Persoonsgegevens
+  start_date: '2024-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/03/jeroen-kerseboom-directeur-strategie-en-internationaal-bij-autoriteit-persoonsgegevens
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-07-03
+  confidence: 0.9
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(0137f25d-849f-428a-b69b-822301b2274e)

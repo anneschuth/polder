@@ -1,0 +1,45 @@
+id: person:kam-vad-1955
+name:
+  full: Dr. E. (Elske) van Amelsfort-van der Kam
+  family: Kam
+  given: E. van Amelsfort-van der
+  initials: E.V.A.D.
+birth:
+  year: 1955
+mandaten:
+- id: mandate-post-directeur-bav-min-jenv-2021-05-01
+  organization_id: org:onderdeel-directie-bav-min-jenv
+  post_id: post:directeur-bav-min-jenv
+  role: directeur Beschermen, Aanpakken en Voorkomen, ministerie van Justitie en Veiligheid
+  start_date: '2021-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/11/elske-van-amelsfort-directeur-beschermen-aanpakken-en-voorkomen-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-11
+  confidence: 0.92
+- id: mandate-post-directeur-beschermen-aanpakken-en-voorkomen-min-jenv-2021-05-01
+  organization_id: org:onderdeel-directie-beschermen-aanpakken-en-voorkomen-min-jenv
+  post_id: post:directeur-beschermen-aanpakken-en-voorkomen-min-jenv
+  role: directeur Beschermen, Aanpakken en Voorkomen, ministerie van Justitie en Veiligheid
+  start_date: '2021-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/11/elske-van-amelsfort-directeur-beschermen-aanpakken-en-voorkomen-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-11
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/11/elske-van-amelsfort-directeur-beschermen-aanpakken-en-voorkomen-bij-jenv
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
