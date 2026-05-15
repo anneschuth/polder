@@ -30,7 +30,7 @@ from pathlib import Path
 
 import yaml
 
-INIT_SEQ_RX = re.compile(r"^([A-Z]\.(?:[A-Z]\.)+)\b")
+INIT_SEQ_RX = re.compile(r"^((?:[A-Z]\.){2,})")
 SINGLE_INIT_RX = re.compile(r"^[A-Z]\.\s*$")
 
 

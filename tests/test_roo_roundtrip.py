@@ -261,3 +261,20 @@ def test_emit_field_map_renders_markdown_table():
     assert "| 80.00% | 4 / 5 | `/raad/totaalZetels` |" in md
     # 100%-velden bovenaan (sortering op coverage descending).
     assert md.index("`/naam`") < md.index("`/raad/totaalZetels`")
+
+
+def test_emit_field_map_sorts_by_coverage_descending():
+    """Field-map sortering: 100%-velden bovenaan, hoge coverage eerst."""
+    from polder.roo_roundtrip import CoverageReport, emit_field_map
+
+    report = CoverageReport()
+    report.fields["/low"].seen = 100
+    report.fields["/low"].matched = 10
+    report.fields["/high"].seen = 100
+    report.fields["/high"].matched = 100
+    report.fields["/mid"].seen = 100
+    report.fields["/mid"].matched = 50
+
+    md = emit_field_map(report)
+    # /high (100%) staat boven /mid (50%) staat boven /low (10%).
+    assert md.index("`/high`") < md.index("`/mid`") < md.index("`/low`")

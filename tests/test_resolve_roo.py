@@ -413,3 +413,82 @@ def test_resolve_dry_run_does_not_write(tmp_path: Path):
     # Disk niet aangeraakt.
     post = yaml.safe_load((data / "posten" / "minister-min-fin.yaml").read_text())
     assert "roo_functie_id" not in post
+
+
+# ---------------------------------------------------------------------------
+# Helpers (test-gaten dichtmaken)
+# ---------------------------------------------------------------------------
+
+
+def test_compact_initials_strips_punctuation():
+    from polder.resolve_roo import compact_initials
+
+    assert compact_initials("H.J.") == "hj"
+    assert compact_initials("M.F.W.") == "mfw"
+    assert compact_initials("J. P.") == "jp"
+    assert compact_initials("") == ""
+    assert compact_initials(None) == ""
+
+
+def test_slugify_label_basic():
+    from polder.resolve_roo import _slugify_label
+
+    assert _slugify_label("Minister van Financiën") == "minister-van-financien"
+    assert _slugify_label("Foo  Bar") == "foo-bar"
+    assert _slugify_label("") == ""
+    assert _slugify_label("???") == ""
+
+
+def test_roo_org_url_via_resolve_roo_helper():
+    """`_roo_org_url` delegeert naar de centrale `roo_org_url`. Verifieer dat
+    org_id-slug correct wordt geëxtraheerd."""
+    from polder.resolve_roo import _roo_org_url
+
+    assert _roo_org_url("21849", "org:gemeente-helmond") == (
+        "https://organisaties.overheid.nl/21849/gemeente-helmond"
+    )
+    # Geen org_id → fallback `x` (uit roo_org_url).
+    assert _roo_org_url("21849", None) == "https://organisaties.overheid.nl/21849/x"
+    # Geen roo_id → PRIMARY_URL.
+    assert "exportOO.xml" in _roo_org_url(None, "org:foo")
+
+
+def test_atomic_write_yaml_skips_no_op(tmp_path: Path):
+    from polder.resolve_roo import _atomic_write_yaml
+
+    p = tmp_path / "x.yaml"
+    data = {"id": "org:foo", "type": "ministerie"}
+    _atomic_write_yaml(p, data)
+    mtime1 = p.stat().st_mtime_ns
+    # Tweede call met identieke inhoud → geen rewrite.
+    import time
+
+    time.sleep(0.01)
+    _atomic_write_yaml(p, data)
+    mtime2 = p.stat().st_mtime_ns
+    assert mtime1 == mtime2, "no-op write zou file niet moeten aanraken"
+
+
+def test_atomic_write_yaml_replaces_on_change(tmp_path: Path):
+    from polder.resolve_roo import _atomic_write_yaml
+
+    p = tmp_path / "x.yaml"
+    _atomic_write_yaml(p, {"id": "org:foo"})
+    _atomic_write_yaml(p, {"id": "org:bar"})
+    assert "bar" in p.read_text(encoding="utf-8")
+
+
+def test_create_mandaat_id_includes_start_for_uniqueness():
+    """Een tweede medewerker met dezelfde sysid op dezelfde post (andere
+    periode) mag niet collideren met de eerste mandate-id."""
+    from polder.resolve_roo import create_mandaat
+
+    person = {"id": "person:x", "mandaten": []}
+    proposal = {"roo_functie_naam": "X", "parent_roo_id": "5"}
+    med1 = {"roo_medewerker_id": "100", "start_date": "2020-01-01", "end_date": "2022-01-01"}
+    med2 = {"roo_medewerker_id": "100", "start_date": "2024-01-01", "end_date": None}
+    create_mandaat(person, proposal, med1, "post:a", "org:y", today="2026-05-15")
+    create_mandaat(person, proposal, med2, "post:a", "org:y", today="2026-05-15")
+    ids = [m["id"] for m in person["mandaten"]]
+    assert len(ids) == 2
+    assert ids[0] != ids[1], f"mandate-ids moeten uniek zijn: {ids}"

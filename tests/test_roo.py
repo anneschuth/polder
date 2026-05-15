@@ -877,3 +877,63 @@ def test_write_records_idempotent_preserves_local_fields(tmp_path: Path):
     loaded = yaml.safe_load(target.read_text(encoding="utf-8"))
     assert loaded["identifiers"]["wikidata"] == "Q1727053"
     assert loaded["identifiers"]["oin"] == "00000001003214345000"
+
+
+# ---------------------------------------------------------------------------
+# Helpers (test-gaten dichtmaken)
+# ---------------------------------------------------------------------------
+
+
+def test_roo_org_url_helper():
+    """Centrale URL-builder geeft resolvend formaat voor ROO-website."""
+    from polder.fetchers.roo import PRIMARY_URL, roo_org_url
+
+    assert roo_org_url("21849", "gemeente-helmond") == (
+        "https://organisaties.overheid.nl/21849/gemeente-helmond"
+    )
+    # Slug ontbreekt → fallback `x` (anders 404 op ROO-site).
+    assert roo_org_url("21849", "") == "https://organisaties.overheid.nl/21849/x"
+    assert roo_org_url("21849", None) == "https://organisaties.overheid.nl/21849/x"
+    # roo_id ontbreekt → val terug op de export-URL.
+    assert roo_org_url(None, "ignored") == PRIMARY_URL
+
+
+def test_roo_type_to_internal_longest_match_wins():
+    """Substring-fallback moet de langste TYPE_MAP-key prefereren — ongeacht
+    dict-iteratie-volgorde."""
+    # "zelfstandig bestuursorgaan (zbo)" matcht zowel "zbo" als
+    # "zelfstandig bestuursorgaan"; de langste moet winnen.
+    result = roo.roo_type_to_internal("Zelfstandig Bestuursorgaan (ZBO)")
+    assert result is not None
+    assert result[0] == "zbo"
+
+
+def test_parse_export_gr_slug_collision_resolution(tmp_path: Path):
+    """~290 GRs delen een titel met een andere (versies, fusies). Per
+    collision-set moet een -<roo_id>-suffix worden toegevoegd zodat de
+    slugs uniek blijven."""
+    xml_data = b"""<?xml version="1.0" encoding="UTF-8"?>
+    <overheidsorganisaties xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9">
+      <gemeenschappelijkeRegelingen>
+        <regeling p:systeemId="111">
+          <titel>Samenwerking Sociale Zaken 2016</titel>
+          <citeertitel>Samenwerking SZ 2016</citeertitel>
+          <types><type>Gemeenschappelijke regeling</type></types>
+        </regeling>
+        <regeling p:systeemId="222">
+          <titel>Samenwerking Sociale Zaken 2016</titel>
+          <citeertitel>Samenwerking SZ 2016</citeertitel>
+          <types><type>Gemeenschappelijke regeling</type></types>
+        </regeling>
+      </gemeenschappelijkeRegelingen>
+    </overheidsorganisaties>
+    """
+    xml = tmp_path / "export.xml"
+    xml.write_bytes(xml_data)
+    records = roo.parse_export(xml)
+    slugs = sorted(r["_slug"] for r in records)
+    # Beide records moeten een -<roo_id>-suffix hebben gekregen.
+    assert slugs == ["samenwerking-sz-2016-111", "samenwerking-sz-2016-222"]
+    ids = sorted(r["id"] for r in records)
+    assert all("-" in i for i in ids)
+    assert ids[0] != ids[1]
