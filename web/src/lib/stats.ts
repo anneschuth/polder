@@ -138,11 +138,14 @@ export function postsByLabelPrefix(): LabelBucket[] {
   const { posts, mandatesByPost } = loadAll();
   const buckets = new Map<string, LabelBucket>();
   for (const prefix of LABEL_PREFIXES) buckets.set(prefix, { prefix, posts: 0, currentHolders: 0 });
+  // Labels in the data are mostly lowercase ("wethouder X"), so match
+  // case-insensitively against the readable display prefixes.
+  const lowered = LABEL_PREFIXES.map((p) => p.toLowerCase());
   for (const p of posts) {
-    const label = p.label ?? '';
-    for (const prefix of LABEL_PREFIXES) {
-      if (label.startsWith(prefix)) {
-        const b = buckets.get(prefix)!;
+    const label = (p.label ?? '').toLowerCase();
+    for (let i = 0; i < lowered.length; i += 1) {
+      if (label.startsWith(lowered[i])) {
+        const b = buckets.get(LABEL_PREFIXES[i])!;
         b.posts += 1;
         const ms = mandatesByPost.get(p.id) ?? [];
         b.currentHolders += ms.filter((x) => isMandateCurrent(x.mandate)).length;
