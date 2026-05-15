@@ -62,6 +62,7 @@ def run_skill(
     use_cache: bool = True,
     max_budget_usd: float = 1000.0,
     reuse_session: bool = True,
+    timeout_s: float | None = None,
 ) -> SkillResult:
     """Roep een skill aan via een thread-local SkillSession.
 
@@ -107,12 +108,12 @@ def run_skill(
         session = get_or_create_session(
             skill_name, model=effective_model, max_budget_usd=max_budget_usd
         )
-        result = session.call(text_input)
+        result = session.call(text_input, timeout_s=timeout_s)
     else:
         with SkillSession(
             skill_name, model=effective_model, max_budget_usd=max_budget_usd
         ) as session:
-            result = session.call(text_input)
+            result = session.call(text_input, timeout_s=timeout_s)
 
     if use_cache and cache_key is not None:
         response_cache.store(skill_name, cache_key, result)

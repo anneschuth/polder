@@ -240,8 +240,15 @@ class SkillSession:
             return input_payload.read_text(encoding="utf-8")
         return input_payload
 
-    def call(self, input_payload: str | Path) -> SkillResult:
-        """Stuur één user-message, retourneer het resultaat-event."""
+    def call(self, input_payload: str | Path, *, timeout_s: float | None = None) -> SkillResult:
+        """Stuur één user-message, retourneer het resultaat-event.
+
+        `timeout_s`: maximale wallclock voor deze call gemeten vanaf de write
+        van de user-message tot het result-event. Als die verstrijkt, wordt
+        het subprocess gesloten en `TimeoutError` opgegooid. None = geen
+        timeout (default; alleen aan te raden in tests of bij heel korte
+        payloads).
+        """
         if self._proc is None:
             raise RuntimeError("SkillSession is niet open; gebruik als context manager")
         proc = self._proc
@@ -260,19 +267,13 @@ class SkillSession:
                 stderr_tail = self._read_stderr_nonblocking()
                 raise RuntimeError(f"claude -p subprocess broke: {stderr_tail}") from e
 
-            result_event: dict | None = None
-            for line in proc.stdout:
-                line = line.strip()
-                if not line:
-                    continue
-                try:
-                    obj = json.loads(line)
-                except json.JSONDecodeError:
-                    logger.debug("Non-JSON line on claude stdout: %r", line[:200])
-                    continue
-                if obj.get("type") == "result":
-                    result_event = obj
-                    break
+            try:
+                result_event = self._read_result_event(proc, timeout_s)
+            except TimeoutError:
+                # Subprocess hangt nog op stdout-read; sluit hem zodat we geen
+                # claude -p processen blijven lekken bij hangende API-calls.
+                self.close(timeout=2.0)
+                raise
 
         if result_event is None:
             stderr_tail = self._read_stderr_nonblocking()
@@ -286,6 +287,72 @@ class SkillSession:
         result = self._parse_result(result_event)
         self._update_stats(result)
         return result
+
+    def _read_result_event(
+        self, proc: subprocess.Popen[str], timeout_s: float | None
+    ) -> dict | None:
+        """Lees stdout tot we een result-event zien, met optionele wallclock-cap.
+
+        Houdt een aftellende deadline aan via `select`. Tijdens een Anthropic-
+        outage kan een blocking `proc.stdout.readline()` indefinitely hangen;
+        deze variant breekt af zonder de daemon-thread truc.
+        """
+        assert proc.stdout is not None
+        if timeout_s is None:
+            for line in proc.stdout:
+                line = line.strip()
+                if not line:
+                    continue
+                event = self._parse_stdout_line(line)
+                if event is not None:
+                    return event
+            return None
+
+        import select
+        import time
+
+        deadline = time.monotonic() + timeout_s
+        fd = proc.stdout.fileno()
+        buffer = ""
+        while True:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise TimeoutError(
+                    f"SkillSession.call exceeded {timeout_s}s (skill={self.skill_name})"
+                )
+            ready, _, _ = select.select([fd], [], [], remaining)
+            if not ready:
+                raise TimeoutError(
+                    f"SkillSession.call exceeded {timeout_s}s (skill={self.skill_name})"
+                )
+            chunk = proc.stdout.readline()
+            if not chunk:
+                # EOF
+                if buffer.strip():
+                    event = self._parse_stdout_line(buffer.strip())
+                    if event is not None:
+                        return event
+                return None
+            buffer += chunk
+            # Splits op newlines, parse complete regels.
+            while "\n" in buffer:
+                line, buffer = buffer.split("\n", 1)
+                line = line.strip()
+                if not line:
+                    continue
+                event = self._parse_stdout_line(line)
+                if event is not None:
+                    return event
+
+    def _parse_stdout_line(self, line: str) -> dict | None:
+        try:
+            obj = json.loads(line)
+        except json.JSONDecodeError:
+            logger.debug("Non-JSON line on claude stdout: %r", line[:200])
+            return None
+        if obj.get("type") == "result":
+            return obj
+        return None
 
     def _read_stderr_nonblocking(self) -> str:
         """Lees beschikbare stderr zonder te blokkeren. Best-effort."""

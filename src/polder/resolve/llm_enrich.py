@@ -34,52 +34,7 @@ logger = logging.getLogger("polder.resolve.llm_enrich")
 
 _SKILL_NAME = "lookup-person"
 _MIN_PERSON_CONF_FOR_AUTOMERGE = 0.95
-
-
-def _call_with_timeout(runner: Any, skill_name: str, payload: str, timeout_s: float = 180.0) -> Any:
-    """Roep `runner(skill_name, payload)` aan met een hard timeout.
-
-    Anthropic API kan tijdens een outage de stdout-read indefinitely blokkeren.
-    Deze wrapper rendert via een thread en abort als de timeout verstrijkt;
-    de caller behandelt dat als runner-exception.
-    """
-    import threading
-
-    result_holder: dict[str, Any] = {}
-
-    def target() -> None:
-        try:
-            result_holder["value"] = runner(skill_name, payload)
-        except Exception as exc:
-            result_holder["error"] = exc
-
-    thread = threading.Thread(target=target, daemon=True)
-    thread.start()
-    thread.join(timeout_s)
-    if thread.is_alive():
-        raise TimeoutError(f"runner call exceeded {timeout_s}s")
-    if "error" in result_holder:
-        raise result_holder["error"]
-    return result_holder["value"]
-
-
-def _reset_session_for_skill(skill_name: str) -> None:
-    """Sluit de thread-local SkillSession voor `skill_name` zodat de volgende
-    call een fresh subprocess opent. Best-effort; faalt stilletjes als er
-    geen session is."""
-    try:
-        from polder.llm.session import _thread_local
-
-        sessions = getattr(_thread_local, "sessions", None) or {}
-        for key, session in list(sessions.items()):
-            if key[0] == skill_name:
-                try:
-                    session.close()
-                except Exception:
-                    pass
-                sessions.pop(key, None)
-    except Exception:
-        pass
+_RUNNER_TIMEOUT_S = 180.0
 
 
 @dataclass
@@ -490,18 +445,48 @@ def enrich_resolved(
 
         payload = _build_payload(proposal, bucket, data_dir=data_dir)
 
-        # KRITIEK: SESSION PER CALL voor lookup-person.
-        # De stream-json sessie houdt user-messages cumulatief in context.
-        # Als de skill bij case N van slag raakt ("this is the fourth empty
-        # payload in a row, I'm stopping here") zien alle volgende cases
-        # die corruptie ook. We sluiten daarom expliciet na elke call.
-        # Verlies van prompt-cache-winst is acceptabel: correctness > kosten.
+        # SESSION PER CALL voor lookup-person.
+        # 1. De stream-json sessie houdt user-messages cumulatief in context.
+        #    Als de skill bij case N van slag raakt zien alle volgende cases
+        #    die corruptie ook. Verse subprocess per call voorkomt dat.
+        # 2. De runner krijgt een harde timeout. Bij een Anthropic-outage moet
+        #    `SkillSession.call` zelf het hangende subprocess sluiten — anders
+        #    lekken `claude -p` processen weg in de background.
+        #
+        # Beide eisen worden afgedwongen door `reuse_session=False` (context
+        # manager sluit subprocess deterministisch) plus `timeout_s` (interne
+        # select-based deadline op stdout-read; geen daemon-thread truc).
         attempts = 0
         result = None
         while attempts < 2:
             attempts += 1
             try:
-                result = _call_with_timeout(runner, skill_name, payload, timeout_s=180.0)
+                result = runner(
+                    skill_name,
+                    payload,
+                    reuse_session=False,
+                    timeout_s=_RUNNER_TIMEOUT_S,
+                )
+            except TypeError:
+                # Test-mocks accepteren mogelijk geen kwargs.
+                try:
+                    result = runner(skill_name, payload)
+                except Exception as exc:
+                    logger.warning(
+                        "[%d/%d] %s (%s): runner-exception (try %d) %s",
+                        idx_proposal + 1,
+                        len(resolved),
+                        name,
+                        bucket.mode,
+                        attempts,
+                        exc,
+                    )
+                    if attempts >= 2:
+                        stats.skill_errors += 1
+                        enriched.append(proposal)
+                        result = None
+                        break
+                    continue
             except Exception as exc:
                 logger.warning(
                     "[%d/%d] %s (%s): runner-exception (try %d) %s",
@@ -512,7 +497,6 @@ def enrich_resolved(
                     attempts,
                     exc,
                 )
-                _reset_session_for_skill(skill_name)
                 if attempts >= 2:
                     stats.skill_errors += 1
                     enriched.append(proposal)
@@ -525,7 +509,8 @@ def enrich_resolved(
             ):
                 break
 
-            # Error of rate-limit: sluit session, retry met fresh subprocess.
+            # Error of rate-limit: retry met fresh subprocess (volgende loop-
+            # iteratie maakt sowieso een nieuwe via reuse_session=False).
             err_msg = getattr(result, "error_message", None) or ""
             logger.warning(
                 "[%d/%d] %s (%s): try %d failed (is_error=%s rate_limited=%s) msg=%s",
@@ -538,12 +523,6 @@ def enrich_resolved(
                 result.rate_limited,
                 (err_msg or "<none>")[:160],
             )
-            _reset_session_for_skill(skill_name)
-
-        # Sluit altijd de session na deze call (succesvol of niet).
-        # Zo blijft de volgende case onafhankelijk; geen accumulerende
-        # user-message-context die de skill verwart.
-        _reset_session_for_skill(skill_name)
 
         if result is None:
             continue  # exception-pad
