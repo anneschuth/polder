@@ -976,7 +976,12 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     slug = slugify(abbr) if abbr and len(abbr) <= 12 else slugify(name)
     org_id = build_id(prefix, slug)
 
-    source_url = f"https://organisaties.overheid.nl/{roo_id}/" if roo_id else PRIMARY_URL
+    # ROO-site eist een non-empty path-segment ná de roo_id; het pad
+    # `/{roo_id}/` (zonder suffix) geeft 404. We gebruiken de polder-slug
+    # als suffix: stabiel over runs en altijd `[a-z0-9-]+`. De inhoud
+    # van het suffix doet er niet toe — alleen de roo_id telt voor de
+    # ROO-server (verifieerbaar met `curl /21849/x` → 200).
+    source_url = f"https://organisaties.overheid.nl/{roo_id}/{slug}" if roo_id else PRIMARY_URL
 
     name_entry: dict[str, Any] = {"value": name}
     if abbr:
@@ -1151,7 +1156,9 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
     slug = slugify(citeertitel or titel)
     org_id = build_id("gr", slug)
 
-    source_url = f"https://organisaties.overheid.nl/{sysid}/" if sysid else PRIMARY_URL
+    # Zie organisatie-source_url-comment hierboven: ROO eist non-empty
+    # path-segment ná de roo_id. Slug komt uit de citeertitel/titel.
+    source_url = f"https://organisaties.overheid.nl/{sysid}/{slug}" if sysid else PRIMARY_URL
 
     identifiers: dict[str, Any] = {}
     if sysid:

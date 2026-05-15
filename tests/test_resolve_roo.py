@@ -184,7 +184,8 @@ def test_enrich_post_adds_roo_fields(tmp_path: Path):
     assert post["roo_functie_id"] == "12345"
     assert post["roo_naam"] == "X-functie"
     assert post["sources"][0]["id"] == "roo"
-    assert post["sources"][0]["url"] == "https://organisaties.overheid.nl/999/"
+    # ROO eist non-empty path-segment ná de roo_id; we hangen de polder-org-slug eraan.
+    assert post["sources"][0]["url"] == "https://organisaties.overheid.nl/999/y"
 
 
 def test_enrich_post_idempotent(tmp_path: Path):
@@ -225,11 +226,15 @@ def test_confirm_mandaat_appends_roo_source():
         "post_id": "post:a",
         "sources": [{"id": "staatscourant", "url": "https://stc"}],
     }
-    proposal = {"parent_roo_id": "999"}
+    proposal = {"parent_roo_id": "999", "parent_org_id": "org:y"}
     med = {"roo_medewerker_id": "12345"}
     changed = confirm_mandaat(mandaat, proposal, med, today="2026-05-15")
     assert changed is True
-    assert any(s["id"] == "roo" and s["url"].endswith("/12345/") for s in mandaat["sources"])
+    # URL wijst naar de organisatie (medewerker-URLs bestaan niet in ROO);
+    # link tussen bron en specifieke medewerker zit in `roo_medewerker_id=...` field.
+    roo_source = next(s for s in mandaat["sources"] if s["id"] == "roo")
+    assert roo_source["url"] == "https://organisaties.overheid.nl/999/y"
+    assert "roo_medewerker_id=12345" in roo_source["fields"]
     # Idempotent.
     assert confirm_mandaat(mandaat, proposal, med, today="2026-05-15") is False
 

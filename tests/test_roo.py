@@ -141,7 +141,8 @@ def test_parse_organisatie_ministerie():
     assert record["valid_from"] == "2010-10-14"
     assert record["valid_until"] is None
     assert record["sources"][0]["id"] == "roo"
-    assert record["sources"][0]["url"] == "https://organisaties.overheid.nl/9632/"
+    # ROO eist non-empty path-segment ná de roo_id; we hangen de polder-slug eraan.
+    assert record["sources"][0]["url"] == "https://organisaties.overheid.nl/9632/bzk"
     assert record["_sub_folder"] == "ministeries"
     assert record["_slug"] == "bzk"
 

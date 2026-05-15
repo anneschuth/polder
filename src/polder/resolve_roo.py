@@ -49,6 +49,23 @@ logger = logging.getLogger("polder.resolve_roo")
 SOURCE_ID = "roo"
 
 
+def _roo_org_url(parent_roo_id: str | None, parent_org_id: str | None) -> str:
+    """Bouw een resolvende ROO-URL voor een organisatie.
+
+    De ROO-website eist `/<roo_id>/<niet-leeg-segment>` — `/<roo_id>/` zonder
+    suffix geeft 404. We gebruiken de polder-slug (deel na `org:`) als
+    suffix omdat die altijd `[a-z0-9-]+` is en stabiel over runs.
+    Individuele medewerker-URLs bestaan NIET in ROO; we linken altijd naar
+    de org-pagina.
+    """
+    if not parent_roo_id:
+        return "https://organisaties.overheid.nl/"
+    slug = ""
+    if parent_org_id and parent_org_id.startswith("org:"):
+        slug = parent_org_id[len("org:") :]
+    return f"https://organisaties.overheid.nl/{parent_roo_id}/{slug or 'x'}"
+
+
 # ---------------------------------------------------------------------------
 # Name parsing
 # ---------------------------------------------------------------------------
@@ -262,11 +279,7 @@ def enrich_post(
     sources = post_data.get("sources") or []
     has_roo_source = any(isinstance(s, dict) and s.get("id") == SOURCE_ID for s in sources)
     if not has_roo_source:
-        url = (
-            f"https://organisaties.overheid.nl/{proposal.get('parent_roo_id')}/"
-            if proposal.get("parent_roo_id")
-            else "https://organisaties.overheid.nl/"
-        )
+        url = _roo_org_url(proposal.get("parent_roo_id"), post_data.get("organization_id"))
         sources.append(
             {
                 "id": SOURCE_ID,
@@ -295,30 +308,51 @@ def find_open_mandate(person_data: dict, post_id: str) -> dict | None:
 
 
 def confirm_mandaat(mandaat: dict, proposal: dict, medewerker: dict, *, today: str) -> bool:
-    """Voeg `roo:<sysid>` toe aan mandaat.sources[]. Geef True als toegevoegd."""
+    """Voeg ROO-source toe aan mandaat.sources[] met `roo_medewerker_id` als
+    fingerprint-veld. Geef True als toegevoegd of geüpgraded.
+
+    URL wijst naar de organisatie-pagina op organisaties.overheid.nl —
+    individuele medewerker-URLs bestaan niet als publiek pad. De link tussen
+    bron en specifieke medewerker zit in `roo_medewerker_id`.
+
+    Als er al een ROO-source bestaat zonder de medewerker-fingerprint
+    (vroegere resolver-run), upgraden we die in-place.
+    """
     sysid = medewerker.get("roo_medewerker_id")
     if not sysid:
         return False
     sources = mandaat.get("sources") or []
+    fingerprint_field = f"roo_medewerker_id={sysid}"
+    url = _roo_org_url(proposal.get("parent_roo_id"), proposal.get("parent_org_id"))
+
+    # Pad 1: bestaande ROO-source met deze fingerprint → niets te doen.
     for s in sources:
         if (
             isinstance(s, dict)
             and s.get("id") == SOURCE_ID
-            and s.get("url", "").endswith(f"/{sysid}/")
+            and fingerprint_field in (s.get("fields") or [])
         ):
             return False
-    parent_roo = proposal.get("parent_roo_id")
-    url = (
-        f"https://organisaties.overheid.nl/{parent_roo}/medewerker/{sysid}/"
-        if parent_roo
-        else f"https://organisaties.overheid.nl/medewerker/{sysid}/"
-    )
+
+    # Pad 2: bestaande ROO-source ZONDER fingerprint → upgrade in-place.
+    for s in sources:
+        if isinstance(s, dict) and s.get("id") == SOURCE_ID:
+            fields = s.get("fields") or []
+            if fingerprint_field not in fields:
+                fields.append(fingerprint_field)
+            s["fields"] = fields
+            # Update URL ook, voor het geval die nog het oude (404) format had.
+            s["url"] = url
+            s["retrieved"] = today
+            return True
+
+    # Pad 3: geen ROO-source → toevoegen.
     sources.append(
         {
             "id": SOURCE_ID,
             "url": url,
             "retrieved": today,
-            "fields": ["confirmed_current"],
+            "fields": ["confirmed_current", fingerprint_field],
         }
     )
     mandaat["sources"] = sources
@@ -366,12 +400,7 @@ def create_mandaat(
             return False
 
     role = proposal.get("roo_functie_naam") or "Functie"
-    parent_roo = proposal.get("parent_roo_id")
-    src_url = (
-        f"https://organisaties.overheid.nl/{parent_roo}/medewerker/{sysid}/"
-        if parent_roo and sysid
-        else "https://organisaties.overheid.nl/"
-    )
+    src_url = _roo_org_url(proposal.get("parent_roo_id"), parent_org_id)
     mandate_id = f"roo-{sysid}-{post_id.replace(':', '-')}" if sysid else f"roo-{post_id}-{start}"
     new_mandaat: dict[str, Any] = {
         "id": mandate_id,
@@ -386,7 +415,9 @@ def create_mandaat(
                 "id": SOURCE_ID,
                 "url": src_url,
                 "retrieved": today,
-                "fields": ["start_date", "role"],
+                "fields": ["start_date", "role", f"roo_medewerker_id={sysid}"]
+                if sysid
+                else ["start_date", "role"],
             }
         ],
     }
