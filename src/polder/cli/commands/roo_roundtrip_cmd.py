@@ -11,7 +11,7 @@ from typing import Annotated
 
 import typer
 
-from polder.roo_roundtrip import format_report, run_roundtrip
+from polder.roo_roundtrip import emit_field_map, format_report, run_roundtrip
 
 
 def roo_roundtrip(
@@ -30,6 +30,13 @@ def roo_roundtrip(
         int,
         typer.Option("--top", help="Aantal slechtst-scorende velden te tonen."),
     ] = 30,
+    emit_field_map_to: Annotated[
+        Path | None,
+        typer.Option(
+            "--emit-field-map",
+            help="Schrijf veld-mapping markdown naar dit pad (bv. docs/roo_field_map.md).",
+        ),
+    ] = None,
 ) -> None:
     """Round-trip reconstructie-test: verifieer dat élk ROO-leaf-veld in
     polder's YAMLs zit. Print coverage-rapport naar stdout."""
@@ -42,3 +49,8 @@ def roo_roundtrip(
 
     report = run_roundtrip(xml, data)
     typer.echo(format_report(report, top_n=top))
+
+    if emit_field_map_to is not None:
+        emit_field_map_to.parent.mkdir(parents=True, exist_ok=True)
+        emit_field_map_to.write_text(emit_field_map(report), encoding="utf-8")
+        typer.echo(f"\nField-map geschreven naar {emit_field_map_to}", err=True)

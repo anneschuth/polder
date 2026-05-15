@@ -414,6 +414,7 @@ _ADDRESS_FIELD_MAP: dict[str, str] = {
     "regio": "regio",
     "land": "land",
     "terattentievan": "ter_attentie_van",
+    "antwoordnummer": "antwoordnummer",
 }
 
 

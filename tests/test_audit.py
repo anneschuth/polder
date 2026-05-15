@@ -724,3 +724,78 @@ def test_single_seat_check_skips_multi_seat_posts(fake_data: Path) -> None:
 
     report = run_audit(fake_data, today="2026-05-11")
     assert "single_seat_both_open" not in _categories_in(report)
+
+
+# ---------------------------------------------------------------------------
+# Phase 5: ROO superset audit-checks
+# ---------------------------------------------------------------------------
+
+
+_MINI_ROO_XML = b"""<?xml version="1.0" encoding="UTF-8"?>
+<overheidsorganisaties xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9">
+<organisaties>
+  <organisatie p:systeemId="9999">
+    <naam>Ministerie van Test</naam>
+    <types><type>Ministerie</type></types>
+    <datumMutatie>2026-05-15</datumMutatie>
+  </organisatie>
+  <organisatie p:systeemId="8888">
+    <naam>Wij Bestaan Niet In Polder</naam>
+    <types><type>Ministerie</type></types>
+  </organisatie>
+</organisaties>
+</overheidsorganisaties>
+"""
+
+
+def test_roo_missing_org_detects_org_not_in_data(fake_data: Path) -> None:
+    """ROO heeft een org die polder niet heeft → roo_missing_org."""
+    cache = fake_data.parent / "_cache"
+    cache.mkdir()
+    (cache / "roo-export-2026-05-15.xml").write_bytes(_MINI_ROO_XML)
+    report = run_audit(fake_data, today="2026-05-15")
+    cats = _categories_in(report)
+    assert "roo_missing_org" in cats
+    # Polder kent roo_id 9999 niet (de fake_data org heeft geen roo_id), dus
+    # beide ROO-records (9999 én 8888) zijn missend. Specifiek 8888 met de
+    # niet-bestaande naam moet erin zitten.
+    msgs = [f.message for f in report.findings if f.category == "roo_missing_org"]
+    assert any("Wij Bestaan Niet In Polder" in m for m in msgs)
+
+
+def test_roo_field_drift_detects_outdated_last_mutation(fake_data: Path, tmp_path: Path) -> None:
+    """ROO datumMutatie nieuwer dan polder last_mutation → roo_field_drift."""
+    # Voeg roo_id + last_mutation aan de fake org toe, een dag ouder dan ROO.
+    org_path = fake_data / "organisaties" / "ministeries" / "min-test.yaml"
+    org_data = yaml.safe_load(org_path.read_text(encoding="utf-8"))
+    org_data["identifiers"] = {"roo_id": "9999"}
+    org_data["last_mutation"] = "2026-05-14"
+    org_path.write_text(yaml.safe_dump(org_data, sort_keys=False), encoding="utf-8")
+
+    cache = fake_data.parent / "_cache"
+    cache.mkdir()
+    (cache / "roo-export-2026-05-15.xml").write_bytes(_MINI_ROO_XML)
+
+    report = run_audit(fake_data, today="2026-05-15")
+    drift = [f for f in report.findings if f.category == "roo_field_drift"]
+    assert drift, "Verwachtte roo_field_drift voor min-test.yaml"
+    assert "2026-05-14" in drift[0].message
+    assert "2026-05-15" in drift[0].message
+
+
+def test_roo_audit_checks_skipped_without_cache(fake_data: Path) -> None:
+    """Geen `_cache/roo-export-*.xml` → ROO-checks worden stilletjes overgeslagen."""
+    report = run_audit(fake_data, today="2026-05-15")
+    cats = _categories_in(report)
+    assert "roo_missing_org" not in cats
+    assert "roo_field_drift" not in cats
+
+
+def test_roo_audit_categories_registered() -> None:
+    """De drie ROO-categorieën staan in CATEGORIES, dus `polder audit --explain`
+    kan ze tonen."""
+    assert "roo_missing_org" in CATEGORIES
+    assert "roo_field_drift" in CATEGORIES
+    assert "roo_stale_appointment" in CATEGORIES
+    assert CATEGORIES["roo_missing_org"].severity == "error"
+    assert CATEGORIES["roo_field_drift"].severity == "review"

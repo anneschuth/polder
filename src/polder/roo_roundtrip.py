@@ -355,3 +355,32 @@ def format_report(report: CoverageReport, *, top_n: int = 30) -> str:
             lines.append(f"  {org_id}  {path}  {value!r}")
 
     return "\n".join(lines)
+
+
+def emit_field_map(report: CoverageReport) -> str:
+    """Genereer markdown-tabel: ROO XML-pad → coverage-percentage.
+
+    Bedoeld voor `docs/roo_field_map.md`. Per veld: pad, # records waar het
+    voorkomt, # records waar polder het terug kan vinden, percentage. Sortering
+    op coverage descending zodat 100%-velden bovenaan staan en de gaten
+    zichtbaar onderaan.
+    """
+    lines = [
+        "# ROO field-map",
+        "",
+        "Per ROO XML-leaf-element: hoe vaak komt het voor in de export, en in",
+        "hoeveel procent van die gevallen kan polder de waarde terugleveren.",
+        "Gegenereerd door `polder roo-roundtrip --emit-field-map`.",
+        "",
+        f"Totaal velden: **{len(report.fields)}**.",
+        "",
+        "| Coverage | Matched / Seen | XML-pad |",
+        "| ---: | ---: | :--- |",
+    ]
+    sorted_fields = sorted(
+        report.fields.items(),
+        key=lambda kv: (-kv[1].ratio, -kv[1].seen),
+    )
+    for path, cov in sorted_fields:
+        lines.append(f"| {cov.ratio * 100:.2f}% | {cov.matched} / {cov.seen} | `{path}` |")
+    return "\n".join(lines) + "\n"

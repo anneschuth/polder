@@ -193,6 +193,28 @@ CATEGORIES: dict[str, Category] = {
         "Bijna altijd een vergeten end_date op de uitgaande ambtenaar, "
         "of twee person-records voor dezelfde persoon (dup).",
     ),
+    # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
+    # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
+    # cache-bestand staat — dan run je `polder fetch roo` eerst.
+    "roo_missing_org": Category(
+        "roo_missing_org",
+        "error",
+        "Organisatie staat in ROO-export-XML maar niet in data/organisaties/. "
+        "Polder claimt een ROO-superset te zijn; dit zou niet voor mogen komen.",
+    ),
+    "roo_field_drift": Category(
+        "roo_field_drift",
+        "review",
+        "Organisatie's `last_mutation` is ouder bij ons dan in ROO. "
+        "Betekent dat er een daily fetcher-run gemist is.",
+    ),
+    "roo_stale_appointment": Category(
+        "roo_stale_appointment",
+        "review",
+        "ROO noemt een functionaris die volgens Staatscourant/ABD al uit "
+        "functie is. Phase 3 vult dit; voor nu placeholder-categorie zonder "
+        "actieve checker.",
+    ),
 }
 
 
@@ -398,6 +420,11 @@ def run_audit(
     _check_ministerie_direct_posts(posts, findings)
     _check_overlapping_open_mandates(persons, org_parent, findings)
     _check_single_seat_both_open(persons, posts, findings)
+
+    # ROO-superset checks (Phase 5). Skip stilletjes als geen XML-cache.
+    cache = _latest_roo_cache(data_dir.parent)
+    if cache is not None:
+        _check_roo_superset(orgs, cache, findings)
 
     report = AuditReport(findings=findings)
 
@@ -1191,6 +1218,92 @@ def _check_single_seat_both_open(
                 f"{post_id}: {len(holders)} personen met open mandaat — {descriptions}",
             )
         )
+
+
+def _latest_roo_cache(repo_root: Path) -> Path | None:
+    """Vind het meest recente `roo-export-*.xml` in `_cache/`."""
+    cache_dir = repo_root / "_cache"
+    if not cache_dir.exists():
+        return None
+    candidates = sorted(cache_dir.glob("roo-export-*.xml"))
+    return candidates[-1] if candidates else None
+
+
+def _check_roo_superset(
+    orgs: list[tuple[Path, dict]],
+    cache_path: Path,
+    findings: list[Finding],
+) -> None:
+    """Vergelijk polder-orgs met laatste ROO-export-XML.
+
+    Twee categorieën:
+    - `roo_missing_org`: ROO heeft een organisatie die wij niet hebben.
+    - `roo_field_drift`: ROO's `<datumMutatie>` is nieuwer dan onze
+      `last_mutation` — betekent dat de daily fetcher achterloopt.
+    """
+    # Lazy import: lxml is een fetcher-dep en mag de hot path van
+    # `polder audit` (zonder cache) niet vertragen.
+    from lxml import etree
+
+    from polder.fetchers.roo import _attr_systeemid, _localname
+
+    try:
+        tree = etree.parse(str(cache_path))
+    except (OSError, etree.XMLSyntaxError):
+        return
+    root = tree.getroot()
+
+    # Index polder-orgs op roo_id.
+    polder_by_roo_id: dict[str, tuple[Path, dict]] = {}
+    for path, d in orgs:
+        rid = (d.get("identifiers") or {}).get("roo_id")
+        if rid:
+            polder_by_roo_id[str(rid)] = (path, d)
+
+    for org_node in root.iter():
+        local = _localname(org_node.tag).lower()
+        if local not in ("organisatie", "regeling"):
+            continue
+        sysid = _attr_systeemid(org_node)
+        if not sysid:
+            continue
+
+        # Naam voor de error-message.
+        naam = ""
+        for c in org_node:
+            if _localname(c.tag).lower() in ("naam", "titel") and (c.text or "").strip():
+                naam = c.text.strip()
+                break
+
+        if sysid not in polder_by_roo_id:
+            findings.append(
+                Finding(
+                    "roo_missing_org",
+                    f"roo:{sysid}",
+                    f"ROO bevat {naam!r} (roo_id={sysid}) maar polder niet",
+                )
+            )
+            continue
+
+        # Field-drift: vergelijk datumMutatie.
+        roo_mutation = ""
+        for c in org_node:
+            if _localname(c.tag).lower() == "datummutatie" and (c.text or "").strip():
+                roo_mutation = c.text.strip()
+                break
+        if not roo_mutation:
+            continue
+        path, polder_d = polder_by_roo_id[sysid]
+        polder_mutation = polder_d.get("last_mutation")
+        if polder_mutation and roo_mutation > polder_mutation:
+            findings.append(
+                Finding(
+                    "roo_field_drift",
+                    f"roo:{sysid}",
+                    f"{path.name}: polder last_mutation={polder_mutation} "
+                    f"maar ROO datumMutatie={roo_mutation}",
+                )
+            )
 
 
 def summary(report: AuditReport) -> tuple[int, int]:

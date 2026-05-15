@@ -56,7 +56,7 @@ Primaire feeds, deterministisch opgehaald (geen LLM):
 
 | Bron | Endpoint | Formaat | Update | Licentie | Dekking |
 |---|---|---|---|---|---|
-| ROO | `organisaties.overheid.nl`, `api-organisaties.overheid.nl`, dagelijkse `exportOO.xml` | XML/CSV/REST/SRU | dagelijks | CC0 | alle organisatietypes, bestuurders tot SG/DG/burgemeester/dijkgraaf |
+| ROO | `organisaties.overheid.nl`, `api-organisaties.overheid.nl`, dagelijkse `exportOO.xml` | XML/CSV/REST/SRU | dagelijks | CC0 | alle organisatietypes, bestuurders tot SG/DG/burgemeester/dijkgraaf. Polder is een **strict superset**: élk leaf-veld uit ROO komt in YAML terecht (verifieerbaar via `polder roo-roundtrip`). Zie [docs/roo_field_map.md](docs/roo_field_map.md). |
 | TOOI | `standaarden.overheid.nl/tooi`, `identifier.overheid.nl/tooi/id/` | SKOS/RDF | gestaag | CC0 | URI-stelsel voor alle organisatietypes |
 | TK OData | `gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/` | OData v4 + Atom SyncFeed | near-realtime | open | TK-personen, fracties, commissies, vanaf 2008-09-01 |
 | Logius COR | `oinregister.logius.nl`, `portaal.digikoppeling.nl/registers/corApi/` | REST | gestaag | open | OIN per organisatie |

@@ -242,3 +242,22 @@ def test_compare_org_unmatched_recorded():
     _, path, value = report.unmatched_examples[0]
     assert path == "/naam"
     assert value == "Foo"
+
+
+def test_emit_field_map_renders_markdown_table():
+    """`emit_field_map` produceert een markdown-tabel met één rij per veld."""
+    from polder.roo_roundtrip import emit_field_map
+
+    report = CoverageReport()
+    report.fields["/naam"].seen = 10
+    report.fields["/naam"].matched = 10
+    report.fields["/raad/totaalZetels"].seen = 5
+    report.fields["/raad/totaalZetels"].matched = 4
+
+    md = emit_field_map(report)
+    assert "# ROO field-map" in md
+    assert "| Coverage | Matched / Seen | XML-pad |" in md
+    assert "| 100.00% | 10 / 10 | `/naam` |" in md
+    assert "| 80.00% | 4 / 5 | `/raad/totaalZetels` |" in md
+    # 100%-velden bovenaan (sortering op coverage descending).
+    assert md.index("`/naam`") < md.index("`/raad/totaalZetels`")
