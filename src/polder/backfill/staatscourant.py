@@ -1,7 +1,13 @@
 """Backfill voor de parse-staatscourant skill.
 
-Symmetrische tegenhanger van `abd_nieuws.py`. Filtert XMLs met de
-staatscourant pre-filter (kijk naar `<intitule>`) voor de LLM-call.
+Symmetrische tegenhanger van `abd_nieuws.py`. Pipeline per file:
+  1. `prefilters.staatscourant_has_signal(xml)` — skip als `<intitule>`
+     geen benoeming/ontslag-keyword heeft
+  2. `prefilters.extract_staatscourant_payload(xml, filename)` — strip XML
+     tags, behoud intitule + body + KB-referentie + URL
+  3. Verse `SkillSession` per file via `run_skill` — geen conversation-
+     stacking (zie runner.py docstring)
+  4. Response-cache op de extracted payload — herhaalde runs zijn gratis
 """
 
 from __future__ import annotations
@@ -13,9 +19,8 @@ from dataclasses import dataclass, field
 from datetime import date as _date
 from pathlib import Path
 
-from polder.llm import cache as response_cache
 from polder.llm import prefilters
-from polder.llm.session import SkillSession
+from polder.llm.runner import run_skill
 
 logger = logging.getLogger("polder.backfill.staatscourant")
 
@@ -107,18 +112,21 @@ def _write_empty_array(path: Path) -> None:
 
 
 def _process_one(
-    session: SkillSession,
     xml_path: Path,
     staging_dir: Path,
     *,
     use_cache: bool,
-    skill_hash: str,
+    model: str | None,
 ) -> tuple[str, BackfillResult]:
+    """Verwerk één XML-file. Returns ("ok"|"skip"|"hit"|"fail"|"rate_limit", deltas).
+
+    De LLM-call gaat via `run_skill`, die per default een verse SkillSession
+    opent (zie runner.py docstring). Response-cache zit in de runner.
+    """
     deltas = BackfillResult(source="staatscourant")
     output = _staging_path_for(staging_dir, xml_path)
     # Idempotent: als de staging-file van vandaag al bestaat en niet-leeg
-    # is, beschouw als done. Voorkomt dat een retry-loop telkens dezelfde
-    # records opnieuw probeert na rate-limit.
+    # is, beschouw als done.
     if output.exists() and output.stat().st_size > 3:
         deltas.cache_hits = 1
         return "hit", deltas
@@ -129,17 +137,15 @@ def _process_one(
         deltas.pre_filtered = 1
         return "skip", deltas
 
-    if use_cache:
-        raw = xml.encode("utf-8")
-        key = response_cache.cache_key("parse-staatscourant", skill_hash, session.model, raw)
-        cached = response_cache.lookup("parse-staatscourant", key)
-        if cached is not None and not cached.is_error and not cached.rate_limited:
-            output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_text(cached.text, encoding="utf-8")
-            deltas.cache_hits = 1
-            return "hit", deltas
-
-    result = session.call(xml_path)
+    payload = prefilters.extract_staatscourant_payload(xml, source_filename=xml_path.name)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    result = run_skill(
+        "parse-staatscourant",
+        payload,
+        model=model,
+        output=output,
+        use_cache=use_cache,
+    )
     deltas.cost_usd = result.cost_usd
     deltas.input_tokens = result.input_tokens
     deltas.output_tokens = result.output_tokens
@@ -150,14 +156,9 @@ def _process_one(
         return "rate_limit", deltas
     if result.is_error:
         return "fail", deltas
-
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(result.text, encoding="utf-8")
-
-    if use_cache:
-        raw = xml.encode("utf-8")
-        key = response_cache.cache_key("parse-staatscourant", skill_hash, session.model, raw)
-        response_cache.store("parse-staatscourant", key, result)
+    if result.response_cache_hit:
+        deltas.cache_hits = 1
+        return "hit", deltas
     deltas.parsed = 1
     return "ok", deltas
 
@@ -192,39 +193,31 @@ def backfill(
         result.notes.append(f"Geen kandidaten in {cache_dir}")
         return result
 
-    skill_hash = response_cache.skill_content_hash("parse-staatscourant")
-
     if parallel <= 1:
-        with SkillSession("parse-staatscourant", model=model) as session:
-            for path in candidates:
-                status, deltas = _process_one(
-                    session, path, staging_dir, use_cache=use_cache, skill_hash=skill_hash
+        for path in candidates:
+            status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
+            _merge(result, status, deltas)
+            if status == "rate_limit" and abort_on_rate_limit:
+                result.rate_limited = True
+                result.notes.append(
+                    f"rate-limit op {path.name}, afgebroken na {result.parsed} parsed"
                 )
-                _merge(result, status, deltas)
-                if status == "rate_limit" and abort_on_rate_limit:
-                    result.rate_limited = True
-                    result.notes.append(
-                        f"rate-limit op {path.name}, afgebroken na {result.parsed} parsed"
-                    )
-                    break
-                if max_cost_usd is not None and result.cost_usd >= max_cost_usd:
-                    result.notes.append(
-                        f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
-                    )
-                    break
+                break
+            if max_cost_usd is not None and result.cost_usd >= max_cost_usd:
+                result.notes.append(
+                    f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
+                )
+                break
         return result
 
     def worker(paths: list[Path]) -> BackfillResult:
         local = BackfillResult(source="staatscourant")
-        with SkillSession("parse-staatscourant", model=model) as session:
-            for path in paths:
-                status, deltas = _process_one(
-                    session, path, staging_dir, use_cache=use_cache, skill_hash=skill_hash
-                )
-                _merge(local, status, deltas)
-                if status == "rate_limit" and abort_on_rate_limit:
-                    local.rate_limited = True
-                    break
+        for path in paths:
+            status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
+            _merge(local, status, deltas)
+            if status == "rate_limit" and abort_on_rate_limit:
+                local.rate_limited = True
+                break
         return local
 
     chunks = _split_chunks(candidates, parallel)

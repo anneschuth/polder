@@ -1,7 +1,7 @@
 ---
 name: parse-staatscourant
 description: Parse een Staatscourant-publicatie (KB-XML) naar Membership-proposals met evidence_snippet als verifieerbare substring. Gebruik wanneer de gebruiker zegt 'parse staatscourant', 'verwerk KB', 'extract benoemingen', 'lees besluittekst', of in English 'parse staatscourant', 'extract appointments', 'process KB document', of een Staatscourant-XML aanlevert.
-version: 0.2.0
+version: 0.3.0
 triggers:
   - parse staatscourant
   - verwerk KB
@@ -20,9 +20,28 @@ Lees een Staatscourant-publicatie (KB-XML van KOOP / officielebekendmakingen.nl)
 
 ## Input
 
-- Pad naar een XML-bestand, of een XML-string in geheugen.
-- Format: KOOP SRU-response, of een export van zoek.officielebekendmakingen.nl.
-- Optioneel: publicatiedatum en bron-URL als die niet uit het XML komen.
+Een gestructureerde plain-text payload met deze secties (in volgorde):
+
+```
+KB_REFERENCE:
+<bv. stcrt-2024-7691>          (afgeleid uit filename, basis voor decision_reference)
+
+STAATSCOURANT_URL:
+<https://zoek.officielebekendmakingen.nl/stcrt-2024-7691.html>
+
+INTITULE:                       (optioneel, ontbreekt bij sommige besluit-types)
+<titel-zin met datum, kenmerk, type besluit, organisatie>
+
+BODY:
+<plain-text besluit-tekst, regel-per-regel; tabellen als rij-per-rij;
+ NAAM-regels markeren ondertekenaars met voornaam-initialen + achternaam>
+```
+
+- `KB_REFERENCE` is de basis voor `decision_reference` (formatteer als bijv. "Staatscourant nr. 2024-7691")
+- `STAATSCOURANT_URL` gebruikt de skill voor `staatscourant_url`
+- `INTITULE` (als aanwezig) bevat de titel-zin met type besluit en organisatie
+- `BODY` heeft de besluit-tekst zonder XML-attributen, geschikt voor naam/functie/datum-extractie
+- `NAAM:` regels onderaan zijn ondertekenaars (minister/SG/voorzitter), niet de benoemde personen
 
 ## Output
 
@@ -47,23 +66,25 @@ Elk proposal heeft:
 
 ## Stappen voor de LLM
 
-1. Laad XML met `lxml.etree`. Zoek `<gegevens>`, `<tekst>` of `<vrijetekst>` elementen voor de besluitinhoud. Onderwerp staat in `<onderwerp>`, datum in `<datum>` of `<publicatiedatum>`.
-2. Identificeer per KB welke organisatie het betreft. Lees titel, onderwerp en eerste alinea. Match tegen `data/organisaties/` op naam of afkorting.
-3. Voor elke benoeming of ontslag in de tekst:
+1. Lees de payload-secties (`KB_REFERENCE`, `STAATSCOURANT_URL`, optioneel `INTITULE`, `BODY`). De combined payload is je raw text voor de evidence-substring-check.
+2. Identificeer welke organisatie het betreft. Lees `INTITULE` (als aanwezig) en de eerste regels van `BODY` (bv. "De Minister voor Rechtsbescherming,"). Match tegen `data/organisaties/` op naam of afkorting.
+3. Voor elke benoeming of ontslag in `BODY`:
    - Extract persoonsnaam (titulering, voornamen of initialen, achternaam).
-   - Extract functie (Secretaris-Generaal, Directeur-Generaal, plaatsvervangend SG, ...).
+   - Extract functie (Secretaris-Generaal, Directeur-Generaal, plaatsvervangend SG, lid van bestuur X, ...).
    - Extract ingangsdatum: zoek "per <datum>" of "met ingang van <datum>".
-   - Extract KB-referentie: zoek "bij koninklijk besluit van <datum>, nr. <nummer>".
+   - `decision_reference`: combineer `KB_REFERENCE` met datum, bv. "Staatscourant nr. 2024-7691, 28 februari 2024".
+   - `staatscourant_url`: gebruik de waarde uit de payload-sectie.
 4. Stel `organization_id` en `post_id` voor volgens de Polder-conventie. Voor ministeries: `org:min-<afkorting>` (bv. `org:min-def`, `org:min-fin`, `org:min-jenv`, `org:min-bzk`, `org:min-ocw`, `org:min-szw`, `org:min-vws`, `org:min-bz`, `org:min-ienw`, `org:min-lvvn`, `org:min-az`, `org:min-ezk`, `org:min-kgg`). Bewindspersoon-posts: `post:minister-min-<afkorting>` of `post:staatssecretaris-min-<afkorting>`. Een aliassen-fallback in de resolver matcht varianten zoals `org:ministerie-defensie` of `post:minister-defensie` ook op de canonical slug, dus exactheid is geen blocker, maar volg de conventie waar je hem kent.
-5. Bouw het proposal. Confidence-rubriek:
+5. Negeer `NAAM:`-regels onderaan: dat zijn ondertekenaars (minister/SG/voorzitter die het besluit tekent), niet de benoemde personen. Tenzij de ondertekenaar zelf in de body wordt benoemd of ontslagen.
+6. Bouw het proposal. Confidence-rubriek:
    - Volledige naam plus expliciete functie plus expliciete datum plus KB-referentie: 0.95 of hoger.
    - Naam ambigu (twee of meer matches in `data/personen/`): maximaal 0.7, forceert review.
    - KB-referentie ontbreekt of post niet matchbaar: maximaal 0.6.
-6. Substring-check vóór output: `assert evidence_snippet in raw_xml_text`. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
+7. Substring-check vóór output: `assert evidence_snippet in payload_text` waar `payload_text` de complete input-payload is. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
 
 ## Harde regels
 
-1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van het XML. Validator faalt anders.
+1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van de input-payload (INTITULE of BODY). Validator faalt anders.
 2. **Two-source rule.** Een proposal merget alleen automatisch als `confidence` minimaal 0.98 is plus een 7-daags review-window. Anders is een tweede onafhankelijke bron vereist.
 3. **Staging-only.** Schrijf naar `data/_staging/staatscourant-YYYY-MM-DD.json`. Nooit direct naar `data/organisaties/`, `data/personen/` of `data/posten/`.
 4. **Confidence per proposal** als float in [0, 1] met expliciete `confidence_reasoning`.

@@ -5,6 +5,7 @@ from __future__ import annotations
 from polder.llm.prefilters import (
     abd_nieuws_has_signal,
     extract_abd_payload,
+    extract_staatscourant_payload,
     html_to_text,
     staatscourant_has_signal,
 )
@@ -221,3 +222,105 @@ def test_extract_abd_payload_evidence_substring_invariant() -> None:
     assert "Marie de Vries wordt per 1 maart 2024 directeur Wonen" in payload
     assert "ministerie van VRO" in payload
     assert "De benoeming gaat in op 1 maart 2024" in payload
+
+
+# ---------------------------------------------------------------------------
+# extract_staatscourant_payload
+# ---------------------------------------------------------------------------
+
+
+_STCRT_FIXTURE = """<?xml version="1.0" encoding="UTF-8"?>
+<officiele-publicatie>
+  <metadata>
+    <meta name="OVERHEIDop.externMetadataRecord" content="https://example/metadata.xml"/>
+  </metadata>
+  <staatscourant>
+    <intitule>Besluit van de Minister van Financien van 1 maart 2024 (kenmerk 2024-001), houdende benoeming van een directeur</intitule>
+    <regeling>
+      <aanhef>
+        <wie>De Minister van Financien,</wie>
+        <considerans>
+          <considerans.al>Gelet op artikel 1 van de Wet X;</considerans.al>
+        </considerans>
+        <afkondiging>
+          <al>Besluit:</al>
+        </afkondiging>
+      </aanhef>
+      <regeling-tekst>
+        <tekst status="goed">
+          <al>De heer J. Jansen wordt per 1 april 2024 benoemd als directeur Y bij het ministerie van Financien.</al>
+        </tekst>
+      </regeling-tekst>
+      <regeling-sluiting>
+        <ondertekening>
+          <functie>De Minister van Financien,</functie>
+          <naam>
+            <voornaam>S.A.M.</voornaam>
+            <achternaam>Heinen</achternaam>
+          </naam>
+        </ondertekening>
+      </regeling-sluiting>
+    </regeling>
+  </staatscourant>
+</officiele-publicatie>"""
+
+
+def test_extract_staatscourant_payload_includes_intitule_and_body() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "INTITULE:" in payload
+    assert "Besluit van de Minister van Financien van 1 maart 2024" in payload
+    assert "BODY:" in payload
+    assert "De heer J. Jansen wordt per 1 april 2024 benoemd" in payload
+
+
+def test_extract_staatscourant_payload_includes_kb_reference_from_filename() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "KB_REFERENCE:" in payload
+    assert "stcrt-2024-1234" in payload
+    assert "STAATSCOURANT_URL:" in payload
+    assert "https://zoek.officielebekendmakingen.nl/stcrt-2024-1234.html" in payload
+
+
+def test_extract_staatscourant_payload_strips_xml_attributes() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    # Tags en attributen mogen niet in payload zitten
+    assert "<al>" not in payload
+    assert "tabstyle" not in payload
+    assert 'status="goed"' not in payload
+    assert "xsi:noNamespaceSchemaLocation" not in payload
+
+
+def test_extract_staatscourant_payload_marks_signers_as_naam() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "NAAM: S.A.M. Heinen" in payload
+
+
+def test_extract_staatscourant_payload_handles_missing_intitule() -> None:
+    xml = (
+        "<?xml version='1.0'?><officiele-publicatie><staatscourant>"
+        "<regeling><regeling-tekst><tekst><al>besluit body</al></tekst></regeling-tekst></regeling>"
+        "</staatscourant></officiele-publicatie>"
+    )
+    payload = extract_staatscourant_payload(xml, source_filename="stcrt-2024-9999.xml")
+    assert "INTITULE:" not in payload
+    assert "BODY:" in payload
+    assert "besluit body" in payload
+
+
+def test_extract_staatscourant_payload_handles_invalid_xml() -> None:
+    payload = extract_staatscourant_payload(
+        "not valid xml at all <<>>", source_filename="stcrt-2024-1.xml"
+    )
+    # Best-effort: krijg in elk geval KB-ref en URL terug
+    assert "KB_REFERENCE:" in payload
+    assert "stcrt-2024-1" in payload
+
+
+def test_extract_staatscourant_payload_evidence_substring_invariant() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    # Evidence-snippets die de skill kan kiezen, moeten letterlijk in payload staan
+    assert (
+        "De heer J. Jansen wordt per 1 april 2024 benoemd als directeur Y bij het ministerie van Financien."
+        in payload
+    )
+    assert "Besluit van de Minister van Financien van 1 maart 2024" in payload
