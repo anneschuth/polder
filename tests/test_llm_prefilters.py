@@ -324,3 +324,23 @@ def test_extract_staatscourant_payload_evidence_substring_invariant() -> None:
         in payload
     )
     assert "Besluit van de Minister van Financien van 1 maart 2024" in payload
+
+
+def test_extract_staatscourant_payload_handles_xml_comments() -> None:
+    # XML met inline comment en processing-instruction crashte eerst lxml.QName
+    xml = (
+        "<?xml version='1.0'?>"
+        "<?xml-stylesheet href='style.xsl'?>"
+        "<officiele-publicatie>"
+        "<staatscourant>"
+        "<intitule>Test besluit</intitule>"
+        "<regeling><regeling-tekst><tekst>"
+        "<!-- inline comment hier -->"
+        "<al>De heer X benoemd per 1-1-2024.</al>"
+        "</tekst></regeling-tekst></regeling>"
+        "</staatscourant>"
+        "</officiele-publicatie>"
+    )
+    payload = extract_staatscourant_payload(xml, source_filename="stcrt-2024-1.xml")
+    assert "Test besluit" in payload
+    assert "De heer X benoemd per 1-1-2024." in payload

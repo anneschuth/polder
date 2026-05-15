@@ -172,10 +172,14 @@ def extract_staatscourant_payload(xml: str, source_filename: str | None = None) 
             intitule = intitule_el.text.strip()
 
         # Itereer over de besluit-tekst-elementen op volgorde, één regel per
-        # blok-element zodat tabellen leesbaar blijven als rij-per-rij.
+        # blok-element zodat tabellen leesbaar blijven als rij-per-rij. Sla
+        # comments en processing-instructions over (die hebben geen tag-naam
+        # en laten QName crashen).
         stcrt_el = root.find(".//staatscourant")
         body_root = stcrt_el if stcrt_el is not None else root
         for el in body_root.iter():
+            if not isinstance(el.tag, str):
+                continue  # comment, PI, of entity-ref
             tag = etree.QName(el).localname
             if tag == "intitule":
                 continue  # al apart
