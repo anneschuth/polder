@@ -1,0 +1,28 @@
+id: person:zwiers-8f72140a
+name:
+  full: Drs. A. (Astrid) Zwiers
+  family: Zwiers
+  given: A.
+  initials: A.
+mandaten:
+- id: mandate-post-directeur-it-svb-2019-05-20
+  organization_id: org:zbo-svb
+  post_id: post:directeur-it-svb
+  role: directeur IT, Sociale Verzekeringsbank
+  start_date: '2019-05-20'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/21/astrid-zwiers-directeur-it-bij-de-sociale-verzekeringsbank
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-03-21
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/21/astrid-zwiers-directeur-it-bij-de-sociale-verzekeringsbank
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

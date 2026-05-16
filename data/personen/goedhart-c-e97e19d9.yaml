@@ -8,7 +8,8 @@ mandaten:
 - id: mandate-post-directeur-generaal-algemene-bestuursdienst-min-bzk-2024-09-01
   organization_id: org:onderdeel-algemene-bestuursdienst-min-bzk
   post_id: post:directeur-generaal-algemene-bestuursdienst-min-bzk
-  role: directeur-generaal Algemene Bestuursdienst bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  role: directeur-generaal Algemene Bestuursdienst bij het ministerie van Binnenlandse
+    Zaken en Koninkrijksrelaties
   start_date: '2024-09-01'
   end_date: null
   sources:
@@ -23,7 +24,8 @@ mandaten:
 - id: mandate-post-directeur-management-development-rijk-plaatsvervangend-dg-abd-min-bzk-2023-06-01
   organization_id: org:onderdeel-dgabd-min-bzk
   post_id: post:directeur-management-development-rijk-plaatsvervangend-dg-abd-min-bzk
-  role: directeur Management Development Rijk tevens plaatsvervangend directeur-generaal Algemene Bestuursdienst, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  role: directeur Management Development Rijk tevens plaatsvervangend directeur-generaal
+    Algemene Bestuursdienst, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
   start_date: '2023-06-01'
   end_date: null
   sources:
@@ -34,6 +36,22 @@ mandaten:
     - applied_via:apply-staging
   appointment:
     decision: ABD-nieuwsbericht 2023-03-28
+  confidence: 0.92
+- id: mandate-post-dg-algemene-bestuursdienst-min-bzk-2024-09-01
+  organization_id: org:onderdeel-dgabd-min-bzk
+  post_id: post:dg-algemene-bestuursdienst-min-bzk
+  role: directeur-generaal Algemene Bestuursdienst, ministerie van Binnenlandse Zaken
+    en Koninkrijksrelaties
+  start_date: '2024-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/05/24/carry-goedhart-directeur-generaal-algemene-bestuursdienst-bij-bzk
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-05-24
   confidence: 0.92
 sources:
 - id: abd_nieuws

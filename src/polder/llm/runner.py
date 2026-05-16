@@ -1,13 +1,31 @@
 """One-shot convenience-API voor LLM-calls.
 
-`run_skill(...)` bouwt een `SkillSession` op, doet één call, drained. Geen
-cache-reuse-winst, maar wel een cleane API voor `polder skill <naam>` CLI-
-aanroepen en losse scripts. Voor bulk-werk (ingest, backfill) blijft een
-langlevende `SkillSession` per worker-thread efficiënter.
-
+`run_skill(...)` opent per default een verse `SkillSession` per call.
 Combineert de response-cache (`polder.llm.cache`) met de session: bij een
 cache-hit gaat er geen subprocess open en bij een miss wordt het resultaat
 na de call gestored.
+
+LET OP — de oude documentatie claimde dat een langlevende `SkillSession`
+"factor 8 goedkoper" was door Anthropic prompt-cache reuse. Dat klopt niet
+in de praktijk. `SkillSession` heeft `--no-session-persistence`, maar dat
+gaat over disk-persistentie, niet over of het assistant prior messages in
+context houdt. Binnen één lopend `claude -p` proces met stream-json input
+stapelt elke user-message bovenop de vorige. Na N calls zit ALLE prior
+input + responses in conversation-state — `cache_creation_tokens` per
+nieuwe call groeit lineair en domineert de kosten.
+
+Gemeten op parse-abd-nieuws (na payload-extractie ~1.3KB per file):
+- `reuse_session=True`, 5 calls in één SkillSession: $0.157/call gemiddeld
+- `reuse_session=False`, verse SkillSession per call: $0.033/call gemiddeld
+
+Verse SkillSession per call wint factor 5. Subprocess-spawn-overhead (~1s)
+is verwaarloosbaar tegenover output-generation (~10s/call dominant). Voor
+de `polder skill <naam>`-CLI is reuse-winst sowieso nul (één call). Voor
+backfill/ingest geldt dezelfde meting.
+
+`reuse_session=True` is alleen zinvol als je écht meerdere kleine queries
+op precies dezelfde context wilt doen (bv. multi-turn dialog binnen één
+sessie). Voor parse/resolve-skills met variërende payloads: laat het uit.
 """
 
 from __future__ import annotations
@@ -44,6 +62,7 @@ def run_skill(
     use_cache: bool = True,
     max_budget_usd: float = 1000.0,
     reuse_session: bool = True,
+    timeout_s: float | None = None,
 ) -> SkillResult:
     """Roep een skill aan via een thread-local SkillSession.
 
@@ -76,10 +95,12 @@ def run_skill(
             if output is not None and not cached.is_error and not cached.rate_limited:
                 _write_output(output, cached.text, skill_name=skill_name)
             # Disk-cache-hit kost de huidige run niets; overschrijf cost_usd
-            # naar 0 zodat budget-caps en cost-rapportage correct zijn.
+            # naar 0 zodat budget-caps en cost-rapportage correct zijn. Markeer
+            # met response_cache_hit zodat callers cache-hits kunnen tellen
+            # zonder te raden op cost==0.
             from dataclasses import replace
 
-            return replace(cached, cost_usd=0.0)
+            return replace(cached, cost_usd=0.0, response_cache_hit=True)
 
     if reuse_session:
         from polder.llm.session import get_or_create_session
@@ -87,12 +108,12 @@ def run_skill(
         session = get_or_create_session(
             skill_name, model=effective_model, max_budget_usd=max_budget_usd
         )
-        result = session.call(text_input)
+        result = session.call(text_input, timeout_s=timeout_s)
     else:
         with SkillSession(
             skill_name, model=effective_model, max_budget_usd=max_budget_usd
         ) as session:
-            result = session.call(text_input)
+            result = session.call(text_input, timeout_s=timeout_s)
 
     if use_cache and cache_key is not None:
         response_cache.store(skill_name, cache_key, result)

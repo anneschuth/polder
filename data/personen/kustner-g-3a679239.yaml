@@ -1,0 +1,29 @@
+id: person:kustner-g-3a679239
+name:
+  full: Guiny Kustner
+  family: Kustner
+  given: Guiny
+  initials: G.
+mandaten:
+- id: mandate-post-directeur-informatiehuishouding-justid-min-jenv-2023-06-01
+  organization_id: org:onderdeel-directie-informatiehuishouding-justid-min-jenv
+  post_id: post:directeur-informatiehuishouding-justid-min-jenv
+  role: directeur Informatiehuishouding, Justitiële Informatiedienst, ministerie van
+    Justitie en Veiligheid
+  start_date: '2023-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/05/04/guiny-kustner-directeur-informatiehuishouding-justitiele-informatiedienst-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-05-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/05/04/guiny-kustner-directeur-informatiehuishouding-justitiele-informatiedienst-bij-jenv
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

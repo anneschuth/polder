@@ -1,0 +1,29 @@
+id: person:koper-1c875d41
+name:
+  full: Dr. C. (Carola) Koper
+  family: Koper
+  given: C.
+  initials: C.
+mandaten:
+- id: mandate-post-plaatsvervangend-directeur-pbl-min-ienw-2025-11-01
+  organization_id: org:pbl
+  post_id: post:plaatsvervangend-directeur-pbl-min-ienw
+  role: plaatsvervangend directeur Planbureau voor de Leefomgeving, ministerie van
+    Infrastructuur en Waterstaat
+  start_date: '2025-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/09/carola-koper-plaatsvervangend-directeur-planbureau-voor-de-leefomgeving-bij-ienw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-09
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/09/carola-koper-plaatsvervangend-directeur-planbureau-voor-de-leefomgeving-bij-ienw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

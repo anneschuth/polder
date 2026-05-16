@@ -235,6 +235,7 @@ def resolve(
             llm_stats.created_new += file_stats.created_new
             llm_stats.no_match += file_stats.no_match
             llm_stats.quote_or_die_rejected += file_stats.quote_or_die_rejected
+            llm_stats.recomputed += file_stats.recomputed
             llm_stats.total_cost_usd += file_stats.total_cost_usd
 
         out_path = path.parent / (path.stem + ".resolved.json")
@@ -277,4 +278,5 @@ def resolve(
         typer.echo(f"  rate-limited:       {llm_stats.rate_limited}")
         typer.echo(f"  errors:             {llm_stats.skill_errors}")
         typer.echo(f"  skipped-budget:     {llm_stats.skipped_budget}")
+        typer.echo(f"  recomputed:         {llm_stats.recomputed}")
         typer.echo(f"  total-cost-usd:     ${llm_stats.total_cost_usd:.4f}")

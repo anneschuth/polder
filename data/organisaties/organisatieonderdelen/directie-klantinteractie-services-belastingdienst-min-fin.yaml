@@ -1,0 +1,15 @@
+id: org:onderdeel-directie-klantinteractie-services-belastingdienst-min-fin
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-belastingdienst
+names:
+- value: Directie Klantinteractie & Services
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

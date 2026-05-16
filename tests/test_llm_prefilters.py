@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from polder.llm.prefilters import (
     abd_nieuws_has_signal,
+    extract_abd_payload,
+    extract_staatscourant_payload,
     html_to_text,
     staatscourant_has_signal,
 )
@@ -128,3 +130,217 @@ def test_staatscourant_ontslag_with_role() -> None:
 def test_staatscourant_herbenoeming_voorzitter() -> None:
     xml = "<root><intitule>Herbenoeming van de voorzitter</intitule></root>"
     assert staatscourant_has_signal(xml) is True
+
+
+# ---------------------------------------------------------------------------
+# extract_abd_payload
+# ---------------------------------------------------------------------------
+
+
+def test_extract_abd_payload_includes_canonical_and_twitter_desc() -> None:
+    html = (
+        "<html><head>"
+        '<link rel="canonical" href="https://example.nl/nieuws/2024/01/15/jan-jansen"/>'
+        '<meta name="twitter:description" content="Jan Jansen wordt directeur."/>'
+        "</head><body><article>Jan Jansen wordt per 1 februari 2024 directeur "
+        "bij het ministerie.</article></body></html>"
+    )
+    payload = extract_abd_payload(html)
+    assert "CANONICAL_URL:" in payload
+    assert "https://example.nl/nieuws/2024/01/15/jan-jansen" in payload
+    assert "TWITTER_DESCRIPTION:" in payload
+    assert "Jan Jansen wordt directeur." in payload
+    assert "BODY:" in payload
+    assert "1 februari 2024" in payload
+
+
+def test_extract_abd_payload_strips_scripts_and_styles() -> None:
+    html = (
+        '<html><head><meta name="twitter:description" content="kern"/></head>'
+        '<body><script>tracker("benoemd")</script>'
+        "<style>.x{color:red}</style>"
+        "<article>artikel-tekst</article></body></html>"
+    )
+    payload = extract_abd_payload(html)
+    assert "tracker(" not in payload
+    assert "color:red" not in payload
+    assert "artikel-tekst" in payload
+
+
+def test_extract_abd_payload_truncates_at_footer_marker() -> None:
+    html = (
+        '<html><head><meta name="twitter:description" content="kern"/></head>'
+        "<body><article>belangrijke artikel-tekst</article>"
+        "<footer>Service Downloads Abonneren Vacatures Contact</footer>"
+        "</body></html>"
+    )
+    payload = extract_abd_payload(html)
+    assert "belangrijke artikel-tekst" in payload
+    assert "Vacatures" not in payload
+    assert "Contact" not in payload
+
+
+def test_extract_abd_payload_includes_staatscourant_url_when_present() -> None:
+    html = (
+        '<html><head><meta name="twitter:description" content="kern"/></head>'
+        '<body><a href="https://zoek.officielebekendmakingen.nl/stcrt-2024-12345.html">KB</a>'
+        "</body></html>"
+    )
+    payload = extract_abd_payload(html)
+    assert "STAATSCOURANT_URLS:" in payload
+    assert "stcrt-2024-12345" in payload
+
+
+def test_extract_abd_payload_omits_staatscourant_section_when_none() -> None:
+    html = (
+        '<html><head><meta name="twitter:description" content="kern"/></head>'
+        "<body><article>geen staatscourant link hier</article></body></html>"
+    )
+    payload = extract_abd_payload(html)
+    assert "STAATSCOURANT_URLS:" not in payload
+
+
+def test_extract_abd_payload_handles_missing_meta_gracefully() -> None:
+    html = "<html><body><article>alleen body, geen meta tags</article></body></html>"
+    payload = extract_abd_payload(html)
+    assert "CANONICAL_URL:" in payload
+    assert "TWITTER_DESCRIPTION:" in payload
+    assert "alleen body" in payload
+
+
+def test_extract_abd_payload_evidence_substring_invariant() -> None:
+    html = (
+        '<html><head><meta name="twitter:description" '
+        'content="Marie de Vries wordt directeur Wonen bij VRO."/></head>'
+        "<body><article>Marie de Vries wordt per 1 maart 2024 directeur Wonen "
+        "bij het ministerie van VRO. De benoeming gaat in op 1 maart 2024."
+        "</article></body></html>"
+    )
+    payload = extract_abd_payload(html)
+    # Evidence-snippets die de skill zou kunnen kiezen, moeten als letterlijke
+    # substring in de payload staan zodat de quote-or-die assert slaagt.
+    assert "Marie de Vries wordt per 1 maart 2024 directeur Wonen" in payload
+    assert "ministerie van VRO" in payload
+    assert "De benoeming gaat in op 1 maart 2024" in payload
+
+
+# ---------------------------------------------------------------------------
+# extract_staatscourant_payload
+# ---------------------------------------------------------------------------
+
+
+_STCRT_FIXTURE = """<?xml version="1.0" encoding="UTF-8"?>
+<officiele-publicatie>
+  <metadata>
+    <meta name="OVERHEIDop.externMetadataRecord" content="https://example/metadata.xml"/>
+  </metadata>
+  <staatscourant>
+    <intitule>Besluit van de Minister van Financien van 1 maart 2024 (kenmerk 2024-001), houdende benoeming van een directeur</intitule>
+    <regeling>
+      <aanhef>
+        <wie>De Minister van Financien,</wie>
+        <considerans>
+          <considerans.al>Gelet op artikel 1 van de Wet X;</considerans.al>
+        </considerans>
+        <afkondiging>
+          <al>Besluit:</al>
+        </afkondiging>
+      </aanhef>
+      <regeling-tekst>
+        <tekst status="goed">
+          <al>De heer J. Jansen wordt per 1 april 2024 benoemd als directeur Y bij het ministerie van Financien.</al>
+        </tekst>
+      </regeling-tekst>
+      <regeling-sluiting>
+        <ondertekening>
+          <functie>De Minister van Financien,</functie>
+          <naam>
+            <voornaam>S.A.M.</voornaam>
+            <achternaam>Heinen</achternaam>
+          </naam>
+        </ondertekening>
+      </regeling-sluiting>
+    </regeling>
+  </staatscourant>
+</officiele-publicatie>"""
+
+
+def test_extract_staatscourant_payload_includes_intitule_and_body() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "INTITULE:" in payload
+    assert "Besluit van de Minister van Financien van 1 maart 2024" in payload
+    assert "BODY:" in payload
+    assert "De heer J. Jansen wordt per 1 april 2024 benoemd" in payload
+
+
+def test_extract_staatscourant_payload_includes_kb_reference_from_filename() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "KB_REFERENCE:" in payload
+    assert "stcrt-2024-1234" in payload
+    assert "STAATSCOURANT_URL:" in payload
+    assert "https://zoek.officielebekendmakingen.nl/stcrt-2024-1234.html" in payload
+
+
+def test_extract_staatscourant_payload_strips_xml_attributes() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    # Tags en attributen mogen niet in payload zitten
+    assert "<al>" not in payload
+    assert "tabstyle" not in payload
+    assert 'status="goed"' not in payload
+    assert "xsi:noNamespaceSchemaLocation" not in payload
+
+
+def test_extract_staatscourant_payload_marks_signers_as_naam() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    assert "NAAM: S.A.M. Heinen" in payload
+
+
+def test_extract_staatscourant_payload_handles_missing_intitule() -> None:
+    xml = (
+        "<?xml version='1.0'?><officiele-publicatie><staatscourant>"
+        "<regeling><regeling-tekst><tekst><al>besluit body</al></tekst></regeling-tekst></regeling>"
+        "</staatscourant></officiele-publicatie>"
+    )
+    payload = extract_staatscourant_payload(xml, source_filename="stcrt-2024-9999.xml")
+    assert "INTITULE:" not in payload
+    assert "BODY:" in payload
+    assert "besluit body" in payload
+
+
+def test_extract_staatscourant_payload_handles_invalid_xml() -> None:
+    payload = extract_staatscourant_payload(
+        "not valid xml at all <<>>", source_filename="stcrt-2024-1.xml"
+    )
+    # Best-effort: krijg in elk geval KB-ref en URL terug
+    assert "KB_REFERENCE:" in payload
+    assert "stcrt-2024-1" in payload
+
+
+def test_extract_staatscourant_payload_evidence_substring_invariant() -> None:
+    payload = extract_staatscourant_payload(_STCRT_FIXTURE, source_filename="stcrt-2024-1234.xml")
+    # Evidence-snippets die de skill kan kiezen, moeten letterlijk in payload staan
+    assert (
+        "De heer J. Jansen wordt per 1 april 2024 benoemd als directeur Y bij het ministerie van Financien."
+        in payload
+    )
+    assert "Besluit van de Minister van Financien van 1 maart 2024" in payload
+
+
+def test_extract_staatscourant_payload_handles_xml_comments() -> None:
+    # XML met inline comment en processing-instruction crashte eerst lxml.QName
+    xml = (
+        "<?xml version='1.0'?>"
+        "<?xml-stylesheet href='style.xsl'?>"
+        "<officiele-publicatie>"
+        "<staatscourant>"
+        "<intitule>Test besluit</intitule>"
+        "<regeling><regeling-tekst><tekst>"
+        "<!-- inline comment hier -->"
+        "<al>De heer X benoemd per 1-1-2024.</al>"
+        "</tekst></regeling-tekst></regeling>"
+        "</staatscourant>"
+        "</officiele-publicatie>"
+    )
+    payload = extract_staatscourant_payload(xml, source_filename="stcrt-2024-1.xml")
+    assert "Test besluit" in payload
+    assert "De heer X benoemd per 1-1-2024." in payload

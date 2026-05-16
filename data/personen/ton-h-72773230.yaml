@@ -1,0 +1,28 @@
+id: person:ton-h-72773230
+name:
+  full: Hans Ton
+  family: Ton
+  given: Hans
+  initials: H.
+mandaten:
+- id: mandate-post-directeur-aps-nla-min-szw-2026-03-01
+  organization_id: org:onderdeel-directie-aps-nla-min-szw
+  post_id: post:directeur-aps-nla-min-szw
+  role: directeur Analyse, Programmering en Strategie bij de Nederlandse Arbeidsinspectie
+  start_date: '2026-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/20/hans-ton-directeur-analyse-programmering-en-strategie-bij-de-nederlandse-arbeidsinspectie
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-02-20
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/20/hans-ton-directeur-analyse-programmering-en-strategie-bij-de-nederlandse-arbeidsinspectie
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

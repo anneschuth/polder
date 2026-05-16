@@ -1,0 +1,28 @@
+id: person:koopman-a148106e
+name:
+  full: Mr. dr. J. (Jaap) Koopman
+  family: Koopman
+  given: J.
+  initials: J.
+mandaten:
+- id: mandate-post-directeur-publieke-gezondheid-ggd-groningen-2022-04-19
+  organization_id: org:gr-ggd-groningen
+  post_id: post:directeur-publieke-gezondheid-ggd-groningen
+  role: directeur Publieke Gezondheid, GGD Groningen
+  start_date: '2022-04-19'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/jaap-koopman-directeur-publieke-gezondheid-ggd-groningen
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-11
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/jaap-koopman-directeur-publieke-gezondheid-ggd-groningen
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

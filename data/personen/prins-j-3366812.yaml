@@ -25,6 +25,21 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366813
     retrieved: '2026-05-13'
+- id: mandate-post-algemeen-secretaris-directeur-ser-2020-06-01
+  organization_id: org:bes-ser
+  post_id: post:algemeen-secretaris-directeur-ser
+  role: algemeen secretaris/directeur van de Sociaal-Economische Raad (SER)
+  start_date: '2020-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/06/jacqueline-prins-algemeen-secretaris-directeur-sociaal-economische-raad-ser
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-06
+  confidence: 0.91
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366812

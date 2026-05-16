@@ -34,52 +34,7 @@ logger = logging.getLogger("polder.resolve.llm_enrich")
 
 _SKILL_NAME = "lookup-person"
 _MIN_PERSON_CONF_FOR_AUTOMERGE = 0.95
-
-
-def _call_with_timeout(runner: Any, skill_name: str, payload: str, timeout_s: float = 180.0) -> Any:
-    """Roep `runner(skill_name, payload)` aan met een hard timeout.
-
-    Anthropic API kan tijdens een outage de stdout-read indefinitely blokkeren.
-    Deze wrapper rendert via een thread en abort als de timeout verstrijkt;
-    de caller behandelt dat als runner-exception.
-    """
-    import threading
-
-    result_holder: dict[str, Any] = {}
-
-    def target() -> None:
-        try:
-            result_holder["value"] = runner(skill_name, payload)
-        except Exception as exc:
-            result_holder["error"] = exc
-
-    thread = threading.Thread(target=target, daemon=True)
-    thread.start()
-    thread.join(timeout_s)
-    if thread.is_alive():
-        raise TimeoutError(f"runner call exceeded {timeout_s}s")
-    if "error" in result_holder:
-        raise result_holder["error"]
-    return result_holder["value"]
-
-
-def _reset_session_for_skill(skill_name: str) -> None:
-    """Sluit de thread-local SkillSession voor `skill_name` zodat de volgende
-    call een fresh subprocess opent. Best-effort; faalt stilletjes als er
-    geen session is."""
-    try:
-        from polder.llm.session import _thread_local
-
-        sessions = getattr(_thread_local, "sessions", None) or {}
-        for key, session in list(sessions.items()):
-            if key[0] == skill_name:
-                try:
-                    session.close()
-                except Exception:
-                    pass
-                sessions.pop(key, None)
-    except Exception:
-        pass
+_RUNNER_TIMEOUT_S = 180.0
 
 
 @dataclass
@@ -108,6 +63,10 @@ class EnrichStats:
 
     quote_or_die_rejected: int = 0
     """evidence_snippet niet teruggevonden in source-url content; geweigerd."""
+
+    recomputed: int = 0
+    """Al-ge-enrichte proposals waarvan merge_recommendation bij een rerun
+    veranderde door een gewijzigde _recompute_merge-policy (geen skill-call)."""
 
     total_cost_usd: float = 0.0
 
@@ -419,16 +378,84 @@ def _append_note(existing: str, addition: str) -> str:
     return f"{existing}; {addition}"
 
 
+def _chain_supports_org_creation(proposal: dict[str, Any]) -> bool:
+    """True als de organization_chain veilig genoeg is om er via apply
+    nieuwe organisatieonderdelen onder te laten aanmaken.
+
+    Vangnet aan de resolver-kant, bovenop de top-down hardening in
+    `apply._build_chain_create_actions`. Eist een chain van ≥ 2 niveaus
+    waarvan het bovenste niveau een ministerie is. Dat sluit losse,
+    contextloze entries uit zoals `[{level: directie, name: Eurowerkgroep}]`
+    (een EU-gremium, geen NL-overheidseenheid) die anders een parentloos
+    org-record zouden worden.
+    """
+    chain = proposal.get("organization_chain") or proposal.get("organization_chain_inferred")
+    if not isinstance(chain, list) or len(chain) < 2:
+        return False
+    top = chain[0]
+    if not isinstance(top, dict):
+        return False
+    return str(top.get("level", "")).strip().lower() == "ministerie"
+
+
+# Org-resolutie-statussen waarbij de org-zijde veilig genoeg is voor
+# auto-merge, ook als de numerieke org-confidence < 0.95 is. De
+# apply-laag valideert de chain top-down (ministerie moet bestaan,
+# parent-tracking, hiërarchie-check), dus deze statussen + een geldige
+# chain zijn betrouwbaarder dan een vlakke confidence-drempel.
+_SAFE_ORG_METHODS = {
+    "proposal_id_exact",
+    "proposal_id_via_alias",
+    "chain_partial_exact",
+    "chain_partial_via_alias",
+}
+
+
+def _org_side_ok_for_automerge(proposal: dict[str, Any]) -> bool:
+    """True als de org-zijde auto-merge mag, gegeven de resolver-status.
+
+    - org-confidence ≥ 0.95: altijd ok.
+    - status in _SAFE_ORG_METHODS: ok (apply valideert de chain).
+    - org: no_match: alleen ok mét een chain die `_chain_supports_org_creation`
+      passeert (≥ 2 niveaus, ministerie-top). Dubbel slot: hier én in
+      apply._build_chain_create_actions.
+    """
+    rc = proposal.get("resolution_confidence") or {}
+    if float(rc.get("organization") or 0) >= 0.95:
+        return True
+    notes = str(proposal.get("resolution_notes") or "")
+    for token in notes.split(";"):
+        token = token.strip()
+        if not token.startswith("org:"):
+            continue
+        status = token[4:].strip()
+        if status in _SAFE_ORG_METHODS:
+            return True
+        if status == "no_match":
+            return _chain_supports_org_creation(proposal)
+    return False
+
+
 def _recompute_merge(proposal: dict[str, Any]) -> str:
     """Hercompute merge_recommendation na een geslaagde LLM-enrich.
 
-    Eenvoudige policy: alleen als alle drie confidences ≥ 0.95 en er geen
-    propose_post_creation is, kan het auto-merge worden. Anders needs-review.
+    Policy:
+    - `person` confidence is niet-onderhandelbaar: < 0.95 → needs-review.
+      Dit is de kern van de two-source-rule (identiteit moet zeker zijn).
+    - org-zijde mag auto-merge via `_org_side_ok_for_automerge`: ofwel
+      org-confidence ≥ 0.95, ofwel een resolver-status die de apply-laag
+      veilig kan valideren (chain top-down, ministerie-hardening).
+    - post-zijde: post-confidence ≥ 0.95 OF `propose_post_creation` met
+      een door de resolver voorgestelde slug. De create-post-actie in
+      apply heeft een eigen ABD-rol-vs-bewindspersoon-guard als vangnet.
     """
     rc = proposal.get("resolution_confidence") or {}
-    if any(float(rc.get(k) or 0) < 0.95 for k in ("organization", "post", "person")):
+    if float(rc.get("person") or 0) < 0.95:
         return "needs-review"
-    if proposal.get("propose_post_creation"):
+    if not _org_side_ok_for_automerge(proposal):
+        return "needs-review"
+    post_conf = float(rc.get("post") or 0)
+    if post_conf < 0.95 and not proposal.get("propose_post_creation"):
         return "needs-review"
     return "auto-merge"
 
@@ -452,8 +479,11 @@ def enrich_resolved(
     waarde geaccepteerd, omdat de skill zelf al de quote-or-die-rule honoreert
     en re-fetchen per proposal traag is). Tests gebruiken een echte hook.
 
-    Het is veilig om dit op een al-LLM-ge-enriched lijst te draaien (idempotent
-    via `llm_enrich` key — die slaat de pass over).
+    Het is veilig om dit op een al-LLM-ge-enriched lijst te draaien: de dure
+    skill- en Wikidata-calls worden overgeslagen via de `llm_enrich` key.
+    De goedkope `merge_recommendation` wordt wél opnieuw afgeleid met de
+    huidige `_recompute_merge`-policy, zodat een policy-wijziging propageert
+    bij een rerun zonder de hele enrich-machinerie opnieuw te draaien.
     """
     if runner is None:
         from polder.llm.runner import run_skill
@@ -472,6 +502,20 @@ def enrich_resolved(
             enriched.append(proposal)
             continue
         if "llm_enrich" in proposal:
+            # Dure delen overslaan, maar de merge_recommendation opnieuw
+            # afleiden met de actuele policy. Alleen voor proposals waar
+            # de eerdere enrich een zekere persoon-match opleverde
+            # (person-confidence ≥ _MIN_PERSON_CONF_FOR_AUTOMERGE) — dat
+            # is exact het contract waaronder _recompute_merge in de
+            # normale flow draait (zie de call-sites in _apply_*). Een
+            # eerdere no_match (person 0.0) blijft onaangeroerd.
+            rc = proposal.get("resolution_confidence") or {}
+            if float(rc.get("person") or 0) >= _MIN_PERSON_CONF_FOR_AUTOMERGE:
+                recomputed = _recompute_merge(proposal)
+                if recomputed != proposal.get("merge_recommendation"):
+                    proposal = dict(proposal)
+                    proposal["merge_recommendation"] = recomputed
+                    stats.recomputed += 1
             enriched.append(proposal)
             continue
 
@@ -490,18 +534,48 @@ def enrich_resolved(
 
         payload = _build_payload(proposal, bucket, data_dir=data_dir)
 
-        # KRITIEK: SESSION PER CALL voor lookup-person.
-        # De stream-json sessie houdt user-messages cumulatief in context.
-        # Als de skill bij case N van slag raakt ("this is the fourth empty
-        # payload in a row, I'm stopping here") zien alle volgende cases
-        # die corruptie ook. We sluiten daarom expliciet na elke call.
-        # Verlies van prompt-cache-winst is acceptabel: correctness > kosten.
+        # SESSION PER CALL voor lookup-person.
+        # 1. De stream-json sessie houdt user-messages cumulatief in context.
+        #    Als de skill bij case N van slag raakt zien alle volgende cases
+        #    die corruptie ook. Verse subprocess per call voorkomt dat.
+        # 2. De runner krijgt een harde timeout. Bij een Anthropic-outage moet
+        #    `SkillSession.call` zelf het hangende subprocess sluiten — anders
+        #    lekken `claude -p` processen weg in de background.
+        #
+        # Beide eisen worden afgedwongen door `reuse_session=False` (context
+        # manager sluit subprocess deterministisch) plus `timeout_s` (interne
+        # select-based deadline op stdout-read; geen daemon-thread truc).
         attempts = 0
         result = None
         while attempts < 2:
             attempts += 1
             try:
-                result = _call_with_timeout(runner, skill_name, payload, timeout_s=180.0)
+                result = runner(
+                    skill_name,
+                    payload,
+                    reuse_session=False,
+                    timeout_s=_RUNNER_TIMEOUT_S,
+                )
+            except TypeError:
+                # Test-mocks accepteren mogelijk geen kwargs.
+                try:
+                    result = runner(skill_name, payload)
+                except Exception as exc:
+                    logger.warning(
+                        "[%d/%d] %s (%s): runner-exception (try %d) %s",
+                        idx_proposal + 1,
+                        len(resolved),
+                        name,
+                        bucket.mode,
+                        attempts,
+                        exc,
+                    )
+                    if attempts >= 2:
+                        stats.skill_errors += 1
+                        enriched.append(proposal)
+                        result = None
+                        break
+                    continue
             except Exception as exc:
                 logger.warning(
                     "[%d/%d] %s (%s): runner-exception (try %d) %s",
@@ -512,7 +586,6 @@ def enrich_resolved(
                     attempts,
                     exc,
                 )
-                _reset_session_for_skill(skill_name)
                 if attempts >= 2:
                     stats.skill_errors += 1
                     enriched.append(proposal)
@@ -525,7 +598,8 @@ def enrich_resolved(
             ):
                 break
 
-            # Error of rate-limit: sluit session, retry met fresh subprocess.
+            # Error of rate-limit: retry met fresh subprocess (volgende loop-
+            # iteratie maakt sowieso een nieuwe via reuse_session=False).
             err_msg = getattr(result, "error_message", None) or ""
             logger.warning(
                 "[%d/%d] %s (%s): try %d failed (is_error=%s rate_limited=%s) msg=%s",
@@ -538,12 +612,6 @@ def enrich_resolved(
                 result.rate_limited,
                 (err_msg or "<none>")[:160],
             )
-            _reset_session_for_skill(skill_name)
-
-        # Sluit altijd de session na deze call (succesvol of niet).
-        # Zo blijft de volgende case onafhankelijk; geen accumulerende
-        # user-message-context die de skill verwart.
-        _reset_session_for_skill(skill_name)
 
         if result is None:
             continue  # exception-pad

@@ -1,0 +1,28 @@
+id: person:ruseler-l-c59ad350
+name:
+  full: Linda Ruseler
+  family: Ruseler
+  given: Linda
+  initials: L.
+mandaten:
+- id: mandate-post-directeur-drz-min-fin-2025-05-01
+  organization_id: org:onderdeel-drz-min-fin
+  post_id: post:directeur-drz-min-fin
+  role: directeur Domeinen Roerende Zaken, ministerie van Financiën
+  start_date: '2025-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/10/linda-ruseler-directeur-domeinen-roerende-zaken-bij-financien
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-02-10
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/10/linda-ruseler-directeur-domeinen-roerende-zaken-bij-financien
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

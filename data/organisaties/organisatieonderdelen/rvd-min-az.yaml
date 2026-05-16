@@ -1,0 +1,15 @@
+id: org:onderdeel-rvd-min-az
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-az
+names:
+- value: Rijksvoorlichtingsdienst (RVD)
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/12/21/freek-manche-plaatsvervangend-directeur-generaal-rvd
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

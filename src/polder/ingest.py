@@ -375,11 +375,24 @@ def _default_skill_runner(
     from polder.llm.runner import run_skill
 
     logger.info("skill=%s input=%s output=%s", skill_name, input_payload, output)
-    # Skills die tools gebruiken (Read, Bash, WebFetch) hebben per call een
-    # schone subprocess nodig; session-reuse na een tool-call leidt tot
-    # is_error=True bij de volgende job in dezelfde thread.
-    _TOOL_HEAVY_SKILLS = {"parse-organogram", "lookup-person"}
-    reuse_session = skill_name not in _TOOL_HEAVY_SKILLS
+    # Twee redenen om reuse_session uit te zetten:
+    #
+    # 1. Tool-heavy skills (Read, Bash, WebFetch): session-reuse na een
+    #    tool-call leidt tot is_error=True bij de volgende job in dezelfde
+    #    thread.
+    # 2. Skills met variërende payloads (parse-*): conversation-state stapelt
+    #    binnen één SkillSession ongeacht --no-session-persistence. Na N calls
+    #    zit alle prior input + output in context, en cache_creation per call
+    #    blijft groeien. Gemeten: $0.157/call met reuse vs $0.033/call zonder
+    #    op parse-abd-nieuws na de payload-extractie. Factor 5 goedkoper en
+    #    de wallclock blijft gelijk (subprocess-spawn ~1s, output-generation
+    #    ~10s, dominant).
+    _NO_SESSION_REUSE = {
+        "parse-organogram",
+        "lookup-person",
+        "parse-abd-nieuws",
+    }
+    reuse_session = skill_name not in _NO_SESSION_REUSE
     result = run_skill(
         skill_name,
         input_payload,
@@ -451,7 +464,8 @@ def run_parse_job(
         if not prefilters.abd_nieuws_has_signal(html):
             _empty_array(job.output_path)
             return SkillRunResult(ok=True, exit_code=0)
-        return runner("parse-abd-nieuws", job.input_path, output=job.output_path, model=model)
+        payload = prefilters.extract_abd_payload(html)
+        return runner("parse-abd-nieuws", payload, output=job.output_path, model=model)
 
     if source == "staatscourant":
         xml = job.input_path.read_text(encoding="utf-8")

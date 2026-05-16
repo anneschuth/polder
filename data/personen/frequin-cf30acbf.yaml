@@ -1,0 +1,28 @@
+id: person:frequin-cf30acbf
+name:
+  full: L. (Liduine) M. Frequin
+  family: Frequin
+  given: L. M.
+  initials: L.M.
+mandaten:
+- id: mandate-post-afdelingshoofd-sso-switch-belastingdienst-2023-01-01
+  organization_id: org:onderdeel-sso-switch-belastingdienst
+  post_id: post:afdelingshoofd-sso-switch-belastingdienst
+  role: afdelingshoofd Shared Service Organisatie Switch, Belastingdienst
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/11/liduine-frequin-afdelingshoofd-shared-service-organisatie-switch-bij-de-belastingdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-11
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/11/liduine-frequin-afdelingshoofd-shared-service-organisatie-switch-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:goet-abe9594e
+name:
+  full: Drs. J.C. (Jan-Kees) Goet
+  family: Goet
+  given: J.C.
+  initials: J.
+mandaten:
+- id: mandate-post-secretaris-generaal-min-lnv-2018-06-15
+  organization_id: org:min-landbouw-natuur-en-voedselkwaliteit-2024
+  post_id: post:secretaris-generaal-min-lnv
+  role: secretaris-generaal, ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2018-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/04/20/jan-kees-goet-secretaris-generaal-bij-lnv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-04-20
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/04/20/jan-kees-goet-secretaris-generaal-bij-lnv
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

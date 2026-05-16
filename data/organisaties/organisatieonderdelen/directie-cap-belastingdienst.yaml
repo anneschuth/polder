@@ -1,0 +1,15 @@
+id: org:onderdeel-directie-cap-belastingdienst
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-belastingdienst
+names:
+- value: directie Centrale Administratieve Processen (CAP)
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/27/karin-christophersen-algemeen-directeur-centrale-administratieve-processen-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

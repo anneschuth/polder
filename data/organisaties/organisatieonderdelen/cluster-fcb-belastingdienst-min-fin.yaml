@@ -1,0 +1,15 @@
+id: org:onderdeel-cluster-fcb-belastingdienst-min-fin
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-belastingdienst
+names:
+- value: cluster Financiën, Control & Beheersing
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/14/benoemingen-erik-broekroelofs-en-mariska-plomp-in-hoofdstructuur-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

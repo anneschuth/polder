@@ -20,6 +20,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2024-10-25
   confidence: 0.91
+- id: mandate-post-waarnemend-dg-migratie-min-jenv-2026-02-23
+  organization_id: org:onderdeel-dg-migratie-min-jenv
+  post_id: post:waarnemend-dg-migratie-min-jenv
+  role: waarnemend directeur-generaal Migratie, ministerie van Justitie en Veiligheid
+  start_date: '2026-02-23'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/17/emine-ozyenici-waarnemend-directeur-generaal-migratie-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-02-17
+  confidence: 0.89
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/25/emine-ozyenici-plaatsvervangend-secretaris-generaal-jenv

@@ -1,7 +1,7 @@
 ---
 name: parse-abd-nieuws
 description: Parse een ABD-nieuwsbericht (HTML van algemenebestuursdienst.nl/actueel/nieuws) naar Membership-proposals met evidence_snippet als verifieerbare substring en organization_chain (ministerie, DG, directie, afdeling). Gebruik wanneer de gebruiker zegt 'parse abd-nieuws', 'verwerk abd-bericht', 'extract benoeming uit abd', 'lees abd-nieuwsbericht', of in English 'parse abd news', 'extract appointments from abd', 'process abd article'.
-version: 0.4.0
+version: 0.5.0
 triggers:
   - parse abd-nieuws
   - verwerk abd-bericht
@@ -24,9 +24,29 @@ Lees een nieuwsbericht van `algemenebestuursdienst.nl/actueel/nieuws/...` (HTML)
 
 ## Input
 
-- Pad naar een HTML-bestand uit `_cache/abd-nieuws/<slug>-<date>.html`, of een HTML-string in geheugen.
-- De bron-URL leid je af uit `<meta name="DCTERMS.identifier">` of `<link rel="canonical">`.
-- Datum komt uit de URL-pad (`/YYYY/MM/DD/`) en wordt bevestigd door `Nieuwsbericht DD-MM-YYYY` in de body.
+Een gestructureerde plain-text payload met deze secties (in volgorde):
+
+```
+CANONICAL_URL:
+<absolute URL van het nieuwsbericht>
+
+TWITTER_DESCRIPTION:
+<éénregelige samenvatting van de benoeming, hoogste signaal-dichtheid>
+
+STAATSCOURANT_URLS:           (optioneel, alleen als er Staatscourant-links in het bericht staan)
+<URL 1>
+<URL 2>
+...
+
+BODY:
+<plain-text artikel-tekst, footer-boilerplate al afgekapt>
+```
+
+- `CANONICAL_URL` is de waarde voor `abd_nieuws_url` in elk proposal.
+- `TWITTER_DESCRIPTION` is de gegarandeerde kern-zin: hieruit haal je in de meeste gevallen `person_name`, `role`, `organization`, en `start_date`.
+- `STAATSCOURANT_URLS` (als aanwezig) levert `staatscourant_url`. Als de sectie ontbreekt, is `staatscourant_url` null.
+- `BODY` bevat de volledige artikel-tekst voor extra context: KB-referentie, opvolging, CV-zinnen, datum-bevestiging via `Nieuwsbericht DD-MM-YYYY`.
+- Datum leid je af uit het URL-pad in `CANONICAL_URL` (`/YYYY/MM/DD/`) of uit `BODY`.
 
 ## Output
 
@@ -48,11 +68,11 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 - `event_type` (string): één van `benoeming`, `ontslag`, `verlenging`, `aankondiging`, `overig`.
 - `confidence` (float, 0 tot 1).
 - `confidence_reasoning` (string): welke signalen meetelden, en welke ontbreken.
-- `evidence_snippet` (string): letterlijke substring uit de artikel-tekst met de feiten.
+- `evidence_snippet` (string): letterlijke substring uit de payload (uit `TWITTER_DESCRIPTION` of `BODY`) met de feiten.
 
 ## Stappen voor de LLM
 
-1. Laad de HTML. Pak de body-tekst (meestal in `<article>` of `<main>`). Bewaar de raw plain-text voor de substring-check.
+1. Lees de payload-secties (`CANONICAL_URL`, `TWITTER_DESCRIPTION`, evt. `STAATSCOURANT_URLS`, `BODY`). De combined payload is je raw text voor de evidence-substring-check; `evidence_snippet` MOET een letterlijke substring van de payload zijn (whitespace en interpunctie meetellen).
 2. Identificeer organisatie en post. Lees titel, eerste alinea en de "bij <organisatie>" suffix. Stel slugs voor volgens de Polder-conventie: ministeries als `org:min-<afkorting>` (`org:min-jenv`, `org:min-fin`, `org:min-bzk`, ...), DG/directie/afdeling als `org:onderdeel-<slug>-min-<min-slug>`. De resolver matcht varianten (`ministerie-X`, `minister-X`) achteraf op de canonical slug, dus exactheid is geen blocker; volg de conventie waar je hem kent.
 3. Zoek benoemings- en ontslagpatronen. ABD-berichten volgen meestal één van deze sjablonen:
    - **Standaard benoeming**: "X wordt [met ingang van <datum>] <functie> bij/onderdeel van <organisatieketen>. ... De benoeming gaat in op <datum>."
@@ -81,7 +101,7 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
    - "verlengd", "wordt herbenoemd": `verlenging`.
    - Persbericht zonder concrete persoon-functie-koppeling (jaarverslag, ABD-blad): `overig` met confidence-cap 0.4.
 6. Bepaal `confidence` volgens de regels in "Confidence-bepaling" hieronder.
-7. Substring-check vóór output: `assert evidence_snippet in raw_html_text`. Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
+7. Substring-check vóór output: `assert evidence_snippet in payload_text` waar `payload_text` de complete input-payload is (alle secties samen). Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
 
 ## Confidence-bepaling
 
@@ -136,7 +156,7 @@ Beide vallen boven de 0.85-drempel en zijn auto-mergeable in `apply-staging`.
 
 ## Harde regels
 
-1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van de gedownloade artikel-HTML. Validator faalt anders.
+1. **Quote-or-die.** `evidence_snippet` is een letterlijke substring van de input-payload (TWITTER_DESCRIPTION of BODY). Validator faalt anders.
 2. **Two-source rule.** Een proposal uit alleen ABD-nieuws krijgt confidence-cap 0.94 (was 0.85 in v0.3.0). Met expliciete KB-link of staatscourant-URL in de tekst mag de cap naar 0.97. Boven 0.97 vereist een derde onafhankelijke bron.
 3. **Staging-only.** Schrijf naar `data/_staging/abd-nieuws-YYYY-MM-DD.json`. Nooit direct naar `data/personen/`, `data/organisaties/` of `data/posten/`.
 4. **Geen privé-data.** Alleen functie en naam en datum. Geen geboortedatum (alleen jaartal als die elders al vaststaat), geen contactgegevens, nooit BSN.

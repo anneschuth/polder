@@ -1,0 +1,77 @@
+id: person:koop-e-8f2c53ea
+name:
+  full: Edwin Koop
+  family: Koop
+  given: Edwin
+  initials: E.
+mandaten:
+- id: mandate-post-lid-hoofddirectie-plaatsvervangend-dg-uitvoering-ind-min-jenv-2023-10-01
+  organization_id: org:agentschap-ind
+  post_id: post:lid-hoofddirectie-plaatsvervangend-dg-uitvoering-ind-min-jenv
+  role: lid hoofddirectie Immigratie- en Naturalisatiedienst, tevens plaatsvervangend
+    directeur-generaal Uitvoering, ministerie van Justitie en Veiligheid
+  start_date: '2023-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/29/edwin-koop-lid-hoofddirectie-ind-tevens-plaatsvervangend-dg-uitvoering-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-09-29
+  confidence: 0.9
+- id: mandate-post-plaatsvervangend-dg-uitvoering-min-jenv-2023-10-01
+  organization_id: org:min-jenv
+  post_id: post:plaatsvervangend-dg-uitvoering-min-jenv
+  role: plaatsvervangend directeur-generaal met de portefeuille Uitvoering, ministerie
+    van Justitie en Veiligheid
+  start_date: '2023-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/29/edwin-koop-lid-hoofddirectie-ind-tevens-plaatsvervangend-dg-uitvoering-bij-jenv
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-09-29
+  confidence: 0.89
+- id: mandate-post-directeur-regulier-verblijf-en-nederlanderschap-ind-2018-12-01
+  organization_id: org:onderdeel-directie-regulier-verblijf-en-nederlanderschap-ind
+  post_id: post:directeur-regulier-verblijf-en-nederlanderschap-ind
+  role: directeur Regulier Verblijf en Nederlanderschap, Immigratie- en Naturalisatiedienst
+    (IND), ministerie van Justitie en Veiligheid
+  start_date: '2018-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/15/edwin-koop-directeur-regulier-verblijf-en-nederlanderschap-bij-de-ind
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-10-15
+  confidence: 0.92
+- id: mandate-post-directeur-regulier-verblijf-en-nederlanderschap-ind-min-jenv-2018-12-01
+  organization_id: org:onderdeel-ind-min-jenv
+  post_id: post:directeur-regulier-verblijf-en-nederlanderschap-ind-min-jenv
+  role: directeur Regulier Verblijf en Nederlanderschap bij de Immigratie- en Naturalisatiedienst
+    (IND) bij het ministerie van Justitie en Veiligheid
+  start_date: '2018-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/15/edwin-koop-directeur-regulier-verblijf-en-nederlanderschap-bij-de-ind
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-10-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/29/edwin-koop-lid-hoofddirectie-ind-tevens-plaatsvervangend-dg-uitvoering-bij-jenv
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

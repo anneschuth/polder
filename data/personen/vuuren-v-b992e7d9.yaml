@@ -1,0 +1,28 @@
+id: person:vuuren-v-b992e7d9
+name:
+  full: Drs. A. E. (Arnold) van Vuuren
+  family: Vuuren
+  given: A. E. van
+  initials: A.E.V.
+mandaten:
+- id: mandate-post-directeur-omgevingsdienst-regio-utrecht-2020-01-01
+  organization_id: org:gr-odru
+  post_id: post:directeur-omgevingsdienst-regio-utrecht
+  role: directeur, Omgevingsdienst regio Utrecht
+  start_date: '2020-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/arnold-van-vuuren-directeur-omgevingsdienst-regio-utrecht
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-06
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/arnold-van-vuuren-directeur-omgevingsdienst-regio-utrecht
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

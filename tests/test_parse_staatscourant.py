@@ -54,9 +54,9 @@ def test_skill_md_frontmatter_required_fields() -> None:
     assert fm.get("version"), "version is verplicht"
 
 
-def test_skill_md_version_is_0_2_0() -> None:
+def test_skill_md_version_is_0_3_0() -> None:
     fm = _parse_frontmatter(_read_skill_md())
-    assert fm["version"] == "0.2.0", "SKILL.md moet versie 0.2.0 zijn"
+    assert fm["version"] == "0.3.0", "SKILL.md moet versie 0.3.0 zijn"
 
 
 def test_skill_md_no_em_dashes() -> None:

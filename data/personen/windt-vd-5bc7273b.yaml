@@ -1,0 +1,45 @@
+id: person:windt-vd-5bc7273b
+name:
+  full: Drs. F.A. (Florien) van der Windt
+  family: Windt
+  given: F.A. van der
+  initials: F.V.D.
+mandaten:
+- id: mandate-post-afdelingshoofd-verkeersveiligheid-wegvervoer-min-ienw-2019-07-22
+  organization_id: org:onderdeel-afdeling-verkeersveiligheid-wegvervoer-min-ienw
+  post_id: post:afdelingshoofd-verkeersveiligheid-wegvervoer-min-ienw
+  role: afdelingshoofd Verkeersveiligheid bij het ministerie van Infrastructuur en
+    Waterstaat
+  start_date: '2019-07-22'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/18/florien-van-der-windt-afdelingshoofd-verkeersveiligheid-en-wegvervoer-bij-ienw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-18
+  confidence: 0.89
+- id: mandate-post-afdelingshoofd-verkeersveiligheid-en-wegvervoer-min-ienw-2019-07-22
+  organization_id: org:onderdeel-afdeling-verkeersveiligheid-en-wegvervoer-min-ienw
+  post_id: post:afdelingshoofd-verkeersveiligheid-en-wegvervoer-min-ienw
+  role: afdelingshoofd Verkeersveiligheid bij het ministerie van Infrastructuur en
+    Waterstaat
+  start_date: '2019-07-22'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/18/florien-van-der-windt-afdelingshoofd-verkeersveiligheid-en-wegvervoer-bij-ienw
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-18
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/18/florien-van-der-windt-afdelingshoofd-verkeersveiligheid-en-wegvervoer-bij-ienw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

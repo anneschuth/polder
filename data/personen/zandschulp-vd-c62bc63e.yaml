@@ -1,0 +1,29 @@
+id: person:zandschulp-vd-c62bc63e
+name:
+  full: Drs. M. (Marjolijn) van de Zandschulp
+  family: Zandschulp
+  given: M. van de
+  initials: M.V.D.
+mandaten:
+- id: mandate-post-hid-rws-oost-nederland-min-ienw-2021-01-01
+  organization_id: org:onderdeel-rws-oost-nederland-min-ienw
+  post_id: post:hid-rws-oost-nederland-min-ienw
+  role: hoofdingenieur-directeur bij Rijkswaterstaat Oost-Nederland, ministerie van
+    Infrastructuur en Waterstaat
+  start_date: '2021-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/10/14/marjolijn-van-de-zandschulp-hoofdingenieur-directeur-bij-rijkswaterstaat-oost-nederland
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-10-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/10/14/marjolijn-van-de-zandschulp-hoofdingenieur-directeur-bij-rijkswaterstaat-oost-nederland
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

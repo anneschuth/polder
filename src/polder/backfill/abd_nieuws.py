@@ -1,9 +1,15 @@
 """Backfill voor de parse-abd-nieuws skill.
 
-Vervangt `scripts/reparse_abd_nieuws.sh` en helpers. Doelgebruik: alle gedownloade
-ABD-nieuwsberichten opnieuw door de huidige skill halen na een schema- of
-skill-tweak. Anthropic's prompt-cache binnen één `SkillSession` plus de
-response-cache zorgen dat dit goedkoop is.
+Vervangt `scripts/reparse_abd_nieuws.sh` en helpers. Doelgebruik: alle
+gedownloade ABD-nieuwsberichten opnieuw door de huidige skill halen na een
+schema- of skill-tweak.
+
+Pipeline per file:
+  1. `prefilters.abd_nieuws_has_signal(html)` — skip als geen personeels-signaal
+  2. `prefilters.extract_abd_payload(html)` — ~1.3KB plain text ipv ~204KB ruw
+  3. Verse `SkillSession` per file — geen conversation-stacking, cache_creation
+     blijft constant ~10K (skill-prompt) per call ipv groeiend tot 80K+
+  4. Response-cache op de extracted payload — herhaalde runs zijn gratis
 """
 
 from __future__ import annotations
@@ -15,9 +21,8 @@ from dataclasses import dataclass, field
 from datetime import date as _date
 from pathlib import Path
 
-from polder.llm import cache as response_cache
 from polder.llm import prefilters
-from polder.llm.session import SkillSession
+from polder.llm.runner import run_skill
 
 logger = logging.getLogger("polder.backfill.abd_nieuws")
 
@@ -113,14 +118,18 @@ def _write_empty_array(path: Path) -> None:
 
 
 def _process_one(
-    session: SkillSession,
     html_path: Path,
     staging_dir: Path,
     *,
     use_cache: bool,
-    skill_hash: str,
+    model: str | None,
 ) -> tuple[str, BackfillResult]:
-    """Verwerk één HTML-file. Returns ("ok"|"skip"|"hit"|"fail"|"rate_limit", deltas)."""
+    """Verwerk één HTML-file. Returns ("ok"|"skip"|"hit"|"fail"|"rate_limit", deltas).
+
+    De LLM-call gaat via `run_skill`, die per default een verse SkillSession
+    opent (zie runner.py docstring). Response-cache zit in de runner; bij een
+    hit doet hij geen subprocess en kost de call $0.
+    """
     deltas = BackfillResult(source="abd-nieuws")
     output = _staging_path_for(staging_dir, html_path)
     # Idempotent: als de staging-file van vandaag al bestaat en niet-leeg
@@ -136,17 +145,15 @@ def _process_one(
         deltas.pre_filtered = 1
         return "skip", deltas
 
-    if use_cache:
-        raw = html.encode("utf-8")
-        key = response_cache.cache_key("parse-abd-nieuws", skill_hash, session.model, raw)
-        cached = response_cache.lookup("parse-abd-nieuws", key)
-        if cached is not None and not cached.is_error and not cached.rate_limited:
-            output.parent.mkdir(parents=True, exist_ok=True)
-            output.write_text(cached.text, encoding="utf-8")
-            deltas.cache_hits = 1
-            return "hit", deltas
-
-    result = session.call(html_path)
+    payload = prefilters.extract_abd_payload(html)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    result = run_skill(
+        "parse-abd-nieuws",
+        payload,
+        model=model,
+        output=output,
+        use_cache=use_cache,
+    )
     deltas.cost_usd = result.cost_usd
     deltas.input_tokens = result.input_tokens
     deltas.output_tokens = result.output_tokens
@@ -157,14 +164,9 @@ def _process_one(
         return "rate_limit", deltas
     if result.is_error:
         return "fail", deltas
-
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(result.text, encoding="utf-8")
-
-    if use_cache:
-        raw = html.encode("utf-8")
-        key = response_cache.cache_key("parse-abd-nieuws", skill_hash, session.model, raw)
-        response_cache.store("parse-abd-nieuws", key, result)
+    if result.response_cache_hit:
+        deltas.cache_hits = 1
+        return "hit", deltas
     deltas.parsed = 1
     return "ok", deltas
 
@@ -184,10 +186,10 @@ def backfill(
 ) -> BackfillResult:
     """Run parse-abd-nieuws op alle gefilterde HTMLs.
 
-    Bij `parallel > 1` worden N parallelle `SkillSession`-instances opgezet,
-    elk met eigen prompt-cache. Bij `parallel == 1` profiteert één sessie
-    maximaal van Anthropic's prompt-cache; dat is meestal goedkoper per call
-    maar duurt langer.
+    Elke file gaat via `run_skill` (verse SkillSession per call). Bij
+    `parallel > 1` werken N threads op disjuncte chunks. Anthropic prompt-
+    cache hergebruikt het skill-prompt-block over calls heen (intra-process
+    cache, geen winst van langlevende SkillSession — zie runner.py).
     """
     cache_dir = repo_root / "_cache" / "abd-nieuws"
     staging_dir = repo_root / "data" / "_staging"
@@ -205,40 +207,31 @@ def backfill(
         result.notes.append(f"Geen kandidaten in {cache_dir}")
         return result
 
-    skill_hash = response_cache.skill_content_hash("parse-abd-nieuws")
-
     if parallel <= 1:
-        with SkillSession("parse-abd-nieuws", model=model) as session:
-            for path in candidates:
-                status, deltas = _process_one(
-                    session, path, staging_dir, use_cache=use_cache, skill_hash=skill_hash
+        for path in candidates:
+            status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
+            _merge(result, status, deltas)
+            if status == "rate_limit" and abort_on_rate_limit:
+                result.rate_limited = True
+                result.notes.append(
+                    f"rate-limit op {path.name}, afgebroken na {result.parsed} parsed"
                 )
-                _merge(result, status, deltas)
-                if status == "rate_limit" and abort_on_rate_limit:
-                    result.rate_limited = True
-                    result.notes.append(
-                        f"rate-limit op {path.name}, afgebroken na {result.parsed} parsed"
-                    )
-                    break
-                if max_cost_usd is not None and result.cost_usd >= max_cost_usd:
-                    result.notes.append(
-                        f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
-                    )
-                    break
+                break
+            if max_cost_usd is not None and result.cost_usd >= max_cost_usd:
+                result.notes.append(
+                    f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
+                )
+                break
         return result
 
-    # parallel > 1: één sessie per worker
     def worker(paths: list[Path]) -> BackfillResult:
         local = BackfillResult(source="abd-nieuws")
-        with SkillSession("parse-abd-nieuws", model=model) as session:
-            for path in paths:
-                status, deltas = _process_one(
-                    session, path, staging_dir, use_cache=use_cache, skill_hash=skill_hash
-                )
-                _merge(local, status, deltas)
-                if status == "rate_limit" and abort_on_rate_limit:
-                    local.rate_limited = True
-                    break
+        for path in paths:
+            status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
+            _merge(local, status, deltas)
+            if status == "rate_limit" and abort_on_rate_limit:
+                local.rate_limited = True
+                break
         return local
 
     chunks = _split_chunks(candidates, parallel)

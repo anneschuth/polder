@@ -1,0 +1,29 @@
+id: person:berentsen-g-c71f46cc
+name:
+  full: Gerald Berentsen
+  family: Berentsen
+  given: Gerald
+  initials: G.
+mandaten:
+- id: mandate-post-directeur-iv-data-security-mkb-belastingdienst-min-fin-2025-03-01
+  organization_id: org:onderdeel-directie-iv-data-security-mkb-belastingdienst-min-fin
+  post_id: post:directeur-iv-data-security-mkb-belastingdienst-min-fin
+  role: directeur Informatievoorziening, Data & Security midden- en kleinbedrijf,
+    Belastingdienst, ministerie van Financiën
+  start_date: '2025-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/21/gerald-berentsen-directeur-informatievoorziening-data--security-midden--en-kleinbedrijf-bij-de-belastingdienst
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-02-21
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/21/gerald-berentsen-directeur-informatievoorziening-data--security-midden--en-kleinbedrijf-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

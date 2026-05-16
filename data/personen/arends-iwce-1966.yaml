@@ -1,0 +1,30 @@
+id: person:arends-iwce-1966
+name:
+  full: Prof. dr. I.W.C.E. (Isabel) Arends
+  family: Arends
+  given: Isabel
+  initials: I.W.C.E.
+birth:
+  year: 1966
+mandaten:
+- id: mandate-post-directeur-generaal-rivm-2026-04-01
+  organization_id: org:agentschap-rivm
+  post_id: post:directeur-generaal-rivm
+  role: directeur-generaal RIVM, ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2026-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/isabel-arends-directeur-generaal-rivm-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-12-19
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/isabel-arends-directeur-generaal-rivm-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

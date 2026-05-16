@@ -1,0 +1,29 @@
+id: person:lazeroms-d5cb00ac
+name:
+  full: Drs. J.P.M. (José) Lazeroms
+  family: Lazeroms
+  given: J.P.M.
+  initials: J.
+mandaten:
+- id: mandate-post-programma-directeur-generaal-nafase-covid-19-2022-09-05
+  organization_id: org:abdtopconsult
+  post_id: post:programma-directeur-generaal-nafase-covid-19
+  role: programma-directeur-generaal Nafase COVID-19 (departement overstijgend, vanuit
+    ABDTOPConsult)
+  start_date: '2022-09-05'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/02/jose-lazeroms-programma-directeur-generaal-nafase-covid-19
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-09-02
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/02/jose-lazeroms-programma-directeur-generaal-nafase-covid-19
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

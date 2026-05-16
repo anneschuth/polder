@@ -17,6 +17,12 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q39447567#P39
     retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-2040
+    retrieved: '2026-05-15'
+    fields:
+    - end_date
+    - applied_via:apply-staging
   end_date: '2024-01-10'
 sources:
 - id: wikidata

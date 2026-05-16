@@ -1,0 +1,15 @@
+id: org:onderdeel-data-center-services-belastingdienst-min-fin
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:agentschap-belastingdienst
+names:
+- value: Data Center Services (DCS)
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/26/harald-langereis-afdelingshoofd-basis-infrastructuur-diensten-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

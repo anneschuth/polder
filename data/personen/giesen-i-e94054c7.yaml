@@ -1,0 +1,29 @@
+id: person:giesen-i-e94054c7
+name:
+  full: Ivo Giesen
+  family: Giesen
+  given: Ivo
+  initials: I.
+mandaten:
+- id: mandate-post-directeur-wodc-2024-09-09
+  organization_id: org:onderdeel-wodc
+  post_id: post:directeur-wodc
+  role: directeur Wetenschappelijk Onderzoek- en Datacentrum (WODC), ministerie van
+    Justitie en Veiligheid
+  start_date: '2024-09-09'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/05/23/ivo-giesen-directeur-wetenschappelijk-onderzoek--en-datacentrum
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-05-23
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/05/23/ivo-giesen-directeur-wetenschappelijk-onderzoek--en-datacentrum
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

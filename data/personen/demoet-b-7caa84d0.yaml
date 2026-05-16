@@ -1,0 +1,45 @@
+id: person:demoet-b-7caa84d0
+name:
+  full: Bob Demoet
+  family: Demoet
+  given: Bob
+  initials: B.
+mandaten:
+- id: mandate-post-hid-ppo-rws-min-ienw-2021-12-01
+  organization_id: org:onderdeel-rws-ppo-min-ienw
+  post_id: post:hid-ppo-rws-min-ienw
+  role: hoofdingenieur-directeur Programma's Projecten en Onderhoud, Rijkswaterstaat,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-19
+  confidence: 0.91
+- id: mandate-post-hoofdingenieur-directeur-ppo-rijkswaterstaat-min-ienw-2021-12-01
+  organization_id: org:onderdeel-hid-ppo-rijkswaterstaat-min-ienw
+  post_id: post:hoofdingenieur-directeur-ppo-rijkswaterstaat-min-ienw
+  role: hoofdingenieur-directeur (HID) Programma's Projecten en Onderhoud (PPO), Rijkswaterstaat,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-19
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

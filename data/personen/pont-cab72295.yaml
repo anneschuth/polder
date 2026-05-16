@@ -1,0 +1,29 @@
+id: person:pont-cab72295
+name:
+  full: Mr. B.C. (Bert) Pont
+  family: Pont
+  given: B.C.
+  initials: B.
+mandaten:
+- id: mandate-post-directeur-financien-facilitair-corporate-dienst-rws-min-ienw-2018-07-16
+  organization_id: org:onderdeel-corporate-dienst-rws-min-ienw
+  post_id: post:directeur-financien-facilitair-corporate-dienst-rws-min-ienw
+  role: directeur Financiën en Facilitair, Corporate Dienst, Rijkswaterstaat, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2018-07-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/25/bert-pont-directeur-financien-en-facilitair-bij-rijkswaterstaat
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-05-25
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/25/bert-pont-directeur-financien-en-facilitair-bij-rijkswaterstaat
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

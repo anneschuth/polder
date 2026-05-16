@@ -1,0 +1,29 @@
+id: person:beekvelt-v-c95dc5ce
+name:
+  full: B.P. (Bregje) van Beekvelt
+  family: Beekvelt
+  given: B.P. van
+  initials: B.V.
+mandaten:
+- id: mandate-post-directeur-netwerkontwikkeling-rws-west-nederland-noord-min-ienw-2020-04-01
+  organization_id: org:onderdeel-directie-netwerkontwikkeling-rws-wnn-min-ienw
+  post_id: post:directeur-netwerkontwikkeling-rws-west-nederland-noord-min-ienw
+  role: directeur Netwerkontwikkeling, Rijkswaterstaat West-Nederland Noord, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/bregje-van-beekvelt-directeur-netwerkontwikkeling-bij-rijkswaterstaat-west-nederland-noord
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-30
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/bregje-van-beekvelt-directeur-netwerkontwikkeling-bij-rijkswaterstaat-west-nederland-noord
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

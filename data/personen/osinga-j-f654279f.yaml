@@ -1,0 +1,28 @@
+id: person:osinga-j-f654279f
+name:
+  full: Johan Osinga
+  family: Osinga
+  given: Johan
+  initials: J.
+mandaten:
+- id: mandate-post-provinciesecretaris-algemeen-directeur-provincie-gelderland-2025-01-01
+  organization_id: org:prov-ge
+  post_id: post:provinciesecretaris-algemeen-directeur-provincie-gelderland
+  role: provinciesecretaris/algemeen directeur provincie Gelderland
+  start_date: '2025-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/20/johan-osinga-provinciesecretaris-algemeen-directeur-provincie-gelderland
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-12-20
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/20/johan-osinga-provinciesecretaris-algemeen-directeur-provincie-gelderland
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

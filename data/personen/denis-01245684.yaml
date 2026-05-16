@@ -1,0 +1,28 @@
+id: person:denis-01245684
+name:
+  full: Drs. J.C.L.J. (Jolanda) Denis
+  family: Denis
+  given: J.C.L.J.
+  initials: J.
+mandaten:
+- id: mandate-post-directeur-hr-ontwikkeling-gemeente-rotterdam-2021-03-01
+  organization_id: org:gemeente-rotterdam
+  post_id: post:directeur-hr-ontwikkeling-gemeente-rotterdam
+  role: directeur Human Resources en Ontwikkeling bij de gemeente Rotterdam
+  start_date: '2021-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/12/jolanda-denis-directeur-human-resources-en-ontwikkeling-bij-de-gemeente-rotterdam
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-01-12
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/12/jolanda-denis-directeur-human-resources-en-ontwikkeling-bij-de-gemeente-rotterdam
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,29 @@
+id: person:wallet-d-613cd936
+name:
+  full: Dirk Wallet
+  family: Wallet
+  given: Dirk
+  initials: D.
+mandaten:
+- id: mandate-post-directeur-bedrijfsvoering-op-rijk-min-bzk-2025-10-01
+  organization_id: org:onderdeel-businessunit-bedrijfsvoering-op-rijk-min-bzk
+  post_id: post:directeur-bedrijfsvoering-op-rijk-min-bzk
+  role: directeur Bedrijfsvoering, Organisatie en Personeel Rijk, ministerie van Binnenlandse
+    Zaken en Koninkrijksrelaties
+  start_date: '2025-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/19/dirk-wallet-directeur-bedrijfsvoering-bij-organisatie-en-personeel-rijk-bzk
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-19
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/19/dirk-wallet-directeur-bedrijfsvoering-bij-organisatie-en-personeel-rijk-bzk
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

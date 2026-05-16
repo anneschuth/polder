@@ -1,0 +1,28 @@
+id: person:nijhuis-1930c969
+name:
+  full: I. (Ivar) Nijhuis
+  family: Nijhuis
+  given: I.
+  initials: I.
+mandaten:
+- id: mandate-post-dg-rijksvoorlichtingsdienst-min-az-2025-05-01
+  organization_id: org:onderdeel-rvd-min-az
+  post_id: post:dg-rijksvoorlichtingsdienst-min-az
+  role: directeur-generaal Rijksvoorlichtingsdienst, ministerie van Algemene Zaken
+  start_date: '2025-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/14/ivar-nijhuis-directeur-generaal-rijksvoorlichtingsdienst-bij-az
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-14
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/14/ivar-nijhuis-directeur-generaal-rijksvoorlichtingsdienst-bij-az
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

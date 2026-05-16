@@ -1,0 +1,15 @@
+id: org:onderdeel-nla-min-szw
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-szw
+names:
+- value: Nederlandse Arbeidsinspectie (NLA)
+  valid_from: '2026-05-15'
+valid_from: '2026-05-15'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/20/hans-ton-directeur-analyse-programmering-en-strategie-bij-de-nederlandse-arbeidsinspectie
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

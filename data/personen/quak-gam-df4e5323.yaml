@@ -1,0 +1,27 @@
+id: person:quak-gam-df4e5323
+name:
+  full: G.A.M. (Gerda) Quak RA
+  family: quak
+  initials: G.A.M.
+mandaten:
+- id: mandate-post-psg-min-fin-2023-11-01
+  organization_id: org:min-fin
+  post_id: post:psg-min-fin
+  role: plaatsvervangend secretaris-generaal bij het ministerie van Financiën
+  start_date: '2023-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/15/gerda-quak-plaatsvervangend-secretaris-generaal-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-09-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/15/gerda-quak-plaatsvervangend-secretaris-generaal-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
