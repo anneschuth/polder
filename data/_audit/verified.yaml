@@ -165,11 +165,6 @@ verified:
   verified_at: 2026-05-11
   verified_by: anneschuth
 - category: quasi_dup_initials_prefix
-  key: voortman|voortman-l-6329568.yaml|voortman-lgj-1979.yaml
-  note: 'verschillende personen: geen org- of rol-overlap'
-  verified_at: 2026-05-11
-  verified_by: anneschuth
-- category: quasi_dup_initials_prefix
   key: voortman|voortman-l-7758971.yaml|voortman-lgj-1979.yaml
   note: 'verschillende personen: geen org- of rol-overlap'
   verified_at: 2026-05-11
@@ -321,24 +316,6 @@ verified:
   note: RVD eigenstandige dienst onder AZ
   verified_at: '2026-05-14'
   verified_by: Anne Schuth
-- category: quasi_dup_initials_prefix
-  key: groot|groot-e-4403687.yaml|groot-ed-b16bf534.yaml
-  note: 'ORI-duplicate: zelfde ORI-id + zelfde given naam + zelfde organisatie. Twee
-    records voor één persoon door inconsistente initialen-spelling tussen ORI-runs.'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
-  key: hellemondt|hellemondt-r-6445838.yaml|hellemondt-rv-61c60201.yaml
-  note: 'ORI-duplicate: zelfde ORI-id + zelfde given naam + zelfde organisatie. Twee
-    records voor één persoon door inconsistente initialen-spelling tussen ORI-runs.'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: pelgrom|pelgrom-h-3067482.yaml|pelgrom-w-3067462.yaml|pelgrom-w-3067539.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
-    verschillende voornaam: Han, Wilko, Wilko).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
   key: roelofs|roelofs-b-2299951.yaml|roelofs-b-7773399.yaml|roelofs-m-2838989.yaml
   note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
@@ -352,51 +329,15 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: lochem|lochem-rv-2035002.yaml|lochem-rv-7769217.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
-    verschillende voornaam: Rik, Rik van).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: reijers - dekkers|dekkers-krr-9cc25b09.yaml|reijers-dekkers-k-3401422.yaml|reijers-dekkers-k-6658576.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
-    verschillende voornaam: Karen Reijers -, Karen, Karen).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: koç|koc-h-4226144.yaml|koc-h-4226321.yaml
   note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
     verschillende voornaam: Hakan, H.).'
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: popering|popering-a-3849223.yaml|popering-av-7769997.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
-    verschillende voornaam: Anna, Anna van).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: slomp-dekkers|slomp-dekkers-m-1952886.yaml|slomp-dekkers-m-1952998.yaml
   note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
     verschillende voornaam: M.J.A., M.).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: hoek|hoek-h-3174259.yaml|hoek-jvd-5628496.yaml|hoek-l-4744048.yaml|hoek-l-7770304.yaml|hoek-w-5559147.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id én
-    verschillende voornaam: Helma, J.J.P. van der, Leon, Leon, Willem).'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
-  key: groot|groot-e-4403687.yaml|groot-ed-7219379.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id, verschillende
-    voornamen: ''Erik'', ''Erik de'').'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
-  key: hellemondt|hellemondt-r-6528779.yaml|hellemondt-rv-61c60201.yaml
-  note: 'ORI-duplicate: zelfde ORI-id (6528779), verschil in `given`-veld is variatie
-    in formatting (bv. uitschrijven achternaam-suffix). Voorbeelden: ''Rachèl'', ''Rachèl'''
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_initials_prefix
@@ -418,20 +359,6 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_initials_prefix
-  key: reijers - dekkers|dekkers-krr-9cc25b09.yaml|reijers-dekkers-k-3401422.yaml
-  note: 'ORI-duplicate: zelfde ORI-id (3401422), verschil in `given`-veld is variatie
-    in formatting (bv. uitschrijven achternaam-suffix). Voorbeelden: ''Karen Reijers
-    -'', ''Karen'''
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
-  key: reijers - dekkers|dekkers-krr-9cc25b09.yaml|reijers-dekkers-k-6658576.yaml
-  note: 'ORI-duplicate: zelfde ORI-id (6658576), verschil in `given`-veld is variatie
-    in formatting (bv. uitschrijven achternaam-suffix). Voorbeelden: ''Karen Reijers
-    -'', ''Karen'''
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
   key: smirren|smirren-h-6445993.yaml|smirren-hv-6529050.yaml
   note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id, verschillende
     voornamen: ''Henri'', ''Henri van'').'
@@ -444,22 +371,9 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_initials_prefix
-  key: popering|popering-a-3849223.yaml|popering-av-7769997.yaml
-  note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id, verschillende
-    voornamen: ''Anna'', ''Anna van'').'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_initials_prefix
   key: last|last-j-3870567.yaml|last-j-3870802.yaml
   note: 'Verschillende personen met dezelfde familienaam (verschillende ORI-id, verschillende
     voornamen: ''Jos'', ''Jos'').'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: gooiker-loeffen|gooiker-loeffen-a-7761675.yaml|gooiker-loeffen-a-7763515.yaml|gooiker-loeffen-a-e97d39d3.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Annemarie'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
@@ -469,36 +383,9 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: joosse - de visser|joosse-visser-m-3400663.yaml|joosse-visser-m-6657998.yaml|visser-mjd-1e466f8e.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Marlien'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: verharen|verharen-m-3401396.yaml|verharen-m-6658561.yaml|verharen-m-b24ef652.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Martijn'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: barten|barten-c-0db2999d.yaml|barten-c-3400708.yaml|barten-c-6658530.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Claudia'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: vos|vos-1903.yaml|vos-a-1910379.yaml|vos-ad-5242957.yaml|vos-g-5270109.yaml|vos-h-5798990.yaml|vos-j-7773996.yaml|vos-jc-1972.yaml|vos-k-7774535.yaml|vos-ld-6699541.yaml|vos-m-7262682.yaml|vos-mb-1957.yaml|vos-ml-1970.yaml|vos-s-3870449.yaml|vos-s-5864523.yaml
   note: 'Verschillende personen met dezelfde familienaam, geen birth_year om te disambigueren.
     Voornamen: ''Hein'', ''A.E.'', ''Arjan'', ''G.'', ''H.''....'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: evers|evers-f-6728767.yaml|evers-h-3067466.yaml|evers-j-3401374.yaml|evers-j-6658539.yaml|evers-j-c426628d.yaml|evers-v-7776826.yaml
-  note: 'Verschillende personen met dezelfde familienaam, geen birth_year om te disambigueren.
-    Voornamen: ''Frank'', ''Harmjan'', ''Jan'', ''Jan'', ''Jan''....'
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
@@ -511,41 +398,6 @@ verified:
   key: meijer|meijer-1939.yaml|meijer-hj-1951.yaml|meijer-l-5858435.yaml|meijer-m-3611629.yaml|meijer-m-7777403.yaml|meijer-pl-1946.yaml|meijer-r-5471672.yaml|meijer-r-7766228.yaml|meijer-s-5351219.yaml
   note: 'Verschillende personen met dezelfde familienaam, geen birth_year om te disambigueren.
     Voornamen: ''Wim'', None, ''Laura'', ''Marcel'', ''Mildo''....'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: kolvenbach|kolvenbach-m-7761671.yaml|kolvenbach-m-7763511.yaml|kolvenbach-m-db760b29.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Maikel'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: broeren|broeren-jp-5481758.yaml|broeren-jp-7774377.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Jean-Paul'
-    over 2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: schroot|schroot-j-6445985.yaml|schroot-j-6529049.yaml|schroot-j-86eee737.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Jolien'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: hellemondt|hellemondt-r-6445838.yaml|hellemondt-r-6528779.yaml|hellemondt-rv-61c60201.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Rachèl'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: rogge|rogge-c-6445822.yaml|rogge-c-6528774.yaml|rogge-c-bc9c628c.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Charlotte'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
@@ -574,20 +426,6 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: merkus|merkus-y-3400739.yaml|merkus-y-6658003.yaml|merkus-y-9781490b.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Youri'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: albersnagel|albersnagel-r-3400645.yaml|albersnagel-r-6658066.yaml|albersnagel-r-ac386b65.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Rob' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: laros|laros-t-1611961.yaml|laros-t-1611981.yaml
   note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Talitha'
     over 2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
@@ -595,71 +433,9 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: voortman|voortman-l-6329568.yaml|voortman-l-7758971.yaml|voortman-lgj-1979.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Linda'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: peters sengers|peters-sengers-j-3400669.yaml|peters-sengers-j-6658081.yaml|sengers-jp-a02d4d2e.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Jan' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: kersten|kersten-a-7179492.yaml|kersten-b-3366888.yaml|kersten-j-2299790.yaml|kersten-j-3400775.yaml|kersten-j-6658341.yaml|kersten-j-a80ef5e8.yaml|kersten-jp-7769620.yaml
-  note: 'Verschillende personen met dezelfde familienaam, geen birth_year om te disambigueren.
-    Voornamen: ''Angelique'', ''B'', ''Jozef'', ''Joost'', ''Joost''....'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: bakker|bakker-1921.yaml|bakker-ad-1958.yaml|bakker-h-5169784.yaml|bakker-m-6781207.yaml|bakker-m-7766715.yaml|bakker-r-3849389.yaml|bakker-s-2374323.yaml|bakker-s-2374489.yaml|bakker-s-7365763.yaml|bakker-w-6188553.yaml
   note: 'Verschillende personen met dezelfde familienaam, geen birth_year om te disambigueren.
     Voornamen: ''Joop'', ''Bert'', ''H.N.'', ''Monique'', ''Mariëlle''....'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: bremmer|bremmer-c-6445973.yaml|bremmer-c-6529046.yaml|bremmer-c-b0591914.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Cees' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: salman|salman-d-5558957.yaml|salman-d-7770745.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Dennis'
-    over 2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: wijnen-lunenburg|wijnen-lunenburg-p-6445850.yaml|wijnen-lunenburg-p-6528781.yaml|wijnen-lunenburg-p-9b6440e6.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Patty'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: huttinga|huttinga-h-3611568.yaml|huttinga-h-5544250.yaml|huttinga-h-c42e39fa.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Henk' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: krijgsman|krijgsman-e-7219725.yaml|krijgsman-e-7219814.yaml|krijgsman-e-908d51d6.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Eric' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: loermans|loermans-r-3401388.yaml|loermans-r-6658553.yaml|loermans-r-c78b9652.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Renate'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
@@ -672,41 +448,6 @@ verified:
 - category: quasi_dup_family_no_birth
   key: last|last-j-3870567.yaml|last-j-3870802.yaml
   note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Jos' over
-    2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: lam|lam-p-6445728.yaml|lam-p-6528635.yaml|lam-p-b3d49a1d.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Paul' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: grobbe|grobbe-h-16ec4b29.yaml|grobbe-hj-3400779.yaml|grobbe-hj-6658342.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Henk-Jan'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: verbeeten|verbeeten-p-7761670.yaml|verbeeten-p-7763510.yaml|verbeeten-p-f403947a.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Pim' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: puijk|puijk-h-3067479.yaml|puijk-h-3067542.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Hans' over
-    2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: weerwag|weerwag-r-6743651.yaml|weerwag-r-7764670.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'R.' over
     2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
     onder vermoeden van 1-persoon.
   verified_at: '2026-05-14'
@@ -726,13 +467,6 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: klinkhamer|klinkhamer-t-3401386.yaml|klinkhamer-t-6658084.yaml|klinkhamer-t-bde6ca87.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Tim' over
-    3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
-    onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: bijmans|bijmans-h-7366805.yaml|bijmans-h-7369314.yaml
   note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Hans' over
     2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
@@ -740,24 +474,10 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_no_birth
-  key: diebels|diebels-gj-7273997.yaml|diebels-gj-7281802.yaml|diebels-gj-d0725e77.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Gert Jan'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
   key: reuvers|reuvers-h-4403634.yaml|reuvers-h-7820967.yaml
   note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Henk' over
     2 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer als legitiem
     onder vermoeden van 1-persoon.
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_no_birth
-  key: treep|treep-a-613d3997.yaml|treep-a-6188417.yaml|treep-a-7497468.yaml
-  note: Mogelijk ORI-meerdere-records voor dezelfde persoon (zelfde given 'Aukje'
-    over 3 ORI-ids, geen birth_year). Vereist handmatige bevestiging maar markeer
-    als legitiem onder vermoeden van 1-persoon.
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_birth
@@ -854,12 +574,6 @@ verified:
   key: geurts|1970
   note: 'Verschillende personen (zelfde familienaam ''geurts'' + geboortejaar 1970).
     Voornamen: ''Jaco'', ''J.L.'', ''Eric''.'
-  verified_at: '2026-05-14'
-  verified_by: Anne Schuth (audit-watcher)
-- category: quasi_dup_family_birth
-  key: voortman|1979
-  note: 'Verschillende personen (zelfde familienaam ''voortman'' + geboortejaar 1979).
-    Voornamen: ''Linda'', ''Linda''.'
   verified_at: '2026-05-14'
   verified_by: Anne Schuth (audit-watcher)
 - category: quasi_dup_family_birth
