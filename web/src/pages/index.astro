@@ -1,10 +1,25 @@
 ---
 import Base from '~/layouts/Base.astro';
-import { totals } from '~/lib/stats';
+import { totals, recordsPerSource, lastUpdated } from '~/lib/stats';
 
 const t = totals();
+const sources = recordsPerSource();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const fmt = (n: number) => n.toLocaleString('nl-NL');
+
+const repo = 'https://github.com/anneschuth/polder';
+const releases = `${repo}/releases/latest`;
+
+// Real data-freshness date (latest `retrieved:` across record sources), not
+// the build date. Empty string if the data carries no retrieved dates.
+const updatedIso = lastUpdated();
+const updated = updatedIso
+  ? new Date(updatedIso).toLocaleDateString('nl-NL', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  : '';
 
 const personYamlExample = `id: person:jansen-jp-1965
 identifiers:
@@ -19,222 +34,610 @@ mandaten:
     post_id: post:sg-min-bzk
     role: Secretaris-Generaal
     start_date: 2022-09-01
-    end_date: null`;
+    end_date: null
+sources:
+  - id: roo
+    url: https://organisaties.overheid.nl/...
+    retrieved: 2026-05-16`;
+
+const entities: {
+  label: string;
+  count: number;
+  popolo: string;
+  fields: string;
+  href: string | null;
+}[] = [
+  {
+    label: 'Organisaties',
+    count: t.orgs,
+    popolo: 'Organization',
+    fields: 'type, naam, afkorting, OIN, KvK, RSIN, TOOI-URI, valid_until',
+    href: `${base}/organisaties/`,
+  },
+  {
+    label: 'Personen',
+    count: t.people,
+    popolo: 'Person',
+    fields: 'naam, initialen, geboortejaar, identifier-crosswalk, mandaten',
+    href: `${base}/personen/`,
+  },
+  {
+    label: 'Posten',
+    count: t.posts,
+    popolo: 'Post',
+    fields: 'rol, classificatie, organisatie, label',
+    href: `${base}/posten/`,
+  },
+  {
+    label: 'Mandaten',
+    count: t.mandates,
+    popolo: 'Membership',
+    fields: `start_date, end_date, persoon, post, organisatie · ${fmt(t.currentMandates)} lopend`,
+    href: null,
+  },
+];
+
+// Source metadata keyed on the ACTUAL id records carry in sources[] (verified
+// against data/ and data.ts). `kind` separates deterministic feeds (fetched
+// without an LLM) from LLM-extracted sources. Both lists below are derived
+// from recordsPerSource(), so a source with zero records never shows up and
+// the feed count can't drift out of sync with the data.
+const sourceMeta: Record<string, { label: string; kind: 'feed' | 'llm' }> = {
+  roo: { label: 'ROO (KOOP), alle organisatietypes, bestuurders tot SG/DG', kind: 'feed' },
+  open_raadsinformatie: { label: 'Open Raadsinformatie, raadsleden, 265+ gemeenten', kind: 'feed' },
+  wikidata: { label: 'Wikidata, Q-id-crosswalk', kind: 'feed' },
+  tk_odata: { label: 'TK OData, Tweede Kamer, fracties, commissies', kind: 'feed' },
+  logius_cor: { label: 'Logius COR, OIN per organisatie', kind: 'feed' },
+  tooi: { label: 'TOOI, URI-stelsel en SKOS-vocabulaires', kind: 'feed' },
+  ar_rwt: { label: 'Algemene Rekenkamer, RWT-register', kind: 'feed' },
+  ek_scrape: { label: 'Eerste Kamer, leden en commissies', kind: 'feed' },
+  kiesraad: { label: 'Kiesraad, verkiezingsuitslagen en kandidaatlijsten', kind: 'feed' },
+  abd_nieuws: { label: 'ABD-nieuws, benoemingen topmanagement', kind: 'llm' },
+  staatscourant: { label: 'Staatscourant benoemings-KB’s', kind: 'llm' },
+  organogram_bzk: { label: 'Rijksoverheid.nl-organogrammen', kind: 'llm' },
+  rijksoverheid_organogram: { label: 'Rijksoverheid.nl-organogrammen', kind: 'llm' },
+};
+// Collapse ids that share a label (e.g. the two organogram source ids) into
+// one row, summing their record counts.
+const byLabel = new Map<string, { label: string; kind: 'feed' | 'llm'; records: number }>();
+for (const s of sources) {
+  if (s.records <= 0 || !(s.id in sourceMeta)) continue;
+  const { label, kind } = sourceMeta[s.id];
+  const row = byLabel.get(label) ?? { label, kind, records: 0 };
+  row.records += s.records;
+  byLabel.set(label, row);
+}
+const withMeta = [...byLabel.values()].sort((a, b) => b.records - a.records);
+const feeds = withMeta.filter((s) => s.kind === 'feed');
+const llmSources = withMeta.filter((s) => s.kind === 'llm');
 ---
-<Base title="Polder" description="Open, machineleesbare dataset van de Nederlandse overheid">
-  <article class="stack">
-    <header class="stack">
-      <h1>Polder</h1>
-      <p class="acronym">
-        <strong>P</strong>ublieke <strong>O</strong>verheid:
-        <strong>L</strong>eden, <strong>D</strong>ienstverbanden,
-        <strong>E</strong>enheden, <strong>R</strong>ollen.
+<Base title="Polder" description="Open, machineleesbare dataset van de Nederlandse overheid: organisaties, posten, personen en mandaten. CC0." background="tinted">
+  <article class="lp">
+    <header class="hero">
+      <p class="kicker">Open dataset · Nederlandse overheid</p>
+      <div class="wordmark">
+        <h1 class="display">Polder</h1>
+        <p class="acronym">
+          <strong>P</strong>ublieke <strong>O</strong>verheid:
+          <strong>L</strong>eden, <strong>D</strong>ienstverbanden,
+          <strong>E</strong>enheden, <strong>R</strong>ollen.
+        </p>
+      </div>
+      <p class="lede">
+        Wie regeert Nederland, vastgelegd als data. Een machineleesbaar
+        register van overheidsorganisaties, posten, personen en hun mandaten,
+        met termijn-historie en gecontroleerde herkomst.
       </p>
-      <p class="tagline">Wie regeert Nederland, in YAML, dagelijks bijgewerkt.</p>
-      <p>
-        Een open, machineleesbare dataset van Nederlandse overheidsorganisaties,
-        posten, personen en mandaten. CC0-gelicenseerd, source-of-truth in YAML,
-        gevalideerd met JSON Schema, gepubliceerd als Datasette en Frictionless
-        Data Package.
+
+      <p class="counts">
+        <span><strong>{fmt(t.orgs)}</strong> organisaties</span>
+        <span aria-hidden="true">·</span>
+        <span><strong>{fmt(t.people)}</strong> personen</span>
+        <span aria-hidden="true">·</span>
+        <span><strong>{fmt(t.posts)}</strong> posten</span>
+        <span aria-hidden="true">·</span>
+        <span><strong>{fmt(t.mandates)}</strong> mandaten</span>
+        {updated && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span class="counts-meta">bijgewerkt {updated}</span>
+          </>
+        )}
+      </p>
+
+      <div class="cta">
+        <nldd-button
+          variant="primary"
+          size="md"
+          text="Verken de data"
+          href={`${base}/personen/`}
+          end-icon="arrow-right"
+        ></nldd-button>
+        <nldd-link href={releases} size="md" start-icon="download"
+          >Download Data Package</nldd-link
+        >
+        <nldd-link href={repo} size="md" start-icon="code"
+          >Broncode op GitHub</nldd-link
+        >
+      </div>
+
+      <p class="badges">
+        <nldd-tag color="success" size="sm" text="CC0 · geen attributie nodig"></nldd-tag>
+        <nldd-tag color="neutral" size="sm" text="EUPL-1.2 (code)"></nldd-tag>
+        <nldd-tag color="neutral" size="sm" text="Open data-standaard"></nldd-tag>
       </p>
     </header>
 
-    <section>
-      <h2>De dataset op dit moment</h2>
-      <dl class="grid grid-2">
-        <div>
-          <dt class="muted">Personen</dt>
-          <dd><strong>{fmt(t.people)}</strong></dd>
-        </div>
-        <div>
-          <dt class="muted">Organisaties</dt>
-          <dd><strong>{fmt(t.orgs)}</strong></dd>
-        </div>
-        <div>
-          <dt class="muted">Posten</dt>
-          <dd><strong>{fmt(t.posts)}</strong></dd>
-        </div>
-        <div>
-          <dt class="muted">Mandaten</dt>
-          <dd><strong>{fmt(t.mandates)}</strong> ({fmt(t.currentMandates)} lopend)</dd>
-        </div>
+    <nldd-divider></nldd-divider>
+
+    <section class="block">
+      <nldd-title size={4}><h2>Wat zit erin</h2></nldd-title>
+      <p class="block-intro">
+        Vier entiteiten, gemodelleerd naar de
+        <nldd-link href="http://www.popoloproject.com/" size="inherit">Popolo</nldd-link>
+        spec voor government-data. Persoon, post en organisatie hangen samen via
+        mandaten met expliciete <code>start_date</code> en <code>end_date</code>.
+      </p>
+      <dl class="entities">
+        {entities.map((e) => (
+          <div class="entity">
+            <dt>
+              {e.href ? <a href={e.href}>{e.label}</a> : <span>{e.label}</span>}
+              <span class="popolo">{e.popolo}</span>
+            </dt>
+            <dd class="entity-count">{fmt(e.count)}</dd>
+            <dd class="entity-fields">{e.fields}</dd>
+          </div>
+        ))}
       </dl>
     </section>
 
-    <section>
-      <h2>Waarom polder</h2>
-      <p>
-        Nederland heeft geen geconsolideerd, machineleesbaar register van wie
-        waar zit in de overheid met termijn-historie. Polder vult vier
-        specifieke gaten in het bestaande aanbod:
-      </p>
-      <ul>
-        <li>Een Popolo-achtig persoon-post-organisatie graafmodel met expliciete <code>start_date</code> en <code>end_date</code> per mandaat.</li>
-        <li>Eerste Kamer en ABD-management onder de Topmanagementgroep, die in geen enkele open feed gestructureerd staan.</li>
-        <li>Een NLP-pipeline op de Staatscourant-feed die benoemings-KB's parst naar gestructureerde Membership-proposals.</li>
-        <li>Een persistente identifier-crosswalk tussen OIN, KvK, RSIN, Wikidata-Q, TK-persoonId, ROO-id, TOOI-URI en stable slugs.</li>
-      </ul>
-    </section>
+    <nldd-divider></nldd-divider>
 
-    <section>
-      <h2>Datamodel</h2>
-      <p>
-        Polder volgt de <a href="http://www.popoloproject.com/" rel="external">Popolo</a>
-        spec voor government-data: Person, Organization, Post, Membership.
-        Veldnamen blijven dicht bij Popolo waar dat redelijk is, met Nederlandse
-        domeintermen waar nodig (<code>bewindspersoon</code>, <code>dienstverband</code>).
+    <section class="block">
+      <nldd-title size={4}><h2>Eén record, zoals het op schijf staat</h2></nldd-title>
+      <p class="block-intro">
+        Geen samenvatting, het echte formaat. Elk record draagt minstens één
+        bron in <code>sources[]</code>: de claim is geciteerd, niet beweerd.
       </p>
-      <p>Een persoon-record ziet er ongeveer zo uit:</p>
-      <pre class="code-block"><code>{personYamlExample}</code></pre>
+      <nldd-code language="yaml" class="sample">{personYamlExample}</nldd-code>
       <p class="muted">
-        Volledige schema-definities staan in <code>schemas/</code> in de repo.
+        Volledige JSON Schema-definities staan in <code>schemas/</code> in de repo.
       </p>
     </section>
 
-    <section>
-      <h2>AVG-zones</h2>
+    <nldd-divider></nldd-divider>
+
+    <section class="block">
+      <nldd-title size={4}><h2>Zo gebruik je het</h2></nldd-title>
+      <div class="lanes">
+        <div class="lane">
+          <h3>Verkennen</h3>
+          <p>
+            Doorzoek personen, organisaties, posten en het organogram direct
+            in de browser, inclusief mandaat-tijdlijnen.
+          </p>
+          <nldd-link href={`${base}/personen/`} size="sm" end-icon="arrow-right"
+            >Naar de dataset</nldd-link
+          >
+        </div>
+        <div class="lane">
+          <h3>Downloaden</h3>
+          <p>
+            SQLite en CSV per resource, plus een
+            <nldd-link href="https://frictionlessdata.io/" size="inherit"
+              >Frictionless Data Package</nldd-link
+            >: een <code>datapackage.json</code> die de tabellen, types en
+            licentie beschrijft, zodat de dataset in één stap inleesbaar is.
+            Als release-asset onder een datum-tag, dagelijks ververst.
+          </p>
+          <nldd-link href={releases} size="sm" end-icon="arrow-right"
+            >Laatste release</nldd-link
+          >
+        </div>
+        <div class="lane">
+          <h3>Bouwen</h3>
+          <p>
+            YAML source-of-truth in git. Lokaal queryen kan met
+            <code>polder serve</code>, dat Datasette op de SQLite-build start.
+          </p>
+          <nldd-link href={repo} size="sm" end-icon="arrow-right"
+            >GitHub-repo</nldd-link
+          >
+        </div>
+      </div>
+    </section>
+
+    <nldd-divider></nldd-divider>
+
+    <section class="block">
+      <nldd-title size={4}><h2>Hoe de data tot stand komt</h2></nldd-title>
+      <p class="block-intro">
+        Deterministische feeds worden zonder LLM opgehaald. De aantallen tellen
+        records die de betreffende bron als herkomst voeren; alleen bronnen die
+        nu in de data zitten staan in de lijst.
+      </p>
+      <dl class="entities feeds">
+        {feeds.map((f) => (
+          <div class="entity">
+            <dt><span class="feed-label">{f.label}</span></dt>
+            <dd class="entity-count">{fmt(f.records)}</dd>
+          </div>
+        ))}
+      </dl>
       <p>
+        Daarbovenop draaien LLM-bronnen met harde guardrails: elk proposal heeft
+        een <strong>quote-or-die</strong> evidence-snippet dat een letterlijke
+        substring van de bron is, benoemingen vallen onder de
+        <strong>two-source-rule</strong>, en er is een
+        human-on-the-loop-window voor de merge. LLM-output landt eerst in
+        <code>data/_staging/</code>, nooit rechtstreeks in <code>data/</code>.
+      </p>
+      <dl class="entities feeds">
+        {llmSources.map((s) => (
+          <div class="entity">
+            <dt><span class="feed-label">{s.label}</span></dt>
+            <dd class="entity-count">{fmt(s.records)}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <nldd-divider></nldd-divider>
+
+    <section class="block">
+      <nldd-title size={4}><h2>Privacy en publicatiebeleid</h2></nldd-title>
+      <p class="block-intro">
         Uitgangspunt is de ABRvS-doctrine sinds 31 januari 2018
         (ECLI:NL:RVS:2018:314): namen mogen openbaar als de medewerker uit
         hoofde van functie in de openbaarheid treedt. Polder hanteert drie
-        zones:
+        zones.
       </p>
       <dl class="zones">
         <div class="zone zone-groen">
-          <dt><span class="dot" aria-hidden="true"></span> Groen, publiceren standaard</dt>
-          <dd>Bewindspersonen, Kamerleden TK en EK, CdK, gedeputeerden, statenleden, burgemeesters, wethouders, raadsleden, dijkgraven, DB- en AB-leden waterschap, voorzitters Hoge Colleges van Staat, RvB-leden ZBO's, ABD-Topmanagementgroep, rechters en raadsheren, gezaghebbers Caribisch Nederland, griffiers.</dd>
+          <dt>
+            <nldd-tag color="success" size="sm" text="Groen"></nldd-tag>
+            Publiceren standaard
+          </dt>
+          <dd>
+            Bewindspersonen, Kamerleden TK en EK, CdK, gedeputeerden,
+            statenleden, burgemeesters, wethouders, raadsleden, dijkgraven,
+            DB- en AB-leden waterschap, voorzitters Hoge Colleges van Staat,
+            RvB-leden ZBO’s, ABD-Topmanagementgroep, rechters en raadsheren,
+            gezaghebbers Caribisch Nederland, griffiers.
+          </dd>
         </div>
         <div class="zone zone-geel">
-          <dt><span class="dot" aria-hidden="true"></span> Geel, alleen functionele gegevens</dt>
-          <dd>ABD-managers schaal 15 en 16 op directieniveau, inspecteurs-generaal, secretarissen van ZBO's en agentschappen, bestuurders en secretarissen van gemeenschappelijke regelingen. Alleen als de organisatie zelf de gegevens al publiek heeft gemaakt. Geen privé-contactgegevens.</dd>
+          <dt>
+            <nldd-tag color="warning" size="sm" text="Geel"></nldd-tag>
+            Alleen functionele gegevens
+          </dt>
+          <dd>
+            ABD-managers schaal 15 en 16 op directieniveau,
+            inspecteurs-generaal, secretarissen van ZBO’s en agentschappen,
+            bestuurders en secretarissen van gemeenschappelijke regelingen.
+            Alleen als de organisatie zelf de gegevens al publiek heeft
+            gemaakt. Geen privé-contactgegevens.
+          </dd>
         </div>
         <div class="zone zone-rood">
-          <dt><span class="dot" aria-hidden="true"></span> Rood, niet doen</dt>
-          <dd>Beleidsmedewerkers, juristen, communicatie, handhavers, dossierbehandelaars. Altijd uitgesloten: privé-contactgegevens, geboortedata (alleen jaar voor disambiguatie), BSN, WNT-salarisdata buiten publicatieplicht, foto's, bijzondere persoonsgegevens.</dd>
+          <dt>
+            <nldd-tag color="critical" size="sm" text="Rood"></nldd-tag>
+            Niet doen
+          </dt>
+          <dd>
+            Beleidsmedewerkers, juristen, communicatie, handhavers,
+            dossierbehandelaars. Altijd uitgesloten: privé-contactgegevens,
+            geboortedata (alleen jaar voor disambiguatie), BSN, WNT-salarisdata
+            buiten publicatieplicht, foto’s, bijzondere persoonsgegevens.
+          </dd>
         </div>
       </dl>
       <p class="muted">
-        Takedown-flow via een GitHub-issue-template met SLA van 14 dagen. Bij
-        bedreigde ambtsdragers is opt-out op verzoek mogelijk.
+        Records worden nooit verwijderd: bij einde mandaat of opheffing wordt
+        <code>valid_until</code> gezet, het record blijft staan. Takedown-flow
+        via een GitHub-issue-template met een SLA van 14 dagen. Bij bedreigde
+        ambtsdragers is opt-out op verzoek mogelijk.
       </p>
     </section>
 
-    <section>
-      <h2>Bronnen</h2>
-      <p>Primaire feeds worden deterministisch opgehaald, zonder LLM:</p>
-      <ul>
-        <li><strong>ROO</strong> (KOOP): alle organisatietypes, bestuurders tot SG, DG, burgemeester, dijkgraaf. Dagelijkse <code>exportOO.xml</code>.</li>
-        <li><strong>TOOI</strong>: URI-stelsel en SKOS-vocabulaires voor alle overheidsorganisatietypes.</li>
-        <li><strong>TK OData</strong>: Tweede Kamer-personen, fracties, commissies, vanaf 2008-09-01, near-realtime via SyncFeed.</li>
-        <li><strong>KOOP SRU</strong>: Staatscourant en KB's, sinds 2009. Bron voor benoemings-parsing.</li>
-        <li><strong>Logius COR</strong>: OIN per organisatie, voor identifier-crosswalk.</li>
-        <li><strong>Wikidata</strong>: Q-id-crosswalk voor ministeries, provincies, gemeenten, waterschappen.</li>
-        <li><strong>Open Raadsinformatie</strong>: raadsleden en bestuurders van 265+ gemeenten in Popolo ODS.</li>
-        <li><strong>Kiesraad</strong>: verkiezingsuitslagen en kandidaatlijsten.</li>
-        <li><strong>Algemene Rekenkamer RWT</strong>: RWT-register, jaarlijks.</li>
-        <li><strong>Allmanak</strong> (Open State Foundation): secundaire bron, gefused met polder waar zinvol.</li>
-      </ul>
+    <nldd-divider></nldd-divider>
+
+    <section class="block">
+      <nldd-title size={4}><h2>Bron en onderhoud</h2></nldd-title>
       <p>
-        Daarnaast LLM-bronnen met guardrails (quote-or-die, two-source-rule):
-        Staatscourant benoemings-KB's, Eerste Kamer-pagina's, Rijksoverheid.nl
-        organogrammen, ABD-jaarverslagen. Proposals landen eerst in
-        <code>data/_staging/</code>, nooit direct in <code>data/</code>.
+        De source-of-truth is plain YAML in
+        <nldd-link href={repo} size="inherit">github.com/anneschuth/polder</nldd-link>,
+        gevalideerd met JSON Schema. Een GitHub Actions-workflow draait dagelijks
+        de fetchers, opent een pull request en logt elke wijziging als git
+        commit. De volledige geschiedenis is permanent en publiek: elke
+        wijziging is een commit, de git-historie ís het audit-spoor.
       </p>
-    </section>
-
-    <section>
-      <h2>Verkennen</h2>
-      <ul>
-        <li><a href={`${base}/personen/`}>Personen</a>, alle bewindspersonen, kamerleden, bestuurders, ambtenaren in de dataset</li>
-        <li><a href={`${base}/organisaties/`}>Organisaties</a>, ministeries, gemeenten, ZBO's, adviescolleges, en meer</li>
-        <li><a href={`${base}/posten/`}>Posten</a>, functies binnen organisaties</li>
-        <li><a href={`${base}/stats/`}>Statistieken</a>, overzichten en aggregaties</li>
-        <li><a href={`${base}/organogram/`}>Organogram</a>, interactieve visualisatie</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Bron en licentie</h2>
-      <p>
-        Source-of-truth: <a href="https://github.com/anneschuth/polder" rel="external">github.com/anneschuth/polder</a>.
-        Data onder CC0, code onder EUPL-1.2.
-      </p>
+      <p class="muted">Data onder CC0, code onder EUPL-1.2.</p>
     </section>
   </article>
 
   <style>
-    .acronym {
-      font-size: 1.1rem;
+    /* Editorial layout. One accent (lintblauw via the accent tokens), a
+       generous measure, thin divider rules, no card boxes. All color,
+       spacing and type come from NLDD design tokens, no local hex. */
+    .lp {
+      display: flex;
+      flex-direction: column;
+      gap: var(--primitives-space-40, 2.5rem);
+      /* Width is owned by the `main` wrapper in Base.astro (72rem, centered).
+         Don't double-constrain; that produced an off-centre narrow band. */
+    }
+    /* Base.astro sets `overflow-wrap: anywhere` globally on .section content
+       to wrap long codes. On running prose that shatters hyphenated terms
+       ("quote-or-die"). Re-assert normal wrapping for the landing copy. */
+    .lp p,
+    .lp dd {
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: var(--primitives-space-16, 1rem);
+      padding: var(--primitives-space-24, 1.5rem) 0 var(--primitives-space-8, 0.5rem);
+    }
+    .kicker {
       margin: 0;
+      font: var(--primitives-font-body-sm-bold-flat);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--semantics-content-accent-color);
+    }
+    /* Title + acronym are one unit: a tight inner gap keeps the acronym
+       hugging the wordmark, independent of the hero's larger flex gap. */
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: var(--primitives-space-4, 0.25rem);
+    }
+    .display {
+      margin: 0;
+      font: var(--primitives-font-display-1-lg);
+      color: var(--semantics-content-color);
+      line-height: 1;
+    }
+    .acronym {
+      margin: 0;
+      font: var(--primitives-font-body-md-regular-flat);
+      color: var(--semantics-content-accent-color);
     }
     .acronym strong {
-      color: var(--primitives-color-lintblauw-650);
+      font-weight: 700;
     }
-    .tagline {
-      font-size: 1.25rem;
-      font-style: italic;
+    .lede {
       margin: 0;
+      max-width: 38rem;
+      font: var(--primitives-font-body-lg-regular-loose);
       color: var(--semantics-content-secondary-color);
     }
-    .code-block {
-      background: var(--primitives-color-coolgray-25);
-      border: 1px solid var(--primitives-color-coolgray-100);
-      border-radius: 4px;
-      padding: 1rem;
-      overflow-x: auto;
-      font-size: 0.9rem;
-      line-height: 1.5;
+    .counts {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.4rem 0.65rem;
+      margin: var(--primitives-space-8, 0.5rem) 0 0;
+      font: var(--primitives-font-body-md-regular-flat);
+      color: var(--semantics-content-secondary-color);
     }
-    .code-block code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      white-space: pre;
+    .counts strong {
+      font-variant-numeric: tabular-nums;
+      color: var(--semantics-content-color);
     }
+    .counts span[aria-hidden] {
+      color: var(--semantics-dividers-color);
+    }
+    .counts-meta {
+      color: var(--semantics-content-secondary-color);
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--primitives-space-16, 1rem) var(--primitives-space-24, 1.5rem);
+      margin-top: var(--primitives-space-8, 0.5rem);
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: var(--primitives-space-4, 0.25rem) 0 0;
+    }
+
+    /* Asymmetric editorial grid: heading + intro in a narrow left rail,
+       content in the wide right column. Falls back to a single column on
+       narrow screens. This is what makes the page read as composed rather
+       than a stacked document. */
+    .block {
+      display: grid;
+      grid-template-columns: 15rem 1fr;
+      gap: var(--primitives-space-16, 1rem) var(--primitives-space-48, 3rem);
+      align-items: start;
+    }
+    .block > nldd-title {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      position: sticky;
+      top: var(--primitives-space-24, 1.5rem);
+    }
+    .block > :not(nldd-title) {
+      grid-column: 2;
+    }
+    .block-intro {
+      margin: 0;
+      max-width: 44rem;
+      font: var(--primitives-font-body-md-regular-loose);
+      color: var(--semantics-content-secondary-color);
+    }
+    .block p {
+      margin: 0;
+      max-width: 44rem;
+      font: var(--primitives-font-body-md-regular-loose);
+      color: var(--semantics-content-secondary-color);
+    }
+    .block h2 {
+      margin: 0;
+    }
+    @media (max-width: 52rem) {
+      .block {
+        grid-template-columns: 1fr;
+      }
+      .block > nldd-title {
+        grid-column: 1;
+        grid-row: auto;
+        position: static;
+      }
+      .block > :not(nldd-title) {
+        grid-column: 1;
+      }
+    }
+    .muted {
+      color: var(--semantics-content-secondary-color);
+    }
+
+    /* Entity / feed list: a typographic table, not boxes. */
+    .entities {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .entity {
+      display: grid;
+      grid-template-columns: 12rem 7rem 1fr;
+      gap: 0.5rem 1.5rem;
+      align-items: baseline;
+      padding: var(--primitives-space-12, 0.75rem) 0;
+      border-top: 1px solid var(--semantics-dividers-color);
+    }
+    .entity:last-child {
+      border-bottom: 1px solid var(--semantics-dividers-color);
+    }
+    .entity dt {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      font: var(--primitives-font-body-md-bold-flat);
+      color: var(--semantics-content-color);
+    }
+    .entity dt a {
+      color: var(--semantics-links-color);
+      text-decoration: none;
+    }
+    .entity dt a:hover {
+      text-decoration: underline;
+    }
+    .entity .popolo {
+      font: var(--primitives-font-body-xs-regular-flat);
+      font-weight: 400;
+      color: var(--semantics-content-secondary-color);
+      font-family: var(--primitives-font-family-mono, ui-monospace, monospace);
+    }
+    .entity-count {
+      margin: 0;
+      font: var(--primitives-font-display-4-md);
+      font-variant-numeric: tabular-nums;
+      color: var(--semantics-content-color);
+    }
+    .entity-fields {
+      margin: 0;
+      font: var(--primitives-font-body-sm-regular-flat);
+      color: var(--semantics-content-secondary-color);
+    }
+    .feeds .entity {
+      grid-template-columns: 1fr 7rem;
+    }
+    .feed-label {
+      font: var(--primitives-font-body-md-regular-flat);
+      font-weight: 400;
+      color: var(--semantics-content-color);
+    }
+
+    .sample {
+      display: block;
+      max-width: 100%;
+    }
+
+    .lanes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: var(--primitives-space-24, 1.5rem) var(--primitives-space-40, 2.5rem);
+    }
+    .lane {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .lane h3 {
+      margin: 0;
+      font: var(--primitives-font-body-lg-bold-flat);
+      color: var(--semantics-content-color);
+    }
+    .lane p {
+      max-width: none;
+    }
+
     .zones {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: var(--primitives-space-12, 0.75rem);
       margin: 0;
     }
     .zone {
-      border: 1px solid var(--primitives-color-coolgray-100);
-      border-left-width: 4px;
-      border-radius: 4px;
-      padding: 0.75rem 1rem;
-      background: var(--primitives-color-coolgray-25);
+      border-left: 3px solid var(--semantics-dividers-color);
+      padding-left: var(--primitives-space-16, 1rem);
     }
     .zone dt {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font: var(--primitives-font-body-md-bold-flat);
+      color: var(--semantics-content-color);
+      margin-bottom: 0.25rem;
     }
     .zone dd {
       margin: 0;
-      font-size: 0.95rem;
+      max-width: 44rem;
+      font: var(--primitives-font-body-sm-regular-loose);
+      color: var(--semantics-content-secondary-color);
     }
-    .zone .dot {
-      width: 0.75rem;
-      height: 0.75rem;
-      border-radius: 50%;
-      display: inline-block;
+    .zone-groen {
+      border-left-color: var(--semantics-content-success-color);
     }
-    .zone-groen { border-left-color: var(--primitives-color-groen-650); }
-    .zone-groen .dot { background: var(--primitives-color-groen-650); }
-    .zone-geel { border-left-color: var(--primitives-color-donkergeel-650); }
-    .zone-geel .dot { background: var(--primitives-color-oranje-550); }
-    .zone-rood { border-left-color: var(--primitives-color-rood-650); }
-    .zone-rood .dot { background: var(--primitives-color-rood-650); }
+    .zone-geel {
+      border-left-color: var(--semantics-content-warning-color);
+    }
+    .zone-rood {
+      border-left-color: var(--semantics-content-critical-color);
+    }
+
     code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: var(--primitives-font-family-mono, ui-monospace, monospace);
       font-size: 0.9em;
-      background: var(--primitives-color-coolgray-50);
-      padding: 0.05rem 0.25rem;
-      border-radius: 3px;
+      background: var(--semantics-surfaces-tinted-background-color);
+      padding: 0.05rem 0.3rem;
+      border-radius: var(--primitives-corner-radius-xs, 3px);
     }
-    .code-block code {
-      background: none;
-      padding: 0;
+
+    nldd-divider {
+      margin: var(--primitives-space-8, 0.5rem) 0;
+    }
+
+    @media (max-width: 38rem) {
+      .entity,
+      .feeds .entity {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+      }
+      .display {
+        font: var(--primitives-font-display-2-md);
+      }
     }
   </style>
 </Base>

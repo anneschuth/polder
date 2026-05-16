@@ -1063,6 +1063,105 @@ def test_dup_mandate_flags_double_entry(fake_data: Path) -> None:
     assert "dup_mandate" in _categories_in(report)
 
 
+def _write_post(data: Path, slug: str, doc: dict) -> None:
+    (data / "posten" / f"{slug}.yaml").write_text(
+        yaml.safe_dump(doc, sort_keys=False), encoding="utf-8"
+    )
+
+
+def test_dup_mandate_same_start_catches_minister_president_pattern(
+    fake_data: Path,
+) -> None:
+    """Het Minister-President-bug: één benoeming onder twee post-ids met
+    verschillende rol-labels, zelfde org + zelfde start_date. `dup_mandate`
+    groepeert op post OF rol en mist dit; `dup_mandate_same_start` moet
+    het wél vangen."""
+    _write_post(
+        fake_data,
+        "minister-president-min-test-roo",
+        {
+            "id": "post:minister-president-min-test-roo",
+            "organization_id": "org:min-test",
+            "label": "Minister-President, Minister van Test",
+            "classification": "bewindspersoon",
+        },
+    )
+    _write_person(
+        fake_data,
+        "jetten-r-1987",
+        {
+            "id": "person:jetten-r-1987",
+            "name": {"family": "Jetten"},
+            "birth": {"year": 1987},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "wd-1",
+                    "organization_id": "org:min-test",
+                    "post_id": "post:minister-min-test",
+                    "role": "Minister-president van Nederland",
+                    "start_date": "2026-02-23",
+                    "end_date": None,
+                    "sources": [{"id": "wd", "url": "https://wd", "retrieved": "2026-01-01"}],
+                },
+                {
+                    "id": "roo-1",
+                    "organization_id": "org:min-test",
+                    "post_id": "post:minister-president-min-test-roo",
+                    "role": "Minister-President en Minister belast met de leiding",
+                    "start_date": "2026-02-23",
+                    "end_date": None,
+                    "sources": [{"id": "roo", "url": "https://roo", "retrieved": "2026-01-01"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    cats = _categories_in(report)
+    assert "dup_mandate_same_start" in cats
+    assert "dup_post_same_office" in cats
+    # `dup_mandate` mist dit juist (verschillende post én rol): regressie-anker.
+    assert "dup_mandate" not in cats
+
+
+def test_dup_post_same_office_ignores_distinct_offices(fake_data: Path) -> None:
+    """Twee posten bij dezelfde org zonder enige persoon die ze via
+    overlappende mandaten linkt is geen finding."""
+    _write_post(
+        fake_data,
+        "staatssecretaris-min-test",
+        {
+            "id": "post:staatssecretaris-min-test",
+            "organization_id": "org:min-test",
+            "label": "Staatssecretaris van Test",
+            "classification": "bewindspersoon",
+        },
+    )
+    _write_person(
+        fake_data,
+        "vries-p-1960",
+        {
+            "id": "person:vries-p-1960",
+            "name": {"family": "Vries"},
+            "birth": {"year": 1960},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "m1",
+                    "organization_id": "org:min-test",
+                    "post_id": "post:minister-min-test",
+                    "role": "Minister",
+                    "start_date": "2010-01-01",
+                    "end_date": "2014-01-01",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                }
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_post_same_office" not in _categories_in(report)
+
+
 def test_dup_mandate_flags_near_duplicate_start(fake_data: Path) -> None:
     """Zelfde org+rol, start_date een paar dagen uit elkaar (ORI-fetcher
     die per run een nieuw mandaat met de run-datum aanmaakt)."""
@@ -1135,3 +1234,71 @@ def test_dup_mandate_ignores_consecutive_terms(fake_data: Path) -> None:
     )
     report = run_audit(fake_data)
     assert "dup_mandate" not in _categories_in(report)
+
+
+def test_prune_removes_only_stale_entries(fake_data: Path) -> None:
+    """prune verwijdert stale verified-entries, behoudt matchende."""
+    from typer.testing import CliRunner
+
+    from polder.cli.commands.audit_cmd import app
+
+    # Twee personen met zelfde familie+geboortejaar → quasi_dup_family_birth.
+    for slug, initials in [("dijk-a-1980", "A."), ("dijk-b-1980", "B.")]:
+        _write_person(
+            fake_data,
+            slug,
+            {
+                "id": f"person:{slug}",
+                "name": {"family": "Dijk", "initials": initials},
+                "birth": {"year": 1980},
+                "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+            },
+        )
+
+    # Eén matchende entry (live finding) + één stale entry (geen finding).
+    audit_dir = fake_data / "_audit"
+    audit_dir.mkdir()
+    verified_path = audit_dir / "verified.yaml"
+    verified_path.write_text(
+        yaml.safe_dump(
+            {
+                "verified": [
+                    {
+                        "category": "quasi_dup_family_birth",
+                        "key": "dijk|1980",
+                        "note": "Echte verschillende personen",
+                        "verified_at": "2026-05-11",
+                        "verified_by": "anneschuth",
+                    },
+                    {
+                        "category": "quasi_dup_family_birth",
+                        "key": "ditbestaatniet|1900",
+                        "note": "Stale: finding bestaat niet meer",
+                        "verified_at": "2026-05-11",
+                        "verified_by": "anneschuth",
+                    },
+                ]
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    runner = CliRunner()
+
+    # Dry-run: meldt 1 stale, schrijft niets weg.
+    result = runner.invoke(app, ["prune", "--data", str(fake_data)])
+    assert result.exit_code == 0, result.output
+    assert "stale:           1" in result.output
+    assert "ditbestaatniet|1900" in result.output
+    raw = yaml.safe_load(verified_path.read_text(encoding="utf-8"))
+    assert len(raw["verified"]) == 2  # nog niets verwijderd
+
+    # --apply: verwijdert alleen de stale entry.
+    result = runner.invoke(app, ["prune", "--apply", "--data", str(fake_data)])
+    assert result.exit_code == 0, result.output
+    raw = yaml.safe_load(verified_path.read_text(encoding="utf-8"))
+    assert len(raw["verified"]) == 1
+    kept = raw["verified"][0]
+    assert kept["key"] == "dijk|1980"
+    assert kept["note"] == "Echte verschillende personen"

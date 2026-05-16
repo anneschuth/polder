@@ -71,3 +71,28 @@ van rijen minder geschikt voor scannen en sorteren. Polder houdt daarom bewust
 **Voorstel (lichter dan de andere drie):** een `nldd-table` /
 `nldd-data-table` met kolomdefinities, headers en eventueel sorteren, zodat
 tabeldata niet via een lijst-omweg hoeft.
+
+## 5. Iconen voor navigatie-concepten ontbreken
+
+**Waar polder dit tegenkomt:** de hoofdnavigatie in
+`web/src/layouts/Base.astro`, waar `nldd-menu-bar-item` per item een `icon`
+krijgt. De iconenset (`icon-registry.js` plus `icon-aliases.js`) heeft een
+goede `person-2` voor Personen en `apartment-building` voor Organisaties, maar
+geen passend icoon voor twee kernconcepten van deze dataset:
+
+- **Post / functie / rol.** Geen badge-, insigne- of rol-icoon. Polder valt
+  nu terug op `certificate` (alias voor diploma/license), wat de lading niet
+  precies dekt.
+- **Organogram / organisatiehiërarchie.** Geen org-chart-, boom-, sitemap-
+  of hiërarchie-icoon. Polder valt nu terug op `rectangle-stack` als
+  benadering.
+
+De set bevat wel `person`, `person-2`, `person-badge-gear` en
+`apartment-building`, dus de organisatie-/personen-kant is gedekt; het zijn
+specifiek de relatie- en structuurconcepten die ontbreken.
+
+**Voorstel:** voeg aan de iconenset een hiërarchie-/organogram-icoon toe
+(een knoop-met-vertakkingen, vergelijkbaar met Material `account_tree` of een
+sitemap-glyph) en een rol-/functie-icoon (een insigne of naamplaatje los van
+het persoon-icoon). Beide zijn breder bruikbaar dan polder: elk
+organisatie- of HR-domein heeft "structuur" en "functie" als concept.

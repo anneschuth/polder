@@ -20,13 +20,13 @@ Tracking issue: https://github.com/anneschuth/polder/issues/16
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import logging
 import re
 import sys
 import time
 import unicodedata
-import uuid
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -568,6 +568,33 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     return record
 
 
+def _ori_mandaat_id(membership_id: str, organization_id: str, post_id: str) -> str:
+    """Deterministische mandaat-id voor één ORI-bezetting.
+
+    Een ``uuid.uuid4()`` per run maakte elke nachtelijke rerun een nieuw
+    open mandaat aan voor dezelfde persoon op dezelfde zetel (issue #64),
+    ook in het pad waar ``_merge_mandaten`` niet wordt bereikt (de
+    persoon-resolutie kiest tussen runs een andere slug door
+    initialen-drift, zie #46/#47/#55).
+
+    ORI levert per Membership een stabiele ``@id`` (zichtbaar in elke
+    bestaande source-url, ``id.openraadsinformatie.nl/<membership_id>``).
+    Die identificeert precies één persoon op één post en is stabiel tussen
+    runs, dus daaruit afgeleid is de id idempotent én uniek per bezetter.
+    Dat laatste is essentieel: één post zoals
+    ``post:raadslid-gemeente-druten`` heeft tientallen gelijktijdige
+    bezetters; een id puur uit ``(org, post)`` zou die allemaal op één id
+    laten botsen.
+
+    Fallback op ``(organization_id, post_id)`` alleen wanneer ORI geen
+    membership-id levert (zeldzaam, en dan is meervoudige bezetting van
+    diezelfde post sowieso niet te onderscheiden).
+    """
+    basis = membership_id.strip() or f"{organization_id}|{post_id}"
+    digest = hashlib.sha1(f"ori|{basis}".encode()).hexdigest()
+    return f"mandate-ori-{digest[:16]}"
+
+
 def build_mandaat(
     *,
     raw_membership: dict[str, Any],
@@ -593,7 +620,7 @@ def build_mandaat(
         _ori_url(membership_id) if membership_id else f"{ORI_ELASTIC_BASE}/ori_{bare}/_search"
     )
     return {
-        "id": str(uuid.uuid4()),
+        "id": _ori_mandaat_id(membership_id, org_id, post_id),
         "organization_id": org_id,
         "post_id": post_id,
         "role": role_label,

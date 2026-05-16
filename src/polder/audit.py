@@ -218,6 +218,26 @@ CATEGORIES: dict[str, Category] = {
         "Vrijwel altijd hetzelfde dienstverband dubbel ingevoerd door "
         "twee bronnen (bv. Wikidata + tk_odata) onder twee post-ids.",
     ),
+    "dup_mandate_same_start": Category(
+        "dup_mandate_same_start",
+        "review",
+        "Persoon heeft twee mandaten met dezelfde organization_id en "
+        "dezelfde start_date maar verschillende post_id, en dus niet "
+        "gevangen door dup_mandate (dat op post OF rol groepeert). Bijna "
+        "altijd dezelfde benoeming dubbel ingevoerd onder twee post-ids "
+        "doordat één bron (ROO) een eigen post-slug aanmaakt naast de "
+        "canonieke. Catch voor het Minister-President-patroon.",
+    ),
+    "dup_post_same_office": Category(
+        "dup_post_same_office",
+        "review",
+        "Twee post-records bij dezelfde organisatie waar verschillende "
+        "personen via mandaten zo'n overlap hebben dat het dezelfde "
+        "functie is onder twee post-ids, ook al verschillen de labels. "
+        "Vangt label-drift die dup_post_role_org mist (bv. "
+        "'Minister-president van Nederland' vs 'Minister-President, "
+        "Minister van Algemene Zaken').",
+    ),
     # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
     # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
     # cache-bestand staat — dan run je `polder roo fetch` eerst.
@@ -452,6 +472,8 @@ def run_audit(
     _check_dup_org_identifier(orgs, findings)
     _check_dup_post_role_org(posts, findings)
     _check_dup_mandate(persons, findings)
+    _check_dup_mandate_same_start(persons, findings)
+    _check_dup_post_same_office(persons, posts, findings)
 
     # ROO-superset checks (Phase 5). Skip stilletjes als geen XML-cache.
     cache = _latest_roo_cache(data_dir.parent)
@@ -658,6 +680,110 @@ def _check_dup_mandate(persons: list[tuple[Path, dict]], findings: list[Finding]
                             f"vs {sb}->{b.get('end_date')}",
                         )
                     )
+
+
+def _check_dup_mandate_same_start(
+    persons: list[tuple[Path, dict]], findings: list[Finding]
+) -> None:
+    """Twee mandaten binnen één persoon met dezelfde organization_id en
+    dezelfde start_date maar verschillende post_id.
+
+    `_check_dup_mandate` groepeert op (org, post) OF (org, rol) en mist het
+    geval waarin één benoeming onder twee verschillende post-ids staat met
+    elk een eigen rol-label — precies wat de ROO-fetcher deed met
+    `post:minister-president` vs `post:minister-president-min-az`. Eén
+    persoon kan niet twee keer op dezelfde dag in twee verschillende
+    posten bij dezelfde organisatie beginnen voor wat feitelijk hetzelfde
+    ambt is; dat is een ontdubbel-signaal sterker dan label-matching.
+    """
+    for p, d in persons:
+        mandates = d.get("mandaten")
+        if not isinstance(mandates, list):
+            continue
+        by_org_start: dict[tuple[str, str], list[dict]] = defaultdict(list)
+        for m in mandates:
+            if not isinstance(m, dict):
+                continue
+            org = m.get("organization_id")
+            start = m.get("start_date")
+            if not org or not start:
+                continue
+            by_org_start[(str(org), str(start))].append(m)
+        for (org, start), members in sorted(by_org_start.items()):
+            posts = {str(m.get("post_id")) for m in members if m.get("post_id")}
+            if len(members) < 2 or len(posts) < 2:
+                continue
+            ids = ", ".join(sorted(str(m.get("id", "?")) for m in members))
+            findings.append(
+                Finding(
+                    "dup_mandate_same_start",
+                    f"{d.get('id', p.name)}|{org}|{start}",
+                    f"{p.name}: {len(members)} mandaten {org} start={start} "
+                    f"op {len(posts)} verschillende posten ({ids})",
+                )
+            )
+
+
+def _check_dup_post_same_office(
+    persons: list[tuple[Path, dict]],
+    posts: list[tuple[Path, dict]],
+    findings: list[Finding],
+) -> None:
+    """Twee post-records bij dezelfde organisatie die feitelijk hetzelfde
+    ambt zijn, ook al verschillen de labels.
+
+    `_check_dup_post_role_org` matcht op genormaliseerd label en mist
+    label-drift ('Minister-president van Nederland' vs 'Minister-President,
+    Minister van Algemene Zaken'). Signaal hier: minstens één persoon heeft
+    twee mandaten — één op post A, één op post B, beide bij dezelfde org —
+    met overlappende of identieke periode. Dan zijn A en B vrijwel zeker
+    dezelfde functie onder twee post-ids.
+    """
+    post_org = {
+        str(d["id"]): str(d["organization_id"])
+        for _, d in posts
+        if d.get("id") and d.get("organization_id")
+    }
+    # (post_a, post_b) -> set van person-ids die het paar via mandaten linken
+    linked: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for p, d in persons:
+        mandates = d.get("mandaten")
+        if not isinstance(mandates, list):
+            continue
+        pid = str(d.get("id", p.name))
+        rows: list[tuple[str, str, str | None]] = []
+        for m in mandates:
+            if not isinstance(m, dict):
+                continue
+            post = m.get("post_id")
+            start = m.get("start_date")
+            if not post or not start:
+                continue
+            rows.append((str(post), str(start), m.get("end_date")))
+        for i, (pa, sa, ea) in enumerate(rows):
+            for pb, sb, eb in rows[i + 1 :]:
+                if pa == pb:
+                    continue
+                if post_org.get(pa) != post_org.get(pb):
+                    continue
+                if post_org.get(pa) is None:
+                    continue
+                if not _periods_collide(sa, ea, sb, eb):
+                    continue
+                key = tuple(sorted((pa, pb)))
+                linked[key].add(pid)
+    for (pa, pb), people in sorted(linked.items()):
+        org = post_org.get(pa, "?")
+        who = ", ".join(sorted(people))
+        findings.append(
+            Finding(
+                "dup_post_same_office",
+                f"{pa}|{pb}",
+                f"{org}: posten {pa} en {pb} overlappen voor "
+                f"{len(people)} persoon(en) ({who}); waarschijnlijk "
+                f"dezelfde functie onder twee post-ids",
+            )
+        )
 
 
 def _check_mandaat(

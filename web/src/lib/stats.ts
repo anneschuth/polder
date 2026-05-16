@@ -64,22 +64,41 @@ export function appointmentsPerYear(): YearBucket[] {
 export interface SourceBucket {
   id: string;
   records: number;
+  /** Most recent `retrieved` date seen for this source (ISO YYYY-MM-DD). */
+  latest: string;
 }
 
 export function recordsPerSource(): SourceBucket[] {
   const { people, orgs, posts } = loadAll();
   const counts = new Map<string, number>();
-  const tally = (sources?: { id: string }[]) => {
+  const latest = new Map<string, string>();
+  const tally = (sources?: { id: string; retrieved?: string }[]) => {
     for (const s of sources ?? []) {
       counts.set(s.id, (counts.get(s.id) ?? 0) + 1);
+      const r = s.retrieved ?? '';
+      if (r > (latest.get(s.id) ?? '')) latest.set(s.id, r);
     }
   };
   for (const p of people) tally(p.sources);
   for (const o of orgs) tally(o.sources);
   for (const p of posts) tally(p.sources);
   return [...counts.entries()]
-    .map(([id, records]) => ({ id, records }))
+    .map(([id, records]) => ({ id, records, latest: latest.get(id) ?? '' }))
     .sort((a, b) => b.records - a.records);
+}
+
+/**
+ * Most recent `retrieved` date across all record-level sources, as a real
+ * data-freshness signal. Returns ISO YYYY-MM-DD, or '' if no source carries
+ * a retrieved date. NOT the build date; this reflects when the data was
+ * last refreshed from upstream.
+ */
+export function lastUpdated(): string {
+  let max = '';
+  for (const s of recordsPerSource()) {
+    if (s.latest > max) max = s.latest;
+  }
+  return max;
 }
 
 export interface FunctionBucket {
