@@ -8,7 +8,7 @@ en `polder audit`.
 ```
 polder roo fetch        # exportOO.xml → data/organisaties/
 polder roo functies     # functies + medewerkers → data/_staging/ (proposals)
-polder roo resolve       # staging-proposals → posten/personen (3 auto-merge lanes)
+polder roo resolve      # proposals → posten/personen (2 auto-merge lanes)
 polder roo roundtrip    # superset-claim verifiëren (XML ⊆ YAML)
 ```
 """
@@ -83,9 +83,10 @@ def roo_resolve(
 ) -> None:
     """Resolve ROO functie/medewerker-proposals naar bestaande posts/personen.
 
-    Drie auto-merge lanes (post enrichment, mandaat bevestiging, mandaat
-    creation) volgens field-aware precedence. Wat niet auto-mergeable is
-    gaat naar `data/_staging/<input-stem>.unresolved.json`."""
+    Twee auto-merge lanes (post enrichment + mandaat bevestiging — beide
+    additief, geen nieuw benoemingsfeit). Nieuwe benoemingen, ambigue
+    matches en onbekende personen/posten gaan naar
+    `data/_staging/<input-stem>.unresolved.json`."""
     from polder.resolve_roo import resolve
 
     if not proposals.exists():
@@ -99,7 +100,6 @@ def roo_resolve(
     typer.echo(f"=== ROO resolve-stats ({label}) ===", err=True)
     typer.echo(f"  posts enriched:       {stats.posts_enriched}", err=True)
     typer.echo(f"  mandaten confirmed:   {stats.mandaten_confirmed}", err=True)
-    typer.echo(f"  mandaten created:     {stats.mandaten_created}", err=True)
     typer.echo(f"  person not found:     {stats.person_not_found}", err=True)
     typer.echo(f"  person ambiguous:     {stats.person_ambiguous}", err=True)
     typer.echo(f"  post not found:       {stats.post_not_found}", err=True)

@@ -1,25 +1,28 @@
 """Deterministic resolver voor ROO functie/medewerker-staging-proposals.
 
-Drie lanes (overeengekomen scope):
+Twee auto-merge lanes (additief, geen nieuwe feiten — daarom binnen
+de project-governance toegestaan voor code):
 
-1. **Post enrichment** (auto-merge, confidence ≥ 0.95):
+1. **Post enrichment** (confidence ≥ 0.95):
    Bestaande post + ROO functie matcht (org+naam) → voeg
-   `roo_id`/`roo_naam`/`roo_functie_id` toe aan post-yaml.
-   Geen nieuwe records.
+   `roo_functie_id`/`roo_naam` toe aan post-yaml. Geen nieuwe records;
+   puur administratieve metadata waarvoor ROO de registry-autoriteit is.
 
-2. **Mandaat bevestiging** (auto-merge, confidence ≥ 0.95):
-   Bestaande person heeft een open mandaat op die post → voeg
-   `roo:<sysid>` toe aan mandaat.sources[]. Two-source rule
-   gerespecteerd: Staatscourant/ABD was bron 1, ROO is bron 2.
+2. **Mandaat bevestiging** (confidence ≥ 0.95):
+   Bestaande person heeft een open mandaat op die post → voeg een ROO
+   `sources[]`-entry toe. Two-source rule blijft intact: het mandaat
+   bestond al uit Staatscourant/ABD/ORI (bron 1), ROO is bron 2. Geen
+   nieuw benoemingsfeit.
 
-3. **Mandaat creation** (auto-merge, confidence ≥ 0.95):
-   Persoon en post matchen exact, maar er is geen open mandaat. Maak
-   mandaat aan met start_date uit ROO-startDatum.
-
-Wat NOOIT auto-gemerged wordt (gaat naar `<input-stem>.resolved.json`
-voor `resolve-staging-proposals`-skill):
+Wat NOOIT auto-gemerged wordt (gaat naar
+`data/_staging/<input-stem>.unresolved.json` voor de
+human-on-the-loop / `resolve-staging-proposals`-skill):
+- **Nieuwe benoeming** (persoon+post matchen maar geen mandaat). Een
+  mandaat-creation met ROO als enige bron schendt de two-source rule
+  (CLAUDE.md: Staatscourant + ≥1 andere bron, of Stcrt ≥ 0.98). Wordt
+  een proposal met confidence 0.7 + confidence_reasoning.
 - Nieuwe person creation (parsing van `mw. drs. M. (Mirjam) van Leeuwen`
-  is broos; zou hard blijven).
+  is broos).
 - Ambiguous person matches (≥ 2 personen delen family+initials).
 - Nieuwe post creation (ROO functie zonder bestaande polder-post).
 
@@ -39,7 +42,6 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
-from typing import Any
 
 import yaml
 
@@ -382,75 +384,12 @@ def confirm_mandaat(mandaat: dict, proposal: dict, medewerker: dict, *, today: s
     return True
 
 
-# ---------------------------------------------------------------------------
-# Lane 3: Mandaat creation
-# ---------------------------------------------------------------------------
-
-
-def create_mandaat(
-    person_data: dict,
-    proposal: dict,
-    medewerker: dict,
-    post_id: str,
-    parent_org_id: str,
-    *,
-    today: str,
-) -> bool:
-    """Maak een nieuw mandaat aan voor deze persoon op deze post.
-
-    Skip als er al een mandaat is op dezelfde post (open of gesloten) met
-    overlappende of latere periode — om dubbele mandaten te voorkomen.
-    """
-    sysid = medewerker.get("roo_medewerker_id")
-    start = medewerker.get("start_date")
-    end = medewerker.get("end_date")
-    if not start:
-        return False  # zonder start_date kunnen we geen mandaat schrijven
-
-    existing = person_data.get("mandaten") or []
-    for m in existing:
-        if not isinstance(m, dict):
-            continue
-        if m.get("post_id") != post_id:
-            continue
-        m_start = m.get("start_date")
-        # Bestaand mandaat op deze post met dezelfde start_date → overlap, skip.
-        if m_start == start:
-            return False
-        # Bestaand open mandaat met eerdere start → ROO bevestigt huidigheid,
-        # NIET een nieuwe mandaat. Skip; lane 2 zou hier moeten landen.
-        if m.get("end_date") in (None, "") and m_start and m_start <= start:
-            return False
-
-    role = proposal.get("roo_functie_naam") or "Functie"
-    src_url = _roo_org_url(proposal.get("parent_roo_id"), parent_org_id)
-    # Mandate-id moet uniek zijn per (persoon, post, periode). Als ROO ooit
-    # een tweede medewerker met dezelfde sysid op dezelfde post (andere
-    # periode) levert, voorkomt `start` een collision.
-    post_slug = post_id.replace(":", "-")
-    mandate_id = f"roo-{sysid}-{post_slug}-{start}" if sysid else f"roo-{post_slug}-{start}"
-    new_mandaat: dict[str, Any] = {
-        "id": mandate_id,
-        "organization_id": parent_org_id,
-        "post_id": post_id,
-        "role": role,
-        "start_date": start,
-        "end_date": end if end else None,
-        "confidence": 0.95,
-        "sources": [
-            {
-                "id": SOURCE_ID,
-                "url": src_url,
-                "retrieved": today,
-                "fields": ["start_date", "role", f"roo_medewerker_id={sysid}"]
-                if sysid
-                else ["start_date", "role"],
-            }
-        ],
-    }
-    existing.append(new_mandaat)
-    person_data["mandaten"] = existing
-    return True
+# Lane 3 (auto-create mandaat uit ROO-only) is bewust verwijderd: dat
+# schond de two-source rule (project-CLAUDE.md — een benoeming vereist
+# Staatscourant + ≥1 andere bron, niet ROO alleen). Nieuwe benoemingen
+# die ROO als enige bron heeft gaan nu als staging-proposal naar
+# `data/_staging/<input>.unresolved.json` (zie de resolve()-loop), waar
+# de human-on-the-loop ze met een tweede bron kan bevestigen.
 
 
 # ---------------------------------------------------------------------------
@@ -462,7 +401,6 @@ def create_mandaat(
 class ResolutionStats:
     posts_enriched: int = 0
     mandaten_confirmed: int = 0
-    mandaten_created: int = 0
     person_not_found: int = 0
     person_ambiguous: int = 0
     post_not_found: int = 0
@@ -540,15 +478,38 @@ def resolve(
 
             open_m = find_open_mandate(person_data, post_id)
             if open_m is not None:
-                # Lane 2: bevestig huidigheid.
+                # Lane 2: bevestig huidigheid. ROO wordt 2e bron op een
+                # mandaat dat al uit Staatscourant/ABD/ORI komt — two-source
+                # rule blijft intact (additieve provenance, geen nieuw feit).
                 if confirm_mandaat(open_m, prop, med, today=today):
                     stats.mandaten_confirmed += 1
                     dirty_persons.add(person_path)
             else:
-                # Lane 3: nieuwe mandaat.
-                if create_mandaat(person_data, prop, med, post_id, org_id, today=today):
-                    stats.mandaten_created += 1
-                    dirty_persons.add(person_path)
+                # Geen bestaand mandaat: een NIEUWE benoeming op alleen ROO
+                # als bron. De two-source rule (project-CLAUDE.md) verbiedt
+                # auto-merge hiervan — Staatscourant + ≥1 andere bron, of
+                # Stcrt confidence ≥ 0.98. ROO alleen voldoet niet. Daarom
+                # geen auto-create, maar een staging-proposal voor de
+                # human-on-the-loop / resolve-staging-proposals-skill.
+                stats.proposals_to_staging += 1
+                staging_proposals.append(
+                    {
+                        "roo_functie_id": prop.get("roo_functie_id"),
+                        "roo_functie_naam": functie_naam,
+                        "post_id": post_id,
+                        "parent_org_id": org_id,
+                        "resolved_person_id": person_id,
+                        "medewerker": med,
+                        "_resolution": "new_mandaat_needs_second_source",
+                        "confidence": 0.7,
+                        "confidence_reasoning": (
+                            "ROO is administratieve current-state, geen "
+                            "benoemingsbron. Een nieuw mandaat vereist "
+                            "Staatscourant + minstens één andere bron "
+                            "(two-source rule). ROO-only blijft een proposal."
+                        ),
+                    }
+                )
 
     if not dry_run:
         # Bouw één keer een path → data lookup uit de bestaande indices.
@@ -616,7 +577,6 @@ def main(argv: list[str] | None = None) -> int:
     )
     print(f"  posts enriched:       {stats.posts_enriched}", file=sys.stderr)
     print(f"  mandaten confirmed:   {stats.mandaten_confirmed}", file=sys.stderr)
-    print(f"  mandaten created:     {stats.mandaten_created}", file=sys.stderr)
     print(f"  person not found:     {stats.person_not_found}", file=sys.stderr)
     print(f"  person ambiguous:     {stats.person_ambiguous}", file=sys.stderr)
     print(f"  post not found:       {stats.post_not_found}", file=sys.stderr)

@@ -424,6 +424,32 @@ def test_merge_yaml_empty_existing():
     assert merged == new
 
 
+def test_merge_yaml_sentinel_does_not_overwrite_real_valid_from():
+    """Een handmatige of Wikidata-P571-correctie op valid_from mag NIET
+    overschreven worden door ROO's 1900-01-01-sentinel bij her-fetch."""
+    existing = {
+        "id": "org:min-bzk",
+        "valid_from": "1798-03-12",  # echte oprichtingsdatum, gecureerd
+        "valid_until": None,
+    }
+    new = {
+        "id": "org:min-bzk",
+        "valid_from": roo.SENTINEL_VALID_FROM,  # ROO weet het niet
+        "valid_until": None,
+    }
+    merged = roo.merge_yaml(existing, new)
+    assert merged["valid_from"] == "1798-03-12"  # behouden, niet 1900-01-01
+
+
+def test_merge_yaml_real_valid_from_does_overwrite_sentinel():
+    """Andersom: als bestaand de sentinel heeft en ROO/nieuw een echte
+    datum, dan wél updaten."""
+    existing = {"id": "org:x", "valid_from": roo.SENTINEL_VALID_FROM}
+    new = {"id": "org:x", "valid_from": "2017-10-26"}
+    merged = roo.merge_yaml(existing, new)
+    assert merged["valid_from"] == "2017-10-26"
+
+
 # ---------------------------------------------------------------------------
 # write_records (idempotency end-to-end)
 # ---------------------------------------------------------------------------

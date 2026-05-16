@@ -10,7 +10,6 @@ import yaml
 from polder.resolve_roo import (
     build_index,
     confirm_mandaat,
-    create_mandaat,
     enrich_post,
     find_open_mandate,
     find_person,
@@ -239,59 +238,9 @@ def test_confirm_mandaat_appends_roo_source():
     assert confirm_mandaat(mandaat, proposal, med, today="2026-05-15") is False
 
 
-# ---------------------------------------------------------------------------
-# Lane 3: mandaat creation
-# ---------------------------------------------------------------------------
-
-
-def test_create_mandaat_writes_new_record():
-    person = {"id": "person:x", "mandaten": []}
-    proposal = {
-        "roo_functie_id": "1",
-        "roo_functie_naam": "Burgemeester",
-        "parent_roo_id": "5",
-    }
-    med = {
-        "roo_medewerker_id": "100",
-        "naam": "Foo",
-        "start_date": "2020-01-01",
-        "end_date": None,
-    }
-    changed = create_mandaat(
-        person, proposal, med, "post:burgemeester-gemeente-x", "org:gemeente-x", today="2026-05-15"
-    )
-    assert changed is True
-    assert len(person["mandaten"]) == 1
-    m = person["mandaten"][0]
-    assert m["start_date"] == "2020-01-01"
-    assert m["post_id"] == "post:burgemeester-gemeente-x"
-    assert m["role"] == "Burgemeester"
-    assert m["sources"][0]["id"] == "roo"
-
-
-def test_create_mandaat_skips_when_open_mandate_exists():
-    """Lane 3 moet niet vuren als er al een open mandaat is dat lane 2 zou
-    moeten bevestigen — dubbele mandaten voorkomen."""
-    person = {
-        "id": "person:x",
-        "mandaten": [
-            {
-                "post_id": "post:a",
-                "start_date": "2019-01-01",
-                "end_date": None,
-            }
-        ],
-    }
-    proposal = {"roo_functie_naam": "X", "parent_roo_id": "5"}
-    med = {"roo_medewerker_id": "100", "start_date": "2020-01-01"}
-    assert create_mandaat(person, proposal, med, "post:a", "org:y", today="2026-05-15") is False
-
-
-def test_create_mandaat_skips_without_start_date():
-    person = {"id": "person:x", "mandaten": []}
-    proposal = {"parent_roo_id": "5"}
-    med = {"roo_medewerker_id": "100"}  # geen start_date
-    assert create_mandaat(person, proposal, med, "post:a", "org:y", today="2026-05-15") is False
+# Lane 3 (auto-create mandaat uit ROO-only) is verwijderd wegens
+# two-source-rule-schending. De vervangende staging-proposal-route wordt
+# gedekt door `test_resolve_new_mandaat_goes_to_staging` hieronder.
 
 
 # ---------------------------------------------------------------------------
@@ -299,10 +248,10 @@ def test_create_mandaat_skips_without_start_date():
 # ---------------------------------------------------------------------------
 
 
-def test_resolve_end_to_end_three_lanes(tmp_path: Path):
+def test_resolve_end_to_end_two_lanes_plus_staging(tmp_path: Path):
     data = _setup_data(tmp_path)
     _write_post(data, "minister-min-fin", "org:min-fin", "Minister van Financiën")
-    # Persoon met open mandaat (lane 2).
+    # Persoon met bestaand open mandaat → lane 2 (bevestiging).
     _write_person(
         data,
         "klop-jp-1970",
@@ -323,7 +272,8 @@ def test_resolve_end_to_end_three_lanes(tmp_path: Path):
             }
         ],
     )
-    # Persoon zonder mandaat op die post (lane 3).
+    # Persoon ZONDER mandaat op die post → mag GEEN auto-mandaat krijgen
+    # (two-source rule); moet als staging-proposal landen.
     _write_person(data, "nieuw-ab-1980", "Nieuw", "A.B.")
 
     proposals_payload = {
@@ -335,10 +285,7 @@ def test_resolve_end_to_end_three_lanes(tmp_path: Path):
                 "parent_roo_id": "12345",
                 "suggested_post_id": "post:minister-min-fin",
                 "medewerkers": [
-                    {
-                        "roo_medewerker_id": "111",
-                        "naam": "dhr. J.P. Klop",
-                    },
+                    {"roo_medewerker_id": "111", "naam": "dhr. J.P. Klop"},
                     {
                         "roo_medewerker_id": "222",
                         "naam": "dhr. A.B. Nieuw",
@@ -364,30 +311,36 @@ def test_resolve_end_to_end_three_lanes(tmp_path: Path):
 
     assert stats.posts_enriched == 1  # lane 1
     assert stats.mandaten_confirmed == 1  # lane 2 (Klop)
-    assert stats.mandaten_created == 1  # lane 3 (Nieuw)
-    assert stats.post_not_found == 1  # Onbekende functie
-    assert stats.proposals_to_staging >= 1
+    assert stats.post_not_found == 1  # Onbekende functie → staging
+    # Nieuw + Onbekende functie → minstens 2 staging-entries.
+    assert stats.proposals_to_staging >= 2
 
-    # Verify post on disk has roo-fields.
+    # Post heeft roo-fields (lane 1).
     post = yaml.safe_load((data / "posten" / "minister-min-fin.yaml").read_text())
     assert post["roo_functie_id"] == "999"
     assert post["sources"][0]["id"] == "roo"
 
-    # Klop's mandaat heeft een roo-source extra.
+    # Klop's mandaat heeft een roo-source extra (lane 2).
     klop = yaml.safe_load((data / "personen" / "klop-jp-1970.yaml").read_text())
-    sources = klop["mandaten"][0]["sources"]
-    assert any(s["id"] == "roo" for s in sources)
+    assert any(s["id"] == "roo" for s in klop["mandaten"][0]["sources"])
 
-    # Nieuw heeft een nieuw mandaat.
+    # Nieuw heeft GEEN auto-mandaat gekregen (two-source rule).
     nieuw = yaml.safe_load((data / "personen" / "nieuw-ab-1980.yaml").read_text())
-    assert len(nieuw["mandaten"]) == 1
-    assert nieuw["mandaten"][0]["start_date"] == "2024-01-01"
+    assert not (nieuw.get("mandaten") or [])
 
-    # Staging-file moet bestaan met de Onbekende functie + ambiguous/missing meds.
+    # Staging-file bevat de nieuwe-benoeming-proposal met reasoning.
     staging_files = list((data / "_staging").glob("roo-functies-*.unresolved.json"))
     assert staging_files
     payload = json.loads(staging_files[0].read_text(encoding="utf-8"))
     assert payload["n_unresolved"] == stats.proposals_to_staging
+    new_mandaat_props = [
+        p for p in payload["proposals"] if p.get("_resolution") == "new_mandaat_needs_second_source"
+    ]
+    assert len(new_mandaat_props) == 1
+    p = new_mandaat_props[0]
+    assert p["resolved_person_id"] == "person:nieuw-ab-1980"
+    assert p["confidence"] == 0.7
+    assert "two-source rule" in p["confidence_reasoning"]
 
 
 def test_resolve_dry_run_does_not_write(tmp_path: Path):
@@ -478,17 +431,44 @@ def test_atomic_write_yaml_replaces_on_change(tmp_path: Path):
     assert "bar" in p.read_text(encoding="utf-8")
 
 
-def test_create_mandaat_id_includes_start_for_uniqueness():
-    """Een tweede medewerker met dezelfde sysid op dezelfde post (andere
-    periode) mag niet collideren met de eerste mandate-id."""
-    from polder.resolve_roo import create_mandaat
+def test_resolve_new_mandaat_goes_to_staging_not_canonical(tmp_path: Path):
+    """Een ROO-only nieuwe benoeming mag NOOIT direct in data/personen
+    belanden (two-source rule). Het hoort als staging-proposal met
+    confidence 0.7 + reasoning."""
+    data = _setup_data(tmp_path)
+    _write_post(data, "burgemeester-gemeente-x", "org:gemeente-x", "Burgemeester")
+    _write_person(data, "foo-ab-1980", "Foo", "A.B.")
 
-    person = {"id": "person:x", "mandaten": []}
-    proposal = {"roo_functie_naam": "X", "parent_roo_id": "5"}
-    med1 = {"roo_medewerker_id": "100", "start_date": "2020-01-01", "end_date": "2022-01-01"}
-    med2 = {"roo_medewerker_id": "100", "start_date": "2024-01-01", "end_date": None}
-    create_mandaat(person, proposal, med1, "post:a", "org:y", today="2026-05-15")
-    create_mandaat(person, proposal, med2, "post:a", "org:y", today="2026-05-15")
-    ids = [m["id"] for m in person["mandaten"]]
-    assert len(ids) == 2
-    assert ids[0] != ids[1], f"mandate-ids moeten uniek zijn: {ids}"
+    proposals_payload = {
+        "proposals": [
+            {
+                "roo_functie_id": "1",
+                "roo_functie_naam": "Burgemeester",
+                "parent_org_id": "org:gemeente-x",
+                "parent_roo_id": "5",
+                "suggested_post_id": "post:burgemeester-gemeente-x",
+                "medewerkers": [
+                    {
+                        "roo_medewerker_id": "100",
+                        "naam": "dhr. A.B. Foo",
+                        "start_date": "2024-01-01",
+                    }
+                ],
+            }
+        ]
+    }
+    pf = tmp_path / "props.json"
+    pf.write_text(json.dumps(proposals_payload), encoding="utf-8")
+    stats, _ = resolve(pf, data, today="2026-05-15")
+
+    # Geen canoniek mandaat aangemaakt.
+    foo = yaml.safe_load((data / "personen" / "foo-ab-1980.yaml").read_text())
+    assert not (foo.get("mandaten") or [])
+    # Wel een staging-proposal.
+    assert stats.proposals_to_staging == 1
+    sf = next((data / "_staging").glob("roo-functies-*.unresolved.json"))
+    payload = json.loads(sf.read_text(encoding="utf-8"))
+    prop = payload["proposals"][0]
+    assert prop["_resolution"] == "new_mandaat_needs_second_source"
+    assert prop["confidence"] == 0.7
+    assert "confidence_reasoning" in prop

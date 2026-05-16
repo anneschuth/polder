@@ -42,6 +42,14 @@ PRIMARY_URL = f"{ROO_PUBLIC_BASE}/archive/exportOO.xml"
 FALLBACK_URL = f"{ROO_PUBLIC_BASE}/archive/exportOO_ministeries.xml"
 SOURCE_ID = "roo"
 
+# ROO's `<startDatum>` is de aanmaakdatum van het legale entity-record,
+# niet de validity-datum van de huidige naam (EZK/IenW kregen daardoor
+# 2010-10-14 terwijl die namen pas in 2017 ontstonden). Als er geen
+# betrouwbare bron is gebruiken we deze sentinel; Wikidata's P571 of een
+# handmatige correctie vult de echte datum. `merge_yaml` overschrijft een
+# bestaande betere waarde NOOIT met deze sentinel.
+SENTINEL_VALID_FROM = "1900-01-01"
+
 
 def roo_org_url(roo_id: str | int | None, slug: str | None) -> str:
     """Bouw een resolvende ROO-organisatie-URL.
@@ -958,7 +966,9 @@ def parse_organisatie(node: etree._Element) -> dict[str, Any] | None:
     # we een sentinel als er geen betrouwbare bron is. `<opgericht>` en
     # `<valid_from>` worden alleen door test-fixtures gebruikt; echte ROO-XML
     # heeft ze niet, en als ze er wel staan zijn ze al inhoudelijk juist.
-    valid_from = _direct_text(node, "opgericht") or _direct_text(node, "valid_from") or "1900-01-01"
+    valid_from = (
+        _direct_text(node, "opgericht") or _direct_text(node, "valid_from") or SENTINEL_VALID_FROM
+    )
     valid_until = (
         _direct_text(node, "opgeheven")
         or _direct_text(node, "einddatum")
@@ -1180,7 +1190,7 @@ def parse_gemeenschappelijke_regeling(node: etree._Element) -> dict[str, Any] | 
     if sysid:
         identifiers["roo_id"] = str(sysid)
 
-    valid_from = _direct_text(node, "datumInwerkingtreding") or "1900-01-01"
+    valid_from = _direct_text(node, "datumInwerkingtreding") or SENTINEL_VALID_FROM
     valid_until = _direct_text(node, "datumUitwerkingtreding")
 
     # Voor de naam-entry: GRs hebben geen eigen afkorting in ROO, maar de
@@ -1487,6 +1497,22 @@ def merge_yaml(existing: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
             # Private key (sub_folder, slug, parent_roo_id, parent_org_id):
             # altijd vervangen.
             merged[key] = value
+        elif key in ("valid_from", "valid_until"):
+            # ROO's `<startDatum>` is onbetrouwbaar als naam-validity; de
+            # fetcher zet daarom de sentinel "1900-01-01" wanneer er geen
+            # betrouwbare bron is. Een eerdere fetch óf een handmatige
+            # correctie óf de Wikidata-fetcher (P571) kan een echte datum
+            # hebben gezet. We mogen die NOOIT overschrijven met de
+            # sentinel — dat is data-verlies bij elke her-fetch.
+            existing_val = merged.get(key)
+            if value == SENTINEL_VALID_FROM and existing_val not in (
+                None,
+                "",
+                SENTINEL_VALID_FROM,
+            ):
+                pass  # behoud de bestaande, betere waarde
+            elif value is not None or key not in merged:
+                merged[key] = value
         else:
             if value is not None or key not in merged:
                 merged[key] = value
