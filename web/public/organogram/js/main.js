@@ -158,7 +158,16 @@ function mergeBundle(id, data) {
   const target = findInRootData(id);
   if (!target) return;
   if (!target.children || target.children.length === 0) {
-    target.children = data.children || [];
+    // Markeer geïnstalleerde subtree-children als dichtgeklapt zodat ze niet
+    // auto-expanderen zodra hun parent opengaat (per-laag openklappen).
+    target.children = (data.children || []).map((child) => {
+      const hasKids =
+        (child.children && child.children.length) ||
+        (child.posten && child.posten.length) ||
+        child.bundle;
+      if (hasKids) child._collapsed = true;
+      return child;
+    });
     target.posten = data.posten || [];
   }
   if (searchApi && rootData) searchApi.indexFromHierarchy(rootData);
@@ -170,6 +179,7 @@ function tileToNode(tile) {
       id: tile.id,
       kind: "category-tree",
       label: tile.label,
+      _collapsed: true,
       _count: tile.count,
       children: (tile.members || []).map((m) => ({
         id: m.id,
@@ -205,6 +215,7 @@ function tileToNode(tile) {
     valid_from: tile.valid_from,
     valid_until: tile.valid_until,
     children: [],
+    _collapsed: true,
     _descendant_org_count: tile.descendant_org_count,
   };
 }
