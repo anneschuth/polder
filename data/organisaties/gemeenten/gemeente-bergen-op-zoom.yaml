@@ -6,21 +6,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0748
   roo_id: '30437'
   wikidata: Q9814
+  owms: http://standaarden.overheid.nl/owms/terms/Bergen_op_Zoom_(gemeente)
+  ictu: 00748
+  organisatiecode: gm0748
+  rsin: 001725038
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BZM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Bergen op Zoom
   abbr: Bergen op Zoom
   valid_from: '1900-01-01'
+description:
+  url: https://bergenopzoom.sharepoint.com/SitePages/Organisatie.aspx
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.bergenopzoom.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/30437/Gemeente_Bergen_op_Zoom
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://bergenopzoom.bestuurlijkeinformatie.nl
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergen+op+Zoom%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergen+op+Zoom%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergen+op+Zoom%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.bergenopzoom.nl/wet-open-overheid-woo
+organogram_url: https://bergenopzoom.sharepoint.com/SitePages/Organigram-%26-managers-per-afdeling.aspx
+afspraak:
+  url: https://www.bergenopzoom.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 100,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 100.0
+  aantal_inwoners: 70692
+  inwoners: '706'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 706.0
+  bevat_plaatsen_raw: Bergen Op Zoom, Halsteren, Lepelstraat
+  bevat_plaatsen:
+  - Bergen Op Zoom
+  - Halsteren
+  - Lepelstraat
+council:
+  total_seats: 34
+  parties:
+  - naam: GBWP
+    aantal_zetels: 8
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 3
+  - naam: PVV
+    aantal_zetels: 3
+  - naam: Lokaal Realisme
+    aantal_zetels: 2
+  - naam: Belang van Bergen op Zoom
+    aantal_zetels: 2
+  - naam: Bergs Collectief
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: BSD
+    aantal_zetels: 1
+  - naam: SAMEN0164
+    aantal_zetels: 1
 contact:
   website: https://www.bergenopzoom.nl
   email: stadskantoor@bergenopzoom.nl
+  bezoekadres: Jacob Obrechtlaan 4, 4611 AR BERGEN OP ZOOM
+  postadres: Postbus 35, 4600 AA BERGEN OP ZOOM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jacob Obrechtlaan
+    huisnummer: '4'
+    postcode: 4611 AR
+    woonplaats: BERGEN OP ZOOM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '35'
+    postcode: 4600 AA
+    woonplaats: BERGEN OP ZOOM
+  - type: Woo-Adres
+    postbus: '35'
+    postcode: 4600 AA
+    woonplaats: Bergen op Zoom
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (0164) 27 70 00
+    label: algemeen
+  emails:
+  - email: stadskantoor@bergenopzoom.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.bergenopzoom.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-07'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30437/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30437/gemeente-bergen-op-zoom
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

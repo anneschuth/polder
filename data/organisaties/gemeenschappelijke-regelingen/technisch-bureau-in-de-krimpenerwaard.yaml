@@ -2,15 +2,37 @@ id: org:gr-technisch-bureau-in-de-krimpenerwaard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28068796'
+  owms: http://standaarden.overheid.nl/owms/terms/tbidkw
+  kvk: '57637660'
+  organisatiecode: so0056
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Technisch Bureau in de Krimpenerwaard
+  roo_id: '28068790'
 names:
 - value: Technisch Bureau in de Krimpenerwaard
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+contact:
+  bezoekadres: Raadhuisplein 6, 2922 AD Krimpen aan den IJssel
+  postadres: Postbus 5, 2920 AA Krimpen aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '6'
+    postcode: 2922 AD
+    woonplaats: Krimpen aan den IJssel
+  - type: Postadres
+    postbus: '5'
+    postcode: 2920 AA
+    woonplaats: Krimpen aan den IJssel
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2020-02-27'
+last_verified: '2020-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28068796/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28068796/technisch-bureau-in-de-krimpenerwaard
+  retrieved: '2026-05-16'
+roo_start_datum: '1989-07-01'

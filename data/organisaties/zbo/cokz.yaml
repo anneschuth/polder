@@ -5,21 +5,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000138
   oin: 00000003411899130000
   kvk: '41189913'
+  rsin: '802253271'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Controle Orgaan Kwaliteits Zaken
   abbr: COKZ
   valid_from: '1900-01-01'
+description:
+  text: De Stichting Controle Orgaan Kwaliteits Zaken (COKZ) is de Nederlandse toezichthouder
+    op het gebied van zuivel, pluimvee en eieren. Bij het houden van dit toezicht
+    voert het COKZ Nederlandse en Europese regelgeving uit. Het COKZ is de opvolger
+    van het Centraal Orgaan Zuivelcontrole (COZ) en het Centraal Orgaan Melkhygiëne
+    (COM). Ook zijn de taken van het Controlebureau voor Pluimvee, Eieren en Eiproducten
+    (CPE) per 1 juli 2012 ondergebracht bij het COKZ.
+  url: https://cokz.nl/over-ons/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Landbouwkwaliteitswet, artikel 8
+  referentie: https://wetten.overheid.nl/BWBR0002755/2021-03-01#Artikel8
+- opschrift: Warenwetregeling aanwijzing en werkwijze toezichthouders COKZ
+  referentie: https://wetten.overheid.nl/BWBR0019227/2020-12-09/0
+- opschrift: Wet dieren, artikelen 5.9 en 8.1
+  referentie: https://wetten.overheid.nl/BWBR0030250/2024-07-01/#Hoofdstuk5_Paragraaf2_Artikel5.9
+- opschrift: Besluit aanwijzing toezichthouders Wet dieren, artikel 2, sub e
+  referentie: https://wetten.overheid.nl/BWBR0032516/2023-10-18/0#Artikel2
+taken_en_bevoegdheden: Het Controle Orgaan Kwaliteits Zaken (COKZ) heeft onder meer
+  de volgende taken:* het houden van toezicht op de naleving van proces- en productkwaliteitscriteria
+  in de zuivel- en eierensector;* het waarborgen van de veiligheid en kwaliteit van
+  in Nederland geproduceerde melk, zuivelproducten, eieren en eiproducten;* het bijhouden
+  van een register van erkende bedrijven (waarop het COKZ toezicht houdt) en dit ter
+  beschikking stellen aan de Nederlandse Voedsel- en Warenautoriteit (NVWA).
+evaluations:
+- datum: '2021-05-20'
+  kamerstuknummer: TK 26991 nr. 578
+  referentie: https://zoek.officielebekendmakingen.nl/kst-26991-578.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Avéro Achmea
+    referentie: https://www.averoachmea.nl/particulier/pensioen/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://cokz.nl/publicatie-homepage/overzicht-wob-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212426/Stichting_Controle_Orgaan_Kwaliteits_Zaken
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stichting+Centraal+Orgaan+voor+Kwaliteitsaangelegenheden+in+de+Zuivel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://cokz.nl/wp-content/uploads/2023/06/Besluit-Woo-verzoek-inz.-overleg-ZuivelNL-Stichting-Geborgde-Dierenarts-en-het-COKZ.pdf
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://cokz.nl/wp-content/uploads/2020/01/200005-ANO-besluitwobRTLbijlagen-1-1.pdf
+  wooVerzoek:
+    url: https://cokz.nl/publicatie-homepage/overzicht-woo-verzoeken/
+organogram_url: https://cokz.nl/wp-content/uploads/2021/02/Organogram-2020.pdf
+afspraak:
+  email: info@cokz.nl
+  telefoonnummer: (033) 496 56 96
+personnel:
+  aantalFte: 71,6
+  peildatumFte: '2024-10-01'
 contact:
   website: https://cokz.nl/
   email: info@cokz.nl
+  bezoekadres: Fokkerstraat 1, 3833 LD Leusden
+  postadres: Postbus 250, 3830 AG Leusden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Fokkerstraat
+    huisnummer: '1'
+    postcode: 3833 LD
+    woonplaats: Leusden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '250'
+    postcode: 3830 AG
+    woonplaats: Leusden
+  - type: Woo-Adres
+    openbare_ruimte: Fokkerstraat
+    huisnummer: '1'
+    postcode: 3833 LD
+    woonplaats: Leusden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Woo-Adres
+    postbus: '250'
+    postcode: 3830 AG
+    woonplaats: Leusden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (033) 496 56 96
+    label: algemeen
+  emails:
+  - email: info@cokz.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://cokz.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://cokz.nl/over-ons/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: COKZ
+    url: https://www.linkedin.com/company/cokz/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212426/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212426/cokz
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -28,3 +151,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000138
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

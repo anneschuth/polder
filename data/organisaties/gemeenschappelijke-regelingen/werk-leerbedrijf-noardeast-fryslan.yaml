@@ -1,19 +1,104 @@
 id: org:gr-werk-leerbedrijf-noardeast-fryslan
 type: gemeenschappelijke-regeling
+subname: sociaal ontwikkelbedrijf Dokwurk
 identifiers:
   roo_id: '24963896'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0681
+  owms: http://standaarden.overheid.nl/owms/terms/wlbnefrl
+  kvk: '53905970'
+  organisatiecode: so0681
+  rsin: '851067499'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werk-/Leerbedrijf NoardEast Fryslân
+  roo_id: '24963891'
 names:
 - value: Werk-/Leerbedrijf NoardEast Fryslân
   valid_from: '1900-01-01'
+description:
+  text: Bij Dokwurk ondersteunen we inwoners binnen de regio Noardeast Fryslân met
+    werk- enleer-/ontwikkelvraagstukken. Meedoen in de regionale arbeidsmarkt, dat
+    is wat telt!We bieden interne én externe werk- en ervaringsplekken, passend bij
+    ieders talent, ambitie en ontwikkelmogelijkheden. Hierbij blijven we als professionele
+    partner meebewegen met de veranderende vraag- en marktomstandigheden.Als sociaal
+    ontwikkelbedrijf blijven we onze leidende positie, samen met onze partners, verder
+    uitbouwen met nieuwe leer-/werkconcepten, detacheringsmogelijkheden en industriële
+    toepassingen. Onze oplossingen voldoen aan de criteria Duurzaam, Eigentijds en
+    Effectief, vanuit het besef dat ontwikkeling een kwestie is van samenwerken en
+    doen!
+  url: https://www.dokwurk.nl/content/over/over-dokwurk/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dokwurk.nl/contactformulier/
+      overzichtURL: https://organisaties.overheid.nl/woo/24963896/Werk-Leerbedrijf_NoardEast_Fryslan
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.dokwurk.nl/woo/
+  wooVerzoek:
+    url: https://www.dokwurk.nl/contactformulier/
+organogram_url: https://www.dokwurk.nl/content/over/hoe-zijn-we-georganiseerd/
+afspraak:
+  email: info@dokwurk.nl
+  telefoonnummer: (0519) 22 91 19
+  url: https://www.dokwurk.nl/contactformulier/
 contact:
   website: https://www.dokwurk.nl
   email: info@dokwurk.nl
+  bezoekadres: Hendoweg 26, 9101 PC Dokkum
+  postadres: Postbus 110, 9100 AC Dokkum
+  addresses:
+  - type: Bezoekadres
+    toelichting: Dokwurk Dokkum
+    openbare_ruimte: Hendoweg
+    huisnummer: '26'
+    postcode: 9101 PC
+    woonplaats: Dokkum
+  - type: Postadres
+    postbus: '110'
+    postcode: 9100 AC
+    woonplaats: Dokkum
+  - type: Woo-Adres
+    openbare_ruimte: Hendoweg
+    huisnummer: '26'
+    postcode: 9101 PC
+    woonplaats: Dokkum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  phones:
+  - nummer: (0519) 22 91 19
+    label: algemeen
+  emails:
+  - email: info@dokwurk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dokwurk.nl
+    label: algemeen
+  - url: https://www.dokwurk.nl/contactformulier
+    label: contact
+  contact_forms:
+  - url: https://www.dokwurk.nl/contactformulier/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-09'
+last_verified: '2021-12-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963896/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963896/werk-leerbedrijf-noardeast-fryslan
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-07-01'

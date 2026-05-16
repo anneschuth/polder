@@ -1,15 +1,44 @@
 id: org:oovb-stichting-chemelot-institute-for-science-en-technology
 type: rwt
+subname: Stichting Chemelot InSciTe
 identifiers:
   roo_id: '28347293'
+  kvk: '63001489'
+  rsin: '855048645'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Chemelot Institute for Science & Technology
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Urmonderbaan 20F, 6167 RD Sittard- Geleen
+  postadres: Urmonderbaan 20F, 6167 RD Geleen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Urmonderbaan 20F
+    postcode: 6167 RD
+    woonplaats: Sittard- Geleen
+  - type: Postadres
+    openbare_ruimte: Urmonderbaan 20F
+    postcode: 6167 RD
+    woonplaats: Geleen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347293/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347293/stichting-chemelot-institute-for-science-en-technology
+  retrieved: '2026-05-16'

@@ -7,11 +7,24 @@ parent_id: org:onderdeel-ipo-secretariaat
 names:
 - value: Algemeen Bestuurlijke en Juridische Zaken
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   email: aklapwijk@ipo.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 888 12 12
+    label: algemeen
+  emails:
+  - email: aklapwijk@ipo.nl
+    label: algemeen
+  fax: (070) 888 12 80
 valid_from: '1900-01-01'
 valid_until: null
+last_verified: '2026-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16055/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16055/algemeen-bestuurlijke-en-juridische-zaken
+  retrieved: '2026-05-16'

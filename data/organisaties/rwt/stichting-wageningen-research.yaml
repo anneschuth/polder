@@ -2,14 +2,43 @@ id: org:stichting-wageningen-research
 type: rwt
 identifiers:
   roo_id: '27917811'
+  kvk: 09098104
+  oin: 00000003090981040000
+  rsin: '806511618'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Wageningen Research
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Droevendaalsesteeg 4, 6708 PB Wageningen
+  postadres: Postbus 9101, 6700 HB Wageningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Droevendaalsesteeg 4
+    postcode: 6708 PB
+    woonplaats: Wageningen
+  - type: Postadres
+    postbus: '9101'
+    postcode: 6700 HB
+    woonplaats: Wageningen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917811/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917811/stichting-wageningen-research
+  retrieved: '2026-05-16'

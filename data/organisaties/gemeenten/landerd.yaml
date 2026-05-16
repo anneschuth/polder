@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1685
   roo_id: '32885'
   wikidata: Q9849
+  owms: http://standaarden.overheid.nl/owms/terms/Landerd
+  ictu: 01685
+  organisatiecode: gm1685
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,89 @@ names:
   abbr: Landerd
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 70,68
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 70.68
+  aantal_inwoners: 15332
+  inwoners: '216'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 216.0
+  bevat_plaatsen_raw: Reek, Schaijk, Zeeland
+  bevat_plaatsen:
+  - Reek
+  - Schaijk
+  - Zeeland
+council:
+  total_seats: 17
+  parties:
+  - naam: Maashorst Vooruit
+    aantal_zetels: 4
+  - naam: RPP
+    aantal_zetels: 3
+  - naam: DS97
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Duurzaam Maashorst
+    aantal_zetels: 2
+  - naam: Lijst Zeeland
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: Progressief Landerd
+    aantal_zetels: 1
 contact:
   website: www.landerd.nl
   email: info@landerd.nl
+  bezoekadres: Kerkstraat 39, 5411 EA ZEELAND
+  postadres: Postbus 35, 5410 AA ZEELAND
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kerkstraat
+    huisnummer: '39'
+    postcode: 5411 EA
+    woonplaats: ZEELAND
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '35'
+    postcode: 5410 AA
+    woonplaats: ZEELAND
+  phones:
+  - nummer: (0486) 45 81 11
+    label: algemeen
+  emails:
+  - email: info@landerd.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.landerd.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2024-05-24'
+last_verified: '2024-05-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32885/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32885/landerd
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +107,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9849
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

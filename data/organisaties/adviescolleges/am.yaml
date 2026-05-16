@@ -3,18 +3,89 @@ type: adviescollege
 identifiers:
   roo_id: '115625'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10252
+  owms: http://standaarden.overheid.nl/owms/terms/advraadmigr
+  organisatiecode: oorg10252
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Adviesraad Migratie
   abbr: AM
   valid_from: '1900-01-01'
+description:
+  text: De Adviesraad Migratie (AM), voorheen de Adviescommissie voor Vreemdelingenzaken,
+    is een onafhankelijk adviescollege onder de Kaderwet adviescolleges, ingesteld
+    bij de Vreemdelingenwet 2000. Zij adviseert regering en parlement over migratiebeleid
+    en vreemdelingenrecht. De AM wordt ondersteund door een secretariaat, waarvan
+    de leiding berust bij de secretaris van de AM.
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Vreemdelingenwet 2000, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0011823/2025-07-01/0#Hoofdstuk1_Afdeling2_Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.adviesraadmigratie.nl
   email: secretariaat@adviesraadmigratie.nl
+  bezoekadres: Koningskade 4, 2596 AA Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '4'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: 06 46 84 09 07
+    label: algemeen
+  emails:
+  - email: secretariaat@adviesraadmigratie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviesraadmigratie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviesraadmigratie.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Adviesraad Migratie (Dutch Advisory Council on Migration)
+    url: https://www.linkedin.com/company/adviesraad-migratie/
+  - platform: X
+    gebruikersnaam: '@AdviesrMigratie'
+    url: https://twitter.com/AdviesrMigratie
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115625/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115625/am
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-04-01'

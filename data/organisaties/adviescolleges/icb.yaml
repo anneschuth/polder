@@ -4,13 +4,28 @@ identifiers:
   roo_id: '28470042'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Interdepartementale Commissie voor Bestuur
   abbr: ICB
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Besluit instelling Interdepartementale Commissie Bestuur, Overheid en
+    Publieke Dienstverlening en Interdepartementale Commissie Bedrijfsvoering Rijksdienst
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0022000
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-11-08'
+last_verified: '2021-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28470042/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28470042/icb
+  retrieved: '2026-05-16'

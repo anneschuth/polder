@@ -2,14 +2,33 @@ id: org:stichting-jogg
 type: rwt
 identifiers:
   roo_id: '30133863'
+  kvk: '62219960'
+  rsin: '854712586'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting JOGG
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Casuariestraat 13, 2511 VB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Casuariestraat
+    huisnummer: '13'
+    postcode: 2511 VB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133863/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133863/stichting-jogg
+  retrieved: '2026-05-16'

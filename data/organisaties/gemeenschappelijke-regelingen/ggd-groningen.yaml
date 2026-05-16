@@ -5,22 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0824
   oin: 00000001854642833000
   kvk: '62089781'
+  owms: http://standaarden.overheid.nl/owms/terms/GGD_Groningen
+  organisatiecode: so0824
+  rsin: '854642833'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD Groningen
+  roo_id: '29973794'
 names:
 - value: GGD Groningen
   valid_from: '1900-01-01'
+description:
+  text: Gezond zijn is meer dan niet ziek zijn. Gezond zijn is ook meedoen in de maatschappij,
+    sociale contacten hebben en een gevoel van controle over je eigen leven kunnen
+    ervaren. Het motto van GGD Groningen, de Gemeentelijke Gezondheidsdienst, is ‘Samen
+    werken aan gezondheid’.Zo’n 500 GGD-professionals werken dagelijks aan de gezondheid,
+    het welzijn en de veiligheid van alle inwoners van de provincie Groningen. Dit
+    doen wij namens alle Groninger gemeenten. Preventie en positieve gezondheid zijn
+    daarbij belangrijke aandachtspunten.
+  url: https://www.ggdgroningen.nl/over-ggd-groningen/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdgroningen.nl/over-ggd-groningen/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28070458/GGD_Groningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://ggdgroningen.edataloket.eu/?sort=publicationDate:desc&category=12
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://ggdgroningen.edataloket.eu/?sort=publicationDate:desc&category=8
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://ggdgroningen.edataloket.eu/?sort=publicationDate:desc&category=14
+    - informatiecategorie: Klachtoordelen
+      url: https://ggdgroningen.edataloket.eu/?sort=publicationDate:desc&category=17
+  wooVerzoek:
+    url: https://www.ggdgroningen.nl/over-ggd-groningen/wet-open-overheid/
+organogram_url: https://www.ggdgroningen.nl/wp-content/uploads/2025/10/Organogram_GGD_Groningen_v28102025_EXTERN.pdf
+afspraak:
+  telefoonnummer: (088) 254 10 00
 contact:
   website: https://www.ggdgroningen.nl
   email: communicatie@ggdgroningen.nl
+  bezoekadres: Hanzeplein 120, 9713 GW Groningen
+  postadres: Postbus 584, 9700 AN Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hanzeplein
+    huisnummer: '120'
+    postcode: 9713 GW
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '584'
+    postcode: 9700 AN
+    woonplaats: Groningen
+  - type: Woo-Adres
+    openbare_ruimte: Hanzeplein
+    huisnummer: '120'
+    postbus: '584'
+    postcode: 9713 GW
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  phones:
+  - nummer: (088) 254 10 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdgroningen.nl
+    label: algemeen
+  - url: https://www.ggdgroningen.nl/contact/
+    label: contact
+  contact_forms:
+  - url: https://www.ggdgroningen.nl/contact/formulier/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-07'
+last_verified: '2022-04-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28070458/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28070458/ggd-groningen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1997-07-01'

@@ -6,21 +6,139 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0632
   roo_id: '39172'
   wikidata: Q5128
+  owms: http://standaarden.overheid.nl/owms/terms/Woerden_(gemeente)
+  ictu: '00632'
+  organisatiecode: gm0632
+  rsin: 001721860
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WOR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Woerden
   abbr: Woerden
   valid_from: '1900-01-01'
+description:
+  url: https://www.woerden.nl/Documenten/Organogram_gemeente_Woerden_2024.pdf
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.woerden.nl/Contact/Woo_verzoek_indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/39172/Gemeente_Woerden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Woerden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Woerden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Woerden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.woerden.nl/Contact/Woo_verzoek_indienen
+organogram_url: https://www.woerden.nl/Documenten/Organogram_gemeente_Woerden_2024.pdf
+afspraak:
+  email: gemeentehuis@woerden.nl
+  telefoonnummer: 14 0348
+  url: https://www.woerden.nl/Afspraak_maken
+geography:
+  oppervlakte: 92,89
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 92.89
+  aantal_inwoners: 54199
+  inwoners: '583'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 583.0
+  bevat_plaatsen_raw: Harmelen, Kamerik, Woerden, Zegveld
+  bevat_plaatsen:
+  - Harmelen
+  - Kamerik
+  - Woerden
+  - Zegveld
+council:
+  total_seats: 32
+  parties:
+  - naam: VVD
+    aantal_zetels: 7
+  - naam: Inwonersbelangen
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Progressief Woerden
+    aantal_zetels: 5
+  - naam: ChristenUnie-SGP
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: LijstvanderDoes
+    aantal_zetels: 2
+  - naam: Woerden&Democratie
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
 contact:
   website: https://www.woerden.nl
   email: gemeentehuis@woerden.nl
+  bezoekadres: Blekerijlaan 14, 3447 GR WOERDEN
+  postadres: Postbus 45, 3440 AA WOERDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Blekerijlaan
+    huisnummer: '14'
+    postcode: 3447 GR
+    woonplaats: WOERDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '45'
+    postcode: 3440 AA
+    woonplaats: WOERDEN
+  - type: Woo-Adres
+    postbus: '45'
+    postcode: 3440 AA
+    woonplaats: Woerden
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Blekerijlaan
+    huisnummer: '14'
+    postcode: 3447 GR
+    ter_attentie_van: Omgevingsloket
+    woonplaats: WOERDEN
+  phones:
+  - nummer: 14 0348
+    label: algemeen
+  emails:
+  - email: gemeentehuis@woerden.nl
+    label: algemeen
+  - email: omgevingsloket@woerden.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.woerden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39172/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39172/woerden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

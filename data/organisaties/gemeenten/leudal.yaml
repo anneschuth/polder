@@ -6,21 +6,173 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1640
   roo_id: '24482'
   wikidata: Q9793
+  owms: http://standaarden.overheid.nl/owms/terms/Leudal
+  ictu: '01640'
+  organisatiecode: gm1640
+  rsin: '816963228'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LED
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Leudal
   abbr: Leudal
   valid_from: '1900-01-01'
+description:
+  url: https://www.leudal.nl/informatie-over-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.leudal.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/24482/Gemeente_Leudal
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leudal%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.jaarverslag-2022.nl/
+      toelichting: Jaarverslag 2022
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leudal%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.begroting-2022.nl/
+      toelichting: Begroting 2022
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.jaarverslag-2023.nl/
+      toelichting: Jaarverslag 2023
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leudal%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.begroting-2023.nl/
+      toelichting: Begroting 2023
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.jaarverslag-2024.nl/
+      toelichting: Jaarverslag 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.begroting-2024.nl/
+      toelichting: Begroting 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.begroting-2025.nl/
+      toelichting: Begroting 2025
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leudal.begroting-2026.nl/
+      toelichting: Begroting 2026
+  wooVerzoek:
+    url: https://www.leudal.nl/wet-open-overheid?origin=/verzoek-wet-open-overheid-woo
+organogram_url: https://www.leudal.nl/organogram
+afspraak:
+  url: https://www.leudal.nl/
+geography:
+  oppervlakte: 164,9
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 164.9
+  aantal_inwoners: 36099
+  inwoners: '218'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 218.0
+  bevat_plaatsen_raw: Baexem, Buggenum, Ell, Grathem, Haelen, Haler, Heibloem, Heythuysen,
+    Horn, Hunsel, Ittervoort, Kelpen-Oler, Neer, Neeritter, Nunhem, Roggel
+  bevat_plaatsen:
+  - Baexem
+  - Buggenum
+  - Ell
+  - Grathem
+  - Haelen
+  - Haler
+  - Heibloem
+  - Heythuysen
+  - Horn
+  - Hunsel
+  - Ittervoort
+  - Kelpen-Oler
+  - Neer
+  - Neeritter
+  - Nunhem
+  - Roggel
+council:
+  total_seats: 24
+  parties:
+  - naam: Ronduit Open
+    aantal_zetels: 9
+  - naam: Samen Verder
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 4
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 1
 contact:
   website: https://www.leudal.nl
   email: info@leudal.nl
+  bezoekadres: Leudalplein 1, 6093 HE HEYTHUYSEN
+  postadres: Postbus 3008, 6093 ZG HEYTHUYSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Leudalplein
+    huisnummer: '1'
+    postcode: 6093 HE
+    woonplaats: HEYTHUYSEN
+  - type: Postadres
+    postbus: '3008'
+    postcode: 6093 ZG
+    woonplaats: HEYTHUYSEN
+  - type: Woo-Adres
+    postbus: '3008'
+    postcode: 6093 ZG
+    woonplaats: Heythuysen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Leudalplein
+    huisnummer: '1'
+    postcode: 6093 HE
+    ter_attentie_van: BBP Omgeving, team Ontwikkeling
+    woonplaats: HEYTHUYSEN
+  phones:
+  - nummer: (0475) 85 90 00
+    label: algemeen
+  emails:
+  - email: info@leudal.nl
+    label: algemeen
+  - email: BBPOmgeving@leudal.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.leudal.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.leudal.nl/form/contactformulier
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-haelen
+- org:gemeente-heythuysen
+- org:gemeente-hunsel
+- org:gemeente-roggel-en-neer
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24482/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24482/leudal
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,8 +181,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9793
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-haelen
-- org:gemeente-heythuysen
-- org:gemeente-hunsel
-- org:gemeente-roggel-en-neer
+roo_start_datum: '2007-01-01'

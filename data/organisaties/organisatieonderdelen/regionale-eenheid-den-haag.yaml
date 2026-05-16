@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150932'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Den Haag
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Burgemeester Patijnlaan 35, 2585 BG Den Haag
+  postadres: Postbus 264, 2501 CG Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische Zaken
+    openbare_ruimte: Burgemeester Patijnlaan
+    huisnummer: '35'
+    postcode: 2585 BG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '264'
+    postcode: 2501 CG
+    woonplaats: Den Haag
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-15'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150932/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150932/regionale-eenheid-den-haag
+  retrieved: '2026-05-16'

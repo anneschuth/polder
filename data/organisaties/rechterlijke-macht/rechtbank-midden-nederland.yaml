@@ -1,22 +1,55 @@
 id: org:rechtbank-midden-nederland
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000033000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10022
   roo_id: '28048450'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Midden-Nederland
 classification: rechterlijke-instantie
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Rechtbank Midden-Nederland
   valid_from: '1900-01-01'
+description:
+  text: Uit de voormalige rechtbanken van Utrecht en Zwolle-Lelystad (locatie Lelystad)
+    is op 1 januari 2013 de rechtbank Midden-Nederland ontstaan. Deze is bevoegd om
+    in haar arrondissement recht te spreken in eerste aanleg. Dit betekent dat de
+    rechtbank de eerste instantie is die een juridisch oordeel over een zaak of conflict
+    geeft. Daarna kan een procespartij (bijvoorbeeld de veroordeelde of het Openbaar
+    Ministerie (om.nl)) in hoger beroep gaan bij gerechtshof Arnhem-Leeuwarden. Bij
+    rechtbank Midden-Nederland werken ongeveer 175 rechters en ruim 700 andere medewerkers
+    in vaste dienst.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Midden-Nederland
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (088) 362 00 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Midden-Nederland
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048450/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048450/rechtbank-midden-nederland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

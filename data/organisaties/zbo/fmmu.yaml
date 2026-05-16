@@ -4,21 +4,70 @@ identifiers:
   roo_id: '26140705'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000192
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: FMMU Advies B.V.
   abbr: FMMU
   valid_from: '1900-01-01'
   valid_until: '2035-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Uitspraak 201304908/3/A2 en 201307828/2/A2
+  referentie: https://www.raadvanstate.nl/uitspraken/zoeken-in-uitspraken/tekst-uitspraak.html?id=79645
+taken_en_bevoegdheden: Het nemen van beslissingen op verzoeken om toekenning van een
+  hoog persoonlijk kilometerbudget voor mensen voor wie het reizen met de trein niet
+  mogelijk is (ook niet met begeleiding). Dit gebeurt in het kader van het bovenregionaal
+  vervoer voor mensen met een mobiliteitsbeperking.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.hoogpkb.nl
   email: info@hoogpkb.nl
+  bezoekadres: Herculesplein 357, 3584 AA Utrecht
+  postadres: Herculesplein 357, 3584 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herculesplein
+    huisnummer: '357'
+    postcode: 3584 AA
+    woonplaats: Utrecht
+  - type: Postadres
+    openbare_ruimte: Herculesplein
+    huisnummer: '357'
+    postcode: 3584 AA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 511 25 35
+    label: algemeen
+  emails:
+  - email: info@hoogpkb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hoogpkb.nl
+    label: algemeen
+  - url: https://www.fmmu.nl/
 valid_from: '1900-01-01'
 valid_until: '2035-01-01'
+last_mutation: '2025-01-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140705/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140705/fmmu
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000192
   retrieved: '2026-05-09'
+roo_start_datum: '2014-01-01'

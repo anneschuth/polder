@@ -6,20 +6,121 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0616
   roo_id: '21184'
   wikidata: Q2619632
+  owms: http://standaarden.overheid.nl/owms/terms/Hoogheemraadschap_van_Rijnland
+  ictu: 04836
+  rsin: '813766928'
 classification: waterschap
 parent_id: null
 names:
 - value: Hoogheemraadschap van Rijnland
   valid_from: '1900-01-01'
+description:
+  text: 'Gebied: Aalsmeer, Alphen aan den Rijn, Amstelveen, Amsterdam, Bloemendaal,
+    Bodegraven-Reeuwijk, Gouda, Haarlem, Haarlemmermeer, Heemstede, Hillegom, Kaag
+    en Braassem, Katwijk, Krimpenerwaard, Leiden, Leiderdorp, Leidschendam-Voorburg,
+    Lisse, Nieuwkoop, Noordwijk, Oestgeest, Teylingen, Velsen, Voorschoten, Waddinxveen,
+    Wassenaar, Zandvoort, Zoetermeer en Zoeterwoude.'
+  url: https://www.rijnland.net/over-rijnland/organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijnland.net/over-rijnland/bestuur/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/21184/Hoogheemraadschap_van_Rijnland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogheemraadschap+van+Rijnland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Overige besluiten van algemene strekking
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://rijnland.bestuurlijkeinformatie.nl/Reports/Details/b83bbd8a-51cc-4c40-beb3-86c979b2c7f0
+      toelichting: Agenda's dagelijks bestuur
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?svel=Publicatiedatum&svol=Aflopend&pg=10&q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Hoogheemraadschap%20van%20Rijnland%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))%20AND%20dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22&zv=&col=&pagina=1
+      toelichting: Algemeen verbindende voorschriften
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://rijnland.bestuurlijkeinformatie.nl/Calendar
+      toelichting: Agenda's en vergaderstukken algemeen bestuuren haar commissies
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijnland.net/over-rijnland/archieven-en-erfgoed/zoeken-in-archieven/?mivast=319&mizig=491&miadt=319&miview=ldt&milang=nl
+      toelichting: Woo-verzoeken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://rijnland.bestuurlijkeinformatie.nl/Reports/Details/70ee2f39-8808-45ef-bb07-bb3d3184f7a1
+      toelichting: Besluitenlijsten dagelijks bestuur
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogheemraadschap+van+Rijnland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Omgevingsvergunningen voor wateractiviteiten, maatwerkbesluiten
+        en aanvragen hiertoe
+  wooVerzoek:
+    url: https://www.rijnland.net/inwoners/mijn-rijnland-inwoners/
+organogram_url: https://www.rijnland.net/werken-bij-rijnland/welke-teams-heeft-rijnland-allemaal/
+afspraak:
+  email: info@rijnland.net
+  telefoonnummer: (071) 306 30 63
 contact:
   website: https://www.rijnland.net
   email: info@rijnland.net
+  bezoekadres: Archimedesweg 1, 2333 CM Leiden
+  postadres: Postbus 156, 2300 AD Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedesweg
+    huisnummer: '1'
+    postcode: 2333 CM
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '156'
+    postcode: 2300 AD
+    woonplaats: Leiden
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '156'
+    postcode: 2300 AD
+    woonplaats: Leiden
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Archimedesweg
+    huisnummer: '1'
+    postcode: 2333 CM
+    woonplaats: LEIDEN
+  phones:
+  - nummer: (071) 306 30 63
+    label: algemeen
+  emails:
+  - email: info@rijnland.net
+    label: algemeen
+  - email: post@rijnland.net
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.rijnland.net
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21184/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21184/hoogheemraadschap-van-rijnland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

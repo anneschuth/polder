@@ -7,12 +7,41 @@ parent_id: org:prov-ov
 names:
 - value: Statengriffie
   valid_from: '1900-01-01'
+description:
+  text: Taak:De Statengriffie ondersteunt de Provinciale Statenleden bij hun werkzaamheden.
+    U kunt bij de griffie terecht met al uw vragen over Provinciale Staten en hun
+    vergaderingen.
 contact:
   email: statengriffie@overijssel.nl
   website: https://www.overijssel.nl/bestuur/provinciale-staten/
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  postadres: Postbus 1461, 8001 BL Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '1461'
+    postcode: 8001 BL
+    woonplaats: Zwolle
+  phones:
+  - nummer: (050) 316 44 58
+    label: algemeen
+  emails:
+  - email: statengriffie@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl/bestuur/provinciale-staten/
+    label: algemeen
+  - url: https://www.overijssel.nl/bestuur/provinciale-staten/provinciale-staten/statengriffie/
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2025-12-16'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16790/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16790/statengriffie
+  retrieved: '2026-05-16'

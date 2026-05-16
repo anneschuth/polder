@@ -2,18 +2,62 @@ id: org:onderdeel-vfg
 type: organisatieonderdeel
 identifiers:
   roo_id: '27918775'
+  kvk: '40002282'
+  rsin: '806078431'
 classification: organisatieonderdeel
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: org:koepel-vng
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging van Friese Gemeenten
   abbr: VFG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.friesegemeenten.nl/
   email: vfg@vfg-fryslan.nl
+  bezoekadres: Hofplein 38, 8911 HJ Leeuwarden
+  postadres: Postbus 935, 8901 BS Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hofplein 38
+    postcode: 8911 HJ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '935'
+    postcode: 8901 BS
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 233 40 51
+    label: algemeen
+  emails:
+  - email: vfg@vfg-fryslan.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.friesegemeenten.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.friesegemeenten.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Vereniging van Friese Gemeenten
+    url: https://www.linkedin.com/company/vereniging-van-friese-gemeenten/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-12-09'
+last_verified: '2026-04-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918775/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918775/vfg
+  retrieved: '2026-05-16'

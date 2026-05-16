@@ -3,18 +3,62 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964482'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0763
+  owms: http://standaarden.overheid.nl/owms/terms/sozog
+  kvk: '51370247'
+  organisatiecode: so0763
+  rsin: '804645000'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Samenwerkingsverband afvalstoffenverwijdering
+    Oost- en Zuidoost Groningen
+  roo_id: '24964477'
 names:
 - value: Samenwerkingsverband afvalstoffenverwijdering Oost- en Zuidoost Groningen
   abbr: SOZOG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.stadskanaal.nl
   email: gemeente@stadskanaal.nl
+  bezoekadres: Raadhuisplein 1, 9501 SZ Stadskanaal
+  postadres: Postbus 140, 9500 AC Stadskanaal
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 9501 SZ
+    woonplaats: Stadskanaal
+  - type: Postadres
+    postbus: '140'
+    postcode: 9500 AC
+    woonplaats: Stadskanaal
+  phones:
+  - nummer: (0599) 63 16 31
+    label: algemeen
+  emails:
+  - email: gemeente@stadskanaal.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.stadskanaal.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2019-06-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964482/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964482/sozog
+  retrieved: '2026-05-16'
+roo_start_datum: '1986-03-25'

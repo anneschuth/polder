@@ -1,26 +1,130 @@
 id: org:agentschap-dictu
 type: agentschap
+subname: DICTU
 identifiers:
   oin: 00000004000000149000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10113
   roo_id: '28324953'
+  owms: http://standaarden.overheid.nl/owms/terms/Dienst_ICT_Uitvoering
+  kvk: '50670875'
+  rsin: '822866043'
 classification: agentschap
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Dienst ICT Uitvoering
   abbr: DICTU
   valid_from: '1900-01-01'
+description:
+  text: De Dienst ICT Uitvoering (DICTU) is een van de grotere ICT-dienstverleners
+    binnen de Rijksoverheid en maakt deel uit van het ministerie van Economische Zaken
+    en Klimaat (EZK). Naast EZK en de daaronder vallende diensten heeft DICTU ook
+    opdrachtgevers bij andere ministeries. DICTU legt zich toe op het ontwikkelen
+    en beheren van systemen en applicaties en de bijbehorende dienstverlening. Dat
+    kunnen bedrijfsvoeringsapplicaties, websites en apps zijn, maar ook digitale werkplekken
+    en applicaties op het gebied van subsidies, inspecties en registers. Wij maken
+    daarbij gebruik van moderne technieken en ontwikkelingen zoals cloud, mobile en
+    data.
+doorlichtingen:
+- datum: '2016-04-06'
+  naam_rapport: Doorlichtingsrapport DICTU
+  referentie: https://www.rijksoverheid.nl/documenten/brieven/2016/06/03/aanbiedingsbrief-bij-doorlichtingsrapport-dictu
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dictu.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28324953/Dienst_ICT_Uitvoering
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-economische-zaken/contact/woo-verzoek-indienen
+organogram_url: https://www.dictu.nl/organisatiestructuur
+afspraak:
+  url: https://www.dictu.nl/contact
 contact:
   website: https://www.dictu.nl
   email: WooContactWJZ@minezk.nl
+  postadres: Postbus 20401, 2500 EK Den Haag
+  bezoekadres: Schepersmaat 2, 9405 TA Assen
+  addresses:
+  - type: Vestigingsadres
+    toelichting: Kantoor Den Haag
+    openbare_ruimte: Prinses Beatrixlaan
+    huisnummer: '116'
+    postcode: 2595 AL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '20401'
+    postcode: 2500 EK
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Kantoor Assen (NAM-gebouw)
+    openbare_ruimte: Schepersmaat
+    huisnummer: '2'
+    postcode: 9405 TA
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Kantoor Zwolle
+    openbare_ruimte: Hanzelaan
+    huisnummer: '310'
+    postcode: 8017 JK
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 379 89 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dictu.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.dictu.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: DICTU
+    url: https://www.linkedin.com/company/dictu/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28324953/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28324953/dictu
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2005-01-01'

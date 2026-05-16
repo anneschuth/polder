@@ -6,21 +6,135 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv22
   roo_id: '14557'
   wikidata: Q772
+  owms: http://standaarden.overheid.nl/owms/terms/Drenthe
+  ictu: '04203'
+  rsin: 001587924
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_DRENT
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Drenthe
   abbr: DR
   valid_from: '1900-01-01'
+description:
+  text: De provincie Drenthe heeft een wisselende personele omvang. Er zijn zo’n tussen
+    de 700 en 800 mensen in dienst. Een groot deel hiervan is in vaste dienst en een
+    klein deel is in tijdelijke dienst. De provinciale ambtenaren werken binnen en
+    buiten het provinciehuis.
+  url: https://www.provincie.drenthe.nl/organisatie-bestuur/organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.provincie.drenthe.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/14557/Provincie_Drenthe
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.drentsparlement.nl/vergaderingen/
+      toelichting: Vergaderstukken Provinciale Staten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.provincie.drenthe.nl/organisatie-bestuur/gedeputeerde-staten/gs-vergaderingen/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.provincie.drenthe.nl/woo-besluiten
+    - informatiecategorie: Beschikkingen
+      url: https://www.provincie.drenthe.nl/loket/subsidieloket/subsidieregister/?handheld=true
+      toelichting: Beschikkingen (subsidies)
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Drenthe%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Drenthe%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Drenthe%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://formulieren.provincie.drenthe.nl/overige-formulieren/wet-open-overheid-(woo-verzoek)/
+organogram_url: https://www.provincie.drenthe.nl/publish/pages/120855/organogram.png
+afspraak:
+  email: post@drenthe.nl
+  telefoonnummer: (0592) 36 55 55
+  url: https://www.provincie.drenthe.nl/contact/
 contact:
   website: http://www.provincie.drenthe.nl
   email: post@drenthe.nl
+  bezoekadres: Westerbrink 1, 9405 BJ Assen
+  postadres: Postbus 122, 9400 AC Assen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westerbrink
+    huisnummer: '1'
+    postcode: 9405 BJ
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '122'
+    postcode: 9400 AC
+    woonplaats: Assen
+  - type: Woo-Adres
+    postbus: '122'
+    postcode: 9400 AC
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  phones:
+  - nummer: (0592) 36 55 55
+    label: algemeen
+  - nummer: (0592) 36 53 03
+    label: Milieuklachtenlijn
+  emails:
+  - email: post@drenthe.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.provincie.drenthe.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.provincie.drenthe.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: provinciedrenthe
+    url: https://www.facebook.com/provinciedrenthe
+  - platform: LinkedIn
+    gebruikersnaam: provincie-drenthe
+    url: https://www.linkedin.com/company/provincie-drenthe
+  - platform: Instagram
+    gebruikersnaam: provdrenthe
+    url: https://www.instagram.com/provdrenthe
+  - platform: X
+    gebruikersnaam: provdrenthe
+    url: https://www.twitter.com/provdrenthe
+  - platform: Mastodon
+    gebruikersnaam: provinciedrenthe
+    url: https://social.overheid.nl/@provinciedrenthe
+  - platform: Bluesky
+    gebruikersnaam: provinciedrenthe
+    url: https://bsky.app/profile/provinciedrenthe.bsky.social
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/14557/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/14557/dr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

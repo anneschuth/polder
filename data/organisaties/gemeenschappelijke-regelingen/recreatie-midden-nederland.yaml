@@ -2,18 +2,66 @@ id: org:gr-recreatie-midden-nederland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25408166'
+  owms: http://standaarden.overheid.nl/owms/terms/rmn
+  kvk: '52393925'
+  btw: NL804805180B01
+  organisatiecode: so0409
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Bedrijfsvoeringsorganisatie Recreatie Midden-Nederland
+  roo_id: '25408161'
 names:
 - value: Recreatie Midden-Nederland
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://recreatiemiddennederland.nl
   email: info@recreatiemiddennederland.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 8058, 3503 RB Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '8058'
+    postcode: 3503 RB
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 297 40 00
+    label: algemeen
+  emails:
+  - email: info@recreatiemiddennederland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://recreatiemiddennederland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://recreatiemiddennederland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2023-02-10'
+last_verified: '2022-04-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25408166/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25408166/recreatie-midden-nederland
+  retrieved: '2026-05-16'
+roo_start_datum: '1996-01-01'

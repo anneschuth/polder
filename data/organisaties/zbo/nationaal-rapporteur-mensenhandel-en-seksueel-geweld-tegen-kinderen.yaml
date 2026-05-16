@@ -3,20 +3,128 @@ type: zbo
 identifiers:
   roo_id: '29769999'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100006
+  owms: http://standaarden.overheid.nl/owms/terms/natrapmenshsgk
+  organisatiecode: zb100006
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Nationaal Rapporteur Mensenhandel en Seksueel Geweld tegen Kinderen
   valid_from: '1900-01-01'
+description:
+  text: De Nationaal Rapporteur Mensenhandel en Seksueel Geweld tegen Kinderen is
+    onafhankelijk en heeft de wettelijke taak om onderzoek te doen naar de aard en
+    omvang van mensenhandel en seksueel geweld tegen kinderen. Ook is het een wettelijke
+    taak om onderzoek te doen naar de effecten van het huidige beleid op de aanpak
+    van mensenhandel en seksueel geweld tegen kinderen en om de regering te adviseren
+    over het voorkomen en bestrijden ervan.Nederland heeft sinds 2000 een Nationaal
+    Rapporteur die zich inzet voor mensenhandel. In 2009 is het mandaat uitgebreid
+    met de aanpak van kinderpornografie. In de eerste rapportage over dit mandaat
+    in 2011, concludeerde de Nationaal Rapporteur dat de aanpak van kinderpornografie
+    breder gezien moet worden in het kader van seksueel geweld tegen kinderen. De
+    daaropvolgende aanbeveling is vervolgens overgenomen door de Nederlandse regering
+    en leidde in 2012 tot mandaatuitbreiding naar seksueel geweld tegen kinderen.De
+    Nationaal Rapporteur wordt in diens werkzaamheden ondersteund door een bureau.
+    Samen met het bureau vormt de Nationaal Rapporteur het instituut Nationaal Rapporteur
+    Mensenhandel en Seksueel Geweld tegen Kinderen; het instituut functioneert als
+    een zelfstandig bestuursorgaan.
+  url: https://www.nationaalrapporteur.nl/over-ons/over-de-nationaal-rapporteur
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid,Regelgebonden uitvoering
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet Nationaal rapporteur mensenhandel en seksueel geweld tegen kinderen,
+    artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0034176/2020-01-01/0#Artikel1
+taken_en_bevoegdheden: '* het doen van onderzoek naar de aard en de omvang van mensenhandel
+  en seksueel geweld tegen kinderen;* het doen van onderzoek naar de effecten van
+  beleid dat mensenhandel en seksueel geweld tegen kinderen moet tegengaan;* het adviseren
+  van de nationale en lokale regering en organisaties in de hulpverlening en het strafrecht,
+  met betrekking tot de bestrijding van mensenhandel en seksueel geweld tegen kinderen;*
+  het delen van inzichten van de problematiek met Tweede Kamerleden en gemeenten.'
+evaluations:
+- datum: '2022-04-26'
+  kamerstuknummer: TK 31015 nr. 256
+  referentie: https://zoek.officielebekendmakingen.nl/kst-31015-256.html
+- datum: '2017-08-28'
+  referentie: https://www.nationaalrapporteur.nl/publicaties/rapporten/2017/08/28/schieten-op-bewegend-doel-evaluatie-nationaal-rapporteur
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nationaalrapporteur.nl/service/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/29769999/Nationaal_Rapporteur_Mensenhandel_en_Seksueel_Geweld_tegen_Kinderen
+  wooVerzoek:
+    url: https://www.nationaalrapporteur.nl/contact
+afspraak:
+  email: secretariaat@nationaalrapporteur.nl
+  url: https://www.nationaalrapporteur.nl/contact
+personnel:
+  aantalFte: 18,0
+  peildatumFte: '2023-12-31'
+  toelichtingFte: De Nationaal Rapporteur is één persoon, maar wordt ondersteund door
+    een bureau bestaande uit diverse medewerkers.
 contact:
   website: https://www.nationaalrapporteur.nl/
   email: secretariaat@nationaalrapporteur.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  bezoekadres: Lange Voorhout 9, 2514 EA Den Haag
+  addresses:
+  - type: Postadres
+    toelichting: Bureau Nationaal Rapporteur Mensenhandel en Seksueel Geweld tegen
+      Kinderen
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  - type: Bezoekadres
+    toelichting: Alleen bezoek mogelijk op basis van een afspraak.
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '9'
+    postcode: 2514 EA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    huisnummer: Postbus 20301
+    postcode: 2500 EH Den Haag
+  phones:
+  - nummer: (070) 370 45 14
+    label: algemeen
+  emails:
+  - email: secretariaat@nationaalrapporteur.nl
+    label: algemeen
+  - email: communicatie@nationaalrapporteur.nl
+    label: pers
+  internet_addresses:
+  - url: https://www.nationaalrapporteur.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nationaalrapporteur.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nationaal Rapporteur Mensenhandel en Seksueel Geweld tegen Kinderen
+    url: https://www.linkedin.com/company/nationaal-rapporteur-mensenhandel-en-seksueel-geweld-tegen-kinderen/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29769999/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29769999/nationaal-rapporteur-mensenhandel-en-seksueel-geweld-tegen-kinderen
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100006
   retrieved: '2026-05-09'
+roo_start_datum: '2013-11-15'

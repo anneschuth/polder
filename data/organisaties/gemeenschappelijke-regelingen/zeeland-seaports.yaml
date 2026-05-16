@@ -2,18 +2,58 @@ id: org:gr-zeeland-seaports
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963206'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '55117805'
+  btw: NL823062992B01
+  organisatiecode: so0508
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Zeeland Seaports
+  roo_id: '24963201'
 names:
 - value: Zeeland Seaports
   valid_from: '1900-01-01'
   valid_until: '2019-07-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-07-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.zeelandseaports.nl
   email: port@zeelandseaports.com
+  bezoekadres: Schelpenpad 2, 4531 PD Terneuzen
+  postadres: Postbus 132, 4530 AC Terneuzen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schelpenpad
+    huisnummer: '2'
+    postcode: 4531 PD
+    woonplaats: Terneuzen
+  - type: Postadres
+    postbus: '132'
+    postcode: 4530 AC
+    woonplaats: Terneuzen
+  phones:
+  - nummer: (0115) 64 74 00
+    label: algemeen
+  emails:
+  - email: port@zeelandseaports.com
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zeelandseaports.nl
+    label: algemeen
+  fax: (0115) 64 75 00
 valid_from: '1900-01-01'
 valid_until: '2019-07-01'
+last_mutation: '2020-08-27'
+last_verified: '2021-01-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963206/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963206/zeeland-seaports
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-01-01'

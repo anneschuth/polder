@@ -3,16 +3,42 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111737'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Economie en Cultuur
   valid_from: '1900-01-01'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8012 EE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postbus: '10078'
+    postcode: 8012 EE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postbus: '10078'
+    postcode: 8012 EE
+    woonplaats: ZWOLLE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  phones:
+  - nummer: (038) 499 75 00
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-11-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111737/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111737/economie-en-cultuur
+  retrieved: '2026-05-16'

@@ -1,18 +1,66 @@
 id: org:onderdeel-studiecentrum-rechtspleging
 type: organisatieonderdeel
+subname: SSR
 identifiers:
   roo_id: '28116661'
+  oin: '00000004000000073000'
 classification: organisatieonderdeel
-parent_id: org:rechtbank-ldcr
+parent_id: org:rechtbank-raad-voor-de-rechtspraak
 names:
 - value: Studiecentrum Rechtspleging
   valid_from: '1900-01-01'
+description:
+  text: SSR is het opleidingsinstituut van de rechterlijke organisatie.
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Indienen-Woo-verzoek.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28116661/Studiecentrum_Rechtspleging
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2023.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2023 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2022.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2022 op verzoek openbaar heeft gemaakt.
 contact:
   website: https://ssr.nl/
   email: ssrservicedesk@ssr.nl
+  bezoekadres: Uniceflaan 1, 3527 WX Utrecht
+  postadres: Postbus 5015, 3502 JA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Uniceflaan
+    huisnummer: '1'
+    postcode: 3527 WX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '5015'
+    postcode: 3502 JA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 361 32 11
+    label: algemeen
+  emails:
+  - email: ssrservicedesk@ssr.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ssr.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://ssr.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28116661/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28116661/studiecentrum-rechtspleging
+  retrieved: '2026-05-16'

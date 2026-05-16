@@ -1,19 +1,65 @@
 id: org:gr-participatie-noord-groningen
 type: gemeenschappelijke-regeling
+subname: Werkplein Ability
 identifiers:
   roo_id: '24963551'
+  owms: http://standaarden.overheid.nl/owms/terms/participatie_ngr
+  organisatiecode: so0909
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Participatie Noord-Groningen
+  roo_id: '24963546'
 names:
 - value: Participatie Noord-Groningen
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+  valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.werkplein-ability.nl
   email: balie@werkpleinability.nl
+  bezoekadres: Ubbo J. Mansholtplein 2, 9951 BX Winsum
+  postadres: Postbus 19, 9950 AA Winsum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ubbo J. Mansholtplein
+    huisnummer: '2'
+    postcode: 9951 BX
+    woonplaats: Winsum
+  - type: Postadres
+    postbus: '19'
+    postcode: 9950 AA
+    woonplaats: Winsum
+  phones:
+  - nummer: (0595) 75 03 00
+    label: werk en inkomen
+  - nummer: (0595) 43 13 98
+    label: werkleerbedrijf
+  - nummer: (0595) 57 56 56
+    label: Leer- en Ontwikkelcentrum
+  emails:
+  - email: balie@werkpleinability.nl
+    label: werk en inkomen
+  - email: info@werkpleinability.nl
+    label: werkleerbedrijf
+  - email: info@werkpleinability.nl
+    label: Leer- en Ontwikkelcentrum
+  internet_addresses:
+  - url: https://www.werkplein-ability.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: '2020-06-19'
+valid_until: '2019-01-01'
+last_mutation: '2022-11-29'
+last_verified: '2022-11-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963551/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963551/participatie-noord-groningen
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-05-19'

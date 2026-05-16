@@ -1,9 +1,10 @@
 id: org:onderdeel-ceg
 type: organisatieonderdeel
+subname: Centrum voor Ethiek en Gezondheid
 identifiers:
   roo_id: '66174'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:onderdeel-overleg-en-adviescommissies
 names:
 - value: Centrum voor Ethiek en Gezondheid
   abbr: CEG
@@ -13,12 +14,44 @@ names:
   abbr: CEG
   valid_from: '1900-01-01'
   valid_until: '2024-07-01'
+description:
+  text: 'Het Centrum voor Ethiek en Gezondheid (CEG) signaleert en informeert over
+    nieuwe ontwikkelingen op het gebied van ethiek, gezondheid en beleid. Het CEG
+    bedient niet alleen de overheid, maar is ook een kenniscentrum voor een breder
+    publiek. Het CEG is een samenwerkingsverband tussen de Gezondheidsraad en de Raad
+    voor Volksgezondheid en Samenleving (RVS).Coördinator CEG: M. (Myrthe) Lenselink
+    MA'
 contact:
   website: www.ceg.nl
   email: ceg@minvws.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 19404, 2500 CK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '19404'
+    postcode: 2500 CK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 50 60
+    label: algemeen
+  emails:
+  - email: ceg@minvws.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.ceg.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2024-07-01'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66174/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66174/ceg
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-03-01'

@@ -2,14 +2,42 @@ id: org:oovb-gebiedscooperatie-rijn-vecht-en-venen-ua
 type: rwt
 identifiers:
   roo_id: '28346549'
+  kvk: '62169610'
+  rsin: '854696490'
 classification: rwt
+legal_form: Privaatrechtelijk - Coöperatie
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Gebiedscoöperatie Rijn Vecht en Venen U.A.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Oostkanaaldijk 12 a, 3632 GA Loenen aan de Vecht
+  postadres: Oostkanaaldijk 12 a, 3632 GA Loenen aan de Vecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oostkanaaldijk 12 a
+    postcode: 3632 GA
+    woonplaats: Loenen aan de Vecht
+  - type: Postadres
+    openbare_ruimte: Oostkanaaldijk 12 a
+    postcode: 3632 GA
+    woonplaats: Loenen aan de Vecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-26'
+last_verified: '2021-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28346549/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28346549/gebiedscooperatie-rijn-vecht-en-venen-ua
+  retrieved: '2026-05-16'

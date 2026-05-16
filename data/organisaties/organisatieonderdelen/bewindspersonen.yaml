@@ -7,9 +7,15 @@ parent_id: org:min-ienw
 names:
 - value: Bewindspersonen
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-09-29'
+last_verified: '2023-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112975/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112975/bewindspersonen
+  retrieved: '2026-05-16'

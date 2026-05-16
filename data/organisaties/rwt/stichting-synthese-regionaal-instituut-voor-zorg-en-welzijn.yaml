@@ -1,15 +1,44 @@
 id: org:oovb-stichting-synthese-regionaal-instituut-voor-zorg-en-welzijn
 type: rwt
+subname: Synthese lokatie Mook, Wozoco Maasstaete
 identifiers:
   roo_id: '27916821'
+  kvk: '41063337'
+  rsin: 007340758
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Synthese, Regionaal Instituut voor Zorg en Welzijn
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Maasstaete 114, 6585 CE Mook
+  postadres: Postbus 5033, 5800 GA Venray
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maasstaete 114
+    postcode: 6585 CE
+    woonplaats: Mook
+  - type: Postadres
+    postbus: '5033'
+    postcode: 5800 GA
+    woonplaats: Venray
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27916821/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27916821/stichting-synthese-regionaal-instituut-voor-zorg-en-welzijn
+  retrieved: '2026-05-16'

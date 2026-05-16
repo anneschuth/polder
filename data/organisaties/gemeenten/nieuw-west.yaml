@@ -2,6 +2,7 @@ id: org:gemeente-nieuw-west
 type: gemeente
 identifiers:
   roo_id: '40084'
+  owms: http://standaarden.overheid.nl/owms/terms/Amsterdam_-_Slotervaart
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +10,48 @@ names:
   abbr: Nieuw-West
   valid_from: '1900-01-01'
   valid_until: '2014-03-19'
+geography:
+  oppervlakte: 11,14
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 11.14
+  aantal_inwoners: 135000
+  inwoners: '12118'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 12118.0
+council:
+  parties:
+  - naam: (onbekend)
+    aantal_zetels: 0
 contact:
   website: http://www.nieuwwest.amsterdam.nl
   email: info@nieuwwest.amsterdam.nl
+  bezoekadres: Pieter Calandlaan 1, 1065 KH AMSTERDAM
+  postadres: Postbus 2003, 1000 CA AMSTERDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pieter Calandlaan
+    huisnummer: '1'
+    postcode: 1065 KH
+    woonplaats: AMSTERDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '2003'
+    postcode: 1000 CA
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: 14 020
+    label: algemeen
+  emails:
+  - email: info@nieuwwest.amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nieuwwest.amsterdam.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-03-19'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40084/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40084/nieuw-west
+  retrieved: '2026-05-16'

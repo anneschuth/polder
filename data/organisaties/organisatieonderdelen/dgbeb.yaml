@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28695291'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bz
+parent_id: org:min-bz
 names:
 - value: Directoraat-generaal Buitenlandse Economische Betrekkingen
   abbr: DGBEB
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-06-09'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28695291/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28695291/dgbeb
+  retrieved: '2026-05-16'

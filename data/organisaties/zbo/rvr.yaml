@@ -4,22 +4,137 @@ identifiers:
   roo_id: '28212541'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000150
   oin: '00000004000000071000'
+  owms: http://standaarden.overheid.nl/owms/terms/rvr
+  kvk: '50589342'
+  rsin: '801731276'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Raad voor Rechtsbijstand
   abbr: RvR
   valid_from: '1900-01-01'
-  valid_until: '2026-12-01'
+description:
+  text: De Raad voor Rechtsbijstand (RvR) is als zelfstandig bestuursorgaan verantwoordelijk
+    voor de uitvoering van gesubsidieerde rechtsbijstand in Europees Nederland en
+    op Bonaire, Sint Eustatius en Saba. Daarnaast voert de RvR (een deel van) de Wet
+    schuldsanering natuurlijke personen (Wsnp) en de Wet beëdigde tolken en vertalers
+    (Wbtv) uit.
+  url: https://www.raadvoorrechtsbijstand.org/over/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+wettelijke_grondslagen:
+- opschrift: Wet op de rechtsbijstand, artikel 2, eerste lid
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20de%20rechtsbijstand/article=2
+taken_en_bevoegdheden: De Raad voor Rechtsbijstand (RvR) zorgt voor de organisatie
+  en het verlenen van rechtsbijstand en mediation, evenals het houden van toezicht
+  op de uitvoering hiervan. Tevens coördineert de RvR in opdracht van de Minister
+  van Justitie en Veiligheid de uitvoering van de Wet schuldsanering natuurlijke personen
+  (Wsnp) en voert daarnaast ook de Wet beëdigde tolken en vertalers (Wbtv) uit.
+evaluations:
+- datum: '2022-05-04'
+  kamerstuknummer: TK 31753 nr. 251
+  referentie: https://zoek.officielebekendmakingen.nl/kst-31753-251.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1438 - RECHTSBIJSTAND
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=18969
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: PGGM
+    referentie: https://www.pggm.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.raadvoorrechtsbijstand.org/publicaties/protocol-wet-open-overheid-woo-0/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212541/Raad_voor_Rechtsbijstand
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.raadvoorrechtsbijstand.org/publicaties/actieve-openbaarmaking/
+      toelichting: Gepubliceerde besluiten op verzoeken in het kader van de Wet open
+        overheid.
+  wooVerzoek:
+    url: https://www.raadvoorrechtsbijstand.org/publicaties/protocol-wet-open-overheid-woo-0/
+organogram_url: https://www.raadvoorrechtsbijstand.org/over/
+afspraak:
+  url: https://www.raadvoorrechtsbijstand.org/contact/
+personnel:
+  aantalFte: 264,9
+  peildatumFte: '2020-12-31'
 contact:
   website: https://www.raadvoorrechtsbijstand.org/
   email: woo-verzoek@rvr.org
+  bezoekadres: Magistratenlaan 172, 5223 MA 's-Hertogenbosch
+  postadres: Postbus 70503, 5201 CD 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Magistratenlaan
+    huisnummer: '172'
+    postcode: 5223 MA
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '70503'
+    postcode: 5201 CD
+    woonplaats: '''s-Hertogenbosch'
+  - type: Woo-Adres
+    toelichting: Dit is het bezoekadres van het hoofdkantoor 's-Hertogenbosch
+    openbare_ruimte: Magistratenlaan
+    huisnummer: '174'
+    postcode: 5223 MA
+    woonplaats: ’s-Hertogenbosch
+  - type: Woo-Adres
+    postbus: '70503'
+    postcode: 5201 CD
+    woonplaats: '''s-Hertogenbosch'
+  phones:
+  - nummer: (088) 787 12 34
+    label: algemeen
+  emails:
+  - email: woo-verzoek@rvr.org
+    label: algemeen
+  internet_addresses:
+  - url: https://www.raadvoorrechtsbijstand.org/
+    label: algemeen
+  contact_forms:
+  - url: https://www.raadvoorrechtsbijstand.org/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-12-01'
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212541/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212541/rvr
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +148,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000150
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

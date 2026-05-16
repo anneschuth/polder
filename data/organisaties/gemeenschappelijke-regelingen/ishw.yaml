@@ -2,19 +2,56 @@ id: org:gr-ishw
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964404'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0837
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ICT-samenwerking Hoeksche Waard
+  roo_id: '24964399'
 names:
 - value: ICT-samenwerking Hoeksche Waard
   abbr: ISHW
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.ishw.nl
   email: info@ishw.nl
+  bezoekadres: Sportlaan 22, 3299 XG Maasdam
+  postadres: Postbus 5455, 3299 ZH Maasdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sportlaan
+    huisnummer: '22'
+    postcode: 3299 XG
+    woonplaats: Maasdam
+  - type: Postadres
+    postbus: '5455'
+    postcode: 3299 ZH
+    woonplaats: Maasdam
+  phones:
+  - nummer: (078) 633 46 00
+    label: algemeen
+  emails:
+  - email: info@ishw.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ishw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-10-27'
+last_verified: '2020-10-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964404/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964404/ishw
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

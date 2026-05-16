@@ -1,16 +1,40 @@
 id: org:oovb-stichting-mee-amstel-en-zaan
 type: rwt
+subname: MEE Amstel en Zaan
 identifiers:
   roo_id: '27914094'
+  kvk: '41216711'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting MEE Amstel en Zaan
   valid_from: '1900-01-01'
   valid_until: '2025-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2025-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Derkinderenstraat 10-18, 1062 DB Amsterdam
+  postadres: Derkinderenstraat 10-18, 1062 DB Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Derkinderenstraat 10-18
+    postcode: 1062 DB
+    woonplaats: Amsterdam
+  - type: Postadres
+    openbare_ruimte: Derkinderenstraat 10-18
+    postcode: 1062 DB
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: '2025-01-01'
+last_mutation: '2025-11-24'
+last_verified: '2025-11-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914094/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914094/stichting-mee-amstel-en-zaan
+  retrieved: '2026-05-16'

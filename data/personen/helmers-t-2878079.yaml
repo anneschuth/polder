@@ -3,7 +3,7 @@ name:
   full: T.A.M. Helmers
   family: Helmers
   given: T.A.M.
-  initials: T.
+  initials: T.A.M.
 mandaten:
 - id: 840f926e-fea9-440b-9f78-2003ddf26aea
   organization_id: org:gemeente-berkelland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878081
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=24581509
 - id: ce343727-9a56-4d3b-bbae-a143375b34a3
   organization_id: org:gemeente-berkelland
   post_id: post:raadslid-gemeente-berkelland

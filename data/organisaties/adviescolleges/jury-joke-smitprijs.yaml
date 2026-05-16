@@ -4,16 +4,57 @@ identifiers:
   roo_id: '28357363'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10145
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Jury Joke Smitprijs
   valid_from: '1900-01-01'
   valid_until: '2017-10-10'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit jury Joke Smit-prijs en Aanmoedigingsprijs vrouwenemancipatie,
+    artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0030259/2011-07-15/0/#Hoofdstuk2_Artikel2
+classifications:
+- type: CAO
+  eind_datum: '2017-10-10'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2017-10-10'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2017-10-10'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.jokesmitprijs.nl/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.jokesmitprijs.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-10-10'
+last_mutation: '2025-08-15'
+last_verified: '2025-08-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28357363/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28357363/jury-joke-smitprijs
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-07-15'

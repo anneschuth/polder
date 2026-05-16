@@ -3,7 +3,7 @@ name:
   full: P.C. Ouwendijk
   family: Ouwendijk
   given: P.C.
-  initials: P.
+  initials: P.C.
 mandaten:
 - id: 47cc2476-4292-447e-b562-dc095b561b7b
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780789
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28629960
 - id: 5feb130c-cfc2-448f-b035-988c4b2d2fc9
   organization_id: org:gemeente-krimpenerwaard
   post_id: post:raadslid-gemeente-krimpenerwaard

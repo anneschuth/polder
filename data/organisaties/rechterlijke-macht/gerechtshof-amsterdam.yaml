@@ -1,23 +1,69 @@
 id: org:rechtbank-gerechtshof-amsterdam
 type: rechterlijke-instantie
+subtype: Gerechtshof
 identifiers:
   oin: '00000004000000046000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10014
   roo_id: '58624'
+  owms: http://standaarden.overheid.nl/owms/terms/Gerechtshof_Amsterdam
+  kvk: '82969175'
+  rsin: '862674852'
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Gerechtshof Amsterdam
   valid_from: '1900-01-01'
+description:
+  text: Gerechtshof Amsterdam behandelt zaken in hoger beroep van de rechtbanken Amsterdam
+    en Noord-Holland, behalve sociale-zekerheids- en ambtenarenzaken (Centrale Raad
+    van Beroep) en overige zaken op het gebied van bestuursrecht (Raad van State).Jaarlijks
+    behandelt het gerechtshof Amsterdam ongeveer 9.500 zaken. Bij het hof werken 350
+    mensen. Het gerechtshof Amsterdam is gevestigd in het Paleis van Justitie op IJdok.Het
+    gerechtshof Amsterdam wordt geleid door een bestuur onder leiding van de president.
+    Het hof heeft 3 afdelingen met elk hun eigen aandachtsgebied. Daarnaast heeft
+    het hof speciale rechtsgebieden. Iedere afdeling staat onder leiding van een afdelingsvoorzitter.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Amsterdam
   email: voorlichting-hof-amsterdam@rechtspraak.nl
+  bezoekadres: IJdok 20, 1013 MM Amsterdam
+  postadres: Postbus 1312, 1000 BH Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: IJdok
+    huisnummer: '20'
+    postcode: 1013 MM
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1312'
+    postcode: 1000 BH
+    woonplaats: Amsterdam
+  phones:
+  - nummer: (088) 361 11 10
+    label: algemeen
+  emails:
+  - email: voorlichting-hof-amsterdam@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Amsterdam
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Paginas/Mailen-met-de-rechtspraak.aspx
+    label: mailen
+  fax: (088) 361 00 41
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58624/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58624/gerechtshof-amsterdam
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

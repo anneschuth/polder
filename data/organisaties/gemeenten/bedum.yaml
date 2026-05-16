@@ -5,6 +5,9 @@ identifiers:
   kvk: '01173414'
   roo_id: '36121'
   wikidata: Q461142
+  owms: http://standaarden.overheid.nl/owms/terms/Bedum_(gemeente)
+  ictu: '00005'
+  organisatiecode: gm0005
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,72 @@ names:
   abbr: Bedum
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 44,96
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 44.96
+  aantal_inwoners: 10441
+  inwoners: '232'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 232.0
+  bevat_plaatsen_raw: Bedum, Noordwolde GN, Onderdendam, Zuidwolde GN
+  bevat_plaatsen:
+  - Bedum
+  - Noordwolde GN
+  - Onderdendam
+  - Zuidwolde GN
+council:
+  total_seats: 12
+  parties:
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.bedum.nl
   email: gemeente@bedum.nl
+  bezoekadres: Schoolstraat 1, 9781 JL BEDUM
+  postadres: Postbus 38, 9780 AA BEDUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schoolstraat
+    huisnummer: '1'
+    postcode: 9781 JL
+    woonplaats: BEDUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 38
+    postbus: '38'
+    postcode: 9780 AA
+    woonplaats: BEDUM
+  phones:
+  - nummer: (050) 301 89 11
+    label: algemeen
+  emails:
+  - email: gemeente@bedum.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.bedum.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36121/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36121/bedum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

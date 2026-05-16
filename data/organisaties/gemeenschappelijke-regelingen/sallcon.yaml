@@ -1,19 +1,76 @@
 id: org:gr-sallcon
 type: gemeenschappelijke-regeling
+subname: KonnecteD B.V.
 identifiers:
   roo_id: '24963880'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0244
+  owms: http://standaarden.overheid.nl/owms/terms/sallcon
+  kvk: 08220030
+  organisatiecode: so0244
+  rsin: 001932536
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Sallcon
+  roo_id: '29619618'
 names:
 - value: Sallcon
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24963880/Sallcon
+afspraak:
+  email: info@konnected.nl
+  telefoonnummer: (0570) 67 95 00
 contact:
   website: https://www.konnected.nl
   email: info@konnected.nl
+  bezoekadres: Schonenvaardersstraat 9, 7418 CC Deventer
+  postadres: Postbus 152, 7400 AD Deventer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schonenvaardersstraat
+    huisnummer: '9'
+    postcode: 7418 CC
+    woonplaats: Deventer
+  - type: Postadres
+    postbus: '152'
+    postcode: 7400 AD
+    woonplaats: Deventer
+  phones:
+  - nummer: (0570) 67 95 00
+    label: algemeen
+  emails:
+  - email: info@konnected.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.konnected.nl
+    label: algemeen
+  - url: https://www.konnected.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.konnected.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-18'
+last_verified: '2026-03-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963880/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963880/sallcon
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-01-01'

@@ -1,23 +1,89 @@
 id: org:rechtbank-oost-brabant
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000032000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10025
   roo_id: '28048631'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Oost-Brabant
 classification: rechterlijke-instantie
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Rechtbank Oost-Brabant
   valid_from: '1900-01-01'
+description:
+  text: 'Bij de rechtbank Oost-Brabant werken zo’n 780 medewerkers. Onze organisatie
+    bestaat uit teams in de rechtsgebieden toezicht, familie- en jeugdrecht, strafrecht,
+    civiel recht en bestuursrecht. Daarnaast zijn bedrijfsvoeringsteams op gebied
+    van Control, Communicatie, Facilitaire Zaken, HRM en Bestuursondersteuning. Of
+    je nu gerechtsjurist, bode, administratief medewerker, rechter of adviseur bent:
+    samen dragen we bij aan een rechtvaardige en tijdige rechtspraak.We behandelen
+    op jaarbasis zo’n 100.000 zaken. Dat gebeurt in het Paleis van Justitie in ‘s-Hertogenbosch
+    (pal naast het centraal station) en in het gerechtsgebouw in het centrum van Eindhoven.We
+    zijn een organisatie met trotse medewerkers die verantwoordelijkheid nemen en
+    zich ook verantwoordelijk voelen. Een organisatie waarin we samenwerking en werkplezier
+    heel belangrijk vinden vanuit onze 3 kernwaarden: ‘de rechtzoekende centraal’,
+    ‘aandacht voor elkaar’ en ‘we doen het samen’. Bij ons staan vertrouwen, gelijkwaardigheid
+    en veiligheid hoog in het vaandel, worden talenten benut en is er voor iedereen
+    ruimte om initiatieven te nemen en om te leren van fouten.We vinden het ook belangrijk
+    bij te dragen aan landelijke ontwikkelingen en te investeren in specialismen.
+    Zo is het Landelijk Kwaliteitsbureau Curatoren, Bewindvoerders en Mentoren (CBM)
+    bij onze rechtbank ondergebracht en hebben we een kenniscentrum erfrecht opgericht.
+    Onze rechtbank is bovendien aangewezen om grote strafzaken te behandelen, onder
+    meer op het gebied van fraudedelicten. Daarnaast hebben we in Eindhoven de eerste
+    wijkrechtbank van het land opgericht.'
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Oost-Brabant
   email: info.rechtbanksHertogenbosch@rechtspraak.nl
+  postadres: Postbus 70584, 5201 CZ 's-Hertogenbosch
+  bezoekadres: Leeghwaterlaan 8, 5223 BA 's-Hertogenbosch
+  addresses:
+  - type: Postadres
+    postbus: '70584'
+    postcode: 5201 CZ
+    woonplaats: '''s-Hertogenbosch'
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie 's-Hertogenbosch
+    openbare_ruimte: Leeghwaterlaan
+    huisnummer: '8'
+    postcode: 5223 BA
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (088) 362 10 00
+    label: algemeen
+  emails:
+  - email: info.rechtbanksHertogenbosch@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Oost-Brabant
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Oost-Brabant/Contact#daa7dfc9-9e48-4848-b41c-d511bd5280210f05734e-2f79-4b63-bdbe-c78c2dc7d68611
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rechtbank Oost-Brabant
+    url: https://www.linkedin.com/company/rechtbank-oost-brabant/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-10-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048631/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048631/rechtbank-oost-brabant
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

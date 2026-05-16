@@ -3,19 +3,73 @@ type: adviescollege
 identifiers:
   roo_id: '30272390'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12383
+  organisatiecode: oorg12383
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Beoordelingscommissie late zwangerschapsafbreking en levensbeëindiging bij
     pasgeborenen en kinderen van 1 tot 12 jaar
   abbr: LZA/LP&K
   valid_from: '1900-01-01'
+description:
+  text: Wanneer er bij ongeborenen, pasgeborenen of kinderen van 1 tot 12 jaar sprake
+    is van uitzichtloos en (te verwachten) ondraaglijk lijden, hebben artsen de mogelijkheid
+    om over te gaan tot afbreking van de zwangerschap of beëindiging van het leven
+    om zulk lijden te voorkomen. Dit kan wanneer artsen bij een dergelijk ingrijpend
+    besluit zorgvuldig handelen volgens de geldende criteria (onder meer beschreven
+    in de Regeling beoordelingscommissie late zwangerschapsafbreking en levensbeëindiging
+    bij pasgeborenen en kinderen 1-12 jaar). De Beoordelingscommissie late zwangerschapsafbreking
+    en levensbeëindiging bij pasgeborenen en kinderen van 1 tot 12 jaar (LZA/LP&K)
+    toetst achteraf of het besluitvormingsproces en de toepassing van de criteria
+    zorgvuldig zijn verlopen.Deze beoordelingscommissie is geen formeel adviescollege
+    en valt niet onder de Kaderwet adviescolleges.
+  url: https://www.lzalpkcommissie.nl/over-ons
+wettelijke_grondslagen:
+- opschrift: Regeling beoordelingscommissie late zwangerschapsafbreking en levensbeëindiging
+    bij pasgeborenen en kinderen 1–12 jaar, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0037570/2024-02-01/0#Artikel2
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30272390/Beoordelingscommissie_late_zwangerschapsafbreking_en_levensbeeindiging_bij_pasgeborenen_en_kinderen_van_1_tot_12_jaar
 contact:
   website: https://www.lzalpkcommissie.nl/
   email: communicatie-estt@minvws.nl
+  postadres: Postbus 80089, 3508 TB Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '80089'
+    postcode: 3508 TB
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '80089'
+    postcode: 3508 TB
+    woonplaats: Utrecht
+  phones:
+  - nummer: 06 29 15 10 32
+    label: pers
+  - nummer: 06 29 28 38 44
+    label: pers
+  emails:
+  - email: communicatie-estt@minvws.nl
+    label: pers
+  internet_addresses:
+  - url: https://www.lzalpkcommissie.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.lzalpkcommissie.nl/service/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30272390/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30272390/lzalp-en-k
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-02-01'

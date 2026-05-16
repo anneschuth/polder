@@ -6,21 +6,148 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0687
   roo_id: '22048'
   wikidata: Q10076
+  owms: http://standaarden.overheid.nl/owms/terms/Middelburg_(gemeente)
+  ictu: 00687
+  organisatiecode: gm0687
+  rsin: 002128032
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MDL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Middelburg
   abbr: Middelburg
   valid_from: '1900-01-01'
+description:
+  url: https://www.middelburg.nl/onze-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.middelburg.nl/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/22048/Gemeente_Middelburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://eloket.middelburg.nl/o
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://financien.middelburg.nl/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Middelburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Middelburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Middelburg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://middelburg.raadsinformatie.nl/dashboard
+      toelichting: Openbare informatiedocumenten Gemeenteraad
+  wooVerzoek:
+    url: https://www.middelburg.nl/woo-verzoek-indienen
+organogram_url: https://www.middelburg.nl/onze-organisatie
+afspraak:
+  url: https://www.middelburg.nl/afspraak-maken
+geography:
+  oppervlakte: 53,04
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 53.04
+  aantal_inwoners: 50439
+  inwoners: '950'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 950.0
+  bevat_plaatsen_raw: Arnemuiden, Middelburg, Nieuw- en Sint Joosland
+  bevat_plaatsen:
+  - Arnemuiden
+  - Middelburg
+  - Nieuw- en Sint Joosland
+council:
+  total_seats: 30
+  parties:
+  - naam: Lokale Partij Middelburg
+    aantal_zetels: 6
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: SGP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Belang van Nederland
+    aantal_zetels: 1
+  - naam: Hart voor Middelburg
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
 contact:
   website: https://www.middelburg.nl
   email: info@middelburg.nl
+  bezoekadres: Kanaalweg 3, 4337 PA MIDDELBURG
+  postadres: Postbus 6000, 4330 LA MIDDELBURG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kanaalweg
+    huisnummer: '3'
+    postcode: 4337 PA
+    woonplaats: MIDDELBURG
+  - type: Postadres
+    postbus: '6000'
+    postcode: 4330 LA
+    woonplaats: MIDDELBURG
+  - type: Woo-Adres
+    openbare_ruimte: Kanaalweg
+    huisnummer: '3'
+    postbus: '6000'
+    postcode: 4337 PA
+    woonplaats: Middelburg
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Kanaalweg
+    huisnummer: '3'
+    postcode: 4337 PA
+    woonplaats: MIDDELBURG
+  phones:
+  - nummer: 14 0118
+    label: algemeen
+  emails:
+  - email: info@middelburg.nl
+    label: algemeen
+  - email: info@middelburg.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.middelburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.middelburg.nl/afspraak-maken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22048/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22048/middelburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

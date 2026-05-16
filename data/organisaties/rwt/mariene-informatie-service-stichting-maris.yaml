@@ -2,14 +2,33 @@ id: org:stichting-mariene-informatie-service-stichting-maris
 type: rwt
 identifiers:
   roo_id: '30133443'
+  kvk: '41155697'
+  rsin: 009159095
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Mariene Informatie Service Stichting Maris
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Gildeweg
+    huisnummer: '7'
+    huisnummer_toevoeging: a
+    postcode: 2632 BD
+    woonplaats: Nootdorp
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133443/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133443/mariene-informatie-service-stichting-maris
+  retrieved: '2026-05-16'

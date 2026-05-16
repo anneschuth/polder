@@ -1,26 +1,142 @@
 id: org:prov-li
 type: provincie
+subname: Provinciaal Bestuur van Limburg
 identifiers:
   oin: '00000001001737430000'
   kvk: '50052969'
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv31
   roo_id: '16071'
   wikidata: Q1093
+  owms: http://standaarden.overheid.nl/owms/terms/Limburg
+  ictu: 04208
+  rsin: '001737430'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_LIMB
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Limburg
   abbr: LI
   valid_from: '1900-01-01'
+description:
+  text: 'Alle informatie over de Provincie Limburg, zowel organisatie als provinciaal
+    bestuur, vindt u op de website https://www.limburg.nl/Meer informatie over Provinciale
+    Staten is te vinden op: https://www.limburg.nl/bestuur/provinciale-staten/Meer
+    informatie over Gedeputeerde Staten is te vinden op: https://www.limburg.nl/bestuur/gedeputeerde-staten/Meer
+    informatie over de Commissaris van de Koning is te vinden op: https://www.limburg.nl/bestuur/commissaris-koning/'
+  url: https://lokaleregelgeving.overheid.nl/CVDR668589/3#bijlage_1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.limburg.nl/bestuur/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/16071/Provincie_Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Limburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Klachtoordelen
+      url: https://www.limburg.nl/bestuur/open-overheid/openbare-documenten/@668/gedraging-provincie/?PagClsIdt=129469#PagCls_129469
+      toelichting: Overzicht klachten ontvangen sinds 1-1-2022
+    - informatiecategorie: Beschikkingen
+      url: https://www.limburg.nl/loket/subsidies/subsidieregister/
+      toelichting: Provincie Limburg publiceert elk kwartaal (in april, juli en oktober
+        en januari) een subsidieregister. Het subsidieregister bestaat uit een overzicht
+        van subsidies die door Gedeputeerde Staten zijn verstrekt.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.limburg.nl/bestuur/begroting/
+      toelichting: In de begroting geeft de Provincie haar inkomsten en uitgaven voor
+        het komende of lopende jaar weer. In de jaarstukken verantwoordt ze haar inkomsten
+        en uitgaven van het afgelopen jaar.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.limburg.nl/bestuur/open-overheid/openbare-documenten/@749/vraag-antwoorden/#item_6429
+      toelichting: Alle Woo-verzoeken en - besluiten (inclusief openbaar gemaakte
+        besluiten) sinds 1-1-2022
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://limburg.bestuurlijkeinformatie.nl/Reports/Details/0c0b395d-1580-406a-a66f-dd61947f4854
+      toelichting: Bij Provinciale Staten ingekomen stukken
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://limburg.bestuurlijkeinformatie.nl/
+      toelichting: Vergaderstukken Provinciale Staten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.limburg.nl/actueel/gs-agenda/
+      toelichting: Agen­da Ge­de­pu­teer­de Sta­ten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.limburg.nl/actueel/gs-besluiten/
+      toelichting: Be­slui­ten Ge­de­pu­teer­de Sta­ten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Limburg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Limburg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Limburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://formulieren.limburg.nl/provincielimburg/Indienen_WOO_verzoek
+organogram_url: https://www.limburg.nl/over/organisatie/organisatiestructuur/
+afspraak:
+  telefoonnummer: (043) 389 99 99
 contact:
   website: https://www.limburg.nl/
   email: postbus@prvlimburg.nl
+  bezoekadres: Limburglaan 10, 6229 GA Maastricht
+  postadres: Postbus 5700, 6202 MA Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Limburglaan
+    huisnummer: '10'
+    postcode: 6229 GA
+    woonplaats: Maastricht
+    regio: Limburg
+    land: NL
+  - type: Postadres
+    postbus: '5700'
+    postcode: 6202 MA
+    woonplaats: Maastricht
+  - type: Woo-Adres
+    postbus: '5700'
+    postcode: 6202 MA
+    ter_attentie_van: Woo-contactpersoon
+    woonplaats: Maastricht
+    land: Nederland
+  phones:
+  - nummer: (043) 389 99 99
+    label: algemeen
+  emails:
+  - email: postbus@prvlimburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.limburg.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.limburg.nl/contact/
+    label: Algemeen
+  fax: (043) 361 80 99
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16071/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16071/li
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

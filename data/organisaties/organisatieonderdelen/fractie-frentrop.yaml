@@ -3,14 +3,23 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28620749'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-gl
+parent_id: org:onderdeel-fracties-ek
 names:
 - value: Fractie-Frentrop
   valid_from: '1900-01-01'
   valid_until: '2023-06-12'
+description:
+  text: 2 zetels
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2023-06-12'
+last_mutation: '2023-06-13'
+last_verified: '2023-06-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28620749/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28620749/fractie-frentrop
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-03-31'

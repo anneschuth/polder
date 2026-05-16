@@ -3,17 +3,97 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967494'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0293
+  owms: http://standaarden.overheid.nl/owms/terms/emcogrp
+  kvk: 01173884
+  organisatiecode: so0293
+  rsin: '808269100'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling EMCO-groep
+  roo_id: '24967489'
 names:
 - value: EMCO-groep
   valid_from: '1900-01-01'
+description:
+  text: De EMCO-groep is hét werkleerbedrijf van de regio Zuidoost Drenthe, met ruim
+    1500 medewerkers. Voor de gemeenten Emmen, Coevorden en een gedeelte van de gemeente
+    Borger-Odoorn voeren wij delen van de Participatiewet uit.Voor alle doelgroepen
+    met een afstand tot de arbeidsmarkt verzorgen wij een pasklare oplossing.Leren
+    en werken op een werkplek, is onze insteek. Door het laten opdoen van werkervaring
+    en door scholing en training verkleinen wij hun afstand tot de arbeidsmarkt.
+  url: https://emco-groep.nl/informatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://emco-groep.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/24967494/EMCO-groep
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://emco-groep.nl/informatie/jaarverslagen/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken
+  wooVerzoek:
+    url: https://emco-groep.nl/contact/
+organogram_url: https://emco-groep.nl/informatie/organigram/
+afspraak:
+  telefoonnummer: (0591) 63 66 00
+  url: https://emco-groep.nl/contact/
 contact:
   website: https://www.emco-groep.nl
   email: algemeen@emco-groep.nl
+  bezoekadres: Abel Tasmanstraat 7, 7821 AN Emmen
+  postadres: Postbus 2040, 7801 CA Emmen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Abel Tasmanstraat
+    huisnummer: '7'
+    postcode: 7821 AN
+    woonplaats: Emmen
+  - type: Postadres
+    postbus: '2040'
+    postcode: 7801 CA
+    woonplaats: Emmen
+  - type: Woo-Adres
+    openbare_ruimte: Abel Tasmanstraat
+    huisnummer: '7'
+    postcode: 7821 AN
+    woonplaats: Emmen
+  phones:
+  - nummer: (0591) 63 66 00
+    label: algemeen
+  emails:
+  - email: algemeen@emco-groep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.emco-groep.nl
+    label: algemeen
+  - url: https://emco-groep.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://emco-groep.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-24'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967494/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967494/emco-groep
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-01-01'

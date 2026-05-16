@@ -3,7 +3,7 @@ name:
   full: H.A.J. Garnier
   family: Garnier
   given: H.A.J.
-  initials: H.
+  initials: H.A.J.
 mandaten:
 - id: 75f6031e-e61d-4a0e-ab5d-c2e45d06e3fa
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910533
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=27053768
 - id: 8a0a57d6-a6c2-4ae2-b05b-345be64aec26
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

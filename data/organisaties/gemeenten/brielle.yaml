@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0501
   roo_id: '23644'
   wikidata: Q462663
+  owms: http://standaarden.overheid.nl/owms/terms/Brielle_(gemeente)
+  ictu: '00501'
+  organisatiecode: gm0501
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,91 @@ names:
   abbr: Brielle
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+geography:
+  oppervlakte: 31,12
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 31.12
+  aantal_inwoners: 17704
+  inwoners: '568'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 568.0
+  bevat_plaatsen_raw: Brielle, Vierpolders, Zwartewaal
+  bevat_plaatsen:
+  - Brielle
+  - Vierpolders
+  - Zwartewaal
+council:
+  total_seats: 17
+  parties:
+  - naam: IBGB
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ONS Brielle
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: Vrij Voorne
+    aantal_zetels: 1
 contact:
   website: www.brielle.nl
   email: info@brielle.nl
+  bezoekadres: Slagveld 36, 3231 AP BRIELLE
+  postadres: Postbus 101, 3230 AC BRIELLE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Slagveld
+    huisnummer: '36'
+    postcode: 3231 AP
+    woonplaats: BRIELLE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '101'
+    postcode: 3230 AC
+    woonplaats: BRIELLE
+  phones:
+  - nummer: (0181) 47 11 11
+    label: algemeen
+  emails:
+  - email: info@brielle.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.brielle.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2024-11-26'
+last_verified: '2024-11-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23644/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23644/brielle
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

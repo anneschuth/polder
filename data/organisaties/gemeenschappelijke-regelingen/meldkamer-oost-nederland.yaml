@@ -3,18 +3,65 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27807702'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0777
+  owms: http://standaarden.overheid.nl/owms/terms/meldkonl
+  kvk: '55105564'
+  organisatiecode: so0777
+  rsin: '851567769'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Meldkamer Oost Nederland 2020
+  roo_id: '30019230'
 names:
 - value: Meldkamer Oost Nederland
   valid_from: '1900-01-01'
   valid_until: '2023-07-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-07-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-07-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.vnog.nl/brandweer/meldkamer-oost-nederland
   email: info@vnog.nl
+  bezoekadres: Europaweg 79, 7336 AK Apeldoorn
+  postadres: Postbus 234, 7300 AE Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europaweg
+    huisnummer: '79'
+    postcode: 7336 AK
+    woonplaats: Apeldoorn
+  - type: Postadres
+    postbus: '234'
+    postcode: 7300 AE
+    woonplaats: Apeldoorn
+  phones:
+  - nummer: (0900) 88 44
+    label: politie
+  - nummer: (088) 051 13 22
+    label: brandweer
+  emails:
+  - email: info@vnog.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vnog.nl/brandweer/meldkamer-oost-nederland
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-07-01'
+last_mutation: '2026-04-24'
+last_verified: '2019-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27807702/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27807702/meldkamer-oost-nederland
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-01'

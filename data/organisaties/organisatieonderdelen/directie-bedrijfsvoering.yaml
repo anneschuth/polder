@@ -3,13 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28697787'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-az
+parent_id: org:min-az
 names:
 - value: Directie Bedrijfsvoering
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-02-21'
+last_verified: '2024-10-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28697787/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28697787/directie-bedrijfsvoering
+  retrieved: '2026-05-16'

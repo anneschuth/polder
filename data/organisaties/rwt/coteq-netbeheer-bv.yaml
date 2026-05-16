@@ -2,14 +2,42 @@ id: org:oovb-coteq-netbeheer-bv
 type: rwt
 identifiers:
   roo_id: '27908919'
+  kvk: 08094695
+  rsin: '809328458'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Coteq Netbeheer B.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Rohofstraat 83, 7605 AT Almelo
+  postadres: Postbus 71, 7600 AB Almelo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rohofstraat 83
+    postcode: 7605 AT
+    woonplaats: Almelo
+  - type: Postadres
+    postbus: '71'
+    postcode: 7600 AB
+    woonplaats: Almelo
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908919/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908919/coteq-netbeheer-bv
+  retrieved: '2026-05-16'

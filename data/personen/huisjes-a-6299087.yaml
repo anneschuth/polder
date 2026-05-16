@@ -3,7 +3,7 @@ name:
   full: A.T. Huisjes
   family: Huisjes
   given: A.T.
-  initials: A.
+  initials: A.T.
 mandaten:
 - id: eb1381c7-7c03-4ebf-a4d7-991b7b7abe4d
   organization_id: org:gemeente-twenterand
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6299089
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36239/gemeente-twenterand
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=24617421
 - id: 77b8e7c1-54a4-4599-8bec-0f8b94dd8b0c
   organization_id: org:gemeente-twenterand
   post_id: post:raadslid-gemeente-twenterand

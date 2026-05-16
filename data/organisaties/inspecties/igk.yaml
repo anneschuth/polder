@@ -3,18 +3,88 @@ type: inspectie
 identifiers:
   roo_id: '5445'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12350
+  owms: http://standaarden.overheid.nl/owms/terms/igkrijgsm
+  organisatiecode: oorg12350
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Inspecteur-Generaal der Krijgsmacht
   abbr: IGK
   valid_from: '1900-01-01'
+description:
+  text: De Inspecteur-Generaal der Krijgsmacht (IGK) bemiddelt wanneer een (voormalige)
+    Defensiemedewerker of het thuisfront een probleem heeft met Defensie maar daar
+    zelf niet uitkomt. De Inspecteur-Generaal der Krijgsmacht probeert de partijen
+    nader tot elkaar te brengen om zo tot een oplossing te komen. Inspecteur-Generaal
+    der Krijgsmacht adviseert ook de minister en is ook Inspecteur der Veteranen en
+    Inspecteur der Reservisten.
+  url: https://www.defensie.nl/onderwerpen/igk
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/5445/Inspecteur-Generaal_der_Krijgsmacht
+  wooVerzoek:
+    url: https://www.defensie.nl/onderwerpen/igk/contact
+afspraak:
+  email: igk@mindef.nl
+  telefoonnummer: (088) 956 63 23
 contact:
   website: https://www.defensie.nl/onderwerpen/igk
   email: igk@mindef.nl
+  postadres: Utrechtseweg 225, 1213 TR Hilversum
+  bezoekadres: Utrechtseweg 225, 1213 TR Hilversum
+  addresses:
+  - type: Postadres
+    toelichting: Landgoed De Zwaluwenberg
+    openbare_ruimte: Utrechtseweg
+    huisnummer: '225'
+    postcode: 1213 TR
+    woonplaats: Hilversum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Bezoekadres
+    toelichting: Landgoed De Zwaluwenberg
+    openbare_ruimte: Utrechtseweg
+    huisnummer: '225'
+    postcode: 1213 TR
+    woonplaats: Hilversum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Landgoed De Zwaluwenberg
+    openbare_ruimte: Utrechtseweg
+    huisnummer: '225'
+    postcode: 1213 TR
+    woonplaats: Hilversum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (088) 956 63 23
+    label: algemeen
+  emails:
+  - email: igk@mindef.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.defensie.nl/onderwerpen/igk
+    label: algemeen
+  contact_forms:
+  - url: https://www.defensie.nl/onderwerpen/igk/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/5445/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/5445/igk
+  retrieved: '2026-05-16'

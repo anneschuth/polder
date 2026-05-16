@@ -1,15 +1,45 @@
 id: org:oovb-nv-waterleiding-maatschappij-limburg
 type: rwt
+subname: WML
 identifiers:
   roo_id: '27909261'
+  kvk: '14602038'
+  oin: 00000003146020380000
+  rsin: '003045250'
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: N.V. Waterleiding Maatschappij Limburg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Limburglaan 25, 6229 GA Maastricht
+  postadres: Postbus 1060, 6201 BB Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Limburglaan 25
+    postcode: 6229 GA
+    woonplaats: Maastricht
+  - type: Postadres
+    postbus: '1060'
+    postcode: 6201 BB
+    woonplaats: Maastricht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909261/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909261/nv-waterleiding-maatschappij-limburg
+  retrieved: '2026-05-16'

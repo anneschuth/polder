@@ -3,19 +3,89 @@ type: zbo
 identifiers:
   roo_id: '30150445'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb099992
+  owms: http://standaarden.overheid.nl/owms/terms/onvzldz
+  kvk: '62128701'
+  rsin: '854671171'
 classification: zbo
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: ONVZ Langdurige Zorg B.V.
   valid_from: '1900-01-01'
+description:
+  text: ONVZ Langdurige Zorg B.V. is een uitvoerder van de Wet langdurige zorg (Wlz),
+    zoals bedoeld in artikel 4.1.1 van die wet.
+  url: https://www.onvz.nl/zorgadvies/langdurige-zorg-en-ondersteuning
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet langdurige zorg, artikel 4.1.1
+  referentie: https://wetten.overheid.nl/BWBR0035917/2025-01-01#Hoofdstuk4_Paragraaf1_Artikel4.1.1
+taken_en_bevoegdheden: ONVZ Langdurige Zorg B.V. is verantwoordelijk voor het uitvoeren
+  van de taken zoals beschreven in paragraaf 2 van hoofdstuk 4 (artikelen 4.2.1 tot
+  en met 4.2.6) van de Wet langdurige zorg (Wlz).
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30150445/ONVZ_Langdurige_Zorg_BV
 contact:
   website: https://www.onvz.nl/
+  bezoekadres: De Molen 66, 3995 AX Houten
+  postadres: Postbus 392, 3990 GD Houten
+  addresses:
+  - type: Bezoekadres
+    toelichting: ONVZ
+    openbare_ruimte: De Molen
+    huisnummer: '66'
+    postcode: 3995 AX
+    woonplaats: Houten
+  - type: Postadres
+    toelichting: ONVZ
+    postbus: '392'
+    postcode: 3990 GD
+    woonplaats: Houten
+  - type: Woo-Adres
+    postbus: '392'
+    postcode: 3990 GD
+    woonplaats: Houten
+  phones:
+  - nummer: (030) 639 62 22
+    label: algemeen
+  internet_addresses:
+  - url: https://www.onvz.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.onvz.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: ONVZ
+    url: https://www.linkedin.com/company/onvz/?originalSubdomain=nl
+  - platform: Facebook
+    gebruikersnaam: ONVZ
+    url: https://www.facebook.com/ONVZ
+  - platform: Instagram
+    gebruikersnaam: '@onvz_zorgverzekeraar'
+    url: https://www.instagram.com/onvz_zorgverzekeraar/
+  - platform: YouTube
+    gebruikersnaam: ONVZ
+    url: https://www.youtube.com/user/ONVZZorgverzekeraar
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-12'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30150445/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30150445/onvz-langdurige-zorg-bv
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb099992
   retrieved: '2026-05-09'
+roo_start_datum: '2014-12-19'

@@ -5,6 +5,9 @@ identifiers:
   kvk: '24494625'
   roo_id: '24529'
   wikidata: Q290475
+  owms: http://standaarden.overheid.nl/owms/terms/Cromstrijen
+  ictu: '00611'
+  organisatiecode: gm0611
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,78 @@ names:
   abbr: Cromstrijen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 70,34
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 70.34
+  aantal_inwoners: 12780
+  inwoners: '181'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 181.0
+  bevat_plaatsen_raw: Klaaswaal, Numansdorp
+  bevat_plaatsen:
+  - Klaaswaal
+  - Numansdorp
+council:
+  total_seats: 13
+  parties:
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Cromstrijen '98
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: Fractie Polderwijk
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
+  - naam: Fractie Van der Giesen
+    aantal_zetels: 1
 contact:
   website: www.cromstrijen.nl
   email: info@cromstrijen.nl
+  bezoekadres: Buttervliet 1, 3281 LK NUMANSDORP
+  postadres: Postbus 7400, 3280 AE NUMANSDORP
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Buttervliet
+    huisnummer: '1'
+    postcode: 3281 LK
+    woonplaats: NUMANSDORP
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 7400
+    postbus: '7400'
+    postcode: 3280 AE
+    woonplaats: NUMANSDORP
+  phones:
+  - nummer: 14 0186
+    label: algemeen
+  emails:
+  - email: info@cromstrijen.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.cromstrijen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24529/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24529/cromstrijen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

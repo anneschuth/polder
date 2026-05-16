@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28287038'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-gl
+parent_id: org:onderdeel-fracties-ek
 names:
 - value: Fractie-Van Pareren
   valid_from: '1900-01-01'
   valid_until: '2021-02-14'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-02-14'
+last_mutation: '2021-03-02'
+last_verified: '2020-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28287038/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28287038/fractie-van-pareren
+  retrieved: '2026-05-16'

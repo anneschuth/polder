@@ -1,19 +1,89 @@
 id: org:gr-openbaar-lichaam-jeugdhulp-rijnmond
 type: gemeenschappelijke-regeling
+subname: Jeugdhulp Rijnmond
 identifiers:
   roo_id: '24965668'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0842
+  owms: http://standaarden.overheid.nl/owms/terms/jhrijnm
+  kvk: '62019163'
+  organisatiecode: so0842
+  rsin: '854598790'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Jeugdhulp Rijnmond
+  roo_id: '24965663'
 names:
 - value: Openbaar Lichaam Jeugdhulp Rijnmond
   valid_from: '1900-01-01'
+description:
+  url: https://www.jeugdhulprijnmond.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.jeugdhulprijnmond.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/24965668/Openbaar_Lichaam_Jeugdhulp_Rijnmond
+  wooVerzoek:
+    url: https://www.jeugdhulprijnmond.nl/contact/
+organogram_url: https://www.jeugdhulprijnmond.nl/over-ons/
+afspraak:
+  email: info@jeugdhulprijnmond.nl
+  url: https://www.jeugdhulprijnmond.nl/contact/
 contact:
   website: https://www.jeugdhulprijnmond.nl
   email: info@jeugdhulprijnmond.nl
+  bezoekadres: Coolsingel 40, 3011 AD Rotterdam
+  postadres: Postbus 70013, 3000 KR Rotterdam
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Rotterdam Stadswinkel Centrum
+    openbare_ruimte: Coolsingel
+    huisnummer: '40'
+    postcode: 3011 AD
+    woonplaats: Rotterdam
+  - type: Postadres
+    postbus: '70013'
+    postcode: 3000 KR
+    woonplaats: Rotterdam
+  - type: Woo-Adres
+    openbare_ruimte: Halvemaanpassage
+    huisnummer: '90'
+    huisnummer_toevoeging: Timmerhuis, verdieping 2
+    postcode: 3011 DL
+    woonplaats: Rotterdam
+    regio: Rijnmond
+  phones:
+  - nummer: 14 010
+    label: algemeen (Rotterdam)
+  emails:
+  - email: info@jeugdhulprijnmond.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.jeugdhulprijnmond.nl
+    label: algemeen
+  - url: https://www.jeugdhulprijnmond.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.jeugdhulprijnmond.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-14'
+last_verified: '2021-06-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965668/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965668/openbaar-lichaam-jeugdhulp-rijnmond
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-05-01'

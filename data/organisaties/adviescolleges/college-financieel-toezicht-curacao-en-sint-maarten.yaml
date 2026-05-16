@@ -3,17 +3,101 @@ type: adviescollege
 identifiers:
   roo_id: '28360955'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10161
+  owms: http://standaarden.overheid.nl/owms/terms/colfintoezcm
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: College financieel toezicht Curaçao en Sint Maarten
   valid_from: '1900-01-01'
+description:
+  text: Het College financieel toezicht (Cft) Curaçao en Sint Maarten is opgericht
+    om in deze landen duurzame overheidsfinanciën te realiseren. Hiervoor wordt samengewerkt
+    met de besturen van Aruba, Curaçao, Sint Maarten, Bonaire, Sint Eustatius en Saba.
+    Het belangrijkste doel van het Cft is het bevorderen van goed openbaar bestuur,
+    welvaart en welzijn op de eilanden. De instelling van het Cft is vastgelegd in
+    de Rijkswet financieel toezicht Curaçao en Sint Maarten (Rft).Dit college valt
+    niet onder de Kaderwet adviescolleges en is dus geen formeel adviescollege in
+    de zin van die wet.
+  url: https://www.cft.cw/organisatie/
+wettelijke_grondslagen:
+- opschrift: Rijkswet financieel toezicht Curaçao en Sint Maarten, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0028132/2010-10-10/#Hoofdstuk2_Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28360955/College_financieel_toezicht_Curacao_en_Sint_Maarten
+afspraak:
+  email: info@cft.cw
+  telefoonnummer: +5999 461 9081
 contact:
   website: https://www.cft.cw/
   email: info@cft.cw
+  bezoekadres: De Rouvilleweg 39, Otrobanda, Willemstad
+  postadres: De Rouvilleweg 39, Otrobanda, Willemstad
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeenschappelijk secretariaat
+    openbare_ruimte: De Rouvilleweg
+    huisnummer: '39'
+    woonplaats: Otrobanda, Willemstad
+    land: Curaçao
+  - type: Woo-Adres
+    toelichting: Gemeenschappelijk secretariaat
+    openbare_ruimte: De Rouvilleweg
+    huisnummer: '39'
+    woonplaats: Otrobanda, Willemstad
+    land: Curaçao
+  - type: Postadres
+    openbare_ruimte: De Rouvilleweg
+    huisnummer: '39'
+    ter_attentie_van: College financieel toezicht Curaçao en Sint Maarten
+    woonplaats: Otrobanda, Willemstad
+    land: Curaçao
+  phones:
+  - nummer: +5999 461 9081
+    label: algemeen
+  - nummer: +5999 512 6861
+    label: pers
+  emails:
+  - email: info@cft.cw
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cft.cw/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cft.cw/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Colleges financieel toezicht (Cft)
+    url: https://www.linkedin.com/company/colleges-financieel-toezicht/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360955/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360955/college-financieel-toezicht-curacao-en-sint-maarten
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

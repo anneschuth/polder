@@ -4,7 +4,13 @@ identifiers:
   roo_id: '28248855'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000062
 classification: zbo
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Registratiecommissie Geneeskundig Specialisten
   abbr: RGS
@@ -12,15 +18,117 @@ names:
 - value: Registratiecommissies KNMG, KNMP, KNMT, FGzPt en V&VN
   abbr: RGS
   valid_from: '1900-01-01'
+description:
+  text: 'Dit zbo is onderdeel van het cluster Registratiecommissies KNMG, KNMP, KNMT,
+    FGzPt en V&VN. Het betreft hier de registratiecommissie van beroepsorganisatie
+    Koninklijke Nederlandsche Maatschappij tot bevordering der Geneeskunst (KNMG).De
+    Registratiecommissie Geneeskundig Specialisten (RGS), een orgaan binnen de KNMG,
+    toetst periodiek of geneeskundig specialisten aan de regels van het College Geneeskundige
+    Specialismen voldoen. Artsen die aan deze regels voldoen, kunnen zich inschrijven
+    in een specialistenregister. De RGS is op 1 januari 2013 ontstaan uit een samenvoeging
+    van drie registratiecommissies: de Huisarts, Verpleeghuisarts en arts voor verstandelijk
+    gehandicapten Registratie Commissie (HVRC), de Medisch Specialisten Registratie
+    Commissie (MSRC) en de Sociaal-Geneeskundigen Registratie Commissie (SGRC).'
+  url: https://www.knmg.nl/ik-ben-arts/rgs/rgs/over-de-rgs
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Artikel 22 van de Kaderwet zelfstandige bestuursorganen is niet
+        van toepassing voor zover het besluiten betreft ter zake van de inschrijving.
+wettelijke_grondslagen:
+- opschrift: Wet beroepen in de individuele gezondheidszorg,  artikel 14
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20de%20beroepen%20in%20de%20individuele%20gezondheidszorg/article=14
+taken_en_bevoegdheden: Indien een organisatie van beoefenaren van een beroep als bedoeld
+  in artikel 3 van de Wet beroepen in de individuele gezondheidszorg (Wet BIG) voor
+  de inschrijving van beroepsbeoefenaren, die een bijzondere deskundigheid hebben
+  verworven met betrekking tot de uitoefening van een deelgebied van hun beroep, een
+  specialistenregister heeft en daaraan een titel is verbonden, kan de Minister van
+  Volksgezondheid, Welzijn en Sport bepalen dat die titel als wettelijk erkende specialistentitel
+  wordt aangemerkt. Een aanvraag daartoe wordt gedaan door het bestuur van de organisatie;
+  het bestuur kan de bevoegdheid daartoe overdragen aan een orgaan. Deze bevoegdheid
+  kan worden overgedragen aan het orgaan (college) zoals bedoeld in artikel 14, tweede
+  lid, sub d van de Wet BIG.De Registratiecommissie Geneeskundig Specialisten (RGS)
+  is als orgaan binnen de Koninklijke Nederlandsche Maatschappij tot bevordering der
+  Geneeskunst (KNMG) verantwoordelijk voor diverse taken met betrekking tot de registers
+  van geneeskundig specialisten. Deze taken zijn:* het inschrijven van geneeskundig
+  specialisten in een specialistenregister;* het periodiek hernieuwen van bovenvermelde
+  inschrijvingen;* het doorhalen van bovenvermelde inschrijvingen.
+evaluations:
+- datum: '2017-05-29'
+  kamerstuknummer: TK 32772 nr. 26
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32772-26.html
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Pensioenfonds Zorg en Welzijn (PFZW)
+    referentie: https://www.pfzw.nl/particulieren.html
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.knmg.nl/ik-ben-arts/rgs/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28248855/Registratiecommissie_Geneeskundig_Specialisten
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.knmg.nl/ik-ben-arts/rgs/wet-open-overheid-woo
+  wooVerzoek:
+    url: https://www.knmg.nl/ik-ben-arts/rgs/wet-open-overheid-woo
+afspraak:
+  email: rgs@fed.knmg.nl
+  telefoonnummer: (088) 440 43 00
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2024-12-02'
+  toelichtingFte: Medewerkers die zich met de zbo-taken van de RGS bezighouden, zijn
+    niet in dienst van de RGS maar van de KNMG.
 contact:
   website: https://www.knmg.nl/ik-ben-arts/rgs/rgs
   email: rgs@fed.knmg.nl
+  postadres: Postbus 20053, 3502 LB Utrecht
+  bezoekadres: Mercatorlaan 1200, 3528 BL Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '20053'
+    postcode: 3502 LB
+    woonplaats: Utrecht
+  - type: Bezoekadres
+    openbare_ruimte: Mercatorlaan
+    huisnummer: '1200'
+    postcode: 3528 BL
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '20053'
+    postcode: 3502 LB
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 440 43 00
+    label: algemeen
+  emails:
+  - email: rgs@fed.knmg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.knmg.nl/ik-ben-arts/rgs/rgs
+    label: algemeen
+  contact_forms:
+  - url: https://www.knmg.nl/ik-ben-arts/rgs/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-01-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248855/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248855/rgs
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000062
   retrieved: '2026-05-09'
+roo_start_datum: '2013-01-01'

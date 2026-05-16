@@ -6,21 +6,156 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1652
   roo_id: '33032'
   wikidata: Q9836
+  owms: http://standaarden.overheid.nl/owms/terms/Gemert-Bakel
+  ictu: '01652'
+  organisatiecode: gm1652
+  rsin: '805516712'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GBA
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Gemert-Bakel
   abbr: Gemert-Bakel
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeenteraad is het hoogste bestuursorgaan. Hij bestuurt op hoofdlijnen
+    en controleert als volksvertegenwoordiging het college van B&W. De raad heeft
+    het laatste woord over de besteding van het geld van de gemeente door het vaststellen
+    van de gemeentebegroting. Ook stelt hij verordeningen vast. De burgemeester is
+    voorzitter en de raadsgriffier is secretaris van de gemeenteraad. Zij hebben hier
+    beiden geen stemrecht.Zie voor meer informatie https://www.gemert-bakel.nl/gemeenteraadHet
+    college van burgemeester en wethouders (B&W) is het dagelijks bestuur van de gemeente
+    en voert het beleid uit dat (op hoofdlijnen) door de gemeenteraad is vastgesteld.
+    Daarover legt het college verantwoording af aan de gemeenteraad.Zie voor meer
+    informatie https://www.gemert-bakel.nl/college-van-bwDe ambtelijke organisatie
+    staat onder leiding van de gemeentesecretaris en algemeen directeur. Deze persoon
+    is ook de adviseur van het college van burgemeester en wethouders.De organisatie
+    bestaande uit ongeveer 170 medewerkers, is opgebouwd uit 7 teams met ieder zijn
+    aandachtsgebieden. De directie stuurt de 7 managers aan. Gemert-Bakel doet dat
+    met ambitie en doorzettingsvermogen en staat open voor mogelijkheden. Samen met
+    onze inwoners en ondernemers. En dat is vertaald naar de competenties van onze
+    medewerkers: samenwerken, klantgericht, initiatiefrijk en daadkracht.'
+  url: https://www.gemert-bakel.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemert-bakel.nl/verzoek-op-basis-van-de-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/33032/Gemeente_Gemert-Bakel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemert-Bakel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gemertbakel.bestuurlijkeinformatie.nl/
+      toelichting: Gemeenteraad en raadscommissies
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemert-Bakel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gemertbakel.bestuurlijkeinformatie.nl/Agenda/Index/1df2e73c-841e-4b81-ace3-90d18a9bdd60
+      toelichting: Besluitlijsten van het College van Burgemeester en Wethouders
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemert-Bakel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://gemertbakel.bestuurlijkeinformatie.nl/Agenda/Index/7dc041cc-5efe-4c9c-b180-f7bb22e06ea7
+      toelichting: Ingekomen stukken gemeenteraad
+  wooVerzoek:
+    url: https://dloket.gemert-bakel.nl/startform?id=zaaktype-2101
+organogram_url: https://www.gemert-bakel.nl/organisatie
+afspraak:
+  email: gemeente@gemert-bakel.nl
+  telefoonnummer: (0492) 37 85 00
+  url: https://www.gemert-bakel.nl/afspraak-maken
+geography:
+  oppervlakte: 123,62
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 123.62
+  aantal_inwoners: 31806
+  inwoners: '257'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 257.0
+  bevat_plaatsen_raw: Bakel, De Mortel, De Rips, Elsendorp, Gemert, Handel, Milheeze
+  bevat_plaatsen:
+  - Bakel
+  - De Mortel
+  - De Rips
+  - Elsendorp
+  - Gemert
+  - Handel
+  - Milheeze
+council:
+  total_seats: 23
+  parties:
+  - naam: CDA
+    aantal_zetels: 9
+  - naam: Dorpspartij
+    aantal_zetels: 4
+  - naam: Politiek Op Inhoud
+    aantal_zetels: 3
+  - naam: Sociaal Gemert-Bakel GROENLINKS PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
 contact:
   website: https://www.gemert-bakel.nl
   email: gemeente@gemert-bakel.nl
+  bezoekadres: Ridderplein 1, 5421 CV GEMERT
+  postadres: Postbus 10000, 5420 DA GEMERT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ridderplein
+    huisnummer: '1'
+    postcode: 5421 CV
+    woonplaats: GEMERT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5420 DA
+    woonplaats: GEMERT
+  - type: Woo-Adres
+    openbare_ruimte: Ridderplein
+    huisnummer: '1'
+    postcode: 5421 CV
+    woonplaats: GEMERT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (0492) 37 85 00
+    label: algemeen
+  emails:
+  - email: gemeente@gemert-bakel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gemert-bakel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33032/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33032/gemert-bakel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +164,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9836
   retrieved: '2026-05-09'
+roo_start_datum: '1997-01-01'

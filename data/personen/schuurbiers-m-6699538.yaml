@@ -3,7 +3,7 @@ name:
   full: M.P.M. Schuurbiers
   family: Schuurbiers
   given: M.P.M.
-  initials: M.
+  initials: M.P.M.
 mandaten:
 - id: 57bc03da-b859-4d33-9b8f-43b7e05faaef
   organization_id: org:gemeente-woensdrecht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7219950
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32470/gemeente-woensdrecht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28766096
 - id: 755c07f8-11f3-4aeb-ad5f-ac49fb22d341
   organization_id: org:gemeente-woensdrecht
   post_id: post:wethouder-gemeente-woensdrecht

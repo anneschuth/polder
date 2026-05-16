@@ -6,22 +6,113 @@ identifiers:
   roo_id: '28617'
   wikidata: Q849574
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0024
+  owms: http://standaarden.overheid.nl/owms/terms/Loppersum_(gemeente)
+  ictu: '00024'
+  organisatiecode: gm0024
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Loppersum
   abbr: Loppersum
   valid_from: '1900-01-01'
-  valid_until: '2021-07-01'
+  valid_until: '2021-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2021-07-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2021-07-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 112,93
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 112.93
+  aantal_inwoners: 9732
+  inwoners: '86'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 86.0
+  bevat_plaatsen_raw: Eenum, Garrelsweer, Garsthuizen, Huizinge, Leermens, Loppersum,
+    Middelstum, Oosterwijtwerd, Startenhuizen Lopp, Stedum, 'T Zandt GN, Toornwerd,
+    Westeremden, Westerwijtwerd, Wirdum GN, Zeerijp, Zijldijk
+  bevat_plaatsen:
+  - Eenum
+  - Garrelsweer
+  - Garsthuizen
+  - Huizinge
+  - Leermens
+  - Loppersum
+  - Middelstum
+  - Oosterwijtwerd
+  - Startenhuizen Lopp
+  - Stedum
+  - '''T Zandt GN'
+  - Toornwerd
+  - Westeremden
+  - Westerwijtwerd
+  - Wirdum GN
+  - Zeerijp
+  - Zijldijk
+council:
+  total_seats: 13
+  parties:
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Loppersum Vooruit
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: Lokaal Belang Eemsdelta
+    aantal_zetels: 1
 contact:
   website: www.loppersum.nl
   email: gemeente@loppersum.nl
+  bezoekadres: Molenweg 12, 9919 AH LOPPERSUM
+  postadres: Postbus 25, 9919 ZG LOPPERSUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Molenweg
+    huisnummer: '12'
+    postcode: 9919 AH
+    woonplaats: LOPPERSUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '25'
+    postcode: 9919 ZG
+    woonplaats: LOPPERSUM
+  phones:
+  - nummer: (0596) 54 82 00
+    label: algemeen
+  emails:
+  - email: gemeente@loppersum.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.loppersum.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: '2021-07-01'
+valid_until: '2021-01-01'
+last_mutation: '2025-03-28'
+last_verified: '2025-03-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28617/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28617/loppersum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

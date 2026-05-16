@@ -2,14 +2,42 @@ id: org:oovb-stichting-werken-in-losser
 type: rwt
 identifiers:
   roo_id: '28347635'
+  kvk: '59475005'
+  rsin: '853510817'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Werken in Losser
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Raadhuisplein 1, 7581 AG Losser
+  postadres: Postbus 90, 7580 AB Losser
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein 1
+    postcode: 7581 AG
+    woonplaats: Losser
+  - type: Postadres
+    postbus: '90'
+    postcode: 7580 AB
+    woonplaats: Losser
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347635/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347635/stichting-werken-in-losser
+  retrieved: '2026-05-16'

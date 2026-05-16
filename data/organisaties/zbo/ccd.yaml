@@ -3,21 +3,103 @@ type: zbo
 identifiers:
   roo_id: '28212352'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000208
+  owms: http://standaarden.overheid.nl/owms/terms/ccd
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Centrale Commissie Dierproeven
   abbr: CCD
   valid_from: '1900-01-01'
+description:
+  text: De CCD is een Commissie die bestaat uit externe leden. Zij worden ondersteund
+    door een secretariaat, het zogeheten ondersteunend bureau dierproeven en alternatieven
+    (OBDA). De medewerkers zijn door de minister van LVVN beschikbaar gesteld en hebben
+    een dienstverband bij de Rijksdienst voor Ondernemend Nederland (RVO).
+  url: https://www.centralecommissiedierproeven.nl/onderwerpen/informatie-over-dierproeven/over-de-ccd
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de dierproeven, artikel 18
+  referentie: http://wetten.overheid.nl/BWBR0003081/
+taken_en_bevoegdheden: De CCD verleentvergunningen voor hetverrichten vandierproeven
+  op basisvan adviezen van deDierexperimentenCommissies (DEC).
+evaluations:
+- datum: '2021-05-07'
+  kamerstuknummer: "TK \t32336 nr. 114"
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32336-114.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.centralecommissiedierproeven.nl/onderwerpen/informatie-over-dierproeven/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212352/Centrale_Commissie_Dierproeven
+  wooVerzoek:
+    url: https://www.centralecommissiedierproeven.nl/onderwerpen/informatie-over-dierproeven/woo
+organogram_url: https://www.centralecommissiedierproeven.nl/onderwerpen/informatie-over-dierproeven/over-de-ccd/activiteiten-en-werkzaamheden
+personnel:
+  aantalFte: 9,3
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.centralecommissiedierproeven.nl/
   email: info@zbo-ccd.nl
+  postadres: Postbus 93118, 2509 AC Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '93118'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '93118'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (0800) 789 07 89
+    label: algemeen
+  emails:
+  - email: info@zbo-ccd.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.centralecommissiedierproeven.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.centralecommissiedierproeven.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-25'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212352/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212352/ccd
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000208
   retrieved: '2026-05-09'
+roo_start_datum: '2014-01-01'

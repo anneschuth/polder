@@ -6,21 +6,182 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0397
   roo_id: '24295'
   wikidata: Q9928
+  owms: http://standaarden.overheid.nl/owms/terms/Heemstede_(gemeente)
+  ictu: 00397
+  organisatiecode: gm0397
+  rsin: 001509937
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HMS
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Heemstede
   abbr: Heemstede
   valid_from: '1900-01-01'
+description:
+  url: https://www.heemstede.nl/bestuur-en-organisatie/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.heemstede.nl/aanvragen-en-regelen/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/24295/Gemeente_Heemstede
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/College-van-Burgemeester-en-Wethouders/2023/23-mei/09:30/Jaarrekening-2022-Heemstede/Jaarrekening-2022-boekwerk-pdf.pdf
+      toelichting: Jaarrekening en jaarverslag van de gemeente Heemstede over het
+        jaar 2022
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://zoek.openraadsinformatie.nl/?zoekterm=%22*%22&organisaties=%5B%22ori_fixed_heemstede_20230704180844%22%5D
+      toelichting: Ingekomen stukken bij de gemeenteraad
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/College-van-Burgemeester-en-Wethouders/
+      toelichting: Besluitenlijsten van het college
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Gemeenteraad/
+      toelichting: Vergaderstukken, audioverslagen en ingekomen stukken van de gemeenteraad
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Begrotingsraad/2022/03-november/19:00/Programma-begroting-2023-en-de-meerjarenbegroting-2024-2026/Begroting-2023-2026.pdf
+      toelichting: Begroting van de gemeente Heemstede over het jaar 2023
+    - informatiecategorie: Adviezen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Welstandscommissie/
+      toelichting: Adviezen van de  Adviescommissie voor Ruimtelijke Kwaliteit Heemstede
+        (Welstandscommissie en Monumentencommissie)
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Conceptagenda-s-raadsvoorstellen-en-collegebesluiten/2025/26-mei/12:00/Jaarstukken-2024/Jaarstukken-2024.pdf
+      toelichting: Jaarrekening en jaarverslag van de gemeente Heemstede over het
+        jaar 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/College-van-Burgemeester-en-Wethouders/2022/18-januari/10:00/Begroting-2022-GBKZ-1.pdf
+      toelichting: Begroting van 2022 van Gemeentelijkebelastingen Kennemerland Zuid
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/ABC-stukken/2024/27-mei/19:00/Jaarstukken-2023-gemeente-Heemstede/Jaarstukken-2023.pdf
+      toelichting: Jaarrekening en jaarverslag van de gemeente Heemstede over het
+        jaar 2023
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Commissie-Middelen/2023/04-oktober/20:00/Begroting-2024-2027/Begroting-2024-3.pdf
+      toelichting: Begroting van de gemeente Heemstede over het jaar 2024
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heemstede%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Algemeen verbindende voorschriften (verordeningen), gemeenschappelijke
+        regelingen, ruimtelijke plannen of omgevingsdocumenten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heemstede%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Evenementenvergunningen, exploitatievergunningen, omgevingsvergunningen,
+        andere beschikkingen, andere vergunningen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heemstede%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Beleidsregels, delegatie- of mandaatbesluiten, verkeersbesluiten
+        of -mededelingen, andere besluiten van algemene strekking
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeentebestuur.heemstede.nl/Vergaderingen/Commissie-Middelen/2024/09-oktober/21:00/Begroting-2025-2028-gemeente-Heemstede-voor-inwoners/Begroting-2025.pdf
+      toelichting: Begroting van de gemeente Heemstede over het jaar 2025
+  wooVerzoek:
+    url: https://www.heemstede.nl/aanvragen-en-regelen/woo-verzoek-indienen
+organogram_url: https://www.heemstede.nl/bestuur-en-organisatie/organogram
+afspraak:
+  email: gemeente@heemstede.nl
+  telefoonnummer: (023) 548 58 68
+geography:
+  oppervlakte: 9,64
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 9.64
+  aantal_inwoners: 27556
+  inwoners: '2858'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2858.0
+  bevat_plaatsen_raw: Heemstede
+  bevat_plaatsen:
+  - Heemstede
+council:
+  total_seats: 21
+  parties:
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 5
+  - naam: HBB
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: Samen Sterk Heemstede
+    aantal_zetels: 1
+  - naam: Heemsteeds Burger Belang
+    aantal_zetels: 1
 contact:
   website: https://www.heemstede.nl
   email: gemeente@heemstede.nl
+  bezoekadres: Raadhuisplein 1, 2101 HA HEEMSTEDE
+  postadres: Postbus 352, 2100 AJ HEEMSTEDE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2101 HA
+    woonplaats: HEEMSTEDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '352'
+    postcode: 2100 AJ
+    woonplaats: HEEMSTEDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2101 HA
+    woonplaats: Heemstede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2101 HA
+    ter_attentie_van: afdeling Bouw- en Woningtoezicht
+    woonplaats: HEEMSTEDE
+  phones:
+  - nummer: (023) 548 58 68
+    label: algemeen
+  emails:
+  - email: gemeente@heemstede.nl
+    label: algemeen
+  - email: gemeente@heemstede.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.heemstede.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.heemstede.nl/vergunningen/vergunning-voor-bouwen-en-verbouwen
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24295/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24295/heemstede
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

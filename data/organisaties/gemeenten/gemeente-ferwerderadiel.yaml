@@ -6,6 +6,9 @@ identifiers:
   roo_id: '34221'
   wikidata: Q750772
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1722
+  owms: http://standaarden.overheid.nl/owms/terms/Ferwerderadiel
+  ictu: '01722'
+  organisatiecode: gm1722
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,86 @@ names:
   abbr: Ferwerderadiel
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 133,18
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 133.18
+  aantal_inwoners: 8735
+  inwoners: '65'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 65.0
+  bevat_plaatsen_raw: Blije, Burdaard, Ferwert, Ginnum, Hallum, Hegebeintum, Jannum,
+    Jislum, Lichtaard, Marrum, Reitsum, Wanswert
+  bevat_plaatsen:
+  - Blije
+  - Burdaard
+  - Ferwert
+  - Ginnum
+  - Hallum
+  - Hegebeintum
+  - Jannum
+  - Jislum
+  - Lichtaard
+  - Marrum
+  - Reitsum
+  - Wanswert
+council:
+  total_seats: 13
+  parties:
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Gemeentebelangen Ferwerderadiel
+    aantal_zetels: 3
+  - naam: FNP
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: www.ddfk.nl
   email: info@ddfk.nl
+  bezoekadres: Hegebeintumerdyk 2, 9172 PJ FERWERT
+  postadres: Postbus 13, 9290 AA KOLLUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hegebeintumerdyk
+    huisnummer: '2'
+    postcode: 9172 PJ
+    woonplaats: FERWERT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 13
+    postbus: '13'
+    postcode: 9290 AA
+    woonplaats: KOLLUM
+  phones:
+  - nummer: (0518) 41 88 88
+    label: algemeen
+  emails:
+  - email: info@ddfk.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.ddfk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
+successor_id: org:gemeente-noardeast-fryslan
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34221/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34221/gemeente-ferwerderadiel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -33,4 +107,3 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm1722
   retrieved: '2026-05-09'
-successor_id: org:gemeente-noardeast-fryslan

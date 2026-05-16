@@ -1,0 +1,111 @@
+id: org:agentschap-logius
+type: agentschap
+identifiers:
+  owms: http://standaarden.overheid.nl/owms/terms/Logius
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10117
+  kvk: '27381312'
+  oin: 00000001822477348000
+  rsin: '822477348'
+  roo_id: '71428'
+classification: agentschap
+parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
+names:
+- value: Logius
+  valid_from: '1900-01-01'
+description:
+  text: Logius (voorheen GBO.Overheid) is de dienst digitale overheid van het ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties. Logius biedt publieke dienstverleners
+    een samenhangende ICT-infrastructuur zodat burgers en bedrijven betrouwbaar, snel
+    en gemakkelijk elektronisch zaken kunnen doen. Logius levert producten op het
+    gebied van toegang (waaronder DigiD), gegevensuitwisseling, informatiebeveiliging
+    en standaardisatie. Voor meer informatie kunt u de website raadplegen (www.logius.nl).
+    Logius werkt nauw samen met Stichting ICTU.
+  url: https://www.logius.nl/onze-organisatie/over-logius/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.logius.nl/woo-verzoek-indienen-bij-logius
+      overzichtURL: https://organisaties.overheid.nl/woo/71428/Logius
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksfinancien.nl/jaarverslag/2024/VII/onderdeel/7597973
+      toelichting: BZK-jaarverslag 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksfinancien.nl/memorie-van-toelichting/2025/OWB/VII/onderdeel/3160150
+      toelichting: BZK-jaarplan 2025
+  wooVerzoek:
+    url: https://www.logius.nl/woo-verzoek-indienen-bij-logius
+afspraak:
+  url: https://www.logius.nl/contact
+contact:
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 96810, 2509 JE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '96810'
+    postcode: 2509 JE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '96810'
+    postcode: 2509 JE
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (0900) 555 45 55
+    label: algemeen
+  - nummer: +31 70 889 63 60
+    label: vanuit het buitenland
+  internet_addresses:
+  - url: https://www.logius.nl
+    label: algemeen
+  contact_forms:
+  - url: https://logius.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Logius
+    url: https://nl.linkedin.com/company/logius
+  - platform: Mastodon
+    gebruikersnaam: '@Logius'
+    url: https://social.overheid.nl/@Logius
+  - platform: Instagram
+    gebruikersnaam: logius_bzk
+    url: https://www.instagram.com/logius_bzk/
+  - platform: YouTube
+    gebruikersnaam: '@Logius_minbzk'
+    url: https://www.youtube.com/@Logius_minbzk
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/71428/logius
+  retrieved: '2026-05-16'

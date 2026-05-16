@@ -1,15 +1,43 @@
 id: org:stichting-naturalis-biodiversity-center
 type: rwt
+subname: Nederlands Edelsteen Laboratorium
 identifiers:
   roo_id: '28347455'
+  kvk: '41169515'
+  rsin: '803595943'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Naturalis Biodiversity Center
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Darwinweg 2, 2333 CR Leiden
+  postadres: Postbus 9517, 2300 RA Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Darwinweg 2
+    postcode: 2333 CR
+    woonplaats: Leiden
+  - type: Postadres
+    postbus: '9517'
+    postcode: 2300 RA
+    woonplaats: Leiden
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347455/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347455/stichting-naturalis-biodiversity-center
+  retrieved: '2026-05-16'

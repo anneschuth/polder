@@ -3,7 +3,7 @@ name:
   full: S.J.H. L'Espoir
   family: L'Espoir
   given: S.J.H.
-  initials: S.
+  initials: S.J.H.
 mandaten:
 - id: e13c41b2-66d0-466e-a657-32f5f69a5da2
   organization_id: org:gemeente-brunssum
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3078602
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/24566/gemeente-brunssum
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28644759
 - id: 18f118b4-6651-434a-918b-ee940fecdc28
   organization_id: org:gemeente-brunssum
   post_id: post:raadslid-gemeente-brunssum

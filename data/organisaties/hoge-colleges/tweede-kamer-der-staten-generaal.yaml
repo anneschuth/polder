@@ -1,24 +1,98 @@
 id: org:hoge-college-tweede-kamer-der-staten-generaal
 type: hoge-college
+subtype: Staten-Generaal
 identifiers:
   roo_id: '19432'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10002
   oin: 00000002813512979000
+  owms: http://standaarden.overheid.nl/owms/terms/Tweede_Kamer_der_Staten-Generaal
+  ictu: '04603'
 classification: hoge-college
 parent_id: null
 names:
 - value: Tweede Kamer der Staten-Generaal
   valid_from: '1900-01-01'
-  valid_until: '2026-09-01'
+description:
+  text: 'ZETELVERDELING: Democraten 66 D66: 26 zetels, Partij voor de Vrijheid PVV:
+    19 zetels, Volkspartij voor Vrijheid en Democratie VVD: 22 zetels, GroenLinks
+    GL-PvdA: 20 zetels, Christen Democratisch Appel CDA: 18 zetels, JA21: 9 zetel,
+    Forum voor Democratie FVD: 7 zetels,   Groep-Markuszower: 7 zetels, BoerBurgerBeweging
+    BBB: 3 zetels, Staatkundig Gereformeerde Partij SGP: 3 zetels, Partij voor de
+    Dieren PvdD: 3 zetels, ChristenUnie CU: 3 zetels, DENK: 3 zetels, Socialistische
+    Partij SP: 3 zetels, 50PLUS: 2 zetels, Lid Keijzer: 1 zetels, Volt: 1 zetels,
+    Voorzitter: Thom van Campen VVD'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.tweedekamer.nl/contact-en-bezoek/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/19432/Tweede_Kamer_der_Staten-Generaal
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.tweedekamer.nl/over_de_tweede_kamer/reglement_tweede_kamer
+    - informatiecategorie: Vergaderstukken Staten-Generaal
+      url: https://www.tweedekamer.nl/kamerstukken
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.tweedekamer.nl/contact-en-bezoek/wet-open-overheid-woo/woo-besluiten
+  wooVerzoek:
+    url: https://www.tweedekamer.nl/woo-verzoek-doen
+organogram_url: https://www.tweedekamer.nl/ambtelijke-ondersteuning/organogram
+afspraak:
+  email: contact@tweedekamer.nl
+  telefoonnummer: (070) 318 22 11
+  url: https://www.tweedekamer.nl/contact-en-bezoek/bezoek-de-tweede-kamer
 contact:
   website: http://www.tweedekamer.nl
   email: contact@tweedekamer.nl
+  bezoekadres: Prinses Irenepad 1, 2595 BG Den Haag
+  postadres: Postbus 20018, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Irenepad 1
+    postcode: 2595 BG
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20018'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: T.a.v. het Woo-loket
+    postbus: '20018'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (070) 318 22 11
+    label: algemeen
+  emails:
+  - email: contact@tweedekamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.tweedekamer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-09-01'
+last_mutation: '2026-02-26'
+last_verified: '2026-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/19432/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/19432/tweede-kamer-der-staten-generaal
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

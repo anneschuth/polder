@@ -4,23 +4,58 @@ identifiers:
   roo_id: '24967573'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1074
   oin: '00000004130377040000'
+  owms: http://standaarden.overheid.nl/owms/terms/isdbrwal
+  organisatiecode: so1074
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Intergemeentelijke Sociale Dienst Brabantse Wal
+  roo_id: '24967568'
 names:
 - value: Intergemeentelijke Sociale Dienst Brabantse Wal
   abbr: ISD Brabantse Wal
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://isdbrabantsewal.antwoordop.nl/bijstand/
   email: stadskantoor@bergenopzoom.nl
+  bezoekadres: Jacob Obrechtlaan 4, 4611 AR Bergen op Zoom
+  postadres: Postbus 35, 4600 AA Bergen Op Zoom
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jacob Obrechtlaan
+    huisnummer: '4'
+    postcode: 4611 AR
+    woonplaats: Bergen op Zoom
+  - type: Postadres
+    postbus: '35'
+    postcode: 4600 AA
+    woonplaats: Bergen Op Zoom
+  phones:
+  - nummer: 14 0164
+    label: algemeen
+  emails:
+  - email: stadskantoor@bergenopzoom.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://isdbrabantsewal.antwoordop.nl/bijstand/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2020-11-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967573/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967573/intergemeentelijke-sociale-dienst-brabantse-wal
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-01-01'

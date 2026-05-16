@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111598'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dgrr-vb
+parent_id: org:onderdeel-programmas
 names:
 - value: afdeling Bestuurlijke Aanpak
   abbr: BA
@@ -11,11 +11,24 @@ names:
 - value: Programma's
   abbr: BA
   valid_from: '1900-01-01'
+description:
+  text: TakenDe afdeling Bestuurlijke Aanpak (BA) staat voor de ontwikkeling van een
+    bestuurlijke aanpak van georganiseerde criminaliteit (naast de strafrechtelijke
+    en fiscale aanpak) tot een geïntegreerde aanpak. Tevens staat de afdeling BA voor
+    de openbare orde portefeuille van de burgemeester. Dit omvat de openbare orde
+    en veiligheid, leefbaarheid, het veiligheidsbeleid van gemeenten en de bestuurlijke
+    aanpak van de georganiseerde criminaliteit. BA functioneert tot slot als expertisecentrum
+    en vraagstuk voor andere onderdelen van V en J waar het gaat om bestuurlijke veiligheidsvraagstukken.
 contact:
   email: j.m.doorschodt@minvenj.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2012-07-10'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111598/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111598/ba
+  retrieved: '2026-05-16'

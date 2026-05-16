@@ -3,18 +3,99 @@ type: adviescollege
 identifiers:
   roo_id: '128594'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10253
+  owms: http://standaarden.overheid.nl/owms/terms/awti
+  kvk: '27367348'
+  oin: '00000001003214400000'
+  organisatiecode: oorg10253
+  rsin: '003214400'
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Adviesraad voor wetenschap, technologie en innovatie
   abbr: AWTI
   valid_from: '1900-01-01'
+description:
+  text: De Adviesraad voor wetenschap, technologie en innovatie (AWTI) is de onafhankelijke
+    adviesraad van de regering en het parlement op het terrein van wetenschap, technologie
+    en innovatie. Met zijn strategische beleidsadviezen wil de AWTI bijdragen aan
+    het versterken van de innovatieve, wetenschappelijke en technologische kracht
+    van mensen, bedrijven en kennisinstellingen in Nederland.  En daarmee aan een
+    toekomstbestendige Nederlandse economie en samenleving.
+  url: https://www.awti.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet Adviesraad voor wetenschap, technologie en innovatie, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0035175/2014-08-01/#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/128594/Adviesraad_voor_wetenschap_technologie_en_innovatie
+afspraak:
+  email: secretariaat@awti.nl
+  telefoonnummer: (070) 311 09 20
 contact:
   website: https://www.awti.nl
   email: secretariaat@awti.nl
+  bezoekadres: Prins Willem-Alexanderhof 20, 2595 BE Den Haag
+  postadres: Prins Willem-Alexanderhof 20, 2595 BE Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Adviesraad voor wetenschap, technologie en innovatie
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  - type: Postadres
+    toelichting: Adviesraad voor wetenschap, technologie en innovatie
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: Adviesraad voor wetenschap, technologie en innovatie
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 311 09 20
+    label: algemeen
+  emails:
+  - email: secretariaat@awti.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.awti.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/128594/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/128594/awti
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-08-01'

@@ -3,21 +3,68 @@ type: zbo
 identifiers:
   roo_id: '28143325'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000335
+  owms: http://standaarden.overheid.nl/owms/terms/smk
+  kvk: '41189940'
+  rsin: '800871510'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Milieukeur
   abbr: SMK
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+taken_en_bevoegdheden: Milieukeur is verantwoordelijk voor de uitgifte van een EU-milieukeurmerk.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.smk.nl/
   email: smk@smk.nl
+  bezoekadres: Bezuidenhoutseweg 105, 2594 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '105'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+  - type: Postadres
+  phones:
+  - nummer: (070) 358 63 00
+    label: algemeen
+  emails:
+  - email: smk@smk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.smk.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.smk.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28143325/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28143325/smk
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +73,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000335
   retrieved: '2026-05-09'
+roo_start_datum: '1993-01-01'

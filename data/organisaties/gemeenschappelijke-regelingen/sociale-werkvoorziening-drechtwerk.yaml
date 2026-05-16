@@ -1,20 +1,76 @@
 id: org:gr-sociale-werkvoorziening-drechtwerk
 type: gemeenschappelijke-regeling
+subname: Drechtwerk
 identifiers:
   roo_id: '24963825'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0298
+  owms: http://standaarden.overheid.nl/owms/terms/drechtwerk
+  kvk: '24483003'
+  organisatiecode: so0298
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Sociale Werkvoorziening Drechtwerk
+  roo_id: '24963820'
 names:
 - value: Sociale Werkvoorziening Drechtwerk
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24963825/Sociale_Werkvoorziening_Drechtwerk
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sociale+Werkvoorziening+Drechtwerk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://drechtwerk.nl
   email: info@drechtwerk.nl
+  bezoekadres: Snelliusstraat 10, 3316 GV Dordrecht
+  postadres: Postbus 528, 3300 AM Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Snelliusstraat
+    huisnummer: '10'
+    postcode: 3316 GV
+    woonplaats: Dordrecht
+  - type: Postadres
+    postbus: '528'
+    postcode: 3300 AM
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (078) 652 59 11
+    label: algemeen
+  emails:
+  - email: info@drechtwerk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://drechtwerk.nl
+    label: algemeen
+  contact_forms:
+  - url: https://drechtwerk.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2022-03-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963825/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963825/sociale-werkvoorziening-drechtwerk
+  retrieved: '2026-05-16'
+roo_start_datum: '1990-01-01'

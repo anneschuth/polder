@@ -7,9 +7,15 @@ parent_id: org:onderdeel-opo
 names:
 - value: School en Omgeving
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-08-17'
+last_verified: '2026-01-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/130886/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/130886/school-en-omgeving
+  retrieved: '2026-05-16'

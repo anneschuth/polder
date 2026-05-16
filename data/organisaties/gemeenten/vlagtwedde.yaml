@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '27845'
   wikidata: Q840460
+  owms: http://standaarden.overheid.nl/owms/terms/Vlagtwedde_(gemeente)
+  ictu: 00048
+  organisatiecode: gm0048
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,76 @@ names:
   abbr: Vlagtwedde
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 170,51
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 170.51
+  aantal_inwoners: 16260
+  inwoners: '95'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 95.0
+  bevat_plaatsen_raw: Bourtange, Sellingen, Ter Apel, Ter Apelkanaal, Vlagtwedde
+  bevat_plaatsen:
+  - Bourtange
+  - Sellingen
+  - Ter Apel
+  - Ter Apelkanaal
+  - Vlagtwedde
+council:
+  total_seats: 17
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 5
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: CD
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.vlagtwedde.nl
   email: info@vlagtwedde.nl
+  bezoekadres: Dorpsstraat 1, 9551 AB SELLINGEN
+  postadres: Postbus 14, 9550 AA SELLINGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpsstraat
+    huisnummer: '1'
+    postcode: 9551 AB
+    woonplaats: SELLINGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 14
+    postbus: '14'
+    postcode: 9550 AA
+    woonplaats: SELLINGEN
+  phones:
+  - nummer: (0599) 32 02 20
+    label: algemeen
+  emails:
+  - email: info@vlagtwedde.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.vlagtwedde.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-16'
+last_verified: '2018-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27845/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27845/vlagtwedde
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q840460
   retrieved: '2026-05-09'

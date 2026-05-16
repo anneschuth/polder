@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-noord-nederland-locatie-groningen
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048586'
+  kvk: '82950385'
+  rsin: '862667446'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-rnn
 names:
 - value: Rechtbank Noord-Nederland, locatie Groningen
   valid_from: '1900-01-01'
+description:
+  text: Niet-zaaksgebonden correspondentie kan naar het algemene postadres.Zaaksgebonden
+    correspondentie moet naar het postadres  van het betreffende rechtsgebied dat
+    te vinden is op:https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland/Contact/Paginas/default.aspx#2a45c9eb-d13c-465f-a2bc-579cee1ece6b094f42c7-dbf3-499e-b88f-802843249aee1
+contact:
+  bezoekadres: Guyotplein 1, 9712 NX Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Guyotplein
+    huisnummer: '1'
+    postcode: 9712 NX
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-07-12'
+last_verified: '2026-04-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048586/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048586/rechtbank-noord-nederland-locatie-groningen
+  retrieved: '2026-05-16'

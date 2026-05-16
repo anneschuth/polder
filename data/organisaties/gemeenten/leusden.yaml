@@ -6,21 +6,152 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0327
   roo_id: '29800'
   wikidata: Q10046
+  owms: http://standaarden.overheid.nl/owms/terms/Leusden_(gemeente)
+  ictu: '00327'
+  organisatiecode: gm0327
+  rsin: 002508667
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LEU
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Leusden
   abbr: Leusden
   valid_from: '1900-01-01'
+description:
+  url: https://www.leusden.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.leusden.nl/bestuur-en-organisatie/informatie-opzoeken-of-aanvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/29800/Gemeente_Leusden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leusden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gemeentebestuur.leusden.nl/Vergaderingen/Raadsvergadering/
+      toelichting: Vergaderstukken gemeenteraad - Verleden
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gemeentebestuur.leusden.nl/Vergaderingen/College-besluitenlijst-en-collegebesluiten/
+      toelichting: Besluitenlijsten van het college van burgermeester en wethouders
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.leusden.nl/bestuur-en-organisatie/begroting-en-jaarstukken
+      toelichting: Begrotingen, jaarverslagen, kaderbrieven en bestuursrapportages
+    - informatiecategorie: Klachtoordelen
+      url: https://www.leusden.nl/bestuur-en-organisatie/informatie-opzoeken-of-aanvragen/klachtoordelen
+      toelichting: Formele klachtoordelen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gemeentebestuur.leusden.nl/Vergaderingen/Raadsvergadering/Komende-vergaderingen/
+      toelichting: Vergaderstukken gemeenteraad - Toekomst
+    - informatiecategorie: Convenanten
+      url: https://www.leusden.nl/bestuur-en-organisatie/informatie-opzoeken-of-aanvragen/convenanten
+      toelichting: Openbaar gemaakte convenanten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leusden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leusden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://loket.leusden.nl/f/1205/login
+afspraak:
+  url: https://www.leusden.nl/afspraakmaken?home2#select/
+geography:
+  oppervlakte: 58,94
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 58.94
+  aantal_inwoners: 32287
+  inwoners: '547'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 547.0
+  bevat_plaatsen_raw: Achterveld, Leusden, Stoutenburg
+  bevat_plaatsen:
+  - Achterveld
+  - Leusden
+  - Stoutenburg
+council:
+  total_seats: 23
+  parties:
+  - naam: Lokaal Belangrijk
+    aantal_zetels: 7
+  - naam: Pro Leusden
+    aantal_zetels: 6
+  - naam: Leusden Vooruit
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.leusden.nl/
   email: gemeente@leusden.nl
+  bezoekadres: '''t Erf 1, 3831 NA LEUSDEN'
+  postadres: Postbus 150, 3830 AD LEUSDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: '''t Erf'
+    huisnummer: '1'
+    postcode: 3831 NA
+    woonplaats: LEUSDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '150'
+    postcode: 3830 AD
+    woonplaats: LEUSDEN
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '150'
+    postcode: 3830 AD
+    woonplaats: Leusden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: '''t Erf'
+    huisnummer: '1'
+    postcode: 3831 NA
+    woonplaats: LEUSDEN
+  phones:
+  - nummer: 14 033
+    label: algemeen
+  emails:
+  - email: gemeente@leusden.nl
+    label: algemeen
+  - email: omgevingsloket@leusden.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.leusden.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.leusden.nl/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-15'
+last_verified: '2026-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29800/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29800/leusden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

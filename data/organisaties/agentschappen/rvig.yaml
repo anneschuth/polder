@@ -5,21 +5,117 @@ identifiers:
   kvk: '27373207'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10103
   roo_id: '96832'
+  owms: http://standaarden.overheid.nl/owms/terms/rvig
+  rsin: '822100824'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Rijksdienst voor Identiteitsgegevens
   abbr: RvIG
   valid_from: '1900-01-01'
+description:
+  text: 'De Rijksdienst voor Identiteitsgegevens (RvIG) is de beheerder van de stelsels
+    van de identiteitsgegevens. RvIG is een baten-lastendienst en onderdeel van het
+    ministerie van Binnenlandse Zaken en Koninkrijksrelaties.RvIG is opgebouwd uit
+    vier directies.Directie Uitvoering:De uitvoerende taken van RvIG zijn samengebracht
+    in de directie Uitvoering. Binnen deze directie vinden de contacten plaats met
+    de gemeenten, afnemers, en burgers aangaande de primaire processen van RvIG.Directie
+    Informatievoorziening en Systemen:De Directie Informatievoorziening en Systemen
+    heeft als belangrijkste taak te zorgen voor de continuïteit van het systeemlandschap
+    van RvIG.Directie Innovatie en ontwikkeling:Door programma’s, projecten en innovatie
+    expliciet te beleggen bij de Directie Innovatie en Ontwikkeling, ontstaat een
+    situatie waarin het dagelijkse beheer in alle rust kan plaatsvinden en er expliciet
+    gestuurd kan worden op vernieuwing.Directie Bestuur en Bedrijfsvoering:De directie
+    Bestuur en Bedrijfsvoering is verantwoordelijk voor de (basis)functies die kaderstellend,
+    adviserend, toetsend en ondersteunend zijn voor het goed functioneren van RvIG.
+    Daarnaast haalt de directie signalen van o.a. afnemers, opdrachtgevers en gebruikers
+    actief naar binnen voert intern regie op een juiste uitvoering. De directie Bestuur
+    en Bedrijfsvoering bestaat uit vier afdelingen: Strategie & Regie, Communicatie,
+    HR & Organisatie en Financiën en Inkoop.'
+  url: https://www.rvig.nl/over-ons
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/96832/Rijksdienst_voor_Identiteitsgegevens
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/contact/woo-verzoek-indienen
+organogram_url: https://www.rvig.nl/over-ons
+afspraak:
+  email: info@rvig.nl
+personnel:
+  aantalFte: 400,0
+  peildatumFte: '2024-10-28'
 contact:
   website: https://www.rvig.nl/
   email: info@rvig.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 10451, 2501 HL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '10451'
+    postcode: 2501 HL
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: T.a.v. directie Constitutionele Zaken en Wetgeving afdeling Juridisch
+      Adviseur - Woo-verzoeken
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 900 10 00
+    label: algemeen
+  emails:
+  - email: info@rvig.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rvig.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rvig.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/96832/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/96832/rvig
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

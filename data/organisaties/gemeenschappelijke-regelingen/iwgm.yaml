@@ -3,19 +3,64 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27706633'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0592
+  owms: http://standaarden.overheid.nl/owms/terms/iwgm
+  kvk: '51895625'
+  organisatiecode: so0592
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Intergemeentelijke Werkvoorziening Gennep, Mook
+    en Middelaar
+  roo_id: '27706628'
 names:
 - value: Intergemeentelijke Werkvoorziening Gennep, Mook en Middelaar
   abbr: IWGM
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.intos-gennep.nl
   email: info@intos-gennep.nl
+  bezoekadres: De Groote Heeze 41, 6598 AV Heijen
+  postadres: Postbus 33, 6590 AA Gennep
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Groote Heeze
+    huisnummer: '41'
+    postcode: 6598 AV
+    woonplaats: Heijen
+  - type: Postadres
+    postbus: '33'
+    postcode: 6590 AA
+    woonplaats: Gennep
+  phones:
+  - nummer: (0485) 49 08 11
+    label: algemeen
+  emails:
+  - email: info@intos-gennep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.intos-gennep.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27706633/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27706633/iwgm
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-06-27'

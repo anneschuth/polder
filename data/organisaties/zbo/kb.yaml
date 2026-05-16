@@ -5,21 +5,148 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000169
   oin: 00000001007969880000
   kvk: '27377634'
+  btw: NL007969880B01
+  rsin: 007969880
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Koninklijke Bibliotheek
   abbr: KB
   valid_from: '1900-01-01'
+description:
+  text: De nationale bibliotheek
+  url: https://www.kb.nl/over-ons
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+wettelijke_grondslagen:
+- opschrift: Wet stelsel openbare bibliotheekvoorzieningen
+  referentie: https://wetten.overheid.nl/BWBR0035878/2022-07-01
+- opschrift: Wet op het hoger onderwijs en wetenschappelijk onderzoek, artikel 1.5
+  referentie: https://wetten.overheid.nl/BWBR0005682/2025-01-01#Hoofdstuk1_Titeldeel1_Artikel1.5
+taken_en_bevoegdheden: De Koninklijke Bibliotheek is als nationale bibliotheek werkzaam
+  op het gebied van het bibliotheekwezen en heeft onder andere de volgende taken:*
+  het voorzien van informatie op het gebied van de Nederlandse geschiedenis, cultuur
+  en samenleving aan het hoger onderwijs, wetenschappelijk onderzoek, het openbaar
+  bestuur en de uitoefening van beroep of bedrijf;* het aansturen van het netwerk
+  van openbare bibliotheekvoorzieningen door afstemming, coördinatie, educatie, informatie,
+  reflectie, vertegenwoordiging en promotie;*  het in stand houden van de landelijke
+  digitale bibliotheek;*  het verzorgen van een bibliotheekvoorziening van noodzakelijk
+  omgezette werken voor personen met een handicap;*  het zorg dragen voor de nationale
+  bibliotheekverzameling van geschreven, gedrukte en digitale publicaties;*  het bevorderen
+  van de totstandkoming en instandhouding van nationale voorzieningen voor duurzaam
+  behoud, beheer, ontsluiting en beschikbaarstelling van de nationale bibliotheekverzameling
+  op haar werkterrein;*  het verrichten van onderzoek, gericht op de voorbereiding
+  en uitvoering van het beleid op het in de wet genoemde terrein;*  het zorg dragen
+  voor landelijke programma's voor conservering en digitalisering;*  het bijdragen
+  aan de internationale infrastructuur voor de duurzame toegankelijkheid van digitale
+  wetenschappelijke publicaties;*  het bevorderen van de afstemming met overige wetenschappelijke
+  bibliotheken binnen en buiten Nederland;*  het bevorderen van de samenwerking met
+  archieven, musea en uitgeverijen op haar werkterrein;*  het bevorderen van de internationale
+  samenwerking op haar werkterrein.
+evaluations:
+- datum: '2020-05-06'
+  kamerstuknummer: TK 33846 nr. 58
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33846-58.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1535 - ONDERZOEKINSTELLINGEN CAO
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=22777
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kb.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212006/Koninklijke_Bibliotheek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.kb.nl/woo-actieve-openbaarmaking/jaarplannen-en-jaarverslagen
+    - informatiecategorie: Convenanten
+      url: https://www.kb.nl/woo-actieve-openbaarmaking/convenanten
+  wooVerzoek:
+    url: https://kb.nl/woo
+organogram_url: https://www.kb.nl/onze-organisatie
+afspraak:
+  url: https://www.kb.nl/contact
+personnel:
+  aantalFte: 352,0
+  peildatumFte: '2020-12-31'
 contact:
   website: https://www.kb.nl/
   email: Woo@kb.nl
+  bezoekadres: Prins Willem-Alexanderhof 5, 2595 BE Den Haag
+  postadres: Postbus 90407, 2509 LK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '5'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '90407'
+    postcode: 2509 LK
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '90407'
+    postcode: 2509 LK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 314 09 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kb.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.kb.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: KB nationale bibliotheek
+    url: https://www.linkedin.com/company/koninklijke-bibliotheek/
+  - platform: Facebook
+    gebruikersnaam: KB nationale bibliotheek
+    url: https://www.facebook.com/KB.nationalebibliotheek
+  - platform: Instagram
+    gebruikersnaam: '@kbnationalebibliotheek'
+    url: https://www.instagram.com/kbnationalebibliotheek/
+  - platform: Instagram
+    gebruikersnaam: '@kb_collecties'
+    url: https://www.instagram.com/kb_collecties/
+  - platform: Mastodon
+    gebruikersnaam: '@kbnationalebibliotheek'
+    url: https://mastodon.social/@kbnationalebibliotheek
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212006/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212006/kb
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +160,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000169
   retrieved: '2026-05-09'
+roo_start_datum: '1798-01-01'

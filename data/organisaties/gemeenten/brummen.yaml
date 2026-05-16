@@ -6,21 +6,140 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0213
   roo_id: '40941'
   wikidata: Q843895
+  owms: http://standaarden.overheid.nl/owms/terms/Brummen
+  ictu: '00213'
+  organisatiecode: gm0213
+  rsin: '001046561'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BRM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Brummen
   abbr: Brummen
   valid_from: '1900-01-01'
+description:
+  url: https://organisaties.overheid.nl/40941/Gemeente_Brummen
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/40941/Gemeente_Brummen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.brummen.nl/bestuur-en-politiek/bw-besluitenlijsten/collegebesluiten
+      toelichting: Besluitenlijsten van het college van burgemeester en wethouders
+        van gemeente Brummen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://brummen.raadsinformatie.nl/
+      toelichting: Agenda's, besluitenlijsten en vergaderdocumenten van de gemeenteraad
+        van Brummen. De documenten zijn per vergaderdatum te raadplegen.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Brummen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Brummen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Brummen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.brummen.nl/bestuur-en-politiek/bestuurlijke-informatie/wet-open-overheid
+afspraak:
+  email: gemeente@brummen.nl
+  telefoonnummer: (0575) 56 82 33
+geography:
+  oppervlakte: 85,10
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 85.1
+  aantal_inwoners: 21562
+  inwoners: '253'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 253.0
+  bevat_plaatsen_raw: Brummen, Eerbeek, Empe, Hall, Leuvenheim, Tonden
+  bevat_plaatsen:
+  - Brummen
+  - Eerbeek
+  - Empe
+  - Hall
+  - Leuvenheim
+  - Tonden
+council:
+  total_seats: 19
+  parties:
+  - naam: VVD
+    aantal_zetels: 7
+  - naam: Lokaal Belang
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.brummen.nl
   email: gemeente@brummen.nl
+  bezoekadres: Engelenburgerlaan 31, 6971 BV BRUMMEN
+  postadres: Postbus 5, 6970 AA BRUMMEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Engelenburgerlaan
+    huisnummer: '31'
+    postcode: 6971 BV
+    woonplaats: BRUMMEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '5'
+    postcode: 6970 AA
+    woonplaats: BRUMMEN
+  - type: Woo-Adres
+    postbus: '5'
+    postcode: 6970 AA
+    woonplaats: Brummen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Engelenburgerlaan
+    huisnummer: '31'
+    postcode: 6971 BV
+    woonplaats: BRUMMEN
+  phones:
+  - nummer: (0575) 56 82 33
+    label: algemeen
+  emails:
+  - email: gemeente@brummen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.brummen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.brummen.nl/inwoner-en-ondernemer/vergunning-of-melding/omgevingsvergunning
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40941/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40941/brummen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

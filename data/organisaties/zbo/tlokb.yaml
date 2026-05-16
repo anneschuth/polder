@@ -3,21 +3,150 @@ type: zbo
 identifiers:
   roo_id: '28664202'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000336
+  owms: http://standaarden.overheid.nl/owms/terms/tlokb
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Toelatingsorganisatie Kwaliteitsborging Bouw
   abbr: TloKB
   valid_from: '1900-01-01'
+description:
+  text: 'Nederland moet kunnen vertrouwen op de kwaliteit van bouwen. Dat is waar
+    de Toelatingsorganisatie Kwaliteitsborging Bouw (TloKB) elke dag mee bezig is.
+    De TloKB houdt toezicht op kwaliteitsborging in de bouw, erkent kwaliteit van
+    bouwproducten en registreert certificaten voor het werken aan gasverbrandingsinstallaties.Als
+    publieke, onafhankelijke partij houdt de TloKB toezicht op het stelsel van bouwkwaliteit
+    als geheel en handhaaft waar nodig. Dat gebeurt altijd zorgvuldig en transparant.
+    Met oog voor het maatschappelijk belang van bouwkwaliteit. Want dat is waar de
+    TloKB voor staat: Beter vertrouwen in kwaliteit van bouwen.'
+  url: https://www.tlokb.nl/over-de-tlokb
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Woningwet, artikel 7ak
+  referentie: https://wetten.overheid.nl/BWBR0005181/2026-01-01/0/#HoofdstukII_Afdeling1a_Paragraaf2_Artikel7ak
+- opschrift: Besluit aanwijzing toezichthouders TloKB
+  referentie: https://wetten.overheid.nl/BWBR0048007/2024-01-01/0
+taken_en_bevoegdheden: De Toelatingsorganisatie Kwaliteitsborging Bouw (TloKB) voert
+  diverse deeltaken uit op drie hoofdgebieden. Deze hoofdgebieden zijn als volgt:*
+  kwaliteitsborging;* erkende kwaliteitsverklaringen;* werkzaamheden aan gasverbrandingsinstallaties.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.tlokb.nl/onderwerpen/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28664202/Toelatingsorganisatie_Kwaliteitsborging_Bouw
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Andere documenten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22toelatingsorganisatie%22%20and%20cql.textAndIndexes=%22kwaliteitsborging%22%20and%20cql.textAndIndexes=%22bouw%22)%20AND%20dt.creator==%22toelatingsorganisatie%20kwaliteitsborging%20bouw%22%20AND%20dt.type==%22beleidsregel%22&zv=toelatingsorganisatie+kwaliteitsborging+bouw&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cbeleidsregel
+      toelichting: Beleidsregels TloKB
+    - informatiecategorie: Klachtoordelen
+      url: https://www.tlokb.nl/over-de-tlokb/Publicaties
+      toelichting: De TloKB neemt conform de klachtenregeling een overzicht van de
+        klachten op in het jaarverslag.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22toelatingsorganisatie%22%20and%20cql.textAndIndexes=%22kwaliteitsborging%22%20and%20cql.textAndIndexes=%22bouw%22)%20AND%20dt.creator==%22toelatingsorganisatie%20kwaliteitsborging%20bouw%22%20AND%20dt.type==%22andere%20beschikking%22&zv=toelatingsorganisatie+kwaliteitsborging+bouw&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7candere+beschikking
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.tlokb.nl/over-de-tlokb/Publicaties
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22toelatingsorganisatie+kwaliteitsborging+bouw%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22toelatingsorganisatie%22%20and%20cql.textAndIndexes=%22kwaliteitsborging%22%20and%20cql.textAndIndexes=%22bouw%22)%20AND%20dt.creator==%22toelatingsorganisatie%20kwaliteitsborging%20bouw%22%20AND%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22&zv=toelatingsorganisatie+kwaliteitsborging+bouw&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cander+besluit+van+algemene+strekking
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.tlokb.nl/publicaties?trefwoord=&startdatum=&einddatum=&onderwerp=Woo-verzoeken&onderdeel=Alle+onderdelen&type=Alle+Publicaties
+    - informatiecategorie: Andere documenten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22toelatingsorganisatie%22%20and%20cql.textAndIndexes=%22kwaliteitsborging%22%20and%20cql.textAndIndexes=%22bouw%22)%20AND%20dt.creator==%22toelatingsorganisatie%20kwaliteitsborging%20bouw%22%20AND%20dt.type==%22delegatie-%20of%20mandaatbesluit%22&zv=toelatingsorganisatie+kwaliteitsborging+bouw&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cdelegatie-+of+mandaatbesluit
+      toelichting: Delegatie- of mandaatbesluit
+  wooVerzoek:
+    url: https://www.tlokb.nl/onderwerpen/woo
+organogram_url: https://www.tlokb.nl/over-de-tlokb/organisatie
+afspraak:
+  email: info@tlokb.nl
+  telefoonnummer: (070) 307 03 57
+  url: https://www.tlokb.nl/over-de-tlokb/contactgegevens-tlokb
+personnel:
+  aantalFte: 14,5
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.tlokb.nl/
   email: info@tlokb.nl
+  bezoekadres: Veraartlaan 10, 2288 GM Rijswijk
+  postadres: Veraartlaan 10, 2288 GM Rijswijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: NIWO-gebouw
+    openbare_ruimte: Veraartlaan
+    huisnummer: '10'
+    postcode: 2288 GM
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: NIWO-gebouw
+    openbare_ruimte: Veraartlaan
+    huisnummer: '10'
+    postcode: 2288 GM
+    woonplaats: Rijswijk
+  - type: Woo-Adres
+    toelichting: bezoek- en postadres
+    openbare_ruimte: Veraartlaan
+    huisnummer: '10'
+    postcode: 2288 GM
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 307 03 57
+    label: algemeen
+  emails:
+  - email: info@tlokb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.tlokb.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.tlokb.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Toelatingsorganisatie Kwaliteitsborging Bouw
+    url: https://www.linkedin.com/company/toelatingsorganisatie-kwaliteitsborging-bouw/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-22'
+last_verified: '2026-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28664202/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28664202/tlokb
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000336
   retrieved: '2026-05-09'
+roo_start_datum: '2022-04-22'

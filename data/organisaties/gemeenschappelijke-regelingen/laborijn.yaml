@@ -1,27 +1,110 @@
 id: org:gr-laborijn
 type: gemeenschappelijke-regeling
+subname: Laborijn
 identifiers:
   roo_id: '28322315'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0862
   oin: '00000001001202753000'
   kvk: 09202658
+  owms: http://standaarden.overheid.nl/owms/terms/laborijn
+  organisatiecode: so0862
+  rsin: '001202753'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Uitvoeringsorganisatie Laborijn
+  roo_id: '29324511'
 names:
 - value: Uitvoeringsorganisatie Laborijn
   abbr: Laborijn
   valid_from: '1900-01-01'
+description:
+  text: Laborijn is de uitvoeringsorganisatie van de Participatiewet, de Wsw en de
+    Wet inburgering voor de gemeenten Doetinchem en Aalten en de Wsw voor de gemeenten
+    Montferland en Oude IJsselstreek.Wij houden ons bezig met de ontwikkeling van
+    mensen. Bij Laborijn geloven wij dat meedoen gelukkig en gezond maakt. Meedoen
+    op je eigen niveau, maar wel in je volle kracht. Of het nu gaat om werk bij een
+    reguliere werkgever, om een leertraject, om een beschutte werkplek of om een andere
+    vorm van ‘meedoen’, bijvoorbeeld met vrijwilligerswerk...wij geloven dat er geen
+    betere manier is om een waardevol leven te leiden.
+  url: https://www.laborijn.nl/over-laborijn
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.laborijn.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28322315/Uitvoeringsorganisatie_Laborijn
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uitvoeringsorganisatie+Laborijn%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uitvoeringsorganisatie+Laborijn%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.laborijn.nl/woo
+organogram_url: https://www.laborijn.nl/organogram
+afspraak:
+  email: contact@laborijn.nl
+  telefoonnummer: (0314) 37 25 00
+  url: https://www.laborijn.nl/woo
 contact:
   website: https://www.laborijn.nl
   email: contact@laborijn.nl
+  bezoekadres: Terborgseweg 106, 7005 BC Doetinchem
+  postadres: Postbus 236, 7000 AE Doetinchem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdlocatie
+    openbare_ruimte: Terborgseweg
+    huisnummer: '106'
+    postcode: 7005 BC
+    woonplaats: Doetinchem
+  - type: Postadres
+    postbus: '236'
+    postcode: 7000 AE
+    woonplaats: Doetinchem
+  - type: Woo-Adres
+    postbus: '236'
+    postcode: 7000 AE
+    woonplaats: Doetinchem
+  phones:
+  - nummer: (0314) 37 25 00
+    label: algemeen
+  - nummer: (0314) 65 46 54
+    label: inkomen en participatie
+  emails:
+  - email: contact@laborijn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.laborijn.nl
+    label: algemeen
+  - url: https://formulieren.laborijn.nl/formulier/nl-NL/Laborijn/scContactformulierL.aspx/fContactformulierL
+    label: contact
+  contact_forms:
+  - url: https://www.laborijn.nl/laborijn/contact-en-locaties_45354/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28322315/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28322315/laborijn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-01-01'

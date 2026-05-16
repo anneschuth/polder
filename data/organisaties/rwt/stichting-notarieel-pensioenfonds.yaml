@@ -2,15 +2,43 @@ id: org:oovb-stichting-notarieel-pensioenfonds
 type: rwt
 identifiers:
   roo_id: '27914715'
+  kvk: '41151989'
+  rsin: 002872845
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Notarieel Pensioenfonds
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Europaweg 27, 9723 AS Groningen
+  postadres: Postbus 51009, 9702 JA Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europaweg 27
+    postcode: 9723 AS
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '51009'
+    postcode: 9702 JA
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-28'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914715/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914715/stichting-notarieel-pensioenfonds
+  retrieved: '2026-05-16'

@@ -9,11 +9,37 @@ names:
   abbr: SSO
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+description:
+  text: TaakDe afdeling Sociale Samenhang en Opvang richt zich vooral op het versterken
+    van de sociale samenhang, het stimuleren van maatschappelijke participatie door
+    vrijwillige inzet en mantelzorg en het bieden van tijdelijke opvang voor en ondersteuning
+    aan mensen met een (psycho)sociale problematiek of slachtoffers geweld in afhankelijkheidsrelaties.
 contact:
   email: secretariaatdmo@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 52 32
+    label: algemeen
+  emails:
+  - email: secretariaatdmo@minvws.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-04-14'
+last_verified: '2025-09-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/54072/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/54072/sso
+  retrieved: '2026-05-16'

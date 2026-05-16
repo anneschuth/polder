@@ -1,22 +1,64 @@
 id: org:rechtbank-den-haag
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000055000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10019
   roo_id: '58628'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Den_Haag
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Den Haag
   valid_from: '1900-01-01'
+description:
+  text: Rechtbank Den Haag is bevoegd om in zijn arrondissement recht te spreken in
+    eerste aanleg. Dit betekent dat de rechtbank de eerste instantie is die een juridisch
+    oordeel over een zaak of conflict geeft. Daarna kan een procespartij (bijvoorbeeld
+    de veroordeelde of het Openbaar Ministerie (om.nl)) in hoger beroep gaan bij gerechtshof
+    Den Haag. De rechtbank is samen met gerechtshof Den Haag en het College van Beroep
+    voor het bedrijfsleven gevestigd in het Haagse paleis van justitie.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Den-Haag
+  bezoekadres: Prins Clauslaan 60, 2595 AJ Den Haag
+  postadres: Postbus 20302, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie
+    openbare_ruimte: Prins Clauslaan
+    huisnummer: '60'
+    postcode: 2595 AJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20302'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 362 22 00
+    label: algemeen
+  - nummer: (088) 361 20 12
+    label: centrale balie
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Den-Haag
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58628/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58628/rechtbank-den-haag
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

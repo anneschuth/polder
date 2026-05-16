@@ -3,7 +3,7 @@ name:
   full: M.T.I.J. Janssen-van Amstel
   family: Janssen-van Amstel
   given: M.T.I.J.
-  initials: M.
+  initials: M.T.I.J.
 mandaten:
 - id: 45eceea9-b89a-4936-a317-38a7a89944f4
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864881
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=129813
 - id: 737bf4c2-ef32-4cec-9429-c21a819958a2
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

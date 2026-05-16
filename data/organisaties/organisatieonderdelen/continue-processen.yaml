@@ -1,0 +1,42 @@
+id: org:onderdeel-continue-processen
+type: organisatieonderdeel
+identifiers:
+  roo_id: '118592'
+classification: organisatieonderdeel
+parent_id: org:onderdeel-provinciale-organisatie
+names:
+- value: Continue processen
+  valid_from: '1900-01-01'
+  valid_until: '2021-12-01'
+contact:
+  bezoekadres: Tweebaksmarkt 52, 8911 KZ Leeuwarden
+  postadres: Postbus 20120, 8900 HM Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tweebaksmarkt
+    huisnummer: '52'
+    postcode: 8911 KZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '20120'
+    postcode: 8900 HM
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 292 59 25
+    label: algemeen
+  emails:
+  - email: provincie@fryslan.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.fryslan.frl
+    label: algemeen
+  email: provincie@fryslan.nl
+valid_from: '1900-01-01'
+valid_until: '2021-12-01'
+last_mutation: '2021-12-15'
+last_verified: '2021-12-15'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/118592/continue-processen
+  retrieved: '2026-05-16'

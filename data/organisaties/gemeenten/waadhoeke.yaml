@@ -6,21 +6,184 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1949
   roo_id: '23087139'
   wikidata: Q27526271
+  owms: http://standaarden.overheid.nl/owms/terms/Waadhoeke
+  rsin: '825581345'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WAH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Waadhoeke
   abbr: Waadhoeke
   valid_from: '1900-01-01'
+description:
+  url: https://www.waadhoeke.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waadhoeke.nl/klacht-en-melden/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/23087139/Gemeente_Waadhoeke
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waadhoeke%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waadhoeke%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waadhoeke.bestuurlijkeinformatie.nl/Agenda/Index/d24388f6-d990-41ef-ac12-75a033845ddc
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://waadhoeke.bestuurlijkeinformatie.nl/Reports/Details/c646b1d2-b246-40b4-8163-e4759cac86be
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waadhoeke%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.waadhoeke.nl/klacht-en-melden/wet-open-overheid-woo
+organogram_url: https://www.waadhoeke.nl/organisatie/organogram
+afspraak:
+  telefoonnummer: (0517) 38 03 80
+  url: https://waadhoeke.mijnafspraakmaken.nl/Client/
+geography:
+  oppervlakte: 315,26
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 315.26
+  aantal_inwoners: 47158
+  inwoners: '149'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 149.0
+  bevat_plaatsen_raw: Achlum, Baaium, Berltsum, Bitgum, Bitgummole, Blessum, Boer,
+    Boksum, Deinum, Dongjum, Dronryp, Firdgum, Franeker, Herbaijum, Hitzum, Ingelum,
+    Klooster Lidlum, Marsum, Menaam, Minnertsga, Nij Altoenae, Oosterbierum, Oudebildtzijl,
+    Peins, Pietersbierum, Ried, Schalsum, Sexbierum, Skingen, Slappeterp, Spannum,
+    St.-Annaparochie, St.-Jacobiparochie, Tzum, Tzummarum, Vrouwenparochie, Westhoek,
+    Wier, Winsum FR, Wjelsryp, Zweins
+  bevat_plaatsen:
+  - Achlum
+  - Baaium
+  - Berltsum
+  - Bitgum
+  - Bitgummole
+  - Blessum
+  - Boer
+  - Boksum
+  - Deinum
+  - Dongjum
+  - Dronryp
+  - Firdgum
+  - Franeker
+  - Herbaijum
+  - Hitzum
+  - Ingelum
+  - Klooster Lidlum
+  - Marsum
+  - Menaam
+  - Minnertsga
+  - Nij Altoenae
+  - Oosterbierum
+  - Oudebildtzijl
+  - Peins
+  - Pietersbierum
+  - Ried
+  - Schalsum
+  - Sexbierum
+  - Skingen
+  - Slappeterp
+  - Spannum
+  - St.-Annaparochie
+  - St.-Jacobiparochie
+  - Tzum
+  - Tzummarum
+  - Vrouwenparochie
+  - Westhoek
+  - Wier
+  - Winsum FR
+  - Wjelsryp
+  - Zweins
+council:
+  total_seats: 29
+  parties:
+  - naam: SAM
+    aantal_zetels: 7
+  - naam: Gemeentebelangen
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: BBB
+    aantal_zetels: 3
+  - naam: FNP
+    aantal_zetels: 2
+  - naam: Fraksje Hoekstra
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.waadhoeke.nl
   email: info@waadhoeke.nl
+  bezoekadres: Harlingerweg 18, 8801 PA FRANEKER
+  postadres: Postbus 58, 8800 AB FRANEKER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Harlingerweg
+    huisnummer: '18'
+    postcode: 8801 PA
+    woonplaats: FRANEKER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '58'
+    postcode: 8800 AB
+    woonplaats: FRANEKER
+  - type: Woo-Adres
+    postbus: '58'
+    postcode: 8800 AB
+    woonplaats: Franeker
+    regio: Fryslân
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Harlingerweg
+    huisnummer: '18'
+    postcode: 8801 PA
+    woonplaats: FRANEKER
+  phones:
+  - nummer: (0517) 38 03 80
+    label: algemeen
+  emails:
+  - email: info@waadhoeke.nl
+    label: algemeen
+  - email: info@waadhoeke.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.waadhoeke.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-franekeradeel
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23087139/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23087139/waadhoeke
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,5 +192,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q27526271
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-franekeradeel
+roo_start_datum: '2018-01-01'

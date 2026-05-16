@@ -5,22 +5,107 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0006
   oin: 00000001001937194000
   kvk: '32170415'
+  owms: http://standaarden.overheid.nl/owms/terms/Regio_Gooi_en_Vechtstreek
+  organisatiecode: so0006
+  rsin: 001937194
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regio Gooi en Vechtstreek
+  roo_id: '29446305'
 names:
 - value: Regio Gooi en Vechtstreek
   valid_from: '1900-01-01'
+description:
+  text: Regio Gooi en Vechtstreek is het samenwerkingsverband van Blaricum, Eemnes,
+    Gooise Meren, Hilversum, Huizen, Laren en Wijdemeren. Wat met elkaar beter lukt
+    en meerwaarde heeft, dat doen we samen. Iedere dag werken we aan een duurzame,
+    gezonde en veilige regio. Voor inwoners, met gemeenten.
+  url: https://www.regiogv.nl/over-ons/organisatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.regiogv.nl/over-ons/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28599043/Regio_Gooi_en_Vechtstreek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+Gooi+en+Vechtstreek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+Gooi+en+Vechtstreek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.regiogv.nl/over-ons/wet-open-overheid-woo/
+organogram_url: https://www.regiogv.nl/over-ons/organisatie/organogram/
+afspraak:
+  email: info@regiogv.nl
+  telefoonnummer: (035) 692 64 44
+  url: https://www.regiogv.nl/over-ons/contact/
 contact:
   website: https://www.regiogv.nl/
   email: info@regiogv.nl
+  bezoekadres: Burgemeester de Bordesstraat 80, 1404 GZ Bussum
+  postadres: Postbus 251, 1400 AG Bussum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester de Bordesstraat
+    huisnummer: '80'
+    postcode: 1404 GZ
+    woonplaats: Bussum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    postbus: '251'
+    postcode: 1400 AG
+    woonplaats: Bussum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '251'
+    postcode: 1400 AG
+    woonplaats: Bussum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (035) 692 64 44
+    label: algemeen
+  emails:
+  - email: info@regiogv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiogv.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.regiogv.nl/over-ons/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Regio Gooi en Vechtstreek
+    url: https://www.linkedin.com/company/gewest-gooi-en-vechtstreek
+  fax: (035) 692 64 40
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28599043/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28599043/regio-gooi-en-vechtstreek
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-07-01'

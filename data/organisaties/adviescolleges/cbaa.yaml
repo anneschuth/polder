@@ -3,18 +3,51 @@ type: adviescollege
 identifiers:
   roo_id: '29516075'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12358
+  owms: http://standaarden.overheid.nl/owms/terms/cieonderzblafstadop
+  organisatiecode: oorg12358
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie onderzoek naar Binnenlandse Afstand en Adoptie
   abbr: CBAA
   valid_from: '1900-01-01'
+description:
+  text: De Commissie onderzoek naar Binnenlandse Afstand en Adoptie leidt een onafhankelijk
+    onderzoek, bestaande uit drie deelonderzoeken, naar de geschiedenis van binnenlandse
+    afstand en adoptie in de periode 1956-1984. Op basis van de uitkomsten van de
+    drie deelonderzoeken zal de Commissie een eindrapport schrijven en aan de verantwoordelijke
+    minister aanbieden.
+  url: https://cbaa.nl/over-ons/
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Commissie Onderzoek naar binnenlandse afstand en adoptie
+    in de periode 1956–1984, artikel 2, lid 1
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0047214
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://cbaa.nl/
   email: info@cbaa.nl
+  emails:
+  - email: info@cbaa.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://cbaa.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29516075/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29516075/cbaa
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-10-01'

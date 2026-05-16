@@ -5,6 +5,9 @@ identifiers:
   kvk: '37159339'
   roo_id: '40448'
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0398
+  owms: http://standaarden.overheid.nl/owms/terms/Heerhugowaard_(gemeente)
+  ictu: 00398
+  organisatiecode: gm0398
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,89 @@ names:
   abbr: Heerhugowaard
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 39,99
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 39.99
+  aantal_inwoners: 55850
+  inwoners: '1396'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1396.0
+  bevat_plaatsen_raw: Heerhugowaard
+  bevat_plaatsen:
+  - Heerhugowaard
+council:
+  total_seats: 31
+  parties:
+  - naam: HOP
+    aantal_zetels: 7
+  - naam: Senioren Heerhugowaard
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: D66 Dijk en Waard
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: www.heerhugowaard.nl
   email: post@heerhugowaard.nl
+  bezoekadres: Parelhof 1, 1703 EZ HEERHUGOWAARD
+  postadres: Postbus 390, 1700 AJ HEERHUGOWAARD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parelhof
+    huisnummer: '1'
+    postcode: 1703 EZ
+    woonplaats: HEERHUGOWAARD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '390'
+    postcode: 1700 AJ
+    woonplaats: HEERHUGOWAARD
+  phones:
+  - nummer: 14 072
+    label: algemeen
+  emails:
+  - email: post@heerhugowaard.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.heerhugowaard.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2023-01-19'
+last_verified: '2023-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40448/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40448/gemeente-heerhugowaard
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,15 +3,50 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '26408031'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0908
+  owms: http://standaarden.overheid.nl/owms/terms/ogz_amstelland
+  kvk: '34370301'
+  organisatiecode: so0908
+  rsin: '821681916'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling openbare Gezondheidszorg Amstelland
+  roo_id: '26408026'
 names:
 - value: Openbare gezondheidszorg Amstelland
   abbr: OGZ Amstelland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Laan Nieuwer-Amstel 1, 1182 JR Amstelveen
+  postadres: Postbus 4, 1180 BA Amstelveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Laan Nieuwer-Amstel
+    huisnummer: '1'
+    postcode: 1182 JR
+    woonplaats: Amstelveen
+  - type: Postadres
+    postbus: '4'
+    postcode: 1180 BA
+    woonplaats: Amstelveen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26408031/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26408031/openbare-gezondheidszorg-amstelland
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-01-01'

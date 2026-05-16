@@ -3,7 +3,7 @@ name:
   full: P.C. Eijgenraam
   family: Eijgenraam
   given: P.C.
-  initials: P.
+  initials: P.C.
 mandaten:
 - id: 3979f1a2-2e25-408a-96e6-912d9260a121
   organization_id: org:gemeente-midden-delfland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7779356
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36436/gemeente-midden-delfland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30568807
 - id: 61028c6a-afdf-4a3d-8133-3c766aba3f34
   organization_id: org:gemeente-midden-delfland
   post_id: post:raadslid-gemeente-midden-delfland

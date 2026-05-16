@@ -5,22 +5,68 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0716
   oin: '00000003555366460000'
   kvk: '55536646'
+  owms: http://standaarden.overheid.nl/owms/terms/ridutr
+  btw: NL851755574B01
+  organisatiecode: so0716
+  rsin: '851755574'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionale ICT-dienst Utrecht
+  roo_id: '30489847'
 names:
 - value: RID
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rid-utrecht.nl
   email: info@rid-utrecht.nl
+  bezoekadres: Raadhuisplein 2, 3941 JT Doorn
+  postadres: Postbus 300, 3720 AH Bilthoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '2'
+    postcode: 3941 JT
+    woonplaats: Doorn
+  - type: Postadres
+    postbus: '300'
+    postcode: 3720 AH
+    woonplaats: Bilthoven
+  phones:
+  - nummer: (088) 031 04 00
+    label: algemeen
+  emails:
+  - email: info@rid-utrecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rid-utrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rid-utrecht.nl/#contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966648/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966648/rid
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-07-01'

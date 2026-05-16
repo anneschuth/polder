@@ -5,6 +5,9 @@ identifiers:
   kvk: '24483056'
   roo_id: '23784'
   wikidata: Q952194
+  owms: http://standaarden.overheid.nl/owms/terms/Korendijk
+  ictu: 00588
+  organisatiecode: gm0588
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,76 @@ names:
   abbr: Korendijk
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 100,85
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 100.85
+  aantal_inwoners: 10959
+  inwoners: '108'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 108.0
+  bevat_plaatsen_raw: Goudswaard, Nieuw-Beijerland, Piershil, Zuid-Beijerland
+  bevat_plaatsen:
+  - Goudswaard
+  - Nieuw-Beijerland
+  - Piershil
+  - Zuid-Beijerland
+council:
+  total_seats: 14
+  parties:
+  - naam: SGP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Gemeentebelangen Korendijk
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: www.korendijk.nl
   email: gemeente@korendijk.nl
+  bezoekadres: Voorstraat 31, 3265 BT PIERSHIL
+  postadres: Postbus 3708, 3265 ZG PIERSHIL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Voorstraat
+    huisnummer: '31'
+    postcode: 3265 BT
+    woonplaats: PIERSHIL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 3708
+    postbus: '3708'
+    postcode: 3265 ZG
+    woonplaats: PIERSHIL
+  phones:
+  - nummer: (088) 647 17 00
+    label: algemeen
+  emails:
+  - email: gemeente@korendijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.korendijk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23784/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23784/korendijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

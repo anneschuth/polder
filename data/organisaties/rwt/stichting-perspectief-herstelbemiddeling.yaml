@@ -2,14 +2,42 @@ id: org:stichting-perspectief-herstelbemiddeling
 type: rwt
 identifiers:
   roo_id: '27915345'
+  kvk: '41184518'
+  rsin: 009612634
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Perspectief Herstelbemiddeling
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Pallas-Athenedreef 27, 3561 PE Utrecht
+  postadres: Postbus 14208, 3508 SH Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pallas-Athenedreef 27
+    postcode: 3561 PE
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '14208'
+    postcode: 3508 SH
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915345/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915345/stichting-perspectief-herstelbemiddeling
+  retrieved: '2026-05-16'

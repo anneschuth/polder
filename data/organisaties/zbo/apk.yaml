@@ -4,14 +4,51 @@ identifiers:
   roo_id: '26140713'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000191
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Erkenninghouders Algemene Periodieke Keuring
   abbr: APK
   valid_from: '1900-01-01'
+description:
+  text: De namen van alle APK-stations in Nederland worden niet opgenomen in dit register.Erkenninghouders
+    Algemene Periodieke Keuring is een cluster.Dit is een cluster van zbo' s die niet
+    onder de werking van de Kaderwet zelfstandige bestuursorganen valt. De onderliggende
+    onderdelen van dit cluster worden daarom niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Regeling voertuigen
+  referentie: http://wetten.overheid.nl/BWBR0025798/
+- opschrift: Besluit voertuigen
+  referentie: http://wetten.overheid.nl/BWBR0025554/
+- opschrift: Wegenverkeerswet 1994
+  referentie: http://wetten.overheid.nl/BWBR0006622/
+- opschrift: Regeling erkenning en keuringsbevoegdheid APK
+  referentie: http://wetten.overheid.nl/BWBR0025735/
+taken_en_bevoegdheden: De erkenninghouders in dit cluster hebben als taak het uitvoeren
+  van de Algemene Periodieke Keuring (APK) van motorrijtuigen.
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '1994-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140713/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140713/apk
+  retrieved: '2026-05-16'
+roo_start_datum: '1994-01-01'

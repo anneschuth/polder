@@ -3,18 +3,94 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27567116'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0547
+  owms: http://standaarden.overheid.nl/owms/terms/strarchmidhol
+  kvk: '58613064'
+  organisatiecode: so0547
+  rsin: '814121846'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Streekarchief Midden-Holland
+  roo_id: '30068827'
 names:
 - value: Streekarchief Midden-Holland
   abbr: SAMH
   valid_from: '1900-01-01'
+description:
+  text: Streekarchief Midden-Holland bewaart de archieven van de volgende gemeenten:Gouda;Krimpen
+    aan den IJssel;Krimpenerwaard (Ammerstol, Berkenwoude, Bergambacht, Gouderak,
+    Haastrecht, Krimpen aan de Lek, Lekkerkerk, Ouderkerk aan den IJssel, Schoonhoven,
+    Stolwijk, Vlist);Waddinxveen (Broek c.a., Noord-Waddinxveen, Zuid-Waddinxveen);Zuidplas
+    (Moordrecht, Nieuwerkerk aan den IJssel, Zevenhuizen-Moerkapelle);diverse Gemeenschappelijke
+    Regelingen die het Streekarchief Midden-Holland hebben aangewezen als archiefbewaarplaats.
+  url: https://samh.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://samh.nl/over-ons/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27567116/Streekarchief_Midden-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://samh.nl/over-ons/woo
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://samh.nl/over-ons/woo
+  wooVerzoek:
+    url: https://samh.nl/contact-en-bezoek
+afspraak:
+  email: info@samh.nl
+  telefoonnummer: (0182) 52 18 21
+  url: https://samh.nl/reserveren-studiezaal
 contact:
   website: https://www.samh.nl
   email: info@samh.nl
+  bezoekadres: Klein Amerika 20, 2806 CA Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Klein Amerika
+    huisnummer: '20'
+    postcode: 2806 CA
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (0182) 52 18 21
+    label: algemeen
+  emails:
+  - email: info@samh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.samh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://samh.nl/contact-en-bezoek
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Streekarchief Midden-Holland
+    url: facebook.com/streekarchiefmh
+  - platform: X
+    gebruikersnaam: StreekarchiefMH
+    url: x.com/streekarchiefmh
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-08-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27567116/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27567116/samh
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

@@ -4,19 +4,63 @@ identifiers:
   roo_id: '27613314'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000325
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Nederlands Meetinstituut ex Regeling meetmiddelen politie
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Regeling meetmiddelen politie
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0008821
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.nmi.nl/
   email: nmi@nmi.nl
+  bezoekadres: Thijsseweg 11, 2629 JA Delft
+  postadres: Postbus 463, 2600 AL Delft
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Thijsseweg
+    huisnummer: '11'
+    postcode: 2629 JA
+    woonplaats: Delft
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '463'
+    postcode: 2600 AL
+    woonplaats: Delft
+  phones:
+  - nummer: (088) 636 23 32
+    label: algemeen
+  emails:
+  - email: nmi@nmi.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nmi.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613314/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613314/nederlands-meetinstituut-ex-regeling-meetmiddelen-politie
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000325
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

@@ -5,23 +5,98 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0639
   oin: 00000001001902726000
   kvk: '50348655'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Brabant-Zuidoost
+  organisatiecode: so0639
+  rsin: 001902726
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: ​​Gemeenschappelijke Regeling VRBZO 2024​
+  roo_id: '30450913'
 names:
 - value: Veiligheidsregio Brabant-Zuidoost
   abbr: VRBZO
   valid_from: '1900-01-01'
+description:
+  text: Nederland telt 25 veiligheidsregio’s. Veiligheidsregio’s moeten de inwoners
+    van Nederland beter beschermen tegen rampen en crises. Veiligheidsregio Brabant-Zuidoost
+    (VRBZO) is de veiligheidsregio voor Zuidoost-Brabant. In onze organisatie werken
+    brandweer en GHOR samen om incidenten en rampen te voorkomen, te beperken en te
+    bestrijden. Dit doen we voor en samen met de 21 gemeenten in ons werkgebied en
+    de mensen die hier wonen of verblijven. We zijn behulpzaam, deskundig, daadkrachtig
+    en gericht op samenwerken.
+  url: https://www.vrbzo.nl/de-veiligheidsregio/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrbzo.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/26639020/Veiligheidsregio_Brabant-Zuidoost
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Brabant-Zuidoost%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Brabant-Zuidoost%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vrbzo.nl/woo-verzoek/
+organogram_url: https://www.vrbzo.nl/de-veiligheidsregio/
+afspraak:
+  email: info@vrbzo.nl
+  telefoonnummer: (040) 220 32 03
 contact:
   website: https://www.vrbzo.nl
   email: info@vrbzo.nl
+  bezoekadres: Deken van Somerenstraat 2, 5611 KX Eindhoven
+  postadres: Postbus 242, 5600 AE Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Deken van Somerenstraat
+    huisnummer: '2'
+    postcode: '5611'
+    woonplaats: KX Eindhoven
+  - type: Postadres
+    postbus: '242'
+    postcode: 5600 AE
+    woonplaats: Eindhoven
+  - type: Woo-Adres
+    postbus: '242'
+    postcode: 5600 AE
+    woonplaats: Eindhoven
+  phones:
+  - nummer: (040) 220 32 03
+    label: algemeen
+  emails:
+  - email: info@vrbzo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrbzo.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vrbzo.nl/contactgegevens/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26639020/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26639020/vrbzo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2011-01-01'

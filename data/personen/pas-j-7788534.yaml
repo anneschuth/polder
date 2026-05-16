@@ -3,7 +3,7 @@ name:
   full: J.H. Pas
   family: Pas
   given: J.H.
-  initials: J.
+  initials: J.H.
 mandaten:
 - id: c1f893dd-74fd-44ec-b577-acd105eff077
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7788545
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30521074
 - id: 61224083-2a16-4942-aa14-1caa845a867c
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

@@ -1,15 +1,34 @@
 id: org:stichting-vilans-kenniscentrum-langdurige-zorg
 type: rwt
+subname: Kenniscentrum Langdurige Zorg
 identifiers:
   roo_id: '30133869'
+  kvk: '30216130'
+  rsin: '816886994'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Vilans (Kenniscentrum Langdurige Zorg)
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Churchilllaan
+    huisnummer: '11'
+    postcode: 3527 GV
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133869/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133869/stichting-vilans-kenniscentrum-langdurige-zorg
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ name:
   full: M.R. Hoeve
   family: Hoeve
   given: M.R.
-  initials: M.
+  initials: M.R.
 mandaten:
 - id: df297504-65aa-4d37-a557-8f22a4d5e6cb
   organization_id: org:gemeente-meppel
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774311
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/41121/gemeente-meppel
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30525709
 - id: a09bb9a7-023c-4b01-ab2a-b008189e468d
   organization_id: org:gemeente-meppel
   post_id: post:raadslid-gemeente-meppel

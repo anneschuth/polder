@@ -3,17 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963074'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1045
+  owms: http://standaarden.overheid.nl/owms/terms/ombmetrams
+  kvk: '34366966'
+  btw: NL002564440B28
+  oin: I0000003343669660000
+  organisatiecode: so1045
+  rsin: '002564440'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ombudsman metropool Amsterdam
+  roo_id: '30479519'
 names:
 - value: Ombudsman Metropool Amsterdam
   valid_from: '1900-01-01'
+description:
+  text: 'Ombudsman Metropool Amsterdam is een tweedelijns klachtenregeling: u kunt
+    bij ons terecht wanneer u een klacht hebt ingediend bij een gemeente die bij ons
+    is aangesloten en u niet tevreden bent met hoe die klacht is afgehandeld. Als
+    uw klacht gaat over de uitvoering van beleid -  bijvoorbeeld de wijze waarop een
+    vergunning (niet) is verstrekt, hoe een bezwaarschrift is behandeld, of het (niet)
+    nakomen van afspraken - dan kijken wij opnieuw naar de klacht en komen wij waar
+    mogelijk met een oplossing.'
+  url: http://www.ombudsmanmetropool.nl/nl/informatie/over-de-organisatie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: http://www.ombudsmanmetropool.nl/nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/24963074/Ombudsman_Metropool_Amsterdam
+  wooVerzoek:
+    url: http://www.ombudsmanmetropool.nl/nl/wet-open-overheid-woo
+organogram_url: http://www.ombudsmanmetropool.nl/nl/informatie/over-de-organisatie
+afspraak:
+  email: info@ombudsmanmetropool.nl
+  telefoonnummer: (020) 625 99 99
+  url: http://www.ombudsmanmetropool.nl/nl/wet-open-overheid-woo
 contact:
   website: https://www.ombudsmanmetropool.nl
   email: info@ombudsmanmetropool.nl
+  bezoekadres: Jacob Bontiusplaats 9, 1018 LL Amsterdam
+  postadres: Postbus 2119, 1000 CC Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jacob Bontiusplaats
+    huisnummer: '9'
+    postcode: 1018 LL
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '2119'
+    postcode: 1000 CC
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    openbare_ruimte: Jacob Bontiusplaats
+    huisnummer: '9'
+    postcode: 1018 LL
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (020) 625 99 99
+    label: algemeen
+  emails:
+  - email: info@ombudsmanmetropool.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ombudsmanmetropool.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ombudsmanmetropool.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963074/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963074/ombudsman-metropool-amsterdam
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

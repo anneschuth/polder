@@ -1,27 +1,105 @@
 id: org:agentschap-odi
 type: agentschap
+subname: Rijksorganisatie ODI
 identifiers:
   oin: 00000003505555960000
   kvk: '50555596'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12347
   roo_id: '29216564'
+  owms: http://standaarden.overheid.nl/owms/terms/roodi
+  organisatiecode: oorg12347
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Rijksorganisatie voor Ontwikkeling, Digitalisering en Innovatie
   abbr: ODI
   valid_from: '1900-01-01'
+description:
+  text: 'Impactvol werken aan de overheid van nu en morgen. Daar is ODI voor. Onze
+    focus ligt op de digitale versnelling van de overheid. Met verschillende ODI-merken
+    hebben wij de benodigde kennis én realisatiekracht in huis om de overheid te helpen
+    bij complexe digitaliseringsvraagstukken. De thema’s waar wij ons mee bezighouden
+    zijn: digitale weerbaarheid, AI, netwerksamenwerking, ambtelijk en digitaal vakmanschap
+    en innovatieve en lerende overheid.'
+  url: https://www.rijksorganisatieodi.nl/over-rijksorganisatie-odi
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/29216564/Rijksorganisatie_voor_Ontwikkeling_Digitalisering_en_Innovatie
+organogram_url: https://www.rijksorganisatieodi.nl/over-rijksorganisatie-odi
+afspraak:
+  email: contact@rijksorganisatieodi.nl
+  telefoonnummer: (070) 758 56 45
+  url: https://www.rijksorganisatieodi.nl/contact
 contact:
   website: https://www.rijksorganisatieodi.nl
   email: contact@rijksorganisatieodi.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 20011, 2500 EA
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+  - type: Woo-Adres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    land: Nederland
+  phones:
+  - nummer: (070) 758 56 45
+    label: algemeen
+  emails:
+  - email: contact@rijksorganisatieodi.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksorganisatieodi.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksorganisatieodi.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29216564/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29216564/odi
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2023-01-01'

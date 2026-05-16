@@ -2,14 +2,48 @@ id: org:oovb-stichting-akros-welzijn
 type: rwt
 identifiers:
   roo_id: '27909855'
+  kvk: '34219027'
+  rsin: '813973946'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting AKROS Welzijn
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Balboastraat 20 -B4, 1057 VW Amsterdam
+  postadres: Balboastraat 20 -B4, 1057 VW Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Balboastraat
+    huisnummer: '20'
+    huisnummer_toevoeging: -B4
+    postcode: 1057 VW
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Balboastraat
+    huisnummer: '20'
+    huisnummer_toevoeging: -B4
+    postcode: 1057 VW
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909855/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909855/stichting-akros-welzijn
+  retrieved: '2026-05-16'

@@ -3,21 +3,123 @@ type: zbo
 identifiers:
   roo_id: '27623551'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000137
+  kvk: '27260493'
+  rsin: '816795460'
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: College donorgegevens kunstmatige bevruchting
   abbr: Cdkb
   valid_from: '1900-01-01'
+description:
+  text: Het College donorgegevens kunstmatige bevruchting (Cdkb) zorgt voor de uitvoering
+    van de Wet donorgegevens kunstmatige bevruchting. Sinds 2004 worden de gegevens
+    van sperma-, eicel- en embryodonoren landelijk geregistreerd. Het Cdkb is verantwoordelijk
+    voor het beheer van deze gegevens en verstrekt deze op verzoek aan het donorkind,
+    de ouders of de huisarts.Het bestuur van het Cdkb heeft een aantal uitvoeringstaken
+    overgedragen aan het Centraal Informatiepunt Beroepen Gezondheidszorg (CIBG),
+    waaronder de registratie van de donorgegevens, het secretariaat van het Cdkb en
+    de informatieverstrekking. Het Cdkb is en blijft echter verantwoordelijk voor
+    de gegevens en beslist over ontvangen verzoeken om donorgegevens. Het CIBG is
+    een agentschap van het Ministerie van Volksgezondheid, Welzijn en Sport (VWS).
+  url: https://www.donorgegevens.nl/over-donorgegevens
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Wet donorgegevens kunstmatige bevruchting, artikel 4
+  referentie: https://wetten.overheid.nl/BWBR0013642/2025-07-05#Paragraaf3_Artikel4
+taken_en_bevoegdheden: Het College donorgegevens kunstmatige bevruchting (Cdkb) is
+  verantwoordelijk voor het uitvoeren van de de Wet donorgegevens kunstmatige bevruchting
+  (Wdkb). Daarom voert het Cdkb de volgende taken uit:* het bewaren en beheren van
+  donorgegevens. De gegevens worden opgeslagen in een centrale database en minstens
+  tachtig jaar bewaard;* het op verzoek verstrekken van donorgegevens aan het kind,
+  de ouders en de huisarts van het donorkind;* het zorgen voor deskundige begeleiding
+  bij het verstrekken van de gegevens (in samenwerking met Fiom);* het verstrekken
+  van ouderschapsverklaringen voor het duomoederschap;* het geven van voorlichting
+  over de Wdkb.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/27623551/College_donorgegevens_kunstmatige_bevruchting
+organogram_url: https://www.donorgegevens.nl/over-donorgegevens/bestuur-en-adviescommissie
+personnel:
+  aantalFte: 9,3
+  peildatumFte: '2021-12-31'
 contact:
   website: https://www.donorgegevens.nl/
   email: info@donorgegevens.nl
+  bezoekadres: Rijnstraat 50, 2515 XP Den Haag
+  postadres: Postbus 16077, 2500 BB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16077'
+    postcode: 2500 BB
+    ter_attentie_van: College donorgegevens kunstmatige bevruchting
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16077'
+    postcode: 2500 BB
+    ter_attentie_van: College donorgegevens kunstmatige bevruchting
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 55 40
+    label: algemeen
+  - nummer: (070) 340 58 32
+    label: pers
+  emails:
+  - email: info@donorgegevens.nl
+    label: algemeen
+  - email: pers@cibg.nl
+    label: pers
+  internet_addresses:
+  - url: https://www.donorgegevens.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.donorgegevens.nl/service/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-29'
+last_verified: '2026-01-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27623551/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27623551/cdkb
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000137
   retrieved: '2026-05-09'
+roo_start_datum: '2004-01-01'

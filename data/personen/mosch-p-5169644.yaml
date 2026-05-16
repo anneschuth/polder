@@ -3,7 +3,7 @@ name:
   full: P.W. Mosch
   family: Mosch
   given: P.W.
-  initials: P.
+  initials: P.W.
 mandaten:
 - id: d56bee72-bb5a-4468-8621-dfa8f2c3fbd9
   organization_id: org:gemeente-medemblik
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5169646
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23294/gemeente-medemblik
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=98066
 - id: 4bab0da8-d136-44d7-9fbe-2acb18077eeb
   organization_id: org:gemeente-medemblik
   post_id: post:raadslid-gemeente-medemblik

@@ -3,18 +3,85 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962444'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0336
+  owms: http://standaarden.overheid.nl/owms/terms/olct
+  kvk: '76376737'
+  organisatiecode: so0336
+  rsin: 001589635
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Openbaar Lichaam Crematoria Twente (OLCT)
+  roo_id: '29681289'
 names:
 - value: Openbaar Lichaam Crematoria Twente
   abbr: OLCT
   valid_from: '1900-01-01'
+description:
+  text: Het Openbaar Lichaam Crematoria Twente (OLCT) is 100% aandeelhouder van Crematoria
+    Twente BV.OLCT is een gemeenschappelijke regeling van 11 Twentse gemeenten.OLCT
+    heeft een algemeen bestuur en een dagelijks bestuur, die beide worden ondersteund
+    door een secretaris.
+  url: https://www.crematoriatwente.nl/fileadmin/crematoriatwente/images/asbestemming/2025/samenstelling_ab_db_-_jan_2025.pdf
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.crematoriatwente.nl/nl/over-ons/crematoria-twente/gr-olct
+      overzichtURL: https://organisaties.overheid.nl/woo/24962444/Openbaar_Lichaam_Crematoria_Twente
+  wooVerzoek:
+    url: https://www.crematoriatwente.nl/fileadmin/crematoriatwente/images/asbestemming/2025/samenstelling_ab_db_-_jan_2025.pdf
+afspraak:
+  url: https://www.crematoriatwente.nl/nl/over-ons/crematoria-twente/gr-olct
 contact:
   website: https://www.crematoriatwente.nl/nl
   email: info@crematoriatwente.nl
+  bezoekadres: Usselerrietweg 40, 7546 PE Enschede
+  postadres: Usselerrietweg 40, 7546 PE Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Usselerrietweg
+    huisnummer: '40'
+    postcode: 7546 PE
+    woonplaats: Enschede
+    regio: Twente
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Usselerrietweg
+    huisnummer: '40'
+    postcode: 7546 PE
+    woonplaats: Enschede
+    regio: Twente
+    land: Nederland
+  phones:
+  - nummer: (053) 475 60 60
+    label: algemeen
+  emails:
+  - email: info@crematoriatwente.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.crematoriatwente.nl/nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.crematoriatwente.nl/nl/#contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-10'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962444/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962444/olct
+  retrieved: '2026-05-16'
+roo_start_datum: '1972-12-13'

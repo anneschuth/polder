@@ -6,21 +6,161 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0344
   roo_id: '38122'
   wikidata: Q803
+  owms: http://standaarden.overheid.nl/owms/terms/Utrecht_(gemeente)
+  ictu: '00344'
+  organisatiecode: gm0344
+  rsin: '002220647'
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Utrecht
   abbr: Utrecht
   valid_from: '1900-01-01'
+description:
+  url: https://www.utrecht.nl/bestuur-en-organisatie/over-onze-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://loket.digitaal.utrecht.nl/nl/products/woo-verzoek-doen-informatie-openbaar-laten-maken
+      overzichtURL: https://organisaties.overheid.nl/woo/38122/Gemeente_Utrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22%20OR%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22%20OR%20dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22%20OR%20dt.type==%22beleidsregel%22%20OR%20dt.type==%22delegatie-%20of%20mandaatbesluit%22%20OR%20dt.type==%22circulaire%22%20OR%20dt.type==%22verkeersbesluit%20of%20-mededeling%22)))%20AND%20w.organisatietype==%22gemeente%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cgemeente
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))%20AND%20w.organisatietype==%22gemeente%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cgemeente
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22ongewenstverklaring%20vreemdeling%22%20OR%20dt.type==%22vervreemding%20erfgoed%22%20OR%20dt.type==%22Beschikking%22%20OR%20dt.type==%22andere%20beschikking%22%20OR%20dt.type==%22andere%20vergunning%22%20OR%20dt.type==%22evenementenvergunning%22%20OR%20dt.type==%22exploitatievergunning%22%20OR%20dt.type==%22omgevingsvergunning%22%20OR%20dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22)))%20AND%20w.organisatietype==%22gemeente%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cgemeente
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.utrecht.nl/search/query/-/filters/type%3ADocument%3Binformation-category%3AWoo-verzoeken%20en%20-besluiten/page/1
+  wooVerzoek:
+    url: https://loket.digitaal.utrecht.nl/nl/products/woo-verzoek-doen-informatie-openbaar-laten-maken
+organogram_url: https://www.werkenbijutrecht.nl/over-ons/onze-organisatie/organisatiestructuur/
+afspraak:
+  email: Gemeente@utrecht.nl
+  telefoonnummer: (014) 030
+  url: https://www.utrecht.nl/contact/afspraak-maken
+geography:
+  oppervlakte: 99,32
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 99.32
+  aantal_inwoners: 378121
+  inwoners: '3807'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 3807.0
+  bevat_plaatsen_raw: De Meern, Haarzuilens, Utrecht, Vleuten
+  bevat_plaatsen:
+  - De Meern
+  - Haarzuilens
+  - Utrecht
+  - Vleuten
+council:
+  total_seats: 45
+  parties:
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 14
+  - naam: D66
+    aantal_zetels: 9
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Partij voor de Dieren
+    aantal_zetels: 2
+  - naam: DENK
+    aantal_zetels: 2
+  - naam: UtrechtNu!
+    aantal_zetels: 1
+  - naam: BIJ1
+    aantal_zetels: 1
+  - naam: EenUtrecht
+    aantal_zetels: 1
+  - naam: Utrecht Solidair
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Forum voor Democratie
+    aantal_zetels: 1
+  - naam: JA21
+    aantal_zetels: 1
+  - naam: Student & Starter
+    aantal_zetels: 1
+  - naam: Stadsbelang Utrecht
+    aantal_zetels: 1
 contact:
   website: https://www.utrecht.nl
   email: Gemeente@utrecht.nl
+  bezoekadres: Stadsplateau 1, 3521 AZ UTRECHT
+  postadres: Postbus 16200, 3500 CE UTRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadsplateau
+    huisnummer: '1'
+    postcode: 3521 AZ
+    woonplaats: UTRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '16200'
+    postcode: 3500 CE
+    woonplaats: UTRECHT
+  - type: Woo-Adres
+    toelichting: Gemeente Utrecht, Afdeling Juridische Zaken
+    postbus: '10080'
+    postcode: 3505 AB
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stadsplateau
+    huisnummer: '1'
+    postcode: 3521 AZ
+    ter_attentie_van: VTH
+    woonplaats: UTRECHT
+  phones:
+  - nummer: (014) 030
+    label: algemeen
+  emails:
+  - email: Gemeente@utrecht.nl
+    label: algemeen
+  - email: Gemeente@utrecht.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.utrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.utrecht.nl/wonen-en-leven/bouwen-en-verbouwen/hebt-u-een-vraag-over-bouwplan-of-bedrijfsplan
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38122/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38122/utrecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

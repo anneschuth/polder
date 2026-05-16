@@ -6,21 +6,131 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0589
   roo_id: '30578'
   wikidata: Q10051
+  owms: http://standaarden.overheid.nl/owms/terms/Oudewater_(gemeente)
+  ictu: 00589
+  organisatiecode: gm0589
+  rsin: 001721689
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ODW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Oudewater
   abbr: Oudewater
   valid_from: '1900-01-01'
+description:
+  url: https://www.oudewater.nl/Gemeente/Organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.oudewater.nl/Contact/Woo_verzoek_indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/30578/Gemeente_Oudewater
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oudewater%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oudewater%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oudewater%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.oudewater.nl/Contact/Woo_verzoek_indienen
+organogram_url: https://www.oudewater.nl/Gemeente/Organisatiestructuur
+afspraak:
+  email: gemeente@oudewater.nl
+  telefoonnummer: 14 0348
+  url: https://www.oudewater.nl/Afspraak_maken
+geography:
+  oppervlakte: 40,16
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 40.16
+  aantal_inwoners: 10513
+  inwoners: '261'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 261.0
+  bevat_plaatsen_raw: Hekendorp, Oudewater, Papekop, Snelrewaard
+  bevat_plaatsen:
+  - Hekendorp
+  - Oudewater
+  - Papekop
+  - Snelrewaard
+council:
+  total_seats: 15
+  parties:
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: De Onafhankelijken
+    aantal_zetels: 3
+  - naam: ChristenUnie-SGP
+    aantal_zetels: 2
+  - naam: Progressief Oudewater
+    aantal_zetels: 1
 contact:
   website: https://www.oudewater.nl
   email: gemeente@oudewater.nl
+  bezoekadres: Kluwen 9, 3421 KW OUDEWATER
+  postadres: Postbus 100, 3420 DC OUDEWATER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kluwen
+    huisnummer: '9'
+    postcode: 3421 KW
+    woonplaats: OUDEWATER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '100'
+    postcode: 3420 DC
+    woonplaats: OUDEWATER
+  - type: Woo-Adres
+    postbus: '100'
+    postcode: 3420 DC
+    woonplaats: Oudewater
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Waardsedijk
+    huisnummer: '219'
+    postcode: 3421 NE
+    ter_attentie_van: Omgevingsloket
+    woonplaats: OUDEWATER
+  phones:
+  - nummer: 14 0348
+    label: algemeen
+  emails:
+  - email: gemeente@oudewater.nl
+    label: algemeen
+  - email: omgevingsloket@woerden.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.oudewater.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30578/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30578/oudewater
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

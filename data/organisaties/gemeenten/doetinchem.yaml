@@ -6,21 +6,151 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0222
   roo_id: '36726'
   wikidata: Q145845
+  owms: http://standaarden.overheid.nl/owms/terms/Doetinchem
+  ictu: '00222'
+  organisatiecode: gm0222
+  rsin: '813585983'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DOI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Doetinchem
   abbr: Doetinchem
   valid_from: '1900-01-01'
+description:
+  text: 'Doetinchem levert een wezenlijke bijdrage aan het leven van bijna 60.000
+    inwoners. Aan de zorg en de kansen van morgen. Aan een leefbare, bereikbare, schone
+    en veilige plek in Nederland. En niet zomaar een plek: we zijn de centrumgemeente
+    van de Achterhoek, een van de allermooiste stukjes Nederland.'
+  url: https://werkenvoordoetinchem.nl/dit-doen-wij/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.doetinchem.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/36726/Gemeente_Doetinchem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doetinchem%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doetinchem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.doetinchem.nl/kadernota-begroting-en-jaarstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://besluitvorming.doetinchem.nl/Vergaderingen/college-van-b-w/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doetinchem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://besluitvorming.doetinchem.nl/vergaderingen/
+  wooVerzoek:
+    url: https://www.doetinchem.nl/woo
+organogram_url: https://werkenvoordoetinchem.nl/dit-doen-wij/
+afspraak:
+  email: gemeente@doetinchem.nl
+  telefoonnummer: (0314) 37 73 77
+  url: https://www.doetinchem.nl/afspraakmaken
+geography:
+  oppervlakte: 79,66
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 79.66
+  aantal_inwoners: 60466
+  inwoners: '759'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 759.0
+  bevat_plaatsen_raw: Doetinchem, Gaanderen, Wehl
+  bevat_plaatsen:
+  - Doetinchem
+  - Gaanderen
+  - Wehl
+council:
+  total_seats: 33
+  parties:
+  - naam: GemeenteBelangen Doetinchem
+    aantal_zetels: 6
+  - naam: PRO
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Partij voor Lokaal Maatwerk
+    aantal_zetels: 2
+  - naam: BBB
+    aantal_zetels: 1
+  - naam: Lokaal Belang Doetinchem
+    aantal_zetels: 1
+  - naam: ChristenUnie-SGP
+    aantal_zetels: 1
 contact:
   website: https://www.doetinchem.nl
   email: gemeente@doetinchem.nl
+  bezoekadres: Raadhuisstraat 2, 7001 EW DOETINCHEM
+  postadres: Postbus 9020, 7000 HA DOETINCHEM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '2'
+    postcode: 7001 EW
+    woonplaats: DOETINCHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9020'
+    postcode: 7000 HA
+    woonplaats: DOETINCHEM
+  - type: Woo-Adres
+    postbus: '9020'
+    postcode: 7000 HA
+    woonplaats: Doetinchem
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '2'
+    postcode: 7001 EW
+    ter_attentie_van: loket bouwen en wonen
+    woonplaats: DOETINCHEM
+  phones:
+  - nummer: (0314) 37 73 77
+    label: algemeen
+  emails:
+  - email: gemeente@doetinchem.nl
+    label: algemeen
+  - email: bouwen&wonen@doetinchem.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.doetinchem.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36726/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36726/doetinchem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +159,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q145845
   retrieved: '2026-05-09'
+roo_start_datum: '1920-01-01'

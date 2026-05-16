@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '58741'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-kcc
+parent_id: org:onderdeel-continue-processen
 names:
 - value: Informatie en facilitaire zaken
   valid_from: '1900-01-01'
@@ -11,9 +11,33 @@ names:
 contact:
   website: http://www.fryslan.nl
   email: provincie@fryslan.nl
+  bezoekadres: Tweebaksmarkt 52 1, 8900 HM Leeuwarden
+  postadres: Postbus 20120, 8900 HM Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tweebaksmarkt 52
+    huisnummer: '1'
+    postcode: 8900 HM
+    woonplaats: Leeuwarden
+  - type: Postadres
+    postbus: '20120'
+    postcode: 8900 HM
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 292 56 55
+    label: algemeen
+  emails:
+  - email: provincie@fryslan.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.fryslan.nl
+    label: algemeen
+  fax: (058) 292 51 25
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2021-12-13'
+last_verified: '2021-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58741/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58741/informatie-en-facilitaire-zaken
+  retrieved: '2026-05-16'

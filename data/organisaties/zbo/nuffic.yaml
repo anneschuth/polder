@@ -3,19 +3,95 @@ type: zbo
 identifiers:
   roo_id: '29225984'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100001
+  kvk: '41150085'
+  btw: NL002877612B01
+  rsin: 002877612
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Nuffic
   valid_from: '1900-01-01'
+description:
+  text: Nuffic helpt scholen en onderwijsinstellingen in binnen- en buitenland om
+    internationale educatie en samenwerking mogelijk te maken. Daarnaast is Nuffic
+    in Nederland verantwoordelijk voor de werkzaamheden van het Nationaal Agentschap
+    Erasmus+ Onderwijs & Training.
+  url: https://www.nuffic.nl/onderwerpen/over-ons/wie-zijn-wij
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 18,19,21,22,23,39,40
+      toelichting: De hierboven vermelde artikelen van de Kaderwet zelfstandige bestuursorganen
+        betreffen onderwerpen waarvoor de Erasmusverordening, de Verordening Europees
+        Solidariteitskorps en het Financieel Regelement van de EU al voorzieningen
+        bevatten. Om die reden zijn deze bepalingen van de toepasselijkheid van de
+        Kaderwet uitgesloten.
+wettelijke_grondslagen:
+- opschrift: Uitvoeringbesluit Uitvoeringswet Erasmusprogramma en programma Europees
+    Solidariteitskorps, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0045493/2021-08-07#Artikel2
+- opschrift: Wet subsidiëring landelijke onderwijsondersteunende activiteiten 2013,
+    artikel 3a
+  referentie: https://wetten.overheid.nl/BWBR0034162/2023-01-01/0#Artikel3a
+taken_en_bevoegdheden: Nuffic is de organisatie die zich in Nederland bezighoudt met
+  het internationaliseren van het onderwijs. Als zbo is Nuffic verantwoordelijk voor
+  het uitvoeren van de taken van het Nationaal Agentschap Erasmus+ Onderwijs & Training.
+organogram_url: https://www.nuffic.nl/over-nuffic/onze-organisatie/organogram
+personnel:
+  aantalFte: 211,8
+  peildatumFte: '2025-06-01'
 contact:
   website: https://www.nuffic.nl/
+  bezoekadres: Kortenaerkade 11, 2518 AX Den Haag
+  postadres: Postbus 29777, 2502 LT Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kortenaerkade
+    huisnummer: '11'
+    postcode: 2518 AX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '29777'
+    postcode: 2502 LT
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 426 02 60
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nuffic.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nuffic.nl/onderwerpen/over-ons/contactgegevens
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Nuffic
+    url: https://www.facebook.com/NufficNL
+  - platform: LinkedIn
+    gebruikersnaam: Nuffic
+    url: https://www.linkedin.com/company/nuffic/
+  - platform: YouTube
+    gebruikersnaam: '@TheNuffic'
+    url: https://www.youtube.com/@TheNuffic
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29225984/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29225984/nuffic
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -24,3 +100,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100001
   retrieved: '2026-05-09'
+roo_start_datum: '2023-12-04'

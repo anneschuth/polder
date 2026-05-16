@@ -3,21 +3,164 @@ type: zbo
 identifiers:
   roo_id: '28212359'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000201
+  kvk: 09212570
+  rsin: '808312327'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: College voor de toelating van gewasbeschermingsmiddelen en biociden
   abbr: Ctgb
   valid_from: '1900-01-01'
+description:
+  text: Het College voor de toelating van gewasbeschermingsmiddelen en biociden (Ctgb)
+    is verantwoordelijk voor de uitvoering van de Wet gewasbeschermingsmiddelen en
+    biociden (Wgb).
+  url: https://www.ctgb.nl/over-ctgb/organisatie
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet gewasbeschermingsmiddelen en biociden, artikel 3
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20gewasbeschermingsmiddelen%20en%20biociden/article=3
+taken_en_bevoegdheden: Het College voor de toelating van gewasbeschermingsmiddelen
+  en biociden oordeelt over de toelating van gewasbeschermingsmiddelen en biociden
+  in Nederland.
+evaluations:
+- datum: '2022-12-05'
+  kamerstuknummer: TK 27858 nr. 601
+  referentie: https://zoek.officielebekendmakingen.nl/kst-27858-601.html
+- datum: '2017-08-29'
+  kamerstuknummer: TK 27858 nr. 399
+  referentie: https://zoek.officielebekendmakingen.nl/kst-27858-399.html
+- datum: '2011-10-13'
+  kamerstuknummer: TK 27585 nr.100
+  referentie: https://zoek.officielebekendmakingen.nl/kst-27858-100.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ctgb.nl/onderwerpen/samenwerken-aan-duurzaam-gebruik/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212359/College_voor_de_toelating_van_gewasbeschermingsmiddelen_en_biociden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.ctgb.nl/over-ctgb/organisatie
+      toelichting: Agende en verslag vergaderingen college
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ctgb.nl/over-ctgb/organisatie/financiele-rapportages
+      toelichting: Werkplan en begroting, de jaarverslagen en de meerjarenstrategie
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.ctgb.nl/over-ctgb/organisatie/bewaken-kwaliteit
+      toelichting: Evaluatie- en auditrapporten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ctgb.nl/onderwerpen/woo
+      toelichting: Alle Wob en Woo verzoeken aan het Ctgb staan hier gepubliceerd
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=c.product-area==%22officielepublicaties%22%20and%20(((w.organisatietype=%22zelfstandig%20bestuursorgaan%22%20and(dt.creator=%22College%20voor%20de%20toelating%20van%20gewasbeschermingsmiddelen%20en%20biociden%22)))and((w.publicatienaam=%22Staatscourant%22))%20)sortby%20dt.available%252fsort.descending&zv=&pg=10
+      toelichting: Alle Ctgb besluiten van algemene strekking worden in de Stgaatcourant
+        gepubliceerd.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22College+voor+de+toelating+van+gewasbeschermingsmiddelen+en+biociden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.ctgb.nl/onderwerpen/woo/indienen-woo-verzoek
+organogram_url: https://www.ctgb.nl/binaries/large/content/gallery/ctgb/content-afbeeldingen/algemeen/organogram-2024-v3-nederlands.jpg
+afspraak:
+  email: post@ctgb.nl
+  url: https://www.ctgb.nl/onderwerpen/woo
+personnel:
+  aantalFte: 153,4
+  peildatumFte: '2023-12-31'
 contact:
   website: http://www.ctgb.nl/
   email: post@ctgb.nl
+  bezoekadres: Bennekomseweg 41, 6717 LL Ede
+  postadres: Postbus 8030, 6710 AA Ede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bennekomseweg
+    huisnummer: '41'
+    postcode: 6717 LL
+    woonplaats: Ede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '8030'
+    postcode: 6710 AA
+    woonplaats: Ede
+  - type: Woo-Adres
+    openbare_ruimte: Bennekomseweg
+    huisnummer: '41'
+    postcode: 6717 LL
+    woonplaats: Ede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '8030'
+    postcode: 6710 AA
+    woonplaats: Ede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (0317) 47 18 10
+    label: algemeen
+  emails:
+  - email: post@ctgb.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ctgb.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ctgb.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Ctgb, College voor de toelating van gewasbeschermingsmiddelen
+      en biociden
+    url: https://www.linkedin.com/company/dutch-board-for-the-authorisation-of-plant-protection-products-and-biocides/
+  - platform: Facebook
+    gebruikersnaam: Ctgb
+    url: https://www.facebook.com/people/Ctgb/100063805910266/
+  - platform: X
+    gebruikersnaam: '@CTGB_NL'
+    url: https://www.x.com/ctgb_nl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212359/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212359/ctgb
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +169,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000201
   retrieved: '2026-05-09'
+roo_start_datum: '2000-01-01'

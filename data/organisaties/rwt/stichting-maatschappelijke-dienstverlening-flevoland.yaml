@@ -2,14 +2,42 @@ id: org:oovb-stichting-maatschappelijke-dienstverlening-flevoland
 type: rwt
 identifiers:
   roo_id: '27913932'
+  kvk: '41023823'
+  rsin: 008567190
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Maatschappelijke Dienstverlening Flevoland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Meenthoek 10, 8224 BS Lelystad
+  postadres: Postbus 1034, 8200 BA Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Meenthoek 10
+    postcode: 8224 BS
+    woonplaats: Lelystad
+  - type: Postadres
+    postbus: '1034'
+    postcode: 8200 BA
+    woonplaats: Lelystad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913932/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913932/stichting-maatschappelijke-dienstverlening-flevoland
+  retrieved: '2026-05-16'

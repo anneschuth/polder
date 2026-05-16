@@ -3,21 +3,120 @@ type: zbo
 identifiers:
   roo_id: '28212533'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000153
+  kvk: '50903349'
+  rsin: '800583863'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Politieacademie
   valid_from: '1900-01-01'
-  valid_until: '2026-12-31'
+description:
+  url: https://www.politieacademie.nl/over-ons/organisatiestructuur
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,15
+wettelijke_grondslagen:
+- opschrift: Politiewet 2012, Artikel 73
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0031788&hoofdstuk=8&paragraaf=1&artikel=73
+taken_en_bevoegdheden: '* Het ondersteunen van de landelijke werving en het uitvoeren
+  van de selectie;* het verzorgen van initieel en post-initieel politieonderwijs (inclusief
+  examinering);* het overdragen van kennis aan de Nederlandse politie en het bijdragen
+  aan de ontwikkeling van de uitoefening van de politietaak, onder meer door het verrichten
+  van onderzoek;* het ontwikkelen en verzorgen van andere opleidingen dan het initieel
+  of post-initieel onderwijs;* Verder kan de Politieacademie marktactiviteiten uitvoeren
+  (zie artikel 3 lid 2 van de Wet op het LSOP), mits die werkzaamheden samenhangen
+  met bovengenoemde taken, niet leiden tot concurrentievervalsing ten opzichte van
+  private aanbieders van vergelijkbare diensten en tegen ten minste kostendekkende
+  prijzen worden verricht.'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: Arbeidsvoorwaarden Sector Politie
+    referentie: https://www.rijksoverheid.nl/documenten/publicaties/2018/11/01/tk-bijlage-arbeidsvoorwaardenakkoord-sector-politie
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.politieacademie.nl/over-ons/contact/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212533/Politieacademie
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.politieacademie.nl/over-ons/wij-zijn-de-politieacademie/feiten-en-cijfers
+  wooVerzoek:
+    url: https://www.politieacademie.nl/over-ons/contact/wet-open-overheid
+organogram_url: https://www.politieacademie.nl/over-ons/organisatiestructuur
+afspraak:
+  url: https://www.politieacademie.nl/over-ons/contact
+personnel:
+  aantalFte: 2,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.politieacademie.nl/
   email: info@politieacademie.nl
+  bezoekadres: Arnhemseweg 348, 7334 AC Apeldoorn
+  postadres: Postbus 834, 7301 BB Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Arnhemseweg
+    huisnummer: '348'
+    postcode: 7334 AC
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '834'
+    postcode: 7301 BB
+    woonplaats: Apeldoorn
+  - type: Woo-Adres
+    postbus: '834'
+    postcode: 7301 BB
+    woonplaats: Apeldoorn
+    land: Nederland
+  phones:
+  - nummer: (088) 662 20 00
+    label: algemeen
+  emails:
+  - email: info@politieacademie.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.politieacademie.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-12-31'
+last_mutation: '2024-10-21'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212533/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212533/politieacademie
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-09'
@@ -26,3 +125,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000153
   retrieved: '2026-05-09'
+roo_start_datum: '1992-01-01'

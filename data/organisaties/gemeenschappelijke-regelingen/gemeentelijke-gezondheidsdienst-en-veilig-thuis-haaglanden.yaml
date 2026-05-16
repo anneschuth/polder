@@ -5,23 +5,108 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0903
   oin: 00000001855322500000
   kvk: '63629216'
+  owms: http://standaarden.overheid.nl/owms/terms/ggdvthl
+  organisatiecode: so0903
+  rsin: '855322500'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling GGD-VT Haaglanden
+  roo_id: '30372532'
 names:
 - value: Gemeentelijke Gezondheidsdienst en Veilig Thuis Haaglanden
   abbr: GR GGD en VT Haaglanden
   valid_from: '1900-01-01'
+description:
+  text: 'Binnen de regio Haaglanden is er een Gemeenschappelijke Regeling (GR) voor
+    de uitvoering van de taken op het gebied van Publieke Gezondheid (GGD Haaglanden)
+    en Huiselijk Geweld en Kindermishandeling (Veilig Thuis Haaglanden). De GR GGD
+    en Veilig Thuis (VT)  Haaglanden bestaat uit de 9 regiogemeenten: Delft, Den Haag,
+    Leidschendam-Voorburg, Midden-Delfland, Pijnacker-Nootdorp, Rijswijk, Wassenaar,
+    Westland en Zoetermeer.Van deze gemeenten vormen de wethouders Zorg het bestuur
+    van de Gemeenschappelijke Regeling. De raad van elke gemeente wijst een lid en
+    een plaatsvervangend lid aan. Gezamenlijk vormen zij het Algemeen Bestuur van
+    de GR GGD en Veilig Thuis Haaglanden.Het Dagelijks Bestuur bestaat uit wethouders
+    van de gemeente Pijnacker-Nootdorp, Delft en Den Haag.De uitvoering van de taken
+    is ondergebracht bij de uitvoeringsorganisatie GGD Haaglanden en uitvoeringsorganisatie
+    Veilig Thuis Haaglanden. Deze uitvoeringsorganisaties zijn onderdeel van de dienst
+    Onderwijs, Cultuur en Welzijn van de gemeente Den Haag.'
+  url: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/woo/24962530/Gemeentelijke_Gezondheidsdienst_en_Veilig_Thuis_Haaglanden
+      overzichtURL: https://organisaties.overheid.nl/woo/24962530/Gemeentelijke_Gezondheidsdienst_en_Veilig_Thuis_Haaglanden
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/vergaderstukken/
+      toelichting: Vergaderstukken algemeen bestuur GR GGD - VT Haaglanden.
+  wooVerzoek:
+    url: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/
+afspraak:
+  email: GR-GGD-VT@denhaag.nl
+  url: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/
 contact:
   website: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/
   email: GR-GGD-VT@denhaag.nl
+  bezoekadres: Westeinde 128, 2512 HE Den Haag
+  postadres: Postbus 16130, 2500 BC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westeinde
+    huisnummer: '128'
+    postcode: 2512 HE
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16130'
+    postcode: 2500 BC
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Westeinde
+    huisnummer: '128'
+    postbus: '16130'
+    postcode: 2512 HE
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 346 97 17
+    label: Veilig Thuis Haaglanden
+  - nummer: (0800) 20 00
+    label: Veilig Thuis (landelijk)
+  - nummer: (088) 355 01 00
+    label: GGD Haaglanden
+  emails:
+  - email: GR-GGD-VT@denhaag.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdhaaglanden.nl/over-ggd-haaglanden/bestuur/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962530/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962530/gemeentelijke-gezondheidsdienst-en-veilig-thuis-haaglanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2018-01-01'

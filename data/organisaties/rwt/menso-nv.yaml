@@ -1,15 +1,44 @@
 id: org:oovb-menso-nv
 type: rwt
+subname: Menso
 identifiers:
   roo_id: '28347194'
+  kvk: '69309221'
+  rsin: '857826591'
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Menso N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Abel Tasmanstraat 7, 7821 AN Emmen
+  postadres: Abel Tasmanstraat 7, 7821 AN Emmen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Abel Tasmanstraat 7
+    postcode: 7821 AN
+    woonplaats: Emmen
+  - type: Postadres
+    openbare_ruimte: Abel Tasmanstraat 7
+    postcode: 7821 AN
+    woonplaats: Emmen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347194/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347194/menso-nv
+  retrieved: '2026-05-16'

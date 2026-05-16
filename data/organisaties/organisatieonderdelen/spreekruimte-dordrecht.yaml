@@ -7,9 +7,20 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Spreekruimte Dordrecht
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Steegoversloot 36, 3311 PP Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Steegoversloot
+    huisnummer: '36'
+    postcode: 3311 PP
+    woonplaats: Dordrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132414/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132414/spreekruimte-dordrecht
+  retrieved: '2026-05-16'

@@ -6,22 +6,117 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv23
   roo_id: '16771'
   wikidata: Q773
+  owms: http://standaarden.overheid.nl/owms/terms/Overijssel
+  ictu: '04211'
+  rsin: 001900328
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_OVER
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Overijssel
   abbr: OV
   valid_from: '1900-01-01'
-  valid_until: '2025-04-06'
+description:
+  text: Missie van de provincie Overijssel:De provincie Overijssel is een middenbestuur
+    dat vernieuwt, inspireert en initiatief neemt. Dat met respect voor traditie vooruit
+    kijkt en investeert in grote, vernieuwende projecten op regionale schaal.Zonodig
+    als regisseur, smeden we coalities met tal van partners om resultaten te boeken
+    voor de inwoners van Overijssel. Ons doel is dat iedereen hier gezond en plezierig
+    kan wonen, werken en recreëren. In een omgeving met balans tussen rust, ruimte
+    én dynamiek.We laten zien dat de provincie er toe doet. Dat we het verschil durven
+    maken. We pakken door, maken keuzes en nemen risico’s. Dit alles met oog voor
+    de verschillen die er zijn, die Overijssel juist aantrekkelijk en veelzijdig maken.https://www.overijssel.nl/over-overijssel/informatie-over-overijssel
+  url: https://www.overijssel.nl/over-overijssel/informatie-over-overijssel/organisatieonderdelen
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://regelen.overijssel.nl/Producten_en_diensten/Bezwaar_klacht_informatie_schade/Woo_verzoek_verzoek_om_informatie_openbaar_te_maken_voor_iedereen
+      overzichtURL: https://organisaties.overheid.nl/woo/16771/Provincie_Overijssel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.overijssel.nl/bestuur/provinciale-staten
+      toelichting: Agenda en besluiten Provinciale Staten Overijssel
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Overijssel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Overijssel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Overijssel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://destaatvan.overijssel.nl/
+      toelichting: Jaarverslagen P&C cyclus
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.overijssel.nl/loket/gepubliceerde-beslissingen-woo-verzoeken/
+  wooVerzoek:
+    url: https://regelen.overijssel.nl/Producten_en_diensten/Bezwaar_klacht_informatie_schade/Woo_verzoek_verzoek_om_informatie_openbaar_te_maken_voor_iedereen
+organogram_url: https://www.overijssel.nl/over-overijssel/informatie-over-overijssel/organisatieonderdelen
+afspraak:
+  email: overijsselloket@overijssel.nl
+  telefoonnummer: (038) 499 88 99
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  - type: Woo-Adres
+    toelichting: Gebouw aan de linkerzijde is Gedeputeerde Staten
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postbus: '10078'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  phones:
+  - nummer: (038) 499 88 99
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-04-06'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16771/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16771/ov
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

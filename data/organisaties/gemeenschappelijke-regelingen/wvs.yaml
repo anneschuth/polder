@@ -1,19 +1,124 @@
 id: org:gr-wvs
 type: gemeenschappelijke-regeling
+subname: Werkvoorzieningsschap West Noord-Brabant
 identifiers:
   roo_id: '26122536'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0284
+  owms: http://standaarden.overheid.nl/owms/terms/wvsg
+  kvk: '20160803'
+  organisatiecode: so0284
+  rsin: 001522784
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling WVS
+  roo_id: '29502107'
 names:
 - value: WVS
   valid_from: '1900-01-01'
+description:
+  text: WVS is het werkontwikkelbedrijf van 9 West-Brabantse gemeenten. Wij geloven
+    in mensen en vinden dat iedereen moet kunnen meedoen in werk en in het leven.
+    Daarom bieden wij werkzoekenden met een ondersteuningsvraag in onze regio een
+    duurzaam arbeidsvangnet of een stevige opstap naar passend werk.
+  url: https://www.wvs.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wvs.nl/?s=woo
+      overzichtURL: https://organisaties.overheid.nl/woo/26122536/WVS
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wvs.nl/jaarverslag-2021/
+      toelichting: Jaarverslag 2021
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wvs.nl/jaarverslag-2019/
+      toelichting: Jaarverslag 2019
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wvs.nl/jaarverslag-2020/
+      toelichting: Jaarverslag 2020
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wvs.nl/jaarverslag/jaarverslag-2022
+      toelichting: Jaarverslag 2022
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wvs.nl/jaarverslag-2023-50-jaar-wvs
+      toelichting: Jaarverslag 2023
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22WVS-groep%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22WVS-groep%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.wvs.nl/woo/
+organogram_url: https://www.wvs.nl/wp-content/uploads/2024/04/WVS-Organigram-2024.pdf
+afspraak:
+  email: info@wvs.nl
+  telefoonnummer: (088) 031 20 00
 contact:
   website: https://www.wvs.nl/
   email: info@wvs.nl
+  bezoekadres: Bosstraat 81, 4704 RL Roosendaal
+  postadres: Postbus 1130, 4700 BC Roosendaal
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bosstraat
+    huisnummer: '81'
+    postcode: 4704 RL
+    woonplaats: Roosendaal
+  - type: Postadres
+    postbus: '1130'
+    postcode: 4700 BC
+    woonplaats: Roosendaal
+  - type: Woo-Adres
+    openbare_ruimte: Bosstraat
+    huisnummer: '81'
+    postcode: 4704 RL
+    woonplaats: Roosendaal
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (088) 031 20 00
+    label: algemeen
+  emails:
+  - email: info@wvs.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wvs.nl/
+    label: algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: WVS
+    url: https://www.facebook.com/WVSnl
+  - platform: Instagram
+    gebruikersnaam: WVS
+    url: https://www.instagram.com/wvsnl
+  - platform: YouTube
+    gebruikersnaam: WVS-YouTube
+    url: https://www.youtube.com/@WVSnl
+  - platform: LinkedIn
+    gebruikersnaam: WVS
+    url: https://www.linkedin.com/company/wvsnl
+  - platform: X
+    gebruikersnaam: WVS
+    url: https://x.com/wvsnl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-20'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26122536/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26122536/wvs
+  retrieved: '2026-05-16'
+roo_start_datum: '1974-01-01'

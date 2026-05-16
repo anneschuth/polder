@@ -2,14 +2,42 @@ id: org:stichting-tki-groene-chemie-en-circulariteit
 type: rwt
 identifiers:
   roo_id: '27917091'
+  kvk: '61187550'
+  rsin: '854245595'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Stichting TKI Groene Chemie & Circulariteit
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Laan van Nieuw-Oost-Indie 300, 2593 CE Den Haag
+  postadres: Postbus 93460, 2509 AL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Laan van Nieuw-Oost-Indie 300
+    postcode: 2593 CE
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '93460'
+    postcode: 2509 AL
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917091/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917091/stichting-tki-groene-chemie-en-circulariteit
+  retrieved: '2026-05-16'

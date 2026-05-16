@@ -7,12 +7,40 @@ parent_id: org:koepel-unie-van-waterschappen
 names:
 - value: Directie
   valid_from: '1900-01-01'
+description:
+  text: De directie heeft de leiding over de ambtelijke provinciale organisatie.
 contact:
   email: overijsselloket@overijssel.nl
   website: https://www.overijssel.nl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '40'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93218'
+    postcode: 2509 AE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 351 98 10
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  fax: (070) 888 12 80
+  bezoekadres: Koningskade 40, 2596 AA Den Haag
+  postadres: Postbus 93218, 2509 AE Den Haag
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
+  - url: https://www.overijssel.nl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-03-05'
+last_verified: '2026-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21230/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21230/directie
+  retrieved: '2026-05-16'

@@ -1,16 +1,45 @@
 id: org:oovb-stichting-openbare-bibliotheek-menterwolde-pekela-veendam
 type: rwt
+subname: Bibliotheek Veendam
 identifiers:
   roo_id: '27914994'
+  kvk: 02094272
+  rsin: '819464351'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Openbare Bibliotheek Menterwolde-Pekela-Veendam
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Museumplein 5-E, 9641 AD Veendam
+  postadres: Postbus 2503, 9704 CM Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Museumplein 5-E
+    postcode: 9641 AD
+    woonplaats: Veendam
+  - type: Postadres
+    postbus: '2503'
+    postcode: 9704 CM
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-28'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914994/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914994/stichting-openbare-bibliotheek-menterwolde-pekela-veendam
+  retrieved: '2026-05-16'

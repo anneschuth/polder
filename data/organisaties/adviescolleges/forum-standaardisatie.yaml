@@ -3,17 +3,92 @@ type: adviescollege
 identifiers:
   roo_id: '28200239'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12348
+  owms: http://standaarden.overheid.nl/owms/terms/forumstand
+  organisatiecode: oorg12348
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Forum Standaardisatie
   valid_from: '1900-01-01'
+description:
+  text: Het Forum Standaardisatie adviseert de publieke sector over het gebruik van
+    standaarden (afspraken over informatie en processen) binnen de ICT. Dit om te
+    bevorderen dat computersystemen gegevens uitwisselen volgens vaste afspraken en
+    processen, zodat systeemfouten, systeemmisbruik en het verkeerd overnemen van
+    data kunnen worden voorkomen. De voornaamste taken van het Forum zijn het toetsen
+    van open standaarden en deze voorschrijven aan publieke organisaties, om zo de
+    samenwerking tussen burgers, de overheid en bedrijven te verbeteren.Het Forum
+    is een extern adviesorgaan waarop de Kaderwet adviescolleges niet van toepassing
+    is, daarom is het Forum geen formeel adviescollege.
+  url: https://www.forumstandaardisatie.nl/over-ons
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Forum Standaardisatie 2026, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0052374/2026-03-03/0#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.forumstandaardisatie.nl
   email: info@forumstandaardisatie.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 96810, 2509 JE Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Beatrixpark
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '96810'
+    postcode: 2509 JE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 888 77 76
+    label: algemeen
+  emails:
+  - email: info@forumstandaardisatie.nl
+    label: secretariaat
+  internet_addresses:
+  - url: https://www.forumstandaardisatie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.forumstandaardisatie.nl/contactgegevens/formulier
+    label: Algemeen
+  social_media:
+  - platform: Mastodon
+    gebruikersnaam: '@forumstandaardisatie'
+    url: https://social.overheid.nl/@forumstandaardisatie
+  - platform: LinkedIn
+    gebruikersnaam: forum-standaardisatie
+    url: https://www.linkedin.com/company/forum-standaardisatie
+  - platform: YouTube
+    gebruikersnaam: '@forum-standaardisatie'
+    url: https://www.youtube.com/channel/UCQcWtUxh8IYQ7cwkYfeLNWw
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28200239/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28200239/forum-standaardisatie
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-04-09'

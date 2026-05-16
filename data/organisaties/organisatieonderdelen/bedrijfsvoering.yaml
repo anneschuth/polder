@@ -3,16 +3,42 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111736'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Bedrijfsvoering
   valid_from: '1900-01-01'
 contact:
   website: https://www.overijssel.nl
   email: bvsecretariaat@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+    regio: OV
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  phones:
+  - nummer: (038) 499 95 00
+    label: algemeen
+  emails:
+  - email: bvsecretariaat@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: null
+valid_until: '2021-01-01'
+last_mutation: '2026-04-23'
+last_verified: '2026-04-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111736/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111736/bedrijfsvoering
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-11-01'

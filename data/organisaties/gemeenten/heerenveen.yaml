@@ -6,21 +6,160 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0074
   roo_id: '31453'
   wikidata: Q574558
+  owms: http://standaarden.overheid.nl/owms/terms/Heerenveen_(gemeente)
+  ictu: '00074'
+  organisatiecode: gm0074
+  rsin: '823765908'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HRV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Heerenveen
   abbr: Heerenveen
   valid_from: '1900-01-01'
+description:
+  url: https://www.heerenveen.nl/over-de-gemeente/organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.heerenveen.nl/gemeentebestuur/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/31453/Gemeente_Heerenveen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heerenveen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heerenveen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heerenveen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.e-inwoner.nl/prod/fr/Heerenveen/Verzoek_Wet_open_overheid_CK/new.digid
+afspraak:
+  telefoonnummer: 14 0513
+  url: https://www.heerenveen.nl/afspraak-maken/
+geography:
+  oppervlakte: 140,16
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 140.16
+  aantal_inwoners: 51955
+  inwoners: '370'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 370.0
+  bevat_plaatsen_raw: Akkrum, Aldeboarn, Bontebok, De Knipe, Gersloot, Haskerdijken,
+    Heerenveen, Hoornsterzwaag, Jubbega, Katlijk, Luinjeberd, Mildam, Nes Gem Heerenveen,
+    Nieuwebrug, Nieuwehorne, Nieuweschoot, Oranjewoud, Oudehorne, Oudeschoot, Terband,
+    Tjalleberd
+  bevat_plaatsen:
+  - Akkrum
+  - Aldeboarn
+  - Bontebok
+  - De Knipe
+  - Gersloot
+  - Haskerdijken
+  - Heerenveen
+  - Hoornsterzwaag
+  - Jubbega
+  - Katlijk
+  - Luinjeberd
+  - Mildam
+  - Nes Gem Heerenveen
+  - Nieuwebrug
+  - Nieuwehorne
+  - Nieuweschoot
+  - Oranjewoud
+  - Oudehorne
+  - Oudeschoot
+  - Terband
+  - Tjalleberd
+council:
+  total_seats: 31
+  parties:
+  - naam: Heerenveen Lokaal
+    aantal_zetels: 6
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: FNP
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Frisse Wind 21
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.heerenveen.nl
   email: gemeente@heerenveen.nl
+  bezoekadres: Crackstraat 2, 8441 ES HEERENVEEN
+  postadres: Postbus 15000, 8440 GA HEERENVEEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Crackstraat
+    huisnummer: '2'
+    postcode: 8441 ES
+    woonplaats: HEERENVEEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '15000'
+    postcode: 8440 GA
+    woonplaats: HEERENVEEN
+  - type: Woo-Adres
+    postbus: '15000'
+    postcode: 8440 ga
+    woonplaats: Heerenveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Crackstraat
+    huisnummer: '2'
+    postcode: 8441 ES
+    woonplaats: HEERENVEEN
+  phones:
+  - nummer: 14 0513
+    label: algemeen
+  emails:
+  - email: gemeente@heerenveen.nl
+    label: algemeen
+  - email: vergunningen@heerenveen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.heerenveen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31453/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31453/heerenveen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +168,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q574558
   retrieved: '2026-05-09'
+roo_start_datum: '1934-07-01'

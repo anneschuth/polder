@@ -6,21 +6,161 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0294
   roo_id: '26666'
   wikidata: Q72974
+  owms: http://standaarden.overheid.nl/owms/terms/Winterswijk_(gemeente)
+  ictu: 00294
+  organisatiecode: gm0294
+  rsin: 001974658
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WTW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Winterswijk
   abbr: Winterswijk
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeente Winterswijk telt bijna 29.000 inwoners. Het levendige centrum,
+    het prachtige buitengebied en de vele voorzieningen maken Winterswijk tot een
+    aantrekkelijke plaats. Samen met onze betrokken inwoners, bedrijven en instellingen
+    werken wij voortdurend aan een optimale leefbaarheid en goed bereikbare voorzieningen.
+    In een vitaal Winterswijk blijft het ook in de toekomst prettig wonen, werken,
+    ondernemen en recreëren. Kortom: Winterswijk heeft veel te bieden.'
+  url: https://www.winterswijk.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.winterswijk.nl/informatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/26666/Gemeente_Winterswijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Winterswijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Winterswijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Winterswijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://winterswijkpc.begrotingsapp.nl/
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://winterswijk.bestuurlijkeinformatie.nl/Reports/Details/e3d9dae4-45f3-44cd-9320-8c4a59814d7f
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://winterswijk.bestuurlijkeinformatie.nl
+  wooVerzoek:
+    url: https://www.winterswijk.nl/informatie-opvragen-woo-verzoek
+organogram_url: https://www.winterswijk.nl/organogram
+afspraak:
+  email: gemeente@winterswijk.nl
+  telefoonnummer: (0543) 54 35 43
+  url: https://www.winterswijk.nl/gemeentekantoor
+geography:
+  oppervlakte: 138,25
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 138.25
+  aantal_inwoners: 29289
+  inwoners: '211'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 211.0
+  bevat_plaatsen_raw: Winterswijk, Winterswijk Brinkheurne, Winterswijk Corle, Winterswijk
+    Henxel, Winterswijk Huppel, Winterswijk Kotten, Winterswijk Meddo, Winterswijk
+    Miste, Winterswijk Ratum, Winterswijk Woold
+  bevat_plaatsen:
+  - Winterswijk
+  - Winterswijk Brinkheurne
+  - Winterswijk Corle
+  - Winterswijk Henxel
+  - Winterswijk Huppel
+  - Winterswijk Kotten
+  - Winterswijk Meddo
+  - Winterswijk Miste
+  - Winterswijk Ratum
+  - Winterswijk Woold
+council:
+  total_seats: 21
+  parties:
+  - naam: Voor Winterswijk
+    aantal_zetels: 6
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Samen Winterswijk
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Daadkracht.nu
+    aantal_zetels: 1
+  - naam: Lijst 8
+    aantal_zetels: 1
 contact:
   website: https://www.winterswijk.nl
   email: gemeente@winterswijk.nl
+  bezoekadres: Stationsstraat 25, 7101 GH WINTERSWIJK
+  postadres: Postbus 101, 7100 AC WINTERSWIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsstraat
+    huisnummer: '25'
+    postcode: 7101 GH
+    woonplaats: WINTERSWIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '101'
+    postcode: 7100 AC
+    woonplaats: WINTERSWIJK
+  - type: Woo-Adres
+    postbus: '101'
+    postcode: 7100 AC
+    woonplaats: Winterswijk
+    regio: Achterhoek
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stationsstraat
+    huisnummer: '25'
+    postcode: 7101 GH
+    woonplaats: WINTERSWIJK
+  phones:
+  - nummer: (0543) 54 35 43
+    label: algemeen
+  emails:
+  - email: gemeente@winterswijk.nl
+    label: algemeen
+  - email: omgeving@winterswijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.winterswijk.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.winterswijk.nl/gemeentekantoor
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-22'
+last_verified: '2026-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26666/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26666/winterswijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

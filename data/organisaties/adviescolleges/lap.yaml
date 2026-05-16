@@ -1,21 +1,69 @@
 id: org:commissie-lap
 type: adviescollege
+subname: Landelijke Adviescommissie Plaatsing
 identifiers:
   roo_id: '28355931'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10134
+  owms: http://standaarden.overheid.nl/owms/terms/acpltslngforzrg
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Landelijke Adviescommissie Plaatsing Langdurige Forensisch Psychiatrische
     Zorg
   abbr: LAP
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit Landelijke adviescommissie plaatsing
+    longstay forensische zorg
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0031541&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.landelijkeadviescommissieplaatsing.nl/
   email: lap@avt.minjus.nl
+  postadres: Postbus 24019, 3502 MA Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '24019'
+    postcode: 3502 MA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 071 39 00
+    label: algemeen
+  emails:
+  - email: lap@avt.minjus.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.landelijkeadviescommissieplaatsing.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.landelijkeadviescommissieplaatsing.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355931/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355931/lap
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-05-10'

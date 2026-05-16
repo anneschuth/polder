@@ -4,22 +4,69 @@ identifiers:
   roo_id: '28391631'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10196
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Commissie voor de milieueffectrapportage
   abbr: Commissie m.e.r.
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2.17 van de Wet milieubeheer
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0003245&hoofdstuk=2&paragraaf=2.2&artikel=2.17&z=2021-01-01&g=2021-01-01
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.commissiemer.nl/
   email: info@commissiemer.nl
+  bezoekadres: Arthur van Schendelstraat 760, 3511 MK Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Arthur van Schendelstraat
+    huisnummer: '760'
+    postcode: 3511 MK
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (030) 234 76 66
+    label: algemeen
+  emails:
+  - email: info@commissiemer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.commissiemer.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.commissiemer.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391631/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391631/commissie-voor-de-milieueffectrapportage
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
   fields:
   - rwt-status
+roo_start_datum: '1994-01-01'

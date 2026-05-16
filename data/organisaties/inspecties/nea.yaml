@@ -3,18 +3,147 @@ type: inspectie
 identifiers:
   roo_id: '28251525'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000164
+  owms: http://standaarden.overheid.nl/owms/terms/Nederlandse_Emissieautoriteit
 classification: inspectie
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Klimaat en Groene Groei
+  roo_id: '29481996'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
+  owms: http://standaarden.overheid.nl/owms/terms/minklgrgr
 names:
 - value: Nederlandse Emissieautoriteit
   abbr: NEa
   valid_from: '1900-01-01'
+description:
+  text: De Nederlandse Emissieautoriteit (NEa) is de onafhankelijke nationale autoriteit
+    voor uitvoering van en toezicht op marktinstrumenten die bijdragen aan een klimaatneutrale
+    samenleving. De NEa is een zogenaamd klein zelfstandig bestuursorgaan (zbo). Dat
+    betekent dat het bestuur een zbo is, terwijl de werkorganisatie een agentschap
+    van het Ministerie van Economische Zaken en Klimaat (EZK) is. De belangrijkste
+    opdrachtgevers van de organisatie zijn de ministeries van EZK, Infrastructuur
+    en Waterstaat (IenW) en Financiën (MinFin). De NEa is gevestigd in Den Haag en
+    telt ruim 140 medewerkers.
+  url: https://www.emissieautoriteit.nl/onderwerpen/taken-en-uitvoering
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '18'
+      toelichting: '[Artikel 2.9 Wet milieubeheer](http://wetten.overheid.nl/jci1.3:c:BWBR0003245&hoofdstuk=2&paragraaf=2.1&artikel=2.9&z=2017-05-16&g=2017-05-16)'
+wettelijke_grondslagen:
+- opschrift: Implementatiewet EG-richtlijn handel in broeikasgasemissierechten
+  referentie: http://wetten.overheid.nl/BWBR0017265
+- opschrift: Richtlijn nr. 2003/87/EG van het Europees Parlement en de Raad van de
+    Europese Unie van 13-10-2003
+  referentie: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2003:275:0032:0046:nl:PDF
+taken_en_bevoegdheden: Ondersteunt de uitvoering van de emissiehandel (broeikasgassen)
+  en toetst als onafhankelijk toezichthouder de naleving van de regels omtrent broeikasgassen.
+evaluations:
+- datum: '2023-02-02'
+  kamerstuknummer: 25268 nr. 214
+  referentie: https://zoek.officielebekendmakingen.nl/blg-1085495.pdf
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.emissieautoriteit.nl/onderwerpen/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28251525/Nederlandse_Emissieautoriteit
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.emissieautoriteit.nl/publicaties/organisatie
+      toelichting: Een agentschap heeft een afzonderlijke financiële staat die wordt
+        opgenomen bij de begrotings- en verantwoordingsstaat van het ministerie waaronder
+        het agentschap ressporteert.  https://www.rijksfinancien.nl
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.emissieautoriteit.nl/publicaties/woo
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nederlandse+Emissieautoriteit%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.emissieautoriteit.nl/onderwerpen/wet-open-overheid-woo
+organogram_url: https://www.emissieautoriteit.nl/over-de-nea/onze-organisatie
+afspraak:
+  email: secretariaat@emissieautoriteit.nl
+  telefoonnummer: (070) 456 80 50
+  url: https://www.emissieautoriteit.nl/contact
+personnel:
+  aantalFte: 1,2
+  peildatumFte: '2025-03-11'
+  toelichtingFte: Enkel fte bestuur
 contact:
   website: https://www.emissieautoriteit.nl
   email: secretariaat@emissieautoriteit.nl
+  bezoekadres: Koningskade 4, 2596 AA Den Haag
+  postadres: Postbus 91503, 2509 EC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '4'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '91503'
+    postcode: 2509 EC
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '91503'
+    postcode: 2509 EC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 456 80 50
+    label: algemeen
+  emails:
+  - email: secretariaat@emissieautoriteit.nl
+    label: algemeen
+  - email: info@emissieautoriteit.nl
+    label: helpdesk
+  internet_addresses:
+  - url: https://www.emissieautoriteit.nl
+    label: algemeen
+  - url: https://formulier.emissieautoriteit.nl/nea/contactformulier
+    label: contactformulier
+  contact_forms:
+  - url: https://www.emissieautoriteit.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nederlandse Emissieautoriteit
+    url: https://www.linkedin.com/company/nederlandse-emissieautoriteit
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28251525/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28251525/nea
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-01-01'

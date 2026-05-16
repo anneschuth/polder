@@ -1,19 +1,131 @@
 id: org:gr-gemeenschappelijke-regeling-wihw
 type: gemeenschappelijke-regeling
 identifiers:
-  roo_id: '28261975'
+  roo_id: '28261965'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0274
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling WIHW
+  roo_id: '28261965'
 names:
+- value: Gemeenschappelijke Regeling WIHW
+  valid_from: '2016-01-01'
+  valid_until: '2019-01-01'
 - value: gemeenschappelijke regeling WIHW
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+gr_meta:
+  citeertitel: Gemeenschappelijke regeling WIHW
+  doel: De regeling is getroffen voor gemeenschappelijke behartiging van de belangen
+    van de deelnemersin het kader van het streven naar een zo hoog mogelijke arbeidsparticipatie
+    van de inwoners vande gemeenten waartoe de deelnemers behoren en, indien nodig,
+    het verstrekken van uitkeringenaan deze doelgroep voor de kosten van levensonderhoud.
+  samenwerkingsvorm:
+    value: Openbaar lichaam
+    afkorting: OL
+  bevoegdheidsverkrijgingen:
+  - Delegatie
+  - Mandaat
+  regionaal_samenwerkingsorgaan:
+    naam: gemeenschappelijke regeling WIHW
+    roo_id: '28261975'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  bronhouder:
+    naam: gemeenschappelijke regeling WIHW
+    roo_id: '28261975'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Gemeente Binnenmaas
+    roo_id: '30982'
+    owms: http://standaarden.overheid.nl/owms/terms/Binnenmaas
+    toetredings_datum: '2001-04-13'
+    bestuursorganen:
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  - naam: Gemeente Cromstrijen
+    roo_id: '24529'
+    owms: http://standaarden.overheid.nl/owms/terms/Cromstrijen
+    toetredings_datum: '2001-04-13'
+    bestuursorganen:
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  - naam: Gemeente Korendijk
+    roo_id: '23784'
+    owms: http://standaarden.overheid.nl/owms/terms/Korendijk
+    toetredings_datum: '2001-04-13'
+    bestuursorganen:
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  - naam: Gemeente Oud-Beijerland
+    roo_id: '34946'
+    owms: http://standaarden.overheid.nl/owms/terms/Oud-Beijerland_(gemeente)
+    toetredings_datum: '2001-04-13'
+    bestuursorganen:
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  - naam: Gemeente Strijen
+    roo_id: '22905'
+    owms: http://standaarden.overheid.nl/owms/terms/Strijen_(gemeente)
+    toetredings_datum: '2001-04-13'
+    bestuursorganen:
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  instellingsbesluiten:
+  - https://zoek.officielebekendmakingen.nl/stcrt-2015-49056.pdf
+  wettelijke_grondslagen:
+  - opschrift: Wet gemeenschappelijke regelingen
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0003740
+  bevoegdheden:
+  - kop_artikel: Artikel 5 Overdracht van bevoegdheden
+    inhoud_artikel: 1. Voor zover hiervan in deze regeling niet is afgeweken, komen
+      aan de bestuursorganen van de regeling ter uitvoering van de in artikel 4 genoemde
+      taken de bevoegdheden van het dagelijks bestuur in de plaats van het college
+      van burgemeester en wethouders en de voorzitter in de plaats van de burgemeester.2.
+      Waar in deze regeling artikelen van de wet, de Gemeentewet, de in artikel 4
+      genoemde wetten en regelingen of enige andere wet van overeenkomstige toepassing
+      worden verklaard, wordt in de artikelen voor de Gemeentewet, het college van
+      burgemeester en wethouders en de burgemeester onderscheidenlijk gelezen het
+      algemeen bestuur, het dagelijks bestuur en de voorzitter.
+  datum_inwerkingtreding: '2016-01-01'
+  datum_uitwerkingtreding: '2019-01-01'
+  previous_version:
+    roo_id: '24964361'
+    naam: Gemeenschappelijke regeling WHW-bedrijven
 contact:
   website: http://www.whwbedrijven.nl
   email: info@whw.nl
-valid_from: '1900-01-01'
+  bezoekadres: Jan van der Heijdenstraat 11, 3261 LE Oud-Beijerland
+  postadres: Postbus 1522, 3260 BA Oud-Beijerland
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jan van der Heijdenstraat
+    huisnummer: '11'
+    postcode: 3261 LE
+    woonplaats: Oud-Beijerland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1522'
+    postcode: 3260 BA
+    woonplaats: Oud-Beijerland
+  phones:
+  - nummer: (0186) 64 10 55
+    label: algemeen
+  emails:
+  - email: info@whw.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.whwbedrijven.nl
+    label: algemeen
+valid_from: '2016-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2022-02-01'
+last_verified: '2022-02-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28261975/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28261965/gemeenschappelijke-regeling-wihw
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-04-13'

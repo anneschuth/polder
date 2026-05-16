@@ -2,19 +2,58 @@ id: org:gr-dsw
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965416'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '27379734'
+  organisatiecode: so0273
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Dienst Sociale Werkvoorziening Rijswijk en Omstreken
+  roo_id: '24965411'
 names:
 - value: Dienst Sociale Werkvoorziening Rijswijk e.o.
   abbr: DSW
   valid_from: '1900-01-01'
   valid_until: '2020-12-31'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.dswrijswijk.nl
   email: info@dswrijswijk.nl
+  bezoekadres: Edelgasstraat 250, 2718 TC Zoetermeer
+  postadres: Postbus 586, 2700 AN Zoetermeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Edelgasstraat
+    huisnummer: '250'
+    postcode: 2718 TC
+    woonplaats: Zoetermeer
+  - type: Postadres
+    postbus: '586'
+    postcode: 2700 AN
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (079) 363 34 00
+    label: algemeen
+  emails:
+  - email: info@dswrijswijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dswrijswijk.nl
+    label: algemeen
+  fax: (079) 363 34 99
 valid_from: '1900-01-01'
 valid_until: '2020-12-31'
+last_mutation: '2019-04-15'
+last_verified: '2021-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965416/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965416/dsw
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-01'

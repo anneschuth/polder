@@ -9,9 +9,28 @@ names:
   abbr: UTR
   valid_from: '1900-01-01'
   valid_until: '2020-04-28'
+description:
+  text: 'Taak:'
+contact:
+  bezoekadres: Herman Gorterstraat 5, 3511 EW UTRECHT
+  postadres: Postbus 18280, 3501 CG UTRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herman Gorterstraat 5
+    postcode: 3511 EW
+    woonplaats: UTRECHT
+  - type: Postadres
+    postbus: '18280'
+    postcode: 3501 CG
+    woonplaats: UTRECHT
+  phones:
+  - nummer: (070) 342 87 64
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-04-28'
+last_mutation: '2020-08-06'
+last_verified: '2020-08-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71441/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71441/utr
+  retrieved: '2026-05-16'

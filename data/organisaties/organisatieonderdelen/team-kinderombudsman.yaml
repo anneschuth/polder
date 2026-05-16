@@ -3,17 +3,59 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28468614'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-wio
+parent_id: org:hoge-college-nationale-ombudsman
 names:
 - value: Team Kinderombudsman
   valid_from: '1900-01-01'
   valid_until: '2023-09-30'
+description:
+  text: Het team Kinderombudsman helpt kinderen en jongeren tot 18 jaar om voor hun
+    rechten op te komen bijvoorbeeld door het geven van advies of het starten van
+    een onderzoek. En als het team Kinderombudsman  zelf ziet dat er in Nederland
+    iets misgaat op het gebied van kinderrechten, dan komt het team ook in actie.
+    Bijvoorbeeld door gevraagd en ongevraagd advies te geven aan politici en te laten
+    zien hoe wetten en regels kunnen worden gebruikt om kinderen en jongeren beter
+    te beschermen.
 contact:
   website: http://www.dekinderombudsman.nl
   email: ombudswerk@dekinderombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Antwoordnummer 10870, 2501 WB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '151'
+    postcode: 2594 AG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Antwoordnummer 10870
+    postcode: 2501 WB
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 356 36 52
+    label: algemeen
+  - nummer: (0800) 876 54 32
+    label: voor vragen en advies
+  emails:
+  - email: ombudswerk@dekinderombudsman.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.dekinderombudsman.nl
+    label: algemeen
+  beschrijving: Het team Kinderombudsman helpt kinderen en jongeren tot 18 jaar om
+    voor hun rechten op te komen bijvoorbeeld door het geven van advies of het starten
+    van een onderzoek. En als het team Kinderombudsman zelf ziet dat er in Nederland
+    iets misgaat op het gebied van kinderrechten, dan komt het team ook in actie.
+    Bijvoorbeeld door gevraagd en ongevraagd advies te geven aan politici en te laten
+    zien hoe wetten en regels kunnen worden gebruikt om kinderen en jongeren beter
+    te beschermen.
 valid_from: '1900-01-01'
 valid_until: '2023-09-30'
+last_mutation: '2023-09-28'
+last_verified: '2023-09-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28468614/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28468614/team-kinderombudsman
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-04-01'

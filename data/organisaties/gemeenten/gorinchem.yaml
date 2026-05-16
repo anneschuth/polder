@@ -6,21 +6,141 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0512
   roo_id: '30894'
   wikidata: Q244327
+  owms: http://standaarden.overheid.nl/owms/terms/Gorinchem_(gemeente)
+  ictu: '00512'
+  organisatiecode: gm0512
+  rsin: 001962577
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GOR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Gorinchem
   abbr: Gorinchem
   valid_from: '1900-01-01'
+description:
+  url: https://www.gorinchem.nl/bestuur-organisatie/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gorinchem.nl/bestuur-organisatie/woo-verzoek#:~:text=De%20Wet%20openbaarheid%20van%20bestuur,het%20handelen%20van%20de%20gemeente.
+      overzichtURL: https://organisaties.overheid.nl/woo/30894/Gemeente_Gorinchem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gorinchem%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gorinchem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gorinchem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.gorinchem.nl/bestuur-organisatie/gemeenteraad/agenda-en-stukken
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://gorinchem.bestuurlijkeinformatie.nl/Reports/Details/fe0e3f7f-5ffd-4315-a0a9-53fa6890da3e
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.gorinchem.nl/bestuur-organisatie/publicaties-en-verslagen/gemeentebegroting-en-jaarstukken
+  wooVerzoek:
+    url: https://formulieren.gorinchem.nl/form/woo-verzoek-indienen/voor-u-begint-0-6-1
+organogram_url: https://www.gorinchem.nl/files/2024-10/Organogram%20gemeente%20Gorinchem.pdf
+afspraak:
+  url: https://gorinchem.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 21,99
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.99
+  aantal_inwoners: 39060
+  inwoners: '1776'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1776.0
+  bevat_plaatsen_raw: Dalem, Gorinchem
+  bevat_plaatsen:
+  - Dalem
+  - Gorinchem
+council:
+  total_seats: 12
+  parties:
+  - naam: Democraten Gorinchem
+    aantal_zetels: 5
+  - naam: Stadsbelang
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
+  - naam: Gorcum Actief
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.gorinchem.nl
   email: Gemeente@Gorinchem.nl
+  bezoekadres: Stadhuisplein 1, 4205 AZ GORINCHEM
+  postadres: Postbus 108, 4200 AC GORINCHEM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 4205 AZ
+    woonplaats: GORINCHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '108'
+    postcode: 4200 AC
+    woonplaats: GORINCHEM
+  - type: Woo-Adres
+    toelichting: College van Burgemeester & Wethouders
+    postbus: '108'
+    postcode: 4200 AC
+    woonplaats: Gorinchem
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '108'
+    postcode: 4200 AC
+    ter_attentie_van: Team ruimtelijke ordening
+    woonplaats: GORINCHEM
+  phones:
+  - nummer: (0183) 65 95 95
+    label: algemeen
+  emails:
+  - email: Gemeente@Gorinchem.nl
+    label: algemeen
+  - email: gemeente@gorinchem.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gorinchem.nl
+    label: algemeen
+  contact_forms:
+  - url: https://formulieren.gorinchem.nl/form/contact-opnemen/vraag-idee-of-compliment-0
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30894/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30894/gorinchem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

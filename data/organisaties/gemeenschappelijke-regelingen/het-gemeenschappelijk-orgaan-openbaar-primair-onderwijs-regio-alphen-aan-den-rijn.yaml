@@ -2,8 +2,13 @@ id: org:gr-het-gemeenschappelijk-orgaan-openbaar-primair-onderwijs-regio-alphen-
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966242'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Openbaar Primair Onderwijs regio Alphen aan den
+    Rijn
+  roo_id: '24966237'
 names:
 - value: Het Gemeenschappelijk Orgaan Openbaar Primair Onderwijs Regio Alphen aan
     den Rijn
@@ -11,9 +16,27 @@ names:
   valid_until: '2017-12-31'
 contact:
   website: http://www.sopora.nl-=-website-opegrichte-stichting-Sopora
+  bezoekadres: Stadhuisplein 1, 2405 SH Alphen aan den Rijn
+  postadres: Postbus 13, 2400 AA Alphen aan den Rijn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 2405 SH
+    woonplaats: Alphen aan den Rijn
+  - type: Postadres
+    postbus: '13'
+    postcode: 2400 AA
+    woonplaats: Alphen aan den Rijn
+  internet_addresses:
+  - url: http://www.sopora.nl-=-website-opegrichte-stichting-Sopora
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-12-31'
+last_mutation: '2019-04-15'
+last_verified: '2020-10-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966242/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966242/het-gemeenschappelijk-orgaan-openbaar-primair-onderwijs-regio-alphen-aan-den-rijn
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-07-04'

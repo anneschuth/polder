@@ -5,22 +5,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0857
   oin: '00000001003315654000'
   kvk: '30254252'
+  owms: http://standaarden.overheid.nl/owms/terms/avres
+  organisatiecode: so0857
+  rsin: '003315654'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Avres
+  roo_id: '29474942'
 names:
 - value: Avres
   valid_from: '1900-01-01'
+description:
+  text: 'Avres is een gemeenschappelijke regeling; een samenwerkingsverband van drie
+    gemeenten in de AV regio. Avres voert namens deze gemeenten o.a. de Participatiewet,
+    de wet Sociale Werkvoorziening en de Wet gemeentelijke schuldhulpverlening uit.
+    Bij Avres werken circa 700 medewerkers. Ongeveer 500 medewerkers zijn binnen Avres
+    werkzaam in het kader van de Wet Sociale Werkvoorziening en de regeling Nieuw
+    Beschut. Zij zijn werkzaam op een aantal locaties in de regio of gedetacheerd
+    bij werkgevers. Daarnaast hebben ongeveer 200 medewerkers een reguliere arbeidsovereenkomst.
+    De organisatie is verdeeld in drie inhoudelijke afdelingen: ‘Inkomensondersteuning
+    en Participatie’, ‘Ontwikkeling werkt!’ en ‘Jobcoaching & Acquisitie’.'
+  url: https://www.avres.nl/organisatie-en-bestuur
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.avres.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28675828/Avres
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.avres.nl/organisatie-en-bestuur
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Avres%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Avres%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.avres.nl/form/indienen-woo-verzoek/indienen-woo-verzoek-0
+organogram_url: https://www.avres.nl/organisatie-en-bestuur
+afspraak:
+  email: info@avres.nl
+  telefoonnummer: (0183) 65 02 00
+  url: https://www.avres.nl/contact
 contact:
   website: www.avres.nl
   email: info@avres.nl
+  bezoekadres: Stadhuisplein 1, 4205 AZ Gorinchem
+  postadres: Postbus 50, 4200 AB Gorinchem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 4205 AZ
+    woonplaats: Gorinchem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '50'
+    postcode: 4200 AB
+    woonplaats: Gorinchem
+  - type: Vestigingsadres
+    openbare_ruimte: Spijksedijk
+    huisnummer: '28'
+    postcode: 4207 GN
+    woonplaats: Gorinchem
+  - type: Vestigingsadres
+    openbare_ruimte: A.M.A. van Langeraadweg 4
+    postcode: 3381 LB
+    woonplaats: Giessenburg
+  - type: Vestigingsadres
+    openbare_ruimte: Marconiweg
+    huisnummer: '7'
+    postcode: 4207 HH Gorinchem
+    woonplaats: Gorinchem
+  - type: Vestigingsadres
+    huisnummer: Industrieweg 16
+    postcode: 4143 HP
+    woonplaats: Leerdam
+  - type: Vestigingsadres
+    openbare_ruimte: Energieweg
+    huisnummer: '39'
+    postcode: 4231 DJ
+    woonplaats: Meerkerk
+  - type: Woo-Adres
+    postbus: '50'
+    postcode: 4200 AB
+    woonplaats: Gorinchem
+    land: Nederland
+  phones:
+  - nummer: (0183) 65 02 00
+    label: algemeen
+  emails:
+  - email: info@avres.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.avres.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.avres.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Avres
+    url: https://www.linkedin.com/company/avres/
+  - platform: Instagram
+    gebruikersnaam: Avres
+    url: https://www.instagram.com/avresonline/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28675828/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28675828/avres
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2002-01-01'

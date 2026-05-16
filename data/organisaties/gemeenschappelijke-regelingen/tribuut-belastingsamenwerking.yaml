@@ -5,22 +5,116 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0860
   oin: 00000001824173090000
   kvk: '64938611'
+  owms: http://standaarden.overheid.nl/owms/terms/tribuut
+  organisatiecode: so0860
+  rsin: '824173090'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Tribuut belastingsamenwerking
+  roo_id: '30444676'
 names:
 - value: Tribuut belastingsamenwerking
   valid_from: '1900-01-01'
+description:
+  text: Tribuut is het centrale belastingcentrum dat namens de gemeenten Apeldoorn,
+    Brummen, Epe, Lochem, Voorst en Zutphen de heffing en invordering van gemeentebelastingen
+    uitvoert. Ook verzorgen wij de waardering van onroerende zaken volgens de Wet
+    Waardering Onroerende Zaken (WOZ). Dit doen wij zelfstandig. Gemeenten blijven
+    zelf verantwoordelijk voor het bepalen van de tarieven.
+  url: https://www.tribuut.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28148904/Tribuut_belastingsamenwerking
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.tribuut.nl/over-ons/publicaties
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Tribuut%20belastingsamenwerking%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.tribuut.nl/over-ons/publicaties
+      toelichting: Vastgestelde financiële stukken van Tribuut
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.tribuut.nl/over-ons/bestuursvergaderingen
+      toelichting: Agenda's, verslagen en bestuursbesluiten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tribuut+belastingsamenwerking%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tribuut+belastingsamenwerking%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.tribuut.nl/contact
+organogram_url: https://www.tribuut.nl/over-ons/organisatiegegevens/-interne-organisatie
+afspraak:
+  email: info@tribuut.nl
+  telefoonnummer: (055) 580 22 22
+  url: https://www.tribuut.nl/contact
 contact:
   website: https://www.tribuut.nl
   email: info@tribuut.nl
+  bezoekadres: Fauststraat 3, 7323 BA Apeldoorn
+  postadres: Postbus 4160, 7320 AD Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Fauststraat
+    huisnummer: '3'
+    postcode: 7323 BA
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Postadres
+    postbus: '4160'
+    postcode: 7320 AD
+    woonplaats: Apeldoorn
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '4160'
+    postcode: 7320 AD
+    woonplaats: Apeldoorn
+    land: Nederland
+  phones:
+  - nummer: (055) 580 22 22
+    label: algemeen
+  emails:
+  - email: info@tribuut.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.tribuut.nl
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Tribuut belastingcentrum
+    url: https://www.linkedin.com/company/tribuut-belastingcentrum/?viewAsMember=true
+  - platform: X
+    gebruikersnaam: Tribuut
+    url: https://x.com/Tribuut
+  - platform: Facebook
+    gebruikersnaam: Tribuut
+    url: https://www.facebook.com/tribuutbelasting
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28148904/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28148904/tribuut-belastingsamenwerking
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-01-01'

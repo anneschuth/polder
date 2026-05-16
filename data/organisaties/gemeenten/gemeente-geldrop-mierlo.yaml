@@ -6,21 +6,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1771
   roo_id: '36388'
   wikidata: Q9835
+  owms: http://standaarden.overheid.nl/owms/terms/Geldrop-Mierlo
+  ictu: '01771'
+  organisatiecode: gm1771
+  rsin: '812613466'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GOM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Geldrop-Mierlo
   abbr: Geldrop-Mierlo
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.geldrop-mierlo.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/36388/Gemeente_Geldrop-Mierlo
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://geldrop-mierlo.begrotingsapp.nl/
+      toelichting: Begrotingen en jaarrekeningen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://geldropmierlo.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Geldrop-Mierlo%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.geldrop-mierlo.nl/besluiten-woo-verzoeken?language_content_entity=nl
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Geldrop-Mierlo%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Convenanten
+      url: https://open.geldrop-mierlo.nl/convenanten?language_content_entity=nl
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Geldrop-Mierlo%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://open.geldrop-mierlo.nl/verzoek-indienen
+organogram_url: https://www.geldrop-mierlo.nl/organisatiestructuur#organogram
+afspraak:
+  email: gemeente@geldrop-mierlo.nl
+  telefoonnummer: (040) 289 38 93
+  url: https://www.geldrop-mierlo.nl/afspraak-maken?language_content_entity=nl
+geography:
+  oppervlakte: 31,93
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 31.93
+  aantal_inwoners: 40683
+  inwoners: '1274'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1274.0
+  bevat_plaatsen_raw: Geldrop, Mierlo
+  bevat_plaatsen:
+  - Geldrop
+  - Mierlo
+council:
+  total_seats: 28
+  parties:
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 5
+  - naam: DGG
+    aantal_zetels: 5
+  - naam: DPM
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: SAMEN
+    aantal_zetels: 3
+  - naam: Wij zijn Geldrop-Mierlo | VVD
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Gemeentebelangen Aa en Hunze
+    aantal_zetels: 1
 contact:
   website: https://www.geldrop-mierlo.nl
   email: gemeente@geldrop-mierlo.nl
+  bezoekadres: De Meent 2, 5664 GC GELDROP
+  postadres: Postbus 10101, 5660 GA GELDROP
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Meent
+    huisnummer: '2'
+    postcode: 5664 GC
+    woonplaats: GELDROP
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10101'
+    postcode: 5660 GA
+    woonplaats: GELDROP
+  - type: Woo-Adres
+    postbus: '10101'
+    postcode: 5660 GA
+  phones:
+  - nummer: (040) 289 38 93
+    label: algemeen
+  emails:
+  - email: gemeente@geldrop-mierlo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.geldrop-mierlo.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
+predecessor_id:
+- org:gemeente-geldrop
+- org:gemeente-mierlo
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36388/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,6 +144,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9835
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-geldrop
-- org:gemeente-mierlo
+roo_start_datum: '2004-01-01'

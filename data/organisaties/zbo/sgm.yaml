@@ -4,20 +4,119 @@ identifiers:
   roo_id: '28212549'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000196
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie schadefonds geweldsmisdrijven
   abbr: SGM
   valid_from: '1900-01-01'
+description:
+  text: 'Het Schadefonds Geweldsmisdrijven geeft een financiële tegemoetkoming aan
+    slachtoffers van geweldsmisdrijven, nabestaanden en naasten. Met deze uitkering
+    erkennen we namens de overheid het onrecht dat zij hebben meegemaakt. Zo dragen
+    wij bij aan het herstel van hun vertrouwen in de samenleving.Link naar beschrijving
+    van taken en bevoegdheden van de organisatie per organisatieonderdeel: https://werkenbijschadefonds.nl/functies/'
+  url: https://www.schadefonds.nl/schadefonds/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet schadefonds geweldsmisdrijven, artikel 8
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=WET%20SCHADEFONDS%20GEWELDSMISDRIJVEN
+taken_en_bevoegdheden: Tegemoetkomen aan slachtoffers van ernstige opzettelijk gepleegde
+  geweldsmisdrijven voor de letstelschade. Indien betrokkene is overleden, kunnen
+  nabestaanden een verzoek doen om een uitkering.
+evaluations:
+- datum: '2020-11-10'
+  kamerstuknummer: TK 25268 nr. 191
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-191.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.schadefonds.nl/schadefonds/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212549/Commissie_schadefonds_geweldsmisdrijven
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.schadefonds.nl/schadefonds/jaarverslagen/
+      toelichting: Jaarverslagen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.schadefonds.nl/schadefonds/woo-verzoeken/
+  wooVerzoek:
+    url: https://www.schadefonds.nl/schadefonds/wet-open-overheid/
+organogram_url: https://www.schadefonds.nl/wp-content/uploads/2022/12/2022-Organogram-Schadefonds-Geweldsmisdrijven.pdf
+personnel:
+  aantalFte: 82,8
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.schadefonds.nl/
   email: info@schadefonds.nl
+  bezoekadres: Kneuterdijk 1, 2514 EM Den Haag
+  postadres: Postbus 71, 2501 CB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kneuterdijk
+    huisnummer: '1'
+    postcode: 2514 EM
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '71'
+    postcode: 2501 CB
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '71'
+    postcode: 2501 CB
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 414 20 00
+    label: algemeen
+  emails:
+  - email: info@schadefonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.schadefonds.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-10'
+last_verified: '2026-02-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212549/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212549/sgm
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000196
   retrieved: '2026-05-09'
+roo_start_datum: '1993-01-01'

@@ -3,7 +3,7 @@ name:
   full: L.L.B.A. Opdam
   family: Opdam
   given: L.L.B.A.
-  initials: L.
+  initials: L.L.B.A.
 mandaten:
 - id: e5cc119e-2154-46e8-9889-15329c420417
   organization_id: org:gemeente-harderwijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7773994
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/32835/gemeente-harderwijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30541138
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7773992

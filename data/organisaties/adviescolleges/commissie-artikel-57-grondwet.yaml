@@ -4,14 +4,49 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10238
   roo_id: '28532149'
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Commissie artikel 57 Grondwet
   valid_from: '1900-01-01'
   valid_until: '2024-12-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+classifications:
+- type: CAO
+  eind_datum: '2024-12-31'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2024-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2024-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2024-12-31'
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28532149/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28532149/commissie-artikel-57-grondwet
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-04-28'

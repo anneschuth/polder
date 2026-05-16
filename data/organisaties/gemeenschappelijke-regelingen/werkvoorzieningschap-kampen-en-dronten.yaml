@@ -1,19 +1,68 @@
 id: org:gr-werkvoorzieningschap-kampen-en-dronten
 type: gemeenschappelijke-regeling
+subname: Impact
 identifiers:
   roo_id: '24962366'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0534
+  owms: http://standaarden.overheid.nl/owms/terms/wvskd
+  kvk: '63579413'
+  organisatiecode: so0534
+  rsin: '823577570'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Kampen & Dronten
+  roo_id: '24962361'
 names:
 - value: Werkvoorzieningschap Kampen & Dronten
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.impact.nl
   email: info@impact.nl
+  bezoekadres: Gildestraat 1, 8263 AH Kampen
+  postadres: Postbus 184, 8260 AD Kampen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gildestraat
+    huisnummer: '1'
+    postcode: 8263 AH
+    woonplaats: Kampen
+  - type: Postadres
+    postbus: '184'
+    postcode: 8260 AD
+    woonplaats: Kampen
+  phones:
+  - nummer: (038) 331 59 44
+    label: algemeen Kampen
+  - nummer: (0321) 32 85 60
+    label: algemeen Dronten
+  emails:
+  - email: info@impact.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.impact.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.impact.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-13'
+last_verified: '2024-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962366/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962366/werkvoorzieningschap-kampen-en-dronten
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-07-01'

@@ -5,6 +5,9 @@ identifiers:
   kvk: '57030707'
   roo_id: '27268'
   wikidata: Q1943433
+  owms: http://standaarden.overheid.nl/owms/terms/Molenwaard
+  ictu: 01927
+  organisatiecode: gm1927
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,87 @@ names:
   abbr: Molenwaard
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 69,29
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 69.29
+  aantal_inwoners: 29051
+  inwoners: '419'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 419.0
+  bevat_plaatsen_raw: Bleskensgraaf Ca, Brandwijk, Goudriaan, Groot-Ammers, Kinderdijk,
+    Langerak ZH, Molenaarsgraaf, Nieuw-Lekkerland, Nieuwpoort, Ottoland, Oud-Alblas,
+    Streefkerk, Waal, Wijngaarden ZH
+  bevat_plaatsen:
+  - Bleskensgraaf Ca
+  - Brandwijk
+  - Goudriaan
+  - Groot-Ammers
+  - Kinderdijk
+  - Langerak ZH
+  - Molenaarsgraaf
+  - Nieuw-Lekkerland
+  - Nieuwpoort
+  - Ottoland
+  - Oud-Alblas
+  - Streefkerk
+  - Waal
+  - Wijngaarden ZH
+council:
+  total_seats: 21
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: SGP
+    aantal_zetels: 5
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: Gemeentebelangen Molenwaard
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.gemeentemolenwaard.nl
   email: communicatie@gemeentemolenwaard.nl
+  postadres: Postbus 5, 2970 AA BLESKENSGRAAF CA
+  addresses:
+  - type: Bezoekadres
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 5
+    postbus: '5'
+    postcode: 2970 AA
+    woonplaats: BLESKENSGRAAF CA
+  phones:
+  - nummer: 14 0184
+    label: algemeen
+  emails:
+  - email: communicatie@gemeentemolenwaard.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.gemeentemolenwaard.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
+predecessor_id:
+- org:gemeente-graafstroom
+- org:gemeente-liesveld
+- org:gemeente-nieuw-lekkerland
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27268/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27268/molenwaard
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,7 +104,3 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1943433
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-graafstroom
-- org:gemeente-liesveld
-- org:gemeente-nieuw-lekkerland

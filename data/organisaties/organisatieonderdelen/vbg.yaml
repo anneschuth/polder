@@ -1,19 +1,63 @@
 id: org:onderdeel-vbg
 type: organisatieonderdeel
+subname: Vereniging Brabantse Gemeenten
 identifiers:
   roo_id: '28347689'
+  kvk: '40216092'
+  rsin: '806991112'
 classification: organisatieonderdeel
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: org:koepel-vng
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging van Brabantse Gemeenten
   abbr: VBG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://verenigingbrabantsegemeenten.nl/
   email: contactpersoon@verenigingbrabantsegemeenten.nl
+  bezoekadres: De Misse 6, 5384 BZ Heesch
+  postadres: Postbus 19, 4920 AA Made
+  addresses:
+  - type: Bezoekadres
+    toelichting: Secretariaat VBG
+    openbare_ruimte: De Misse
+    huisnummer: '6'
+    postcode: 5384 BZ
+    woonplaats: Heesch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '19'
+    postcode: 4920 AA
+    woonplaats: Made
+  emails:
+  - email: contactpersoon@verenigingbrabantsegemeenten.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://verenigingbrabantsegemeenten.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://verenigingbrabantsegemeenten.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Vereniging Brabantse Gemeenten
+    url: https://www.linkedin.com/company/vereniging-brabantse-gemeenten/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2026-04-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347689/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347689/vbg
+  retrieved: '2026-05-16'

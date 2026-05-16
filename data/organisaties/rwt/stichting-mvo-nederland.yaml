@@ -2,14 +2,35 @@ id: org:stichting-mvo-nederland
 type: rwt
 identifiers:
   roo_id: '30133366'
+  kvk: '30195730'
+  rsin: '814363647'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting MVO Nederland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Europalaan
+    huisnummer: '101'
+    postcode: 3526 KR
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133366/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133366/stichting-mvo-nederland
+  retrieved: '2026-05-16'

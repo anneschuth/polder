@@ -1,22 +1,86 @@
 id: org:zbo-kamer-van-koophandel-en-nijverheid-bonaire
 type: zbo
+subname: KvK Bonaire
 identifiers:
   roo_id: '29908909'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100015
+  organisatiecode: zb100015
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Kamer van Koophandel en Nijverheid Bonaire
   valid_from: '1900-01-01'
+description:
+  text: "De Kamers van Koophandel en Nijverheid (KvK’s) in Caribisch Nederland zijn\
+    \ er voor ondernemers die op de eilanden van Caribisch Nederland zijn gevestigd\
+    \ en voor ondernemers die zich er willen vestigen. Er is één KvK ingesteld voor\
+    \ Bonaire en één voor Sint Eustatius en Saba samen, met op beide eilanden een\
+    \ publiekskantoor.De KvK’s dragen bij aan het ondernemerschapsbeleid door te informeren\
+    \ en te ondersteunen op het gebied van ondernemen. Zij bevorderen de economische\
+    \ belangen van handel, industrie, ambacht en dienstverlening, en vormen daarmee\
+    \ een schakel tussen ondernemer en overheid. De KvK's zijn zo een belangrijke\
+    \ partner bij het uitvoeren van overheidsbeleid voor ondernemingen.De KvK's hebben\
+    \ een aantal belangrijke wettelijke taken, te weten:•\tHet bijhouden van het handelsregister,\
+    \ met daarin alle bedrijven, verenigingen en stichtingen•\tHet geven van voorlichting\
+    \ aan (startende) ondernemers, bijvoorbeeld over het starten van een bedrijf en\
+    \ over beschikbare ondersteuning•\tHet adviseren van het Bestuurscollege over\
+    \ te verlenen vestigingsvergunningen•\tHet geven van adviezen aan de Bestuurscolleges.\
+    \ Zo geven de KvK's bijvoorbeeld, in overleg met bestaande ondernemers, commentaar\
+    \ op overheidsplannen.Andere diensten die de Kamers van Koophandel en Nijverheid\
+    \ aan ondernemers leveren zijn onder meer:•\tInformatie verstrekken over subsidiemogelijkheden•\t\
+    Voorlichting geven over het vestigen van een bedrijf•\tOrganiseren van cursussen\
+    \ en trainingen voor het bedrijfsleven."
+  url: https://bonairechamber.com/over-de-kvk/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Participatie
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet op de Kamers van Koophandel en Nijverheid BES
+  referentie: https://wetten.overheid.nl/BWBR0028238/
 contact:
   website: https://bonairechamber.com/
   email: administratie@kvkbonaire.com
+  bezoekadres: Kaya Amsterdam 23, Kralendijk
+  postadres: Postbus 52, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kaya Amsterdam
+    huisnummer: '23'
+    woonplaats: Kralendijk
+    land: Bonaire
+  - type: Postadres
+    postbus: '52'
+    woonplaats: Kralendijk
+    land: Bonaire
+  phones:
+  - nummer: +599 717 55 95
+    label: algemeen
+  emails:
+  - email: administratie@kvkbonaire.com
+    label: Administratie
+  internet_addresses:
+  - url: https://bonairechamber.com/
+    label: algemeen
+  contact_forms:
+  - url: https://bonairechamber.com/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908909/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908909/kamer-van-koophandel-en-nijverheid-bonaire
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100015
   retrieved: '2026-05-09'
+roo_start_datum: '2010-10-10'

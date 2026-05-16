@@ -6,21 +6,141 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0289
   roo_id: '32273'
   wikidata: Q1305
+  owms: http://standaarden.overheid.nl/owms/terms/Wageningen_(gemeente)
+  ictu: 00289
+  organisatiecode: gm0289
+  rsin: '001104536'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WGW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Wageningen
   abbr: Wageningen
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/32273/Gemeente_Wageningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wageningen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wageningen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://wageningen.raadsinformatie.nl/
+      toelichting: Vergaderstukken en -verslagen gemeenteraad
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://wageningen.begrotingsapp.nl/
+      toelichting: Op dit portaal kunt u de documenten raadplegen van de begrotingscyclus
+        van de gemeente Wageningen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wageningen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.wageningen.nl/bestuur/college-van-burgemeester-en-wethouders/besluitenlijsten-college-bw/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.wageningen.nl/woo-verzoeken/
+      toelichting: Ingediende Woo-verzoeken bij de gemeente Wageningen
+  wooVerzoek:
+    url: https://www.wageningen.nl/direct-regelen/melding-klacht-of-bezwaar/klacht-of-bezwaar/woo-verzoek-doen/
+organogram_url: https://www.wageningen.nl/organogram-3/
+afspraak:
+  telefoonnummer: (0317) 49 29 11
+  url: https://www.wageningen.nl/contact/#afspraak
+geography:
+  oppervlakte: 32,35
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 32.35
+  aantal_inwoners: 42779
+  inwoners: '1322'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1322.0
+  bevat_plaatsen_raw: Wageningen
+  bevat_plaatsen:
+  - Wageningen
+council:
+  total_seats: 27
+  parties:
+  - naam: PRO
+    aantal_zetels: 10
+  - naam: Stadspartij
+    aantal_zetels: 6
+  - naam: D66
+    aantal_zetels: 5
+  - naam: Partij voor de Dieren
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: Connect-Volt
+    aantal_zetels: 1
 contact:
   website: https://www.wageningen.nl
   email: gemeente@wageningen.nl
+  bezoekadres: Markt 22, 6701 CZ WAGENINGEN
+  postadres: Postbus 1, 6700 AA WAGENINGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '22'
+    postcode: 6701 CZ
+    woonplaats: WAGENINGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '1'
+    postcode: 6700 AA
+    woonplaats: WAGENINGEN
+  - type: Woo-Adres
+    postbus: '1'
+    postcode: 6700 AA
+    woonplaats: Wageningen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '22'
+    postcode: 6701 CZ
+    woonplaats: WAGENINGEN
+  phones:
+  - nummer: (0317) 49 29 11
+    label: algemeen
+  emails:
+  - email: gemeente@wageningen.nl
+    label: algemeen
+  - email: loketruimte@wageningen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.wageningen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32273/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32273/wageningen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

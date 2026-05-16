@@ -2,18 +2,64 @@ id: org:koepel-vdp
 type: zbo
 identifiers:
   roo_id: '28382661'
+  owms: http://standaarden.overheid.nl/owms/terms/Vereniging_Directeuren_Publieksdiensten
+  kvk: '34212939'
+  rsin: '815563802'
 classification: zbo
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
 names:
 - value: Vereniging Directeuren Publieksdiensten
   abbr: VDP
   valid_from: '1900-01-01'
+description:
+  text: De Vereniging Directeuren Publieksdiensten (VDP) zet zich in voor passende
+    gemeentelijke dienstverlening. Dat zijn alle acties die een gemeente kan, mag
+    en wil doen om een individuele inwoner, ondernemer of bezoeker van dienst te zijn
+    en te laten meedoen aan de samenleving. Door samenwerking, kennisdeling en innovatie
+    kun je de dienstverlening op veel manieren verbeteren en vernieuwen. De VDP is
+    een strategische partner in het totale veld van overheidsdienstverlening.
+  url: https://www.publieksdiensten.nl/over-de-vdp/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
 contact:
   website: https://www.publieksdiensten.nl
   email: vdp@publieksdiensten.nl
+  postadres: Kwikstaartlaan 42 E0421, 3704 GS Zeist
+  addresses:
+  - type: Postadres
+    toelichting: Alleen voor post, geen bezoekadres
+    openbare_ruimte: Kwikstaartlaan
+    huisnummer: '42'
+    huisnummer_toevoeging: E0421
+    postcode: 3704 GS
+    woonplaats: Zeist
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: 06 29 00 03 06
+    label: ondersteuning bestuur
+  emails:
+  - email: vdp@publieksdiensten.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.publieksdiensten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.publieksdiensten.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Vereniging Directeuren Publieksdiensten
+    url: https://www.linkedin.com/company/vereniging-directeur-publieksdiensten/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28382661/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28382661/vdp
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-12-10'

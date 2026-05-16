@@ -3,16 +3,28 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '269'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-az
+parent_id: org:min-az
 names:
 - value: Kabinet Minister-President
   abbr: KMP
   valid_from: '1900-01-01'
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram/kabinet-minister-president-kmp
+  bezoekadres: Binnenhof 20, 2513 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Binnenhof 20
+    postcode: 2513 AA
+    woonplaats: Den Haag
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram/kabinet-minister-president-kmp
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-02-21'
+last_verified: '2024-10-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/269/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/269/kmp
+  retrieved: '2026-05-16'

@@ -3,16 +3,58 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28450295'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0773
+  owms: http://standaarden.overheid.nl/owms/terms/ngsbdz
+  kvk: '52996581'
+  btw: NL850702318B01
+  organisatiecode: so0773
+  rsin: '850702318'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Nazorg Gesloten Stortplaatsen Bavel-Dorst en Zevenbergen
+  roo_id: '29678017'
 names:
 - value: Nazorg gesloten stortplaatsen Bavel-Dorst en Zevenbergen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: nazorgstortplaatsen@breda.nl
+  bezoekadres: Claudius Prinsenlaan 10, 4811 DJ Breda
+  postadres: Postbus 90156, 4800 RH Breda
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Breda
+    openbare_ruimte: Claudius Prinsenlaan
+    huisnummer: '10'
+    postcode: 4811 DJ
+    woonplaats: Breda
+  - type: Postadres
+    postbus: '90156'
+    postcode: 4800 RH
+    woonplaats: Breda
+  phones:
+  - nummer: (076) 529 98 09
+    label: gemeente Breda
+  emails:
+  - email: nazorgstortplaatsen@breda.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2022-04-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28450295/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28450295/nazorg-gesloten-stortplaatsen-bavel-dorst-en-zevenbergen
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-03-01'

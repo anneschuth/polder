@@ -2,14 +2,43 @@ id: org:oovb-oasen-nv
 type: rwt
 identifiers:
   roo_id: '27909315'
+  kvk: '29010639'
+  oin: 00000003290106390000
+  rsin: 001998079
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Oasen N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Nieuwe Gouwe O.Z. 3, 2801 SB Gouda
+  postadres: Postbus 122, 2800 AC Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Gouwe O.Z. 3
+    postcode: 2801 SB
+    woonplaats: Gouda
+  - type: Postadres
+    postbus: '122'
+    postcode: 2800 AC
+    woonplaats: Gouda
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909315/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909315/oasen-nv
+  retrieved: '2026-05-16'

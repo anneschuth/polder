@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1684
   roo_id: '25165'
   wikidata: Q9827
+  owms: http://standaarden.overheid.nl/owms/terms/Cuijk_(gemeente)
+  ictu: 01684
+  organisatiecode: gm1684
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,92 @@ names:
   abbr: Cuijk
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 56,99
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 56.99
+  aantal_inwoners: 24911
+  inwoners: '437'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 437.0
+  bevat_plaatsen_raw: Beers NB, Cuijk, Haps, Katwijk NB, Linden, Sint Agatha, Vianen
+    NB
+  bevat_plaatsen:
+  - Beers NB
+  - Cuijk
+  - Haps
+  - Katwijk NB
+  - Linden
+  - Sint Agatha
+  - Vianen NB
+council:
+  total_seats: 18
+  parties:
+  - naam: Liberaal LvC
+    aantal_zetels: 5
+  - naam: ABC
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.cuijk.nl
   email: gemeente@cuijk.nl
+  bezoekadres: Louis Jansenplein 1, 5431 BV CUIJK
+  postadres: Postbus 7, 5360 AA GRAVE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Louis Jansenplein
+    huisnummer: '1'
+    postcode: 5431 BV
+    woonplaats: CUIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '7'
+    postcode: 5360 AA
+    woonplaats: GRAVE
+  phones:
+  - nummer: (0485) 39 66 00
+    label: algemeen
+  emails:
+  - email: gemeente@cuijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.cuijk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2026-04-01'
+last_verified: '2026-04-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25165/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25165/cuijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +110,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9827
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

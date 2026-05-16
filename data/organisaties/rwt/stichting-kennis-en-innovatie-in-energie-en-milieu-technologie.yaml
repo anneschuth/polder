@@ -2,14 +2,45 @@ id: org:oovb-stichting-kennis-en-innovatie-in-energie-en-milieu-technologie
 type: rwt
 identifiers:
   roo_id: '27913230'
+  kvk: 09151222
+  rsin: '814986286'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Kennis en Innovatie in Energie- en Milieu Technologie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Utrechtseweg 310 -B38, 6812 AR Arnhem
+  postadres: Postbus 2184, 6802 CD Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Utrechtseweg
+    huisnummer: '310'
+    huisnummer_toevoeging: -B38
+    postcode: 6812 AR
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '2184'
+    postcode: 6802 CD
+    woonplaats: Arnhem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913230/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913230/stichting-kennis-en-innovatie-in-energie-en-milieu-technologie
+  retrieved: '2026-05-16'

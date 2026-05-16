@@ -2,14 +2,45 @@ id: org:oovb-stichting-maashorst-in-uitvoering
 type: rwt
 identifiers:
   roo_id: '27913860'
+  kvk: '55451152'
+  rsin: '851718528'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Maashorst in Uitvoering
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: De Misse 6 -2e etage, 5384 BZ Heesch
+  postadres: Postbus 55, 5340 AB Oss
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Misse
+    huisnummer: '6'
+    huisnummer_toevoeging: -2e etage
+    postcode: 5384 BZ
+    woonplaats: Heesch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '55'
+    postcode: 5340 AB
+    woonplaats: Oss
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913860/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913860/stichting-maashorst-in-uitvoering
+  retrieved: '2026-05-16'

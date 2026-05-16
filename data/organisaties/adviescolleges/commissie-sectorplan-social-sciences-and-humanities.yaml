@@ -3,18 +3,58 @@ type: adviescollege
 identifiers:
   roo_id: '28390752'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10171
+  organisatiecode: oorg10171
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Tijdelijk adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissie sectorplan Social Sciences and Humanities
   abbr: Commissie sectorplan SSH
   valid_from: '1900-01-01'
   valid_until: '2025-11-30'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 3 van het Instellingsbesluit Commissie sectorplan Bèta en Techniek
+    en de Commissie sectorplan Social Sciences and Humanities
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0041941&artikel=3
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2025-11-30'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.sectorplan-ssh.nl/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.sectorplan-ssh.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-11-30'
+last_mutation: '2025-02-06'
+last_verified: '2025-10-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390752/commissie-sectorplan-social-sciences-and-humanities
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-02-23'

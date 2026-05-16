@@ -3,14 +3,44 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28153053'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1064
+  organisatiecode: so1064
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Europese Gemeenschap voor Territoriale Samenwerking (EGTS) 'Linieland van
+    Waas en Hulst'
+  roo_id: '28153047'
 names:
 - value: Europese Gemeenschap voor Territoriale Samenwerking
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Burgemeester Omer De Meyplein 1, 9170 Sint-Gillis-Waas
+  postadres: Burgemeester Omer De Meyplein 1, 9170 Sint-Gillis-Waas
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Omer De Meyplein
+    huisnummer: '1'
+    postcode: '9170'
+    woonplaats: Sint-Gillis-Waas
+    land: België
+  - type: Postadres
+    openbare_ruimte: Burgemeester Omer De Meyplein
+    huisnummer: '1'
+    postcode: '9170'
+    woonplaats: Sint-Gillis-Waas
+    land: België
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-27'
+last_verified: '2023-03-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28153053/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28153053/europese-gemeenschap-voor-territoriale-samenwerking
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-06-15'

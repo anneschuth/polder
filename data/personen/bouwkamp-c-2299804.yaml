@@ -3,7 +3,7 @@ name:
   full: C.C. Bouwkamp
   family: Bouwkamp
   given: C.C.
-  initials: C.
+  initials: C.C.
 mandaten:
 - id: 96b9b267-4b83-4436-8f68-60ab2edfeaa6
   organization_id: org:gemeente-arnhem
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2299805
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32510/gemeente-arnhem
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25543547
 - id: 2de95960-e8c1-40a2-b563-efef00766be4
   organization_id: org:gemeente-arnhem
   post_id: post:wethouder-gemeente-arnhem

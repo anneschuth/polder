@@ -3,16 +3,34 @@ type: zbo
 identifiers:
   roo_id: '29908845'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: CBS communicatie en nieuws
   abbr: CCN
   valid_from: '1900-01-01'
+description:
+  text: Het departement CBS communicatie en nieuws (CCN) is een organisatieonderdeel
+    van het Centraal Bureau voor de Statistiek (CBS).
+taken_en_bevoegdheden: Het departement CBS communicatie en nieuws (CCN) van het CBS
+  bestaat uit onderstaande teams:* CST (Staf)* CDV (Design & visualisatie)* CRM (Redactie
+  & media)* CCC (Corporate communicatie)* CRS (Centrale regie & services)* COP (Online
+  platforms)De teams zijn overgenomen uit het [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908845/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908845/ccn
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-03'

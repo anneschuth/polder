@@ -6,21 +6,165 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0866
   roo_id: '35025'
   wikidata: Q9877
+  owms: http://standaarden.overheid.nl/owms/terms/Waalre_(gemeente)
+  ictu: 00866
+  organisatiecode: gm0866
+  rsin: 001902982
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WAA
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Waalre
   abbr: Waalre
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Waalre kent 9 verschillende teams. Elk team wordt aangestuurd
+    door een manager.
+  url: https://www.waalre.nl/bestuur-en-organisatie/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waalre.nl/inwoners-en-ondernemers/informatieverzoek-en-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/35025/Gemeente_Waalre
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.waalre.nl/bestuur-en-organisatie/gemeenteraad/vergaderingen/
+      toelichting: Vergaderingsarchief en komende vergaderingen
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://www.waalre.nl/bestuur-en-organisatie/gemeenteraad/documenten/ingekomen-stukken
+      toelichting: Een overzicht van alle ingekomen stukken.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waalre%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waalre%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.waalre.nl/bestuur-en-organisatie/gemeentefinancien.html
+      toelichting: Het jaarverslag en bijbehorende jaarrekening bevat de programmaverantwoording
+        met daarin per programma een terugblik op onderwerpen die een belangrijke
+        rol hebben gespeeld.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.waalre.nl/inwoners-en-ondernemers/informatieverzoek-en-woo-verzoek
+      toelichting: Hier vindt u alle Woo-verzoeken waarover de gemeente Waalre op
+        basis van de Wet open overheid (Woo) een besluit heeft genomen.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.waalre.nl/bestuur-en-organisatie/collegevergaderingen/
+      toelichting: In de collegevergadering kunt u lezen welke onderwerpen op de agenda
+        staan en over welke onderwerpen het college welk besluit genomen heeft.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waalre%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Adviezen
+      url: https://www.waalre.nl/bestuur-en-organisatie/adviezen-commissies-en-externen
+      toelichting: Een advies van een adviescollege of -commissie of een ander externe
+        partij die om advies is gevraagd.
+    - informatiecategorie: Convenanten
+      url: https://www.waalre.nl/bestuur-en-organisatie/convenanten
+      toelichting: Een convenant is een afspraak van de gemeente met een of meer partijen,
+        om bepaalde (beleids-)doelstellingen te realiseren.
+  wooVerzoek:
+    url: https://www.waalre.nl/inwoners-en-ondernemers/informatieverzoek-en-woo-verzoek
+organogram_url: https://www.waalre.nl/bestuur-en-organisatie/organisatiestructuur
+afspraak:
+  email: gemeente@waalre.nl
+  telefoonnummer: (040) 228 25 00
+  url: https://www.waalre.nl/afspraak/
+geography:
+  oppervlakte: 22,19
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 22.19
+  aantal_inwoners: 17864
+  inwoners: '805'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 805.0
+  bevat_plaatsen_raw: Waalre
+  bevat_plaatsen:
+  - Waalre
+council:
+  total_seats: 17
+  parties:
+  - naam: D66
+    aantal_zetels: 3
+  - naam: AWB
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ZW14
+    aantal_zetels: 2
 contact:
   website: https://www.waalre.nl
   email: gemeente@waalre.nl
+  bezoekadres: Koningin Julianalaan 19, 5582 JV WAALRE
+  postadres: Postbus 10000, 5580 GA WAALRE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '19'
+    postcode: 5582 JV
+    woonplaats: WAALRE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5580 GA
+    woonplaats: WAALRE
+  - type: Woo-Adres
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '19'
+    postbus: '10000'
+    postcode: 5582 JV
+    woonplaats: Waalre
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '19'
+    postcode: 5582 JV
+    woonplaats: WAALRE
+  phones:
+  - nummer: (040) 228 25 00
+    label: algemeen
+  emails:
+  - email: gemeente@waalre.nl
+    label: algemeen
+  - email: gemeente@waalre.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.waalre.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.waalre.nl/afspraak/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-03'
+last_verified: '2026-05-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35025/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35025/waalre
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

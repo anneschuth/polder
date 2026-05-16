@@ -2,8 +2,12 @@ id: org:gr-gemeenschappelijk-toezichthoudend-orgaan-stichting-klasse
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965135'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling toezicht op het openbaar primair en speciaal onderwijs
+  roo_id: '24965130'
 names:
 - value: Gemeenschappelijk toezichthoudend orgaan Stichting Klasse
   valid_from: '1900-01-01'
@@ -11,9 +15,33 @@ names:
 contact:
   website: http://www.waddinxveen.nl
   email: gemeente@waddinxveen.nl
+  bezoekadres: Raadhuisplein 1, 2741 HR Waddinxveen
+  postadres: Postbus 400, 2740 AK Waddinxveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2741 HR
+    woonplaats: Waddinxveen
+  - type: Postadres
+    postbus: '400'
+    postcode: 2740 AK
+    woonplaats: Waddinxveen
+  phones:
+  - nummer: 14 0182
+    label: algemeen
+  emails:
+  - email: gemeente@waddinxveen.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.waddinxveen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-01-01'
+last_mutation: '2020-10-20'
+last_verified: '2020-11-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965135/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965135/gemeenschappelijk-toezichthoudend-orgaan-stichting-klasse
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-08-01'

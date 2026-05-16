@@ -2,14 +2,42 @@ id: org:oovb-stichting-vlechter
 type: rwt
 identifiers:
   roo_id: '27916299'
+  kvk: '41012106'
+  rsin: '801686362'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Vlechter!
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Schweitzerlaan 4, 9728 NP Groningen
+  postadres: Postbus 8073, 9702 KB Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schweitzerlaan 4
+    postcode: 9728 NP
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '8073'
+    postcode: 9702 KB
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-24'
+last_verified: '2021-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27916299/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27916299/stichting-vlechter
+  retrieved: '2026-05-16'

@@ -1,20 +1,74 @@
 id: org:gr-mz
 type: gemeenschappelijke-regeling
+subname: Muziekschool Zeeland
 identifiers:
   roo_id: '24962005'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0170
+  owms: http://standaarden.overheid.nl/owms/terms/zwmuzsch
+  kvk: '58570365'
+  organisatiecode: so0170
+  rsin: 002917981
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling de Zeeuwse Muziekschool
+  roo_id: '30500968'
 names:
 - value: de Zeeuwse Muziekschool
   abbr: MZ
   valid_from: '1900-01-01'
+description:
+  text: Door middel van kunst- en cultuureducatie èn participatie levert GR de Zeeuwse
+    Muziekschool (h.o.d.n. Muziekschool Zeeland) een bijdrage aan de ontwikkeling
+    van kinderen, jongeren en volwassenen. Hierbij is een primaire rol weggelegd voor
+    muzikale vorming.
+  url: https://muziekschoolzeeland.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+afspraak:
+  telefoonnummer: (088) 470 00 00
 contact:
   website: https://muziekschoolzeeland.nl/
   email: info@muziekschoolzeeland.nl
+  bezoekadres: Kuiperspoort 21, 4331 GS Middelburg
+  postadres: Kuiperspoort 21, 4331 GS Middelburg
+  addresses:
+  - type: Bezoekadres
+    toelichting: Kuiperspoortgebouw - Ingang Hagepreekgang
+    openbare_ruimte: Kuiperspoort
+    huisnummer: '21'
+    postcode: 4331 GS
+    woonplaats: Middelburg
+  - type: Postadres
+    openbare_ruimte: Kuiperspoort
+    huisnummer: '21'
+    postcode: 4331 GS
+    woonplaats: Middelburg
+  phones:
+  - nummer: (088) 470 00 00
+    label: algemeen
+  emails:
+  - email: info@muziekschoolzeeland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://muziekschoolzeeland.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962005/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962005/mz
+  retrieved: '2026-05-16'
+roo_start_datum: '1984-01-01'

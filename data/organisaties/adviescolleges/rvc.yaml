@@ -3,18 +3,110 @@ type: adviescollege
 identifiers:
   roo_id: '71981'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10260
+  kvk: '27367348'
+  oin: '00000001003214400000'
+  organisatiecode: oorg10260
+  rsin: '003214400'
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Raad voor Cultuur
   abbr: RVC
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor Cultuur treedt op als het wettelijke adviesorgaan van de regering
+    en het parlement wanneer het gaat om kunst, cultuur en media. De Raad adviseert
+    over het Nederlandse cultuurbeleid. Hoewel de Raad zowel gevraagd als ongevraagd
+    adviezen kan uitbrengen, wordt er meestal geadviseerd op verzoek van de minister
+    van Onderwijs, Cultuur en Wetenschap.Naast adviezen over het cultuurbeleid geeft
+    de Raad ook zogenoemde 'uitvoeringsadviezen'. Dit zijn adviezen over de aanwijzing
+    van beschermde stads- en dorpsgezichten, over aanvragen tot aanwijzing als professionele
+    organisatie voor monumentenbehoud en over voorwerpen en verzamelingen die van
+    bijzondere, cultuurhistorische of wetenschappelijke betekenis zijn.
+  url: https://www.raadvoorcultuur.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '16'
+      toelichting: De Raad kan commissies samenstellen die bestaan uit anderen dan
+        de leden.
+wettelijke_grondslagen:
+- opschrift: Wet op het specifiek cultuurbeleid, artikel 2a
+  referentie: https://wetten.overheid.nl/BWBR0005904/2016-07-01/#HoofdstukIA_Artikel2a
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/71981/Raad_voor_Cultuur
+afspraak:
+  email: info@cultuur.nl
+  telefoonnummer: (070) 310 66 86
 contact:
   website: https://www.raadvoorcultuur.nl
   email: info@cultuur.nl
+  bezoekadres: Prins Willem-Alexanderhof 20, 2595 BE Den Haag
+  postadres: Postbus 90520, 2509 LM Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Raad voor Cultuur
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  - type: Postadres
+    toelichting: Raad voor Cultuur
+    postbus: '90520'
+    postcode: 2509 LM
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: Raad voor Cultuur
+    postbus: '90520'
+    postcode: 2509 LM
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 310 66 86
+    label: algemeen
+  emails:
+  - email: info@cultuur.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.raadvoorcultuur.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.raadvoorcultuur.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor Cultuur
+    url: https://www.linkedin.com/company/raad-voor-cultuur/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71981/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71981/rvc
+  retrieved: '2026-05-16'
+roo_start_datum: '1995-11-22'

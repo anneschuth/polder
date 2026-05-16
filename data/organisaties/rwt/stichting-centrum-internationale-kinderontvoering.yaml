@@ -2,14 +2,42 @@ id: org:oovb-stichting-centrum-internationale-kinderontvoering
 type: rwt
 identifiers:
   roo_id: '27910971'
+  kvk: '32163645'
+  rsin: '821643149'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Centrum Internationale Kinderontvoering
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: P.C. Hooftweg 9, 1217 RJ Hilversum
+  postadres: Postbus 2006, 1200 CA Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: P.C. Hooftweg 9
+    postcode: 1217 RJ
+    woonplaats: Hilversum
+  - type: Postadres
+    postbus: '2006'
+    postcode: 1200 CA
+    woonplaats: Hilversum
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27910971/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27910971/stichting-centrum-internationale-kinderontvoering
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ name:
   full: R.J. Proos
   family: Proos
   given: R.J.
-  initials: R.
+  initials: R.J.
 mandaten:
 - id: 17a1ecb4-e68f-44b9-a7a5-ba64bae13866
   organization_id: org:gemeente-hilversum
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4226214
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28797/gemeente-hilversum
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30088676
 - id: 7181356b-18b3-4c37-a4cb-9fad38f0a8a5
   organization_id: org:gemeente-hilversum
   post_id: post:raadslid-gemeente-hilversum

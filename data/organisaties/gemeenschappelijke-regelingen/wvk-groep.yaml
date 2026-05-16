@@ -2,18 +2,55 @@ id: org:gr-wvk-groep
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962164'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0299
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regeling WVK-Groep
+  roo_id: '24962159'
 names:
 - value: WVK-groep
   valid_from: '1900-01-01'
   valid_until: '2019-07-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-07-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.wvk-groep.nl
   email: info@wvk-groep.nl
+  bezoekadres: Raambrug 8, 5531 AG Bladel
+  postadres: Postbus 10, 5530 AA Bladel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raambrug
+    huisnummer: '8'
+    postcode: 5531 AG
+    woonplaats: Bladel
+  - type: Postadres
+    postbus: '10'
+    postcode: 5530 AA
+    woonplaats: Bladel
+  phones:
+  - nummer: (0497) 33 12 00
+    label: algemeen
+  emails:
+  - email: info@wvk-groep.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.wvk-groep.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-07-01'
+last_mutation: '2020-01-07'
+last_verified: '2020-01-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962164/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962164/wvk-groep
+  retrieved: '2026-05-16'
+roo_start_datum: '1989-07-01'

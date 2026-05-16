@@ -5,23 +5,123 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0713
   oin: 00000001851672620000
   kvk: '55366643'
+  owms: http://standaarden.overheid.nl/owms/terms/odmh
+  organisatiecode: so0713
+  rsin: '851672620'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Midden-Holland
+  roo_id: '29490352'
 names:
 - value: Omgevingsdienst Midden-Holland
   abbr: ODMH
   valid_from: '1900-01-01'
+description:
+  text: De ODMH is de omgevingsdienst van de Provincie Zuid-Holland en de gemeenten
+    Alphen aan den Rijn, Bodegraven-Reeuwijk, Gouda, Krimpenerwaard, Waddinxveen en
+    Zuidplas.De ODMH draagt bij aan een veilige, duurzame en gezonde samenleving.
+    Dit doet de ODMH door de (wettelijke) taken op het gebied van milieu en bouw-
+    en woningtoezicht namens de deelnemers uit te voeren. We verlenen omgevingsvergunningen
+    en controleren op de naleving van milieu- en bouwregels. Daarnaast adviseert de
+    ODMH zijn deelnemers over inhoudelijke onderwerpen op het gebied van de fysieke
+    leefomgeving, zoals bodem, geluid, lucht en externe veiligheid.
+  url: https://www.odmh.nl/over-odmh/organogram/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odmh.nl/digitaal-loket/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28147764/Omgevingsdienst_Midden-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odmh.nl/over-odmh/bestuur/jaarplannen-begroting-jaarrapportages/
+      toelichting: Hier vindt u de jaarplannen, begroting en jaarrapportages van de
+        ODMH.
+    - informatiecategorie: Beschikkingen
+      url: https://www.odmh.nl/digitaal-loket/hhbeschikking/
+      toelichting: Hier vindt u de handhavingsbeschikkingen.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.odmh.nl/digitaal-loket/wet-open-overheid-woo/
+      toelichting: Hier vindt u de ingediende Woo-verzoeken en de besluiten daarop.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odmh.nl/over-odmh/bestuur/vergaderingen-dagelijks-bestuur/
+      toelichting: Hier vindt u de agenda's en besluitenlijsten van het dagelijks
+        bestuur van de ODMH.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Midden-Holland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Hier vindt u de besluiten van algemene strekking van de ODMH.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Midden-Holland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Hier vindt u de verordeningen van de ODMH.
+    - informatiecategorie: Beschikkingen
+      url: https://www.odmh.nl/digitaal-loket/vergunningen/
+      toelichting: Hier vindt u de vergunningen van provinciale bedrijven.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.odmh.nl/over-odmh/bestuur/vergaderingen-algemeen-bestuur/
+      toelichting: Hier vindt u de agenda en vergaderstukken van het algemeen bestuur
+        van de ODMH.
+  wooVerzoek:
+    url: https://www.odmh.nl/digitaal-loket/wet-open-overheid-woo/
+organogram_url: https://www.odmh.nl/over-odmh/organogram/
+afspraak:
+  telefoonnummer: (088) 545 00 00
 contact:
   website: https://www.odmh.nl
   email: info@odmh.nl
+  bezoekadres: Thorbeckelaan 5, 2805 CA Gouda
+  postadres: Postbus 45, 2800 AA Gouda
+  addresses:
+  - type: Bezoekadres
+    toelichting: Midden-Hollandhuis
+    openbare_ruimte: Thorbeckelaan
+    huisnummer: '5'
+    postcode: 2805 CA
+    woonplaats: Gouda
+  - type: Postadres
+    postbus: '45'
+    postcode: 2800 AA
+    woonplaats: Gouda
+  - type: Woo-Adres
+    postbus: '45'
+    postcode: 2800 AA
+    woonplaats: Gouda
+  phones:
+  - nummer: (088) 545 00 00
+    label: algemeen
+  emails:
+  - email: info@odmh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odmh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odmh.nl/over-odmh/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28147764/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28147764/odmh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-04-18'

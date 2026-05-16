@@ -7,12 +7,31 @@ parent_id: org:onderdeel-griffie-ek
 names:
 - value: Directie Organisatie
   valid_from: '1900-01-01'
+description:
+  text: De directie Organisatie omvat alle taken op het gebied van bedrijfsvoering,
+    communicatie en protocol van de Eerste Kamer. Dit betreft de taakvelden van het
+    secretariaat van de Voorzitter en Griffier en de raadadviseur van de Griffier,
+    alle (buitenlandse) protocollaire aangelegenheden en communicatie, veiligheid
+    en huisvesting, de financieel-economische aangelegenheden inclusief inkoop, personeel
+    en organisatie, informatievoorziening en ICT, postregistratie en archivering,
+    de receptietaken, de huishoudelijke dienst, facilitaire zaken, de bodedienst,
+    de chauffeurstaak en adviserende en ondersteunende werkzaamheden bedrijfsvoering
+    breed.
+  url: https://www.eerstekamer.nl/begrip/ambtelijke_organisatie
 contact:
   website: https://www.eerstekamer.nl/begrip/ambtelijke_organisatie
   email: postbus@eerstekamer.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: postbus@eerstekamer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-08-22'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/313/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/313/directie-organisatie
+  retrieved: '2026-05-16'

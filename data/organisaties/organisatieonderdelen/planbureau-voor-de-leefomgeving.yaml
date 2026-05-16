@@ -1,5 +1,6 @@
 id: org:onderdeel-planbureau-voor-de-leefomgeving
 type: organisatieonderdeel
+subname: PBL
 identifiers:
   roo_id: '112992'
 classification: organisatieonderdeel
@@ -7,9 +8,25 @@ parent_id: org:min-ienw
 names:
 - value: Planbureau voor de Leefomgeving
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 30314, 2500 GH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30314'
+    postcode: 2500 GH
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-07-31'
+last_verified: '2023-07-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112992/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112992/planbureau-voor-de-leefomgeving
+  retrieved: '2026-05-16'

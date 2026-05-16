@@ -3,15 +3,29 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29159797'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1086
+  owms: http://standaarden.overheid.nl/owms/terms/gotpoo
+  organisatiecode: so1086
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Toezicht op het Primair Openbaar Onderwijs
+  roo_id: '29159831'
 names:
 - value: Gemeenschappelijk Orgaan Toezicht op het Primair Openbaar Onderwijs
   abbr: GOTPOO
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-06'
+last_verified: '2025-05-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29159797/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29159797/gotpoo
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-01-01'

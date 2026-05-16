@@ -3,19 +3,63 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24961840'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0766
+  owms: http://standaarden.overheid.nl/owms/terms/phtb
+  kvk: '51979233'
+  organisatiecode: so0766
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling projectbureau herstructurering tuinbouw Bommelerwaard
+  roo_id: '24961835'
 names:
 - value: Projectbureau Herstructurering Tuinbouw Bommelerwaard
   abbr: PHTB
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.tuinbouwbommelerwaard.nl
   email: info@tuinbouwbommelerwaard.nl
+  bezoekadres: Hogeweg 11, 5301 LB Zaltbommel
+  postadres: Postbus 10002, 5300 DA Zaltbommel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hogeweg
+    huisnummer: '11'
+    postcode: 5301 LB
+    woonplaats: Zaltbommel
+  - type: Postadres
+    postbus: '10002'
+    postcode: 5300 DA
+    woonplaats: Zaltbommel
+  phones:
+  - nummer: (0418) 68 16 95
+    label: algemeen
+  emails:
+  - email: info@tuinbouwbommelerwaard.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.tuinbouwbommelerwaard.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24961840/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24961840/phtb
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-01-04'

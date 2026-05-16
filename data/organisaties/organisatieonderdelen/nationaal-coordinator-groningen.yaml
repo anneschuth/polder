@@ -2,14 +2,30 @@ id: org:onderdeel-nationaal-coordinator-groningen
 type: organisatieonderdeel
 identifiers:
   roo_id: '28963280'
+  owms: http://standaarden.overheid.nl/owms/terms/ncg
+  oin: I0000004126201990000
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Nationaal Coördinator Groningen
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28963280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28963280/nationaal-coordinator-groningen
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-06-01'

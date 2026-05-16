@@ -1,20 +1,67 @@
 id: org:commissie-ncad
 type: adviescollege
+subname: Nationaal Comité advies dierproevenbeleid
 identifiers:
   roo_id: '28391601'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10193
+  owms: http://standaarden.overheid.nl/owms/terms/natcteebeschdier
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Nationaal comité voor de bescherming van dieren
   abbr: NCad
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 19 van de Wet op de dierproeven
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0003081&paragraaf=7&artikel=19&z=2019-01-01&g=2019-01-01
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.ncadierproevenbeleid.nl/
   email: ncad@minlnv.nl
+  postadres: Postbus 93118, 2509 AC Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '93118'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (0800) 789 07 89
+    label: algemeen
+  emails:
+  - email: ncad@minlnv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ncadierproevenbeleid.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ncadierproevenbeleid.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391601/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391601/ncad
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-12-18'

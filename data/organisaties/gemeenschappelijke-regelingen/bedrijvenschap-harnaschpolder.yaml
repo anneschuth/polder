@@ -3,17 +3,62 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962515'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0545
+  owms: http://standaarden.overheid.nl/owms/terms/harnasch
+  kvk: '52752968'
+  organisatiecode: so0545
+  rsin: '813362064'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijvenschap Harnaschpolder
+  roo_id: '24962510'
 names:
 - value: Bedrijvenschap Harnaschpolder
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://businessparkhaaglanden.nl/vestigingslocaties/midden-delfland
   email: gemeente@middendelfland.nl
+  bezoekadres: Anna van Raesfeltstraat 37, 2636 HX Schipluiden
+  postadres: Postbus 1, 2636 ZG Schipluiden
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Midden-Delfland
+    openbare_ruimte: Anna van Raesfeltstraat
+    huisnummer: '37'
+    postcode: 2636 HX
+    woonplaats: Schipluiden
+  - type: Postadres
+    postbus: '1'
+    postcode: 2636 ZG
+    woonplaats: Schipluiden
+  phones:
+  - nummer: (015) 380 41 11
+    label: algemeen
+  emails:
+  - email: gemeente@middendelfland.nl
+    label: Midden-Delfland
+  internet_addresses:
+  - url: https://businessparkhaaglanden.nl/vestigingslocaties/midden-delfland
+    label: algemeen
+  - url: https://bedrijvenschapharnaschpolder.nl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-17'
+last_verified: '2022-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962515/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962515/bedrijvenschap-harnaschpolder
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-01'

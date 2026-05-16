@@ -3,7 +3,7 @@ name:
   full: H.F. Kuit
   family: Kuit
   given: H.F.
-  initials: H.
+  initials: H.F.
 mandaten:
 - id: 85ced27b-e1c5-4271-afc6-78bc894fede2
   organization_id: org:gemeente-meppel
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774306
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/41121/gemeente-meppel
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30525783
 - id: 4d11d963-c4be-4fa8-a514-b899bf6645ee
   organization_id: org:gemeente-meppel
   post_id: post:raadslid-gemeente-meppel

@@ -5,22 +5,105 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0637
   oin: 00000001004772581000
   kvk: '32168264'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Gooi_en_Vechtstreek
+  organisatiecode: so0637
+  rsin: 004772581
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Gooi en Vechtstreek 2023
+  roo_id: '29491896'
 names:
 - value: Veiligheidsregio Gooi en Vechtstreek
   valid_from: '1900-01-01'
+description:
+  text: In de Veiligheidsregio Gooi en Vechtstreek wordt samengewerkt door de zes
+    gemeenten in de regio (Blaricum, Gooise Meren, Hilversum, Huizen, Laren en Wijdemeren),
+    de brandweer in de regio, de geneeskundige hulpverleningsorganisatie in de regio
+    (GHOR), de politie en het Openbaar Ministerie.
+  url: https://www.vrgooienvechtstreek.nl/onze-organisatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrgooienvechtstreek.nl/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28664233/Veiligheidsregio_Gooi_en_Vechtstreek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Gooi+en+Vechtstreek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.vrgooienvechtstreek.nl/agendas-en-verslagen-vergaderingen-algemeen-bestuur/
+      toelichting: Vergaderstukken van het algemeen bestuur Veiligheidsregio Gooi
+        en Vechtstreek
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.vrgooienvechtstreek.nl/documenten-en-publicaties/
+    - informatiecategorie: Convenanten
+      url: https://www.vrgooienvechtstreek.nl/documenten-en-publicaties/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.vrgooienvechtstreek.nl/documenten-en-publicaties/
+  wooVerzoek:
+    url: https://www.vrgooienvechtstreek.nl/wet-open-overheid-woo/
+afspraak:
+  email: info@brandweergooivecht.nl
+  telefoonnummer: (035) 688 55 55
 contact:
   website: https://www.vrgooienvechtstreek.nl
   email: info@brandweergooivecht.nl
+  bezoekadres: Kamerlingh Onnesweg 148, 1223 JN Hilversum
+  postadres: Postbus 57, 1200 AB Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kamerlingh Onnesweg
+    huisnummer: '148'
+    postcode: 1223 JN
+    woonplaats: Hilversum
+  - type: Postadres
+    postbus: '57'
+    postcode: 1200 AB
+    woonplaats: Hilversum
+  - type: Woo-Adres
+    openbare_ruimte: Kamerlingh Onnesweg
+    huisnummer: '148'
+    postcode: 1223 JN
+    woonplaats: Hilversum
+  phones:
+  - nummer: (035) 688 55 55
+    label: algemeen
+  emails:
+  - email: info@brandweergooivecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrgooienvechtstreek.nl
+    label: algemeen
+  - url: https://www.vrgooienvechtstreek.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.vrgooienvechtstreek.nl/contact
+    label: Algemeen
+  fax: (035) 688 55 15
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28664233/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28664233/veiligheidsregio-gooi-en-vechtstreek
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2007-01-01'

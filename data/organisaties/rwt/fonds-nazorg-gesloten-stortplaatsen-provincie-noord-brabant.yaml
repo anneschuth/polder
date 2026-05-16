@@ -2,14 +2,44 @@ id: org:oovb-fonds-nazorg-gesloten-stortplaatsen-provincie-noord-brabant
 type: rwt
 identifiers:
   roo_id: '28050365'
+  kvk: '17280802'
+  rsin: '808696683'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Fonds Nazorg Gesloten Stortplaatsen Provincie Noord-Brabant
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+contact:
+  bezoekadres: Brabantlaan 1, 5216 TV ’s-Hertogenbosch
+  postadres: Postbus 90151, 5200 MC ’s-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brabantlaan
+    huisnummer: '1'
+    postcode: 5216 TV
+    woonplaats: ’s-Hertogenbosch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '90151'
+    postcode: 5200 MC
+    woonplaats: ’s-Hertogenbosch
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-11'
+last_verified: '2019-09-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28050365/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28050365/fonds-nazorg-gesloten-stortplaatsen-provincie-noord-brabant
+  retrieved: '2026-05-16'

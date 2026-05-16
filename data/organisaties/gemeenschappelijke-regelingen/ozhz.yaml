@@ -5,23 +5,101 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0669
   oin: 00000001823289552000
   kvk: '51291010'
+  owms: http://standaarden.overheid.nl/owms/terms/Omgevingsdienst_Zuid-Holland_Zuid
+  btw: NL823289552B01
+  organisatiecode: so0669
+  rsin: '823289552'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Zuid-Holland Zuid
+  roo_id: '29990201'
 names:
 - value: Omgevingsdienst Zuid-Holland Zuid
   abbr: OZHZ
   valid_from: '1900-01-01'
+description:
+  url: https://www.ozhz.nl/zo-ziet-de-organisatie-ozhz-eruit/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ozhz.nl/een-woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28093502/Omgevingsdienst_Zuid-Holland_Zuid
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.ozhz.nl/over-ozhz/vergaderingen-en-stukken/
+      toelichting: Op onze site vindt u de openbare stukken van het algemeen bestuur
+        en de openbare agenda's en besluitenlijsten van het dagelijks bestuur. Ook
+        vindt u daar de vastgestelde jaarstukken en de belangrijkste beleidsdocumenten.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Zuid-Holland+Zuid%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: U vindt hier de gepubliceerde besluiten van de directeur, het dagelijks
+        bestuur en het algemeen bestuur.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Zuid-Holland+Zuid%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: U vindt hier de gepubliceerde besluiten van de directeur, het dagelijks
+        bestuur en het algemeen bestuur.
+  wooVerzoek:
+    url: https://www.ozhz.nl/dien-uw-woo-verzoek-in/
+afspraak:
+  url: https://www.ozhz.nl/contact/
 contact:
   website: https://www.ozhz.nl
   email: wooverzoeken@ozhz.nl
+  bezoekadres: Johan de Wittstraat 140, 3311 KJ Dordrecht
+  postadres: Postbus 550, 3300 AN Dordrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Post 120
+    openbare_ruimte: Johan de Wittstraat
+    huisnummer: '140'
+    postcode: 3311 KJ
+    woonplaats: Dordrecht
+  - type: Postadres
+    postbus: '550'
+    postcode: 3300 AN
+    woonplaats: Dordrecht
+  - type: Woo-Adres
+    toelichting: Bezoek- en postadres
+    openbare_ruimte: Johan de Wittstraat
+    huisnummer: '140'
+    postcode: 3311 KJ
+    woonplaats: Dordrecht
+    regio: Zuid-Holland
+    land: Nederland
+  phones:
+  - nummer: (078) 770 85 85
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ozhz.nl
+    label: algemeen
+  - url: https://www.ozhz.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28093502/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28093502/ozhz
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-03-05'

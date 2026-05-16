@@ -3,15 +3,32 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '93519'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Commissie voor Koninkrijksrelaties (KOREL)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/korel
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/korel
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-04-09'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/93519/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/93519/commissie-voor-koninkrijksrelaties-korel
+  retrieved: '2026-05-16'

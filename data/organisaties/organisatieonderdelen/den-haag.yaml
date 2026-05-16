@@ -10,12 +10,23 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Den Haag
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Alexanderveld 5, 2585 DB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Alexanderveld
+    huisnummer: '5'
+    postcode: 2585 DB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132297/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132297/den-haag
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'

@@ -3,17 +3,99 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28324231'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1070
+  owms: http://standaarden.overheid.nl/owms/terms/bvovaho
+  kvk: '82056625'
+  organisatiecode: so1070
+  rsin: '862320094'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bedrijfsvoeringsorganisatie Valleihopper
+  roo_id: '30155600'
 names:
 - value: Bedrijfsvoeringsorganisatie Valleihopper
   valid_from: '1900-01-01'
+description:
+  text: Of u nu speciaal aangepast vervoer nodig heeft of niet, wij vervoeren u comfortabel
+    en veilig. Het vervoer wordt verzorgd door Munckhof en Van Driel. U herkent Valleihopper
+    aan het logo op de voertuigen.Valleihopper is er voor mensen met een Wmo-vervoerindicatie
+    die wonen in de regio Foodvalley. Dit zijn de gemeenten Barneveld, Ede, Nijkerk,
+    Renswoude, Rhenen, Scherpenzeel, Wageningen en Veenendaal. Valleihopper is bestemd
+    voor sociaal-recreatieve doeleinden. Het vervoer naar een medische afspraak wordt
+    gedoogd, als er geen alternatief vervoer voorhanden is.U kunt gebruik maken van
+    Valleihopper wanneer u vanwege een beperking niet met openbaar vervoer kunt reizen,
+    of als u aangepast vervoer nodig heeft. U kunt dan bij de afdeling Wmo van uw
+    gemeente een vervoerindicatie aanvragen. Komt u in aanmerking voor de vervoervoorziening,
+    dan ontvangt u een Valleihopper-pas. Deze pas heeft een uniek nummer. Met deze
+    pas kunt u ritten boeken en gebruik maken van de vervoerdiensten van Valleihopper.
+  url: https://www.valleihopper.nl/over-valleihopper
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28324231/Bedrijfsvoeringsorganisatie_Valleihopper
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/uitgebreidzoeken
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.valleihopper.nl/over-valleihopper/jaarverslagen-en-publicatiestukken
+  wooVerzoek:
+    url: https://www.valleihopper.nl/contact
+organogram_url: https://www.valleihopper.nl/fileadmin/valleihopper/Documenten/Organogram_BVO_Valleihopper.pdf
+afspraak:
+  email: valleihopper@pzn-bv.nl
+  telefoonnummer: (0900) 551 15 51
+  url: https://www.valleihopper.nl/contact
 contact:
   website: https://www.valleihopper.nl
   email: valleihopper@pzn-bv.nl
+  postadres: Postbus 63, 3770 AB Barneveld
+  bezoekadres: Raadhuisplein 2, 3771 ER Barneveld
+  addresses:
+  - type: Postadres
+    postbus: '63'
+    postcode: 3770 AB
+    woonplaats: Barneveld
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '2'
+    postcode: 3771 ER
+    woonplaats: Barneveld
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Woo-Adres
+    huisnummer: '63'
+    postcode: 3770 AB
+    woonplaats: Barneveld
+  phones:
+  - nummer: (0900) 551 15 51
+    label: reserveren rit
+  - nummer: (0900) 662 26 62
+    label: klantenservice
+  emails:
+  - email: valleihopper@pzn-bv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.valleihopper.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.valleihopper.nl/contact.html
+    label: Algemeen
+  - url: https://www.valleihopper.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-05'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28324231/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28324231/bedrijfsvoeringsorganisatie-valleihopper
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-01-01'

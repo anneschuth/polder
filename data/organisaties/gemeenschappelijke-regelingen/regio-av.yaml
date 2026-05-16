@@ -3,18 +3,67 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967755'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0641
+  owms: http://standaarden.overheid.nl/owms/terms/regioav
+  kvk: '54694884'
+  organisatiecode: so0641
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio Alblasserwaard – Vijfheerenlanden 2019
+  roo_id: '24967750'
 names:
 - value: Regio-AV
   valid_from: '1900-01-01'
   valid_until: '2025-02-05'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2025-02-05'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2025-02-05'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://alblasserwaard-vijfheerenlanden.nl
   email: info@regioav.nl
+  bezoekadres: Stadhuisplein 1, 4205 AZ Gorinchem
+  postadres: Postbus 119, 4200 AC Gorinchem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 4205 AZ
+    woonplaats: Gorinchem
+  - type: Postadres
+    postbus: '119'
+    postcode: 4200 AC
+    woonplaats: Gorinchem
+  phones:
+  - nummer: (085) 486 85 40
+    label: algemeen
+  emails:
+  - email: info@regioav.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://alblasserwaard-vijfheerenlanden.nl
+    label: algemeen
+  - url: https://alblasserwaard-vijfheerenlanden.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://alblasserwaard-vijfheerenlanden.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-02-05'
+last_mutation: '2026-05-04'
+last_verified: '2023-08-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967755/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967755/regio-av
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-01-01'

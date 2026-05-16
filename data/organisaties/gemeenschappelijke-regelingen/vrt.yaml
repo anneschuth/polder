@@ -5,23 +5,112 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0679
   oin: 00000001850303977000
   kvk: '52112357'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Twente
+  organisatiecode: so0679
+  rsin: '850303977'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Veiligheidsregio Twente
+  roo_id: '29515888'
 names:
 - value: Veiligheidsregio Twente
   abbr: VRT
   valid_from: '1900-01-01'
+description:
+  text: Het rechtspersoonlijkheid bezittend openbaar lichaam genaamd Veiligheidsregio
+    Twente gevestigd te Enschede, met als rechtsgebied het grondgebied van de gemeenten
+    Almelo, Borne, Dinkelland, Enschede, Haaksbergen, Hellendoorn, Hengelo (O), Hof
+    van Twente, Losser, Oldenzaal, Rijssen, Holten, Tubbergen, Twenterand en Wierden.
+  url: https://www.vrtwente.nl/over-de-veiligheidsregio
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrtwente.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/24221356/Veiligheidsregio_Twente
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Twente%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Twente%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vrtwente.nl/wet-open-overheid-woo
+organogram_url: https://www.vrtwente.nl/over-de-veiligheidsregio
+afspraak:
+  email: info@vrtwente.nl
+  telefoonnummer: (088) 256 78 00
+  url: https://www.vrtwente.nl/contact
 contact:
   website: https://www.vrtwente.nl
   email: info@vrtwente.nl
+  bezoekadres: Spaansland 20, 7543 BG Enschede
+  postadres: Postbus 383, 7500 AJ Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spaansland
+    huisnummer: '20'
+    postcode: 7543 BG
+    woonplaats: Enschede
+    land: Nederland
+  - type: Postadres
+    postbus: '383'
+    postcode: 7500 AJ
+    woonplaats: Enschede
+    regio: Twente
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '383'
+    postcode: 7500 AJ
+    woonplaats: Enschede
+  phones:
+  - nummer: (088) 256 78 00
+    label: algemeen
+  emails:
+  - email: info@vrtwente.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrtwente.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vrtwente.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: veiligheidsregiotwente
+    url: https://www.instagram.com/veiligheidsregiotwente/
+  - platform: Facebook
+    gebruikersnaam: veiligheidsregiotwente
+    url: https://www.facebook.com/veiligheidsregiotwente
+  - platform: X
+    gebruikersnaam: VRT_Twente
+    url: https://x.com/VRT_Twente
+  - platform: LinkedIn
+    gebruikersnaam: veiligheidsregio-twente
+    url: https://www.linkedin.com/company/veiligheidsregio-twente
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24221356/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24221356/vrt
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2011-01-01'

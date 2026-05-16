@@ -3,18 +3,133 @@ type: adviescollege
 identifiers:
   roo_id: '28211375'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10261
+  owms: http://standaarden.overheid.nl/owms/terms/Raden_voor_de_leefomgeving_en_infrastructuur
+  organisatiecode: oorg10261
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Raad voor de leefomgeving en infrastructuur
   abbr: Rli
   valid_from: '1900-01-01'
+description:
+  text: De Raad adviseert de regering en de Eerste en Tweede Kamer over strategische
+    beleidsvraagstukken met betrekking tot de duurzame ontwikkeling van de leefomgeving
+    en infrastructuur. Hierbij wordt in het bijzonder aandacht besteed aan wonen,
+    ruimtelijke ordening, milieu, klimaatbeleid, water, energie-infrastructuur, landbouw,
+    natuur, voedsel(kwaliteit), verkeer en vervoer en de ruimtelijk-economische ontwikkeling.Verder
+    adviseert de Raad over beleid ter voorkoming van ongevallen en rampen als gevolg
+    van het gebruik, de opslag, de productie en het vervoer van gevaarlijke stoffen.
+    Hierbij geeft de Raad ook advies over hoe de gevolgen van dergelijke ongevallen
+    en rampen beperkt kunnen worden.
+  url: https://www.rli.nl/over-de-raad
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet Raad voor de leefomgeving en infrastructuur, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0031263/2014-08-01/#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rli.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28211375/Raad_voor_de_leefomgeving_en_infrastructuur
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rli.nl/over-de-raad
+      toelichting: De raadsevaluaties treft  u rechts aan op de pagina onder 'downloads
+        & links'
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rli.nl/alle-publicaties?f%5B0%5D=typepublicatie%3Ajaarverslag
+      toelichting: Via deze link treft u de jaarverslagen aan van de Rli
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rli.nl/alle-publicaties
+      toelichting: De Rli publiceert onder publicaties de bedoelde onderzoeksrapporten
+        (indien van toepassing).
+    - informatiecategorie: Adviezen
+      url: https://www.rli.nl/alle-publicaties
+      toelichting: Via deze link treft u de adviezen aan die de Rli heeft uitgebracht
+  wooVerzoek:
+    url: https://www.rli.nl/contact
+organogram_url: https://www.rli.nl/raadsleden
+afspraak:
+  url: https://www.rli.nl/contact
 contact:
   website: https://www.rli.nl/
   email: info@rli.nl
+  bezoekadres: Bezuidenhoutseweg 30 (B30), 2594 AV Den Haag
+  postadres: Postbus 20906, 2500 EX Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stafbureau Rli
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    huisnummer_toevoeging: (B30)
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20906'
+    postcode: 2500 EX
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20906'
+    postcode: 2500 EX
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: 06 21 80 03 02
+    label: algemeen
+  emails:
+  - email: info@rli.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rli.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rli.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor de leefomgeving en infrastructuur (Rli)
+    url: https://www.linkedin.com/company/raden-voor-de-leefomgeving-%26-infrastructuur-rli-/
+  - platform: Facebook
+    gebruikersnaam: Rli - Raad voor de leefomgeving en infrastructuur
+    url: https://www.facebook.com/RaadRli
+  - platform: YouTube
+    gebruikersnaam: RaadRli
+    url: https://www.youtube.com/user/RaadRli/videos
+  - platform: X
+    gebruikersnaam: '@raadrli'
+    url: https://twitter.com/raadrli
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28211375/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28211375/rli
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-02-11'

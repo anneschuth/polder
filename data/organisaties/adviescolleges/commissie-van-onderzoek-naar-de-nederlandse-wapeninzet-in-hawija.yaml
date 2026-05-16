@@ -3,15 +3,46 @@ type: adviescollege
 identifiers:
   roo_id: '28390823'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10179
+  owms: http://standaarden.overheid.nl/owms/terms/cieonderzhawija
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
 names:
 - value: Commissie van onderzoek naar de Nederlandse wapeninzet in Hawija
   valid_from: '1900-01-01'
   valid_until: '2025-01-27'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit Commissie van onderzoek wapeninzet
+    Hawija
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0044377&artikel=2
+classifications:
+- type: CAO
+  eind_datum: '2025-01-27'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2025-01-27'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2025-01-27'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2025-01-27'
+last_mutation: '2026-04-14'
+last_verified: '2026-04-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390823/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390823/commissie-van-onderzoek-naar-de-nederlandse-wapeninzet-in-hawija
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-11-27'

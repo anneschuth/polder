@@ -2,8 +2,9 @@ id: org:onderdeel-scp
 type: organisatieonderdeel
 identifiers:
   roo_id: '66140'
+  oin: '00000004000000053000'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:onderdeel-planbureau
 names:
 - value: Sociaal en Cultureel Planbureau
   abbr: SCP
@@ -11,12 +12,55 @@ names:
 - value: Planbureau
   abbr: SCP
   valid_from: '1900-01-01'
+description:
+  text: Het SCP is één van de drie planbureaus dat met wetenschappelijke kennis over
+    het leven van burgers in Nederland bijdraagt aan goed geïnformeerd overheidsbeleid
+    en een betere samenleving. Als kennisinstelling doet het SCP op onafhankelijke
+    wijze – gevraagd en ongevraagd – beleidsrelevant wetenschappelijk onderzoek naar
+    de kwaliteit van de samenleving vanuit het perspectief van de burger.Taken* Wetenschappelijke
+    verkenningen verrichten om te komen tot een samenhangende beschrijving van de
+    situatie van het sociaal en cultureel welzijn in Nederland en belangrijke ontwikkelingen
+    in de samenleving;* Bijdragen aan een verantwoorde keuze van beleidsdoelen en
+    inzicht in de verschillende wegen om deze doeleinden te bereiken;* Informatie
+    verwerven met betrekking tot de uitvoering van interdepartementaal beleid op het
+    gebied van sociaal en cultureel welzijn, om de evaluatie van deze uitvoering mogelijk
+    te maken.De maatschappelijke vraagstukken waar het SCP onderzoek naar doet, beperken
+    zich zelden tot één specifiek beleidsterrein. Burgers bevinden zich immers in
+    veel domeinen tegelijkertijd. Door dit als uitgangspunt te nemen, kan het SCP
+    het effect van overheidsbeleid voor burgers beter onderzoeken. Als onafhankelijk
+    planbureau kiest het SCP zelf welke onderzoeken het uitvoert, in verbindingen
+    met anderen.
+organogram_url: https://www.scp.nl/over-scp
 contact:
   website: http://www.scp.nl
   email: info@scp.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 16164, 2500 BD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16164'
+    postcode: 2500 BD
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 984 63 00
+    label: algemeen
+  emails:
+  - email: info@scp.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.scp.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2023-08-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66140/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66140/scp
+  retrieved: '2026-05-16'

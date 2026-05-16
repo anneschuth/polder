@@ -5,23 +5,121 @@ identifiers:
   kvk: '50973029'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10148
   roo_id: '71857'
+  owms: http://standaarden.overheid.nl/owms/terms/Dienst_Uitvoering_Onderwijs
+  rsin: '823427055'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Dienst Uitvoering Onderwijs
   abbr: DUO
   valid_from: '1900-01-01'
+description:
+  text: De Dienst Uitvoering Onderwijs (DUO) voert als baten-lastendienst in opdracht
+    van de minister van Onderwijs, Cultuur en Wetenschap onderwijswetten en -regelingen
+    uit. Ook voert DUO in opdracht van het ministerie van Justitie en Veiligheid de
+    Wet inburgering uit.De hoofdtaken van DUO zijn:- bekostigen van onderwijsinstellingen-
+    verstrekken van studiefinanciering en tegemoetkoming schoolkosten- innen van lesgelden
+    en studieschulden- erkennen van diploma's, beheren Mijn diploma's- organiseren
+    van school-, staats-, Wft- en inburgeringsexamens- verzamelen en beheren van onderwijsgegevens
+    in diverse registraties- verrijken van onderwijsgegevens tot informatieproducten-
+    fungeren als Nationaal Europass Centrum Nederland- verzamelen en beheren van gegevens
+    in het landelijk register kinderopvang en peuterspeelzalen
+  url: https://duo.nl/organisatie/organisatie/
+taken_en_bevoegdheden: De Dienst Uitvoering Onderwijs (DUO) voert als baten-lastendienst
+  in opdracht van de minister van Onderwijs, Cultuur en Wetenschap onderwijswetten
+  en -regelingen uit. Ook voert DUO in opdracht van het ministerie van Sociale Zaken
+  en Werkgelegenheid de Wet inburgering uit.
+doorlichtingen:
+- datum: '2025-04-01'
+  naam_rapport: Doorlichting DUO
+  referentie: https://www.tweedekamer.nl/kamerstukken/detail/detail?id=2025D26187&did=2025D26187
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://duo.nl/organisatie/wet-open-overheid.jsp
+      overzichtURL: https://organisaties.overheid.nl/woo/71857/Dienst_Uitvoering_Onderwijs
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://duo.nl/organisatie/openbare-woo-documenten.jsp
+      toelichting: Op deze pagina staan de gepubliceerde openbare convenanten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Onderwijs%2C+Cultuur+en+Wetenschap&type=Woo-besluit
+      toelichting: Woo-besluiten en openbaar gemaakte documenten (n.a.v. het Woo-verzoek).
+  wooVerzoek:
+    url: https://duo.nl/organisatie/wet-open-overheid.jsp
+organogram_url: https://duo.nl/organisatie/hoofdtaken-en-organogram.jsp
+afspraak:
+  url: https://duo.nl/particulier/contact/bezoeken/
+personnel:
+  aantalFte: '3277'
+  peildatumFte: '2025-12-31'
+  toelichtingFte: Aantal voltijdsarbeidsplaatsen intern personeel
 contact:
   website: http://www.duo.nl
   email: dg-duo-ondersteuning@duo.nl
+  bezoekadres: Kempkensberg 12, 9722 LG Groningen
+  postadres: Postbus 30155, 9700 LG Groningen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor
+    openbare_ruimte: Kempkensberg
+    huisnummer: '12'
+    postcode: 9722 LG
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  - type: Postadres
+    postbus: '30155'
+    postcode: 9700 LG
+    woonplaats: Groningen
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: T.a.v. Woo-functionaris, KB 12, N*-803
+    postbus: '30155'
+    postcode: 9700 LG
+    woonplaats: Groningen
+    land: Nederland
+  phones:
+  - nummer: (050) 599 77 55
+    label: algemeen
+  internet_addresses:
+  - url: http://www.duo.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.duo.nl/particulier/footer/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71857/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71857/duo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-01-01'

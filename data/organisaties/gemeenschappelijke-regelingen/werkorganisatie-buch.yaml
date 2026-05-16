@@ -5,22 +5,115 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0874
   oin: 00000001824347419000
   kvk: '67675808'
+  owms: http://standaarden.overheid.nl/owms/terms/buch
+  organisatiecode: so0874
+  rsin: '824347419'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkorganisatie BUCH
+  roo_id: '29576839'
 names:
 - value: Werkorganisatie BUCH
   valid_from: '1900-01-01'
+description:
+  text: Werkorganisatie BUCH is in 2017 ontstaan, na een fusie van de ambtelijke organisaties
+    van de gemeenten Bergen, Uitgeest, Castricum en Heiloo. Het is daarmee een jonge
+    organisatie, met sterke wortels binnen de vier gemeenten.Met ruim 850 medewerkers
+    faciliteren we vier besturen bij het realiseren van hun ambities. We bieden als
+    één organisatie het hoofd aan maatschappelijke opgaven zoals wonen, klimaat, zorg
+    en gezonde financiën. We focussen op de overeenkomsten met oog voor de lokale
+    verschillen.Samen werken we aan morgen.De BUCH werkt volgens de Gemeenschappelijke
+    Regeling Werkorganisatie BUCH.Werkorganisatie BUCH is een collegeregeling (art.
+    2.1 van de Gemeenschappelijke Regeling), wat betekent dat de leden van het algemeen
+    bestuur verantwoording afleggen aan de vier colleges die hen hebben aangewezen.
+    Er wordt ook verantwoording afgelegd aan de vier gemeenteraden.Het algemeen bestuur
+    – het BUCH-bestuur – bestaat uit:Vier burgemeesters, uit elke gemeente éénUit
+    ieder college één wethouderDe algemeen directeur van de werkorganisatie BUCH is
+    secretaris van het bestuur, maar is geen lid van het bestuur.
+  url: https://www.werkenbijdebuch.nl/over-de-buch
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.werkenbijdebuch.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28620826/Werkorganisatie_BUCH
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkorganisatie+BUCH%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkorganisatie+BUCH%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.burgerberichten.nl/buch/formulieren/aa8c1324-7ca8-41b0-bd8e-e5dd513bb5f3/Indienen-Woo-verzoek/introduction
+organogram_url: https://www.werkenbijdebuch.nl/over-de-buch
+afspraak:
+  email: info@debuch.nl
+  telefoonnummer: 14 0251
+  url: https://www.werkenbijdebuch.nl/contact
 contact:
   website: https://www.werkenbijdebuch.nl/
   email: info@debuch.nl
+  bezoekadres: Middelweg 28, 1911 EG Uitgeest
+  postadres: Postbus 7, 1910 AA Uitgeest
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Middelweg
+    huisnummer: '28'
+    postcode: 1911 EG
+    woonplaats: Uitgeest
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Middelweg
+    huisnummer: '28'
+    postcode: 1911 EG
+    woonplaats: Uitgeest
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    postbus: '7'
+    postcode: 1910 AA
+    woonplaats: Uitgeest
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: 14 0251
+    label: algemeen
+  emails:
+  - email: info@debuch.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.werkenbijdebuch.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.werkenbijdebuch.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28620826/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28620826/werkorganisatie-buch
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

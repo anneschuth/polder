@@ -5,6 +5,9 @@ identifiers:
   kvk: '52188663'
   roo_id: '22496'
   wikidata: Q9786
+  owms: http://standaarden.overheid.nl/owms/terms/Onderbanken
+  ictu: 00881
+  organisatiecode: gm0881
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,75 @@ names:
   abbr: Onderbanken
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 21,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.0
+  aantal_inwoners: 7800
+  inwoners: '371'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 371.0
+  bevat_plaatsen_raw: Bingelrade, Jabeek, Merkelbeek, Schinveld
+  bevat_plaatsen:
+  - Bingelrade
+  - Jabeek
+  - Merkelbeek
+  - Schinveld
+council:
+  total_seats: 13
+  parties:
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: D18
+    aantal_zetels: 3
+  - naam: Democraten Onderbanken
+    aantal_zetels: 2
+  - naam: Progressief Onderbanken
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Vernieuwingsgroep
+    aantal_zetels: 1
 contact:
   website: www.onderbanken.nl
   email: gemeente@onderbanken.nl
+  bezoekadres: Kloosterlaan 7, 6451 EN SCHINVELD
+  postadres: Postbus 1090, 6450 CB SCHINVELD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kloosterlaan
+    huisnummer: '7'
+    postcode: 6451 EN
+    woonplaats: SCHINVELD
+  - type: Postadres
+    openbare_ruimte: Postbus 1090
+    postbus: '1090'
+    postcode: 6450 CB
+    woonplaats: SCHINVELD
+  phones:
+  - nummer: (045) 527 87 87
+    label: algemeen
+  emails:
+  - email: gemeente@onderbanken.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.onderbanken.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-10-14'
+last_verified: '2020-10-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22496/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22496/onderbanken
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

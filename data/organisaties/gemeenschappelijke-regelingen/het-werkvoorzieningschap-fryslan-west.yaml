@@ -3,17 +3,93 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962032'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0446
+  owms: http://standaarden.overheid.nl/owms/terms/wvsfrysw
+  kvk: 01170318
+  btw: NL817729860B01
+  organisatiecode: so0446
+  rsin: '810197595'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkvoorzieningschap Fryslân-West
+  roo_id: '29892807'
 names:
 - value: Het werkvoorzieningschap Fryslân-West
   valid_from: '1900-01-01'
+description:
+  url: https://www.empatec.nl/over-empatec/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.empatec.nl/algemeen-bestuur/
+      overzichtURL: https://organisaties.overheid.nl/woo/24962032/Het_werkvoorzieningschap_Fryslan-West
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.empatec.nl/over-empatec/algemeen-bestuur/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.empatec.nl/over-empatec/algemeen-bestuur/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.empatec.nl/over-empatec/algemeen-bestuur/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Het+werkvoorzieningschap+Fryslân-West%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.empatec.nl/algemeen-bestuur/
+afspraak:
+  email: secretariaat@grfryslanwest.nl
+  telefoonnummer: (0515) 48 49 99
 contact:
   website: https://www.empatec.nl/
   email: secretariaat@grfryslanwest.nl
+  bezoekadres: Tingietersstraat 1, 8601 WJ Sneek
+  postadres: Postbus 280, 8600 AG Sneek
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tingietersstraat
+    huisnummer: '1'
+    postcode: 8601 WJ
+    woonplaats: Sneek
+  - type: Postadres
+    postbus: '280'
+    postcode: 8600 AG
+    woonplaats: Sneek
+  - type: Woo-Adres
+    openbare_ruimte: Tingietersstraat
+    huisnummer: '1'
+    postbus: '280'
+    postcode: 8601 WJ
+    woonplaats: Sneek
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  phones:
+  - nummer: (0515) 48 49 99
+    label: algemeen
+  emails:
+  - email: secretariaat@grfryslanwest.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.empatec.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.empatec.nl/over-empatec/algemeen-bestuur/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-10-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962032/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962032/het-werkvoorzieningschap-fryslan-west
+  retrieved: '2026-05-16'
+roo_start_datum: '2002-01-01'

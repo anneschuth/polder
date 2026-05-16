@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-rotterdam-locatie-dordrecht
 type: organisatieonderdeel
 identifiers:
   roo_id: '28046901'
+  kvk: '82947740'
+  rsin: '862666314'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-rotterdam
 names:
 - value: Rechtbank Rotterdam, locatie Dordrecht
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Steegoversloot 36, 3311 PP Dordrecht
+  postadres: Postbus 7003, 3300 GC Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Steegoversloot
+    huisnummer: '36'
+    postcode: 3311 PP
+    woonplaats: Dordrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '7003'
+    postcode: 3300 GC
+    woonplaats: Dordrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2025-09-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046901/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046901/rechtbank-rotterdam-locatie-dordrecht
+  retrieved: '2026-05-16'

@@ -5,23 +5,66 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0890
   oin: 00000001813195457000
   kvk: '01175667'
+  owms: http://standaarden.overheid.nl/owms/terms/huseh
+  organisatiecode: so0890
+  rsin: '813195457'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling hûs en hiem, welstandsadvisering en monumentenzorg
+  roo_id: '25038262'
 names:
 - value: hûs en hiem, welstandsadvisering en monumentenzorg
   abbr: hûs en hiem
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.husenhiem.nl
   email: husenhiem@husenhiem.nl
+  bezoekadres: J.W. Frisostraat 1, 8933 BN Leeuwarden
+  postadres: J.W. Frisostraat 1, 8933 BN Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: J.W. Frisostraat
+    huisnummer: '1'
+    postcode: 8933 BN
+    woonplaats: Leeuwarden
+  - type: Postadres
+    openbare_ruimte: J.W. Frisostraat
+    huisnummer: '1'
+    postcode: 8933 BN
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 233 79 30
+    label: algemeen
+  emails:
+  - email: husenhiem@husenhiem.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.husenhiem.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25038267/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25038267/hus-en-hiem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1983-01-01'

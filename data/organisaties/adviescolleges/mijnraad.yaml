@@ -3,17 +3,60 @@ type: adviescollege
 identifiers:
   roo_id: '28360925'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10158
+  owms: http://standaarden.overheid.nl/owms/terms/mijnraad
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Mijnraad
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 105 van de Mijnbouwwet
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0014168&hoofdstuk=6&paragraaf=6.1&artikel=105
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://demijnraad.nl/
   email: secretariaatmijnraad@rvo.nl
+  postadres: Postbus 93144, 2500 AC Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '93144'
+    postcode: 2500 AC
+    woonplaats: Den Haag
+  emails:
+  - email: secretariaatmijnraad@rvo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://demijnraad.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://demijnraad.nl/page/view/28692ff9-d9db-4425-8e0b-b58fd477f9a4/over-ons
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360925/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360925/mijnraad
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-01-01'

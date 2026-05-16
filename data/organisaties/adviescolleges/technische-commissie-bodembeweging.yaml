@@ -4,17 +4,63 @@ identifiers:
   roo_id: '28391721'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10205
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Technische commissie bodembeweging
   valid_from: '1900-01-01'
   valid_until: '2023-12-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 114 van de Mijnbouwwet
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0014168&hoofdstuk=6&paragraaf=6.2&artikel=114&z=2020-07-01&g=2020-07-01
+classifications:
+- type: CAO
+  eind_datum: '2023-12-31'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2023-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://tcbb.nl/
   email: info@tcbb.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: info@tcbb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://tcbb.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://tcbb.nl/page/view/0bc2d4e5-f598-4f89-8c58-c1e6cf2cb16d/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-12-31'
+last_mutation: '2024-12-04'
+last_verified: '2023-12-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391721/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391721/technische-commissie-bodembeweging
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-01-01'

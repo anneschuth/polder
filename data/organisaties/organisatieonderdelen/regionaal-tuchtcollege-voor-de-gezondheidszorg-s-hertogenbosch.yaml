@@ -7,9 +7,31 @@ parent_id: org:onderdeel-regionale-tuchtcolleges-voor-de-gezondheidszorg
 names:
 - value: Regionaal Tuchtcollege voor de Gezondheidszorg 's-Hertogenbosch
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Magistratenlaan 82, 5223 MD 's-Hertogenbosch
+  postadres: Postbus 3555, 5203 DN ’s-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Magistratenlaan
+    huisnummer: '82'
+    postcode: 5223 MD
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '3555'
+    postcode: 5203 DN
+    woonplaats: ’s-Hertogenbosch
+  phones:
+  - nummer: (040) 232 85 99
+    label: algemeen
+  - nummer: (088) 371 25 50
+    label: algemeen
+  fax: (040) 232 85 95
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66167/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66167/regionaal-tuchtcollege-voor-de-gezondheidszorg-s-hertogenbosch
+  retrieved: '2026-05-16'

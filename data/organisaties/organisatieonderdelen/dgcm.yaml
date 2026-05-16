@@ -3,16 +3,37 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '71902'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ocw
+parent_id: org:min-ocw
 names:
 - value: Directeur-Generaal Cultuur en Media
   abbr: DGCM
   valid_from: '1900-01-01'
+description:
+  text: 'De DGCM heeft de volgende directies in portefeuille:  - Media, Letteren en
+    Bibliotheken (MLB) - Cultureel Erfgoed (DCE) - Kunsten (DK) - Instituut Collectie
+    Nederland (ICN) - Nationaal Archief (NA) - Rijksdienst voor het Cultureel Erfgoed
+    (RCE) - Raad voor Cultuur (RvC).'
 contact:
   website: http://www.rijksoverheid.nl/ministeries/ocw
+  bezoekadres: Rijnstraat 50, 2515 BJ Den Haag
+  postadres: Postbus 16375, 2500 BJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat 50
+    postcode: 2515 BJ
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16375'
+    postcode: 2500 BJ
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/ministeries/ocw
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-20'
+last_verified: '2026-02-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71902/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71902/dgcm
+  retrieved: '2026-05-16'

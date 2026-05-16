@@ -3,21 +3,121 @@ type: zbo
 identifiers:
   roo_id: '28212576'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000198
+  owms: http://standaarden.overheid.nl/owms/terms/Commissie_Eindtermen_Accountantsopleiding
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Commissie Eindtermen Accountantsopleiding
   abbr: CEA
   valid_from: '1900-01-01'
+description:
+  text: De Commissie Eindtermen Accountantsopleiding (CEA) is een zelfstandig bestuursorgaan
+    zonder rechtspersoonlijkheid en stelt de eindtermen vast voor de accountantsopleiding,
+    en houdt hier toezicht op. De grondslag voor CEA is terug te vinden in de artikelen
+    49 tot en met 53 van de Wet op het Accountantsberoep (Wab).De commissie bestaat
+    uit zeven leden. De Minister van Financiën benoemt zowel de voorzitter als de
+    andere leden op persoonlijke titel en voor een periode van vijf jaar.  Het werk
+    van de commissie wordt ondersteund door de medewerkers van haar bureau.
+  url: https://www.cea.nl/over-cea/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op het accountantsberoep, artikel 49
+  referentie: http://wetten.overheid.nl/BWBR0032573/
+taken_en_bevoegdheden: De CEA heeft de volgende taken en bevoegdheden:* het vaststellen
+  van de eindtermen voor de opleidingen tot AA en RA;* het aanwijzen van opleidingen
+  die geheel of gedeeltelijk voldoen aan de eindtermen, met uitzondering van de eindtermen
+  die betrekking hebben op de praktijkstage;* het toetsen van de praktijkstage aan
+  de mate waarin wordt voldaan aan de eindtermen;* het afgeven van verklaringen van
+  vakbekwaamheid aan buitenlandse accountants.
+evaluations:
+- datum: '2023-09-01'
+  kamerstuknummer: TK 25268 nr. 218
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-218.html
+- datum: '2018-07-05'
+  kamerstuknummer: TK 25268 nr. 164
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-164.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Nationale-Nederlanden
+    referentie: https://www.nn.nl/Particulier/Pensioen.htm
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cea.nl/over-cea/verantwoording/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212576/Commissie_Eindtermen_Accountantsopleiding
+  wooVerzoek:
+    url: https://www.cea.nl/over-cea/verantwoording/
+afspraak:
+  email: info@cea.nl
+  url: https://www.cea.nl/contact/
+personnel:
+  aantalFte: 4,3
+  peildatumFte: '2025-01-01'
+  toelichtingFte: De CEA heeft geen eigen medewerkers, maar de Nederlandse Beroepsorganisatie
+    van Accountants (NBA) faciliteert de CEA en voorziet de commissie van het benodigde
+    personeel.
 contact:
   website: https://www.cea.nl/
   email: info@cea.nl
+  bezoekadres: Mercuriusplein 3, 2132 HA Hoofddorp
+  postadres: Postbus 242, 2130 AE Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mercuriusplein
+    huisnummer: '3'
+    postcode: 2132 HA
+    woonplaats: Hoofddorp
+  - type: Woo-Adres
+    openbare_ruimte: Mercuriusplein
+    huisnummer: '3'
+    postcode: 2132 HA
+    woonplaats: Hoofddorp
+  - type: Postadres
+    postbus: '242'
+    postcode: 2130 AE
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (088) 496 04 21
+    label: algemeen
+  emails:
+  - email: info@cea.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cea.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cea.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212576/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212576/cea
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000198
   retrieved: '2026-05-09'
+roo_start_datum: '2006-01-01'

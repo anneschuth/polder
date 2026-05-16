@@ -2,14 +2,42 @@ id: org:oovb-stichting-promotie-uithoorn
 type: rwt
 identifiers:
   roo_id: '27915597'
+  kvk: '58450572'
+  rsin: '853045227'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Promotie Uithoorn
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Goudlijster 13, 1423 RR Uithoorn
+  postadres: Postbus 240, 1420 AE Uithoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Goudlijster 13
+    postcode: 1423 RR
+    woonplaats: Uithoorn
+  - type: Postadres
+    postbus: '240'
+    postcode: 1420 AE
+    woonplaats: Uithoorn
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915597/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915597/stichting-promotie-uithoorn
+  retrieved: '2026-05-16'

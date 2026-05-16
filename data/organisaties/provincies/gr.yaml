@@ -1,27 +1,124 @@
 id: org:prov-gr
 type: provincie
 identifiers:
-  oin: 00000001825783434000
-  kvk: '73558907'
+  oin: 00000001001932822000
+  kvk: 01182023
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv20
   roo_id: '15632'
   wikidata: Q752
+  owms: http://standaarden.overheid.nl/owms/terms/Groningen_(provincie)
+  ictu: '04207'
+  rsin: 001932822
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_GRON
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Groningen
   abbr: GR
   valid_from: '1900-01-01'
-  valid_until: '2023-03-28'
+description:
+  text: De adres- en telecomgegevens gelden voor alle dienstonderdelen, tenzij anders
+    staat vermeld.
+  url: https://www.provinciegroningen.nl/bestuur-en-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.provinciegroningen.nl/contact/woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/15632/Provincie_Groningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Groningen%22))%20AND%20((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22%20OR%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22%20OR%20dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22%20OR%20dt.type==%22beleidsregel%22%20OR%20dt.type==%22delegatie-%20of%20mandaatbesluit%22%20OR%20dt.type==%22circulaire%22%20OR%20dt.type==%22verkeersbesluit%20of%20-mededeling%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.provinciegroningen.nl/beleid-en-documenten/financien/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Groningen%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://provinciegroningen.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.provinciegroningen.nl/contact/woo-besluiten/
+    - informatiecategorie: Klachtoordelen
+      url: https://www.provinciegroningen.nl/contact/klacht-over-de-provincie/gedrag-bestuurder-of-ambtenaar/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Groningen%22))%20AND%20((dt.type==%22ongewenstverklaring%20vreemdeling%22%20OR%20dt.type==%22vervreemding%20erfgoed%22%20OR%20dt.type==%22Beschikking%22%20OR%20dt.type==%22andere%20beschikking%22%20OR%20dt.type==%22andere%20vergunning%22%20OR%20dt.type==%22evenementenvergunning%22%20OR%20dt.type==%22exploitatievergunning%22%20OR%20dt.type==%22omgevingsvergunning%22%20OR%20dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Andere documenten
+      url: https://bestanden.provinciegroningen.nl/robots.txt
+      toelichting: Bestanden
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.provinciegroningen.nl/bestuur-en-organisatie/gedeputeerde-staten/besluitenlijsten/
+  wooVerzoek:
+    url: https://www.provinciegroningen.nl/contact/woo-verzoek-indienen/
+organogram_url: https://www.provinciegroningen.nl/bestuur-en-organisatie/ambtelijke-organisatie/organisatiestructuur/
+afspraak:
+  email: info@provinciegroningen.nl
+  telefoonnummer: (050) 316 49 11
 contact:
   website: http://www.provinciegroningen.nl
   email: info@provinciegroningen.nl
+  bezoekadres: Sint Jansstraat 4, 9712 JN Groningen
+  postadres: Postbus 610, 9700 AP Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sint Jansstraat
+    huisnummer: '4'
+    postcode: 9712 JN
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Bezoekadres
+    toelichting: Martinikerkhof
+    huisnummer: '12'
+    postcode: 9712 JG
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '610'
+    postcode: 9700 AP
+    woonplaats: Groningen
+  - type: Woo-Adres
+    postbus: '610'
+    postcode: 9700 AP
+    woonplaats: Groningen
+    land: Nederland
+  phones:
+  - nummer: (050) 316 49 11
+    label: algemeen
+  emails:
+  - email: info@provinciegroningen.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.provinciegroningen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.provinciegroningen.nl/contact/contactformulier/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-03-28'
+last_mutation: '2025-09-25'
+last_verified: '2026-04-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15632/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/15632/gr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

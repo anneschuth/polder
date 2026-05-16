@@ -5,23 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0706
   oin: 00000001820151130000
   kvk: '52280438'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Zuid-Limburg
+  organisatiecode: so0706
+  rsin: '820151130'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Veiligheidsregio Zuid-Limburg
+  roo_id: '29562392'
 names:
 - value: Veiligheidsregio Zuid-Limburg
   abbr: VRZL
   valid_from: '1900-01-01'
+description:
+  text: Veiligheidsregio Zuid-Limburg is erop gericht om inwoners en bezoekers van
+    Zuid-Limburg beter te beschermen tegen (gezondheids)risico's, rampen en crises.
+    Wij zijn er voor jouw veiligheid. Die veiligheid beschermen we door risico&rsquo;s
+    in kaart te brengen en ons aan de hand daarvan voor te bereiden op mogelijke rampen
+    en crises. Dat doen we echter niet alleen. Door samen te werken met onze partners,
+    kunnen we tijdens en na een &eacute;chte ramp of crisis zo effectief mogelijk
+    optreden. Zo houden we Zuid-Limburg veilig.
+  url: https://www.vrzl.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrzl.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28331808/Veiligheidsregio_Zuid-Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zuid-Limburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.vrzl.nl/jaarverslagen
+      toelichting: Jaarrekeningen en begrotingen VRZL
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zuid-Limburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vrzl.nl/woo
+organogram_url: https://www.vrzl.nl/over-ons/organogram
+afspraak:
+  email: info@vrzl.nl
 contact:
   website: https://www.vrzl.nl
   email: info@vrzl.nl
+  bezoekadres: Prins Bisschopsingel 53, 6212 AB Maastricht
+  postadres: Postbus 35, 6269 ZG Margraten
+  addresses:
+  - type: Bezoekadres
+    toelichting: Meld- en Coördinatiecentrum
+    openbare_ruimte: Prins Bisschopsingel
+    huisnummer: '53'
+    postcode: 6212 AB
+    woonplaats: Maastricht
+  - type: Postadres
+    postbus: '35'
+    postcode: 6269 ZG
+    woonplaats: Margraten
+  - type: Woo-Adres
+    huisnummer: '35'
+    postcode: 6269 ZG
+    woonplaats: Margraten
+  phones:
+  - nummer: (088) 450 74 50
+    label: algemeen
+  emails:
+  - email: info@vrzl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrzl.nl
+    label: algemeen
+  - url: https://www.brandweer.nl/zuid-limburg
+  contact_forms:
+  - url: https://www.vrzl.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28331808/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28331808/vrzl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-01-01'

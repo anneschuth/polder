@@ -9,9 +9,20 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.rijksoverheid.nl/jenv
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 370 62 09
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/jenv
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2018-10-23'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112807/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112807/integrale-aanpak-kindermishandeling-en-jeugdgroepen
+  retrieved: '2026-05-16'

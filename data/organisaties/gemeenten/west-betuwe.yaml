@@ -6,21 +6,166 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1960
   roo_id: '27465448'
   wikidata: Q30142059
+  owms: http://standaarden.overheid.nl/owms/terms/West_Betuwe
+  rsin: '825778803'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WBE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente West Betuwe
   abbr: West Betuwe
   valid_from: '1900-01-01'
+description:
+  text: De gemeente West Betuwe is een grote plattelandsgemeente die bestaat uit 26
+    kernen. De dienstverlening van de organisatie staat altijd voorop, altijd met
+    het oog op wat de inwoners nodig hebben.
+  url: https://www.westbetuwe.nl/organisatiebeschrijving-met-taken-en-bevoegdheden
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.westbetuwe.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27465448/Gemeente_West_Betuwe
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22West+Betuwe%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22West+Betuwe%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22West+Betuwe%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://formulieren.westbetuwe.nl/woo-verzoek-indienen/startpagina
+afspraak:
+  telefoonnummer: (0345) 72 88 00
+  url: https://www.westbetuwe.nl/afspraak-maken#
+geography:
+  oppervlakte: 216,25
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 216.25
+  aantal_inwoners: 53445
+  inwoners: '247'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 247.0
+  bevat_plaatsen_raw: Acquoy, Asperen, Beesd, Buurmalsen, Deil, Enspijk, Est, Geldermalsen,
+    Gellicum, Haaften, Heesselt, Hellouw, Herwijnen, Heukelum, Meteren, Neerijnen,
+    Ophemert, Opijnen, Rhenoy, Rumpt, Spijk Gem West Betuwe, Tricht, Tuil, Varik,
+    Vuren, Waardenburg, Zennewijnen
+  bevat_plaatsen:
+  - Acquoy
+  - Asperen
+  - Beesd
+  - Buurmalsen
+  - Deil
+  - Enspijk
+  - Est
+  - Geldermalsen
+  - Gellicum
+  - Haaften
+  - Heesselt
+  - Hellouw
+  - Herwijnen
+  - Heukelum
+  - Meteren
+  - Neerijnen
+  - Ophemert
+  - Opijnen
+  - Rhenoy
+  - Rumpt
+  - Spijk Gem West Betuwe
+  - Tricht
+  - Tuil
+  - Varik
+  - Vuren
+  - Waardenburg
+  - Zennewijnen
+council:
+  total_seats: 31
+  parties:
+  - naam: Dorpsbelangen
+    aantal_zetels: 10
+  - naam: SGP
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: Leefbaar Lokaal Belang
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Verenigd West Betuwe
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: https://www.westbetuwe.nl/
   email: gemeente@westbetuwe.nl
+  bezoekadres: Kuipershof 2, 4191 KH GELDERMALSEN
+  postadres: Postbus 112, 4190 CC GELDERMALSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kuipershof
+    huisnummer: '2'
+    postcode: 4191 KH
+    woonplaats: GELDERMALSEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '112'
+    postcode: 4190 CC
+    woonplaats: GELDERMALSEN
+  - type: Woo-Adres
+    postbus: '112'
+    postcode: 4190 CC
+    woonplaats: GELDERMALSEN
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Kuipershof
+    huisnummer: '2'
+    postcode: 4191 KH
+    woonplaats: GELDERMALSEN
+  phones:
+  - nummer: (0345) 72 88 00
+    label: algemeen
+  emails:
+  - email: gemeente@westbetuwe.nl
+    label: algemeen
+  - email: info@odrivierenland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.westbetuwe.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.odrivierenland.nl/contact/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27465448/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27465448/west-betuwe
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +174,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q30142059
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

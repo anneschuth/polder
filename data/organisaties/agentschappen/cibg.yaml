@@ -5,20 +5,114 @@ identifiers:
   kvk: '50000535'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10112
   roo_id: '106676'
+  owms: http://standaarden.overheid.nl/owms/terms/cibg
+  rsin: '822556170'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: CIBG
   valid_from: '1900-01-01'
+description:
+  text: 'Wij zijn het CIBG, een uitvoeringsorganisatie van het ministerie van Volksgezondheid,
+    Welzijn en Sport. In het hart van de zorg, met hart voor de zorg. Met onze 600
+    professionals verbinden de werelden van zorgverlener, zorgaanbieder en mensen
+    met een zorgvraag door gegevens te beoordelen, te registreren en te verstrekken.
+    In de vorm van informatie, registratie of vergunning. Zodat iedereen kan beschikken
+    over de juiste zorginformatie. Waar je ook bent, op elk moment.Voor wie doen we
+    het?We zijn ontstaan als antwoord op de roep om betere registratie in de zorg.
+    Zijn huisartsen, specialisten en tandartsen bevoegd om hun beroep uit te oefenen?
+    Zijn mensen wel of niet bereid na hun dood hun organen te doneren aan anderen?
+    Welke geneesmiddelen worden in Nederland vergoed, en wat mogen ze kosten? En wie
+    mag op beslissende momenten de gegevens van patiënten of cliënten inzien?Wij geven
+    antwoord op deze en andere vragen. Inmiddels zijn we uitgegroeid tot een ervaren
+    en wendbare uitvoeringsorganisatie die met haar producten en diensten bijdraagt
+    aan goede toegankelijke zorginformatie. We weten wat er speelt, we kennen de zorg,
+    kennen de informatiestromen. Dat maakt ons goed in wat we doen. Maar goed kan
+    altijd beter.Altijd in ontwikkelingWe blijven verbeteren en versterken onze positie
+    als betrouwbare strategisch uitvoeringspartner. Door onze expertise verder te
+    verbreden en te verdiepen, en met één stem, met één doel te acteren: zakelijk,
+    voorspelbaar en transparant. Door aan te sluiten bij Rijksbrede ontwikkelingen
+    waar dat moet of kan, en specifiek te ontwikkelen waar nodig. En door toekomstgericht
+    te adviseren over slim gebruik van data, technologie en AI. Daarmee maken we goede
+    zorg mogelijk. Voor iedereen, voor nu én voor straks.'
+  url: https://www.cibg.nl/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/106676/CIBG
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((w.publicatienaam==%22Staatscourant%22))and(cql.textAndIndexes=%22CIBG%22)%20AND%20dt.type==%22convenant%22%20AND%20dt.creator==%22Centraal%20Informatiepunt%20Beroepen%20Gezondheidszorg%20(CIBG)%22&zv=CIBG&pg=10&col=Staatscourant&svel=Publicatiedatum&svol=Aflopend&sf=po%7cCentraal+Informatiepunt+Beroepen+Gezondheidszorg+(CIBG)
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+afspraak:
+  telefoonnummer: (070) 340 54 87
+  url: https://www.cibg.nl/contact
 contact:
   website: http://www.cibg.nl
   email: contactpersoonwoo@minvws.nl
+  bezoekadres: Rijnstraat 50, 2515 XP Den Haag
+  postadres: Postbus 16114, 2500 BC Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoftoren
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '16114'
+    postcode: 2500 BC
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '20350'
+    postcode: 2500 EJ Den Haag
+    regio: Zuid-Holland
+  phones:
+  - nummer: (070) 340 54 87
+    label: algemeen
+  internet_addresses:
+  - url: http://www.cibg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.cibg.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/106676/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/106676/cibg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

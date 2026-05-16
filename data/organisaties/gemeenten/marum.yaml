@@ -5,6 +5,9 @@ identifiers:
   kvk: '01176243'
   roo_id: '33125'
   wikidata: Q841525
+  owms: http://standaarden.overheid.nl/owms/terms/Marum_(gemeente)
+  ictu: '00025'
+  organisatiecode: gm0025
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,81 @@ names:
   abbr: Marum
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 64,88
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 64.88
+  aantal_inwoners: 10379
+  inwoners: '159'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 159.0
+  bevat_plaatsen_raw: Boerakker, De Wilp GN, Jonkersvaart, Lucaswolde, Marum, Niebert,
+    Noordwijk GN, Nuis
+  bevat_plaatsen:
+  - Boerakker
+  - De Wilp GN
+  - Jonkersvaart
+  - Lucaswolde
+  - Marum
+  - Niebert
+  - Noordwijk GN
+  - Nuis
+council:
+  total_seats: 15
+  parties:
+  - naam: PvdA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: GemeenteBelangen Marum
+    aantal_zetels: 2
+  - naam: Toekomst voor Marum
+    aantal_zetels: 1
 contact:
   website: http://www.marum.nl
   email: gemeente@marum.nl
+  bezoekadres: Molenstraat 45, 9363 BA MARUM
+  postadres: Postbus 2, 9363 ZG MARUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Molenstraat
+    huisnummer: '45'
+    postcode: 9363 BA
+    woonplaats: MARUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 2
+    postbus: '2'
+    postcode: 9363 ZG
+    woonplaats: MARUM
+  phones:
+  - nummer: (0594) 64 13 33
+    label: algemeen
+  emails:
+  - email: gemeente@marum.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.marum.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33125/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33125/marum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -2,6 +2,7 @@ id: org:gemeente-zuid
 type: gemeente
 identifiers:
   roo_id: '40007'
+  owms: http://standaarden.overheid.nl/owms/terms/Amsterdam_-_Zuideramstel
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +10,48 @@ names:
   abbr: Zuid
   valid_from: '1900-01-01'
   valid_until: '2014-03-19'
+geography:
+  oppervlakte: 10,26
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 10.26
+  aantal_inwoners: 132000
+  inwoners: '12865'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 12865.0
+council:
+  parties:
+  - naam: (onbekend)
+    aantal_zetels: 0
 contact:
   website: http://www.zuid.amsterdam.nl
   email: stadsdeel@zuid.amsterdam.nl
+  bezoekadres: President Kennedylaan 923, 1079 MZ AMSTERDAM
+  postadres: Postbus 74019, 1070 BA AMSTERDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: President Kennedylaan
+    huisnummer: '923'
+    postcode: 1079 MZ
+    woonplaats: AMSTERDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '74019'
+    postcode: 1070 BA
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: 14 020
+    label: algemeen
+  emails:
+  - email: stadsdeel@zuid.amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zuid.amsterdam.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-03-19'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40007/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40007/zuid
+  retrieved: '2026-05-16'

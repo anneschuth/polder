@@ -1,18 +1,117 @@
 id: org:gr-samenwerkingsverband-aalsmeer-uithoorn
 type: gemeenschappelijke-regeling
 identifiers:
-  roo_id: '24964645'
+  roo_id: '24964640'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '34373968'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling samenwerkingsverband
+  roo_id: '24964640'
 names:
+- value: Gemeenschappelijke Regeling samenwerkingsverband
+  valid_from: '2009-05-01'
+  valid_until: '2015-01-01'
 - value: Samenwerkingsverband Aalsmeer-Uithoorn
   valid_from: '1900-01-01'
   valid_until: '2015-01-01'
+gr_meta:
+  citeertitel: Samenwerkingsverband Aalsmeer-Uithoorn
+  doel: '1. Belang van de regeling is voor de deelnemers: de kwaliteit van de dienstverlening
+    en de e-dienstverlening, de continuïteit, realisatie van nieuwe taken ten gevolge
+    van decentralisatie van taken door de rijksoverheid en lagere uitvoeringskosten.2.
+    Doel van de regeling is het bewerkstelligen van een kwalitatief hoogwaardige en
+    doelmatige uitvoering door het samenwerkingsverband van de door de deelnemers
+    opgedragen taken.3. De missie van de organisatie is ten dienste staan van de burgers,
+    bedrijven en instellingen van de gemeenten Aalsmeer en Uithoorn.'
+  samenwerkingsvorm:
+    value: Openbaar lichaam
+    afkorting: OL
+  bevoegdheidsverkrijgingen:
+  - Delegatie
+  - Mandaat
+  regionaal_samenwerkingsorgaan:
+    naam: Samenwerkingsverband Aalsmeer-Uithoorn
+    roo_id: '24964645'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  bronhouder:
+    naam: Samenwerkingsverband Aalsmeer-Uithoorn
+    roo_id: '24964645'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  archiefzorgdrager:
+    naam: Samenwerkingsverband Aalsmeer-Uithoorn
+    roo_id: '24964645'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Gemeente Aalsmeer
+    roo_id: '38409'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0358
+    owms: http://standaarden.overheid.nl/owms/terms/Aalsmeer_(gemeente)
+    toetredings_datum: '2009-05-01'
+    bestuursorganen:
+    - naam: Burgemeester
+      owms: http://standaarden.overheid.nl/owms/terms/burgemeester
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  - naam: Gemeente Uithoorn
+    roo_id: '40702'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0451
+    owms: http://standaarden.overheid.nl/owms/terms/Uithoorn_(gemeente)
+    toetredings_datum: '2009-05-01'
+    bestuursorganen:
+    - naam: Burgemeester
+      owms: http://standaarden.overheid.nl/owms/terms/burgemeester
+    - naam: College van burgemeester en wethouders
+      owms: http://standaarden.overheid.nl/owms/terms/college_van_burgemeester_en_wethouders
+  instellingsbesluiten:
+  - http://decentrale.regelgeving.overheid.nl/cvdr/xhtmloutput/Historie/Aalsmeer/CVDR24477/CVDR24477_2.html
+  wettelijke_grondslagen:
+  - opschrift: Wet op de ondernemingsraden
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0002747
+  - opschrift: Algemene wet bestuursrecht
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0005537
+  - opschrift: Wet gemeenschappelijke regelingen
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0003740
+  bevoegdheden:
+  - inhoud_artikel: 1. De gemeenteraden dragen geen bevoegdheden over aan de bestuursorganen
+      van de regeling.2. De gemeenteraden stellen algemeen verbindende voorschriften
+      en kaderstellend beleid vast ter zake van de opgedragen taakvelden zoals genoemd
+      in artikel 6.3. De colleges en burgemeesters dragen, ieder voor zover daartoe
+      bevoegd, met betrekking tot de taakvelden zoals opgedragen in artikel 6, de
+      bevoegdheden over aan het dagelijks bestuur van het samenwerkingsverband ten
+      aanzien van de uitvoering van de opgedragen wet- en regelgeving.
+  datum_inwerkingtreding: '2009-05-01'
+  datum_uitwerkingtreding: '2015-01-01'
 contact:
   website: https://www.uithoorn.nl
-valid_from: '1900-01-01'
+  bezoekadres: Drie Kolommenplein 1, 1431 LA Aalsmeer
+  postadres: Postbus 541, 1420 CA Uithoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Drie Kolommenplein
+    huisnummer: '1'
+    postcode: 1431 LA
+    woonplaats: Aalsmeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '541'
+    postcode: 1420 CA
+    woonplaats: Uithoorn
+  phones:
+  - nummer: (0297) 51 31 31
+    label: algemeen
+  internet_addresses:
+  - url: https://www.uithoorn.nl
+    label: algemeen
+valid_from: '2009-05-01'
 valid_until: '2015-01-01'
+last_mutation: '2019-10-01'
+last_verified: '2019-10-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964645/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964640/samenwerkingsverband-aalsmeer-uithoorn
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-05-01'

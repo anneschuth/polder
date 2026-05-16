@@ -6,21 +6,143 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0233
   roo_id: '22253'
   wikidata: Q753920
+  owms: http://standaarden.overheid.nl/owms/terms/Ermelo_(gemeente)
+  ictu: '00233'
+  organisatiecode: gm0233
+  rsin: 001831136
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ERM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Ermelo
   abbr: Ermelo
   valid_from: '1900-01-01'
+description:
+  url: https://www.ermelo.nl/gemeentebestuur/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ermelo.nl/melding-klacht-bezwaar-en-compliment/bezwaar-zienswijze-schade-en-woo/informatie-opvragen-via-woo-en-who
+      overzichtURL: https://organisaties.overheid.nl/woo/22253/Gemeente_Ermelo
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ermelo%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ermelo.nl/gemeentebestuur/gemeenteraad/financien
+      toelichting: Financiën
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ermelo%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ermelo%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.ermelo.nl/gemeentebestuur/college-van-burgemeester-en-wethouders/besluitenlijsten-college-van-burgemeester-en-wethouders
+      toelichting: Besluitenlijst college B&W
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://ermelo.raadsinformatie.nl/uitgebreide_kalender
+      toelichting: Agenda raadsvergaderingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://ermelo.raadsinformatie.nl/modules/19/raadsvoorstellen_en_raadsbesluiten/view
+      toelichting: Raadsvoorstellen en raadsbesluiten
+  wooVerzoek:
+    url: https://www.ermelo.nl/melding-klacht-bezwaar-en-compliment/bezwaar-zienswijze-schade-en-woo/informatie-opvragen-via-woo-en-who
+organogram_url: http://lokaleregelgeving.overheid.nl/CVDR720080
+afspraak:
+  url: https://afspraken.ermelo.nl/JCC/Internetafspraken
+geography:
+  oppervlakte: 87,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 87.38
+  aantal_inwoners: 28199
+  inwoners: '322'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 322.0
+  bevat_plaatsen_raw: Ermelo
+  bevat_plaatsen:
+  - Ermelo
+council:
+  total_seats: 21
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: één-Ermelo
+    aantal_zetels: 5
+  - naam: Progressief Ermelo
+    aantal_zetels: 4
+  - naam: SGP
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
 contact:
   website: https://www.ermelo.nl
   email: gemeente@ermelo.nl
+  bezoekadres: Raadhuisplein 2, 3851 NT ERMELO
+  postadres: Postbus 500, 3850 AM ERMELO
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '2'
+    postcode: 3851 NT
+    woonplaats: ERMELO
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '500'
+    postcode: 3850 AM
+    woonplaats: ERMELO
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '2'
+    postcode: 3851 NT
+    woonplaats: Ermelo
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '2'
+    postcode: 3851 NT
+    woonplaats: ERMELO
+  phones:
+  - nummer: (0341) 56 73 21
+    label: algemeen
+  emails:
+  - email: gemeente@ermelo.nl
+    label: algemeen
+  - email: gemeente@ermelo.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.ermelo.nl
+    label: algemeen
+  contact_forms:
+  - url: https://afspraken.ermelo.nl/JCC/Internetafspraken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22253/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22253/ermelo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

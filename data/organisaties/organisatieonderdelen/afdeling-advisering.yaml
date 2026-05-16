@@ -7,9 +7,15 @@ parent_id: org:hoge-college-rvs
 names:
 - value: Afdeling advisering
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28085762/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28085762/afdeling-advisering
+  retrieved: '2026-05-16'

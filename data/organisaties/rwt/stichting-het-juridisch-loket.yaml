@@ -2,17 +2,45 @@ id: org:stichting-het-juridisch-loket
 type: rwt
 identifiers:
   roo_id: '27912681'
+  kvk: '30198127'
+  rsin: '813789497'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting het Juridisch Loket
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Moreelsepark 1, 3511 EP Utrecht
+  postadres: Postbus 487, 3500 AL Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Moreelsepark 1
+    postcode: 3511 EP
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '487'
+    postcode: 3500 AL
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912681/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912681/stichting-het-juridisch-loket
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'

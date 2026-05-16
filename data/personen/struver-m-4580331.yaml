@@ -3,7 +3,7 @@ name:
   full: M.M.K. Struver
   family: Struver
   given: M.M.K.
-  initials: M.
+  initials: M.M.K.
 mandaten:
 - id: 91a8656f-0da8-4792-9242-5b4c1c1efc1d
   organization_id: org:gemeente-kerkrade
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580333
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28635211
 - id: f20de5e2-8859-4fec-b0e5-d32594676bcc
   organization_id: org:gemeente-kerkrade
   post_id: post:raadslid-gemeente-kerkrade

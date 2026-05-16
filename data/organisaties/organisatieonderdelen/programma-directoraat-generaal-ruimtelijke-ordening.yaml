@@ -3,13 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28751779'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
 names:
 - value: Programma Directoraat-generaal Ruimtelijke Ordening
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28751779/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28751779/programma-directoraat-generaal-ruimtelijke-ordening
+  retrieved: '2026-05-16'

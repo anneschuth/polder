@@ -2,18 +2,68 @@ id: org:gr-parkschap-nationaal-park-de-biesbosch
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28436414'
+  owms: http://standaarden.overheid.nl/owms/terms/npbiesbosch
+  kvk: '53554116'
+  organisatiecode: so0203
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Parkschap Nationaal Park De Biesbosch
+  roo_id: '28436399'
 names:
 - value: Parkschap Nationaal Park De Biesbosch
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://np-debiesbosch.nl/organisatie/parkschap-nationaal-park-de-biesbosch
   email: biesbosch@dordrecht.nl
+  bezoekadres: Baanhoekweg 53, 3313 LP Dordrecht
+  postadres: Postbus 8, 3300 AA Dordrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Biesboschcentrum Dordrecht
+    openbare_ruimte: Baanhoekweg
+    huisnummer: '53'
+    postcode: 3313 LP
+    woonplaats: Dordrecht
+  - type: Postadres
+    postbus: '8'
+    postcode: 3300 AA
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (078) 770 53 53
+    label: Dordrecht
+  - nummer: (030) 692 61 11
+    label: Drimmelen
+  - nummer: (0183) 50 40 09
+    label: MuseumEiland Werkendam
+  emails:
+  - email: biesbosch@dordrecht.nl
+    label: Dordrecht
+  - email: biesbosch@staatsbosbeheer.nl
+    label: Drimmelen
+  - email: info@biesboschmuseumeiland.nl
+    label: MuseumEiland Werkendam
+  internet_addresses:
+  - url: https://np-debiesbosch.nl/organisatie/parkschap-nationaal-park-de-biesbosch
+    label: algemeen
+  contact_forms:
+  - url: https://np-debiesbosch.nl/organisatie/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2021-07-06'
+last_verified: '2021-07-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28436414/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28436414/parkschap-nationaal-park-de-biesbosch
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-01-01'

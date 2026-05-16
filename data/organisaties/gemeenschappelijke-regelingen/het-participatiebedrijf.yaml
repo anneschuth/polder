@@ -1,19 +1,105 @@
 id: org:gr-het-participatiebedrijf
 type: gemeenschappelijke-regeling
+subname: Werkom
 identifiers:
   roo_id: '27763207'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0895
+  owms: http://standaarden.overheid.nl/owms/terms/partbedr
+  kvk: '69966192'
+  btw: NL826281187B01
+  organisatiecode: so0895
+  rsin: '858084326'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling participatiebedrijf Zaanstad Purmerend
+  roo_id: '29772709'
 names:
 - value: het participatiebedrijf
   valid_from: '1900-01-01'
+description:
+  text: Wij zijn het werkontwikkelbedrijf van de gemeenten Purmerend en Zaanstad.
+    Wij helpen mensen met een kwetsbare positie op de arbeidsmarkt om duurzaam werk
+    te vinden. Voor mensen die dat nodig hebben, bieden wij beschut werk. We doen
+    ons werk in uitstekende samenwerking met werkgevers.Onze organisatie is vernieuwend
+    en volop in ontwikkeling. Als vraag en aanbod op de arbeidsmarkt elkaar niet vinden,
+    zorgt Werkom voor verbinding. Dat doen wij in samenwerking met werkzoekenden,
+    werkgevers, maatschappelijke organisaties en gemeenten.Opleidingstrajecten en
+    trainingenOm mensen goed voor te bereiden op een baan bij de werkgever, bieden
+    wij opleidingstrajecten en trainingen aan. Daarbij maken wij gebruik van onze
+    eigen leerwerkbedrijven én van trajecten bij het bedrijfsleven. Zo werken wij
+    samen met alle partijen aan een toekomst, waarin iedereen kan groeien. Bedrijven
+    die mensen kansen willen bieden kunnen bij Werkom altijd terecht voor informatie,
+    begeleiding en advies.DoelOns doel is om zoveel mogelijk mensen hun eigen inkomen
+    te laten verdienen. Daarnaast biedt Werkom voor werknemers die een beschutte werkomgeving
+    nodig hebben, een werkplek die bij hen past.
+  url: https://werkom.nl/over-ons/wie-zijn-wij
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/27763207/het_participatiebedrijf
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22het+participatiebedrijf%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22het+participatiebedrijf%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://werkom.nl/contact
+organogram_url: https://werkom.nl/images/Organogram-2024.pdf
+afspraak:
+  email: info@werkom.nl
+  telefoonnummer: (0299) 46 93 69
+  url: https://werkom.nl/contact
 contact:
   website: https://www.werkom.nl
   email: info@werkom.nl
+  bezoekadres: Einsteinstraat 103, 1446 VE Purmerend
+  postadres: Postbus 404, 1440 AK Purmerend
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Einsteinstraat
+    huisnummer: '103'
+    postcode: 1446 VE
+    woonplaats: Purmerend
+  - type: Postadres
+    postbus: '404'
+    postcode: 1440 AK
+    woonplaats: Purmerend
+  - type: Woo-Adres
+    postbus: '404'
+    postcode: 1440 AK
+    woonplaats: Purmerend
+  phones:
+  - nummer: (0299) 46 93 69
+    label: algemeen
+  emails:
+  - email: info@werkom.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.werkom.nl
+    label: algemeen
+  contact_forms:
+  - url: https://werkom.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-03-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27763207/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27763207/het-participatiebedrijf
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-01-01'

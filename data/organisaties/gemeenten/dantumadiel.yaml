@@ -5,23 +5,160 @@ identifiers:
   kvk: '50820753'
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1891
   roo_id: '33564'
+  owms: http://standaarden.overheid.nl/owms/terms/Dantumadiel
+  ictu: 01891
+  organisatiecode: gm1891
+  rsin: 001954805
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DTU
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dantumadiel
   abbr: Dantumadiel
   valid_from: '1900-01-01'
+description:
+  url: https://www.dantumadiel.frl/vacatures-en-stages
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dantumadiel.frl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/33564/Gemeente_Dantumadiel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.dantumadiel.frl/financien-en-verantwoording
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://dantumadiel.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://dantumadiel.bestuurlijkeinformatie.nl/
+      toelichting: Hier kunt u verder zoeken naar ontwerpen en externe adviesaanvragen
+        van lokale regelgeving
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dantumadiel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dantumadiel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?zv=dantumadiel&pg=10&col=
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.dantumadiel.frl/wet-open-overheid-woo
+      toelichting: Woo-verzoeken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://dantumadiel.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://dantumadiel.bestuurlijkeinformatie.nl/Reports/Details/65284820-80dc-4f49-adff-d57beae91324
+  wooVerzoek:
+    url: https://www.dantumadiel.frl/wet-open-overheid-woo
+afspraak:
+  telefoonnummer: (0511) 71 70 00
+  url: https://www.dantumadiel.frl/afspraak-maken
+geography:
+  oppervlakte: 87,49
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 87.49
+  aantal_inwoners: 19231
+  inwoners: '219'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 219.0
+  bevat_plaatsen_raw: Broeksterwald, Damwald, De Falom, De Westereen, Driezum, Feanwalden,
+    Readtsjerk, Rinsumageast, Sibrandahus, Walterswald
+  bevat_plaatsen:
+  - Broeksterwald
+  - Damwald
+  - De Falom
+  - De Westereen
+  - Driezum
+  - Feanwalden
+  - Readtsjerk
+  - Rinsumageast
+  - Sibrandahus
+  - Walterswald
+council:
+  total_seats: 17
+  parties:
+  - naam: Sociaal Links
+    aantal_zetels: 4
+  - naam: Gemeentebelangen Dantumadiel
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: BBB
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 1
+  - naam: FNP
+    aantal_zetels: 1
 contact:
   website: https://www.dantumadiel.frl
   email: info@dantumadiel.frl
+  bezoekadres: Hynsteblom 4, 9104 BR DAMWÂLD
+  postadres: Postbus 22, 9104 ZG DAMWÂLD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hynsteblom
+    huisnummer: '4'
+    postcode: 9104 BR
+    woonplaats: DAMWÂLD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '22'
+    postcode: 9104 ZG
+    woonplaats: DAMWÂLD
+  - type: Woo-Adres
+    openbare_ruimte: Hynsteblom
+    huisnummer: '4'
+    postcode: 9104 BR
+    woonplaats: Damwâld
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hynsteblom
+    huisnummer: '4'
+    postcode: 9104 BR
+    woonplaats: DAMWâLD
+  phones:
+  - nummer: (0511) 71 70 00
+    label: algemeen
+  emails:
+  - email: info@dantumadiel.frl
+    label: algemeen
+  - email: info@dantumadiel.frl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.dantumadiel.frl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33564/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33564/dantumadiel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-01-01'

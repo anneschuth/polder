@@ -6,21 +6,161 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0420
   roo_id: '23294'
   wikidata: Q9947
+  owms: http://standaarden.overheid.nl/owms/terms/Medemblik_(gemeente)
+  ictu: '00420'
+  organisatiecode: gm0420
+  rsin: 001516826
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MDM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Medemblik
   abbr: Medemblik
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.medemblik.nl/over-gemeente-medemblik/openbare-informatie/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/23294/Gemeente_Medemblik
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://medemblik.bestuurlijkeinformatie.nl/
+      toelichting: Vergaderstukken van de gemeenteraad en de raadscommissie
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://medemblik.bestuurlijkeinformatie.nl/Reports/Details/55930379-b454-4196-8da1-1bb8f00c7ab8
+      toelichting: Bij de gemeenteraad ingekomen stukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Medemblik%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Beleidsregels, aanwijzingsbesluiten, verkeersbesluiten en andere
+        besluiten van algemene strekking
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Medemblik%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Verordeningen en nadere regels
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.medemblik.nl/raad-en-bestuur/collegebesluiten
+      toelichting: Nog niet volledig
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Medemblik%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Omgevingsvergunningen, evenementenvergunningen en andere vergunningen
+  wooVerzoek:
+    url: https://www.medemblik.nl/over-gemeente-medemblik/openbare-informatie/woo-verzoek
+organogram_url: https://www.medemblik.nl/over-gemeente-medemblik/organisatie/organogram
+afspraak:
+  email: info@medemblik.nl
+  telefoonnummer: (0229) 85 60 00
+  url: https://www.medemblik.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 257,56
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 257.56
+  aantal_inwoners: 46305
+  inwoners: '179'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 179.0
+  bevat_plaatsen_raw: Abbekerk, Andijk, Benningbroek, Hauwert, Lambertschaag, Medemblik,
+    Midwoud, Nibbixwoud, Oostwoud, Opperdoes, Sijbekarspel, Twisk, Wervershoof, Wognum,
+    Zwaagdijk-Oost, Zwaagdijk-West
+  bevat_plaatsen:
+  - Abbekerk
+  - Andijk
+  - Benningbroek
+  - Hauwert
+  - Lambertschaag
+  - Medemblik
+  - Midwoud
+  - Nibbixwoud
+  - Oostwoud
+  - Opperdoes
+  - Sijbekarspel
+  - Twisk
+  - Wervershoof
+  - Wognum
+  - Zwaagdijk-Oost
+  - Zwaagdijk-West
+council:
+  total_seats: 29
+  parties:
+  - naam: Hart voor Medemblik
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: GemeenteBelangen
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Morgen!
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
 contact:
   website: https://www.medemblik.nl
   email: info@medemblik.nl
+  bezoekadres: Dick Ketlaan 21, 1687 CD WOGNUM
+  postadres: Postbus 45, 1687 ZG WOGNUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dick Ketlaan
+    huisnummer: '21'
+    postcode: 1687 CD
+    woonplaats: WOGNUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '45'
+    postcode: 1687 ZG
+    woonplaats: WOGNUM
+  - type: Woo-Adres
+    postbus: '45'
+    postcode: 1687 ZG
+    woonplaats: Wognum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Dick Ketlaan
+    huisnummer: '21'
+    postcode: 1687 CD
+    woonplaats: WOGNUM
+  phones:
+  - nummer: (0229) 85 60 00
+    label: algemeen
+  emails:
+  - email: info@medemblik.nl
+    label: algemeen
+  - email: omgevingsloket@medemblik.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.medemblik.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23294/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23294/medemblik
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,16 +3,38 @@ type: zbo
 identifiers:
   roo_id: '29908840'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Bedrijfsvoering en strategie
   abbr: BVS
   valid_from: '1900-01-01'
+description:
+  text: Het departement Bedrijfsvoering en strategie (BVS) is een organisatieonderdeel
+    van het Centraal Bureau voor de Statistiek (CBS).
+taken_en_bevoegdheden: Het departement Bedrijfsvoering en strategie (BVS) van het
+  CBS bestaat uit onderstaande afdelingen, die elk zijn onderverdeeld in een aantal
+  teams:BSB (Strategie en bestuursadvisering):* BSA (Algemeen)* BBE (Beleid)* BIA
+  (Interne auditdienst)BCB (Control & bedrijfsadministraties):* BBA (Bedrijfsadministraties)*
+  BPC (Planning & control)BPO (Personeel en organisatie):* BPD (Personeel en organisatie
+  Den Haag)* BPH (Personeel en organisatie Heerlen)* BCA (CBS Academy )BFB (Facilitair
+  Bedrijf):* BRO (Regieorganisatie)* BUO (Uitvoeringsorganisatie)* BIH (Informatiehuishouding)BBM
+  (Ondersteuning & informatiemanagement):* BBM (Ondersteuning & informatiemanagement)*
+  BMO (Managementondersteuning)De afdelingen en teams zijn overgenomen uit het [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908840/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908840/bvs
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-03'

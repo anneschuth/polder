@@ -3,21 +3,118 @@ type: zbo
 identifiers:
   roo_id: '28248902'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000154
+  kvk: '27365375'
+  rsin: 006688147
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Pensioen- en Uitkeringsraad
   abbr: PUR
   valid_from: '1900-01-01'
+description:
+  url: https://www.svb.nl/nl/verzetsdeelnemers-en-oorlogsgetroffenen/pensioen-en-uitkeringsraad/pur
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet uitvoering wetten voor verzetsdeelnemers en oorlogsgetroffenen, artikel
+    3, eerste lid  (Wuvo)
+  referentie: http://wetten.overheid.nl/BWBR0027660/
+taken_en_bevoegdheden: '* Het geven van beschikkingen op een aanvraag voor een erkenning,
+  buitengewoon pensioen, garantietoeslag, (periodieke) uitkering, garantieuitkering,
+  vergoeding, tegemoetkoming of herziening als bedoeld in de wetten voor verzetsdeelnemers
+  en oorlogsgetroffenen, afkomstig van een persoon die nog geen financiële aanspraak
+  ontleent of heeft ontleend aan de wet waarop hij zijn aanvraag baseert;* Het ambtshalve
+  herzien van de erkenning als verzetsdeelnemer, vervolgde of burger-slachtoffer;*
+  Het vaststellen van beleidsregels voor beschikkingen van de Sociale Verzekeringsbank
+  als bedoeld in artikel 6 (onderdelen a, b en d);* Het adviseren van de Sociale Verzekeringsbank
+  over beschikkingen waarbij niet op basis van de beleidsregels, bedoeld in onderdeel
+  c, kan worden besloten.'
+evaluations:
+- datum: '2020-02-25'
+  kamerstuknummer: TK 20454 nr. 161
+  referentie: https://zoek.officielebekendmakingen.nl/kst-20454-161.html
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.svb.nl/nl/over-de-svb/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28248902/Pensioen-_en_Uitkeringsraad
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+(((dt.creator==%22Pensioen-+en+Uitkeringsraad%22))+OR+((dt.creator==%22Sociale+Verzekeringsbank%22)+AND+(cql.textAndIndexes=%22Besluit%20van%20de%20Pensioen-%20en%20Uitkeringsraad%22))))
+      toelichting: De publicaties van de PUR in de Staatscourant worden door de PUR
+        en de SVB gedaan.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.svb.nl/nl/verzetsdeelnemers-en-oorlogsgetroffenen/pensioen-en-uitkeringsraad/vorige-jaarverslagen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://puc.overheid.nl/svb/zoeken/resultaat/t/0/s/issued-wt_desc/srt/beslissing_wob/0?noredir=1
+      toelichting: De SVB publiceert de Woo-besluiten van de PUR
+  wooVerzoek:
+    url: https://www.svb.nl/nl/over-de-svb/wet-open-overheid
+afspraak:
+  url: https://www.svb.nl/nl/verzetsdeelnemers-en-oorlogsgetroffenen/hoe-contact
+personnel:
+  aantalFte: 0,8
+  peildatumFte: '2019-12-31'
 contact:
   website: https://www.svb.nl/nl/verzetsdeelnemers-en-oorlogsgetroffenen/pensioen-en-uitkeringsraad/pur
   email: info.wvo@svb.nl
+  bezoekadres: Stationsplein 1, 2312 AJ Leiden
+  postadres: Postbus 9575, 2300 RB Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '1'
+    postcode: 2312 AJ
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '9575'
+    postcode: 2300 RB
+    woonplaats: Leiden
+  - type: Woo-Adres
+    toelichting: Ter attentie van Bedrijfsjuridische Dienst
+    openbare_ruimte: Van Heuven Goedhartlaan
+    huisnummer: '1'
+    postcode: 1181 KJ
+    woonplaats: Amstelveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (071) 535 68 88
+    label: algemeen
+  emails:
+  - email: info.wvo@svb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.svb.nl/nl/verzetsdeelnemers-en-oorlogsgetroffenen/pensioen-en-uitkeringsraad/pur
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-09-05'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248902/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248902/pur
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +123,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000154
   retrieved: '2026-05-09'
+roo_start_datum: '1990-01-01'

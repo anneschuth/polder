@@ -1,27 +1,109 @@
 id: org:gr-mgr
 type: gemeenschappelijke-regeling
+subname: MGR Rijk van Nijmegen
 identifiers:
   roo_id: '28555781'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0840
   oin: 00000001854380140000
   kvk: '61535702'
+  owms: http://standaarden.overheid.nl/owms/terms/mgrrvn
+  organisatiecode: so0840
+  rsin: '854380140'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Modulaire Gemeenschappelijke Regeling Rijk van Nijmegen
+  roo_id: '29530130'
 names:
 - value: Modulaire gemeenschappelijke regeling Rijk van Nijmegen
   abbr: MGR
   valid_from: '1900-01-01'
+description:
+  text: 'De MGR is een platform voor samenwerking en afstemming tussen gemeenten in
+    de regio. Dat zijn de gemeenten: Berg en Dal, Beuningen, Druten, Heumen, Mook
+    en Middelaar, Nijmegen en Wijchen.Er vallen twee uitvoeringsmodules onder de MGR:
+    iRvN en WerkBedrijf.iRvN is de regionale samenwerkingspartner op ICT-gebied voor
+    de gemeenten in Het Rijk van Nijmegen. Alle zeven gemeenten hebben hun ICT ondergebracht
+    bij iRvN. Door samenwerking realiseert iRvN schaalvoordelen, centralisatie en
+    standaardisatie van ICT- en informatiesystemen binnen de aangesloten gemeenten.WerkBedrijf
+    voert voor de deelnemende gemeenten het werkdeel van de Participatiewet uit. Daarnaast
+    wordt ook de Wet sociale werkvoorziening uitgevoerd. WerkBedrijf coördineert ook
+    de arbeidsmatige dagbesteding (WMO).'
+  url: https://www.regiorvn.nl/over-regio-rvn
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.regiorvn.nl/over-regio-rvn
+      overzichtURL: https://organisaties.overheid.nl/woo/28555781/Modulaire_gemeenschappelijke_regeling_Rijk_van_Nijmegen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22modulaire+gemeenschappelijke+regeling+Rijk+van+Nijmegen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22modulaire+gemeenschappelijke+regeling+Rijk+van+Nijmegen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.regiorvn.nl/over-regio-rvn
+organogram_url: https://www.regiorvn.nl/over-regio-rvn
+afspraak:
+  email: info@regiorvn.nl
+  url: https://www.regiorvn.nl/contact
 contact:
   website: https://www.regiorvn.nl
   email: info@regiorvn.nl
+  postadres: Postbus 38165, 6503 AD Nijmegen
+  bezoekadres: Nieuwe Dukenburgseweg 21A, 6534 AD Nijmegen
+  addresses:
+  - type: Postadres
+    postbus: '38165'
+    postcode: 6503 AD
+    woonplaats: Nijmegen
+  - type: Woo-Adres
+    postbus: '38165'
+    postcode: 6503 AD
+    woonplaats: Nijmegen
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Dukenburgseweg
+    huisnummer: 21A
+    postcode: 6534 AD
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (024) 751 75 00
+    label: algemeen
+  emails:
+  - email: info@regiorvn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiorvn.nl
+    label: algemeen
+  - url: https://www.regiorvn.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.regiorvn.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28555781/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28555781/mgr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-07-01'

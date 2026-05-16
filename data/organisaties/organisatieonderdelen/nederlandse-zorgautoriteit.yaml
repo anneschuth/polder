@@ -3,16 +3,53 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66170'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-cvz
+parent_id: org:onderdeel-secretariaten-van-raden-en-commissies
 names:
 - value: Nederlandse Zorgautoriteit
   valid_from: '1900-01-01'
   valid_until: '2024-07-01'
+description:
+  text: 'De Nederlandse Zorgautoriteit (NZa) maakt en bewaakt goed werkende zorgmarkten.
+    De belangen van de consument staan daarbij centraal. Efficiëntie op korte en lange
+    termijn, markttransparantie, keuzevrijheid, toegang tot zorg en de kwaliteit zijn
+    gewaarborgd. De consument krijgt zo de beste waar en waarde voor zijn zorgeuro.De
+    NZa is marktmeester in de zorg en heeft hiervoor verschillende instrumenten. Bijvoorbeeld
+    het monitoren van de ontwikkeling van zorgmarkten en het bevorderen van de werking
+    van zorgmarkten, het adviseren over zorgfusies en onderzoeken en ingrijpen op
+    zorgmarkten en in overeenkomsten tussen partijen, als er sprake lijkt van marktmacht.De
+    NZa is ook regelgever en zorgt dat de zorg betaalbaar blijft. Dit doet de NZa
+    door de tarieven, budgetten en prestaties in de zorg vast te stellen. De NZa onderzoekt
+    of de consument beter af is wanneer de prijzen worden vrijgegeven of juist worden
+    gereguleerd en adviseert de minister daarover.De NZa houdt toezicht op de zorgmarkten,
+    om na te gaan of de zorgmarkten goed werken en zorgaanbieders en zorgverzekeraars
+    de wet en regelgeving naleven. Er zijn drie vormen van toezicht: nalevingstoezicht,
+    markttoezicht en uitvoeringstoezicht.'
 contact:
   email: info@nza.nl
+  bezoekadres: Newtonlaan 1 - 41, 3584 BX Utrecht
+  postadres: Postbus 3017, 3502 GA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Newtonlaan
+    huisnummer: 1 - 41
+    postcode: 3584 BX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '3017'
+    postcode: 3502 GA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 296 81 11
+    label: algemeen
+  emails:
+  - email: info@nza.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2024-07-01'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66170/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66170/nederlandse-zorgautoriteit
+  retrieved: '2026-05-16'

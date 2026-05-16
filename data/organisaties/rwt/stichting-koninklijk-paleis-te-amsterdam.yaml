@@ -2,14 +2,30 @@ id: org:stichting-koninklijk-paleis-te-amsterdam
 type: rwt
 identifiers:
   roo_id: '30133302'
+  kvk: '41199049'
+  rsin: '805376628'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Koninklijk Paleis te Amsterdam
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Nieuwezijds Voorburgwal
+    huisnummer: '147'
+    postcode: 1012 RJ
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133302/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133302/stichting-koninklijk-paleis-te-amsterdam
+  retrieved: '2026-05-16'

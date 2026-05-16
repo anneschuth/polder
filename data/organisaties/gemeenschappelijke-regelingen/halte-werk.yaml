@@ -5,22 +5,67 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0847
   oin: 00000001854645895000
   kvk: '62094424'
+  owms: http://standaarden.overheid.nl/owms/terms/haltewerk
+  organisatiecode: so0847
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling HALte werk
+  roo_id: '28472791'
 names:
 - value: HALte werk
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.haltewerk.nl
+  bezoekadres: Mallegatsplein 10, 1815 AG Alkmaar
+  postadres: Postbus 8002, 1802 KA Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mallegatsplein
+    huisnummer: '10'
+    postcode: 1815 AG
+    woonplaats: Alkmaar
+  - type: Postadres
+    postbus: '8002'
+    postcode: 1802 KA
+    woonplaats: Alkmaar
+  phones:
+  - nummer: 14 072
+    label: algemeen
+  internet_addresses:
+  - url: https://www.haltewerk.nl
+    label: algemeen
+  - url: https://www.e-inwoner.nl/prod/fr/heerhugowaard/CRS2_Contactformulier_Haltewerk/new
+    label: contactformulier
+  contact_forms:
+  - url: https://www.haltewerk.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28472813/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28472813/halte-werk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-01-01'

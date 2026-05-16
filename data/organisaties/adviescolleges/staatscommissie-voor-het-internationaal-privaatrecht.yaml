@@ -3,17 +3,70 @@ type: adviescollege
 identifiers:
   roo_id: '28212189'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10263
+  organisatiecode: oorg10263
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Staatscommissie voor het internationaal privaatrecht
   valid_from: '1900-01-01'
+description:
+  text: De staatscommissie adviseert de regering en de beide kamers der Staten-Generaal
+    over de wetgeving inzake onderwerpen van internationaal privaatrecht.
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 10,11,25,26,27,28,29,30
+      toelichting: Naast een nationale taak kent de Staatscommissie een omvangrijke
+        internationale taak in het kader van de Haagse Conferentie voor internationaal
+        privaatrecht. Om die reden zijn enkele bepalingen afwijkend. Wat betreft artikel
+        11 zit de afwijking in het tweede lid, tweede volzin.
+wettelijke_grondslagen:
+- opschrift: Statuut van de Haagse Conferentie voor Internationaal Privaatrecht
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBV0002032
+- opschrift: Wet op de Staatscommissie voor het internationaal privaatrecht
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0009388
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28212189/Staatscommissie_voor_het_internationaal_privaatrecht
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
   email: contactpersoonwoo@minbuza.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-03-28'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212189/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212189/staatscommissie-voor-het-internationaal-privaatrecht
+  retrieved: '2026-05-16'
+roo_start_datum: '1897-02-20'

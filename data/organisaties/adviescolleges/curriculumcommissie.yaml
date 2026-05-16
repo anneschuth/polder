@@ -3,18 +3,71 @@ type: adviescollege
 identifiers:
   roo_id: '29819798'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12364
+  organisatiecode: oorg12364
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Curriculumcommissie
   valid_from: '1900-01-01'
   valid_until: '2025-01-01'
+description:
+  text: Het curriculum van het Nederlandse onderwijs maakt onder meer duidelijk welke
+    basiskennis en -vaardigheden leerlingen dienen te leren en leraren dienen te onderwijzen.
+    Daarmee is het curriculum een belangrijk onderdeel van het onderwijsstelsel. De
+    Curriculumcommissie is een adviescollege dat adviseert over het actueler maken
+    van het curriculum, zodat hierin de meest recente inzichten uit het onderwijs,
+    de maatschappij en de wetenschap verwerkt kunnen worden.
+  url: https://www.curriculumcommissie.nl/opdracht
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Curriculumcommissie, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0043948/2023-09-13/0#Artikel2
+classifications:
+- type: CAO
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
 contact:
   website: https://www.curriculumcommissie.nl/
   email: info@curriculumcommissie.nl
+  addresses:
+  - type: Postadres
+    postbus: '288'
+    postcode: 3800 AG
+    woonplaats: Amersfoort
+  internet_addresses:
+  - url: https://www.curriculumcommissie.nl/
+    label: algemeen
+  postadres: Postbus 288, 3800 AG Amersfoort
+  phones:
+  - nummer: 06 21 52 85 87
+    label: algemeen
+  emails:
+  - email: info@curriculumcommissie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.curriculumcommissie.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-01-01'
+last_mutation: '2025-10-29'
+last_verified: '2025-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29819798/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29819798/curriculumcommissie
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-07-28'

@@ -3,18 +3,113 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28583334'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0288
+  owms: http://standaarden.overheid.nl/owms/terms/wvswrtris
+  kvk: '14131889'
+  organisatiecode: so0288
+  rsin: '002124427'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werkvoorzieningschap Risse Groep
+  roo_id: '28583319'
 names:
 - value: Werkvoorzieningschap Risse Groep
   valid_from: '1900-01-01'
-  valid_until: '2035-12-31'
+description:
+  text: "Risse Groep heeft zich de afgelopen jaren ontwikkeld tot een netwerkorganisatie\
+    \ die zich richt op het bieden van kansen op werk voor mensen met een afstand\
+    \ tot de arbeidsmarkt. Hierbij wordt het beste in mensen naar boven gehaald. De\
+    \ organisatie begeleidt hen bij de specifieke ontwikkeling van hun mogelijkheden,\
+    \ talenten en ambities en werken samen met veel partners in de regio. Op deze\
+    \ manier is Risse Groep succesvol in het bieden van passende werkplekken voor\
+    \ deze doelgroep, zowel in de eigen leerwerkbedrijven als bij de bedrijven uit\
+    \ het netwerk. (Werk.kom, sd). Tot deze mensen behoren onder andere:-\tBijstandsgerechtigden\
+    \ die naar werk worden begeleid-\tInwoners voor wie arbeidsmatige dagbesteding\
+    \ is geïndiceerd-\tJongeren voor wie het aanbod op het terrein van werk van betekenis\
+    \ is-\tMedewerkers met een “beschut-nieuw”- indicatie-\tMedewerkers met een bestaande\
+    \ “wsw”- baan-\tNiet- uitkeringsgerechtigden die naar werk worden begeleid-\t\
+    Vluchtelingen en statushouders-\tMensen met een Wajong uitkering die gedeeltelijk\
+    \ arbeidsongeschikt zijnDe organisatie voert haar werkzaamheden hoofdzakelijk\
+    \ uit voor de aangesloten gemeenten. Hiertoe behoren de gemeente Weert, Nederweert\
+    \ en Cranendonck."
+  url: https://risse.nl/1/over-risse-groep/kennismaking
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://risse.nl/1/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28583334/Werkvoorzieningschap_Risse_Groep
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkvoorzieningschap+Risse+Groep%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkvoorzieningschap+Risse+Groep%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://risse.nl/1/woo-verzoek
+organogram_url: https://risse.nl/organisatie-structuur
+afspraak:
+  email: info@risse.nl
 contact:
   website: https://risse.nl
   email: info@risse.nl
+  bezoekadres: Risseweg 8, 6004 RM Weert
+  postadres: Risseweg 8, 6004 RM Weert
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Risseweg
+    huisnummer: '8'
+    postcode: 6004 RM
+    woonplaats: Weert
+    regio: Midden Limburg
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Risseweg
+    huisnummer: '8'
+    postcode: 6004 RM
+    woonplaats: Weert
+    regio: Midden Limburg
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Risseweg
+    huisnummer: '8'
+    postcode: 6004 RM
+    woonplaats: Weert
+    regio: Midden Limburg
+    land: Nederland
+  phones:
+  - nummer: (0495) 75 07 50
+    label: algemeen
+  emails:
+  - email: info@risse.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://risse.nl
+    label: algemeen
+  contact_forms:
+  - url: https://risse.nl/1/contact/algemeen
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Risse Groep
+    url: https://www.linkedin.com/company/rissegroep/posts/?feedView=all
 valid_from: '1900-01-01'
 valid_until: '2035-12-31'
+last_mutation: '2024-10-30'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28583334/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28583334/werkvoorzieningschap-risse-groep
+  retrieved: '2026-05-16'
+roo_start_datum: '1965-07-01'

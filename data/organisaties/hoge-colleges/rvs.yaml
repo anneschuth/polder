@@ -4,22 +4,110 @@ identifiers:
   oin: 00000001815051037000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10008
   roo_id: '18595'
+  owms: http://standaarden.overheid.nl/owms/terms/Raad_van_State
+  ictu: 04947
+  organisatiecode: oorg10008
 classification: hoge-college
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
 names:
 - value: Raad van State
   abbr: RvS
   valid_from: '1900-01-01'
-  valid_until: '2030-11-29'
+description:
+  text: 'De Raad van State is onafhankelijk adviseur van regering en parlement over
+    wetgeving en bestuur en hoogste algemene bestuursrechter van Nederland. De Raad
+    van State is een Hoog College van Staat waarvan de taken en de werkwijze zijn
+    vastgelegd in de Grondwet en de Wet op de Raad van State. De dagelijkse leiding
+    ligt bij de vice-president. De Raad van State heeft twee Afdelingen: de Afdeling
+    advisering en de Afdeling bestuursrechtspraak. De Raad en de beide Afdelingen
+    worden ondersteund door een ambtelijke organisatie met vier directies en staat
+    onder leiding van de secretaris van de Raad van State.'
+  url: https://www.raadvanstate.nl/overrvs/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.raadvanstate.nl/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/18595/Raad_van_State
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.raadvanstate.nl/publicaties/regelingen/
+      toelichting: De Raad van State heeft een volmachtregister openbaar gemaakt.
+        In de rubriek 'Regelingen' zijn ook de andere besluiten van algemene strekking
+        opgenomen.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.raadvanstate.nl/wet-open-overheid/woo-besluiten/
+      toelichting: Woo-besluiten en eventuele vervolgprocedures
+    - informatiecategorie: Adviezen
+      url: https://www.raadvanstate.nl/adviezen/
+      toelichting: Hier worden adviezen van de Raad van State openbaar gemaakt.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.raadvanstate.nl/publicaties/studies-onderzoeken/
+      toelichting: Op onze website publiceert de Raad van State onder ‘Studies en
+        onderzoeken’ de bedoelde onderzoeksrapporten
+  wooVerzoek:
+    url: https://www.raadvanstate.nl/wet-open-overheid/woo-verzoek-indienen/
+organogram_url: https://www.raadvanstate.nl/overrvs/organisatie/
+afspraak:
+  email: voorlichting@raadvanstate.nl
+  telefoonnummer: (070) 426 44 26
+  url: https://www.raadvanstate.nl/wet-open-overheid/
 contact:
   website: https://www.raadvanstate.nl
   email: voorlichting@raadvanstate.nl
+  bezoekadres: Kneuterdijk 22, 2514 EN Den Haag
+  postadres: Postbus 20019, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kneuterdijk 22
+    postcode: 2514 EN
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20019'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Oranjestraat
+    huisnummer: '15'
+    postcode: 2514 JB
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 44 26
+    label: algemeen
+  emails:
+  - email: voorlichting@raadvanstate.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.raadvanstate.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.raadvanstate.nl/contact/formulier-algemene/algemene-vraag-raad/
+    label: Algemeen
+  fax: (070) 365 13 80
 valid_from: '1900-01-01'
 valid_until: '2030-11-29'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/18595/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/18595/rvs
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

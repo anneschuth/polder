@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0530
   roo_id: '25383'
   wikidata: Q826130
+  owms: http://standaarden.overheid.nl/owms/terms/Hellevoetsluis_(gemeente)
+  ictu: '00530'
+  organisatiecode: gm0530
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,75 @@ names:
   abbr: Hellevoetsluis
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+geography:
+  oppervlakte: 46,14
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 46.14
+  aantal_inwoners: 40574
+  inwoners: '879'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 879.0
+  bevat_plaatsen_raw: Hellevoetsluis, Oudenhoorn
+  bevat_plaatsen:
+  - Hellevoetsluis
+  - Oudenhoorn
 contact:
   website: www.hellevoetsluis.nl
   email: gemeente@hellevoetsluis.nl
+  bezoekadres: Oostzanddijk 26, 3221 AL HELLEVOETSLUIS
+  postadres: Postbus 13, 3220 AA HELLEVOETSLUIS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oostzanddijk
+    huisnummer: '26'
+    postcode: 3221 AL
+    woonplaats: HELLEVOETSLUIS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '13'
+    postcode: 3220 AA
+    woonplaats: HELLEVOETSLUIS
+  phones:
+  - nummer: 14 0181
+    label: algemeen
+  emails:
+  - email: gemeente@hellevoetsluis.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.hellevoetsluis.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2024-11-26'
+last_verified: '2024-11-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25383/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25383/gemeente-hellevoetsluis
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

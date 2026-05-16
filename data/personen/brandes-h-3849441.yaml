@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3849443
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28975/gemeente-gouda
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28983946
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3849441

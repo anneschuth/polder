@@ -5,22 +5,112 @@ identifiers:
   kvk: 01178978
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv21
   roo_id: '15184'
+  owms: http://standaarden.overheid.nl/owms/terms/Fryslan
+  ictu: '04205'
+  rsin: 001032823
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_FRSL
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Fryslân
   abbr: FR
   valid_from: '1900-01-01'
-  valid_until: '2021-12-01'
+description:
+  url: https://www.fryslan.frl/wie-zijn-we
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.fryslan.frl
+      overzichtURL: https://organisaties.overheid.nl/woo/15184/Provincie_Fryslan
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryslân%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryslân%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryslân%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.fryslan.frl
+      toelichting: Publicatie Woo-verzoeken en -besluiten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.fryslan.frl/besluiten-gedeputeerde-staten
+      toelichting: Besluiten Gedeputeerde Staten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://fryslan.notubiz.nl/dashboard
+      toelichting: Agenda en vergaderstukken Provinciale Staten
+  wooVerzoek:
+    url: https://www.fryslan.frl/publieksinformatie
+organogram_url: https://www.fryslan.frl/organogram-nevenfuncties-en-gedragscode
+afspraak:
+  email: provincie@fryslan.frl
+  telefoonnummer: (058) 292 59 25
 contact:
   website: https://www.fryslan.frl
   email: provincie@fryslan.frl
+  bezoekadres: Tweebaksmarkt 52, 8911 KZ Leeuwarden
+  postadres: Postbus 20120, 8900 HM Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tweebaksmarkt
+    huisnummer: '52'
+    postcode: 8911 KZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '20120'
+    postcode: 8900 HM
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    openbare_ruimte: Tweebaksmarkt
+    huisnummer: '52'
+    postcode: 8911 KZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  phones:
+  - nummer: (058) 292 59 25
+    label: algemeen
+  emails:
+  - email: provincie@fryslan.frl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.fryslan.frl
+    label: algemeen
+  - url: https://open.fryslan.frl
+    label: openbare informatie Woo
+  - url: https://www.fryslan.frl/publieksinformatie
+    label: indienen Woo verzoek
+  contact_forms:
+  - url: https://www.fryslan.frl/home/contact-en-adres_3187/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2025-09-25'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15184/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/15184/fr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

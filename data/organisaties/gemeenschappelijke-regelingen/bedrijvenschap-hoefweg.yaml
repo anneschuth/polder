@@ -3,17 +3,75 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964923'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0456
+  owms: http://standaarden.overheid.nl/owms/terms/hoefweg
+  kvk: '61231223'
+  organisatiecode: so0456
+  rsin: '807567723'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bedrijvenschap Hoefweg
+  roo_id: '24964918'
 names:
 - value: Bedrijvenschap Hoefweg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24964923/Bedrijvenschap_Hoefweg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bedrijvenschap+Hoefweg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bedrijvenschap+Hoefweg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
 contact:
   website: https://hoefweg.nl
   email: secretariaat@hoefweg.nl
+  bezoekadres: Prismalaan West 1, 2665 PC Bleiswijk
+  postadres: Postbus 45, 2665 ZG Bleiswijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prismalaan West
+    huisnummer: '1'
+    postcode: 2665 PC
+    woonplaats: Bleiswijk
+  - type: Postadres
+    postbus: '45'
+    postcode: 2665 ZG
+    woonplaats: Bleiswijk
+  phones:
+  - nummer: (010) 303 74 33
+    label: secretariaat
+  emails:
+  - email: secretariaat@hoefweg.nl
+    label: secretariaat
+  internet_addresses:
+  - url: https://hoefweg.nl
+    label: algemeen
+  - url: https://hoefweg.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://hoefweg.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2025-11-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964923/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964923/bedrijvenschap-hoefweg
+  retrieved: '2026-05-16'
+roo_start_datum: '1996-11-20'

@@ -3,7 +3,7 @@ name:
   full: M.A.S. Urru
   family: Urru
   given: M.A.S.
-  initials: M.
+  initials: M.A.S.
 mandaten:
 - id: f02a010b-a136-432b-b5e5-6f85c93c24f2
   organization_id: org:gemeente-beesel
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2838996
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/21559/gemeente-beesel
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=119812
 - id: 05348f1d-264a-4e2b-9a92-4f33f20a70af
   organization_id: org:gemeente-beesel
   post_id: post:raadslid-gemeente-beesel

@@ -3,6 +3,10 @@ type: caribisch-openbaar-lichaam
 identifiers:
   roo_id: '27030689'
   tooi: https://identifier.overheid.nl/tooi/id/col/col01
+  owms: http://standaarden.overheid.nl/owms/terms/Bonaire
+  ictu: 09001
+  organisatiecode: col01
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_OCT_BQ1
 classification: caribisch-openbaar-lichaam
 parent_id: null
 names:
@@ -12,9 +16,30 @@ names:
 contact:
   website: https://www.bonairegov.com
   email: info@bonairegov.com
+  bezoekadres: Kaya International z/n, Kralendijk, Bonaire
+  postadres: Postbus 357, Kralendijk, Bonaire
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kaya International z/n
+    woonplaats: Kralendijk, Bonaire
+  - type: Postadres
+    postbus: '357'
+    woonplaats: Kralendijk, Bonaire
+  phones:
+  - nummer: +599 715 5330
+    label: algemeen
+  emails:
+  - email: info@bonairegov.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.bonairegov.com
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-11'
+last_verified: '2025-08-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27030689/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27030689/olb
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

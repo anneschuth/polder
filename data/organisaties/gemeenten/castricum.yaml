@@ -6,21 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0383
   roo_id: '35518'
   wikidata: Q9910
+  owms: http://standaarden.overheid.nl/owms/terms/Castricum_(gemeente)
+  ictu: 00383
+  organisatiecode: gm0383
+  rsin: '810243428'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_CAS
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Castricum
   abbr: Castricum
   valid_from: '1900-01-01'
+description:
+  url: https://www.castricum.nl/over-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.castricum.nl/aanvragen-en-regelen/verzoek-om-informatie/
+      overzichtURL: https://organisaties.overheid.nl/woo/35518/Gemeente_Castricum
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Castricum%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://castricum.raadsinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Castricum%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Castricum%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.burgerberichten.nl/buch/formulieren/aa8c1324-7ca8-41b0-bd8e-e5dd513bb5f3/Indienen-Woo-verzoek/introduction
+organogram_url: https://www.castricum.nl/raad-en-college
+afspraak:
+  email: info@castricum.nl
+  telefoonnummer: (0251) 66 11 22
+  url: https://www.castricum.nl/aanvragen-en-regelen
+geography:
+  oppervlakte: 59,93
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 59.93
+  aantal_inwoners: 37077
+  inwoners: '618'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 618.0
+  bevat_plaatsen_raw: Akersloot, Castricum, De Woude, Limmen
+  bevat_plaatsen:
+  - Akersloot
+  - Castricum
+  - De Woude
+  - Limmen
+council:
+  total_seats: 25
+  parties:
+  - naam: Lokaal Vitaal
+    aantal_zetels: 7
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Forza! Castricum
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: De VrijeLijst
+    aantal_zetels: 1
 contact:
   website: https://www.castricum.nl
   email: info@castricum.nl
+  bezoekadres: Raadhuisplein 1, 1902 CA CASTRICUM
+  postadres: Postbus 1301, 1900 BH CASTRICUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 1902 CA
+    woonplaats: CASTRICUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1301'
+    postcode: 1900 BH
+    woonplaats: CASTRICUM
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '1301'
+    postcode: 1900 BH
+    woonplaats: Castricum
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 1902 CA
+    woonplaats: Castricum
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (0251) 66 11 22
+    label: algemeen
+  emails:
+  - email: info@castricum.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.castricum.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35518/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35518/castricum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

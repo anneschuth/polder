@@ -3,16 +3,24 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '57830'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-szw
+parent_id: org:min-szw
 names:
 - value: Agentschap SZW
   valid_from: '1900-01-01'
   valid_until: '2020-02-01'
 contact:
   website: https://www.agentschapszw.nl/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.agentschapszw.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-02-01'
+last_mutation: '2020-02-17'
+last_verified: '2020-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/57830/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/57830/agentschap-szw
+  retrieved: '2026-05-16'

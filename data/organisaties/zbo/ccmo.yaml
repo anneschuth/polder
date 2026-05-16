@@ -3,21 +3,133 @@ type: zbo
 identifiers:
   roo_id: '28248917'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000206
+  owms: http://standaarden.overheid.nl/owms/terms/Centrale_Commissie_voor_Mensgebonden_Onderzoek
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Centrale Commissie Mensgebonden Onderzoek
   abbr: CCMO
   valid_from: '1900-01-01'
+description:
+  text: De Centrale Commissie Mensgebonden Onderzoek (CCMO) waarborgt de bescherming
+    van proefpersonen die bij medisch-wetenschappelijk onderzoek betrokken zijn, door
+    toetsing aan de wettelijke bepalingen die voor zulk onderzoek zijn vastgesteld
+    en door rekening te houden met de diverse ontwikkelingen binnen de medische wetenschap.
+  url: https://www.ccmo.nl/over-de-ccmo
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: De genoemde afwijkende bepaling geldt voor besluiten ter uitvoering
+        van de Wet Medisch-wetenschappelijk onderzoek met mensen en de artikelen 10,
+        16 en 19 van de Embryowet.
+wettelijke_grondslagen:
+- opschrift: Wet medisch-wetenschappelijk onderzoek met mensen, artikel 14
+  referentie: https://wetten.overheid.nl/BWBR0009408/2024-01-01#Paragraaf5_Artikel14
+taken_en_bevoegdheden: De CCMO heeft de volgende taken en bevoegdheden:* het houden
+  van toezicht op de toetsing door medisch-ethische commissies van medisch-wetenschappelijk
+  onderzoek met mensen in Nederland;* het toetsen van onderzoeksvormen zoals beschreven
+  in artikel 2 van de Wet medisch-wetenschappelijk onderzoek met mensen en artikel
+  3 van de Embryowet;* het behandelen van administratieve beroepsaanvragen van belanghebbenden
+  tegen beoordelingen van medisch-ethische toetsingscommissies;* het registreren van
+  medisch-wetenschappelijk onderzoek met mensen.
+evaluations:
+- datum: '2023-11-29'
+  kamerstuknummer: TK 29963 nr. 24
+  referentie: https://zoek.officielebekendmakingen.nl/kst-29963-24.html
+- datum: '2015-02-10'
+  kamerstuknummer: TK 29963 nr. 13
+  referentie: https://zoek.officielebekendmakingen.nl/kst-29963-13.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ccmo.nl/over-de-ccmo/contact/woo-verzoek-indienen-bij-de-ccmo
+      overzichtURL: https://organisaties.overheid.nl/woo/28248917/Centrale_Commissie_Mensgebonden_Onderzoek
+  wooVerzoek:
+    url: https://www.ccmo.nl/over-de-ccmo/contact/woo-verzoek-indienen-bij-de-ccmo
+organogram_url: https://www.ccmo.nl/binaries/medium/content/gallery/ccmo/content-afbeeldingen/ccmo-organisatiestructuur.png
+afspraak:
+  email: ccmo@ccmo.nl
+  url: https://www.ccmo.nl/over-de-ccmo/contact
+personnel:
+  aantalFte: 47,9
+  peildatumFte: '2023-12-31'
 contact:
   website: http://www.ccmo.nl/
   email: ccmo@ccmo.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 16302, 2500 BH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16302'
+    postcode: 2500 BH
+    woonplaats: Den Haag
+  - type: Postadres
+    toelichting: Centrale Commissie Mensgebonden Onderzoek (CCMO)
+    postbus: '16302'
+    postcode: 2500 BH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 67 00
+    label: algemeen
+  emails:
+  - email: ccmo@ccmo.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ccmo.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ccmo.nl/over-de-ccmo/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Central Committee on Research Involving Human Subjects (CCMO)
+    url: https://www.linkedin.com/company/_ccmo/
+  - platform: X
+    gebruikersnaam: '@_CCMO'
+    url: https://twitter.com/_ccmo
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248917/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248917/ccmo
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000206
   retrieved: '2026-05-09'
+roo_start_datum: '1999-01-01'

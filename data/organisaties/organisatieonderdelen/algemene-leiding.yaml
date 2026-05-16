@@ -3,13 +3,43 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '4960'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-mivd
+parent_id: org:onderdeel-bestuursstaf
 names:
 - value: Algemene Leiding
   valid_from: '1900-01-01'
+description:
+  text: Het ministerie bestaat uit twee delen, te weten de posten in het buitenland
+    en het departement in Den Haag. Het departement is als volgt geformeerd:- de onder
+    de Secretaris-Generaal en zijn plaatsvervanger ressorterende dienstonderdelen-
+    de regiodirecties, formatief gerangschikt onder de Directeur-Generaal Regiobeleid
+    en Consulaire Zaken (DGRC)- De themadirecties, formatief gerangschikt onder de
+    Directeur-Generaal Politieke Zaken (DPGZ), de Directeur-Generaal Internationale
+    Samenwerking (DGIS) en de Directeur-Generaal Europese Samenwerking (DGES)- de
+    forumdirecties, formatief geranschikt onder de Directeur-Generaal Politieke Zaken
+    (DGPZ), de Directeur-Generaal Internationale Samenwerking (DGIS) en de Directeur-Generaal
+    Europese Samenwerking (DGES).
+contact:
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt
+    huisnummer: '32'
+    postcode: 2511 CB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+  bezoekadres: Kalvermarkt 32, 2511 CB Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  phones:
+  - nummer: (070) 318 81 88
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-11-26'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/4960/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/4960/algemene-leiding
+  retrieved: '2026-05-16'

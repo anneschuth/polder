@@ -3,15 +3,25 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '98419'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-gl
+parent_id: org:onderdeel-fracties-ek
 names:
 - value: Christen-Democratisch Appèl (CDA)
   valid_from: '1900-01-01'
+description:
+  text: 6 zetels
 contact:
   website: https://www.eerstekamer.nl/fractie/christen_democratisch_appel
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/fractie/christen_democratisch_appel
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98419/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98419/christen-democratisch-appel-cda
+  retrieved: '2026-05-16'

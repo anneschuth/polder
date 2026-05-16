@@ -3,17 +3,80 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967073'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0415
+  owms: http://standaarden.overheid.nl/owms/terms/Stedendriehoek
+  kvk: '63096838'
+  organisatiecode: so0415
+  rsin: '855090340'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling regio Stedendriehoek
+  roo_id: '24967068'
 names:
 - value: regio Stedendriehoek
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24967073/regio_Stedendriehoek
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+Stedendriehoek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+afspraak:
+  email: info@regiostedendriehoek.nl
+  url: https://regiostedendriehoek.nl/
 contact:
   website: https://regiostedendriehoek.nl/
   email: info@regiostedendriehoek.nl
+  bezoekadres: Zutphenseweg 6 e, 7418 AJ Deventer
+  postadres: Zutphenseweg 6, 7418 AJ Deventer
+  addresses:
+  - type: Bezoekadres
+    toelichting: GebouwX
+    openbare_ruimte: Zutphenseweg
+    huisnummer: '6'
+    huisnummer_toevoeging: e
+    postcode: 7418 AJ
+    woonplaats: Deventer
+    regio: Stedendriehoek
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Zutphenseweg
+    huisnummer: '6'
+    postcode: 7418 AJ
+    woonplaats: Deventer
+  phones:
+  - nummer: (0570) 75 80 21
+    label: algemeen
+  emails:
+  - email: info@regiostedendriehoek.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://regiostedendriehoek.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://regiostedendriehoek.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2024-10-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967073/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967073/regio-stedendriehoek
+  retrieved: '2026-05-16'
+roo_start_datum: '1995-05-01'

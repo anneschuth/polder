@@ -2,14 +2,41 @@ id: org:oovb-iucn-the-world-conservation-union
 type: rwt
 identifiers:
   roo_id: '28347185'
+  kvk: '41180885'
+  rsin: 009898281
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: IUCN The World Conservation Union
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Plantage Middenlaan 2K, 1018 DD Amsterdam
+  postadres: Plantage Middenlaan 2K, 1018 DD Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Plantage Middenlaan 2K
+    postcode: 1018 DD
+    woonplaats: Amsterdam
+  - type: Postadres
+    openbare_ruimte: Plantage Middenlaan 2K
+    postcode: 1018 DD
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347185/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347185/iucn-the-world-conservation-union
+  retrieved: '2026-05-16'

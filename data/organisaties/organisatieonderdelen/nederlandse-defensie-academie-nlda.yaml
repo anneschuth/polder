@@ -9,9 +9,30 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: http://www.nlda.nl
+  bezoekadres: Kasteelplein 10, 4811 XC Breda
+  postadres: Postbus 90004, 3509 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kasteelplein
+    huisnummer: '10'
+    postcode: 4811 XC
+    woonplaats: Breda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '90004'
+    postcode: 3509 AA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (076) 527 35 11
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nlda.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-02'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/43766/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/43766/nederlandse-defensie-academie-nlda
+  retrieved: '2026-05-16'

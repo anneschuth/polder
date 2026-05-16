@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '21260'
   wikidata: Q9981
+  owms: http://standaarden.overheid.nl/owms/terms/Zeevang
+  ictu: 00478
+  organisatiecode: gm0478
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,68 @@ names:
   abbr: Zeevang
   valid_from: '1900-01-01'
   valid_until: '2016-01-01'
+geography:
+  oppervlakte: 56,19
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 56.19
+  aantal_inwoners: 6307
+  inwoners: '112'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 112.0
+  bevat_plaatsen_raw: Beets NH, Hobrede, Kwadijk, Middelie, Oosthuizen, Schardam,
+    Warder
+  bevat_plaatsen:
+  - Beets NH
+  - Hobrede
+  - Kwadijk
+  - Middelie
+  - Oosthuizen
+  - Schardam
+  - Warder
+council:
+  total_seats: 13
+  parties:
+  - naam: Zeevangs Belang
+    aantal_zetels: 7
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: http://www.zeevang.nl
   email: gemeente@zeevang.nl
+  bezoekadres: Raadhuisstraat 24, 1474 HG OOSTHUIZEN
+  postadres: Postbus 1, 1474 ZG OOSTHUIZEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '24'
+    postcode: 1474 HG
+    woonplaats: OOSTHUIZEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1'
+    postcode: 1474 ZG
+    woonplaats: OOSTHUIZEN
+  phones:
+  - nummer: (0299) 40 94 09
+    label: algemeen
+  emails:
+  - email: gemeente@zeevang.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zeevang.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21260/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21260/zeevang
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9981
   retrieved: '2026-05-09'

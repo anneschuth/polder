@@ -3,18 +3,108 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967208'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0100
+  owms: http://standaarden.overheid.nl/owms/terms/ispppol
+  kvk: '52364518'
+  organisatiecode: so0100
+  rsin: 001527824
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling IPP Haaglanden
+  roo_id: '29817892'
 names:
 - value: IPP Haaglanden
   abbr: IPP
   valid_from: '1900-01-01'
+description:
+  text: Sinds 1953 werken de gemeente Den Haag en Rijswijk samen in de oudste Gemeenschappelijke
+    Regeling van Nederland, het Industrieschap de Plaspoelpolder (IPP). Het IPP biedt
+    de gemeente Den Haag en Rijswijk een bestuurlijk-strategisch instrument waarmee
+    gestuurd wordt op een sterk vestigings- en investeringsklimaat in de regio Haaglanden,
+    onder meer door duurzame herinrichting en -structurering van bedrijventerreinen
+    en gronduitgifte binnen haar werkgebied. Zeggenschap en risico zijn gelijk verdeeld
+    tussen de deelnemende gemeenten.Het IPP heeft ten doel om bij te dragen aan een
+    aantrekkelijk, duurzaam en veilig vestigingsklimaat en het bevorderen van de brede
+    werkgelegenheid. Het IPP kan in opdracht van de gemeenten en binnen de geldende
+    publiekrechtelijke beleidskaders privaatrechtelijke handelingen verrichten zoals
+    het aanleggen, herstructureren en exploiteren van bedrijventerreinen, en het verrichten
+    van alle taken die met deze doelstelling samenhangen. De GR IPP is gericht op
+    het uitvoeren van gemeentelijk beleid waarbij geen sprake is van beleidsvoorbereiding
+    of (strategische) beleidskeuzes.
+  url: https://ipphaaglanden.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://ipphaaglanden.nl/wetopenoverheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/24967208/IPP_Haaglanden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Andere documenten
+      url: https://ipphaaglanden.nl/documenten/#overige
+      toelichting: Gemeenschappelijke regeling 2024, Investeringsagenda
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://ipphaaglanden.nl/documenten/#jaarrekeningen
+  wooVerzoek:
+    url: https://ipphaaglanden.nl/contact
+afspraak:
+  email: ipphaaglanden@rijswijk.nl
+  telefoonnummer: (070) 326 15 37
+  url: https://ipphaaglanden.nl/contact/
 contact:
   website: https://ipphaaglanden.nl
   email: ipphaaglanden@rijswijk.nl
+  bezoekadres: Frijdastraat 7, 2288 EX Rijswijk
+  postadres: Postbus 5305, 2280 HH Rijswijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: House of Future
+    openbare_ruimte: Frijdastraat
+    huisnummer: '7'
+    postcode: 2288 EX
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '5305'
+    postcode: 2280 HH
+    woonplaats: Rijswijk
+  - type: Woo-Adres
+    postbus: '5305'
+    postcode: 2280 HH
+    woonplaats: Rijswijk
+  phones:
+  - nummer: (070) 326 15 37
+    label: algemeen
+  emails:
+  - email: ipphaaglanden@rijswijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ipphaaglanden.nl
+    label: algemeen
+  contact_forms:
+  - url: https://ipphaaglanden.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: IPP Haaglanden
+    url: https://www.linkedin.com/company/ipphaaglanden/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967208/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967208/ipp
+  retrieved: '2026-05-16'
+roo_start_datum: '1953-01-01'

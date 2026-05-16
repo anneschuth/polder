@@ -5,21 +5,138 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000128
   oin: 00000001804415183000
   kvk: '41134697'
+  rsin: '804415183'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Participatiefonds voor het Onderwijs
   abbr: Pf
   valid_from: '1900-01-01'
+description:
+  text: Vervangingsfonds en Participatiefonds (VfPf) zijn twee zelfstandig bestuursorganen
+    die nauw met elkaar verweven zijn. We werken vanuit wettelijke taken die omschreven
+    staan in de Wet op het primair onderwijs. VfPf is de expert op het gebied van
+    HRM die scholen adviseert en ondersteunt in hun ambities en ontwikkeling tot toekomstbestendige
+    en professionele organisaties.Het beste onderwijs voor kinderen komt tot stand
+    in goed functionerende schoolorganisaties waar iedereen met plezier aan het werk
+    is en blijft. VfPf adviseert en ondersteunt schoolbesturen in het versterken van
+    hun verantwoordelijkheid om werknemers duurzaam inzetbaar te houden binnen de
+    sector. Zodat verzuim en werkloosheid zo laag mogelijk zijn. Dit doen we met onze
+    expertise en ervaring van binnen én buiten het onderwijsveld. We geloven in duurzame
+    oplossingen en bieden altijd maatwerk, afgestemd op regionale behoeftes. Waar
+    nodig vangt VfPf de financiële gevolgen van verzuim en werkloosheid op en begeleidt
+    uitkeringsgerechtigden snel naar een passende nieuwe baan. VfPf is van en voor
+    het primair onderwijs en werkt zonder winstoogmerk. Samen met schoolbesturen werken
+    we aan een aantrekkelijke en vitale sector.
+  url: https://www.vfpf.nl/over-vfpf
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Besluit Vervangingsfonds en Participatiefonds
+  referentie: http://wetten.overheid.nl/BWBR0030106/
+- opschrift: Wet op het primair onderwijs , Art 190
+  referentie: http://wetten.overheid.nl/BWBR0003420/
+taken_en_bevoegdheden: Zorgdragen voor de vergoeding van de kosten die verband houden
+  met werkloosheidsuitkeringen voor het onderwijspersoneel in het primair en voortgezet
+  onderwijs.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1183 - APG GROEP CAO
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=21467
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vfpf.nl/hulp-en-contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28212088/Stichting_Participatiefonds_voor_het_Onderwijs
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.vfpf.nl/over-vfpf/woo-verzoeken
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.vfpf.nl/over-vfpf/bestuursbesluiten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stichting+Participatiefonds+voor+het+Onderwijs%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.vfpf.nl/hulp-en-contact
+organogram_url: https://www.vfpf.nl/over-vfpf/onze-organisatie
+afspraak:
+  email: directiesecretariaat@vfpf.nl
+  telefoonnummer: (088) 837 30 30
+  url: https://www.vfpf.nl/hulp-en-contact
+personnel:
+  aantalFte: 99,5
+  peildatumFte: '2021-09-01'
+  toelichtingFte: Deze zbo deelt samen met het Stichting Vervangingsfonds en Bedrijfsgezondheidszorg
+    voor het Onderwijs een personeelsbestand. Formeel zijn de werknemers per 1-1-2023
+    in dienst van het Participatiefonds.
 contact:
   website: https://www.vfpf.nl/
   email: directiesecretariaat@vfpf.nl
+  bezoekadres: Boompjes 40, 3011 XB Rotterdam
+  postadres: Boompjes 40, 3011 XB Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Boompjes
+    huisnummer: '40'
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Boompjes
+    huisnummer: '40'
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    openbare_ruimte: Boompjes
+    huisnummer: '40'
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 837 30 30
+    label: algemeen
+  emails:
+  - email: directiesecretariaat@vfpf.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vfpf.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.vfpf.nl/contact/hr-en-arbo
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212088/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212088/pf
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -28,3 +145,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000128
   retrieved: '2026-05-09'
+roo_start_datum: '2004-01-01'

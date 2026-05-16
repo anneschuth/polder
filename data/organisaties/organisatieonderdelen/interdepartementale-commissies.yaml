@@ -3,14 +3,24 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66178'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-ceg
+parent_id: org:onderdeel-overleg-en-adviescommissies
 names:
 - value: Interdepartementale Commissies
   valid_from: '1900-01-01'
   valid_until: '2024-07-01'
+description:
+  text: Onder interdepartementale commissies worden verstaan commissies:a. waarin
+    meer dan ??????n ministerie is vertegenwoordigd, enb. waarvan meer dan de helft
+    van de leden amtenaar bij een ministerie is.
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2024-07-01'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66178/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66178/interdepartementale-commissies
+  retrieved: '2026-05-16'

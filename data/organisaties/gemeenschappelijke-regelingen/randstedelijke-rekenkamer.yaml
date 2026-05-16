@@ -3,17 +3,82 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27614752'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0597
+  owms: http://standaarden.overheid.nl/owms/terms/randstrekenk
+  organisatiecode: so0597
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Randstedelijke Rekenkamer
+  roo_id: '27614747'
 names:
 - value: Randstedelijke Rekenkamer
   valid_from: '1900-01-01'
+description:
+  text: De Randstedelijke Rekenkamer doet onafhankelijk onderzoek naar het provinciaal
+    beleid. De onderzoeksrapporten zijn openbaar en worden behandeld in de vergaderingen
+    van Provinciale Staten. Provinciale Staten besluiten vervolgens wat er met de
+    conclusies en aanbevelingen gedaan wordt.Op deze wijze draagt de Randstedelijke
+    Rekenkamer bij aan de kwaliteit van het provinciaal bestuur en aan het vergroten
+    van de publieke verantwoording.
+  url: https://www.randstedelijke-rekenkamer.nl/over-ons/wat-we-doen/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.randstedelijke-rekenkamer.nl/over-ons/woo-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/27614752/Randstedelijke_Rekenkamer
+  wooVerzoek:
+    url: https://www.randstedelijke-rekenkamer.nl/over-ons/woo-verzoeken
+organogram_url: https://www.randstedelijke-rekenkamer.nl/sites/d10p.randstedelijke-rekenkamer.nl/files/2025-01/2025-01-21%20Organogram%20Randstedelijke%20Rekenkamer.pdf
+afspraak:
+  email: info@randstedelijke-rekenkamer.nl
+  telefoonnummer: (020) 581 85 85
+  url: https://www.randstedelijke-rekenkamer.nl/contact/
 contact:
   website: https://www.randstedelijke-rekenkamer.nl
   email: info@randstedelijke-rekenkamer.nl
+  bezoekadres: Teleportboulevard 110, 1043 EJ Amsterdam
+  postadres: Teleportboulevard 110, 1043 EJ Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Teleportboulevard
+    huisnummer: '110'
+    postcode: 1043 EJ
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    openbare_ruimte: Teleportboulevard
+    huisnummer: '110'
+    postcode: 1043 EJ
+    woonplaats: Amsterdam
+  - type: Postadres
+    openbare_ruimte: Teleportboulevard
+    huisnummer: '110'
+    postcode: 1043 EJ
+    woonplaats: Amsterdam
+    land: Nederland
+  phones:
+  - nummer: (020) 581 85 85
+    label: algemeen
+  emails:
+  - email: info@randstedelijke-rekenkamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.randstedelijke-rekenkamer.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.randstedelijke-rekenkamer.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-15'
+last_verified: '2026-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27614752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27614752/randstedelijke-rekenkamer
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-07-28'

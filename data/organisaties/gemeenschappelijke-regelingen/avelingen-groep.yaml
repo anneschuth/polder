@@ -2,8 +2,12 @@ id: org:gr-avelingen-groep
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964162'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkvoorzieningsschap de Avelingen Groep
+  roo_id: '24964157'
 names:
 - value: Avelingen Groep
   valid_from: '1900-01-01'
@@ -11,9 +15,34 @@ names:
 contact:
   website: http://www.avelingengroep.nl
   email: info@avelingengroep.nl
+  bezoekadres: Avelingen-West 2, 4202 MS Gorinchem
+  postadres: Postbus 210, 4200 AC Gorinchem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Avelingen-West
+    huisnummer: '2'
+    postcode: 4202 MS
+    woonplaats: Gorinchem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '210'
+    postcode: 4200 AC
+    woonplaats: Gorinchem
+  phones:
+  - nummer: (0183) 65 56 55
+    label: algemeen
+  emails:
+  - email: info@avelingengroep.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.avelingengroep.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-01-01'
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964162/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964162/avelingen-groep
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-02-28'

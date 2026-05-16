@@ -1,20 +1,116 @@
 id: org:pbo-nba
 type: zbo
+subname: Koninklijke Nederlandse Beroepsorganisatie van Accountants
 identifiers:
   roo_id: '27906604'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10011
+  kvk: '56874987'
+  rsin: '852342238'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Nederlandse beroepsorganisatie van accountants
   abbr: NBA
   valid_from: '1900-01-01'
+description:
+  text: Met de Wet op het accountantsberoep (inwerking getreden op 1 januari 2013)
+    ingesteld openbaar lichaam in de zin van artikel 134 van de Grondwet.Op grond
+    van de Wet op het accountantsberoep is de NBA de rechtsopvolger onder algemene
+    titel van het Nederlands Instituut van Regisgteraccountants (NIVRA) en de Nederlandse
+    Orde van Accountants-Administratieconsulenten (NOvAA)..
+  url: https://www.nba.nl/over-nba/
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nba.nl/over-nba/woo-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/27906604/Nederlandse_beroepsorganisatie_van_accountants
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.nba.nl/over-nba/organisatie/regelgeving-beroepsorganisatie/
+      toelichting: Regelgeving vastgesteld door de ledenvergadering of het bestuur
+        van de NBA
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.nba.nl/over-nba/woo-verzoeken/
+      toelichting: Recente beslissingen op Woo-verzoeken
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.nba.nl/over-nba/organisatie/ledenvergadering/
+      toelichting: jaarplannen en jaarverslagen zoals gepubliceerd in de openbare
+        documenten voor de bijeenkomsten van de ledenvergadering
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.nba.nl/over-nba/woo-verzoeken/
+      toelichting: Beslissingen op Woo-verzoeken
+  wooVerzoek:
+    url: https://www.nba.nl/over-nba/woo-verzoeken/
+organogram_url: https://www.nba.nl/siteassets/over-de-nba/organisatie/2022070_nba_organogram-nba-002.pdf
+afspraak:
+  email: nba@nba.nl
+  telefoonnummer: (088) 496 03 01
+  url: http://nba@nba.nl
 contact:
   website: www.nba.nl
   email: nba@nba.nl
+  postadres: Postbus 242, 2130 AE Hoofddorp
+  bezoekadres: Mercuriusplein 3, 2132 HA Hoofddorp
+  addresses:
+  - type: Postadres
+    postbus: '242'
+    postcode: 2130 AE
+    woonplaats: Hoofddorp
+  - type: Bezoekadres
+    openbare_ruimte: Mercuriusplein
+    huisnummer: '3'
+    postcode: 2132 HA
+    woonplaats: Hoofddorp
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    postbus: '242'
+    postcode: 2130 AE
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (088) 496 03 01
+    label: algemeen
+  emails:
+  - email: nba@nba.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.nba.nl
+    label: algemeen
+  contact_forms:
+  - url: http://www.nba.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-13'
+last_verified: '2026-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27906604/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27906604/nba
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

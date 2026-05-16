@@ -5,6 +5,9 @@ identifiers:
   kvk: '50047876'
   roo_id: '40626'
   wikidata: Q171536
+  owms: http://standaarden.overheid.nl/owms/terms/Geldermalsen_(gemeente)
+  ictu: '00236'
+  organisatiecode: gm0236
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,88 @@ names:
   abbr: Geldermalsen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 101,67
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 101.67
+  aantal_inwoners: 26224
+  inwoners: '257'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 257.0
+  bevat_plaatsen_raw: Acquoy, Beesd, Buurmalsen, Deil, Enspijk, Geldermalsen, Gellicum,
+    Meteren, Rhenoy, Rumpt, Tricht
+  bevat_plaatsen:
+  - Acquoy
+  - Beesd
+  - Buurmalsen
+  - Deil
+  - Enspijk
+  - Geldermalsen
+  - Gellicum
+  - Meteren
+  - Rhenoy
+  - Rumpt
+  - Tricht
+council:
+  total_seats: 20
+  parties:
+  - naam: Dorpsbelangen
+    aantal_zetels: 5
+  - naam: SGP
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Leefbaar Geldermalsen
+    aantal_zetels: 1
+  - naam: Lijst Van Vrouwerff
+    aantal_zetels: 1
 contact:
   website: www.geldermalsen.nl
   email: info@geldermalsen.nl
+  bezoekadres: Kuipershof 2, 4191 KH GELDERMALSEN
+  postadres: Postbus 112, 4190 CC GELDERMALSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kuipershof
+    huisnummer: '2'
+    postcode: 4191 KH
+    woonplaats: GELDERMALSEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: Postbus 112
+    postbus: '112'
+    postcode: 4190 CC
+    woonplaats: GELDERMALSEN
+  phones:
+  - nummer: (0345) 58 66 11
+    label: algemeen
+  emails:
+  - email: info@geldermalsen.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.geldermalsen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-07-16'
+last_verified: '2020-07-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40626/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40626/geldermalsen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

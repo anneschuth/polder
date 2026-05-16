@@ -4,18 +4,40 @@ identifiers:
   roo_id: '22736052'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12372
   oin: 00000004178458171000
+  owms: http://standaarden.overheid.nl/owms/terms/ncsc
+  organisatiecode: oorg12372
 classification: organisatieonderdeel
-parent_id: org:onderdeel-deia
+parent_id: org:onderdeel-sg-cluster
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Nationaal Cyber Security Centrum
   abbr: NCSC
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 751 55 55
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-12'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22736052/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22736052/ncsc
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

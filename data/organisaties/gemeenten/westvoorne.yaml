@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0614
   roo_id: '34694'
   wikidata: Q935657
+  owms: http://standaarden.overheid.nl/owms/terms/Westvoorne_(gemeente)
+  ictu: '00614'
+  organisatiecode: gm0614
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,93 @@ names:
   abbr: Westvoorne
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+geography:
+  oppervlakte: 97,63
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 97.63
+  aantal_inwoners: 14960
+  inwoners: '153'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 153.0
+  bevat_plaatsen_raw: Oostvoorne, Rockanje, Tinte
+  bevat_plaatsen:
+  - Oostvoorne
+  - Rockanje
+  - Tinte
+council:
+  total_seats: 15
+  parties:
+  - naam: Inwonersbelang Westvoorne
+    aantal_zetels: 3
+  - naam: Partij Voorne aan Zee
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Gemeentebelangen Westvoorne
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: www.westvoorne.nl
   email: gemeente@westvoorne.nl
+  bezoekadres: Raadhuislaan 6, 3235 AP ROCKANJE
+  postadres: Postbus 550, 3235 ZH ROCKANJE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuislaan
+    huisnummer: '6'
+    postcode: 3235 AP
+    woonplaats: ROCKANJE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '550'
+    postcode: 3235 ZH
+    woonplaats: ROCKANJE
+  phones:
+  - nummer: (0181) 40 80 00
+    label: algemeen
+  emails:
+  - email: gemeente@westvoorne.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.westvoorne.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2024-11-26'
+last_verified: '2024-11-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34694/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34694/westvoorne
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +111,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q935657
   retrieved: '2026-05-09'
+roo_start_datum: '1980-01-01'

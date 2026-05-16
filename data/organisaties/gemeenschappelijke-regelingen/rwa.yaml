@@ -1,20 +1,65 @@
 id: org:gr-rwa
 type: gemeenschappelijke-regeling
+subname: RWA
 identifiers:
   roo_id: '24963434'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0258
+  owms: http://standaarden.overheid.nl/owms/terms/rswsamf
+  kvk: '32157550'
+  organisatiecode: so0258
+  rsin: 002508345
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling betreffende het Regionaal Sociaal Werkvoorzieningsschap
+    Amersfoort en omgeving RWA te Amersfoort
+  roo_id: '24963429'
 names:
 - value: Regionaal Sociaal Werkvoorzieningschap Amersfoort en omgeving RWA
   abbr: RWA
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.amfors.nl
   email: info@amfors.nl
+  bezoekadres: Uraniumweg 15, 3812 RJ Amersfoort
+  postadres: Postbus 304, 3800 AH Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Uraniumweg
+    huisnummer: '15'
+    postcode: 3812 RJ
+    woonplaats: Amersfoort
+  - type: Postadres
+    postbus: '304'
+    postcode: 3800 AH
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (033) 422 49 00
+    label: algemeen
+  emails:
+  - email: info@amfors.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.amfors.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2020-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963434/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963434/rwa
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-12-01'

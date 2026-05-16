@@ -10,9 +10,26 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+  bezoekadres: 3527 GA
+  postadres: Postbus 19266, 3501 DG UTRECHT
+  addresses:
+  - type: Bezoekadres
+    postcode: 3527 GA
+  - type: Postadres
+    postbus: '19266'
+    postcode: 3501 DG
+    woonplaats: UTRECHT
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-24'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71106/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71106/b-fiod
+  retrieved: '2026-05-16'

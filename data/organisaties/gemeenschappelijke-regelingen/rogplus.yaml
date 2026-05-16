@@ -3,17 +3,90 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28549181'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0551
+  owms: http://standaarden.overheid.nl/owms/terms/rogplusnwwn
+  kvk: '85096857'
+  organisatiecode: so0551
+  rsin: '863507396'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling openbaar lichaam Rogplus
+  roo_id: '30006959'
 names:
 - value: Rogplus
   valid_from: '1900-01-01'
+description:
+  text: Over RogplusWij zorgen dat iedere inwoner van Maassluis, Vlaardingen of Schiedam
+    mee kan (blijven) doen in de samenleving. En (langer) zelfstandig kan wonen. Want
+    ook met een beperking of ziekte kunnen mensen hun zelfstandigheid behouden. Of
+    weer terugkrijgen. De Wet maatschappelijke ondersteuning (Wmo) maakt dit mogelijk.
+    Wij geven ook advies over oplossingen buiten de Wmo. En werken nauw samen met
+    de gemeentelijke wijkteams en organisaties in het sociaal domein.
+  url: https://www.rogplus.nl/over-rogplus
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28549181/Rogplus
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rogplus.nl/over-rogplus/documenten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Rogplus%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.rogplus.nl/over-rogplus/bestuursoverleg
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Rogplus%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.rogplus.nl/contact
+organogram_url: https://www.rogplus.nl/over-rogplus/de-organisatie
+afspraak:
+  email: info@rogplus.nl
+  telefoonnummer: (010) 870 11 11
+  url: https://www.rogplus.nl/contact
 contact:
   website: https://www.rogplus.nl
   email: info@rogplus.nl
+  bezoekadres: Westlandseweg 1, 3144 CZ Maassluis
+  postadres: Postbus 234, 3140 AE Maassluis
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westlandseweg
+    huisnummer: '1'
+    postcode: 3144 CZ
+    woonplaats: Maassluis
+  - type: Postadres
+    postbus: '234'
+    postcode: 3140 AE
+    woonplaats: Maassluis
+  - type: Woo-Adres
+    postbus: '234'
+    postcode: 3140 AE
+    woonplaats: Maassluis
+  phones:
+  - nummer: (010) 870 11 11
+    label: algemeen
+  emails:
+  - email: info@rogplus.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rogplus.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rogplus.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-30'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28549181/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28549181/rogplus
+  retrieved: '2026-05-16'
+roo_start_datum: '1994-01-01'

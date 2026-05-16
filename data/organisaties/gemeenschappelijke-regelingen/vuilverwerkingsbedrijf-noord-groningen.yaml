@@ -2,18 +2,56 @@ id: org:gr-vuilverwerkingsbedrijf-noord-groningen
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963495'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '52158314'
+  organisatiecode: so0317
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Vuilverwerkingsbedrijf Noord-Groningen
+  roo_id: '24963490'
 names:
 - value: Vuilverwerkingsbedrijf Noord-Groningen
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.afvalbeheernoordgroningen.nl/
   email: info@afvalbeheernoordgroningen.nl
+  bezoekadres: Westerhornseweg 22, 9988 NT Usquert
+  postadres: Postbus 44, 9980 AA Uithuizen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westerhornseweg
+    huisnummer: '22'
+    postcode: 9988 NT
+    woonplaats: Usquert
+  - type: Postadres
+    postbus: '44'
+    postcode: 9980 AA
+    woonplaats: Uithuizen
+  phones:
+  - nummer: (0595) 42 31 90
+    label: algemeen
+  emails:
+  - email: info@afvalbeheernoordgroningen.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.afvalbeheernoordgroningen.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2022-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963495/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963495/vuilverwerkingsbedrijf-noord-groningen
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-01-01'

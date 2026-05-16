@@ -3,17 +3,73 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30092745'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1101
+  owms: http://standaarden.overheid.nl/owms/terms/solido
+  kvk: '95676732'
+  btw: NL867235743B01
+  organisatiecode: so1101
+  rsin: '867235743'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Solido
+  roo_id: '30092751'
 names:
 - value: Solido
   valid_from: '1900-01-01'
+description:
+  text: Solido is een Gemeenschappelijk Regeling (GR), ontstaan als samenwerkingsverband
+    voor IT-diensten van gemeenten. Onze GR heeft 8 deelnemers die feitelijk onze
+    eigenaren zijn.Deze deelnemers zijn de gemeenten Heerlen, Kerkrade, Landgraaf,
+    Brunssum, Voerendaal, Simpelveld, Beekdaelen en de Veiligheidsregio Zuid-Limburg.
+    Daarnaast hebben we nog diverse klanten waar wij enkele of meerdere IT-diensten
+    aan leveren.Omdat schaalgrootte van wezenlijk belang is om zo efficiënt en goedkoop
+    mogelijk ons werk te doen, staan wij open voor nieuwe klanten en deelnemers. Heeft
+    u interesse in onze dienstverlening of heeft u een ander vraagstuk, neem dan contact
+    met ons op.
+classifications:
+- type: Woo
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://solido-it.nl/
   email: info@solido-it.nl
+  bezoekadres: CBS-weg 2, 6412 EZ Heerlen
+  postadres: 1, 6400 AA Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: CBS-weg
+    huisnummer: '2'
+    postcode: 6412 EZ
+    woonplaats: Heerlen
+  - type: Postadres
+    huisnummer: '1'
+    postcode: 6400 AA
+    woonplaats: Heerlen
+  phones:
+  - nummer: (045) 211 61 00
+    label: algemeen
+  - nummer: (045) 560 51 11
+    label: Helpdesk
+  emails:
+  - email: info@solido-it.nl
+    label: algemeen
+  - email: helpdesk@solido-it.nl
+    label: Helpdesk
+  internet_addresses:
+  - url: https://solido-it.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://solido-it.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30092745/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30092745/solido
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-11-22'

@@ -3,21 +3,89 @@ type: zbo
 identifiers:
   roo_id: '29420239'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb099994
+  owms: http://standaarden.overheid.nl/owms/terms/sbow
+  kvk: '27285045'
+  rsin: '815298742'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Stichting Blik op Werk
   abbr: BoW
   valid_from: '1900-01-01'
+description:
+  text: De Stichting Blik op Werk is opgericht als onafhankelijk kwaliteitsinstituut
+    en door de Regeling inburgering 2021 aangewezen als de organisatie die het Keurmerk
+    Inburgeren toekent en beheert.
+  url: https://www.blikopwerk.nl/over-ons/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet inburgering 2021, artikelen 28 en 29
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0044770
+- opschrift: Regeling inburgering 2021, artikel 8.1
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0045574
+- opschrift: Uitspraak 202100290/1/A2 van de Raad van State
+  referentie: https://www.raadvanstate.nl/uitspraken/@130166/202100290-1-a2/
+taken_en_bevoegdheden: Blik op Werk verleent een kwaliteitskeurmerk aan organisaties
+  die met hun dienstverlening duurzame arbeidsparticipatie en inburgering bevorderen.
+  De kwaliteit van diensten die door keurmerkhouders worden verleend, is onafhankelijk
+  gecontroleerd. Tevens ondersteunt Blik op Werk keurmerkhouders bij het transparant,
+  zichtbaar en vindbaar maken van hun dienstverlening in het Blik op Werk Kwaliteitsregister.
+evaluations:
+- datum: '2022-07-04'
+  kamerstuknummer: TK 32824 nr. 365
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32824-365.html
+personnel:
+  aantalFte: 15,0
+  peildatumFte: '2024-04-24'
 contact:
   website: https://www.blikopwerk.nl/
   email: info@blikopwerk.nl
+  postadres: Postbus 2707, 3500 GS Utrecht
+  bezoekadres: Vliegend Hertlaan 61, 3526 KT Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '2707'
+    postcode: 3500 GS
+    woonplaats: Utrecht
+  - type: Bezoekadres
+    openbare_ruimte: Vliegend Hertlaan
+    huisnummer: '61'
+    postcode: 3526 KT
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 291 60 25
+    label: algemeen
+  emails:
+  - email: info@blikopwerk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.blikopwerk.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.blikopwerk.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Blik op Werk
+    url: https://www.linkedin.com/company/blikopwerk/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29420239/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29420239/bow
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +94,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb099994
   retrieved: '2026-05-09'
+roo_start_datum: '2022-01-01'

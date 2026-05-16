@@ -7,12 +7,34 @@ parent_id: org:prov-zh
 names:
 - value: Provinciale Staten
   valid_from: '1900-01-01'
+description:
+  url: https://www.zuid-holland.nl/politiek-bestuur/provinciale-staten/provinciale-staten/
 contact:
   website: https://zuid-holland.nl/politiek-bestuur/provinciale-staten/
   email: Statengriffie@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, Zwolle
+  postadres: Postbus 1461, 8001 BL ZWOLLE
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (050) 316 44 58
+    label: Statengriffie
+  emails:
+  - email: Statengriffie@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://zuid-holland.nl/politiek-bestuur/provinciale-staten/
+    label: algemeen
+  fax: (058) 292 51 25
+  contact_forms:
+  - url: https://www.provinciegroningen.nl/contact/contact-met-provinciale-staten/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-05-31'
+last_mutation: '2026-01-28'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/17843/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/17843/provinciale-staten
+  retrieved: '2026-05-16'

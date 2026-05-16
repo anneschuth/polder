@@ -11,9 +11,17 @@ names:
   valid_until: '2023-01-01'
 contact:
   website: http://www.rijkskoeriers.nl/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: http://www.rijkskoeriers.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2022-09-16'
+last_verified: '2022-12-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28604954/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28604954/ipkd
+  retrieved: '2026-05-16'

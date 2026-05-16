@@ -6,21 +6,168 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0971
   roo_id: '29239'
   wikidata: Q9780
+  owms: http://standaarden.overheid.nl/owms/terms/Stein_(gemeente)
+  ictu: 00971
+  organisatiecode: gm0971
+  rsin: '001731105'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_STI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Stein
   abbr: Stein
   valid_from: '1900-01-01'
+description:
+  url: https://www.gemeentestein.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentestein.nl/informatieverzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/29239/Gemeente_Stein
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://open.gemeentestein.nl/categorieen/gemeentelijke-regelgeving
+      toelichting: Gemeentelijke regelgeving
+    - informatiecategorie: Andere documenten
+      url: https://open.gemeentestein.nl/categorieen/andere-documenten
+      toelichting: Andere documenten die buiten de verplichte categorieën vallen
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://open.gemeentestein.nl/categorieen/adviezen-van-externen
+      toelichting: Adviezen en adviesaanvragen
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://open.gemeentestein.nl/categorieen/onderzoeksrapporten
+      toelichting: Onderzoeksrapporten
+    - informatiecategorie: Klachtoordelen
+      url: https://open.gemeentestein.nl/categorieen/klachtenprocedures
+      toelichting: Schriftelijke oordelen in klachtprocedures
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://open.gemeentestein.nl/categorieen/raadsstukken
+      toelichting: Raadsstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.gemeentestein.nl/categorieen/agendas-en-besluitenlijsten-bw
+      toelichting: Agenda's en besluitenlijsten B&W
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://open.gemeentestein.nl/categorieen/gemeentelijke-regelgeving
+      toelichting: Gemeentelijke regelgeving
+    - informatiecategorie: Adviezen
+      url: https://open.gemeentestein.nl/categorieen/adviezen-van-externen
+      toelichting: Adviezen en adviesaanvragen
+    - informatiecategorie: Convenanten
+      url: https://open.gemeentestein.nl/categorieen/convenanten
+      toelichting: Convenanten, beleidsovereenkomsten en andere afspraken tussen de
+        gemeente en andere partijen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.gemeentestein.nl/categorieen/woo-verzoeken
+      toelichting: Woo-verzoeken en - besluiten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.gemeentestein.nl/categorieen/jaarplannen-en-jaarverslagen
+      toelichting: Jaarplannen en jaarverslagen
+    - informatiecategorie: Beschikkingen
+      url: https://open.gemeentestein.nl/categorieen/beschikkingen
+      toelichting: Beschikkingen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://open.gemeentestein.nl/categorieen/raadsstukken
+      toelichting: Raadsstukken
+  wooVerzoek:
+    url: https://www.gemeentestein.nl/informatieverzoek
+organogram_url: https://www.gemeentestein.nl/data/downloadables/1/7/organogram-gemeente-stein.pdf
+afspraak:
+  email: info@gemeentestein.nl
+  telefoonnummer: (046) 435 93 93
+  url: https://www.gemeentestein.nl/contact/
+geography:
+  oppervlakte: 22,76
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 22.76
+  aantal_inwoners: 24691
+  inwoners: '1084'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1084.0
+  bevat_plaatsen_raw: Elsloo LB, Stein, Urmond
+  bevat_plaatsen:
+  - Elsloo LB
+  - Stein
+  - Urmond
+council:
+  total_seats: 19
+  parties:
+  - naam: DOS (Democratisch Onafhankelijken Stein)
+    aantal_zetels: 7
+  - naam: CMB (Communiceren met Burgers)
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 1
+  - naam: Steins Belang
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentestein.nl
   email: info@gemeentestein.nl
+  bezoekadres: Stadhouderslaan 200, 6171 KP STEIN LB
+  postadres: Postbus 15, 6170 AA STEIN LB
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhouderslaan
+    huisnummer: '200'
+    postcode: 6171 KP
+    woonplaats: STEIN LB
+  - type: Postadres
+    postbus: '15'
+    postcode: 6170 AA
+    woonplaats: STEIN LB
+  - type: Woo-Adres
+    openbare_ruimte: Stadhouderslaan
+    huisnummer: '200'
+    postcode: 6171 KP
+    woonplaats: Stein
+    regio: Limburg
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stadhouderslaan
+    huisnummer: '200'
+    postcode: 6171 KP
+    woonplaats: STEIN LB
+  phones:
+  - nummer: (046) 435 93 93
+    label: algemeen
+  emails:
+  - email: info@gemeentestein.nl
+    label: algemeen
+  - email: info@gemeentestein.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentestein.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29239/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29239/stein
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

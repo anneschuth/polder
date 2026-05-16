@@ -3,20 +3,43 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '97925'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
 names:
 - value: Directoraat-generaal Digitalisering en Overheidsorganisatie
   abbr: DGDOO
   valid_from: '1900-01-01'
+description:
+  text: Het directoraat-generaal werkt aan een moderne overheid. Een overheid die
+    flexibel georganiseerd is, die werkt aan de ontwikkeling van één overheid die
+    goed werkgeverschap toont en technologie effectief inzet. Daarbij staat de informatiesamenleving
+    centraal en is de rol van de overheid een afgeleide van de behoeftes van de samenleving.
 contact:
   website: http://www.rijksoverheid.nl/
   email: Eva.Heijblom@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-04-22'
+last_verified: '2025-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97925/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97925/dgdoo
+  retrieved: '2026-05-16'
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/eva-den-dunnen-heijblom-directeur-generaal-digitalisering-en-overheidsorganisatie-bij-bzk
   retrieved: '2026-05-13'

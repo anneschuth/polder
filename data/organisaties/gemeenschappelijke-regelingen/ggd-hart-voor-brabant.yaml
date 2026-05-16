@@ -5,22 +5,96 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0442
   oin: '00000003172475440000'
   kvk: '17247544'
+  owms: http://standaarden.overheid.nl/owms/terms/GGD_Hart_voor_Brabant
+  organisatiecode: so0442
+  rsin: '809327648'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD Hart voor Brabant
+  roo_id: '29663197'
 names:
 - value: GGD Hart voor Brabant
   valid_from: '1900-01-01'
+description:
+  text: Stel je eens voor… een samenleving waarin iedereen zo gezond mogelijk kan
+    opgroeien en ouder worden. Waarin mensen zelf kunnen beslissen over hun eigen
+    gezondheid en voldoende veerkracht hebben om met fysieke, emotionele en sociale
+    uitdagingen om te gaan. Waar onze omgeving zo is ingericht dat gezonde keuzes
+    de meest logische keuzes zijn. En waar gezondheid als vanzelfsprekend bovenaan
+    iedere agenda staat!
+  url: https://www.ggdhvb.nl/over-de-ggd/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdhvb.nl/over-de-ggd/publicaties/archiefwet-en-wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28594315/GGD_Hart_voor_Brabant
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22GGD+Hart+voor+Brabant%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.ggdhvb.nl/over-de-ggd/publicaties/archiefwet-en-wet-open-overheid/
+organogram_url: https://www.ggdhvb.nl/app/uploads/2024/11/Organigram-website.pdf
+afspraak:
+  telefoonnummer: (088) 368 70 00
 contact:
   website: https://www.ggdhvb.nl
   email: contact@ggdhvb.nl
+  bezoekadres: Pettelaarpark 10, 5216 PD 's-Hertogenbosch
+  postadres: Postbus 3024, 5003 DA Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pettelaarpark
+    huisnummer: '10'
+    postcode: 5216 PD
+    woonplaats: '''s-Hertogenbosch'
+  - type: Postadres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+  - type: Woo-Adres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (088) 368 70 00
+    label: algemeen
+  emails:
+  - email: contact@ggdhvb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdhvb.nl
+    label: algemeen
+  - url: https://www.ggdhvb.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.ggdhvb.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-08-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28594315/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28594315/ggd-hart-voor-brabant
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2001-01-01'

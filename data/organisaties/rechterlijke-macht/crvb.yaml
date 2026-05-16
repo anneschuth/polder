@@ -4,21 +4,70 @@ identifiers:
   oin: '00000004000000037000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10033
   roo_id: '58622'
+  owms: http://standaarden.overheid.nl/owms/terms/Centrale_Raad_van_Beroep
+  kvk: '83015604'
+  rsin: '862692167'
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Centrale Raad van Beroep
   abbr: CRvB
   valid_from: '1900-01-01'
+description:
+  text: De Centrale Raad van Beroep is een van de vier hoogste bestuursrechters die
+    Nederland kent. De andere drie zijn de Hoge Raad, de Afdeling bestuursrechtspraak
+    van de Raad van State en het College van Beroep voor het bedrijfsleven.De Centrale
+    Raad van Beroep oordeelt in hoger beroep over geschillen op het terrein van de
+    sociale verzekeringen, de sociale voorzieningen en ambtenarenzaken.Daarnaast is
+    de Centrale Raad van Beroep rechter in eerste en enige aanleg in geschillen over
+    de uitvoering van wetten voor oorlogs- en vervolgingsgetroffenen en voor beroepen
+    van rechterlijke ambtenaren.De Centrale Raad van Beroep wordt geleid door een
+    bestuur, bestaande uit de president (voorzitter), een rechterlijk bestuurslid
+    en een niet-rechterlijk bestuurslid. Het bestuur wordt ondersteund door een aantal
+    adviseurs.De Centrale Raad van Beroep bestaat uit drie werkstromen:• AVI (Ambtenaren
+    en Pensioenen, Sociale voorzieningen, Internationale Kamer)• Bijstand• Sociale
+    verzekeringenIn deze werkstromen werken rechters, gerechtsauditeurs en gerechtsambtenaren.Daarnaast
+    is er één administratie (griffie) en zijn er twee ondersteunende bureaus:• Bureau
+    ondersteuning bedrijfsvoering• Wetenschappelijk Bureau
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Centrale-Raad-van-beroep
   email: crvb@rechtspraak.nl
+  bezoekadres: Vrouwe Justitiaplein 1, 3511 EX Utrecht
+  postadres: Postbus 16002, 3500 DA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vrouwe Justitiaplein
+    huisnummer: '1'
+    postcode: 3511 EX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '16002'
+    postcode: 3500 DA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 362 11 11
+    label: algemeen
+  emails:
+  - email: crvb@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Centrale-Raad-van-beroep
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-08-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58622/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58622/crvb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -1,15 +1,44 @@
 id: org:oovb-stichting-centrum-voor-de-kunsten-zuid-groningen
 type: rwt
+subname: Stichting Kunstenschool ZG
 identifiers:
   roo_id: '27911025'
+  kvk: 01137759
+  rsin: '819947684'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Centrum voor de Kunsten Zuid Groningen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Raadhuisplein 2, 9501 SZ Stadskanaal
+  postadres: Postbus 201, 9500 AE Stadskanaal
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein 2
+    postcode: 9501 SZ
+    woonplaats: Stadskanaal
+  - type: Postadres
+    postbus: '201'
+    postcode: 9500 AE
+    woonplaats: Stadskanaal
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27911025/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27911025/stichting-centrum-voor-de-kunsten-zuid-groningen
+  retrieved: '2026-05-16'

@@ -9,9 +9,33 @@ names:
   abbr: B en A
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+description:
+  text: Taak:De kerntaken van de afdeling BenA, die twee clusters kent (arbeidsmarkt
+    & arbeidsvoorwaarden en beroepen & opleidingen) centreren zich rond de arbeidsmarkt
+    en opleidingen van het zorgveld.
+contact:
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 62 04
+    label: algemeen
+  fax: (070) 340 73 72
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-04-14'
+last_verified: '2025-09-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8725/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8725/b-en-a
+  retrieved: '2026-05-16'

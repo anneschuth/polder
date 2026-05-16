@@ -1,5 +1,6 @@
 id: org:onderdeel-facilitaire-service
 type: organisatieonderdeel
+subname: Afdelingsmanager
 identifiers:
   roo_id: '64599'
 classification: organisatieonderdeel
@@ -10,9 +11,37 @@ names:
 contact:
   website: http://www.provincie-utrecht.nl
   email: info@provincie-utrecht.nl
+  bezoekadres: Pythagoraslaan 101, 3584 BB Utrecht
+  postadres: Postbus 80300, 3508 TH Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pythagoraslaan
+    huisnummer: '101'
+    postcode: 3584 BB
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Postadres
+    postbus: '80300'
+    postcode: 3508 TH
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (030) 258 32 23
+    label: algemeen
+  emails:
+  - email: info@provincie-utrecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.provincie-utrecht.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-07'
+last_verified: '2024-02-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/64599/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/64599/facilitaire-service
+  retrieved: '2026-05-16'

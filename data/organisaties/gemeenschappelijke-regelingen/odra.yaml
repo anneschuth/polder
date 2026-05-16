@@ -1,28 +1,109 @@
 id: org:gr-odra
 type: gemeenschappelijke-regeling
+subname: Omgevingsdienst regio Arnhem
 identifiers:
   roo_id: '28162321'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0826
   oin: 00000001852452998000
   kvk: '57137528'
+  owms: http://standaarden.overheid.nl/owms/terms/Omgevingsdienst_regio_Arnhem
+  organisatiecode: so0826
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Regio Arnhem
+  roo_id: '28162281'
 names:
 - value: Omgevingsdienst Regio Arnhem
   abbr: ODRA
   valid_from: '1900-01-01'
   valid_until: '2026-01-01'
+description:
+  text: ODRA is een gemeenschappelijke regeling waarin onze opdrachtgevers als eigenaren
+    deelnemen en samenwerken. Onze organisatie staat voor de uitvoering van zogenaamde
+    VTH-taken op het gebied van milieu en bouw. Vergunningverlening, toezicht en handhaving
+    zijn onze kerntaken. Ook verzorgt ODRA juridische ondersteuning en specialistische
+    advisering. Onder meer op het gebied van geluid, licht, omgevingsveiligheid en
+    milieumetingen.De eigenaren van de gemeenschappelijke regeling zijn tien gemeenten
+    uit de Provincie Gelderland en de Provincie Gelderland samen. Iedere deelnemer
+    is als eigenaar vertegenwoordigt in ons Algemeen Bestuur.
+  url: https://www.odregioarnhem.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2026-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2026-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odregioarnhem.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28162321/Omgevingsdienst_Regio_Arnhem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+regio+Arnhem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+regio+Arnhem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odregioarnhem.nl/over-ons/bestuur/
+      toelichting: Hier vindt u de agenda en vergaderstukken van het Algemeen Bestuur.
+  wooVerzoek:
+    url: https://www.odregioarnhem.nl/woo-verzoek/
+afspraak:
+  telefoonnummer: (026) 377 16 00
 contact:
   website: https://www.odregioarnhem.nl
   email: postbus@odra.nl
+  bezoekadres: Eusebiusbuitensingel 75, 6828 HZ Arnhem
+  postadres: Postbus 3066, 6802 DB Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eusebiusbuitensingel
+    huisnummer: '75'
+    postcode: 6828 HZ
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '3066'
+    postcode: 6802 DB
+    woonplaats: Arnhem
+  - type: Woo-Adres
+    postbus: '3066'
+    postcode: 6802 DB
+    land: Nederland
+  phones:
+  - nummer: (026) 377 16 00
+    label: algemeen
+  emails:
+  - email: postbus@odra.nl
+    label: digitaal postadres
+  - email: afspraken@odra.nl
+    label: voor afspraken
+  internet_addresses:
+  - url: https://www.odregioarnhem.nl
+    label: algemeen
+  - url: https://www.odregioarnhem.nl/contact
+    label: voor vragen
 valid_from: '1900-01-01'
 valid_until: '2026-01-01'
+last_mutation: '2026-01-19'
+last_verified: '2024-02-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28162321/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28162321/odra
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-11-14'

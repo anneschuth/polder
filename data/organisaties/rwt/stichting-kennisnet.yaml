@@ -2,14 +2,34 @@ id: org:stichting-kennisnet
 type: rwt
 identifiers:
   roo_id: '30133743'
+  kvk: '27244834'
+  oin: 00000003272448340000
+  rsin: '810348147'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Kennisnet
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Bleiswijkseweg
+    huisnummer: '37'
+    huisnummer_toevoeging: d
+    postcode: 2712 PB
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133743/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133743/stichting-kennisnet
+  retrieved: '2026-05-16'

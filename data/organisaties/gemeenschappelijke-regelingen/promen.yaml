@@ -3,17 +3,109 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27706686'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0539
+  owms: http://standaarden.overheid.nl/owms/terms/promen
+  kvk: '24484664'
+  organisatiecode: so0539
+  rsin: '807758917'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Promen
+  roo_id: '30104372'
 names:
 - value: Promen
   valid_from: '1900-01-01'
+description:
+  text: We bieden een breed scala aan werkplekken en opleidingsmogelijkheden, buiten
+    de muren van Promen of op een zo regulier mogelijke passende werkplek bij Promen
+    zelf. We bieden diensten op het gebied van schoonmaak, groenonderhoud en catering
+    en productiematige diensten zoals  in-, om- en verpakken (van zowel food als non-food),
+    assemblage en montage. Al deze werkzaamheden worden uitgevoerd door mensen met
+    een afstand tot de arbeidsmarkt. We doen dit voor mensen vanuit de Participatiewet,
+    met een WSW-indicatie, maar ook voor statushouders, schoolverlaters van VSO/PRO
+    en voor mensen met een indicatie voor Beschut Werk, een garantiebaan of re-integratie.
+  url: https://promen.nl/over-promen/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://promen.nl/wp-content/uploads/2024/04/Promen_WOO-verzoek_april-2024.pdf
+      overzichtURL: https://organisaties.overheid.nl/woo/27706686/Promen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://promen.nl/organisatie-en-bestuur/
+      toelichting: Op deze webpagina vindt u informatie over de organisatie, het bestuur,
+        directie, managementteam, bestuursstukken, jaarrekeningen, ondernemingsplannen
+        en primitieve begrotingen van Promen.
+  wooVerzoek:
+    url: https://promen.nl/contact/
+organogram_url: https://promen.nl/organisatie-en-bestuur/
+afspraak:
+  email: info@promen.nl
+  telefoonnummer: (088) 989 80 00
+  url: https://promen.nl/contact/
 contact:
   website: https://www.promen.nl
   email: info@promen.nl
+  bezoekadres: Zuider IJsseldijk 46, 2808 PB Gouda
+  postadres: Postbus 247, 2800 AE Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuider IJsseldijk
+    huisnummer: '46'
+    postcode: 2808 PB
+    woonplaats: Gouda
+    regio: ZH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '247'
+    postcode: 2800 AE
+    woonplaats: Gouda
+    regio: ZH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '247'
+    postcode: 2800 AE
+    woonplaats: Gouda
+    regio: ZH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 989 80 00
+    label: algemeen
+  emails:
+  - email: info@promen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.promen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://promen.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Promen
+    url: https://nl.linkedin.com/company/promen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-04'
+last_verified: '2026-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27706686/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27706686/promen
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

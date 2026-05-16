@@ -5,24 +5,83 @@ identifiers:
   oin: 00000004000000080000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10003
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ocw
+parent_id: org:onderdeel-diensten-en-agentschappen
 names:
 - value: Rijksdienst voor het Cultureel Erfgoed
   abbr: RCE
   valid_from: '1900-01-01'
-  valid_until: '2024-06-01'
 - value: Diensten en Agentschappen
   abbr: RCE
   valid_from: '1900-01-01'
   valid_until: '2024-06-01'
+description:
+  text: De Rijksdienst voor het Cultureel Erfgoed (RCE) is een onderdeel van het ministerie
+    van Onderwijs, Cultuur en Wetenschap. De RCE werkt onder de rechtstreekse verantwoordelijkheid
+    van de minister en voert wet- en regelgeving en erfgoedbeleid uit dat het ministerie
+    en de dienst samen maken. Ook ontwikkelt de dienst praktisch toepasbare kennis,
+    en geeft de RCE advies over rijksmonumenten, landschap & leefomgeving, archeologie
+    en roerend erfgoed.
+  url: https://www.cultureelerfgoed.nl/over-ons
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cultureelerfgoed.nl/over-ons/open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/71896/Rijksdienst_voor_het_Cultureel_Erfgoed
 contact:
   website: http://www.cultureelerfgoed.nl
+  bezoekadres: Smallepad 5, 3811 BP Amersfoort
+  postadres: Postbus 1600, 3800 BP Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Smallepad 5
+    postcode: 3811 BP
+    woonplaats: Amersfoort
+  - type: Postadres
+    postbus: '1600'
+    postcode: 3800 BP
+    woonplaats: Amersfoort
+  - type: Woo-Adres
+    postbus: '1600'
+    postcode: 3800 BP
+    woonplaats: Amersfoort
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (033) 421 74 56
+    label: Infodesk
+  internet_addresses:
+  - url: http://www.cultureelerfgoed.nl
+    label: algemeen
+  - url: https://www.cultureelerfgoed.nl/over-ons/afdelingen-programmas-en-medewerkers
+    label: medewerkers en afdelingen
+  - url: https://www.cultureelerfgoed.nl/over-ons/klachtenregeling
+    label: klachtenregeling
+  contact_forms:
+  - url: https://www.cultureelerfgoed.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Rijksdienst voor het Cultureel Erfgoed
+    url: https://www.facebook.com/RijksdienstvoorhetCultureelErfgoed/
+  - platform: Instagram
+    gebruikersnaam: cultureelerfgoed
+    url: https://www.instagram.com/cultureelerfgoed/
+  - platform: LinkedIn
+    gebruikersnaam: Rijksdienst voor het Cultureel Erfgoed
+    url: https://www.linkedin.com/company/338695
+  - platform: X
+    gebruikersnaam: RCE_erfgoed
+    url: https://twitter.com/RCE_erfgoed
+  - platform: YouTube
+    gebruikersnaam: cultureel-erfgoed
+    url: https://www.youtube.com/channel/UCk28TXwN_hESwFdC3-ABpOg
 valid_from: '1900-01-01'
 valid_until: '2024-06-01'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71896/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71896/rce
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

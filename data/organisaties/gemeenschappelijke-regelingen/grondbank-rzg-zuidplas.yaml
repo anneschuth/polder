@@ -3,14 +3,54 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966886'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0526
+  owms: http://standaarden.overheid.nl/owms/terms/rzgzuidplas
+  kvk: '65061306'
+  organisatiecode: so0526
+  rsin: '815107808'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Grondbank RZG Zuidplas 2015
+  roo_id: '24966881'
 names:
 - value: Grondbank RZG Zuidplas
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Kleinpolderlaan 4, 2911 PA Nieuwerkerk aan den IJssel
+  postadres: Postbus 29, 2910 AA Nieuwerkerk aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kleinpolderlaan
+    huisnummer: '4'
+    postcode: 2911 PA
+    woonplaats: Nieuwerkerk aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '29'
+    postcode: 2910 AA
+    woonplaats: Nieuwerkerk aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 441 66 11
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-28'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966886/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966886/grondbank-rzg-zuidplas
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-07-01'

@@ -6,21 +6,160 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0935
   roo_id: '32664'
   wikidata: Q1309
+  owms: http://standaarden.overheid.nl/owms/terms/Maastricht_(gemeente)
+  ictu: 00935
+  organisatiecode: gm0935
+  rsin: '001737442'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MST
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Maastricht
   abbr: Maastricht
   valid_from: '1900-01-01'
+description:
+  url: https://www.gemeentemaastricht.nl/organogram-gemeente-maastricht
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentemaastricht.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/32664/Gemeente_Maastricht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.gemeentemaastricht.nl/wet-open-overheid
+      toelichting: Overzicht van de onderwerpen van de genomen Woo-besluiten
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://maastricht.parlaeus.nl/app/
+      toelichting: U vindt hier de actuele agenda’s, documenten, live uitzendingen
+        en videoverslagen van de gemeenteraad Maastricht
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maastricht.bestuurlijkeinformatie.nl/
+      toelichting: Openbare besluitenlijst van de besluiten die het college een week
+        eerder heeft genomen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maastricht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maastricht%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maastricht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.gemeentemaastricht.nl/woo-verzoek-indienen
+organogram_url: https://www.gemeentemaastricht.nl/sites/default/files/2024-11/Organogram%20gemeente%20Maastricht.pdf
+afspraak:
+  url: https://www.gemeentemaastricht.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 60,06
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 60.06
+  aantal_inwoners: 126026
+  inwoners: '2098'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2098.0
+  bevat_plaatsen_raw: Maastricht
+  bevat_plaatsen:
+  - Maastricht
+council:
+  total_seats: 39
+  parties:
+  - naam: D66
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: GroenLinks
+    aantal_zetels: 4
+  - naam: Senioren StadsPartij Maastricht
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Volt
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: MAASTRICHT van NU
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 2
+  - naam: PVV
+    aantal_zetels: 1
+  - naam: M:OED
+    aantal_zetels: 1
+  - naam: Sociaal Actieve Burgerpartij
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: Partij Veilig Maastricht
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentemaastricht.nl
   email: post@maastricht.nl
+  bezoekadres: Mosae Forum 10, 6211 DW MAASTRICHT
+  postadres: Postbus 1992, 6201 BZ MAASTRICHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mosae Forum
+    huisnummer: '10'
+    postcode: 6211 DW
+    woonplaats: MAASTRICHT
+  - type: Postadres
+    postbus: '1992'
+    postcode: 6201 BZ
+    woonplaats: MAASTRICHT
+  - type: Woo-Adres
+    openbare_ruimte: Mosae Forum
+    huisnummer: '10'
+    postcode: 6211 DW
+    woonplaats: Maastricht
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Mosae Forum
+    huisnummer: '10'
+    postcode: 6211 DW
+    woonplaats: MAASTRICHT
+  phones:
+  - nummer: 14 043
+    label: algemeen
+  emails:
+  - email: post@maastricht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gemeentemaastricht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://eloket.gemeentemaastricht.nl/f/2176/login
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32664/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32664/maastricht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

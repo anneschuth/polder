@@ -3,15 +3,60 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28116654'
 classification: organisatieonderdeel
-parent_id: org:rechtbank-ldcr
+parent_id: org:rechtbank-raad-voor-de-rechtspraak
 names:
 - value: IVO Rechtspraak
   valid_from: '1900-01-01'
+description:
+  text: IVO Rechtspraak is de ICT-dienstverlener voor de Rechtspraak, heeft goede
+    kennis van de Rechtspraak en haar werkprocessen, en biedt ICT-gebaseerde oplossingen.
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Indienen-Woo-verzoek.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28116654/IVO_Rechtspraak
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2023.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2023 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2022.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2022 op verzoek openbaar heeft gemaakt.
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/ivorechtspraak
+  bezoekadres: Uniceflaan 1, 3527 WX Utrecht
+  postadres: Postbus 85228, 3508 AE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Uniceflaan
+    huisnummer: '1'
+    postcode: 3527 WX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '85228'
+    postcode: 3508 AE
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 361 30 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/ivorechtspraak
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/ivorechtspraak
+    label: Algemeen
+  fax: (088) 361 00 08
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-06-20'
+last_verified: '2026-03-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28116654/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28116654/ivo-rechtspraak
+  retrieved: '2026-05-16'

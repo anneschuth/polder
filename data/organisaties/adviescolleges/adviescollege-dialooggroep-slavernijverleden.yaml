@@ -4,14 +4,45 @@ identifiers:
   roo_id: '28391541'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10187
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege dialooggroep Slavernijverleden
   valid_from: '1900-01-01'
   valid_until: '2021-09-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: artikel 2 van de Regeling instelling Adviescollege dialooggroep slavernijverleden
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0043916&artikel=2&z=2020-07-21&g=2020-07-21
+classifications:
+- type: CAO
+  eind_datum: '2021-09-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2021-09-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+contact:
+  addresses:
+  - type: Bezoekadres
 valid_from: '1900-01-01'
 valid_until: '2021-09-01'
+last_mutation: '2023-11-14'
+last_verified: '2023-11-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391541/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391541/adviescollege-dialooggroep-slavernijverleden
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-07-21'

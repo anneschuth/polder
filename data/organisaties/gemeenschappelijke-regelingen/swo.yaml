@@ -5,23 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0832
   oin: 00000001854377876000
   kvk: '61529419'
+  owms: http://standaarden.overheid.nl/owms/terms/samwolhoo
+  btw: NL854377876B01
+  organisatiecode: so0832
+  rsin: '854377876'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Samenwerkingsorganisatie De Wolden Hoogeveen
+  roo_id: '29040233'
 names:
 - value: Samenwerkingsorganisatie De Wolden Hoogeveen
   abbr: SWO
   valid_from: '1900-01-01'
+description:
+  text: De ambtelijke organisaties van de gemeente De Wolden en de gemeente Hoogeveen
+    zijn per 1 januari 2015 samengevoegd tot één nieuwe publiekrechtelijke ambtelijke
+    organisatie voor beide gemeenten met het doel de kwaliteit van de gemeentelijke
+    dienstverlening te optimaliseren, de kwetsbaarheid van de respectievelijke ambtelijke
+    organisaties te beperken en de kosten van de uitvoering van de gemeentelijke taken
+    zo goed mogelijk te beheersen.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hoogeveen.nl/raad-en-college/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/27882953/Samenwerkingsorganisatie_De_Wolden_Hoogeveen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerkingsorganisatie+De+Wolden+Hoogeveen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://openformulieren.hoogeveen.nl/woo-verzoek-indienen/startpagina
+organogram_url: https://www.werkenbijdeswo.nl/over-de-swo/organisatiestructuur
+afspraak:
+  telefoonnummer: 14 0528
+  url: https://www.werkenbijdeswo.nl/contact
 contact:
   website: https://www.dewoldenhoogeveen.nl
   email: info@dewoldenhoogeveen.nl
+  bezoekadres: Raadhuisplein 24, 7901 BW Hoogeveen
+  postadres: Postbus 100, 7900 AC Hoogeveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '24'
+    postcode: 7901 BW
+    woonplaats: Hoogeveen
+    regio: Drenthe
+    land: NL
+  - type: Postadres
+    postbus: '100'
+    postcode: 7900 AC
+    woonplaats: Hoogeveen
+    regio: Drenthe
+    land: NL
+  - type: Woo-Adres
+    postbus: '100'
+    postcode: 7900 AC
+    woonplaats: Hoogeveen
+    regio: Drenthe
+    land: NL
+  phones:
+  - nummer: 14 0528
+    label: algemeen
+  emails:
+  - email: info@dewoldenhoogeveen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dewoldenhoogeveen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.werkenbijdeswo.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27882953/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27882953/swo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-08-01'

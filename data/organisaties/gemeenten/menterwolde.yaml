@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '37397'
   wikidata: Q932066
+  owms: http://standaarden.overheid.nl/owms/terms/Menterwolde
+  ictu: 01987
+  organisatiecode: gm1987
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,76 @@ names:
   abbr: Menterwolde
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 81,62
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 81.62
+  aantal_inwoners: 12181
+  inwoners: '149'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 149.0
+  bevat_plaatsen_raw: Borgercompagnie, Meeden, Muntendam, Noordbroek, Tripscompagnie,
+    Zuidbroek
+  bevat_plaatsen:
+  - Borgercompagnie
+  - Meeden
+  - Muntendam
+  - Noordbroek
+  - Tripscompagnie
+  - Zuidbroek
+council:
+  total_seats: 15
+  parties:
+  - naam: Menterwolde Gewoon
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Kritisch Menterwolde
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: MenterwoldeGewoon
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: www.menterwolde.nl
   email: Info@menterwolde.nl
+  bezoekadres: Kerkstraat 2, 9649 GR MUNTENDAM
+  postadres: Postbus 2, 9649 ZG MUNTENDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kerkstraat
+    huisnummer: '2'
+    postcode: 9649 GR
+    woonplaats: MUNTENDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 2
+    postbus: '2'
+    postcode: 9649 ZG
+    woonplaats: MUNTENDAM
+  phones:
+  - nummer: (0598) 65 88 88
+    label: algemeen
+  emails:
+  - email: Info@menterwolde.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.menterwolde.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-16'
+last_verified: '2018-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37397/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37397/menterwolde
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q932066
   retrieved: '2026-05-09'

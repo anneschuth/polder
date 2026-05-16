@@ -2,14 +2,42 @@ id: org:oovb-stichting-ondersteuning-omgevingsraad-schiphol-soors
 type: rwt
 identifiers:
   roo_id: '27914796'
+  kvk: '34251725'
+  rsin: '816030157'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting ondersteuning Omgevingsraad Schiphol (SOORS)
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Polarisavenue 85-B, 2132 JH Hoofddorp
+  postadres: Polarisavenue 85-B, 2132 JH Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Polarisavenue 85-B
+    postcode: 2132 JH
+    woonplaats: Hoofddorp
+  - type: Postadres
+    openbare_ruimte: Polarisavenue 85-B
+    postcode: 2132 JH
+    woonplaats: Hoofddorp
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914796/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914796/stichting-ondersteuning-omgevingsraad-schiphol-soors
+  retrieved: '2026-05-16'

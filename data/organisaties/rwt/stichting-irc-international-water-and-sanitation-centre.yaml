@@ -2,14 +2,42 @@ id: org:oovb-stichting-irc-international-water-and-sanitation-centre
 type: rwt
 identifiers:
   roo_id: '28347383'
+  kvk: '41151952'
+  rsin: '800441734'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting IRC, International Water and Sanitation Centre
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Bezuidenhoutseweg 2, 2594 AV Den Haag
+  postadres: Postbus 82327, 2508 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg 2
+    postcode: 2594 AV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '82327'
+    postcode: 2508 EH
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347383/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347383/stichting-irc-international-water-and-sanitation-centre
+  retrieved: '2026-05-16'

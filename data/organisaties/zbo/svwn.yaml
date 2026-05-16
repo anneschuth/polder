@@ -3,22 +3,131 @@ type: zbo
 identifiers:
   roo_id: '28212642'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000121
+  kvk: '30265910'
+  rsin: '820989150'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Visitatie Woningcorporaties Nederland
   abbr: SVWN
   valid_from: '1900-01-01'
-  valid_until: '2099-12-31'
+description:
+  text: SVWN is in 2015 – op basis van de Woningwet art. 53a – door de minister aangewezen
+    als de onafhankelijke instantie die visitatiebureaus accrediteert. Daarnaast ontwikkelen
+    en beheren wij de visitatiemethodiek en zien we toe op de kwaliteit van de visitaties.
+    Ook publiceert SVWN alle visitatierapporten.
+  url: https://visitaties.nl/missie-en-positie
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Woningwet, artikel 53a eerste lid
+  referentie: http://wetten.overheid.nl/BWBR0005181/HoofdstukIV/Afdeling3/6/Artikel53a/
+taken_en_bevoegdheden: '* De onafhankelijke instantie heeft tot taak ervoor te zorgen
+  dat er eens per vier jaar bij corporaties een visitatie kan worden uitgevoerd, specifiek
+  door het aanwijzen van ''deskundige instanties''. SVWN doet dat door het accrediteren
+  van bureaus die visitaties mogen uitvoeren. (zie ook art. 2 Statuten).'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 833 - WOONDIENSTEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=22643
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Stichting Pensioenfonds voor de Woningcorporaties (SPW)
+    referentie: https://www.spw.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://visitaties.nl/bezwaren-klachten-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212642/Stichting_Visitatie_Woningcorporaties_Nederland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://visitaties.nl/jaarverslagen-1
+      toelichting: Jaarverslagen 2020 en eerder
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://visitaties.nl/jaarverslagen
+      toelichting: Meest recente jaarverslagen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://visitaties.nl/organisatie
+      toelichting: Statuten SVWN en reglementen Raad van Toezicht en College van Deskundigen
+    - informatiecategorie: Klachtoordelen
+      url: https://visitaties.nl/bezwaren-klachten-woo
+      toelichting: Reglement klachtprocedure, reglement bezwaarprocedure, klachten-
+        en geschillenregeling
+  wooVerzoek:
+    url: https://visitaties.nl/bezwaren-klachten-woo
+organogram_url: https://visitaties.nl/organisatie
+afspraak:
+  email: info@visitaties.nl
+  url: https://visitaties.nl/contact
+personnel:
+  aantalFte: 0,3
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.visitaties.nl
   email: info@visitaties.nl
+  bezoekadres: Weg der Verenigde Naties 1, 3527 KT Utrecht
+  postadres: Weg der Verenigde Naties 1, 3527 KT Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Weg der Verenigde Naties
+    huisnummer: '1'
+    postcode: 3527 KT
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    openbare_ruimte: Weg der Verenigde Naties
+    huisnummer: '1'
+    postcode: 3527 KT
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: Weg der Verenigde Naties
+    huisnummer: '1'
+    postcode: 3527 KT
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (030) 721 07 80
+    label: algemeen
+  emails:
+  - email: info@visitaties.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.visitaties.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2099-12-31'
+last_mutation: '2024-11-11'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212642/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212642/svwn
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000121
   retrieved: '2026-05-09'
+roo_start_datum: '2015-01-01'

@@ -5,6 +5,9 @@ identifiers:
   kvk: '30283708'
   roo_id: '32629'
   wikidata: Q184288
+  owms: http://standaarden.overheid.nl/owms/terms/Zederik_(gemeente)
+  ictu: '00707'
+  organisatiecode: gm0707
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,80 @@ names:
   abbr: Zederik
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 76,49
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 76.49
+  aantal_inwoners: 13646
+  inwoners: '178'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 178.0
+  bevat_plaatsen_raw: Ameide, Hei- en Boeicop, Leerbroek, Lexmond, Meerkerk, Nieuwland,
+    Tienhoven ZH
+  bevat_plaatsen:
+  - Ameide
+  - Hei- en Boeicop
+  - Leerbroek
+  - Lexmond
+  - Meerkerk
+  - Nieuwland
+  - Tienhoven ZH
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VKG
+    aantal_zetels: 3
+  - naam: SGP
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: www.zederik.nl
   email: postbus1@zederik.nl
+  bezoekadres: Prinses Marijkeweg 1, 4231 BP MEERKERK
+  postadres: Postbus 1, 4230 BA MEERKERK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Marijkeweg
+    huisnummer: '1'
+    postcode: 4231 BP
+    woonplaats: MEERKERK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    openbare_ruimte: Postbus 1
+    postbus: '1'
+    postcode: 4230 BA
+    woonplaats: MEERKERK
+  phones:
+  - nummer: (0183) 35 65 00
+    label: algemeen
+  emails:
+  - email: postbus1@zederik.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.zederik.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32629/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32629/zederik
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -6,21 +6,152 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0321
   roo_id: '38261'
   wikidata: Q10044
+  owms: http://standaarden.overheid.nl/owms/terms/Houten_(gemeente)
+  ictu: '00321'
+  organisatiecode: gm0321
+  rsin: 002313388
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HOU
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Houten
   abbr: Houten
   valid_from: '1900-01-01'
+description:
+  text: Naast de gemeenteraad en het college van burgemeester en wethouders bestaat
+    de gemeente Houten uit een ambtelijke organisatie. Deze ambtenaren maken beleidsplannen
+    en nota's waarover het gemeentebestuur moet beslissen. Daarnaast zorgen de ambtenaren
+    voor de uitvoering van het vastgestelde beleid.Bij de gemeente Houten werken,
+    verdeeld verschillende teams, ongeveer 350 medewerkers, waarvan velen in deeltijd.
+    De gemeentesecretaris is het hoofd van de ambtenaren en maakt samen met een directeur
+    deel uit van het Directieteam.
+  url: https://www.houten.nl/gemeentelijke-organisatie/werken-bij-houten/wie-zijn-wij
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.houten.nl/gemeentelijke-organisatie/wet-en-regelgeving/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/38261/Gemeente_Houten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Houten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Houten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Andere documenten
+      url: https://www.houten.nl/gemeentelijke-organisatie/wet-en-regelgeving/wet-open-overheid-woo/verstrekte-informatie-woo-verzoeken
+      toelichting: Openbaar gemaakte documenten in antwoord op verzoeken in het kader
+        van de Wet open overheid.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Houten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.houten.nl/gemeentelijke-organisatie/wet-en-regelgeving/wet-open-overheid-woo
+organogram_url: https://www.werkenbijhouten.nl/wie-zijn-wij/
+afspraak:
+  telefoonnummer: (030) 639 26 11
+  url: https://www.houten.nl/gemeentelijke-organisatie/contact/afspraak#select/
+geography:
+  oppervlakte: 59,05
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 59.05
+  aantal_inwoners: 50952
+  inwoners: '862'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 862.0
+  bevat_plaatsen_raw: '''T Goy, Houten, Schalkwijk, Tull en ''T Waal'
+  bevat_plaatsen:
+  - '''T Goy'
+  - Houten
+  - Schalkwijk
+  - Tull en 'T Waal
+council:
+  total_seats: 31
+  parties:
+  - naam: Inwonerspartij Toekomst Houten
+    aantal_zetels: 11
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Natuurlijk Houten
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
 contact:
   website: https://www.houten.nl
   email: gemeentehuis@houten.nl
+  bezoekadres: Onderdoor 25, 3995 DW HOUTEN
+  postadres: Postbus 30, 3990 DA HOUTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Onderdoor
+    huisnummer: '25'
+    postcode: 3995 DW
+    woonplaats: HOUTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '30'
+    postcode: 3990 DA
+    woonplaats: HOUTEN
+  - type: Woo-Adres
+    postbus: '30'
+    postcode: 3990 DA
+    woonplaats: Houten
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Onderdoor
+    huisnummer: '25'
+    postcode: 3995 DW
+    woonplaats: HOUTEN
+  phones:
+  - nummer: (030) 639 26 11
+    label: algemeen
+  emails:
+  - email: gemeentehuis@houten.nl
+    label: algemeen
+  - email: gemeentehuis@houten.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.houten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.houten.nl
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38261/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38261/houten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

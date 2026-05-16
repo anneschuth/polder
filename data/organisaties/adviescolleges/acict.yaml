@@ -3,18 +3,108 @@ type: adviescollege
 identifiers:
   roo_id: '28360995'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10165
+  owms: http://standaarden.overheid.nl/owms/terms/acict
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege ICT-toetsing
   abbr: AcICT
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege ICT-toetsing (AcICT) is ingesteld voor de algehele verbetering
+    van de beheersing van ICT-projecten en informatiesystemen bij ministeries, zelfstandige
+    bestuursorganen, de politie en de Raad voor de rechtspraak.Het AcICT adviseert
+    het kabinet en de Eerste en Tweede Kamer over de doeltreffendheid en doelmatigheid
+    van de inrichting en toepassing van een informatiesysteem ter uitvoering van beleid
+    en regelgeving binnen de Rijksoverheid. En over de risico’s en slaagkans van (voorgenomen)
+    ICT-projecten. Ministeries zijn gehouden om alle voorgenomen projecten met een
+    ICT-component van meer dan vijf miljoen euro bij het Adviescollege aan te melden.
+    Daarnaast adviseert het Adviescollege over de doeltreffendheid en doelmatigheid
+    van het onderhoud en beheer van informatiesystemen.Dit college valt niet onder
+    de Kaderwet adviescolleges en is dus geen formeel adviescollege in de zin van
+    die wet, al zijn enkele afzonderlijke bepalingen in de Kaderwet wel van (overeenkomstige)
+    toepassing.
+  url: https://www.adviescollegeicttoetsing.nl/het-adviescollege
+wettelijke_grondslagen:
+- opschrift: Wet Adviescollege ICT-toetsing, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0049412/2025-02-12/0#Paragraaf2_Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.adviescollegeicttoetsing.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28360995/Adviescollege_ICT-toetsing
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Andere documenten
+      url: https://www.adviescollegeicttoetsing.nl/publicaties
+      toelichting: 'Voor alle openbaargemaakte documenten - naast de uitgebrachte
+        adviezen -  kunt u naar gaan naar:  https://www.adviescollegeicttoetsing.nl/publicaties'
+    - informatiecategorie: Adviezen
+      url: https://www.adviescollegeicttoetsing.nl/onderzoeken
+      toelichting: Alle uitgebrachte adviezen worden gepubliceerd op de website
+  wooVerzoek:
+    url: https://www.adviescollegeicttoetsing.nl/contact
+afspraak:
+  telefoonnummer: (070) 426 63 23
+  url: https://www.adviescollegeicttoetsing.nl/service/contact
 contact:
   website: https://www.adviescollegeicttoetsing.nl/
   email: info@adviescollegeicttoetsing.nl
+  bezoekadres: Muzenstraat 95, 2511 WB Den Haag
+  postadres: Postbus 16292, 2500 BG Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Zurichtoren
+    openbare_ruimte: Muzenstraat
+    huisnummer: '95'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '16292'
+    postcode: 2500 BG
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Postadres
+    postbus: '16292'
+    postcode: 2500 BG
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 63 23
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviescollegeicttoetsing.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviescollegeicttoetsing.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-13'
+last_verified: '2026-03-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360995/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360995/acict
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-12-31'

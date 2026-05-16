@@ -3,7 +3,7 @@ name:
   full: S.R.A. Zegstroo
   family: Zegstroo
   given: S.R.A.
-  initials: S.
+  initials: S.R.A.
 mandaten:
 - id: 9648c3cc-3d32-48ae-8fae-b49e5b39f4c5
   organization_id: org:gemeente-lelystad
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5628662
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30046/gemeente-lelystad
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28640721
 - id: e46d05e9-951d-43bc-b538-db703b1551d4
   organization_id: org:gemeente-lelystad
   post_id: post:raadslid-gemeente-lelystad

@@ -6,21 +6,132 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0809
   roo_id: '25473'
   wikidata: Q9850
+  owms: http://standaarden.overheid.nl/owms/terms/Loon_op_Zand_(gemeente)
+  ictu: 00809
+  organisatiecode: gm0809
+  rsin: 003067841
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LOZ
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Loon op Zand
   abbr: Loon op Zand
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.loonopzand.nl/organisatie-en-politiek/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/25473/Gemeente_Loon_op_Zand
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Loon+op+Zand%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Loon+op+Zand%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://loonopzand.bestuurlijkeinformatie.nl
+      toelichting: Vergaderstukken Raad
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Loon+op+Zand%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://loonopzand.bestuurlijkeinformatie.nl/Agenda/Index/11e5f36e-050c-4ae3-9846-97467df939b9
+      toelichting: Vergaderstukken College
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://loonopzand.bestuurlijkeinformatie.nl/Reports/Details/e69c0e44-1982-47ed-9162-b574b161ca97
+      toelichting: Lijst ingekomen stukken
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.loonopzand.nl/organisatie-en-politiek/financieel
+  wooVerzoek:
+    url: https://www.loonopzand.nl/organisatie-en-politiek/woo-verzoek
+organogram_url: https://www.loonopzand.nl/organisatie-en-politiek/organogram
+afspraak:
+  telefoonnummer: (0416) 28 91 11
+  url: https://www.loonopzand.nl/contact/afspraak-maken
+geography:
+  oppervlakte: 53,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 53.0
+  aantal_inwoners: 24111
+  inwoners: '454'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 454.0
+  bevat_plaatsen_raw: De Moer, Kaatsheuvel, Loon Op Zand
+  bevat_plaatsen:
+  - De Moer
+  - Kaatsheuvel
+  - Loon Op Zand
+council:
+  total_seats: 19
+  parties:
+  - naam: GemeenteBelangen
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: Pro3
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Toekomstig KLM
+    aantal_zetels: 1
 contact:
   website: https://www.loonopzand.nl
   email: info@loonopzand.nl
+  bezoekadres: Anton Pieckplein 1, 5171 CV KAATSHEUVEL
+  postadres: Postbus 7, 5170 AA KAATSHEUVEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Anton Pieckplein
+    huisnummer: '1'
+    postcode: 5171 CV
+    woonplaats: KAATSHEUVEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '7'
+    postcode: 5170 AA
+    woonplaats: KAATSHEUVEL
+  - type: Woo-Adres
+    postbus: '7'
+    postcode: 5170 AA
+    woonplaats: Kaatsheuvel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (0416) 28 91 11
+    label: algemeen
+  emails:
+  - email: info@loonopzand.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.loonopzand.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25473/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25473/loon-op-zand
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

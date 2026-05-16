@@ -3,18 +3,65 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28163262'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0478
+  owms: http://standaarden.overheid.nl/owms/terms/rhcalkmaar
+  kvk: '37159239'
+  organisatiecode: so0478
+  rsin: '811347643'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Historisch Centrum Alkmaar
+  roo_id: '29712457'
 names:
 - value: Regionaal Historisch Centrum Alkmaar
   abbr: RHC Alkmaar
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.regionaalarchiefalkmaar.nl
   email: info@archiefalkmaar.nl
+  bezoekadres: Bergerweg 1, 1815 AC Alkmaar
+  postadres: Bergerweg 1, 1815 AC Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bergerweg
+    huisnummer: '1'
+    postcode: 1815 AC
+    woonplaats: Alkmaar
+  - type: Postadres
+    openbare_ruimte: Bergerweg
+    huisnummer: '1'
+    postcode: 1815 AC
+    woonplaats: Alkmaar
+  phones:
+  - nummer: (072) 850 82 00
+    label: algemeen
+  emails:
+  - email: info@archiefalkmaar.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regionaalarchiefalkmaar.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.regionaalarchiefalkmaar.nl/over-ons/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-03-29'
+last_verified: '2022-10-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28163262/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28163262/rhc-alkmaar
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-07-01'

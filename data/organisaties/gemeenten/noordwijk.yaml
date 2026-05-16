@@ -6,21 +6,171 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0575
   roo_id: '27985'
   wikidata: Q455464
+  owms: http://standaarden.overheid.nl/owms/terms/Noordwijk_(gemeente)
+  ictu: '00575'
+  organisatiecode: gm0575
+  rsin: '825792150'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NDW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Noordwijk
   abbr: Noordwijk
   valid_from: '1900-01-01'
+description:
+  text: Bij de gemeente Noordwijk werken we met ruim 300 medewerkers voor ruim 44.000
+    inwoners. Dit doen we in 10 clusters. Binnen elk cluster werken teams aan verschillende
+    onderwerpen zoals financiën, dienstverlening en duurzaamheid. De gemeentesecretaris
+    en de algemeen directeur geven leiding aan de ambtelijke organisatie.
+  url: https://www.noordwijk.nl/bestuur-organisatie/de-gemeentelijke-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.noordwijk.nl/onderwerp/overheidsinformatie-en-regelgeving/wet-open-overheid-woo/woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/27985/Gemeente_Noordwijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordwijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Adviezen
+      url: https://open.noordwijk.nl/?categorie=_adviezen
+      toelichting: Momenteel staan hier alleen de adviezen van de Omgevingscommissie.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordwijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordwijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.noordwijk.nl/?categorie=Agenda%27s_en_besluitenlijsten_bestuurscolleges
+      toelichting: Openbare besluitenlijst van de collegevergaderingen. De agenda's
+        zijn op dit moment nog niet beschikbaar.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.noordwijk.nl/bestuur-organisatie/financien/financiele-stukken/
+      toelichting: Op deze pagina staan de programmabegroting en de jaarstukken vanaf
+        2019.
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://noordwijk.bestuurlijkeinformatie.nl/Reports/Details/4e761a50-6364-4e53-a426-e5ca4f09ebc6
+      toelichting: De ingekomen stukken voor de gemeenteraad van Noordwijk
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordwijk.bestuurlijkeinformatie.nl/Reports
+      toelichting: 'Hier vind je in overzichten de informatie over waar de raad en
+        de commissies over vergaderen: de vergaderstukken.'
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.noordwijk.nl/?categorie=Woo-verzoeken_en_-besluiten
+      toelichting: Hier vind je alle afgehandelde WOO-verzoeken en -besluiten vanaf
+        1 mei 2023.
+  wooVerzoek:
+    url: https://www.noordwijk.nl/onderwerp/overheidsinformatie-en-regelgeving/wet-open-overheid-woo/woo-verzoek-indienen/
+organogram_url: https://www.noordwijk.nl/bestuur-organisatie/de-gemeentelijke-organisatie/
+afspraak:
+  email: gemeente@noordwijk.nl
+  telefoonnummer: (071) 366 00 00
+  url: https://noordwijk.mijnafspraakmaken.nl/Client/#/
+geography:
+  oppervlakte: 58,37
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 58.37
+  aantal_inwoners: 46453
+  inwoners: '795'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 795.0
+  bevat_plaatsen_raw: De Zilk, Noordwijk ZH, Noordwijkerhout
+  bevat_plaatsen:
+  - De Zilk
+  - Noordwijk ZH
+  - Noordwijkerhout
+council:
+  total_seats: 29
+  parties:
+  - naam: Partij voor de Inwoners
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: Lijst Salman Noordwijk
+    aantal_zetels: 2
+  - naam: PUUR
+    aantal_zetels: 2
+  - naam: NZLokaal
+    aantal_zetels: 2
+  - naam: Helder
+    aantal_zetels: 1
 contact:
   website: https://www.noordwijk.nl
   email: gemeente@noordwijk.nl
+  bezoekadres: Voorstraat 42, 2201 HW NOORDWIJK ZH
+  postadres: Postbus 298, 2200 AG NOORDWIJK ZH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Voorstraat
+    huisnummer: '42'
+    postcode: 2201 HW
+    woonplaats: NOORDWIJK ZH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '298'
+    postcode: 2200 AG
+    woonplaats: NOORDWIJK ZH
+  - type: Woo-Adres
+    toelichting: Voor het indienen van een Woo-verzoek via de post
+    postbus: '298'
+    postcode: 2200 AG
+    woonplaats: Noordwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Voorstraat
+    huisnummer: '42'
+    postcode: 2201 HW
+    woonplaats: NOORDWIJK
+  phones:
+  - nummer: (071) 366 00 00
+    label: algemeen
+  emails:
+  - email: gemeente@noordwijk.nl
+    label: algemeen
+  - email: gemeente@noordwijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.noordwijk.nl
+    label: algemeen
+  contact_forms:
+  - url: https://noordwijk.mijnafspraakmaken.nl/Client/#/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27985/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27985/noordwijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

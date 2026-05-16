@@ -3,17 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962202'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0595
+  owms: http://standaarden.overheid.nl/owms/terms/kcvbno
+  kvk: '51335093'
+  btw: NL813093053B01
+  loonheffing: 813093053L02
+  organisatiecode: so0595
+  rsin: '813093053'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Kleinschalig collectief vervoer Brabant Noordoost
+  roo_id: '30527884'
 names:
 - value: Samenwerkingsverband kleinschalig collectief vervoer Brabant-Noordoost
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.regiotaxinoordoostbrabant.nl
   email: klantenservice@regiotaxinoordoostbrabant.nl
+  bezoekadres: Raadhuislaan 2, 5341 GM Oss
+  postadres: Raadhuislaan 2, 5341 GM Oss
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuislaan
+    huisnummer: '2'
+    postcode: 5341 GM
+    woonplaats: Oss
+  - type: Postadres
+    openbare_ruimte: Raadhuislaan
+    huisnummer: '2'
+    postcode: 5341 GM
+    woonplaats: Oss
+  phones:
+  - nummer: (0412) 68 59 99
+    label: algemeen
+  emails:
+  - email: klantenservice@regiotaxinoordoostbrabant.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiotaxinoordoostbrabant.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.regiotaxinoordoostbrabant.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2022-01-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962202/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962202/samenwerkingsverband-kleinschalig-collectief-vervoer-brabant-noordoost
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-01'

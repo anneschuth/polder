@@ -6,22 +6,130 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv27
   roo_id: '16412'
   wikidata: Q701
+  owms: http://standaarden.overheid.nl/owms/terms/Noord-Holland
+  ictu: '04210'
+  rsin: '001003124'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_NORH
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Noord-Holland
   abbr: NH
   valid_from: '1900-01-01'
-  valid_until: '2026-05-31'
+description:
+  text: 'Alle informatie over de provincie Noord-Holland staat op de website www.noord-holland.nl.Volg
+    de provincie ook via Twitter @ProvincieNH.De manier waarop u bij de provincie
+    Noord-Holland een Woo verzoek kunt indienen staat beschreven op onze website:
+    www.noord-holland.nl/loket/Woo_verzoekDe taken en organisatie-onderdelen van de
+    provincie Noord-Holland staan beschreven op onze website: www.noord-holland.nl/over_de_provincie/Organisatie'
+  url: https://www.noord-holland.nl/Over_de_provincie/Organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.noord-holland.nl/Loket/Woo_verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/16412/Provincie_Noord-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordholland.bestuurlijkeinformatie.nl/Reports/Details/0d2cd4cf-37ed-4620-92ee-97d01507e23c
+      toelichting: Schriftelijke vragen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordholland.bestuurlijkeinformatie.nl/Agenda/Index/0d1ccb8f-1a69-4060-a5c0-c391aec228e7
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordholland.bestuurlijkeinformatie.nl/Reports/Details/95a2053b-5dd6-4aa4-9e60-fdf5158fc48f
+      toelichting: Amendementen
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://noordholland.bestuurlijkeinformatie.nl/Agenda/Index/3b779e44-5655-41c4-af2e-4e81708078aa
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.noord-holland.nl/Loket/Woo_verzoek/Woo_verzoeken_2022
+      toelichting: Woo-verzoeken 2022
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.noord-holland.nl/Loket/Woo_verzoek/Woo_verzoeken_2024
+      toelichting: Woo-verzoeken 2024
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.noord-holland.nl/Loket/Woo_verzoek/Woo_verzoeken_2023
+      toelichting: Woo-verzoeken 2023
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordholland.bestuurlijkeinformatie.nl/Reports/Details/84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed
+      toelichting: Moties
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordholland.bestuurlijkeinformatie.nl/Reports/Details/13f8ca65-3a48-48e1-8b01-58ff61df9cd3
+      toelichting: Toezeggingen PS en commissies
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noord-Holland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noord-Holland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noord-Holland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.noord-holland.nl/Bestuur/Gedeputeerde_Staten/Gedeputeerde_Staten/GS_besluitenlijst/2024
+      toelichting: Besluitenlijsten Gedeputeerde Staten
+  wooVerzoek:
+    url: https://formulieren.noord-holland.nl/pnh/aanvraag_WOO_pnh
+organogram_url: https://www.noord-holland.nl/Over_de_provincie/Organisatie
+afspraak:
+  email: post@noord-holland.nl
+  telefoonnummer: (0800) 020 06 00
+  url: https://www.noord-holland.nl/Loket/Contact/Contact
 contact:
   website: http://www.noord-holland.nl
   email: post@noord-holland.nl
+  bezoekadres: Houtplein 33, 2012 DE Haarlem
+  postadres: Postbus 3007, 2001 DA Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Houtplein
+    huisnummer: '33'
+    postcode: 2012 DE
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '3007'
+    postcode: 2001 DA
+    woonplaats: Haarlem
+  - type: Woo-Adres
+    openbare_ruimte: Houtplein
+    huisnummer: '33'
+    postcode: 2012 DE
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (0800) 020 06 00
+    label: algemeen
+  emails:
+  - email: post@noord-holland.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.noord-holland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-05-31'
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16412/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16412/nh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

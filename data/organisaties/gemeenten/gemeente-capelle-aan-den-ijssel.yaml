@@ -6,22 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0502
   roo_id: '22846'
   wikidata: Q734860
+  owms: http://standaarden.overheid.nl/owms/terms/Capelle_aan_den_IJssel_(gemeente)
+  ictu: '00502'
+  organisatiecode: gm0502
+  rsin: 001877045
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_CPI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Capelle aan den IJssel
   abbr: Capelle aan den IJssel
   valid_from: '1900-01-01'
-  valid_until: '2026-11-30'
+description:
+  url: https://www.capelleaandenijssel.nl/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.capelleaandenijssel.nl/informatie-opvragen-via-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/22846/Gemeente_Capelle_aan_den_IJssel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.capelleaandenijssel.nl/financiele-documenten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Capelle+aan+den+IJssel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Capelle+aan+den+IJssel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://www.capelleaandenijssel.nl/regelgeving
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Capelle+aan+den+IJssel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://capelleaandenijssel.raadsinformatie.nl/
+  wooVerzoek:
+    url: https://www.capelleaandenijssel.nl/informatie-opvragen-via-wet-open-overheid-woo
+organogram_url: https://www.capelleaandenijssel.nl/organogram
+afspraak:
+  telefoonnummer: 14 010
+  url: https://www.capelleaandenijssel.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 15,4
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 15.4
+  aantal_inwoners: 69698
+  inwoners: '4525'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 4525.0
+  bevat_plaatsen_raw: Capelle aan den IJssel
+  bevat_plaatsen:
+  - Capelle aan den IJssel
+council:
+  total_seats: 33
+  parties:
+  - naam: Leefbaar Capelle
+    aantal_zetels: 15
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: SGP
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Echt voor Capelle
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.capelleaandenijssel.nl
   email: gemeente@capelleaandenijssel.nl
+  bezoekadres: Rivierweg 111, 2903 AR CAPELLE AAN DEN IJSSEL
+  postadres: Postbus 70, 2900 AB CAPELLE AAN DEN IJSSEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rivierweg
+    huisnummer: '111'
+    postcode: 2903 AR
+    woonplaats: CAPELLE AAN DEN IJSSEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '70'
+    postcode: 2900 AB
+    woonplaats: CAPELLE AAN DEN IJSSEL
+  - type: Woo-Adres
+    openbare_ruimte: Postbus 70
+    postcode: 2900 AB
+    woonplaats: Capelle aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Rivierweg
+    huisnummer: '111'
+    postcode: 2903 AR
+    ter_attentie_van: Team Ruimte
+    woonplaats: CAPELLE AAN DEN IJSSEL
+  phones:
+  - nummer: 14 010
+    label: algemeen
+  emails:
+  - email: gemeente@capelleaandenijssel.nl
+    label: algemeen
+  - email: https://www.capelleaandenijssel.nl/#
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.capelleaandenijssel.nl
+    label: algemeen
+  contact_forms:
+  - url: https://eloket.ijsselgemeenten.nl/formulier/nl-NL/Capelle/scContactformulier.aspx/sscIntro/sscIdentificatie/sscHandmatig/f_G_HandmatigeInvoer
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2026-11-30'
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22846/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22846/gemeente-capelle-aan-den-ijssel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

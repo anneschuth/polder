@@ -3,15 +3,54 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28160935'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1046
+  owms: http://standaarden.overheid.nl/owms/terms/grooteheide
+  kvk: '72673702'
+  organisatiecode: so1046
+  rsin: '859192507'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Grensoverschrijdend Openbaar Lichaam Natuurgrenspark De Groote Heide
+  roo_id: '28160929'
 names:
 - value: Grensoverschrijdend Openbaar Lichaam Natuurgrenspark De Groote Heide
   abbr: GOL/BGTS Natuurgrenspark De Groote Heide
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Cranendonck 10, 6027 RK Soerendonk
+  postadres: Cranendonck 10, 6027 RK Cranendonck
+  addresses:
+  - type: Bezoekadres
+    toelichting: Streekhuis
+    openbare_ruimte: Cranendonck
+    huisnummer: '10'
+    postcode: 6027 RK
+    woonplaats: Soerendonk
+    regio: Noord-Brabant
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Cranendonck
+    huisnummer: '10'
+    postcode: 6027 RK
+    woonplaats: Cranendonck
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-08-10'
+last_verified: '2020-09-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28160935/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28160935/grensoverschrijdend-openbaar-lichaam-natuurgrenspark-de-groote-heide
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-11-06'

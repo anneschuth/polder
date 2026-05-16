@@ -5,23 +5,117 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0718
   oin: 00000001852497933000
   kvk: '57242178'
+  owms: http://standaarden.overheid.nl/owms/terms/odach
+  btw: NL852497933B01
+  organisatiecode: so0718
+  rsin: '852497933'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Achterhoek
+  roo_id: '30085681'
 names:
 - value: Omgevingsdienst Achterhoek
   abbr: ODA
   valid_from: '1900-01-01'
+description:
+  text: Omgevingsdienst Achterhoek (ODA) draagt bij aan een veilige, duurzame en gezonde
+    leefomgeving. Wij verlenen omgevingsvergunningen in opdracht van tien gemeenten
+    en de provincie Gelderland. Ook zien we erop toe dat bedrijven voldoen aan actuele
+    wet- en regelgeving op het gebied van milieu(veiligheid). Daarnaast adviseren
+    we onder andere onze opdrachtgevers over archeologie en over verschillende milieu-onderwerpen,
+    zoals bodem, geluid en lucht.
+  url: https://www.odachterhoek.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odachterhoek.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/25195973/Omgevingsdienst_Achterhoek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odachterhoek.nl/over-ons/#:~:text=Jaarstukken%20en%20begrotingen
+      toelichting: Jaarplannen en jaarverslagen van bestuursorganen inzake de voorgenomen
+        uitvoering van de taak of de verantwoording van die uitvoering.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odachterhoek.nl/over-ons/#:~:text=Vergaderdata%20Algemeen%20Bestuur%202022%2C%202023%20en%202024
+      toelichting: Planning en agenda's vergaderingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odachterhoek.nl/over-ons/
+      toelichting: Op deze pagina vindt u een overzicht van de vastgestelde documenten.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.odachterhoek.nl/woo-verzoek/
+      toelichting: Pagina voor informatieverzoek of WOO-verzoek en de documenten ter
+        inzage
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Achterhoek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Achterhoek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeri%C3%ABle+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.odachterhoek.nl/woo-verzoek/
+organogram_url: https://www.odachterhoek.nl/wp-content/uploads/sites/3/2024/09/Organogram-ODA-V2-1536x1170.png
+afspraak:
+  email: info@odachterhoek.nl
+  telefoonnummer: 06 10 57 80 53
+  url: https://www.odachterhoek.nl/contact
 contact:
   website: https://www.odachterhoek.nl
   email: info@odachterhoek.nl
+  bezoekadres: Hanzestraat 3, 7006 RH Doetinchem
+  postadres: Postbus 350, 7000 AJ Doetinchem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hanzestraat
+    huisnummer: '3'
+    postcode: 7006 RH
+    woonplaats: Doetinchem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '350'
+    postcode: 7000 AJ
+    woonplaats: Doetinchem
+    regio: Achterhoek
+  - type: Woo-Adres
+    openbare_ruimte: Hanzestraat
+    huisnummer: '3'
+    postcode: 7006 RH
+    woonplaats: Doetinchem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: 06 10 57 80 53
+    label: algemeen
+  emails:
+  - email: info@odachterhoek.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odachterhoek.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odachterhoek.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25195973/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25195973/oda
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-11-07'

@@ -5,23 +5,124 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0660
   oin: 00000001821612426000
   kvk: '50767224'
+  owms: http://standaarden.overheid.nl/owms/terms/vregzhz
+  organisatiecode: so0660
+  rsin: '821612426'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Zuid-Holland Zuid (VRZHZ)
+  roo_id: '29991089'
 names:
 - value: Veiligheidsregio Zuid-Holland Zuid
   abbr: VRZHZ
   valid_from: '1900-01-01'
+description:
+  text: De Veiligheidsregio Zuid-Holland Zuid (VRZHZ) werkt aan een veilige en gezonde
+    omgeving voor de inwoners, bedrijven en bezoekers van onze regio. Hiervoor is
+    een goede samenwerking tussen alle partijen van groot belang. Niet voor niets
+    is onze slogan; samen voor veiligheid. Lees meer op https://www.zhzveilig.nl/over-de-veiligheidsregio
+  url: https://www.zhzveilig.nl/over-de-veiligheidsregio
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zhzveilig.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28643376/Veiligheidsregio_Zuid-Holland_Zuid
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.zhzveilig.nl/publicaties/jaarverslagen-wnt-jaarverslag
+      toelichting: Jaarverslagen en jaarstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zhzveilig.nl/bestuur/vergaderingen
+      toelichting: Vergaderstukken en besluitenlijsten Algemeen Bestuur
+    - informatiecategorie: Andere documenten
+      url: https://www.zhzveilig.nl/risicos
+      toelichting: Regionaal risicoprofiel veiligheidsregio Zuid-Holland Zuid
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.zhzveilig.nl/publicaties/beleidsplan
+      toelichting: Beleidsplannen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zuid-Holland+Zuid%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zuid-Holland+Zuid%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zuid-Holland+Zuid%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+organogram_url: https://www.zhzveilig.nl/vrzhz/organogram
+afspraak:
+  telefoonnummer: (088) 636 50 00
+  url: https://www.zhzveilig.nl/vrzhz/contact
 contact:
   website: https://www.zhzveilig.nl
   email: mail@vrzhz.nl
+  bezoekadres: Prof. Kohnstammlaan 10, 3312 Kl Dordrecht
+  postadres: Postbus 350, 3300 AJ Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prof. Kohnstammlaan
+    huisnummer: '10'
+    postcode: 3312 Kl
+    woonplaats: Dordrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '350'
+    postcode: 3300 AJ
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (088) 636 50 00
+    label: algemeen
+  - nummer: (085) 087 73 12
+    label: Pers
+  emails:
+  - email: mail@vrzhz.nl
+    label: voor klachten
+  - email: pers@vrzhz.nl
+    label: Pers
+  internet_addresses:
+  - url: https://www.zhzveilig.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zhzveilig.nl/vrzhz/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Veiligheidsregio Zuid-Holland Zuid
+    url: https://www.facebook.com/VRZHZ
+  - platform: X
+    gebruikersnaam: '@VRZHZ'
+    url: https://x.com/VRZHZ
+  - platform: Instagram
+    gebruikersnaam: veiligheidsregiozhz
+    url: https://www.instagram.com/veiligheidsregiozhz/
+  - platform: LinkedIn
+    gebruikersnaam: veiligheidsregio-zuid-holland-zuid
+    url: https://www.linkedin.com/company/veiligheidsregio-zuid-holland-zuid
+  - platform: YouTube
+    gebruikersnaam: '@veiligheidsregiozhz'
+    url: https://www.youtube.com/channel/UCWThFTMlBFWAqR2fAI2ILaQ
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28643376/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28643376/vrzhz
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-06-24'

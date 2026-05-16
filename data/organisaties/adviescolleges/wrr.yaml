@@ -4,17 +4,91 @@ identifiers:
   roo_id: '28351125'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10105
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Algemene Zaken
+  roo_id: '123'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1010
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Algemene_Zaken
 names:
 - value: Wetenschappelijke Raad voor het Regeringsbeleid
   abbr: WRR
   valid_from: '1900-01-01'
+description:
+  text: De Wetenschappelijk Raad voor het Regeringsbeleid (WRR) geeft de regering
+    en het parlement op wetenschap gebaseerd en onafhankelijk advies. Het bureau van
+    de WRR ondersteunt de WRR bij de voorbereiding en het samenstellen van adviesrapporten
+    aan de regering.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram/bureau-van-de-wrr
+wettelijke_grondslagen:
+- opschrift: Instellingswet W.R.R., artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0003043/2019-03-01/#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28351125/Wetenschappelijke_Raad_voor_het_Regeringsbeleid
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Onderzoeksrapporten
+      url: https://www.wrr.nl/publicaties?trefwoord=&startdatum=&einddatum=&adviesproject=Alle%20adviesprojecten&type=Rapport
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram
+afspraak:
+  telefoonnummer: (070) 356 46 00
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact
 contact:
   website: https://www.wrr.nl/
   email: woo@minaz.nl
+  bezoekadres: Buitenhof 34, 2513 AH Den Haag
+  postadres: Postbus 20004, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Buitenhof
+    huisnummer: '34'
+    postcode: 2513 AH
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20004'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20004'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 356 46 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wrr.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.wrr.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28351125/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28351125/wrr
+  retrieved: '2026-05-16'
+roo_start_datum: '1976-09-01'

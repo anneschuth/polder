@@ -2,14 +2,44 @@ id: org:oovb-stichting-aanpak-financieel-economische-criminaliteit-in-nederland-
 type: rwt
 identifiers:
   roo_id: '27909684'
+  kvk: 09138148
+  rsin: '812877408'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Aanpak Financieel-Economische Criminaliteit in Nederland (SAFECIN)
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Wapenrustlaan 11, 7321 DL Apeldoorn
+  postadres: Postbus 963, 7301 BE Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wapenrustlaan
+    huisnummer: '11'
+    postcode: 7321 DL
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '963'
+    postcode: 7301 BE
+    woonplaats: Apeldoorn
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909684/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909684/stichting-aanpak-financieel-economische-criminaliteit-in-nederland-safecin
+  retrieved: '2026-05-16'

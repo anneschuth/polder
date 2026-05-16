@@ -3,17 +3,39 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '115846'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ocw
+parent_id: org:min-ocw
 names:
 - value: Secretaris-Generaal
   abbr: SG
   valid_from: '1900-01-01'
-  valid_until: '2025-06-16'
+description:
+  text: Aan het hoofd van het managementteam OCW staat de secretaris-generaal (SG).
+    De SG geeft leiding aan alle onderdelen van het ministerie, inclusief de (rijks)diensten
+    en inspecties. De SG voert haar taak uit in overeenstemming met het politieke
+    beleid en is eerste politiek-adviseur van de bewindslieden. Secretaris-Generaal
+    van het ministerie van Onderwijs, Cultuur en Wetenschap (OCW) is mevrouw drs.
+    L. (Loes) Mulder.
 contact:
   website: http://www.rijksoverheid.nl/ministeries/ocw
+  bezoekadres: Rijnstraat 50, 2515 BJ Den Haag
+  postadres: Postbus 16375, 2500 BJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat 50
+    postcode: 2515 BJ
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16375'
+    postcode: 2500 BJ
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/ministeries/ocw
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-06-16'
+last_mutation: '2025-06-16'
+last_verified: '2026-01-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115846/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115846/sg
+  retrieved: '2026-05-16'

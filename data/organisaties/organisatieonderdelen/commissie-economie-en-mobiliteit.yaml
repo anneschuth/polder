@@ -8,9 +8,25 @@ names:
 - value: Commissie Economie en Mobiliteit
   valid_from: '1900-01-01'
   valid_until: '2023-03-28'
+contact:
+  bezoekadres: Martinikerkhof 12, 9712 JG Groningen
+  postadres: Postbus 610, 9700 AP Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Martinikerkhof
+    huisnummer: '12'
+    postcode: 9712 JG
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '610'
+    postcode: 9700 AP
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: '2023-03-28'
+last_mutation: '2026-04-21'
+last_verified: '2026-04-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15867/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/15867/commissie-economie-en-mobiliteit
+  retrieved: '2026-05-16'

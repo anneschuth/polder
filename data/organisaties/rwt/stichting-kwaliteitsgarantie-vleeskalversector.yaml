@@ -2,14 +2,33 @@ id: org:stichting-kwaliteitsgarantie-vleeskalversector
 type: rwt
 identifiers:
   roo_id: '30133520'
+  kvk: '41156558'
+  rsin: '800831688'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Kwaliteitsgarantie Vleeskalversector
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Nevelgaarde
+    huisnummer: '20'
+    huisnummer_toevoeging: d
+    postcode: 3436 ZZ
+    woonplaats: Nieuwegein
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133520/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133520/stichting-kwaliteitsgarantie-vleeskalversector
+  retrieved: '2026-05-16'

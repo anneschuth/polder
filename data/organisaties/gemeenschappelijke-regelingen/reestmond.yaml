@@ -3,17 +3,86 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28470826'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0241
+  owms: http://standaarden.overheid.nl/owms/terms/reestmond
+  kvk: 01171817
+  organisatiecode: so0241
+  rsin: '001274661'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Reestmond
+  roo_id: '29605421'
 names:
 - value: Reestmond
   valid_from: '1900-01-01'
+description:
+  text: Het doel van ReestmondReestmond, één van de grootste werkgevers in de regio,
+    voert voor de gemeenten Meppel, Westerveld en Staphorst de Wet sociale werkvoorzieningen
+    uit.Het doel van Reestmond is mensen ontwikkelen, waardoor voor hen de afstand
+    tot de arbeidsmarkt wordt verkleind en de kans op een reguliere baan vergroot.
+  url: https://www.reestmond.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28470826/Reestmond
+  wooVerzoek:
+    url: https://www.reestmond.nl/over-ons/
+afspraak:
+  email: info@reestmond.nl
+  telefoonnummer: (0522) 23 62 36
+  url: https://www.reestmond.nl/contact/
 contact:
   website: https://www.reestmond.nl
   email: info@reestmond.nl
+  bezoekadres: Eekhorstweg 4, 7942 JC Meppel
+  postadres: Postbus 146, 7940 AC Meppel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eekhorstweg
+    huisnummer: '4'
+    postcode: 7942 JC
+    woonplaats: Meppel
+  - type: Postadres
+    postbus: '146'
+    postcode: 7940 AC
+    woonplaats: Meppel
+  - type: Woo-Adres
+    postbus: '146'
+    postcode: 7940 AC
+    woonplaats: Meppel
+  phones:
+  - nummer: (0522) 23 62 36
+    label: algemeen
+  emails:
+  - email: info@reestmond.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.reestmond.nl
+    label: algemeen
+  - url: https://www.reestmond.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.reestmond.nl/contact/
+    label: Algemeen
+  fax: (0522) 25 94 18
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-07'
+last_verified: '2024-11-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28470826/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28470826/reestmond
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-07-01'

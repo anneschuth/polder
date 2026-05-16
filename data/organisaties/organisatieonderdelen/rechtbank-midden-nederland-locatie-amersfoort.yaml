@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-midden-nederland-locatie-amersfoort
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048479'
+  kvk: '82940444'
+  rsin: '862663489'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-midden-nederland
 names:
 - value: Rechtbank Midden-Nederland, locatie Amersfoort
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Stationsstraat 81, 3811 MH Amersfoort
+  postadres: Postbus 16005, 3500 DA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsstraat
+    huisnummer: '81'
+    postcode: 3811 MH
+    woonplaats: Amersfoort
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '16005'
+    postcode: 3500 DA
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2026-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048479/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048479/rechtbank-midden-nederland-locatie-amersfoort
+  retrieved: '2026-05-16'

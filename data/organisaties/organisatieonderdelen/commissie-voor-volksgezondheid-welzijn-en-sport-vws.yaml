@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '98881'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Commissie voor Volksgezondheid, Welzijn en Sport (VWS)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/vws
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/vws
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-07'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98881/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98881/commissie-voor-volksgezondheid-welzijn-en-sport-vws
+  retrieved: '2026-05-16'

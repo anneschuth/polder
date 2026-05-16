@@ -6,6 +6,9 @@ identifiers:
   roo_id: '25248'
   wikidata: Q9787
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0951
+  owms: http://standaarden.overheid.nl/owms/terms/Nuth_(gemeente)
+  ictu: 00951
+  organisatiecode: gm0951
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,79 @@ names:
   abbr: Nuth
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 33,19
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 33.19
+  aantal_inwoners: 15844
+  inwoners: '477'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 477.0
+  bevat_plaatsen_raw: Hulsberg, Nuth, Schimmert, Wijnandsrade
+  bevat_plaatsen:
+  - Hulsberg
+  - Nuth
+  - Schimmert
+  - Wijnandsrade
+council:
+  total_seats: 16
+  parties:
+  - naam: Burger Belangen Nuth
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Trots
+    aantal_zetels: 2
+  - naam: Leefbaar Nuth
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: Lokale Partij Groot Nuth
+    aantal_zetels: 1
 contact:
   website: http://www.nuth.nl
   email: gemeente@nuth.nl
+  bezoekadres: Deweverplein 1, 6361 BZ NUTH
+  postadres: Postbus 22000, 6360 AA NUTH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Deweverplein
+    huisnummer: '1'
+    postcode: 6361 BZ
+    woonplaats: NUTH
+  - type: Postadres
+    openbare_ruimte: Postbus 22000
+    postbus: '22000'
+    postcode: 6360 AA
+    woonplaats: NUTH
+  phones:
+  - nummer: 14 045
+    label: algemeen
+  emails:
+  - email: gemeente@nuth.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nuth.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2022-02-04'
+last_verified: '2022-02-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25248/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25248/nuth
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

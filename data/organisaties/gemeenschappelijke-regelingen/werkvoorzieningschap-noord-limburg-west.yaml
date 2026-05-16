@@ -3,17 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967418'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0287
+  owms: http://standaarden.overheid.nl/owms/terms/wvsnlimw
+  kvk: '50791648'
+  organisatiecode: so0287
+  rsin: 005569357
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkvoorzieningschap Noord-Limburg West
+  roo_id: '24967413'
 names:
 - value: Werkvoorzieningschap Noord-Limburg West
   valid_from: '1900-01-01'
+description:
+  text: NLW Groep is hét werkbedrijf voor sociaal-maatschappelijke werkgelegenheid
+    in de regio Noord-Limburg West, dat staat voor waardevol en passend werken met
+    mensen met een afstand tot de arbeidsmarkt. NLW voert de (voormalige) Wet sociale
+    werkvoorziening (Wsw) uit voor de gemeenten Peel en Maas, Horst aan de Maas en
+    Venray. Daarnaast is NLW voor deze drie gemeenten een professionele partner bij
+    het uitvoeren van de Participatiewet.
+  url: https://nlw.nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24967418/Werkvoorzieningschap_Noord-Limburg_West
+organogram_url: https://nlw.nl/onze-organisatie
+afspraak:
+  email: info@nlw.nl
+  telefoonnummer: (0478) 55 23 23
+  url: https://nlw.nl/contact
 contact:
   website: https://nlw.nl
   email: info@nlw.nl
+  postadres: Postbus 29, 5800 AA Venray
+  addresses:
+  - type: Woo-Adres
+    openbare_ruimte: Smakterweg
+    huisnummer: '19'
+    postcode: 5804 AE
+    woonplaats: Venray
+    land: Nederland
+  - type: Postadres
+    postbus: '29'
+    postcode: 5800 AA
+    woonplaats: Venray
+  phones:
+  - nummer: (0478) 55 23 23
+    label: algemeen
+  emails:
+  - email: info@nlw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://nlw.nl
+    label: algemeen
+  - url: https://nlw.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://nlw.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: LinkedIn NLW
+    url: https://www.linkedin.com/company/nlw-groep/
+  fax: (0478) 55 23 24
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-04-24'
+last_verified: '2025-04-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967418/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967418/werkvoorzieningschap-noord-limburg-west
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-10-28'

@@ -9,9 +9,27 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: f.buis@mindef.nl
+  bezoekadres: van Alkemadelaan 786, 2597 BC Den Haag
+  postadres: Postbus 90822, 2509 LV Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: van Alkemadelaan
+    huisnummer: '786'
+    postcode: 2597 BC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90822'
+    postcode: 2509 LV
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 316 47 08
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-11-26'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/6567/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/6567/directie-financien-en-control
+  retrieved: '2026-05-16'

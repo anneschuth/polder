@@ -3,7 +3,7 @@ name:
   full: W.H. Botter
   family: Botter
   given: W.H.
-  initials: W.
+  initials: W.H.
 mandaten:
 - id: 7b18d19a-1402-4078-8f00-7de0f8de5ed8
   organization_id: org:gemeente-lelystad
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5628493
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30046/gemeente-lelystad
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=132532
 - id: c4393ef7-b8c4-4066-bb7d-8ef311adb807
   organization_id: org:gemeente-lelystad
   post_id: post:raadslid-gemeente-lelystad

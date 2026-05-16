@@ -5,23 +5,116 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0335
   oin: 00000001008588235000
   kvk: '50000438'
+  owms: http://standaarden.overheid.nl/owms/terms/DCMR_Milieudienst_Rijnmond
+  organisatiecode: so0335
+  rsin: 008588235
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling DCMR Milieudienst Rijnmond 2015
+  roo_id: '30259979'
 names:
 - value: DCMR Milieudienst Rijnmond
   abbr: DCMR
   valid_from: '1900-01-01'
+description:
+  text: DCMR Milieudienst Rijnmond is de gezamenlijke omgevingsdienst van de provincie
+    Zuid-Holland en dertien gemeenten in de regio Rijnmond. DCMR zet zich in voor
+    een gezonde, veilige en duurzame leefomgeving voor de 1,2 miljoen inwoners van
+    de Rijnmondregio. We verlenen milieuvergunningen aan bedrijven en controleren
+    op de naleving van geldende milieuregels en andere wet- en regelgeving. Daarnaast
+    geeft DCMR adviezen aan overheden over ruimtelijke plannen met als doel een toekomstbestendig
+    gebruik van de fysieke leefomgeving.
+  url: https://www.dcmr.nl/over-dcmr/organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dcmr.nl/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/23018469/DCMR_Milieudienst_Rijnmond
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.dcmr.nl/over-dcmr/jaarverslagen-dcmr
+      toelichting: Een overzicht van de verschillende jaarverslagen en jaaroverzichten
+        van DCMR.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22DCMR+Milieudienst+Rijnmond%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Officiële bekendmakingen DCMR
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22DCMR+Milieudienst+Rijnmond%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Officiële bekendmakingen DCMR
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.dcmr.nl/over-dcmr/organisatie-en-bestuur/bestuur
+      toelichting: Een overzicht van de agenda's, stukken en besluitenlijsten van
+        ons Algemeen Bestuur.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.dcmr.nl/woo-verzoek-indienen
+      toelichting: Informatie over het indienen van een WOO-verzoek bij DCMR.
+  wooVerzoek:
+    url: https://www.dcmr.nl/woo-verzoek-indienen
+organogram_url: https://www.dcmr.nl/over-dcmr/organisatie
+afspraak:
+  email: info@dcmr.nl
+  telefoonnummer: (010) 246 80 00
+  url: https://www.dcmr.nl/contactformulier
 contact:
   website: https://www.dcmr.nl
   email: info@dcmr.nl
+  bezoekadres: Parallelweg 1, 3112 NA Schiedam
+  postadres: Postbus 843, 3100 AV Schiedam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parallelweg
+    huisnummer: '1'
+    postcode: 3112 NA
+    woonplaats: Schiedam
+  - type: Postadres
+    postbus: '843'
+    postcode: 3100 AV
+    woonplaats: Schiedam
+  - type: Vestigingsadres
+    toelichting: Nevenvestiging
+    openbare_ruimte: Kanaalweg
+    huisnummer: '1'
+    postcode: 4337 PA
+    woonplaats: Middelburg
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '843'
+    postcode: 3100 AV
+    woonplaats: Schiedam
+  phones:
+  - nummer: (010) 246 80 00
+    label: algemeen
+  emails:
+  - email: info@dcmr.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dcmr.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-12-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23018469/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23018469/dcmr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1971-12-20'

@@ -3,16 +3,47 @@ type: adviescollege
 identifiers:
   roo_id: '28391501'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10183
+  owms: http://standaarden.overheid.nl/owms/terms/acdzschb
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Adviescommissie duurzame scheepsbouw
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 3.19.7. van de Regeling nationale EZ-subsidies
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0035474&hoofdstuk=3&titeldeel=3.19&artikel=3.19.7&z=2019-01-01&g=2019-01-01
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rvo.nl/subsidies-financiering/sds
+  internet_addresses:
+  - url: https://www.rvo.nl/subsidies-financiering/sds
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391501/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391501/adviescommissie-duurzame-scheepsbouw
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-07-15'

@@ -4,20 +4,136 @@ identifiers:
   roo_id: '28212179'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000158
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Nederlandse Zorgautoriteit
   abbr: NZa
   valid_from: '1900-01-01'
+description:
+  url: https://www.nza.nl/over-de-nza/organisatie
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '17'
+wettelijke_grondslagen:
+- opschrift: Wet marktordening gezondheidszorg, artikel 3
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20marktordening%20gezondheidszorg/article=3
+taken_en_bevoegdheden: De Nederlandse Zorgautoriteit (NZa) is belast met:* markttoezicht,
+  marktontwikkeling en tarief- en prestatieregulering, op het terrein van de gezondheidszorg;*  toezicht
+  op de rechtmatige uitvoering door de zorgverzekeraars van hetgeen bij of krachtens
+  de Zorgverzekeringswet is geregeld;* toezicht op de rechtmatige afrekening van de
+  bijdragen, bedoeld in de artikelen 32 tot en met 34 van de Zorgverzekeringswet,
+  nadat een verzekeraar opgehouden is zorgverzekeringen uit te voeren;* toezicht op
+  de rechtmatige en doelmatige uitvoering door de AWBZ-verzekeraars en de rechtspersonen,
+  bedoeld in artikel 40 van de Algemene Wet Bijzondere Ziektekosten, van hetgeen bij
+  of krachtens die wet en de artikelen 91, tweede lid, tweede volzin, 123 en 124 van
+  de Wet financiering sociale verzekeringen is geregeld;* toezicht op de uitvoering
+  van de artikelen 41, 42 en 43 van de Wet marktordening gezondheidszorg. In artikel
+  3 van deze wet is de juridische basis van de NZa vastgelegd. De NZa richt zich -
+  naast bekostiging van zorgverleners en het bewaken van goede uitvoering van verzekeringswetten
+  in de zorg - op het proactief vaststellen van condities voor marktwerking en de
+  handhaving daarvan. Doel van het nieuwe zorgstelsel is dat de consument waar voor
+  zijn geld krijgt. Daarbij hebben efficiëntie, keuze, kwaliteit en toegankelijkheid
+  van zorgmarkten een centrale plaats.
+evaluations:
+- datum: '2019-03-22'
+  kamerstuknummer: TK 28844 nr. 176
+  referentie: https://zoek.officielebekendmakingen.nl/kst-28844-176.html
+- datum: '2014-09-02'
+  kamerstuknummer: TK 25268 nr. 87
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-87.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nza.nl/over-de-nza/ons-toezicht/t/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212179/Nederlandse_Zorgautoriteit
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nederlandse+Zorgautoriteit%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nederlandse+Zorgautoriteit%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.nza.nl/over-de-nza/ons-toezicht/t/wet-open-overheid
+organogram_url: https://puc.overheid.nl/doc/PUC_208672_22
+afspraak:
+  email: info@nza.nl
+  telefoonnummer: (030) 296 81 11
+  url: https://www.nza.nl/contact
+personnel:
+  aantalFte: 452,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.nza.nl/
   email: info@nza.nl
+  bezoekadres: Newtonlaan 1-41, 3584 BX Utrecht
+  postadres: Postbus 3017, 3502 GA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Newtonlaan
+    huisnummer: 1-41
+    postcode: 3584 BX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '3017'
+    postcode: 3502 GA
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    toelichting: Zie Postbus voor postadres
+    openbare_ruimte: Newtonlaan
+    huisnummer: 1-41
+    postbus: '3017'
+    postcode: 3584 BX
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (030) 296 81 11
+    label: algemeen
+  emails:
+  - email: info@nza.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nza.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212179/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212179/nza
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +142,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000158
   retrieved: '2026-05-09'
+roo_start_datum: '2006-01-01'

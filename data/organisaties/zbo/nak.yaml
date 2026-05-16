@@ -3,22 +3,142 @@ type: zbo
 identifiers:
   roo_id: '28212443'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000134
+  kvk: '41046731'
+  rsin: 002973169
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Nederlandse Algemene Keuringsdienst voor Zaaizaad en Pootgoed van
     Landbouwgewassen
   abbr: NAK
   valid_from: '1900-01-01'
+description:
+  text: De Nederlandse Algemene Keuringsdienst voor zaaizaad en pootgoed van landbouwgewassen
+    voert wettelijke keuringen uit in opdracht en onder toezicht van het ministerie
+    van Landbouw, Natuur en Voedselkwaliteit. Hierbij worden onder andere aardappelen,
+    grond en zaaizaden beoordeeld op diverse kwaliteitskenmerken.
+  url: https://www.nak.nl/over-de-nak/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Zaaizaad- en Plantgoedwet 2005, artikel 19
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Zaaizaad-%20en%20plantgoedwet%202005/article=19
+taken_en_bevoegdheden: '* Het door middel van keuringen bevorderen dat betrouwbaar
+  teeltmateriaal van landbouwgewassen in het verkeer wordt gebracht, verder verhandeld
+  en uitgevoerd wordt;* het verstrekken van certificaten ten bewijze van goedkeuring;*
+  toezicht houden op de naleving van de voorschriften;* het uitvoeren van fytosanitaire
+  export- en importinspecties en het waarmerken van het fytosanitaire certificaat.'
+evaluations:
+- datum: '2023-12-22'
+  kamerstuknummer: TK 25268 nr. 221
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-221.html
+- datum: '2017-12-19'
+  kamerstuknummer: TK 25268 nr. 157
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-157.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 2318 - NEDERLANDSE ALGEMENE KEURINGSDIENST VOOR ZAAIGOED EN POOTGROND
+      VAN LANDBOUWGEWASSEN (NAK)
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15173
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Bedrijfspensioenfonds voor de Landbouw (BPL Pensioen)
+    referentie: https://www.bplpensioen.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212443/Stichting_Nederlandse_Algemene_Keuringsdienst_voor_Zaaizaad_en_Pootgoed_van_Landbouwgewassen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.nak.nl/wet-a-regelgeving-zzo/
+      toelichting: Zaaizaden
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.nak.nl/teeltvoorschriften/wet-regelgeving/
+      toelichting: Teeltvoorschriften
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.nak.nl/wet-a-regelgeving-am/
+      toelichting: Grondonderzoek
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.nak.nl/wet-a-regelgeving-aao/
+      toelichting: Aardappelen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://jaarverslag.nak.nl/
+personnel:
+  aantalFte: 227,0
+  peildatumFte: '2024-03-01'
 contact:
   website: http://www.nak.nl/
   email: nak@nak.nl
+  bezoekadres: Randweg 14, 8304 AS Emmeloord
+  postadres: Postbus 1115, 8300 BC Emmeloord
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Randweg
+    huisnummer: '14'
+    postcode: 8304 AS
+    woonplaats: Emmeloord
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '1115'
+    postcode: 8300 BC
+    woonplaats: Emmeloord
+  phones:
+  - nummer: (0527) 63 53 50
+    label: algemeen
+  emails:
+  - email: nak@nak.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nak.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nak.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: NAK (Nederlandse Algemene Keuringsdienst)
+    url: https://www.linkedin.com/company/stichting-nak/
+  - platform: Instagram
+    gebruikersnaam: '@stichting_nak'
+    url: https://www.instagram.com/stichting_nak/
+  - platform: X
+    gebruikersnaam: '@stichting_nak'
+    url: https://twitter.com/stichting_nak
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212443/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212443/nak
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000134
   retrieved: '2026-05-09'
+roo_start_datum: '1932-01-01'

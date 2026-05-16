@@ -3,16 +3,50 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962660'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1039
+  owms: http://standaarden.overheid.nl/owms/terms/Amstelland-_en_Meerlanden_Overleg
+  organisatiecode: so1039
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Amstelland-Meerlandenoverleg
+  roo_id: '29924131'
 names:
 - value: Amstelland-en Meerlandenoverleg
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.amstelland-meerlanden.nl
+  bezoekadres: Raadhuisplein 1, 2132 TZ Hoofddorp
+  postadres: Postbus 250, 2130 AG Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2132 TZ
+    woonplaats: Hoofddorp
+  - type: Postadres
+    postbus: '250'
+    postcode: 2130 AG
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (0900) 18 52
+    label: algemeen (Haarlemmermeer)
+  internet_addresses:
+  - url: https://www.amstelland-meerlanden.nl
+    label: algemeen
+  - url: https://www.amstelland-meerlanden.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962660/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962660/amstelland-en-meerlandenoverleg
+  retrieved: '2026-05-16'
+roo_start_datum: '1982-05-27'

@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28967883'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-lvvn
+parent_id: org:min-lvvn
 names:
 - value: Financieel-Economische Zaken
   abbr: FEZ
@@ -11,17 +11,50 @@ names:
 - value: Directie Financieel-Economische Zaken
   abbr: FEZ
   valid_from: '1900-01-01'
-  valid_until: '2025-06-16'
 - value: Directie Financieel - Economische Zaken
   abbr: FEZ
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
+description:
+  text: 'De Directie Financieel Economische Zaken (FEZ) fungeert als concerncontroller
+    en waarborgt de rechtmatige, doelmatige en doeltreffende besteding van middelen.
+    Deze taken zijn wettelijk geregeld volgens de Comptabiliteitswet.Kerntaken van
+    FEZ:- Begroting en verantwoording: Betrouwbare begroting en verantwoording van
+    middelen.- Regie over begrotingscyclus: Samenhangend sturingsmodel tussen beleid,
+    begroting en management.- Allocatie van middelen: Transparante advisering over
+    budgetverdeling binnen LNV.- Toezicht op besteding: Toezicht houden op rechtmatige
+    en doelmatige besteding van begrotingsmiddelen.- Ondersteuning DG''s: Ondersteuning
+    bieden aan beleidsverantwoordelijke DG''s in de begrotingscyclus.- Advies aan
+    leidinggevenden: Gevraagd en ongevraagd advies aan politieke en ambtelijke leiding.-
+    Audit Committee: Organiseren van een Audit Committee binnen LNV.- EU-fondsen:
+    Toezicht op de inzet van Europese fondsen en advies over uitvoeringsorganisaties.-
+    Beleidsevaluaties: Begeleiden van beleidsevaluaties en bewaken van de uitvoering.FEZ
+    werkt nauw samen met andere directies van LVVN en de ministeries van EZ en KGG.'
 contact:
   email: ja.leenders@minvws.nl
   website: http://www.rijksoverheid.nl/ministeries/ocw
+  bezoekadres: Rijnstraat 50, 2515 BJ Den Haag
+  postadres: Postbus 16375, 2500 BJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat 50
+    postcode: 2515 BJ
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16375'
+    postcode: 2500 BJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 59 01
+    label: algemeen
+  fax: (070) 340 51 79
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/ministeries/ocw
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-06-16'
+last_mutation: '2024-09-30'
+last_verified: '2025-12-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28967883/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28967883/fez
+  retrieved: '2026-05-16'

@@ -3,18 +3,105 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28635572'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0599
+  owms: http://standaarden.overheid.nl/owms/terms/rekenkoostnl
+  kvk: '76563480'
+  organisatiecode: so0599
+  rsin: '860676316'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Oost-Nederland
+  roo_id: '29430205'
 names:
 - value: Rekenkamer Oost-Nederland
   abbr: RKON
   valid_from: '1900-01-01'
+description:
+  text: De Rekenkamer Oost-Nederland is de rekenkamer voor de provincies Gelderland
+    en Overijssel. Wij doen onafhankelijk onderzoek naar de uitvoering van het provinciaal
+    beleid. De onderzoeksrapporten zijn openbaar en worden behandeld in de vergaderingen
+    van Provinciale Staten. Provinciale Staten besluiten vervolgens wat er met de
+    conclusies en aanbevelingen gedaan wordt.Op deze wijze draagt de Rekenkamer Oost-Nederland
+    bij aan de kwaliteit van het provinciaal bestuur en aan het vergroten van de publieke
+    verantwoording.
+  url: https://rekenkameroost.nl/rekenkamer-oost-nederland/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://rekenkameroost.nl/wp-content/uploads/Woo/Informatie-en-Woo-verzoeken.pdf
+      overzichtURL: https://organisaties.overheid.nl/woo/28635572/Rekenkamer_Oost-Nederland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://rekenkameroost.nl/publicaties/
+      toelichting: Onderzoeksrapporten 2006-heden
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://rekenkameroost.nl/wp-content/uploads/Woo/Informatie-en-Woo-verzoeken.pdf
+      toelichting: Overzicht Woo-verzoeken en besluiten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://rekenkameroost.nl/rekenkamer-oost-nederland/alle-begrotingen/
+      toelichting: Begrotingen en jaarverslagen vanaf 2016
+  wooVerzoek:
+    url: https://rekenkameroost.nl/contact/
+afspraak:
+  email: info@rekenkameroost.nl
+  url: https://rekenkameroost.nl/contact/
 contact:
   website: https://rekenkameroost.nl
   email: info@rekenkameroost.nl
+  bezoekadres: Sijzenbaanplein 11-15, 7411 HL Deventer
+  postadres: Sijzenbaanplein 11-15, 7411 HL Deventer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sijzenbaanplein
+    huisnummer: 11-15
+    postcode: 7411 HL
+    woonplaats: Deventer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    openbare_ruimte: Sijzenbaanplein
+    huisnummer: 11-15
+    postcode: 7411 HL
+    woonplaats: Deventer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Woo-Adres
+    openbare_ruimte: Sijzenbaanplein
+    huisnummer: 11-15
+    postcode: 7411 HL
+    woonplaats: Deventer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  phones:
+  - nummer: (0570) 66 58 00
+    label: algemeen
+  emails:
+  - email: info@rekenkameroost.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://rekenkameroost.nl
+    label: algemeen
+  - url: https://rekenkameroost.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://rekenkameroost.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-05'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28635572/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28635572/rkon
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

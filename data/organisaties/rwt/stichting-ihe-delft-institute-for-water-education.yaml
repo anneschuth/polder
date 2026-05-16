@@ -2,15 +2,43 @@ id: org:oovb-stichting-ihe-delft-institute-for-water-education
 type: rwt
 identifiers:
   roo_id: '27912879'
+  kvk: '41146484'
+  rsin: '803273150'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting IHE Delft Institute for Water Education
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Westvest 7, 2611 AX Delft
+  postadres: Postbus 3015, 2601 DA Delft
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westvest 7
+    postcode: 2611 AX
+    woonplaats: Delft
+  - type: Postadres
+    postbus: '3015'
+    postcode: 2601 DA
+    woonplaats: Delft
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-28'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912879/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912879/stichting-ihe-delft-institute-for-water-education
+  retrieved: '2026-05-16'

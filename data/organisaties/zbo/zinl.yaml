@@ -5,21 +5,125 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000114
   oin: 00000001001900584000
   kvk: '34340664'
+  rsin: 001900584
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Zorginstituut Nederland
   abbr: ZiNL
   valid_from: '1900-01-01'
+description:
+  text: Zorginstituut Nederland heeft per 1 april 2014 de taken van College voor Zorgverzekeringen
+    overgenomen. Het College voor Zorgverzekeringen is opgeheven.
+  url: https://www.zorginstituutnederland.nl/over-ons/organisatie
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Zorgverzekeringswet, artikel 58
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Zorgverzekeringswet/article=58
+taken_en_bevoegdheden: Zorginstituut Nederland heeft de volgende taken:* het bevorderen
+  van de rechtmatige en doelmatige uitvoering van de Wet Langdurige Zorg (Wlz) door
+  de Wlz-uitvoerders en het CAK;* het bevorderen van een eenduidige uitleg van de
+  aard, inhoud en omvang van het verzekerde pakket;* het met het oog op de rechtmatige
+  en doelmatige uitvoering van de Wlz beleidsregels stellen voor de Wlz-uitvoerders
+  en voor het CAK;* het voorlichten van Wlz-uitvoerders, zorgaanbieders en burgers
+  over de aard, inhoud en omvang van de zorg die tot het verzekerde pakket behoort;*
+  het desgevraagd adviseren van de minister van Volksgezondheid, Welzijn en Sport
+  (VWS) over voorgenomen beleid inzake de aard, inhoud en omvang van de zorg die tot
+  het verzekerde pakket behoort;* het gevraagd en ongevraagd aan de minister van VWS
+  doorgeven van feitelijke ontwikkelingen die aanleiding kunnen geven tot wijzigingen
+  van de aard, inhoud en omvang van de zorg die tot het verzekerde pakket behoort;*
+  het bij of krachtens algemene maatregel van bestuur genoemde werkzaamheden uitvoeren
+  ten behoeve van de gezamenlijke zorg voor de instandhouding van het elektronische
+  gegevensverkeer, zoals bedoeld in artikel 9.1.6, eerste lid van de Wlz.
+evaluations:
+- datum: '2020-12-30'
+  kamerstuknummer: TK 25268 nr. 193
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-193.html
+- datum: '2014-10-27'
+  kamerstuknummer: TK 25268 nr. 99
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-99.html/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zorginstituutnederland.nl/over-ons/bezwaar-klacht-woo-verzoek-of-avg-inzageverzoek/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28212234/Zorginstituut_Nederland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zorginstituut+Nederland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.zorginstituutnederland.nl/over-ons/bezwaar-klacht-woo-verzoek-of-avg-inzageverzoek/woo-verzoek
+organogram_url: https://www.zorginstituutnederland.nl/over-ons/publicaties/publicatie/2024/01/23/organogram-zorginstituut-nederland-2024
+afspraak:
+  telefoonnummer: (020) 797 85 55
+personnel:
+  aantalFte: 337,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.zorginstituutnederland.nl/
   email: info@zinl.nl
+  bezoekadres: Willem Dudokhof 1, 1112 ZA Diemen
+  postadres: Postbus 320, 1110 AH Diemen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willem Dudokhof
+    huisnummer: '1'
+    postcode: 1112 ZA
+    woonplaats: Diemen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '320'
+    postcode: 1110 AH
+    woonplaats: Diemen
+  - type: Woo-Adres
+    postbus: '320'
+    postcode: 1110 AH
+    woonplaats: Diemen
+  phones:
+  - nummer: (020) 797 85 55
+    label: algemeen
+  emails:
+  - email: info@zinl.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zorginstituutnederland.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212234/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212234/zinl
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +137,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000114
   retrieved: '2026-05-09'
+roo_start_datum: '1999-01-01'

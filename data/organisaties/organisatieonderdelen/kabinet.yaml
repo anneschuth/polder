@@ -11,9 +11,34 @@ names:
 contact:
   website: http://www.fryslan.frl
   email: provincie@fryslan.nl
+  bezoekadres: Tweebaksmarkt 52, 8911 KZ Leeuwarden
+  postadres: Postbus 20120, 8900 HM Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tweebaksmarkt
+    huisnummer: '52'
+    postcode: 8911 KZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '20120'
+    postcode: 8900 HM
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 292 55 10
+    label: algemeen
+  emails:
+  - email: provincie@fryslan.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.fryslan.frl
+    label: algemeen
+  fax: (058) 292 51 25
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2024-02-12'
+last_verified: '2024-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58733/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58733/kabinet
+  retrieved: '2026-05-16'

@@ -3,18 +3,103 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28487126'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0708
+  owms: http://standaarden.overheid.nl/owms/terms/ravbmwn
+  kvk: '17278973'
+  organisatiecode: so0708
+  rsin: '817061472'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionale Ambulancevoorziening Brabant Midden-West-Noord
+  roo_id: '29657265'
 names:
 - value: Regionale Ambulancevoorziening Brabant Midden-West-Noord
   abbr: RAV Brabant Midden-West-Noord
   valid_from: '1900-01-01'
+description:
+  text: De Regionale Ambulancevoorziening Brabant Midden-West-Noord is een samenwerkingsverband
+    tussen 35 Brabantse gemeenten, die ervoor kozen om samen te werken op het gebied
+    van de ambulancezorg.
+  url: https://www.ravbrabantmwn.nl/wat-we-doen/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ravbrabantmwn.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/28487126/Regionale_Ambulancevoorziening_Brabant_Midden-West-Noord
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+Ambulancevoorziening+Brabant+Midden-West-Noord%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+Ambulancevoorziening+Brabant+Midden-West-Noord%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.ravbrabantmwn.nl/contact/
+organogram_url: https://www.ravbrabantmwn.nl/wp-content/uploads/2024/03/organogram-per-1-januari-2022.docx
+afspraak:
+  email: info@ravbrabantmwn.nl
+  telefoonnummer: (085) 044 22 00
+  url: https://www.ravbrabantmwn.nl/contact/
 contact:
   website: https://www.ravbrabantmwn.nl
   email: info@ravbrabantmwn.nl
+  bezoekadres: Gruttostraat 14, 5212 VM ’s-Hertogenbosch
+  postadres: Postbus 3024, 5003 DA Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gruttostraat
+    huisnummer: '14'
+    postcode: 5212 VM
+    woonplaats: ’s-Hertogenbosch
+  - type: Postadres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+  - type: Woo-Adres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+  phones:
+  - nummer: (085) 044 22 00
+    label: algemeen
+  emails:
+  - email: info@ravbrabantmwn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ravbrabantmwn.nl
+    label: algemeen
+  - url: https://www.ravbrabantmwn.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://ravbrabantmwn.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: ravbrabantmwn
+    url: https://www.instagram.com/ravbrabantmwn/
+  - platform: Facebook
+    gebruikersnaam: RAV Brabant Midden-West-Noord
+    url: https://www.facebook.com/ravbrabantmwn/
+  - platform: LinkedIn
+    gebruikersnaam: RAV Brabant Midden-West-Noord
+    url: https://www.linkedin.com/company/ravbrabantmwn/posts/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-22'
+last_verified: '2024-10-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28487126/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28487126/regionale-ambulancevoorziening-brabant-midden-west-noord
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-07-01'

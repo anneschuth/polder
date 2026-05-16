@@ -6,21 +6,146 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1859
   roo_id: '36670'
   wikidata: Q47104
+  owms: http://standaarden.overheid.nl/owms/terms/Berkelland
+  ictu: 01859
+  organisatiecode: gm1859
+  rsin: '813585922'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_KLL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Berkelland
   abbr: Berkelland
   valid_from: '1900-01-01'
+description:
+  url: https://www.gemeenteberkelland.nl/werkenbij/wie-zijn-wij/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeenteberkelland.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/36670/Gemeente_Berkelland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Berkelland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Berkelland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Berkelland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.gemeenteberkelland.nl/woo-verzoek
+organogram_url: https://www.gemeenteberkelland.nl/werkenbij/wie-zijn-wij/
+afspraak:
+  url: https://www.gemeenteberkelland.nl/contact/
+geography:
+  oppervlakte: 260,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 260.0
+  aantal_inwoners: 43986
+  inwoners: '169'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 169.0
+  bevat_plaatsen_raw: Beltrum, Borculo, Eibergen, Geesteren GLD, Gelselaar, Haarlo,
+    Neede, Rekken, Rietmolen, Ruurlo
+  bevat_plaatsen:
+  - Beltrum
+  - Borculo
+  - Eibergen
+  - Geesteren GLD
+  - Gelselaar
+  - Haarlo
+  - Neede
+  - Rekken
+  - Rietmolen
+  - Ruurlo
+council:
+  total_seats: 27
+  parties:
+  - naam: CDA
+    aantal_zetels: 8
+  - naam: SvB
+    aantal_zetels: 5
+  - naam: Samen D'ran
+    aantal_zetels: 4
+  - naam: PRO Berkelland
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: BBB
+    aantal_zetels: 3
 contact:
   website: https://www.gemeenteberkelland.nl
   email: info@gemeenteberkelland.nl
+  bezoekadres: Marktstraat 1, 7271 AX BORCULO
+  postadres: Postbus 200, 7270 HA BORCULO
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Marktstraat
+    huisnummer: '1'
+    postcode: 7271 AX
+    woonplaats: BORCULO
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '200'
+    postcode: 7270 HA
+    woonplaats: BORCULO
+  - type: Woo-Adres
+    postbus: '200'
+    postcode: 7270 HA
+    woonplaats: Borculo
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Marktstraat
+    huisnummer: '1'
+    postcode: 7271 AX
+    woonplaats: BORCULO
+  phones:
+  - nummer: (0545) 25 02 50
+    label: algemeen
+  emails:
+  - email: info@gemeenteberkelland.nl
+    label: algemeen
+  - email: info@gemeenteberkelland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeenteberkelland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.gemeenteberkelland.nl/contact/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
+predecessor_id:
+- org:gemeente-borculo
+- org:gemeente-eibergen
+- org:gemeente-neede
+- org:gemeente-ruurlo
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36670/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36670/berkelland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,8 +154,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q47104
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-borculo
-- org:gemeente-eibergen
-- org:gemeente-neede
-- org:gemeente-ruurlo
+roo_start_datum: '2005-01-01'

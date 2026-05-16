@@ -3,17 +3,94 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965623'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0205
+  owms: http://standaarden.overheid.nl/owms/terms/rsrottem
+  kvk: '53216520'
+  btw: NL003311764B01
+  organisatiecode: so0205
+  rsin: '003311764'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Rottemeren
+  roo_id: '29495820'
 names:
 - value: Recreatieschap Rottemeren
   valid_from: '1900-01-01'
+description:
+  text: In het recreatieschap Rottemeren werken de gemeenten Rotterdam, Lansingerland
+    en Zuidplas samen. Ze vormen samen het bestuur en behartigen de belangen van natuur,
+    landschap en openluchtrecreatie in het recreatiegebied Rottemeren.
+  url: https://recreatieschaprottemeren.nl/organisatie/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://recreatieschaprottemeren.nl/home/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/24965623/Recreatieschap_Rottemeren
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://recreatieschaprottemeren.nl/vergaderingen/default.aspx
+  wooVerzoek:
+    url: https://recreatieschaprottemeren.nl/contact/woo/default.aspx
+afspraak:
+  email: rottemeren@staatsbosbeheer.nl
 contact:
   website: https://recreatieschaprottemeren.nl
   email: rottemeren@staatsbosbeheer.nl
+  bezoekadres: Smallepad 5, 3811 MG Amersfoort
+  postadres: Postbus 2, 3800 AA Amersfoort
+  addresses:
+  - type: Bezoekadres
+    toelichting: Ontmoetingskantoor Amersfoort
+    openbare_ruimte: Smallepad
+    huisnummer: '5'
+    postbus: '2'
+    postcode: 3811 MG
+    woonplaats: Amersfoort
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Woo-Adres
+    toelichting: Ontmoetingskantoor Amersfoort
+    openbare_ruimte: Smallepad
+    huisnummer: '5'
+    postcode: 3811 MG
+    woonplaats: Amersfoort
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2'
+    postcode: 3800 AA
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (030) 692 61 11
+    label: algemeen
+  emails:
+  - email: rottemeren@staatsbosbeheer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://recreatieschaprottemeren.nl
+    label: algemeen
+  - url: https://www.recreatieschaprottemeren.nl/shortcuts/sendcontactmessage.aspx
+    label: contactformulier
+  contact_forms:
+  - url: https://recreatieschaprottemeren.nl/shortcuts/sendcontactmessage.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-21'
+last_verified: '2025-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965623/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965623/recreatieschap-rottemeren
+  retrieved: '2026-05-16'
+roo_start_datum: '1967-01-12'

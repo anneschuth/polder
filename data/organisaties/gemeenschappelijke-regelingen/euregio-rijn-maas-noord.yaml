@@ -3,14 +3,45 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28143836'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1062
+  owms: http://standaarden.overheid.nl/owms/terms/eurrijnmaasnrd
+  organisatiecode: so1062
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Openbaar lichaam Euregio Rijn-Maas-Noord
+  roo_id: '28143830'
 names:
 - value: euregio rijn-maas-noord
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Konrad-Zuse-Ring 6, 4117 9 Mönchengladbach
+  postadres: Konrad-Zuse-Ring 6, 4117 9 Mönchengladbach
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Konrad-Zuse-Ring
+    huisnummer: '6'
+    postcode: 4117 9
+    woonplaats: Mönchengladbach
+    land: Duitsland
+  - type: Postadres
+    openbare_ruimte: Konrad-Zuse-Ring
+    huisnummer: '6'
+    postcode: 4117 9
+    woonplaats: Mönchengladbach
+    land: Duitsland
+  fax: +49 (0) 2161 6985 555
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2020-03-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28143836/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28143836/euregio-rijn-maas-noord
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-07-01'

@@ -6,21 +6,151 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0766
   roo_id: '35200'
   wikidata: Q9829
+  owms: http://standaarden.overheid.nl/owms/terms/Dongen_(gemeente)
+  ictu: '00766'
+  organisatiecode: gm0766
+  rsin: 001325978
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DON
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dongen
   abbr: Dongen
   valid_from: '1900-01-01'
+description:
+  url: https://www.dongen.nl/college
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dongen.nl/over-dongen/bestuur/wet-open-overheid-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/35200/Gemeente_Dongen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://dongen.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://dongen.bestuurlijkeinformatie.nl/Reports/Details/04c9326f-44fd-4c89-aeda-9a65f514fab2
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dongen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Naast algemene verbindende voorschriften kan gemeente Dongen ook
+        andere besluiten van algemene strekking nemen. Dat zijn dan bijvoorbeeld beleidsregels,
+        waarin de gemeente aangeeft hoe zij bepaald beleid uitvoert.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dongen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten. Ook de gemeente kan regels opstellen. Dat heet dan niet een
+        wet, maar bijvoorbeeld een algemeen verbindend voorschrift.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://dongen.bestuurlijkeinformatie.nl/
+      toelichting: Wilt u weten hoe en waaraan de gemeente geld uitgeeft? Bekijk dan
+        de programmabegroting en de jaarrekening. Deze kunt u opzoeken in het raadsinformatiesysteem
+        van de gemeente.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.dongen.nl/college
+      toelichting: Op deze pagina treft u de collegebesluiten die het bestuur van
+        de gemeente Dongen (het college van Burgemeester en Wethouders) heeft genomen.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dongen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Een beschikking is een besluit in een concreet geval. Het verlenen
+        van een bouwvergunning is een voorbeeld van een beschikking.
+  wooVerzoek:
+    url: https://www.dongen.nl/over-dongen/bestuur/wet-open-overheid-woo-verzoek
+organogram_url: https://www.werkenvoordongen.nl/pagina/werken-voor-dongen
+afspraak:
+  email: info@dongen.nl
+  telefoonnummer: '0140162'
+geography:
+  oppervlakte: 29,72
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 29.72
+  aantal_inwoners: 27673
+  inwoners: '931'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 931.0
+  bevat_plaatsen_raw: '''S Gravenmoer, Dongen'
+  bevat_plaatsen:
+  - '''S Gravenmoer'
+  - Dongen
+council:
+  total_seats: 21
+  parties:
+  - naam: Volkspartij Dongen
+    aantal_zetels: 9
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
 contact:
   website: https://www.dongen.nl
   email: info@dongen.nl
+  bezoekadres: Hoge Ham 62, 5104 JJ DONGEN
+  postadres: Postbus 10153, 5100 GE DONGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoge Ham
+    huisnummer: '62'
+    postcode: 5104 JJ
+    woonplaats: DONGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10153'
+    postcode: 5100 GE
+    woonplaats: DONGEN
+  - type: Woo-Adres
+    openbare_ruimte: Hoge Ham
+    huisnummer: '62'
+    postbus: '10153'
+    postcode: 5104 JJ
+    woonplaats: Dongen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hoge Ham
+    huisnummer: '62'
+    postcode: 5104 JJ
+    ter_attentie_van: Team VTH
+    woonplaats: DONGEN
+  phones:
+  - nummer: '0140162'
+    label: algemeen
+  emails:
+  - email: info@dongen.nl
+    label: algemeen
+  - email: info@dongen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.dongen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-07'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35200/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35200/dongen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

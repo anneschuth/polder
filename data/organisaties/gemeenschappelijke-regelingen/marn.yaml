@@ -3,18 +3,98 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28571093'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0330
+  owms: http://standaarden.overheid.nl/owms/terms/marn
+  kvk: '50178334'
+  organisatiecode: so0330
+  rsin: 009141790
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Milieusamenwerking en Afvalverwerking Regio Nijmegen
+  roo_id: '29529899'
 names:
 - value: Milieusamenwerking en Afvalverwerking Regio Nijmegen
   abbr: MARN
   valid_from: '1900-01-01'
+description:
+  text: De MARN (Milieusamenwerking en Afvalverwerking Regio Nijmegen) is een openbaar
+    lichaam waarin de zeven gemeenten in de regio Nijmegen samenwerken. De gemeenschappelijke
+    regeling wordt getroffen ter ondersteuning van de behartiging van de gemeenschappelijke
+    belangen van de deelnemende gemeenten ter bescherming van het milieu, waaronder
+    een optimale en milieuhygiënisch verantwoorde verwijdering van afvalstoffen. Deze
+    gemeenten zijn Nijmegen, Heumen, Beuningen, Druten, Wijchen, Mook en Middelaar,
+    en Berg en Dal.
+  url: https://www.marn.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28571093/Milieusamenwerking_en_Afvalverwerking_Regio_Nijmegen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))%20AND%20w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22%20AND%20dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20AND%20dt.creator==%22Milieusamenwerking%20en%20Afvalverwerking%20Regio%20Nijmegen%22&zv=&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=po%7cMilieusamenwerking+en+Afvalverwerking+Regio+Nijmegen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.marn.nl/Publicaties
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Milieusamenwerking+en+Afvalverwerking+Regio+Nijmegen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.marn.nl/Publicaties
+  wooVerzoek:
+    url: https://www.marn.nl/contact
+organogram_url: https://www.marn.nl/
+afspraak:
+  email: info@marn.nl
+  url: https://www.marn.nl/contact
 contact:
   website: http://www.marn.nl
   email: info@marn.nl
+  bezoekadres: Kanaalstraat 401, 6541 XK Nijmegen
+  postadres: Postbus 316, 6500 AH Nijmegen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kanaalstraat
+    huisnummer: '401'
+    postcode: 6541 XK
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '316'
+    postcode: 6500 AH
+    woonplaats: Nijmegen
+  - type: Woo-Adres
+    postbus: '316'
+    postcode: 6500 AH
+    woonplaats: Nijmegen
+  phones:
+  - nummer: (024) 371 60 13
+    label: algemeen
+  emails:
+  - email: info@marn.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.marn.nl
+    label: algemeen
+  contact_forms:
+  - url: http://www.marn.nl/contact.html
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28571093/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28571093/marn
+  retrieved: '2026-05-16'
+roo_start_datum: '1985-01-01'

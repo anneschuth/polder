@@ -3,19 +3,64 @@ type: zbo
 identifiers:
   roo_id: '28143350'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000322
+  owms: http://standaarden.overheid.nl/owms/terms/anwb
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Koninklijke Nederlandse Toeristenbond ANWB
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wegenverkeerswet 1994, artikel 117
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0006622
+taken_en_bevoegdheden: Afgifte van een internationaal rijbewijs
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.anwb.nl
+  bezoekadres: Wassenaarseweg 220, 2596 EC Den Haag
+  postadres: Postbus 93200, 2509 BA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wassenaarseweg
+    huisnummer: '220'
+    postcode: 2596 EC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93200'
+    postcode: 2509 BA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 269 22 22
+    label: algemeen
+  internet_addresses:
+  - url: https://www.anwb.nl
+    label: algemeen
+  - url: https://www.anwb.nl/contact-en-service/contactformulier
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28143350/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28143350/koninklijke-nederlandse-toeristenbond-anwb
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000322
   retrieved: '2026-05-09'
+roo_start_datum: '1882-12-30'

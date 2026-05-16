@@ -5,22 +5,100 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0201
   oin: '00000003371624540000'
   kvk: '37162454'
+  owms: http://standaarden.overheid.nl/owms/terms/rswstfr
+  organisatiecode: so0201
+  rsin: 003770485
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Recreatieschap Westfriesland
+  roo_id: '24966117'
 names:
 - value: Recreatieschap Westfriesland
   valid_from: '1900-01-01'
+description:
+  text: Recreatieschap Westfriesland maakt buiten genieten van groen, natuur en landschap
+    mogelijk voor de inwoners en bezoekers van de regio Westfriesland. Het Recreatieschap
+    zorgt voor gevarieerd ingerichte recreatiegebieden dicht bij huis. Alle recreatiegebieden
+    zijn voorzien van waterpartijen en bos. Ook zijn er gebieden met strand, zwemwater
+    en horeca. Een aantal recreatiegebieden heeft plekken om honden los te laten en
+    in het Streekbos is een hondenzwemstrand aangelegd. Voor fietsen, wandelen en
+    varen zijn er goed onderhouden en bewegwijzerde netwerken die naadloos aansluiten
+    op de netwerken in de naastgelegen regio’s.
+  url: https://recreatieschapwestfriesland.nl/organisatie/bestuur/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://recreatieschapwestfriesland.nl/organisatie/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/24966122/Recreatieschap_Westfriesland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://recreatieschapwestfriesland.nl/ons-archief/publicaties/
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://recreatieschapwestfriesland.nl/ons-archief/bestuursstukken/
+  wooVerzoek:
+    url: https://recreatieschapwestfriesland.nl/organisatie/wet-open-overheid/
+organogram_url: https://recreatieschapwestfriesland.nl/wp-content/uploads/2026/04/Organogram.pdf
+afspraak:
+  url: https://recreatieschapwestfriesland.nl/contact/
 contact:
   website: https://recreatieschapwestfriesland.nl
   email: info@recreatieschapwestfriesland.nl
+  bezoekadres: De Middend 2, 1611 KW Bovenkarspel
+  postadres: Postbus 20, 1610 AA Bovenkarspel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Middend
+    huisnummer: '2'
+    postcode: 1611 KW
+    woonplaats: Bovenkarspel
+  - type: Postadres
+    postbus: '20'
+    postcode: 1610 AA
+    woonplaats: Bovenkarspel
+  - type: Woo-Adres
+    openbare_ruimte: De Middend
+    huisnummer: '2'
+    postcode: 1611 KW
+    ter_attentie_van: Recreatieschap Westfriesland
+    woonplaats: Bovenkarspel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (0228) 56 57 50
+    label: algemeen
+  emails:
+  - email: info@recreatieschapwestfriesland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://recreatieschapwestfriesland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://recreatieschapwestfriesland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-09-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966122/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966122/recreatieschap-westfriesland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2005-01-01'

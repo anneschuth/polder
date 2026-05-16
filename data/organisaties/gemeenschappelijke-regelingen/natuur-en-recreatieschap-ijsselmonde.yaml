@@ -3,17 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966920'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0204
+  owms: http://standaarden.overheid.nl/owms/terms/nrsijsm
+  kvk: '53215370'
+  organisatiecode: so0204
+  rsin: 003866865
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Natuur- en recreatieschap IJsselmonde
+  roo_id: '29496602'
 names:
 - value: Natuur- en recreatieschap IJsselmonde
   valid_from: '1900-01-01'
+description:
+  text: Het natuur- recreatieschap vervult een trekkersrol in het realiseren en beheren
+    van het bestaande en geplande recreatieve aanbod in de groene buitenruimte van
+    IJsselmonde. Het wordt in onderlinge samenhang afgestemd op de brede maatschappelijke
+    vraag en mogelijkheden met een marktgerichte oriëntatie.Onderdeel van de gemeenschappelijke
+    regeling zijn de gemeenten Zwijndrecht, Barendrecht, Hendrik-Ido-Ambacht, Ridderkerk
+    en Alblasserwaard.
+  url: https://www.natuurenrecreatieschapijsselmonde.nl/organisatie/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.natuurenrecreatieschapijsselmonde.nl/contact/woo/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/24966920/Natuur-_en_recreatieschap_IJsselmonde
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.natuurenrecreatieschapijsselmonde.nl/organisatie/vergaderingen/default.aspx
+  wooVerzoek:
+    url: https://www.natuurenrecreatieschapijsselmonde.nl/contact/woo/default.aspx
+afspraak:
+  email: ijsselmonde@staatsbosbeheer.nl
+  url: https://www.natuurenrecreatieschapijsselmonde.nl/contact/default.aspx
 contact:
   website: https://www.natuurenrecreatieschapijsselmonde.nl
   email: ijsselmonde@staatsbosbeheer.nl
+  bezoekadres: Overschieseweg 310, 3112 NC Schiedam
+  postadres: Postbus 2, 3800 AA Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Overschieseweg
+    huisnummer: '310'
+    postcode: 3112 NC
+    woonplaats: Schiedam
+  - type: Postadres
+    postbus: '2'
+    postcode: 3800 AA
+    woonplaats: Amersfoort
+  - type: Woo-Adres
+    postbus: '2'
+    postcode: 3800 AA
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (010) 298 10 10
+    label: algemeen
+  emails:
+  - email: ijsselmonde@staatsbosbeheer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.natuurenrecreatieschapijsselmonde.nl
+    label: algemeen
+  - url: https://www.natuurenrecreatieschapijsselmonde.nl/shortcuts/sendcontactmessage.aspx
+    label: contactformulier
+  contact_forms:
+  - url: https://www.natuurenrecreatieschapijsselmonde.nl/shortcuts/sendcontactmessage.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-28'
+last_verified: '2025-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966920/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966920/natuur-en-recreatieschap-ijsselmonde
+  retrieved: '2026-05-16'
+roo_start_datum: '1990-01-01'

@@ -1,19 +1,71 @@
 id: org:gr-ict-samenwerking-west-brabant-west
 type: gemeenschappelijke-regeling
+subname: ICT West-Brabant West
 identifiers:
   roo_id: '25055761'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0864
+  owms: http://standaarden.overheid.nl/owms/terms/ictswbw
+  kvk: '63848104'
+  organisatiecode: so0864
+  rsin: '855426342'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ICT samenwerking West-Brabant-West
+  roo_id: '29715530'
 names:
 - value: ICT samenwerking West-Brabant-West
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/25055761/ICT_samenwerking_West-Brabant-West
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22ICT+samenwerking+West-Brabant-West%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.ictwbw.nl
   email: info@ictwbw.nl
+  bezoekadres: Pastoor van Kessellaan 15, 4761 BJ Zevenbergen
+  postadres: Postbus 4, 4760 AA Zevenbergen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pastoor van Kessellaan
+    huisnummer: '15'
+    postcode: 4761 BJ
+    woonplaats: Zevenbergen
+  - type: Postadres
+    postbus: '4'
+    postcode: 4760 AA
+    woonplaats: Zevenbergen
+  phones:
+  - nummer: (088) 996 04 00
+    label: algemeen
+  emails:
+  - email: info@ictwbw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ictwbw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-04-15'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25055761/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25055761/ict-samenwerking-west-brabant-west
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-08-01'

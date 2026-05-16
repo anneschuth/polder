@@ -4,22 +4,58 @@ identifiers:
   oin: '00000001001220421000'
   kvk: 01149804
   roo_id: '27965353'
+  owms: http://standaarden.overheid.nl/owms/terms/wpfivel
+  organisatiecode: so0879
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werkplein Fivelingo
+  roo_id: '28842279'
 names:
 - value: Werkplein Fivelingo
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://werkpleinfivelingo.nl
+  bezoekadres: Fivelpoort 1, 9902 SR Appingedam
+  postadres: Postbus 24, 9900 AA Appingedam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Fivelpoort
+    huisnummer: '1'
+    postcode: 9902 SR
+    woonplaats: Appingedam
+  - type: Postadres
+    postbus: '24'
+    postcode: 9900 AA
+    woonplaats: Appingedam
+  phones:
+  - nummer: (0596) 85 68 56
+    label: algemeen
+  internet_addresses:
+  - url: https://werkpleinfivelingo.nl
+    label: algemeen
+  - url: https://werkpleinfivelingo.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2022-11-29'
+last_verified: '2019-11-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27965353/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27965353/werkplein-fivelingo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

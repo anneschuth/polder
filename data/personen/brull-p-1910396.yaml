@@ -3,7 +3,7 @@ name:
   full: P.M.H. Brüll
   family: Brüll
   given: P.M.H.
-  initials: P.
+  initials: P.M.H.
 mandaten:
 - id: 77cb33cb-8b50-49aa-864c-81b41e25e75a
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910576
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28701381
 - id: dd6515b7-5a54-4673-824b-17cce6d16d5f
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

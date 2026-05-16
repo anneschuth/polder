@@ -5,6 +5,9 @@ identifiers:
   kvk: '24485644'
   roo_id: '30982'
   wikidata: Q863961
+  owms: http://standaarden.overheid.nl/owms/terms/Binnenmaas
+  ictu: 00585
+  organisatiecode: gm0585
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,85 @@ names:
   abbr: Binnenmaas
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 75,6
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 75.6
+  aantal_inwoners: 28962
+  inwoners: '383'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 383.0
+  bevat_plaatsen_raw: '''s-Gravendeel, Heinenoord, Maasdam, Mijnsheerenland, Puttershoek,
+    Westmaas'
+  bevat_plaatsen:
+  - '''s-Gravendeel'
+  - Heinenoord
+  - Maasdam
+  - Mijnsheerenland
+  - Puttershoek
+  - Westmaas
+council:
+  total_seats: 21
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 2
+  - naam: Fractie Baars
+    aantal_zetels: 1
+  - naam: Fractie Nieland
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.binnenmaas.nl
   email: gemeente@binnenmaas.nl
+  bezoekadres: Sportlaan 22, 3299 XG MAASDAM
+  postadres: Postbus 5455, 3299 ZH MAASDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sportlaan
+    huisnummer: '22'
+    postcode: 3299 XG
+    woonplaats: MAASDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 5455
+    postbus: '5455'
+    postcode: 3299 ZH
+    woonplaats: MAASDAM
+  phones:
+  - nummer: 14 078
+    label: algemeen
+  emails:
+  - email: gemeente@binnenmaas.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.binnenmaas.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30982/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30982/binnenmaas
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

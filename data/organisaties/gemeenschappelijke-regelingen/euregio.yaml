@@ -3,16 +3,73 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28143364'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1005
+  owms: http://standaarden.overheid.nl/owms/terms/Euregio_Enschede-Gronau
+  organisatiecode: so1005
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling voor het Nederlands-Duitse openbare lichaam EUREGIO
+  roo_id: '28143358'
 names:
 - value: EUREGIO
   valid_from: '1900-01-01'
+description:
+  text: 'De EUREGIO, met haar secretariaat vlak bij de grens Gronau-Enschede, is een
+    grensoverschrijdend samenwerkingsverband van Nederlandse en Duitse gemeenten,
+    (Land-)Kreise en Waterschappen. Het gebied van de EUREGIO omvat ongeveer 13.000
+    km², er wonen ongeveer 3,4 miljoen mensen in 128 gemeenten. Aan Nederlandse zijde
+    omvat het gebied de regio''s Twente en Achterhoek, en delen van Noordoost-Overijssel
+    en Zuidoost-Drenthe. Aan de Duitse kant omvat de EUREGIO het Münsterland, Grafschaft
+    Bentheim, de stad en Landkreis Osnabrück, evenals delen van het zuidelijke Emsland.De
+    EUREGIO werd in 1958 opgericht als eerste grensoverschrijdende organisatie op
+    regionaal niveau. Zij zet zich in voor grenzeloos samenleven in dit gebied. Hordes
+    tussen Nederland en Duitsland moeten worden afgebouwd, zodat burgers, gemeenten
+    en bedrijven optimaal gebruik kunnen maken van de diverse mogelijkheden die beide
+    landen bieden. De EUREGIO vormt zo een platform en is een schakel voor haar leden
+    om een breed scala aan grensoverschrijdende activiteiten te ondersteunen en uit
+    te voeren. De organisatie is een spreekbuis dat de interesses van de grensregio
+    overbrengt aan Düsseldorf, Hannover, Berlijn en Brussel.De EUREGIO ziet het als
+    haar taak om de sociaal-culturele samenwerking te bevorderen en de arbeidsmarkt,
+    economie en duurzame ruimtelijke ontwikkeling in het grensgebied te versterken.Onze
+    visie? Samen leven in één ‘grenzeloze’ stad-land-regio! Alle inspanningen van
+    de EUREGIO zijn gericht op één doel: de sterke deelregio’s moeten samengroeien
+    tot één gemeenschappelijke stad-land-regio, een geïntegreerd en sterk woon- en
+    economisch gebied waarin de grens geen scheidend of remmend effect meer heeft.
+    Het doel is de economische kracht en de leefbaarheid in de regio te vergroten
+    en de integratie van het gebied te bevorderen. Het geheel is immers meer dan de
+    som der delen: 1+1=3. We zijn pas tevreden wanneer ook de inwoners dit verzorgingsgebied
+    als dusdanig ervaren.'
+organogram_url: https://www.euregio.eu/wie-we-zijn/organisatie/
 contact:
   website: https://www.euregio.eu/contact/
+  bezoekadres: Gronausestraat 1258-1260, 7534 AV Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gronausestraat
+    huisnummer: 1258-1260
+    postcode: 7534 AV
+    woonplaats: Enschede
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Enscheder Straße
+    huisnummer: '362'
+    postcode: 4859 9
+    woonplaats: Gronau
+    regio: Nordrhein-Westfalen
+    land: Duitsland
+  contact_forms:
+  - url: https://www.euregio.eu/contact/
+    label: Algemeen
+  fax: (053) 460 51 59
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-10'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28143364/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28143364/euregio
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-08'

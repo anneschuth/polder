@@ -3,21 +3,66 @@ type: inspectie
 identifiers:
   roo_id: '30443734'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12388
+  organisatiecode: oorg12388
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Raad voor de rechtshandhaving
   valid_from: '1900-01-01'
+description:
+  text: De Raad staat voor een veilige en rechtvaardige samenleving. Daartoe draagt
+    de Raad bij aan de kwaliteit van de rechtshandhaving door vanuit een onafhankelijke
+    positie toezicht te houden op en inzicht te verschaffen in het functioneren van
+    de justitiële keten.
+  url: https://www.raadrh.com/role
 contact:
   website: https://www.raadrh.com/
+  bezoekadres: Schouwburgweg 1 B, Willemstad
+  addresses:
+  - type: Bezoekadres
+    toelichting: Secretariaat Curaçao
+    openbare_ruimte: Schouwburgweg
+    huisnummer: '1'
+    huisnummer_toevoeging: B
+    woonplaats: Willemstad
+    land: Curaçao
+  - type: Bezoekadres
+    toelichting: Secretariaat Sint Maarten
+    openbare_ruimte: Juancho Yrausquin Boulevard
+    huisnummer: '26'
+    huisnummer_toevoeging: 2G
+    woonplaats: Philipsburg
+    land: Sint Maarten
+  - type: Bezoekadres
+    toelichting: Secretariaat Caribisch Nederland
+    openbare_ruimte: Kaya Industria
+    woonplaats: Kralendijk
+  phones:
+  - nummer: +5999 73 63 500
+    label: Secretariaat Curaçao
+  - nummer: '17215439680'
+    label: Secretariaat Sint Maarten
+  - nummer: '17215811067'
+    label: Secr. Caribisch Nederland
+  internet_addresses:
+  - url: https://www.raadrh.com/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-24'
+last_verified: '2025-11-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30443734/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30443734/raad-voor-de-rechtshandhaving
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
   fields:
   - rwt-status
+roo_start_datum: '2010-10-10'

@@ -3,18 +3,67 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28211472'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0329
+  owms: http://standaarden.overheid.nl/owms/terms/olavu
+  kvk: '54672392'
+  organisatiecode: so0329
+  rsin: '804188543'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling afvalverwijdering Utrecht
+  roo_id: '29430875'
 names:
 - value: Afvalverwijdering Utrecht
   abbr: AVU
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.avu.nl
   email: info@avu.nl
+  bezoekadres: Lange Brinkweg 81, 3764 AB Soest
+  postadres: Postbus 3250, 3760 DG Soest
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Brinkweg
+    huisnummer: '81'
+    postcode: 3764 AB
+    woonplaats: Soest
+  - type: Postadres
+    postbus: '3250'
+    postcode: 3760 DG
+    woonplaats: Soest
+  phones:
+  - nummer: (035) 603 23 03
+    label: algemeen
+  emails:
+  - email: info@avu.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.avu.nl
+    label: algemeen
+  - url: http://www.avu.nl/cms/?page_id=112
+    label: contact
+  contact_forms:
+  - url: http://www.avu.nl
+    label: Algemeen
+  fax: (035) 603 55 44
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2022-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28211472/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28211472/avu
+  retrieved: '2026-05-16'
+roo_start_datum: '1984-12-01'

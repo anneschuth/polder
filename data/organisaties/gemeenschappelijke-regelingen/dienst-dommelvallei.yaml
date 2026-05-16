@@ -5,22 +5,95 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0723
   oin: 00000001852722096000
   kvk: '57755086'
+  owms: http://standaarden.overheid.nl/owms/terms/dommelvallei
+  btw: NL852722096B01
+  organisatiecode: so0723
+  rsin: '852722096'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Dienst Dommelvallei
+  roo_id: '30413154'
 names:
 - value: Dienst Dommelvallei
   valid_from: '1900-01-01'
+description:
+  url: https://www.dienstdommelvallei.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24963336/Dienst_Dommelvallei
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://dienst-dommelvallei.begrotingsapp.nl/
+      toelichting: Begrotingen en jaarrekeningen
+  wooVerzoek:
+    url: https://www.dienstdommelvallei.nl/
+afspraak:
+  email: info@dienstdommelvallei.nl
+  telefoonnummer: (088) 163 10 00
+  url: https://www.dienstdommelvallei.nl/
 contact:
   website: http://www.dienstdommelvallei.nl
   email: info@dienstdommelvallei.nl
+  bezoekadres: Dorpsstraat 210, 5731 JL Mierlo
+  postadres: Postbus 60, 5730 AB Mierlo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpsstraat
+    huisnummer: '210'
+    postcode: 5731 JL
+    woonplaats: Mierlo
+  - type: Postadres
+    postbus: '60'
+    postcode: 5730 AB
+    woonplaats: Mierlo
+  - type: Woo-Adres
+    openbare_ruimte: Dorpsstraat
+    huisnummer: '210'
+    postcode: 5731 JL
+    woonplaats: Mierlo
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (088) 163 10 00
+    label: algemeen
+  emails:
+  - email: info@dienstdommelvallei.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.dienstdommelvallei.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.dienstdommelvallei.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Dienst Dommelvallei
+    url: https://www.linkedin.com/company/dienst-dommelvallei/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-10-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963336/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963336/dienst-dommelvallei
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-04-01'

@@ -3,17 +3,80 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28478388'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0894
+  owms: http://standaarden.overheid.nl/owms/terms/mbnofy
+  kvk: '68615590'
+  organisatiecode: so0894
+  rsin: '857520799'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Mobiliteitsbureau
+    Noordoost Fryslân
+  roo_id: '30019255'
 names:
 - value: Mobiliteitsbureau Noordoost Fryslân
   valid_from: '1900-01-01'
+description:
+  text: Mobiliteitsbureau Noordoost Fryslân is een GR van de 4 gemeenten in Noordoost
+    Fryslân en de provincie Fryslân die voor de gemeenten het leerlingenvervoer en
+    het WMO-vervoer regelt en voor de provincie de Opstapper.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.jobinder.nl
   email: info@mobiliteitsbureau.nl
+  bezoekadres: Hynsteblom 4, 9104 BR Damwâld
+  postadres: Postbus 22, 9104 ZG Damwâld
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Dantumadiel
+    openbare_ruimte: Hynsteblom
+    huisnummer: '4'
+    postcode: 9104 BR
+    woonplaats: Damwâld
+  - type: Postadres
+    postbus: '22'
+    postcode: 9104 ZG
+    woonplaats: Damwâld
+    regio: Fryslan
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  phones:
+  - nummer: 06 34 21 04 33
+    label: Coordinator
+  - nummer: 06 40 75 36 66
+    label: Controller
+  - nummer: (0900) 405 05 00
+    label: Centrale
+  emails:
+  - email: info@mobiliteitsbureau.nl
+    label: algemeen
+  - email: p.maasbommel@mobiliteitsbureau.nl
+    label: Coordinator
+  - email: j.dijkstra@mobiliteitsbureau.nl
+    label: Controller
+  internet_addresses:
+  - url: https://www.jobinder.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.jobinder.nl/service-en-contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-02-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28478388/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28478388/mobiliteitsbureau-noordoost-fryslan
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-03-23'

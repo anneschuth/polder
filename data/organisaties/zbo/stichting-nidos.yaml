@@ -5,20 +5,82 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000129
   oin: 00000001810264481000
   kvk: '30176667'
+  rsin: '810264481'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Nidos
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Jeugdwet, artikel 3.4.
+  referentie: http://wetten.overheid.nl/BWBR0034925
+- opschrift: Burgerlijk Wetboek, art. 254
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=burgerlijk%20wetboek%20boek%201/article=254
+taken_en_bevoegdheden: Uitvoering van de voogdij voor alleenstaande minderjarige asielzoekers
+  en gezinsvoogdij voor minderjarige kinderen die in een opvangcentrum van het Centraal
+  Orgaan opvang asielzoekers (COA) verblijven.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 442,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.nidos.nl/
   email: contact@nidos.nl
+  bezoekadres: Maliebaan 99, 3581 CH Utrecht
+  postadres: Postbus 13021, 3507 LA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maliebaan
+    huisnummer: '99'
+    postcode: 3581 CH
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '13021'
+    postcode: 3507 LA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 501 12 00
+    label: algemeen
+  emails:
+  - email: contact@nidos.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nidos.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212557/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212557/stichting-nidos
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -32,3 +94,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000129
   retrieved: '2026-05-09'
+roo_start_datum: '2005-01-01'

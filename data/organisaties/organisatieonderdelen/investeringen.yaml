@@ -8,12 +8,40 @@ names:
 - value: Investeringen
   valid_from: '1900-01-01'
   valid_until: '2022-02-13'
+description:
+  text: 'Taak :'
 contact:
   website: http://www.overijssel.nl
   email: postbus@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8011 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8011 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (038) 499 70 00
+    label: algemeen
+  - nummer: (038) 499 70 11
+  - nummer: (038) 499 70 12
+  emails:
+  - email: postbus@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-02-13'
+last_mutation: '2023-06-26'
+last_verified: '2023-06-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16958/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16958/investeringen
+  retrieved: '2026-05-16'

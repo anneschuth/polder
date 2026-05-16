@@ -3,18 +3,90 @@ type: adviescollege
 identifiers:
   roo_id: '28199715'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10251
+  organisatiecode: oorg10251
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Adviesraad internationale vraagstukken
   abbr: AIV
   valid_from: '1900-01-01'
+description:
+  text: 'De Adviesraad internationale vraagstukken is het adviescollege voor regering
+    en parlement op het gebied van buitenlands beleid. De AIV adviseert gevraagd en
+    ongevraagd over internationale vraagstukken. Het betreft in het bijzonder: Europese
+    samenwerking, mensenrechten, ontwikkelingssamenwerking en veiligheidsbeleid.De
+    AIV is een permanent adviescollege onder de Kaderwet adviescolleges, ingesteld
+    middels de Wet op de Adviesraad internationale vraagstukken.'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '16'
+      toelichting: Ook anderen dan leden kunnen worden benoemd in door de Raad ingestelde
+        commissies.
+wettelijke_grondslagen:
+- opschrift: artikel 1 van de Wet op de Adviesraad internationale vraagstukken
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0009474&artikel=1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28199715/Adviesraad_internationale_vraagstukken
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
 contact:
   website: https://www.adviesraadinternationalevraagstukken.nl
   email: aiv@minbuza.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 20061, 2500 EB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20061'
+    postcode: 2500 EB
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 348 60 60
+    label: Algemeen
+  emails:
+  - email: aiv@minbuza.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviesraadinternationalevraagstukken.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28199715/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28199715/aiv
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

@@ -8,9 +8,15 @@ names:
 - value: Expertisebureaus
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2024-10-28'
+last_verified: '2024-10-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115892/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115892/expertisebureaus
+  retrieved: '2026-05-16'

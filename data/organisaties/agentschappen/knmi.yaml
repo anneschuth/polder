@@ -5,21 +5,106 @@ identifiers:
   kvk: '30276595'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10116
   roo_id: '113567'
+  owms: http://standaarden.overheid.nl/owms/terms/Koninklijk_Nederlands_Meteorologisch_Instituut
+  rsin: '821693992'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Koninklijk Nederlands Meteorologisch Instituut
   abbr: KNMI
   valid_from: '1900-01-01'
+description:
+  text: Nationaal kennisinstituut voor weer, klimaat en seismologieHet KNMI adviseert
+    en waarschuwt de samenleving om risico’s met een atmosferische of seismologische
+    oorsprong terug te dringen. Daarvoor ontwikkelt het KNMI hoogwaardige kennis,
+    verricht waarnemingen en zet die om in producten en diensten die de veiligheidsrisico’s
+    verminderen, bijdragen aan een duurzame samenleving en economische mogelijkheden
+    bevorderen.Het KNMI verzorgt ook de meteorologische en seismische berichtgeving
+    voor Caribisch Nederland. Dit zijn de bijzondere gemeenten Bonaire, Sint Eustatius
+    en Saba (de BES-eilanden). Het KNMI werkt nauw samen met meteorologische diensten
+    in de regio en met Météo France.
+  url: https://www.knmi.nl/over-het-knmi/over
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.knmi.nl/over-het-knmi/contact/contactformulier
+      overzichtURL: https://organisaties.overheid.nl/woo/113567/Koninklijk_Nederlands_Meteorologisch_Instituut
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Andere documenten
+      url: https://www.knmi.nl/kennis-en-datacentrum
+      toelichting: Kennis en uitleg over onderwerpen op het gebied van weer, klimaat
+        en seismologie. Verder onder meer een verwijziging naar klimaatdata met informatie
+        over weer in het verleden. Experts kunnen terecht bij de KNMI Climate Explorer
+        en KNMI Dataplatform.
+  wooVerzoek:
+    url: https://www.knmi.nl/over-het-knmi/contact/contactformulier
+organogram_url: https://knmi-wwwknminl-prd.s3.eu-west-1.amazonaws.com/system/readmore_links/files/000/000/142/original/KNMI_organogram_nl.pdf?1709128290
+afspraak:
+  url: https://www.knmi.nl/over-het-knmi/contact/contactformulier
 contact:
   website: https://www.knmi.nl/
   email: informatiecentrum@knmi.nl
+  bezoekadres: Utrechtseweg 297, 3731 GA De Bilt
+  postadres: Postbus 201, 3730 AE De Bilt
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Utrechtseweg
+    huisnummer: '297'
+    postcode: 3731 GA
+    woonplaats: De Bilt
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '201'
+    postcode: 3730 AE
+    woonplaats: De Bilt
+  - type: Woo-Adres
+    postbus: '201'
+    postcode: 3730 AE
+    woonplaats: De Bilt
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Netherlands
+  phones:
+  - nummer: (030) 220 69 11
+    label: algemeen
+  emails:
+  - email: informatiecentrum@knmi.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.knmi.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.knmi.nl/over-het-knmi/contact/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-01-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/113567/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/113567/knmi
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

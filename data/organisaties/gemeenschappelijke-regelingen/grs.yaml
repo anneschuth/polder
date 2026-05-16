@@ -5,23 +5,107 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0621
   oin: 00000001817301409000
   kvk: '52618196'
+  owms: http://standaarden.overheid.nl/owms/terms/drechtsteden
+  btw: NL817301409B01
+  loonheffing: 817301409L01
+  organisatiecode: so0621
+  rsin: '817301409'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Sociaal
+  roo_id: '28847885'
 names:
 - value: Sociaal
   abbr: GRS
   valid_from: '1900-01-01'
+description:
+  text: Het betreft een gemeenschappelijke sociale dienst van 7 gemeenten in de Drechtsteden
+    regio.
+  url: https://lokaleregelgeving.overheid.nl/CVDR693067/1
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.socialedienstdrechtsteden.nl/overons/wooverzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28604201/Sociaal
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://vergaderen.gemeenteoplossingen.nl/
+      toelichting: onder deze link staan de bestuurlijke documenten van het Algemeen
+        Bestuur van de GR Sociaal
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sociaal%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sociaal%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Klachtoordelen
+      url: https://www.socialedienstdrechtsteden.nl/overons/wetopenoverheid
+      toelichting: Op de website van de GR worden per kwartaal de overzichten gepubliceerd
+        van de in dat kwartaal behandelde klachten
+  wooVerzoek:
+    url: https://www.socialedienstdrechtsteden.nl/overons/wooverzoek
+organogram_url: https://www.socialedienstdrechtsteden.nl/overons/wetopenoverheid
+afspraak:
+  telefoonnummer: (078) 770 89 10
+  url: https://www.socialedienstdrechtsteden.nl/contactmogelijkheden
 contact:
   website: https://www.socialedienstdrechtsteden.nl/
   email: woosdd@drechtsteden.nl
+  bezoekadres: Spuiboulevard 298, 3311 GR Dordrecht
+  postadres: Postbus 619, 3300 AP Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spuiboulevard
+    huisnummer: '298'
+    postcode: 3311 GR
+    woonplaats: Dordrecht
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '619'
+    postcode: 3300 AP
+    woonplaats: Dordrecht
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '619'
+    postcode: 3300 AP
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (078) 770 89 10
+    label: algemeen
+  internet_addresses:
+  - url: https://www.socialedienstdrechtsteden.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.socialedienstdrechtsteden.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28604201/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28604201/grs
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-03-08'

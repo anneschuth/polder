@@ -2,14 +2,32 @@ id: org:stichting-pensioenregister
 type: rwt
 identifiers:
   roo_id: '30133809'
+  kvk: '30241879'
+  oin: 00000003302418790000
+  rsin: '819536970'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Stichting Pensioenregister
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '19'
+    postcode: 2514 AB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133809/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133809/stichting-pensioenregister
+  retrieved: '2026-05-16'

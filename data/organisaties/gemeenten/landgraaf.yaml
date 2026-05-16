@@ -6,21 +6,130 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0882
   roo_id: '34171'
   wikidata: Q9795
+  owms: http://standaarden.overheid.nl/owms/terms/Landgraaf_(gemeente)
+  ictu: 00882
+  organisatiecode: gm0882
+  rsin: '005560500'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LAF
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Landgraaf
   abbr: Landgraaf
   valid_from: '1900-01-01'
+description:
+  text: https://www.landgraaf.nl/ambtelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.landgraaf.nl/beschikbaar-stellen-van-openbare-informatie-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/34171/Gemeente_Landgraaf
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Landgraaf%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Landgraaf%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Landgraaf%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.landgraaf.nl/form/woo-verzoek/algemeen-8-1
+organogram_url: https://cuatro.sim-cdn.nl/landgraaf/uploads/organogram-gemeente-landgraaf-2024-t.pdf?cb=0WvoiaX_
+afspraak:
+  url: https://www.landgraaf.nl/afspraak-maken
+geography:
+  oppervlakte: 24,68
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 24.68
+  aantal_inwoners: 36844
+  inwoners: '1492'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1492.0
+  bevat_plaatsen_raw: Landgraaf
+  bevat_plaatsen:
+  - Landgraaf
+council:
+  total_seats: 25
+  parties:
+  - naam: GBBL
+    aantal_zetels: 9
+  - naam: OPL/EENLandgraaf
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PVV
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.landgraaf.nl
   email: gemeente@landgraaf.nl
+  bezoekadres: Sweelinckplein 1, 6371 LB LANDGRAAF
+  postadres: Postbus 31000, 6370 AA LANDGRAAF
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sweelinckplein
+    huisnummer: '1'
+    postcode: 6371 LB
+    woonplaats: LANDGRAAF
+  - type: Postadres
+    postbus: '31000'
+    postcode: 6370 AA
+    woonplaats: LANDGRAAF
+  - type: Woo-Adres
+    postbus: '31000'
+    postcode: 6370 AA
+    woonplaats: Landgraaf
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv31
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Sweelinckplein
+    huisnummer: '1'
+    postcode: 6371 LB
+    woonplaats: LANDGRAAF
+  phones:
+  - nummer: 14 045
+    label: algemeen
+  emails:
+  - email: gemeente@landgraaf.nl
+    label: algemeen
+  - email: gemeente@landgraaf.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.landgraaf.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34171/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34171/landgraaf
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +138,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9795
   retrieved: '2026-05-09'
+roo_start_datum: '1982-01-01'

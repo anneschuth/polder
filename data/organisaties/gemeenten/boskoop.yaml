@@ -3,6 +3,7 @@ type: gemeente
 identifiers:
   roo_id: '36015'
   wikidata: Q106322830
+  owms: http://standaarden.overheid.nl/owms/terms/Boskoop_(gemeente)
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +11,65 @@ names:
   abbr: Boskoop
   valid_from: '1900-01-01'
   valid_until: '2014-01-01'
+geography:
+  oppervlakte: 16,96
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 16.96
+  aantal_inwoners: 15223
+  inwoners: '897'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 897.0
+  bevat_plaatsen_raw: Boskoop
+  bevat_plaatsen:
+  - Boskoop
+council:
+  total_seats: 17
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: http://www.Boskoop.nl
   email: Info@boskoop.nl
+  bezoekadres: Raadhuisplein 1, 2771 EK BOSKOOP
+  postadres: Postbus 5, 2770 AA BOSKOOP
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2771 EK
+    woonplaats: BOSKOOP
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '5'
+    postcode: 2770 AA
+    woonplaats: BOSKOOP
+  phones:
+  - nummer: (0172) 21 95 00
+    label: algemeen
+  emails:
+  - email: Info@boskoop.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.Boskoop.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36015/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36015/boskoop
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q106322830
   retrieved: '2026-05-09'

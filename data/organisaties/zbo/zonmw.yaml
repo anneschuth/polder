@@ -3,21 +3,137 @@ type: zbo
 identifiers:
   roo_id: '28212246'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000112
+  owms: http://standaarden.overheid.nl/owms/terms/Zorg_Onderzoek_Nederland_Medische_Wetenschappen
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: ZorgOnderzoek Nederland / Medische Wetenschappen
   abbr: ZonMw
   valid_from: '1900-01-01'
+description:
+  text: Met allerlei subsidieprogramma’s stimuleren en financieren wij kennisontwikkeling
+    op het gebied van  gezondheid, zorg en welzijn. Daarnaast stimuleren we het gebruik
+    van de ontwikkelde kennis en signaleren waar kennis nodig is. Zo blijven we inspelen
+    op de veranderende wereld om ons heen.We vergroten relevantie, kwaliteit en impact
+    van kennis en innovaties en versnellen de praktijktoepassingen om zo bij te dragen
+    een goede gezondheid voor iedereen.  Daarbij ondersteunen we als organisatie de
+    gehele kennisketen; van fundamenteel onderzoek, tot praktijkgericht- en actieonderzoek
+    tot implementatieprojecten.Binnen de organisatie staan maatschappelijk relevante
+    thema’s centraal. Deze thema’s worden – in de vorm van programma’s – binnen  verschillende
+    clusters uitgevoerd. Elk cluster heeft zijn eigen team met leidinggevende. De
+    stafafdelingen Beleid, Advies en Strategie (BAS) en Bedrijfsvoering ondersteunen
+    de organisatie. De organisatie als geheel staat onder leiding van algemeen directeur
+    Véronique Timmerhuis. Zij werkt daarin samen met het managementteam dat bestaat
+    uit twee directeuren programma’s, die de inhoudelijke clusters aansturen, en de
+    afdelingshoofden BAS en Bedrijfsvoering. Het ZonMw-bestuur is het hoogste bestuursorgaan
+    van ZonMw.
+  url: https://www.zonmw.nl/nl/over-zonmw/organisatie
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de organisatie ZorgOnderzoek Nederland
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20de%20organisatie%20ZorgOnderzoek%20Nederland/article=2
+taken_en_bevoegdheden: ZonMw is een intermediaire organisatie die op programmatische
+  wijze projecten, experimenten, onderzoek en ontwikkeling op het gebied van gezondheid,
+  preventie en zorg laat uitvoeren. ZonMW bewaakt daarbij de kwaliteit, relevantie
+  en samenhang. De activiteiteiten zijn gericht op het gehele continuüm van fundamenteel
+  medisch onderzoek tot en met toepassing en implementatie van onderzoeksprojecten.
+  De belangrijkste opdrachtgevers zijn het ministerie van Volksgezondheid, Welzijn
+  en Sport (VWS) en de Nederlandse Organisatie voor Wetenschappelijk Onderzoek (NWO).
+evaluations:
+- datum: '2017-06-12'
+  kamerstuknummer: TK 30850 nr. 44
+  referentie: https://zoek.officielebekendmakingen.nl/kst-30850-44.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zonmw.nl/nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28212246/ZorgOnderzoek_Nederland__Medische_Wetenschappen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://projecten.zonmw.nl/nl
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.zonmw.nl/nl/over-zonmw/beleid-en-verantwoording
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.zonmw.nl/nl/wet-open-overheid
+  wooVerzoek:
+    url: https://www.zonmw.nl/nl/wet-open-overheid
+organogram_url: https://www.zonmw.nl/nl/over-zonmw/organisatie
+afspraak:
+  email: info@zonmw.nl
+  telefoonnummer: (070) 349 51 11
+  url: https://www.zonmw.nl/nl/contact
+personnel:
+  aantalFte: 327,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.zonmw.nl/
   email: info@zonmw.nl
+  bezoekadres: Laan van Nieuw Oost-Indië 334, 2593 CE Den Haag
+  postadres: Postbus 93245, 2509 AE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Laan van Nieuw Oost-Indië
+    huisnummer: '334'
+    postcode: 2593 CE
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93245'
+    postcode: 2509 AE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Laan van Nieuw Oost-Indië
+    huisnummer: '334'
+    postcode: 2593 CE
+    woonplaats: De Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 349 51 11
+    label: algemeen
+  emails:
+  - email: info@zonmw.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zonmw.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212246/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212246/zonmw
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +142,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000112
   retrieved: '2026-05-09'
+roo_start_datum: '2001-01-01'

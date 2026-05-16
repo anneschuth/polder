@@ -3,17 +3,88 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27706657'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0815
+  owms: http://standaarden.overheid.nl/owms/terms/Aqualysis
+  kvk: '59117702'
+  organisatiecode: so0815
+  rsin: '853325303'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Aqualysis
+  roo_id: '29943170'
 names:
 - value: Aqualysis
   valid_from: '1900-01-01'
+description:
+  text: Wij zijn een geaccrediteerd (RvA L230), onafhankelijk en onpartijdig laboratorium.
+    Met een team van enthousiaste en deskundige collega’s voeren wij hydrobiologisch,
+    bacteriologisch en chemisch onderzoek uit en verrichten we diverse soorten veldwerkzaamheden
+    en monsternemingen.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.aqualysis.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27706657/Aqualysis
+  wooVerzoek:
+    url: https://www.aqualysis.nl/wet-open-overheid
+organogram_url: https://www.aqualysis.nl/de-afdelingen-binnen-aqualysis
+afspraak:
+  email: info@aqualysis.nl
+  telefoonnummer: (038) 425 96 00
 contact:
   website: https://www.aqualysis.nl
   email: info@aqualysis.nl
+  bezoekadres: Loggerweg 6, 8042 PG Zwolle
+  postadres: Postbus 12, 8000 AA Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Loggerweg
+    huisnummer: '6'
+    postcode: 8042 PG
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Postadres
+    postbus: '12'
+    postcode: 8000 AA
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '12'
+    postcode: 8000 AA
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  phones:
+  - nummer: (038) 425 96 00
+    label: algemeen
+  emails:
+  - email: info@aqualysis.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.aqualysis.nl
+    label: algemeen
+  - url: https://www.aqualysis.nl/algemeen/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-11'
+last_verified: '2024-11-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27706657/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27706657/aqualysis
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-01'

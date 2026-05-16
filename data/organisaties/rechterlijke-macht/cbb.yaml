@@ -4,21 +4,78 @@ identifiers:
   oin: 00000004000000049000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10035
   roo_id: '58623'
+  owms: http://standaarden.overheid.nl/owms/terms/College_van_Beroep_voor_het_bedrijfsleven
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: College van Beroep voor het bedrijfsleven
   abbr: CBb
   valid_from: '1900-01-01'
+description:
+  text: Het College van Beroep voor het bedrijfsleven (CBb) is één van de vier hoogste
+    bestuursrechters die Nederland kent. De andere drie zijn de Hoge Raad, de Afdeling
+    bestuursrechtspraak van de Raad van State en de Centrale Raad van Beroep.Het CBb
+    is de hoogste rechter op het gebied van het economisch bestuursrecht. Het CBb
+    is zowel rechter in eerste en enige aanleg, als rechter in hoger beroep. In eerste
+    en enige aanleg oordeelt het CBb over onder andere landbouwsubsidies, tarieven
+    voor gezondheidszorg en telecomtarieven.In hoger beroep oordeelt het CBb over
+    onder andere mestboetes en boetes voor verboden prijsafspraken. Ook treedt het
+    CBb in hoger beroep op als tuchtrechter voor (register)accountants.Het College
+    van Beroep voor het bedrijfsleven telt ongeveer 85 personeelsleden, waaronder
+    raadsheren (rechters), juristen (gerechtsauditeurs en juridische adviseurs) en
+    een administratieve ondersteuning. De raadsheren en de juristen werken in twee
+    werkverbanden.De administratieve ondersteuning (bedrijfsbureau, bureau bestuursondersteuning,
+    administratie) verleent ondersteuning aan het bestuur en de organisatie op het
+    gebied van de financiën, personeel, facilitair, documentatie, communicatie en
+    ten aanzien van het primaire proces.Het College van Beroep voor het bedrijfsleven
+    wordt geleid door een bestuur, bestaande uit de president, een rechterlijk lid
+    en een niet-rechterlijk lid.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/College-van-Beroep-voor-het-bedrijfsleven
   email: mediation.cbb@rechtspraak.nl
+  bezoekadres: Prins Clauslaan 14, 2595 AJ ’s-Gravenhage
+  postadres: Postbus 20021, 2500 EA ’s-Gravenhage
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Clauslaan
+    huisnummer: '14'
+    postcode: 2595 AJ
+    woonplaats: ’s-Gravenhage
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20021'
+    postcode: 2500 EA
+    woonplaats: ’s-Gravenhage
+  phones:
+  - nummer: (088) 362 39 10
+    label: algemeen
+  - nummer: (088) 361 20 12
+    label: informatiebalie
+  - nummer: (088) 362 55 42
+    label: mediationbureau
+  emails:
+  - email: mediation.cbb@rechtspraak.nl
+    label: mediationbureau
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/College-van-Beroep-voor-het-bedrijfsleven
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Paginas/Mailen-met-de-rechtspraak.aspx
+    label: mailen
+  fax: (088) 361 00 56
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2019-12-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58623/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58623/cbb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

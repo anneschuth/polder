@@ -6,21 +6,150 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0848
   roo_id: '31060'
   wikidata: Q9869
+  owms: http://standaarden.overheid.nl/owms/terms/Son_en_Breugel_(gemeente)
+  ictu: 00848
+  organisatiecode: gm0848
+  rsin: 001902921
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SBR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Son en Breugel
   abbr: Son en Breugel
   valid_from: '1900-01-01'
+description:
+  text: Son en Breugel is een groene, Brabantse gemeente met ruim 18.000 inwoners
+    waar het goed wonen, werken en verblijven is. De ligging van bedrijvenpark Ekkersrijt
+    binnen de gemeentegrenzen, zorgt ook voor stedelijke bedrijvigheid. Samen met
+    ongeveer 80 collega's werken we samen met bewoners, bedrijven en maatschappelijke
+    partners aan onze lokale en regionale opgaven op het gebied van ruimtelijke ontwikkeling,
+    economie, duurzaamheid, wonen, milieu, welzijn, veiligheid en mobiliteit.
+  url: https://www.sonenbreugel.nl/over-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.sonenbreugel.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/31060/Gemeente_Son_en_Breugel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://open.sonenbreugel.nl/convenanten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.sonenbreugel.nl/besluitenlijst-van-college-van-burgemeester-en-wethouders
+      toelichting: Besluitenlijsten college van burgemeester en wethouders
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.sonenbreugel.nl/woo-verzoeken
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://sonenbreugel.notubiz.nl/dashboard
+      toelichting: Raadsinformatiesysteem
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Son+en+Breugel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Son+en+Breugel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://son-en-breugel.begrotingsapp.nl/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Son+en+Breugel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://open.sonenbreugel.nl/verzoek-indienen
+afspraak:
+  url: https://sonenbreugel.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 26,49
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 26.49
+  aantal_inwoners: 18140
+  inwoners: '684'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 684.0
+  bevat_plaatsen_raw: Son en Breugel
+  bevat_plaatsen:
+  - Son en Breugel
+council:
+  total_seats: 17
+  parties:
+  - naam: Dorpsvisie
+    aantal_zetels: 5
+  - naam: VVD VOOR U!
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: VVD VOOR U!
+    aantal_zetels: 1
 contact:
   website: https://www.sonenbreugel.nl
   email: gemeente@sonenbreugel.nl
+  bezoekadres: Raadhuisplein 1, 5691 AL SON EN BREUGEL
+  postadres: Postbus 8, 5690 AA SON EN BREUGEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 5691 AL
+    woonplaats: SON EN BREUGEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '8'
+    postcode: 5690 AA
+    woonplaats: SON EN BREUGEL
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postbus: '8'
+    postcode: 5691 AL
+    woonplaats: Son en Breugel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 5691 AL
+    woonplaats: SON EN BREUGEL
+  phones:
+  - nummer: (0499) 49 14 91
+    label: algemeen
+  emails:
+  - email: gemeente@sonenbreugel.nl
+    label: algemeen
+  - email: gemeente@sonenbreugel.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.sonenbreugel.nl
+    label: algemeen
+  contact_forms:
+  - url: https://eloket.sonenbreugel.nl/f/2688/login
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31060/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31060/gemeente-son-en-breugel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,20 +3,76 @@ type: zbo
 identifiers:
   roo_id: '28359419'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000331
+  kvk: '50514776'
+  rsin: '822779675'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Regionale Loodsencorporatie Scheldemonden
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Loodsenwet, artikel 10
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0004365&artikel=I&hoofdstuk=III&paragraaf=2&artikel=10
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Stichting Beroepspensioenfonds Loodsen (BPLoodsen)
+    referentie: https://www.bploodsen.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://scheldemonden.loodswezen.nl/
   email: scheldemonden@loodswezen.nl
+  bezoekadres: Boulevard De Ruyter 8, 4381 KA Vlissingen
+  postadres: Boulevard de Ruijter 8, 4381 KA Vlissingen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Boulevard De Ruyter
+    huisnummer: '8'
+    postcode: 4381 KA
+    woonplaats: Vlissingen
+  - type: Postadres
+    openbare_ruimte: Boulevard de Ruijter
+    huisnummer: '8'
+    postcode: 4381 KA
+    woonplaats: Vlissingen
+  phones:
+  - nummer: (0118) 48 95 00
+    label: algemeen
+  emails:
+  - email: scheldemonden@loodswezen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://scheldemonden.loodswezen.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-05'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28359419/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28359419/regionale-loodsencorporatie-scheldemonden
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000331
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

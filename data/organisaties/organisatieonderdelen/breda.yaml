@@ -10,12 +10,23 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Breda
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Stationslaan 2, 4815 GW Breda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationslaan
+    huisnummer: '2'
+    postcode: 4815 GW
+    woonplaats: Breda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132280/breda
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'

@@ -4,14 +4,36 @@ identifiers:
   roo_id: '30491021'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Adviescommissie Lijst beroepsziekten
   valid_from: '1900-01-01'
+description:
+  text: De Adviescommissie Lijst beroepsziekten heeft als voornaamste taak het adviseren
+    van de minister van Sociale Zaken en Werkgelegenheid (SZW) over het aanpassen
+    of uitbreiden van de Lijst beroepsziekten veroorzaakt door gevaarlijke stoffen.
+    Deze [lijst](https://wetten.overheid.nl/BWBR0047535/2026-01-01/0#Bijlage) hoort
+    bij de Regeling tegemoetkoming stoffengerelateerde beroepsziekten (Regeling TSB)
+    en biedt een overzicht van ziekten die veroorzaakt kunnen zijn door werkgerelateerde
+    blootstelling aan bepaalde stoffen (bijvoorbeeld longkanker als gevolg van asbest).
+    Daarnaast is de commissie ook verantwoordelijk voor het opstellen en onderhouden
+    van een afwegingskader causaliteit en bijbehorende protocollen beroepsziekten.
+  url: https://www.lexces.nl/nl/regeling_tsb/adviescommisie_lijst_beroepsziekten
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Adviescommissie Lijst beroepsziekten, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0047526/2022-11-30/0#Artikel2
 contact:
   website: https://www.lexces.nl/nl/regeling_tsb/adviescommisie_lijst_beroepsziekten
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-12'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30491021/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30491021/adviescommissie-lijst-beroepsziekten
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-11-29'

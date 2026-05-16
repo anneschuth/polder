@@ -4,16 +4,97 @@ identifiers:
   roo_id: '7799'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10212
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Onderwijsraad
   valid_from: '1900-01-01'
+description:
+  text: 'Goed onderwijs voor iedereen: daar draagt de Onderwijsraad aan bij. De raad
+    geeft al meer dan honderd jaar onafhankelijk advies over onderwijsbeleid en -wetgeving
+    aan de regering en de Eerste en Tweede Kamer. Gevraagd én uit eigen beweging.
+    Dit mondt uit in gefundeerde verkenningen en adviezen die focussen op oplossingen
+    voor de langere termijn. Ze gaan over alle vormen van onderwijs: van voorschoolse
+    voorzieningen tot aan postuniversitair onderwijs en een leven lang ontwikkelen.De
+    raad is onafhankelijk, met oog en oor voor opvattingen en ontwikkelingen in de
+    samenleving en het onderwijs. De adviezen zijn gebaseerd op wetenschappelijke
+    kennis en inzichten. En ze worden gevoed door kennis en ervaring uit de onderwijspraktijk
+    en de praktijk van onderwijswetgeving en -beleid. De JongerenOnderwijsraad, met
+    leerlingen en studenten van diverse leeftijden en schooltypen, voedt de raad met
+    ervaringen en ideeën over het Nederlandse onderwijs en denkt mee over onderwerpen.'
+  url: https://www.onderwijsraad.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '19'
+      toelichting: De Onderwijsraad kent ten hoogste negentien leden.
+wettelijke_grondslagen:
+- opschrift: Wet op de Onderwijsraad, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0008683/2020-04-01#HoofdstukI_Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.onderwijsraad.nl/service/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/7799/Onderwijsraad
+afspraak:
+  email: secretariaat@onderwijsraad.nl
 contact:
   website: https://www.onderwijsraad.nl
   email: secretariaat@onderwijsraad.nl
+  bezoekadres: Prins Willem-Alexanderhof 20, 2595 BE Den Haag
+  postadres: Postbus 90520, 2509 LM Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90520'
+    postcode: 2509 LM
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '90520'
+    postcode: 2509 LM
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 310 00 00
+    label: algemeen
+  emails:
+  - email: secretariaat@onderwijsraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.onderwijsraad.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/7799/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/7799/onderwijsraad
+  retrieved: '2026-05-16'
+roo_start_datum: '1919-02-21'

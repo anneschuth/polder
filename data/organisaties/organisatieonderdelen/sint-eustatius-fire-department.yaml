@@ -7,9 +7,27 @@ parent_id: org:onderdeel-brandweerkorps-caribisch-nederland
 names:
 - value: Sint Eustatius Fire Department
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Franklin D. Roosevelt Airport, Concordia, 0099 AA Oranjestad A-456,
+    Sint-Eustatius
+  postadres: Franklin D. Roosevelt Airport, Concordia, 0099 AA Oranjestad A-456, Sint-Eustatius
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Franklin D. Roosevelt Airport, Concordia
+    postcode: 0099 AA
+    woonplaats: Oranjestad A-456, Sint-Eustatius
+  - type: Postadres
+    openbare_ruimte: Franklin D. Roosevelt Airport, Concordia
+    postcode: 0099 AA
+    woonplaats: Oranjestad A-456, Sint-Eustatius
+  phones:
+  - nummer: 005993182715
+    label: algemeen
+  - nummer: 005993182360
+  fax: 005993182817
 valid_from: '1900-01-01'
 valid_until: null
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111923/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111923/sint-eustatius-fire-department
+  retrieved: '2026-05-16'

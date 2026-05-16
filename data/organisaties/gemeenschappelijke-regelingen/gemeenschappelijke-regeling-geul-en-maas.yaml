@@ -3,17 +3,69 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28851151'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1084
+  owms: http://standaarden.overheid.nl/owms/terms/grgm
+  organisatiecode: so1084
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Geul en Maas
+  roo_id: '29516267'
 names:
 - value: Gemeenschappelijke regeling Geul en Maas
   valid_from: '1900-01-01'
+description:
+  text: Het gemeenschappelijk orgaan heeft tot doel het realiseren van een effectieve,
+    efficiënte, kwalitatief hoogwaardige en duurzame beleidsondersteuning en uitvoering
+    van het afval- en grondstoffenbeheer.Het gemeenschappelijk orgaan draagt daarmee
+    bij aan de beleidsdoelstellingen van de deelnemende gemeenten, zoals bescherming
+    van het milieu en duurzaamheid, het bieden van regionale werkgelegenheid, het
+    leveren van goede service en betaalbaarheid van de diensten.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28851151/Gemeenschappelijke_regeling_Geul_en_Maas
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+regeling+Geul+en+Maas%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://besteuitafval.nl/
   email: info@valkenburg.nl
+  bezoekadres: Geneindestraat 4, 6301 HC Valkenburg
+  postadres: Postbus 998, Valkenburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Geneindestraat
+    huisnummer: '4'
+    postcode: 6301 HC
+    woonplaats: Valkenburg
+  - type: Postadres
+    postbus: '998'
+    woonplaats: Valkenburg
+  phones:
+  - nummer: 14 043
+    label: algemeen
+  emails:
+  - email: info@valkenburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://besteuitafval.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.valkenburg.nl/bestuur-en-organisatie/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28851151/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28851151/gemeenschappelijke-regeling-geul-en-maas
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-01-01'

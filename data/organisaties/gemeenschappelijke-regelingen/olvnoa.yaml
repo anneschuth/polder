@@ -3,18 +3,56 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28534808'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1080
+  owms: http://standaarden.overheid.nl/owms/terms/olvnoa
+  kvk: '52875563'
+  organisatiecode: so1080
+  rsin: '003452104'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Openbaar Lichaam Vuilverwerking Noord Oost Achterhoek
+  roo_id: '28534802'
 names:
 - value: Openbaar Lichaam Vuilverwerking Noord Oost Achterhoek
   abbr: OLVNOA
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.gemeenteberkelland.nl
   email: info@gemeenteberkelland
+  bezoekadres: Marktstraat 1, 7271 AX Borculo
+  postadres: Postbus 200, 7270 HA Borculo
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Berkelland
+    openbare_ruimte: Marktstraat
+    huisnummer: '1'
+    postcode: 7271 AX
+    woonplaats: Borculo
+  - type: Postadres
+    postbus: '200'
+    postcode: 7270 HA
+    woonplaats: Borculo
+  phones:
+  - nummer: (0545) 25 02 50
+    label: gemeente Berkellan
+  emails:
+  - email: info@gemeenteberkelland
+    label: gemeente Berkelland
+  internet_addresses:
+  - url: https://www.gemeenteberkelland.nl
+    label: gemeente Berkelland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2022-01-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28534808/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28534808/olvnoa
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-04-03'

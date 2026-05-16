@@ -6,21 +6,145 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0399
   roo_id: '27630'
   wikidata: Q9932
+  owms: http://standaarden.overheid.nl/owms/terms/Heiloo_(gemeente)
+  ictu: 00399
+  organisatiecode: gm0399
+  rsin: '001722244'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HLO
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Heiloo
   abbr: Heiloo
   valid_from: '1900-01-01'
+description:
+  text: De gemeenteraad is het hoogste bestuursorgaan. De gemeenteraad bepaalt de
+    hoofdlijnen van het beleid en controleert of het beleid goed wordt uitgevoerd.
+    Eens in de 4 jaar kiezen de inwoners de raadsleden. De raadsleden zijn dus uw
+    volksvertegenwoordigers.De gemeenteraad bestaat uit 19 leden. De burgemeester
+    is de voorzitter en de griffier ondersteunt en adviseert de gemeenteraad.
+  url: https://www.heiloo.nl/raad-en-college
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.heiloo.nl/aanvragen-en-regelen/verzoek-om-informatie/
+      overzichtURL: https://organisaties.overheid.nl/woo/27630/Gemeente_Heiloo
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heiloo%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heiloo%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heiloo%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://heiloo.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://heiloo.bestuurlijkeinformatie.nl/
+  wooVerzoek:
+    url: https://www.burgerberichten.nl/buch/formulieren/aa8c1324-7ca8-41b0-bd8e-e5dd513bb5f3/Indienen-Woo-verzoek/introduction
+organogram_url: https://www.heiloo.nl/raad-en-college
+afspraak:
+  email: info@heiloo.nl
+  telefoonnummer: (072) 535 66 66
+  url: https://www.heiloo.nl/aanvragen-en-regelen
+geography:
+  oppervlakte: 19,01
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 19.01
+  aantal_inwoners: 24613
+  inwoners: '1294'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1294.0
+  bevat_plaatsen_raw: Heiloo
+  bevat_plaatsen:
+  - Heiloo
+council:
+  total_seats: 19
+  parties:
+  - naam: Heiloo-2000
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Gemeentebelangen Heiloo
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
 contact:
   website: https://www.heiloo.nl
   email: info@heiloo.nl
+  bezoekadres: Westerweg 252, 1852 AR HEILOO
+  postadres: Westerweg 252, 1852 AR HEILOO
+  addresses:
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '1'
+    postcode: 1850 AA
+    woonplaats: Heiloo
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Westerweg
+    huisnummer: '252'
+    postcode: 1852 AR
+    woonplaats: HEILOO
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Westerweg
+    huisnummer: '252'
+    postcode: 1852 AR
+    woonplaats: HEILOO
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Westerweg
+    huisnummer: '252'
+    postcode: 1852 AR
+    woonplaats: Heiloo
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (072) 535 66 66
+    label: algemeen
+  emails:
+  - email: info@heiloo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.heiloo.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27630/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27630/heiloo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

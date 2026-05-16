@@ -2,15 +2,43 @@ id: org:oovb-stichting-parkeerbeheer-arnhem
 type: rwt
 identifiers:
   roo_id: '27915237'
+  kvk: 09176437
+  rsin: '818703404'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Parkeerbeheer Arnhem
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Langstraat 10, 6811 JA Arnhem
+  postadres: Postbus 60181, 6800 JD Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Langstraat 10
+    postcode: 6811 JA
+    woonplaats: Arnhem
+  - type: Postadres
+    postbus: '60181'
+    postcode: 6800 JD
+    woonplaats: Arnhem
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-28'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915237/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915237/stichting-parkeerbeheer-arnhem
+  retrieved: '2026-05-16'

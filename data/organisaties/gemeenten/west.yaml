@@ -2,6 +2,7 @@ id: org:gemeente-west
 type: gemeente
 identifiers:
   roo_id: '39885'
+  owms: http://standaarden.overheid.nl/owms/terms/Amsterdam_-_Bos_en_Lommer
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +10,48 @@ names:
   abbr: West
   valid_from: '1900-01-01'
   valid_until: '2014-03-19'
+geography:
+  oppervlakte: 2,71
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 2.71
+  aantal_inwoners: 130000
+  inwoners: '47970'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 47970.0
+council:
+  parties:
+  - naam: (onbekend)
+    aantal_zetels: 0
 contact:
   website: http://www.west.amsterdam.nl
   email: info@west.amsterdam.nl
+  bezoekadres: Bos en Lommerplein 250, 1055 EK AMSTERDAM
+  postadres: Postbus 57239, 1040 BC AMSTERDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bos en Lommerplein
+    huisnummer: '250'
+    postcode: 1055 EK
+    woonplaats: AMSTERDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '57239'
+    postcode: 1040 BC
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: 14 020
+    label: algemeen
+  emails:
+  - email: info@west.amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.west.amsterdam.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-03-19'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39885/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39885/west
+  retrieved: '2026-05-16'

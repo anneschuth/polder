@@ -2,17 +2,43 @@ id: org:gr-sww-gemeenten
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967994'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0870
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie SWW-gemeenten
+  roo_id: '24967989'
 names:
 - value: SWW-gemeenten
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
 contact:
   email: info@weesp.nl
+  bezoekadres: Nieuwstraat 70a, 1381 BD Weesp
+  postadres: Postbus 5099, 1380 GB Weesp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwstraat
+    huisnummer: 70a
+    postcode: 1381 BD
+    woonplaats: Weesp
+  - type: Postadres
+    postbus: '5099'
+    postcode: 1380 GB
+    woonplaats: Weesp
+  phones:
+  - nummer: (0294) 49 13 91
+    label: algemeen
+  emails:
+  - email: info@weesp.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2021-03-15'
+last_verified: '2021-03-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967994/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967994/sww-gemeenten
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-01-01'

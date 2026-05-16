@@ -2,14 +2,33 @@ id: org:stichting-prenatale-screening-noord-holland
 type: rwt
 identifiers:
   roo_id: '30133959'
+  kvk: '88808300'
+  rsin: '864785823'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Prenatale Screening Noord-Holland
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    toelichting: Unit 5.02
+    openbare_ruimte: Paasheuvelweg
+    huisnummer: '25'
+    postcode: 1105 BP
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133959/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133959/stichting-prenatale-screening-noord-holland
+  retrieved: '2026-05-16'

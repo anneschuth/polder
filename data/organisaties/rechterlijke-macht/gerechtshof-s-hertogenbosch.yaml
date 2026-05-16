@@ -1,23 +1,69 @@
 id: org:rechtbank-gerechtshof-s-hertogenbosch
 type: rechterlijke-instantie
+subtype: Gerechtshof
 identifiers:
   oin: '00000004000000036000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10017
   roo_id: '28039500'
+  owms: http://standaarden.overheid.nl/owms/terms/Gerechtshof_'s-Hertogenbosch
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Gerechtshof 's-Hertogenbosch
   valid_from: '1900-01-01'
+description:
+  text: Het gerechtshof ’s-Hertogenbosch behandelt zaken in hoger beroep van de rechtbanken
+    Limburg, Oost-Brabant en Zeeland-West-Brabant, behalve socialezekerheids- en ambtenarenzaken
+    (Centrale Raad van Beroep) en overige zaken op het gebied van bestuursrecht (Raad
+    van State). Het hof is samen met rechtbank Oost-Brabant gevestigd in het Paleis
+    van Justitie in ’s-Hertogenbosch.Het gerechtshof ’s-Hertogenbosch bestaat uit
+    de teams belastingrecht, handelsrecht, familie- en jeugdrecht, strafrecht en bedrijfsvoering
+    en bestuursondersteuning (BBO). Het team BBO ondersteunt het bestuur en de organisatie
+    op het gebied van Personeel & Organisatie, Communicatie & Voorlichting en Planning
+    & Control. Daarnaast behandelt het hof beklagzaken (ex. artikel 12 Sv). Het hof
+    wordt geleid door een gerechtsbestuur.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-s-Hertogenbosch
   email: info.gerechtshofshertogenbosch@rechtspraak.nl
+  bezoekadres: Leeghwaterlaan 8, 5223 BA ’s-Hertogenbosch
+  postadres: Postbus 70583, 5201 CZ 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie
+    openbare_ruimte: Leeghwaterlaan
+    huisnummer: '8'
+    postcode: 5223 BA
+    woonplaats: ’s-Hertogenbosch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '70583'
+    postcode: 5201 CZ
+    woonplaats: '''s-Hertogenbosch'
+  phones:
+  - nummer: (088) 362 20 00
+    label: algemeen
+  emails:
+  - email: info.gerechtshofshertogenbosch@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-s-Hertogenbosch
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Paginas/Mailen-met-de-rechtspraak.aspx
+    label: mailen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28039500/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28039500/gerechtshof-s-hertogenbosch
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

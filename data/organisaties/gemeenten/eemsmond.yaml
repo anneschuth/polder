@@ -5,6 +5,9 @@ identifiers:
   kvk: '01176410'
   roo_id: '28693'
   wikidata: Q255972
+  owms: http://standaarden.overheid.nl/owms/terms/Eemsmond
+  ictu: '01651'
+  organisatiecode: gm1651
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,91 @@ names:
   abbr: Eemsmond
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 551,24
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 551.24
+  aantal_inwoners: 16232
+  inwoners: '29'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 29.0
+  bevat_plaatsen_raw: Eemshaven, Eppenhuizen, Kantens, Oldenzijl, Oosternieland, Oudeschip,
+    Roodeschool, Rottum GN, Startenhuizen, Stitswerd, Uithuizen, Uithuizermeeden,
+    Usquert, Warffum, Zandeweer
+  bevat_plaatsen:
+  - Eemshaven
+  - Eppenhuizen
+  - Kantens
+  - Oldenzijl
+  - Oosternieland
+  - Oudeschip
+  - Roodeschool
+  - Rottum GN
+  - Startenhuizen
+  - Stitswerd
+  - Uithuizen
+  - Uithuizermeeden
+  - Usquert
+  - Warffum
+  - Zandeweer
+council:
+  total_seats: 17
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.eemsmond.nl
   email: algemeen@eemsmond.nl
+  bezoekadres: Hoofdstraat-West 1, 9981 AA UITHUIZEN
+  postadres: Postbus 11, 9980 AA UITHUIZEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat-West
+    huisnummer: '1'
+    postcode: 9981 AA
+    woonplaats: UITHUIZEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 11
+    postbus: '11'
+    postcode: 9980 AA
+    woonplaats: UITHUIZEN
+  phones:
+  - nummer: (0595) 43 75 55
+    label: algemeen
+  emails:
+  - email: algemeen@eemsmond.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.eemsmond.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28693/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28693/eemsmond
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

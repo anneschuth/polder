@@ -5,19 +5,86 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100013
   oin: 00000003091675320000
   kvk: 09167532
+  owms: http://standaarden.overheid.nl/owms/terms/vgzzk
+  rsin: '817532948'
 classification: zbo
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: VGZ Zorgkantoor B.V.
   valid_from: '1900-01-01'
+description:
+  text: VGZ Zorgkantoor B.V. is een uitvoerder van de Wet langdurige zorg (Wlz), zoals
+    bedoeld in artikel 4.1.1 van die wet. Tevens heeft deze Wlz-uitvoerder een zorgkantoorfunctie.
+  url: https://www.vgz-zorgkantoren.nl/consumenten/langdurige-zorg/wat-doet-het-zorgkantoor
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet langdurige zorg, artikel 4.1.1
+  referentie: https://wetten.overheid.nl/BWBR0035917/2025-01-01#Hoofdstuk4_Paragraaf1_Artikel4.1.1
+taken_en_bevoegdheden: VGZ Zorgkantoor B.V. is verantwoordelijk voor het uitvoeren
+  van de taken zoals beschreven in paragraaf 2 van hoofdstuk 4 (artikelen 4.2.1 tot
+  en met 4.2.6) van de Wet langdurige zorg (Wlz). Als zorgkantoor heeft VGZ Zorgkantoor
+  B.V. tevens een zorgplicht richting alle verzekerden die wonen in de regio waarvoor
+  VGZ Zorgkantoor B.V. als zorgkantoor is aangewezen. Deze zorgplicht omvat onder
+  meer het verstrekken van een persoonsgebonden budget (pgb) en het verzorgen van
+  de administratie of controle van de zorg die aan verzekerden in de betreffende regio
+  wordt verleend. De mate van die administratie of controle wordt bepaald aan de hand
+  van een Algemene Maatregel van Bestuur.
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30150429/VGZ_Zorgkantoor_BV
 contact:
   website: https://www.vgz-zorgkantoren.nl/consumenten
+  bezoekadres: Nieuwe Stationsstraat 12, 6811 KS Arnhem
+  postadres: Postbus 5040, 6802 EA Arnhem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Algemeen vestigingsadres
+    openbare_ruimte: Nieuwe Stationsstraat
+    huisnummer: '12'
+    postcode: 6811 KS
+    woonplaats: Arnhem
+  - type: Postadres
+    toelichting: Algemeen vestigingsadres
+    postbus: '5040'
+    postcode: 6802 EA
+    woonplaats: Arnhem
+  - type: Woo-Adres
+    postbus: '5040'
+    postcode: 6802 EA
+    woonplaats: Arnhem
+  phones:
+  - nummer: (088) 131 16 60
+    label: afdeling Zorgadvies
+  - nummer: (088) 131 45 55
+    label: vragen over pgb
+  - nummer: (0900) 84 90
+    label: VGZ Zorgverzekering
+  - nummer: (088) 131 16 57
+    label: Kennisloket
+  internet_addresses:
+  - url: https://www.vgz-zorgkantoren.nl/consumenten
+    label: algemeen
+  contact_forms:
+  - url: https://www.vgz-zorgkantoren.nl/consumenten/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-17'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30150429/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30150429/vgz-zorgkantoor-bv
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -26,3 +93,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100013
   retrieved: '2026-05-09'
+roo_start_datum: '2006-12-28'

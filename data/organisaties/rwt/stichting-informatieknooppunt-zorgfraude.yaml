@@ -2,14 +2,33 @@ id: org:stichting-informatieknooppunt-zorgfraude
 type: rwt
 identifiers:
   roo_id: '30133857'
+  kvk: '95172920'
+  oin: 00000003951729200000
+  rsin: '867029201'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Informatieknooppunt zorgfraude
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Pythagoraslaan
+    huisnummer: 2-18
+    postcode: 3584 BB
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133857/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133857/stichting-informatieknooppunt-zorgfraude
+  retrieved: '2026-05-16'

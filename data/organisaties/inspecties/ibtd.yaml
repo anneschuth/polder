@@ -3,18 +3,118 @@ type: inspectie
 identifiers:
   roo_id: '29213992'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12353
+  owms: http://standaarden.overheid.nl/owms/terms/inspbeltoesdou
+  organisatiecode: oorg12353
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Inspectie belastingen, toeslagen en douane
   abbr: IBTD
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie belastingen, toeslagen en douane toetst of de overheid mensen
+    en bedrijven rechtvaardig behandelt wanneer zij te maken hebben met belastingzaken,
+    toeslagen of de douane. Dat doen wij door mogelijke structurele risico’s te onderzoeken.
+    Daarbij kijken we naar het hele proces van totstandkoming van wetten en regels
+    tot en met de uitvoering daarvan. Met onze onderzoeken en aanbevelingen werken
+    we aan een betrouwbare overheid.
+  url: https://www.inspectiebtd.nl/over-ons
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.inspectiebtd.nl/service/contact/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/29213992/Inspectie_belastingen_toeslagen_en_douane
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.inspectiebtd.nl/onderzoeken
+    - informatiecategorie: Convenanten
+      url: https://www.inspectiebtd.nl/over-ons/documenten/publicaties/2025/02/10/relatiestatuut
+      toelichting: Relatiestatuut Inspectie belastingen, toeslagen en douane en ministerie
+        van Financiën
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.inspectiebtd.nl/over-ons/onze-jaarverslagen
+  wooVerzoek:
+    url: https://www.inspectiebtd.nl/service/contact/woo-verzoek
+organogram_url: https://www.inspectiebtd.nl/over-ons/organisatiestructuur
+afspraak:
+  email: contact@inspectiebtd.nl
+  telefoonnummer: (088) 442 87 60
+  url: https://www.inspectiebtd.nl/contact
 contact:
   website: https://www.inspectiebtd.nl
   email: contact@inspectiebtd.nl
+  postadres: Rijnstraat 50 28e etage, 2515 XP Den Haag
+  bezoekadres: Rijnstraat 50 28e etage, 2515 XP Den Haag
+  addresses:
+  - type: Vestigingsadres
+    toelichting: De Hoftoren
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    huisnummer_toevoeging: 28e etage
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    huisnummer_toevoeging: 28e etage
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    huisnummer_toevoeging: 28e etage
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    huisnummer_toevoeging: 28e etage
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 442 87 60
+    label: algemeen
+  emails:
+  - email: contact@inspectiebtd.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.inspectiebtd.nl
+    label: algemeen
+  - url: https://www.inspectiebtd.nl/contact/contactformulier
+    label: contactformulier
+  contact_forms:
+  - url: https://www.inspectiebtd.nl/contact/contactformulier
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: inspectiebtd
+    url: https://nl.linkedin.com/company/inspectiebtd
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-01'
+last_verified: '2026-01-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29213992/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29213992/ibtd
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-01-01'

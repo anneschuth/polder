@@ -2,15 +2,46 @@ id: org:oovb-werkse
 type: rwt
 identifiers:
   roo_id: '28087390'
+  kvk: '27374588'
+  oin: 00000001001569417000
+  rsin: 001569417
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Werkse!
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+contact:
+  bezoekadres: Gantel 23, 2635 DP Den Hoorn
+  postadres: Postbus 500, 2600 AM Delft
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gantel
+    huisnummer: '23'
+    postcode: 2635 DP
+    woonplaats: Den Hoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '500'
+    postcode: 2600 AM
+    woonplaats: Delft
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28087390/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28087390/werkse
+  retrieved: '2026-05-16'

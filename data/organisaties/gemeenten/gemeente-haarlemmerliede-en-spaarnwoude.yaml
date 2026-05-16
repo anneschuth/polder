@@ -6,6 +6,9 @@ identifiers:
   roo_id: '22752'
   wikidata: Q9921
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0393
+  owms: http://standaarden.overheid.nl/owms/terms/Haarlemmerliede_en_Spaarnwoude
+  ictu: 00393
+  organisatiecode: gm0393
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,73 @@ names:
   abbr: Haarlemmerliede en Spaarnwoude
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 21,08
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.08
+  aantal_inwoners: 5444
+  inwoners: '258'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 258.0
+  bevat_plaatsen_raw: Haarlemmerliede, Halfweg NH, Spaarndam
+  bevat_plaatsen:
+  - Haarlemmerliede
+  - Halfweg NH
+  - Spaarndam
+council:
+  total_seats: 9
+  parties:
+  - naam: D66
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: HAP
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: www.haarlemmerliede.nl
   email: post@Haarlemmerliede.nl
+  bezoekadres: Haarlemmerstraatweg 51, 1165 MJ HALFWEG NH
+  postadres: Postbus 83, 1160 AB ZWANENBURG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Haarlemmerstraatweg
+    huisnummer: '51'
+    postcode: 1165 MJ
+    woonplaats: HALFWEG NH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Postbus 83
+    postbus: '83'
+    postcode: 1160 AB
+    woonplaats: ZWANENBURG
+  phones:
+  - nummer: (020) 407 90 00
+    label: algemeen
+  emails:
+  - email: post@Haarlemmerliede.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.haarlemmerliede.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22752/gemeente-haarlemmerliede-en-spaarnwoude
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

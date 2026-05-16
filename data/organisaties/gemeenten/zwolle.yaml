@@ -6,21 +6,166 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0193
   roo_id: '33731'
   wikidata: Q793
+  owms: http://standaarden.overheid.nl/owms/terms/Zwolle_(gemeente)
+  ictu: 00193
+  organisatiecode: gm0193
+  rsin: 001900249
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ZWO
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Zwolle
   abbr: Zwolle
   valid_from: '1900-01-01'
+description:
+  url: https://www.zwolle.nl/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zwolle.nl/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/33731/Gemeente_Zwolle
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwolle%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten. Ook gemeenten kunnen regels opstellen. Dat heet dan niet een
+        wet, maar bijvoorbeeld een algemeen verbindend voorschrift.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://zwolle.bestuurlijkeinformatie.nl/
+      toelichting: Op deze pagina vindt u informatie over de vergaderingen en besluiten
+        van het college van gemeente Zwolle
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwolle%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Beschikkingen zijn besluiten over specifieke gevallen. Als u bijvoorbeeld
+        bezwaar maakt tegen bouwplannen in uw straat, neemt het college hier een besluit
+        over. Dit heet een beschikking.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwolle%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Naast algemene verbindende voorschriften zijn er ook andere besluiten
+        van algemene strekking. Dat zijn dan bijvoorbeeld beleidsregels, waarin de
+        gemeente aangeeft hoe zij bepaald beleid uitvoert.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://zwolle.pcportal.nl/
+      toelichting: Op deze pagina vindt u alle jaarstukken van de gemeente Zwolle
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://zwolle.bestuurlijkeinformatie.nl/
+      toelichting: Op deze pagina vindt u de vergaderstukken van onze gemeenteraad.
+        Zo kunt u bijvoorbeeld een Raadsdebat terugkijken en de besproken stukken
+        inzien.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.zwolle.nl/woo-verzoeken
+      toelichting: Op deze pagina vindt u alle Woo-verzoeken en -besluiten ingedeeld
+        in jaartallen.
+  wooVerzoek:
+    url: https://www.zwolle.nl/woo-verzoeken
+organogram_url: https://www.zwolle.nl/organogram
+afspraak:
+  telefoonnummer: 14 038
+  url: https://www.zwolle.nl/afspraak-maken
+geography:
+  oppervlakte: 119,28
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 119.28
+  aantal_inwoners: 134147
+  inwoners: '1124'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1124.0
+  bevat_plaatsen_raw: Zwolle
+  bevat_plaatsen:
+  - Zwolle
+council:
+  total_seats: 39
+  parties:
+  - naam: PRO
+    aantal_zetels: 8
+  - naam: Swollwacht
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Stadspartij Zwolle
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: Volt
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.zwolle.nl
   email: postbus@zwolle.nl
+  bezoekadres: Lubeckplein 2, 8017 JZ ZWOLLE
+  postadres: Postbus 10007, 8000 GA ZWOLLE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lubeckplein
+    huisnummer: '2'
+    postcode: 8017 JZ
+    woonplaats: ZWOLLE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10007'
+    postcode: 8000 GA
+    woonplaats: ZWOLLE
+  - type: Woo-Adres
+    postbus: '10007'
+    postcode: 8000 GA
+    woonplaats: Zwolle
+    regio: Overijssel
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Lubeckplein
+    huisnummer: '2'
+    postcode: 8017 JZ
+    woonplaats: ZWOLLE
+  phones:
+  - nummer: 14 038
+    label: algemeen
+  emails:
+  - email: postbus@zwolle.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zwolle.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zwolle.nl/stuur-ons-een-bericht
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-10'
+last_verified: '2026-04-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33731/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33731/zwolle
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

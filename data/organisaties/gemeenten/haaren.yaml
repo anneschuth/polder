@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0788
   roo_id: '28763'
   wikidata: Q9840
+  owms: http://standaarden.overheid.nl/owms/terms/Haaren_(gemeente)
+  ictu: 00788
+  organisatiecode: gm0788
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,82 @@ names:
   abbr: Haaren
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 60,73
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 60.73
+  aantal_inwoners: 14103
+  inwoners: '232'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 232.0
+  bevat_plaatsen_raw: Biezenmortel, Esch, Haaren, Helvoirt
+  bevat_plaatsen:
+  - Biezenmortel
+  - Esch
+  - Haaren
+  - Helvoirt
+council:
+  total_seats: 15
+  parties:
+  - naam: Progressief 96
+    aantal_zetels: 5
+  - naam: Samenwerking '95
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.haaren.nl
   email: gemeente@haaren.nl
+  bezoekadres: Mgr Bekkersplein 2, 5076 AV HAAREN
+  postadres: Postbus 44, 5076 ZG HAAREN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mgr Bekkersplein
+    huisnummer: '2'
+    postcode: 5076 AV
+    woonplaats: HAAREN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '44'
+    postcode: 5076 ZG
+    woonplaats: HAAREN
+  phones:
+  - nummer: (0411) 62 72 82
+    label: algemeen
+  emails:
+  - email: gemeente@haaren.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.haaren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-02-03'
+last_verified: '2026-02-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28763/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28763/haaren
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

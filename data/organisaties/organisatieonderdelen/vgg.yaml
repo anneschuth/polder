@@ -2,18 +2,66 @@ id: org:onderdeel-vgg
 type: organisatieonderdeel
 identifiers:
   roo_id: '28116180'
+  kvk: '40038854'
+  rsin: '805144857'
 classification: organisatieonderdeel
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: org:koepel-vng
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging van Groninger Gemeenten
   abbr: VGG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.groningergemeenten.nl/
   email: secretariaat@groningergemeenten.nl
+  bezoekadres: Hendrik Westerstraat 24, 9791 CT Ten Boer
+  postadres: Postbus 9, 9790 AA Ten Boer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hendrik Westerstraat
+    huisnummer: '24'
+    postcode: 9791 CT
+    woonplaats: Ten Boer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '9'
+    postcode: 9790 AA
+    woonplaats: Ten Boer
+  phones:
+  - nummer: (050) 303 97 97
+    label: algemeen
+  emails:
+  - email: secretariaat@groningergemeenten.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.groningergemeenten.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.groningergemeenten.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Vereniging van Groninger Gemeenten (VGG)
+    url: https://www.linkedin.com/in/vereniging-van-groninger-gemeenten-126416236/
+  - platform: X
+    gebruikersnaam: Vereniging van Groninger Gemeenten (VGG)
+    url: https://x.com/VerGronGem/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-12-09'
+last_verified: '2026-04-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28116180/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28116180/vgg
+  retrieved: '2026-05-16'

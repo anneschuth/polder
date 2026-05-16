@@ -3,7 +3,7 @@ name:
   full: R.A.F. Stoter
   family: Stoter
   given: R.A.F.
-  initials: R.
+  initials: R.A.F.
 mandaten:
 - id: 7c6d1c4c-58e1-4c6d-897d-992d75e9a8fb
   organization_id: org:gemeente-steenwijkerland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758867
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/24145/gemeente-steenwijkerland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30569827
 - id: 52e54de0-a86f-43b8-a4ea-d3ae59eea416
   organization_id: org:gemeente-steenwijk
   post_id: post:raadslid-gemeente-steenwijk

@@ -2,19 +2,58 @@ id: org:gr-ssc-zl
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25250008'
+  owms: http://standaarden.overheid.nl/owms/terms/ssczl
+  kvk: '65079639'
+  organisatiecode: so0891
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Shared Service Center Zuid-Limburg
+  roo_id: '25250003'
 names:
 - value: Shared Service Center Zuid-Limburg
   abbr: SSC-ZL
   valid_from: '1900-01-01'
-  valid_until: '2021-12-01'
+  valid_until: '2020-07-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-12-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.ssc-zl.nl
   email: info@ssc-zl.nl
+  bezoekadres: CBS Weg 2, 6412 EZ Heerlen
+  postadres: CBS Weg 2, 6412 EZ Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: CBS Weg
+    huisnummer: '2'
+    postcode: 6412 EZ
+    woonplaats: Heerlen
+  - type: Postadres
+    openbare_ruimte: CBS Weg
+    huisnummer: '2'
+    postcode: 6412 EZ
+    woonplaats: Heerlen
+  phones:
+  - nummer: (045) 511 88 88
+    label: algemeen
+  emails:
+  - email: info@ssc-zl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ssc-zl.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: '2021-12-01'
+valid_until: '2020-07-01'
+last_mutation: '2019-04-15'
+last_verified: '2022-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25250008/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25250008/ssc-zl
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-10-23'

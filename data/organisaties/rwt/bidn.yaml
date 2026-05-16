@@ -1,16 +1,46 @@
 id: org:stichting-bidn
 type: rwt
+subname: Inlichtingenbureau
 identifiers:
   roo_id: '27912978'
+  kvk: '27244197'
+  oin: 00000001810207357000
+  rsin: '810207357'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Stichting Bureau Informatiediensten Nederland
   abbr: BIDN
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: St.-Jacobsstraat 400-420, 3511 BT Utrecht
+  postadres: Postbus 19247, 3501 DE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: St.-Jacobsstraat 400-420
+    postcode: 3511 BT
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '19247'
+    postcode: 3501 DE
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912978/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912978/bidn
+  retrieved: '2026-05-16'

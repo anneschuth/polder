@@ -3,16 +3,31 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111739'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Project- en Programmamanagement
   valid_from: '1900-01-01'
 contact:
   website: www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (038) 499 95 56
+    label: algemeen
+  - nummer: (038) 499 89 26
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111739/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111739/project-en-programmamanagement
+  retrieved: '2026-05-16'

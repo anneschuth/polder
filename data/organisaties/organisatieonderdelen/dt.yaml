@@ -8,12 +8,38 @@ names:
 - value: Directieteam
   abbr: DT
   valid_from: '1900-01-01'
+description:
+  url: https://www.zuid-holland.nl/politiek-bestuur/
+organogram_url: https://www.zuid-holland.nl/politiek-bestuur/organogram/
 contact:
   website: https://www.zuid-holland.nl/algemeen/contact/
   email: zuidholland@pzh.nl
+  bezoekadres: Zuid-Hollandplein 1, Den Haag
+  postadres: Postbus 90602, 2509 LP Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuid-Hollandplein
+    huisnummer: '1'
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90602'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 441 66 11
+    label: algemeen
+  emails:
+  - email: zuidholland@pzh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zuid-holland.nl/algemeen/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-23'
+last_verified: '2026-04-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/17482/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/17482/dt
+  retrieved: '2026-05-16'

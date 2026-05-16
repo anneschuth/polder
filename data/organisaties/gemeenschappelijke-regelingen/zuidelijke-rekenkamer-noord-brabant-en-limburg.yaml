@@ -1,19 +1,114 @@
 id: org:gr-zuidelijke-rekenkamer-noord-brabant-en-limburg
 type: gemeenschappelijke-regeling
+subname: Zuidelijke Rekenkamer
 identifiers:
   roo_id: '28435696'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0596
+  owms: http://standaarden.overheid.nl/owms/terms/rekenknbrl
+  kvk: '58959785'
+  organisatiecode: so0596
+  rsin: '853255271'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Zuidelijke Rekenkamer Noord-Brabant en Limburg
+    2024
+  roo_id: '29576053'
 names:
 - value: Zuidelijke Rekenkamer Noord-Brabant en Limburg
   valid_from: '1900-01-01'
+description:
+  text: De Zuidelijke Rekenkamer is de gemeenschappelijke rekenkamer van de provincies
+    Noord-Brabant en Limburg. De taak van de rekenkamer, zoals vastgelegd in de Provinciewet
+    is het onderzoeken van de doelmatigheid, de doeltreffendheid en de rechtmatigheid
+    van de door het provinciebestuur gevoerde beleid.
+  url: https://zuidelijkerekenkamer.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://zuidelijkerekenkamer.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/28435696/Zuidelijke_Rekenkamer_Noord-Brabant_en_Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://zuidelijkerekenkamer.nl/begrotingen/
+      toelichting: Begrotingen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zuidelijkerekenkamer.nl/privacy/
+      toelichting: AVG en procedures conform AVG
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://zuidelijkerekenkamer.nl/werkprogramma/
+      toelichting: Werkprogramma
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://zuidelijkerekenkamer.nl/publicaties/
+      toelichting: Publicaties onderzoeksrapporten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://zuidelijkerekenkamer.nl/jaarverslagen/
+      toelichting: Jaarverslagen
+  wooVerzoek:
+    url: https://zuidelijkerekenkamer.nl/contact/
+organogram_url: https://zuidelijkerekenkamer.nl/over-ons/
+afspraak:
+  email: info@zuidelijkerekenkamer.nl
+  url: https://zuidelijkerekenkamer.nl/contact/
 contact:
   website: https://zuidelijkerekenkamer.nl
   email: info@zuidelijkerekenkamer.nl
+  bezoekadres: John F. Kennedylaan 2, 5612 AB Eindhoven
+  postadres: John F. Kennedylaan 2, 5612 AB Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: John F. Kennedylaan
+    huisnummer: '2'
+    postcode: 5612 AB
+    woonplaats: Eindhoven
+  - type: Postadres
+    openbare_ruimte: John F. Kennedylaan
+    huisnummer: '2'
+    postcode: 5612 AB
+    woonplaats: Eindhoven
+  - type: Woo-Adres
+    openbare_ruimte: John F Kennedylaan
+    huisnummer: '2'
+    postcode: 5612 AB
+    woonplaats: Eindhoven
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (040) 244 18 74
+    label: algemeen
+  emails:
+  - email: info@zuidelijkerekenkamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://zuidelijkerekenkamer.nl
+    label: algemeen
+  - url: https://zuidelijkerekenkamer.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://zuidelijkerekenkamer.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Zuidelijke Rekenkamer
+    url: https://zuidelijkerekenkamer.nl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2024-10-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28435696/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28435696/zuidelijke-rekenkamer-noord-brabant-en-limburg
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

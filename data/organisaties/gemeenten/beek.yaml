@@ -6,21 +6,159 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0888
   roo_id: '34989'
   wikidata: Q9806
+  owms: http://standaarden.overheid.nl/owms/terms/Beek_(gemeente)
+  ictu: 00888
+  organisatiecode: gm0888
+  rsin: '001732304'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BEQ
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Beek
   abbr: Beek
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeenteraad, bestaande uit 17 raadsleden,  wordt ondersteund door de
+    griffie. De griffie bij de gemeente Beek bestaat uit de griffier en zijn plaatsvervanger.Het
+    college wordt gevormd door de burgemeester en wethouders. In Beek zijn er momenteel
+    drie wethouders.Het college wordt ondersteund door de gemeentesecretaris/algemeen
+    directeur en een directiesecretaris.Aan het hoofd van de ambtelijke organisatie
+    staat de gemeentesecretaris/algemeen directeur. In Beek wordt de gemeentesecretaris
+    ondersteund door een directiesecretaris.Beek bestaat uit drie afdelingen: afdeling
+    Samenleving, afdeling Ruimte en afdeling Bestuurs- en Managementondersteuning
+    (BMO).Afdeling Samenleving:Team Publiekszaken;Team Beleid;Team Wijkteam WMO/Jeugd.Afdeling
+    Ruimte:Team Ondersteuning, Omgevingsplannen, Vergunningen en Toezicht (OOVT);Team
+    Beleid, Ontwikkeling en Projecten (BOP);Team Wijkbeheer (WB).Afdeling BMO:Team
+    Advies;Team Ondersteuning;Team Administratie;Team Informatiemanagement.'
+  url: https://cuatro.sim-cdn.nl/beek/uploads/organogram_2025.pdf?cb=elPcsIdd
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentebeek.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/34989/Gemeente_Beek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beek%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Andere documenten
+      url: https://www.gemeentebeek.nl/jaaroverzicht-klachten
+      toelichting: In het ‘jaaroverzicht klachten’ van de gemeente staat hoeveel en
+        welke klachten er zijn binnengekomen en hoe de gemeente deze heeft afgehandeld.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://beek.bestuurlijkeinformatie.nl
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://beek.bestuurlijkeinformatie.nl/Reports/Details/b5216e9d-e080-4923-a8c4-dff22d26c6a3
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.gemeentebeek.nl/financiele-documenten
+    - informatiecategorie: Adviezen
+      url: https://beek.bestuurlijkeinformatie.nl/Calendar
+      toelichting: 'Gemeente Beek heeft drie commissies: Grondgebiedzaken, Inwonerszaken  en
+        Bestuurszaken. Via deze link komt u terecht op de informatiepagina van deze
+        commissies. In de besluitenlijsten staan de adviezen van de desbetreffende
+        commissie.'
+  wooVerzoek:
+    url: https://www.gemeentebeek.nl/woo
+organogram_url: https://cuatro.sim-cdn.nl/beek/uploads/organogram_2025.pdf?cb=elPcsIdd
+afspraak:
+  telefoonnummer: (046) 438 92 22
+  url: https://beek.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 21,04
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.04
+  aantal_inwoners: 16141
+  inwoners: '767'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 767.0
+  bevat_plaatsen_raw: Beek LB, Maastricht-Airport, Spaubeek
+  bevat_plaatsen:
+  - Beek LB
+  - Maastricht-Airport
+  - Spaubeek
+council:
+  total_seats: 17
+  parties:
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: Progressief Beek
+    aantal_zetels: 4
+  - naam: Beek Lokaal
+    aantal_zetels: 3
+  - naam: Belang van Beek
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentebeek.nl
   email: info@gemeentebeek.nl
+  bezoekadres: Raadhuisstraat 9, 6191 KA BEEK LB
+  postadres: Postbus 20, 6190 AA BEEK LB
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '9'
+    postcode: 6191 KA
+    woonplaats: BEEK LB
+  - type: Postadres
+    postbus: '20'
+    postcode: 6190 AA
+    woonplaats: BEEK LB
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '20'
+    postcode: 6190 AA
+    woonplaats: Beek
+    regio: Limburg
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '9'
+    postcode: 6191 KA
+    woonplaats: BEEK LB
+  phones:
+  - nummer: (046) 438 92 22
+    label: algemeen
+  emails:
+  - email: info@gemeentebeek.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gemeentebeek.nl
+    label: algemeen
+  contact_forms:
+  - url: https://beek.mijnafspraakmaken.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34989/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34989/beek
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

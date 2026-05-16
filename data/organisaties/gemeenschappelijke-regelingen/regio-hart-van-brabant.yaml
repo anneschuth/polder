@@ -3,17 +3,71 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28682225'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0835
+  owms: http://standaarden.overheid.nl/owms/terms/reghvbr
+  kvk: '61911909'
+  organisatiecode: so0835
+  rsin: '854544975'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio Hart van Brabant
+  roo_id: '29990242'
 names:
 - value: Regio Hart van Brabant
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.regio-hartvanbrabant.nl
   email: info@regio-hartvanbrabant.nl
+  bezoekadres: Burgemeester Brokxlaan 12, 5041 SB Tilburg
+  postadres: Postbus 788, 5000 AT Tilburg
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gebouw 88, tweede verdieping
+    openbare_ruimte: Burgemeester Brokxlaan
+    huisnummer: '12'
+    postcode: 5041 SB
+    woonplaats: Tilburg
+  - type: Postadres
+    postbus: '788'
+    postcode: 5000 AT
+    woonplaats: Tilburg
+  phones:
+  - nummer: (013) 744 04 06
+    label: algemeen
+  emails:
+  - email: info@regio-hartvanbrabant.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regio-hartvanbrabant.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.regio-hartvanbrabant.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Regio Hart van Brabant
+    url: https://www.linkedin.com/company/regio-hart-van-brabant/
+  - platform: YouTube
+    gebruikersnaam: regiohartvanbrabant
+    url: https://www.youtube.com/channel/UCAxtf1nRFGiN06ZjDdDIViQ
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-05-07'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28682225/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28682225/regio-hart-van-brabant
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

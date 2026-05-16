@@ -3,18 +3,84 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27792829'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0043
+  owms: http://standaarden.overheid.nl/owms/terms/Regio_De_Vallei
+  kvk: '53751639'
+  organisatiecode: so0043
+  rsin: '800417951'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regio De Vallei
+  roo_id: '29474096'
 names:
 - value: Regio De Vallei
   abbr: RDV
   valid_from: '1900-01-01'
+description:
+  text: Gemeenschappelijke regeling Regio De Vallei is een samenwerking van gemeenten
+    Barneveld, Ede, Nijkerk, Scherpenzeel en Wageningen. De regio heeft tot taak het
+    gezamenlijk aanbesteden, contracteren, beheren en beëindigen van contracten ten
+    aanzien van de daarvoor door de deelnemende gemeenten aan te wijzen onderdelen
+    van de verwerking van huishoudelijk afval. En het afstemmen en in samenwerking
+    ontwikkelen van beleid, uitwisselen van kennis en ervaring en adviseren over huishoudelijk
+    afval ten behoeve van de deelnemende gemeenten.Het secretariaat van de regio wordt
+    ingevuld door gemeente Ede.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/29474096/Gemeenschappelijke_Regeling_Regio_De_Vallei
+      overzichtURL: https://organisaties.overheid.nl/woo/27792829/Regio_De_Vallei
+afspraak:
+  email: regiodevallei@ede.nl
+  telefoonnummer: (0318) 68 04 80
 contact:
   website: https://organisaties.overheid.nl/29474096/Gemeenschappelijke_Regeling_Regio_De_Vallei
   email: regiodevallei@ede.nl
+  bezoekadres: Bergstraat 4, 6711 DD Ede
+  postadres: Postbus 9022, 6710 HK Ede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bergstraat
+    huisnummer: '4'
+    postcode: 6711 DD
+    woonplaats: Ede
+    land: Nederland
+  - type: Postadres
+    postbus: '9022'
+    postcode: 6710 HK
+    woonplaats: Ede
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '9022'
+    postcode: 6710 HK
+    woonplaats: Ede
+    land: Nederland
+  phones:
+  - nummer: (0318) 68 04 80
+    label: algemeen
+  emails:
+  - email: regiodevallei@ede.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://organisaties.overheid.nl/29474096/Gemeenschappelijke_Regeling_Regio_De_Vallei
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-25'
+last_verified: '2024-11-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27792829/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27792829/rdv
+  retrieved: '2026-05-16'
+roo_start_datum: '1992-01-01'

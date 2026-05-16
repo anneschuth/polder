@@ -6,21 +6,218 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0479
   roo_id: '27115'
   wikidata: Q9978
+  owms: http://standaarden.overheid.nl/owms/terms/Zaanstad
+  ictu: 00479
+  organisatiecode: gm0479
+  rsin: 003148889
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ZST
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Zaanstad
   abbr: Zaanstad
   valid_from: '1900-01-01'
+description:
+  url: https://www.zaanstad.nl/bestuur-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zaanstad.nl/direct-regelen/klacht-of-melding/gemeente/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/27115/Gemeente_Zaanstad
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zaanstad.bestuurlijkeinformatie.nl/
+      toelichting: 'Deze informatie is grotendeels te vinden op het Raadsinformatiesysteem
+        (RIS). We werken aan het makkelijker vindbaar maken van deze informatie. Typ
+        zoekterm: convenant of samenwerkingsovereenkomst..'
+    - informatiecategorie: Adviezen
+      url: https://zaanstad.bestuurlijkeinformatie.nl/
+      toelichting: 'Deze informatie is grotendeels te vinden via het Raadsinformatiesysteem
+        (RIS). We werken aan het makkelijker vindbaar maken van deze informatie. Typ
+        zoekterm: advies of adviezen.'
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://zaanstad.bestuurlijkeinformatie.nl/
+      toelichting: 'Deze informatie is beschikbaar via het Raadsinformatiesysteem
+        (RIS). We werken aan het makkelijker vindbaar maken van deze informatie. Typ
+        zoekterm: ingekomen stukken.'
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://loket.zaanstad.nl/mozard/!suite16.scherm1168?mGmr=8023
+      toelichting: Woo-besluiten zijn beschikbaar via het Zaaksysteem. We werken aan
+        het beschikbaar maken van de Woo-verzoeken.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zaanstad%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Deze informatie vindt u op Overheid.nl
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://financien.zaanstad.nl/
+      toelichting: 'Op het financieel portaal van de gemeente Zaanstad vindt u belangrijke
+        financiële documenten die u digitaal kunt raadplegen. Bijvoorbeeld: voorjaarsnota
+        (vjn), najaarsrapportage (narap), bestuursrapportage (burap), begroting, kadernota
+        etc.'
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://zaanstad.bestuurlijkeinformatie.nl/
+      toelichting: Deze informatie vindt u op het Raadsinformatiesysteem (RIS).
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zaanstad%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Deze informatie vindt u op Overheid.nl
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zaanstad%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Deze informatie vindt u op Overheid.nl
+    - informatiecategorie: Beschikkingen
+      url: https://www.zaanstad.nl/direct-regelen/subsidies/overzicht-van-subsidieregelingen-waarvan-de-aanvraagtermijn-is-verlopen/subsidieregister/
+      toelichting: Via deze link komt u bij de subsidieoverzichten vanaf 2016. Er
+        is een splitsing gemaakt tussen subsidies toegekend aan burgers en aan instellingen
+        of bedrijven.
+    - informatiecategorie: Beschikkingen
+      url: https://www.zaanstad.nl/direct-regelen/subsidies/beschikbare-subsidies/gemeentelijke-steunmaatregelen-algemene-groepsvrijstellingsverordening-agvv/
+      toelichting: Hier vindt u gemeentelijke steunmaatregelen volgens de Algemene
+        Groepsvrijstellingsverordening (AGVV).
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://zaanstad.incijfers.nl/homezaanstad.aspx
+      toelichting: Deze informatie vindt u op  Onderzoeksplein Zaanstad.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://zaanstad.bestuurlijkeinformatie.nl/
+      toelichting: 'Deze informatie is deels beschikbaar via het Raadsinformatiesysteem.
+        We werken aan het compleet maken van deze informatie (onderdeel: o.a. agenda''s)
+        en  het makkelijker vindbaar maken.  Typ zoekterm: besluitenlijst college.'
+    - informatiecategorie: Klachtoordelen
+      url: https://www.zaanstad.nl/direct-regelen/klacht-of-melding/gemeentelijke-organisatie/klacht-gemeente-medewerker-of-bestuurder/
+      toelichting: We werken aan het beschikbaar maken van deze informatie. Wilt u
+        nu al meer weten dan kunt u een Woo-verzoek indienen via de link..
+  wooVerzoek:
+    url: https://loket.zaanstad.nl/mozard/!suite09.scherm1089?mWfrs=4719823&mNch=bl5ae6i11a
+organogram_url: https://www.zaanstad.nl/organogram/
+afspraak:
+  telefoonnummer: (075) 655 21 84
+  url: https://www.zaanstad.nl/afspraak-maken/#select/
+geography:
+  oppervlakte: 83,05
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 83.05
+  aantal_inwoners: 165201
+  inwoners: '1989'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1989.0
+  bevat_plaatsen_raw: Assendelft, Koog aan de Zaan, Krommenie, Westknollendam, Westzaan,
+    Wormerveer, Zaandam, Zaandijk
+  bevat_plaatsen:
+  - Assendelft
+  - Koog aan de Zaan
+  - Krommenie
+  - Westknollendam
+  - Westzaan
+  - Wormerveer
+  - Zaandam
+  - Zaandijk
+council:
+  total_seats: 39
+  parties:
+  - naam: Lokaal Zaans
+    aantal_zetels: 8
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 6
+  - naam: POV
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PVV
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: DENK
+    aantal_zetels: 2
+  - naam: Democratisch Zaanstad
+    aantal_zetels: 2
+  - naam: ROSA
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: https://www.zaanstad.nl
   email: raadsgriffie@zaanstad.nl
+  bezoekadres: Stadhuisplein 100, 1506 MZ ZAANDAM
+  postadres: Postbus 2000, 1500 GA ZAANDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '100'
+    postcode: 1506 MZ
+    woonplaats: ZAANDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '2000'
+    postcode: 1500 GA
+    woonplaats: ZAANDAM
+  - type: Woo-Adres
+    toelichting: Bezoekadres gemeentehuis
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '100'
+    postcode: 1506 MZ
+    woonplaats: Zaandam
+    regio: Zaanstreek - Waterland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '2000'
+    postcode: 1500 GA
+    woonplaats: Zaandam
+    regio: Zaanstreek - Waterland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '100'
+    postcode: 1506 MZ
+    woonplaats: ZAANDAM
+  phones:
+  - nummer: (075) 655 21 84
+    label: algemeen
+  emails:
+  - email: raadsgriffie@zaanstad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zaanstad.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zaanstad.nl/contact/
+    label: Algemeen
+  - url: https://www.zaanstad.nl/contact/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27115/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27115/zaanstad
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +226,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9978
   retrieved: '2026-05-09'
+roo_start_datum: '1974-01-01'

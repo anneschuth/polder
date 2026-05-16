@@ -4,14 +4,44 @@ identifiers:
   roo_id: '28391681'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10201
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Tijdelijk adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Muntadviescommissie
   valid_from: '1900-01-01'
   valid_until: '2021-12-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 1 van het Besluit Muntadviescommissie 2019
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0041990&artikel=1&z=2020-04-17&g=2020-04-17
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-12-31'
+last_mutation: '2021-07-02'
+last_verified: '2021-07-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391681/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391681/muntadviescommissie
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-03-01'

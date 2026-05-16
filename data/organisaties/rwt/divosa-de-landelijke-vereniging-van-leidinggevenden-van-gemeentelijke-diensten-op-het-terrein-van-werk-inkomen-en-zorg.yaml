@@ -2,15 +2,43 @@ id: org:oovb-divosa-de-landelijke-vereniging-van-leidinggevenden-van-gemeentelij
 type: rwt
 identifiers:
   roo_id: '27908964'
+  kvk: '40532318'
+  rsin: '002603056'
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Divosa, de landelijke vereniging van leidinggevenden van gemeentelijke diensten
     op het terrein van werk, inkomen en zorg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Koningin Wilhelminalaan 5, 3527 LA Utrecht
+  postadres: Postbus 2758, 3500 GT Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningin Wilhelminalaan 5
+    postcode: 3527 LA
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '2758'
+    postcode: 3500 GT
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908964/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908964/divosa-de-landelijke-vereniging-van-leidinggevenden-van-gemeentelijke-diensten-op-het-terrein-van-werk-inkomen-en-zorg
+  retrieved: '2026-05-16'

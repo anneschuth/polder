@@ -4,17 +4,72 @@ identifiers:
   roo_id: '27660232'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000148
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Referendumcommissie
   valid_from: '1900-01-01'
   valid_until: '2018-07-10'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Wet Raadgevend Referendum, artikelen 87-90
+  referentie: http://wetten.overheid.nl/BWBR0036443/
+taken_en_bevoegdheden: '* De referendumcommissie verstrekt informatie aan de kiezer
+  over een aan een referendum onderworpen wet.* Daarnaast verstrekt de referendumcommissie
+  subsidies ten behoeve van maatschappelijke initiatieven die zich ten doel stellen
+  het publieke debat in Nederland over de aan het referendum onderworpen wet te bevorderen.*
+  De referendumcommissie stelt ter uitvoering van de taak, genoemd het tweede lid,
+  een regeling vast. In deze regeling wordt in ieder geval een subsidieplafond vastgesteld.
+  Het subsidieplafond bedraagt ten hoogste € 2 miljoen per referendum.'
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2018-12-31'
 contact:
   website: http://www.referendum-commissie.nl/
   email: info@referendum-commissie.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 11713, 2502 AS Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '11713'
+    postcode: 2502 AS
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 751 75 17
+    label: algemeen
+  emails:
+  - email: info@referendum-commissie.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.referendum-commissie.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-07-10'
+last_mutation: '2019-11-22'
+last_verified: '2019-11-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27660232/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27660232/referendumcommissie
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-01-01'

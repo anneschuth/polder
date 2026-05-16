@@ -4,21 +4,79 @@ identifiers:
   oin: 00000004000000009000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10036
   roo_id: '18417'
+  owms: http://standaarden.overheid.nl/owms/terms/Hoge_Raad_der_Nederlanden
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Hoge Raad der Nederlanden
   abbr: HR
   valid_from: '1900-01-01'
+description:
+  text: De Hoge Raad der Nederlanden is als hoogste rechterlijke instantie binnen
+    de gewone rechtspraak in Nederland belast met de cassatierechtspraak op het gebied
+    van het civiele recht, strafrecht en belastingrecht. De Raad is op het gebied
+    van het civiele en strafrecht ook cassatierechter voor Caribisch Nederland.De
+    Hoge Raad bestaat uit een president, zes vice-presidenten, raadsheren en raadsheren
+    in buitengewone dienst, en worden bijgestaan door een griffier die tevens kabinetschef
+    van de president is.De raadsheren en advocaten-generaal worden in hun werkzaamheden
+    ondersteund door het Wetenschappelijk Bureau (WB). Die ondersteuning bestaat uit
+    het analyseren van dossiers, het verzamelen van relevante literatuur en jurisprudentie
+    en het voorbereiden van conclusies of arresten. Een wetenschappelijk medewerker
+    werkt óf voor de Raad óf voor het Parket.Voor de samenstelling van de kamers van
+    de Hoge Raad zie www.hogeraad.nl
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.hogeraad.nl
   email: info@hogeraad.nl
+  bezoekadres: Korte Voorhout 8, 2511 EK Den Haag
+  postadres: Postbus 20303, 2500 EH ’s-Gravenhage
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '8'
+    postcode: 2511 EK
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20303'
+    postcode: 2500 EH
+    woonplaats: ’s-Gravenhage
+  phones:
+  - nummer: (070) 361 13 11
+    label: algemeen
+  emails:
+  - email: info@hogeraad.nl
+    label: algemeen
+  - email: voorlichting@hogeraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hogeraad.nl
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Hoge-Raad-der-Nederlanden
+    label: algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: '@HogeRaad'
+    url: https://twitter.com/HogeRaad
+  - platform: LinkedIn
+    gebruikersnaam: Hoge Raad der Nederlanden
+    url: https://www.linkedin.com/company/hoge-raad-der-nederlanden/
+  fax: (070) 753 03 47
+  beschrijving: 'Fax griffie fiscaal: (070) 753 03 54Fax griffie straf: (070) 753
+    03 52Fax griffie civiel: (070) 753 03 51'
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-12-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/18417/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/18417/hr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

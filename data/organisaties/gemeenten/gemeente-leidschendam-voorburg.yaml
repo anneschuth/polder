@@ -6,21 +6,165 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1916
   roo_id: '38521'
   wikidata: Q112675
+  owms: http://standaarden.overheid.nl/owms/terms/Leidschendam-Voorburg
+  ictu: 01916
+  organisatiecode: gm1916
+  rsin: '810208891'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LSV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Leidschendam-Voorburg
   abbr: Leidschendam-Voorburg
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Leidschendam-Voorburg is een lokale overheidsinstantie die verantwoordelijk
+    is voor het besturen en beheren van de gemeente. Haar taken en bevoegdheden omvatten
+    onder andere:Ruimtelijke ordening en stedelijke ontwikkeling,  openbare voorzieningen
+    en onderhoudsociale zaken, onderwijs en jeugd, maatschappelijke ondersteuning
+    en welzijn, veiligheid en handhaving, milieu en duurzaamheid en burgerzakenDe
+    gemeente voert haar taken uit binnen de kaders van landelijke en provinciale wetgeving,
+    met eigen beleidsvrijheid binnen deze kaders.
+  url: https://www.lv.nl/organigram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.lv.nl/wet-open-overheid-informatie-opvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/38521/Gemeente_Leidschendam-Voorburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leidschendam-Voorburg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://lv.bestuurlijkeinformatie.nl/reports
+      toelichting: Op deze site is de informatie van de raad te vinden, zoals de besluitenlijsten,
+        agenda zijn te vinden onder de tab vergaderingen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leidschendam-Voorburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Leidschendam-Voorburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.lv.nl/gepubliceerde-woo-verzoeken
+      toelichting: Op de ste staan alleen de besluiten, de verzoeken en de gevraagde
+        informatie is op te vragen via een formulier
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://leidschendam-voorburg.pcportal.nl/
+      toelichting: Op deze site staan de verschillende jaarplannen en verslagen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://lv.bestuurlijkeinformatie.nl/reports
+      toelichting: Op deze site bevinden zich onder andere de agenda en besluitenlijsten
+        van het college van B&W
+  wooVerzoek:
+    url: https://www.lv.nl/woo-verzoek-indienen
+organogram_url: https://www.lv.nl/organigram
+afspraak:
+  email: info@leidschendam-voorburg.nl
+  telefoonnummer: 14 070
+  url: https://www.lv.nl/afspraak-maken
+geography:
+  oppervlakte: 35,6
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 35.6
+  aantal_inwoners: 78916
+  inwoners: '2216'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2216.0
+  bevat_plaatsen_raw: Leidschendam, Voorburg
+  bevat_plaatsen:
+  - Leidschendam
+  - Voorburg
+council:
+  total_seats: 32
+  parties:
+  - naam: D66
+    aantal_zetels: 7
+  - naam: VVD
+    aantal_zetels: 6
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: GBLV
+    aantal_zetels: 4
+  - naam: Aandacht LV
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
 contact:
   website: https://www.leidschendam-voorburg.nl
   email: info@leidschendam-voorburg.nl
+  bezoekadres: Raadhuisplein 1, 2264 BP LEIDSCHENDAM
+  postadres: Postbus 1005, 2260 BA LEIDSCHENDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2264 BP
+    woonplaats: LEIDSCHENDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1005'
+    postcode: 2260 BA
+    woonplaats: LEIDSCHENDAM
+  - type: Woo-Adres
+    postbus: '1005'
+    postcode: 2260 BA
+    woonplaats: Leidschendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 2264 BP
+    ter_attentie_van: team RO
+    woonplaats: LEIDSCHENDAM
+  phones:
+  - nummer: 14 070
+    label: algemeen
+  emails:
+  - email: info@leidschendam-voorburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.leidschendam-voorburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://loket.lv.nl/zaak/create/webformulier?instance_country_code=6030&aanvrager=betrokkene-natuurlijk_persoon-958&zaaktype_id=3537&sessreset=0&ztc_aanvrager_type=unknown
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
+predecessor_id:
+- org:gemeente-leidschendam
+- org:gemeente-voorburg
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38521/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38521/gemeente-leidschendam-voorburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,6 +173,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q112675
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-leidschendam
-- org:gemeente-voorburg
+roo_start_datum: '2002-01-01'

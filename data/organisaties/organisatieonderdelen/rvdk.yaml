@@ -4,21 +4,93 @@ identifiers:
   roo_id: '13254'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12374
   oin: '00000002003214436001'
+  ictu: 03493
+  organisatiecode: oorg12374
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dtenv
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+parent_id: org:onderdeel-diensten-en-baten-lastenagentschappen
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Raad voor de Kinderbescherming
   abbr: RvdK
   valid_from: '1900-01-01'
+description:
+  text: 'Ingesteld bij wet, artikel 1:238 van het Burgerlijk Wetboek, laatstelijk
+    gewijzigd bij Wet van 13 juni 1996, Stb. 328 (in werking 29 juni 1996). Bijbehorende
+    besluiten:Organisatiebesluit Raad voor de Kinderbescherming 2015, laatstelijk
+    gewijzigd bij AMvB van 2 september 2020, Stb. 357 (in werking 1 oktober 2020)
+    met een Nota van Toelichting.Het Mandaatbesluit Raad voor de Kinderbescherming
+    Ministerie van Justitie en Veiligheid 2022, Ministeriële Regeling van 7 juli 2022,
+    Stcrt. 19514 (in werking 26 juli 2022).Missie: De Raad voor de Kinderbescherming,
+    omdat ieder kind dat ernstige schade dreigt op te lopen het recht heeft om veilig
+    verder op te groeien.Visie: De Raad voor de Kinderbescherming heeft een belangrijke
+    rol in zowel de jeugdbeschermings- als strafrechtketen. We onderzoeken of overheidsingrijpen
+    nodig is om een kind te beschermen, als de mogelijkheden voor vrijwillige hulp
+    zijn uitgeput. Met pedagogische deskundigheid bekijken we hoe het tij te keren
+    voor jongeren die met het strafrecht in aanraking zijn gekomen.De RvdK is een
+    wendbare, solide en toekomstbestendige organisatie waarin veranderingen planbaar
+    en voorspelbaar worden gerealiseerd.'
+  url: https://www.kinderbescherming.nl/over-ons/organisatiestructuur
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kinderbescherming.nl/over-ons/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/13254/Raad_voor_de_Kinderbescherming
+  wooVerzoek:
+    url: https://www.kinderbescherming.nl/over-ons/wet-open-overheid/formulier-woo
+organogram_url: https://www.kinderbescherming.nl/over-ons/organisatiestructuur
+afspraak:
+  url: https://www.kinderbescherming.nl/over-ons/wet-open-overheid/formulier-woo
 contact:
   website: https://www.kinderbescherming.nl/contact-en-adressen
   email: woo@rvdk.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  - type: Bezoekadres
+    toelichting: Raad voor de Kinderbescherming is niet fysiek te bezoeken.
+  - type: Woo-Adres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (030) 888 24 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kinderbescherming.nl/contact-en-adressen
+  contact_forms:
+  - url: https://www.kinderbescherming.nl/contact-en-adressen/klacht-of-ervaring-delen/klachtenformulier
+    label: Algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: Raadvoordekinderbescherming
+    url: www.instagram.com/Raadvoordekinderbescherming
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor de Kinderbescherming
+    url: https://nl.linkedin.com/company/kinderbescherming
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13254/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13254/rvdk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

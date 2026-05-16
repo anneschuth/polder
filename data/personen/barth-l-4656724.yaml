@@ -3,7 +3,7 @@ name:
   full: L.G.I. Barth
   family: Barth
   given: L.G.I.
-  initials: L.
+  initials: L.G.I.
 mandaten:
 - id: 0adc4ce1-30d0-40a4-8e1f-b97da8186128
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780799
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29030218
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4656724

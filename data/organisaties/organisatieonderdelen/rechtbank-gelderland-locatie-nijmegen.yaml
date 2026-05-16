@@ -7,9 +7,25 @@ parent_id: org:rechtbank-gelderland
 names:
 - value: Rechtbank Gelderland, locatie Nijmegen
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Oranjesingel 56, 6511 NW Nijmegen
+  postadres: Postbus 9030, 6800 EM Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oranjesingel
+    huisnummer: '56'
+    postcode: 6511 NW
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9030'
+    postcode: 6800 EM
+    woonplaats: Arnhem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2026-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046963/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046963/rechtbank-gelderland-locatie-nijmegen
+  retrieved: '2026-05-16'

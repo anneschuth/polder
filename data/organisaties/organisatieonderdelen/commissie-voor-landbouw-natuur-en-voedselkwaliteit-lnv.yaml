@@ -3,15 +3,25 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29066036'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Commissie voor Landbouw, Natuur en Voedselkwaliteit (LNV)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/lnv
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/lnv
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-07'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29066036/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29066036/commissie-voor-landbouw-natuur-en-voedselkwaliteit-lnv
+  retrieved: '2026-05-16'

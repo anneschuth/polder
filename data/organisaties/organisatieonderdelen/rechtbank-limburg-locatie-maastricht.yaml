@@ -2,14 +2,31 @@ id: org:onderdeel-rechtbank-limburg-locatie-maastricht
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048412'
+  kvk: '82942978'
+  rsin: '862664573'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-limburg
 names:
 - value: Rechtbank Limburg, locatie Maastricht
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Sint Annadal 1, 6214 PA Maastricht
+  postadres: Postbus 1988, 6201 BZ Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sint Annadal
+    huisnummer: '1'
+    postcode: 6214 PA
+    woonplaats: Maastricht
+  - type: Postadres
+    postbus: '1988'
+    postcode: 6201 BZ
+    woonplaats: Maastricht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-08-27'
+last_verified: '2026-03-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048412/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048412/rechtbank-limburg-locatie-maastricht
+  retrieved: '2026-05-16'

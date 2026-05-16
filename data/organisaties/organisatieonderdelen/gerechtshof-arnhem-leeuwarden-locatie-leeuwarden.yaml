@@ -7,9 +7,26 @@ parent_id: org:rechtbank-gerechtshof-arnhem-leeuwarden
 names:
 - value: Gerechtshof Arnhem-Leeuwarden, locatie Leeuwarden
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Wilhelminaplein 1, 8911 BS Leeuwarden
+  postadres: Postbus 1704, 8901 CA Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie (Zittingen)
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: '1'
+    postcode: 8911 BS
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '1704'
+    postcode: 8901 CA
+    woonplaats: Leeuwarden
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2026-02-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28039047/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28039047/gerechtshof-arnhem-leeuwarden-locatie-leeuwarden
+  retrieved: '2026-05-16'

@@ -3,19 +3,83 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28364484'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0511
+  owms: http://standaarden.overheid.nl/owms/terms/wvsnobr
+  kvk: '17278039'
+  organisatiecode: so0511
+  rsin: '806666584'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werkvoorzieningschap Noordoost-Brabant
+  roo_id: '30470992'
 names:
 - value: Werkvoorzieningschap Noordoost-Brabant
   abbr: WVS-NB
   valid_from: '1900-01-01'
-  valid_until: '2028-04-14'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wvs-nb.nl
+      overzichtURL: https://organisaties.overheid.nl/woo/28364484/Werkvoorzieningschap_Noordoost-Brabant
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkvoorzieningschap+Noordoost-Brabant%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.wvs-nb.nl/
+organogram_url: https://www.wvs-nb.nl/
+afspraak:
+  telefoonnummer: (0413) 33 69 70
+  url: https://www.wvs-nb.nl/
 contact:
   website: https://www.wvs-nb.nl
   email: infowvs@ibn.nl
+  bezoekadres: Industrielaan 63, 5349 AE Oss
+  postadres: Postbus 163, 5340 AD Oss
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Industrielaan
+    huisnummer: '63'
+    postcode: 5349 AE
+    woonplaats: Oss
+  - type: Postadres
+    postbus: '163'
+    postcode: 5340 AD
+    woonplaats: Oss
+  - type: Woo-Adres
+    postbus: '163'
+    postcode: 5340 AD
+    woonplaats: Oss
+  phones:
+  - nummer: (0413) 33 69 70
+    label: algemeen
+  emails:
+  - email: infowvs@ibn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wvs-nb.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wvs-nb.nl/wbc-reuseables/freelancer-below-page/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2028-04-14'
+last_mutation: '2024-12-12'
+last_verified: '2024-12-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28364484/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28364484/wvs-nb
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

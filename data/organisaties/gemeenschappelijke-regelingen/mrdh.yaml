@@ -5,23 +5,93 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0830
   oin: 00000001854747515000
   kvk: '62288024'
+  owms: http://standaarden.overheid.nl/owms/terms/metregrdh
+  organisatiecode: so0830
+  rsin: '854747515'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Metropoolregio Rotterdam Den Haag 2014
+  roo_id: '29530165'
 names:
 - value: Metropoolregio Rotterdam Den Haag
   abbr: MRDH
   valid_from: '1900-01-01'
+description:
+  text: De Metropoolregio Rotterdam Den Haag (MRDH) is dé samenwerking van, voor en
+    door 21 gemeenten in de grootstedelijke regio Rotterdam Den Haag. Samen met het
+    bestuur, de 21 gemeenten, mede-overheden en onze netwerkpartners van kennisinstellingen
+    en bedrijfsleven, werken we aan een aantrekkelijke regio voor inwoners om te werken,
+    wonen en recreëren, waar (internationale) bedrijven zich vestigen en waar bezoekers
+    zich welkom voelen. Wij richten ons op het versterken van het economisch vestigingsklimaat
+    en het verbeteren van de bereikbaarheid.
+  url: https://mrdh.nl/wie-zijn/mrdh-organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/25160840/Metropoolregio_Rotterdam_Den_Haag
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Metropoolregio+Rotterdam+Den+Haag%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Metropoolregio+Rotterdam+Den+Haag%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Metropoolregio+Rotterdam+Den+Haag%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+organogram_url: https://mrdh.nl/wie-zijn/mrdh-organisatie
+afspraak:
+  email: informatie@mrdh.nl
+  telefoonnummer: (088) 544 51 00
+  url: https://mrdh.nl/contact
 contact:
   website: https://mrdh.nl
   email: informatie@mrdh.nl
+  bezoekadres: Westersingel 12, 3014 GN Rotterdam
+  postadres: Postbus 21012, 3001 AA Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westersingel
+    huisnummer: '12'
+    postcode: 3014 GN
+    woonplaats: Rotterdam
+  - type: Postadres
+    postbus: '21012'
+    postcode: 3001 AA
+    woonplaats: Rotterdam
+  - type: Woo-Adres
+    postbus: '21012'
+  phones:
+  - nummer: (088) 544 51 00
+    label: algemeen
+  emails:
+  - email: informatie@mrdh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://mrdh.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25160840/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25160840/mrdh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-01-01'

@@ -1,5 +1,6 @@
 id: org:onderdeel-uht
 type: organisatieonderdeel
+subname: Herstel
 identifiers:
   roo_id: '29591909'
 classification: organisatieonderdeel
@@ -10,9 +11,35 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://herstel.toeslagen.nl/
+  phones:
+  - nummer: (0800) 235 83 58
+    label: vraag over herstel
+  - nummer: +31 55 538 53 85
+    label: herstel buitenland
+  internet_addresses:
+  - url: https://herstel.toeslagen.nl/
+    label: voor burgers
+  contact_forms:
+  - url: https://herstel.toeslagen.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Toeslagherstel
+    url: https://www.facebook.com/toeslagherstel
+  - platform: X
+    gebruikersnaam: Toeslagherstel
+    url: https://x.com/toeslagherstel
+  - platform: Instagram
+    gebruikersnaam: Toeslagherstel
+    url: https://www.instagram.com/toeslagherstel/
+  - platform: LinkedIn
+    gebruikersnaam: Uitvoeringsorganisatie Herstel Toeslagen (UHT)
+    url: https://www.linkedin.com/company/uitvoeringsorganisatiehersteltoeslagen/posts/?feedView=all
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-09-12'
+last_verified: '2026-01-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29591909/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29591909/uht
+  retrieved: '2026-05-16'

@@ -5,23 +5,104 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0682
   oin: 00000001823302490000
   kvk: '51459361'
+  owms: http://standaarden.overheid.nl/owms/terms/liemers
+  btw: NL823302490B01
+  organisatiecode: so0682
+  rsin: '823302490'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Samenwerking De Liemers
+  roo_id: '24965997'
 names:
 - value: Samenwerking De Liemers
   abbr: SDL
   valid_from: '1900-01-01'
+description:
+  text: Samenwerking de Liemers (SDL) is een samenwerkingsverband van RID de Liemers
+    (Regionaal ICT en Inkoop Dienstencentrum voor de gemeenten Duiven, Westervoort
+    en Zevenaar) en RSD de Liemers (Regionale Sociale Dienst voor de gemeente Duiven,
+    Westervoort en Zevenaar).
+  url: https://www.rsddeliemers.nl/over-samenwerking-de-liemers
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rsddeliemers.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/24966002/Samenwerking_De_Liemers
+  wooVerzoek:
+    url: https://www.rsddeliemers.nl/woo-verzoek
+organogram_url: https://www.rsddeliemers.nl/over-samenwerking-de-liemers
+afspraak:
+  email: info@rsddeliemers.nl
+  telefoonnummer: (0316) 27 95 33
+  url: https://www.rsddeliemers.nl/contact
 contact:
   website: https://www.werkeningelderland.nl/organisaties/samenwerking-de-liemers
   email: info@rsddeliemers.nl
+  bezoekadres: Koning Willem-Alexanderplein 1, 6921 ES Duiven
+  postadres: Postbus 45, 6920 AA Duiven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koning Willem-Alexanderplein
+    huisnummer: '1'
+    postcode: 6921 ES
+    woonplaats: Duiven
+  - type: Woo-Adres
+    toelichting: RSD de Liemers
+    openbare_ruimte: Kerkstraat (Turmac Cultuurfabriek)
+    huisnummer: 27d
+    postcode: 6901 AA
+    woonplaats: Zevenaar
+  - type: Postadres
+    postbus: '45'
+    postcode: 6920 AA
+    woonplaats: Duiven
+  - type: Woo-Adres
+    toelichting: RID de Liemers
+    openbare_ruimte: Dorpsplein
+    huisnummer: 115a
+    postcode: 6931 CZ
+    woonplaats: Westervoort
+  phones:
+  - nummer: (0316) 27 95 33
+    label: RSD De Liemers
+  - nummer: (088) 623 39 99
+    label: RID De Liemers
+  emails:
+  - email: info@rsddeliemers.nl
+    label: RSD De Liemers
+  - email: info@riddeliemers.nl
+    label: RID De Liemers
+  internet_addresses:
+  - url: https://www.werkeningelderland.nl/organisaties/samenwerking-de-liemers
+    label: algemeen
+  - url: https://www.rsddeliemers.nl
+    label: RSD De Liemers
+  - url: https://www.riddeliemers.nl
+    label: RID De Liemers
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966002/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966002/sdl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-11-30'

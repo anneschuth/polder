@@ -3,21 +3,116 @@ type: zbo
 identifiers:
   roo_id: '28212015'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000173
+  kvk: '54667089'
+  rsin: 002958697
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Koninklijke Nederlandse Akademie van Wetenschappen
   abbr: KNAW
   valid_from: '1900-01-01'
+description:
+  text: De Koninklijke Nederlandse Akademie van Wetenschappen (KNAW) is een genootschap
+    van vooraanstaande wetenschappers uit allerlei vakgebieden en fungeert als bestuurder
+    van diverse wetenschappelijke onderzoeksinstituten. Daarnaast voorziet de KNAW
+    de regering van advies over wetenschapsbeoefening.
+  url: https://www.knaw.nl/over-de-knaw
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet op het hoger onderwijs en wetenschappelijk onderzoek, artikel 1.5
+  referentie: http://wetten.overheid.nl/BWBR0005682/
+taken_en_bevoegdheden: '* Advisering op het gebied van de wetenschapsbeoefening.*
+  Beoordeling van de kwaliteit van hetwetenschappelijk onderzoek (peer review).* Forum
+  voor de wetenschappelijke wereld en bevordering van internationale samenwerking.*
+  Koepelorganisatie voor wetenschappelijke onderzoeksinstituten.'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 4095 - NEDERLANDSE UNIVERSITEITEN - KNAW
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=20837
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.knaw.nl/open-government-act
+      overzichtURL: https://organisaties.overheid.nl/woo/28212015/Koninklijke_Nederlandse_Akademie_van_Wetenschappen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Koninklijke+Nederlandse+Akademie+van+Wetenschappen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.knaw.nl/publicaties?refinementList%5Bpublication_type.title%5D%5B0%5D=Jaarverslag
+      toelichting: Jaarverslagen
+  wooVerzoek:
+    url: https://www.knaw.nl/open-government-act
+organogram_url: https://storage.knaw.nl/2024-07/Organogram-KNAW-2024-NL_0.pdf
+afspraak:
+  email: knaw@knaw.nl
+  url: https://www.knaw.nl/open-government-act
+personnel:
+  aantalFte: 1183,0
+  peildatumFte: '2023-06-06'
 contact:
   website: http://www.knaw.nl/
   email: knaw@knaw.nl
+  postadres: Postbus 19121, 1000 GC Amsterdam
+  bezoekadres: Kloveniersburgwal 29, 1011 JV Amsterdam
+  addresses:
+  - type: Postadres
+    postbus: '19121'
+    postcode: 1000 GC
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Bezoekadres
+    openbare_ruimte: Kloveniersburgwal
+    huisnummer: '29'
+    postcode: 1011 JV
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    toelichting: Wooverzoek
+    postbus: '19121'
+    postcode: 1000 GC
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Netherlands
+  phones:
+  - nummer: (020) 551 07 00
+    label: algemeen
+  emails:
+  - email: knaw@knaw.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.knaw.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.knaw.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-07'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212015/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212015/knaw
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +121,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000173
   retrieved: '2026-05-09'
+roo_start_datum: '1851-01-01'

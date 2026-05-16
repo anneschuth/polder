@@ -3,17 +3,86 @@ type: adviescollege
 identifiers:
   roo_id: '28391471'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10180
+  owms: http://standaarden.overheid.nl/owms/terms/acnatgrfnds
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Adviescommissie Nationaal Groeifonds
   valid_from: '1900-01-01'
+description:
+  text: Het Nationaal Groeifonds werkt samen met initiatiefnemers en investeerders
+    om projecten te financieren die bijdragen aan duurzame en structurele economische
+    groei. Om te bepalen in welk van deze projecten geïnvesteerd wordt, is de Adviescommissie
+    Nationaal Groeifonds ingesteld. Deze commissie beoordeelt op investeringsvoorstellen
+    op onafhankelijke wijze, aan de hand van vooraf vastgestelde voorwaarden.
+  url: https://www.nationaalgroeifonds.nl/over-de-commissie
+wettelijke_grondslagen:
+- opschrift: Regeling adviescommissie Nationaal Groeifonds
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0046952
+- opschrift: Instellingsbesluit Adviescommissie Nationaal Groeifonds, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0044080/2020-09-15/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+organogram_url: https://www.nationaalgroeifonds.nl/over-de-commissie/wie-zijn-de-leden
+afspraak:
+  url: https://www.nationaalgroeifonds.nl/contact
 contact:
   website: https://www.nationaalgroeifonds.nl/
   email: persngf@minezk.nl
+  bezoekadres: Bezuidenhoutseweg 73, 2594 AC Den Haag
+  postadres: Ministerie van Economische Zaken, 2500 EK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Adviescommissie Nationaal Groeifonds
+    huisnummer_toevoeging: Ministerie van Economische Zaken
+    postbus: '20401'
+    postcode: 2500 EK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 379 89 11
+    label: algemeen
+  - nummer: 06 11 35 13 13
+    label: pers
+  emails:
+  - email: persngf@minezk.nl
+    label: pers
+  internet_addresses:
+  - url: https://www.nationaalgroeifonds.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nationaalgroeifonds.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391471/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391471/adviescommissie-nationaal-groeifonds
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-09-15'

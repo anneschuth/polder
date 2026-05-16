@@ -6,21 +6,167 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0400
   roo_id: '24611'
   wikidata: Q9911
+  owms: http://standaarden.overheid.nl/owms/terms/Den_Helder_(gemeente)
+  ictu: '00400'
+  organisatiecode: gm0400
+  rsin: 001945907
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DHR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Den Helder
   abbr: Den Helder
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.denhelder.nl/Onderwerpen/Bestuur_en_organisatie/Beleid/Woo_verzoek_indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/24611/Gemeente_Den_Helder
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22gemeente%22)and(dt.creator==%22Den%20Helder%22))))and((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22)or(dt.type==%22ander%20besluit%20van%20algemene%20strekking%22)or(dt.type==%22beleidsregel%22)or(dt.type==%22delegatie-%20of%20mandaatbesluit%22)or(dt.type==%22gemeenschappelijke%20regeling%22)or(dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Legger, Verordeningen, Reglementen, Projectplannen etc.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.denhelder.nl/Onderwerpen/Bestuur_en_organisatie/Beleid/Woo_verzoek_bekijken
+      toelichting: Openbaar gemaakte Woo-verzoeken
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Helder%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.denhelder.nl/Onderwerpen/Bestuur_en_organisatie/Beleid/Besluitenlijsten
+      toelichting: Vergaderstukken Algemeen Bestuur, Dagelijks Bestuur en Commissies
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Helder%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Helder%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22gemeente%22)and(dt.creator==%22Den%20Helder%22))))and((dt.type==%22verkeersbesluit%20of%20-mededeling%22)or(dt.type==%22autorisatiebesluit%20basisregistratie%20personen%22)or(dt.type==%22kieswetpublicatie%22)or(dt.type==%22overige%20overheidsinformatie%22)or(dt.type==%22participatie%22)or(dt.type==%22andere%20beschikking%22)or(dt.type==%22andere%20vergunning%22)or(dt.type==%22evenementenvergunning%22)or(dt.type==%22exploitatievergunning%22)or(dt.type==%22omgevingsvergunning%22)or(dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Overige besluiten van algemene strekking
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gemeenteraad.denhelder.nl/vergaderingen
+      toelichting: Vergaderstukken Algemeen Bestuur, Dagelijks Bestuur en Commissies
+  wooVerzoek:
+    url: https://www.denhelder.nl/Onderwerpen/Bestuur_en_organisatie/Beleid/Woo_verzoek_indienen
+organogram_url: https://www.denhelder.nl/dsresource?objectid=05b2ae94-3720-4fae-b119-4758d367f4de&type=pdf&&
+afspraak:
+  email: info@denhelder.nl
+  telefoonnummer: '0140223'
+  url: https://www.denhelder.nl/Contact/Afspraak_maken
+geography:
+  oppervlakte: 178,83
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 178.83
+  aantal_inwoners: 56678
+  inwoners: '316'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 316.0
+  bevat_plaatsen_raw: Den Helder, Huisduinen, Julianadorp
+  bevat_plaatsen:
+  - Den Helder
+  - Huisduinen
+  - Julianadorp
+council:
+  total_seats: 32
+  parties:
+  - naam: Behoorlijk Bestuur v D-H & Julianadorp
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: Beter voor Den Helder
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Samen Actief
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: PVV
+    aantal_zetels: 1
+  - naam: Stadspartij Den Helder
+    aantal_zetels: 1
+  - naam: Fractie Pastoor
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: Fractie Nanning
+    aantal_zetels: 1
 contact:
   website: https://www.denhelder.nl
   email: info@denhelder.nl
+  bezoekadres: Willemsoord 66, 1781 AS DEN HELDER
+  postadres: Postbus 36, 1780 AA DEN HELDER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willemsoord
+    huisnummer: '66'
+    postcode: 1781 AS
+    woonplaats: DEN HELDER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '36'
+    postcode: 1780 AA
+    woonplaats: DEN HELDER
+  - type: Woo-Adres
+    postbus: '36'
+    postcode: 1780 AA
+    woonplaats: Den Helder
+    regio: Noord-Holland
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Willemsoord
+    huisnummer: '66'
+    postcode: 1781 AS
+    woonplaats: DEN HELDER
+  phones:
+  - nummer: '0140223'
+    label: algemeen
+  emails:
+  - email: info@denhelder.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.denhelder.nl
+    label: algemeen
+  contact_forms:
+  - url: https://mijn.denhelder.nl/zaak/create/webformulier?ztc_aanvrager_type=unknown&aanvrager=betrokkene-natuurlijk_persoon-1&sessreset=1&zaaktype_id=435
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24611/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24611/den-helder
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

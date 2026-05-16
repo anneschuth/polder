@@ -4,13 +4,27 @@ identifiers:
   roo_id: '28470058'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie Bedrijfsjuridisch Advies
   abbr: CBA
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit CBA
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0039036
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-11-08'
+last_verified: '2021-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28470058/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28470058/cba
+  retrieved: '2026-05-16'

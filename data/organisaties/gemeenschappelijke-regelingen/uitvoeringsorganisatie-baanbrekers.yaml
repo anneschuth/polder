@@ -4,22 +4,118 @@ identifiers:
   roo_id: '24311127'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0695
   oin: 00000004003067889001
+  owms: http://standaarden.overheid.nl/owms/terms/baanbrekers
+  kvk: '17256566'
+  organisatiecode: so0695
+  rsin: '003122670'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Uitvoeringsorganisatie Baanbrekers
+  roo_id: '29592001'
 names:
 - value: Uitvoeringsorganisatie Baanbrekers
   valid_from: '1900-01-01'
+description:
+  text: 'Baanbrekers is het leer-, werk- en mensontwikkelbedrijf van de gemeenten
+    Heusden, Loon op Zand en Waalwijk. Wij willen dat iedereen meedoet aan de samenleving
+    en aan werk. Is werk niet, nog niet of even niet mogelijk? Dan is er hulp in de
+    vorm van een tijdelijk inkomen.Baanbrekers heeft 3 afdelingen:- Leren & Werken;
+    De afdeling L&W verricht - in- en extern - allerlei activiteiten voor opdrachtgevers.
+    Denk hierbij aan: inpakken, ompakken, samenstellen, cateren, beveiliging, groenvoorziening,
+    schoonmaak en het stimuleren van de kringloop. Dit met het doel om mensen te leren
+    werken en ontwikkelen.- Re integratie, Participatie & Inkomen; De afdeling RP&I
+    is er voor inwoners van de gemeenten Heusden, Loon op Zand en Waalwijk die niet
+    in hun eigen levensonderhoud kunnen voorzien of die te maken krijgen met hoge
+    bijzondere bestaanskosten. Wij ondersteunen en begeleiden mensen naar werk.- Bedrijfsvoering
+    & Control: De afdeling B&C is de ondersteunende stafafdeling van het leer-, werk-
+    en mensontwikkelbedrijf.'
+  url: https://baanbrekers.org/over-baanbrekers/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://baanbrekers.org/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/24311127/Uitvoeringsorganisatie_Baanbrekers
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Uitvoeringsorganisatie%20Baanbrekers%22))%20AND%20((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22%20OR%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22%20OR%20dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22%20OR%20dt.type==%22beleidsregel%22%20OR%20dt.type==%22delegatie-%20of%20mandaatbesluit%22%20OR%20dt.type==%22circulaire%22%20OR%20dt.type==%22verkeersbesluit%20of%20-mededeling%22)))&zv=&pg=50&col=&svel=Publicatiedatum&svol=Aflopend
+      toelichting: Baanbrekers' andere besluiten van algemene strekking
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://baanbrekers.org/bestuur/
+      toelichting: Het bestuur van Baanbrekers met vergaderstukken van het Algemeen
+        Bestuur en vergaderdata.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Uitvoeringsorganisatie%20Baanbrekers%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))&zv=&pg=50&col=&svel=Publicatiedatum&svol=Aflopend
+      toelichting: Algemeen verbindende voorschriften (verordeningen) van Baanbrekers
+  wooVerzoek:
+    url: https://www.baanbrekers.org/wet-open-overheid-woo/
+organogram_url: https://baanbrekers.org/wp-content/uploads/2025/04/Organogram-Baanbrekers-jan-2026.pdf
+afspraak:
+  email: info@baanbrekers.org
+  telefoonnummer: (0416) 67 10 00
+  url: https://baanbrekers.org/contact/
 contact:
   website: https://baanbrekers.org
   email: info@baanbrekers.org
+  bezoekadres: Zanddonkweg 14, 5144 NX Waalwijk
+  postadres: Postbus 15, 5140 AA Waalwijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zanddonkweg
+    huisnummer: '14'
+    postcode: 5144 NX
+    woonplaats: Waalwijk
+    land: Nederland
+  - type: Postadres
+    postbus: '15'
+    postcode: 5140 AA
+    woonplaats: Waalwijk
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '15'
+    postcode: 5140 AA
+    woonplaats: Waalwijk
+    land: Nederland
+  phones:
+  - nummer: (0416) 67 10 00
+    label: Telefoon algemeen
+  emails:
+  - email: info@baanbrekers.org
+    label: E-mail algemeen
+  internet_addresses:
+  - url: https://baanbrekers.org
+    label: Website algemeen
+  contact_forms:
+  - url: https://baanbrekers.org/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Baanbrekers
+    url: https://nl.linkedin.com/company/baanbrekers-sterkmensenwerk
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-09'
+last_verified: '2026-02-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24311127/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24311127/uitvoeringsorganisatie-baanbrekers
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-12-28'

@@ -7,12 +7,45 @@ parent_id: org:onderdeel-directie-klachtbehandeling
 names:
 - value: Team Ombudsplein
   valid_from: '1900-01-01'
+description:
+  text: Op het Ombudsplein worden telefonische vragen beantwoord en klachten behandeld
+    of opgelost.
 contact:
   website: http://www.nationaleombudsman.nl
   email: post@nationaleombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Postbus 93122, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '151'
+    postcode: 2594 AG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93122'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 356 35 63
+    label: algemeen
+  - nummer: (0800) 335 55 55
+    label: voor vragen en advies
+  emails:
+  - email: post@nationaleombudsman.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nationaleombudsman.nl
+    label: algemeen
+  fax: (070) 360 75 72
+  beschrijving: Op het Ombudsplein worden telefonische vragen beantwoord en klachten
+    behandeld of opgelost.
 valid_from: '1900-01-01'
 valid_until: '2023-09-30'
+last_mutation: '2023-09-28'
+last_verified: '2025-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29166646/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29166646/team-ombudsplein
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-10-01'

@@ -4,13 +4,39 @@ identifiers:
   roo_id: '28507243'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000311
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Instellingen hoger onderwijs en academische ziekenhuizen
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo' s die niet onder de werking van de kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.Dit cluster bestaat uit zowel privaatrechtelijke
+    en publiekrechtelijke organisaties.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet op het hoger onderwijs en wetenschappelijk onderzoek, artikel 1.3
+    en 1.4
+  referentie: https://wetten.overheid.nl/BWBR0005682/
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28507243/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28507243/instellingen-hoger-onderwijs-en-academische-ziekenhuizen
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-09-01'

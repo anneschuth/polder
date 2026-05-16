@@ -5,22 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0885
   oin: 00000001855370944000
   kvk: '63720787'
+  owms: http://standaarden.overheid.nl/owms/terms/geghuis
+  organisatiecode: so0885
+  rsin: '855370944'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Het Gegevenshuis
+  roo_id: '29491943'
 names:
 - value: Het Gegevenshuis
   valid_from: '1900-01-01'
+description:
+  url: https://gegevenshuis.nl/over-ons/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://gegevenshuis.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28240554/Het_Gegevenshuis
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gegevenshuis.nl/bestuur/bestuur-nieuws
+      toelichting: Vergaderdocumenten Algemeen bestuur, Agenda Dagelijks Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gegevenshuis.nl/bestuur/bestuur-nieuws
+      toelichting: Begroting en Jaarrekening (publicatie via bijlagen vergadering
+        Algemeen Bestuur)
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://gegevenshuis.nl/bestuur/bestuur-nieuws
+      toelichting: verordeningen (publicatie via bijlagen vergadering Algemeen Bestuur)
+  wooVerzoek:
+    url: https://gegevenshuis.nl/wet-open-overheid-woo
+organogram_url: https://gegevenshuis.nl/bestuur/bestuur
+afspraak:
+  email: info@gegevenshuis.nl
+  telefoonnummer: (045) 569 56 00
+  url: https://gegevenshuis.nl/contact
 contact:
   website: https://www.gegevenshuis.nl
   email: info@gegevenshuis.nl
+  bezoekadres: Emile Erensplein 55, 6371 GH Landgraaf
+  postadres: Postbus 31300, 6370 AH Landgraaf
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Emile Erensplein
+    huisnummer: '55'
+    postcode: 6371 GH
+    woonplaats: Landgraaf
+    regio: Limburg
+    land: Nederland
+  - type: Postadres
+    postbus: '31300'
+    postcode: 6370 AH
+    woonplaats: Landgraaf
+  - type: Woo-Adres
+    openbare_ruimte: Emile Erensplein
+    huisnummer: '55'
+    postcode: 6371 GH
+    woonplaats: Landgraaf
+    regio: Limburg
+    land: Nederland
+  phones:
+  - nummer: (045) 569 56 00
+    label: algemeen
+  emails:
+  - email: info@gegevenshuis.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gegevenshuis.nl
+    label: algemeen
+  contact_forms:
+  - url: https://gegevenshuis.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28240554/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28240554/het-gegevenshuis
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-06-25'

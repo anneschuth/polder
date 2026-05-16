@@ -3,17 +3,65 @@ type: adviescollege
 identifiers:
   roo_id: '28391521'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10185
+  owms: http://standaarden.overheid.nl/owms/terms/auditvoetbveil
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Auditteam Voetbal en Veiligheid
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Besluit instelling van het Auditteam Voetbal en Veiligheid
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0031703&artikel=2&z=2012-06-27&g=2012-06-27
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rijksoverheid.nl/onderwerpen/voetbalvandalisme/auditteam-voetbal-en-veiligheid
   email: h.ferwerda@beke.nl
+  bezoekadres: Turfstraat 1, 6811 HL Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfstraat
+    huisnummer: '1'
+    postcode: 6811 HL
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: 06 54 36 09 63
+    label: algemeen
+  emails:
+  - email: h.ferwerda@beke.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/onderwerpen/voetbalvandalisme/auditteam-voetbal-en-veiligheid
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/contactgids/auditteam-voetbal-en-veiligheid
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391521/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391521/auditteam-voetbal-en-veiligheid
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-06-27'

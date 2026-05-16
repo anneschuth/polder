@@ -3,17 +3,50 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '54070'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dlz
+parent_id: org:onderdeel-directoraat-generaal-langdurige-zorg
 names:
 - value: Directie Maatschappelijke Ondersteuning
   abbr: DMO
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
+description:
+  text: 'De missie van DMO is: De burger participeert vanuit zijn eigen verantwoordelijkheid
+    en eigen kracht in de samenleving. Het is onze taak gemeenten en veldpartijen
+    in een positie te brengen zodat ze burgers effectief en efficiënt kunnen ondersteunen.
+    Tevens werken we aan het versterken van de sociale basis en samenredzaamheid van
+    mensen. De directie Maatschappelijke Ondersteuning is hierbij verantwoordelijk
+    voor het stelsel van ondersteuning zoals dat in de Wet maatschappelijke ondersteuning
+    (Wmo) is vastgelegd. De gemeenten zijn hiervoor bestuurlijk en financieel verantwoordelijk.Aandachtsgebieden*
+    Een toekomstbestendig stelsel van maatschappelijke ondersteuning.* Sterke samenleving;
+    versterken van de sociale basis.* Inclusieve maatschappij.* Versterken toegang.*
+    Veilig Thuis.* Herdenken en nooit vergeten.* Eén tegen eenzaamheid.* Wonen en
+    zorg.'
 contact:
   email: secretariaatdmo@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 54 34
+    label: algemeen
+  emails:
+  - email: secretariaatdmo@minvws.nl
+    label: algemeen
+  fax: (070) 340 67 19
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/54070/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/54070/dmo
+  retrieved: '2026-05-16'

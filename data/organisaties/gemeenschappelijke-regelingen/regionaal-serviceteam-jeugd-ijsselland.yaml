@@ -3,18 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28200285'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1066
+  owms: http://standaarden.overheid.nl/owms/terms/rsjijsselland
+  kvk: '63560119'
+  organisatiecode: so1066
+  rsin: '855291692'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Regionaal Serviceteam
+    Jeugd IJsselland
+  roo_id: '28200279'
 names:
 - value: Regionaal Serviceteam Jeugd IJsselland
   abbr: RSJ IJsselland
   valid_from: '1900-01-01'
+description:
+  text: Het Regionaal Serviceteam Jeugd IJsselland (RSJ IJsselland) is het regionale
+    samenwerkingsverband van de elf gemeenten in de regio IJsselland als het gaat
+    om de uitvoering van de taken uit de Jeugdwet. De gemeenten Dalfsen, Deventer,
+    Hardenberg, Kampen, Olst-Wijhe, Ommen, Raalte, Staphorst, Steenwijkerland, Zwartewaterland
+    en Zwolle hebben de Gemeenschappelijke Regeling Bedrijfsvoeringsorganisatie Regionaal
+    Serviceteam Jeugd IJsselland (RSJ IJsselland) opgericht. Hiermee is het RSJ IJsselland
+    het regionale samenwerkingsverband van deze elf gemeenten als het gaat om de uitvoering
+    van de taken uit de Jeugdwet. De gemeenten werken allen vanuit hun eigen lokale
+    autonomie. De regionale samenwerking dient de lokale werking te faciliteren.Het
+    RSJ IJsselland draagt voor deze elf gemeenten zorg voor de inkoop van diensten
+    in het kader van de specialistische jeugdzorg, het contractmanagement, het contractbeheer,
+    monitoring en de uitvoering van regionale inhoudelijke thema’s.
+  url: https://www.rsj-ijsselland.nl/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28200285/Regionaal_Serviceteam_Jeugd_IJsselland
+  wooVerzoek:
+    url: https://www.rsj-ijsselland.nl/contact
+organogram_url: https://www.rsj-ijsselland.nl/rsj-ijsselland/organisatie
+afspraak:
+  url: https://www.rsj-ijsselland.nl/contact
 contact:
   website: https://www.rsj-ijsselland.nl
   email: info@rsj-ijsselland.nl
+  bezoekadres: Grote Kerkplein 15, 8011 PK Zwolle
+  postadres: Postbus 10007, 8000 GA Zwolle
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stadhuis gemeente Zwolle
+    openbare_ruimte: Grote Kerkplein
+    huisnummer: '15'
+    postcode: 8011 PK
+    woonplaats: Zwolle
+  - type: Postadres
+    postbus: '10007'
+    postcode: 8000 GA
+    woonplaats: Zwolle
+  - type: Woo-Adres
+    postbus: '10007'
+    postcode: 8000 GA
+    woonplaats: Zwolle
+  phones:
+  - nummer: 14 038
+    label: gemeente Zwolle
+  emails:
+  - email: info@rsj-ijsselland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rsj-ijsselland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rsj-ijsselland.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: RSJ IJsselland
+    url: https://nl.linkedin.com/company/rsjijsselland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-05'
+last_verified: '2025-02-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28200285/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28200285/regionaal-serviceteam-jeugd-ijsselland
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-01-01'

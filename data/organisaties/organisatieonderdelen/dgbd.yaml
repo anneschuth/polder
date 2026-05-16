@@ -1,20 +1,292 @@
 id: org:onderdeel-dgbd
 type: organisatieonderdeel
+subname: Belastingdienst
 identifiers:
   roo_id: '68888'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12368
+  owms: http://standaarden.overheid.nl/owms/terms/Belastingdienst
+  organisatiecode: oorg12368
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-fin
+parent_id: org:min-fin
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Directoraat-generaal Belastingdienst
   abbr: DGBD
   valid_from: '1900-01-01'
+description:
+  text: Bij de Belastingdienst werken bijna 27.000 mensen. Een groot deel van onze
+    medewerkers heeft direct contact met burgers en bedrijven. De rest van de medewerkers
+    werkt bij de facilitaire bedrijven, concerndirecties en corporate diensten binnen
+    de Belastingdienst.De Belastingdienst is onderdeel van het ministerie van Financiën.
+    We voeren niet alleen fiscale wetgeving uit. Ook de FIOD maakt deel uit van de
+    Belastingdienst. We hebben bovendien een van de grootste ICT-organisaties van
+    het land.
+  url: https://over-ons.belastingdienst.nl/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/standaard_functies/prive/contact/verzoek-wet-open-overheid-woo/overheidsinformatie-openbaar-met-wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/68888/Directoraat-generaal_Belastingdienst
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22ministerie%22)and((dt.creator==%22Ministerie%20van%20Financi%25c3%25abn%20(MINFIN)%22)or(dt.creator==%22Ministerie%20van%20Financi%25c3%25abn%22)))or((w.organisatietype==%22dienst%20en%20agentschap%22)and((dt.creator==%22Belastingdienst%22)or(dt.creator==%22Dutch%20State%20Treasury%20Agency%20(Agentschap%20Financien)%22)))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(cql.textAndIndexes=%22convenant%22)%20AND%20dt.type==%22convenant%22&zv=convenant&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cconvenant
+      toelichting: URL van de Staatscourant. Een convenant is een schriftelijke set
+        van afspraken tussen een overheidsorganisatie en één of meer andere partijen.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=Belastingdienst&onderdeel=Ministerie%20van%20Financi%C3%ABn&type=Rapport
+      toelichting: 'URL van Rijksoverheid.nl. Onderzoeksrapporten: Ter voorbereiding
+        en ter evaluatie van beleid of uitvoering'
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22ministerie%22)and((dt.creator==%22Ministerie%20van%20Financi%25c3%25abn%20(MINFIN)%22)or(dt.creator==%22Ministerie%20van%20Financi%25c3%25abn%22)))or((w.organisatietype==%22dienst%20en%20agentschap%22)and((dt.creator==%22Belastingdienst%22)or(dt.creator==%22Dutch%20State%20Treasury%20Agency%20(Agentschap%20Financien)%22)))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(cql.textAndIndexes=%22Directoraat-generaal%22%20and%20cql.textAndIndexes=%22Belastingdienst%22)%20AND%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22&zv=Directoraat-generaal+Belastingdienst&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cander+besluit+van+algemene+strekking
+      toelichting: URL van de Staatscourant. Een schriftelijke ondertekende afspraak
+        met een of meer publiekrechtelijke partijen, die mede betrekking heeft op
+        de uitoefening van publiekrechtelijke bevoegdheden.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=Belastingdienst&startdatum=&einddatum=&onderdeel=Ministerie+van+Financi%C3%ABn&type=Woo-besluit
+      toelichting: URL van Rijksoverheid.nl. Deze categorie betreft het voor iedereen
+        openbaar maken van het besluit op een Woo-verzoek, de inhoud daarvan en de
+        documenten die aan de verzoeker verstrekt zijn (incl. inventarislijst).
+    - informatiecategorie: Convenanten
+      url: https://www.belastingdienst.nl/wps/wcm/connect/nl/zoeken/zoeken?q=convenant
+      toelichting: URL van de Belastingdienst website. Een convenant is een schriftelijke
+        set van afspraken tussen een overheidsorganisatie en één of meer andere partijen.
+        Het doel van de afspraken is het voorbereiden of realiseren van beleid.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://over-ons.belastingdienst.nl/wp-content/uploads/2026/01/Jaarplan-Belastingdienst-2026.pdf
+      toelichting: URL van Openoverheid.nl, waar het jaarplan van de Belastingdienst
+        staat.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.overheid.nl/documenten/fdbaa3f7-9f04-4a0e-b260-c9db5e3146f1/file
+      toelichting: URL van Jaarrapportage 2025 van de Belastingdienst
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.government.nl/topics/taxation-and-businesses/documents
+      toelichting: URL naar de Engelstalige site van de Rijksoverheid.
+  wooVerzoek:
+    url: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/standaard_functies/prive/contact/verzoek-wet-open-overheid-woo/overheidsinformatie-openbaar-met-wet-open-overheid
+organogram_url: https://over-ons.belastingdienst.nl/organisatie/organisatie-en-taken/
+afspraak:
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/content/afspraak-maken-balie-bezoeken
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-financien
   email: woo@belastingdienst.nl
+  bezoekadres: Kingsfordweg 1, 1043 GN Amsterdam
+  postadres: Postbus 30206, 2500 GE 'S-GRAVENHAGE
+  addresses:
+  - type: Woo-Adres
+    postbus: '30206'
+    postcode: 2500 GE
+    woonplaats: '''S-GRAVENHAGE'
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Amsterdam
+    openbare_ruimte: Kingsfordweg
+    huisnummer: '1'
+    postcode: 1043 GN
+    woonplaats: Amsterdam
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Almelo
+    openbare_ruimte: Stationsstraat
+    huisnummer: '5'
+    postcode: 7607 GX
+    woonplaats: Almelo
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Almere
+    openbare_ruimte: W. Dreesweg
+    huisnummer: '24'
+    postcode: 1314 CN
+    woonplaats: Almere
+    regio: Flevoland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Breda
+    openbare_ruimte: Gravinnen van Nassauboulevard
+    huisnummer: '75'
+    postcode: 4811 BN
+    woonplaats: Breda
+    regio: Noord-Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Arnhem
+    openbare_ruimte: Groningensingel
+    huisnummer: '21'
+    huisnummer_toevoeging: Gelderland
+    postcode: 6835 EA
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor 's-Gravenhage
+    openbare_ruimte: Prinses Beatrixlaan
+    huisnummer: '512'
+    postcode: 2595 BL
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Eindhoven
+    openbare_ruimte: Fellenoord
+    huisnummer: '15'
+    postcode: 5612 AA
+    woonplaats: Eindhoven
+    regio: Noord-Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Doetinchem
+    openbare_ruimte: Hamburgerbroeklaan
+    huisnummer: '12'
+    postcode: 7005 AJ
+    woonplaats: Doetinchem
+    regio: Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Enschede
+    openbare_ruimte: Hengelosestraat
+    huisnummer: '75'
+    postcode: 7514 AE
+    woonplaats: Enschede
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Emmen
+    openbare_ruimte: Verlengde Spoorstraat
+    huisnummer: '2'
+    postcode: 7811 GA
+    woonplaats: Emmen
+    regio: Drenthe
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Heerlen
+    openbare_ruimte: Kloosterweg
+    huisnummer: '22'
+    postcode: 6412 CN
+    woonplaats: Heerlen
+    regio: Limburg
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Groningen
+    openbare_ruimte: Kempkensberg
+    huisnummer: '12'
+    postcode: 9722 TB
+    woonplaats: Groningen
+    regio: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Hoofddorp
+    openbare_ruimte: Capellalaan
+    huisnummer: 1-17
+    postcode: 2132 JK
+    woonplaats: Hoofddorp
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Hoorn
+    openbare_ruimte: Nieuwe Steen
+    huisnummer: '4'
+    postcode: 1625 HV
+    woonplaats: Hoorn
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Leeuwarden
+    openbare_ruimte: Tesselschadestraat
+    huisnummer: '140'
+    postcode: 8913 HC
+    woonplaats: Leeuwarden
+    regio: Friesland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Middelburg
+    openbare_ruimte: Poelendaelesingel
+    huisnummer: '18'
+    postcode: 4335 JA
+    woonplaats: Middelburg
+    regio: Zeeland
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Maastricht
+    openbare_ruimte: Terra nigrastraat
+    huisnummer: '10'
+    postcode: 6216 BL
+    woonplaats: Maastricht
+    regio: Limburg
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Utrecht
+    openbare_ruimte: Graadt van Roggenweg
+    huisnummer: '500'
+    postcode: 3531 AH
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Rotterdam
+    openbare_ruimte: Laan op Zuid
+    huisnummer: '45'
+    postcode: 3072 DB
+    woonplaats: Rotterdam
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Zwolle
+    openbare_ruimte: Burgemeester Drijbersingel
+    huisnummer: '27'
+    postcode: 8021 DA
+    woonplaats: Zwolle
+    regio: Overijssel
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Belastingdienst/kantoor Venlo
+    openbare_ruimte: Hogeweg
+    huisnummer: '85'
+    postcode: 5914 BC
+    woonplaats: Venlo
+    regio: Limburg
+    land: Nederland
+  - type: Postadres
+    postbus: '30206'
+    postcode: 2500 GE
+    woonplaats: '''S-GRAVENHAGE'
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-financien
+    label: algemeen
+  - url: https://belastingdienst.nl
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2026-04-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/68888/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/68888/dgbd
+  retrieved: '2026-05-16'

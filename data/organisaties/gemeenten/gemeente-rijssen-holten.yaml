@@ -6,21 +6,155 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1742
   roo_id: '33952'
   wikidata: Q10020
+  owms: http://standaarden.overheid.nl/owms/terms/Rijssen-Holten
+  ictu: '01742'
+  organisatiecode: gm1742
+  rsin: 001584169
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_RIH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Rijssen-Holten
   abbr: Rijssen-Holten
   valid_from: '1900-01-01'
+description:
+  url: https://www.rijssen-holten.nl/bestuur-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijssen-holten.nl/direct-regelen/melding-klacht-compliment/klachten-en-bezwaren/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/33952/Gemeente_Rijssen-Holten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Rijssen-Holten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Naast algemene verbindende voorschriften kan de gemeente ook andere
+        besluiten van algemene strekking nemen. Dat zijn bijvoorbeeld beleidsregels
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Rijssen-Holten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten.  De gemeente maakt algemeen verbindende voorschriften zoals
+        bijvoorbeeld de Algemene Plaatselijke Verordening.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Rijssen-Holten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Beschikkingen zijn besluiten over specifieke gevallen. Dit zijn
+        vergunningen zoals bijvoorbeeld een omgevingsvergunning.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://raad.rijssen-holten.nl/vergaderstukken/publicatie/verslagen-en-besluitenlijsten?oo=Raad
+      toelichting: Op deze pagina vindt u de verslagen en besluitenlijst van de gemeenteraad.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://raad.rijssen-holten.nl/vergaderstukken/publicatie/agenda-s?oo=Raad
+      toelichting: Op deze pagina vindt u de agenda's van de gemeenteraad.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://raad.rijssen-holten.nl/vergaderstukken/publicatie/verslagen-en-besluitenlijsten?oo=College
+      toelichting: Op deze pagina vindt u de besluiten die het college van burgemeester
+        en wethouders heeft genomen.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijssen-holten.nl/woo-verzoeken/
+      toelichting: Met een Woo-verzoek wordt gevraagd om overheidsinformatie openbaar
+        te maken. Iedereen kan een Woo-verzoek indienen. Bekijk op deze pagina een
+        overzicht van afgehandelde Woo-verzoeken.
+  wooVerzoek:
+    url: https://loket.rijssen-holten.nl/aanvraag?schema=aanvraagformulierwoo
+organogram_url: https://www.rijssen-holten.nl/bestuur-organisatie/organogram-rijssen-holten/
+afspraak:
+  telefoonnummer: (0548) 85 48 54
+  url: https://rijssen-holten.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 94,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 94.38
+  aantal_inwoners: 39274
+  inwoners: '416'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 416.0
+  bevat_plaatsen_raw: Holten, Rijssen
+  bevat_plaatsen:
+  - Holten
+  - Rijssen
+council:
+  total_seats: 25
+  parties:
+  - naam: SGP
+    aantal_zetels: 8
+  - naam: Gemeentebelang
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 1
 contact:
   website: https://www.rijssen-holten.nl
   email: woo@rijssen-holten.nl
+  bezoekadres: Schild 1, 7461 DD RIJSSEN
+  postadres: Postbus 244, 7460 AE RIJSSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schild
+    huisnummer: '1'
+    postcode: 7461 DD
+    woonplaats: RIJSSEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '244'
+    postcode: 7460 AE
+    woonplaats: RIJSSEN
+  - type: Woo-Adres
+    toelichting: ter attentie van de Woo-coördinator
+    postbus: '244'
+    postcode: 7460 AE
+    woonplaats: Rijssen
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Schild
+    huisnummer: '1'
+    postcode: 7461 DD
+    woonplaats: RIJSSEN
+  phones:
+  - nummer: (0548) 85 48 54
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijssen-holten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://loket.rijssen-holten.nl/aanvraag?schema=vraagbouwenenwonen
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33952/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33952/gemeente-rijssen-holten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +163,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q10020
   retrieved: '2026-05-09'
+roo_start_datum: '2003-03-15'

@@ -6,21 +6,148 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1991
   roo_id: '28523626'
   wikidata: Q104758976
+  owms: http://standaarden.overheid.nl/owms/terms/Maashorst
+  ictu: 01991
+  organisatiecode: gm1991
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MAA
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Maashorst
   abbr: Maashorst
   valid_from: '1900-01-01'
+description:
+  text: 'Maashorst is een jonge gemeente met zes kernen, omgeven door natuur zoals
+    je die nergens anders tegenkomt. We kennen, net als iedere gemeente, een college,
+    een gemeenteraad en een directie. De organisatie is verdeeld in drie domeinen:
+    Ruimte, Sociaal en Dienstverlening. Ieder domein heeft een directeur en bestaat
+    uit verschillende teams. De teams worden aangestuurd door een teammanager.Aan
+    het hoofd van de ambtelijke organisatie staat de gemeentesecretaris.'
+  url: http://www.gemeentemaashorst.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentemaashorst.nl/bestuur-en-organisatie/beleid-en-regelgeving/woo/?zoek=woo%20ver
+      overzichtURL: https://organisaties.overheid.nl/woo/28523626/Gemeente_Maashorst
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uden%22+OR+dt.creator==%22Landerd%22+OR+dt.creator==%22Maashorst%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uden%22+OR+dt.creator==%22Landerd%22+OR+dt.creator==%22Maashorst%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uden%22+OR+dt.creator==%22Landerd%22+OR+dt.creator==%22Maashorst%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://dloket.gemeentemaashorst.nl/burger/startform?id=WOO
+organogram_url: https://www.gemeentemaashorst.nl/data/downloadables/4/1/9/4/organogram-gemeente-maashorst.pdf
+afspraak:
+  url: https://maashorst.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 67,53
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 67.53
+  aantal_inwoners: 60059
+  inwoners: '889'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 889.0
+  bevat_plaatsen_raw: Odiliapeel, Reek, Schaijk, Uden, Volkel, Zeeland
+  bevat_plaatsen:
+  - Odiliapeel
+  - Reek
+  - Schaijk
+  - Uden
+  - Volkel
+  - Zeeland
+council:
+  total_seats: 34
+  parties:
+  - naam: KOMPAS Maashorst
+    aantal_zetels: 7
+  - naam: Gewoon VVD Maashorst
+    aantal_zetels: 6
+  - naam: Jong Maashorst
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA-D66-PRO
+    aantal_zetels: 3
+  - naam: Lokaal Maashorst
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentemaashorst.nl
   email: info@gemeentemaashorst.nl
+  bezoekadres: Markt 145, 5401 EJ UDEN
+  postadres: Postbus 83, 5400 AB UDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '145'
+    postcode: 5401 EJ
+    woonplaats: UDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '83'
+    postcode: 5400 AB
+    woonplaats: UDEN
+  - type: Woo-Adres
+    postbus: '83'
+    postcode: 5400 AB
+    woonplaats: Uden
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '145'
+    postcode: 5401 EJ
+    ter_attentie_van: Medewerkers Front Office Vergunning Toezicht en Handhaving
+    woonplaats: UDEN
+  phones:
+  - nummer: (0413) 28 19 11
+    label: algemeen
+  emails:
+  - email: info@gemeentemaashorst.nl
+    label: algemeen
+  - email: info@gemeentemaashorst.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentemaashorst.nl
+    label: algemeen
+  contact_forms:
+  - url: https://maashorst.mijnafspraakmaken.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28523626/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28523626/maashorst
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +156,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q104758976
   retrieved: '2026-05-09'
+roo_start_datum: '2022-01-01'

@@ -4,20 +4,110 @@ identifiers:
   roo_id: '28248887'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000066
 classification: zbo
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Registratiecommissie Specialismen Verpleegkunde
   abbr: RSV
   valid_from: '1900-01-01'
+description:
+  text: Dit zbo is onderdeel van het cluster Registratiecommissies KNMG, KNMP, KNMT,
+    FGzPt en V&VN. Het betreft hier de registratiecommissie van beroepsorganisatie
+    Verpleegkundigen en Verzorgenden Nederland (V&VN).De Registratiecommissie Specialismen
+    Verpleegkunde (RSV), een onafhankelijk orgaan binnen V&VN, is verantwoordelijk
+    voor de registratie en herregistratie van verpleegkundig specialisten, op basis
+    van artikel 14 van de Wet op de beroepen in de individuele gezondheidszorg (Wet
+    BIG). Het aanwijzen van de specialismen binnen de verpleegkunde, het instellen
+    van registers en het opstellen van de algemene regelgeving hieromtrent wordt gedaan
+    door het College Specialismen Verpleegkunde (CSV). De RSV exploiteert de registers
+    en vertaalt de regelgeving van het CSV naar een praktische uitvoering.
+  url: https://www.venvn.nl/registers/verpleegkundig-specialisten-register/het-register/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Artikel 22 van de Kaderwet zelfstandige bestuursorganen is niet
+        van toepassing voor zover het besluiten betreft ter zake van de inschrijving.
+wettelijke_grondslagen:
+- opschrift: Wet beroepen in de individuele gezondheidszorg, artikelen 14 en 15
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20de%20beroepen%20in%20de%20individuele%20gezondheidszorg/article=14
+taken_en_bevoegdheden: Indien een organisatie van beoefenaren van een beroep als bedoeld
+  in artikel 3 van de Wet beroepen in de individuele gezondheidszorg (Wet BIG) voor
+  de inschrijving van beroepsbeoefenaren, die een bijzondere deskundigheid hebben
+  verworven met betrekking tot de uitoefening van een deelgebied van hun beroep, een
+  specialistenregister heeft en daaraan een titel is verbonden, kan de Minister van
+  Volksgezondheid, Welzijn en Sport bepalen dat die titel als wettelijk erkende specialistentitel
+  wordt aangemerkt. Een aanvraag daartoe wordt gedaan door het bestuur van de organisatie;
+  het bestuur kan de bevoegdheid daartoe overdragen aan een orgaan. Deze bevoegdheid
+  kan worden overgedragen aan het orgaan (college) zoals bedoeld in artikel 14, tweede
+  lid, sub d van de Wet BIG.De Registratiecommissie Specialismen Verpleegkunde (RSV)
+  is als onafhankelijk orgaan binnen Verpleegkundigen & Verzorgenden Nederland (V&VN)
+  verantwoordelijk voor diverse taken met betrekking tot de registers van specialistisch
+  verpleegkundigen. Deze taken zijn:* het inrichten en opheffen van de opleidingsregisters
+  voor verpleegkundigen in opleiding tot specialist;* het inschrijven van verpleegkundig
+  specialisten in opleiding in de opleidingsregisters;* het erkennen van opleidingsinstellingen
+  en praktijkinstellingen, hoofd- en praktijkopleiders;* het houden van toezicht op
+  de naleving van collegebesluiten door opleiders en opleidingsinstellingen (onder
+  andere door visitatie);* het inrichten en opheffen van de registers voor verpleegkundig
+  specialisten;* het registreren en herregistreren van verpleegkundig specialisten
+  in de specialistenregisters voor Algemene Gezondheidszorg (AGZ) en Geestelijke Gezondheidszorg
+  (GGZ).
+evaluations:
+- datum: '2017-05-29'
+  kamerstuknummer: TK 32772 nr. 26
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32772-26.html
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 12,5
+  peildatumFte: '2026-02-26'
 contact:
   website: https://www.venvn.nl/registers/verpleegkundig-specialisten-register/
   email: registers@venvn.nl
+  bezoekadres: Orteliuslaan 1000, 3528 BD Utrecht
+  postadres: Postbus 8212, 3503 RE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Orteliuslaan
+    huisnummer: '1000'
+    postcode: 3528 BD
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '8212'
+    postcode: 3503 RE
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 291 90 50
+    label: algemeen
+  emails:
+  - email: registers@venvn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.venvn.nl/registers/verpleegkundig-specialisten-register/
+    label: algemeen
+  contact_forms:
+  - url: https://www.venvn.nl/registers/verpleegkundig-specialisten-register/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-26'
+last_verified: '2026-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248887/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248887/rsv
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000066
   retrieved: '2026-05-09'
+roo_start_datum: '2008-01-01'

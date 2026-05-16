@@ -3,16 +3,64 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '8802'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-pg
+parent_id: org:onderdeel-directoraat-generaal-volksgezondheid
 names:
 - value: Directie Voeding, Gezondheidsbescherming en Preventie
   abbr: VGP
   valid_from: '1900-01-01'
+description:
+  text: 'TDe directie (VGP) richt zich op het bevorderen en beschermen van de gezondheid
+    van alle mensen in Nederland. Belangrijke beleidsinstrumenten zijn wetgeving (Warenwet,
+    Alcoholwet, Tabakswet en Opiumwet), het Gezond en Actief Leven Akkoord (GALA),
+    toezicht en handhaving, voorlichtingscampagnes en onderzoek.Aandachtsgebieden*
+    De veiligheid van voedsel consumentproducten staan centraal. De Warenwet biedt
+    daarvoor het belangrijkste wettelijke kader. De belangrijke regelgeving wordt
+    Europees vastgelegd. De Europese kaders vertalen we door naar de Warenwet.* Leefstijlpreventie:
+    met het terugdringen van overmatig alcoholgebruik, roken van tabak en vapes en
+    het stimuleren van gezonde voeding streven we naar een gezondere bevolking en
+    het voorkomen van ziekte. Doelstelling is een gezonde generatie in 2040.* We werken
+    samen met partijen in de samenleving. Het Nationaal Preventie Akkoord hebben we
+    gesloten met vele maatschappelijke organisaties. In het Gezond en Actief Leven
+    Akkoord hebben we afspraken gemaakt met GGD/GHOR, VNG en Zorgverzekeraars. Met
+    deze akkoorden helpen we lokale partijen mensen te ondersteunen bij een gezonde
+    leefstijl. Daarnaast stellen we landelijk wettelijke normen en kaders, zoals het
+    verbieden van de verkoop van vapes via internet of met smaakjes.* VGP helpt mensen
+    bij het tegengaan van overgewicht en obesitas. Onder meer met programma’s als
+    Jongeren op Gezond Gewicht, Gezonde school en gezonde schoolmaaltijden. Daarnaast
+    werken we aan maatregelen om marketing van ongezonde producten gericht op kinderen
+    en jongeren tegen te gaan. Met voorschriften over etikettering en een logo als
+    Nutriscore stimuleren we de consument een gezonde keuze te maken.* Met gerichte
+    preventie proberen we het drugsgebruik in Nederland terug te dringen. Als mensen
+    drugs gebruiken proberen we gezondheidsschade te voorkomen door behandeling van
+    verslaving en schade reductie.* Om de nadelige gevolgen van gehoorschade tegen
+    te gaan is eind 2023 een nieuw convenant preventie gehoorschade gesloten met meer
+    partijen dan voorheen, zoals nu ook de horecasector.* Bij VGP is het Departementaal
+    Crisiscentrum van VWS (DCC VWS) ondergebracht. Het DCC is verantwoordelijk voor
+    het inrichten en faciliteren van de crisisorganisatie tijdens crises of dreiging
+    daarvan, ter ondersteuning van alle beleidsdirecties van VWS.'
 contact:
   email: m.provence@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 68 80
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8802/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8802/vgp
+  retrieved: '2026-05-16'

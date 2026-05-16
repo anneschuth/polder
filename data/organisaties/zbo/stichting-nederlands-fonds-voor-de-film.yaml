@@ -3,21 +3,94 @@ type: zbo
 identifiers:
   roo_id: '28212067'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000131
+  kvk: '41212734'
+  rsin: '801887288'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Nederlands Fonds voor de Film
   abbr: Nederlands Filmfonds
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Zover het een besluit betreft die het bestuur van een fonds neemt
+        ter uitvoering van de in art. 9, eerste lid, van de wet op het specifiek cultuurbeleid
+        bedoelde taak.
+wettelijke_grondslagen:
+- opschrift: Wet op het specifiek cultuurbeleid, artikel 9
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20het%20specifiek%20cultuurbeleid
+taken_en_bevoegdheden: Het stimuleren van de filmproductie in Nederland, met nadruk
+  op kwaliteit en diversiteit, en het bevorderen van een goed klimaat voor de Nederlandse
+  filmcultuur. Om dit te bereiken geeft het Fonds filmmakers financiële ondersteuning
+  bij het ontwikkelen, realiseren en distribueren van films. Het Fonds is betrokken
+  bij de totstandkoming van lange speelfilms, documentaire films, experimentele films,
+  korte films en animatiefilms. Daarnaast heeft het Fonds geld voor bijzondere activiteiten
+  op het gebied van film.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Delta Lloyd Pensioenfonds
+    referentie: https://www.deltalloydpensioenfonds.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212067/Stichting_Nederlands_Fonds_voor_de_Film
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stichting+Nederlands+Fonds+voor+de+Film%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+personnel:
+  aantalFte: 44,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.filmfonds.nl/
   email: info@filmfonds.nl
+  bezoekadres: Pijnackerstraat 5, 1072 JS Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pijnackerstraat
+    huisnummer: '5'
+    postcode: 1072 JS
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+  phones:
+  - nummer: (020) 570 76 76
+    label: algemeen
+  emails:
+  - email: info@filmfonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.filmfonds.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212067/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212067/stichting-nederlands-fonds-voor-de-film
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +99,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000131
   retrieved: '2026-05-09'
+roo_start_datum: '2004-01-01'

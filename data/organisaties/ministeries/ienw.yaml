@@ -6,13 +6,14 @@ identifiers:
   kvk: '52766179'
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
   roo_id: '112773'
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
+  rsin: '003214412'
 classification: ministerie
 parent_id: null
 names:
 - value: Infrastructuur en Waterstaat
   abbr: IenW
   valid_from: '1900-01-01'
-  valid_until: '2018-01-01'
 - value: Infrastructuur en Waterstaat
   abbr: IenW
   valid_from: '2010-10-14'
@@ -21,15 +22,101 @@ names:
   valid_from: '2010-10-14'
   abbr: IenM
   valid_until: '2017-10-26'
+description:
+  text: Het ministerie van Infrastructuur en Waterstaat (IenW) zet in op leefbaarheid
+    en bereikbaarheid, met een vlotte doorstroming in een goed ingerichte, schone
+    en veilige omgeving. Het ministerie werkt aan krachtige verbindingen over de weg,
+    spoor, het water en door de lucht, beschermt tegen wateroverlast en bevordert
+    de kwaliteit van lucht en water. Een leefbaar, bereikbaar en veilig Nederland.
+    Daar werkt IenW aan.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/organisatie-ienw
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/112773/Infrastructuur_en_Waterstaat
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu+(MINIM)%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Bouwnijverheid%22+OR+dt.creator==%22Ministerie+van+Wederopbouw+en+Volkshuisvesting%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu+(MINIM)%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Bouwnijverheid%22+OR+dt.creator==%22Ministerie+van+Wederopbouw+en+Volkshuisvesting%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu+(MINIM)%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Bouwnijverheid%22+OR+dt.creator==%22Ministerie+van+Wederopbouw+en+Volkshuisvesting%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Infrastructuur+en+Waterstaat&type=Woo-besluit
+      toelichting: Informatie die met een Woo-besluit openbaar wordt gemaakt, is toegankelijk
+        voor iedereen. U vindt de Woo-besluiten voor het ministerie van I en W op
+        deze website zodra ze zijn gepubliceerd.
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu+(MINIM)%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Milieu%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Ruimtelijke+Ordening+en+Milieubeheer%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening%22+OR+dt.creator==%22Ministerie+van+Volkshuisvesting+en+Bouwnijverheid%22+OR+dt.creator==%22Ministerie+van+Wederopbouw+en+Volkshuisvesting%22+OR+dt.creator==%22Ministerie+van+Infrastructuur+en+Waterstaat%22))+AND+((dt.type==%22convenant%22)))
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/documenten/publicaties/2018/02/01/organogram-ministerie-van-infrastructuur-en-waterstaat
+afspraak:
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-infrastructuur-en-waterstaat/contact
 contact:
   website: www.minienw.nl
   email: contactpersoonwoo@minienw.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 20901, 2500 EX Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20901'
+    postcode: 2500 EX
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: T.a.v. Woo-unit/Hoofddirectie Bestuurlijke en Juridische Zaken
+    postbus: '20901'
+    postcode: 2500 EX
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    land: Nederland
+  phones:
+  - nummer: (070) 456 00 00
+    label: algemeen
+  internet_addresses:
+  - url: www.minienw.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2023-06-28'
+predecessor_id:
+- org:min-infrastructuur-en-milieu-2017
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112773/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112773/ienw
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2188136
   retrieved: '2026-05-09'
@@ -41,5 +128,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
   retrieved: '2026-05-09'
-predecessor_id:
-- org:min-infrastructuur-en-milieu-2017
+roo_start_datum: '2010-10-14'

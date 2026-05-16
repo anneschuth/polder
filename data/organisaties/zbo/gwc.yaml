@@ -3,20 +3,63 @@ type: zbo
 identifiers:
   roo_id: '27613172'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000307
+  owms: http://standaarden.overheid.nl/owms/terms/garantiewetcie
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Garantiewetcommissie
   abbr: GWC
   valid_from: '1900-01-01'
+description:
+  text: De Garantiewetcommissie (GWC) is ingesteld op basis van de Garantiewet Overheidspersoneel
+    Indonesië, die op 3 juni 1950 in werking trad. In artikel 8 van de Garantiewet
+    wordt verwezen naar de overige wetsartikelen waarin de diverse taken en bevoegdheden
+    van de GWC zijn vastgelegd.
+  url: https://wetten.overheid.nl/BWBR0002060/2013-01-01/0/#Artikel8
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Garantiewet Burgerlijk Overheidspersoneel Indonesië, artikel 8
+  referentie: https://wetten.overheid.nl/BWBR0002060/2013-01-01/0/#Artikel8
+taken_en_bevoegdheden: De Garantiewetcommissie (GWC) heeft als voornaamste taken:*
+  het toezicht houden op de naleving van de Garantiewet Burgerlijk Overheidspersoneel
+  Indonesië;* het garanderen van de rechten van burgerlijk overheidspersoneel op grond
+  van de Garantiewet;* het behandelen van klachten en geschillen met betrekking tot
+  de toepassing van de Garantiewet;* het nemen van maatregelen om de rechten van het
+  personeel te beschermen.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://wetten.overheid.nl/BWBR0002060/2013-01-01/0/#Artikel8
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613172/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613172/gwc
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000307
   retrieved: '2026-05-09'
+roo_start_datum: '1950-06-03'

@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28468710'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-wio
+parent_id: org:hoge-college-nationale-ombudsman
 names:
 - value: ICT
   valid_from: '1900-01-01'
@@ -16,12 +16,40 @@ names:
   abbr: ICT
   valid_from: '1900-01-01'
   valid_until: '2021-08-23'
+description:
+  text: 'Taak :'
 contact:
   email: post@nationaleombudsman.nl
   website: http://www.nationaleombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Postbus 93122, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '151'
+    postcode: 2594 AG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93122'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  emails:
+  - email: post@nationaleombudsman.nl
+    label: algemeen
+  phones:
+  - nummer: (070) 356 35 63
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nationaleombudsman.nl
+    label: algemeen
+  fax: (070) 360 75 72
 valid_from: '1900-01-01'
 valid_until: '2023-09-30'
+last_mutation: '2023-09-28'
+last_verified: '2023-09-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28468710/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28468710/ict
+  retrieved: '2026-05-16'
+roo_start_datum: '1982-01-01'

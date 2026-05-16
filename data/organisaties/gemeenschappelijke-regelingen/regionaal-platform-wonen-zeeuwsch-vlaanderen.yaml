@@ -2,17 +2,43 @@ id: org:gr-regionaal-platform-wonen-zeeuwsch-vlaanderen
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967638'
+  owms: http://standaarden.overheid.nl/owms/terms/rpwzv
+  organisatiecode: so0859
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regionaal Platform Wonen voor de regio Zeeuwsch-Vlaanderen
+  roo_id: '24967633'
 names:
 - value: Regionaal Platform Wonen Zeeuwsch-Vlaanderen
   valid_from: '1900-01-01'
   valid_until: '2017-11-01'
 contact:
   website: https://www.terneuzen.nl
+  bezoekadres: Stadhuisplein 1, 4531 GZ Terneuzen
+  postadres: Postbus 35, 4530 AA Terneuzen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 4531 GZ
+    woonplaats: Terneuzen
+  - type: Postadres
+    postbus: '35'
+    postcode: 4530 AA
+    woonplaats: Terneuzen
+  phones:
+  - nummer: 14 0115
+    label: algemeen
+  internet_addresses:
+  - url: https://www.terneuzen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-11-01'
+last_mutation: '2023-02-23'
+last_verified: '2023-02-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967638/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967638/regionaal-platform-wonen-zeeuwsch-vlaanderen
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-03-07'

@@ -6,21 +6,166 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0677
   roo_id: '34650'
   wikidata: Q10073
+  owms: http://standaarden.overheid.nl/owms/terms/Hulst_(gemeente)
+  ictu: '00677'
+  organisatiecode: gm0677
+  rsin: '810988707'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HUL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Hulst
   abbr: Hulst
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Hulst telt zo'n 27.500 inwoners . De gemeente Hulst kent een lange
+    historie en is in huidige vorm ontstaan in 2003  door samenvoeging van de voormalige
+    gemeenten Hontenisse en Hulst. De gemeente Hulst bestaat uit vijftien kernen,
+    namelijk Hulst, Sint Jansteen, Clinge, Kloosterzande, Vogelwaarde, Nieuw Namen,
+    Lamswaarde, Terhole, Graauw, Heikant, Hengstdijk, Kuitaart, Kapellebrug, Walsoorden,
+    Ossenisse. In 2024 is gestart met de bouw van een groot aantal woningen aan de
+    boorden van de Westerschelde op het voormalige parkeerterrein van de Veerhaven.
+    Hier zal het plaatsje Waterzande verschijne.De organisatie van de gemeente Hulst
+    kent circa 220 medewerkers, wat ongeveer 180 fté is. De organisatie bestaat uit
+    een vijftal afdelingen, te weten Bedrijfsvoering, Wonen & Werken, Realisatie &
+    Beheer, Publieke Dienstverlening en Samenleving. Daarnaast is er ook een stafafdeling
+    met onder andere de teams P&O en Bestuursondersteuning.
+  url: https://www.gemeentehulst.nl/de_Gemeente/Organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentehulst.nl/de_Gemeente/Bekendmakingen/Wet_openbaarheid_van_bestuur_informatieverzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/34650/Gemeente_Hulst
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hulst%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hulst%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hulst%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://hulst.pcportal.nl/
+      toelichting: Begroting en jaarrekening gemeente Hulst
+  wooVerzoek:
+    url: https://www.gemeentehulst.nl/de_Gemeente/Bekendmakingen/Wet_openbaarheid_van_bestuur_informatieverzoek
+organogram_url: https://www.gemeentehulst.nl/de_Gemeente/Organisatie/Organogram
+afspraak:
+  email: info@gemeentehulst.nl
+  telefoonnummer: 14 0114
+  url: https://www.gemeentehulst.nl/de_Gemeente/Contact/Afspraak#select/
+geography:
+  oppervlakte: 250,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 250.0
+  aantal_inwoners: 27376
+  inwoners: '109'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 109.0
+  bevat_plaatsen_raw: Clinge, Graauw, Heikant, Hengstdijk, Hulst, Kapellebrug, Kloosterzande,
+    Kuitaart, Lamswaarde, Nieuw Namen, Ossenisse, Sint Jansteen, Terhole, Vogelwaarde,
+    Walsoorden
+  bevat_plaatsen:
+  - Clinge
+  - Graauw
+  - Heikant
+  - Hengstdijk
+  - Hulst
+  - Kapellebrug
+  - Kloosterzande
+  - Kuitaart
+  - Lamswaarde
+  - Nieuw Namen
+  - Ossenisse
+  - Sint Jansteen
+  - Terhole
+  - Vogelwaarde
+  - Walsoorden
+council:
+  total_seats: 21
+  parties:
+  - naam: Algemeen Belang Groot Hulst
+    aantal_zetels: 6
+  - naam: Bouwen van Onderop
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Groot Hontenisse - Hulst
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentehulst.nl
   email: info@gemeentehulst.nl
+  bezoekadres: Grote Markt 21, 4561 EA HULST
+  postadres: Postbus 49, 4560 AA HULST
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Grote Markt
+    huisnummer: '21'
+    postcode: 4561 EA
+    woonplaats: HULST
+  - type: Postadres
+    postbus: '49'
+    postcode: 4560 AA
+    woonplaats: HULST
+  - type: Woo-Adres
+    postbus: '49'
+    postcode: 4561 EA
+    woonplaats: Hulst
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Grote Markt
+    huisnummer: '21'
+    postcode: 4561 EA
+    ter_attentie_van: Team ruimtelijke ordening
+    woonplaats: HULST
+  phones:
+  - nummer: 14 0114
+    label: algemeen
+  emails:
+  - email: info@gemeentehulst.nl
+    label: algemeen
+  - email: info@gemeentehulst.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentehulst.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.gemeentehulst.nl/de_Gemeente/Contact/Afspraak#select/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34650/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34650/hulst
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

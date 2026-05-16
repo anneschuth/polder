@@ -5,22 +5,82 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so1063
   oin: 00000003785760400000
   kvk: '78576040'
+  owms: http://standaarden.overheid.nl/owms/terms/sbjhhaagl
+  btw: NL854773976B01
+  organisatiecode: so1063
+  rsin: '854773976'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Servicebureau Jeugdhulp Haaglanden
+  roo_id: '29484696'
 names:
 - value: Servicebureau Jeugdhulp Haaglanden
   valid_from: '1900-01-01'
+description:
+  url: https://sbjh.nl/over-ons/servicebureau-jeugdhulp-haaglanden/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://sbjh.nl/contact/indienen-verzoek-wet-open-overheid-woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28196462/Servicebureau_Jeugdhulp_Haaglanden
+  wooVerzoek:
+    url: https://sbjh.nl/contact/indienen-verzoek-wet-open-overheid-woo-verzoek/
+organogram_url: https://sbjh.nl/over-ons/servicebureau-jeugdhulp-haaglanden/
+afspraak:
+  email: info@sbjh.nl
+  url: https://sbjh.nl/contact/contact-sbjh/
 contact:
   website: https://sbjh.nl
   email: info@sbjh.nl
+  bezoekadres: Koninginnegracht 7, 2514 AA Den Haag
+  postadres: Koninginnegracht 7, 2514 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '7'
+    postcode: 2514 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '12600'
+    postcode: 2500 DJ
+    woonplaats: Den Haag
+  - type: Postadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '7'
+    postcode: 2514 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (085) 485 54 17
+    label: algemeen
+  emails:
+  - email: info@sbjh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://sbjh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://sbjh.nl/over-ons/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-10-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28196462/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28196462/servicebureau-jeugdhulp-haaglanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-11-24'

@@ -1,20 +1,106 @@
 id: org:inspectie-ivho
 type: inspectie
+subname: Onderwijsinspectie
 identifiers:
   roo_id: '115891'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12355
+  owms: http://standaarden.overheid.nl/owms/terms/Inspectie_van_het_Onderwijs
+  kvk: '27367348'
+  oin: '00000001003214400000'
+  organisatiecode: oorg12355
+  rsin: '003214400'
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Inspectie van het Onderwijs
   abbr: IvhO
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie van het Onderwijs onderzoekt of alle leerlingen onderwijs krijgen
+    van voldoende kwaliteit. En of scholen en opleidingen voldoen aan de wet- en regelgeving
+    en of ze hun financiën op orde hebben. De onderwijsbesturen zijn hiervoor verantwoordelijk
+    en daarom begint en eindigt het toezicht bij hen. De inspectie voert daarnaast
+    onderzoeken uit bij de scholen. Ook analyseert de inspectie jaarlijks alle scholen
+    op basis van de gegevens die de inspectie al heeft, om te weten of er risico’s
+    zijn. Naast het toezicht op individuele besturen en hun scholen kijkt de inspectie
+    naar het onderwijsstelsel als geheel. Daarbij agendeert de inspectie maatschappelijk
+    belangrijke onderwerpen, onder meer in de jaarlijkse Staat van het Onderwijs.In
+    het hoger onderwijs beoordeelt en bevordert de Inspectie van het Onderwijs de
+    kwaliteit van het stelsel, de inspectie houdt financieel toezicht en ziet toe
+    op de naleving van wettelijke voorschriften door instellingen in het hoger onderwijs.Tot
+    slot houdt de Inspectie van het Onderwijs toezicht hoe gemeenten hun wettelijke
+    toezichtstaken uitvoeren rond de kinderopvang.
+  url: https://www.onderwijsinspectie.nl/over-ons
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.onderwijsinspectie.nl/actueel/nieuws/2022/05/04/wet-open-overheid-regelt-recht-op-overheidsinformatie
+      overzichtURL: https://organisaties.overheid.nl/woo/115891/Inspectie_van_het_Onderwijs
+  wooVerzoek:
+    url: https://www.onderwijsinspectie.nl/actueel/nieuws/2022/05/04/wet-open-overheid-regelt-recht-op-overheidsinformatie
+organogram_url: https://www.onderwijsinspectie.nl/over-ons/onze-organisatie
+afspraak:
+  url: https://www.onderwijsinspectie.nl/contact
 contact:
   website: https://www.onderwijsinspectie.nl
   email: informatieverzoekenwoo@owinsp.nl
+  bezoekadres: St.-Jacobsstraat 200, 3511 BT Utrecht
+  postadres: Postbus 2730, 3500 GS Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: St.-Jacobsstraat
+    huisnummer: '200'
+    postcode: 3511 BT
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2730'
+    postcode: 3500 GS
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Woo-Adres
+    postbus: '2730'
+    postcode: 3500 GS
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (088) 669 60 60
+    label: algemeen
+  emails:
+  - email: informatieverzoekenwoo@owinsp.nl
+    label: WOO-verzoeken en -vragen
+  internet_addresses:
+  - url: https://www.onderwijsinspectie.nl
+    label: algemeen
+  - url: https://contactformulier.onderwijsinspectie.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.onderwijsinspectie.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Inspectie van het onderwijs
+    url: https://www.linkedin.com/company/inspectie-van-het-onderwijs/
+  - platform: Facebook
+    gebruikersnaam: Inspectie van het Onderwijs
+    url: https://www.facebook.com/onderwijsinspectie/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115891/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115891/ivho
+  retrieved: '2026-05-16'
+roo_start_datum: '1801-10-02'

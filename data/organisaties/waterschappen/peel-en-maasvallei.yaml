@@ -6,17 +6,47 @@ identifiers:
   roo_id: '21166'
   oin: 00000001802305556000
   kvk: '14129820'
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Peel_en_Maasvallei
+  ictu: 04830
 classification: waterschap
 parent_id: null
 names:
 - value: Peel en Maasvallei
   valid_from: '1900-01-01'
   valid_until: '2016-12-31'
+description:
+  text: 'Gebied: Beesel, Bergen, Gennep, Horst aan de Maas, Leudal, Maasgouw, Mook
+    en Middelaar, Nederweert, Peel en Maas, Roermond, Venlo, Venray en Weert.'
 contact:
   website: http://www.wpm.nl
   email: info@WPM.nl
+  bezoekadres: Drie Decembersingel 46, 5921 AC Venlo
+  postadres: Postbus 3390, 5902 RJ Venlo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Drie Decembersingel
+    huisnummer: '46'
+    postcode: 5921 AC
+    woonplaats: Venlo
+  - type: Postadres
+    postbus: '3390'
+    postcode: 5902 RJ
+    woonplaats: Venlo
+  phones:
+  - nummer: (077) 389 11 11
+    label: algemeen
+  emails:
+  - email: info@WPM.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.wpm.nl
+    label: algemeen
+  fax: (077) 387 36 05
 valid_from: '1900-01-01'
 valid_until: '2016-12-31'
+last_mutation: '2019-04-09'
+last_verified: '2019-04-09'
+successor_id: org:waterschap-limburg
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0638
@@ -25,11 +55,10 @@ sources:
   url: https://www.wikidata.org/wiki/Q11164426
   retrieved: '2026-05-13'
 - id: roo
-  url: https://organisaties.overheid.nl/21166/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21166/peel-en-maasvallei
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'
   fields:
   - oin
-successor_id: org:waterschap-limburg

@@ -3,14 +3,53 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '25213898'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dbpz
+parent_id: org:onderdeel-plaatsvervangend-sg-psg
 names:
 - value: Directie Informatiebeleid CIO
   abbr: DI CIO
   valid_from: '1900-01-01'
+description:
+  text: 'De beleidsdirectie Informatiebeleid/CIO (DICIO) werkt aan helder, eenduidig
+    en samenhangend beleid gericht op het realiseren van een gezondheidsinformatiestelsel.
+    Databeschikbaarheid en het vertrouwen en zeggenschap van de burger en zorgverlener
+    staan hierin centraal. Data moeten beschikbaar, bereikbaar en bruikbaar zijn voor
+    de burger en alle betrokkenen in het zorgnetwerk zodat het kan worden ingezet
+    voor preventie, het primaire zorgproces en voor bijvoorbeeld onderzoek, monitoring
+    en innovatie. Uiteraard met nadrukkelijke waarborgen voor veiligheid en privacy.
+    Hiermee ondersteunen we de beweging van zorg naar gezondheid die nodig is om goede,
+    betaalbare en toegankelijke zorg te kunnen blijven bieden.Op de korte termijn
+    ligt de focus op het organiseren van gegevensuitwisseling in lijn met de Wegiz
+    en de afspraken uit het Integraal Zorg Akkoord. Dit doet DICIO in samenwerking
+    met andere VWS-directies, concernonderdelen, departementen en de partijen in het
+    zorgveld. De Chief Information Officer (CIO) en het CIO-office adviseren, stellen
+    kaders op en voeren toetsen uit op het gebied van informatievoorziening binnen
+    VWS.OrganisatieDICIO werkt met 7 clusters:* Realisatie: realiseert in opdracht
+    maatwerk software en tools die bijdragen aan het versnellen van de digitalisering
+    in de zorg.* Beleid: 3 beleidsclusters werken aan het creëren en bevorderen van
+    databeschikbaarheid.* Regie: richt zich op het voeren van interne en externe regie
+    op het gebied van gegevensuitwisseling in de zorg.* CIO-office: geeft advies,
+    stelt van kaders en voert toetsen uit op het gebied van informatievoorziening
+    voor de eigen concernorganisaties.* Staf: draagt zorg voor een optimaal functionerende
+    directie.'
+contact:
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25213898/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25213898/di-cio
+  retrieved: '2026-05-16'

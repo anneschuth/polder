@@ -3,17 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27195034'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0206
+  owms: http://standaarden.overheid.nl/owms/terms/rshitl
+  kvk: '58728813'
+  btw: NL802128944B01
+  organisatiecode: so0206
+  rsin: '802128944'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Recreatieschap Hitland
+  roo_id: '30127487'
 names:
 - value: Recreatieschap Hitland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+organogram_url: https://www.parkhitland.nl/beheer-en-bestuur/achtergrondinformatie/organisatie/
 contact:
   website: https://www.parkhitland.nl
   email: info@hitland.nl
+  bezoekadres: Blaardorpseweg 1, 2911 BC Nieuwerkerk aan den IJssel
+  postadres: Blaardorpseweg 1, 2911 BC Nieuwerkerk aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Blaardorpseweg
+    huisnummer: '1'
+    postcode: 2911 BC
+    woonplaats: Nieuwerkerk aan den IJssel
+  - type: Postadres
+    openbare_ruimte: Blaardorpseweg
+    huisnummer: '1'
+    postcode: 2911 BC
+    woonplaats: Nieuwerkerk aan den IJssel
+  phones:
+  - nummer: (0180) 31 71 88
+    label: algemeen
+  emails:
+  - email: info@hitland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.parkhitland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.parkhitland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-12'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27195034/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27195034/recreatieschap-hitland
+  retrieved: '2026-05-16'
+roo_start_datum: '1974-01-07'

@@ -2,14 +2,42 @@ id: org:oovb-stichting-burgerpersoneelsfonds-ministerie-van-defensie
 type: rwt
 identifiers:
   roo_id: '27910809'
+  kvk: '41149232'
+  rsin: '802399502'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting Burgerpersoneelsfonds Ministerie van Defensie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Kalvermarkt 28, 2511 CB Den Haag
+  postadres: Postbus 90701, 2509 LS Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt 28
+    postcode: 2511 CB
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '90701'
+    postcode: 2509 LS
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27910809/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27910809/stichting-burgerpersoneelsfonds-ministerie-van-defensie
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ name:
   full: G.P.H. Mertens
   family: Mertens
   given: G.P.H.
-  initials: G.
+  initials: G.P.H.
 mandaten:
 - id: 0d240b2c-2a2f-4c25-b459-41515449531f
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910485
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29406736
 - id: 613b2c95-db57-4335-9a2e-dddf2fa096cd
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

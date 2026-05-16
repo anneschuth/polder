@@ -7,12 +7,38 @@ parent_id: org:onderdeel-bedrijfsvoering
 names:
 - value: Facilitair
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Bezoekadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  phones:
+  - nummer: (038) 499 95 56
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-22'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16857/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16857/facilitair
+  retrieved: '2026-05-16'

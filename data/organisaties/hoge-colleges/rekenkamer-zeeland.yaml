@@ -7,12 +7,54 @@ parent_id: null
 names:
 - value: Rekenkamer Zeeland
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rekenkamerzeeland.nl
   email: rekenkamer@zeeland.nl
+  bezoekadres: Abdij 6, 4331 BK Middelburg
+  postadres: Postbus 6001, 4330 LA Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Abdij
+    huisnummer: '6'
+    postcode: 4331 BK
+    woonplaats: Middelburg
+  - type: Postadres
+    postbus: '6001'
+    postcode: 4330 LA
+    woonplaats: Middelburg
+  phones:
+  - nummer: (0118) 63 18 41
+    label: algemeen
+  emails:
+  - email: rekenkamer@zeeland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rekenkamerzeeland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rekenkamerzeeland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-28'
+last_verified: '2025-08-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30318641/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30318641/rekenkamer-zeeland
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

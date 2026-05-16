@@ -8,9 +8,36 @@ names:
 - value: Dienst Vervoer en Ondersteuning
   abbr: DV&O
   valid_from: '1900-01-01'
+description:
+  text: TaakDe Dienst Vervoer en Ondersteuning (DV&O) is een landelijke dienst van
+    DJI en verzorgt onder meer het vervoer van arrestanten, gedetineerden en vreemdelingen
+    met verschillende beveiligingsniveaus. DV&O vervoert bovendien goederen en penitentiaire
+    dossiers in geheel Veiligheid en Justitie.DV&O verleent daarnaast bijstand bij
+    calamiteiten in (justitiële) inrichtingen en detacheert beveiligingsmedewerkers
+    ter ondersteuning van organisaties die aan Veiligheid en Justitie gelieerd zijn.
+contact:
+  bezoekadres: Borgstee 19, 9403 TS Assen
+  postadres: Postbus 50, 9400 AB Assen
+  addresses:
+  - type: Bezoekadres
+    toelichting: DV&O Hoofdkantoor
+    openbare_ruimte: Borgstee
+    huisnummer: '19'
+    postcode: 9403 TS
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '50'
+    postcode: 9400 AB
+    woonplaats: Assen
+  phones:
+  - nummer: (088) 073 03 00
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-06'
+last_verified: '2024-11-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12711/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12711/dv-en-o
+  retrieved: '2026-05-16'

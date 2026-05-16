@@ -2,17 +2,51 @@ id: org:onderdeel-ris
 type: organisatieonderdeel
 identifiers:
   roo_id: '28977368'
+  oin: 00000004168249811000
 classification: organisatieonderdeel
-parent_id: org:onderdeel-obf
+parent_id: org:onderdeel-shared-service-organisatie
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Rijksinkoopsamenwerking
   abbr: RIS
   valid_from: '1900-01-01'
+description:
+  text: "De Rijksinkoopsamenwerking (RIS) is een shared service organisatie binnen\
+    \ het ministerie van Binnenlandse Zaken en Koninkrijksrelaties. Wij kopen in voor\
+    \ de ministeries van AZ, BZ, BZK en VRO, Fin, VWS en SZW. Daarnaast voeren we\
+    \ ook werkzaamheden uit voor de Hoge Colleges van Staat. Voor de rijksbrede categorieën\
+    \ Schoonmaak en Vervoer & Verblijf voeren wij de aanbestedingen uit. In voorkomende\
+    \ gevallen voert de RIS ook aanbestedingen uit voor andere ministeries. Daarnaast\
+    \ verzorgen wij aanvullende inkoopdienstverlening zoals het beheer van primaire\
+    \ inkoopapplicaties en van inkoopportalen, het adviseren over complexe vraagstukken\
+    \ en het leiden van ontwikkelprojecten.De Rijksinkoopsamenwerking bestaat uit\
+    \ de volgende organisatieonderdelen:•\tAfdeling Inkopen•\tAfdeling Categorie en\
+    \ Contractenservices•\tStaf•\tProjectsecretarissen•\tJuridische zaken•\tRelatiemanagement•\t\
+    Strategisch advies•\tMT"
 contact:
   email: contact.ris@rijksoverheid.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN Den Haag
+  phones:
+  - nummer: (070) 758 56 78
+    label: algemeen
+  emails:
+  - email: contact.ris@rijksoverheid.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28977368/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28977368/ris
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-01-01'

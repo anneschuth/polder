@@ -6,21 +6,156 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0716
   roo_id: '33998'
   wikidata: Q10082
+  owms: http://standaarden.overheid.nl/owms/terms/Tholen_(gemeente)
+  ictu: '00716'
+  organisatiecode: gm0716
+  rsin: '001726006'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_THO
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Tholen
   abbr: Tholen
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.tholen.nl/informatieaanvraag-wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/33998/Gemeente_Tholen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tholen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tholen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://tholen.bestuurlijkeinformatie.nl/Reports/Details/0e514c2b-fe83-44e1-93a8-5ca26cb78522
+      toelichting: Besluitenlijsten raadscommissie samenleving
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://tholen.bestuurlijkeinformatie.nl/Reports/Details/dc795442-4bde-4075-9908-c734bf99a3b7
+      toelichting: Besluitenlijsten college van burgemeester en wethouders
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://tholen.bestuurlijkeinformatie.nl/Reports/Details/45e1dfaa-2aa4-4dc7-846c-2e9f649c08e0
+      toelichting: Besluitenlijsten raadscommissie Ruimte
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://tholen.bestuurlijkeinformatie.nl/Reports/Details/e4ecad38-6988-4d98-9d90-989dd37c61e3
+      toelichting: Besluitenlijsten raadscommissie bestuurszaken
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tholen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://tholen.bestuurlijkeinformatie.nl/Reports/Details/8c6f2a22-cbc0-4fbe-9d96-6cf1e35cf13e
+      toelichting: Besluitenlijsten gemeenteraad
+  wooVerzoek:
+    url: https://www.tholen.nl/informatieaanvraag-wet-open-overheid
+organogram_url: https://www.tholen.nl/over-tholen/over-de-gemeente-tholen/organisatieschema-van-de-gemeente-tholen
+afspraak:
+  email: gemeente@tholen.nl
+  telefoonnummer: 14 0166
+  url: https://www.tholen.nl/informatieaanvraag-wet-open-overheid
+geography:
+  oppervlakte: 254,51
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 254.51
+  aantal_inwoners: 27031
+  inwoners: '106'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 106.0
+  bevat_plaatsen_raw: Oud-Vossemeer, Poortvliet, Scherpenisse, Sint Philipsland, Sint-Annaland,
+    Sint-Maartensdijk, Stavenisse, Tholen
+  bevat_plaatsen:
+  - Oud-Vossemeer
+  - Poortvliet
+  - Scherpenisse
+  - Sint Philipsland
+  - Sint-Annaland
+  - Sint-Maartensdijk
+  - Stavenisse
+  - Tholen
+council:
+  total_seats: 21
+  parties:
+  - naam: SGP
+    aantal_zetels: 8
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Algemeen Belang Tholen (ABT)
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 1
 contact:
   website: https://www.tholen.nl
   email: gemeente@tholen.nl
+  bezoekadres: Hof van Tholen 2, 4691 DZ THOLEN
+  postadres: Postbus 51, 4690 AB THOLEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hof van Tholen
+    huisnummer: '2'
+    postcode: 4691 DZ
+    woonplaats: THOLEN
+  - type: Postadres
+    postbus: '51'
+    postcode: 4690 AB
+    woonplaats: THOLEN
+  - type: Woo-Adres
+    openbare_ruimte: Hof van Tholen
+    huisnummer: '2'
+    postcode: 4691 DZ
+    woonplaats: Tholen
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hof van Tholen
+    huisnummer: '2'
+    postcode: 4691 DZ
+    woonplaats: THOLEN
+  phones:
+  - nummer: 14 0166
+    label: algemeen
+  emails:
+  - email: gemeente@tholen.nl
+    label: algemeen
+  - email: gemeente@tholen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.tholen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.tholen.nl/informatieaanvraag-wet-open-overheid
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33998/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33998/tholen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

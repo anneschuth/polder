@@ -6,21 +6,154 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0171
   roo_id: '26440'
   wikidata: Q69262
+  owms: http://standaarden.overheid.nl/owms/terms/Noordoostpolder_(gemeente)
+  ictu: '00171'
+  organisatiecode: gm0171
+  rsin: 001891984
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NOP
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Noordoostpolder
   abbr: Noordoostpolder
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.noordoostpolder.nl/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/26440/Gemeente_Noordoostpolder
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordoostpolder%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordoostpolder%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordoostpolder%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://raad.noordoostpolder.nl/Documenten/besluitenlijsten-raad
+      toelichting: Wilt u weten over welke onderwerpen de raad heeft gesproken of
+        welke beslissingen er zijn genomen? Die informatie kunt u vinden in de besluitenlijsten.
+        Van iedere vergadering publiceren wij een besluitenlijst.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.noordoostpolder.nl/besluitenlijsten-college-van-bw
+      toelichting: Iedere week (in vakanties minder) vergadert het college van burgemeester
+        en wethouders. Deze vergadering is niet openbaar. De genomen besluiten zijn
+        openbaar. U vindt hier de meest recente besluitenlijsten.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://raad.noordoostpolder.nl/Vergaderingen/Gemeenteraad
+      toelichting: Overzicht van de vergaderingen van de Gemeenteraad met agenda.
+  wooVerzoek:
+    url: https://www.noordoostpolder.nl/woo-verzoek-indienen
+organogram_url: https://www.noordoostpolder.nl/organogram
+afspraak:
+  email: info@noordoostpolder.nl
+  telefoonnummer: (0527) 63 39 11
+  url: https://www.noordoostpolder.nl/openingstijden-en-contact
+geography:
+  oppervlakte: 596,2
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 596.2
+  aantal_inwoners: 51930
+  inwoners: '87'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 87.0
+  bevat_plaatsen_raw: Bant, Creil, Emmeloord, Ens, Espel, Kraggenburg, Luttelgeest,
+    Marknesse, Nagele, Rutten, Schokland, Tollebeek
+  bevat_plaatsen:
+  - Bant
+  - Creil
+  - Emmeloord
+  - Ens
+  - Espel
+  - Kraggenburg
+  - Luttelgeest
+  - Marknesse
+  - Nagele
+  - Rutten
+  - Schokland
+  - Tollebeek
+council:
+  total_seats: 31
+  parties:
+  - naam: CU-SGP
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Politieke Unie
+    aantal_zetels: 5
+  - naam: ONS
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: BrH
+    aantal_zetels: 2
 contact:
   website: https://www.noordoostpolder.nl
   email: info@noordoostpolder.nl
+  bezoekadres: Harmen Visserplein 1, 8302 BW EMMELOORD
+  postadres: Postbus 155, 8300 AD EMMELOORD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Harmen Visserplein
+    huisnummer: '1'
+    postcode: 8302 BW
+    woonplaats: EMMELOORD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '155'
+    postcode: 8300 AD
+    woonplaats: EMMELOORD
+  - type: Woo-Adres
+    openbare_ruimte: Harmen Visserplein
+    huisnummer: '1'
+    postbus: '155'
+    postcode: 8302 BW
+    woonplaats: Emmeloord
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  phones:
+  - nummer: (0527) 63 39 11
+    label: algemeen
+  emails:
+  - email: info@noordoostpolder.nl
+    label: algemeen
+  - email: woonloket@noordoostpolder.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.noordoostpolder.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26440/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26440/gemeente-noordoostpolder
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +162,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q69262
   retrieved: '2026-05-09'
+roo_start_datum: '1962-07-01'

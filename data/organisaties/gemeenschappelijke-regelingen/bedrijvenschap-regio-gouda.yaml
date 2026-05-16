@@ -3,18 +3,65 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27331909'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0457
+  owms: http://standaarden.overheid.nl/owms/terms/bsrgouda
+  kvk: '24490521'
+  organisatiecode: so0457
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijvenschap Regio Gouda
+  roo_id: '27331904'
 names:
 - value: Bedrijvenschap Regio Gouda
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.gouwepark.nl
   email: gouwepark@gouda.nl
+  bezoekadres: Burgemeester Jamesplein 1, 2803 PG Gouda
+  postadres: Postbus 1086, 2800 BB Gouda
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gouwe Park bedrijventerrein
+    openbare_ruimte: Burgemeester Jamesplein
+    huisnummer: '1'
+    postcode: 2803 PG
+    woonplaats: Gouda
+  - type: Postadres
+    postbus: '1086'
+    postcode: 2800 BB
+    woonplaats: Gouda
+  phones:
+  - nummer: (0182) 58 86 46
+    label: algemeen
+  emails:
+  - email: gouwepark@gouda.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gouwepark.nl
+    label: algemeen
+  - url: https://www.gouwepark.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2019-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27331909/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27331909/bedrijvenschap-regio-gouda
+  retrieved: '2026-05-16'
+roo_start_datum: '1993-02-11'

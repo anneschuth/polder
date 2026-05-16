@@ -5,6 +5,7 @@ identifiers:
   kvk: '27365563'
   roo_id: '27230'
   wikidata: Q952183
+  owms: http://standaarden.overheid.nl/owms/terms/Rijnwoude
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +13,69 @@ names:
   abbr: Rijnwoude
   valid_from: '1900-01-01'
   valid_until: '2014-01-01'
+geography:
+  oppervlakte: 57,85
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 57.85
+  aantal_inwoners: 18696
+  inwoners: '323'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 323.0
+  bevat_plaatsen_raw: Benthuizen, Hazerswoude-Dorp, Hazerswoude-Rijndijk, Koudekerk
+    aan Den Rijn
+  bevat_plaatsen:
+  - Benthuizen
+  - Hazerswoude-Dorp
+  - Hazerswoude-Rijndijk
+  - Koudekerk aan Den Rijn
+council:
+  total_seats: 17
+  parties:
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: SGP
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: http://www.rijnwoude.nl
   email: gemeente@rijnwoude.nl
+  bezoekadres: Frederik van Eedenplein 4, 2394 EB HAZERSWOUDE-RIJNDIJK
+  postadres: Postbus 115, 2394 ZG HAZERSWOUDE-RIJNDIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Frederik van Eedenplein
+    huisnummer: '4'
+    postcode: 2394 EB
+    woonplaats: HAZERSWOUDE-RIJNDIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '115'
+    postcode: 2394 ZG
+    woonplaats: HAZERSWOUDE-RIJNDIJK
+  phones:
+  - nummer: (071) 342 82 82
+    label: algemeen
+  emails:
+  - email: gemeente@rijnwoude.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijnwoude.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27230/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27230/rijnwoude
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

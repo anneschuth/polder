@@ -5,23 +5,129 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0588
   oin: 00000001811197955000
   kvk: '51817330'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Utrecht
+  btw: NL811197955B01
+  organisatiecode: so0588
+  rsin: '811197955'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Utrecht
+  roo_id: '28426877'
 names:
 - value: Veiligheidsregio Utrecht
   abbr: VRU
   valid_from: '1900-01-01'
+description:
+  text: 'Wij dragen bij aan veiligheid. Elke dag weer, steeds beter.’ Dat is waar
+    we voor staan. De Veiligheidsregio Utrecht is een samenwerkingsverband van en
+    voor alle 26 Utrechtse gemeenten in de provincie Utrecht. Samen met onze partners
+    zorgen wij elke dag voor de veiligheid van alle mensen die in de regio wonen en
+    verblijven.Dat doen wij met onze centralisten op de 112-meldkamer, onze brandweermensen
+    en onze collega’s van risicobeheersing, crisisbeheersing, de geneeskundige hulpverleningsorganisatie
+    in de regio (GHOR) en de ondersteunende diensten.Of we nou branden blussen of
+    op kantoor werken: bij de VRU werken we allemaal met een passie. Een passie om
+    levens te redden, om incidenten te voorkomen en te bestrijden. Mensen met een
+    helder hoofd en een hart dat klopt voor de goede afloop. Dienstbaar, deskundig,
+    alert en adequaat. Wij zijn de VRU.'
+  url: https://vru.nl/wij-zijn-de-vru/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://vru.nl/wij-zijn-de-vru/besluiten-en-publicaties/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28426948/Veiligheidsregio_Utrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Klachtoordelen
+      url: https://vru.nl/wij-zijn-de-vru/besluiten-en-publicaties/klachten/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Utrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Utrecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Veiligheidsregio%20Utrecht%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen)
+      toelichting: Bekendmakingen van algemeen verbindende voorschriften en andere
+        besluiten publiceren wij op officiëlebekendmakingen.nl.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://vru.nl/wij-zijn-de-vru/bestuur/vergaderingen-en-vergaderstukken/
+      toelichting: De vergaderingen van het algemeen bestuur zijn openbaar. Werk je
+        voor de pers en wil je langs komen? Laat het ons dan van tevoren weten via
+        het e-mailadres communicatie@vru.nl.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://vru.nl/wij-zijn-de-vru/besluiten-en-publicaties/wet-open-overheid/afgehandelde-verzoeken-wet-open-overheid/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Veiligheidsregio%20Utrecht%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen)
+      toelichting: Bekendmakingen van algemeen verbindende voorschriften en andere
+        besluiten publiceren wij op officiëlebekendmakingen.nl.
+  wooVerzoek:
+    url: https://formulieren.vru.nl/formeel-verzoek
+afspraak:
+  email: info@vru.nl
+  telefoonnummer: (088) 878 10 00
+  url: https://vru.nl/contact/
 contact:
   website: https://www.vru.nl
   email: info@vru.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 3154, 3502 GD Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '3154'
+    postcode: 3502 GD
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '3154'
+    postcode: 3502 GD
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 878 10 00
+    label: algemeen
+  emails:
+  - email: info@vru.nl
+    label: algemeen
+  - email: facturen@vru.nl
+    label: factuuradres
+  internet_addresses:
+  - url: https://www.vru.nl
+    label: algemeen
+  - url: https://www.vru.nl/contactformulier
+    label: contactformulier
+  contact_forms:
+  - url: https://www.vru.nl/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-10-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28426948/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28426948/vru
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-01-01'

@@ -2,17 +2,59 @@ id: org:kabinet-kvdk
 type: hoge-college
 identifiers:
   roo_id: '686'
+  ictu: 04965
 classification: hoge-college
 parent_id: null
 names:
 - value: Kabinet van de Koning
   abbr: KvdK
   valid_from: '1900-01-01'
+description:
+  text: Het Kabinet van de Koning is een kleine rijksorganisatie die de Koning ondersteunt
+    in de uitoefening van zijn constitutionele werkzaamheden. Dit heeft onder meer
+    betrekking op de contacten tussen de Koning en de overige leden van de regering.Jaarlijks
+    bereidt het Kabinet honderden bezoeken, ontvangsten, gesprekken en beëdigingen
+    door de Koning voor. Ook verwerkt en archiveert het Kabinet van de Koning per
+    jaar ruim 2500 wetten, algemene maatregelen van bestuur (amvb’s) en Koninklijke
+    Besluiten.De organisatie behandelt ieder jaar duizenden brieven van burgers en
+    organisaties die zich met hun vragen richten tot de Koning (verzoekschriften).
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.kabinetvandekoning.nl
+  bezoekadres: Korte Vijverberg 3, 2513 AB Den Haag
+  postadres: Postbus 20001, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Vijverberg 3
+    postcode: 2513 AB
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20001'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 330 88 88
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kabinetvandekoning.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.kabinetvandekoning.nl/onze-taken/werkzaamheden-koning/verzoekschriften-koning/formulier-verzoekschrift-aan-de-koning
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/686/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/686/kvdk
+  retrieved: '2026-05-16'

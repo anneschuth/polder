@@ -1,20 +1,74 @@
 id: org:commissie-cmmbo
 type: adviescollege
+subname: Adviescommissie macrodoelmatigheid beroepsonderwijs
 identifiers:
   roo_id: '28390762'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10172
+  owms: http://standaarden.overheid.nl/owms/terms/ciemacrodoelmbo
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissie macrodoelmatigheid mbo
   abbr: CMMBO
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Commissie macrodoelmatigheid mbo
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0036973
+- opschrift: Wet educatie en beroepsonderwijs, artikel 6.1.4a
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0007625&hoofdstuk=6&titeldeel=1&artikel=6.1.4a
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+afspraak:
+  email: info@cmmbo.nl
+  telefoonnummer: (070) 750 45 70
 contact:
   website: https://www.cmmbo.nl/
   email: info@cmmbo.nl
+  bezoekadres: Parkstraat 83, 2514 JG Den Haag
+  postadres: Postbus 85498, 2508 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parkstraat
+    huisnummer: '83'
+    postcode: 2514 JG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '85498'
+    postcode: 2508 CD
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 750 45 70
+    label: algemeen
+  emails:
+  - email: info@cmmbo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cmmbo.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cmmbo.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390762/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390762/cmmbo
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-08-01'

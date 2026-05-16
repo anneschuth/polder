@@ -4,22 +4,153 @@ identifiers:
   roo_id: '28212470'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000215
   oin: 00000004000000079000
+  owms: http://standaarden.overheid.nl/owms/terms/Autoriteit_Persoonsgegevens
+  kvk: '73709131'
+  rsin: '859636434'
 classification: adviescollege
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Autoriteit Persoonsgegevens
   abbr: AP
   valid_from: '1900-01-01'
-  valid_until: '2026-08-01'
+description:
+  text: De Autoriteit Persoonsgegevens (AP) is opgericht en aangewezen als toezichthouder
+    op de Algemene verordening gegevensbescherming (AVG) en de Uitvoeringswet AVG
+    (UAVG). De AP is zowel een adviescollege als een zelfstandig bestuursorgaan.
+  url: https://www.autoriteitpersoonsgegevens.nl/over-de-autoriteit-persoonsgegevens
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 10,11,12,13,14,15,16,25,26,27,28
+      toelichting: Omdat de adviestaak bij de AP niet de hoofdtaak is, gelden enkele
+        bepalingen niet, zoals bedoeld in artikel 3 van de Kaderwet adviescolleges.
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,20,21,22,23
+      toelichting: Artikel 20 is niet van toepassing als het College de informatie
+        van derden heeft verkregen onder de voorwaarde dat het geheime karakter daarvan
+        wordt gehandhaafd. Artikel 23 is slechts toepasbaar op het financiële beheer
+        en de administratieve organisatie.
+wettelijke_grondslagen:
+- opschrift: Uitvoeringswet Algemene verordening gegevensbescherming, artikel 6, lid
+    1
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0040940&hoofdstuk=2&paragraaf=2.1&artikel=6
+taken_en_bevoegdheden: De Autoriteit Persoonsgegevens (AP) is verantwoordelijk voor:*
+  het toezicht houden op de verwerking van persoonsgegevens overeenkomstig het bij
+  en krachtens de wet bepaalde;* het toezicht houden op de verwerking van persoonsgegevens
+  in Nederland, wanneer de verwerking plaatsvindt overeenkomstig het recht van een
+  ander land van de Europese Unie;* het adviseren over wetsvoorstellen en ontwerpen
+  van algemene maatregelen van bestuur die geheel of voor een belangrijk deel betrekking
+  hebben op de verwerking van persoonsgegevens;* het toetsen van gedragscodes;* het
+  voorafgaand onderzoek doen naar verwerkingen met bijzondere risico's;* het adviseren
+  over vergunningen voor het doorgeven van persoonsgegevens naar landen buiten de
+  Europese Unie;* het behandelen van klachten en verzoeken van betrokkenen en andere
+  belanghebbenden;* diverse taken ingevolge de Wet politiegegevens en andere bijzondere
+  wetgeving;* diverse internationaalrechtelijke taken, die verband houden met het
+  bovenstaande.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.autoriteitpersoonsgegevens.nl/contact/contactpersoon-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212470/Autoriteit_Persoonsgegevens
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.autoriteitpersoonsgegevens.nl/woo-besluiten
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Persoonsgegevens%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Persoonsgegevens%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.autoriteitpersoonsgegevens.nl/contact/contactpersoon-wet-open-overheid-woo
+organogram_url: https://www.autoriteitpersoonsgegevens.nl/documenten/organogram-ap
+afspraak:
+  email: info@autoriteitpersoonsgegevens.nl
+  telefoonnummer: (070) 888 85 00
+  url: https://www.autoriteitpersoonsgegevens.nl/contact
+personnel:
+  aantalFte: 320,0
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.autoriteitpersoonsgegevens.nl
   email: info@autoriteitpersoonsgegevens.nl
+  bezoekadres: Hoge Nieuwstraat 8, 2514 EL Den Haag
+  postadres: Postbus 93374, 2509 AJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoge Nieuwstraat
+    huisnummer: '8'
+    postcode: 2514 EL
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '93374'
+    postcode: 2509 AJ
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '93374'
+    postcode: 2509 AJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 888 85 00
+    label: algemeen
+  emails:
+  - email: info@autoriteitpersoonsgegevens.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.autoriteitpersoonsgegevens.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.autoriteitpersoonsgegevens.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Autoriteit Persoonsgegevens (Dutch DPA)
+    url: https://www.linkedin.com/company/autoriteitpersoonsgegevens/
+  fax: (088) 071 21 40
 valid_from: '1900-01-01'
 valid_until: '2026-08-01'
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212470/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212470/ap
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -30,3 +161,4 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2000-01-01'

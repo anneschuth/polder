@@ -3,17 +3,64 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965339'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0316
+  owms: http://standaarden.overheid.nl/owms/terms/afbhregcgr
+  kvk: '74166484'
+  organisatiecode: so0316
+  rsin: 007242499
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Afvalbeheer Regio Centraal Groningen 2016
+  roo_id: '24965334'
 names:
 - value: Afvalbeheer Regio Centraal Groningen
   abbr: ARCG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://gemeente.groningen.nl
+  bezoekadres: Duinkerkenstraat 99, 9723 BP Groningen
+  postadres: Postbus 742, 9700 AS Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Duinkerkenstraat
+    huisnummer: '99'
+    postcode: 9723 BP
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '742'
+    postcode: 9700 AS
+    woonplaats: Groningen
+  phones:
+  - nummer: (050) 367 10 00
+    label: algemeen
+  - nummer: 14 050
+    label: gemeente Groningen
+  internet_addresses:
+  - url: https://gemeente.groningen.nl
+    label: gemeente Groningen
+  - url: https://milieudienst.groningen.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://milieudienst.groningen.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-07'
+last_verified: '2025-08-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965339/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965339/arcg
+  retrieved: '2026-05-16'
+roo_start_datum: '2002-01-01'

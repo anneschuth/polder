@@ -3,17 +3,58 @@ type: adviescollege
 identifiers:
   roo_id: '28356001'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10141
+  owms: http://standaarden.overheid.nl/owms/terms/cieassdeg
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissie Associate degree
   valid_from: '1900-01-01'
+description:
+  text: De Commissie Associate degree beoordeelt pilots met Associate-degreeprogramma’s
+    en brengt hier advies over uit. Hierbij is het Overlegplatform Associate degrees
+    betrokken.De commissie is geen formeel adviescollege zoals bedoeld in de Kaderwet
+    adviescolleges.
+  url: https://www.deassociatedegree.nl/opleidingsprofielen/
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Commissie Associate degree, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0026738/2009-12-02/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.deassociatedegree.nl/
   email: platformassociatedegrees@outlook.com
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: platformassociatedegrees@outlook.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.deassociatedegree.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.deassociatedegree.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28356001/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28356001/commissie-associate-degree
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-03-01'

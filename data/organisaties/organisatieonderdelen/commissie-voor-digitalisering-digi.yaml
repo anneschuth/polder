@@ -3,15 +3,24 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29424604'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Commissie voor Digitalisering (DIGI)
   valid_from: '1900-01-01'
+description:
+  url: https://www.eerstekamer.nl/commissies/digi
 contact:
   website: https://www.eerstekamer.nl/commissies/digi
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-11'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29424604/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29424604/commissie-voor-digitalisering-digi
+  retrieved: '2026-05-16'

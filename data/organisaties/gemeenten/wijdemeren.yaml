@@ -6,21 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1696
   roo_id: '22675'
   wikidata: Q9975
+  owms: http://standaarden.overheid.nl/owms/terms/Wijdemeren
+  ictu: 01696
+  organisatiecode: gm1696
+  rsin: '810115013'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WIM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Wijdemeren
   abbr: Wijdemeren
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Wijdemeren is een groene en waterrijke gemeente in Noord-Holland,
+    gelegen tussen Hilversum, Loosdrecht en ’s-Graveland. De organisatie richt zich
+    op het leveren van publieke diensten aan inwoners en ondernemers, met aandacht
+    voor leefbaarheid, duurzaamheid en samenwerking binnen de regio Gooi en Vechtstreek.De
+    gemeenteraden van Wijdemeren en Hilversum hebben op 10 juli 2024 besloten om op
+    1 januari 2027 de gemeente Wijdemeren bij Hilversum te voegen.
+  url: https://www.wijdemeren.nl/Bestuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wijdemeren.nl/Bekendmakingen
+      overzichtURL: https://organisaties.overheid.nl/woo/22675/Gemeente_Wijdemeren
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijdemeren%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijdemeren%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijdemeren%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.wijdemeren.nl/nl
+organogram_url: https://www.wijdemeren.nl/nl/organisatiestructuur/Mandaatregeling/Organogram-2024.pdf
+afspraak:
+  email: postbus@wijdemeren.nl
+  telefoonnummer: (035) 655 95 95
+  url: https://wijdemeren.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 77,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 77.0
+  aantal_inwoners: 24672
+  inwoners: '320'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 320.0
+  bevat_plaatsen_raw: '''s-Graveland, Ankeveen, Breukeleveen, Kortenhoef, Loosdrecht,
+    Nederhorst Den Berg'
+  bevat_plaatsen:
+  - '''s-Graveland'
+  - Ankeveen
+  - Breukeleveen
+  - Kortenhoef
+  - Loosdrecht
+  - Nederhorst Den Berg
+council:
+  total_seats: 19
+  parties:
+  - naam: De Lokale Partij
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: DorpsBelangen
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Groep Goetheer
+    aantal_zetels: 1
 contact:
   website: https://www.wijdemeren.nl
   email: postbus@wijdemeren.nl
+  bezoekadres: Rading 1, 1231 KB LOOSDRECHT
+  postadres: Postbus 190, 1230 AD LOOSDRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rading
+    huisnummer: '1'
+    postcode: 1231 KB
+    woonplaats: LOOSDRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '190'
+    postcode: 1230 AD
+    woonplaats: LOOSDRECHT
+  - type: Woo-Adres
+    openbare_ruimte: Rading
+    huisnummer: '1'
+    postcode: 1231 KB
+    woonplaats: Loosdrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (035) 655 95 95
+    label: algemeen
+  emails:
+  - email: postbus@wijdemeren.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wijdemeren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-loosdrecht
+- org:gemeente-nederhorst-den-berg
+- org:gemeente-s-graveland
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22675/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22675/wijdemeren
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,7 +152,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9975
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-loosdrecht
-- org:gemeente-nederhorst-den-berg
-- org:gemeente-s-graveland
+roo_start_datum: '2002-01-01'

@@ -5,21 +5,131 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000193
   oin: 00000001812483297000
   kvk: '51197073'
+  rsin: '812483297'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Centraal Bureau voor de Statistiek
   abbr: CBS
   valid_from: '1900-01-01'
+description:
+  text: Het Centraal Bureau voor de Statistiek (CBS) verzamelt gegevens van personen
+    en bedrijven en verwerkt deze gegevens tot statistieken. De statistieken van het
+    CBS gaan over een groot aantal verschillende onderwerpen (denk bijvoorbeeld aan
+    wonen, werken, gezondheid en economie) en zijn openbaar in te zien.
+  url: https://www.cbs.nl/nl-nl/over-ons/dit-zijn-wij
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op het Centraal bureau voor de statistiek, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0015926/2022-03-02#Hoofdstuk2_Paragraaf1_Artikel2
+taken_en_bevoegdheden: Het Centraal Bureau voor de Statistiek (CBS) heeft de volgende
+  taken:* het van overheidswege verrichten van statistisch onderzoek ten behoeve van
+  praktijk, beleid en wetenschap;* het openbaar maken van de statistieken die voortkomen
+  uit het hierboven genoemde onderzoek.Naast de verantwoordelijkheid voor de nationale
+  (officiële) statistieken is het CBS ook verantwoordelijk voor het samenstellen van
+  Europese (communautaire) statistieken.
+evaluations:
+- datum: '2022-07-04'
+  kamerstuknummer: TK 25268 nr. 209
+  referentie: https://zoek.officielebekendmakingen.nl/blg-1038307
+- datum: '2017-09-04'
+  kamerstuknummer: TK 25268 nr. 148
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-148.html
+- datum: '2012-01-22'
+  kamerstuknummer: TK 25268 nr. 74
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-74.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cbs.nl/nl-nl/over-ons/dit-zijn-wij/onze-organisatie/bedrijfsvoering/bestuurlijke-informatiehuishouding
+      overzichtURL: https://organisaties.overheid.nl/woo/28212129/Centraal_Bureau_voor_de_Statistiek
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.cbs.nl/nl-nl/over-ons/dit-zijn-wij/onze-organisatie/bedrijfsvoering/bestuurlijke-informatiehuishouding/overzicht-woo-aanvragen-en-woo-besluiten
+  wooVerzoek:
+    url: https://www.cbs.nl/nl-nl/over-ons/dit-zijn-wij/onze-organisatie/bedrijfsvoering/bestuurlijke-informatiehuishouding
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
+afspraak:
+  url: https://www.cbs.nl/nl-nl/over-ons/contact
+personnel:
+  aantalFte: 1922,0
+  peildatumFte: '2024-03-27'
 contact:
   website: http://www.cbs.nl/
   email: info@cbs.nl
+  postadres: Postbus 24500, 2490 HA Den Haag
+  bezoekadres: Henri Faasdreef 312, 2492 JP Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '24500'
+    postcode: 2490 HA
+    woonplaats: Den Haag
+  - type: Bezoekadres
+    openbare_ruimte: Henri Faasdreef
+    huisnummer: '312'
+    postcode: 2492 JP
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '24500'
+    postcode: 2490 HA
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (070) 337 38 00
+    label: algemeen
+  emails:
+  - email: info@cbs.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.cbs.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cbs.nl/nl-nl/over-ons/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212129/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212129/cbs
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +143,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000193
   retrieved: '2026-05-09'
+roo_start_datum: '1899-01-09'

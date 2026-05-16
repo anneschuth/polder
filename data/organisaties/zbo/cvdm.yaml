@@ -5,21 +5,117 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000197
   oin: 00000001001943443000
   kvk: '50203517'
+  rsin: 001943443
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissariaat voor de Media
   abbr: CvdM
   valid_from: '1900-01-01'
+description:
+  url: https://www.cvdm.nl/over-het-cvdm/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '17'
+wettelijke_grondslagen:
+- opschrift: Mediawet 2008 artikel 7.1
+  referentie: http://wetten.overheid.nl/BWBR0025028/Hoofdstuk7/Titel71
+taken_en_bevoegdheden: Ziet toe op naleving van de Mediawet en de daarop gebaseerde
+  regels. Het Commissariaat garandeert daarmee een eerlijke toegang tot de media en
+  bewaakt de kwaliteit, de diversiteit en de onafhankelijkheid van de informatievoorziening.
+evaluations:
+- datum: '2019-03-26'
+  kamerstuknummer: TK 35000-VIII nr. 171
+  referentie: https://zoek.officielebekendmakingen.nl/kst-35000-VIII-171.html/
+- datum: '2013-11-12'
+  kamerstuknummer: TK 33750-VIII nr. 60
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33750-VIII-60.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cvdm.nl/over-het-cvdm/openbaarheid-van-bestuur/woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28211997/Commissariaat_voor_de_Media
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Commissariaat+voor+de+Media%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://eloket.cvdm.nl/f/3020/login
+organogram_url: https://www.cvdm.nl/over-het-cvdm/onze-organisatie/indeling-organisatie/
+afspraak:
+  url: https://www.cvdm.nl/contact
+personnel:
+  aantalFte: 44,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.cvdm.nl/
   email: cvdm@cvdm.nl
+  bezoekadres: Hoge Naarderweg 78, 1217 AH Hilversum
+  postadres: Postbus 1426, 1200 BK Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoge Naarderweg
+    huisnummer: '78'
+    postcode: 1217 AH
+    woonplaats: Hilversum
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1426'
+    postcode: 1200 BK
+    woonplaats: Hilversum
+  - type: Woo-Adres
+    postbus: '1426'
+    postcode: 1200 BK
+    woonplaats: Hilversum
+  phones:
+  - nummer: (035) 773 77 00
+    label: algemeen
+  emails:
+  - email: cvdm@cvdm.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.cvdm.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cvdm.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28211997/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28211997/cvdm
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +129,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000197
   retrieved: '2026-05-09'
+roo_start_datum: '1988-01-01'

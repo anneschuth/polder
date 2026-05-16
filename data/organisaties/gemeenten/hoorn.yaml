@@ -6,21 +6,174 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0405
   roo_id: '24950'
   wikidata: Q9938
+  owms: http://standaarden.overheid.nl/owms/terms/Hoorn_(gemeente)
+  ictu: '00405'
+  organisatiecode: gm0405
+  rsin: 001516814
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HRN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Hoorn
   abbr: Hoorn
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Hoorn bestaat uit een directiestaf en is georganiseerd in de volgende
+    drie domeinen:Domein Maatschappelijke ontwikkeling, Domein Stedelijke Ontwikkeling
+    & Beheer en als laatste het Domein Bedrijfsvoering en dienstverlening.Elk domein
+    heeft zijn eigen directeur. De drie directeuren van de domeinen vormen samen met
+    de gemeentesecretaris de directie.
+  url: https://www.hoorn.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hoorn.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/24950/Gemeente_Hoorn
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hoorn.bestuurlijkeinformatie.nl
+      toelichting: Raadsstukken, moties en amendementen.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoorn%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Verordeningen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.westfriesarchief.nl/onderzoek/zoeken?mivast=136&mizig=491&miadt=136&miview=tbl&milang=nl&mizk_alle=Woo
+      toelichting: De publicatieplek van de Woo-verzoeken van de gemeente Hoorn
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://hoorn.bestuurlijkeinformatie.nl/
+      toelichting: Amendementen, art.36 vragen, belangrijke documenten, raadsstukken,
+        besluitenlijst en brieven van B&W, interne regelingen Raad en Commissies,
+        moties & toezeggingen en de overige acties en vragen raad
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoorn%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Ingediende en verleende omgevingsvergunningen en andere vergunningen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoorn%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Beleidsregels en verkeersbesluiten
+  wooVerzoek:
+    url: https://www.hoorn.nl/woo-verzoek
+organogram_url: https://www.hoorn.nl/bestanden/documenten/organogram/Organogram-zonder-namen-en-opgaven.pdf
+afspraak:
+  email: gemeente@hoorn.nl
+  telefoonnummer: (0229) 25 22 00
+  url: https://www.hoorn.nl/afspraak
+geography:
+  oppervlakte: 52,17
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 52.17
+  aantal_inwoners: 76202
+  inwoners: '1460'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1460.0
+  bevat_plaatsen_raw: Blokker, Hoorn NH, Zwaag
+  bevat_plaatsen:
+  - Blokker
+  - Hoorn NH
+  - Zwaag
+council:
+  total_seats: 34
+  parties:
+  - naam: Hart van Hoorn
+    aantal_zetels: 6
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Sociaal Hoorn Team Tonnaer
+    aantal_zetels: 2
+  - naam: Éénhoorn
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: Hoorn Centraal
+    aantal_zetels: 1
+  - naam: HOOP!
+    aantal_zetels: 1
+  - naam: Hoorn lokaal
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
 contact:
   website: https://www.hoorn.nl
   email: gemeente@hoorn.nl
+  bezoekadres: Nieuwe Steen 1, 1625 HV HOORN NH
+  postadres: Postbus 603, 1620 AR HOORN NH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Steen
+    huisnummer: '1'
+    postcode: 1625 HV
+    woonplaats: HOORN NH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '603'
+    postcode: 1620 AR
+    woonplaats: HOORN NH
+  - type: Woo-Adres
+    toelichting: Stadhuis
+    openbare_ruimte: Nieuwe Steen 1
+    huisnummer: '1'
+    postcode: 1625 HV
+    woonplaats: Hoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '603'
+    postcode: 1620 AR
+    woonplaats: Hoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (0229) 25 22 00
+    label: algemeen
+  emails:
+  - email: gemeente@hoorn.nl
+    label: algemeen
+  - email: gemeente@hoorn.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.hoorn.nl
+    label: algemeen
+  contact_forms:
+  - url: http://www.hoorn.nl/contactformulier
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24950/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24950/hoorn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

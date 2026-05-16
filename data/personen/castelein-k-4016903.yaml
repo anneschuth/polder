@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4016905
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/27765/gemeente-hattem
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28772741
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4016903

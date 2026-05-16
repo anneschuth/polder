@@ -1,27 +1,135 @@
 id: org:prov-ut
 type: provincie
 identifiers:
-  oin: '00000001002220647000'
-  kvk: '30280353'
+  oin: 00000001001797864000
+  kvk: '30277172'
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv26
   roo_id: '17166'
   wikidata: Q776
+  owms: http://standaarden.overheid.nl/owms/terms/Utrecht_(provincie)
+  btw: NL001797864B02
+  ictu: '04212'
+  rsin: 001797864
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_UTC
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Utrecht
   abbr: UT
   valid_from: '1900-01-01'
-  valid_until: '2024-02-04'
+description:
+  text: 'De organisatie van provincie Utrecht bestaat uit:Het bestuur: dat zijn Provinciale
+    Staten en Gedeputeerde Staten samen.De ambtelijke organisatie: dat zijn de ambtenaren
+    die voor de provincie werken.De directie: de provinciesecretaris/algemeen directeur
+    en de directeuren. Samen zorgen zij voor de verbinding tussen het bestuur en de
+    ambtelijke organisatie.'
+  url: https://www.provincie-utrecht.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.provincie-utrecht.nl/loket/diensten/verzoek-om-openbaarmaking-documenten-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/17166/Provincie_Utrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://stateninformatie.provincie-utrecht.nl/
+      toelichting: Ingekomen stukken worden als documenten toegevoegd aan de vergaderingen,
+        in te zien via het Stateninformatiesysteem
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22%20OR%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22%20OR%20dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22%20OR%20dt.type==%22beleidsregel%22%20OR%20dt.type==%22delegatie-%20of%20mandaatbesluit%22%20OR%20dt.type==%22circulaire%22%20OR%20dt.type==%22verkeersbesluit%20of%20-mededeling%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.provincie-utrecht.nl/loket/informatieverzoek-wob/wob-besluiten
+      toelichting: Wob- en Woo-verzoeken en besluiten vanaf 2020
+    - informatiecategorie: Beschikkingen
+      url: https://www.provincie-utrecht.nl/loket/subsidies/verleende-subsidies
+      toelichting: kwartaaloverzichten verleende subsidies vanaf 2017
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.provincie-utrecht.nl/organisatie/financien
+      toelichting: Jaarrekeningen en begrotingen vanaf 2015
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://stateninformatie.provincie-utrecht.nl/
+      toelichting: Alle informatie over Provinciale Staten, zoals vergaderdata, documenten
+        en wie de Statenleden zijn
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Utrecht%22))%20AND%20((dt.type==%22ongewenstverklaring%20vreemdeling%22%20OR%20dt.type==%22vervreemding%20erfgoed%22%20OR%20dt.type==%22Beschikking%22%20OR%20dt.type==%22andere%20beschikking%22%20OR%20dt.type==%22andere%20vergunning%22%20OR%20dt.type==%22evenementenvergunning%22%20OR%20dt.type==%22exploitatievergunning%22%20OR%20dt.type==%22omgevingsvergunning%22%20OR%20dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22)))%20AND%20w.organisatietype==%22provincie%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=to%7cprovincie
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.provincie-utrecht.nl/actueel/gs-besluiten/gs-besluiten-archief?page=0
+  wooVerzoek:
+    url: https://formulieren.provincie-utrecht.nl/provincieutrecht1/Woo-verzoek/?get=1&sidn=e5e95f6f980e44558c80da87286fe504
+organogram_url: https://www.provincie-utrecht.nl/organisatie/over-de-organisatie
+afspraak:
+  telefoonnummer: (030) 258 91 11
 contact:
   website: https://www.provincie-utrecht.nl
   email: info@provincie-utrecht.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 80300, 3508 TH Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '80300'
+    postcode: 3508 TH
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '80300'
+    postcode: 3508 TH
+    woonplaats: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (030) 258 91 11
+    label: algemeen
+  emails:
+  - email: info@provincie-utrecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.provincie-utrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.provincie-utrecht.nl/contact
+    label: Algemeen
+  fax: (030) 258 91 12
+  beschrijving: Algemene contactgegevens provincie Utrecht. Open van maandag t/m vrijdag
+    van 8.30 tot 17.00 uur.
 valid_from: '1900-01-01'
 valid_until: '2024-02-04'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/17166/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/17166/ut
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

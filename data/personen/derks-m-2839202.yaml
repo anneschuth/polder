@@ -3,7 +3,7 @@ name:
   full: M.F.W. Derks
   family: Derks
   given: M.F.W.
-  initials: M.
+  initials: M.F.W.
 mandaten:
 - id: 76f8f598-9e0c-49cf-9949-3289f73e67c0
   organization_id: org:gemeente-beesel
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7277265
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/21559/gemeente-beesel
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30098435
 - id: 1077abcd-b782-4c36-a47d-4d8e96a808e0
   organization_id: org:gemeente-beesel
   post_id: post:burgemeester-gemeente-beesel

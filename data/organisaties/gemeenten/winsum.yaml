@@ -5,6 +5,9 @@ identifiers:
   kvk: '01170341'
   roo_id: '37505'
   wikidata: Q1025079
+  owms: http://standaarden.overheid.nl/owms/terms/Winsum_(gemeente)
+  ictu: '00053'
+  organisatiecode: gm0053
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,91 @@ names:
   abbr: Winsum
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 102,53
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 102.53
+  aantal_inwoners: 14086
+  inwoners: '137'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 137.0
+  bevat_plaatsen_raw: Adorp, Baflo, Den Andel, Ezinge, Feerwerd, Garnwerd, Rasquert,
+    Saaxumhuizen, Sauwerd, Tinallinge, Wetsinge, Winsum GN
+  bevat_plaatsen:
+  - Adorp
+  - Baflo
+  - Den Andel
+  - Ezinge
+  - Feerwerd
+  - Garnwerd
+  - Rasquert
+  - Saaxumhuizen
+  - Sauwerd
+  - Tinallinge
+  - Wetsinge
+  - Winsum GN
+council:
+  total_seats: 16
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: CDW 2.0
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Gemeentebelangen
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.winsum.nl
   email: Gemeente@winsum.nl
+  bezoekadres: Hoofdstraat Winsum 70, 9951 AC WINSUM GN
+  postadres: Postbus 10, 9950 AA WINSUM GN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat Winsum
+    huisnummer: '70'
+    postcode: 9951 AC
+    woonplaats: WINSUM GN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 10
+    postbus: '10'
+    postcode: 9950 AA
+    woonplaats: WINSUM GN
+  phones:
+  - nummer: (0595) 44 77 77
+    label: algemeen
+  emails:
+  - email: Gemeente@winsum.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.winsum.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37505/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37505/winsum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

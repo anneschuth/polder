@@ -1,26 +1,111 @@
 id: org:gr-bedrijfsvoeringsorganisatie-h2o
 type: gemeenschappelijke-regeling
+subname: i-Dienst
 identifiers:
   roo_id: '27807685'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1043
   oin: 00000001858238160000
   kvk: '70288801'
+  owms: http://standaarden.overheid.nl/owms/terms/bvoh20
+  btw: NL858238160B01
+  organisatiecode: so1043
+  rsin: '858238160'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Bedrijfsvoeringsorganisatie H2O 2024
+  roo_id: '30334682'
 names:
 - value: Bedrijfsvoeringsorganisatie H2O
   valid_from: '1900-01-01'
+description:
+  text: De gemeenten Hattem, Heerde en Oldebroek (H2O) hebben een Bedrijfsvoeringsorganisatie
+    H2O opgericht, de i-Dienst. De gemeenschappelijke serviceorganisatie i-Dienst
+    verzorgt de automatisering voor de H2O-gemeenten. Ze biedt werkplek ondersteuning
+    aan de circa 800 medewerkers op 10 verschillende locaties. De i-Dienst is gevestigd
+    in het Stadhuis van de gemeente Hattem.De basisdiensten die de i-Dienst voor de
+    H2O-gemeenten uitvoert zijn- Systeembeheer van ICT-middelen;- Netwerkbeheer van
+    ICT-infrastructuur;- ICT-apparatenbeheer;- Beheer kantoorautomatisering;- (Skilled)
+    ICT Servicedesk;- ICT-architectuur;- Informatiebeveiliging;- ICT-advies en -beleidsvoorbereiding.
+  url: https://i-dienst.nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://i-dienst.nl/?page_id=242
+      overzichtURL: https://organisaties.overheid.nl/woo/27807685/Bedrijfsvoeringsorganisatie_H2O
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://i-dienst.nl/?page_id=207
+      toelichting: Vergaderingen en vergaderstukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://i-dienst.nl/?page_id=211
+      toelichting: Bestuurlijke documenten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://i-dienst.nl/?page_id=209
+      toelichting: Begroting en jaarstukken BVO H2O
+  wooVerzoek:
+    url: https://i-dienst.nl/?page_id=242
+organogram_url: https://i-dienst.nl/?page_id=202
+afspraak:
+  email: info@i-dienst.nl
+  url: https://i-dienst.nl/
 contact:
   website: https://i-dienst.nl/
   email: info@i-dienst.nl
+  bezoekadres: Markt 1, 8051 EZ Hattem
+  postadres: Markt 1, 8051 EZ Hattem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 8051 EZ
+    woonplaats: Hattem
+  - type: Postadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 8051 EZ
+    woonplaats: Hattem
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 8051 EZ
+    woonplaats: Hattem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (0578) 69 94 84
+    label: algemeen
+  emails:
+  - email: info@i-dienst.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://i-dienst.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27807685/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27807685/bedrijfsvoeringsorganisatie-h2o
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-12-19'

@@ -6,21 +6,190 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0307
   roo_id: '35134'
   wikidata: Q992
+  owms: http://standaarden.overheid.nl/owms/terms/Amersfoort_(gemeente)
+  ictu: '00307'
+  organisatiecode: gm0307
+  rsin: 002508369
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_AME
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Amersfoort
   abbr: Amersfoort
   valid_from: '1900-01-01'
+description:
+  url: https://www.amersfoort.nl/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.amersfoort.nl/informatie-van-de-gemeente-opzoeken-aanvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/35134/Gemeente_Amersfoort
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://amersfoort.raadsinformatie.nl/
+      toelichting: Hier kunt u verder zoeken naar ontwerpen en externe adviesaanvragen
+        van lokale regelgeving.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://amersfoort.bestuurlijkeinformatie.nl/Reports/Details/69b01c4f-3ce6-443e-b1f9-b05ce5df3339
+      toelichting: Overzicht van Woo-verzoeken.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://amersfoortincijfers.nl/documents
+      toelichting: Onderzoeksrapporten door het team Onderzoek en Statistiek van de
+        gemeente Amersfoort.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://financien.amersfoort.nl/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Amersfoort%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Amersfoort%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Klachtoordelen
+      url: https://amersfoort.bestuurlijkeinformatie.nl/Reports/Details/7648325d-2682-4f74-8442-2c03526aeb34
+      toelichting: Gemeente Amersfoort werkt aan een verdere verbetering van de dienstverlening
+        door klachtoordelen in een overzicht openbaar te maken. Want klachten zijn
+        een belangrijk signaal.
+    - informatiecategorie: Adviezen
+      url: https://www.amersfoort.nl/adviesorganisaties
+      toelichting: Gemeente Amersfoort werkt momenteel aan het verzamelen en anonimiseren
+        van adviesdocumenten om ze te kunnen publiceren. Dit is naar verwachting eind
+        2026 afgerond.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://amersfoort.notubiz.nl/modules/12/besluitenlijsten_b%26w/view
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Amersfoort%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Gemeente Amersfoort werkt momenteel aan het verzamelen en anonimiseren
+        van beschikkingen om ze te kunnen publiceren. Dit is naar verwachting eind
+        2026 afgerond.
+    - informatiecategorie: Convenanten
+      url: https://amersfoort.bestuurlijkeinformatie.nl/Reports/Details/98f3693f-6cd1-4fda-8cf3-74292e74378e
+      toelichting: Gemeente Amersfoort werkt momenteel aan het anonimiseren en publiceren
+        van convenanten. Dit is naar verwachting eind 2026 afgerond.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://amersfoort.notubiz.nl/
+      toelichting: Verdere informatie vindt u in de link onder het kopje 'Documenten'
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://amersfoort.notubiz.nl/modules/1/ingekomen_stukken/view
+  wooVerzoek:
+    url: https://www.amersfoort.nl/een-woo-verzoek#een-woo-verzoek-doen-17758
+organogram_url: https://www.amersfoort.nl/organogram
+afspraak:
+  email: info@amersfoort.nl
+  telefoonnummer: 14 033
+  url: https://afspraken.amersfoort.nl/
+geography:
+  oppervlakte: 63,86
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 63.86
+  aantal_inwoners: 163764
+  inwoners: '2564'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2564.0
+  bevat_plaatsen_raw: Amersfoort, Hoogland, Hooglanderveen, Stoutenburg Noord
+  bevat_plaatsen:
+  - Amersfoort
+  - Hoogland
+  - Hooglanderveen
+  - Stoutenburg Noord
+council:
+  total_seats: 39
+  parties:
+  - naam: PRO
+    aantal_zetels: 7
+  - naam: KeiHart voor Amersfoort
+    aantal_zetels: 6
+  - naam: D66
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Amersfoort voor Vrijheid
+    aantal_zetels: 3
+  - naam: Amersfoort2014
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 1
+  - naam: Burger Partij Amersfoort
+    aantal_zetels: 1
+  - naam: Beter Amersfoort
+    aantal_zetels: 1
+  - naam: DENK
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
 contact:
   website: https://www.amersfoort.nl
   email: info@amersfoort.nl
+  bezoekadres: Stadhuisplein 1, 3811 LM AMERSFOORT
+  postadres: Postbus 4000, 3800 EA AMERSFOORT
+  addresses:
+  - type: Woo-Adres
+    postbus: '4000'
+    postcode: 3800 EA
+    woonplaats: Amersfoort
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 3811 LM
+    woonplaats: AMERSFOORT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '4000'
+    postcode: 3800 EA
+    woonplaats: AMERSFOORT
+  - type: Woo-Adres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 3811 LM
+    woonplaats: Amersfoort
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    postcode: 3800 EA
+    woonplaats: AMERSFOORT
+  phones:
+  - nummer: 14 033
+    label: algemeen
+  emails:
+  - email: info@amersfoort.nl
+    label: algemeen
+  - email: info@amersfoort.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.amersfoort.nl
+    label: algemeen
+  contact_forms:
+  - url: https://afspraken.amersfoort.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35134/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35134/amersfoort
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

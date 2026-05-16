@@ -1,15 +1,44 @@
 id: org:oovb-cooperatieve-vereniging-agrarisch-landschap-achterhoek-ua
 type: rwt
+subname: Coöperatieve Vereniging Agrarisch Landschap Achterhoek U.A. | VALA
 identifiers:
   roo_id: '28346477'
+  kvk: '54524881'
+  rsin: '851338264'
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Coöperatieve Vereniging Agrarisch Landschap Achterhoek U.A.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Enzerinckweg 10, 7251 KA Vorden
+  postadres: Enzerinckweg 10, 7251 KA Vorden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Enzerinckweg 10
+    postcode: 7251 KA
+    woonplaats: Vorden
+  - type: Postadres
+    openbare_ruimte: Enzerinckweg 10
+    postcode: 7251 KA
+    woonplaats: Vorden
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-26'
+last_verified: '2021-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28346477/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28346477/cooperatieve-vereniging-agrarisch-landschap-achterhoek-ua
+  retrieved: '2026-05-16'

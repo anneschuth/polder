@@ -7,11 +7,38 @@ parent_id: org:onderdeel-bureau-algemene-bestuursdienst
 names:
 - value: directie Management Development Rijk
   valid_from: '1900-01-01'
+description:
+  text: Binnen de directie MD Rijk worden taken op gebied van werving en selectie
+    en ontwikkelen en opleiden nader met elkaar in samenhang gebracht.De directie
+    MD Rijk verzorgt vacaturevervulling, loopbaanadvies, opleidingen en ontwikkeling
+    voor de ABD-doelgroep. Bureau ABD biedt verschillende ontwikkelprogramma's aan
+    voor (aankomende) ABD-managers en levert daarnaast diensten als coaching en opleidingsadvies.
 contact:
   website: http://www.algemenebestuursdienst.nl
+  bezoekadres: Muzenstraat 95, 2511 WB DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '95'
+    postcode: 2511 WB
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 73 36
+    label: algemeen
+  internet_addresses:
+  - url: http://www.algemenebestuursdienst.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98720/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98720/directie-management-development-rijk
+  retrieved: '2026-05-16'

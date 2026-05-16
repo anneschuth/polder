@@ -3,18 +3,62 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24961683'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0533
+  owms: http://standaarden.overheid.nl/owms/terms/soweco
+  kvk: 08221036
+  organisatiecode: so0533
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling SOWECO
+  roo_id: '24961678'
 names:
 - value: SOWECO
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.soweco.nl
   email: info@soweco.nl
+  bezoekadres: Plesmanweg 9, 7602 PD ALMELO
+  postadres: Postbus 308, 7600 AH ALMELO
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Plesmanweg
+    huisnummer: '9'
+    postcode: 7602 PD
+    woonplaats: ALMELO
+  - type: Postadres
+    postbus: '308'
+    postcode: 7600 AH
+    woonplaats: ALMELO
+  phones:
+  - nummer: (0546) 87 56 78
+    label: algemeen
+  emails:
+  - email: info@soweco.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.soweco.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24961683/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24961683/soweco
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-03-31'

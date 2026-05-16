@@ -3,15 +3,34 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '5464'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-mivd
+parent_id: org:onderdeel-bestuursstaf
 names:
 - value: Militaire Luchtvaart Autoriteit (MLA)
   valid_from: '1900-01-01'
 contact:
   email: mla@mindef.nl
+  bezoekadres: Brasserskade 227 a, 2497 NX Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brasserskade
+    huisnummer: '227'
+    huisnummer_toevoeging: a
+    postcode: 2497 NX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+  emails:
+  - email: mla@mindef.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/5464/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/5464/militaire-luchtvaart-autoriteit-mla
+  retrieved: '2026-05-16'

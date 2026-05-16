@@ -5,21 +5,103 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so1022
   oin: 00000001857787573000
   kvk: '69217610'
+  owms: http://standaarden.overheid.nl/owms/terms/nrdbelkan
+  btw: NL857787573B01
+  organisatiecode: so1022
+  rsin: '857787573'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Noordelijk Belastingkantoor
+  roo_id: '29516013'
 names:
 - value: Noordelijk Belastingkantoor
   valid_from: '1900-01-01'
+description:
+  text: Het Noordelijk Belastingkantoor is een overheidsorganisatie die belasting
+    heft en int voor waterschappen en gemeenten.WaterschapsbelastingWoont u in het
+    gebied van de waterschappen Hunze en Aa’s, Noorderzijlvest of Wetterskip Fryslân?
+    Dan krijgt u de aanslag waterschapsbelastingen van het Noordelijk Belastingkantoor.Gemeentelijke
+    belastingenWoont u in de gemeente Groningen, Eemsdelta, Noordenveld, Oldambt of
+    Pekela? Dan krijgt u van ons de aanslag voor de waterschapsbelastingen, gemeentelijke
+    belastingen en uw WOZ-waarde.KwijtscheldingsgemeentenVoor een groot aantal gemeenten
+    in Noord-Nederland handelen wij ook de kwijtscheldingsverzoeken af.
+  url: https://noordelijkbelastingkantoor.nl/over-ons/wat-doet-het-noordelijk-belastingkantoor/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://noordelijkbelastingkantoor.nl/over-ons/verzoek-wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/25038180/Noordelijk_Belastingkantoor
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://noordelijkbelastingkantoor.nl/over-ons/bestuur/bestuursvergaderingen/
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://noordelijkbelastingkantoor.nl/over-ons/bekendmakingen/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordelijk+Belastingkantoor%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordelijk+Belastingkantoor%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://noordelijkbelastingkantoor.nl/over-ons/verzoek-wet-open-overheid-woo/
+afspraak:
+  telefoonnummer: (088) 787 90 00
+  url: https://noordelijkbelastingkantoor.nl/search/contact/
 contact:
   website: https://noordelijkbelastingkantoor.nl
+  bezoekadres: Raadhuisplein 10, 9751 AN Haren Gn
+  postadres: Postbus 88, 9700 AB Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '10'
+    postcode: 9751 AN
+    woonplaats: Haren Gn
+  - type: Postadres
+    postbus: '88'
+    postcode: 9700 AB
+    woonplaats: Groningen
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '10'
+    postbus: '88'
+    postcode: 9751 AN
+    woonplaats: Haren Gn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  phones:
+  - nummer: (088) 787 90 00
+    label: algemeen
+  internet_addresses:
+  - url: https://noordelijkbelastingkantoor.nl
+    label: algemeen
+  - url: https://noordelijkbelastingkantoor.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://noordelijkbelastingkantoor.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25038180/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25038180/noordelijk-belastingkantoor
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-07-01'

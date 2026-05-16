@@ -1,19 +1,55 @@
 id: org:onderdeel-arbm
 type: organisatieonderdeel
+subname: Atelier Rijksbouwmeester
 identifiers:
   roo_id: '97041'
 classification: organisatieonderdeel
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: org:agentschap-rvb
+relation_to_ministerie:
+  naam: Volkshuisvesting en Ruimtelijke Ordening
+  roo_id: '29481991'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1171
+  owms: http://standaarden.overheid.nl/owms/terms/minvoro
 names:
 - value: Atelier Rijksbouwmeester
   abbr: aRBM
   valid_from: '1900-01-01'
+description:
+  text: Is een instituut voor de vakgemeenschap. De Rijksbouwmeester (Rbm) bewaakt
+    en bevordert de architectonische, stedenbouwkundige en ruimtelijke kwaliteit van
+    de rijksvastgoedportefeuille. Het instituut richt zich op de gebruiker en de maatschappelijke
+    functie die het rijksvastgoed inneemt in de nabije omgeving.
 contact:
   website: http://www.rijksbouwmeester.nl
   email: Irene.Verhagen@rgd.minbzk.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW DEN HAAG
+  postadres: Postbus 16169, 2500 BD DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (088) 115 81 71
+    label: algemeen
+  emails:
+  - email: Irene.Verhagen@rgd.minbzk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksbouwmeester.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-04'
+last_verified: '2025-12-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97041/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97041/arbm
+  retrieved: '2026-05-16'

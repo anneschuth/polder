@@ -3,13 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '22745749'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:min-jenv
 names:
 - value: Directoraat-Generaal Migratie (DGM)
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-24'
+last_verified: '2026-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22745749/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22745749/directoraat-generaal-migratie-dgm
+  retrieved: '2026-05-16'

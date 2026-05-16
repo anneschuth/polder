@@ -1,18 +1,41 @@
 id: org:onderdeel-directie-communicatie-dcom
 type: organisatieonderdeel
+subname: Directie Communicatie
 identifiers:
   roo_id: '12490'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-deia
+parent_id: org:onderdeel-sg-cluster
 names:
 - value: Directie Communicatie (DCOM)
   valid_from: '1900-01-01'
+description:
+  text: "TAAK-\tZorgdragen voor en geven van informatie omtrent het beleid en de taakuitoefening\
+    \ van het Ministerie aan het publiek, door middel van publiciteitsmedia en/of\
+    \ rechtstreeks\\;-\tGeven van interne voorlichting op het ministerie  omtrent\
+    \  gebeurtenissen, omstandigheden en meningen die het justitiebeleid en de taakuitoefening\
+    \ raken."
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid
   email: dcom.secretariaat@minjenv.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 73 45
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid
+    label: algemeen
+  fax: (070) 370 79 37
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-01'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12490/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12490/directie-communicatie-dcom
+  retrieved: '2026-05-16'

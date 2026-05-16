@@ -6,21 +6,140 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0312
   roo_id: '32201'
   wikidata: Q10032
+  owms: http://standaarden.overheid.nl/owms/terms/Bunnik_(gemeente)
+  ictu: '00312'
+  organisatiecode: gm0312
+  rsin: 002691401
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BUK
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Bunnik
   abbr: Bunnik
   valid_from: '1900-01-01'
+description:
+  text: De ambtelijke organisatie ondersteunt het gemeentebestuur en voert allerlei
+    gemeentelijke taken uit. De medewerkers werken vanuit het gemeentehuis in Odijk.
+    De gemeentelijke organisatie wordt geleid door de directeur/gemeentesecretaris,
+    Mark van der Jagt. Hij vormt de verbinding tussen het college van burgemeester
+    en wethouders en de ambtenaren en vormt samen met de afdelingshoofden het managementteam
+    (MT). De organisatie bestaat uit vijf afdelingen, elk met verschillende teams.
+  url: https://www.bunnik.nl/bestuur-en-organisatie/overig/onze-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.bunnik.nl/melding-doen/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/32201/Gemeente_Bunnik
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://loket.bunnik.nl/mozard/!suite16.scherm1168?mGmr=2261&mGeenSel=J
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bunnik%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bunnik%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bunnik%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.bunnik.nl/melding-doen/woo-verzoek
+organogram_url: https://www.bunnik.nl/bestuur-en-organisatie/overig/onze-organisatie
+afspraak:
+  email: info@bunnik.nl
+  telefoonnummer: (030) 659 48 48
+  url: https://www.bunnik.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 37,57
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 37.57
+  aantal_inwoners: 16402
+  inwoners: '436'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 436.0
+  bevat_plaatsen_raw: Bunnik, Odijk, Werkhoven
+  bevat_plaatsen:
+  - Bunnik
+  - Odijk
+  - Werkhoven
+council:
+  total_seats: 17
+  parties:
+  - naam: P21
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 3
 contact:
   website: https://www.bunnik.nl
   email: info@bunnik.nl
+  bezoekadres: Singelpark 1, 3984 NC ODIJK
+  postadres: Postbus 5, 3980 CA BUNNIK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Singelpark
+    huisnummer: '1'
+    postcode: 3984 NC
+    woonplaats: ODIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '5'
+    postcode: 3980 CA
+    woonplaats: BUNNIK
+  - type: Woo-Adres
+    openbare_ruimte: Singelpark
+    huisnummer: '1'
+    postcode: 3984 NC
+    woonplaats: Odijk
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Singelpark
+    huisnummer: '1'
+    postcode: 3984 NC
+    woonplaats: ODIJK
+  phones:
+  - nummer: (030) 659 48 48
+    label: algemeen
+  emails:
+  - email: info@bunnik.nl
+    label: algemeen
+  - email: info@bunnik.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.bunnik.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.bunnik.nl/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32201/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32201/bunnik
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

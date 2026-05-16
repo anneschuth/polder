@@ -3,18 +3,79 @@ type: adviescollege
 identifiers:
   roo_id: '28356021'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10143
+  owms: http://standaarden.overheid.nl/owms/terms/ciedoelmho
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissie Doelmatigheid Hoger Onderwijs
   abbr: CDHO
   valid_from: '1900-01-01'
+description:
+  text: De Commissie Doelmatigheid Hoger Onderwijs (CDHO) heeft als belangrijkste
+    taken:* het adviseren van de minister van Onderwijs, Cultuur en Wetenschap (OCW),
+    zoals beschreven in artikel 3, lid 1 en 3, van het [Instellingsbesluit Commissie
+    Doelmatigheid Hoger Onderwijs](https://wetten.overheid.nl/BWBR0026019/2024-03-20/#Artikel3);*
+    het op grond van de [Regeling macrodoelmatig opleidingsaanbod hoger onderwijs
+    2023](https://wetten.overheid.nl/BWBR0048105/2023-04-29/0) adviseren over nieuwe
+    opleidingen en vestigingsplaatsen, verplaatsing van bestaande opleidingen, fusietoetsen
+    en herordeningsoperaties;* het op verzoek van de minister adviseren over ontwikkelingen
+    op het gebied van de macrodoelmatigheid en de (mogelijke) effecten hiervan op
+    het beleid;* het op verzoek van de minister uitvoeren van sectorale doorlichtingen
+    van het bestaande opleidingsaanbod.
+  url: https://www.cdho.nl/commissie/taken/
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Commissie Doelmatigheid Hoger Onderwijs, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0026019/2024-03-20/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.cdho.nl/
   email: info@cdho.nl
+  bezoekadres: Parkstraat 83, 2514 JG Den Haag
+  postadres: Postbus 85498, 2508 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parkstraat
+    huisnummer: '83'
+    postcode: 2514 JG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '85498'
+    postcode: 2508 CD
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 850 53 00
+    label: algemeen
+  emails:
+  - email: info@cdho.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cdho.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cdho.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28356021/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28356021/cdho
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-07-01'

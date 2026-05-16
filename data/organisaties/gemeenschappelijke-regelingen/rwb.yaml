@@ -5,23 +5,115 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0684
   oin: 00000001850021455000
   kvk: '51448122'
+  owms: http://standaarden.overheid.nl/owms/terms/regwbr
+  btw: NL850021455B01
+  loonheffing: 850021455L01
+  organisatiecode: so0684
+  rsin: '850021455'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regio West-Brabant
+  roo_id: '29695623'
 names:
 - value: Regio West-Brabant
   abbr: RWB
   valid_from: '1900-01-01'
+description:
+  text: RWB is een (college-)samenwerking van de zestien gemeenten in West-Brabant,
+    gericht op 1) de uitvoering van een strategische economische agenda en 2) op het
+    uitvoeren van een aantal collectieve dienstverlenende taken. 1) We werken met
+    het bedrijfsleven en onderwijsinstellingen aan een sterke economie voor onze regio.
+    We geven daarmee invulling aan het overheidsdeel van de ambitie van de Economic
+    Board West-Brabant. 2) RWB voert een aantal dienstverlenende taken uit. Dit zijn
+    Kleinschalig Collectief Vervoer (KCV), met als 'product' de Deeltaxi, het Mobiliteitscentrum
+    voor regionale HR-diensten met onder meer een regionale flexpool en inhuurdesk
+    en taken op het gebied van Regioarcheologie.Daarnaast beheren we ook het Onderzoek
+    & Ontwikkelfonds.
+  url: https://www.west-brabant.eu/over-rwb/over-ons/rwb-in-het-kort
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.west-brabant.eu/over-rwb/bestuur-en-organisatie/wet-open-overheid-woo-regio-west-brabant/
+      overzichtURL: https://organisaties.overheid.nl/woo/28343507/Regio_West-Brabant
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+West-Brabant%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.west-brabant.eu/over-rwb/bestuur-en-organisatie/verslagen-algemeen-bestuur-en-strategisch-beraad/
+      toelichting: Vastgestelde verslagen algemeen bestuur en strategisch beraad
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.west-brabant.eu/over-rwb/bestuur-en-organisatie/jaarverslag/
+      toelichting: Jaarverslagen Regio West-Brabant
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+West-Brabant%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.west-brabant.eu/over-rwb/bedrijfsvoering/wet-open-overheid-woo-regio-west-brabant
+afspraak:
+  email: info@west-brabant.eu
+  url: https://www.west-brabant.eu/contact
 contact:
   website: https://www.west-brabant.eu
   email: info@west-brabant.eu
+  bezoekadres: Raadhuisplein 4, 4873 BH Etten-Leur
+  postadres: Postbus 503, 4870 AM Etten-Leur
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '4'
+    postcode: 4873 BH
+    woonplaats: Etten-Leur
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '503'
+    postcode: 4870 AM
+    woonplaats: Etten-Leur
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '4'
+    postcode: 4873 BH
+    woonplaats: Etten-Leur
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (076) 502 72 00
+    label: algemeen
+  emails:
+  - email: info@west-brabant.eu
+    label: algemeen
+  internet_addresses:
+  - url: https://www.west-brabant.eu
+    label: algemeen
+  - url: https://www.west-brabant.eu/contact
+    label: contact
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Regio West-Brabant
+    url: https://www.linkedin.com/company/regiowestbrabant
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28343507/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28343507/rwb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2011-01-03'

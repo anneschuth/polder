@@ -3,7 +3,7 @@ name:
   full: A.A.D.  van Binsbergen
   family: Binsbergen
   given: A.A.D.  van
-  initials: A.V.
+  initials: A.A.D.
   tussenvoegsel: van
 mandaten:
 - id: 79623970-e65e-4119-b897-0e940243c26b
@@ -16,6 +16,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7298641
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26937/gemeente-overbetuwe
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30557322
 - id: 92d69781-9379-4c30-acbd-c5d1f167216d
   organization_id: org:gemeente-overbetuwe
   post_id: post:raadslid-gemeente-overbetuwe

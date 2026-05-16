@@ -1,22 +1,91 @@
 id: org:zbo-kamer-van-koophandel-en-nijverheid-sint-eustatius-en-saba
 type: zbo
+subname: KvK Sint Eustatius en Saba
 identifiers:
   roo_id: '29908925'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100016
+  organisatiecode: zb100016
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Kamer van Koophandel en Nijverheid Sint Eustatius en Saba
   valid_from: '1900-01-01'
+description:
+  text: "De Kamers van Koophandel en Nijverheid (KvK’s) in Caribisch Nederland zijn\
+    \ er voor ondernemers die op de eilanden van Caribisch Nederland zijn gevestigd\
+    \ en voor ondernemers die zich er willen vestigen. Er is één KvK ingesteld voor\
+    \ Bonaire en één voor Sint Eustatius en Saba samen, met op beide eilanden een\
+    \ publiekskantoor.De KvK’s dragen bij aan het ondernemerschapsbeleid door te informeren\
+    \ en te ondersteunen op het gebied van ondernemen. Zij bevorderen de economische\
+    \ belangen van handel, industrie, ambacht en dienstverlening, en vormen daarmee\
+    \ een schakel tussen ondernemer en overheid. De KvK's zijn zo een belangrijke\
+    \ partner bij het uitvoeren van overheidsbeleid voor ondernemingen.De KvK's hebben\
+    \ een aantal belangrijke wettelijke taken, te weten:•\tHet bijhouden van het handelsregister,\
+    \ met daarin alle bedrijven, verenigingen en stichtingen•\tHet geven van voorlichting\
+    \ aan (startende) ondernemers, bijvoorbeeld over het starten van een bedrijf en\
+    \ over beschikbare ondersteuning•\tHet adviseren van het Bestuurscollege over\
+    \ te verlenen vestigingsvergunningen•\tHet geven van adviezen aan de Bestuurscolleges.\
+    \ Zo geven de KvK's bijvoorbeeld, in overleg met bestaande ondernemers, commentaar\
+    \ op overheidsplannen.Andere diensten die de Kamers van Koophandel en Nijverheid\
+    \ aan ondernemers leveren zijn onder meer:•\tInformatie verstrekken over subsidiemogelijkheden•\t\
+    Voorlichting geven over het vestigen van een bedrijf•\tOrganiseren van cursussen\
+    \ en trainingen voor het bedrijfsleven."
+  url: https://statia-sabachamber.com/index.php/about/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Participatie
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet op de Kamers van Koophandel en Nijverheid BES
+  referentie: https://wetten.overheid.nl/BWBR0028238/
 contact:
   website: https://statia-sabachamber.com/
   email: saba@statiasabachamber.com
+  bezoekadres: Windwardside
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Windwardside
+    land: Saba
+  - type: Bezoekadres
+    openbare_ruimte: Ada de Veer Southern Road
+    huisnummer: '2'
+    land: Sint Eustatius
+  phones:
+  - nummer: +599 416 25 54
+    label: algemeen Saba
+  - nummer: +599 318 33 32
+    label: algemeen Sint Eustatius
+  emails:
+  - email: saba@statiasabachamber.com
+    label: algemeen Saba
+  - email: statia@statiasabachamber.com
+    label: algemeen Sint Eustatius
+  internet_addresses:
+  - url: https://statia-sabachamber.com/
+    label: algemeen
+  contact_forms:
+  - url: https://statia-sabachamber.com/index.php/contact-1/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Chamber of Commerce & Industry St. Eustatius & Saba
+    url: https://www.facebook.com/CoCStatiaSaba
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908925/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908925/kamer-van-koophandel-en-nijverheid-sint-eustatius-en-saba
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100016
   retrieved: '2026-05-09'
+roo_start_datum: '2010-10-10'

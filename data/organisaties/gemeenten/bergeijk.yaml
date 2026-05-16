@@ -6,21 +6,142 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1724
   roo_id: '21977'
   wikidata: Q9812
+  owms: http://standaarden.overheid.nl/owms/terms/Bergeijk_(gemeente)
+  ictu: '01724'
+  organisatiecode: gm1724
+  rsin: 001902611
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BEY
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Bergeijk
   abbr: Bergeijk
   valid_from: '1900-01-01'
+description:
+  text: De gemeenteraad en het college van burgemeester en wethouders vormen het bestuur
+    van de gemeente Bergeijk. De gemeenteraad wordt ondersteund door de griffie. De
+    gemeenteraad is het hoogste orgaan en wordt door de inwoners van de gemeente gekozen.
+    De raad neemt besluiten voor de gemeente.Het college van burgemeester en wethouders
+    zijn verantwoordelijk voor het dagelijks bestuur van de gemeente Bergeijk. De
+    gemeentesecretaris is algemeen directeur van de ambtelijke organisatie en is tevens
+    de eerste adviseur van de burgemeester en het college van B&W.Aan het hoofd van
+    elke afdeling staat een afdelingshoofd. De afdelingshoofden vormen samen met de
+    gemeentesecretaris het managementteam. De vier afdelingen zijn opgedeeld in clusters.
+    Onderstaand worden taken en bevoegdheden van de clusters beschreven.
+  url: https://www.bergeijk.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.bergeijk.nl/informatie-opvragen-bij-gemeente-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/21977/Gemeente_Bergeijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergeijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergeijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bergeijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.bergeijk.nl/form/woo-verzoek-indienen-digid-eherkenning/burger-of-organisatie-0
+organogram_url: https://www.bergeijk.nl/organisatiestructuur
+afspraak:
+  telefoonnummer: (0497) 55 14 55
+  url: https://afspraken.bergeijk.nl:8022/afspraken
+geography:
+  oppervlakte: 103,22
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 103.22
+  aantal_inwoners: 19436
+  inwoners: '188'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 188.0
+  bevat_plaatsen_raw: Bergeijk, 't Loo, de Weebosch, Luyksgestel, Riethoven, 't Hof,
+    Westerhoven
+  bevat_plaatsen:
+  - Bergeijk
+  - '''t Loo'
+  - de Weebosch
+  - Luyksgestel
+  - Riethoven
+  - '''t Hof'
+  - Westerhoven
+council:
+  total_seats: 17
+  parties:
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: LPB
+    aantal_zetels: 5
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: https://www.bergeijk.nl
   email: info@bergeijk.nl
+  bezoekadres: Burgemeester Magneestraat 1, 5571 HB BERGEIJK
+  postadres: Postbus 10000, 5570 GA BERGEIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Magneestraat
+    huisnummer: '1'
+    postcode: 5571 HB
+    woonplaats: BERGEIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5570 GA
+    woonplaats: BERGEIJK
+  - type: Woo-Adres
+    openbare_ruimte: Burgemeester Magneestraat
+    huisnummer: '1'
+    postbus: '10000'
+    postcode: 5571 HB
+    woonplaats: Bergeijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (0497) 55 14 55
+    label: algemeen
+  emails:
+  - email: info@bergeijk.nl
+    label: algemeen
+  - email: info@bergeijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.bergeijk.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.bergeijk.nl/spreekuur
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21977/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21977/bergeijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +150,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9812
   retrieved: '2026-05-09'
+roo_start_datum: '1999-01-01'

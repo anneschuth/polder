@@ -5,23 +5,113 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0882
   oin: 00000003681035300000
   kvk: '68103530'
+  owms: http://standaarden.overheid.nl/owms/terms/mgrsdcgl
+  organisatiecode: so0882
+  rsin: '857303181'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Modulaire gemeenschappelijke regeling sociaal domein centraal Gelderland
+  roo_id: '29457020'
 names:
 - value: Modulaire gemeenschappelijke regeling sociaal domein centraal Gelderland
   abbr: MGR SDCG
   valid_from: '1900-01-01'
+description:
+  text: De Modulaire Gemeenschappelijke Regeling sociaal domein Centraal Gelderland
+    (MGR SDCG) is een samenwerkingsverband van 11 gemeenten op het gebied van het
+    sociaal domein. De MGR bestaat uit zes samenwerkingsmodules:- Inkoop Zorg - sociaal
+    domein Centraal Gelderland- Regionale Facilitering Zorg- Onderwijszaken (Regionaal
+    Bureau Leerlingzaken Midden Gelre - RBL)- Werkgeversservicepunt Midden-Gelderland
+    (WSP)- Werkgeverschap SW (WgSW)- Contractmanagement InburgeringstrajectenEen gemeente
+    is deelnemer in de MGR en kan op basis daarvan participeren in een programma en
+    bijbehorende module. Iedere gemeente bepaalt zelf in welk programma en welke module
+    wordt geparticipeerd. De afspraken tussen gemeenten en de MGR worden vastgelegd
+    in een dienstverleningsovereenkomst (DVO). De kosten van de MGR worden per module
+    begroot en verantwoord. Gemeenten betalen alleen voor de modules waarin zij deelnemen.
+  url: https://mgrsdcg.nl/over+de+mgr/algemeen/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://mgrsdcg.nl/publicaties/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28166678/Modulaire_gemeenschappelijke_regeling_sociaal_domein_centraal_Gelderland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Modulaire+gemeenschappelijke+regeling+sociaal+domein+centraal+Gelderland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://mgrsdcg.nl/publicaties/vergaderstukken+bestuur/default.aspx
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://mgrsdcg.nl/publicaties/begroting/default.aspx
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://mgrsdcg.nl/publicaties/jaarverslagen+website/default.aspx
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Modulaire+gemeenschappelijke+regeling+sociaal+domein+centraal+Gelderland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://mgrsdcg.nl/publicaties/default.aspx
+organogram_url: https://mgrsdcg.nl/over+de+mgr/organogram/default.aspx
+afspraak:
+  email: info@mgrsdcg.nl
+  telefoonnummer: (026) 702 97 77
 contact:
   website: www.mgrsdcg.nl
   email: info@mgrsdcg.nl
+  bezoekadres: Dorpsplein 1, 6931 CZ Westervoort
+  postadres: Postbus 2100, 6802 CC Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpsplein
+    huisnummer: '1'
+    postcode: 6931 CZ
+    woonplaats: Westervoort
+  - type: Postadres
+    postbus: '2100'
+    postcode: 6802 CC
+    woonplaats: Arnhem
+  - type: Woo-Adres
+    openbare_ruimte: Dorpsplein
+    huisnummer: '1'
+    postcode: 6931 CZ
+    woonplaats: Westervoort
+  - type: Woo-Adres
+    postbus: '2100'
+    postcode: 6802 CC
+    woonplaats: Arnhem
+  phones:
+  - nummer: (026) 702 97 77
+    label: algemeen
+  emails:
+  - email: info@mgrsdcg.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.mgrsdcg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://mgrsdcg.nl/over+de+mgr/contact+met+de+mgr/default.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-05-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28166678/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28166678/mgr-sdcg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

@@ -5,22 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0869
   oin: 00000003585921990000
   kvk: '58592199'
+  owms: http://standaarden.overheid.nl/owms/terms/rstwwl
+  organisatiecode: so0869
+  rsin: '853103872'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Recreatieschap Twiske-Waterland
+  roo_id: '29563201'
 names:
 - value: Recreatieschap Twiske-Waterland
   valid_from: '1900-01-01'
+description:
+  text: Recreatieschap Twiske-Waterland is de bestuurlijke organisatie die verantwoordelijk
+    is voor de ontwikkeling en het beheer van het prachtige Twiske. In opdracht van
+    het Recreatieschap Twiske-Waterland wordt recreatiegebied Het Twiske beheerd door
+    Recreatie Noord-Holland. Centraal hierbij staat dat alle bezoekers van het recreatiegebied
+    naar hartenlust van de bijzondere omgeving kunnen genieten.
+  url: https://www.twiske-waterland.nl/over/over-de-organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.twiske-waterland.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/25871741/Recreatieschap_Twiske-Waterland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Recreatieschap+Twiske-Waterland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Recreatieschap+Twiske-Waterland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.twiske-waterland.nl/beleid-en-bestuur/vergaderingen
+      toelichting: Via de links op deze pagina van de website komt u bij iBabs. Hierin
+        worden de openbare vergaderstukken van het recreatieschap gepubliceerd.
+  wooVerzoek:
+    url: https://www.twiske-waterland.nl/contact
+organogram_url: https://www.twiske-waterland.nl/beleid-en-bestuur/bestuur
+afspraak:
+  email: info@twiske-waterland.nl
 contact:
   website: https://www.twiske-waterland.nl
   email: info@twiske-waterland.nl
+  bezoekadres: Noorderlaaik 1, 1511 BX Oostzaan
+  postadres: Postbus 2571, 2002 RB Haarlem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Beheerskantoor
+    openbare_ruimte: Noorderlaaik
+    huisnummer: '1'
+    postcode: 1511 BX
+    woonplaats: Oostzaan
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '2571'
+    postcode: 2002 RB
+    woonplaats: Haarlem
+  - type: Woo-Adres
+    postbus: '2571'
+    postcode: 2002 RB
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (075) 684 43 38
+    label: algemeen
+  emails:
+  - email: info@twiske-waterland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.twiske-waterland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.twiske-waterland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-10-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25871741/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25871741/recreatieschap-twiske-waterland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-01-01'

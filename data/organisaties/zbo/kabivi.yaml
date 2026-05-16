@@ -4,20 +4,86 @@ identifiers:
   roo_id: '28212401'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000183
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Kamer voor de Binnenvisserij
   abbr: Kabivi
   valid_from: '1900-01-01'
+description:
+  text: De Kamer voor Binnenvisserij is ondergebracht bij een andere organisatie.
+    Vraag bij telefonisch contact om doorverbonden te worden.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Visserijwet 1963, Artikel 45
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=VISSERIJWET%201963
+taken_en_bevoegdheden: Toetsen van overeenkomsten van huur- en verhuur van visrechten
+  en het verlenen van toestemming tot vergunninguitgifte met het oog op een doelmatige
+  bevissing van binnenwateren.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 2,6
+  peildatumFte: '2020-12-31'
 contact:
   website: www.kamervoordebinnenvisserij.nl/
   email: kabivi@rvo.nl
+  bezoekadres: Hanzelaan 310, 8017 JK Zwolle
+  postadres: Postbus 2, 8000 AA Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hanzelaan
+    huisnummer: '310'
+    postcode: 8017 JK
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '2'
+    postcode: 8000 AA
+    woonplaats: Zwolle
+  phones:
+  - nummer: (088) 042 99 31
+    label: algemeen
+  emails:
+  - email: kabivi@rvo.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.kamervoordebinnenvisserij.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-07-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212401/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212401/kabivi
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000183
   retrieved: '2026-05-09'
+roo_start_datum: '1954-01-01'

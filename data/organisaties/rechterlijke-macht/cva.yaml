@@ -3,18 +3,90 @@ type: rechterlijke-instantie
 identifiers:
   roo_id: '28630377'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10034
+  owms: http://standaarden.overheid.nl/owms/terms/colvafg
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: College van afgevaardigden
   abbr: Cva
   valid_from: '1900-01-01'
+description:
+  text: Het College van afgevaardigden is een onafhankelijk adviesorgaan dat tot taak
+    heeft de Raad voor de rechtspraak gevraagd of ongevraagd te adviseren. Het college
+    toetst onder andere of de Raad de rechterlijke onafhankelijkheid wel respecteert
+    bij de besluiten die hij neemt. Het college fungeert ook als klankbord en brengt
+    ontwikkelingen bij de gerechten onder de aandacht van de Raad.Het College van
+    Afgevaardigden bestaat uit vertegenwoordigers van de gerechten (rechtbanken en
+    gerechtshoven), de Centrale Raad van Beroep en het College van Beroep voor het
+    bedrijfsleven.Het wordt bij het uitvoeren van zijn werkzaamheden administratief
+    ondersteund door het Bureau van de Raad voor de rechtspraak.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Indienen-Woo-verzoek.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28630377/College_van_afgevaardigden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2025.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2025 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2022.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2022 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2024.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2024 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2023.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2023 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/raad-voor-de-rechtspraak/besluiten-wet-open-overheid-2026
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2026 op verzoek openbaar heeft gemaakt.
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Indienen-Woo-verzoek.aspx
   email: cva.rvdr@rechtspraak.nl
+  postadres: Postbus 90613, 2509 LP Den Haag
+  bezoekadres: Kneuterdijk 1, 2514 EM Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '90613'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+  - type: Bezoekadres
+    openbare_ruimte: Kneuterdijk
+    huisnummer: '1'
+    postbus: '90613'
+    postcode: 2514 EM
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (088) 361 00 00
+    label: Raad voor de rechtspraak
+  emails:
+  - email: cva.rvdr@rechtspraak.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-26'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28630377/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28630377/cva
+  retrieved: '2026-05-16'

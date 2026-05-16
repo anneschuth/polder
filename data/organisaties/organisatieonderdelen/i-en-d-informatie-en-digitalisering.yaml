@@ -7,12 +7,38 @@ parent_id: org:onderdeel-bedrijfsvoering
 names:
 - value: I&D Informatie en Digitalisering
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   website: http://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8011 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8011 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: 06 27 04 48 02
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-15'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16851/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16851/i-en-d-informatie-en-digitalisering
+  retrieved: '2026-05-16'

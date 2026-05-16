@@ -1,23 +1,76 @@
 id: org:rechtbank-gelderland
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000150000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10020
   roo_id: '28046934'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Gelderland
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Gelderland
   valid_from: '1900-01-01'
+description:
+  text: 'Ruim 180 rechters telt de rechtbank Gelderland. Samen met de ongeveer 660
+    medewerkers behandelen zij elk jaar zo’n 140.000 rechtszaken. Dat doen zij deskundig
+    en met oog voor de belangen van de individuele rechtzoekende. De rechtbank telt
+    vier locaties: Apeldoorn, Arnhem, Nijmegen en Zutphen. De hoofdlocaties zijn gevestigd
+    in Arnhem en Zutphen. In het Zaakverdelingsreglement (officielebekendmakingen.nl)
+    staat welke zaken op welke locatie worden behandeld. Rechtbank Gelderland is de
+    enige rechtbank in Nederland met een militaire kamer. Hier staan Nederlandse militairen
+    terecht, die zich waar ook ter wereld misdragen.Met digitale zittingszalen op
+    drie locaties is de rechtbank voorbereid op de toekomst. De Rechtspraak moderniseert
+    en digitaal procederen wordt de norm. In dat proces wil de rechtbank Gelderland
+    een vitale organisatie zijn, met blijvende aandacht voor zowel de eigen medewerkers
+    als onze professionele partners en de rechtzoekenden.'
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Gelderland
   email: kcc.gld@rechtspraak.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (088) 361 20 00
+    label: algemeen
+  emails:
+  - email: kcc.gld@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Gelderland
+    label: algemeen
+  - url: www.rechtbankgelderland.nl
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Gelderland/Contact
+  contact_forms:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Gelderland/Contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rechtbank Gelderland
+    url: https://www.linkedin.com/company/rechtbank-gelderland/?originalSubdomain=nl
+  - platform: Instagram
+    gebruikersnaam: '@rechtbankgelderland'
+    url: https://www.instagram.com/rechtbankgelderland/
+  - platform: X
+    gebruikersnaam: '@rbGelderland'
+    url: https://twitter.com/RbGelderland
+  - platform: Facebook
+    gebruikersnaam: Rechtbankgelderland
+    url: https://www.facebook.com/rechtbankgelderland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046934/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046934/rechtbank-gelderland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

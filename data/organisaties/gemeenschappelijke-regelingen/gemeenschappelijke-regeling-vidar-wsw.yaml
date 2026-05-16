@@ -3,17 +3,102 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28418145'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1060
+  owms: http://standaarden.overheid.nl/owms/terms/vidarwsw
+  kvk: '76357392'
+  organisatiecode: so1060
+  rsin: '860599279'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Vidar Wsw
+  roo_id: '30402775'
 names:
 - value: Gemeenschappelijke Regeling Vidar Wsw
   valid_from: '1900-01-01'
+description:
+  text: 'Ons motto is: “Werk voorop, kansen voor iedereen.” Wij geloven dat iedereen
+    talent heeft en mee kan doen aan de samenleving. Wij vinden ook dat iedereen recht
+    heeft op (betaald) werk.Vidar ondersteunt inwoners van Sittard-Geleen, Stein en
+    Beek bij het vinden van werk, het krijgen van een inkomen, het ontwikkelen van
+    vaardigheden en het ontdekken van hun talenten.Bedrijven kunnen bij ons terecht
+    voor de werving, selectie en begeleiding van personeel, (groeps)detachering, advies
+    bij personeelsvraagstukken, informatie over subsidies en regelingen m.b.t. inclusief
+    ondernemen, jobcarving, inclusief bedrijfsadvies, branche-inzichten en arbeidsmarktkennis
+    en voor hulp bij de invulling van social return. Ook kunnen bedrijven productie-
+    en montagewerk aan Vidar uitbesteden.Bij Vidar werken 1.000 medewerkers, waarvan
+    zo’n 660 werkzaam zijn in een beschutte werkomgeving. Wij begeleiden zo''n 1.300
+    kandidaten in ontwikkelingstrajecten en ondersteunen ruim 3.000 huishoudens in
+    de regio met een bijstandsuitkering. Tot slot ondersteunen wij zo’n 8.000 inwoners
+    uit de Westelijke Mijnstreek die rond het bestaansminimum leven aanvullend met
+    een of meerdere minima-regelingen.'
+  url: https://www.vidar.nl/over-vidar
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28418145/Gemeenschappelijke_Regeling_Vidar_Wsw
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+Regeling+Vidar+Wsw%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vidar.nl/contactpagina
+afspraak:
+  email: Info@vidar.nl
+  telefoonnummer: (046) 477 71 30
+  url: https://www.vidar.nl/contactpagina
 contact:
   website: https://vidar.nl
   email: Info@vidar.nl
+  bezoekadres: Millenerweg 4, 6136 KW Sittard
+  postadres: Postbus 18, 6130 AA Sittard
+  addresses:
+  - type: Bezoekadres
+    toelichting: Vidar Werk & inkomen
+    openbare_ruimte: Millenerweg
+    huisnummer: '4'
+    postcode: 6136 KW
+    woonplaats: Sittard
+  - type: Postadres
+    postbus: '18'
+    postcode: 6130 AA
+    woonplaats: Sittard
+  - type: Woo-Adres
+    huisnummer: '18'
+    postcode: 6130 AA
+    woonplaats: Sittard
+  phones:
+  - nummer: (046) 477 71 30
+    label: algemeen
+  emails:
+  - email: Info@vidar.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://vidar.nl
+    label: algemeen
+  - url: https://service.sittard-geleen.nl/Formulieren/formulier/nl-NL/Vidar/scVidarContact.aspx/fVidarBerichtSturen
+    label: contactformulier
+  contact_forms:
+  - url: https://vidar.nl/contactpagina
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Participatiebedrijf Vidar
+    url: www.linkedin.com/company/participatiebedrijfvidar/
+  - platform: Facebook
+    gebruikersnaam: ParticipatiebedrijfVidar
+    url: https://www.facebook.com/ParticipatiebedrijfVidar
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-30'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28418145/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28418145/gemeenschappelijke-regeling-vidar-wsw
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-11-09'

@@ -4,13 +4,39 @@ identifiers:
   roo_id: '27613238'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000324
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Metacluster in het Schepenbesluit 2004 jo. Besluit erkende organisaties Schepenwet
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo' s die niet onder de werking van de kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Besluit erkende organisaties Schepenwet
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0019673
+- opschrift: Schepenbesluit 2004
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0016880
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-05-16'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613238/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613238/metacluster-in-het-schepenbesluit-2004-jo-besluit-erkende-organisaties-schepenwet
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-01-01'

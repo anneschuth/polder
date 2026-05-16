@@ -3,16 +3,58 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28586634'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0732
+  owms: http://standaarden.overheid.nl/owms/terms/dnlgrenspmsn
+  kvk: '50376667'
+  btw: NL810888270B01
+  loonheffing: 810888270L01
+  organisatiecode: so0732
+  rsin: '810888270'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling van het Openbaar Lichaam Duits-Nederlands Grenspark
+    Maas-Swalm-Nette
+  roo_id: '28586589'
 names:
 - value: Openbaar Lichaam Duits-Nederlands Grenspark Maas-Swalm-Nette
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: info@grenspark-msn.nl
+  bezoekadres: Kapellerpoort 1, 6041 HZ Roermond
+  postadres: Kapellerpoort 1, 6041 HZ Roermond
+  addresses:
+  - type: Bezoekadres
+    toelichting: Grenspark Maas-Swalm-Nette
+    openbare_ruimte: Kapellerpoort
+    huisnummer: '1'
+    postcode: 6041 HZ
+    woonplaats: Roermond
+  - type: Postadres
+    openbare_ruimte: Kapellerpoort
+    huisnummer: '1'
+    postcode: 6041 HZ
+    woonplaats: Roermond
+  emails:
+  - email: info@grenspark-msn.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-24'
+last_verified: '2024-12-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28586634/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28586634/openbaar-lichaam-duits-nederlands-grenspark-maas-swalm-nette
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-07-01'

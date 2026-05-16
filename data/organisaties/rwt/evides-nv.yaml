@@ -2,14 +2,42 @@ id: org:oovb-evides-nv
 type: rwt
 identifiers:
   roo_id: '27909036'
+  kvk: '24170650'
+  rsin: 007197032
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Evides N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Schaardijk 150, 3063 NH Rotterdam
+  postadres: Postbus 4472, 3006 AL Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schaardijk 150
+    postcode: 3063 NH
+    woonplaats: Rotterdam
+  - type: Postadres
+    postbus: '4472'
+    postcode: 3006 AL
+    woonplaats: Rotterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909036/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909036/evides-nv
+  retrieved: '2026-05-16'

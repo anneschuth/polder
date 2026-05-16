@@ -2,17 +2,42 @@ id: org:gr-gemeenschappelijk-orgaan-openbaar-primair-onderwijs-hoeksche-waard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964347'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Openbaar Primair Onderwijs Hoeksche Waard
+  roo_id: '24964342'
 names:
 - value: Gemeenschappelijk orgaan openbaar primair onderwijs Hoeksche Waard
   valid_from: '1900-01-01'
   valid_until: '2019-08-01'
 contact:
   email: gemeente@binnenmaas.nl
+  bezoekadres: Sportlaan 22, 3299 XG Maasdam
+  postadres: Postbus 5455, 2399 ZH Maasdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sportlaan
+    huisnummer: '22'
+    postcode: 3299 XG
+    woonplaats: Maasdam
+  - type: Postadres
+    postbus: '5455'
+    postcode: 2399 ZH
+    woonplaats: Maasdam
+  phones:
+  - nummer: (078) 676 44 33
+    label: algemeen
+  emails:
+  - email: gemeente@binnenmaas.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-08-01'
+last_mutation: '2020-10-29'
+last_verified: '2020-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964347/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964347/gemeenschappelijk-orgaan-openbaar-primair-onderwijs-hoeksche-waard
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-08-01'

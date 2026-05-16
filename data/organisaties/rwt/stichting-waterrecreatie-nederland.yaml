@@ -2,14 +2,32 @@ id: org:stichting-waterrecreatie-nederland
 type: rwt
 identifiers:
   roo_id: '30133538'
+  kvk: '41158896'
+  rsin: '803546804'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Waterrecreatie Nederland
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Storkstraat
+    huisnummer: '24'
+    postcode: 3833 LB
+    woonplaats: Leusden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133538/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133538/stichting-waterrecreatie-nederland
+  retrieved: '2026-05-16'

@@ -3,14 +3,43 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28146759'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1007
+  owms: http://standaarden.overheid.nl/owms/terms/Euregio_Rijn-Waal
+  organisatiecode: so1007
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Statuten van het openbaar lichaam Euregio Rijn-Waal
+  roo_id: '28146753'
 names:
 - value: Euregio Rijn-Waal
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Emmericher Str. 24, 4753 3 Kleve
+  postadres: Postbus 220, 7040 AE ´s-Heerenberg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Emmericher Str.
+    huisnummer: '24'
+    postcode: 4753 3
+    woonplaats: Kleve
+    land: Duitsland
+  - type: Postadres
+    postbus: '220'
+    postcode: 7040 AE
+    woonplaats: ´s-Heerenberg
+  fax: +49 (0) 2821 7930 30
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-08-06'
+last_verified: '2022-02-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28146759/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28146759/euregio-rijn-waal
+  retrieved: '2026-05-16'
+roo_start_datum: '1993-11-01'

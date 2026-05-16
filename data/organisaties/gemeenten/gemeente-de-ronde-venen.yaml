@@ -6,21 +6,153 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0736
   roo_id: '27383'
   wikidata: Q10036
+  owms: http://standaarden.overheid.nl/owms/terms/De_Ronde_Venen
+  ictu: '00736'
+  organisatiecode: gm0736
+  rsin: '823178195'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_RVE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente De Ronde Venen
   abbr: De Ronde Venen
   valid_from: '1900-01-01'
+description:
+  text: De ambtelijke organisatie van gemeente De Ronde Venen staat onder leiding
+    van een tweehoofdige directie. De directie bestaat uit de gemeentesecretaris,
+    tevens algemeen directeur en een directeur bedrijfsvoering.
+  url: https://www.derondevenen.nl/Bestuur_en_organisatie/Over_ons/Organisatieomschrijving
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.derondevenen.nl/Wonen_en_leven/Iets_melden_klacht_indienen_of_bezwaar_maken/Informatieverzoek_of_Woo_verzoek_doen
+      overzichtURL: https://organisaties.overheid.nl/woo/27383/Gemeente_De_Ronde_Venen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&datumop=7-8-2024&date-input--2=7-8-2024&filter-id--ss-gemeenten=de+ronde&gemeenten=De+Ronde+Venen&indeling=
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://de-ronde-venen.begrotingsapp.nl/
+      toelichting: Informatie over de programmabegroting, de programmarekening, bestuursrapportages
+        en de kadernota
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22De+Ronde+Venen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&datumop=7-8-2024&date-input--2=7-8-2024&filter-id--ss-gemeenten=de+ronde&gemeenten=De+Ronde+Venen&indeling=
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://derondevenen.raadsinformatie.nl/dashboard
+  wooVerzoek:
+    url: https://www.derondevenen.nl/Wonen_en_leven/Iets_melden_klacht_indienen_of_bezwaar_maken/Informatieverzoek_of_Woo_verzoek_doen
+afspraak:
+  url: https://derondevenen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 116,91
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 116.91
+  aantal_inwoners: 45749
+  inwoners: '391'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 391.0
+  bevat_plaatsen_raw: Abcoude, Amstelhoek, Baambrugge, De Hoef, Mijdrecht, Vinkeveen,
+    Waverveen, Wilnis
+  bevat_plaatsen:
+  - Abcoude
+  - Amstelhoek
+  - Baambrugge
+  - De Hoef
+  - Mijdrecht
+  - Vinkeveen
+  - Waverveen
+  - Wilnis
+council:
+  total_seats: 29
+  parties:
+  - naam: VVD
+    aantal_zetels: 7
+  - naam: Ronde Venen Belang
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 4
+  - naam: Lokaal en Fair
+    aantal_zetels: 2
+  - naam: Seniorenpartij De Ronde Venen
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
+  - naam: ChristenUnie-SGP
+    aantal_zetels: 1
 contact:
   website: https://www.derondevenen.nl
   email: gemeente@derondevenen.nl
+  bezoekadres: Croonstadtlaan 111, 3641 AL MIJDRECHT
+  postadres: Postbus 250, 3640 AG MIJDRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Croonstadtlaan
+    huisnummer: '111'
+    postcode: 3641 AL
+    woonplaats: MIJDRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '250'
+    postcode: 3640 AG
+    woonplaats: MIJDRECHT
+  - type: Woo-Adres
+    openbare_ruimte: Croonstadtlaan
+    huisnummer: '111'
+    postcode: 3641 AL
+    woonplaats: Mijdrecht
+    regio: Utrecht
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Croonstadtlaan
+    huisnummer: '111'
+    postcode: 3641 AL
+    woonplaats: MIJDRECHT
+  phones:
+  - nummer: (0297) 29 16 16
+    label: algemeen
+  emails:
+  - email: gemeente@derondevenen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.derondevenen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://mijnzaken.derondevenen.nl/f/1654/login
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27383/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27383/gemeente-de-ronde-venen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +161,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q10036
   retrieved: '2026-05-09'
+roo_start_datum: '1989-01-01'

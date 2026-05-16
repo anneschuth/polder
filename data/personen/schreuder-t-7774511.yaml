@@ -3,7 +3,7 @@ name:
   full: T.M. Schreuder
   family: Schreuder
   given: T.M.
-  initials: T.
+  initials: T.M.
 mandaten:
 - id: 55a61143-97f7-4a21-83b4-77d9d2579206
   organization_id: org:gemeente-overbetuwe
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774512
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26937/gemeente-overbetuwe
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30557295
 - id: 018e7557-5da9-415e-9260-46297d5fcee7
   organization_id: org:gemeente-overbetuwe
   post_id: post:raadslid-gemeente-overbetuwe

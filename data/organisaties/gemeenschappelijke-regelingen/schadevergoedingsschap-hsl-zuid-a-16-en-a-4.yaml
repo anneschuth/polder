@@ -1,18 +1,57 @@
 id: org:gr-schadevergoedingsschap-hsl-zuid-a-16-en-a-4
 type: gemeenschappelijke-regeling
+subname: het Schap
 identifiers:
   roo_id: '28575831'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1065
+  owms: http://standaarden.overheid.nl/owms/terms/svshslzuid
+  organisatiecode: so1065
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling schadevergoedingsschap HSL-Zuid, A16 en A4
+  roo_id: '28575800'
 names:
 - value: Schadevergoedingsschap HSL-Zuid, A 16 en A 4
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: schadeschap.hsl@outlook.com
+  bezoekadres: Boompjes 200, 3011 XB Rotterdam
+  postadres: Postbus 556, 3000 AN Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Boompjes
+    huisnummer: '200'
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+  - type: Postadres
+    postbus: '556'
+    postcode: 3000 AN
+    woonplaats: Rotterdam
+  phones:
+  - nummer: (030) 271 12 93
+    label: algemeen
+  emails:
+  - email: schadeschap.hsl@outlook.com
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2022-01-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28575831/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28575831/schadevergoedingsschap-hsl-zuid-a-16-en-a-4
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-04-01'

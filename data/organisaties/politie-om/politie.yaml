@@ -1,0 +1,93 @@
+id: org:politie
+type: politie
+subname: Landelijke politiekorps
+identifiers:
+  oin: 00000001816076790000
+  roo_id: '22660975'
+classification: politie
+parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
+names:
+- value: Politie
+  valid_from: '1900-01-01'
+description:
+  url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.politie.nl/onderwerpen/wet-open-overheid.html
+      overzichtURL: https://organisaties.overheid.nl/woo/22660975/Politie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Adviezen
+      url: https://www.politie.nl/onderwerpen/wet-open-overheid.html
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.politie.nl/onderwerpen/wet-open-overheid.html
+      toelichting: documentatie op politie.nl
+  wooVerzoek:
+    url: https://www.politie.nl/informatie/hoe-kan-ik-een-woo-verzoek-indienen.html
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
+afspraak:
+  telefoonnummer: (0900) 88 44
+  url: https://www.politie.nl/contact/
+contact:
+  bezoekadres: Nieuwe Uitleg 1, 2514 BP Den Haag
+  postadres: Postbus 17107, 2502 CC Den Haag
+  addresses:
+  - type: Woo-Adres
+    toelichting: Staf Korpsleiding t.a.v. Juridische Zaken
+    openbare_ruimte: Nieuwe Uitleg 1
+    postcode: 2514 BP
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Staf Korpsleiding t.a.v. Juridische Zaken
+    postbus: '17107'
+    postcode: 2502 CC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres
+    toelichting: Staf Korpsleiding t.a.v. Juridische Zaken
+    openbare_ruimte: Nieuwe Uitleg
+    huisnummer: '1'
+    postcode: 2514 BP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Staf Korpsleiding t.a.v. Juridische Zaken
+    postbus: '17107'
+    postcode: 2502 CC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (0900) 88 44
+    label: algemeen
+  internet_addresses:
+  - url: https://www.politie.nl
+    label: algemeen
+  - url: https://www.politie.nl/woo
+    label: algemeen
+  - url: https://www.politie.nl/contact
+    label: algemeen
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2025-12-11'
+last_verified: '2025-12-11'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/22660975/politie
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-01-01'

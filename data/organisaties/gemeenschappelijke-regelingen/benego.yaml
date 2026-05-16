@@ -1,16 +1,41 @@
 id: org:gr-benego
 type: gemeenschappelijke-regeling
+subname: Belgisch-Nederlands Grensoverleg
 identifiers:
   roo_id: '28261834'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1072
+  owms: http://standaarden.overheid.nl/owms/terms/benego
+  organisatiecode: so1072
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Benego
+  roo_id: '28261828'
 names:
 - value: BENEGO
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Steenweg op Gierle 100, B-23 00 Turnhout
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Steenweg op Gierle
+    huisnummer: '100'
+    postcode: B-23 00
+    woonplaats: Turnhout
+    land: België
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-27'
+last_verified: '2020-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28261834/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28261834/benego
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-10-27'

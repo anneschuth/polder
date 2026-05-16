@@ -2,14 +2,42 @@ id: org:oovb-stichting-elektronische-communicatie-hypotheken-ech
 type: rwt
 identifiers:
   roo_id: '27912015'
+  kvk: '27259827'
+  rsin: '812411778'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Elektronische Communicatie Hypotheken (ECH)
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Spui 184, 2511 BW Den Haag
+  postadres: Postbus 16020, 2500 BA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spui 184
+    postcode: 2511 BW
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16020'
+    postcode: 2500 BA
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912015/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912015/stichting-elektronische-communicatie-hypotheken-ech
+  retrieved: '2026-05-16'

@@ -6,21 +6,180 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1701
   roo_id: '31991'
   wikidata: Q747920
+  owms: http://standaarden.overheid.nl/owms/terms/Westerveld
+  ictu: '01701'
+  organisatiecode: gm1701
+  rsin: '806298844'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WTV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Westerveld
   abbr: Westerveld
   valid_from: '1900-01-01'
+description:
+  url: https://www.gemeentewesterveld.nl/Alle_onderwerpen/Bestuur_en_organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentewesterveld.nl/Contact/Woo_verzoek_indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/31991/Gemeente_Westerveld
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Westerveld%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: De gemeente kan besluiten van algemene strekking nemen. Bijvoorbeeld
+        beleidsregels. Daarin geeft de gemeente aan hoe bepaald beleid wordt uitgevoerd.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Westerveld%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten. De gemeente kan regels bijvoorbeeld in een algemeen verbindend
+        voorschrift vastleggen.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Westerveld%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Beschikkingen zijn besluiten over specifieke gevallen. Als u bijvoorbeeld
+        bezwaar maakt tegen bouwplannen in uw straat, dan neemt het college B&W hierover
+        een besluit. Dit heet een beschikking.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://westerveld.begrotingsapp.nl/
+      toelichting: In de kadernota stellen we beleidsuitgangspunten voor het komende
+        jaar vast. De begroting werkt deze financieel uit. Via de 1e en 2e bestuursrapportage
+        volgen we de voortgang. Na het jaar komen de jaarstukken en de jaarrekening.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://westerveld.bestuurlijkeinformatie.nl/
+      toelichting: De leden van de gemeenteraad (raadsleden) nemen alle beslissingen
+        die voor de gemeente van belang zijn.  Hier vindt u de agenda en vergaderstukken
+        van de gemeenteraad van Westerveld. Ook kunt u  vergaderingen live volgen
+        of terugkijken.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.gemeentewesterveld.nl/Alle_onderwerpen/Bestuur_en_organisatie/College/Collegebesluiten
+      toelichting: In de besluitenlijst ziet u de besluiten die het college van Burgemeester
+        en Wethouders van de gemeente Westerveld heeft genomen. Gemeente Westerveld
+        publiceert de agenda's van de collegevergaderingen nog niet.
+  wooVerzoek:
+    url: https://www.gemeentewesterveld.nl/Bibliotheek/Formulieren/E_diensten/Juridische_zaken/Wet_open_overheid_Woo_verzoek_indienen
+organogram_url: https://www.gemeentewesterveld.nl/organogram
+afspraak:
+  email: info@gemeentewesterveld.nl
+  telefoonnummer: (0521) 34 93 49
+  url: https://westerveld.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 282,75
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 282.75
+  aantal_inwoners: 20035
+  inwoners: '70'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 70.0
+  bevat_plaatsen_raw: Ansen, Boschoord, Darp, Diever, Dieverbrug, Doldersum, Dwingeloo,
+    Frederiksoord, Geeuwenbrug, Havelte, Havelterberg, Nijensleek, Oude Willem, Pesse,
+    Ruinen, Uffelte, Vledder, Vledderveen DR, Wapse, Wapserveen, Wateren, Wilhelminaoord,
+    Wittelte, Zorgvlied
+  bevat_plaatsen:
+  - Ansen
+  - Boschoord
+  - Darp
+  - Diever
+  - Dieverbrug
+  - Doldersum
+  - Dwingeloo
+  - Frederiksoord
+  - Geeuwenbrug
+  - Havelte
+  - Havelterberg
+  - Nijensleek
+  - Oude Willem
+  - Pesse
+  - Ruinen
+  - Uffelte
+  - Vledder
+  - Vledderveen DR
+  - Wapse
+  - Wapserveen
+  - Wateren
+  - Wilhelminaoord
+  - Wittelte
+  - Zorgvlied
+council:
+  total_seats: 17
+  parties:
+  - naam: Duurzaam Sterk Westerveld / Gemeentebelangen Westerveld
+    aantal_zetels: 6
+  - naam: PRO Westerveld
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Lokaal Sociaal Westerveld
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentewesterveld.nl
   email: info@gemeentewesterveld.nl
+  bezoekadres: Raadhuislaan 1, 7981 EL DIEVER
+  postadres: Postbus 50, 7970 AB HAVELTE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuislaan
+    huisnummer: '1'
+    postcode: 7981 EL
+    woonplaats: DIEVER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '50'
+    postcode: 7970 AB
+    woonplaats: HAVELTE
+  - type: Woo-Adres
+    postbus: '50'
+    postcode: 7970 AB
+    woonplaats: Havelte
+    regio: Drenthe
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuislaan
+    huisnummer: '1'
+    postcode: 7981 EL
+    woonplaats: DIEVER
+  phones:
+  - nummer: (0521) 34 93 49
+    label: algemeen
+  emails:
+  - email: info@gemeentewesterveld.nl
+    label: algemeen
+  - email: info@gemeentewesterveld.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentewesterveld.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31991/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31991/westerveld
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +188,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q747920
   retrieved: '2026-05-09'
+roo_start_datum: '1998-01-01'

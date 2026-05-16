@@ -6,21 +6,186 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0296
   roo_id: '24056'
   wikidata: Q72981
+  owms: http://standaarden.overheid.nl/owms/terms/Wijchen_(gemeente)
+  ictu: 00296
+  organisatiecode: gm0296
+  rsin: 001096874
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WCH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Wijchen
   abbr: Wijchen
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Wijchen voert samen met de gemeente Druten een bedrijfsvoeringsorganisatie
+    voor de uitvoering van de ambtelijke taken.De Werkorganisatie Druten Wijchen is
+    een samenwerkingsverband tussen de gemeenten Druten en Wijchen. De Werkorganisatie
+    Druten Wijchen bestaat uit vijf domeinen met zelforganiserende teams.
+  url: https://www.werkorganisatiedrutenwijchen.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wijchen.nl/informatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/24056/Gemeente_Wijchen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijchen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22)))
+      toelichting: Naast algemeen verbindende voorschriften kan de gemeente Wijchen
+        ook andere besluiten van algemene strekking nemen. Dat zijn bijvoorbeeld beleidsregels,
+        waarin staat hoe de gemeente bepaald beleid uitvoert.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijchen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn regels van de overheid waaraan iedereen gebonden is. De
+        Rijksoverheid maakt wetten. Voor de gemeente zijn algemeen verbindende voorschriften
+        opgenomen in bijvoorbeeld een verordening of een omgevingsplan.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://wijchen.bestuurlijkeinformatie.nl/Agenda/Index/677c317d-684e-404e-bf35-4c191ce35445
+      toelichting: In de besluitenlijsten ziet u de besluiten die het college van
+        burgemeester en wethouders van Wijchen heeft genomen. De agenda's van de collegevergaderingen
+        en de belisnota's worden ook gepubliceerd.
+    - informatiecategorie: Adviezen
+      url: https://wijchen.edataloket.eu/?sort=publicationDate:desc
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijchen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://wijchen.edataloket.eu/?sort=publicationDate:desc
+      toelichting: Beschikkingen zijn besluiten over specifieke gevallen. Als u bijvoorbeeld
+        een vergunning aanvraagt of bezwaar maakt tegen bouwplannen in uw straat,
+        neemt het college van burgemeester en wethouders daar een besluit over. Dit
+        heet een beschikking.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://wijchen.edataloket.eu/?sort=publicationDate:desc
+      toelichting: Met een Woo-verzoek vraagt iemand om overheidsinformatie openbaar
+        te maken. Informatie die met een Woo-verzoek wordt verstrekt wordt op dit
+        moment verstrekt aan de aanvrager. In de toekomst wordt dit openbaar voor
+        iedereen.
+    - informatiecategorie: Andere documenten
+      url: https://wijchen.edataloket.eu/?sort=publicationDate:desc
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wijchen.nl/begroting-jaarrekening-en-samenwerking
+      toelichting: In de begroting staan de financiële vooruitzichten. In de jaarrekening
+        staan de uitgaven van het afgelopen jaar. U kunt de stukken opvragen bij de
+        griffie.
+    - informatiecategorie: Klachtoordelen
+      url: https://www.wijchen.nl/klacht-indienen
+      toelichting: Een klacht geeft aan dat iemand niet tevreden is over hoe een ambtenaar
+        zich heeft gedragen. De gemeente Wijchen behandelt deze klachten en publiceert
+        daarover een jaarverslag.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://wijchen.bestuurlijkeinformatie.nl/
+      toelichting: Deze documenten bespreekt de gemeenteraad. Dat kan een brief van
+        een inwoner zijn. Of een voorstel van het college waarover de raad stemt.
+        Wil de raad een voorstel wijzigen, dan heet dat een amendement. Moties zijn
+        voorstellen vanuit de raad.
+  wooVerzoek:
+    url: https://www.wijchen.nl/informatie-opvragen-woo-verzoek?zoek=woo
+organogram_url: https://www.werkorganisatiedrutenwijchen.nl/data/images/2/2/6/8/organogram-wdw-extern-v2.png
+afspraak:
+  telefoonnummer: (088) 432 70 00
+  url: https://wijchen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 69,58
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 69.58
+  aantal_inwoners: 42106
+  inwoners: '605'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 605.0
+  bevat_plaatsen_raw: Balgoij, Batenburg, Bergharen, Hernen, Leur, Niftrik, Wijchen
+  bevat_plaatsen:
+  - Balgoij
+  - Batenburg
+  - Bergharen
+  - Hernen
+  - Leur
+  - Niftrik
+  - Wijchen
+council:
+  total_seats: 26
+  parties:
+  - naam: Kernachtig Wijchen
+    aantal_zetels: 10
+  - naam: Hart voor Wijchen
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Emilia
+    aantal_zetels: 1
 contact:
   website: https://www.wijchen.nl
   email: gemeente@wijchen.nl
+  bezoekadres: Kasteellaan 27, 6602 DB WIJCHEN
+  postadres: Postbus 9000, 6600 HA WIJCHEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kasteellaan
+    huisnummer: '27'
+    postcode: 6602 DB
+    woonplaats: WIJCHEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9000'
+    postcode: 6600 HA
+    woonplaats: WIJCHEN
+  - type: Woo-Adres
+    postbus: '9000'
+    postcode: 6602 DB
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Kasteellaan
+    huisnummer: '27'
+    postcode: 6602 DB
+    woonplaats: WIJCHEN
+  phones:
+  - nummer: (088) 432 70 00
+    label: algemeen
+  emails:
+  - email: gemeente@wijchen.nl
+    label: algemeen
+  - email: omgevingsloket@drutenwijchen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.wijchen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wijchen.nl/omgevingsvergunning
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-18'
+last_verified: '2026-04-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24056/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24056/wijchen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -2,14 +2,42 @@ id: org:oovb-stichting-solidaridad
 type: rwt
 identifiers:
   roo_id: '27916236'
+  kvk: '41150939'
+  rsin: 006176628
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Solidaridad
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: '''t Goylaan 15, 3525 AA Utrecht'
+  postadres: '''t Goylaan 15, 3525 AA Utrecht'
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: '''t Goylaan 15'
+    postcode: 3525 AA
+    woonplaats: Utrecht
+  - type: Postadres
+    openbare_ruimte: '''t Goylaan 15'
+    postcode: 3525 AA
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27916236/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27916236/stichting-solidaridad
+  retrieved: '2026-05-16'

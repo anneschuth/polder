@@ -2,14 +2,43 @@ id: org:oovb-liander-nv
 type: rwt
 identifiers:
   roo_id: '27909180'
+  kvk: 08021677
+  oin: I0000003080216770000
+  rsin: 003049395
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Liander N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Utrechtseweg 68, 6812 AH Arnhem
+  postadres: Postbus 50, 6920 AB Duiven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Utrechtseweg 68
+    postcode: 6812 AH
+    woonplaats: Arnhem
+  - type: Postadres
+    postbus: '50'
+    postcode: 6920 AB
+    woonplaats: Duiven
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909180/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909180/liander-nv
+  retrieved: '2026-05-16'

@@ -3,20 +3,95 @@ type: zbo
 identifiers:
   roo_id: '28248895'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000306
+  owms: http://standaarden.overheid.nl/owms/terms/dopingautoriteit
+  kvk: '73556416'
+  rsin: '859575731'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Dopingautoriteit
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid,Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Er is een afwijkende bepaling voor het eerste lid van artikel 22.
+wettelijke_grondslagen:
+- opschrift: Wet uitvoering antidopingbeleid, artikel 4
+  referentie: https://wetten.overheid.nl/BWBR0041439/2025-07-05#Hoofdstuk2_Artikel4
+taken_en_bevoegdheden: De missie van de Dopingautoriteit is het realiseren van  dopingvrije
+  sport in Nederland. De Dopingautoriteit heeft als wettelijke taken:1) Het bestrijden
+  van doping in de sport.2) Het uitvoeren van het dopingcontroleproces:a) Het beoordelen
+  van verzoeken tot dispensatie, alsmede het verlenen van dispensatie.b) Het nemen
+  van besluiten over de samenstelling van de topsportgroep.c) Het selecteren en aanwijzen
+  van de personen bij wie lichaamsmonsters zullen worden   afgenomen.d) Het afnemen,
+  verzamelen en analyseren van lichaamsmonsters.e) Het beheren van de resultaten van
+  het laboratoriumonderzoek.f) Het deelnemen aan tuchtrechtelijke procedures.3) Het
+  verzamelen en onderzoeken van informatie over mogelijke overtredingen van een  dopingreglement.4)
+  Het geven van voorlichting over doping.5) Andere door Onze Minister opgedragen taken
+  die verband houden met het bestrijden van toepassing van doping in de sport.De taken
+  worden uitgevoerd in overeenstemming met de <a href="https://zoek.officielebekendmakingen.nl/stcrt-2019-21461.html"
+  target="_blank">Wereld Anti-Doping Code.</a> Voor de uitvoering werkt de Dopingautoriteit
+  samen met vele nationale en internationale organisaties.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 21,0
+  peildatumFte: '2019-12-31'
 contact:
   website: https://www.dopingautoriteit.nl/
   email: info@dopingautoriteit.nl
+  bezoekadres: Barbizonlaan 55, 2908 ME Capelle aan den IJssel
+  postadres: Postbus 5000, 2900 EA Capelle aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Barbizonlaan
+    huisnummer: '55'
+    postcode: 2908 ME
+    woonplaats: Capelle aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '5000'
+    postcode: 2900 EA
+    woonplaats: Capelle aan den IJssel
+  phones:
+  - nummer: (010) 201 01 50
+    label: algemeen
+  emails:
+  - email: info@dopingautoriteit.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dopingautoriteit.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248895/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248895/dopingautoriteit
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -25,3 +100,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000306
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

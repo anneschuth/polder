@@ -6,21 +6,186 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1895
   roo_id: '33197'
   wikidata: Q1347872
+  owms: http://standaarden.overheid.nl/owms/terms/Oldambt
+  ictu: 01895
+  organisatiecode: gm1895
+  rsin: '821479490'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OBT
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Oldambt
   abbr: Oldambt
   valid_from: '1900-01-01'
+description:
+  text: Onze organisatie bestaat uit een directie van twee personen en negen teams.
+  url: https://www.gemeente-oldambt.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeente-oldambt.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/33197/Gemeente_Oldambt
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://oldambt.bestuurlijkeinformatie.nl/
+      toelichting: De gemeenteraad bepaalt in hoofdlijnen het beleid van de gemeente
+        en controleert of het beleid goed wordt uitgevoerd. Hier vindt u de agenda
+        en vergaderstukken van de gemeenteraad van Oldambt. Ook kunt u vergaderingen
+        live volgen of terugkijken.
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://oldambt.bestuurlijkeinformatie.nl/Reports/Details/bc0b6f05-3eaf-4053-9b15-72947d934766
+    - informatiecategorie: Convenanten
+      url: https://woo-oldambt.divault.com/portaal?categorie=convenanten&page=1&sort=Publicatiedatum+-+aflopend
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo-oldambt.divault.com/portaal?categorie=woo-verzoeken+en+-besluiten&page=1&sort=Publicatiedatum+-+aflopend
+      toelichting: Met een Woo-verzoek vraagt u om overheidsinformatie openbaar te
+        maken voor iedereen. Hier leest u de onderwerpen van afgehandelde Woo-verzoeken.
+    - informatiecategorie: Adviezen
+      url: https://woo-oldambt.divault.com/portaal?categorie=adviezen&page=1&sort=Publicatiedatum+-+aflopend
+      toelichting: Adviezen voor omgevingsplannen via https://omgevingswet.overheid.nl/regels-op-de-kaart/zoeken/locatie
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.gemeente-oldambt.nl/agendas-en-besluitenlijsten-college
+    - informatiecategorie: Beschikkingen
+      url: https://woo-oldambt.divault.com/portaal?categorie=beschikkingen&page=1&sort=Publicatiedatum+-+aflopend
+      toelichting: Dit zijn de bekendmakingen op de Woo-portal
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://woo-oldambt.divault.com/portaal?categorie=jaarplannen+en+jaarverslagen&page=1&sort=Publicatiedatum+-+aflopend
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://omgevingswet.overheid.nl/regels-op-de-kaart/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oldambt%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oldambt%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Klachtoordelen
+      url: https://woo-oldambt.divault.com/portaal?categorie=klachtoordelen&page=1&sort=Publicatiedatum+-+aflopend
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://woo-oldambt.divault.com/portaal
+  wooVerzoek:
+    url: https://formulier.gemeente-oldambt.nl/verzoek-wet-open-overheid-a4e0cf/startpagina
+afspraak:
+  telefoonnummer: (0597) 48 20 00
+  url: https://www.gemeente-oldambt.nl/openingstijden-en-meer
+geography:
+  oppervlakte: 240,75
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 240.75
+  aantal_inwoners: 39746
+  inwoners: '165'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 165.0
+  bevat_plaatsen_raw: '''t Waar, Bad Nieuweschans, Beerta, Blauwestad, Drieborg, Finsterwolde,
+    Heiligerlee, Midwolda, Nieuw Beerta, Nieuw Scheemda, Nieuwolda, Oostwold Gem Oldambt,
+    Oudezijl, Scheemda, Westerlee, Winschoten'
+  bevat_plaatsen:
+  - '''t Waar'
+  - Bad Nieuweschans
+  - Beerta
+  - Blauwestad
+  - Drieborg
+  - Finsterwolde
+  - Heiligerlee
+  - Midwolda
+  - Nieuw Beerta
+  - Nieuw Scheemda
+  - Nieuwolda
+  - Oostwold Gem Oldambt
+  - Oudezijl
+  - Scheemda
+  - Westerlee
+  - Winschoten
+council:
+  total_seats: 20
+  parties:
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: VCP
+    aantal_zetels: 3
+  - naam: Gemeentebelangen Oldambt
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PVV
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: DURF
+    aantal_zetels: 1
+  - naam: Partij voor het Noorden
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.gemeente-oldambt.nl
   email: info@gemeente-oldambt.nl
+  bezoekadres: Johan Modastraat 6, 9671 CD WINSCHOTEN
+  postadres: Postbus 175, 9670 AD WINSCHOTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Johan Modastraat
+    huisnummer: '6'
+    postcode: 9671 CD
+    woonplaats: WINSCHOTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '175'
+    postcode: 9670 AD
+    woonplaats: WINSCHOTEN
+  - type: Woo-Adres
+    postbus: '175'
+    postcode: 9670 AD
+    woonplaats: Winschoten
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Johan Modastraat
+    huisnummer: '6'
+    postcode: 9671 CD
+    woonplaats: WINSCHOTEN
+  phones:
+  - nummer: (0597) 48 20 00
+    label: algemeen
+  emails:
+  - email: info@gemeente-oldambt.nl
+    label: algemeen
+  - email: info@gemeente-oldambt.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeente-oldambt.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-10'
+last_verified: '2026-04-10'
+predecessor_id:
+- org:gemeente-reiderland
+- org:gemeente-scheemda
+- org:gemeente-winschoten
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33197/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33197/oldambt
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,7 +194,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1347872
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-reiderland
-- org:gemeente-scheemda
-- org:gemeente-winschoten
+roo_start_datum: '2010-01-01'

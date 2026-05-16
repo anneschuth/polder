@@ -3,21 +3,115 @@ type: zbo
 identifiers:
   roo_id: '28212172'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000207
+  owms: http://standaarden.overheid.nl/owms/terms/ciz
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: CIZ
   abbr: Centrum Indicatiestelling Zorg
   valid_from: '1900-01-01'
+description:
+  text: Het CIZ is de opvolger van het in 2005 opgerichte privaatrechtelijke zbo Centrum
+    Indicatiestelling Zorg.
+  url: https://www.ciz.nl/over-het-ciz
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+wettelijke_grondslagen:
+- opschrift: Wet langdurige zorg, artikel 7.1.1.
+  referentie: http://wetten.overheid.nl/BWBR0035917/Hoofdstuk7/1/Artikel711/
+taken_en_bevoegdheden: Het CIZ geeft indicatiebesluiten af waarmee verzekerden toegang
+  kunnen krijgen tot zorg uit de Wet langdurige zorg (Wlz) en de Wet zorg en dwang
+  (Wzd).
+evaluations:
+- datum: '2021-03-01'
+  kamerstuknummer: TK25268 nr. 196
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-196.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 2404 - CIZ
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15654
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ciz.nl/hulp-en-contact#contact/opvragen/woo-verzoek:informatie-opvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/28212172/CIZ
+  wooVerzoek:
+    url: https://www.ciz.nl/hulp-en-contact#contact/opvragen/woo-verzoek:woo-verzoek-indienen
+afspraak:
+  email: info@ciz.nl
+  telefoonnummer: (088) 789 10 00
+  url: https://www.ciz.nl/hulp-en-contact#contact
+personnel:
+  aantalFte: 1526,0
+  peildatumFte: '2025-06-13'
 contact:
   website: http://www.ciz.nl
   email: info@ciz.nl
+  bezoekadres: Orteliuslaan 1000, 3528 BD Utrecht
+  postadres: Postbus 2690, 3500 GR Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Orteliuslaan
+    huisnummer: '1000'
+    postcode: 3528 BD
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2690'
+    postcode: 3500 GR
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    toelichting: Het hoofdkantoor van het CIZ is alleen op afspraak te bezoeken.
+    openbare_ruimte: Orteliuslaan
+    huisnummer: '1000'
+    postcode: 3528 BD
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (088) 789 10 00
+    label: algemeen
+  emails:
+  - email: info@ciz.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ciz.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212172/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212172/ciz
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +120,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000207
   retrieved: '2026-05-09'
+roo_start_datum: '2015-01-01'

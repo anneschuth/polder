@@ -6,21 +6,122 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv28
   roo_id: '17466'
   wikidata: Q694
+  owms: http://standaarden.overheid.nl/owms/terms/Zuid-Holland
+  ictu: '04214'
+  rsin: 002306608
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_ZUIH
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Zuid-Holland
   abbr: ZH
   valid_from: '1900-01-01'
+description:
+  url: https://www.zuid-holland.nl/politiek-bestuur/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zuid-holland.nl/online-regelen/informatie/woo-informatieverzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/17466/Provincie_Zuid-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://pzh.notubiz.nl/modules/1/ingekomen_stukken/view
+      toelichting: Bij Provinciale Staten ingekomen stukken
+    - informatiecategorie: Klachtoordelen
+      url: https://www.zuid-holland.nl/online-regelen/bezwaar/klacht-gedraging/
+      toelichting: Op dit moment publiceren wij het Jaarverslag klachtfunctionaris
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zuid-holland.nl/politiek-bestuur/gedeputeerde-staten/gs-vergaderingen/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://begrotingzuidholland.nl/
+      toelichting: Begroting, jaarrekening, voorjaarsnota & najaarsnota
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://pzh.notubiz.nl/dashboard
+      toelichting: Vergaderstukken van Provinciale Staten
+    - informatiecategorie: Beschikkingen
+      url: https://subsidieregister.zuid-holland.nl/
+      toelichting: Overzicht van alle (openbare) subsidies verstrekt door de provincie
+        Zuid-Holland
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zuid-Holland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.zuid-holland.nl/politiek-bestuur/bestuur-zh/gedeputeerde-staten/besluiten/#&ajax=true&facet_wob=10&pager_page=0&zoeken_term=&date_from=&date_to=
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zuid-holland.nl/politiek-bestuur/gedeputeerde-staten/gs-vergaderingen/
+      toelichting: Agenda's en besluitenlijsten van Gedeputeerde Staten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zuid-Holland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zuid-Holland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.zuid-holland.nl/online-regelen/informatie/woo-informatieverzoek/
+organogram_url: https://www.zuid-holland.nl/politiek-bestuur/organogram
+afspraak:
+  telefoonnummer: (070) 441 66 11
+  url: https://www.zuid-holland.nl/algemeen/contact/
 contact:
   website: http://www.zuid-holland.nl
   email: zuidholland@pzh.nl
+  bezoekadres: Zuid-Hollandplein 1, 2596 AW Den Haag
+  postadres: Postbus 90602, 2509 LP Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuid-Hollandplein
+    huisnummer: '1'
+    postcode: 2596 AW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90602'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '90602'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 441 66 11
+    label: algemeen
+  emails:
+  - email: zuidholland@pzh.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zuid-holland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zuid-holland.nl/algemeen/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/17466/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/17466/zh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -2,18 +2,54 @@ id: org:gr-bestuursdienst-ommen-hardenberg
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962859'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bestuursdienst Ommen-Hardenberg
+  roo_id: '24962854'
 names:
 - value: Bestuursdienst Ommen-Hardenberg
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.ommen-hardenberg.nl
   email: info@ommen-hardenberg.nl
+  bezoekadres: Stephanuspark 1, 7772 HZ Hardenberg
+  postadres: Postbus 500, 7770 AB Hardenberg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stephanuspark
+    huisnummer: '1'
+    postcode: 7772 HZ
+    woonplaats: Hardenberg
+  - type: Postadres
+    postbus: '500'
+    postcode: 7770 AB
+    woonplaats: Hardenberg
+  phones:
+  - nummer: 14 0523
+    label: algemeen
+  emails:
+  - email: info@ommen-hardenberg.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ommen-hardenberg.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962859/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962859/bestuursdienst-ommen-hardenberg
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-07-01'

@@ -3,7 +3,7 @@ name:
   full: E.P. Kabel
   family: Kabel
   given: E.P.
-  initials: E.
+  initials: E.P.
 mandaten:
 - id: d55b7964-600b-4217-a884-c9d42eede884
   organization_id: org:gemeente-lelystad
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770362
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30046/gemeente-lelystad
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30569359
 - id: 287aa748-083f-4ff5-a560-1b34da80e73c
   organization_id: org:gemeente-lelystad
   post_id: post:raadslid-gemeente-lelystad

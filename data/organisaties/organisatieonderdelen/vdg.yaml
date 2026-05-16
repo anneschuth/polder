@@ -2,18 +2,59 @@ id: org:onderdeel-vdg
 type: organisatieonderdeel
 identifiers:
   roo_id: '27918766'
+  kvk: 04069773
+  rsin: '812225429'
 classification: organisatieonderdeel
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: org:koepel-vng
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging van Drentse Gemeenten
   abbr: VDG
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.vdgdrenthe.nl/
   email: secretariaat@vdgdrenthe.nl
+  bezoekadres: Raadhuisstraat 2, 7921 GD Zuidwolde
+  postadres: Postbus 20, 7920 AA Zuidwolde Dr.
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '2'
+    postcode: 7921 GD
+    woonplaats: Zuidwolde
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '20'
+    postcode: 7920 AA
+    woonplaats: Zuidwolde Dr.
+  phones:
+  - nummer: (0528) 29 15 29
+    label: algemeen
+  emails:
+  - email: secretariaat@vdgdrenthe.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vdgdrenthe.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.vdgdrenthe.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2026-04-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918766/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918766/vdg
+  retrieved: '2026-05-16'

@@ -2,6 +2,8 @@ id: org:oovb-nazorg-limburg-bv
 type: rwt
 identifiers:
   roo_id: '29440481'
+  kvk: '14631388'
+  rsin: '800697108'
 classification: rwt
 parent_id: null
 names:
@@ -10,9 +12,30 @@ names:
 contact:
   website: https://www.bodemzorglimburg.nl
   email: info@bodemzorglimburg.nl
+  bezoekadres: Europalaan 24, 6199 AB Maastricht-Airport
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europalaan
+    huisnummer: '24'
+    postcode: 6199 AB
+    woonplaats: Maastricht-Airport
+  phones:
+  - nummer: (043) 350 96 96
+    label: algemeen
+  emails:
+  - email: info@bodemzorglimburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.bodemzorglimburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.bodemzorglimburg.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-04-30'
+last_verified: '2024-04-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29440481/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29440481/nazorg-limburg-bv
+  retrieved: '2026-05-16'

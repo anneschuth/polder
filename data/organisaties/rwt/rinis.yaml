@@ -2,16 +2,30 @@ id: org:stichting-rinis
 type: rwt
 identifiers:
   roo_id: '30133797'
+  kvk: '41216424'
+  oin: 00000001805544434000
+  rsin: '805544434'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting Routerings instituut (inter)nationale informatiestromen (Stichting
     RINIS)
   abbr: RINIS
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Van Heuven Goedhartlaan
+    huisnummer: '1'
+    postcode: 1181 KJ
+    woonplaats: Amstelveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133797/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133797/rinis
+  retrieved: '2026-05-16'

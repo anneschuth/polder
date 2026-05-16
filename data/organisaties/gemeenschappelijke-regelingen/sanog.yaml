@@ -2,19 +2,59 @@ id: org:gr-sanog
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27685454'
+  owms: http://standaarden.overheid.nl/owms/terms/sanog
+  kvk: '52011283'
+  organisatiecode: so0746
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling samenwerkingsverband afvalstoffenverwijdering
+    voor Noordoost Groningen
+  roo_id: '27685449'
 names:
 - value: Samenwerkingsverband afvalstoffenverwijdering Noordoost Groningen
   abbr: SANOG
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.delfzijl.nl
   email: gemeente@delfzijl.nl
+  bezoekadres: J. van den Kornputplein 10, 9934 EA Delfzijl
+  postadres: Postbus 20000, 9930 PA Delfzijl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: J. van den Kornputplein
+    huisnummer: '10'
+    postcode: 9934 EA
+    woonplaats: Delfzijl
+  - type: Postadres
+    postbus: '20000'
+    postcode: 9930 PA
+    woonplaats: Delfzijl
+  phones:
+  - nummer: 14 0596
+    label: algemeen
+  emails:
+  - email: gemeente@delfzijl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.delfzijl.nl
+    label: algemeen
+  fax: (0596) 63 07 12
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2022-11-29'
+last_verified: '2022-11-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27685454/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27685454/sanog
+  retrieved: '2026-05-16'
+roo_start_datum: '1987-08-01'

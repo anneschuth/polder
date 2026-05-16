@@ -7,9 +7,16 @@ parent_id: org:onderdeel-griffier
 names:
 - value: Bureau BVA
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2024-11-21'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29788003/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29788003/bureau-bva
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-11-01'

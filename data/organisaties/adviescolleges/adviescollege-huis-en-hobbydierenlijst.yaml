@@ -3,16 +3,50 @@ type: adviescollege
 identifiers:
   roo_id: '29836996'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12359
+  organisatiecode: oorg12359
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Tijdelijk adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Adviescollege huis- en hobbydierenlijst
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege huis- en hobbydierenlijst beoordeelt en registreert welke
+    zoogdieren geschikt zijn om in Nederland als huis- of hobbydieren te houden. Dit
+    wordt gedaan aan de hand van een toetsingskader dat door het college zelf ontwikkeld
+    is, waarbij onder meer gekeken wordt naar eventuele risico's voor het dierenwelzijn
+    en of het houden van een bepaalde diersoort gevaren voor andere dieren en mensen
+    kan opleveren. Tevens adviseert het college de minister van Landbouw, Visserij,
+    Voedselzekerheid en Natuur over het aanwijzen van dieren die als huis- of hobbydier
+    gehouden kunnen worden.
+  url: https://www.rvo.nl/sites/default/files/2022-07/Advies_Adviescollege_huis-_en_hobbydierenlijst_Zoogdieren.pdf
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Besluit instelling Adviescollege huis- en hobbydierenlijst, artikel 1
+    (oorspronkelijke instelling)
+  referentie: https://wetten.overheid.nl/BWBR0044122/2020-09-29#Artikel1
+- opschrift: Besluit instelling en benoeming Adviescollege huis- en hobbydierenlijst
+    2023, artikel 1 (verlenging)
+  referentie: https://wetten.overheid.nl/BWBR0049666/2024-05-01#Artikel1
 contact:
   website: https://www.rvo.nl/onderwerpen/dieren-houden-verkopen-verzorgen/huis-en-hobbydierenlijst#beoordeling-van-zoogdiersoorten
+  internet_addresses:
+  - url: https://www.rvo.nl/onderwerpen/dieren-houden-verkopen-verzorgen/huis-en-hobbydierenlijst#beoordeling-van-zoogdiersoorten
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-27'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29836996/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29836996/adviescollege-huis-en-hobbydierenlijst
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-07-22'

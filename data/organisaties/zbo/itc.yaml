@@ -3,16 +3,39 @@ type: zbo
 identifiers:
   roo_id: '29908860'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: IT en CIO
   abbr: ITC
   valid_from: '1900-01-01'
+description:
+  text: Het departement IT en CIO (ITC) is een organisatieonderdeel van het Centraal
+    Bureau voor de Statistiek (CBS).
+taken_en_bevoegdheden: Het departement IT en CIO (ITC) van het CBS bestaat uit het
+  onderstaande team en de daaronder vermelde afdelingen, waarvan de afdelingen elk
+  zijn onderverdeeld in een aantal teams:* ICO (CIO office)IAS (Architectuur en security):*
+  IAR (Architectuur en research)* ISC (Security service center)ITD (Techniek en dienstverlening):*
+  IDO (Dienstverlening en ondersteuning)* ITT (Techniek)IAO (Applicatieontwikkeling):*
+  IAO1 (Applicatieontwikkeling 1)* IAO2 (Applicatieontwikkeling 2)* IAO3 (Applicatieontwikkeling
+  3)* IAO4 (Applicatieontwikkeling 4)* IAO5 (Applicatieontwikkeling 5)* IAO6 (Applicatieontwikkeling
+  6)* IAO7 (Applicatieontwikkeling 7)De afdelingen en teams zijn overgenomen uit het
+  [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908860/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908860/itc
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-03'

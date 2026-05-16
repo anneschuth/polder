@@ -1,17 +1,69 @@
 id: org:stichting-waarborgfonds-eigen-woningen
 type: rwt
+subname: Nationale Hypotheek Garantie (NHG)
 identifiers:
   roo_id: '27917757'
+  kvk: '41158179'
+  oin: 00000003411581790000
+  rsin: '802521058'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Waarborgfonds Eigen Woningen
   valid_from: '1900-01-01'
+description:
+  text: Stichting Waarborgfonds Eigen Woningen (handelend onder de naam Nationale
+    Hypotheek Garantie (NHG)) is in 1993 opgericht en staat voor een toegankelijke
+    koopwoningmarkt voor kwetsbare groepen en consumenten in kwetsbare situaties,
+    ook wanneer de macro-economische situatie ongunstig is. Dit tracht NHG te bereiken
+    door via het afgeven van de Nationale Hypotheek Garantie consumenten toegang te
+    bieden tot verantwoorde financiering voor koop en verbetering van een woning,
+    hulp te bieden bij beheer en behoud van de woning en een vangnet te zijn in kwetsbare
+    situaties.NHG is een privaatrechtelijke stichting met een eigen Raad van Bestuur.
+    Het ministerie van Binnenlandse Zaken en Koninkrijksrelaties (BZK), het ministerie
+    van Financiën, de Nederlandse Vereniging van Banken (NVB), en de Vereniging Eigen
+    Huis (VEH) zijn als stakeholders betrokken bij NHG en benoemen NHG’s Raad van
+    Commissarissen.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
 contact:
   website: https://www.nhg.nl
+  bezoekadres: Stadsplateau 13, 3521 AZ Utrecht
+  postadres: Stadsplateau 13, 3521 AZ Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: WTC
+    openbare_ruimte: Stadsplateau
+    huisnummer: '13'
+    postcode: 3521 AZ
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    openbare_ruimte: Stadsplateau
+    huisnummer: '13'
+    postcode: 3521 AZ
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 550 05 00
+    label: NHG
+  internet_addresses:
+  - url: https://www.nhg.nl
+    label: NHG
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917757/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917757/stichting-waarborgfonds-eigen-woningen
+  retrieved: '2026-05-16'

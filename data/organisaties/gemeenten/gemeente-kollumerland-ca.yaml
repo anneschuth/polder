@@ -4,6 +4,9 @@ identifiers:
   oin: 00000001001964124000
   kvk: 01181378
   roo_id: '34288'
+  owms: http://standaarden.overheid.nl/owms/terms/Kollumerland_en_Nieuwkruisland
+  ictu: 00079
+  organisatiecode: gm0079
 classification: gemeente
 parent_id: null
 names:
@@ -11,15 +14,83 @@ names:
   abbr: Kollumerland c.a.
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 116,35
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 116.35
+  aantal_inwoners: 12872
+  inwoners: '110'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 110.0
+  bevat_plaatsen_raw: Augsbuurt, Burum, Kollum, Kollumerpomp, Kollumerzwaag, Munnekezijl,
+    Oudwoude, Triemen, Veenklooster, Warfstermolen, Westergeest, Zwagerbosch
+  bevat_plaatsen:
+  - Augsbuurt
+  - Burum
+  - Kollum
+  - Kollumerpomp
+  - Kollumerzwaag
+  - Munnekezijl
+  - Oudwoude
+  - Triemen
+  - Veenklooster
+  - Warfstermolen
+  - Westergeest
+  - Zwagerbosch
+council:
+  total_seats: 15
+  parties:
+  - naam: FNP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
 contact:
   website: www.ddfk.nl
   email: info@ddfk.nl
+  bezoekadres: Van Limburg Stirumweg 18, 9291 KB KOLLUM
+  postadres: Postbus 13, 9290 AA KOLLUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Van Limburg Stirumweg
+    huisnummer: '18'
+    postcode: 9291 KB
+    woonplaats: KOLLUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 13
+    postbus: '13'
+    postcode: 9290 AA
+    woonplaats: KOLLUM
+  phones:
+  - nummer: (0519) 29 88 88
+    label: algemeen
+  emails:
+  - email: info@ddfk.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.ddfk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34288/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34288/gemeente-kollumerland-ca
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -6,21 +6,129 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0755
   roo_id: '26635'
   wikidata: Q9818
+  owms: http://standaarden.overheid.nl/owms/terms/Boekel_(gemeente)
+  ictu: '00755'
+  organisatiecode: gm0755
+  rsin: '001160710'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BEL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Boekel
   abbr: Boekel
   valid_from: '1900-01-01'
+description:
+  url: https://www.boekel.nl/bestuur-en-organisatie/?sqr=organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.boekel.nl/bestuur-en-organisatie/woo/?sqr=woo
+      overzichtURL: https://organisaties.overheid.nl/woo/26635/Gemeente_Boekel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Boekel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Boekel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Boekel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.boekel.nl/bestuur-en-organisatie/woo/?sqr=woo
+organogram_url: https://www.boekel.nl/bestuur-en-organisatie/ambtelijke-organisatie/organisatiestructuur/?sqr=organigram
+afspraak:
+  email: info@boekel.nl
+  telefoonnummer: (0492) 32 68 00
+  url: https://www.boekel.nl/afspraak/?sqr=afspraak%20maken
+geography:
+  oppervlakte: 34,51
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 34.51
+  aantal_inwoners: 11686
+  inwoners: '338'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 338.0
+  bevat_plaatsen_raw: Boekel, Venhorst
+  bevat_plaatsen:
+  - Boekel
+  - Venhorst
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: Gemeenschapsbelang Venhorst-Boekel
+    aantal_zetels: 4
+  - naam: D.O.P.
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: https://www.boekel.nl
   email: info@boekel.nl
+  bezoekadres: Sint Agathaplein 2, 5427 AB BOEKEL
+  postadres: Postbus 99, 5427 ZH BOEKEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sint Agathaplein
+    huisnummer: '2'
+    postcode: 5427 AB
+    woonplaats: BOEKEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '99'
+    postcode: 5427 ZH
+    woonplaats: BOEKEL
+  - type: Woo-Adres
+    toelichting: Gemeentehuis
+    openbare_ruimte: Sint Agathaplein
+    huisnummer: '2'
+    postcode: 5427 AB
+    woonplaats: Boekel
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Sint Agathaplein
+    huisnummer: '2'
+    postcode: 5427 AB
+    woonplaats: BOEKEL
+  phones:
+  - nummer: (0492) 32 68 00
+    label: algemeen
+  emails:
+  - email: info@boekel.nl
+    label: algemeen
+  - email: vergunningen@boekel.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.boekel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26635/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26635/boekel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

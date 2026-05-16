@@ -2,14 +2,33 @@ id: org:stichting-maatschappelijke-alliantie
 type: rwt
 identifiers:
   roo_id: '30133514'
+  kvk: '62762451'
+  rsin: '854947607'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Maatschappelijke Alliantie
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Burgemeester van Karnebeeklaan
+    huisnummer: '6'
+    huisnummer_toevoeging: a
+    postcode: 2585 BB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133514/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133514/stichting-maatschappelijke-alliantie
+  retrieved: '2026-05-16'

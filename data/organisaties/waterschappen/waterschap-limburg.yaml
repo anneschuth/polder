@@ -1,25 +1,147 @@
 id: org:waterschap-limburg
 type: waterschap
 identifiers:
-  oin: '00000001001737430000'
-  kvk: '50052969'
+  oin: 00000001857127858000
+  kvk: '67682065'
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0665
   roo_id: '21194'
   wikidata: Q27895262
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Limburg
+  ictu: 04834
+  rsin: '857127858'
 classification: waterschap
 parent_id: null
 names:
 - value: Waterschap Limburg
   valid_from: '1900-01-01'
+description:
+  text: 'Gebied: Beek, Beekdaelen, Beesel, Bergen, Brunssum, Echt-Susteren, Eijsden-Margraten,
+    Gennep, Gulpen-Wittem, Heerlen, Horst aan de Maas, Kerkrade, Landgraaf, Leudal,
+    Maasgouw, Maastricht, Meerssen, Mook en Middelaar, Nederweert, Peel en Maas, Roerdalen,
+    Roermond, Simpelveld, Sittard-Geleen, Stein, Vaals, Valkenburg aan de Geul, Venlo,
+    Venray, Voerendaal en Weert.'
+  url: https://www.waterschaplimburg.nl/overons/organisatiestructuur/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.waterschaplimburg.nl/wet-open-overheid/woo-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/21194/Waterschap_Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://open.waterschaplimburg.nl/convenanten
+    - informatiecategorie: Klachtoordelen
+      url: https://open.waterschaplimburg.nl/klachten
+      toelichting: Oordelen over bij Waterschap Limburg ingediende klachten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.waterschaplimburg.nl/jaarplannen-en-jaarverslagen
+      toelichting: Begroting, jaarstukken en meerjarenperspectief
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Limburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Regelgeving van het waterschap, zoals verordeningen en reglementen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Limburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Algemene besluiten, zoals projectplannen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://waterschaplimburg.bestuurlijkeinformatie.nl/Calendar/OpenCategory/100000462
+      toelichting: Agenda’s en besluitenlijsten van het dagelijks bestuur
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waterschaplimburg.bestuurlijkeinformatie.nl/Calendar/OpenCategory/100008370
+      toelichting: Vergaderstukken en verslagen van het Algemeen Bestuur en zijn commissies
+        (Agenda, bijlagen, verslag, videotulen, ingekomen stukken)
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22waterschap%22)and(dt.creator==%22Waterschap%20Limburg%22))))and((dt.type==%22andere%20beschikking%22)or(dt.type==%22andere%20vergunning%22)or(dt.type==%22omgevingsvergunning%22)or(dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Besluiten over specifieke gevallen, zoals watervergunningen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.waterschaplimburg.nl/woo-verzoeken/
+      toelichting: Woo-verzoeken en de bijbehorende besluiten, inclusief de informatie
+        die openbaar is gemaakt
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waterschaplimburg.bestuurlijkeinformatie.nl/Reports/Details/9c7435bd-e8c7-4aa6-af83-2184b209cb73
+      toelichting: 'Besluitvormingsstukken Algemeen Bestuur: Moties'
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waterschaplimburg.bestuurlijkeinformatie.nl/Reports/Details/c96f5063-0e65-4aec-b36e-f98dc50a36ec
+      toelichting: 'Besluitvormingsstukken Algemeen Bestuur: Amendementen'
+  wooVerzoek:
+    url: https://www.waterschaplimburg.nl/regelen/product/verzoek-wet-open-overheid-woo/
+organogram_url: https://www.waterschaplimburg.nl/overons/organisatiestructuur/
+afspraak:
+  email: info@waterschaplimburg.nl
+  telefoonnummer: (088) 889 01 00
 contact:
   website: https://www.waterschaplimburg.nl
   email: info@waterschaplimburg.nl
+  bezoekadres: Maria Theresialaan 99, 6043 CX Roermond
+  postadres: Postbus 2207, 6040 CC Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maria Theresialaan
+    huisnummer: '99'
+    postcode: 6043 CX
+    woonplaats: Roermond
+  - type: Postadres
+    postbus: '2207'
+    postcode: 6040 CC
+    woonplaats: Roermond
+  - type: Woo-Adres
+    postbus: '2207'
+    postcode: 6040 CC
+    ter_attentie_van: Woo-contactpersoon
+    woonplaats: Roermond
+  - type: Postadres Omgevingsloket
+    postbus: '2207'
+    postcode: 6040 CC
+    woonplaats: ROERMOND
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Maria Theresialaan
+    huisnummer: '99'
+    postcode: 6043 CX
+    woonplaats: ROERMOND
+  phones:
+  - nummer: (088) 889 01 00
+    label: algemeen
+  emails:
+  - email: info@waterschaplimburg.nl
+    label: algemeen
+  - email: vergunningen@waterschaplimburg.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.waterschaplimburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.waterschaplimburg.nl/formulieren/contactformulier/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
+predecessor_id:
+- org:waterschap-peel-en-maasvallei
+- org:ws-roer-en-overmaas
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21194/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21194/waterschap-limburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -31,6 +153,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0665
   retrieved: '2026-05-09'
-predecessor_id:
-- org:waterschap-peel-en-maasvallei
-- org:ws-roer-en-overmaas
+roo_start_datum: '2017-01-01'

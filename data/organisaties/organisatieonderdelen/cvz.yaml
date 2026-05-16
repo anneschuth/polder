@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66158'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:onderdeel-secretariaten-van-raden-en-commissies
 names:
 - value: College voor Zorgverzekeringen
   abbr: CVZ
@@ -13,12 +13,51 @@ names:
   abbr: CVZ
   valid_from: '1900-01-01'
   valid_until: '2024-07-01'
+description:
+  text: 'Taak:Het CVZ voert vier kerntaken uit op het gebied van de Zorgverzekeringswet
+    (Zvw) en de Algemene Wet Bijzondere Ziektekosten (AWBZ):- Pakketbeheer - adviseren
+    en standpunten innemen over de inhoud van het verzekerde pakket, adviseren over
+    de methode van beoordelen van het verzekerde pakket, adviseren over pakketgeschillen
+    tussen verzekerden en verzekeraars\;- Fondsbeheer - verantwoording afleggen over
+    de inkomsten en uitgaven van de fondsen Zvw en AWBZ, en tot 2010 ook over de afwikkeling
+    van Ziekenfondswet, analyse van ontwikkelingen in beleid en zorg en daaruit volgende
+    veranderingen in de kosten\;- Verzekeraarsfinanciering - uitvoeren risicoverevening
+    en uitvoeren beheerskosten AWBZ\;- Centrale uitvoering - uitvoeren van de Zvw
+    en AWBZ voor Nederlanders die in het buitenland wonen, uitvoeren van de boeteregeling
+    voor mensen die niet verzekerd zijn, beheren van de bijdragevervangende belasting
+    voor gemoedsbezwaren.Toelichting:- rechtsvorm: Zelfstandig bestuursorgaan\;- relatie
+    naar het ministerie: Directie Zorgverzekeringen'
 contact:
   website: http://www.cvz.nl
   email: info@cvz.nl
+  bezoekadres: Eekholt 4, 1112 XH Diemen
+  postadres: Postbus 320, 1110 AH Diemen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eekholt
+    huisnummer: '4'
+    postcode: 1112 XH
+    woonplaats: Diemen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '320'
+    postcode: 1110 AH
+    woonplaats: Diemen
+  phones:
+  - nummer: (020) 797 85 55
+    label: algemeen
+  emails:
+  - email: info@cvz.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.cvz.nl
+    label: algemeen
+  fax: (020) 797 85 00
 valid_from: '1900-01-01'
 valid_until: '2024-07-01'
+last_mutation: '2026-04-23'
+last_verified: '2026-04-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66158/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66158/cvz
+  retrieved: '2026-05-16'

@@ -3,17 +3,81 @@ type: inspectie
 identifiers:
   roo_id: '71984'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12352
+  owms: http://standaarden.overheid.nl/owms/terms/Erfgoedinspectie
+  organisatiecode: oorg12352
 classification: inspectie
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Inspectie Overheidsinformatie en Erfgoed
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie Overheidsinformatie en Erfgoed houdt toezicht op een deel van
+    het Nederlandse erfgoed en op het informatiebeheer bij de  centrale overheid.
+    Ze levert een bijdrage aan het tegengaan van illegale handel in cultuurgoederen.  Daarnaast
+    houdt ze toezicht op de naleving van het archeologiebestel, opgravingen, vondsten
+    en archeologische monumenten.  Professionele organisaties voor monumentenbehoud
+    vallen onder het toezicht als ook de werking van het monumentenstelsel. De Inspectie
+    draagt zo bij aan het behoud en beheer van het nationale erfgoed.
+  url: https://www.inspectie-oe.nl/de-inspectie-overheidsinformatie-en-erfgoed/organisatie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-onderwijs-cultuur-en-wetenschap/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/71984/Inspectie_Overheidsinformatie_en_Erfgoed
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-onderwijs-cultuur-en-wetenschap/contact/woo-verzoek-indienen
+afspraak:
+  telefoonnummer: (070) 412 40 12
+  url: https://www.inspectie-oe.nl/contact
 contact:
   website: https://www.inspectie-oe.nl/
   email: contactpersoonwoo@minocw.nl
+  bezoekadres: Rijnstraat 50, 2515 XP Den Haag
+  postadres: Postbus 16478, 2500 BL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16478'
+    postcode: 2500 BL
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16478'
+    postcode: 2500 BL
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 412 40 12
+    label: algemeen
+  internet_addresses:
+  - url: https://www.inspectie-oe.nl/
+    label: algemeen
+  - url: https://english.inspectie-oe.nl/
+    label: Engelstalige website
+  contact_forms:
+  - url: https://www.inspectie-oe.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-10'
+last_verified: '2026-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71984/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71984/inspectie-overheidsinformatie-en-erfgoed
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-11-01'

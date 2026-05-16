@@ -2,14 +2,31 @@ id: org:stichting-arbeidsmarkt-en-scholingsfonds-defensie
 type: rwt
 identifiers:
   roo_id: '30133319'
+  kvk: '41159067'
+  rsin: '803782147'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting Arbeidsmarkt- en Scholingsfonds Defensie
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '13'
+    postcode: 2514 EA
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133319/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133319/stichting-arbeidsmarkt-en-scholingsfonds-defensie
+  retrieved: '2026-05-16'

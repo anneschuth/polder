@@ -1,18 +1,47 @@
 id: org:rechtbank-zeeland-west-brabant
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   roo_id: '28048730'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10028
+  owms: https://standaarden.overheid.nl/owms/terms/Zeeland-West-Brabant
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Zeeland-West-Brabant
   valid_from: '1900-01-01'
+description:
+  text: Rechtbank Zeeland-West-Brabant is bevoegd om in het arrondissement recht te
+    spreken in eerste aanleg. Dit betekent dat de rechtbank de eerste instantie is
+    die een juridisch oordeel over een zaak of conflict geeft. Daarna kan een procespartij
+    (bijvoorbeeld de veroordeelde of het Openbaar Ministerie (om.nl)) in hoger beroep
+    gaan bij gerechtshof ’s-Hertogenbosch.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Zeeland-West-Brabant
+  postadres: Postbus 90110, 4800 RA Breda
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '90110'
+    postcode: 4800 RA
+    woonplaats: Breda
+  phones:
+  - nummer: (088) 361 60 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Zeeland-West-Brabant
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-06'
+last_verified: '2025-11-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048730/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048730/rechtbank-zeeland-west-brabant
+  retrieved: '2026-05-16'

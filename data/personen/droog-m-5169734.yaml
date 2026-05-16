@@ -3,7 +3,7 @@ name:
   full: M.G.A. Droog
   family: Droog
   given: M.G.A.
-  initials: M.
+  initials: M.G.A.
 mandaten:
 - id: 3145bc36-8e31-4b3d-99c9-ac4f1762e861
   organization_id: org:gemeente-medemblik
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5169736
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23294/gemeente-medemblik
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28620888
 - id: c59f09f1-4162-4116-b402-7b8f4456d917
   organization_id: org:gemeente-medemblik
   post_id: post:raadslid-gemeente-medemblik

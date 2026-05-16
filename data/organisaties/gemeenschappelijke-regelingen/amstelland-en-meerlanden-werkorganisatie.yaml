@@ -3,17 +3,69 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964549'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0261
+  owms: http://standaarden.overheid.nl/owms/terms/amlmlwo
+  kvk: '34328759'
+  btw: NL805742001B01
+  loonheffing: 001708867L03
+  organisatiecode: so0261
+  rsin: 001708867
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Amstelland en Meerlanden Werkorganisatie
+  roo_id: '24964544'
 names:
 - value: Amstelland en Meerlanden Werkorganisatie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://ammatch.nl
   email: info@ammatch.nl
+  bezoekadres: Wijkermeerstraat 36, 2131 HA Hoofddorp
+  postadres: Postbus 53, 2130 AB Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    toelichting: Locatie Hoofddorp
+    openbare_ruimte: Wijkermeerstraat
+    huisnummer: '36'
+    postcode: 2131 HA
+    woonplaats: Hoofddorp
+  - type: Postadres
+    postbus: '53'
+    postcode: 2130 AB
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (023) 566 15 66
+    label: algemeen
+  emails:
+  - email: info@ammatch.nl
+    label: algemeen
+  - email: administratie@ammatch.nl
+  internet_addresses:
+  - url: https://ammatch.nl
+    label: algemeen
+  - url: https://ammatch.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.ammatch.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-04-11'
+last_verified: '2022-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964549/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964549/amstelland-en-meerlanden-werkorganisatie
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-12-31'

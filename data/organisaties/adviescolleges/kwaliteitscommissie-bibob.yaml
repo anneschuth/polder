@@ -3,16 +3,66 @@ type: adviescollege
 identifiers:
   roo_id: '28355911'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10132
+  owms: http://standaarden.overheid.nl/owms/terms/ciebibob
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Kwaliteitscommissie Bibob
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit kwaliteitscommissie Bibob
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0034492&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://justis.nl/producten/wet-bibob/landelijk-bureau-bibob/kwaliteitscommissie
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 16120, 2500 BC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16120'
+    postcode: 2500 BC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 998 22 50
+    label: algemeen
+  internet_addresses:
+  - url: https://justis.nl/producten/wet-bibob/landelijk-bureau-bibob/kwaliteitscommissie
+    label: algemeen
+  contact_forms:
+  - url: https://justis.nl/service-contact/contactmogelijkheden/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355911/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355911/kwaliteitscommissie-bibob
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

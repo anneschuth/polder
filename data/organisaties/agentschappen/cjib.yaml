@@ -4,20 +4,110 @@ identifiers:
   oin: '00000004000000044000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10111
   roo_id: '12583'
+  owms: http://standaarden.overheid.nl/owms/terms/Centraal_Justitieel_Incassobureau
+  ictu: 03480
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Centraal Justitieel Incassobureau
   abbr: CJIB
   valid_from: '1900-01-01'
+description:
+  text: Als onderdeel van de Rijksoverheid en het Ministerie van Justitie en Veiligheid
+    werkt het CJIB aan een veilige en rechtvaardige samenleving. Het CJIB vormt een
+    belangrijke schakel in het borgen van de rechtsstaat in Nederland.* CJIB is publieke
+    dienstverlener met een persoonsgerichte uitvoeringHet CJIB is als publieke dienstverlener
+    expert op het gebied van innen en incasseren voor overheidsinstanties én is de
+    spil in de executieketen. Hoogwaardige en persoonsgerichtedienstverlening staat
+    centraal in alles wat we doen richting mensen, bedrijven en hun vertegenwoordigers
+    en altijd in verbinding met de samenleving. Zodat mensen, bedrijven enhun vertegenwoordigers
+    passende dienstverlening krijgen, nooit voor een dichte deur staan en wanneer
+    nodig altijd (verder) geholpen worden door een deskundige medewerker.* CJIB is
+    regisseur en verbinder in de executieketenHet CJIB zorgt als ketenregisseur voor
+    snelle, daadwerkelijke en volledige tenuitvoerlegging van strafrechtelijke beslissingen
+    door goed geïnformeerde partijen. Het CJIB doet dit vanuit het besef dat hiermee
+    ingrijpende beslissingen worden uitgevoerd en genomen in de levens van mensen.
+    Daarmee wordt recht gedaan aan daders door strafrechtelijke beslissingen rechtvaardig
+    uit te voeren en aan slachtoffers door hen te informeren, te beschermen en schade
+    te vergoeden. De ketenpartners  wordengefaciliteerd door hen te voorzien van de
+    juiste informatie, het delen van relevante data en inzichten en het inzetten van
+    onze expertise.* CJIB is expert in persoonsgericht innen & incasserenHet CJIB
+    is expert op het gebied van persoonsgericht innen en incasseren en voegt daarmee
+    gericht waarde toe aan de inning en incasso van overheidsvorderingen.
+  url: https://www.cjib.nl/onze-kerntaken
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cjib.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/12583/Centraal_Justitieel_Incassobureau
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.cjib.nl/open-cjib?field_woo_category_target_id=337&field_woo_theme_target_id=All&field_woo_date_value%5Bmin%5D=&field_woo_date_value%5Bmax%5D=&sort_by=field_woo_date_value&sort_order=ASC
+    - informatiecategorie: Convenanten
+      url: https://www.cjib.nl/open-cjib?field_woo_category_target_id=338&field_woo_theme_target_id=All&field_woo_date_value%5Bmin%5D=&field_woo_date_value%5Bmax%5D=&sort_by=field_woo_date_value&sort_order=ASC
+  wooVerzoek:
+    url: https://www.cjib.nl/over-ons/feiten-cijfers/ik-wil-een-woo-verzoek-indienen
+organogram_url: https://www.cjib.nl/organogram
+afspraak:
+  url: https://www.cjib.nl/contact
 contact:
   website: https://www.cjib.nl/
+  postadres: Postbus 1794, 8901 CB Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    toelichting: U kunt online of telefonisch contact opnemen met het CJIB
+  - type: Postadres
+    postbus: '1794'
+    postcode: 8901 CB
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    toelichting: 'Schrijf ‘Woo’ op de envelop en stuur uw brief naar: Centraal Justitieel
+      Incassobureau'
+    postbus: '1794'
+    postcode: 8901 CB
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 215 95 55
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cjib.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cjib.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Centraal Justitieel Incassobureau (CJIB)
+    url: https://www.linkedin.com/company/cjib
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12583/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12583/cjib
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

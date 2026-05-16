@@ -8,9 +8,19 @@ names:
 - value: Afdeling Analyse Nationale Veiligheid
   abbr: AAN
   valid_from: '1900-01-01'
+contact:
+  postadres: Postbus 16950, 2500 BZ Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '16950'
+    postcode: 2500 BZ
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-30'
+last_verified: '2025-12-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98015/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98015/aan
+  retrieved: '2026-05-16'

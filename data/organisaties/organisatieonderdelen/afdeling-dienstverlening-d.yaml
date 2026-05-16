@@ -9,9 +9,24 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: directiesecretariaat@minvenj.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 75 11
+    label: algemeen
+  emails:
+  - email: directiesecretariaat@minvenj.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-01-05'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12463/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12463/afdeling-dienstverlening-d
+  retrieved: '2026-05-16'

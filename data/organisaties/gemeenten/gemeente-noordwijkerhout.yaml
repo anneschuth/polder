@@ -6,6 +6,9 @@ identifiers:
   roo_id: '34729'
   wikidata: Q848988
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0576
+  owms: http://standaarden.overheid.nl/owms/terms/Noordwijkerhout_(gemeente)
+  ictu: '00576'
+  organisatiecode: gm0576
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,74 @@ names:
   abbr: Noordwijkerhout
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 23,41
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 23.41
+  aantal_inwoners: 15559
+  inwoners: '664'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 664.0
+  bevat_plaatsen_raw: De Zilk, Noordwijkerhout
+  bevat_plaatsen:
+  - De Zilk
+  - Noordwijkerhout
+council:
+  total_seats: 17
+  parties:
+  - naam: NZ Lokaal
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: www.noordwijkerhout.nl
   email: gemeente@noordwijkerhout.nl
+  bezoekadres: Herenweg 4, 2211 CC NOORDWIJKERHOUT
+  postadres: Postbus 13, 2210 AA NOORDWIJKERHOUT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herenweg
+    huisnummer: '4'
+    postcode: 2211 CC
+    woonplaats: NOORDWIJKERHOUT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 13
+    postbus: '13'
+    postcode: 2210 AA
+    woonplaats: NOORDWIJKERHOUT
+  phones:
+  - nummer: (0252) 34 37 37
+    label: algemeen
+  emails:
+  - email: gemeente@noordwijkerhout.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.noordwijkerhout.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34729/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34729/gemeente-noordwijkerhout
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

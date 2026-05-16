@@ -5,23 +5,89 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0780
   oin: 00000001852132104000
   kvk: '56452500'
+  owms: http://standaarden.overheid.nl/owms/terms/odrrivl
+  organisatiecode: so0780
+  rsin: '852132104'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Rivierenland
+  roo_id: '29664019'
 names:
 - value: Omgevingsdienst Rivierenland
   abbr: ODR
   valid_from: '1900-01-01'
+description:
+  url: https://www.odrivierenland.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odrivierenland.nl/kennisbank/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28197626/Omgevingsdienst_Rivierenland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Rivierenland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Rivierenland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.odrivierenland.nl/kennisbank/woo-verzoek/
+afspraak:
+  email: info@odrivierenland.nl
+  telefoonnummer: (0344) 57 93 14
 contact:
   website: https://www.odrivierenland.nl
   email: info@odrivierenland.nl
+  bezoekadres: J.S. de Jongplein 2, 4001 WG Tiel
+  postadres: Postbus 6267, 4000 HG Tiel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: J.S. de Jongplein
+    huisnummer: '2'
+    postcode: 4001 WG
+    woonplaats: Tiel
+  - type: Postadres
+    postbus: '6267'
+    postcode: 4000 HG
+    woonplaats: Tiel
+  - type: Woo-Adres
+    postbus: '6267'
+    postcode: 4000 HG
+    woonplaats: Tiel
+  phones:
+  - nummer: (0344) 57 93 14
+    label: algemeen
+  emails:
+  - email: info@odrivierenland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odrivierenland.nl
+    label: algemeen
+  - url: https://www.odrivierenland.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-12-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28197626/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28197626/odr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-10-24'

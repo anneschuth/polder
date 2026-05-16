@@ -2,6 +2,8 @@ id: org:onderdeel-rechtbank-den-haag-locatie-gouda
 type: organisatieonderdeel
 identifiers:
   roo_id: '28046852'
+  kvk: '82946175'
+  rsin: '862665796'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-den-haag
 names:
@@ -9,9 +11,31 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
+  bezoekadres: Oosthaven 25, 2801 PC Gouda
+  postadres: Postbus 3013, 2800 CC Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oosthaven
+    huisnummer: '25'
+    postcode: 2801 PC
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '3013'
+    postcode: 2800 CC
+    woonplaats: Gouda
+  phones:
+  - nummer: (088) 361 20 40
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
+    label: Algemeen
+  fax: (088) 361 06 77
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-02-20'
+last_verified: '2026-02-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046852/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046852/rechtbank-den-haag-locatie-gouda
+  retrieved: '2026-05-16'

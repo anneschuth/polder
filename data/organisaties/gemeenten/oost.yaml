@@ -3,6 +3,7 @@ type: gemeente
 identifiers:
   roo_id: '39963'
   wikidata: Q3353012
+  owms: http://standaarden.overheid.nl/owms/terms/Amsterdam_-_Oost-Watergraafsmeer
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +11,51 @@ names:
   abbr: Oost
   valid_from: '1900-01-01'
   valid_until: '2014-03-19'
+geography:
+  oppervlakte: 0,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 0.0
+  aantal_inwoners: 116615
+  inwoners: '11661500'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 11661500.0
+council:
+  parties:
+  - naam: (onbekend)
+    aantal_zetels: 0
 contact:
   website: http://www.oost.amsterdam.nl
   email: info@oost.amsterdam.nl
+  bezoekadres: Oranje-Vrijstaatplein 2, 1093 NG AMSTERDAM
+  postadres: Postbus 94801, 1090 GV AMSTERDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oranje-Vrijstaatplein
+    huisnummer: '2'
+    postcode: 1093 NG
+    woonplaats: AMSTERDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '94801'
+    postcode: 1090 GV
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: 14 020
+    label: algemeen
+  emails:
+  - email: info@oost.amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.oost.amsterdam.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-03-19'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39963/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39963/oost
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3353012
   retrieved: '2026-05-09'

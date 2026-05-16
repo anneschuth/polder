@@ -5,3 +5,12 @@ classification: wethouder
 seat_count: null
 valid_from: '1900-01-01'
 valid_until: null
+roo_functie_id: '21286'
+roo_naam: Wethouder
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/29079/gemeente-alblasserdam
+  retrieved: '2026-05-16'
+  fields:
+  - roo_functie_id
+  - roo_naam

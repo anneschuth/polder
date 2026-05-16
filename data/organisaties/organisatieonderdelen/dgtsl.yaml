@@ -1,20 +1,102 @@
 id: org:onderdeel-dgtsl
 type: organisatieonderdeel
+subname: Dienst Toeslagen
 identifiers:
   roo_id: '71117'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12369
+  owms: http://standaarden.overheid.nl/owms/terms/dgtoeslagen
+  organisatiecode: oorg12369
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-fin
+parent_id: org:min-fin
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Directoraat-generaal Toeslagen
   abbr: DGTSL
   valid_from: '1900-01-01'
+description:
+  text: Wij zijn Dienst Toeslagen, zelfstandig onderdeel van het ministerie van Financiën.
+    Miljoenen mensen in Nederland krijgen 1 of meer toeslagen die helpen om de zorgverzekering,
+    de zorg voor kinderen en de huur te betalen. Zodat iedereen kan meedoen in de
+    maatschappij. Wie je ook bent en wat je persoonlijke situatie ook is. Dienst Toeslagen
+    is de organisatie die deze toeslagen toekent en uitkeert.
+  url: https://www.overtoeslagen.nl/over-ons/organisatie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/71117/Directoraat-generaal_Toeslagen
+  wooVerzoek:
+    url: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/hoe_werken_toeslagen/ik_wil_informatie_over_toeslagen/ik_wil_vragen_om_informatie_openbaar_te_maken
+organogram_url: https://www.overtoeslagen.nl/over-ons/organisatie
+afspraak:
+  telefoonnummer: (0800) 05 43
+  url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact-met-dienst-toeslagen/contact-met-dienst-toeslagen
 contact:
   website: http://www.toeslagen.nl
   email: ContactpersoonWootsl@Minfin.nl
+  bezoekadres: Graadt van Roggenweg 500, 3531 AH Utrecht
+  postadres: Postbus 4510, 6401 JA Heerlen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Voor hulp bij het regelen van toeslagen kunt u terecht bij het dichtstbijzijnde
+      servicepunt, te vinden via toeslagen.nl/hulp
+    openbare_ruimte: Graadt van Roggenweg
+    huisnummer: '500'
+    postcode: 3531 AH
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Postadres
+    postbus: '4510'
+    postcode: 6401 JA
+    woonplaats: Heerlen
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '4510'
+    postcode: 6401 JA
+    woonplaats: Heerlen
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  - nummer: 080005437123
+    label: doorkiesnr. toeslagen
+  - nummer: 080005437128
+    label: doorkiesnr. kinderopvang
+  internet_addresses:
+  - url: http://www.toeslagen.nl
+    label: Website voor burgers
+  - url: https://www.overtoeslagen.nl
+    label: Corporate website
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/toeslagen/contact-over-toeslagen
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Facebook Dienst Toeslagen
+    url: https://www.facebook.com/diensttoeslagen/
+  - platform: X
+    gebruikersnaam: X Dienst Toeslagen
+    url: https://twitter.com/diensttoeslagen
+  - platform: Instagram
+    gebruikersnaam: Instagram Dienst Toeslagen
+    url: https://www.instagram.com/diensttoeslagen/
+  - platform: LinkedIn
+    gebruikersnaam: Corporate Linkedin Dienst Toeslagen
+    url: https://www.linkedin.com/company/diensttoeslagen/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-23'
+last_verified: '2026-04-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71117/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71117/dgtsl
+  retrieved: '2026-05-16'

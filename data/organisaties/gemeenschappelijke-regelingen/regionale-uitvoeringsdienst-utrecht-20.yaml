@@ -1,26 +1,138 @@
 id: org:gr-regionale-uitvoeringsdienst-utrecht-20
 type: gemeenschappelijke-regeling
+subname: RUD Utrecht
 identifiers:
   roo_id: '28059618'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0843
   oin: 00000001853913341000
   kvk: '60444037'
+  owms: http://standaarden.overheid.nl/owms/terms/RUDU2_0
+  btw: NL853913341B01
+  organisatiecode: so0843
+  rsin: '853913341'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionale uitvoeringsdienst Utrecht 2.0
+  roo_id: '28059612'
 names:
 - value: Regionale uitvoeringsdienst Utrecht 2.0
   valid_from: '1900-01-01'
+description:
+  text: De Regionale Uitvoeringsdienst (RUD) Utrecht verleent vergunningen en handhaaft
+    wetten en regels op het gebied van milieu, natuur, bodem, landschap en water.De
+    RUD werkt voor de provincie Utrecht en de gemeenten Amersfoort, Baarn, Bunschoten,
+    Eemnes, Houten, Leusden, Lopik, Nieuwegein, Soest, Utrecht en Woudenberg.
+  url: https://www.rudutrecht.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rudutrecht.nl/verzoek-om-informatie-of-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28059618/Regionale_uitvoeringsdienst_Utrecht_20
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rudutrecht.nl/verantwoording
+      toelichting: 'Onder Verantwoording staan: Jaarverslagen, Kadernota''s, Begrotingen,
+        Bestuursrapportages en Jaarrekeningen van de RUD Utrecht'
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rudutrecht.nl/woo-publicaties
+      toelichting: Op deze pagina vindt u de besluiten over Woo-verzoeken en de documenten
+        die op verzoek zijn verstrekt vanaf 2023. De Woo staat voor Wet open overheid.
+        Wilt u een verzoek om informatie of een Woo-verzoek indienen? U vindt op deze
+        pagina hoe dat moet.
+    - informatiecategorie: Andere documenten
+      url: https://www.rudutrecht.nl/vergaderingen-algemeen-bestuur-2022-en-2023
+      toelichting: Agenda's en vergaderstukken Algemeen Bestuur 2022 en 2023
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.rudutrecht.nl/vergaderingen-algemeen-bestuur-2020-2021
+      toelichting: Agenda's en vergaderstukken Algemeen Bestuur 2020 en 2021
+    - informatiecategorie: Andere documenten
+      url: https://www.rudutrecht.nl/vergaderingen-algemeen-bestuur-2024-en-2025
+      toelichting: Agenda's en vergaderstukken Algemeen Bestuur 2024 en 2025
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.rudutrecht.nl/vergaderingen-2015-2019
+      toelichting: Agenda's en vergaderstukken Algemeen Bestuur 2018 en 2019
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.rudutrecht.nl/vergaderingen-algemeen-bestuur-2024-en-2025
+      toelichting: Vergaderstukken Algemeen Bestuur 2024 en 2025
+  wooVerzoek:
+    url: https://www.rudutrecht.nl/verzoek-om-informatie-of-woo-verzoek
+afspraak:
+  email: info@rudutrecht.nl
+  telefoonnummer: (030) 702 33 00
+  url: https://www.rudutrecht.nl/contact-met-rud-utrecht
 contact:
   website: https://www.rudutrecht.nl
   email: info@rudutrecht.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 85242, 3508 AE Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Provinciehuis Utrecht
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  - type: Postadres
+    toelichting: Provinciehuis Utrecht
+    postbus: '85242'
+    postcode: 3508 AE
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Provinciehuis Utrecht
+    postbus: '85242'
+    postcode: 3508 AE
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: N
+  phones:
+  - nummer: (030) 702 33 00
+    label: algemeen
+  emails:
+  - email: info@rudutrecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rudutrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rudutrecht.nl/contact-met-rud-utrecht
+    label: Algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: rudutrecht
+    url: https://www.instagram.com/rudutrecht/?hl=nl
+  - platform: LinkedIn
+    gebruikersnaam: RUD Utrecht
+    url: https://www.linkedin.com/company/rud-utrecht/posts/?feedView=all
+  fax: (030) 799 86 88
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-04-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28059618/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28059618/regionale-uitvoeringsdienst-utrecht-20
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-01-01'

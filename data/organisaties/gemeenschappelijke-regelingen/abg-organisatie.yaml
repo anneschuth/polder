@@ -5,23 +5,94 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0854
   oin: 00000001855432950000
   kvk: '63865718'
+  owms: http://standaarden.overheid.nl/owms/terms/abgorg
+  organisatiecode: so0854
+  rsin: '855432950'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling ABG-organisatie
+  roo_id: '29530004'
 names:
 - value: ABG-organisatie
   valid_from: '1900-01-01'
-  valid_until: '2026-09-30'
+description:
+  url: https://www.abg.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28336629/ABG-organisatie
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22ABG-organisatie%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.abg.nl/wooverzoek.html
+organogram_url: https://www.abg.nl/documents/Organogram-ABG-gemeenten-en-organisatie.pdf
+afspraak:
+  url: https://www.abg.nl/
 contact:
   website: https://www.abg.nl
   email: info@abg.nl
+  bezoekadres: Willibrordplein 1, 5131 AV Alphen
+  postadres: Postbus 3, 5130 AA Alphen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willibrordplein
+    huisnummer: '1'
+    postcode: 5131 AV
+    woonplaats: Alphen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '3'
+    postcode: 5130 AA
+    woonplaats: Alphen
+  - type: Woo-Adres
+    postbus: '3'
+    postcode: 5130 AA
+    woonplaats: Alphen NB
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Willibrordplein
+    huisnummer: '1'
+    postcode: 5131 AV
+    woonplaats: Alphen NB
+    land: Nederland
+  phones:
+  - nummer: (088) 382 10 00
+    label: algemeen
+  emails:
+  - email: info@abg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.abg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.abg.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-09-30'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28336629/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28336629/abg-organisatie
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-08-01'

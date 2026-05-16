@@ -6,21 +6,134 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0928
   roo_id: '40395'
   wikidata: Q9796
+  owms: http://standaarden.overheid.nl/owms/terms/Kerkrade_(gemeente)
+  ictu: 00928
+  organisatiecode: gm0928
+  rsin: '001737223'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_KER
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Kerkrade
   abbr: Kerkrade
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kerkrade.nl/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/40395/Gemeente_Kerkrade
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kerkrade%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kerkrade%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kerkrade%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.kerkrade.nl/woo-verzoek-indienen
+organogram_url: https://www.kerkrade.nl/organogram
+afspraak:
+  telefoonnummer: 14 045
+  url: https://kerkrade.mijnafspraakmaken.nl
+geography:
+  oppervlakte: 21,74
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.74
+  aantal_inwoners: 45824
+  inwoners: '2107'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2107.0
+  bevat_plaatsen_raw: Eygelshoven, Kerkrade
+  bevat_plaatsen:
+  - Eygelshoven
+  - Kerkrade
+council:
+  total_seats: 29
+  parties:
+  - naam: Burgerbelangen
+    aantal_zetels: 14
+  - naam: Ouderenpartij Kerkrade
+    aantal_zetels: 4
+  - naam: Ons Kerkrade (OK)
+    aantal_zetels: 4
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: Lokaal Alternatief
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: https://www.kerkrade.nl
   email: gemeentehuis@kerkrade.nl
+  bezoekadres: Markt 1, 6461 EB KERKRADE
+  postadres: Postbus 600, 6460 AP KERKRADE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 6461 EB
+    woonplaats: KERKRADE
+  - type: Postadres
+    postbus: '600'
+    postcode: 6460 AP
+    woonplaats: KERKRADE
+  - type: Woo-Adres
+    postbus: '600'
+    postcode: 6460 AP
+    woonplaats: Kerkrade
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '33'
+    postcode: 6461 EC
+    woonplaats: KERKRADE
+  phones:
+  - nummer: 14 045
+    label: algemeen
+  emails:
+  - email: gemeentehuis@kerkrade.nl
+    label: algemeen
+  - email: gemeentehuis@kerkrade.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.kerkrade.nl
+    label: algemeen
+  contact_forms:
+  - url: https://kerkrade.mijnafspraakmaken.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40395/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40395/kerkrade
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

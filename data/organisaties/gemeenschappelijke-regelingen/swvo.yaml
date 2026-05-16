@@ -5,23 +5,128 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0137
   oin: 00000001801089566000
   kvk: '51259583'
+  owms: http://standaarden.overheid.nl/owms/terms/swvo
+  organisatiecode: so0137
+  rsin: '801089566'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Samenwerkingsverband Welzijnszorg Oosterschelderegio
+  roo_id: '28463982'
 names:
 - value: Samenwerkingsverband Welzijnszorg Oosterschelderegio
   abbr: SWVO
   valid_from: '1900-01-01'
+description:
+  text: Het Samenwerkingsverband Welzijnszorg Oosterschelderegio (SWVO) is een gemeenschappelijke
+    regeling.  De gemeenten Borsele, Goes, Kapelle, Noord-Beveland, Reimerswaal, Schouwen-Duiveland
+    en Tholen hebben het SWVO de opdracht gegeven om hun gezamenlijke belangen te
+    behartigen en hen te ondersteunen op de volgende beleidsterreinen:- Wmo- Volwasseneneducatie-
+    Gezondheid- Cultuur en bibliotheek- Maatschappelijk werk en Cliëntondersteuning-
+    Leerlingenvervoer- Jeugd
+  url: https://www.swvo.nl/ons-werk/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.swvo.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/28464015/Samenwerkingsverband_Welzijnszorg_Oosterschelderegio
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.swvo.nl/over-ons/documenten/
+      toelichting: Verslagen en agenda Algemeen Bestuur SWVO
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.swvo.nl/over-ons/documenten/
+      toelichting: Rapporten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.swvo.nl/over-ons/documenten/
+      toelichting: Jaarplannen, kadernota, jaarverslag, jaarrekening, programma begroting,
+        strategische agenda
+    - informatiecategorie: Klachtoordelen
+      url: https://www.swvo.nl/klachten/
+      toelichting: Klachten en bezwaar
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.swvo.nl/over-ons/documenten/
+      toelichting: relevante wet- en regelgeving, GR, verordeningen, statuten, regelingen,
+        reglementen, protocollen
+    - informatiecategorie: Convenanten
+      url: https://www.swvo.nl/over-ons/onzeorganisatie/
+      toelichting: Samenwerkingsrelatie met CZW bureau
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.swvo.nl/contact/
+      toelichting: Contactformulier, ook voor WOO verzoek
+  wooVerzoek:
+    url: https://www.swvo.nl/wet-open-overheid-woo/
+organogram_url: https://www.swvo.nl/over-ons/onzeorganisatie/
+afspraak:
+  email: l.vanineveld@swvo.nl
+  url: https://www.swvo.nl/wet-open-overheid-woo/
 contact:
   website: https://www.swvo.nl
   email: l.vanineveld@swvo.nl
+  bezoekadres: Stationspark 27 E, 4462 DZ Goes
+  postadres: Stationspark 27 E, 4462 DZ Goes
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationspark
+    huisnummer: '27'
+    huisnummer_toevoeging: E
+    postcode: 4462 DZ
+    woonplaats: Goes
+  - type: Postadres
+    openbare_ruimte: Stationspark
+    huisnummer: '27'
+    huisnummer_toevoeging: E
+    postcode: 4462 DZ
+    woonplaats: Goes
+  - type: Woo-Adres
+    openbare_ruimte: Stationspark
+    huisnummer: '27'
+    huisnummer_toevoeging: E
+    postcode: 4462 DZ
+    woonplaats: Goes
+    land: Nederland
+  phones:
+  - nummer: (0113) 24 23 66
+    label: algemeen
+  emails:
+  - email: l.vanineveld@swvo.nl
+    label: secretariaat
+  - email: info@swvo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.swvo.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.swvo.nl/wet-open-overheid-woo/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: SWVO
+    url: https://www.linkedin.com/company/swvo/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-03-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28464015/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28464015/swvo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1993-01-01'

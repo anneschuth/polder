@@ -2,8 +2,13 @@ id: org:gr-landschap-waterland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966098'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0574
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Landschap Waterland
+  roo_id: '24966093'
 names:
 - value: Landschap Waterland
   valid_from: '1900-01-01'
@@ -11,9 +16,34 @@ names:
 contact:
   website: http://www.landschapwaterland.nl
   email: info@landschapwaterland.nl
+  bezoekadres: Noorderlaaik 1, 1511 BX Oostzaan
+  postadres: Noorderlaaik 1, 1511 BX Oostzaan
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Noorderlaaik
+    huisnummer: '1'
+    postcode: 1511 BX
+    woonplaats: Oostzaan
+  - type: Postadres
+    openbare_ruimte: Noorderlaaik
+    huisnummer: '1'
+    postcode: 1511 BX
+    woonplaats: Oostzaan
+  phones:
+  - nummer: (075) 684 25 36
+    label: algemeen
+  emails:
+  - email: info@landschapwaterland.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.landschapwaterland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2011-12-31'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966098/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966098/landschap-waterland
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

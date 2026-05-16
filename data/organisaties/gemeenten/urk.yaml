@@ -6,21 +6,132 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0184
   roo_id: '33357'
   wikidata: Q273746
+  owms: http://standaarden.overheid.nl/owms/terms/Urk_(gemeente)
+  ictu: 00184
+  organisatiecode: gm0184
+  rsin: 001892009
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_URK
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Urk
   abbr: Urk
   valid_from: '1900-01-01'
+description:
+  url: https://www.urk.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.urk.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/33357/Gemeente_Urk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Urk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Urk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Urk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.urk.nl/wet-open-overheid-woo
+afspraak:
+  email: gemeente@urk.nl
+  url: https://urk.mijnafspraakmaken.nl/client/
+geography:
+  oppervlakte: 109,81
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 109.81
+  aantal_inwoners: 22431
+  inwoners: '204'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 204.0
+  bevat_plaatsen_raw: Urk
+  bevat_plaatsen:
+  - Urk
+council:
+  total_seats: 19
+  parties:
+  - naam: SGP
+    aantal_zetels: 6
+  - naam: Hart voor Urk
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Rechtvaardig en Betrokken Urk (RBU)
+    aantal_zetels: 1
+  - naam: Krachtig Urk
+    aantal_zetels: 1
+  - naam: Forum voor Democratie
+    aantal_zetels: 1
+  - naam: Gemeentebelangen
+    aantal_zetels: 1
 contact:
   website: https://www.urk.nl/
   email: gemeente@urk.nl
+  bezoekadres: Singel 9, 8321 GT URK
+  postadres: Postbus 77, 8320 AB URK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Singel
+    huisnummer: '9'
+    postcode: 8321 GT
+    woonplaats: URK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '77'
+    postcode: 8320 AB
+    woonplaats: URK
+  - type: Woo-Adres
+    openbare_ruimte: Singel
+    huisnummer: '9'
+    postcode: 8321 GT
+    woonplaats: Urk
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Singel
+    huisnummer: '9'
+    postcode: 8321 GT
+    woonplaats: URK
+  phones:
+  - nummer: (0527) 68 98 68
+    label: algemeen
+  emails:
+  - email: gemeente@urk.nl
+    label: algemeen
+  - email: omgeving@urk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.urk.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33357/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33357/urk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

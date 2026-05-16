@@ -4,6 +4,9 @@ identifiers:
   roo_id: '37316'
   wikidata: Q73069
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0018
+  owms: http://standaarden.overheid.nl/owms/terms/Hoogezand-Sappemeer
+  ictu: 00018
+  organisatiecode: gm0018
 classification: gemeente
 parent_id: null
 names:
@@ -11,19 +14,85 @@ names:
   abbr: Hoogezand-Sappemeer
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 73,05
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 73.05
+  aantal_inwoners: 34616
+  inwoners: '473'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 473.0
+  bevat_plaatsen_raw: Foxhol, Hoogezand, Kiel-Windeweer, Kropswolde, Sappemeer, Waterhuizen,
+    Westerbroek
+  bevat_plaatsen:
+  - Foxhol
+  - Hoogezand
+  - Kiel-Windeweer
+  - Kropswolde
+  - Sappemeer
+  - Waterhuizen
+  - Westerbroek
+council:
+  total_seats: 22
+  parties:
+  - naam: SP
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Lokaal Perspectief
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: Fractie Julia Polat
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: Roodgewoon
+    aantal_zetels: 1
 contact:
   website: http://www.hoogezand-sappemeer.nl
   email: gemeente@hoogezand-sappemeer.nl
+  bezoekadres: Gorecht-Oost 157, 9603 AE HOOGEZAND
+  postadres: Postbus 75, 9600 AB HOOGEZAND
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gorecht-Oost
+    huisnummer: '157'
+    postcode: 9603 AE
+    woonplaats: HOOGEZAND
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 75
+    postbus: '75'
+    postcode: 9600 AB
+    woonplaats: HOOGEZAND
+  phones:
+  - nummer: (0598) 37 37 37
+    label: algemeen
+  emails:
+  - email: gemeente@hoogezand-sappemeer.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.hoogezand-sappemeer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-23'
+last_verified: '2018-01-23'
+successor_id: org:gemeente-midden-groningen
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37316/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37316/gemeente-hoogezand-sappemeer
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q73069
   retrieved: '2026-05-09'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0018
   retrieved: '2026-05-09'
-successor_id: org:gemeente-midden-groningen

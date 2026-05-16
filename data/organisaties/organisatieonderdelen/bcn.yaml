@@ -8,12 +8,58 @@ names:
 - value: Belastingdienst Caribisch Nederland
   abbr: BCN
   valid_from: '1900-01-01'
+description:
+  text: De Belastingdienst Caribisch Nederland (BCN) is onderdeel van de Belastingdienst
+    Nederland. BCN bestaat uit zowel de Belastingdienst als de Douane Caribisch Nederland.
+    BCN heeft vestigingen op Bonaire, Saba en Sint Eustatius.
+  url: https://www.belastingdienst-cn.nl/organisatie
 contact:
   website: https://www.belastingdienst-cn.nl/
   email: balie@belastingdienst-cn.nl
+  bezoekadres: Kaya L.D. Gerharts 12, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: Belastingdienst en Douane (Team klantbehandeling) Bonaire
+    openbare_ruimte: Kaya L.D. Gerharts
+    huisnummer: '12'
+    woonplaats: Kralendijk
+  - type: Bezoekadres
+    toelichting: Belastingdienst en Douane Sint Eustatius
+    openbare_ruimte: H.M. Queen Beatrix Road
+    woonplaats: Oranjestad
+  - type: Bezoekadres
+    toelichting: Belastingdienst en Douane Saba
+    openbare_ruimte: Matthew Levenstone Street
+    woonplaats: The Bottom
+  phones:
+  - nummer: +599 715 85 85
+    label: Bonaire
+  - nummer: +599 318 33 25
+    label: Sint Eustatius 1/2
+  - nummer: +599 318 33 26
+    label: Sint Eustatius 2/2
+  - nummer: +599 416 39 41
+    label: Saba 1/2
+  - nummer: +599 416 39 42
+    label: Saba 2/2
+  emails:
+  - email: balie@belastingdienst-cn.nl
+    label: algemeen
+  - email: douane@belastingdienst-cn.nl
+    label: algemeen
+  - email: invordering@belastingdienst-cn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.belastingdienst-cn.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.belastingdienst-cn.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-17'
+last_verified: '2025-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29987745/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29987745/bcn
+  retrieved: '2026-05-16'

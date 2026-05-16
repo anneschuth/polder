@@ -2,14 +2,42 @@ id: org:oovb-agrifood-capital-bv
 type: rwt
 identifiers:
   roo_id: '27908721'
+  kvk: '62614584'
+  rsin: '854887994'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: AgriFood Capital BV
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Onderwijsboulevard 225, 5223 DE 's-Hertogenbosch
+  postadres: Onderwijsboulevard 225, 5223 DE 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Onderwijsboulevard 225
+    postcode: 5223 DE
+    woonplaats: '''s-Hertogenbosch'
+  - type: Postadres
+    openbare_ruimte: Onderwijsboulevard 225
+    postcode: 5223 DE
+    woonplaats: '''s-Hertogenbosch'
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908721/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908721/agrifood-capital-bv
+  retrieved: '2026-05-16'

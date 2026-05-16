@@ -3,7 +3,7 @@ name:
   full: T.R. Gardien
   family: Gardien
   given: T.R.
-  initials: T.
+  initials: T.R.
 mandaten:
 - id: 19c2c241-8118-4a94-8e2f-2f0bee277913
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910592
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28701387
 - id: eac30b74-b068-4deb-a1a3-b37e840cbdda
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

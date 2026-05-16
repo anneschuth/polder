@@ -3,17 +3,70 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28218516'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0264
+  owms: http://standaarden.overheid.nl/owms/terms/ijmondwerkt
+  kvk: '34372643'
+  btw: NL001933528B01
+  organisatiecode: so0264
+  rsin: 001933528
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling IJmond Werkt!
+  roo_id: '29561394'
 names:
 - value: IJmond Werkt!
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.ijmondwerkt.com
   email: info@ijmondwerkt.com
+  bezoekadres: Stationsplein 48 A, 1948 LC Beverwijk
+  postadres: Postbus 282, 1940 AG Beverwijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '48'
+    huisnummer_toevoeging: A
+    postcode: 1948 LC
+    woonplaats: Beverwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '282'
+    postcode: 1940 AG
+    woonplaats: Beverwijk
+  phones:
+  - nummer: (0251) 27 90 00
+    label: algemeen
+  emails:
+  - email: info@ijmondwerkt.com
+    label: algemeen
+  - email: fg@ijmondwerkt.com
+    label: Funct gegevensbescherming
+  internet_addresses:
+  - url: https://www.ijmondwerkt.com
+    label: algemeen
+  - url: https://www.ijmondwerkt.com/contact-hoe-zijn-wij-te-bereiken
+    label: contact
+  contact_forms:
+  - url: https://www.ijmondwerkt.com/contact-hoe-zijn-wij-te-bereiken
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-19'
+last_verified: '2026-02-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28218516/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28218516/ijmond-werkt
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

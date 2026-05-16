@@ -1,26 +1,85 @@
 id: org:onderdeel-dg-douane
 type: organisatieonderdeel
+subname: Douane
 identifiers:
   roo_id: '29632519'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12370
   oin: 00000001003214394001
+  organisatiecode: oorg12370
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-fin
+parent_id: org:min-fin
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Directoraat-generaal Douane
   abbr: DG Douane
   valid_from: '1900-01-01'
+description:
+  text: Een financieel gezond Nederland en een veilig Europa. Dat is waar de Douane
+    aan werkt. Douaniers houden onveilige en andere ongewenste goederen tegen bij
+    ons deel van de buitengrens van de Europese Unie. En we dragen bij aan een sterke
+    economie, onder andere door oneerlijke concurrentie tegen te gaan. Voor inwoners,
+    bedrijven en het (inter)nationale belang.
+  url: https://www.overdedouane.nl/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-financien/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/29632519/Directoraat-generaal_Douane
+  wooVerzoek:
+    url: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/douane/woo-verzoek-bij-douane
+organogram_url: https://www.overdedouane.nl/organisatie-douane/organogram-douane
+afspraak:
+  url: https://www.overdedouane.nl/contact
 contact:
   website: www.douane.nl
   email: woo@douane.nl
+  bezoekadres: Laan op Zuid 45, 3072 DB Rotterdam
+  postadres: Postbus 3070, 6401 DN Heerlen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Douane Landelijk kantoor
+    openbare_ruimte: Laan op Zuid
+    huisnummer: '45'
+    postcode: 3072 DB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '3070'
+    postcode: 6401 DN
+    woonplaats: Heerlen
+  phones:
+  - nummer: (0800) 01 43
+    label: algemeen
+  emails:
+  - email: woo@douane.nl
+    label: Woo-contactpersoon
+  internet_addresses:
+  - url: www.douane.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.overdedouane.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-04'
+last_verified: '2026-03-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29632519/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29632519/dg-douane
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2021-01-01'

@@ -5,23 +5,111 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0645
   oin: 00000001821449539000
   kvk: 09219971
+  owms: http://standaarden.overheid.nl/owms/terms/Sociale_Dienst_Oost-Achterhoek
+  btw: NL821449539B01
+  loonheffing: 821449539L01
+  organisatiecode: so0645
+  rsin: '821449539'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Fijnder
+  roo_id: '29481202'
 names:
 - value: Fijnder
   valid_from: '1900-01-01'
-  valid_until: '2026-12-31'
+description:
+  text: Fijnder is het werkleerbedrijf voor de gemeenten Berkelland, Oost Gelre en
+    Winterswijk. Fijnder is verantwoordelijk voor de sociale werkplaats, de weg naar
+    werk en uitkeringen. Samen met andere ketenpartners in het sociaal domein zetten
+    we ons proactief in voor een zo optimaal mogelijke deelname van onze inwoners
+    aan de samenleving. Zelfredzaamheid is hierin een belangrijke waarde.
+  url: https://www.fijnder.nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.fijnder.nl/over-fijnder/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28547870/Fijnder
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.fijnder.nl/over-fijnder/bestuur-en-organisatie/financien
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Fijnder%22))))and((dt.type==%22ander%20besluit%20van%20algemene%20strekking%22)or(dt.type==%22beleidsregel%22)or(dt.type==%22delegatie-%20of%20mandaatbesluit%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.fijnder.nl/over-fijnder/bestuur-en-organisatie
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Fijnder%22))))and(dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22)and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+  wooVerzoek:
+    url: https://www.fijnder.nl/over-fijnder/wet-open-overheid-woo
+organogram_url: https://www.fijnder.nl/over-fijnder/bestuur-en-organisatie
+afspraak:
+  email: info@fijnder.nl
+  telefoonnummer: (0544) 47 42 00
+  url: https://www.fijnder.nl/over-fijnder/wet-open-overheid/wet-open-overheid-woo
 contact:
   website: https://www.fijnder.nl
   email: info@fijnder.nl
+  bezoekadres: Batterij 12, 7141 JL Groenlo
+  postadres: Postbus 109, 7140 AC Groenlo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Batterij
+    huisnummer: '12'
+    postcode: 7141 JL
+    woonplaats: Groenlo
+    regio: Achterhoek
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Postadres
+    postbus: '109'
+    postcode: 7140 AC
+    woonplaats: Groenlo
+  - type: Woo-Adres
+    toelichting: Fijnder
+    openbare_ruimte: Batterij
+    huisnummer: '12'
+    postbus: '109'
+    postcode: 7141 JL
+    woonplaats: Groenlo
+    regio: Achterhoek in de Nederlandse provincie Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (0544) 47 42 00
+    label: algemeen
+  emails:
+  - email: info@fijnder.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.fijnder.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.fijnder.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-12-31'
+last_mutation: '2025-11-04'
+last_verified: '2026-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28547870/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28547870/fijnder
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-01-01'

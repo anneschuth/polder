@@ -3,17 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28139774'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0589
+  owms: http://standaarden.overheid.nl/owms/terms/eurode
+  kvk: '14128455'
+  organisatiecode: so0589
+  rsin: '823037125'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Eurode
+  roo_id: '29415791'
 names:
 - value: Openbaar Lichaam Eurode
   valid_from: '1900-01-01'
+description:
+  text: Het openbaar lichaam Eurode is een samenwerkingsverband tussen de steden Kerkrade
+    (NL) en Herzogenrath (DE) waarin lokale bestuurders, burgers en organisaties samen
+    aan de oplossing van grensoverschrijdende kwesties werken.
+  url: https://www.eurode.eu/Samenwerking.Openbaar.Lichaam.Eurode.html
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+afspraak:
+  email: info@eurode.eu
 contact:
   website: https://www.eurode.eu/Samenwerking.Openbaar.Lichaam.Eurode.html
   email: info@eurode.eu
+  bezoekadres: Eurode-Park 1-10, 6461 KB Kerkrade
+  postadres: Eurode-Park 1-10, 6461 KB Kerkrade
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eurode-Park
+    huisnummer: 1-10
+    postcode: 6461 KB
+    woonplaats: Kerkrade
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv31
+  - type: Postadres
+    openbare_ruimte: Eurode-Park
+    huisnummer: 1-10
+    postcode: 6461 KB
+    woonplaats: Kerkrade
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv31
+    land: Nederland
+  emails:
+  - email: info@eurode.eu
+    label: algemeen
+  fax: 02406999021
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-12'
+last_verified: '2025-11-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28139774/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28139774/openbaar-lichaam-eurode
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

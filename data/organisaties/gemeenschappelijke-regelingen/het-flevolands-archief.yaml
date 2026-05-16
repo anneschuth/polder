@@ -5,22 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0480
   oin: 00000001812824696000
   kvk: '57497524'
+  owms: http://standaarden.overheid.nl/owms/terms/hfa
+  organisatiecode: so0480
+  rsin: '812824696'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regionaal Historisch Centrum Het Flevolands Archief,
+    Ministerie van Onderwijs, Cultuur en Wetenschap
+  roo_id: '30554450'
 names:
 - value: Het Flevolands Archief
   valid_from: '1900-01-01'
+description:
+  text: Het Flevolands Archief is een van de 12 Regionaal Historische Centra in Nederland
+    en is gevestigd in Lelystad. De basis van het archief wordt gevormd door de archieven
+    van het Zuiderzeeproject, de grootste polder ter wereld en één van de grootste
+    waterbouwkundige projecten die ooit zijn uitgevoerd door het Rijk. Deze werkzaamheden
+    zijn veelal vastgelegd op foto of film, wat resulteert in een prachtige beeldcollectie.HFA
+    bewaart het geheugen van de provincie Flevoland in archieven en verschillende
+    collecties. In het archief vindt u tekeningen, foto's, kranten, boeken en archieven
+    over de geschiedenis van Flevoland.Het Flevolands Archief is een openbaar lichaam
+    en is samenwerkingspartner voor diverse overheidsorganen. Dit zijn het Rijk, de
+    Provincie Flevoland, de  gemeenten Dronten, Lelystad, Urk en Zeewolde en het waterschap
+    Zuiderzeeland.
+  url: https://www.hetflevolandsarchief.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hetflevolandsarchief.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/27964937/Het_Flevolands_Archief
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.hetflevolandsarchief.nl/bestuursstukken
+  wooVerzoek:
+    url: https://www.hetflevolandsarchief.nl/contact
+organogram_url: https://www.hetflevolandsarchief.nl/images/lijsten_en_artikelen/Organogram%202024%20HFA.pdf
+afspraak:
+  email: info@hetflevolandsarchief.nl
+  telefoonnummer: (0320) 82 04 27
+  url: https://www.hetflevolandsarchief.nl/studiezaal
 contact:
   website: https://www.hetflevolandsarchief.nl
   email: info@hetflevolandsarchief.nl
+  bezoekadres: Oostvaardersdijk 1-13, 8242 PA Lelystad
+  postadres: 8200 AB Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oostvaardersdijk
+    huisnummer: 1-13
+    postcode: 8242 PA
+    woonplaats: Lelystad
+    regio: Flevoland
+    land: Nederland
+  - type: Postadres
+    postcode: 8200 AB
+    woonplaats: Lelystad
+  - type: Woo-Adres
+    openbare_ruimte: Oostvaardersdijk
+    huisnummer: 1-13
+    postcode: 8242 PA
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+    land: Nederland
+  phones:
+  - nummer: (0320) 82 04 27
+    label: algemeen
+  emails:
+  - email: info@hetflevolandsarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hetflevolandsarchief.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-10-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27964937/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27964937/het-flevolands-archief
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-06-01'

@@ -2,16 +2,54 @@ id: org:oovb-uw-holding-bv
 type: rwt
 identifiers:
   roo_id: '28072289'
+  kvk: '65113217'
+  rsin: '855985239'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: UW Holding B.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.uw.nl
+  bezoekadres: Niels Bohrweg 121, 3542 CA Utrecht
+  postadres: Postbus 9255, 3506 GG Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Niels Bohrweg
+    huisnummer: '121'
+    postcode: 3542 CA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '9255'
+    postcode: 3506 GG
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 239 15 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.uw.nl
+    label: algemeen
+  - url: https://www.uw.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-10-11'
+last_verified: '2019-10-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28072289/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28072289/uw-holding-bv
+  retrieved: '2026-05-16'

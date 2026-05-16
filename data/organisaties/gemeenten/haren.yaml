@@ -5,6 +5,9 @@ identifiers:
   kvk: '50537806'
   roo_id: '28059'
   wikidata: Q691754
+  owms: http://standaarden.overheid.nl/owms/terms/Haren_(gemeente)
+  ictu: '00017'
+  organisatiecode: gm0017
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,78 @@ names:
   abbr: Haren
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 50,7
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 50.7
+  aantal_inwoners: 19216
+  inwoners: '379'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 379.0
+  bevat_plaatsen_raw: Glimmen, Haren GN, Noordlaren, Onnen
+  bevat_plaatsen:
+  - Glimmen
+  - Haren GN
+  - Noordlaren
+  - Onnen
+council:
+  total_seats: 17
+  parties:
+  - naam: D66
+    aantal_zetels: 5
+  - naam: Gezond verstand Haren
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: www.haren.nl
   email: gemeente@haren.nl
+  bezoekadres: Raadhuisplein 10, 9751 AN HAREN GN
+  postadres: Postbus 21, 9750 AA HAREN GN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '10'
+    postcode: 9751 AN
+    woonplaats: HAREN GN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 21
+    postbus: '21'
+    postcode: 9750 AA
+    woonplaats: HAREN GN
+  phones:
+  - nummer: 14 050
+    label: algemeen
+  emails:
+  - email: gemeente@haren.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.haren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28059/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28059/haren
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

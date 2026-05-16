@@ -2,14 +2,33 @@ id: org:stichting-pensioenfonds-rail-en-openbaar-vervoer
 type: rwt
 identifiers:
   roo_id: '30133467'
+  kvk: '41186005'
+  oin: 00000003411860050000
+  rsin: '002220660'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Pensioenfonds Rail & Openbaar Vervoer
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Arthur van Schendelstraat
+    huisnummer: '850'
+    postcode: 3511 ML
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133467/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133467/stichting-pensioenfonds-rail-en-openbaar-vervoer
+  retrieved: '2026-05-16'

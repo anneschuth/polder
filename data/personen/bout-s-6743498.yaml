@@ -3,7 +3,7 @@ name:
   full: S.N. Bout
   family: Bout
   given: S.N.
-  initials: S.
+  initials: S.N.
 mandaten:
 - id: c3306886-bc76-4ed7-ae67-ae4f56c760df
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743500
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25628617
 - id: ad51b4c4-5a80-4ff3-84ed-36211b862317
   organization_id: org:gemeente-zoetermeer
   post_id: post:raadslid-gemeente-zoetermeer

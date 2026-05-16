@@ -2,14 +2,42 @@ id: org:oovb-stichting-maatschappelijke-dienstverlening-amsterdam-zuidoost-en-di
 type: rwt
 identifiers:
   roo_id: '27913914'
+  kvk: '34112551'
+  rsin: '808811782'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Maatschappelijke Dienstverlening Amsterdam Zuidoost en Diemen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Karspeldreef 1009, 1104 SE Amsterdam
+  postadres: Postbus 23504, 1100 EA Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Karspeldreef 1009
+    postcode: 1104 SE
+    woonplaats: Amsterdam
+  - type: Postadres
+    postbus: '23504'
+    postcode: 1100 EA
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913914/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913914/stichting-maatschappelijke-dienstverlening-amsterdam-zuidoost-en-diemen
+  retrieved: '2026-05-16'

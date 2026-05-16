@@ -3,16 +3,47 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '30427873'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dtenv
+parent_id: org:onderdeel-diensten-en-baten-lastenagentschappen
 names:
 - value: Voogdijraad CN
   valid_from: '1900-01-01'
 contact:
   website: https://www.rijksdienstcn.com/voogdijraad
   email: haltcn@rijksdienstcn.com
+  bezoekadres: Kaya Gresia 6, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: Bonaire
+    openbare_ruimte: Kaya Gresia
+    huisnummer: '6'
+    woonplaats: Kralendijk
+  - type: Bezoekadres
+    toelichting: Sint Eustatius
+    openbare_ruimte: H.M. Beatrixstraat
+    huisnummer: '17'
+    woonplaats: Oranjestad
+  - type: Bezoekadres
+    toelichting: Saba (achter het politiebureau)
+    openbare_ruimte: Upper Road Z/N
+    woonplaats: The Bottom
+  phones:
+  - nummer: +599 715 8898
+    label: locatie Bonaire
+  - nummer: +599 318 2814
+    label: locatie Sint Eustatius
+  - nummer: +599 416 3283
+    label: locatie Saba
+  internet_addresses:
+  - url: https://www.rijksdienstcn.com/voogdijraad
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksdienstcn.com/voogdijraad/contact-met-de-voogdijraad
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-06'
+last_verified: '2025-11-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30427873/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30427873/voogdijraad-cn
+  retrieved: '2026-05-16'

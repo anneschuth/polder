@@ -7,12 +7,39 @@ parent_id: org:onderdeel-directoraat-generaal-volkshuisvesting-en-bouwen
 names:
 - value: Directie Wonen
   valid_from: '1900-01-01'
+description:
+  text: De directie Wonen is verantwoordelijk voor beleid en regelgeving voor de huurmarkt,
+    waaronder de woningcorporaties, en de koopmarkt. Doelstelling is om te komen tot
+    een goede werking van de woningmarkt en daarbinnen volkshuisvestelijke doelen
+    te realiseren, zodat burgers goede huisvesting kunnen realiseren. Belangrijke
+    thema’s zijn de betaalbaarheid en beschikbaarheid van woningen, keuzevrijheid
+    voor woonconsumenten en de zorg voor het huisvesten van urgente en specifieke
+    doelgroepen.
 contact:
   website: http://www.rijksoverheid.nl
   email: erikjan.kempen@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 72 18
+    label: algemeen
+  - nummer: (070) 426 72 24
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97035/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97035/directie-wonen
+  retrieved: '2026-05-16'

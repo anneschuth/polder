@@ -3,14 +3,44 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '8592'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:min-vws
 names:
 - value: Algemene Leiding
   abbr: AL
   valid_from: '1900-01-01'
+description:
+  text: De secretaris-generaal (SG) is eindverantwoordelijk  voor het aansturen van
+    het ambtelijke apparaat.  De SG vormt samen met de plaatsvervangend secretaris-generaal
+    (pSG) en de directeuren-generaal (DG) de algemene leiding van het ministerie.Taken
+    Algemene Leiding:- Stellen en bewaken van inhoudelijk strategische kaders en sturing
+    geven op politiek gevoelige en strategisch belangrijke onderwerpen- Algemeen sturing
+    geven aan het departement (toezicht, coaching, monitoring, prioriteiten, planning,
+    voortgangsbewaking)- bewaken en bevorderen van een samenhangend en consistent
+    beleid- inrichten en onderhouden van een infrastructuur voor de bedrijfsvoering-
+    coördineren van directieoverstijgende zaken.
+contact:
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 79 11
+    label: algemeen
+  fax: (070) 340 78 34
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-09-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8592/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8592/al
+  retrieved: '2026-05-16'

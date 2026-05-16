@@ -5,21 +5,151 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000156
   oin: '00000003273640160000'
   kvk: '27364016'
+  rsin: '814293566'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Onderzoeksraad voor Veiligheid
   abbr: OVV
   valid_from: '1900-01-01'
+description:
+  text: De Onderzoeksraad voor Veiligheid (OVV) doet onderzoek naar ongevallen en
+    rampen in Nederland, met als doel herhaling daarvan te voorkomen. Per 1 februari
+    2005 is de OVV de voortzetting van de voormalige Raad voor de Transportveiligheid.
+  url: https://onderzoeksraad.nl/home/over-de-raad/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,20,21,23,39
+      toelichting: De gemaakte uitzonderingen waarborgen de onafhankelijkheid van
+        de Onderzoeksraad. Voor artikelen 12 en 20 is slechts bij het eerste lid sprake
+        van een afwijkende bepaling. Ook voor het eerste lid van artikel 39 bestaat
+        een afwijkende bepaling, voor de rest van dit artikel zijn geen afwijkende
+        bepalingen.
+wettelijke_grondslagen:
+- opschrift: Rijkswet Onderzoeksraad voor veiligheid, artikel 2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=rijkswet%20onderzoeksraad%20voor%20veiligheid/article=2
+taken_en_bevoegdheden: De Onderzoeksraad voor Veiligheid (OVV) heeft, met het uitsluitende
+  doel toekomstige voorvallen te voorkomen of de gevolgen daarvan te beperken, tot
+  taak te onderzoeken en vast te stellen wat de oorzaken of vermoedelijke oorzaken
+  van individuele of categorieën voorvallen, wat de omvang van hun gevolgen is en
+  waar nodig aanbevelingen te doen om de veiligheid te verbeteren. De OVV is bevoegd
+  om onderzoek te verrichten naar gebeurtenissen op terreinen zoals verkeer en vervoer,
+  defensie, gezondheid, milieu, industrie, bouw en natuur. Zo kan de OVV bijvoorbeeld
+  onderzoek doen naar branden, explosies of natuurrampen, maar in beginsel komen alle
+  voorvallen in aanmerking voor onderzoek. De enige uitzonderingen hierop zijn voorvallen
+  op het gebied van openbare orde, terreurbestrijding, vredesmissies, oorlogshandelingen
+  en dergelijke. De OVV is bevoegd voor het gehele Koninkrijk, dus voor Nederland,
+  Aruba, Curaçao en Sint Maarten.
+evaluations:
+- datum: '2020-05-13'
+  kamerstuknummer: TK 25268 nr. 186
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-186.html
+- datum: '2015-06-29'
+  kamerstuknummer: TK 32008-(R1883) nr. 2
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32008-2.html/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.onderzoeksraad.nl/home/over-de-raad/wet-en-regelgeving/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28214736/Onderzoeksraad_voor_Veiligheid
+  wooVerzoek:
+    url: https://www.onderzoeksraad.nl/home/over-de-raad/wet-en-regelgeving/woo-verzoek/
+organogram_url: https://onderzoeksraad.nl/wp-content/uploads/2024/09/Organogram-1536x1086.jpg
+afspraak:
+  email: info@onderzoeksraad.nl
+  telefoonnummer: (070) 333 70 00
+  url: https://onderzoeksraad.nl/home/contact/
+personnel:
+  aantalFte: 81,0
+  peildatumFte: '2023-12-31'
+  toelichtingFte: Bovenop de 81 fte zijn er nog 2 fte afkomstig van het ministerie
+    van Defensie, die op detacheringsbasis voor de Onderzoeksraad werken.
 contact:
   website: http://www.onderzoeksraad.nl/
   email: info@onderzoeksraad.nl
+  bezoekadres: Lange Voorhout 9, 2514 EA Den Haag
+  postadres: Postbus 95404, 2509 CK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '9'
+    postcode: 2514 EA
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '95404'
+    postcode: 2509 CK
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '95404'
+    postcode: 2509 CK
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (070) 333 70 00
+    label: algemeen
+  - nummer: 06 45 69 17 11
+    label: pers
+  emails:
+  - email: info@onderzoeksraad.nl
+    label: algemeen
+  - email: communicatie@onderzoeksraad.nl
+    label: pers
+  internet_addresses:
+  - url: http://www.onderzoeksraad.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://onderzoeksraad.nl/home/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Onderzoeksraad voor Veiligheid
+    url: https://www.linkedin.com/company/onderzoeksraad-voor-veiligheid/
+  - platform: YouTube
+    gebruikersnaam: Onderzoeksraad voor Veiligheid (Dutch Safety Board)
+    url: https://www.youtube.com/channel/UC8YTCQ5-kR3aqaUwyUk1Sig
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28214736/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28214736/ovv
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +163,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000156
   retrieved: '2026-05-09'
+roo_start_datum: '1999-01-01'

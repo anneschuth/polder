@@ -5,23 +5,77 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so1091
   oin: 00000001827434121000
   kvk: '92483461'
+  owms: http://standaarden.overheid.nl/owms/terms/odveluwe
+  organisatiecode: so1091
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Veluwe
+  roo_id: '29847755'
 names:
 - value: Omgevingsdienst Veluwe
   abbr: ODVeluwe
   valid_from: '1900-01-01'
+description:
+  text: Omgevingsdienst Veluwe (ODVeluwe) draagt bij aan een veilige en gezonde fysieke
+    leefomgeving. In opdracht van de gemeenten en de provincie Gelderland verstrekken
+    onze vergunningverleners omgevingsvergunningen en zien onze toezichthouders erop
+    toe dat bedrijven voldoen aan actuele wet- en regelgeving op het gebied van milieu(veiligheid).
+    Daarnaast adviseren onze experts onder meer onze partners over verschillende (milieu)onderwerpen,
+    zoals energie, bodem, ruimtelijke ordening, duurzaamheid, lucht, geluid, natuur
+    en ecologie, en externe veiligheid.
+  url: https://www.odveluwe.nl/over-ons/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.linkedin.com/company/omgevingsdienst-veluwe/
   email: info@odveluwe.nl
+  postadres: Postbus 971, 7301 BE Apeldoorn
+  bezoekadres: Marktplein 1, 7311 LG Apeldoorn
+  addresses:
+  - type: Postadres
+    postbus: '971'
+    postcode: 7301 BE
+    woonplaats: Apeldoorn
+  - type: Bezoekadres
+    openbare_ruimte: Marktplein
+    huisnummer: '1'
+    postcode: 7311 LG
+    woonplaats: Apeldoorn
+  - type: Bezoekadres
+    openbare_ruimte: Oosteinde
+    huisnummer: '17'
+    postcode: 3842 DR
+    woonplaats: Harderwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (055) 580 17 05
+    label: algemeen
+  emails:
+  - email: info@odveluwe.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odveluwe.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: omgevingsdienst-veluwe
+    url: https://www.linkedin.com/company/omgevingsdienst-veluwe/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2025-02-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29847749/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29847749/odveluwe
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2024-01-01'

@@ -2,14 +2,48 @@ id: org:oovb-stichting-radio-la-benevolencijahumanitarian-tools-foundation
 type: rwt
 identifiers:
   roo_id: '27915687'
+  kvk: '34176587'
+  rsin: '811072423'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Radio La Benevolencija\Humanitarian Tools Foundation
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Plantage Middenlaan 27 -3e verdieping, 1018 DB Amsterdam
+  postadres: Plantage Middenlaan 27 -3e verdieping, 1018 DB Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Plantage Middenlaan
+    huisnummer: '27'
+    huisnummer_toevoeging: -3e verdieping
+    postcode: 1018 DB
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Plantage Middenlaan
+    huisnummer: '27'
+    huisnummer_toevoeging: -3e verdieping
+    postcode: 1018 DB
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915687/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915687/stichting-radio-la-benevolencijahumanitarian-tools-foundation
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ name:
   full: V.J.A. Frinking
   family: Frinking
   given: V.J.A.
-  initials: V.
+  initials: V.J.A.
 mandaten:
 - id: 4f0678b4-496c-4cec-883e-13c72c8c08af
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743469
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29489243
 - id: 1851ae2e-8627-47bb-ae93-d88d9e92cd6c
   organization_id: org:gemeente-zoetermeer
   post_id: post:wethouder-gemeente-zoetermeer

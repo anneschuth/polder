@@ -3,17 +3,105 @@ type: inspectie
 identifiers:
   roo_id: '111121'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12351
+  organisatiecode: oorg12351
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Inspectie Justitie en Veiligheid
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie Justitie en Veiligheid draagt bij aan een rechtvaardige en veilige
+    samenleving. Dit doet de Inspectie door toezicht te houden op uitvoeringsorganisaties
+    op het terrein van justitie en veiligheid. Door onderzoeken geeft de Inspectie
+    inzicht in de kwaliteit van de taakuitvoering en de naleving van regels en normen.
+    Om zo risico’s te signaleren en om organisaties aan te zetten tot verbetering.
+  url: https://www.inspectie-jenv.nl/organisatie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.inspectie-jenv.nl/contact/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/111121/Inspectie_Justitie_en_Veiligheid
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.inspectie-jenv.nl/Publicaties?trefwoord=&startdatum=&einddatum=&toezichtgebieden=Alle+toezichtgebieden&type=Jaarverslag
+      toelichting: Jaarverslagen van de inspectie.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.inspectie-jenv.nl/Publicaties?trefwoord=&startdatum=&einddatum=&toezichtgebieden=Alle+toezichtgebieden&type=Jaarplan
+      toelichting: Jaarplannen en meerjarenperspectieven.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/zoeken?trefwoord=inspectie+justitie+en+veiligheid&startdatum=&einddatum=&onderdeel=Alle+ministeries&type=Woo-besluit
+      toelichting: Woo-besluiten van de inspectie op Rijksoverheid.nl.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.inspectie-jenv.nl/Publicaties?trefwoord=&startdatum=&einddatum=&toezichtgebieden=Alle+toezichtgebieden&type=Rapport
+      toelichting: Onderzoeksrapporten van de inspectie.
+    - informatiecategorie: Andere documenten
+      url: https://www.inspectie-jenv.nl/Publicaties?trefwoord=&startdatum=&einddatum=&toezichtgebieden=Alle+toezichtgebieden&type=Brief
+      toelichting: 'Inspectieproduct: brieven van de inspectie.'
+    - informatiecategorie: Andere documenten
+      url: https://www.inspectie-jenv.nl/Publicaties?trefwoord=&startdatum=&einddatum=&toezichtgebieden=Alle+toezichtgebieden&type=Plan+van+aanpak
+      toelichting: 'Inspectieproducten: plannen van aanpak.'
+  wooVerzoek:
+    url: https://www.inspectie-jenv.nl/contact/wet-open-overheid
+organogram_url: https://www.inspectie-jenv.nl/organisatie/organisatiestructuur
+afspraak:
+  email: woocontact@inspectie-jenv.nl
+  url: https://www.inspectie-jenv.nl/contact
 contact:
   website: https://www.inspectie-jenv.nl
   email: woocontact@inspectie-jenv.nl
+  bezoekadres: Hoge Nieuwstraat 8, 2514 EL Den Haag
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoge Nieuwstraat
+    huisnummer: '8'
+    postcode: 2514 EL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: 'Onder vermelding van: inspectie Justitie en Veiligheid'
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  emails:
+  - email: woocontact@inspectie-jenv.nl
+    label: Woo-contact
+  internet_addresses:
+  - url: https://www.inspectie-jenv.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.inspectie-jenv.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: inspectie-justitie-en-veiligheid
+    url: https://www.linkedin.com/company/inspectie-justitie-en-veiligheid/
+  - platform: Mastodon
+    gebruikersnaam: '@inspectiejenv'
+    url: https://social.overheid.nl/@inspectiejenv
+  - platform: X
+    gebruikersnaam: '@InspectieJenV'
+    url: https://x.com/InspectieJenV
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-19'
+last_verified: '2026-02-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111121/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111121/inspectie-justitie-en-veiligheid
+  retrieved: '2026-05-16'

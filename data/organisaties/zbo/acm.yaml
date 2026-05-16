@@ -3,21 +3,152 @@ type: zbo
 identifiers:
   roo_id: '26140472'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000217
+  kvk: '52813150'
+  oin: 00000001003214369000
+  rsin: 003166946
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Autoriteit Consument en Markt
   abbr: ACM
   valid_from: '1900-01-01'
+description:
+  text: De Autoriteit Consument en Markt (ACM) is op 1 april 2013 in het leven geroepen
+    en houdt onafhankelijk toezicht op mededinging, het consumentenrecht en meerdere
+    specifieke (bedrijfs)sectoren. Doel van de ACM is een goede, eerlijke werking
+    van de markten voor zowel consumenten als bedrijven. De ACM is voortgekomen uit
+    een fusie van de Consumentenautoriteit, de Nederlandse Mededingingsautoriteit
+    (NMa) en de Onafhankelijke Post en Telecommunicatie Autoriteit (OPTA). De toezichtstaken
+    van de ACM hebben betrekking op zowel Europees als Caribisch Nederland.
+  url: https://www.acm.nl/nl/organisatie
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: 'Artikel 22 van de Kaderwet zelfstandige bestuursorganen is gedeeltelijk
+        van toepassing (zie: TKII 2012-2013, 33 622, nr. 2, artikel I, onderdeel G).'
+wettelijke_grondslagen:
+- opschrift: Instellingswet Autoriteit Consument en Markt, artikel 2, lid 1
+  referentie: https://wetten.overheid.nl/BWBR0033043/2022-05-01#Hoofdstuk2_Artikel2
+taken_en_bevoegdheden: De ACM is belast met taken (hoofdzakelijk nalevingstoezicht
+  en bestuursrechtelijke handhaving) op grond van de volgende wetgeving:* Wet handhaving
+  consumentenbescherming;* Mededingingswet;* Telecommunicatiewet;* Postwet 2009;*
+  Elektriciteitswet 1998;* Gaswet;* vervoerswetgeving (Wet personenvervoer 2000, Loodsenwet,
+  Spoorwegwet, Wet luchtvaart en Scheepvaartverkeerswet).
+evaluations:
+- datum: '2021-02-17'
+  kamerstuknummer: TK 25268 nr. 195
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-195.html
+- datum: '2015-12-18'
+  kamerstuknummer: TK 25268 nr. 132
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-132.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.acm.nl/nl/woo-verzoeken-en-informatieverzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/26140472/Autoriteit_Consument_en_Markt
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.acm.nl/nl/organisatie/onze-organisatie/acm-jaarverslagen
+    - informatiecategorie: Convenanten
+      url: https://www.acm.nl/nl/organisatie/samenwerking
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.acm.nl/nl/publicaties/openbare-stukken-naar-aanleiding-van-woo-en-informatieverzoeken
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Consument+en+Markt%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Consument+en+Markt%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.acm.nl/nl/woo-verzoeken-en-informatieverzoeken
+organogram_url: https://www.acm.nl/nl/organisatie/onze-organisatie/organogram
+afspraak:
+  email: acm-post@acm.nl
+personnel:
+  aantalFte: 712,2
+  peildatumFte: '2023-12-31'
 contact:
   website: https://www.acm.nl/nl
   email: acm-post@acm.nl
+  bezoekadres: Muzenstraat 41, 2511 WB Den Haag
+  postadres: Postbus 16326, 2500 BH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '41'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16326'
+    postcode: 2500 BH
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16326'
+    postcode: 2500 BH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 070 70 70
+    label: voor consumenten
+  - nummer: (070) 722 20 00
+    label: voor bedrijven
+  emails:
+  - email: acm-post@acm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.acm.nl/nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.acm.nl/nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Autoriteit Consument & Markt
+    url: https://nl.linkedin.com/company/acm---autoriteit-consument-&-markt
+  - platform: Mastodon
+    gebruikersnaam: '@acm'
+    url: https://social.overheid.nl/@acm
+  - platform: X
+    gebruikersnaam: '@AutoriteitCM'
+    url: https://twitter.com/AutoriteitCM
+  fax: (070) 722 23 55
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140472/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140472/acm
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000217
   retrieved: '2026-05-09'
+roo_start_datum: '2013-04-01'

@@ -4,19 +4,88 @@ identifiers:
   roo_id: '28212395'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000071
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Grondkamer Zuidwest
   valid_from: '1900-01-01'
+description:
+  text: Deze organisatie is onderdeel van het cluster Grondkamers.
+  url: https://www.rvo.nl/onderwerpen/pachten-en-pachtovereenkomsten/grondkamer
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,14,21,22
+      toelichting: Van de artikelen 12, 14, 21 en 22 van de Kaderwet zelfstandige
+        bestuursorganen wordt afgeweken in overeenstemming met artikel 1a van de Uitvoeringswet
+        grondkamers.
+wettelijke_grondslagen:
+- opschrift: Uitvoeringswet grondkamers, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0021912/2024-01-01#Hoofdstuk1_Artikel1
+taken_en_bevoegdheden: Binnen de provincies Zeeland en Zuid-Holland heeft de grondkamer
+  Zuidwest onder meer als taak:* het bevorderen van goede pachtverhoudingen in Nederland;*
+  het toetsen van de inhoud van pachtovereenkomsten aan de dwingend rechtelijke bepalingen
+  van Titel 7.5 Burgerlijk Wetboek (pacht);* prijstoetsing;* het toetsen van overeenkomsten
+  van korte duur en de bepaling van verpachte waarde.
+evaluations:
+- datum: '2015-05-06'
+  kamerstuknummer: TK 27924 nr. 63
+  referentie: https://zoek.officielebekendmakingen.nl/kst-27924-63.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://wetten.overheid.nl/BWBR0045754/2024-11-01
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rvo.nl/onderwerpen/pachten-en-pachtovereenkomsten/grondkamer
   email: grondkamer@rvo.nl
+  postadres: Postbus 40111, 8004 DC Zwolle
+  addresses:
+  - type: Postadres
+    toelichting: Grondkamer Zuidwest
+    postbus: '40111'
+    postcode: 8004 DC
+    woonplaats: Zwolle
+  emails:
+  - email: grondkamer@rvo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rvo.nl/onderwerpen/pachten-en-pachtovereenkomsten/grondkamer
+    label: algemeen
+  contact_forms:
+  - url: https://www.rvo.nl/onderwerpen/pachten-en-pachtovereenkomsten/grondkamer#heeft-u-post-voor-de-grondkamers%3F
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-05'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212395/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212395/grondkamer-zuidwest
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000071
   retrieved: '2026-05-09'
+roo_start_datum: '1958-01-01'

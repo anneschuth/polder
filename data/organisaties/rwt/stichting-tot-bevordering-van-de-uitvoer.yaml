@@ -2,14 +2,42 @@ id: org:stichting-tot-bevordering-van-de-uitvoer
 type: rwt
 identifiers:
   roo_id: '27917280'
+  kvk: '41150546'
+  rsin: '808953990'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Stichting tot Bevordering van de Uitvoer
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Prinses Beatrixlaan 2, 2595 AL Den Haag
+  postadres: Postbus 93144, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Beatrixlaan 2
+    postcode: 2595 AL
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '93144'
+    postcode: 2509 AC
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917280/stichting-tot-bevordering-van-de-uitvoer
+  retrieved: '2026-05-16'

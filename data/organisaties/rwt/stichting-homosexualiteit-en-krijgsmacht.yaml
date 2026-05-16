@@ -2,14 +2,32 @@ id: org:stichting-homosexualiteit-en-krijgsmacht
 type: rwt
 identifiers:
   roo_id: '30133337'
+  kvk: '41226542'
+  rsin: '803135373'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting Homosexualiteit en Krijgsmacht
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Marmontweg
+    huisnummer: '45'
+    postcode: 3711 BH
+    woonplaats: Austerlitz
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133337/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133337/stichting-homosexualiteit-en-krijgsmacht
+  retrieved: '2026-05-16'

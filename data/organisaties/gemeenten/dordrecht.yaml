@@ -6,21 +6,154 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0505
   roo_id: '40563'
   wikidata: Q26421
+  owms: http://standaarden.overheid.nl/owms/terms/Dordrecht_(gemeente)
+  ictu: '00505'
+  organisatiecode: gm0505
+  rsin: 001915794
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DOR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dordrecht
   abbr: Dordrecht
   valid_from: '1900-01-01'
+description:
+  url: https://lokaleregelgeving.overheid.nl/CVDR670844/3
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://cms.dordrecht.nl/Inwoners/Overzicht_Inwoners/Wet_open_overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/40563/Gemeente_Dordrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://cms.dordrecht.nl/Inwoners/Overzicht_Inwoners/Wet_open_overheid/Afgehandelde_Woo_verzoeken
+      toelichting: Hier zijn de afgehandelde WOO-verzoeken te vinden
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dordrecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeri%C3%ABle+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://raad.dordrecht.nl/
+      toelichting: Raadsinformatiesysteem (RIS) Dordrecht
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dordrecht%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dordrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://cms.dordrecht.nl/Bestuur/Overzicht_Bestuur/College_van_burgemeester_en_wethouders
+      toelichting: Besluiten van het College van Burgemeester en Wethouders
+  wooVerzoek:
+    url: https://loket.dordrecht.nl/aanvraag?schema=indienenwooverzoekbeoordelen
+organogram_url: https://cms.dordrecht.nl/Bestuur/Overzicht_Bestuur/Over_de_gemeente/Gemeentelijke_organisatie
+afspraak:
+  email: gemeente@dordrecht.nl
+  telefoonnummer: 14 078
+geography:
+  oppervlakte: 99,45
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 99.45
+  aantal_inwoners: 122991
+  inwoners: '1236'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1236.0
+  bevat_plaatsen_raw: Dordrecht
+  bevat_plaatsen:
+  - Dordrecht
+council:
+  total_seats: 39
+  parties:
+  - naam: VVD
+    aantal_zetels: 6
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 6
+  - naam: VSP Dordrecht
+    aantal_zetels: 5
+  - naam: Beter Voor Dordt (BVD)
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: Partij voor de Dieren
+    aantal_zetels: 2
+  - naam: PVV
+    aantal_zetels: 1
+  - naam: DENK
+    aantal_zetels: 1
+  - naam: Christenunie/SGP
+    aantal_zetels: 1
+  - naam: Op Ons Eiland
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.dordrecht.nl
   email: gemeente@dordrecht.nl
+  bezoekadres: Spuiboulevard 300, 3311 GR DORDRECHT
+  postadres: Postbus 8, 3300 AA DORDRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spuiboulevard
+    huisnummer: '300'
+    postcode: 3311 GR
+    woonplaats: DORDRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '8'
+    postcode: 3300 AA
+    woonplaats: DORDRECHT
+  - type: Woo-Adres
+    postbus: '8'
+    postcode: 3300 AA
+    woonplaats: Dordrecht
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Spuiboulevard
+    huisnummer: '300'
+    postcode: 3311 GR
+    woonplaats: DORDRECHT
+  phones:
+  - nummer: 14 078
+    label: algemeen
+  emails:
+  - email: gemeente@dordrecht.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.dordrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://cms.dordrecht.nl/Contact
+    label: Algemeen
+  - url: https://cms.dordrecht.nl/Contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40563/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40563/dordrecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

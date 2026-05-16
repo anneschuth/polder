@@ -3,7 +3,7 @@ name:
   full: J.P.M. Paas
   family: Paas
   given: J.P.M.
-  initials: J.
+  initials: J.P.M.
 mandaten:
 - id: 9dd603d7-e3a3-4cac-8268-ed83f67c188d
   organization_id: org:gemeente-kerkrade
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580223
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28695198
 - id: 03950314-056f-404a-bc00-ad2e65b62255
   organization_id: org:gemeente-kerkrade
   post_id: post:wethouder-gemeente-kerkrade

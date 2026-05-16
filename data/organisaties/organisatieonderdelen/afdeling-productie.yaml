@@ -8,9 +8,23 @@ names:
 - value: Afdeling Productie
   valid_from: '1900-01-01'
   valid_until: '2019-11-25'
+contact:
+  postadres: Postbus 20300, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20300'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 72 59
+    label: algemeen
+  fax: (070) 370 77 37
 valid_from: '1900-01-01'
 valid_until: '2019-11-25'
+last_mutation: '2021-03-04'
+last_verified: '2020-09-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/46794/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/46794/afdeling-productie
+  retrieved: '2026-05-16'

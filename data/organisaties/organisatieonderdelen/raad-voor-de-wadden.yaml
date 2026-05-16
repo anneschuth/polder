@@ -3,14 +3,23 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '112995'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-tcb
+parent_id: org:onderdeel-commissies-en-raden
 names:
 - value: Raad voor de Wadden
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 339 39 39
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2020-05-25'
+last_verified: '2020-05-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112995/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112995/raad-voor-de-wadden
+  retrieved: '2026-05-16'

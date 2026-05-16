@@ -3,15 +3,21 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66099'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:min-vws
 names:
 - value: Dienst
   valid_from: '1900-01-01'
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/organogram
 contact:
   website: https://www.dus-i.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-27'
+last_verified: '2025-10-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66099/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66099/dienst
+  retrieved: '2026-05-16'

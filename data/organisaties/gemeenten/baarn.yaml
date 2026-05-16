@@ -6,21 +6,162 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0308
   roo_id: '35974'
   wikidata: Q10027
+  owms: http://standaarden.overheid.nl/owms/terms/Baarn_(gemeente)
+  ictu: 00308
+  organisatiecode: gm0308
+  rsin: 001739657
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BAA
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Baarn
   abbr: Baarn
   valid_from: '1900-01-01'
+description:
+  url: https://www.baarn.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.baarn.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/35974/Gemeente_Baarn
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Besluiten mbt ruimte, verkeer en algemeen verbindende voorschriften
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.ruimtelijkeplannen.nl/landing
+      toelichting: Ruimtelijke plannen
+    - informatiecategorie: Adviezen
+      url: https://www.baarn.nl/rekenkamercommissie
+      toelichting: -Onderzoeken en rapporten van de rekenkamercommissie
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://baarn.raadsinformatie.nl/dashboard
+      toelichting: Agenda, vergaderstukken en besluiten van de gemeenteraad
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.baarn.nl/besluitenlijsten-college-van-bw
+      toelichting: Besluiten van het college van burgemeester en wethouders
+    - informatiecategorie: Beschikkingen
+      url: https://www.baarn.nl/bekendmakingen
+      toelichting: Bekendmakingen van verleende omgevingsvergunningen, aangevraagde
+        evenementenvergunningen, bestemmingsplannen, etc.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://baarn.begrotingsapp.nl/
+      toelichting: Begroting, jaarrekening, perspectiefnota en tussenrapportages
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.baarn.nl/woo/woo/zoeken/1#commonground-openwoo__result
+      toelichting: Woo-verzoeken en -besluiten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Omgevingsvergunningen e.a. vergunningen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22)))
+      toelichting: Beleidsregels, mandaat en besluiten van algemene strekking
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarn%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.baarn.nl/woo-verzoek
+organogram_url: https://www.baarn.nl/de-ambtelijke-organisatie
+afspraak:
+  telefoonnummer: (035) 548 16 11
+  url: https://www.baarn.nl/afspraak-maken
+geography:
+  oppervlakte: 33,32
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 33.32
+  aantal_inwoners: 25435
+  inwoners: '763'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 763.0
+  bevat_plaatsen_raw: Baarn, Lage Vuursche
+  bevat_plaatsen:
+  - Baarn
+  - Lage Vuursche
+council:
+  total_seats: 20
+  parties:
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: VoorBaarn
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: 50PLUS
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: Lijst Mylou Deurloo
+    aantal_zetels: 1
 contact:
   website: https://www.baarn.nl
   email: gemeente@baarn.nl
+  bezoekadres: Stationsweg 18, 3743 EN BAARN
+  postadres: Postbus 1003, 3740 BA BAARN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsweg
+    huisnummer: '18'
+    postcode: 3743 EN
+    woonplaats: BAARN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '1003'
+    postcode: 3740 BA
+    woonplaats: BAARN
+  - type: Woo-Adres
+    postbus: '1003'
+    postcode: 3740 BA
+    woonplaats: Baarn
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stationsweg
+    huisnummer: '18'
+    postcode: 3743 EN
+    woonplaats: BAARN
+  phones:
+  - nummer: (035) 548 16 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.baarn.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.baarn.nl/afspraak-maken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35974/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35974/baarn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

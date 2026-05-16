@@ -5,22 +5,110 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0896
   oin: 00000001858103242000
   kvk: '70012245'
+  owms: http://standaarden.overheid.nl/owms/terms/nstroom
+  organisatiecode: so0896
+  rsin: '858103242'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling 1Stroom
+  roo_id: '28221679'
 names:
 - value: 1Stroom
   valid_from: '1900-01-01'
+description:
+  text: 1Stroom is de (ambtelijke) organisatie die werkt voor de gemeenten Duiven
+    en Westervoort. De gemeenten zijn elk zelfstandig, met een eigen gemeenteraad
+    en college van burgemeester en wethouders. Ze maken zelf keuzes in waar geld in
+    wordt geïnvesteerd en ze stellen beleid op.
+  url: https://www.1stroom.nl/over+1stroom/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.1stroom.nl/over+1stroom/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28221695/1Stroom
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.1stroom.nl/over+1stroom/default.aspx
+      toelichting: De vergaderstukken van het Algemeen Bestuur van 1Stroom zijn onderaan
+        deze webpagina te vinden.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%221Stroom%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%221Stroom%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://formulieren.duiven.nl/verzoek-openbaarmaking-op-grond-van-de-wet-open-overheid/startpagina
+organogram_url: https://www.1stroom.nl/over+1stroom/default.aspx
+afspraak:
+  url: https://www.1stroom.nl/contact/default.aspx
 contact:
   website: https://www.1stroom.nl
   email: info@1stroom.nl
+  bezoekadres: Dorpsplein 1, 6931 CZ Westervoort
+  postadres: Postbus 6, 6920 AA Duiven
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeentehuis Westervoort
+    openbare_ruimte: Dorpsplein
+    huisnummer: '1'
+    postcode: 6931 CZ
+    woonplaats: Westervoort
+  - type: Postadres
+    postbus: '6'
+    postcode: 6920 AA
+    woonplaats: Duiven
+  - type: Woo-Adres
+    toelichting: Postadres t.b.v. Woo-verzoeken (indien digitaal indienen niet mogelijk
+      is).
+    postbus: '6'
+    postcode: 6920 AA
+    woonplaats: Duiven
+    land: Nederland
+  phones:
+  - nummer: (088) 695 30 00
+    label: algemeen
+  - nummer: (026) 317 99 11
+    label: gemeente Westervoort
+  - nummer: (0316) 27 91 11
+    label: gemeente Duiven
+  emails:
+  - email: info@1stroom.nl
+    label: algemeen
+  - email: gemeente@westervoort.nl
+    label: gemeente Westervoort
+  - email: gemeente@duiven.nl
+    label: gemeente Duiven
+  internet_addresses:
+  - url: https://www.1stroom.nl
+    label: algemeen
+  - url: https://www.westervoort.nl
+    label: gemeente Westervoort
+  - url: https://www.duiven.nl
+    label: gemeente Duiven
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2020-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28221695/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28221695/1stroom
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2018-01-01'

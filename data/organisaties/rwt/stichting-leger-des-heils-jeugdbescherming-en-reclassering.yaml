@@ -2,14 +2,42 @@ id: org:oovb-stichting-leger-des-heils-jeugdbescherming-en-reclassering
 type: rwt
 identifiers:
   roo_id: '27913752'
+  kvk: '63300664'
+  rsin: '855175990'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Leger des Heils Jeugdbescherming & Reclassering
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Spoordreef 10, 1315 GN Almere
+  postadres: Spoordreef 10, 1315 GN Almere
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spoordreef 10
+    postcode: 1315 GN
+    woonplaats: Almere
+  - type: Postadres
+    openbare_ruimte: Spoordreef 10
+    postcode: 1315 GN
+    woonplaats: Almere
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913752/stichting-leger-des-heils-jeugdbescherming-en-reclassering
+  retrieved: '2026-05-16'

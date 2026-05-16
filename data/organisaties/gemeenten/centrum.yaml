@@ -2,6 +2,9 @@ id: org:gemeente-centrum
 type: gemeente
 identifiers:
   roo_id: '21915'
+  owms: http://standaarden.overheid.nl/owms/terms/Amsterdam_-_Centrum
+  ictu: '03002'
+  organisatiecode: gm3002
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +12,48 @@ names:
   abbr: Centrum
   valid_from: '1900-01-01'
   valid_until: '2014-03-19'
+geography:
+  oppervlakte: 0,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 0.0
+  aantal_inwoners: 82203
+  inwoners: '8220300'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 8220300.0
+council:
+  parties:
+  - naam: (onbekend)
+    aantal_zetels: 0
 contact:
   website: http://www.centrum.amsterdam.nl
   email: DIV@centrum.amsterdam.nl
+  bezoekadres: Amstel 1, 1011 PN AMSTERDAM
+  postadres: Postbus 202, 1000 AE AMSTERDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Amstel
+    huisnummer: '1'
+    postcode: 1011 PN
+    woonplaats: AMSTERDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '202'
+    postcode: 1000 AE
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: (020) 256 44 44
+    label: algemeen
+  emails:
+  - email: DIV@centrum.amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.centrum.amsterdam.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-03-19'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21915/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21915/centrum
+  retrieved: '2026-05-16'

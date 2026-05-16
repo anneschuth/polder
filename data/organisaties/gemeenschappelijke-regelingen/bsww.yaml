@@ -1,27 +1,65 @@
 id: org:gr-bsww
 type: gemeenschappelijke-regeling
+subname: Belastingen SWW
 identifiers:
   oin: 00000001855700191000
   kvk: '64516393'
   roo_id: '25286025'
+  owms: http://standaarden.overheid.nl/owms/terms/bswsww
+  organisatiecode: so1002
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Belastingsamenwerking SWW-gemeenten
+  roo_id: '25286020'
 names:
 - value: Belastingsamenwerking SWW-gemeenten
   abbr: BSWW
   valid_from: '1900-01-01'
   valid_until: '2019-12-31'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.belastingensww.nl
   email: info@belastingensww.nl
+  bezoekadres: Rading 1, 1231 KB Loosdrecht
+  postadres: Postbus 241, 1200 AE Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rading
+    huisnummer: '1'
+    postcode: 1231 KB
+    woonplaats: Loosdrecht
+  - type: Postadres
+    postbus: '241'
+    postcode: 1200 AE
+    woonplaats: Hilversum
+  phones:
+  - nummer: (035) 655 91 94
+    label: algemeen
+  emails:
+  - email: info@belastingensww.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.belastingensww.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-12-31'
+last_mutation: '2021-03-23'
+last_verified: '2021-03-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25286025/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25286025/bsww
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2018-01-01'

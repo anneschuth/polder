@@ -4,17 +4,83 @@ identifiers:
   roo_id: '28211368'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10211
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Commissie van advies inzake volkenrechtelijke vraagstukken
   abbr: CAVV
   valid_from: '1900-01-01'
+description:
+  text: De Commissie van advies inzake volkenrechtelijke vraagstukken (CAVV) is een
+    orgaan dat onafhankelijk adviezen uitbrengt over internationale vraagstukken met
+    betrekking tot volkenrechtelijke kwesties. Deze adviezen worden door de CAVV aangeboden
+    aan de Eerste en Tweede Kamer en de regering.
+  url: https://www.adviescommissievolkenrecht.nl/over-de-cavv
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de Commissie van advies inzake volkenrechtelijke vraagstukken,
+    artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0009457/1998-04-17/0#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28211368/Commissie_van_advies_inzake_volkenrechtelijke_vraagstukken
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
 contact:
   website: https://www.adviescommissievolkenrecht.nl/
   email: cavv@minbuza.nl
+  postadres: Postbus 20061, 2500 EB Den Haag
+  addresses:
+  - type: Postadres
+    toelichting: Ministerie van Buitenlandse Zaken, t.a.v. DOB/CAVV
+    postbus: '20061'
+    postcode: 2500 EB
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: Ministerie van Buitenlandse Zaken T.a.v. de directie Open Overheid
+    postbus: '20061'
+    postcode: 2500 EB
+    woonplaats: Den Haag
+  emails:
+  - email: cavv@minbuza.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviescommissievolkenrecht.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviescommissievolkenrecht.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28211368/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28211368/cavv
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

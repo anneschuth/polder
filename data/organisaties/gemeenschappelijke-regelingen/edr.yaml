@@ -3,18 +3,54 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28844706'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1004
+  owms: http://standaarden.overheid.nl/owms/terms/Eems-Dollard_Regio
+  organisatiecode: so1004
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Eems Dollard Regio
+  roo_id: '28844710'
 names:
 - value: Eems Dollard Regio
   abbr: EDR
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://edr.eu
   email: edr@edr.eu
+  bezoekadres: Bunderpoort 14, 9693 CJ Bad Nieuweschans
+  postadres: Postbus 43, 9693 ZG Bad Nieuweschans
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bunderpoort
+    huisnummer: '14'
+    postcode: 9693 CJ
+    woonplaats: Bad Nieuweschans
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '43'
+    postcode: 9693 ZG
+    woonplaats: Bad Nieuweschans
+  phones:
+  - nummer: (0597) 52 18 18
+    label: algemeen
+  emails:
+  - email: edr@edr.eu
+    label: algemeen
+  internet_addresses:
+  - url: https://edr.eu
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-27'
+last_verified: '2022-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28844706/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28844706/edr
+  retrieved: '2026-05-16'
+roo_start_datum: '1996-01-01'

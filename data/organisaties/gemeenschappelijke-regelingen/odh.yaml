@@ -5,23 +5,129 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0700
   oin: 00000001851972299000
   kvk: '56093926'
+  owms: http://standaarden.overheid.nl/owms/terms/ODHL
+  btw: NL851972299B01
+  loonheffing: 851972299L01
+  organisatiecode: so0700
+  rsin: '851972299'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Haaglanden
+  roo_id: '28539467'
 names:
 - value: Omgevingsdienst Haaglanden
   abbr: ODH
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://omgevingsdiensthaaglanden.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/28539513/Omgevingsdienst_Haaglanden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Haaglanden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Haaglanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Haaglanden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://omgevingsdiensthaaglanden.nl/contact/
+organogram_url: https://omgevingsdiensthaaglanden.nl/wp-content/uploads/Organogram-2024-ODH.pdf
+afspraak:
+  email: info@odh.nl
+  telefoonnummer: (088) 833 35 55
+  url: https://omgevingsdiensthaaglanden.nl/contact/
 contact:
   website: https://omgevingsdiensthaaglanden.nl/
   email: info@odh.nl
+  bezoekadres: Zuid-Hollandplein 1, 2596 AW Den Haag
+  postadres: Postbus 14060, 2501 GB Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: C-gebouw hoofdingang van de provincie Zuid-Holland
+    openbare_ruimte: Zuid-Hollandplein
+    huisnummer: '1'
+    postcode: 2596 AW
+    woonplaats: Den Haag
+    regio: Haaglanden
+    land: Nederland
+  - type: Postadres
+    postbus: '14060'
+    postcode: 2501 GB
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: C-gebouw hoofdingang van de provincie Zuid-Holland
+    openbare_ruimte: Zuid-Hollandplein
+    huisnummer: '1'
+    postcode: 2596 AW
+    woonplaats: Den Haag
+    regio: Haaglanden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 833 35 55
+    label: Klacht, Melding, Incident
+  - nummer: (070) 218 99 00
+    label: Algemeen
+  - nummer: (070) 218 99 02
+    label: Toezicht en Handhaving
+  - nummer: (070) 218 99 03
+    label: Vergunningverlening
+  - nummer: (070) 218 99 04
+    label: Directiesecretariaat
+  emails:
+  - email: info@odh.nl
+    label: Algemeen
+  - email: toezicht@odh.nl
+    label: Toezicht en Handhaving
+  - email: vergunningen@odh.nl
+    label: Vergunningaanvragen
+  internet_addresses:
+  - url: https://omgevingsdiensthaaglanden.nl/
+    label: Website
+  contact_forms:
+  - url: https://omgevingsdiensthaaglanden.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Facebook ODH
+    url: https://www.facebook.com/p/Omgevingsdienst-Haaglanden-100069378752285/
+  - platform: Instagram
+    gebruikersnaam: instagram ODH
+    url: https://www.instagram.com/omgevingsdiensthaaglanden/
+  - platform: LinkedIn
+    gebruikersnaam: LinkedIn ODH
+    url: https://www.linkedin.com/company/omgevingsdienst-haaglanden/posts/?feedView=all
+  - platform: X
+    gebruikersnaam: X-ODH
+    url: https://x.com/odhl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2024-10-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28539513/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28539513/odh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-07-01'

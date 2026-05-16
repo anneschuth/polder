@@ -6,22 +6,133 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0744
   roo_id: '22221'
   wikidata: Q9811
+  owms: http://standaarden.overheid.nl/owms/terms/Baarle-Nassau_(gemeente)
+  ictu: '00744'
+  organisatiecode: gm0744
+  rsin: '001172657'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BNS
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Baarle-Nassau
   abbr: Baarle-Nassau
   valid_from: '1900-01-01'
-  valid_until: '2026-09-30'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/22221/Gemeente_Baarle-Nassau
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarle-Nassau%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarle-Nassau%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Baarle-Nassau%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.baarle-nassau.nl/woo
+organogram_url: https://www.abg.nl/documents/Organogram-ABG-gemeenten-en-organisatie.pdf
+afspraak:
+  telefoonnummer: (088) 382 10 00
+  url: https://www.baarle-nassau.nl/afspraak
+geography:
+  oppervlakte: 76,36
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 76.36
+  aantal_inwoners: 7256
+  inwoners: '95'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 95.0
+  bevat_plaatsen_raw: Baarle-Nassau, Castelre, Ulicoten
+  bevat_plaatsen:
+  - Baarle-Nassau
+  - Castelre
+  - Ulicoten
+council:
+  total_seats: 13
+  parties:
+  - naam: Fractie Ulicoten
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VPB
+    aantal_zetels: 3
+  - naam: BAARLE!
+    aantal_zetels: 2
 contact:
   website: https://www.baarle-nassau.nl
   email: gemeente@baarle-nassau.nl
+  bezoekadres: Singel 1, 5111 CC BAARLE-NASSAU
+  postadres: Postbus 105, 5110 AC BAARLE-NASSAU
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Singel
+    huisnummer: '1'
+    postcode: 5111 CC
+    woonplaats: BAARLE-NASSAU
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '105'
+    postcode: 5110 AC
+    woonplaats: BAARLE-NASSAU
+  - type: Woo-Adres
+    postbus: '105'
+    postcode: 5110 CC
+    woonplaats: Baarle-Nassau
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Singel
+    huisnummer: '1'
+    postcode: 5111 CC
+    woonplaats: Baarle-Nassau
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Singel
+    huisnummer: '1'
+    postcode: 5111 CC
+    woonplaats: BAARLE-NASSAU
+  phones:
+  - nummer: (088) 382 10 00
+    label: algemeen
+  emails:
+  - email: gemeente@baarle-nassau.nl
+    label: algemeen
+  - email: info@baarle-nassau.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.baarle-nassau.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.baarle-nassau.nl/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2026-09-30'
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22221/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22221/gemeente-baarle-nassau
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

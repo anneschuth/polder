@@ -2,15 +2,49 @@ id: org:oovb-stichting-mayday-rescue-foundation
 type: rwt
 identifiers:
   roo_id: '27914076'
+  kvk: '64492915'
+  rsin: '855689493'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Mayday Rescue Foundation
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: De Cuserstraat 93 -3e en 4e verdieping, 1081 CN Amsterdam
+  postadres: De Cuserstraat 93 -3e en 4e verdieping, 1081 CN Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Cuserstraat
+    huisnummer: '93'
+    huisnummer_toevoeging: -3e en 4e verdieping
+    postcode: 1081 CN
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: De Cuserstraat
+    huisnummer: '93'
+    huisnummer_toevoeging: -3e en 4e verdieping
+    postcode: 1081 CN
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914076/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914076/stichting-mayday-rescue-foundation
+  retrieved: '2026-05-16'

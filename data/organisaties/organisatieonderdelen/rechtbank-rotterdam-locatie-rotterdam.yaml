@@ -7,9 +7,25 @@ parent_id: org:rechtbank-rotterdam
 names:
 - value: Rechtbank Rotterdam, locatie Rotterdam
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Wilhelminaplein 100-125, 3072 AK Rotterdam
+  postadres: Postbus 50950, 3007 BL Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: 100-125
+    postcode: 3072 AK
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '50950'
+    postcode: 3007 BL
+    woonplaats: Rotterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-12-30'
+last_verified: '2025-09-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046894/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046894/rechtbank-rotterdam-locatie-rotterdam
+  retrieved: '2026-05-16'

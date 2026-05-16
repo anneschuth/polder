@@ -3,16 +3,36 @@ type: adviescollege
 identifiers:
   roo_id: '30259055'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12377
+  organisatiecode: oorg12377
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Adviescommissie Stimuleringsregeling Technologie in Ondersteuning en Zorg
   abbr: Adviescommissie STOZ
   valid_from: '1900-01-01'
   valid_until: '2027-01-01'
+description:
+  text: De adviescommissie Stimuleringsregeling Technologie in Ondersteuning en Zorg
+    adviseert de minister van Volksgezondheid, Welzijn en Sport (VWS) over subsidieaanvragen
+    boven een bedrag van &euro; 125.000, op grond van de Stimuleringsregeling Technologie
+    in Ondersteuning en Zorg (STOZ). Hierbij hanteert de commissie de beoordelingscriteria
+    zoals vermeld in de bijlage van de STOZ.Deze adviescommissie is geen formeel adviescollege
+    en valt niet onder de Kaderwet adviescolleges.
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit adviescommissie Stimuleringsregeling Technologie in
+    Ondersteuning en Zorg, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0049888/2024-11-30#Artikel2
 valid_from: '1900-01-01'
 valid_until: '2027-01-01'
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30259055/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30259055/adviescommissie-stimuleringsregeling-technologie-in-ondersteuning-en-zorg
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-07-01'

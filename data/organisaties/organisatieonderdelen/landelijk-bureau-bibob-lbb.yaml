@@ -7,9 +7,22 @@ parent_id: org:agentschap-justis
 names:
 - value: Landelijk Bureau Bibob (LBB)
   valid_from: '1900-01-01'
+contact:
+  postadres: Postbus 20300, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20300'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 998 22 50
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-14'
+last_verified: '2026-04-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12190/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12190/landelijk-bureau-bibob-lbb
+  retrieved: '2026-05-16'

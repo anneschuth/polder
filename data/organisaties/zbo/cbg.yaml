@@ -5,20 +5,149 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000204
   oin: 00000004000000038000
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: College ter Beoordeling van Geneesmiddelen
   abbr: CBG
   valid_from: '1900-01-01'
+description:
+  text: Als onafhankelijke autoriteit reguleert het CBG de kwaliteit, werking en veiligheid
+    van een medicijn, en stimuleert het CBG het juiste gebruik door de juiste patiënt.Onze
+    organisatie bestaat uit een agentschap ('het aCBG') en een zelfstandig bestuursorgaan
+    ('het College'). Het agentschap is verantwoordelijk voor de voorbereiding en uitvoering
+    van besluiten van het College. Het College geeft op basis van die voorbereidende
+    beoordeling een onafhankelijk en deskundig oordeel.Verder is het agentschap verantwoordelijk
+    voor de geneesmiddelenbewaking in Nederland en voor de ontvangst van meldingen
+    van medicijntekorten. En de Nederlandse vertegenwoordigers in de comités van het
+    Europees medicijnagentschap EMA werken bij het agentschap.Naast de beoordeling
+    van medicijnen voor mensen beoordeelt het agentschap ook diergeneesmiddelen en
+    nieuwe voedingsmiddelen. De uiteindelijke verantwoordelijkheid voor de beoordeling
+    daarvan ligt bij het ministerie van LVVN (diergeneesmiddelen) en het ministerie
+    van VWS (nieuwe voedingsmiddelen).
+  url: https://www.cbg-meb.nl/onderdelen/over-cbg
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Geneesmiddelenwet, artikel 2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Geneesmiddelenwet/article=2
+taken_en_bevoegdheden: Het College ter Beoordeling van Geneesmiddelen is verantwoordelijk
+  voor het toelaten van geneesmiddelen, beslist over de afleverstatus en is in Nederland
+  belast met de geneesmiddelenbewaking, een en ander overeenkomstig bij of krachtens
+  Europese richtlijnen en de Geneesmiddelenwet gegeven voorschriften.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cbg-meb.nl/onderwerpen/over-ons-de-organisatie/over-cbg-integriteit-openbaarheid-en-financien/over-cbg-openbaarheid-van-informatie
+      overzichtURL: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.minvws.nl/
+      toelichting: Publicatie op het platform van het MInisterie van VWS
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.cbg-meb.nl/onderwerpen/handelsvergunning-cbg-beleid/hv-beleidsdocumenten
+      toelichting: Beleidsdocumenten
+    - informatiecategorie: Convenanten
+      url: https://open.minvws.nl/zoeken?sort=_score&sortorder=desc&doctype%5B%5D=covenant&doctype%5B%5D=covenant.publication&doctype%5B%5D=covenant.covenant_main_document&dep%5B%5D=CBG%7CCollege+ter+Beoordeling+van+Geneesmiddelen
+      toelichting: Publicatie op het platform van het MInisterie van VWS
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.cbg-meb.nl/onderwerpen/over-ons-ons-werk/over-cbg-jaarverslag
+      toelichting: Overzicht jaarverslagen CBG
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22College+ter+Beoordeling+van+Geneesmiddelen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Publicaties in de Staatscourant
+organogram_url: https://www.cbg-meb.nl/onderwerpen/over-ons-de-organisatie/over-cbg-het-agentschap
+afspraak:
+  telefoonnummer: (088) 224 80 00
+  url: https://www.cbg-meb.nl/contact
+personnel:
+  aantalFte: 3,5
+  peildatumFte: '2019-12-31'
+  toelichtingFte: Het College bestaat uit maximaal 17 leden, inclusief voorzitter.
+    De leden zijn experts op medisch of farmaceutisch terrein, die de functie van
+    Collegelid naast hun dagelijks werk vervullen. Met hun inzet voor het college
+    vervullen zij de bovenstaande fte.
 contact:
   website: https://www.cbg-meb.nl
   email: BBR@cbg-meb.nl
+  bezoekadres: Graadt van Roggenweg 500, 3531 AH Utrecht
+  postadres: Postbus 8275, 3503 RG Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Graadt van Roggenweg
+    huisnummer: '500'
+    postcode: 3531 AH
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '8275'
+    postcode: 3503 RG
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '8275'
+    postcode: 3503 RG
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 224 80 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cbg-meb.nl
+    label: algemeen
+  - url: https://www.cbg-meb.nl/onderwerpen/over-ons-de-organisatie
+    label: over het CBG
+  contact_forms:
+  - url: https://www.cbg-meb.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: LinkedIn-pagina CBG
+    url: https://www.linkedin.com/company/college-ter-beoordeling-van-geneesmiddelen/
+  - platform: LinkedIn
+    gebruikersnaam: CBG Showcasepagina Regulatory Science
+    url: https://www.linkedin.com/showcase/regulatory-science-cbg-meb/
+  - platform: Instagram
+    gebruikersnaam: Instagram CBG
+    url: https://www.instagram.com/medicijnnl/
+  - platform: YouTube
+    gebruikersnaam: CBG op YouTube
+    url: https://www.youtube.com/@medicijnnl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248840/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248840/cbg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -27,3 +156,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000204
   retrieved: '2026-05-09'
+roo_start_datum: '1964-01-01'

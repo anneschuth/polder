@@ -2,8 +2,12 @@ id: org:gr-regionale-sociale-dienst-hoeksche-waard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964291'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionale Sociale Dienst Hoeksche Waard
+  roo_id: '24964286'
 names:
 - value: Regionale Sociale Dienst Hoeksche Waard
   valid_from: '1900-01-01'
@@ -11,9 +15,33 @@ names:
 contact:
   website: http://www.rsdhw.nl
   email: info@rsdhw.nl
+  bezoekadres: Beetsstraat 7c, 3261 PL Oud-Beijerland
+  postadres: Postbus 1568, 3260 BB Oud-Beijerland
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Beetsstraat
+    huisnummer: 7c
+    postcode: 3261 PL
+    woonplaats: Oud-Beijerland
+  - type: Postadres
+    postbus: '1568'
+    postcode: 3260 BB
+    woonplaats: Oud-Beijerland
+  phones:
+  - nummer: (0186) 63 01 00
+    label: algemeen
+  emails:
+  - email: info@rsdhw.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rsdhw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-01-01'
+last_mutation: '2020-10-27'
+last_verified: '2020-10-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964291/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964291/regionale-sociale-dienst-hoeksche-waard
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-23'

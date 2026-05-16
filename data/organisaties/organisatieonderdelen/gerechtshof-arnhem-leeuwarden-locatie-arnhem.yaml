@@ -7,9 +7,26 @@ parent_id: org:rechtbank-gerechtshof-arnhem-leeuwarden
 names:
 - value: Gerechtshof Arnhem-Leeuwarden, locatie Arnhem
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Walburgstraat 2-4, 6811 CD Arnhem
+  postadres: Postbus 9030, 6800 EM Arnhem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie
+    openbare_ruimte: Walburgstraat
+    huisnummer: 2-4
+    postcode: 6811 CD
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9030'
+    postcode: 6800 EM
+    woonplaats: Arnhem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2026-02-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28039040/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28039040/gerechtshof-arnhem-leeuwarden-locatie-arnhem
+  retrieved: '2026-05-16'

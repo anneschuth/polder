@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28751742'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-obf
+parent_id: org:onderdeel-shared-service-organisatie
 names:
 - value: Uitvoeringsorganisatie Bedrijfsvoering Rijk
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2024-07-02'
+last_verified: '2024-07-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28751742/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28751742/uitvoeringsorganisatie-bedrijfsvoering-rijk
+  retrieved: '2026-05-16'

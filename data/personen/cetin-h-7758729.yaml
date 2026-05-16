@@ -3,7 +3,7 @@ name:
   full: H.A. Çetin
   family: Çetin
   given: H.A.
-  initials: H.
+  initials: H.A.
 mandaten:
 - id: 1d313359-e7d5-4d7a-98e1-a6551ea81834
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7762693
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30520599
 - id: 9a1f54e0-041c-4765-ada5-afb33b5f7a33
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

@@ -2,16 +2,44 @@ id: org:stichting-landelijke-inspectiedienst-dierenwelzijn
 type: rwt
 identifiers:
   roo_id: '27913581'
+  kvk: '41193523'
+  rsin: '809145819'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting Landelijke Inspectiedienst Dierenwelzijn
   valid_from: '1900-01-01'
+description:
+  text: De LID is een onafhankelijke stichting die de dierenwelzijnswetgeving in Nederland
+    handhaaft en toezicht houdt op de naleving ervan. De inspectiedienst richt zich
+    daarbij op het welzijn van hobby- en gezelschapsdieren. De LID telt 25 inspecteurs
+    en werkt in opdracht van het ministerie van Landbouw, Natuur en Voedselkwaliteit.
+  url: https://www.inspectiedienst.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.inspectiedienst.nl/
+  bezoekadres: Regulusweg 11, 2516 AC Den Haag
+  postadres: Postbus 84051, 2508 AB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Regulusweg 11
+    postcode: 2516 AC
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '84051'
+    postcode: 2508 AB
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-08'
+last_verified: '2025-06-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913581/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913581/stichting-landelijke-inspectiedienst-dierenwelzijn
+  retrieved: '2026-05-16'

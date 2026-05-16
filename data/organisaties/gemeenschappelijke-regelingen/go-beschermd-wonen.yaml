@@ -3,17 +3,73 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29546239'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1098
+  owms: http://standaarden.overheid.nl/owms/terms/gobw
+  organisatiecode: so1098
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Beschermd Wonen regio Zuid-Kennemerland, IJmond
+    en Haarlemmermeer
+  roo_id: '29546244'
 names:
 - value: GO Beschermd Wonen
   valid_from: '1900-01-01'
+description:
+  text: 1. Het GO Beschermd Wonen voert taken op het gebied van Beschermd Wonen voor
+    haar deelnemers uit, of doet deze uitvoeren.2. Het GO Beschermd Wonen stelt, op
+    voorstel van de colleges, bij unaniem besluit, in een dienstverleningshandvest
+    vast welke taken door het GO Beschermd Wonen regionaal worden uitgevoerd en onder
+    welke voorwaarden dit gebeurt.3. Het GO Beschermd Wonen kan, indien de colleges
+    daartoe besluiten, ook besluiten taken uit te voeren of te laten uitvoeren op
+    aanverwante beleidsterreinen.4. Het GO Beschermd Wonen kan in aanvulling op de
+    regionale taken, bedoeld in het tweede en derde lid, op verzoek voor deelnemers
+    lokale taken uitvoeren of doen uitvoeren. Het GO Beschermd Wonen besluit naar
+    aanleiding van dit verzoek in hoeverre en onder welke voorwaarden deze lokale
+    taken kunnen worden uitgevoerd. Het GO Beschermd Wonen stelt dit besluit vast
+    bij unanimiteit.5. In aanvulling op het vierde lid komt het GO Beschermd Wonen
+    met elke gemeente, die een verzoek doet voor het uitvoeren van lokale taken, bedoeld
+    in het vierde lid, een dienstverleningsovereenkomst overeen waarin wordt gespecificeerd
+    welke taken als bedoeld in het vierde lid, het GO Beschermd Wonen voor die gemeente
+    uitvoert of doet uitvoeren en onder welke inhoudelijke en financiële voorwaarden
+    dit plaatsvindt.
+  url: https://zoek.officielebekendmakingen.nl/gmb-2024-10226.html
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: www.haarlem.nl
   email: teamregionalebwtaken@haarlem.nl
+  bezoekadres: Zijlvest 39, 2011 VB Haarlem
+  postadres: Postbus 511, 2003 PB Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zijlvest
+    huisnummer: '39'
+    postcode: 2011 VB
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '511'
+    postcode: 2003 PB
+    woonplaats: Haarlem
+  phones:
+  - nummer: 14 023
+    label: Gemeente Haarlem
+  emails:
+  - email: teamregionalebwtaken@haarlem.nl
+    label: Gemeente Haarlem
+  internet_addresses:
+  - url: www.haarlem.nl
+    label: Gemeente Haarlem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2024-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29546239/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29546239/go-beschermd-wonen
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

@@ -1,22 +1,137 @@
 id: org:zbo-stichting-nederlands-letterenfonds
 type: zbo
+subname: Letterenfonds
 identifiers:
   roo_id: '28212081'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000130
+  kvk: '41202221'
+  rsin: 004080701
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Nederlands Letterenfonds
   valid_from: '1900-01-01'
+description:
+  text: Het Nederlands Letterenfonds is in 2010 ontstaan uit een fusie van de Stichting
+    Fonds voor de Letteren en de Stichting Nederlands Literair Productie- en Vertalingenfonds.
+  url: https://www.letterenfonds.nl/over-het-fonds
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Zover het een besluit betreft dat het bestuur van een fonds neemt
+        ter uitvoering van de in art. 9, eerste lid, van de wet op het specifiek cultuurbeleid
+        bedoelde taak.
+wettelijke_grondslagen:
+- opschrift: Wet op het specifiek cultuurbeleid, artikel 9
+  referentie: http://wetten.overheid.nl/BWBR0005904/
+taken_en_bevoegdheden: Het Nederlands Letterenfonds heeft als voornaamste doelstelling
+  het bevorderen van de volgende zaken:* de kwaliteit en diversiteit van de Nederlands-,
+  Fries- en Papiamentstalige letteren en de kwaliteit en diversiteit van literaire
+  werken in de Nederlandse gebarentaal;* de kwaliteit en diversiteit van de literatuur
+  uit andere taalgebieden in Nederlandse, Friese of Papiamentse vertaling of vertaling
+  in de Nederlandse gebarentaal;* de vertaling van kwalitatief hoogstaande oorspronkelijk
+  Nederlands-, Fries-, en Papiamentstalige literaire werken en literaire werken in
+  de Nederlandse gebarentaal in andere talen dan het Nederlands, het Fries en het
+  Papiaments, alsmede de internationale verspreiding van deze vertalingen en voorts
+  al hetgeen daarmee verband houdt of daaraan bevorderlijk kan zijn.
+evaluations:
+- datum: '2024-04-09'
+  kamerstuknummer: TK 32820 nr. 522
+  referentie: https://zoek.officielebekendmakingen.nl/blg-1136930
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.letterenfonds.nl/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/28212081/Stichting_Nederlands_Letterenfonds
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stichting+Nederlands+Letterenfonds%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.letterenfonds.nl/woo-verzoeken
+afspraak:
+  email: post@letterenfonds.nl
+  telefoonnummer: (020) 520 73 00
+  url: https://www.letterenfonds.nl/contact
+personnel:
+  aantalFte: 30,4
+  peildatumFte: '2022-12-31'
 contact:
   website: http://www.letterenfonds.nl/
   email: post@letterenfonds.nl
+  bezoekadres: Nieuwe Prinsengracht 89, 1018 VR Amsterdam
+  postadres: Postbus 16588, 1001 RB Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Prinsengracht
+    huisnummer: '89'
+    postcode: 1018 VR
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '16588'
+    postcode: 1001 RB
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    postbus: '16588'
+    postcode: 1001 RB
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (020) 520 73 00
+    label: algemeen
+  emails:
+  - email: post@letterenfonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.letterenfonds.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.letterenfonds.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Nederlands Letterenfonds
+    url: https://www.facebook.com/Letterenfonds/
+  - platform: Instagram
+    gebruikersnaam: Nederlands Letterenfonds
+    url: https://www.instagram.com/letterenfonds/
+  - platform: X
+    gebruikersnaam: '@letterenfonds'
+    url: https://twitter.com/letterenfonds
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212081/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212081/stichting-nederlands-letterenfonds
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -25,3 +140,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000130
   retrieved: '2026-05-09'
+roo_start_datum: '2010-01-01'

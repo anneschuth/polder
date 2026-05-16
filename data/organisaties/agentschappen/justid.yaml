@@ -4,23 +4,118 @@ identifiers:
   oin: '00000004000000002000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10249
   roo_id: '71277'
+  owms: http://standaarden.overheid.nl/owms/terms/justid
+  kvk: '85039713'
+  rsin: '863482892'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Justitiële Informatiedienst
   abbr: Justid
   valid_from: '1900-01-01'
+description:
+  text: 'De Justitiële Informatiedienst (Justid) is een onderdeel van het ministerie
+    van Justitie en Veiligheid. Wij zorgen ervoor dat cruciale informatie beschikbaar
+    is op het juiste moment voor de juiste persoon. Dat is onze missie. In de strijd
+    voor een veilige en rechtvaardige samenleving helpt de Justitiële Informatiedienst
+    met betrouwbare informatie en slimme oplossingen. Wij bouwen aan een krachtige
+    verbinding tussen mens, informatie en technologie.Vingerafdrukken, informatie
+    over de gezinssituatie, een strafverleden of de geldigheid van een verblijfsvergunning.
+    Detentie-informatie voor slachtoffers en burgemeesters wanneer een dader weer
+    vrijkomt. Enkele voorbeelden van informatie die wij, via onze ICT-voorzieningen,
+    beschikbaar stellen. Informatie die strikt vertrouwelijk is en met veel zorg moet
+    worden behandeld: het gaat immers over mensen. En dat is ons werk; zorgen dat
+    de juiste informatie beschikbaar is over een persoon. Wij maken dit mogelijk door
+    slim gebruik te maken van bestaande technologie en door innovaties en creativiteit
+    te stimuleren.'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.justid.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/71277/Justitiele_Informatiedienst
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.justid.nl/woo
+      toelichting: Hier zijn alle Woo-verzoeken en besluiten welke door Justid gepubliceerd
+        zijn terug te vinden.
+  wooVerzoek:
+    url: https://www.justid.nl/woo
+organogram_url: https://www.justid.nl/onderwerpen/o/organogram
+afspraak:
+  email: info@justid.nl
+  telefoonnummer: (088) 998 90 00
+  url: https://www.justid.nl/contact
 contact:
   website: https://www.justid.nl
   email: info@justid.nl
+  bezoekadres: Burgemeester Raveslootsingel 2, 7607 GK Almelo
+  postadres: Postbus 337, 7600 AH Almelo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Raveslootsingel
+    huisnummer: '2'
+    postcode: 7607 GK
+    woonplaats: Almelo
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    openbare_ruimte: Postbus
+    huisnummer: '337'
+    postcode: 7600 AH
+    woonplaats: Almelo
+  - type: Woo-Adres
+    postbus: '337'
+    postcode: 7600 AH
+    woonplaats: Almelo
+    land: NL
+  phones:
+  - nummer: (088) 998 90 00
+    label: algemeen
+  emails:
+  - email: info@justid.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.justid.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.justid.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71277/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71277/justid
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2022-01-01'

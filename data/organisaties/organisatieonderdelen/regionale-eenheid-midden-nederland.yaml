@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150940'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Midden-Nederland
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Kroonstraat 25, 3511 RC Utrecht
+  postadres: Postbus 8300, 3503 RH Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische Zaken
+    openbare_ruimte: Kroonstraat
+    huisnummer: '25'
+    postcode: 3511 RC
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '8300'
+    postcode: 3503 RH
+    woonplaats: Utrecht
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-18'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150940/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150940/regionale-eenheid-midden-nederland
+  retrieved: '2026-05-16'

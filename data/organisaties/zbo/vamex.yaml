@@ -3,19 +3,77 @@ type: zbo
 identifiers:
   roo_id: '27623191'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000123
+  kvk: '27186724'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Vaarbewijs- en marifoonexamens
   abbr: Vamex
   valid_from: '1900-01-01'
   valid_until: '2019-12-31'
+description:
+  text: in 2018 was het aantal fte 7,0 (31-12-2018)
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Binnenvaartwet artikel 29, lid 1
+  referentie: http://wetten.overheid.nl/BWBR0023009/
+taken_en_bevoegdheden: '* De Stichting Vamex is aangewezen als exameninstelling voor
+  de examens Klein Vaarbewijs en het examen CWO Groot Motorschip. Vamex geeft tevens
+  het Klein Vaarbewijs en het Groot Pleziervaartbewijs af.* Daarnaast verzorgt het
+  de organisatie van examens voor het Basiscertificaat Marifonie (voor het ministerie
+  van EZ).* Vamex geeft ook veel vaarbewijzen af die door burgers vrijwillig (zonder
+  verplichting door wet- en regelgeving) worden gehaald.'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+personnel:
+  aantalFte: 8,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.vamex.nl
   email: info@vamex.nl
+  bezoekadres: Maria Montessorilaan 21, 2719 DB Zoetermeer
+  postadres: Postbus 876, 2700 AW Zoetermeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maria Montessorilaan
+    huisnummer: '21'
+    postcode: 2719 DB
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '876'
+    postcode: 2700 AW
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (088) 456 45 67
+    label: algemeen
+  emails:
+  - email: info@vamex.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.vamex.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-12-31'
+last_mutation: '2020-08-13'
+last_verified: '2020-08-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27623191/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27623191/vamex
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-01-01'

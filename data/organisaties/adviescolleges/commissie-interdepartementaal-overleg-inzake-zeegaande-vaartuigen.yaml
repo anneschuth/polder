@@ -4,12 +4,26 @@ identifiers:
   roo_id: '28470067'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Commissie interdepartementaal Overleg inzake Zeegaande Vaartuigen
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Instelling Commissie interdepartementaal Overleg inzake Zeegaande Vaartuigen
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0015054
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-12'
+last_verified: '2021-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28470067/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28470067/commissie-interdepartementaal-overleg-inzake-zeegaande-vaartuigen
+  retrieved: '2026-05-16'

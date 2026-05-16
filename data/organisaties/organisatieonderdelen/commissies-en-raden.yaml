@@ -1,19 +1,30 @@
 id: org:onderdeel-commissies-en-raden
 type: organisatieonderdeel
 identifiers:
-  roo_id: '13594'
+  roo_id: '112993'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-overleg-en-adviescommissies
+parent_id: org:min-ienw
 names:
+- value: Commissies en raden
+  valid_from: '1900-01-01'
+  valid_until: '2018-01-01'
 - value: Commissies en Raden
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+description:
+  text: TOELICHTINGOnder deze rubriek vallen geen externe adviescolleges.
 contact:
   website: http://www.rsj.nl
   email: college@toezichtkansspelen.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
-valid_until: '2018-11-15'
+valid_until: '2018-01-01'
+last_mutation: '2020-05-25'
+last_verified: '2020-05-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13594/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112993/commissies-en-raden
+  retrieved: '2026-05-16'

@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '98819'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie voor Justitie en Veiligheid (J&V)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/j_v
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/j_v
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98819/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98819/commissie-voor-justitie-en-veiligheid-j-en-v
+  retrieved: '2026-05-16'

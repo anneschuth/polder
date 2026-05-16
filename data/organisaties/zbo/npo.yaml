@@ -3,20 +3,104 @@ type: zbo
 identifiers:
   roo_id: '28212037'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000160
+  kvk: '32043579'
+  rsin: 009025509
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Nederlandse Publieke Omroep
   abbr: NPO
   valid_from: '1900-01-01'
+description:
+  text: De Nederlandse Publieke Omroep (NPO) is het sturings- en samenwerkingsorgaan
+    dat verantwoordelijk is voor het uitvoeren van de publieke mediataken op landelijk
+    niveau, zoals vastgelegd in de Mediawet 2008.
+  url: https://npo.nl/overnpo/organisatie-npo
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Mediawet 2008, artikel 2.2
+  referentie: https://wetten.overheid.nl/BWBR0025028/2026-01-01#Hoofdstuk2_Titeldeel2.2_Afdeling2.2.1_Paragraaf2.2.1.1_Artikel2.2
+taken_en_bevoegdheden: De Nederlandse Publieke Omroep (NPO) heeft als belangrijkste
+  taken:* het bevorderen van samenwerking en coördinatie binnen de landelijke publieke
+  omroep;* het indelen van de zendtijd van instellingen die landelijke publieke zendtijd
+  hebben verkregen;* de bekostiging van de instellingen die landelijke publieke zendtijd
+  hebben verkregen.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212037/Nederlandse_Publieke_Omroep
+organogram_url: https://npo.nl/overnpo/organisatie-npo/organogram-en-statuten
+personnel:
+  aantalFte: 549,6
+  peildatumFte: '2024-12-31'
 contact:
   website: https://npo.nl/overnpo
+  bezoekadres: Bart de Graaffweg 2, 1217 ZL Hilversum
+  postadres: Postbus 26444, 1202 JJ Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bart de Graaffweg
+    huisnummer: '2'
+    postcode: 1217 ZL
+    woonplaats: Hilversum
+  - type: Woo-Adres
+    toelichting: NPO
+    postbus: '26444'
+    postcode: 1202 JJ
+    woonplaats: Hilversum
+  - type: Postadres
+    toelichting: NPO
+    postbus: '26444'
+    postcode: 1202 JJ
+    woonplaats: Hilversum
+  phones:
+  - nummer: (035) 677 88 99
+    label: algemeen
+  - nummer: (035) 677 57 55
+    label: klantenservice
+  internet_addresses:
+  - url: https://npo.nl/overnpo
+    label: algemeen
+  contact_forms:
+  - url: https://npo.nl/overnpo/contact-npo
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: NPO
+    url: https://www.linkedin.com/company/npo/?originalSubdomain=nl
+  - platform: Facebook
+    gebruikersnaam: NPO
+    url: https://www.facebook.com/WerkenbijNPO/
+  - platform: Instagram
+    gebruikersnaam: '@npo_actueel'
+    url: https://www.instagram.com/npo_actueel
+  - platform: X
+    gebruikersnaam: '@NPO_Actueel'
+    url: https://x.com/npo_actueel
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212037/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212037/npo
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -25,3 +109,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000160
   retrieved: '2026-05-09'
+roo_start_datum: '1988-01-01'

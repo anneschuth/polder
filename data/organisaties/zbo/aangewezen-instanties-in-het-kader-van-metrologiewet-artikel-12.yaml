@@ -4,13 +4,44 @@ identifiers:
   roo_id: '26140453'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000219
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Aangewezen instanties in het kader van Metrologiewet artikel 12
   valid_from: '1900-01-01'
+description:
+  text: 'Ten aanzien van privaatrechtelijke deeltijd keuringsinstanties is besloten
+    dat deze niet noodzakelijk onder de Kaderwet zbo''s hoeven te worden gebracht.
+    Zie meer hierover: Kamerstukken TK 2007/08. 25 268, nr. 53 (brief van de Minister
+    van Economische Zaken).Dit is een cluster van zbo’s die niet onder de werking
+    van de kaderwet zelfstandige bestuursorganen valt. De onderliggende onderdelen
+    van dit cluster worden daarom niet in dit register benoemd.'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Metrologiewet, artikel 12
+  referentie: http://wetten.overheid.nl/BWBR0019517/
+taken_en_bevoegdheden: Het optreden alsonafhankelijketoetsende instantie bijovereenstemmingbeoordelingenvan
+  meetinstrumenten.De werkzaamheden diezij verrichten kunnen perovereenstemmingbeoordelingverschillen
+  maar omvato.a. het beoordelen vankwaliteitssystemen, hetafgeven van certificatenvan
+  typeonderzoek ofontwerponderzoek enhet keuren vanmeetinstrumenten.
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-09-17'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140453/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140453/aangewezen-instanties-in-het-kader-van-metrologiewet-artikel-12
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-01-01'

@@ -3,15 +3,55 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29836097'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1089
+  owms: http://standaarden.overheid.nl/owms/terms/jeugdwmomh
+  organisatiecode: so1089
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Jeugd en Wmo Midden-Holland 2024
+  roo_id: '29836103'
 names:
 - value: GR Jeugd en Wmo Midden-Holland
   abbr: GR JW
   valid_from: '1900-01-01'
+description:
+  text: 1. De GR JW heeft tot doel om een doelmatig regionaal zorg- en ondersteuningsaanbod
+    voor de inwoners van Midden-Holland te organiseren en de kwaliteit, continuïteit,
+    doelmatigheid en rechtmatigheid van het zorg- en ondersteuningsaanbod te waarborgen.2.
+    De GR JW heeft mede tot doel de colleges te ondersteunen bij het opstellen van
+    kaderstellend beleid en door middel van overleg dit beleid zo veel mogelijk op
+    elkaar af te stemmen en binnen de kaders van de gemeenschappelijke regeling uitvoering
+    te geven aan het door gemeenten vastgestelde beleid.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Burgemeester Jamesplein 1, 2803 PG Gouda
+  postadres: Postbus 1086, 2800 BB Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Jamesplein
+    huisnummer: '1'
+    postcode: 2803 PG
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1086'
+    postcode: 2800 BB
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: 14 0182
+    label: gemeente Gouda
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29836097/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29836097/gr-jw
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-01-01'

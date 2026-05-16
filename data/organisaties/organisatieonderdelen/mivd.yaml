@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '5455'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-def
+parent_id: org:onderdeel-bestuursstaf
 names:
 - value: Militaire Inlichtingen- en Veiligheidsdienst
   abbr: MIVD
@@ -14,9 +14,27 @@ names:
 contact:
   website: http://www.defensie.nl/servicemenu/contact/
   email: mla@mindef.nl
+  bezoekadres: Van Alkemadelaan 786, 2597 BC Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Van Alkemadelaan
+    huisnummer: '786'
+    postcode: 2597 BC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+  contact_forms:
+  - url: http://www.defensie.nl/servicemenu/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-19'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/5455/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/5455/mivd
+  retrieved: '2026-05-16'

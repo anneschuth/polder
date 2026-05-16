@@ -9,9 +9,27 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: gf.sotthewes@mindef.nl
+  bezoekadres: Luchtmachtplein 1, 4822 ZB Breda
+  postadres: Postbus 8672, 4820 BB Breda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luchtmachtplein
+    huisnummer: '1'
+    postcode: 4822 ZB
+    woonplaats: Breda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '8672'
+    postcode: 4820 BB
+    woonplaats: Breda
+  phones:
+  - nummer: (076) 544 71 12
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-11-26'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/96213/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/96213/directie-personeel-en-bedrijfsvoering
+  retrieved: '2026-05-16'

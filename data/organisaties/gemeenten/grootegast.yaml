@@ -5,6 +5,9 @@ identifiers:
   kvk: '50656082'
   roo_id: '28731'
   wikidata: Q605986
+  owms: http://standaarden.overheid.nl/owms/terms/Grootegast_(gemeente)
+  ictu: '00015'
+  organisatiecode: gm0015
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,81 @@ names:
   abbr: Grootegast
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 88,32
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 88.32
+  aantal_inwoners: 12166
+  inwoners: '137'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 137.0
+  bevat_plaatsen_raw: Doezum, Grootegast, Kornhorn, Lutjegast, Niekerk Grootegast,
+    Oldekerk, Opende, Sebaldeburen
+  bevat_plaatsen:
+  - Doezum
+  - Grootegast
+  - Kornhorn
+  - Lutjegast
+  - Niekerk Grootegast
+  - Oldekerk
+  - Opende
+  - Sebaldeburen
+council:
+  total_seats: 15
+  parties:
+  - naam: VZ2000
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: www.grootegast.nl
   email: info@grootegast.nl
+  bezoekadres: Hoofdstraat 97, 9861 AC GROOTEGAST
+  postadres: Postbus 46, 9860 AA GROOTEGAST
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat
+    huisnummer: '97'
+    postcode: 9861 AC
+    woonplaats: GROOTEGAST
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 46
+    postbus: '46'
+    postcode: 9860 AA
+    woonplaats: GROOTEGAST
+  phones:
+  - nummer: 14 0594
+    label: algemeen
+  emails:
+  - email: info@grootegast.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.grootegast.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28731/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28731/grootegast
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

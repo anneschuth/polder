@@ -2,6 +2,9 @@ id: org:gemeente-menameradiel
 type: gemeente
 identifiers:
   roo_id: '29842'
+  owms: http://standaarden.overheid.nl/owms/terms/Menameradiel
+  ictu: 01908
+  organisatiecode: gm1908
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +12,76 @@ names:
   abbr: Menameradiel
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 70,03
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 70.03
+  aantal_inwoners: 13441
+  inwoners: '191'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 191.0
+  bevat_plaatsen_raw: Berltsum, Bitgum, Bitgummole, Blessum, Boksum, Deinum, Dronryp,
+    Ingelum, Marsum, Menaam, Skingen, Slappeterp, Wier
+  bevat_plaatsen:
+  - Berltsum
+  - Bitgum
+  - Bitgummole
+  - Blessum
+  - Boksum
+  - Deinum
+  - Dronryp
+  - Ingelum
+  - Marsum
+  - Menaam
+  - Skingen
+  - Slappeterp
+  - Wier
+council:
+  total_seats: 15
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: FNP
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: www.menameradiel.nl
   email: gemeente@menameradiel.nl
+  bezoekadres: Dyksterbuorren 16, 9036 MS MENAAM
+  postadres: Postbus 3, 9036 ZW MENAAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dyksterbuorren
+    huisnummer: '16'
+    postcode: 9036 MS
+    woonplaats: MENAAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 3
+    postbus: '3'
+    postcode: 9036 ZW
+    woonplaats: MENAAM
+  phones:
+  - nummer: (0518) 45 29 00
+    label: algemeen
+  emails:
+  - email: gemeente@menameradiel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.menameradiel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-11'
+last_verified: '2018-01-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29842/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29842/menameradiel
+  retrieved: '2026-05-16'

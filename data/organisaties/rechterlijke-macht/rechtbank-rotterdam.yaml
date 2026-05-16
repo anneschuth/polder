@@ -1,23 +1,85 @@
 id: org:rechtbank-rotterdam
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000027000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10027
   roo_id: '58627'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Rotterdam
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Rotterdam
   valid_from: '1900-01-01'
+description:
+  text: De rechtbankRechtbank Rotterdam is één van de grootste rechtbanken van Nederland.
+    In Rotterdam en Dordrecht behandelen we jaarlijks 184.000 zaken. Met 1.200 medewerkers
+    zetten we ons elke dag in om recht te doen aan mensen en organisaties.Met een
+    gezonde dosis lef en focus op innovatie en samenwerking maken we de rechtspraak
+    toegankelijker. Dat doen we met projecten waarin we samen met onze ketenpartners
+    de rechtsstaat versterken, zoals wijkrechtspraak en de schuldenfunctionaris. Omdat
+    we zien dat kwetsbare mensen vaker in de knel komen in onze snel veranderende
+    samenleving.We werken samen hard om een toegankelijke, inclusieve organisatie
+    te zijn waar iedereen zich welkom voelt. Met onze uitspraken, betrokken medewerkers
+    en communicatie bouwen we elke dag aan vertrouwen in een rechtvaardige samenleving.Met
+    een haven van wereldformaat in de nabijheid is de rechtbank Rotterdam gespecialiseerd
+    op het terrein van (inter)nationale scheepvaart-, haven- en handelszaken. Daarnaast
+    is de rechtbank exclusief bevoegd op het terrein van telecommunicatierecht, mededingingsrecht
+    en financieel toezicht. Tevens behandelt de rechtbank als een van de vier rechtbanken
+    in Nederland de door het Landelijk Parket en Functioneel Parket aangeleverde zwaardere
+    strafzaken.De rechtbank is bevoegd om in zijn arrondissement recht te spreken
+    in eerste aanleg. Dit betekent dat de rechtbank de eerste instantie is die een
+    juridisch oordeel over een zaak of conflict geeft.
+  url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Rotterdam/Over-de-rechtbank/Organisatie/Paginas/default.aspx
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Rotterdam
   email: rechtbankrotterdam@rechtspraak.nl
+  bezoekadres: Wilhelminaplein 100-125, 3072 AK Rotterdam
+  postadres: Postbus 50950, 3007 BL Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: 100-125
+    postcode: 3072 AK
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '50950'
+    postcode: 3007 BL
+    woonplaats: Rotterdam
+  phones:
+  - nummer: (088) 362 60 00
+    label: algemeen
+  emails:
+  - email: rechtbankrotterdam@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Rotterdam
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rechtbank Rotterdam
+    url: https://nl.linkedin.com/company/rechtbank-rotterdam
+  - platform: Instagram
+    gebruikersnaam: Rechtbank Rotterdam
+    url: https://www.instagram.com/rechtbankrotterdam/
+  - platform: X
+    gebruikersnaam: Rechtbank Rotterdam
+    url: https://x.com/rb_rotterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58627/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58627/rechtbank-rotterdam
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

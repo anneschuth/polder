@@ -3,17 +3,105 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30478823'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1108
+  owms: http://standaarden.overheid.nl/owms/terms/odgrp
+  organisatiecode: so1108
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Groene Metropool
+  roo_id: '30478829'
 names:
 - value: Omgevingsdienst Groene Metropool
   abbr: ODGM
   valid_from: '1900-01-01'
+description:
+  text: Als inwoner en ondernemer in Gelderland kunt u op ons rekenen. Omgevingsdienst
+    Groene Metropool zorgt voor een duurzame, veilige en gezonde leefomgeving. Dit
+    doen we door taken uit te voeren op het gebied van vergunningverlening, toezicht
+    en handhaving (VTH). Daarnaast geven wij ook advies aan onze partners, zoals gemeenten
+    en provincies, en delen wij kennis over verschillende belangrijke onderwerpen.
+    Bijvoorbeeld over circulair ondernemen of gevaarlijke stoffen.
+  url: https://www.odgroenemetropool.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odgroenemetropool.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/30478823/Omgevingsdienst_Groene_Metropool
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odgroenemetropool.nl/over-ons/bestuurlijke-agenda-vergaderstukken/
+    - informatiecategorie: Beschikkingen
+      url: https://www.odgroenemetropool.nl/handhavingsbeschikkingen/
+    - informatiecategorie: Andere documenten
+      url: https://www.odgroenemetropool.nl/over-ons/jaarstukken/
+  wooVerzoek:
+    url: https://www.odgroenemetropool.nl/woo-verzoek/
 contact:
   website: https://www.odgroenemetropool.nl/
+  bezoekadres: Eusebiusbuitensingel 75, 6828 HZ Arnhem
+  postadres: Postbus 3066, 6802 DB Arnhem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Regio Arnhem
+    openbare_ruimte: Eusebiusbuitensingel
+    huisnummer: '75'
+    postcode: 6828 HZ
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres
+    toelichting: Regio Nijmegen
+    openbare_ruimte: Mariënburg
+    huisnummer: '75'
+    postcode: 6511 PS
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    toelichting: Regio Arnhem
+    postbus: '3066'
+    postcode: 6802 DB
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    toelichting: Regio Nijmegen
+    postbus: '1603'
+    postcode: 6501 BP
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (026) 377 16 00
+    label: Regio Arnhem
+  - nummer: (024) 751 77 00
+    label: Regio Nijmegen
+  internet_addresses:
+  - url: https://www.odgroenemetropool.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.odgroenemetropool.nl/contactformulier/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Omgevingsdienst Groene Metropool
+    url: https://nl.linkedin.com/company/omgevingsdienst-groene-metropool
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-18'
+last_verified: '2026-03-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30478823/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30478823/odgm
+  retrieved: '2026-05-16'
+roo_start_datum: '2026-01-01'

@@ -6,16 +6,45 @@ identifiers:
   roo_id: '21171'
   oin: 00000001808373894000
   kvk: '50618466'
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Reest_en_Wieden
+  ictu: 04831
 classification: waterschap
 parent_id: null
 names:
 - value: Reest en Wieden
   valid_from: '1900-01-01'
   valid_until: '2015-12-31'
+description:
+  text: 'Gebied: Aa en Hunze, Assen, Coevorden, De Wolden, Hardenberg, Hoogeveen,
+    Meppel, Midden-Drenthe, Noordenveld, Staphorst, Steenwijkerland, Westerveld en
+    Zwartewaterland.'
 contact:
   website: http://www.wdodelta.nl
+  bezoekadres: Blankenstein 540, 7943 PA Meppel
+  postadres: Postbus 120, 7940 AC Meppel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Blankenstein
+    huisnummer: '540'
+    postcode: 7943 PA
+    woonplaats: Meppel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '120'
+    postcode: 7940 AC
+    woonplaats: Meppel
+  phones:
+  - nummer: (0522) 27 67 67
+    label: algemeen
+  internet_addresses:
+  - url: http://www.wdodelta.nl
+    label: algemeen
+  fax: (0522) 27 67 99
 valid_from: '1900-01-01'
 valid_until: '2015-12-31'
+last_mutation: '2019-04-09'
+last_verified: '2019-04-09'
+successor_id: org:waterschap-wdodelta
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0648
@@ -24,11 +53,10 @@ sources:
   url: https://www.wikidata.org/wiki/Q2802070
   retrieved: '2026-05-13'
 - id: roo
-  url: https://organisaties.overheid.nl/21171/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21171/reest-en-wieden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'
   fields:
   - oin
-successor_id: org:waterschap-wdodelta

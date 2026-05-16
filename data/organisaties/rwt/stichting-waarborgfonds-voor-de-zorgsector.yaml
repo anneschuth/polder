@@ -2,14 +2,33 @@ id: org:stichting-waarborgfonds-voor-de-zorgsector
 type: rwt
 identifiers:
   roo_id: '30133923'
+  kvk: '30157837'
+  rsin: '808028121'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Waarborgfonds voor de Zorgsector
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Oudlaan
+    huisnummer: '4'
+    huisnummer_toevoeging: t
+    postcode: 3515 GA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133923/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133923/stichting-waarborgfonds-voor-de-zorgsector
+  retrieved: '2026-05-16'

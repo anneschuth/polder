@@ -5,22 +5,86 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0652
   oin: 00000001852259190000
   kvk: '56683464'
+  owms: http://standaarden.overheid.nl/owms/terms/wsh
+  btw: NL852259190B01
+  loonheffing: 852259190L01
+  organisatiecode: so0652
+  rsin: '852259190'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Het Waterschapshuis
+  roo_id: '29469100'
 names:
 - value: Het Waterschapshuis
   valid_from: '1900-01-01'
+description:
+  url: https://www.hetwaterschapshuis.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hetwaterschapshuis.nl/over-ons
+      overzichtURL: https://organisaties.overheid.nl/woo/27192067/Het_Waterschapshuis
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.hetwaterschapshuis.nl/ons-bestuur
+  wooVerzoek:
+    url: https://www.hetwaterschapshuis.nl/over-ons
+afspraak:
+  email: servicedesk@hetwaterschapshuis.nl
 contact:
   website: https://www.hetwaterschapshuis.nl
   email: servicedesk@hetwaterschapshuis.nl
+  bezoekadres: Stationsplein 89, 3818 LE Amersfoort
+  postadres: Postbus 2180, 3800 CD Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '89'
+    postcode: 3818 LE
+    woonplaats: Amersfoort
+  - type: Postadres
+    postbus: '2180'
+    postcode: 3800 CD
+    woonplaats: Amersfoort
+  - type: Woo-Adres
+    postbus: '2180'
+    postcode: 3800 CD
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (033) 460 31 00
+    label: algemeen
+  emails:
+  - email: servicedesk@hetwaterschapshuis.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hetwaterschapshuis.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27192067/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27192067/het-waterschapshuis
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-07-01'

@@ -4,6 +4,9 @@ identifiers:
   roo_id: '24415'
   wikidata: Q851310
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0140
+  owms: http://standaarden.overheid.nl/owms/terms/Littenseradiel
+  ictu: '00140'
+  organisatiecode: gm0140
 classification: gemeente
 parent_id: null
 names:
@@ -11,15 +14,93 @@ names:
   abbr: Littenseradiel
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 132,6
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 132.6
+  aantal_inwoners: 10930
+  inwoners: '82'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 82.0
+  bevat_plaatsen_raw: Baaium, Baard, Bears FR, Boazum, Britswert, Easterein, Easterlittens,
+    Easterwierrum, Hidaard, Hilaard, Hinnaard, Huns, Iens, Itens, Jellum, Jorwert,
+    Kubaard, Leons, Lytsewierrum, Mantgum, Reahus, Rien, Spannum, Waaksens Gem Litt,
+    Weidum, Winsum FR, Wiuwert, Wjelsryp, Wommels
+  bevat_plaatsen:
+  - Baaium
+  - Baard
+  - Bears FR
+  - Boazum
+  - Britswert
+  - Easterein
+  - Easterlittens
+  - Easterwierrum
+  - Hidaard
+  - Hilaard
+  - Hinnaard
+  - Huns
+  - Iens
+  - Itens
+  - Jellum
+  - Jorwert
+  - Kubaard
+  - Leons
+  - Lytsewierrum
+  - Mantgum
+  - Reahus
+  - Rien
+  - Spannum
+  - Waaksens Gem Litt
+  - Weidum
+  - Winsum FR
+  - Wiuwert
+  - Wjelsryp
+  - Wommels
+council:
+  total_seats: 14
+  parties:
+  - naam: SAM Littenseradiel
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: FNP
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.littenseradiel.nl
   email: info@littenseradiel.nl
+  bezoekadres: Keatsebaen 1, 8731 BN WOMMELS
+  postadres: Postbus 1, 8730 AA WOMMELS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Keatsebaen
+    huisnummer: '1'
+    postcode: 8731 BN
+    woonplaats: WOMMELS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 1
+    postbus: '1'
+    postcode: 8730 AA
+    woonplaats: WOMMELS
+  phones:
+  - nummer: 14 0515
+    label: algemeen
+  emails:
+  - email: info@littenseradiel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.littenseradiel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24415/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24415/gemeente-littenseradiel
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q851310
   retrieved: '2026-05-09'

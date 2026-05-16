@@ -6,21 +6,137 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0158
   roo_id: '32233'
   wikidata: Q10003
+  owms: http://standaarden.overheid.nl/owms/terms/Haaksbergen_(gemeente)
+  ictu: 00158
+  organisatiecode: gm0158
+  rsin: 001255824
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HKH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Haaksbergen
   abbr: Haaksbergen
   valid_from: '1900-01-01'
+description:
+  text: De gemeenteraad, het college van burgemeester en wethouders en de burgemeester
+    zijn de bestuursorganen van de gemeente Haaksbergen. De gemeenteraad (algemeen
+    bestuur) wordt ondersteund door de griffie. De gemeenteraad is het hoogste orgaan
+    en wordt door de inwoners van de gemeente gekozen. De raad neemt besluiten voor
+    de gemeente.
+  url: https://www.haaksbergen.nl/gemeentebestuur/Organisatiegegevens.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.haaksbergen.nl/gemeentebestuur/woo.html
+      overzichtURL: https://organisaties.overheid.nl/woo/32233/Gemeente_Haaksbergen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Haaksbergen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Haaksbergen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Haaksbergen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.haaksbergen.nl/gemeentebestuur/woo.html
+organogram_url: https://www.haaksbergen.nl/Docs/Bestuur/Organogram%202024%20matrixorganisatie%20Haaksbergen%20(v%201.9%20DEF).pdf
+afspraak:
+  email: gemeente@haaksbergen.nl
+  telefoonnummer: (053) 573 45 67
+  url: https://www.haaksbergen.nl/Actueel/openingstijden.html
+geography:
+  oppervlakte: 105,48
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 105.48
+  aantal_inwoners: 24313
+  inwoners: '230'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 230.0
+  bevat_plaatsen_raw: Haaksbergen
+  bevat_plaatsen:
+  - Haaksbergen
+council:
+  total_seats: 19
+  parties:
+  - naam: Nieuw Haaksbergen
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Team DAP
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.haaksbergen.nl
   email: gemeente@haaksbergen.nl
+  bezoekadres: Markt 3, 7481 HS HAAKSBERGEN
+  postadres: Postbus 102, 7480 AC HAAKSBERGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '3'
+    postcode: 7481 HS
+    woonplaats: HAAKSBERGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '102'
+    postcode: 7480 AC
+    woonplaats: HAAKSBERGEN
+  - type: Woo-Adres
+    postbus: '102'
+    postcode: 7480 AC
+    woonplaats: Haaksbergen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '3'
+    postcode: 7481 HS
+    woonplaats: HAAKSBERGEN
+  phones:
+  - nummer: (053) 573 45 67
+    label: algemeen
+  emails:
+  - email: gemeente@haaksbergen.nl
+    label: algemeen
+  - email: vergunningen@haaksbergen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.haaksbergen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.haaksbergen.nl/Actueel/openingstijden.html
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32233/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32233/haaksbergen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,17 +3,83 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966502'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0262
+  owms: http://standaarden.overheid.nl/owms/terms/wvstomgrp
+  kvk: '32154612'
+  organisatiecode: so0262
+  rsin: 005695004
 classification: gemeenschappelijke-regeling
+legal_form: Privaatrechtelijk - Overig
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werkvoorzieningsschap Tomingroep
+  roo_id: '29528928'
 names:
 - value: Werkvoorzieningsschap Tomingroep
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://tomingroep.nl/over-ons/
+      overzichtURL: https://organisaties.overheid.nl/woo/24966502/Werkvoorzieningsschap_Tomingroep
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://tomingroep.nl/over-ons/
+      toelichting: vergaderstukken van de openbare vergaderingen van het Algemeen
+        Bestuur Werkvoorzieningsschap Tomingroep
+  wooVerzoek:
+    url: https://tomingroep.nl/over-ons/
+afspraak:
+  email: info@tomingroep.nl
+  telefoonnummer: (035) 671 81 11
+  url: https://tomingroep.nl/contact/
 contact:
   website: https://www.tomingroep.nl
   email: info@tomingroep.nl
+  bezoekadres: Franciscusweg 12, 1216 SK Hilversum
+  postadres: Postbus 194, 1200 AD Hilversum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Franciscusweg
+    huisnummer: '12'
+    postcode: 1216 SK
+    woonplaats: Hilversum
+  - type: Postadres
+    postbus: '194'
+    postcode: 1200 AD
+    woonplaats: Hilversum
+  phones:
+  - nummer: (035) 671 81 11
+    label: algemeen
+  emails:
+  - email: info@tomingroep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.tomingroep.nl
+    label: algemeen
+  - url: https://www.tomingroep.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.tomingroep.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-08-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966502/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966502/werkvoorzieningsschap-tomingroep
+  retrieved: '2026-05-16'
+roo_start_datum: '1988-12-01'

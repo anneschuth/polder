@@ -6,21 +6,181 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0796
   roo_id: '40498'
   wikidata: Q9807
+  owms: http://standaarden.overheid.nl/owms/terms/'s-Hertogenbosch
+  ictu: 00796
+  organisatiecode: gm0796
+  rsin: 001709124
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HTB
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente 's-Hertogenbosch
   abbr: Den Bosch
   valid_from: '1900-01-01'
+description:
+  text: De organisatie van de gemeente ’s-Hertogenbosch bestaat uit verschillende
+    afdelingen en rollen die gezamenlijk de werking en het bestuur van de gemeente
+    ondersteunen. Aan het hoofd staat de gemeenteraad, die de volksvertegenwoordiging
+    vormt en besluiten neemt over het beleid en de toekomst van de gemeente. De griffie
+    ondersteunt de gemeenteraad met advisering, agendabeheer en administratieve taken
+    om hun werkzaamheden efficiënt te laten verlopen.Het College van Burgemeester
+    en Wethouders (B&W), bestaande uit de burgemeester en wethouders, voert het beleid
+    van de gemeenteraad uit en is verantwoordelijk voor het dagelijks bestuur van
+    de gemeente. De gemeentesecretaris is de hoogste ambtenaar en fungeert als schakel
+    tussen het College van B&W en de ambtelijke organisatie. Onder de gemeentesecretaris
+    vallen verschillende sectoren, elk met specifieke taken en verantwoordelijkheden.
+  url: https://www.s-hertogenbosch.nl/organogram/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.s-hertogenbosch.nl/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/40498/Gemeente_s-Hertogenbosch
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22's-Hertogenbosch%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22's-Hertogenbosch%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22's-Hertogenbosch%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://s-hertogenbosch.raadsinformatie.nl/modules/19/raadsvoorstellen/view
+      toelichting: besluiten Gemeenteraad
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://s-hertogenbosch.raadsinformatie.nl/modules/18/collegevoorstellen/view
+      toelichting: Besluiten College
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://s-hertogenbosch.raadsinformatie.nl/
+      toelichting: Raadsinformatie 's-Hertogenbosch
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://s-hertogenbosch.jaarverslag-2022.nl/
+      toelichting: jaarverslag gemeente 's-Hertogenbosch 2022
+  wooVerzoek:
+    url: https://formulier.s-hertogenbosch.nl/informatie-opvragen-op-grond-van-de-woo/startpagina
+organogram_url: https://www.s-hertogenbosch.nl/organogram/
+afspraak:
+  email: gemeente@s-hertogenbosch.nl
+  telefoonnummer: (073) 615 51 55
+  url: https://formulieren.s-hertogenbosch.nl/formulier/nl-NL/Burgerzaken/scGCC09.aspx/fGCC09_Email
+geography:
+  oppervlakte: 91,27
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 91.27
+  aantal_inwoners: 162295
+  inwoners: '1778'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1778.0
+  bevat_plaatsen_raw: '''s-Hertogenbosch, Nuland, Rosmalen, Vinkel'
+  bevat_plaatsen:
+  - '''s-Hertogenbosch'
+  - Nuland
+  - Rosmalen
+  - Vinkel
+council:
+  total_seats: 36
+  parties:
+  - naam: D66
+    aantal_zetels: 7
+  - naam: Leefbaar 's-Hertogenbosch
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 3
+  - naam: Rosmalens Belang
+    aantal_zetels: 3
+  - naam: De Bossche Groenen
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: gewoon ge-DREVEN
+    aantal_zetels: 1
+  - naam: PVV
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: Forum voor Democratie
+    aantal_zetels: 1
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
 contact:
   website: https://www.s-hertogenbosch.nl
   email: gemeente@s-hertogenbosch.nl
+  bezoekadres: Wolvenhoek 1, 5211 HH 'S-HERTOGENBOSCH
+  postadres: Postbus 12345, 5200 GZ 'S-HERTOGENBOSCH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wolvenhoek
+    huisnummer: '1'
+    postcode: 5211 HH
+    woonplaats: '''S-HERTOGENBOSCH'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '12345'
+    postcode: 5200 GZ
+    woonplaats: '''S-HERTOGENBOSCH'
+  - type: Woo-Adres
+    toelichting: informatieverzoek of WOO-verzoek?  https://www.s-hertogenbosch.nl/woo/
+    postbus: '12345'
+    postcode: 5200 GZ
+    woonplaats: '''s-Hertogenbosch'
+    regio: Noord- Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Wolvenhoek
+    huisnummer: '1'
+    postcode: 5200 GZ
+    ter_attentie_van: Stadsontwikkeling/Vergunning Toezicht Handhaving SO/VTH
+    woonplaats: S-HERTOGENBOSCH
+  phones:
+  - nummer: (073) 615 51 55
+    label: algemeen
+  emails:
+  - email: gemeente@s-hertogenbosch.nl
+    label: algemeen
+  - email: omgevingsloket@s-hertogenbosch.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.s-hertogenbosch.nl
+    label: algemeen
+  contact_forms:
+  - url: https://formulier.s-hertogenbosch.nl/bericht-aan-de-gemeente/startpagina?initial_data_reference=63e4c13d-0dfb-47ef-9a96-dd62e98a05e2
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40498/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40498/den-bosch
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

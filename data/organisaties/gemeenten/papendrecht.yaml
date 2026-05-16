@@ -6,21 +6,149 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0590
   roo_id: '35435'
   wikidata: Q934511
+  owms: http://standaarden.overheid.nl/owms/terms/Papendrecht_(gemeente)
+  ictu: 00590
+  organisatiecode: gm0590
+  rsin: 001919775
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_PAP
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Papendrecht
   abbr: Papendrecht
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.papendrecht.nl/Politiek_en_Bestuur/Overzicht_Politiek_en_Bestuur/Bestuurlijke_documenten/Wet_open_overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/35435/Gemeente_Papendrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://raad.papendrecht.nl/Documenten/Ingekomen-stukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Papendrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Papendrecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.papendrecht.nl/Politiek_en_Bestuur/College_van_B_W/Besluitenlijsten_Collegevergaderingen
+      toelichting: Besluitenlijsten collegevergaderingen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.papendrecht.nl/Politiek_en_Bestuur/Wet_open_overheid/Afgehandelde_Woo_verzoeken_per_dossier
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22gemeente%22)and((dt.creator==%22Papendrecht%22)or(dt.creator==%22gemeente%20Papendrecht%22)))))and((dt.type==%22andere%20vergunning%22)or(dt.type==%22evenementenvergunning%22)or(dt.type==%22exploitatievergunning%22)or(dt.type==%22omgevingsvergunning%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&pg=10&svel=Publicatiedatum&svol=Aflopend&zv=&col=AlleBekendmakingen
+  wooVerzoek:
+    url: https://www.papendrecht.nl/Politiek_en_Bestuur/Overzicht_Politiek_en_Bestuur/Bestuurlijke_documenten/Wet_open_overheid
+organogram_url: https://www.papendrecht.nl/Politiek_Bestuur/Alle_onderwerpen/Opbouw_gemeentelijke_organisatie
+afspraak:
+  email: info@papendrecht.nl
+  telefoonnummer: 14 078
+  url: https://loket.papendrecht.nl/aanvraag?schema=informatieverzoekdoorderde
+geography:
+  oppervlakte: 10,77
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 10.77
+  aantal_inwoners: 32267
+  inwoners: '2996'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2996.0
+  bevat_plaatsen_raw: Papendrecht
+  bevat_plaatsen:
+  - Papendrecht
+council:
+  total_seats: 23
+  parties:
+  - naam: PVV
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: SGP
+    aantal_zetels: 2
+  - naam: OP (Onafhankelijk Papendrecht)
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PAB (Papendrechts Algemeen Belang)
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
 contact:
   website: https://www.papendrecht.nl
   email: info@papendrecht.nl
+  bezoekadres: Markt 22, 3351 PB PAPENDRECHT
+  postadres: Postbus 11, 3350 AA PAPENDRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '22'
+    postcode: 3351 PB
+    woonplaats: PAPENDRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '11'
+    postcode: 3350 AA
+    woonplaats: PAPENDRECHT
+  - type: Woo-Adres
+    openbare_ruimte: Markt
+    huisnummer: '22'
+    postcode: 3351 PB
+    woonplaats: Papendrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '22'
+    postcode: 3351 PB
+    ter_attentie_van: Team ruimte
+    woonplaats: PAPENDRECHT
+  phones:
+  - nummer: 14 078
+    label: algemeen
+  emails:
+  - email: info@papendrecht.nl
+    label: algemeen
+  - email: info@papendrecht.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.papendrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://loket.papendrecht.nl/aanvraag?schema=informatieverzoekdoorderde
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35435/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35435/papendrecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

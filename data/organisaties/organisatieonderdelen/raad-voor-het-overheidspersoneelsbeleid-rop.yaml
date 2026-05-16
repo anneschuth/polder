@@ -7,12 +7,46 @@ parent_id: org:onderdeel-raden
 names:
 - value: Raad voor het Overheidspersoneelsbeleid (ROP)
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor het Overheidspersoneelsbeleid (ROP) is het centrale overlegplatform
+    van de gezamenlijke sectorwerkgevers en werknemers bij de overheid. De ROP heeft
+    diverse taken. Zo voert de Raad overleg met de Minister van Binnenlandse Zaken
+    en Koninkrijksrelaties en adviseert hij het kabinet en de Tweede Kamer - desgevraagd
+    of uit eigen beweging - over aangelegenheden die het overheidspersoneelsbeleid
+    betreffen. Ook doet de ROP aanbevelingen aan de overheidssectoren. Voorts is de
+    ROP verantwoordelijk voor de aard en de inhoud van de pensioenvoorziening van
+    het overheidspersoneel.
 contact:
   website: http://rop.caop.nl
   email: info@caop.nl
+  bezoekadres: Lange Voorhout 13, 2514 EA Den Haag
+  postadres: Postbus 556, 2501 CN Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '13'
+    postcode: 2514 EA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '556'
+    postcode: 2501 CN
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 376 57 65
+    label: algemeen
+  emails:
+  - email: info@caop.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://rop.caop.nl
+    label: algemeen
+  fax: (070) 345 75 28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/10557/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/10557/raad-voor-het-overheidspersoneelsbeleid-rop
+  retrieved: '2026-05-16'

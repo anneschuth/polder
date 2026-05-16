@@ -6,21 +6,153 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0785
   roo_id: '30496'
   wikidata: Q9838
+  owms: http://standaarden.overheid.nl/owms/terms/Goirle_(gemeente)
+  ictu: 00785
+  organisatiecode: gm0785
+  rsin: 001172682
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GOI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Goirle
   abbr: Goirle
   valid_from: '1900-01-01'
+description:
+  text: Aan het hoofd van de gemeentelijke organisatie staat de gemeentesecretaris.
+    Hij geeft leiding aan concernstaf en aan vier domeinen. Deze domeinen worden direct
+    aangestuurd door de domeinmanagers. Samen met de gemeentesecretaris vormen zij
+    het managementteam (MT).De organisatie bestaat uit 4 domeinen:BedrijfsvoeringFysiekSociaalPubliek
+  url: https://www.goirle.nl/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30496/Gemeente_Goirle
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Klachtoordelen
+      url: https://www.goirle.nl/wet-open-overheid/klachtoordelen
+      toelichting: Oordelen van formele klachtenprocedures
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.goirle.nl/woo-verzoek
+      toelichting: Dit betreft het Woo-verzoek en een link het Woo-besluit
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goirle%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.goirle.nl/besluitenlijsten
+      toelichting: De besluitenlijsten van het college van burgemeester en wethouders
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goirle%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: De gemeente neemt diverse besluiten, in een beschikking wordt het
+        besluit meegedeeld aan de aanvrager
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goirle%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Overige besluiten van algemene strekking
+  wooVerzoek:
+    url: https://www.goirle.nl/woo-verzoek
+organogram_url: https://www.goirle.nl/gemeentelijke-organisatie
+afspraak:
+  email: info@goirle.nl
+  telefoonnummer: (013) 531 06 10
+  url: https://goirle.mijnafspraakmaken.nl
+geography:
+  oppervlakte: 42,24
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 42.24
+  aantal_inwoners: 24886
+  inwoners: '589'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 589.0
+  bevat_plaatsen_raw: Goirle, Riel
+  bevat_plaatsen:
+  - Goirle
+  - Riel
+council:
+  total_seats: 19
+  parties:
+  - naam: Gezond Verstand Goirle Riel
+    aantal_zetels: 7
+  - naam: Lijst Riel-Goirle
+    aantal_zetels: 3
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Arbeiderspartij Goirle-Riel
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Pro Actief Goirle
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: https://www.goirle.nl
   email: info@goirle.nl
+  bezoekadres: Oranjeplein 1, 5051 LT GOIRLE
+  postadres: Postbus 17, 5050 AA GOIRLE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oranjeplein
+    huisnummer: '1'
+    postcode: 5051 LT
+    woonplaats: GOIRLE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '17'
+    postcode: 5050 AA
+    woonplaats: GOIRLE
+  - type: Woo-Adres
+    openbare_ruimte: Postbus
+    huisnummer: '17'
+    postcode: 5050 AA
+    woonplaats: Goirle
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Oranjeplein
+    huisnummer: '1'
+    postcode: 5051 LT
+    woonplaats: GOIRLE
+  phones:
+  - nummer: (013) 531 06 10
+    label: algemeen
+  emails:
+  - email: info@goirle.nl
+    label: algemeen
+  - email: info@goirle.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.goirle.nl
+    label: algemeen
+  contact_forms:
+  - url: https://samenwerkendegemeenten.equalit.nl/formulier/nl-NL/Goirle/scContactIntro.aspx/button_GLE
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30496/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30496/goirle
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

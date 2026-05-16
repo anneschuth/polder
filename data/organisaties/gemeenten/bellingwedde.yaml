@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '27352'
   wikidata: Q747965
+  owms: http://standaarden.overheid.nl/owms/terms/Bellingwedde
+  ictu: '00007'
+  organisatiecode: gm0007
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,69 @@ names:
   abbr: Bellingwedde
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 110,08
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 110.08
+  aantal_inwoners: 9261
+  inwoners: '84'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 84.0
+  bevat_plaatsen_raw: Bellingwolde, Blijham, Oudeschans, Veelerveen, Vriescheloo,
+    Wedde
+  bevat_plaatsen:
+  - Bellingwolde
+  - Blijham
+  - Oudeschans
+  - Veelerveen
+  - Vriescheloo
+  - Wedde
+council:
+  total_seats: 12
+  parties:
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Partij Neef/Van der Laan
+    aantal_zetels: 2
+  - naam: Westerwolde Lokaal
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: www.bellingwedde.nl
   email: gemeente@bellingwedde.nl
+  bezoekadres: Hoofdweg 2, 9698 AE WEDDE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdweg
+    huisnummer: '2'
+    postcode: 9698 AE
+    woonplaats: WEDDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+  phones:
+  - nummer: (0597) 53 71 00
+    label: algemeen
+  emails:
+  - email: gemeente@bellingwedde.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.bellingwedde.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-23'
+last_verified: '2018-01-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27352/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27352/bellingwedde
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q747965
   retrieved: '2026-05-09'

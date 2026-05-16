@@ -6,21 +6,201 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0518
   roo_id: '24873'
   wikidata: Q36600
+  owms: http://standaarden.overheid.nl/owms/terms/'s-Gravenhage
+  ictu: 00518
+  organisatiecode: gm0518
+  rsin: 002308836
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HAG
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Den Haag
   abbr: Den Haag
   valid_from: '1900-01-01'
+description:
+  text: Gemeente Den Haag. Den Haag telt acht stadsdelen. Elk van deze stadsdelen
+    heeft een eigen kantoor, waar de meeste diensten van de gemeente zijn gehuisvest.
+    De indeling in stadsdelen is in 1988 vastgesteld door de gemeenteraad. Elk van
+    deze stadsdelen is daarbij onderverdeeld in wijken en buurten.De Rekenkamer is
+    een onafhankelijke toezichthouder op het gemeentebestuur. Zij heeft een eigen
+    adres voor Woo-verzoeken.
+  url: https://www.denhaag.nl/nl/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.denhaag.nl/nl/beleid-en-regelgeving/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/24873/Gemeente_Den_Haag
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Andere documenten
+      url: https://open.denhaag.nl/
+      toelichting: Hier heeft u toegang tot álle informatie die door de gemeente openbaar
+        is gemaakt. Bijvoorbeeld adviezen, convenanten en documenten van participatieprojecten.
+        Of u wordt doorverwezen naar andere locaties waar documenten worden gepubliceerd.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rekenkamerdenhaag.nl/jaarverslagen/
+      toelichting: De jaarverslagen van de Rekenkamer Den Haag
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Haag%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Ruimtelijke plannen/omgevingsdocumenten.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Haag%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Omgevingsvergunningen.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Den+Haag%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Verkeersbesluiten of mededelingen.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.cbs.nl/nl-nl/onze-diensten/cbs-urban-data-centers/locaties/cbs-urban-data-center-den-haag
+      toelichting: Onderzoeksprojecten en rapporten van het CBS Urban Data Center/Den
+        Haag
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://denhaag.incijfers.nl/homedh.aspx
+      toelichting: Den Haag in Cijfers. Informatie over de stad en haar inwoners.
+        Van heel Den Haag en per stadsdeel, wijk en buurt.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rekenkamerdenhaag.nl/onderzoeken/
+      toelichting: Onderzoeken van de Rekenkamer Den Haag. Deze zijn aanvullend op
+        de informatie die de gemeenteraad van het college ontvangt om haar taken te
+        kunnen uitoefenen.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://denhaag.raadsinformatie.nl/
+      toelichting: Raadsinformatiesysteem (RIS).
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://denhaag.dataplatform.nl/
+      toelichting: Alle open data van de gemeente.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://geoportaal-ddh.opendata.arcgis.com/
+      toelichting: kaartendenhaag.nl. Open data van de gemeente op de kaart.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://archeologie.denhaag.nl/
+      toelichting: Informatie over vondsten, dossiers en publicaties van de afdeling
+        Archeologie.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://denhaag.raadsinformatie.nl/
+      toelichting: Agenda's en vergaderstukken van de gemeenteraad en raadscommissies.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.denhaag.nl/
+      toelichting: Openbaar gemaakte informatie ​naar aanleiding van Woo-verzoeken.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://financien.denhaag.nl/
+      toelichting: Planning & Control Portaal. Begrotingen, jaarstukken, voorjaarsnota's,
+        coalitieakkoorden en overige rapportages.
+    - informatiecategorie: Beschikkingen
+      url: https://subsidieregister.denhaag.nl/
+      toelichting: Het subsidieregister. Alle project- en jaarsubsidies, inclusief
+        begrotingssubsidies, die de gemeente via het subsidieadministratiesysteem
+        in de voorafgaande jaren heeft verstrekt.
+  wooVerzoek:
+    url: https://formulieren.denhaag.nl/woo-verzoek-indienen/startpagina
+organogram_url: https://www.denhaag.nl/nl/gemeentelijke-organisatie/de-gemeentelijke-organisatie/
+afspraak:
+  telefoonnummer: 14 070
+  url: https://www.denhaag.nl/nl/contact-met-de-gemeente/afspraak-maken-bij-de-gemeente-den-haag/
+geography:
+  oppervlakte: 98,13
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 98.13
+  aantal_inwoners: 569468
+  inwoners: '5803'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 5803.0
+  bevat_plaatsen_raw: '''s-Gravenhage'
+  bevat_plaatsen:
+  - '''s-Gravenhage'
+council:
+  total_seats: 48
+  parties:
+  - naam: Hart voor Den Haag
+    aantal_zetels: 16
+  - naam: D66
+    aantal_zetels: 9
+  - naam: PRO Den Haag
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: DENK
+    aantal_zetels: 3
+  - naam: Partij voor de Dieren
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: ChristenUnie/SGP
+    aantal_zetels: 1
 contact:
   website: https://www.denhaag.nl
   email: woo@denhaag.nl
+  bezoekadres: Spui 70, 2511 BT 'S-GRAVENHAGE
+  postadres: Postbus 12600, 2500 DJ 'S-GRAVENHAGE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spui
+    huisnummer: '70'
+    postcode: 2511 BT
+    woonplaats: '''S-GRAVENHAGE'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '12600'
+    postcode: 2500 DJ
+    woonplaats: '''S-GRAVENHAGE'
+  - type: Woo-Adres
+    toelichting: Burgemeester en wethouders van Den Haag
+    postbus: '12600'
+    postcode: 2500 DJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+  phones:
+  - nummer: 14 070
+    label: algemeen
+  - nummer: 14 070
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.denhaag.nl
+    label: algemeen
+  - url: https://www.denhaag.nl/nl/vergunningen-en-ontheffingen/
+    label: Omgevingsloket
+  contact_forms:
+  - url: https://www.denhaag.nl/nl/contact-met-de-gemeente/
+    label: Algemeen
+  - url: https://www.denhaag.nl/nl/contact-met-de-gemeente/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24873/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24873/den-haag
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

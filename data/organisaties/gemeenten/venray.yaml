@@ -6,21 +6,167 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0984
   roo_id: '39557'
   wikidata: Q9775
+  owms: http://standaarden.overheid.nl/owms/terms/Venray_(gemeente)
+  ictu: 00984
+  organisatiecode: gm0984
+  rsin: '001567731'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_VNR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Venray
   abbr: Venray
   valid_from: '1900-01-01'
+description:
+  text: In de gemeente Venray zetten dagelijks ruim 450 gemeenteambtenaren zich in
+    voor ruim 45.000 inwoners. Zij doen dat samen met de gemeenteraad en het college
+    van burgemeester en wethouders.
+  url: https://www.venray.nl/de-organisatie-van-de-gemeente-venray
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.venray.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/39557/Gemeente_Venray
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Venray%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.venray.nl/besluiten-van-het-college
+      toelichting: Agenda's en besluitenlijsten bestuurscolleges
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Venray%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Venray%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://eloket.venray.nl/o
+    - informatiecategorie: Klachtoordelen
+      url: https://eloket.venray.nl/o
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://venray.raadsinformatie.nl
+      toelichting: Vergaderstukken gemeenteraad
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://venray.raadsinformatie.nl/modules/1/ingekomen_stukken/view
+      toelichting: Ingekomen stukken bij de gemeenteraad
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.venray.nl/begroting-en-jaarverslag
+      toelichting: Begroting en jaarverslagen
+  wooVerzoek:
+    url: https://open-formulieren.venray.nl/woo-verzoek/startpagina
+organogram_url: https://www.venray.nl/de-organisatie-van-de-gemeente-venray
+afspraak:
+  email: gemeente@venray.nl
+  telefoonnummer: (0478) 52 33 33
+  url: https://www.venray.nl/openingstijden-en-contact
+geography:
+  oppervlakte: 146,36
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 146.36
+  aantal_inwoners: 45108
+  inwoners: '308'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 308.0
+  bevat_plaatsen_raw: Blitterswijck, Castenray, Geijsteren, Heide, Leunen, Merselo,
+    Oirlo, Oostrum, Smakt, Venray, Veulen, Vredepeel, Wanssum, Ysselsteyn
+  bevat_plaatsen:
+  - Blitterswijck
+  - Castenray
+  - Geijsteren
+  - Heide
+  - Leunen
+  - Merselo
+  - Oirlo
+  - Oostrum
+  - Smakt
+  - Venray
+  - Veulen
+  - Vredepeel
+  - Wanssum
+  - Ysselsteyn
+council:
+  total_seats: 29
+  parties:
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: VENRAY Lokaal
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 4
+  - naam: BBB
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: Samenwerking Venray
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.venray.nl
   email: gemeente@venray.nl
+  bezoekadres: Raadhuisstraat 1, 5801 MB VENRAY
+  postadres: Postbus 500, 5800 AM VENRAY
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 5801 MB
+    woonplaats: VENRAY
+  - type: Postadres
+    postbus: '500'
+    postcode: 5800 AM
+    woonplaats: VENRAY
+  - type: Woo-Adres
+    postbus: '500'
+    postcode: 5800 AM
+    woonplaats: Venray
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 5801 MB
+    woonplaats: VENRAY
+  phones:
+  - nummer: (0478) 52 33 33
+    label: algemeen
+  emails:
+  - email: gemeente@venray.nl
+    label: algemeen
+  - email: infoVTH@venray.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.venray.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39557/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39557/venray
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -1,18 +1,59 @@
 id: org:onderdeel-bureau-algemene-bestuursdienst
 type: organisatieonderdeel
+subname: Bureau ABD
 identifiers:
   roo_id: '9675'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
 names:
 - value: Bureau Algemene Bestuursdienst
   valid_from: '1900-01-01'
+description:
+  text: 'De secretarissen-generaal, directeuren-generaal, inspecteurs-generaal en
+    alle managers met integrale eindverantwoordelijkheid maken deel uit van de Algemene
+    Bestuursdienst (ABD).Bureau Algemene BestuursdienstBureau Algemene Bestuursdienst
+    (Bureau ABD) is het management development bureau voor de ABD-managers.De noodzaak
+    van management development voor de top van de Rijksdienst is de laatste jaren
+    sterk toegenomen. Een veranderende, kritische en vooral ook zeer diverse samenleving
+    vraagt om een anders denkende en werkende overheid. Dat brengt verandering van
+    de interne processen met zich mee en vereist nieuwe werkstijlen en een nieuwe
+    wijze van leidinggeven.Bureau ABD stelt zich ten doel de kwaliteit van de ambtelijke
+    leiding op de departementen te bevorderen en te waarborgen.De 3 kerntaken van
+    Bureau ABD zijn: werving en selectie, opleiden en ontwikkelen en het uitoefenen
+    van het werkgeverschap voor de topmanagementgroep. Meer informatie over vacatures,
+    benoemingen en opleidingen voor ABD-managers staat op de website van de Algemene
+    Bestuursdienst.'
 contact:
   website: http://www.algemenebestuursdienst.nl
   email: abd@minbzk.nl
+  bezoekadres: Muzenstraat 97, 2511 WB Den Haag
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    toelichting: Zurichtoren
+    openbare_ruimte: Muzenstraat
+    huisnummer: '97'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 73 53
+    label: algemeen
+  emails:
+  - email: abd@minbzk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.algemenebestuursdienst.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/9675/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/9675/bureau-algemene-bestuursdienst
+  retrieved: '2026-05-16'

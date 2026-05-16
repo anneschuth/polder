@@ -3,14 +3,32 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '49482'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bcv
+parent_id: org:onderdeel-landelijke-en-overige-diensten
 names:
 - value: Corporate Communicatie
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+description:
+  text: TAAKDe afdeling Corporate Communicatie zorgt DJI-breed voor de ontwikkeling
+    van het communicatiebeleid passend binnen de taak- en doelstelling van de DJI-organisatie.De
+    afdeling adviseert en ondersteunt de directies over communicatie-activiteiten
+    en verzorgt DJI-publicaties waaronder periodieken en voorlichtingsmateriaal.
+contact:
+  postadres: Postbus 30132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 072 58 75
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-10-23'
+last_verified: '2018-10-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/49482/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/49482/corporate-communicatie
+  retrieved: '2026-05-16'

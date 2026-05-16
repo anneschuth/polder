@@ -3,17 +3,98 @@ type: agentschap
 identifiers:
   roo_id: '28325614'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10121
+  owms: http://standaarden.overheid.nl/owms/terms/Paresto
+  kvk: '30282286'
+  rsin: '821998274'
 classification: agentschap
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Paresto
   valid_from: '1900-01-01'
+description:
+  text: Paresto is de interne defensiecateraar en verzorgt de catering op ongeveer
+    80 defensielocaties in Nederland en Duitsland.
+  url: https://werkenbijdefensie.nl/paresto
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28325614/Paresto
+  wooVerzoek:
+    url: https://www.defensie.nl/organisatie/dosco/contact
+organogram_url: https://www.defensie.nl/organisatie/dosco/organisatiestructuur
+afspraak:
+  email: frontoffice@ebvkomfort.nl
+  telefoonnummer: (088) 950 14 30
 contact:
   website: https://werkenbijdefensie.nl/paresto
   email: frontoffice@ebvkomfort.nl
+  bezoekadres: Herculeslaan 1, 3584 AB Utrecht
+  postadres: Postbus 90004, 3509 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Kromhoutkazerne (K2)
+    openbare_ruimte: Herculeslaan
+    huisnummer: '1'
+    postcode: 3584 AB
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Postadres
+    postbus: '90004'
+    postcode: 3509 AA
+    woonplaats: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Kromhoutkazerne (K2)
+    openbare_ruimte: Herculeslaan
+    huisnummer: '1'
+    postcode: 3584 AB
+    woonplaats: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '90004'
+    postcode: 3509 AA
+    woonplaats: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (088) 950 14 30
+    label: Front office hoofdkantoor
+  emails:
+  - email: frontoffice@ebvkomfort.nl
+    label: Front office hoofdkantoor
+  internet_addresses:
+  - url: https://werkenbijdefensie.nl/paresto
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Paresto
+    url: https://www.linkedin.com/company/52191240
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-11'
+last_verified: '2026-02-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28325614/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28325614/paresto
+  retrieved: '2026-05-16'

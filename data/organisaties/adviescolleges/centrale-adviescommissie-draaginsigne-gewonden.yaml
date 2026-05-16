@@ -3,14 +3,46 @@ type: adviescollege
 identifiers:
   roo_id: '28390793'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10176
+  owms: http://standaarden.overheid.nl/owms/terms/acdraaginsgew
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Centrale Adviescommissie Draaginsigne Gewonden
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 7 van het Besluit Draaginsigne Gewonden 2017
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0039236&artikel=7
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390793/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390793/centrale-adviescommissie-draaginsigne-gewonden
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-02-28'

@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '29722'
   wikidata: Q850211
+  owms: http://standaarden.overheid.nl/owms/terms/Slochteren
+  ictu: '00040'
+  organisatiecode: gm0040
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,84 @@ names:
   abbr: Slochteren
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 158,84
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 158.84
+  aantal_inwoners: 15547
+  inwoners: '97'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 97.0
+  bevat_plaatsen_raw: Froombosch, Harkstede, Hellum, Kolham, Lageland, Luddeweer,
+    Meerstad, Overschild, Scharmer, Schildwolde, Siddeburen, Slochteren, Steendam,
+    Tjuchem, Woudbloem
+  bevat_plaatsen:
+  - Froombosch
+  - Harkstede
+  - Hellum
+  - Kolham
+  - Lageland
+  - Luddeweer
+  - Meerstad
+  - Overschild
+  - Scharmer
+  - Schildwolde
+  - Siddeburen
+  - Slochteren
+  - Steendam
+  - Tjuchem
+  - Woudbloem
+council:
+  total_seats: 17
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: http://www.slochteren.nl
   email: algemeen@slochteren.nl
+  bezoekadres: Hoofdweg 10 a, 9621 AL SLOCHTEREN
+  postadres: Postbus 13, 9620 AA SLOCHTEREN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdweg
+    huisnummer: 10 a
+    postcode: 9621 AL
+    woonplaats: SLOCHTEREN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 13
+    postbus: '13'
+    postcode: 9620 AA
+    woonplaats: SLOCHTEREN
+  phones:
+  - nummer: (0598) 42 55 55
+    label: algemeen
+  emails:
+  - email: algemeen@slochteren.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.slochteren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-16'
+last_verified: '2018-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29722/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29722/slochteren
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q850211
   retrieved: '2026-05-09'

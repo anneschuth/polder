@@ -2,18 +2,55 @@ id: org:gr-regio-noord-veluwe
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966462'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Samenwerkingsregeling Noord-Veluwe
+  roo_id: '24966457'
 names:
 - value: Regio Noord-Veluwe
   valid_from: '1900-01-01'
   valid_until: '2018-09-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2018-09-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.regionoordveluwe.nl
   email: info@regionoordveluwe.nl
+  bezoekadres: Oosteinde 17, 3842 DR Harderwijk
+  postadres: Postbus 271, 3840 AG Harderwijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oosteinde
+    huisnummer: '17'
+    postcode: 3842 DR
+    woonplaats: Harderwijk
+  - type: Postadres
+    postbus: '271'
+    postcode: 3840 AG
+    woonplaats: Harderwijk
+  phones:
+  - nummer: (0341) 47 44 00
+    label: algemeen
+  emails:
+  - email: info@regionoordveluwe.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.regionoordveluwe.nl
+    label: algemeen
+  fax: (0341) 47 44 99
 valid_from: '1900-01-01'
 valid_until: '2018-09-01'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966462/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966462/regio-noord-veluwe
+  retrieved: '2026-05-16'
+roo_start_datum: '1988-01-01'

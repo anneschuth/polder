@@ -5,23 +5,137 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0504
   oin: 00000001807450108000
   kvk: '51365901'
+  owms: http://standaarden.overheid.nl/owms/terms/odijm
+  organisatiecode: so0504
+  rsin: '807450108'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst IJmond
+  roo_id: '29577614'
 names:
 - value: Omgevingsdienst IJmond
   abbr: ODIJ
   valid_from: '1900-01-01'
+description:
+  text: MissieWij dragen bij aan het bereiken en in stand houden van een veilige en
+    duurzame fysieke leefomgeving en een goede omgevingskwaliteit binnen ons werkgebied.
+    Daarbinnen inspireren wij burgers en bedrijven tot het nemen van eigen verantwoordelijkheid.
+    Het resultaat is een landelijk vooruitstrevende en toekomstbestendige voorbeeldorganisatie
+    waar partners met vertrouwen mee samenwerken.VisieWij werken, als onderdeel van
+    het openbaar bestuur, samen met burgers, bedrijven en overheden aan een evenwichtige
+    en duurzame ontwikkeling van onze leefomgeving. Naast vergunningverlening, toezicht
+    en handhaving bij bedrijven, adviseren wij over de verschillende aspecten van
+    de fysieke leefomgeving en duurzaamheid binnen het ruimtelijke domein.In de uitvoering
+    van onze taken vervullen wij een proactieve, regisserende en vooral verbindende
+    rol. Als procesregisseur met kennis van zowel inhoud als uitvoering bevorderen
+    wij een integrale aanpak binnen het ruimtelijk domein en koppelen wij de juiste
+    partijen aan elkaar. Daarbij is kwalitatieve en adequate dienstverlening leidend.Initiatieven
+    van burgers en bedrijven vragen van ons een open houding, gericht op wederzijds
+    vertrouwen. Als kennisorgaan anticiperen wij hierop en faciliteren met een helder
+    inzicht in het speelveld, binnen de kaders van de wet- en regelgeving.Via deze
+    werkwijze bouwen wij, namens onze gemeenten en provincie, elke dag aan een landelijk
+    vooruitstrevende en toekomstbestendige voorbeeldorganisatie.
+  url: https://www.odijmond.nl/#:~:text=Omgevingsdienst%20IJmond%20voert%20namens%20en%20v%C3%B3%C3%B3r
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odijmond.nl/actueel/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/25213722/Omgevingsdienst_IJmond
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+IJmond%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odijmond.nl/over-ons/rapportages/
+      toelichting: Hier vindt u onze jaarverslagen.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.odijmond.nl/actueel/wet-open-overheid-woo/
+      toelichting: Hier vindt u de Woo-verzoeken en -besluiten.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odijmond.nl/over-ons/bestuur/algemeen-bestuur/
+      toelichting: Hier vindt u de agendabundels en notulen van ons Algemeen Bestuur.
+  wooVerzoek:
+    url: https://www.odijmond.nl/
+afspraak:
+  email: info@odijmond.nl
+  telefoonnummer: (0251) 26 38 63
+  url: https://www.odijmond.nl/over-ons/contact/
 contact:
   website: https://www.odijmond.nl
   email: info@odijmond.nl
+  postadres: Postbus 325, 1940 AH Beverwijk
+  bezoekadres: Koetserstraat 2 a, 1531 NX Wormer
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '48'
+    huisnummer_toevoeging: b
+    postcode: 1948 LC
+    woonplaats: Beverwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    toelichting: postadres voor alle correspondentie
+    postbus: '325'
+    postcode: 1940 AH
+    woonplaats: Beverwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Bezoekadres
+    toelichting: Regio Waterland
+    openbare_ruimte: Koetserstraat
+    huisnummer: '2'
+    huisnummer_toevoeging: a
+    postcode: 1531 NX
+    woonplaats: Wormer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '325'
+    postcode: 1940 AH
+    woonplaats: Beverwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (0251) 26 38 63
+    label: algemeen
+  emails:
+  - email: info@odijmond.nl
+    label: algemeen
+  - email: woovragen@odijmond.nl
+    label: Wet open Overheid
+  internet_addresses:
+  - url: https://www.odijmond.nl
+    label: algemeen
+  - url: https://www.odijmond.nl/over-ons/contact/reageer
+    label: contact
+  contact_forms:
+  - url: https://www.odijmond.nl/over-ons/contact/
+    label: Algemeen
+  fax: (0251) 26 38 88
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25213722/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25213722/odij
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-01-01'

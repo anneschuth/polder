@@ -6,21 +6,147 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0579
   roo_id: '38899'
   wikidata: Q94747
+  owms: http://standaarden.overheid.nl/owms/terms/Oegstgeest_(gemeente)
+  ictu: 00579
+  organisatiecode: gm0579
+  rsin: 001797840
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OGE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Oegstgeest
   abbr: Oegstgeest
   valid_from: '1900-01-01'
+description:
+  text: Gemeente Oegstgeest
+  url: https://lokaleregelgeving.overheid.nl/CVDR662897
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.oegstgeest.nl/bestuur/de-wet-open-overheid-en-een-woo-verzoek#:~:text=U%20kunt%20een%20Woo%2Dverzoek,een%20Woo%2Dverzoek%20digitaal%20indienen.
+      overzichtURL: https://organisaties.overheid.nl/woo/38899/Gemeente_Oegstgeest
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.oegstgeest.nl/bestuur/het-college/programmabegroting-2024-2027
+      toelichting: Programmabegrotingen en jaarstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.oegstgeest.nl/bestuur/het-college/b-en-w-besluitenlijst
+      toelichting: Besluitenlijst college van burgemeester en wethouders
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://oegstgeest.qualigraf.nl/app/
+      toelichting: Het vergaderschema, de agenda’s en stukken van de gemeenteraad
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oegstgeest%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Algemeen verbindende voorschriften
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oegstgeest%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Beschikkingen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oegstgeest%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Overige besluiten van algemene strekking
+  wooVerzoek:
+    url: https://www.oegstgeest.nl/wooformulier
+organogram_url: https://www.oegstgeest.nl/bestuur/directie-en-teams
+afspraak:
+  telefoonnummer: (071) 519 17 93
+  url: https://www.oegstgeest.nl/contact
+geography:
+  oppervlakte: 7,76
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 7.76
+  aantal_inwoners: 26095
+  inwoners: '3362'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 3362.0
+  bevat_plaatsen_raw: Oegstgeest
+  bevat_plaatsen:
+  - Oegstgeest
+council:
+  total_seats: 21
+  parties:
+  - naam: D66
+    aantal_zetels: 5
+  - naam: Progressief Oegstgeest
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: Hart voor Oegstgeest
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Belang van Oegstgeest
+    aantal_zetels: 1
 contact:
   website: https://www.oegstgeest.nl
   email: gemeente@oegstgeest.nl
+  bezoekadres: Rhijngeesterstraatweg 13, 2342 AN OEGSTGEEST
+  postadres: Postbus 1270, 2340 BG OEGSTGEEST
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rhijngeesterstraatweg
+    huisnummer: '13'
+    postcode: 2342 AN
+    woonplaats: OEGSTGEEST
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1270'
+    postcode: 2340 BG
+    woonplaats: OEGSTGEEST
+  - type: Woo-Adres
+    postbus: '1270'
+    postcode: 2340 BG
+    woonplaats: Oegstgeest
+    regio: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Rhijngeesterstraatweg
+    huisnummer: '13'
+    postcode: 2342 AN
+    ter_attentie_van: Ruimte
+    woonplaats: OEGSTGEEST
+  phones:
+  - nummer: (071) 519 17 93
+    label: algemeen
+  emails:
+  - email: gemeente@oegstgeest.nl
+    label: algemeen
+  - email: Gemeente@oegstgeest.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.oegstgeest.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.oegstgeest.nl/contactformulier
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38899/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38899/oegstgeest
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

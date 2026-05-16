@@ -5,23 +5,115 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so1042
   oin: 00000003705639340000
   kvk: '70563934'
+  owms: http://standaarden.overheid.nl/owms/terms/ictnml
+  organisatiecode: so1042
+  rsin: '858375564'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ICT Noord- en Midden-Limburg (ICT NML)
+  roo_id: '29340237'
 names:
 - value: ICT Noord- en Midden-Limburg
   abbr: ICT NML
   valid_from: '1900-01-01'
+description:
+  text: ICT NML is een samenwerkingsverband tussen zes gemeenten in Limburg en Noord-Brabant
+    (Venlo, Roermond, Weert, Nederweert, Asten en Someren) op het gebied van gezamenlijke
+    ICT infrastructuur. Wij zijn een gerenommeerde ICT-dienstverlener die zowel de
+    lokale overheid als haar ketenpartners:helpt te excelleren door snel, goed en
+    slim gebruik te maken van technische mogelijkheden;aanzet tot synergie-effecten;maximaal
+    ontzorgt.ICT NML biedt een gemeenschappelijk automatiseringsplatform dat samenwerken
+    vergemakkelijkt. Dit is randvoorwaardelijk voor verdere digitale samenwerking.
+    Ondernemerschap staat bij ons hoog in het vaandel; wij zijn een wendbare en weerbare
+    organisatie die kwaliteit van bestaande dienstverlening borgt én is voorbereid
+    op de toekomst. Onze kernwaarden - passie, vertrouwen, eenvoud en flexibiliteit
+    - geven richting aan ons handelen en vormen de basis van onze werkwijze.Sinds
+    januari 2024 maakt ECGeo, het geo-samenwerkingsverband van de gemeenten Leudal,
+    Nederweert, Roermond en Weert, deel uit van ICT NML. ECGeo brengt haar eigen expertise
+    op het gebied van geo-informatie mee, zoals de BGT, BAG en kaartviewer. Deze integratie
+    maakt het mogelijk om geo-diensten efficiënter en effectiever in te zetten en
+    de kwaliteit verder te verhogen.
+  url: https://www.ictnml.nl/onze-organisatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ictnml.nl/onze-documenten/
+      overzichtURL: https://organisaties.overheid.nl/woo/28447104/ICT_Noord-_en_Midden-Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ictnml.nl/onze-documenten/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&filter-id--ss-samenwerkingsorganen=ICT&samenwerkingsorganen=ICT+Noord-+en+Midden-Limburg&indeling=
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ictnml.nl/onze-documenten/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&filter-id--ss-samenwerkingsorganen=ICT&samenwerkingsorganen=ICT+Noord-+en+Midden-Limburg&indeling=
+  wooVerzoek:
+    url: https://form.asana.com/?k=sGS7fRNCGJDLWB7-e8a4yw&d=1202957274098310
+organogram_url: https://www.ictnml.nl/imager/images/9033/Schermafbeelding-2025-02-17-165337_d84d3b3de02bf433e9d8943a7fb3178a.png
+afspraak:
+  email: info@ictnml.nl
+  url: https://form.asana.com/?k=xsn334ksvgpGVNJG2SSfuw&d=1202957274098310
 contact:
   website: https://www.ictnml.nl
   email: info@ictnml.nl
+  bezoekadres: Godsweerderstraat 2, 6041 GH Roermond
+  postadres: Godsweerderstraat 2, 6041 GH Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Godsweerderstraat
+    huisnummer: '2'
+    postcode: 6041 GH
+    woonplaats: Roermond
+  - type: Postadres
+    openbare_ruimte: Godsweerderstraat
+    huisnummer: '2'
+    postcode: 6041 GH
+    woonplaats: Roermond
+  - type: Woo-Adres
+    openbare_ruimte: Godsweerderstraat
+    huisnummer: '2'
+    postcode: 6041 GH
+    woonplaats: Roermond
+  phones:
+  - nummer: (088) 243 21 11
+    label: algemeen (helpdesk)
+  emails:
+  - email: info@ictnml.nl
+    label: algemene vraag
+  internet_addresses:
+  - url: https://www.ictnml.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ictnml.nl
+    label: Algemeen
+  - url: http://www.ictnml.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-02-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28447104/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28447104/ict-nml
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2018-01-01'

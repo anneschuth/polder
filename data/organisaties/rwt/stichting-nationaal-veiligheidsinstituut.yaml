@@ -1,15 +1,48 @@
 id: org:oovb-stichting-nationaal-veiligheidsinstituut
 type: rwt
+subname: P!T
 identifiers:
   roo_id: '27914499'
+  kvk: '54262127'
+  rsin: '851232875'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Nationaal Veiligheidsinstituut
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: St. Eustatius 18, 7333 NX Apeldoorn
+  postadres: St. Eustatius 18, 7333 NX Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: St. Eustatius 18
+    postcode: 7333 NX
+    woonplaats: Apeldoorn
+  - type: Postadres
+    openbare_ruimte: St. Eustatius
+    huisnummer: '18'
+    postcode: 7333 NX
+    woonplaats: Apeldoorn
+  phones:
+  - nummer: (055) 543 06 91
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-20'
+last_verified: '2023-03-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914499/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914499/stichting-nationaal-veiligheidsinstituut
+  retrieved: '2026-05-16'

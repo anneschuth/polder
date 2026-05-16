@@ -2,14 +2,42 @@ id: org:oovb-vereniging-van-bos-en-natuurterreineigenaren-vbne
 type: rwt
 identifiers:
   roo_id: '27918757'
+  kvk: '58889884'
+  rsin: '853225321'
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging van Bos- en Natuurterreineigenaren (VBNE)
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Princenhof Park 9, 3972 NG Driebergen-Rijsenburg
+  postadres: Princenhof Park 9, 3972 NG Driebergen-Rijsenburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Princenhof Park 9
+    postcode: 3972 NG
+    woonplaats: Driebergen-Rijsenburg
+  - type: Postadres
+    openbare_ruimte: Princenhof Park 9
+    postcode: 3972 NG
+    woonplaats: Driebergen-Rijsenburg
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918757/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918757/vereniging-van-bos-en-natuurterreineigenaren-vbne
+  retrieved: '2026-05-16'

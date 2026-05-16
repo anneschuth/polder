@@ -3,16 +3,60 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '99020'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dlz
+parent_id: org:onderdeel-directoraat-generaal-langdurige-zorg
 names:
 - value: Directie Jeugd
   abbr: DJ
   valid_from: '1900-01-01'
+description:
+  text: 'Kinderen in Nederland groeien gezond en veilig op. Dat is de maatschappelijke
+    doelstelling van de directie Jeugd. De directie is verantwoordelijk voor het stelsel
+    van preventie en jeugdhulp, zoals dit in de Jeugdwet is vastgelegd. Op grond van
+    de Jeugdwet zijn gemeenten bestuurlijk en financieel verantwoordelijk voor de
+    uitvoering van jeugdhulp.Aandachtsgebieden* Faciliteren en ondersteunen van netwerken
+    in de buurt en wijk rondom jeugdigen (kinderopvang, onderwijs, informele steunfiguren,
+    sport, en andere algemene voorzieningen).* Betere toegang tot zorg in de wijk
+    met stevige multidisciplinaire wijkteams, die zowel naar kind als gezin kijken
+    indien professionele hulp aan de orde is.* Betere inkoop en organisatie van individuele
+    specialistische hulp voor jeugdigen die dit echt nodig hebben.* Versterken van
+    rechten van kinderen, onder meer door het verbeteren van participatie van (ervaringsdeskundige)
+    jeugdigen bij besluitvorming.* Af- en ombouw van gesloten jeugdzorg en opbouw
+    alternatieven. De uitvoering van de jeugdbeschermingsketen wordt de komende jaren
+    vereenvoudigd: jeugdigen en hun gezin moeten meer centraal staan en de beschermingsketen
+    moet worden omgebouwd van estafette naar een team model waarin betrokken organisaties
+    samenwerken.* Toekomstscenario kind- en gezinsbescherming. Om uithuisplaatsing
+    te voorkomen en jeugdigen en hun ouders beter te beschermen wordt de beschermingsketen
+    herzien.* Randvoorwaardelijke thema’s zoals kennis, data en monitoring, regelgeving,
+    en financiën (er wordt een nieuwe financieringsstructuur voor de jeugdwet ontworpen),
+    internationale samenwerking, en verminderen administratieve lasten.* Toezicht.
+    Het Rijk houdt toezicht op gemeenten. De Inspectie Gezondheidszorg en Jeugd (IGJ)
+    en de Inspectie van Justitie en Veiligheid zijn verantwoordelijk voor onafhankelijk
+    toezicht op zorgaanbieders. De Jeugdautoriteit (straks Nza) heeft de taak om risico’s
+    met betrekking tot de continuïteit van cruciale zorg voor jeugdigen te signaleren,
+    te voorkomen en op te kunnen vangen.'
 contact:
   email: directiesecretariaat-LW@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 54 43
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/99020/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/99020/dj
+  retrieved: '2026-05-16'

@@ -8,11 +8,36 @@ names:
 - value: Belastingdienst Douane Arnhem
   abbr: B-DAR
   valid_from: '1900-01-01'
+description:
+  text: Taak:De kerntaken van de Douane zijn het 'stoppen' van goederen aan de grens,
+    het bewaken van de juiste toepassing van wet- en regelgeving en het heffen en
+    innen van belastingen.
 contact:
   website: http://www.douane.nl
+  bezoekadres: Pels Rijckenstraat 1, 6814 DK ARNHEM
+  postadres: Postbus 3070, 6401 DN HEERLEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pels Rijckenstraat
+    huisnummer: '1'
+    postcode: 6814 DK
+    woonplaats: ARNHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '3070'
+    postcode: 6401 DN
+    woonplaats: HEERLEN
+  phones:
+  - nummer: (0800) 01 43
+    label: algemeen
+  internet_addresses:
+  - url: http://www.douane.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-24'
+last_verified: '2026-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/74110/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/74110/b-dar
+  retrieved: '2026-05-16'

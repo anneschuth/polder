@@ -3,7 +3,7 @@ name:
   full: L.P.W. Pellikaan
   family: Pellikaan
   given: L.P.W.
-  initials: L.
+  initials: L.P.W.
 mandaten:
 - id: 4a625a4c-92e8-47ae-a34c-1637cf2e5c00
   organization_id: org:gemeente-gorinchem
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836627
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30894/gemeente-gorinchem
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25916595
 - id: fd2e3ca0-6b4d-4db0-87f3-a7d274a79f1a
   organization_id: org:gemeente-gorinchem
   post_id: post:raadslid-gemeente-gorinchem

@@ -1,18 +1,40 @@
 id: org:commissie-begeleidingscommissie-voor-het-sociaal-en-cultureel-planbureau
 type: adviescollege
+subname: Begeleidingscommissie SCP
 identifiers:
   roo_id: '30272345'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12382
+  organisatiecode: oorg12382
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Begeleidingscommissie voor het Sociaal en Cultureel Planbureau
   valid_from: '1900-01-01'
+description:
+  text: De begeleidingscommissie voor het Sociaal en Cultureel Planbureau (SCP) houdt
+    toezicht op de wetenschappelijke kwaliteit en de maatschappelijke relevantie van
+    het werk van het SCP. Daarnaast adviseert de commissie het SCP bij het uitvoeren
+    van zijn taken. Tevens is de commissie verantwoordelijk voor de periodieke visitatie
+    van het SCP.Deze begeleidingscommissie is geen formeel adviescollege en valt niet
+    onder de Kaderwet adviescolleges.
+  url: https://www.scp.nl/over-scp/begeleidingscommissie
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit begeleidingscommissie voor het Sociaal en Cultureel
+    Planbureau, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0032715/2021-11-05#Artikel2
 contact:
   website: https://www.scp.nl/over-scp/begeleidingscommissie
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30272345/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30272345/begeleidingscommissie-voor-het-sociaal-en-cultureel-planbureau
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-01-03'

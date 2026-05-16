@@ -4,21 +4,104 @@ identifiers:
   roo_id: '13333'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12371
   oin: '00000004000000034000'
+  owms: http://standaarden.overheid.nl/owms/terms/Openbaar_Ministerie
+  ictu: '04101'
+  organisatiecode: oorg12371
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:min-jenv
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Openbaar Ministerie
   abbr: OM
   valid_from: '1900-01-01'
+description:
+  text: Mensen die worden verdacht van het plegen van een strafbaar feit, krijgen
+    met het Openbaar Ministerie (OM) te maken. Het OM is de enige instantie in Nederland
+    die verdachten voor de strafrechter kan brengen. Het OM zorgt ervoor dat strafbare
+    feiten worden opgespoord en vervolgd. Daarvoor wordt samengewerkt met politie
+    en andere opsporingsdiensten. De officier van justitie leidt het opsporingsonderzoek.Samen
+    met de rechters is het OM onderdeel van de rechterlijke macht. Het OM is dus geen
+    ministerie in de gebruikelijke zin van het woord.Beschrijving:Het OM is een landelijke
+    organisatie verdeeld over tien arrondissementen. Deze zijn gelijk aan de tien
+    regionale eenheden van de politie. Daarnaast richt het Landelijk Parket zich op
+    de bestrijding van (internationaal) georganiseerde misdaad, bestrijdt het Functioneel
+    Parket criminaliteit op het gebied van milieu, economie en fraude en worden alle
+    beroepen tegen verkeersboetes door het Parket Centrale Verwerking OM beoordeeld.Op
+    de tien arrondissementsparketten beoordelen officieren van justitie, ondersteund
+    door administratieve en juridische specialisten, jaarlijks enkele honderdduizenden
+    zaken. De zaken waarin hoger beroep wordt aangetekend komen bij een van de vier
+    vestigingen van het Ressortsparket. Daar heet de vertegenwoordiger van het OM
+    'advocaat-generaal'. De arrondissementsparketten worden geleid door hoofdofficieren
+    van justitie en aan het hoofd van het Ressortsparket staat de hoofdadvocaat-generaal.De
+    landelijke leiding van het OM berust bij het College van procureurs-generaal(het
+    College) in Den Haag. De minister van Justitie en Veiligheid is politiek verantwoordelijk
+    voor het OM. Hij bepaalt samen met het College de prioriteiten in de opsporing
+    en vervolging.Het OM bestaat  uit:College van procureurs-generaal;Parket Generaal;tien
+    arrondissementsparketten;het Ressortsparket met vier vestigingen;Landelijk Parket;Functioneel
+    Parket;Parket Centrale Verwerking OM;Wetenschappelijk Bureau OM;Landelijke Bedrijfsvoering
+    OM;Informatievoorziening OMRijksrecherche
+  url: https://www.om.nl/organisatie/openbaar-ministerie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.om.nl/onderwerpen/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/13333/Openbaar_Ministerie
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.om.nl/onderwerpen/wet-open-overheid/woo-documenten
+      toelichting: Op deze pagina vindt u de door het OM vanaf 1 mei 2022 openbaar
+        gemaakte documenten in het kader van de Wet openbare overheid
+  wooVerzoek:
+    url: https://www.om.nl/onderwerpen/wet-open-overheid/woo-formulier
+organogram_url: https://www.om.nl/organisatie/openbaar-ministerie/organogram
+afspraak:
+  url: https://www.om.nl/contact
 contact:
   website: https://www.om.nl/organisatie
   email: post@om.nl
+  bezoekadres: Prins Clauslaan 16, 2595 AJ Den Haag
+  postadres: Postbus 20305, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Parket-Generaal (hoofdkantoor)
+    openbare_ruimte: Prins Clauslaan
+    huisnummer: '16'
+    postcode: 2595 AJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20305'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  emails:
+  - email: post@om.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.om.nl/organisatie
+    label: algemeen
+  - url: https://www.om.nl/contact
+  contact_forms:
+  - url: https://www.om.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-04-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13333/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13333/om
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0856
   roo_id: '37613'
   wikidata: Q9872
+  owms: http://standaarden.overheid.nl/owms/terms/Uden_(gemeente)
+  ictu: 00856
+  organisatiecode: gm0856
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,93 @@ names:
   abbr: Uden
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 67,59
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 67.59
+  aantal_inwoners: 41725
+  inwoners: '617'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 617.0
+  bevat_plaatsen_raw: Odiliapeel, Uden, Volkel
+  bevat_plaatsen:
+  - Odiliapeel
+  - Uden
+  - Volkel
+council:
+  total_seats: 27
+  parties:
+  - naam: Jong Uden
+    aantal_zetels: 5
+  - naam: SP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD-Leefbaar Uden
+    aantal_zetels: 4
+  - naam: Gewoon Uden
+    aantal_zetels: 4
+  - naam: UdenPlus
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: Maashorst Vooruit
+    aantal_zetels: 1
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: www.uden.nl
   email: postbus83@uden.nl
+  bezoekadres: Markt 145, 5401 EJ UDEN
+  postadres: Postbus 83, 5400 AB UDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '145'
+    postcode: 5401 EJ
+    woonplaats: UDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '83'
+    postcode: 5400 AB
+    woonplaats: UDEN
+  phones:
+  - nummer: (0413) 28 19 11
+    label: algemeen
+  emails:
+  - email: postbus83@uden.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.uden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2024-05-24'
+last_verified: '2024-05-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37613/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37613/uden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,16 +3,30 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111738'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Natuur en Milieu
   valid_from: '1900-01-01'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (038) 499 79 03
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111738/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111738/natuur-en-milieu
+  retrieved: '2026-05-16'

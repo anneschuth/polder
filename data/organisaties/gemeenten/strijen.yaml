@@ -4,6 +4,9 @@ identifiers:
   oin: 00000001001877422000
   kvk: '24485569'
   roo_id: '22905'
+  owms: http://standaarden.overheid.nl/owms/terms/Strijen_(gemeente)
+  ictu: '00617'
+  organisatiecode: gm0617
 classification: gemeente
 parent_id: null
 names:
@@ -11,15 +14,75 @@ names:
   abbr: Strijen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 57,72
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 57.72
+  aantal_inwoners: 8848
+  inwoners: '153'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 153.0
+  bevat_plaatsen_raw: Mookhoek, Strijen, Strijensas
+  bevat_plaatsen:
+  - Mookhoek
+  - Strijen
+  - Strijensas
+council:
+  total_seats: 13
+  parties:
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie/SGP
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: Strijens Belang
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: www.strijen.nl
   email: info@strijen.nl
+  bezoekadres: Waleplein 2, 3291 CZ STRIJEN
+  postadres: Postbus 5881, 3290 EA STRIJEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Waleplein
+    huisnummer: '2'
+    postcode: 3291 CZ
+    woonplaats: STRIJEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 5881
+    postbus: '5881'
+    postcode: 3290 EA
+    woonplaats: STRIJEN
+  phones:
+  - nummer: (088) 647 12 00
+    label: algemeen
+  emails:
+  - email: info@strijen.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.strijen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22905/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22905/strijen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

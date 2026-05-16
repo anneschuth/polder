@@ -2,15 +2,44 @@ id: org:oovb-stichting-landelijk-meldpunt-afvalstoffen-lma
 type: rwt
 identifiers:
   roo_id: '27913563'
+  kvk: '41158236'
+  oin: I0000001802767448000
+  rsin: '802767448'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Landelijk Meldpunt Afvalstoffen (LMA)
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Lange Kleiweg 34, 2288 GK Rijswijk
+  postadres: Postbus 2232, 3500 GE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Kleiweg 34
+    postcode: 2288 GK
+    woonplaats: Rijswijk
+  - type: Postadres
+    postbus: '2232'
+    postcode: 3500 GE
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913563/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913563/stichting-landelijk-meldpunt-afvalstoffen-lma
+  retrieved: '2026-05-16'

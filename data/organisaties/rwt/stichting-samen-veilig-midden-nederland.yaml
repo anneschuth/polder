@@ -2,14 +2,43 @@ id: org:oovb-stichting-samen-veilig-midden-nederland
 type: rwt
 identifiers:
   roo_id: '27915939'
+  kvk: '41177220'
+  oin: 00000001002884124000
+  rsin: 002884124
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Samen Veilig Midden-Nederland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Tiberdreef 8, 3561 GG Utrecht
+  postadres: Postbus 13060, 3507 LB Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tiberdreef 8
+    postcode: 3561 GG
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '13060'
+    postcode: 3507 LB
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915939/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915939/stichting-samen-veilig-midden-nederland
+  retrieved: '2026-05-16'

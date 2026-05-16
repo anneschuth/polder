@@ -2,19 +2,54 @@ id: org:gr-regionale-afvalstoffendienst-hoeksche-waard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25782760'
+  owms: http://standaarden.overheid.nl/owms/terms/radhw
+  kvk: '53504054'
+  organisatiecode: so0312
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling RAD Hoeksche Waard
+  roo_id: '25782755'
 names:
 - value: Regionale Afvalstoffendienst Hoeksche Waard
   abbr: RAD Hoeksche Waard
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.radhw.nl
   email: info@radhw.nl
+  bezoekadres: Smidsweg 20a, 3273 LK Westmaas
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Smidsweg
+    huisnummer: 20a
+    postcode: 3273 LK
+    woonplaats: Westmaas
+  - type: Postadres
+  phones:
+  - nummer: (0186) 57 25 86
+    label: algemeen
+  emails:
+  - email: info@radhw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.radhw.nl
+    label: algemeen
+  fax: (0186) 57 40 52
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-10-27'
+last_verified: '2020-10-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25782760/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25782760/regionale-afvalstoffendienst-hoeksche-waard
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-01-01'

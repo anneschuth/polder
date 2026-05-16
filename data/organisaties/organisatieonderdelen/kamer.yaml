@@ -7,12 +7,25 @@ parent_id: org:hoge-college-tweede-kamer-der-staten-generaal
 names:
 - value: Kamer
   valid_from: '1900-01-01'
-  valid_until: '2026-09-01'
 contact:
   website: http://www.tweedekamer.nl
+  bezoekadres: Lange Poten 4, 2511 CL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Poten
+    huisnummer: '4'
+    postcode: 2511 CL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+  phones:
+  - nummer: (070) 318 22 11
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-09-01'
+last_mutation: '2023-12-21'
+last_verified: '2025-11-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/118718/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/118718/kamer
+  retrieved: '2026-05-16'

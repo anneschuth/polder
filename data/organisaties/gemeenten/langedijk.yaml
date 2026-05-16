@@ -6,6 +6,9 @@ identifiers:
   roo_id: '37098'
   wikidata: Q9944
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0416
+  owms: http://standaarden.overheid.nl/owms/terms/Langedijk_(gemeente)
+  ictu: '00416'
+  organisatiecode: gm0416
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,95 @@ names:
   abbr: Langedijk
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 26,99
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 26.99
+  aantal_inwoners: 27836
+  inwoners: '1031'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1031.0
+  bevat_plaatsen_raw: Broek Op Langedijk, Koedijk, Noord-Scharwoude, Oudkarspel, Sint
+    Pancras, Zuid-Scharwoude
+  bevat_plaatsen:
+  - Broek Op Langedijk
+  - Koedijk
+  - Noord-Scharwoude
+  - Oudkarspel
+  - Sint Pancras
+  - Zuid-Scharwoude
+council:
+  total_seats: 19
+  parties:
+  - naam: Dorpsbelang Langedijk
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Hart voor Langedijk/D66
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Senioren Langedijk
+    aantal_zetels: 2
+  - naam: Kleurrijk Langedijk
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: http://www.gemeentelangedijk.nl/
   email: info@gemeentelangedijk.nl
+  bezoekadres: Bosgroet 2, 1722 KA ZUID-SCHARWOUDE
+  postadres: Postbus 15, 1723 ZG NOORD-SCHARWOUDE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bosgroet
+    huisnummer: '2'
+    postcode: 1722 KA
+    woonplaats: ZUID-SCHARWOUDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '15'
+    postcode: 1723 ZG
+    woonplaats: NOORD-SCHARWOUDE
+  phones:
+  - nummer: (0226) 33 44 33
+    label: algemeen
+  emails:
+  - email: info@gemeentelangedijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.gemeentelangedijk.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2026-04-24'
+last_verified: '2026-04-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37098/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37098/langedijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +113,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9944
   retrieved: '2026-05-09'
+roo_start_datum: '1941-08-01'

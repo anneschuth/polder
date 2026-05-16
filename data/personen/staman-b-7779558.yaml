@@ -3,7 +3,7 @@ name:
   full: B.J. Staman
   family: Staman
   given: B.J.
-  initials: B.
+  initials: B.J.
 mandaten:
 - id: 402a9966-98ff-4051-8b72-35a682d15cf0
   organization_id: org:gemeente-twenterand
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7779560
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36239/gemeente-twenterand
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30547806
 - id: 978ef82d-abf1-44e6-bd22-0e80e41f5744
   organization_id: org:gemeente-twenterand
   post_id: post:raadslid-gemeente-twenterand

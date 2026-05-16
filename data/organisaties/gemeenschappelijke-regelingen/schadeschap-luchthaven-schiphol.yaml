@@ -2,17 +2,52 @@ id: org:gr-schadeschap-luchthaven-schiphol
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964779'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '34372150'
+  organisatiecode: so0426
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Schadeschap Luchthaven Schiphol
+  roo_id: '24964774'
 names:
 - value: Schadeschap Luchthaven Schiphol
   valid_from: '1900-01-01'
   valid_until: '2020-06-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   email: info@schadeschap.nl
+  bezoekadres: Toekanweg 7, 2035 LC Haarlem
+  postadres: Postbus 716, 2130 AS Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Toekanweg
+    huisnummer: '7'
+    postcode: 2035 LC
+    woonplaats: Haarlem
+  - type: Postadres
+    postbus: '716'
+    postcode: 2130 AS
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (088) 797 45 35
+    label: algemeen
+  emails:
+  - email: info@schadeschap.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-06-01'
+last_mutation: '2022-12-02'
+last_verified: '2022-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964779/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964779/schadeschap-luchthaven-schiphol
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-12-01'

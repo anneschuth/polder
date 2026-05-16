@@ -7,12 +7,38 @@ parent_id: org:onderdeel-directoraat-generaal-volkshuisvesting-en-bouwen
 names:
 - value: Directie Bouwen en Energie
   valid_from: '1900-01-01'
+description:
+  text: De directie Bouwen en Energie maakt beleid voor woningbouw, woningvoorraadtransformatie
+    en energie in de gebouwde omgeving. De directie zorgt voor een goed functionerende
+    bouwmarkt en borgt daarbij van publieke belangen voor burgers en bedrijfsleven,
+    zoals de beschikbaarheid, kwaliteit en duurzaamheid van woningen en gebouwen.
 contact:
   website: http://www.rijksoverheid.nl/
   email: Ferdi.Licher@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 71 81
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97038/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97038/directie-bouwen-en-energie
+  retrieved: '2026-05-16'

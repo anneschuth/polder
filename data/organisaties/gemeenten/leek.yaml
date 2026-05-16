@@ -5,6 +5,9 @@ identifiers:
   kvk: '01177267'
   roo_id: '32064'
   wikidata: Q835096
+  owms: http://standaarden.overheid.nl/owms/terms/Leek_(gemeente)
+  ictu: '00022'
+  organisatiecode: gm0022
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,81 @@ names:
   abbr: Leek
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 64,27
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 64.27
+  aantal_inwoners: 19611
+  inwoners: '305'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 305.0
+  bevat_plaatsen_raw: Boerakker Gem Leek, Enumatil, Leek, Lettelbert, Midwolde, Oostwold
+    Gem Leek, Tolbert, Zevenhuizen GN
+  bevat_plaatsen:
+  - Boerakker Gem Leek
+  - Enumatil
+  - Leek
+  - Lettelbert
+  - Midwolde
+  - Oostwold Gem Leek
+  - Tolbert
+  - Zevenhuizen GN
+council:
+  total_seats: 17
+  parties:
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
 contact:
   website: http://www.leek.nl
   email: info@leek.nl
+  bezoekadres: Tolberterstraat 66, 9351 BJ LEEK
+  postadres: Postbus 100, 9350 AC LEEK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tolberterstraat
+    huisnummer: '66'
+    postcode: 9351 BJ
+    woonplaats: LEEK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 100
+    postbus: '100'
+    postcode: 9350 AC
+    woonplaats: LEEK
+  phones:
+  - nummer: (0594) 55 15 15
+    label: algemeen
+  emails:
+  - email: info@leek.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.leek.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32064/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32064/leek
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

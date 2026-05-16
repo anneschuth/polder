@@ -6,21 +6,132 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0352
   roo_id: '25942'
   wikidata: Q10053
+  owms: http://standaarden.overheid.nl/owms/terms/Wijk_bij_Duurstede_(gemeente)
+  ictu: '00352'
+  organisatiecode: gm0352
+  rsin: 002691760
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WBD
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Wijk bij Duurstede
   abbr: Wijk bij Duurstede
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wijkbijduurstede.nl/beleid-en-regelgeving/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/25942/Gemeente_Wijk_bij_Duurstede
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijk+bij+Duurstede%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijk+bij+Duurstede%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wijk+bij+Duurstede%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.wijkbijduurstede.nl/beleid-en-regelgeving/wet-open-overheid-woo/bent-u-van-plan-een-woo-verzoek-in-te-dienen
+organogram_url: https://www.wijkbijduurstede.nl/beleid-en-regelgeving/wet-open-overheid-woo/organogram
+afspraak:
+  email: info@wijkbijduurstede.nl
+  telefoonnummer: (0343) 59 55 95
+  url: https://www.wijkbijduurstede.nl/afspraak-maken
+geography:
+  oppervlakte: 50,30
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 50.3
+  aantal_inwoners: 23707
+  inwoners: '471'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 471.0
+  bevat_plaatsen_raw: Cothen, Langbroek, Wijk bij Duurstede
+  bevat_plaatsen:
+  - Cothen
+  - Langbroek
+  - Wijk bij Duurstede
+council:
+  total_seats: 18
+  parties:
+  - naam: SamenWerkt
+    aantal_zetels: 5
+  - naam: Oprechte BurgerBelangen
+    aantal_zetels: 4
+  - naam: Lokaal Liberaal
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Protestants Christelijke Groepering (PCG)
+    aantal_zetels: 1
 contact:
   website: https://www.wijkbijduurstede.nl
   email: info@wijkbijduurstede.nl
+  bezoekadres: Karel de Grotestraat 30, 3962 CL WIJK BIJ DUURSTEDE
+  postadres: Postbus 83, 3960 BB WIJK BIJ DUURSTEDE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Karel de Grotestraat
+    huisnummer: '30'
+    postcode: 3962 CL
+    woonplaats: WIJK BIJ DUURSTEDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '83'
+    postcode: 3960 BB
+    woonplaats: WIJK BIJ DUURSTEDE
+  - type: Woo-Adres
+    postbus: '83'
+    postcode: 3960 BB
+    woonplaats: WIJK BIJ DUURSTEDE
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Karel de Grotestraat
+    huisnummer: '30'
+    postcode: 3962 CL
+    woonplaats: WIJK BIJ DUURSTEDE
+  phones:
+  - nummer: (0343) 59 55 95
+    label: algemeen
+  emails:
+  - email: info@wijkbijduurstede.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wijkbijduurstede.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wijkbijduurstede.nl/afspraak-maken#select/productguid/49a239ad-e60e-4c13-abbe-5ef66aa94328/Afspraak-met-team-Bouwen
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25942/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25942/gemeente-wijk-bij-duurstede
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

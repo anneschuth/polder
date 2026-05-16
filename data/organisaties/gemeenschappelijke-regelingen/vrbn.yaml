@@ -5,23 +5,131 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0066
   oin: 00000001001160837000
   kvk: '51425165'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Brabant-Noord
+  btw: NL001160837B01
+  loonheffing: 001160837L01
+  organisatiecode: so0066
+  rsin: 001160837
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Brabant-Noord 2024
+  roo_id: '29491068'
 names:
 - value: Veiligheidsregio Brabant-Noord
   abbr: VRBN
   valid_from: '1900-01-01'
+description:
+  text: De Veiligheidsregio Brabant-Noord is een bestuurlijke samenwerking van deelnemende
+    gemeenten, en kent de volgende organisatorische onderdelen Brandweer, Geneeskundige
+    Hulpverleningsorganisatie in de Regio (GHOR), Crisisbeheersing en Rampenbestrijding,
+    Bevolkingszorg en Bedrijfsvoering.De GHOR Brabant Midden-West-Noord kent een afzonderlijke
+    ambtelijke organisatie, bestaande uit een samenwerking tussen de GGD Hart voor
+    Brabant en de GGD West-Brabant.Veiligheidsregio Brabant-Noord heeft samen met
+    Veiligheidsregio Brabant-Zuidoost een Brandweermeldkamer Oost-Brabant.
+  url: https://www.vrbn.nl/wie-zijn-wij/onze-organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrbn.nl/wie-zijn-wij/bestuur/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28422209/Veiligheidsregio_Brabant-Noord
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://vrbn.bestuurlijkeinformatie.nl/Reports/Details/cdc0a92a-6eb3-4816-9b08-6912692184be
+      toelichting: Onder de kop "Financiële documenten" vindt u de laatste twee actuele
+        Programmabegrotingen (jaarplannen) en Jaarstukken (jaarverslagen).
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://vrbn.bestuurlijkeinformatie.nl/Calendar
+      toelichting: Het betreft de vergaderstukken van het Algemeen Bestuur van onze
+        Veiligheidsregio vanaf 2024
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Brabant-Noord%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Brabant-Noord%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vrbn.nl/wie-zijn-wij/bestuur/woo
+organogram_url: https://www.vrbn.nl/sites/default/files/2025-12/organogram_veiligheidsregio_brabant-noord_2024_1_0.pdf
+afspraak:
+  telefoonnummer: (088) 020 82 08
 contact:
   website: https://www.vrbn.nl/
   email: info@vrbn.nl
+  postadres: Postbus 218, 5201 AE 's-Hertogenbosch
+  bezoekadres: Vogelstraat 45, 5212 VL 's-Hertogenbosch
+  addresses:
+  - type: Postadres
+    postbus: '218'
+    postcode: 5201 AE
+    woonplaats: '''s-Hertogenbosch'
+    regio: Noordoost-Brabant
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '218'
+    postcode: 5201 AE
+    woonplaats: ’s-Hertogenbosch
+    regio: Noordoost-Brabant
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Vogelstraat
+    huisnummer: '45'
+    postcode: 5212 VL
+    ter_attentie_van: Veiligheidsregio Brabant-Noord
+    woonplaats: '''s-Hertogenbosch'
+    regio: Noordoost-Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (088) 020 82 08
+    label: algemeen
+  - nummer: (085) 743 29 57
+    label: Perstelefoon 24/7
+  emails:
+  - email: info@vrbn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrbn.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.vrbn.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: vrbrabantnoord
+    url: https://x.com/vrbrabantnoord
+  - platform: Mastodon
+    gebruikersnaam: VRBN
+    url: https://social.overheid.nl/@vrbn
+  - platform: LinkedIn
+    gebruikersnaam: veiligheidsregio-brabant-noord
+    url: https://www.linkedin.com/company/veiligheidsregio-brabant-noord/
+  - platform: YouTube
+    gebruikersnaam: veiligheidsregiobrabant-no61
+    url: https://www.youtube.com/channel/UCWyOqpEwapXGzIEsE4f9UbQ
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28422209/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28422209/vrbn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-07-01'

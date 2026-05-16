@@ -4,22 +4,113 @@ identifiers:
   oin: '00000004000000011000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10101
   roo_id: '13251'
+  owms: http://standaarden.overheid.nl/owms/terms/Nederlands_Forensisch_Instituut
+  kvk: '50384511'
+  ictu: 03490
+  rsin: '822820778'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Nederlands Forensisch Instituut
   abbr: NFI
   valid_from: '1900-01-01'
-  valid_until: '2026-08-14'
+description:
+  text: 'Het NFI is een internationaal kennis- en expertisecentrum voor forensisch
+    onderzoek. Het instituut heeft bijna veertig verschillende forensische deskundigheidsgebieden
+    onder één dak en houdt zich bezig met onder andere DNA-onderzoek, het verrichten
+    van gerechtelijke secties, het onderzoeken van vezels of het openmaken, uitlezen
+    en ontsleutelen van digitale informatie uit telefoons van verdachten.Met deze
+    onderzoeken, met de overdracht van kennis en door te innoveren levert het NFI
+    een bijdrage aan de opsporing en waarheidsvinding in strafrechtelijke onderzoeken,
+    zowel nationaal als internationaal. Dat doet het NFI op basis van de laatste wetenschappelijke
+    inzichten.De missie van het NFI is dan ook: ‘Gericht op waarheid. Geleid door
+    wetenschap. Voor een veiliger samenleving.’'
+  url: https://www.forensischinstituut.nl/over-het-nfi
+taken_en_bevoegdheden: 'Regeling taken NFI: https://wetten.overheid.nl/BWBR0031558/2012-05-19/'
+doorlichtingen:
+- datum: '2021-05-01'
+  naam_rapport: Agentschapsdoorlichting NFI
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.forensischinstituut.nl/over-het-nfi/organisatie/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/13251/Nederlands_Forensisch_Instituut
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.forensischinstituut.nl/over-het-nfi/organisatie/woo-verzoeken
+  wooVerzoek:
+    url: https://www.forensischinstituut.nl/over-het-nfi/organisatie/woo-verzoeken
+organogram_url: https://www.forensischinstituut.nl/over-het-nfi/organisatie/organisatiestructuur
+afspraak:
+  url: https://www.forensischinstituut.nl/contact-2
+personnel:
+  aantalFte: '729'
+  peildatumFte: '2025-01-01'
+  toelichtingFte: https://www.rijksfinancien.nl/memorie-van-toelichting/2026/OWB/VI/onderdeel/9799202
 contact:
   website: http://www.forensischinstituut.nl/
   email: woo@nfi.nl
+  bezoekadres: Laan van Ypenburg 6, 2497 GB Den Haag
+  postadres: Postbus 24044, 2490 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdgebouw
+    openbare_ruimte: Laan van Ypenburg
+    huisnummer: '6'
+    postcode: 2497 GB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '24044'
+    postcode: 2490 AA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '24044'
+    postcode: 2490 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 888 66 66
+    label: algemeen
+  internet_addresses:
+  - url: http://www.forensischinstituut.nl/
+    label: algemeen
+  - url: https://www.forensischinstituut.nl/contact-2/algemeen-contactformulier
+    label: contactformulier
+  contact_forms:
+  - url: https://www.forensischinstituut.nl/contact-2
+    label: Algemeen
+  fax: (070) 888 65 55
 valid_from: '1900-01-01'
 valid_until: '2026-08-14'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13251/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13251/nfi
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

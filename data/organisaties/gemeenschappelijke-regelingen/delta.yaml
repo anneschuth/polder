@@ -2,18 +2,58 @@ id: org:gr-delta
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28218550'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: 08216268
+  organisatiecode: so0257
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Delta
+  roo_id: '28218531'
 names:
 - value: Delta
   valid_from: '1900-01-01'
   valid_until: '2020-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://deltawerkt.nl
   email: info@deltawerkt.nl
+  bezoekadres: Egerlaan 15, 7334 AD Apeldoorn
+  postadres: Egerlaan 15, 7334 AD Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    toelichting: Locatie Apeldoorn
+    openbare_ruimte: Egerlaan
+    huisnummer: '15'
+    postcode: 7334 AD
+    woonplaats: Apeldoorn
+  - type: Postadres
+    openbare_ruimte: Egerlaan
+    huisnummer: '15'
+    postcode: 7334 AD
+    woonplaats: Apeldoorn
+  phones:
+  - nummer: (0575) 51 65 13
+    label: algemeen
+  emails:
+  - email: info@deltawerkt.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://deltawerkt.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-01-01'
+last_mutation: '2020-08-18'
+last_verified: '2020-08-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28218550/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28218550/delta
+  retrieved: '2026-05-16'
+roo_start_datum: '1988-06-26'

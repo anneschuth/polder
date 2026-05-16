@@ -3,17 +3,86 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27164571'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0282
+  owms: http://standaarden.overheid.nl/owms/terms/dethon
+  kvk: '50593986'
+  organisatiecode: so0282
+  rsin: 002746396
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Sociaal Werkvoorzieningsschap Zeeuwsch-Vlaanderen
+  roo_id: '27164566'
 names:
 - value: Sociaal Werkvoorzieningsschap DETHON
   valid_from: '1900-01-01'
+description:
+  text: Dethon is een Gemeenschappelijke Regeling (GR) van de drie gemeenten in Zeeuws-Vlaanderen.
+    Wij voeren een aantal onderdelen van de Participatiewet uit. Een Gemeenschappelijke
+    Regeling heeft een unieke manier van bedrijfsvoering. Hoe dat werkt? Dat leggen
+    we graag uit. Dethon voert een aantal onderdelen van de Participatiewet uit namens
+    de drie gemeenten in Zeeuws-Vlaanderen.
+  url: https://www.dethon.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dethon.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/27164571/Sociaal_Werkvoorzieningsschap_DETHON
+  wooVerzoek:
+    url: https://www.dethon.nl/contact/
+organogram_url: https://www.dethon.nl/app/uploads/2024/10/Dethon-totaal-organogram-1.pdf
+afspraak:
+  email: info@dethon.nl
+  telefoonnummer: (0115) 67 52 00
+  url: https://www.dethon.nl/contact/
 contact:
   website: https://www.dethon.nl/
   email: info@dethon.nl
+  bezoekadres: Mr. F.J. Haarmanweg 33, 4538 AN Terneuzen
+  postadres: Postbus 163, 4530 AD Terneuzen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mr. F.J. Haarmanweg
+    huisnummer: '33'
+    postcode: 4538 AN
+    woonplaats: Terneuzen
+  - type: Postadres
+    postbus: '163'
+    postcode: 4530 AD
+    woonplaats: Terneuzen
+  - type: Woo-Adres
+    postbus: '163'
+    postcode: 4530 AD
+    woonplaats: Terneuzen
+  phones:
+  - nummer: (0115) 67 52 00
+    label: algemeen
+  emails:
+  - email: info@dethon.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dethon.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.dethon.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-15'
+last_verified: '2024-11-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27164571/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27164571/sociaal-werkvoorzieningsschap-dethon
+  retrieved: '2026-05-16'
+roo_start_datum: '1995-01-01'

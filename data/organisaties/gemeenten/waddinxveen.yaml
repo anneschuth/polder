@@ -6,21 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0627
   roo_id: '23854'
   wikidata: Q826048
+  owms: http://standaarden.overheid.nl/owms/terms/Waddinxveen_(gemeente)
+  ictu: '00627'
+  organisatiecode: gm0627
+  rsin: 001998389
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WAD
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Waddinxveen
   abbr: Waddinxveen
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waddinxveen.nl/direct-regelen/afval/het-ergens-niet-mee-eens-zijn/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/23854/Gemeente_Waddinxveen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://waddinxveen.raadsinformatie.nl/modules/1/ingekomen_stukken/view
+      toelichting: De gemeenteraad ontvangt brieven of e-mails van inwoners, organisaties
+        of andere overheden. Om privacy redenen staan ingekomen stukken van inwoners
+        geanonimiseerd op deze website.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waddinxveen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waddinxveen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.waddinxveen.nl/organisatie-bestuur/financien/
+      toelichting: Op deze pagina vindt u de financiële stukken van de gemeente zoals
+        de jaarstukken en de begroting.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waddinxveen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waddinxveen.raadsinformatie.nl/dashboard
+      toelichting: Op deze pagina vindt u de vergaderstukken, videoverslagen en besluitenlijsten
+        van de gemeenteraad.
+  wooVerzoek:
+    url: https://www.waddinxveen.nl/direct-regelen/afval/het-ergens-niet-mee-eens-zijn/woo-verzoek/
+organogram_url: https://www.waddinxveen.nl/organisatie-bestuur/organogram/
+afspraak:
+  telefoonnummer: 14 0182
+geography:
+  oppervlakte: 29,39
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 29.39
+  aantal_inwoners: 35542
+  inwoners: '1209'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1209.0
+  bevat_plaatsen_raw: Waddinxveen
+  bevat_plaatsen:
+  - Waddinxveen
+council:
+  total_seats: 23
+  parties:
+  - naam: WEWA
+    aantal_zetels: 7
+  - naam: PCW
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: GROENLINKS/PvdA
+    aantal_zetels: 2
 contact:
   website: https://www.waddinxveen.nl
   email: gemeente@waddinxveen.nl
+  bezoekadres: Beukenhof 1, 2741 HS WADDINXVEEN
+  postadres: Postbus 400, 2740 AK WADDINXVEEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Beukenhof
+    huisnummer: '1'
+    postcode: 2741 HS
+    woonplaats: WADDINXVEEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '400'
+    postcode: 2740 AK
+    woonplaats: WADDINXVEEN
+  - type: Woo-Adres
+    postbus: '400'
+    postcode: 2740 AK
+    woonplaats: Waddinxveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Postbus
+    huisnummer: '45'
+    postcode: 2800 AA
+    ter_attentie_van: Omgevingsdienst Midden-Holland
+    woonplaats: GOUDA
+  phones:
+  - nummer: 14 0182
+    label: algemeen
+  emails:
+  - email: gemeente@waddinxveen.nl
+    label: algemeen
+  - email: info@odmh.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.waddinxveen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odmh.nl/over-odmh/contact/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23854/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23854/waddinxveen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

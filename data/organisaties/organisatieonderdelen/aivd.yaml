@@ -3,16 +3,46 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '9633'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
 names:
 - value: Algemene Inlichtingen- en Veiligheidsdienst
   abbr: AIVD
   valid_from: '1900-01-01'
+description:
+  text: In het belang van de nationale veiligheid heeft de AIVD de volgende taken:-
+    het verrichten van onderzoek naar organisaties enpersonen die door de doelen die
+    zij nastreven, of doorhun activiteiten een gevaar kunnen vormen voor hetvoortbestaan
+    van de democratische rechtsorde, destaatsveiligheid of voor andere gewichtige
+    belangen vande staat- het verrichten van veiligheidsonderzoeken- het bevorderen
+    van beveiligingsmaatregelen- het doen van onderzoek naar andere landen
+  url: https://www.aivd.nl/onderwerpen/over-de-aivd/organisatiestructuur
 contact:
   website: http://www.aivd.nl
+  bezoekadres: Europaweg 4, 2711 AH ZOETERMEER
+  postadres: Postbus 20010, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europaweg
+    huisnummer: '4'
+    postcode: 2711 AH
+    woonplaats: ZOETERMEER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20010'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (079) 320 50 50
+    label: algemeen
+  internet_addresses:
+  - url: http://www.aivd.nl
+    label: algemeen
+  fax: (070) 320 07 33
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-15'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/9633/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/9633/aivd
+  retrieved: '2026-05-16'

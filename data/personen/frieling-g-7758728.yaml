@@ -3,7 +3,7 @@ name:
   full: G.A.S. Frieling
   family: Frieling
   given: G.A.S.
-  initials: G.
+  initials: G.A.S.
 mandaten:
 - id: 05b51724-7798-43e3-a459-306a50bd511b
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7760104
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30520590
 - id: 11d64b48-6e92-4738-bec5-a6c3cc560ce6
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

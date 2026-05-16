@@ -5,21 +5,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000210
   oin: 00000001803660406000
   kvk: '27380622'
+  rsin: '803660406'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Centraal Orgaan opvang asielzoekers
   abbr: COA
   valid_from: '1900-01-01'
+description:
+  text: COA staat voor Centraal Orgaan opvang asielzoekers. Het COA is een zelfstandig
+    bestuursorgaan.Tot de invoering van de Regeling Opvang Asielzoekers (1987) was
+    er in Nederland geen officiële asielopvang. Vanaf 1992 werd de verzelfstandiging
+    van de asielopvang verder uitgewerkt tot de Wet Centraal Orgaan opvang asielzoekers.Die
+    wet is vanaf 1 juli 1994 van kracht.Wij zijn sinds 1994 verantwoordelijk voor
+    de opvang en begeleiding van asielzoekers in Nederland.Verder is het bestuur hetgene
+    die verantwoordelijk is voor de uitvoering van de taken zoals beschreven in de
+    Wet COA. De bevoegdheden van het bestuur zijn  ook uitgewerkt in de Bevoegdhedenregeling
+    COA.
+  url: https://www.coa.nl/nl/het-coa
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+wettelijke_grondslagen:
+- opschrift: Wet Centraal Orgaan opvang asielzoekers, artikel 2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=WET%20CENTRAAL%20ORGAAN%20OPVANG%20ASIELZOEKERS
+taken_en_bevoegdheden: Het op een bedrijfsmatige wijze organiseren van een humaan
+  en sober eerste verblijf voor wisselende aantallen asielzoekers die naar Nederland
+  komen, op een zodanige wijze dat hun komst en eerste verblijf hanteerbaar zijn voor
+  overheid en samenleving.
+evaluations:
+- datum: '2019-07-18'
+  kamerstuknummer: TK 33042 nr. 34
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33042-34.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 301 - WELZIJN MAATSCHAPPELIJKE DIENSTVERLENING SOCIAAL WERK
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15574
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Pensioenfonds Zorg en Welzijn (PFZW)
+    referentie: https://www.pfzw.nl/particulieren.html
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.coa.nl/nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212487/Centraal_Orgaan_opvang_asielzoekers
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.coa.nl/nl/woo-publicaties
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.coa.nl/nl/jaarverslagen
+  wooVerzoek:
+    url: https://www.coa.nl/nl/wet-open-overheid-woo
+organogram_url: https://www.coa.nl/nl/organisatie
+afspraak:
+  email: info@coa.nl
+  telefoonnummer: (088) 715 70 00
+  url: https://www.coa.nl/nl/contact
+personnel:
+  aantalFte: 2277,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.coa.nl/
   email: info@coa.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 30203, 2500 GE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30203'
+    postcode: 2500 GE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postbus: '30203'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    regio: Midden-Zuid
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 715 70 00
+    label: algemeen
+  emails:
+  - email: info@coa.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.coa.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212487/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212487/coa
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +148,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000210
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

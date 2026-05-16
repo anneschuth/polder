@@ -2,6 +2,9 @@ id: org:onderdeel-cap
 type: organisatieonderdeel
 identifiers:
   roo_id: '29731779'
+  kvk: '27365323'
+  oin: 00000001003214394000
+  rsin: 003214394
 classification: organisatieonderdeel
 parent_id: org:onderdeel-dgbd
 names:
@@ -11,11 +14,43 @@ names:
 - value: Centrale Administratieve Processen
   abbr: CAP
   valid_from: '1900-01-01'
+description:
+  text: 'Het kloppende hart van de Belastingdienst, zo wordt de directie Centrale
+    Administratieve Processen (CAP) vaak genoemd. Bij CAP zijn we namelijk verantwoordelijk
+    voor de ontvangst, verwerking en verzending van álle fiscale gegevens aan en van
+    burgers en bedrijven in Nederland. Het is de plek waar alle processen en gegevens
+    samenkomen, en waar we ervoor zorgen dat de Belastingdienst optimaal kan doen
+    wat het moet doen: zorgen dat Nederland blijft draaien.'
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/71120/Centrale_Administratieve_Processen
 contact:
   website: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+  postadres: Postbus 9057, 7300 GW APELDOORN
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '9057'
+    postcode: 7300 GW
+    woonplaats: APELDOORN
+  - type: Woo-Adres
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  internet_addresses:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/home/home
+    label: algemeen
+  - url: https://werken.belastingdienst.nl/centrale-administratieve-processen-cap
+    label: Werken bij CAP
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-28'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29731779/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29731779/cap
+  retrieved: '2026-05-16'

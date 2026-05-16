@@ -10,9 +10,25 @@ names:
 contact:
   website: www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (038) 499 70 00
+    label: algemeen
+  - nummer: (038) 499 70 11
+  - nummer: (038) 499 70 12
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-29'
+last_verified: '2026-01-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112651/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112651/bedrijfsvoering-wkb
+  retrieved: '2026-05-16'

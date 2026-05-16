@@ -3,17 +3,57 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27964953'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1054
+  owms: http://standaarden.overheid.nl/owms/terms/reinunie
+  kvk: '90186540'
+  organisatiecode: so1054
+  rsin: '865235260'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ReinUnie
+  roo_id: '27964947'
 names:
 - value: ReinUnie
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: post@heemskerk.nl
+  bezoekadres: Maerten van Heemskerckplein 1, 1964 EZ Heemskerk
+  postadres: Postbus 1, 1960 AA Heemskerk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maerten van Heemskerckplein
+    huisnummer: '1'
+    postcode: 1964 EZ
+    woonplaats: Heemskerk
+  - type: Postadres
+    postbus: '1'
+    postcode: 1960 AA
+    woonplaats: Heemskerk
+  phones:
+  - nummer: '0140251'
+    label: gemeente Heemskerk
+  emails:
+  - email: post@heemskerk.nl
+    label: gemeente Heemskerk
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2024-01-22'
+last_verified: '2020-09-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27964953/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27964953/reinunie
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-07-01'

@@ -1,23 +1,134 @@
 id: org:zbo-nrgd
 type: zbo
+subname: Nederlands Register Gerechtelijk Deskundigen
 identifiers:
   roo_id: '28212524'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000205
+  owms: http://standaarden.overheid.nl/owms/terms/College_gerechtelijk_deskundigen
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: College gerechtelijk deskundigen
   abbr: NRGD
   valid_from: '1900-01-01'
+description:
+  text: Het Nederlands Register Gerechtelijk Deskundigen (NRGD)  is een register met
+    gecertificeerde deskundigen die in strafzaken rapporteren.  Het College gerechtelijk
+    deskundigen vormt het bestuur van het NRGD. Het College is een zelfstandig bestuursorgaan
+    (zbo), ressorterend onder het ministerie van Justitie en Veiligheid.
+  url: https://www.nrgd.nl/over-het-nrgd
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wetboek van Strafvordering, artikel 51k
+  referentie: https://wetten.overheid.nl/BWBR0001903/2024-10-01#BoekEerste_TiteldeelIIIC_Artikel51k
+- opschrift: Besluit register deskundige in strafzaken
+  referentie: http://wetten.overheid.nl/BWBR0026190/
+taken_en_bevoegdheden: Het Nederlands Register Gerechtelijk Deskundigen (NRGD), bestuurd
+  door het College gerechtelijk deskundigen, is verantwoordelijk voor de volgende
+  taken:* het beslissen over een aanvraag tot (her)inschrijving in het NRGD, op grond
+  van artikelen 12 tot en met 14 en 17 tot en met 19 van het Besluit register deskundige
+  in strafzaken (Brdis);* het beslissen over een aanvraag tot (her)inschrijving in
+  of over een eventuele doorhaling uit het NRGD, op grond van artikel 18 Brdis;* het
+  inrichten en onderhouden van het register waarin bovenstaande beslissingen worden
+  verwerkt, alsmede het geven van aanwijzingen daarover aan het Bureau NRGD;* het
+  bevorderen van de opstelling van specifieke eisen per deskundigheidsgebied, ter
+  verdere uitwerking van de in artikel 12, tweede lid, Brdis bedoelde eisen;* het
+  vaststellen van een gedragscode die de gedragsregels bevat waaraan geregistreerde
+  deskundigen zich dienen te houden;* het in overleg met de secretaris vaststellen
+  van de activiteiten van het Bureau NRGD, ter ondersteuning van de werkzaamheden
+  van het College gerechtelijk deskundigen.
+evaluations:
+- datum: '2020-07-10'
+  kamerstuknummer: "TK \t25268 nr. 187"
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-187.html
+- datum: '2015-04-09'
+  kamerstuknummer: TK 27279 nr. 230
+  referentie: https://zoek.officielebekendmakingen.nl/kst-29279-230.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212524/College_gerechtelijk_deskundigen
+  wooVerzoek:
+    url: https://www.nrgd.nl/contact
+organogram_url: https://www.nrgd.nl/over-het-nrgd/college
+afspraak:
+  email: deskundigenregister@nrgd.nl
+  telefoonnummer: (030) 256 70 40
+  url: https://www.nrgd.nl/contact
+personnel:
+  aantalFte: 12,0
+  peildatumFte: '2024-11-18'
 contact:
   website: http://www.nrgd.nl
   email: deskundigenregister@nrgd.nl
+  bezoekadres: Catharijnesingel 56, 3511 GE Utrecht
+  postadres: Postbus 12080, 3501 AB Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Catharijnesingel
+    huisnummer: '56'
+    postcode: 3511 GE
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '12080'
+    postcode: 3501 AB
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    toelichting: Voor niet-zaaksgebonden correspondentie
+    postbus: '12080'
+    postcode: 3501 AB
+    woonplaats: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (030) 256 70 40
+    label: algemeen
+  emails:
+  - email: deskundigenregister@nrgd.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nrgd.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.nrgd.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-11'
+last_verified: '2026-02-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212524/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212524/nrgd
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000205
   retrieved: '2026-05-09'
+roo_start_datum: '2010-01-01'

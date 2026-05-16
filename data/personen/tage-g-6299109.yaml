@@ -3,7 +3,7 @@ name:
   full: G.H.G. Täge
   family: Täge
   given: G.H.G.
-  initials: G.
+  initials: G.H.G.
 mandaten:
 - id: 04189e09-e898-44bc-9f60-46b16fa515bd
   organization_id: org:gemeente-twenterand
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6299111
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36239/gemeente-twenterand
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28645155
 - id: b677bc60-8038-44b4-8f1a-696f13aef986
   organization_id: org:gemeente-twenterand
   post_id: post:raadslid-gemeente-twenterand

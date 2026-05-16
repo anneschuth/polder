@@ -3,17 +3,85 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964119'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0246
+  owms: http://standaarden.overheid.nl/owms/terms/wvsijsgrp
+  kvk: '32166124'
+  organisatiecode: so0246
+  rsin: 001891996
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkvoorzieningschap IJsselmeergroep 2020
+  roo_id: '29118157'
 names:
 - value: Werkvoorzieningschap lJsselmeergroep
   valid_from: '1900-01-01'
+description:
+  text: De Gemeenschappelijke Regeling IJsselmeergroep (GR) is als bedrijfsvoeringsorganisatie
+    belast met de uitvoering van de Wet sociale werkvoorziening (Wsw) voor de gemeenten
+    Lelystad, Noordoostpolder, Urk. De feitelijke uitvoering van deze wet is opgedragen
+    aan Concern voor Werk nv (nv).Tevens is een overeenkomst gesloten in het kader
+    van de uitvoering van Beschut Werk.De GR is niet alleen opdrachtgever voor de
+    uitvoering van de Wsw door de nv, maar is ook enig aandeelhouder van de nv. In
+    de jaarrekeningen is, conform de grondslagen voor waardering en resultaatbepaling,
+    derhalve ook het resultaat van de deelneming van de GR in de nv verwerkt. Overigens
+    dient het bestuur van de GR de uitvoering van de Wsw te verantwoorden tegenover
+    de deelnemende gemeenten.
+  url: https://www.concernvoorwerk.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.concernvoorwerk.nl/gr/
+      overzichtURL: https://organisaties.overheid.nl/woo/24964119/Werkvoorzieningschap_lJsselmeergroep
+  wooVerzoek:
+    url: https://www.concernvoorwerk.nl/gr/
+organogram_url: https://www.concernvoorwerk.nl/organisatieschema-concern-voor-werk/
+afspraak:
+  email: info@concernvoorwerk.nl
+  telefoonnummer: (0320) 80 00 00
+  url: https://www.concernvoorwerk.nl/
 contact:
   website: https://www.concernvoorwerk.nl
   email: info@concernvoorwerk.nl
+  bezoekadres: Vaartweg 67, 8243 PD Lelystad
+  postadres: Postbus 2032, 8203 AA Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vaartweg
+    huisnummer: '67'
+    postcode: 8243 PD
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '2032'
+    postcode: 8203 AA
+    woonplaats: Lelystad
+  phones:
+  - nummer: (0320) 80 00 00
+    label: algemeen
+  emails:
+  - email: info@concernvoorwerk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.concernvoorwerk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-12-02'
+last_verified: '2024-08-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964119/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964119/werkvoorzieningschap-ljsselmeergroep
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-01-01'

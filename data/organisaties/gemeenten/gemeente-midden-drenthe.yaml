@@ -6,21 +6,157 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1731
   roo_id: '35710'
   wikidata: Q835125
+  owms: http://standaarden.overheid.nl/owms/terms/Midden-Drenthe
+  ictu: '01731'
+  organisatiecode: gm1731
+  rsin: '806300449'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MDD
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Midden-Drenthe
   abbr: Midden-Drenthe
   valid_from: '1900-01-01'
+description:
+  url: https://www.middendrenthe.nl/bestuur-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.middendrenthe.nl/bestuur-organisatie/informatie-opvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/35710/Gemeente_Midden-Drenthe
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Drenthe%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Drenthe%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Drenthe%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.middendrenthe.nl/woo-verzoek-indienen
+afspraak:
+  telefoonnummer: (0593) 53 92 22
+  url: https://www.middendrenthe.nl/contact
+geography:
+  oppervlakte: 345,82
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 345.82
+  aantal_inwoners: 34402
+  inwoners: '99'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 99.0
+  bevat_plaatsen_raw: Balinge, Beilen, Bovensmilde, Bruntinge, Drijber, Elp, Eursinge
+    Midden-Drenthe, Garminge, Hijken, Hoogersmilde, Hooghalen, Mantinge, Nieuw-Balinge,
+    Nieuweroord, Oranje, Orvelte, Smilde, Spier, Stuifzand, Tiendeveen, Westerbork,
+    Wijster, Witteveen, Zuidveld, Zwiggelte
+  bevat_plaatsen:
+  - Balinge
+  - Beilen
+  - Bovensmilde
+  - Bruntinge
+  - Drijber
+  - Elp
+  - Eursinge Midden-Drenthe
+  - Garminge
+  - Hijken
+  - Hoogersmilde
+  - Hooghalen
+  - Mantinge
+  - Nieuw-Balinge
+  - Nieuweroord
+  - Oranje
+  - Orvelte
+  - Smilde
+  - Spier
+  - Stuifzand
+  - Tiendeveen
+  - Westerbork
+  - Wijster
+  - Witteveen
+  - Zuidveld
+  - Zwiggelte
+council:
+  total_seats: 23
+  parties:
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: MiddenDrenthe Nu
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Gemeentebelangen
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Gemeentebelangen
+    aantal_zetels: 1
+  - naam: Positief Vooruit
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.middendrenthe.nl
   email: gemeente@middendrenthe.nl
+  bezoekadres: Raadhuisplein 1, 9411 NB BEILEN
+  postadres: Postbus 24, 9410 AA BEILEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 9411 NB
+    woonplaats: BEILEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '24'
+    postcode: 9410 AA
+    woonplaats: BEILEN
+  - type: Woo-Adres
+    postbus: '24'
+    postcode: 9410 AA
+    woonplaats: BEILEN
+  phones:
+  - nummer: (0593) 53 92 22
+    label: algemeen
+  emails:
+  - email: gemeente@middendrenthe.nl
+    label: algemeen
+  - email: gemeente@middendrenthe.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.middendrenthe.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-11'
+last_verified: '2026-04-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35710/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35710/gemeente-midden-drenthe
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +165,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q835125
   retrieved: '2026-05-09'
+roo_start_datum: '2000-01-01'

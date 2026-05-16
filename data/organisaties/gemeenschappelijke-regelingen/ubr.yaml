@@ -1,20 +1,93 @@
 id: org:gr-ubr
 type: gemeenschappelijke-regeling
+subname: UBRivierenland
 identifiers:
   roo_id: '28117717'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1057
+  owms: http://standaarden.overheid.nl/owms/terms/bbnrivl
+  kvk: '76907694'
+  organisatiecode: so1057
+  rsin: '860835546'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Uitvoeringsorganisatie Breedbandnetwerk Rivierenland
+  roo_id: '29559644'
 names:
 - value: Uitvoeringsorganisatie Breedbandnetwerk Rivierenland
   abbr: UBR
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://ubrivierenland.nl/documenten/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28117717/Uitvoeringsorganisatie_Breedbandnetwerk_Rivierenland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://ubrivierenland.notubiz.nl/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uitvoeringsorganisatie+Breedbandnetwerk+Rivierenland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Uitvoeringsorganisatie+Breedbandnetwerk+Rivierenland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://ubrivierenland.nl/documenten/wet-open-overheid/
+organogram_url: https://ubrivierenland.nl/dit-is-ubr-rivierenland/
+afspraak:
+  email: info@ubrivierenland.nl
+  url: https://ubrivierenland.nl/documenten/wet-open-overheid/
 contact:
   website: https://ubrivierenland.nl
   email: info@ubrivierenland.nl
+  bezoekadres: Burgemeester van Lidth de Jeudelaan 3, 4001 VK Tiel
+  postadres: Burgemeester van Lidth de Jeudelaan 3, 4001 VK Tiel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester van Lidth de Jeudelaan
+    huisnummer: '3'
+    postcode: 4001 VK
+    woonplaats: Tiel
+  - type: Postadres
+    openbare_ruimte: Burgemeester van Lidth de Jeudelaan
+    huisnummer: '3'
+    postcode: 4001 VK
+    woonplaats: Tiel
+  - type: Vestigingsadres
+    openbare_ruimte: Burgemeester van Lidth de Jeudelaan
+    huisnummer: '3'
+    postcode: 4001 VK
+    woonplaats: Tiel
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Burgemeester van Lidth de Jeudelaan
+    huisnummer: '3'
+    postcode: 4001 VK
+    woonplaats: Tiel
+    land: Nederland
+  phones:
+  - nummer: (085) 400 08 14
+    label: algemeen
+  emails:
+  - email: info@ubrivierenland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ubrivierenland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://ubrivierenland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-11'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28117717/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28117717/ubr
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-01-01'

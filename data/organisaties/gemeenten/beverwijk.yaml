@@ -6,21 +6,139 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0375
   roo_id: '29600'
   wikidata: Q9905
+  owms: http://standaarden.overheid.nl/owms/terms/Beverwijk_(gemeente)
+  ictu: '00375'
+  organisatiecode: gm0375
+  rsin: 001999266
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BEV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Beverwijk
   abbr: Beverwijk
   valid_from: '1900-01-01'
+description:
+  url: https://www.beverwijk.nl/over-ons
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.beverwijk.nl/verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/29600/Gemeente_Beverwijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beverwijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beverwijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beverwijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.beverwijk.nl/form/woo-verzoek/
+organogram_url: https://www.beverwijk.nl/over-ons
+afspraak:
+  email: info@beverwijk.nl
+  telefoonnummer: (0251) 25 62 56
+geography:
+  oppervlakte: 20,09
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 20.09
+  aantal_inwoners: 43052
+  inwoners: '2142'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2142.0
+  bevat_plaatsen_raw: Beverwijk, Wijk aan Zee
+  bevat_plaatsen:
+  - Beverwijk
+  - Wijk aan Zee
+council:
+  total_seats: 27
+  parties:
+  - naam: Samen Lokaal Beverwijk
+    aantal_zetels: 7
+  - naam: VRIJ!
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 3
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Ons Beverwijk
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: DENK
+    aantal_zetels: 1
 contact:
   website: https://www.beverwijk.nl
   email: info@beverwijk.nl
+  bezoekadres: Stationsplein 48, 1948 LC BEVERWIJK
+  postadres: Postbus 450, 1940 AL BEVERWIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '48'
+    postcode: 1948 LC
+    woonplaats: BEVERWIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '450'
+    postcode: 1940 AL
+    woonplaats: BEVERWIJK
+  - type: Woo-Adres
+    openbare_ruimte: Postbus
+    huisnummer: '450'
+    postcode: 1940 AL
+    woonplaats: Beverwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stationsplein
+    huisnummer: '48'
+    postcode: 1948 LC
+    ter_attentie_van: Team Leefomgeving
+    woonplaats: BEVERWIJK
+  phones:
+  - nummer: (0251) 25 62 56
+    label: algemeen
+  emails:
+  - email: info@beverwijk.nl
+    label: algemeen
+  - email: omgevingsdesk@beverwijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.beverwijk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29600/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29600/beverwijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

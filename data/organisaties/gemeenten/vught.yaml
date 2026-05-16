@@ -6,21 +6,153 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0865
   roo_id: '37665'
   wikidata: Q9876
+  owms: http://standaarden.overheid.nl/owms/terms/Vught_(gemeente)
+  ictu: 00865
+  organisatiecode: gm0865
+  rsin: 001709240
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_VGT
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Vught
   abbr: Vught
   valid_from: '1900-01-01'
+description:
+  url: https://vught.nl/wie-doet-wat-in-de-gemeente-vught
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://vught.nl/wet-open-overheid-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/37665/Gemeente_Vught
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://vught.woopublicaties.nl/overig
+      toelichting: Beleidsnota's Gemeente Vught
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&gemeenten=Vught&indeling=
+      toelichting: Wetten en algemeen verbindende voorschriften Gemeente Vught
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)%20AND%20dt.creator==%22Vught%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=po%7cVught
+      toelichting: Overige besluiten van algemene strekking worden openbaar gemaakt
+        op de website van de Overheid.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://vught.bestuurlijkeinformatie.nl/Reports
+      toelichting: In deze informatiecategorie vindt u vergaderstukken, verslagen
+        en besluitenlijsten van de gemeenteraad.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://vught.bestuurlijkeinformatie.nl/Calendar
+      toelichting: In deze informatiecategorie vindt u de agenda’s en besluitenlijsten
+        van het college van burgemeester en wethouders.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://vught.nl/programmabegrotingen-en-jaarstukken
+      toelichting: Hier vindt u het jaarplan (de begroting) en het jaarverslag (jaarverslag
+        en jaarrekening) van de Gemeente Vught.
+  wooVerzoek:
+    url: https://formulieren.vught.nl/informatieverzoek-wet-open-overheid/startpagina
+organogram_url: https://vught.bestuurlijkeinformatie.nl/Reports/Document/c5980fad-ac34-49d6-a417-2d3df679e587?documentId=ae1accf0-41d2-47ef-9870-6546a1992192
+afspraak:
+  email: gemeente@vught.nl
+  telefoonnummer: (073) 658 06 80
+  url: https://vught.nl/afspraak-maken/formulier
+geography:
+  oppervlakte: 34,46
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 34.46
+  aantal_inwoners: 33202
+  inwoners: '963'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 963.0
+  bevat_plaatsen_raw: Cromvoirt, Helvoirt, Vught
+  bevat_plaatsen:
+  - Cromvoirt
+  - Helvoirt
+  - Vught
+council:
+  total_seats: 24
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 7
+  - naam: D66
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: PvdA-GroenLinks
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
+  - naam: SamenLokaal
+    aantal_zetels: 1
 contact:
   website: https://www.vught.nl
   email: gemeente@vught.nl
+  bezoekadres: Secr. van Rooijstraat 1, 5261 EP VUGHT
+  postadres: Postbus 10100, 5260 GA VUGHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Secr. van Rooijstraat
+    huisnummer: '1'
+    postcode: 5261 EP
+    woonplaats: VUGHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10100'
+    postcode: 5260 GA
+    woonplaats: VUGHT
+  - type: Woo-Adres
+    postbus: '10100'
+    postcode: 5260 GA
+    woonplaats: Vught
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Secr. Van Rooijstraat
+    huisnummer: '1'
+    postcode: 5261 EP
+    ter_attentie_van: Team Vergunningen en Veiligheid
+    woonplaats: VUGHT
+  phones:
+  - nummer: (073) 658 06 80
+    label: algemeen
+  emails:
+  - email: gemeente@vught.nl
+    label: algemeen
+  - email: gemeente@vught.n
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.vught.nl
+    label: algemeen
+  contact_forms:
+  - url: https://formulieren.vught.nl/contact-opnemen/startpagina
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37665/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37665/vught
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

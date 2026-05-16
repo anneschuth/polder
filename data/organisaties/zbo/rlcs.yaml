@@ -4,17 +4,54 @@ identifiers:
   roo_id: '27623535'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000147
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Regionale Loodsencorporaties
   abbr: rlc's
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Loodsenwet, artikel 10
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0004365&artikel=I&hoofdstuk=III&paragraaf=2&artikel=10
+taken_en_bevoegdheden: Iedere registerloods is daarnaast van rechtswege lid van een
+  (of meer)regionale loodsencorporaties (rlc’s). De rlc’shebben een, overigens zeer
+  beperkte, bevoegdheid tot het stellen vanaanvullende regels voor haar leden. Voor
+  het overige verzorgen de Nederlandse Loodsencorporatie ende rlc’s de opleidingen,
+  examens en voorlichting.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Stichting Beroepspensioenfonds Loodsen (BPLoodsen)
+    referentie: https://www.bploodsen.nl/
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2018-12-31'
 contact:
   website: https://ijmond.loodswezen.nl/nl
   email: amsterdam-ijmond@loodswezen.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-07-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27623535/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27623535/rlcs
+  retrieved: '2026-05-16'
+roo_start_datum: '1988-01-01'

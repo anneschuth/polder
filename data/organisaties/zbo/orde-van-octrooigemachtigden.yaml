@@ -3,17 +3,72 @@ type: zbo
 identifiers:
   roo_id: '27906622'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10013
+  kvk: '27348662'
+  rsin: 003580659
 classification: zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Orde van Octrooigemachtigden
   valid_from: '1900-01-01'
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: www.octrooigemachtigde.nl
   email: mail@octrooigemachtigde.nl
+  bezoekadres: Lange Kleiweg 6 -28, 2288 GK Rijswijk
+  postadres: Lange Kleiweg 6-28, 2288 GK Rijswijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Kleiweg
+    huisnummer: '6'
+    huisnummer_toevoeging: '-28'
+    postcode: 2288 GK
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Lange Kleiweg
+    huisnummer: 6-28
+    postcode: 2288 GK
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: 06 24 98 61 34
+    label: algemeen
+  emails:
+  - email: mail@octrooigemachtigde.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.octrooigemachtigde.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-17'
+last_verified: '2026-03-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27906622/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27906622/orde-van-octrooigemachtigden
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

@@ -5,24 +5,95 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0783
   oin: 00000001852234673000
   kvk: '56645813'
+  owms: http://standaarden.overheid.nl/owms/terms/odrnijm
+  organisatiecode: so0783
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling openbaar lichaam omgevingsdienst regio Nijmegen
+  roo_id: '30090003'
 names:
 - value: Omgevingsdienst Regio Nijmegen
   abbr: ODRN
   valid_from: '1900-01-01'
   valid_until: '2026-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2026-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2026-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odregionijmegen.nl/contact/woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28160442/Omgevingsdienst_Regio_Nijmegen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Regio+Nijmegen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Regio+Nijmegen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odregionijmegen.nl/over-de-odrn/bestuur-odrn/
+      toelichting: Onderaan deze pagina staan de jaarverslagen (vanaf 2020) en begrotingen
+        (vanaf 2022)
+  wooVerzoek:
+    url: https://www.odregionijmegen.nl/contact/woo-verzoek-indienen/
+organogram_url: https://www.odregionijmegen.nl/over-de-odrn/maak-kennis-met-de-odrn/
+afspraak:
+  telefoonnummer: (024) 751 77 00
+  url: https://www.odregionijmegen.nl/contact/
 contact:
   website: https://www.odregionijmegen.nl
   email: info@odrn.nl
+  bezoekadres: Marienburg 75, 6511 PS Nijmegen
+  postadres: Postbus 1603, 6501 BP Nijmegen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Marienburg
+    huisnummer: '75'
+    postcode: 6511 PS
+    woonplaats: Nijmegen
+  - type: Postadres
+    postbus: '1603'
+    postcode: 6501 BP
+    woonplaats: Nijmegen
+  - type: Woo-Adres
+    openbare_ruimte: Mariënburg
+    huisnummer: '75'
+    postcode: 6511 PS
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (024) 751 77 00
+    label: algemeen
+  emails:
+  - email: info@odrn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odregionijmegen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-01-01'
+last_mutation: '2026-05-04'
+last_verified: '2020-08-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28160442/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28160442/odrn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-11-07'

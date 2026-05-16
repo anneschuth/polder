@@ -2,14 +2,43 @@ id: org:oovb-dunea-nv
 type: rwt
 identifiers:
   roo_id: '27908973'
+  kvk: '27122974'
+  oin: 00000003271229740000
+  rsin: 009288193
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Dunea N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Pln vd Verenigde Naties 11, 2719 EG Zoetermeer
+  postadres: Postbus 756, 2700 AT Zoetermeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pln vd Verenigde Naties 11
+    postcode: 2719 EG
+    woonplaats: Zoetermeer
+  - type: Postadres
+    postbus: '756'
+    postcode: 2700 AT
+    woonplaats: Zoetermeer
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908973/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908973/dunea-nv
+  retrieved: '2026-05-16'

@@ -6,20 +6,119 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0636
   roo_id: '21204'
   wikidata: Q2046915
+  owms: http://standaarden.overheid.nl/owms/terms/Hoogheemraadschap_De_Stichtse_Rijnlanden
+  ictu: 04840
+  rsin: '802139097'
 classification: waterschap
 parent_id: null
 names:
 - value: Hoogheemraadschap De Stichtse Rijnlanden
   valid_from: '1900-01-01'
+description:
+  text: 'Gebied: Alphen aan den Rijn, Bodegraven-Reeuwijk, Bunnik, De Bilt, Houten,
+    IJsselstein, Krimpenerwaard, Lopik, Montfoort, Nieuwegein, Nieuwkoop, Oudewater,
+    Rhenen, Stichtse Vecht, Utrecht, Utrechtse Heuvelrug, Wijk bij Duurstede, Woerden,
+    Woudenberg en Zeist.'
+  url: https://www.hdsr.nl/overhdsr/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hdsr.nl/zelf-regelen/wet-open-overheid-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/21204/Hoogheemraadschap_De_Stichtse_Rijnlanden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://hdsr.openbaarmakingen.nl/woo-verzoeken-en--besluiten
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://hdsr.bestuurlijkeinformatie.nl/Reports/Details/1c1ddaea-3860-4060-bb85-c2cdd5ee2087
+      toelichting: Bij het Algemeen Bestuur ter behandeling ingekomen stukken
+    - informatiecategorie: Klachtoordelen
+      url: https://hdsr.openbaarmakingen.nl/klachtoordelen
+      toelichting: Een overzicht van formele klachtoordelen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogheemraadschap+De+Stichtse+Rijnlanden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hdsr.bestuurlijkeinformatie.nl/Calendar
+      toelichting: Agenda’s en verslagen van het Algemeen Bestuur en zijn commissies
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogheemraadschap+De+Stichtse+Rijnlanden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogheemraadschap+De+Stichtse+Rijnlanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.hdsr.nl/overhdsr/beleidscyclus/
+      toelichting: Begroting en jaarrekening
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://hdsr.bestuurlijkeinformatie.nl/Reports/Details/95add7c8-f281-4b88-b36b-ae7f14665cef
+      toelichting: Agenda's en besluitenlijsten Dagelijks Bestuur
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hdsr.bestuurlijkeinformatie.nl/Reports
+      toelichting: Vergaderstukken van het Algemeen Bestuur en de commissies
+  wooVerzoek:
+    url: https://www.hdsr.nl/zelf-regelen/wet-open-overheid/
+organogram_url: https://www.hdsr.nl/overhdsr/organisatie/
+afspraak:
+  email: post@hdsr.nl
+  telefoonnummer: (030) 634 57 00
+  url: https://www.hdsr.nl/contact/
 contact:
   website: https://www.hdsr.nl
   email: post@hdsr.nl
+  bezoekadres: Poldermolen 2, 3994 DD Houten
+  postadres: Postbus 550, 3990 GJ Houten
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Poldermolen
+    huisnummer: '2'
+    postcode: 3994 DD
+    woonplaats: Houten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '550'
+    postcode: 3990 GJ
+    woonplaats: Houten
+  - type: Woo-Adres
+    postbus: '550'
+    postcode: 3990 GJ
+    woonplaats: Houten
+  phones:
+  - nummer: (030) 634 57 00
+    label: algemeen
+  emails:
+  - email: post@hdsr.nl
+    label: algemeen
+  - email: vhpost@hdsr.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.hdsr.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21204/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21204/hoogheemraadschap-de-stichtse-rijnlanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

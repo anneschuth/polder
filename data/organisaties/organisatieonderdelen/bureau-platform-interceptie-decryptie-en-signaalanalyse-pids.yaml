@@ -7,11 +7,39 @@ parent_id: org:agentschap-justid
 names:
 - value: Bureau Platform Interceptie Decryptie & Signaalanalyse (PIDS)
   valid_from: '1900-01-01'
+description:
+  text: 'Taak: Het bureau PIDS ondersteunt het interdepartementale Platform Interceptie,
+    Decryptie en Signaalanalyse. Op deze terreinen heeft het platform de volgende
+    taken: onderzoek en advies, uitwisseling van expertise en het uitvoeren van projecten.
+    Het platform dient tevens als intermediair tussen aanbieders van telecommunicatiediensten
+    en -netwerken en de behoeftestellende autoriteiten zoals OM, opsporings- en I&V
+    diensten.'
 contact:
   website: www.justid.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 63 11
+    label: algemeen
+  internet_addresses:
+  - url: www.justid.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-12'
+last_verified: '2026-04-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12303/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12303/bureau-platform-interceptie-decryptie-en-signaalanalyse-pids
+  retrieved: '2026-05-16'

@@ -2,14 +2,31 @@ id: org:onderdeel-rechtbank-limburg-locatie-roermond
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048419'
+  kvk: '82942978'
+  rsin: '862664573'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-limburg
 names:
 - value: Rechtbank Limburg, locatie Roermond
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Willem II Singel 67, 6041 HR Roermond
+  postadres: Postbus 950, 6040 AZ Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willem II Singel
+    huisnummer: '67'
+    postcode: 6041 HR
+    woonplaats: Roermond
+  - type: Postadres
+    postbus: '950'
+    postcode: 6040 AZ
+    woonplaats: Roermond
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-08-27'
+last_verified: '2026-03-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048419/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048419/rechtbank-limburg-locatie-roermond
+  retrieved: '2026-05-16'

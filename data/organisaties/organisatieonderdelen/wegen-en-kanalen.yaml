@@ -3,16 +3,47 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '16951'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Wegen en Kanalen
   valid_from: '1900-01-01'
+description:
+  text: 'Taak : Wij dragen bij aan een betere en veiligere verkeersafwikkeling binnen
+    de provincie. Dat begint bij een goede zorg voor de provinciale infrastructuur.
+    Wij zorgen voor een maximale levensduur van wegen, vaarwegen en objecten zoals
+    bruggen en sluizen. Daarnaast is onze eenheid verantwoordelijk voor bodem- en
+    asbestsanering binnen risicovolle gebieden.'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8011 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8011 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (038) 499 70 00
+    label: algemeen
+  - nummer: (038) 499 75 95
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16951/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16951/wegen-en-kanalen
+  retrieved: '2026-05-16'

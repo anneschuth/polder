@@ -5,23 +5,125 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0439
   oin: 00000001806381176000
   kvk: '54079403'
+  owms: http://standaarden.overheid.nl/owms/terms/odbrnrd
+  organisatiecode: so0439
+  rsin: '806381176'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Omgevingsdienst Brabant Noord
+  roo_id: '29894712'
 names:
 - value: Omgevingsdienst Brabant Noord
   abbr: ODBN
   valid_from: '1900-01-01'
+description:
+  url: https://odbn.nl/over
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28107449/Omgevingsdienst_Brabant_Noord
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://odbn.nl/besluitenlijst-vergaderingen-dagelijks-bestuur
+      toelichting: Hier vindt u de besluitenlijsten van vergaderingen van het Dagelijks
+        Bestuur van de ODBN.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://odbn.bestuurlijkeinformatie.nl/
+      toelichting: Hier vindt u de ingediende WOO-verzoeken en de antwoorden hierop.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://odbn.nl/besluitenlijst-vergaderingen-dagelijks-bestuur
+      toelichting: Vindplaats Besluitenlijsten vergaderingen Dagelijks Bestuur ODBN
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Brabant+Noord%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Brabant+Noord%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://odbn.nl/besluitenlijst-vergaderingen-dagelijks-bestuur
+      toelichting: Hier vindt u de besluitenlijsten van het Dagelijks Bestuur
+  wooVerzoek:
+    url: https://odbn.nl/contact
+organogram_url: https://odbn.nl/over-odbn/organogram
+afspraak:
+  email: info@odbn.nl
+  telefoonnummer: (088) 743 00 00
+  url: https://odbn.nl/contact
 contact:
   website: https://www.odbn.nl
   email: info@odbn.nl
+  bezoekadres: Victorialaan 1, 5213 JG 's-Hertogenbosch
+  postadres: Victorialaan 1, 5213 JG 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Victorialaan
+    huisnummer: '1'
+    postcode: 5213 JG
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    openbare_ruimte: Victorialaan
+    huisnummer: '1'
+    postcode: 5213 JG
+    woonplaats: '''s-Hertogenbosch'
+  - type: Woo-Adres
+    openbare_ruimte: Victorialaan
+    huisnummer: '1'
+    postcode: 5213 JG
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (088) 743 00 00
+    label: algemeen
+  emails:
+  - email: info@odbn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odbn.nl
+    label: algemeen
+  contact_forms:
+  - url: https://odbn.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Omgevingsdienst Brabant Noord
+    url: https://nl.linkedin.com/company/omgevingsdienst-brabant-noord
+  - platform: Facebook
+    gebruikersnaam: Omgevingsdienst Brabant Noord
+    url: https://www.facebook.com/omgevingsdienstbrabantnoord
+  - platform: Instagram
+    gebruikersnaam: omgevingsdienstodbn
+    url: https://www.instagram.com/omgevingsdienstodbn/
+  - platform: YouTube
+    gebruikersnaam: Omgevingsdienst Brabant Noord
+    url: https://www.youtube.com/channel/UCGGnsktUixQ1rN_sN30MOHw
+  - platform: X
+    gebruikersnaam: odbrabantnoord
+    url: https://twitter.com/odbrabantnoord
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28107449/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28107449/odbn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-04-01'

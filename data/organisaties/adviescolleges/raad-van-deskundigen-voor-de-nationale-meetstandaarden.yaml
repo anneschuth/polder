@@ -3,18 +3,66 @@ type: adviescollege
 identifiers:
   roo_id: '29452324'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12365
+  owms: http://standaarden.overheid.nl/owms/terms/rvdnatmeetst
+  organisatiecode: oorg12365
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Raad van deskundigen voor de nationale meetstandaarden
   valid_from: '1900-01-01'
-  valid_until: '2027-06-30'
+description:
+  text: De Raad van deskundigen voor de nationale meetstandaarden is een technisch
+    wetenschappelijk adviescollege. Op grond van de Metrologiewet beheert en oefent
+    de Raad toezicht uit op de verwezenlijking van nationale meetstandaarden en brengt
+    hierover jaarlijks verslag uit aan de minister van Economische Zaken en Klimaat,
+    evenals advies over aangelegenheden in verband met de meetstandaarden van grootheden.
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Metrologiewet, artikel 4
+  referentie: https://wetten.overheid.nl/BWBR0019517/2023-04-19#Hoofdstuk2_Artikel4
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rijksoverheid.nl/onderwerpen/certificaten-keurmerken-en-meetinstrumenten/metrologie
   email: vincent.vanderdonk@rvo.nl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Beatrixlaan
+    huisnummer: '2'
+    postcode: 2595 AL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  bezoekadres: Prinses Beatrixlaan 2, 2595 AL Den Haag
+  phones:
+  - nummer: 06 25 06 33 27
+    label: algemeen
+  emails:
+  - email: vincent.vanderdonk@rvo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/onderwerpen/certificaten-keurmerken-en-meetinstrumenten/metrologie
+    label: algemeen
+  - url: https://www.rijksoverheid.nl/documenten/rapporten/2024/12/13/rvd-strategisch-advies-2024-2028
+    label: strategisch advies
 valid_from: '1900-01-01'
-valid_until: '2027-06-30'
+valid_until: '1997-12-24'
+last_mutation: '2026-04-09'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29452324/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29452324/raad-van-deskundigen-voor-de-nationale-meetstandaarden
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-02-01'

@@ -3,13 +3,32 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '5128'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-mivd
+parent_id: org:onderdeel-bestuursstaf
 names:
 - value: Directie Juridische Zaken (DJZ)
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Kalvermarkt 32, 2511 CB Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt
+    huisnummer: '32'
+    postcode: 2511 CB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 318 67 67
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-02'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/5128/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/5128/directie-juridische-zaken-djz
+  retrieved: '2026-05-16'

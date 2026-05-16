@@ -2,15 +2,34 @@ id: org:stichting-sbca
 type: rwt
 identifiers:
   roo_id: '30133773'
+  kvk: '30151245'
+  rsin: '807817405'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: stichting Beheer Certificatieregeling Arbodiensten
   abbr: SBCA
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Gooimeer
+    huisnummer: '4'
+    huisnummer_toevoeging: '15'
+    postcode: 1411 DC
+    woonplaats: Naarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133773/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133773/sbca
+  retrieved: '2026-05-16'

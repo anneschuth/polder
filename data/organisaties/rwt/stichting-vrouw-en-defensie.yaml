@@ -2,14 +2,31 @@ id: org:stichting-vrouw-en-defensie
 type: rwt
 identifiers:
   roo_id: '30133325'
+  kvk: '69284350'
+  rsin: '857816068'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting Vrouw En Defensie
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Karel Appelstraat
+    huisnummer: '26'
+    postcode: 7556 JH
+    woonplaats: Hengelo
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133325/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133325/stichting-vrouw-en-defensie
+  retrieved: '2026-05-16'

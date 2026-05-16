@@ -1,19 +1,86 @@
 id: org:adviescollege-orgaan-voor-de-friese-taal
 type: adviescollege
+subname: DINGtiid
 identifiers:
   roo_id: '28360985'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10164
+  owms: http://standaarden.overheid.nl/owms/terms/orgfriestaal
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Orgaan voor de Friese taal
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 10,11,12,13,14,15,16,25,26,27,28
+      toelichting: Het Orgaan voor de Friese taal kent andere taken naast zijn adviestaken
+        en is zodoende een adviescollege bedoeld als in artikel 3 van de Kaderwet
+        adviescolleges.
+wettelijke_grondslagen:
+- opschrift: artikel 18 van de Wet gebruik Friese taal
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0034047&hoofdstuk=4&artikel=18
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://dingtiid.frl/nl/home/
   email: ynfo@dingtiid.frl
+  bezoekadres: Westersingel 4 (kamer 0.03), 8913 CK Leeuwarden
+  postadres: Westersingel 4 (kamer 0.03), 8913 CK Ljouwert
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westersingel
+    huisnummer: '4'
+    huisnummer_toevoeging: (kamer 0.03)
+    postcode: 8913 CK
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    toelichting: DINGtiid orgaan foar de Fryske taal
+    openbare_ruimte: Westersingel
+    huisnummer: '4'
+    huisnummer_toevoeging: (kamer 0.03)
+    postcode: 8913 CK
+    woonplaats: Ljouwert
+  phones:
+  - nummer: 06 53 13 79 82
+    label: algemeen
+  emails:
+  - email: ynfo@dingtiid.frl
+    label: algemeen
+  internet_addresses:
+  - url: https://dingtiid.frl/nl/home/
+    label: algemeen
+  contact_forms:
+  - url: https://dingtiid.frl/nl/kontakt/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360985/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360985/orgaan-voor-de-friese-taal
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

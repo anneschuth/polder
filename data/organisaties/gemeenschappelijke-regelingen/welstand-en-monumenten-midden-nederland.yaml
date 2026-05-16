@@ -2,8 +2,13 @@ id: org:gr-welstand-en-monumenten-midden-nederland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966541'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '50694960'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Welstand en Monumenten Midden Nederland 2005
+  roo_id: '24966536'
 names:
 - value: Welstand en Monumenten Midden-Nederland
   valid_from: '1900-01-01'
@@ -11,9 +16,33 @@ names:
 contact:
   website: http://www.welmon.nl
   email: info@welmon.nl
+  bezoekadres: Dorpstraat 1b, 3980 CC Bunnik
+  postadres: Postbus 115, 3980 CC Bunnik
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpstraat
+    huisnummer: 1b
+    postcode: 3980 CC
+    woonplaats: Bunnik
+  - type: Postadres
+    postbus: '115'
+    postcode: 3980 CC
+    woonplaats: Bunnik
+  phones:
+  - nummer: (030) 656 90 00
+    label: algemeen
+  emails:
+  - email: info@welmon.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.welmon.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2020-10-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966541/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966541/welstand-en-monumenten-midden-nederland
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-02-01'

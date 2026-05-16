@@ -5,23 +5,78 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0676
   oin: 00000001817539347000
   kvk: '27380656'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Hollands_Midden
+  organisatiecode: so0676
+  rsin: '817539347'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Veiligheidsregio Hollands Midden
+  roo_id: '30005176'
 names:
 - value: Veiligheidsregio Hollands Midden
   abbr: VRHM
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24185261/Veiligheidsregio_Hollands_Midden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Hollands+Midden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Hollands+Midden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
 contact:
   website: https://www.vrhm.nl
   email: info@brandweer.vrhm.nl
+  bezoekadres: Rooseveltstraat 4 a, 2321 BM Leiden
+  postadres: Postbus 1123, 2302 BC Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rooseveltstraat
+    huisnummer: '4'
+    huisnummer_toevoeging: a
+    postcode: 2321 BM
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1123'
+    postcode: 2302 BC
+    woonplaats: Leiden
+  phones:
+  - nummer: (088) 246 50 00
+    label: algemeen
+  emails:
+  - email: info@brandweer.vrhm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrhm.nl
+    label: algemeen
+  fax: (088) 246 50 01
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24185261/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24185261/vrhm
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-10-08'

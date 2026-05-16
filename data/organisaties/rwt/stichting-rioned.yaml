@@ -2,14 +2,33 @@ id: org:stichting-rioned
 type: rwt
 identifiers:
   roo_id: '30133455'
+  kvk: '41154304'
+  rsin: 009039995
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting RIONED
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Horaplantsoen
+    huisnummer: '12'
+    huisnummer_toevoeging: b
+    postcode: 6717 LT
+    woonplaats: Ede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133455/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133455/stichting-rioned
+  retrieved: '2026-05-16'

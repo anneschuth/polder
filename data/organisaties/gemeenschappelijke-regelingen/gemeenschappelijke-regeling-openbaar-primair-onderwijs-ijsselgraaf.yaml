@@ -1,18 +1,83 @@
 id: org:gr-gemeenschappelijke-regeling-openbaar-primair-onderwijs-ijsselgraaf
 type: gemeenschappelijke-regeling
 identifiers:
-  roo_id: '24963319'
+  roo_id: '24963314'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling openbaar primair onderwijs IJsselgraaf
+  roo_id: '24963314'
 names:
+- value: Gemeenschappelijke regeling openbaar primair onderwijs IJsselgraaf
+  valid_from: '2010-02-05'
+  valid_until: '2016-01-01'
 - value: Gemeenschappelijke regeling openbaar primair onderwijs IJsselgraaf
   valid_from: '1900-01-01'
   valid_until: '2016-01-01'
+gr_meta:
+  samenwerkingsvorm:
+    value: Gemeenschappelijk orgaan
+    afkorting: GO
+  bevoegdheidsverkrijgingen:
+  - Delegatie
+  regionaal_samenwerkingsorgaan:
+    naam: Gemeenschappelijke regeling openbaar primair onderwijs IJsselgraaf
+    roo_id: '24963319'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  bronhouder:
+    naam: Gemeenschappelijke regeling openbaar primair onderwijs IJsselgraaf
+    roo_id: '24963319'
+    owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Gemeente Bronckhorst
+    roo_id: '36916'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1876
+    owms: http://standaarden.overheid.nl/owms/terms/Bronckhorst
+    toetredings_datum: '2010-02-05'
+  - naam: Gemeente Doesburg
+    roo_id: '35063'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0221
+    owms: http://standaarden.overheid.nl/owms/terms/Doesburg_(gemeente)
+    toetredings_datum: '2010-02-05'
+  - naam: Gemeente Doetinchem
+    roo_id: '36726'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0222
+    owms: http://standaarden.overheid.nl/owms/terms/Doetinchem
+    toetredings_datum: '2010-02-05'
+  instellingsbesluiten:
+  - http://decentrale.regelgeving.overheid.nl/cvdr/xhtmloutput/Historie/Bronckhorst/CVDR98835/CVDR98835_1.html
+  datum_inwerkingtreding: '2010-02-05'
+  datum_uitwerkingtreding: '2016-01-01'
 contact:
   email: info@ijsselgraaf.nl
-valid_from: '1900-01-01'
+  bezoekadres: Palmberg 18, 7021 DJ Zelhem
+  postadres: Postbus 18, 7020 AA Zelhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Palmberg
+    huisnummer: '18'
+    postcode: 7021 DJ
+    woonplaats: Zelhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '18'
+    postcode: 7020 AA
+    woonplaats: Zelhem
+  phones:
+  - nummer: 04382990
+    label: algemeen
+  emails:
+  - email: info@ijsselgraaf.nl
+    label: algemeen
+valid_from: '2010-02-05'
 valid_until: '2016-01-01'
+last_mutation: '2020-10-21'
+last_verified: '2020-10-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963319/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963314/gemeenschappelijke-regeling-openbaar-primair-onderwijs-ijsselgraaf
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-02-05'
