@@ -2,14 +2,42 @@ id: org:oovb-stichting-factorium-podiumkunsten
 type: rwt
 identifiers:
   roo_id: '27912141'
+  kvk: '41095753'
+  rsin: 002790403
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Factorium Podiumkunsten
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Koningsplein 11a, 5038 WG Tilburg
+  postadres: Postbus 10141, 5000 JC Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningsplein 11a
+    postcode: 5038 WG
+    woonplaats: Tilburg
+  - type: Postadres
+    postbus: '10141'
+    postcode: 5000 JC
+    woonplaats: Tilburg
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912141/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912141/stichting-factorium-podiumkunsten
+  retrieved: '2026-05-16'

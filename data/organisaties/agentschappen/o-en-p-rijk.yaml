@@ -3,18 +3,95 @@ type: agentschap
 identifiers:
   roo_id: '63254'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10120
+  owms: http://standaarden.overheid.nl/owms/terms/oenpr
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Organisatie en Personeel Rijk
   abbr: O&P Rijk
   valid_from: '1900-01-01'
+description:
+  text: Bij Organisatie en Personeel Rijk (O&P Rijk) komen alle uitvoeringsvraagstukken
+    op het terrein van organisatie en personeel bij elkaar. Samen bieden we hr-oplossingen
+    voor medewerkers, managers, hr-directies en beleidsmakers binnen het Rijk.
+  url: https://www.oprijk.nl/over-op-rijk
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/63254/Organisatie_en_Personeel_Rijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.oprijk.nl/binaries/oprijk/documenten/verslagen/2025/04/18/jaarverslag-op-rijk-2024/Jaarverslag+OPRijk+2024+Webtoegankelijke_digitale_versie.pdf
+      toelichting: Jaarverslag 2024 O&P Rijk
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.oprijk.nl/binaries/oprijk/documenten/jaarplannen/2025/02/25/index/Jaarplan+OPRijk+2025+%2820250225%29.pdf
+      toelichting: Jaarplan 2025 O&P Rijk
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/contact/woo-verzoek-indienen
+organogram_url: https://www.oprijk.nl/over-op-rijk/organogram
+afspraak:
+  url: https://www.oprijk.nl/contact
 contact:
   website: https://www.oprijk.nl/
   email: Klantcontact.oprijk@rijksoverheid.nl
+  bezoekadres: Schenkkade 100, 2595 AS Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schenkkade
+    huisnummer: '100'
+    postcode: 2595 AS
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (070) 700 05 00
+    label: algemeen
+  emails:
+  - email: Klantcontact.oprijk@rijksoverheid.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.oprijk.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.oprijk.nl/
+    label: Algemeen
+  fax: (070) 315 24 11
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-06'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/63254/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/63254/o-en-p-rijk
+  retrieved: '2026-05-16'

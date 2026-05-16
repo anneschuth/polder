@@ -3,17 +3,49 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28468696'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-wio
+parent_id: org:hoge-college-nationale-ombudsman
 names:
 - value: Bestuursbureau
   valid_from: '1900-01-01'
   valid_until: '2023-09-30'
+description:
+  text: Bij het Bestuursbureau komt een veelheid aan taken samen. Denk aan taken op
+    het gebied van financiën, personeel, informatievoorziening en planning & control.
 contact:
   website: http://www.nationaleombudsman.nl
   email: post@nationaleombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Postbus 93122, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '151'
+    postcode: 2594 AG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93122'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 356 35 63
+    label: algemeen
+  emails:
+  - email: post@nationaleombudsman.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nationaleombudsman.nl
+    label: algemeen
+  fax: (070) 360 75 72
+  beschrijving: Bij het Bestuursbureau komt een veelheid aan taken samen. Denk aan
+    taken op het gebied van financiën, personeel, informatievoorziening en planning
+    & control.
 valid_from: '1900-01-01'
 valid_until: '2023-09-30'
+last_mutation: '2023-09-28'
+last_verified: '2023-09-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28468696/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28468696/bestuursbureau
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-05-01'

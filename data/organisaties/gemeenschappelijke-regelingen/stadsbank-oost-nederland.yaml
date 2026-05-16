@@ -3,17 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24961722'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0087
+  owms: http://standaarden.overheid.nl/owms/terms/sbonl
+  kvk: '50830953'
+  btw: NL003257812B01
+  organisatiecode: so0087
+  rsin: 003257812
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Stadsbank Oost Nederland 2023
+  roo_id: '29641913'
 names:
 - value: Stadsbank Oost Nederland
   valid_from: '1900-01-01'
+description:
+  text: Wij zijn dé financieel dienstverlener in Oost Nederland sinds 1939. Stadsbank
+    Oost Nederland is een non-profit organisatie. Ons kantoor is gevestigd in Enschede.
+    Onze drijfveer? Duurzame financiële stabiliteit creëren voor onze klanten in opdracht
+    van 21 gemeenten in Twente en de Achterhoek. Elke werkdag zetten ruim 160 financiële
+    professionals hun expertise in om mensen weer in hun kracht te zetten als het
+    gaat om financieel gezond worden én blijven.
+  url: https://son.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://stadsbankoostnederland.nl/over-ons/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/24961722/Stadsbank_Oost_Nederland
+  wooVerzoek:
+    url: https://stadsbankoostnederland.nl/over-ons/woo-verzoek/
+afspraak:
+  email: info@stadsbankoostnederland.nl
+  telefoonnummer: (088) 766 36 66
+  url: https://son.nl
 contact:
   website: https://stadsbankoostnederland.nl
   email: info@stadsbankoostnederland.nl
+  bezoekadres: Spelbergsweg 35, 7512 DX Enschede
+  postadres: Postbus 1393, 7500 BJ Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spelbergsweg
+    huisnummer: '35'
+    postcode: 7512 DX
+    woonplaats: Enschede
+  - type: Postadres
+    postbus: '1393'
+    postcode: 7500 BJ
+    woonplaats: Enschede
+  - type: Woo-Adres
+    openbare_ruimte: Spelbergsweg
+    huisnummer: '35'
+    postcode: 7512 DX
+    woonplaats: Enschede
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  phones:
+  - nummer: (088) 766 36 66
+    label: algemeen
+  emails:
+  - email: info@stadsbankoostnederland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://stadsbankoostnederland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://stadsbankoostnederland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-03'
+last_verified: '2022-03-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24961722/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24961722/stadsbank-oost-nederland
+  retrieved: '2026-05-16'
+roo_start_datum: '1953-01-01'

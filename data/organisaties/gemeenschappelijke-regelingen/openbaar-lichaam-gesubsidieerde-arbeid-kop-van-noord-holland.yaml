@@ -3,17 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963915'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0538
+  owms: http://standaarden.overheid.nl/owms/terms/gakvnh
+  kvk: '57587264'
+  organisatiecode: so0538
+  rsin: '808319243'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gesubsidieerde arbeid Kop van Noord-Holland
+  roo_id: '24963910'
 names:
 - value: Openbaar lichaam Gesubsidieerde Arbeid Kop van Noord-Holland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.grga.nl
   email: secretariaat@grga.nl
+  bezoekadres: Witte Paal 122, 1742 NW Schagen
+  postadres: Postbus 315, 1740 AH Schagen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Witte Paal
+    huisnummer: '122'
+    postcode: 1742 NW
+    woonplaats: Schagen
+  - type: Postadres
+    postbus: '315'
+    postcode: 1740 AH
+    woonplaats: Schagen
+  phones:
+  - nummer: (0224) 21 54 44
+    label: algemeen
+  emails:
+  - email: secretariaat@grga.nl
+    label: verbeterpunten
+  internet_addresses:
+  - url: https://www.grga.nl
+    label: algemeen
+  - url: https://www.grga.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.grga.nl/contact
+    label: Algemeen
+  fax: (0224) 21 62 24
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-12-09'
+last_verified: '2022-12-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963915/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963915/openbaar-lichaam-gesubsidieerde-arbeid-kop-van-noord-holland
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-06-14'

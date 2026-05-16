@@ -2,14 +2,32 @@ id: org:stichting-rijksmuseum-boerhaave
 type: rwt
 identifiers:
   roo_id: '30133623'
+  kvk: '41169218'
+  rsin: '802994131'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Rijksmuseum Boerhaave
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Lange Sint Agnietenstraat
+    huisnummer: '10'
+    postcode: 2312 WC
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133623/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133623/stichting-rijksmuseum-boerhaave
+  retrieved: '2026-05-16'

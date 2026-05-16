@@ -8,12 +8,31 @@ names:
 - value: Statencommissies
   valid_from: '1900-01-01'
   valid_until: '2023-03-28'
+description:
+  text: 'Taak :'
 contact:
   website: https://www.drentsparlement.nl/drents_parlement_/commissies/
   email: post@drenthe.nl
+  bezoekadres: Westerbrink 1, 9405 BJ Assen
+  postadres: Postbus 122, 9400 AC Assen
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (0592) 36 55 55
+    label: algemeen
+  emails:
+  - email: post@drenthe.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.drentsparlement.nl/drents_parlement_/commissies/
+    label: algemeen
+  fax: (0592) 36 57 77
 valid_from: '1900-01-01'
 valid_until: '2023-03-28'
+last_mutation: '2023-12-07'
+last_verified: '2024-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15842/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/15842/statencommissies
+  retrieved: '2026-05-16'

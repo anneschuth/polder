@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0370
   roo_id: '31527'
   wikidata: Q9900
+  owms: http://standaarden.overheid.nl/owms/terms/Beemster_(gemeente)
+  ictu: '00370'
+  organisatiecode: gm0370
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,84 @@ names:
   abbr: Beemster
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 72,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 72.0
+  aantal_inwoners: 9550
+  inwoners: '132'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 132.0
+  bevat_plaatsen_raw: Middenbeemster, Noordbeemster, Westbeemster, Zuidoostbeemster
+  bevat_plaatsen:
+  - Middenbeemster
+  - Noordbeemster
+  - Westbeemster
+  - Zuidoostbeemster
+council:
+  total_seats: 13
+  parties:
+  - naam: Beemster Polder Partij
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA/GroenLinks
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
 contact:
   website: www.beemster.net
   email: gemeente@beemster.net
+  bezoekadres: Rijn Middelburgstraat 1, 1462 NV MIDDENBEEMSTER
+  postadres: Postbus 7, 1462 ZG MIDDENBEEMSTER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijn Middelburgstraat
+    huisnummer: '1'
+    postcode: 1462 NV
+    woonplaats: MIDDENBEEMSTER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '7'
+    postcode: 1462 ZG
+    woonplaats: MIDDENBEEMSTER
+  phones:
+  - nummer: (0299) 45 24 52
+    label: algemeen
+  emails:
+  - email: gemeente@beemster.net
+    label: algemeen
+  internet_addresses:
+  - url: www.beemster.net
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2022-11-18'
+last_verified: '2022-11-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31527/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31527/beemster
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

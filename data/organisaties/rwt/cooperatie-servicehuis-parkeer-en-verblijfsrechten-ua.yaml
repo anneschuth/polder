@@ -1,15 +1,47 @@
 id: org:oovb-cooperatie-servicehuis-parkeer-en-verblijfsrechten-ua
 type: rwt
+subname: Coöperatie Servicehuis Parkeer- en Verblijfsrechten U.A.
 identifiers:
   roo_id: '27908901'
+  kvk: '50371371'
+  rsin: '822698900'
 classification: rwt
+legal_form: Privaatrechtelijk - Coöperatie
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Coöperatie Servicehuis Parkeer- en Verblijfsrechten UA
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Weesperplein 8 -7e verdieping, 1018 XA Amsterdam
+  postadres: Postbus 95089, 1090 HB Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Weesperplein
+    huisnummer: '8'
+    huisnummer_toevoeging: -7e verdieping
+    postcode: 1018 XA
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '95089'
+    postcode: 1090 HB
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908901/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908901/cooperatie-servicehuis-parkeer-en-verblijfsrechten-ua
+  retrieved: '2026-05-16'

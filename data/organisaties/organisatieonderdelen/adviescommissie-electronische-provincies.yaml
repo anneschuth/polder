@@ -7,11 +7,25 @@ parent_id: org:onderdeel-bestuur
 names:
 - value: Adviescommissie Electronische provincies
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   email: communicatie@ipo.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 888 12 45
+    label: algemeen
+  emails:
+  - email: communicatie@ipo.nl
+    label: algemeen
+  fax: (070) 888 12 80
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-08-02'
+last_verified: '2026-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15978/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/15978/adviescommissie-electronische-provincies
+  retrieved: '2026-05-16'

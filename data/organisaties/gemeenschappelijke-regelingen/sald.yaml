@@ -3,18 +3,83 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28772572'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1082
+  owms: http://standaarden.overheid.nl/owms/terms/sald
+  kvk: '51115395'
+  organisatiecode: so1082
+  rsin: '001202650'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Streekarchivariaat de Liemers en Doesburg
+  roo_id: '30150112'
 names:
 - value: Streekarchivariaat de Liemers en Doesburg
   abbr: SALD
   valid_from: '1900-01-01'
+description:
+  text: Het streekarchivariaat De Liemers en Doesburg beheert de overgedragen archieven
+    van de gemeenten Doesburg, Duiven, Westervoort en Zevenaar.
+  url: https://www.liemersverleden.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28772572/Streekarchivariaat_de_Liemers_en_Doesburg
+afspraak:
+  email: sald@freeler.nl
+  telefoonnummer: (0316) 59 51 11
+  url: https://www.liemersverleden.nl/
 contact:
   website: https://www.liemersverleden.nl/streekarchivariaat-de-liemers-en-doesburg/
   email: sald@freeler.nl
+  bezoekadres: Kerkstraat 27, 6901 AA Zevenaar
+  postadres: Postbus 100, 6980 AC Doesburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kerkstraat
+    huisnummer: '27'
+    postcode: 6901 AA
+    woonplaats: Zevenaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '100'
+    postcode: 6980 AC
+    woonplaats: Doesburg
+  - type: Woo-Adres
+    openbare_ruimte: Kerkstraat
+    huisnummer: '27'
+    postcode: 6901 AA
+    woonplaats: Zevenaar
+    land: Nederland
+  phones:
+  - nummer: (0316) 59 51 11
+    label: algemeen
+  emails:
+  - email: sald@freeler.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.liemersverleden.nl/streekarchivariaat-de-liemers-en-doesburg/
+    label: algemeen
+  contact_forms:
+  - url: https://www.liemersverleden.nl/streekarchivariaat-de-liemers-en-doesburg/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-24'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28772572/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28772572/sald
+  retrieved: '2026-05-16'
+roo_start_datum: '1959-01-09'

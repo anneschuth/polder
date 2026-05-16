@@ -6,20 +6,150 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv30
   roo_id: '16317'
   wikidata: Q1101
+  owms: http://standaarden.overheid.nl/owms/terms/Noord-Brabant
+  ictu: 04209
+  rsin: 001709069
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_NORB
 classification: provincie
 parent_id: null
 names:
 - value: Provincie Noord-Brabant
   abbr: NB
   valid_from: '1900-01-01'
+description:
+  url: https://open.brabant.nl/organisatie-en-werkwijze
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.brabant.nl/loket/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/16317/Provincie_Noord-Brabant
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.brabant.nl/wooverzoeken
+      toelichting: Woo-verzoeken en -besluiten
+    - informatiecategorie: Klachtoordelen
+      url: https://api.sduconnect.nl/media/jaarverslag-2024-hac-68f0ed76bc5b1771613297.pdf
+      toelichting: Op dit moment publiceren wij het jaarverslag van de hoor- en adviescommissie
+        voor bezwaarschriften en klachten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?locatie=5262&datumrange=op&datumop=30-1-2026&date-input--2=30-1-2026&provincies=Noord-Brabant&indeling=
+      toelichting: Algemene regels bevatten die voor iedereen gelden (dus niet alleen
+        voor specifieke personen of instanties)
+    - informatiecategorie: Beschikkingen
+      url: https://open.brabant.nl/beschikkingen
+      toelichting: Beschikkingen zijn besluiten die niet van algemene aard zijn, maar
+        betrekking hebben op een specifiek geval. Een voorbeeld hiervan zijn besluiten
+        van de provincie om een vergunning te verlenen.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.brabant.nl/jaarplannen-en-jaarverslagen
+      toelichting: Jaarplannen en begroting
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://open.brabant.nl/onderzoeksrapporten
+      toelichting: De provincie heeft sinds eind 2024 de onderzoeksbank beschikbaar
+        gesteld, bekijk de reeds gepubliceerde onderzoeken (niet alleen volgens de
+        Woo).
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.brabant.nl/agenda-en-besluitenlijsten-bestuurscolleges
+      toelichting: Besluiten en activiteiten Gedeputeerde Staten
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordbrabant.bestuurlijkeinformatie.nl
+      toelichting: Vergaderstukken Provinciale Staten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noord-Brabant%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Dit betreft besluiten die niet wettelijk zijn vastgelegd, maar
+        wel algemeen geldend zijn, zoals beleidsregels of aanwijzingen.
+  wooVerzoek:
+    url: https://www.brabant.nl/loket/producten-diensten/overheidsinformatie-opvragen-woo/
+organogram_url: https://www.brabant.nl/over-brabant/provinciale-organisatie/organisatie-programmamanagement/
+afspraak:
+  telefoonnummer: (073) 681 28 12
+  url: https://www.brabant.nl/contact/
 contact:
   website: http://www.brabant.nl
+  bezoekadres: Brabantlaan 1, 5216 TV 's-Hertogenbosch
+  postadres: Postbus 90151, 5200 MC 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brabantlaan
+    huisnummer: '1'
+    postcode: 5216 TV
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '90151'
+    postcode: 5200 MC
+    woonplaats: '''s-Hertogenbosch'
+  - type: Woo-Adres
+    openbare_ruimte: Brabantlaan
+    huisnummer: '1'
+    postbus: '90151'
+    postcode: 5216 TV
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (073) 681 28 12
+    label: algemeen
+  internet_addresses:
+  - url: http://www.brabant.nl
+    label: algemeen
+  - url: https://www.formdesk.com/provincienoordbrabant/M382308_Nederlandstalige_Vraag_Brabantloket
+    label: Contactformulier
+  contact_forms:
+  - url: https://www.brabant.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://x.com/brabant
+  - platform: Facebook
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://www.facebook.com/provincienoordbrabant
+  - platform: Instagram
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://www.instagram.com/provincienoordbrabant/
+  - platform: LinkedIn
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://www.linkedin.com/company/provincie-noord-brabant/
+  - platform: YouTube
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://www.youtube.com/user/brabant/videos
+  - platform: Bluesky
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://bsky.app/profile/noordbrabant.bsky.social
+  - platform: Mastodon
+    gebruikersnaam: Provincie Noord-Brabant
+    url: https://social.overheid.nl/@provincienoordbrabant
+  fax: (073) 680 76 80
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16317/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16317/nb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

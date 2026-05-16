@@ -3,18 +3,98 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28361754'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0761
+  owms: http://standaarden.overheid.nl/owms/terms/rhczou
+  kvk: '50907905'
+  btw: NL822989712B01
+  organisatiecode: so0761
+  rsin: '822989712'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Archief Zuid-Utrecht
+  roo_id: '29606236'
 names:
 - value: Regionaal Archief Zuid-Utrecht
   abbr: RAZU
   valid_from: '1900-01-01'
+description:
+  text: 'Het Regionaal Archief Zuid-Utrecht (RAZU) is een gemeenschappelijke regeling
+    (GR) van de gemeenten Bunnik, Houten, Utrechtse Heuvelrug, Rhenen, Vijfheerenlanden
+    en Wijk bij Duurstede.Het RAZU heef een tweeledig doel: enerzijds het uitvoeren
+    van de Archiefwet 1995, anderzijds het vervullen van de functie van regionaal
+    kennis- en informatiecentrum op het gebied van de lokale en regionale geschiedenis,
+    door het opbouwen en beheren van een zo breed mogelijke collectie historische
+    bronnen en door te zorgen dat zoveel mogelijk mensen daarvan kunnen genieten en
+    gebruik maken.De huidige GR trad op 1 januari 2020 in werking en betreft een Bedrijfsvoeringsorganisatie.
+    Het heeft één directeur en een zeskoppig bestuur. Het bestuur heeft daarnaast
+    een secretaris (de directeur) en een adviseur (provinciaal interbestuurlijk toezichthouder).'
+  url: https://www.razu.nl/over-ons/menu/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.razu.nl/over-ons/woo_informatie/
+      overzichtURL: https://organisaties.overheid.nl/woo/28361754/Regionaal_Archief_Zuid-Utrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionaal+Archief+Zuid-Utrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.razu.nl/over-ons/woo_informatie/woo-categorie-3_3_2_g-jaarstukken/
+      toelichting: Jaarplannen en jaarverslagen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.razu.nl/over-ons/woo_informatie/woo-categorie-3_3_2_i-woo_verzoeken/
+      toelichting: Publicatie van Woo-verzoeken
+  wooVerzoek:
+    url: https://www.razu.nl/over-ons/woo_informatie/
+afspraak:
+  email: info@razu.nl
+  telefoonnummer: (088) 530 01 70
+  url: https://www.razu.nl/praktisch-actueel/aanvragen-archiefstukken/
 contact:
   website: https://www.razu.nl
   email: info@razu.nl
+  bezoekadres: Karel de Grotestraat 30, 3962 CL Wijk bij Duurstede
+  postadres: Postbus 64, 3960 BB Wijk bij Duurstede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Karel de Grotestraat
+    huisnummer: '30'
+    postcode: 3962 CL
+    woonplaats: Wijk bij Duurstede
+  - type: Postadres
+    postbus: '64'
+    postcode: 3960 BB
+    woonplaats: Wijk bij Duurstede
+  - type: Woo-Adres
+    postbus: '64'
+    postcode: 3960 BB
+    woonplaats: Wijk bij Duurstede
+  phones:
+  - nummer: (088) 530 01 70
+    label: algemeen
+  emails:
+  - email: info@razu.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.razu.nl
+    label: algemeen
+  - url: https://www.razu.nl/praktisch-actueel/contact/
+    label: contactformulier
+  contact_forms:
+  - url: https://www.razu.nl/praktisch-actueel/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2024-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28361754/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28361754/razu
+  retrieved: '2026-05-16'
+roo_start_datum: '1996-09-01'

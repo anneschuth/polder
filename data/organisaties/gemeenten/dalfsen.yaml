@@ -6,21 +6,148 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0148
   roo_id: '31019'
   wikidata: Q9998
+  owms: http://standaarden.overheid.nl/owms/terms/Dalfsen_(gemeente)
+  ictu: 00148
+  organisatiecode: gm0148
+  rsin: '809249108'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DAL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dalfsen
   abbr: Dalfsen
   valid_from: '1900-01-01'
+description:
+  url: https://www.dalfsen.nl/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dalfsen.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/31019/Gemeente_Dalfsen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dalfsen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dalfsen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dalfsen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.dalfsen.nl/form/formulier-woo-verzoek/persoonsgegevens-0
+organogram_url: https://www.dalfsen.nl/gemeentelijke-organisatie
+afspraak:
+  email: gemeente@dalfsen.nl
+  telefoonnummer: 14 0529
+  url: https://dalfsen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 280,75
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 280.75
+  aantal_inwoners: 30264
+  inwoners: '107'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 107.0
+  bevat_plaatsen_raw: Dalfsen, Lemelerveld, Nieuwleusen
+  bevat_plaatsen:
+  - Dalfsen
+  - Lemelerveld
+  - Nieuwleusen
+council:
+  total_seats: 23
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 10
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Stand Organisatie
+    aantal_zetels: 1
 contact:
   website: https://www.dalfsen.nl
   email: gemeente@dalfsen.nl
+  bezoekadres: Raadhuisstraat 1, 7721 AX DALFSEN
+  postadres: Postbus 35, 7720 AA DALFSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 7721 AX
+    woonplaats: DALFSEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '35'
+    postcode: 7720 AA
+    woonplaats: DALFSEN
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postbus: '35'
+    postcode: 7721 AX
+    woonplaats: Dalfsen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 7721 AX
+    woonplaats: Dalfsen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 7721 AX
+    ter_attentie_van: Ruimtelijke Kwaliteit
+    woonplaats: DALFSEN
+  phones:
+  - nummer: 14 0529
+    label: algemeen
+  emails:
+  - email: gemeente@dalfsen.nl
+    label: algemeen
+  - email: omgevingsloket@dalfsen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.dalfsen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.dalfsen.nl/form/contactformulier-gemeente-dalfsen/informatie-vooraf-0
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-09'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31019/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31019/dalfsen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

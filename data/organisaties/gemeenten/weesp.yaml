@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0457
   roo_id: '33836'
   wikidata: Q9974
+  owms: http://standaarden.overheid.nl/owms/terms/Weesp_(gemeente)
+  ictu: '00457'
+  organisatiecode: gm0457
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,83 @@ names:
   abbr: Weesp
   valid_from: '1900-01-01'
   valid_until: '2022-03-24'
+classifications:
+- type: CAO
+  eind_datum: '2022-03-24'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-03-24'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-03-24'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 21,88
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.88
+  aantal_inwoners: 19147
+  inwoners: '875'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 875.0
+  bevat_plaatsen_raw: Weesp
+  bevat_plaatsen:
+  - Weesp
+council:
+  total_seats: 15
+  parties:
+  - naam: WSP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
 contact:
   website: http://www.weesp.nl
   email: info@weesp.nl
+  bezoekadres: Nieuwstraat 70a, 1381 BD WEESP
+  postadres: Postbus 5099, 1380 GB WEESP
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwstraat
+    huisnummer: 70a
+    postcode: 1381 BD
+    woonplaats: WEESP
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '5099'
+    postcode: 1380 GB
+    woonplaats: WEESP
+  phones:
+  - nummer: (0294) 49 13 91
+    label: algemeen
+  emails:
+  - email: info@weesp.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.weesp.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-03-24'
+last_mutation: '2022-05-10'
+last_verified: '2022-05-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33836/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33836/weesp
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

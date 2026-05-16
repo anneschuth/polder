@@ -3,7 +3,7 @@ name:
   full: V.A. Voermans
   family: Voermans
   given: V.A.
-  initials: V.
+  initials: V.A.
 mandaten:
 - id: 3989c503-590f-43e2-858b-c0bab54a9736
   organization_id: org:gemeente-diemen
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366840
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/21518/gemeente-diemen
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28637806
 - id: 10f91ef9-93b6-42f4-a8e5-d735562a6a6c
   organization_id: org:gemeente-diemen
   post_id: post:raadslid-gemeente-diemen

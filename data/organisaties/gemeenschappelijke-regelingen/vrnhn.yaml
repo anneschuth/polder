@@ -5,23 +5,131 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0494
   oin: 00000001812577176000
   kvk: '37158900'
+  owms: http://standaarden.overheid.nl/owms/terms/vregnhn
+  organisatiecode: so0494
+  rsin: '812577176'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Noord-Holland Noord
+  roo_id: '29694430'
 names:
 - value: Veiligheidsregio Noord-Holland Noord
   abbr: VRNHN
   valid_from: '1900-01-01'
+description:
+  text: De term Veiligheidsregio Noord-Holland Noord slaat behalve op een geografisch
+    gebied ook op een organisatie met rond de achttienhonderd medewerkers. De veiligheidsregio
+    coördineert de inspanningen op het gebied van veiligheid in de regio Noord-Holland
+    Noord. Samen Hulpvaardig, luidt het motto.De organisatie Veiligheidsregio Noord-Holland
+    Noord is een samenvoeging van de regionale brandweer, de GHOR (geneeskundige hulpverlening),
+    Zorg- en Veiligheidshuis Noord-Holland Noord, Risico- en Crisisbeheersing, de
+    Gemeenschappelijke Meldkamer en Ambulancezorg Noord-Holland Noord.Veiligheidsregio
+    Noord-Holland Noord werkt intensief samen met partners op het gebied van veiligheid.
+    Denk daarbij aan politie van de eenheid Noord-Holland, GGD Hollands Noorden, Kustwacht,
+    KNRM reddingsbrigades, Hoogheemraadschap Hollands Noorderkwartier, het Nederlands
+    Rode Kruis, Defensie en de ziekenhuizen in de regio.
+  url: https://www.vrnhn.nl/ons-werk
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrnhn.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28108391/Veiligheidsregio_Noord-Holland_Noord
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.vrnhn.nl/adviescommissies
+      toelichting: 'Vergaderstukken Bestuurlijke Adviescommissies: Auditcommissie,
+        Adviescommissie Brandweerzorg, Adviescommissie Crisisbeheersing, Adviescommissie
+        Zorg in de  Veiligheidsregio'
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Noord-Holland+Noord%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Publicaties in het Blad Gemeenschappelijke Regelingen (door VRNHN)
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.vrnhn.nl/organisatie/beleidsplan-2024-2027
+      toelichting: Beleidsplan VRNHN 2024-2027
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.vrnhn.nl/organisatie/algemeen-bestuur
+      toelichting: Vergaderstukken Algemeen Bestuur Veiligheidsregio Noord-Holland
+        Noord
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.vrnhn.nl/dagelijks-bestuur
+      toelichting: Agenda's en Besluitenlijsten Dagelijks Bestuur VRNHN
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.vrnhn.nl/organisatie/jaarstukken-en-begroting
+      toelichting: Jaarstukken en Begroting Veiligheidsregio Noord-Holland Noord
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.vrnhn.nl/wet-open-overheid-woo
+      toelichting: Woo-besluiten en Wob-besluiten Veiligheidsregio Noord-Holland Noord
+  wooVerzoek:
+    url: https://www.vrnhn.nl/wet-open-overheid-woo
+organogram_url: https://www.vrnhn.nl/organisatiestructuur-van-veiligheidsregio-noord-holland-noord-vrnhn
+afspraak:
+  email: info@vrnhn.nl
+  telefoonnummer: (072) 567 50 10
+  url: https://www.vrnhn.nl/contact-veiligheidsregio-noord-holland-noord
 contact:
   website: https://www.vrnhn.nl
   email: info@vrnhn.nl
+  bezoekadres: Hertog Aalbrechtweg 22, 1823 DL Alkmaar
+  postadres: Postbus 416, 1800 AK Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hertog Aalbrechtweg
+    huisnummer: '22'
+    postcode: 1823 DL
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    postbus: '416'
+    postcode: 1800 AK
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Hertog Aalbrechtweg
+    huisnummer: '22'
+    postcode: 1823 DL
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (072) 567 50 10
+    label: algemeen
+  emails:
+  - email: info@vrnhn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrnhn.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vrnhn.nl/contact-veiligheidsregio-noord-holland-noord
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28108391/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28108391/vrnhn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2004-01-01'

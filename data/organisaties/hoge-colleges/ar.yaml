@@ -4,21 +4,127 @@ identifiers:
   oin: 00000002815051232000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10229
   roo_id: '1'
+  ictu: 04904
 classification: hoge-college
 parent_id: null
 names:
 - value: Algemene Rekenkamer
   abbr: AR
   valid_from: '1900-01-01'
+description:
+  text: De Algemene Rekenkamer onderzoekt of de rijksoverheid publiek geld zinnig,
+    zuinig en zorgvuldig uitgeeft. Haar wettelijke taak is het controleren van de
+    inkomsten en uitgaven van het Rijk en hierover rapporteert de Algemene Rekenkamer
+    één keer per jaar aan het parlement op Verantwoordingsdag (derde woensdag in mei).  Op
+    basis van dit oordeel kan het parlement besluiten of zij decharge verlenen aan
+    het kabinet. Daarnaast rapporteert de Algemene Rekenkamer over afzonderlijke onderzoeken
+    aan het parlement zodat Kamerleden kunnen bepalen of het beleid van een minister
+    doeltreffend is.
+  url: https://www.rekenkamer.nl/over-de-algemene-rekenkamer
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rekenkamer.nl/contact/ik-heb-een-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/1/Algemene_Rekenkamer
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rekenkamer.nl/publicaties
+      toelichting: Publicaties Algemene Rekenkamer
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2023/08/07/besluit-op-een-woo-verzoek-van-17-juli-2023-inzake-openbaarmaking-van-het-volmacht-register-van-de-algemene-rekenkamer
+      toelichting: Besluit op een Woo verzoek van 17 juli 2023 inzake openbaarmaking
+        van het volmacht register van de Algemene Rekenkamer
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2022/6/28/besluit-op-woo-verzoek-over-de-werkzaamheden-voor-de-programmacommissie-bestuurscultuur-provincie-limburg
+      toelichting: Besluit op Woo verzoek over de werkzaamheden voor de Programmacommissie
+        Bestuurscultuur Provincie Limburg
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2022/09/01/besluit-op-woo-verzoek-over-een-groot-aantal-onderwerpen
+      toelichting: Besluit op Woo verzoek over een groot aantal onderwerpen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2023/05/17/woo-verzoek-presentatie-fondsen-in-beeld
+      toelichting: Woo-verzoek presentatie Fondsen in beeld
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2023/03/14/besluit-op-woo-verzoek-14-maart-2023-over-bestuurskosten-van-de-president-van-de-algemene-rekenkamer-2018-2022
+      toelichting: Besluit op Woo-verzoek 14 maart 2023 over bestuurskosten van de
+        president van de Algemene Rekenkamer 2018-2022.
+    - informatiecategorie: Andere documenten
+      url: https://www.rekenkamer.nl/bestuurskosten
+      toelichting: Bestuurskosten collegeleden in gewone dienst
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rekenkamer.nl/onderwerpen
+      toelichting: Lijst met onderwerpen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rekenkamer.nl/onderwerpen/jaarverslagen-algemene-rekenkamer
+      toelichting: Jaarverslagen Algemene Rekenkamer
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/publicaties/woo-besluit/2023/08/10/besluit-op-woo-verzoek-28-juni-2023-over-algoritmes
+      toelichting: Besluit op Woo-verzoek 28 juni 2023 over Algoritme
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rekenkamer.nl/contact/ik-heb-een-woo-verzoek/gepubliceerde-woo-besluiten
+      toelichting: Algemeen overzicht Woo-besluiten
+  wooVerzoek:
+    url: https://www.rekenkamer.nl/contact/ik-heb-een-woo-verzoek
+organogram_url: https://www.rekenkamer.nl/over-de-algemene-rekenkamer/organisatie
+afspraak:
+  telefoonnummer: (070) 342 43 44
+  url: https://www.rekenkamer.nl/contact
 contact:
   website: http://www.rekenkamer.nl
   email: voorlichting@rekenkamer.nl
+  bezoekadres: Lange Voorhout 8, 2514 ED Den Haag
+  postadres: Postbus 20015, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout 8
+    postcode: 2514 ED
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20015'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '8'
+    postcode: 2514 ED
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 342 43 44
+    label: algemeen
+  emails:
+  - email: voorlichting@rekenkamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rekenkamer.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rekenkamer.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/1/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/1/ar
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

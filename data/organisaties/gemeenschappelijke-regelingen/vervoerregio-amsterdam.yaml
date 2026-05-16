@@ -1,26 +1,126 @@
 id: org:gr-vervoerregio-amsterdam
 type: gemeenschappelijke-regeling
+subname: Vervoerregio
 identifiers:
   roo_id: '25533181'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0001
   oin: 00000001810938029000
   kvk: '34374879'
+  owms: http://standaarden.overheid.nl/owms/terms/vrvregams
+  organisatiecode: so0001
+  rsin: '810938029'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Vervoerregio Amsterdam
+  roo_id: '29786045'
 names:
 - value: Vervoerregio Amsterdam
   valid_from: '1900-01-01'
+description:
+  text: Vervoerregio Amsterdam verbindt gemeenten en werkt aan een regio waar mensen
+    vlot hun bestemming bereiken. De Vervoerregio is opdrachtgever van het openbaar
+    vervoer per bus, tram en metro. De Vervoerregio financiert ook verbeteringen in
+    de regionale infrastructuur voor (vracht)auto, fiets en openbaar vervoer.
+  url: https://vervoerregio.nl/pagina/20170321-vervoerregio-amsterdam-veertien-gemeenten-werken-sam
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://vervoerregio.nl/pagina-id/212a3d36-0a5c-429b-a6f8-3fafec5d5e43
+      overzichtURL: https://organisaties.overheid.nl/woo/25533181/Vervoerregio_Amsterdam
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22))and(cql.textAndIndexes=%22Vervoerregio%22%20and%20cql.textAndIndexes=%22Amsterdam%22)%20AND%20w.organisatietype==%22regionaal%20samenwerkingsorgaan%22%20AND%20dt.creator==%22Vervoerregio%20Amsterdam%22%20AND%20dt.subject==%22Ruimte%20en%20infrastructuur%20%7C%20Organisatie%20en%20beleid%22&zv=Vervoerregio+Amsterdam&pg=10&col=BladGemeenschappelijkeregeling&svel=Publicatiedatum&svol=Aflopend&sf=on%7cRuimte+en+infrastructuur+%7c+Organisatie+en+beleid
+      toelichting: DIt betreft voornamelijk ontheffingen voor beperkingengebiedactiviteiten.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?wti=Verordening&datumrange=op&samenwerkingsorganen=Vervoerregio%20Amsterdam&indeling=verordening%20overig&page=1&count=20&&datumop=nu
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Vervoerregio%20Amsterdam%22))%20AND%20((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22%20OR%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22%20OR%20dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22%20OR%20dt.type==%22beleidsregel%22%20OR%20dt.type==%22delegatie-%20of%20mandaatbesluit%22%20OR%20dt.type==%22circulaire%22%20OR%20dt.type==%22verkeersbesluit%20of%20-mededeling%22)))%20AND%20dt.type==%22ander%20besluit%20van%20algemene%20strekking%22&zv=&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cander+besluit+van+algemene+strekking
+  wooVerzoek:
+    url: https://vervoerregio.nl/pagina-id/212a3d36-0a5c-429b-a6f8-3fafec5d5e43
+organogram_url: https://vervoerregio.nl/home/wie-zijn-wij/bestuur-organisatie/
+afspraak:
+  email: info@vervoerregio.nl
+  telefoonnummer: (020) 527 37 00
+  url: https://vervoerregio.nl/pagina/20241220-contact
 contact:
   website: https://vervoerregio.nl
   email: info@vervoerregio.nl
+  postadres: Postbus 626, 1000 AP Amsterdam
+  bezoekadres: Termini 179, 1025 XM Amsterdam
+  addresses:
+  - type: Postadres
+    postbus: '626'
+    postcode: 1000 AP
+    woonplaats: Amsterdam
+  - type: Bezoekadres
+    openbare_ruimte: Termini
+    huisnummer: '179'
+    postcode: 1025 XM
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    postbus: '626'
+    postcode: 1000 AP
+    woonplaats: Amsterdam
+  phones:
+  - nummer: (020) 527 37 00
+    label: algemeen
+  emails:
+  - email: info@vervoerregio.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://vervoerregio.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.burgerberichten.nl/vervoerregio/formulieren/dce2eae5-6e27-44f1-9508-9379fa2feff8/Algemeen-vragenformulier/questions
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: '@vervoerregio'
+    url: https://www.facebook.com/vervoerregio
+  - platform: Instagram
+    gebruikersnaam: '@vervoerregio'
+    url: https://www.instagram.com/vervoerregio/#
+  - platform: X
+    gebruikersnaam: '@vervoerregio'
+    url: https://x.com/vervoerregio
+  - platform: LinkedIn
+    gebruikersnaam: '@vervoerregio'
+    url: https://linkedin.com/company/vervoerregio-amsterdam
+  - platform: YouTube
+    gebruikersnaam: '@VervoerregioAmsterdam'
+    url: https://www.youtube.com/channel/UC2_gAyN93xwM-Tj09GW-zZw
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25533181/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25533181/vervoerregio-amsterdam
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

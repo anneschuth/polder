@@ -6,21 +6,161 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0285
   roo_id: '30397'
   wikidata: Q384772
+  owms: http://standaarden.overheid.nl/owms/terms/Voorst_(gemeente)
+  ictu: 00285
+  organisatiecode: gm0285
+  rsin: 001299967
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_VRS
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Voorst
   abbr: Voorst
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeente Voorst is een aantrekkelijke Gelderse gemeente gelegen tussen
+    IJssel en Veluwe. Een gemeente met ongeveer 25.000 inwoners die wonen in twaalf
+    kernen: Bussloo, De Vecht, Klarenbeek, Nijbroek, Posterenk, Steenenkamer, Terwolde,
+    Teuge, Twello, Voorst, Wilp en Wilp-Achterhoek.'
+  url: https://www.voorst.nl/over-voorst
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.voorst.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/30397/Gemeente_Voorst
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.voorst.nl/woo/woo-verzoeken
+      toelichting: Woo-verzoeken en -besluiten 2023
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://voorst.raadsinformatie.nl/modules/12/Besluitenlijsten/view?month=all&year=2025&week=all&section=
+      toelichting: Besluitenlijsten gemeenteraad
+    - informatiecategorie: Klachtoordelen
+      url: https://www.voorst.nl/woo/klachten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Voorst%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Voorst%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.voorst.nl/bestuur-organisatie/college-van-bw/besluitenlijsten-2023
+      toelichting: Besluitenlijsten college van burgemeester en wethouders
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Voorst%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Adviezen
+      url: https://www.voorst.nl/adviesraad-sociaal-domein/documenten
+      toelichting: Adviezen adviesraad sociaal domein
+  wooVerzoek:
+    url: https://www.voorst.nl/woo/informatieaanvraag-wet-open-overheid
+afspraak:
+  email: Gemeente@voorst.nl
+  telefoonnummer: (0571) 27 99 11
+  url: https://www.voorst.nl/home/afspraakmaken
+geography:
+  oppervlakte: 126,60
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 126.6
+  aantal_inwoners: 25569
+  inwoners: '201'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 201.0
+  bevat_plaatsen_raw: Klarenbeek, Nijbroek, Steenenkamer, Terwolde, Teuge, Twello,
+    Voorst Gem Voorst, Wilp
+  bevat_plaatsen:
+  - Klarenbeek
+  - Nijbroek
+  - Steenenkamer
+  - Terwolde
+  - Teuge
+  - Twello
+  - Voorst Gem Voorst
+  - Wilp
+council:
+  total_seats: 19
+  parties:
+  - naam: VoortvArend Voorst
+    aantal_zetels: 5
+  - naam: Gemeente Belangen
+    aantal_zetels: 5
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Lokaal Liberaal
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: https://www.voorst.nl
   email: Gemeente@voorst.nl
+  bezoekadres: H.W. Iordensweg 17, 7391 KA TWELLO
+  postadres: H.W. Iordensweg 17, 7391 KA TWELLO
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: H.W. Iordensweg
+    huisnummer: '17'
+    postcode: 7391 KA
+    woonplaats: TWELLO
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: H.W. Iordensweg
+    huisnummer: '17'
+    postcode: 7391 KA
+    woonplaats: TWELLO
+  - type: Woo-Adres
+    openbare_ruimte: H.W. Iordensweg
+    huisnummer: '17'
+    postbus: '9000'
+    postcode: 7391 KA
+    woonplaats: Twello
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: H.W. Iordensweg
+    huisnummer: '17'
+    postcode: 7391 KA
+    woonplaats: TWELLO
+  phones:
+  - nummer: (0571) 27 99 11
+    label: algemeen
+  emails:
+  - email: Gemeente@voorst.nl
+    label: algemeen
+  - email: omgevingsvergunning@voorst.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.voorst.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-04'
+last_verified: '2026-04-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30397/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30397/voorst
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '22698451'
 classification: organisatieonderdeel
-parent_id: org:prov-fr
+parent_id: org:onderdeel-publyksplein
 names:
 - value: Klant Contact Centrum
   abbr: KCC
@@ -24,9 +24,24 @@ names:
 contact:
   website: https://www.fryslan.frl/home/contact-en-adres_3187/
   email: provincie@fryslan.frl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (058) 292 59 25
+    label: algemeen
+  emails:
+  - email: provincie@fryslan.frl
+    label: algemeen
+  contact_forms:
+  - url: https://www.fryslan.frl/home/contact-en-adres_3187/
+    label: Algemeen
+  fax: (058) 292 51 25
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2021-12-13'
+last_verified: '2021-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22698451/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22698451/kcc
+  retrieved: '2026-05-16'

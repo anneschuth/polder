@@ -3,7 +3,7 @@ name:
   full: D.H. Janssen
   family: Janssen
   given: D.H.
-  initials: D.
+  initials: D.H.
 mandaten:
 - id: 14376811-4d5e-454f-a7fe-b8fed1f56144
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7254613
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30519033
 - id: 6f13adce-f19a-4d6d-8e0f-9177465fd1ac
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

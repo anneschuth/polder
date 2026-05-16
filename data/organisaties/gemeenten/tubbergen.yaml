@@ -6,21 +6,139 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0183
   roo_id: '27560'
   wikidata: Q10023
+  owms: http://standaarden.overheid.nl/owms/terms/Tubbergen_(gemeente)
+  ictu: 00183
+  organisatiecode: gm0183
+  rsin: 002172859
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_TBB
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Tubbergen
   abbr: Tubbergen
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.tubbergen.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27560/Gemeente_Tubbergen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tubbergen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tubbergen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Tubbergen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.tubbergen.nl/wet-open-overheid
+organogram_url: https://www.tubbergen.nl/bestuur-en-organisatie
+afspraak:
+  email: gemeente@tubbergen.nl
+  telefoonnummer: (0546) 62 80 00
+  url: https://afspraken.noaberkracht.nl/tubbergen
+geography:
+  oppervlakte: 147,4
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 147.4
+  aantal_inwoners: 21604
+  inwoners: '146'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 146.0
+  bevat_plaatsen_raw: Albergen, Fleringen, Geesteren OV, Haarle Gem Tubbergen, Harbrinkhoek,
+    Hezingen, Langeveen, Mander, Manderveen, Mariaparochie, Reutum, Tubbergen, Vasse
+  bevat_plaatsen:
+  - Albergen
+  - Fleringen
+  - Geesteren OV
+  - Haarle Gem Tubbergen
+  - Harbrinkhoek
+  - Hezingen
+  - Langeveen
+  - Mander
+  - Manderveen
+  - Mariaparochie
+  - Reutum
+  - Tubbergen
+  - Vasse
+council:
+  total_seats: 19
+  parties:
+  - naam: CDA
+    aantal_zetels: 8
+  - naam: Keerpunt22
+    aantal_zetels: 5
+  - naam: GB/VVD
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 2
 contact:
   website: https://www.tubbergen.nl
   email: gemeente@tubbergen.nl
+  bezoekadres: Raadhuisplein 1, 7651 CV TUBBERGEN
+  postadres: Raadhuisplein 1, 7651 CV TUBBERGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7651 CV
+    woonplaats: TUBBERGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7651 CV
+    woonplaats: TUBBERGEN
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7651 CV
+    woonplaats: Tubbergen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7651 CV
+    ter_attentie_van: Omgevingsvergunningen
+    woonplaats: TUBBERGEN
+  phones:
+  - nummer: (0546) 62 80 00
+    label: algemeen
+  emails:
+  - email: gemeente@tubbergen.nl
+    label: algemeen
+  - email: gemeente@tubbergen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.tubbergen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-18'
+last_verified: '2026-04-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27560/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27560/tubbergen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

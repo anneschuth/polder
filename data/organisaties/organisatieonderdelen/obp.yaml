@@ -3,17 +3,64 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66815'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dbpz
+parent_id: org:onderdeel-plaatsvervangend-sg-psg
 names:
 - value: Directie Organisatie, Bedrijfsvoering en Personeel
   abbr: OBP
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
+description:
+  text: 'De directie OBP is een centrale stafdirectie. De directie ondersteunt VWS
+    op de terreinen personeel en organisatie, ICT, financiën, inkoop, facilitaire
+    zaken, huisvesting en biedt ook flexibele capaciteit (project, programma, beleid).
+    OBP werkt samen met alle concernonderdelen van VWS en maakt deel uit van de interdepartementale
+    bedrijfsvoeringsfunctie. OBP stelt VWS in staat een toonaangevende organisatie
+    te zijn, met medewerkers die gezond, fit en veerkrachtig (vitaal) in het (werkende)
+    leven staan. En die bovendien kunnen werken in een inclusieve werkomgeving waarin
+    iedereen meedoet en meetelt. OBP stelt VWS als concern in staat om proactief,
+    duurzaam en snel te acteren in de continu veranderende wereld om ons heen.Aandachtsgebieden*
+    Personeel en Organisatie: richt en ondersteunt de ontwikkeling van de medewerkers,
+    managers en organisatie vanVWS door onder andere HR beleidsontwikkeling, advisering
+    bij personele, arbeidsjuridische en integriteit-gerelateerdevraagstukken alsook
+    recruitment, organisatie-advies en de afhandeling van administratieve p-processen.*
+    VWS Flex: koppelt concernbreed de vraag naar tijdelijk werk op prioritaire dossiers
+    aan de beschikbare tijdelijkecapaciteit. Daarmee levert VWS Flex een bijdrage
+    aan het resultaatgericht en flexibel werken binnen VWS en hetbeperken van externe
+    inhuur;* Werkomgeving, Inkoop, Strategie en Proces (WISP): is verantwoordelijk
+    voor de implementatie van rijksbrede kadersbij VWS en voor specifieke kaderstelling
+    en specialistische advisering ten behoeve van het VWS-bestuur en deVWS-onderdelen
+    op het gebied van faciliteiten, huisvesting en inkoop. WISP geeft gevraagd en
+    ongevraagd advies ophet gebied van rijksbrede bedrijfsvoering (Strategisch Advies).
+    Tevens worden in opdracht van de directie Financieel-Economische Zaken (FEZ) tweedelijns
+    activiteiten op het gebied van kwaliteit en procesbeheersing uitgevoerd (KwaliteitProces
+    & Advies);* Informatievoorziening (IV): ondersteunt het kerndepartement en kleinere
+    concernonderdelen in deinformatiebehoefte, inclusief kaderstelling en toetsing
+    in samenwerking met de directie Informatiebeleid, beheertbedrijfsapplicaties en
+    verzorgt toegang en beheer tot informatie.* Bedrijfsbureau: ondersteunt de primaire
+    processen van de directie, zoals bedrijfsvoering en ondersteuning,evenementenbureau,
+    communicatie, inkoop, financiën en control (IFC) en chauffeursdienst.'
 contact:
   email: m.vd.steen@minvws.nl
+  bezoekadres: Schedeldoekshaven 131, 2511 EM Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schedeldoekshaven
+    huisnummer: '131'
+    postcode: 2511 EM
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 58 99
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66815/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66815/obp
+  retrieved: '2026-05-16'

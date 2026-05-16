@@ -5,21 +5,122 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000179
   oin: 00000001814869233000
   kvk: '61057509'
+  rsin: '814869233'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Landelijk Bureau Inning Onderhoudsbijdragen
   abbr: LBIO
   valid_from: '1900-01-01'
+description:
+  text: Het Landelijk Bureau Inning Onderhoudsbijdragen (LBIO) voert incasso-taken
+    uit op het gebied van alimentatie. Alimentatiegerechtigden kunnen het LBIO inschakelen
+    om openstaande alimentatie te incasseren.
+  url: https://lbio.nl/over/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet Landelijk Bureau Inning Onderhoudsbijdragen, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0007292/2021-07-01#Hoofdstuk1_Artikel2
+taken_en_bevoegdheden: Het Landelijk Bureau Inning Onderhoudsbijdragen (LBIO) heeft
+  de volgende taken en bevoegdheden:* het op verzoek innen van onderhoudsbijdragen
+  voor minderjarigen en meerderjarigen die de leeftijd van 21 jaar nog niet hebben
+  bereikt;* het uitvoeren van internationale verdragstaken met betrekking tot onderhoudsbijdragen.
+evaluations:
+- datum: '2024-02-12'
+  kamerstuknummer: TK 31575 nr. 14
+  referentie: https://zoek.officielebekendmakingen.nl/kst-31575-14.html
+- datum: '2019-01-18'
+  kamerstuknummer: TK 33836 nr. 33
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33836-33.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://lbio.nl/over/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212515/Landelijk_Bureau_Inning_Onderhoudsbijdragen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Landelijk+Bureau+Inning+Onderhoudsbijdragen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://lbio.nl/over/
+afspraak:
+  email: alimentatie@lbio.nl
+  telefoonnummer: (010) 289 48 90
+personnel:
+  aantalFte: 64,4
+  peildatumFte: '2023-12-31'
 contact:
   website: https://lbio.nl/
   email: alimentatie@lbio.nl
+  postadres: Postbus 8901, 3009 AX Rotterdam
+  addresses:
+  - type: Postadres
+    toelichting: LBIO
+    postbus: '8901'
+    postcode: 3009 AX
+    woonplaats: Rotterdam
+  - type: Woo-Adres
+    toelichting: LBIO
+    postbus: '8901'
+    postcode: 3009 AX
+    woonplaats: Rotterdam
+  - type: Bezoekadres
+    toelichting: U kunt online of telefonisch contact opnemen met het LBIO.
+  phones:
+  - nummer: (010) 289 48 90
+    label: algemeen
+  emails:
+  - email: alimentatie@lbio.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://lbio.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://lbio.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212515/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212515/lbio
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +134,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000179
   retrieved: '2026-05-09'
+roo_start_datum: '1995-01-01'

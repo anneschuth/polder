@@ -4,17 +4,121 @@ identifiers:
   roo_id: '66175'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10218
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Gezondheidsraad
   abbr: GR
   valid_from: '1900-01-01'
+description:
+  text: De Gezondheidsraad is een onafhankelijke wetenschappelijke adviesraad voor
+    regering en parlement op het brede terrein van de volksgezondheid en gezondheidszorg.
+    De organisatie van de Gezondheidsraad bestaat uit een raad en een secretariaat
+    en beschikt over een uitgebreid netwerk van gerespecteerde wetenschappers die
+    zich onbezoldigd inzetten. Adviezen worden opgesteld door multidisciplinaire tijdelijke
+    of vaste commissies en getoetst door de beraadsgroep. Ook nauw betrokken bij het
+    raadswerk zijn de leden van de presidiumcommissie. Via de Jonge Gezondheidsraad
+    (jongGR) worden jonge wetenschappers betrokken bij het werk van de Gezondheidsraad
+    en verder onderhoudt de Gezondheidsraad zowel nationaal als internationaal samenwerkingsverbanden.
+  url: https://www.gezondheidsraad.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 10,11,15,16,17,18,19,20,21
+      toelichting: Het maximumaantal leden, normaliter maximaal vijftien, is, vanwege
+        de noodzakelijke technisch-specialistische kennis op velerlei gebieden, losgelaten.
+        Daaruit voortvloeiend zijn er enkele andere afwijkingen. Bij artikel 19 wijkt
+        alleen het tweede lid af, bij artikel 20 het eerste lid.
+wettelijke_grondslagen:
+- opschrift: Gezondheidswet, artikel 21
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0002202&hoofdstuk=III&artikel=21
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gezondheidsraad.nl/over-ons/werkwijze/vertrouwelijkheid-en-openbaarheid
+      overzichtURL: https://organisaties.overheid.nl/woo/66175/Gezondheidsraad
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.gezondheidsraad.nl/over-ons/overig-werk/jaarverslag
+      toelichting: In de jaarverslagen van de Gezondheidsraad vindt u een overzicht
+        van de adviezen uit het voorbije jaar, waarvan enkele uitgelicht. Verder wordt
+        het werk van de raad weergegeven in getallen.
+    - informatiecategorie: Adviezen
+      url: https://www.gezondheidsraad.nl/documenten
+      toelichting: Binnen 'documenten' kan gezocht worden naar adviezen en andere
+        documenten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.gezondheidsraad.nl/over-ons/werkwijze/vertrouwelijkheid-en-openbaarheid
+  wooVerzoek:
+    url: https://www.gezondheidsraad.nl/contact/contact-met-de-gezondheidsraad
+organogram_url: https://www.gezondheidsraad.nl/over-ons/organisatie
+afspraak:
+  email: info@gr.nl
+  telefoonnummer: (070) 340 75 20
 contact:
   website: https://www.gezondheidsraad.nl
   email: info@gr.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 16052, 2500 BB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16052'
+    postcode: 2500 BB
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16052'
+    postcode: 2500 BB
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 75 20
+    label: algemeen
+  emails:
+  - email: info@gr.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gezondheidsraad.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.gezondheidsraad.nl/contact/contact-met-de-gezondheidsraad
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Gezondheidsraad
+    url: https://www.linkedin.com/company/gezondheidsraad/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-29'
+last_verified: '2026-04-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66175/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66175/gr
+  retrieved: '2026-05-16'
+roo_start_datum: '1902-08-01'

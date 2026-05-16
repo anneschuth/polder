@@ -2,14 +2,44 @@ id: org:oovb-stichting-welzijn-lelystad
 type: rwt
 identifiers:
   roo_id: '27918036'
+  kvk: '39077518'
+  rsin: '811212555'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Welzijn Lelystad
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: De Schans 19 9, 8231 KM Lelystad
+  postadres: Postbus 2305, 8203 AH Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Schans
+    huisnummer: '19'
+    huisnummer_toevoeging: '9'
+    postcode: 8231 KM
+    woonplaats: Lelystad
+  - type: Postadres
+    postbus: '2305'
+    postcode: 8203 AH
+    woonplaats: Lelystad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918036/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918036/stichting-welzijn-lelystad
+  retrieved: '2026-05-16'

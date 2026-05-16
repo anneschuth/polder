@@ -3,17 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963052'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0771
+  owms: http://standaarden.overheid.nl/owms/terms/ecaenl
+  kvk: '52794830'
+  organisatiecode: so0771
+  rsin: '850600509'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Erfgoedcentrum Achterhoek en Liemers
+  roo_id: '30288263'
 names:
 - value: Erfgoedcentrum Achterhoek en Liemers
   valid_from: '1900-01-01'
+description:
+  url: https://www.ecal.nu/over-ons/bestuur-en-beleid/?mivast=26&mizig=0&miadt=26&miview=lst&milang=nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ecal.nu/faq/
+      overzichtURL: https://organisaties.overheid.nl/woo/24963052/Erfgoedcentrum_Achterhoek_en_Liemers
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ecal.nu/over-ons/bestuur-en-beleid/?mivast=26&mizig=0&miadt=26&miview=lst&milang=nl
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ecal.nu/over-ons/bestuur-en-beleid/?mivast=26&mizig=0&miadt=26&miview=lst&milang=nl
+  wooVerzoek:
+    url: https://www.ecal.nu/contact/?mivast=26&mizig=0&miadt=26&miview=lst&milang=nl
+afspraak:
+  email: info@ecal.nu
+  telefoonnummer: (0314) 78 70 78
+  url: https://www.ecal.nu/faq/
 contact:
   website: https://www.ecal.nu
   email: info@ecal.nu
+  bezoekadres: IJsselkade 13, 7001 AN Doetinchem
+  postadres: IJsselkade 13, 7001 AN Doetinchem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gebouw 't Brewinc
+    openbare_ruimte: IJsselkade
+    huisnummer: '13'
+    postcode: 7001 AN
+    woonplaats: Doetinchem
+  - type: Postadres
+    openbare_ruimte: IJsselkade
+    huisnummer: '13'
+    postcode: 7001 AN
+    woonplaats: Doetinchem
+  - type: Woo-Adres
+    openbare_ruimte: IJsselkade
+    huisnummer: '13'
+    postcode: 7001 AN
+    woonplaats: Doetinchem
+  phones:
+  - nummer: (0314) 78 70 78
+    label: algemeen
+  emails:
+  - email: info@ecal.nu
+    label: algemeen
+  - email: info@ecal.nu
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ecal.nu
+    label: algemeen
+  contact_forms:
+  - url: https://www.ecal.nu/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-18'
+last_verified: '2026-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963052/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963052/erfgoedcentrum-achterhoek-en-liemers
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-07-01'

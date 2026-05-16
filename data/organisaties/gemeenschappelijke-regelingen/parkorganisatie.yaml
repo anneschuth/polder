@@ -1,19 +1,98 @@
 id: org:gr-parkorganisatie
 type: gemeenschappelijke-regeling
+subname: Park Lingezegen
 identifiers:
   roo_id: '28370996'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0762
+  owms: http://standaarden.overheid.nl/owms/terms/parkorg
+  kvk: '51449897'
+  organisatiecode: so0762
+  rsin: '850022319'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling park Lingezegen
+  roo_id: '28370975'
 names:
 - value: Parkorganisatie
   valid_from: '1900-01-01'
+description:
+  text: Park Lingezegen is een gemeenschappelijke regeling. In deze gemeenschappelijke
+    regeling nemen de Gemeente Arnhem, Gemeente Overbetuwe, Gemeente Lingewaard en
+    Gemeente Nijmegen deel. De Parkorganisatie is gemandateerd om de uitvoering van
+    de werkzaamheden voor de gemeenschappelijke regeling uit te voeren.De Parkorganisatie
+    heeft tot doel de realisatie en coördinatie van het beheer van Park Lingezegen
+    op basis van het Beheerplan Park Lingezegen en het Masterplan én het exploiteren
+    van natuurgronden en een evenemententerrein en het stimuleren van doorontwikkeling
+    in het Park.
+  url: https://parklingezegen.nl/organisatie-organisatiestructuur/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28370996/Parkorganisatie
+  wooVerzoek:
+    url: https://parklingezegen.nl/contact/
+organogram_url: https://parklingezegen.nl/organisatie-organisatiestructuur/
+afspraak:
+  email: info@parklingezegen.nl
+  telefoonnummer: (088) 010 93 33
+  url: https://parklingezegen.nl/contact/
 contact:
   website: https://parklingezegen.nl
   email: info@parklingezegen.nl
+  bezoekadres: De Park 10, 6661 NW Elst
+  postadres: De Park 10, 6661 NW Elst
+  addresses:
+  - type: Bezoekadres
+    toelichting: Projectbureau Park Lingezegen
+    openbare_ruimte: De Park
+    huisnummer: '10'
+    postcode: 6661 NW
+    woonplaats: Elst
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    toelichting: Projectbureau Park Lingezegen
+    openbare_ruimte: De Park
+    huisnummer: '10'
+    postcode: 6661 NW
+    woonplaats: Elst
+  - type: Woo-Adres
+    toelichting: Projectbureau Park Lingezegen
+    openbare_ruimte: De Park
+    huisnummer: '10'
+    postcode: 6661 NW
+    woonplaats: Elst
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (088) 010 93 33
+    label: algemeen
+  emails:
+  - email: info@parklingezegen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://parklingezegen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://parklingezegen.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-03-03'
+last_verified: '2021-12-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28370996/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28370996/parkorganisatie
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-12-01'

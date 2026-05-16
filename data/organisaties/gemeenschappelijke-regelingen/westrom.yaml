@@ -3,17 +3,92 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965963'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0472
+  owms: http://standaarden.overheid.nl/owms/terms/westrom
+  kvk: '14114157'
+  btw: NL001702592B01
+  organisatiecode: so0472
+  rsin: 001702592
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Westrom
+  roo_id: '30481954'
 names:
 - value: Westrom
   valid_from: '1900-01-01'
+description:
+  text: Westrom is een gemeenschappelijke regeling van 5 Midden-Limburgse gemeenten.
+    Het algemeen bestuur bestaat uit 2 wethouders per deelnemende gemeenten. Het DB
+    bestaat uit 5 AB-leden ieder afkomstig uit een andere gemeente plus drie onafhankelijke
+    leden.De organisatie wordt geleid door een algemeen directeur. Er zijn twee operationele
+    divisies plus een stafafdeling.
+  url: https://www.westrom.nl/over-ons/organisatiestructuur/organogrammen
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.westrom.nl/contact/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/24965963/Westrom
+  wooVerzoek:
+    url: https://www.westrom.nl/contact/woo-verzoek
+organogram_url: https://www.westrom.nl/over-ons/organisatiestructuur/organogrammen
+afspraak:
+  email: info@westrom.nl
+  telefoonnummer: (0475) 38 98 98
+  url: https://www.westrom.nl/home
 contact:
   website: https://www.westrom.nl/
   email: info@westrom.nl
+  bezoekadres: De Hanze 1, 6041 PA Roermond
+  postadres: De Hanze 1, 6041 PA Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Hanze
+    huisnummer: '1'
+    postcode: 6041 PA
+    woonplaats: Roermond
+  - type: Woo-Adres
+    openbare_ruimte: De Hanze
+    huisnummer: '1'
+    postcode: 6041 PA
+    woonplaats: Roermond
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: De Hanze
+    huisnummer: '1'
+    postcode: 6041 PA
+    woonplaats: Roermond
+  phones:
+  - nummer: (0475) 38 98 98
+    label: algemeen
+  emails:
+  - email: info@westrom.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.westrom.nl/
+    label: algemeen
+  - url: https://www.westrom.nl/contact/contactformulier
+    label: contactformulier
+  contact_forms:
+  - url: https://www.westrom.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-06'
+last_verified: '2025-10-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965963/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965963/westrom
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-01-01'

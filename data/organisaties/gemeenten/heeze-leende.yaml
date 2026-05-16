@@ -6,21 +6,137 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1658
   roo_id: '39347'
   wikidata: Q9843
+  owms: http://standaarden.overheid.nl/owms/terms/Heeze-Leende
+  ictu: 01658
+  organisatiecode: gm1658
+  rsin: 001902805
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HEZ
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Heeze-Leende
   abbr: Heeze-Leende
   valid_from: '1900-01-01'
+description:
+  url: https://www.heeze-leende.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.heeze-leende.nl/informatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/39347/Gemeente_Heeze-Leende
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heeze-Leende%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heeze-Leende%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Heeze-Leende%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.heeze-leende.nl/informatie-opvragen-woo-verzoek
+organogram_url: https://www.heeze-leende.nl/organogram
+afspraak:
+  url: https://afspraken.heeze-leende.nl/
+geography:
+  oppervlakte: 105,12
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 105.12
+  aantal_inwoners: 17281
+  inwoners: '164'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 164.0
+  bevat_plaatsen_raw: Heeze, Leende, Sterksel
+  bevat_plaatsen:
+  - Heeze
+  - Leende
+  - Sterksel
+council:
+  total_seats: 17
+  parties:
+  - naam: Algemeen belang Heeze-Leende
+    aantal_zetels: 4
+  - naam: PRO Heeze-Leende
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Partij voor Oud en Jong
+    aantal_zetels: 2
+  - naam: LOKAAL Heeze-Leende
+    aantal_zetels: 2
 contact:
   website: https://www.heeze-leende.nl
   email: postbus@heeze-leende.nl
+  bezoekadres: Jan Deckersstraat 2, 5591 HS HEEZE
+  postadres: Postbus 10000, 5590 GA HEEZE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jan Deckersstraat
+    huisnummer: '2'
+    postcode: 5591 HS
+    woonplaats: HEEZE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5590 GA
+    woonplaats: HEEZE
+  - type: Woo-Adres
+    openbare_ruimte: Jan Deckersstraat
+    huisnummer: '2'
+    postbus: '10000'
+    postcode: 5591 HS
+    woonplaats: Heeze
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Jan Deckersstraat
+    huisnummer: '2'
+    postcode: 5591 HS
+    ter_attentie_van: Team Veiligheid, Vergunningen en Handhaving
+    woonplaats: HEEZE-LEENDE
+  phones:
+  - nummer: (040) 224 14 00
+    label: algemeen
+  emails:
+  - email: postbus@heeze-leende.nl
+    label: algemeen
+  - email: postbus@heeze-leende.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.heeze-leende.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.heeze-leende.nl/form/contactformulier/introductie-0-1
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39347/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39347/heeze-leende
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +145,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9843
   retrieved: '2026-05-09'
+roo_start_datum: '1997-01-01'

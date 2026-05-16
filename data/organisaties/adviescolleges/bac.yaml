@@ -4,16 +4,69 @@ identifiers:
   roo_id: '30491008'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Bezwaarschriftenadviescommissie hersteloperatie toeslagen
   abbr: BAC
   valid_from: '1900-01-01'
+description:
+  text: De Bezwaarschriftenadviescommissie hersteloperatie toeslagen (BAC) is een
+    onafhankelijke commissie die Uitvoeringsorganisatie Herstel Toeslagen (UHT) adviseert.
+    Wanneer de UHT een beslissing heeft genomen en een belanghebbende het daar niet
+    mee eens is, kan de belanghebbende bezwaar maken tegen de beslissing. In bepaalde
+    gevallen zal de BAC de UHT vervolgens adviseren over het ingediende bezwaar.
+  url: https://herstel.toeslagen.nl/toeslagen-bezwaarschriftenadviescommissie/over-de-bac/
+wettelijke_grondslagen:
+- opschrift: Instellingsregeling Bezwaarschriftenadviescommissie hersteloperatie toeslagen,
+    artikel 3
+  referentie: https://wetten.overheid.nl/BWBR0045876/2026-01-01/0#Artikel3
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30491008/Bezwaarschriftenadviescommissie_hersteloperatie_toeslagen
 contact:
   website: https://herstel.toeslagen.nl/toeslagen-bezwaarschriftenadviescommissie/
   email: communicatie@kinderopvangtoeslagbac.nl
+  bezoekadres: Orteliuslaan 1000, 3528 BD Utrecht
+  postadres: 6400 SN Heerlen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Courtyard Building (ingang Orteliuslaan)
+    openbare_ruimte: Orteliuslaan
+    huisnummer: '1000'
+    postcode: 3528 BD
+    woonplaats: Utrecht
+  - type: Postadres
+    toelichting: Kinderopvangtoeslag UHT
+    postcode: 6400 SN
+    antwoordnummer: '21460'
+    ter_attentie_van: BAC
+    woonplaats: Heerlen
+  - type: Woo-Adres
+    toelichting: Kinderopvangtoeslag UHT
+    postcode: 6400 SN
+    antwoordnummer: '21460'
+    ter_attentie_van: BAC
+    woonplaats: Heerlen
+  emails:
+  - email: communicatie@kinderopvangtoeslagbac.nl
+    label: contact over BAC-website
+  internet_addresses:
+  - url: https://herstel.toeslagen.nl/toeslagen-bezwaarschriftenadviescommissie/
+    label: algemeen
+  contact_forms:
+  - url: https://herstel.toeslagen.nl/toeslagen-bezwaarschriftenadviescommissie/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-12'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30491008/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30491008/bac
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-07-07'

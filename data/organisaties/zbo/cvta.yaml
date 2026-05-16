@@ -1,24 +1,142 @@
 id: org:zbo-cvta
 type: zbo
+subname: College van Toezicht Auteursrechten
 identifiers:
   roo_id: '28212496'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000202
+  owms: http://standaarden.overheid.nl/owms/terms/College_van_Toezicht_Auteursrechten_en_naburige_rechten
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: College van toezicht collectieve beheersorganisaties auteurs- en naburige
     rechten
   abbr: CvTA
   valid_from: '1900-01-01'
+description:
+  text: Het College van Toezicht Auteursrechten (CvTA) houdt toezicht op de collectieve
+    beheersorganisaties voor auteurs- en naburige rechten.
+  url: https://www.cvta.nl/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 18,21,22
+      toelichting: Voor dit zelfstandig bestuursorgaan is er naast artikel 21 en 22
+        ook sprake van een afwijking ten opzichte van het eerste lid van artikel 18
+        van de Kaderwet zelfstandige bestuursorganen. Voor het tweede lid van artikel
+        18 is geen afwijkende bepaling.
+wettelijke_grondslagen:
+- opschrift: Wet toezicht en geschillenbeslechting collectieve beheersorganisaties
+    auteurs- en naburige rechten, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0014779/2025-07-01#Artikel2
+taken_en_bevoegdheden: De belangrijkste taak van het College van Toezicht Auteursrechten
+  (CVtA) is het uitoefenen van toezicht op collectieve beheersorganisaties. Deze organisaties
+  zijn door de minister van Justitie en Veiligheid aangewezen om vergoedingen op gezag
+  van Auteurswet of de Wet op de Naburige Rechten te innen en te verdelen.
+evaluations:
+- datum: '2025-05-12'
+  kamerstuknummer: TK 25268 nr. 236
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-236.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cvta.nl/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212496/College_van_toezicht_collectieve_beheersorganisaties_auteurs-_en_naburige_rechten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.cvta.nl/documentatie/?_documentation_type=beleidsnotities
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.cvta.nl/zoeken/?_search_search=jaarverslag
+    - informatiecategorie: Beschikkingen
+      url: https://www.cvta.nl/documentatie/?_documentation_type=besluiten
+    - informatiecategorie: Adviezen
+      url: https://www.cvta.nl/documentatie/?_documentation_type=adviezen
+  wooVerzoek:
+    url: https://www.cvta.nl/woo/
+afspraak:
+  email: info@cvta.nl
+  telefoonnummer: (020) 303 02 61
+  url: https://www.cvta.nl/contact/
+personnel:
+  aantalFte: 8,0
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.cvta.nl/
   email: info@cvta.nl
+  bezoekadres: Krom Boomssloot 22 -II, 1011 GW Amsterdam
+  postadres: Krom Boomssloot 22 -II, 1011 GW Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Krom Boomssloot
+    huisnummer: '22'
+    huisnummer_toevoeging: -II
+    postcode: 1011 GW
+    woonplaats: Amsterdam
+  - type: Postadres
+    openbare_ruimte: Krom Boomssloot
+    huisnummer: '22'
+    huisnummer_toevoeging: -II
+    postcode: 1011 GW
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    openbare_ruimte: Krom Boomssloot
+    huisnummer: '22'
+    huisnummer_toevoeging: -II
+    postcode: 1011 GW
+    woonplaats: Amsterdam
+    land: Nederland
+  phones:
+  - nummer: (020) 303 02 61
+    label: algemeen
+  emails:
+  - email: info@cvta.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cvta.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cvta.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: CvTA (College van Toezicht Auteursrechten)
+    url: https://www.linkedin.com/company/college-van-toezicht-auteursrechten/?originalSubdomain=nl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-09'
+last_verified: '2025-12-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212496/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212496/cvta
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000202
   retrieved: '2026-05-09'
+roo_start_datum: '2003-01-01'

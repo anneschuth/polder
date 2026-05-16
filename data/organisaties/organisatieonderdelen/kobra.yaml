@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111469'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dg-pol
+parent_id: org:onderdeel-portefeuille-politieorganisatie-en-middelen
 names:
 - value: Bureau Korpsbeheer en Relatiebeheer Agentschappen
   abbr: KOBRA
@@ -14,9 +14,16 @@ names:
 contact:
   website: https://www.politie.nl/
   email: gieta.jethu@dgv.minvenj.nl
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111469/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111469/kobra
+  retrieved: '2026-05-16'

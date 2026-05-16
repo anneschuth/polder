@@ -3,16 +3,38 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29749027'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1087
+  owms: http://standaarden.overheid.nl/owms/terms/rzr
+  organisatiecode: so1087
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Zundert en Rucphen 2024
+  roo_id: '29749033'
 names:
 - value: Rekenkamer Zundert en Rucphen
   valid_from: '1900-01-01'
+description:
+  text: 1. Door de raden van de deelnemende gemeenten wordt een gemeenschappelijk
+    orgaan als bedoeld in artikel 1 juncto artikel 8 lid 2 van de Wet gemeenschappelijke
+    regelingen ingesteld.2. Het gemeenschappelijk orgaan is genaamd ‘Rekenkamer Zundert
+    en Rucphen’ en is gevestigd in Zundert.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: griffie@zundert.nl
+  emails:
+  - email: griffie@zundert.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-03'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29749027/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29749027/rekenkamer-zundert-en-rucphen
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

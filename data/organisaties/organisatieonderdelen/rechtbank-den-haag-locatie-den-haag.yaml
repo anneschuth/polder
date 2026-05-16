@@ -9,9 +9,30 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
+  bezoekadres: Prins Clauslaan 60, 2595 AJ Den Haag
+  postadres: Postbus 20302, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Clauslaan
+    huisnummer: '60'
+    postcode: 2595 AJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20302'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 362 22 00
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-08-17'
+last_verified: '2026-02-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046845/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046845/rechtbank-den-haag-locatie-den-haag
+  retrieved: '2026-05-16'

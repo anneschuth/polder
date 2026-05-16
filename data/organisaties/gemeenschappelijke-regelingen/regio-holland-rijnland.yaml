@@ -5,22 +5,108 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0507
   oin: 00000001813768068000
   kvk: '27365539'
+  owms: http://standaarden.overheid.nl/owms/terms/sohlrl
+  organisatiecode: so0507
+  rsin: '813768068'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio Holland Rijnland
+  roo_id: '30421654'
 names:
 - value: Regio Holland Rijnland
   valid_from: '1900-01-01'
+description:
+  text: Regio Holland Rijnland is een regio in het hart van de Randstad. In een samenwerkingsverband
+    van dertien gemeenten verbeteren we het wonen, werken en welzijn van onze inwoners.
+  url: https://hollandrijnland.nl/onze-regio/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://hollandrijnland.nl/over-ons/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/25249818/Regio_Holland_Rijnland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerkingsorgaan+Holland+Rijnland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerkingsorgaan+Holland+Rijnland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://hollandrijnland.nl/over-ons/woo-verzoeken-en-besluiten/
+      toelichting: Overzicht van Woo-verzoeken en -besluiten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://hollandrijnland.bestuurlijkeinformatie.nl/Reports
+      toelichting: Vastgestelde besluitenlijsten van het Algemeen en Dagelijks Bestuur
+        van Holland Rijnland
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://hollandrijnland.nl/over-ons/financien/
+      toelichting: Jaarstukken, begroting, tussentijdse rapportage en verslagen van
+        bevindingen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hollandrijnland.bestuurlijkeinformatie.nl/Agenda/Index/52d60936-32b2-435a-bd0b-b89e61ab6105
+      toelichting: Agenda en vergaderstukken van het Algemeen Bestuur van Holland
+        Rijnland
+  wooVerzoek:
+    url: https://hollandrijnland.nl/over-ons/wet-open-overheid/
+organogram_url: https://hollandrijnland.nl/wp-content/uploads/2025/08/Organogram-bewerkbaarsvg-2023-1.png
+afspraak:
+  email: receptiehr@hollandrijnland.nl
+  telefoonnummer: (071) 523 90 90
 contact:
   website: https://hollandrijnland.nl
   email: receptiehr@hollandrijnland.nl
+  bezoekadres: Schuttersveld 9, 2316 XG Leiden
+  postadres: Postbus 558, 2300 AN Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schuttersveld
+    huisnummer: '9'
+    postcode: 2316 XG
+    woonplaats: Leiden
+  - type: Postadres
+    postbus: '558'
+    postcode: 2300 AN
+    woonplaats: Leiden
+  - type: Woo-Adres
+    toelichting: t.a.v. afdeling Juridische zaken
+    postbus: '558'
+    postcode: 2300 AN
+    woonplaats: Leiden
+  phones:
+  - nummer: (071) 523 90 90
+    label: algemeen
+  emails:
+  - email: receptiehr@hollandrijnland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://hollandrijnland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://hollandrijnland.nl/onze-regio/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25249818/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25249818/regio-holland-rijnland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-04-01'

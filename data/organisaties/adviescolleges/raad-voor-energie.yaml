@@ -3,14 +3,39 @@ type: adviescollege
 identifiers:
   roo_id: '30489470'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12389
+  organisatiecode: oorg12389
 classification: adviescollege
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Klimaat en Groene Groei
+  roo_id: '29481996'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
+  owms: http://standaarden.overheid.nl/owms/terms/minklgrgr
 names:
 - value: Raad voor Energie
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor Energie bestaat uit onafhankelijke deskundigen die de regering
+    en de Eerste en Tweede Kamer adviseren over diverse energievraagstukken. De nadruk
+    van deze advisering ligt vooral op de volgende punten:* het overgaan naar een
+    klimaatneutrale, betrouwbare en betaalbare energievoorziening in Nederland (de
+    energietransitie);* het minder afhankelijk worden van buitenlandse energiebronnen
+    en grondstoffen;* de voorbereiding van het [Nationaal plan energiesysteem (NPE)](https://www.rvo.nl/onderwerpen/energiesysteem/nationaal-plan-energiesysteem),
+    dat in kaart brengt hoe er een energiesysteem kan worden opgezet waarmee Nederland
+    in 2050 klimaatneutraal kan zijn.
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Energiewet, artikel 6.6
+  referentie: https://wetten.overheid.nl/BWBR0050714/2026-01-01/0#Hoofdstuk6_Afdeling6.3_Paragraaf6.3.2_Artikel6.6
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-09'
+last_verified: '2026-02-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30489470/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30489470/raad-voor-energie
+  retrieved: '2026-05-16'
+roo_start_datum: '2026-01-01'

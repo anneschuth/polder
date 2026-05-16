@@ -3,18 +3,111 @@ type: adviescollege
 identifiers:
   roo_id: '20567377'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10259
+  owms: http://standaarden.overheid.nl/owms/terms/nlsportraad
+  organisatiecode: oorg10259
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Nederlandse Sportraad
   abbr: NLsportraad
   valid_from: '1900-01-01'
+description:
+  text: De Nederlandse Sportraad (NLsportraad) is een onafhankelijk adviesorgaan dat
+    zich richt op het versterken van de betekenis van topsport, breedtesport en bewegen
+    voor de samenleving. De raad geeft strategische en operationele adviezen over
+    zowel sportspecifieke thema’s als de relatie tussen sport en andere beleidsterreinen.
+    Adviezen worden op transparante wijze ontwikkeld, samen met de betrokkenen uit
+    het veld. Op die manier zijn de adviezen van de raad vernieuwend, onderbouwd door
+    onderzoek en praktisch uitvoerbaar.
+  url: https://www.nederlandse-sportraad.nl/de-raad
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de Nederlandse Sportraad, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0047303/2023-01-01#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nederlandse-sportraad.nl/contact/contact-met-de-nlsportraad
+      overzichtURL: https://organisaties.overheid.nl/woo/20567377/Nederlandse_Sportraad
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Adviezen
+      url: https://www.nederlandse-sportraad.nl/adviezen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.nederlandse-sportraad.nl/werkprogramma
+  wooVerzoek:
+    url: https://www.nederlandse-sportraad.nl/contact/contact-met-de-nlsportraad
+afspraak:
+  email: info@nlsportraad.nl
+  telefoonnummer: (070) 340 72 73
 contact:
   website: https://www.nederlandse-sportraad.nl/
   email: info@nlsportraad.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 184, 2501 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '184'
+    postcode: 2501 CD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '184'
+    postcode: 2501 CD
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 72 73
+    label: algemeen
+  emails:
+  - email: info@nlsportraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nederlandse-sportraad.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nederlandse-sportraad.nl/contact/contact-met-de-nlsportraad
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nederlandse Sportraad (NLsportraad)
+    url: https://www.linkedin.com/company/nederlandse-sportraad/
+  - platform: YouTube
+    gebruikersnaam: Nederlandse Sportraad
+    url: https://www.youtube.com/channel/UCspQDYNFGFgHR6nbPArYo6A?view_as=subscriber
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/20567377/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/20567377/nlsportraad
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-01-01'

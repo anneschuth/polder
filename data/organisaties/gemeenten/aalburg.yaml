@@ -6,6 +6,9 @@ identifiers:
   roo_id: '23199'
   wikidata: Q9808
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0738
+  owms: http://standaarden.overheid.nl/owms/terms/Aalburg_(gemeente)
+  ictu: 00738
+  organisatiecode: gm0738
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,84 @@ names:
   abbr: Aalburg
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 53,13
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 53.13
+  aantal_inwoners: 12779
+  inwoners: '240'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 240.0
+  bevat_plaatsen_raw: Babylonienbroek, Drongelen, Eethen, Genderen, Meeuwen, Veen,
+    Wijk en Aalburg
+  bevat_plaatsen:
+  - Babylonienbroek
+  - Drongelen
+  - Eethen
+  - Genderen
+  - Meeuwen
+  - Veen
+  - Wijk en Aalburg
+council:
+  total_seats: 15
+  parties:
+  - naam: SGP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Ideaalburg
+    aantal_zetels: 2
+  - naam: Progressief Altena
+    aantal_zetels: 1
+  - naam: BAB
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: De Aalburgse Alliantie
+    aantal_zetels: 1
 contact:
   website: www.aalburg.nl
   email: gemeente@aalburg.nl
+  bezoekadres: Grote Kerkstraat 32, 4261 BE WIJK EN AALBURG
+  postadres: Postbus 40, 4260 AA WIJK EN AALBURG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Grote Kerkstraat
+    huisnummer: '32'
+    postcode: 4261 BE
+    woonplaats: WIJK EN AALBURG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    openbare_ruimte: Postbus 40
+    postbus: '40'
+    postcode: 4260 AA
+    woonplaats: WIJK EN AALBURG
+  phones:
+  - nummer: (0416) 69 87 00
+    label: algemeen
+  emails:
+  - email: gemeente@aalburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.aalburg.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2022-04-22'
+last_verified: '2022-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23199/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23199/aalburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

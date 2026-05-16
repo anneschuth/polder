@@ -3,17 +3,61 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30432195'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1104
+  owms: http://standaarden.overheid.nl/owms/terms/odutrecht
+  oin: 00000003987038700000
+  organisatiecode: so1104
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Utrecht
+  roo_id: '30432201'
 names:
 - value: Omgevingsdienst Utrecht
   valid_from: '1900-01-01'
+description:
+  text: 1. De Omgevingsdienst behartigt, met inachtneming van hetgeen hierover in
+    de regeling is bepaald, de belangen van de provincie en de gemeenten tezamen en
+    van de provincie en elke gemeente afzonderlijk op het gebied van omgeving in de
+    ruimste zin, voor zover de bevoegdheid daartoe de provincie of de gemeente toekomt
+    en aan de Omgevingsdienst gemandateerd is.2. De Omgevingsdienst draagt zorg voor
+    een organisatie ter behartiging van de in lid 1 genoemde belangen en van de ter
+    uitvoering daarvan opgedragen en overeengekomen taken.
+  url: https://www.odu.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.odu.nl/
   email: info@odu.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  emails:
+  - email: info@odu.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odu.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30432195/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30432195/omgevingsdienst-utrecht
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-10-14'

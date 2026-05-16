@@ -10,9 +10,35 @@ names:
 contact:
   website: www.kinderbescherming.nl
   email: info@kinderbescherming.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Ministerie van Veiligheid en Justitie Raad voor de Kinderbescherming,
+    2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Ministerie van Veiligheid en Justitie Raad voor de Kinderbescherming
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (030) 888 24 00
+    label: algemeen
+  emails:
+  - email: info@kinderbescherming.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.kinderbescherming.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112810/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112810/landelijke-staforganisatie
+  retrieved: '2026-05-16'

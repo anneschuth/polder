@@ -6,21 +6,149 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0824
   roo_id: '26989'
   wikidata: Q9857
+  owms: http://standaarden.overheid.nl/owms/terms/Oisterwijk_(gemeente)
+  ictu: 00824
+  organisatiecode: gm0824
+  rsin: '001172736'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OIW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Oisterwijk
   abbr: Oisterwijk
   valid_from: '1900-01-01'
+description:
+  text: 'De organisatie is verdeeld in 3 domeinen waar verschillende teams onder vallen:
+    domein Bedrijfsvoering, domein Fysieke Leefomgeving en domein Samenleving.'
+  url: https://www.oisterwijk.nl/bestuur-en-organisatie/beschrijving-organisatie-en-organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.oisterwijk.nl/bestuur-en-organisatie/woo-verzoek-indienen-wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/26989/Gemeente_Oisterwijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oisterwijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: De gemeente neemt diverse besluiten, in een beschikking wordt het
+        besluit meegedeeld aan de aanvrager.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oisterwijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Overige besluiten van algemene strekking
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oisterwijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.oisterwijk.nl/actuele-bekendmakingen
+      toelichting: De besluitenlijsten van het college van burgemeester en wethouders
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.oisterwijk.nl/bestuur-en-organisatie/begroting-en-jaarstukken
+      toelichting: De begroting, Perspectiefnota en Jaarstukken van de gemeente Oisterwijk
+  wooVerzoek:
+    url: https://www.oisterwijk.nl/bestuur-en-organisatie/woo-verzoek-indienen-wet-open-overheid
+organogram_url: https://www.oisterwijk.nl/bestuur-en-organisatie/beschrijving-organisatie-en-organogram
+afspraak:
+  telefoonnummer: (013) 529 13 11
+  url: https://oisterwijk.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 63,91
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 63.91
+  aantal_inwoners: 33356
+  inwoners: '521'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 521.0
+  bevat_plaatsen_raw: Haaren, Heukelom, Moergestel, Oisterwijk
+  bevat_plaatsen:
+  - Haaren
+  - Heukelom
+  - Moergestel
+  - Oisterwijk
+council:
+  total_seats: 22
+  parties:
+  - naam: Partij Gemeente Belangen
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Algemeen Belang
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: WIJ!Oisterwijk
+    aantal_zetels: 1
 contact:
   website: https://www.oisterwijk.nl
   email: gemeente@oisterwijk.nl
+  bezoekadres: De Lind 44, 5061 HX OISTERWIJK
+  postadres: Postbus 10101, 5060 GA OISTERWIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Lind
+    huisnummer: '44'
+    postcode: 5061 HX
+    woonplaats: OISTERWIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10101'
+    postcode: 5060 GA
+    woonplaats: OISTERWIJK
+  - type: Woo-Adres
+    postbus: '10101'
+    postcode: 5060 GA
+    woonplaats: Oisterwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: De Lind
+    huisnummer: '44'
+    postcode: 5061 HX
+    ter_attentie_van: Domein Fysieke Leefomgeving
+    woonplaats: OISTERWIJK
+  phones:
+  - nummer: (013) 529 13 11
+    label: algemeen
+  emails:
+  - email: gemeente@oisterwijk.nl
+    label: algemeen
+  - email: Omgevingsloket@oisterwijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.oisterwijk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26989/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26989/oisterwijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

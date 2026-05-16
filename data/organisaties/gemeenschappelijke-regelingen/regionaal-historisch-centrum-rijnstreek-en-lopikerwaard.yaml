@@ -3,18 +3,71 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28091427'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1085
+  owms: http://standaarden.overheid.nl/owms/terms/rhcrl
+  kvk: '51347822'
+  btw: NL823236225B01
+  organisatiecode: so1085
+  rsin: '823236225'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Historisch Centrum Rijnstreek en Lopikerwaard
+  roo_id: '29489613'
 names:
 - value: Regionaal Historisch Centrum Rijnstreek en Lopikerwaard
   abbr: RHC Rijnstreek en Lopikerwaard
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28091427/Regionaal_Historisch_Centrum_Rijnstreek_en_Lopikerwaard
+  wooVerzoek:
+    url: https://rhcrijnstreek.nl/algemene-informatie/woo-verzoek/
+organogram_url: https://rhcrijnstreek.nl/algemene-informatie/werkgebied/
+afspraak:
+  email: rhc@woerden.nl
+  telefoonnummer: (0348) 42 88 46
+  url: https://rhcrijnstreek.nl/algemene-informatie/adres-openingstijden/
 contact:
   website: https://rhcrijnstreek.nl/
   email: rhc@woerden.nl
+  bezoekadres: Blekerijlaan 14, 3447 GR Woerden
+  postadres: Postbus 45, 3440 AA Woerden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Blekerijlaan
+    huisnummer: '14'
+    postcode: 3447 GR
+    woonplaats: Woerden
+  - type: Postadres
+    postbus: '45'
+    postcode: 3440 AA
+    woonplaats: Woerden
+  - type: Woo-Adres
+    postbus: '45'
+    postcode: 3440 AA
+    woonplaats: Woerden
+  phones:
+  - nummer: (0348) 42 88 46
+    label: algemeen
+  emails:
+  - email: rhc@woerden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://rhcrijnstreek.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-22'
+last_verified: '2025-07-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28091427/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28091427/regionaal-historisch-centrum-rijnstreek-en-lopikerwaard
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-04-01'

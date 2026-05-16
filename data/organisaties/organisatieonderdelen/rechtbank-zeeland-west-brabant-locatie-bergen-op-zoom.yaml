@@ -7,9 +7,21 @@ parent_id: org:rechtbank-zeeland-west-brabant
 names:
 - value: Rechtbank Zeeland-West-Brabant, locatie Bergen op Zoom
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Zuid-Oostsingel 41, 4611 BC Bergen op Zoom
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuid-Oostsingel
+    huisnummer: '41'
+    postcode: 4611 BC
+    woonplaats: Bergen op Zoom
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-22'
+last_verified: '2025-05-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048759/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048759/rechtbank-zeeland-west-brabant-locatie-bergen-op-zoom
+  retrieved: '2026-05-16'

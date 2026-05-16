@@ -3,6 +3,7 @@ type: gemeente
 identifiers:
   roo_id: '25595'
   wikidata: Q840628
+  owms: http://standaarden.overheid.nl/owms/terms/Lemsterland
 classification: gemeente
 parent_id: null
 names:
@@ -10,16 +11,78 @@ names:
   abbr: Lemsterland
   valid_from: '1900-01-01'
   valid_until: '2014-01-01'
+geography:
+  oppervlakte: 124,37
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 124.37
+  aantal_inwoners: 13576
+  inwoners: '109'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 109.0
+  bevat_plaatsen_raw: Bantega, Delfstrahuizen, Echten FR, Echtenerbrug, Eesterga,
+    Follega, Lemmer, Oosterzee
+  bevat_plaatsen:
+  - Bantega
+  - Delfstrahuizen
+  - Echten FR
+  - Echtenerbrug
+  - Eesterga
+  - Follega
+  - Lemmer
+  - Oosterzee
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Gemeentebelangen
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: NCPN
+    aantal_zetels: 2
+  - naam: NPP
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Lijst De Jong
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: http://www.lemsterland.nl
   email: info@lemsterland.nl
+  bezoekadres: Burg Krijgerplein 7, 8531 EA LEMMER
+  postadres: Postbus 2, 8530 AA LEMMER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burg Krijgerplein
+    huisnummer: '7'
+    postcode: 8531 EA
+    woonplaats: LEMMER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '2'
+    postcode: 8530 AA
+    woonplaats: LEMMER
+  phones:
+  - nummer: (0514) 56 75 75
+    label: algemeen
+  emails:
+  - email: info@lemsterland.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.lemsterland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
+successor_id: org:gemeente-de-friese-meren
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25595/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25595/lemsterland
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q840628
   retrieved: '2026-05-09'
-successor_id: org:gemeente-de-friese-meren

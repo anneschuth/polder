@@ -3,13 +3,23 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '45178'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dp-en-o
+parent_id: org:onderdeel-psg-cluster
 names:
 - value: Directie Huisvesting en Facilities (DHF)
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 370 91 05
+    label: algemeen
+  fax: (070) 370 61 03
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2017-12-05'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/45178/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/45178/directie-huisvesting-en-facilities-dhf
+  retrieved: '2026-05-16'

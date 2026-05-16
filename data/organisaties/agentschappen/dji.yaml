@@ -3,18 +3,93 @@ type: agentschap
 identifiers:
   roo_id: '13080'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10114
+  owms: http://standaarden.overheid.nl/owms/terms/Dienst_Justitiele_Inrichtingen
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Dienst Justitiële Inrichtingen
   abbr: DJI
   valid_from: '1900-01-01'
+description:
+  text: Dienst Justitiële Inrichtingen (DJI) is een agentschap van het ministerie
+    van Justitie en Veiligheid. We zijn met zo'n 16.000 medewerkers verantwoordelijk
+    voor de dagelijkse verzorging van de volwassenen en jongeren in onze inrichtingen.
+    We werken op vele manieren met hen samen aan voorbereiding op hun terugkeer in
+    de maatschappij. Zo dragen we bij aan de veiligheid van de samenleving. DJI'ers
+    werken op 50 locaties, waaronder Caribisch Nederland. Jaarlijks stromen er ruim
+    29.000 nieuwe justitiabelen in.
+  url: https://www.dji.nl/over-dji/organisatie-dji
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/13080/Dienst_Justitiele_Inrichtingen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid/contact/woo-verzoek-indienen
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid/contact/woo-verzoek-indienen
+organogram_url: https://www.dji.nl/over-dji/documenten/publicaties/2024/08/01/organogram-dji-juli-2019
+afspraak:
+  telefoonnummer: (088) 072 50 00
+  url: https://www.dji.nl/contact
 contact:
   website: https://www.dji.nl/
   email: servicepunt@dji.minjus.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 30132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 072 50 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dji.nl/
+    label: algemeen
+  - url: https://www.dji.nl/locaties
+    label: Contact inrichtingen
+  contact_forms:
+  - url: https://www.dji.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-12'
+last_verified: '2025-06-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13080/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13080/dji
+  retrieved: '2026-05-16'

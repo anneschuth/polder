@@ -5,22 +5,187 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0731
   oin: 00000001811159279000
   kvk: 09217030
+  owms: http://standaarden.overheid.nl/owms/terms/gldarch
+  btw: NL811159279B01
+  loonheffing: 811159279L01
+  organisatiecode: so0731
+  rsin: '811159279'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gelders Archief, Ministerie van Onderwijs, Cultuur
+    en Wetenschap
+  roo_id: '24964242'
 names:
 - value: Gelders Archief
   valid_from: '1900-01-01'
+description:
+  text: Het Gelders Archief is een eigentijds informatiecentrum. Wij verzamelen en
+    beheren al twee eeuwen regionale archieven en historische collecties om ze beschikbaar
+    te stellen aan een breed publiek.
+  url: https://www.geldersarchief.nl/over-ons/ons-verhaal
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/24964247/Gelders_Archief
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-1140.html
+      toelichting: Financiële jaarstukken 2021
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+      toelichting: AB stukken ; DB agenda en besluitenlijst vanaf 2024
+    - informatiecategorie: Convenanten
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-1040.html
+      toelichting: Besluit Informatiebeheer Regionaal Historisch Centrum ‘Gelders
+        Archief’ 2021
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+      toelichting: Brievenboek AB
+    - informatiecategorie: Klachtoordelen
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+      toelichting: Strategische plannen vanaf 2021; jaarverslagen vanaf 2022; begrotingen
+        vanaf 2022
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid/actieve-openbaarmakingen
+    - informatiecategorie: Klachtoordelen
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-994.html
+      toelichting: Regeling afhandeling klachten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1496.html
+      toelichting: WMEBV ZORGPLICHT BELEID RHC GELDERS ARCHIEF 2023
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-1042.html
+      toelichting: Delegatie en mandaatbesluit
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-1040.html
+      toelichting: Besluit informatiebeheer
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-1041.html
+      toelichting: Aanwijzing gemeente- en rijksarchivaris
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2022-994.html
+      toelichting: Regeling afhandeling klachten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1502.html
+      toelichting: REGELING FINANCIËLE VERORDENING RHC GELDERS ARCHIEF 2023
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gelders+Archief%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: archiefverordening
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1498.html
+      toelichting: AANWIJSBESLUIT ELEKTRONISCHE KANALEN RHC GELDERS ARCHIEF 2023
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1499.html
+      toelichting: REGELING CONTROLEVERORDENING RHC GELDERS ARCHIEF 2023
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1501.html
+      toelichting: REGELING INTERN CONTROLEPLAN RHC GELDERS ARCHIEF 2023
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gelders+Archief%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/bgr-2023-1500.html
+      toelichting: REGELING NORMENKADER RECHTMATIGHEID RHC GELDERS ARCHIEF 2023
+  wooVerzoek:
+    url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid
+afspraak:
+  email: info@geldersarchief.nl
+  telefoonnummer: (026) 352 16 00
 contact:
   website: https://www.geldersarchief.nl
   email: info@geldersarchief.nl
+  bezoekadres: Westervoortsedijk 67 -d, 6827 AT Arnhem
+  postadres: Westervoortsedijk 67 -d, 6827 AT Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Westervoortsedijk
+    huisnummer: '67'
+    huisnummer_toevoeging: -d
+    postcode: 6827 AT
+    woonplaats: Arnhem
+    regio: Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Westervoortsedijk
+    huisnummer: '67'
+    huisnummer_toevoeging: -d
+    postcode: 6827 AT
+    woonplaats: Arnhem
+    regio: Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Westervoortsedijk
+    huisnummer: '67'
+    huisnummer_toevoeging: -d
+    postcode: 6827 AT
+    woonplaats: Arnhem
+    regio: Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (026) 352 16 00
+    label: algemeen
+  emails:
+  - email: info@geldersarchief.nl
+    label: Algemeen
+  - email: woo@geldersarchief.nl
+    label: WOO verzoeken
+  internet_addresses:
+  - url: https://www.geldersarchief.nl
+    label: algemeen
+  - url: https://www.geldersarchief.nl/over-ons/beleid/wet-open-overheid
+    label: WOO
+  contact_forms:
+  - url: https://www.geldersarchief.nl/informatie/contact-tips
+    label: Algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: Geldersarchief
+    url: https://x.com/geldersarchief
+  - platform: YouTube
+    gebruikersnaam: Geldersarchiefarnhem
+    url: https://www.youtube.com/user/geldersarchiefarnhem
+  - platform: Facebook
+    gebruikersnaam: geldersarchief
+    url: https://www.facebook.com/geldersarchief
+  - platform: Instagram
+    gebruikersnaam: geldersarchief
+    url: https://www.instagram.com/geldersarchief/
+  - platform: LinkedIn
+    gebruikersnaam: gelders-archief
+    url: https://www.linkedin.com/company/gelders-archief/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-02-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964247/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964247/gelders-archief
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2002-09-06'

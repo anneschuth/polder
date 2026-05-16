@@ -3,7 +3,7 @@ name:
   full: A.N. Lucas
   family: Lucas
   given: A.N.
-  initials: A.
+  initials: A.N.
 mandaten:
 - id: 9a22bc26-19c9-436a-b4dd-89395aa2c7aa
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910562
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28800459
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1910389

@@ -3,16 +3,40 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '97034'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:min-bzk
 names:
 - value: Directoraat-generaal Volkshuisvesting en Bouwen
   valid_from: '1900-01-01'
+description:
+  text: Het directoraat-generaal Bestuur, Ruimte en Wonen staat voor sterk, vernieuwend
+    en adaptief openbaar bestuur, een functionerend en ontwikkelend democratisch stelsel,
+    een evenwichtige woningmarkt en een goed gebouwde bebouwde omgeving.Het directoraat-generaal
+    helpt het openbaar bestuur zodanig in te richten en te laten werken dat het optimaal
+    bijdraagt aan de welvaart en het welzijn van Nederland. Daarbij hoort hoe we wonen,
+    bouwen en samenleven en uiteraard het functioneren van ons (lokaal) bestuur en
+    onze democratie. Middenin de samenleving werken aan sterk openbaar bestuur en
+    goed wonen en bouwen.
 contact:
   website: http://www.rijksoverheid.nl
   email: Chris.Kuijpers@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97034/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97034/directoraat-generaal-volkshuisvesting-en-bouwen
+  retrieved: '2026-05-16'

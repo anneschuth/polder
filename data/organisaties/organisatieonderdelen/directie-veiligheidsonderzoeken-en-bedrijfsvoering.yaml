@@ -7,9 +7,30 @@ parent_id: org:onderdeel-aivd
 names:
 - value: directie Veiligheidsonderzoeken & Bedrijfsvoering
   valid_from: '1900-01-01'
+description:
+  text: Onder de directie Veiligheidsonderzoeken & Bedrijfsvoering vallen, naast de
+    businessunit Veiligheidsonderzoeken, die organisatie-onderdelen die verantwoordelijk
+    zijn voor het leveren van producten en diensten op het gebied van interne dienstverlening
+    en informatievoorziening.
+contact:
+  bezoekadres: Europaweg 4, 2711 AH ZOETERMEER
+  postadres: Postbus 20010, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europaweg
+    huisnummer: '4'
+    postcode: 2711 AH
+    woonplaats: ZOETERMEER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20010'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/96430/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/96430/directie-veiligheidsonderzoeken-en-bedrijfsvoering
+  retrieved: '2026-05-16'

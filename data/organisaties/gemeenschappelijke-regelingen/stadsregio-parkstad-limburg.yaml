@@ -5,23 +5,118 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0035
   oin: 00000001007379936000
   kvk: '51330032'
+  owms: http://standaarden.overheid.nl/owms/terms/strpslim
+  organisatiecode: so0035
+  rsin: 007379936
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Stadsregio Parkstad Limburg
+  roo_id: '29496578'
 names:
 - value: Stadsregio Parkstad Limburg
   valid_from: '1900-01-01'
-  valid_until: '2021-05-01'
+description:
+  text: 'Stadsregio Parkstad Limburg is sinds 1999 het bestuurlijk samenwerkingsverband
+    van de Parkstadgemeenten Beekdaelen, Brunssum, Heerlen, Kerkrade, Landgraaf, Simpelveld
+    en Voerendaal. Daarvoor werkten de gemeenten samen onder de titels ''Oostelijke
+    Mijnstreek'' en ''Streekgewest Oostelijk Zuid Limburg''. Vanaf 2014 wordt gewerkt
+    met een Gemeenschappelijke Regeling (GR) van Colleges van Burgemeesters en Wethouders.  Het
+    Dagelijks Bestuur (DB) wordt gevormd door de burgemeesters van de zeven gemeenten.
+    Het Algemeen Bestuur (AB) uit de burgemeesters aangevuld met zeven wethouders,
+    van iedere gemeente één. Daarnaast zijn er vijf bestuurscommissies: Economie &
+    Toerisme, Wonen & Herstructurering, Ruimte & Mobiliteit, Duurzaamheid en Sociaal
+    Economische Structuurversterking (SES).Elke bestuurscommissie is samengesteld
+    uit één portefeuille-houdend collegelid per aan het onderwerp deelnemende gemeente.
+    Het doel is te komen tot een samenhangend beleid en uitvoering op de thema’s:
+    ruimte & mobiliteit, economie & toerisme, wonen & herstructurering, duurzaamheid
+    & energie, leefbaarheid en welzijn (SES) en grensoverschrijdende samenwerking
+    (GROS). Het thema Grensoverstijgende Samenwerking is belegd in het Dagelijks Bestuur.Het
+    regiobureau waar zo’n 35 professionals werken, faciliteert de samenwerking tussen
+    de zeven gemeenten op basis van de strategische agenda. Zij ondersteunen ook de
+    Bestuurscommissies waar leden van de colleges van Burgemeesters en Wethouders
+    van de Parkstadgemeenten het beleid en de (uitvoering)plannen vaststellen die
+    invulling geven aan de thema’s.'
+  url: http://www.parkstad-limburg.nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-05-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.parkstad-limburg.nl/woo---wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28505209/Stadsregio_Parkstad_Limburg
+  wooVerzoek:
+    url: https://www.parkstad-limburg.nl/woo---wet-open-overheid
+organogram_url: https://www.parkstad-limburg.nl/Stadsregio-Parkstad
+afspraak:
+  email: info@parkstad-limburg.nl
+  telefoonnummer: (045) 570 01 23
+  url: https://www.parkstad-limburg.nl/contact
 contact:
   website: https://parkstad-limburg.nl
   email: info@parkstad-limburg.nl
+  bezoekadres: Kloosterweg 1, 6412 CN Heerlen
+  postadres: Postbus 200, 6400 AE Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kloosterweg
+    huisnummer: '1'
+    postcode: 6412 CN
+    woonplaats: Heerlen
+  - type: Postadres
+    postbus: '200'
+    postcode: 6400 AE
+    woonplaats: Heerlen
+  - type: Woo-Adres
+    toelichting: Gebouw Carbon6, 3e Etage Gang J
+    openbare_ruimte: Kloosterweg
+    huisnummer: '1'
+    postcode: 6412 CN
+    woonplaats: Heerlen
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '200'
+    postcode: 6400 AE
+    woonplaats: Heerlen
+    land: Nederland
+  phones:
+  - nummer: (045) 570 01 23
+    label: algemeen
+  - nummer: 06 28 65 30 20
+    label: redacteur
+  emails:
+  - email: info@parkstad-limburg.nl
+    label: algemeen
+  - email: i.demandt@parkstad-limburg.nl
+    label: redacteur
+  internet_addresses:
+  - url: https://parkstad-limburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://parkstad-limburg.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-05-01'
+last_mutation: '2026-05-02'
+last_verified: '2025-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28505209/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28505209/stadsregio-parkstad-limburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-01-01'

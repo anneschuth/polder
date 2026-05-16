@@ -1,23 +1,56 @@
 id: org:rechtbank-gerechtshof-arnhem-leeuwarden
 type: rechterlijke-instantie
+subtype: Gerechtshof
 identifiers:
   oin: '00000004000000147000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10015
   roo_id: '59048'
+  owms: http://standaarden.overheid.nl/owms/terms/Gerechtshof_Arnhem-Leeuwarden
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Gerechtshof Arnhem-Leeuwarden
   valid_from: '1900-01-01'
+description:
+  text: Gerechtshof Arnhem-Leeuwarden behandelt zaken in hoger beroep van de rechtbanken
+    Gelderland, Midden-Nederland, Noord-Nederland en Overijssel, behalve socialezekerheids-
+    en ambtenarenzaken (Centrale Raad van Beroep) en overige zaken op het gebied van
+    bestuursrecht (Raad van State). Er werken ongeveer 400 mensen in vaste dienst.Het
+    gerechtshof heeft in totaal zes afdelingen, te weten een strafafdeling en een
+    civiele afdeling in zowel Arnhem als Leeuwarden. Deze afdelingen zijn weer onderverdeeld
+    in teams. Daarnaast is er één belastingafdeling met teams in Arnhem en in Leeuwarden
+    en één afdeling Bedrijfsvoering.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Arnhem-Leeuwarden
   email: info.hof-arle@rechtspraak.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (088) 361 81 81
+    label: algemeen
+  emails:
+  - email: info.hof-arle@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Arnhem-Leeuwarden
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Paginas/Mailen-met-de-rechtspraak.aspx
+    label: mailen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/59048/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/59048/gerechtshof-arnhem-leeuwarden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

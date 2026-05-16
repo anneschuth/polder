@@ -2,14 +2,42 @@ id: org:oovb-stichting-life-science-incubator-maastricht
 type: rwt
 identifiers:
   roo_id: '27913788'
+  kvk: '14075707'
+  rsin: '811127072'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Life Science Incubator Maastricht
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Duboisdomein 30, 6229 GT Maastricht
+  postadres: Postbus 616, 6200 MD Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Duboisdomein 30
+    postcode: 6229 GT
+    woonplaats: Maastricht
+  - type: Postadres
+    postbus: '616'
+    postcode: 6200 MD
+    woonplaats: Maastricht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913788/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913788/stichting-life-science-incubator-maastricht
+  retrieved: '2026-05-16'

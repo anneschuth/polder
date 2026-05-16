@@ -1,27 +1,124 @@
 id: org:gr-gemeentelijke-gezondheidsdienst-flevoland
 type: gemeenschappelijke-regeling
+subname: GGD Flevoland
 identifiers:
   roo_id: '24943450'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0910
   oin: '00000001005740551000'
   kvk: '32170514'
+  owms: http://standaarden.overheid.nl/owms/terms/gemgdfld
+  organisatiecode: so0910
+  rsin: '005740551'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gemeentelijke Gezondheidsdienst Flevoland
+  roo_id: '29837044'
 names:
 - value: Gemeentelijke Gezondheidsdienst Flevoland
   abbr: GGD Flevoland
   valid_from: '1900-01-01'
+description:
+  text: Mensen gezonde kansen bieden om alles uit hún leven te halen. Dat is de missie
+    van GGD Flevoland. Want mensen die zich gezond en veilig voelen, doen actiever
+    mee aan het leven. In de samenleving probeert iedereen alles uit het leven te
+    halen met de mogelijkheden die ze hebben. Dat maakt hen gelukkiger en zelfredzamer.
+    Het ervaren van zelf te kunnen kiezen. De kwaliteit van leven stimuleert hen om
+    gezonde keuzes te maken. Lekker in je vel zitten geeft plezier aan je leven!Gezond
+    opgroeienHet is belangrijk dat iedereen zo gezond mogelijk opgroeit en leeft.
+    Positieve gezondheid is de basis voor het handelen van GGD Flevoland. Gezondheid
+    is meer dan niet ziek zijn. De publieke gezondheidszorg is bedoeld om de gezondheid
+    van alle inwoners van Flevoland te bewaken, te beschermen en te bevorderen. Ook
+    als mensen daar niet altijd om vragen.GGD Flevoland werkt in opdracht van de zes
+    gemeenten in Flevoland. De hoofdvestiging van GGD Flevoland bevindt zich Lelystad.
+    De aandacht is speciaal gericht op mensen die meer hulp nodig hebben, bijvoorbeeld
+    omdat ze kwetsbaar zijn of zorg mijden.PreventiePreventie (voorkomen van) is de
+    belangrijkste activiteit van GGD Flevoland. Het is gericht op het helpen bij een
+    gezonde leefstijl. In een gezonde omgeving, die meehelpt aan het voorkomen van.
+    Als GGD proberen we de gezondheidsverschillen te verkleinen. Gezondheid moet overal
+    terugkomen en bij de gemeenten hoog op de agenda staan. Als GGD laten we zien
+    wat we doen en onderbouwen dit met data. Dat inzicht delen we met de inwoners
+    van Flevoland.Je kunt bij ons terecht voorJeugdgezondheidszorg, zoals advies bij
+    kinderziekten en prikken tegen ziekten.Vragen over infectieziekten, zoals hepatitis,
+    de ziekte van Lyme en q-koorts.Soatesten en vragen over jouw seksuele gezondheid,
+    liefde en seks.Reisvaccinaties en advies bij reizen.Vragen en zorgen over milieu
+    en veiligheid in jouw omgeving.Maatschappelijke zorg.
+  url: https://www.ggdflevoland.nl/over-ggd/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdflevoland.nl/over-ggd/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/24943450/Gemeentelijke_Gezondheidsdienst_Flevoland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.ggdflevoland.nl/over-ggd/bestuur-en-directie/agenda-algemeen-bestuur-2/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ggdflevoland.nl/over-ggd/publicaties/
+  wooVerzoek:
+    url: https://www.ggdflevoland.nl/over-ggd/wet-open-overheid-woo/
+organogram_url: https://www.ggdflevoland.nl/over-ggd/bestuur-en-directie/
+afspraak:
+  email: post@ggdflevoland.nl
+  telefoonnummer: (0320) 27 62 11
+  url: https://www.ggdflevoland.nl/contact/
 contact:
   website: https://www.ggdflevoland.nl
   email: post@ggdflevoland.nl
+  bezoekadres: Noorderwagenstraat 2, 8223 AM Lelystad
+  postadres: Postbus 1120, 8200 BC Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Noorderwagenstraat
+    huisnummer: '2'
+    postcode: 8223 AM
+    woonplaats: Lelystad
+    regio: Flevoland
+  - type: Postadres
+    postbus: '1120'
+    postcode: 8200 BC
+    woonplaats: Lelystad
+  - type: Woo-Adres
+    postbus: '1120'
+    postcode: 8200 BC
+    woonplaats: Lelystad
+  phones:
+  - nummer: (0320) 27 62 11
+    label: algemeen
+  emails:
+  - email: post@ggdflevoland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdflevoland.nl
+    label: algemeen
+  - url: https://www.ggdflevoland.nl/contact/
+    label: email de FG
+  contact_forms:
+  - url: https://www.ggdflevoland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24943450/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24943450/gemeentelijke-gezondheidsdienst-flevoland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2008-01-01'

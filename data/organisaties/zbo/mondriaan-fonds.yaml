@@ -4,20 +4,115 @@ identifiers:
   roo_id: '28212022'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000166
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Mondriaan Fonds
   valid_from: '1900-01-01'
-  valid_until: '2030-10-31'
+description:
+  text: Het Mondriaan Fonds is voortgekomen uit de fusie op 30 december 2011 van het
+    Fonds BKVB, dat zich richtte op hedendaagse kunstenaars en bemiddelaars, en de
+    Mondriaan Stichting, die zich richtte op instellingen op het gebied van beeldende
+    kunst en cultureel erfgoed.
+  url: https://www.mondriaanfonds.nl/over-het-fonds/organisatie/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Wet op het specifiek cultuurbeleid, artikel 9
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20het%20specifiek%20cultuurbeleid
+taken_en_bevoegdheden: Het Mondriaan Fonds is het publieke stimuleringsfonds voor
+  beeldende kunst en cultureel erfgoed. Het bevordert bijzondere en vernieuwende projecten
+  en activiteiten van beeldend kunstenaars, bemiddelaars en instellingen die van belang
+  zijn voor de beeldende kunst en cultureel erfgoed in Nederland. Alle financiële
+  bijdragen die het Mondriaan Fonds verstrekt, hebben tot doel de betekenisvolle ontwikkeling
+  en zichtbaarheid van beeldende kunst en cultureel erfgoed in Nederland te stimuleren
+  daar waar de markt dit niet of nog niet mogelijk maakt.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Pensioenfonds Zorg en Welzijn (PFZW)
+    referentie: https://www.pfzw.nl/particulieren.html
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.mondriaanfonds.nl/over-het-fonds/verslagen-plannen-protocollen/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212022/Mondriaan_Fonds
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Mondriaan+Fonds%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.mondriaanfonds.nl/over-het-fonds/verslagen-plannen-protocollen/wet-open-overheid-woo/
+organogram_url: https://www.mondriaanfonds.nl/over-het-fonds/organisatie/team/
+afspraak:
+  email: info@mondriaanfonds.nl
+  telefoonnummer: (020) 523 15 23
+  url: https://www.mondriaanfonds.nl/contactgegevens/
+personnel:
+  aantalFte: 34,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.mondriaanfonds.nl/
   email: info@mondriaanfonds.nl
+  bezoekadres: Brouwersgracht 276, 1013 HG Amsterdam
+  postadres: Postbus 773, 1000 AT Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brouwersgracht
+    huisnummer: '276'
+    postcode: 1013 HG
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '773'
+    postcode: 1000 AT
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    postbus: '773'
+    postcode: 1000 AT
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (020) 523 15 23
+    label: algemeen
+  emails:
+  - email: info@mondriaanfonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.mondriaanfonds.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2030-10-31'
+last_mutation: '2024-12-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212022/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212022/mondriaan-fonds
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +121,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000166
   retrieved: '2026-05-09'
+roo_start_datum: '2012-01-01'

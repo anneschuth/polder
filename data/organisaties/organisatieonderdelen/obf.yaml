@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28977363'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bzk
+parent_id: org:onderdeel-shared-service-organisatie
 names:
 - value: Organisatie voor Bedrijfsvoering en Financiën
   abbr: OBF
@@ -15,12 +15,49 @@ names:
 - value: Directoraat-generaal Vastgoed en Bedrijfsvoering Rijk (DGVBR)
   abbr: OBF
   valid_from: '1900-01-01'
+description:
+  text: "Shared service organisaties (SSO's)Onder het directoraat-generaal Vastgoed\
+    \ en Bedrijfsvoering Rijk vallen de shared service organisaties FMHaaglanden,\
+    \ Rijksorganisatie voor Informatiehuishouding (RvIHH), Shared Service Center-ICT\
+    \ (SSC-ICT), Rijksorganisatie voor Ontwikkeling, Digitalisering en Innovatie (Rijksorganisatie\
+    \ ODI), Organisatie Personeel en Rijk (O&P Rijk), Rijksinkoopsamenwerking (RIS),\
+    \ Rijksorganisatie Beveiliging en Logistiek (RBL) en Organisatie voor Bedrijfsvoering\
+    \ en Financiën (OBF).De Organisatie voor Bedrijfsvoering en Financiën (OBF) adviseert,\
+    \ voert uit en ondersteunt in bedrijfsvoering en financiële processen. Dit gebeurt\
+    \ op gebied van in-, door- en uitstroom, boekhouding, crediteuren- en debiteurenadministratie,\
+    \ projectadministratie, functioneel beheer, communicatie, informatiebeveiliging\
+    \ en privacy. Dit doet OBF voor de organisatieonderdelen Rijksorganisatie ODI,\
+    \ RIS, RBL. Daarbij levert OBF ook diensten aan collega- agentschappen SSC-ICT,\
+    \ FMH, Rijksorganisatie voor Informatiehuishouding (RvIHH) en de Rijkschoonmaakdienst\
+    \ (RSO).De Organisatie voor Bedrijfsvoering en Financiën bestaat uit de volgende\
+    \ afdelingen:-\tFinanciële Dienstverlening-\tControl & Advies-\tInformatievoorziening-\t\
+    Contentteam-\tStaf"
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/organisatie/organogram/shared-service-organisaties
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/organisatie/organogram/shared-service-organisaties
   email: OBF.Bedrijfsbureau@rijksoverheid.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  emails:
+  - email: OBF.Bedrijfsbureau@rijksoverheid.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-10'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28977363/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28977363/obf
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-01-01'

@@ -6,21 +6,167 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0537
   roo_id: '27030'
   wikidata: Q208764
+  owms: http://standaarden.overheid.nl/owms/terms/Katwijk_(gemeente)
+  ictu: '00537'
+  organisatiecode: gm0537
+  rsin: '814933737'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_KWK
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Katwijk
   abbr: Katwijk
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Katwijk is op 1 januari 2006 ontstaan uit een samenvoeging van
+    de gemeenten Katwijk, Rijnsburg en Valkenburg.
+  url: https://www.katwijk.nl/gemeente-en-burgerzaken
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.katwijk.nl/wat-is-de-wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27030/Gemeente_Katwijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Katwijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.katwijk.nl/
+      toelichting: Hier vindt u de openbare gegevens van de gemeente Katwijk, op grond
+        van de Wet open overheid (Woo).
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Katwijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=alle&gemeenten=Katwijk
+      toelichting: Lokale regelgeving (verordeningen en regelingen)
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://katwijk.raadsinformatie.nl/
+      toelichting: 'Raads- en bestuursstukken: stukken van de vergaderingen van de
+        gemeenteraad en van de vergaderingen van het college van burgemeester en wethouders
+        (B&W).'
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://katwijk.raadsinformatie.nl/
+      toelichting: 'Raads- en bestuursstukken: stukken van de vergaderingen van de
+        gemeenteraad en van de vergaderingen van het college van burgemeester en wethouders
+        (B&W).'
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22katwijk%22)&pg=10&svel=Publicatiedatum&svol=Aflopend&zv=katwijk&col=
+      toelichting: 'Beschikkingen: bekendmakingen van besluiten van de gemeente.'
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://loket.katwijk.nl/o/search?q=woo
+      toelichting: 'Woo-verzoeken: verzoeken tot informatie in het kader van de Wet
+        open overheid.'
+  wooVerzoek:
+    url: https://extra.katwijk.nl/gemeente-en-burgerzaken/woo-verzoek-indienen
+organogram_url: https://www.katwijk.nl/gemeente-en-burgerzaken/organisatiestructuur
+afspraak:
+  url: https://www.katwijk.nl/algemeen/contact-en-openingstijden
+geography:
+  oppervlakte: 31,06
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 31.06
+  aantal_inwoners: 67149
+  inwoners: '2161'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2161.0
+  bevat_plaatsen_raw: Katwijk ZH, Rijnsburg, Valkenburg ZH
+  bevat_plaatsen:
+  - Katwijk ZH
+  - Rijnsburg
+  - Valkenburg ZH
+council:
+  total_seats: 32
+  parties:
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: SGP
+    aantal_zetels: 6
+  - naam: DURF
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 1
+  - naam: GemeenteBelangen
+    aantal_zetels: 1
+  - naam: KiesKatwijk
+    aantal_zetels: 1
 contact:
   website: https://www.katwijk.nl
   email: info@katwijk.nl
+  bezoekadres: Koningin Julianalaan 3, 2224 EW KATWIJK ZH
+  postadres: Postbus 589, 2220 AN KATWIJK ZH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '3'
+    postcode: 2224 EW
+    woonplaats: KATWIJK ZH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '589'
+    postcode: 2220 AN
+    woonplaats: KATWIJK ZH
+  - type: Woo-Adres
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '3'
+    postbus: '589'
+    postcode: 2224 EW
+    woonplaats: Katwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Koningin Julianalaan
+    huisnummer: '3'
+    postcode: 2224 EW
+    ter_attentie_van: Team ruimtelijke ontwikkeling
+    woonplaats: KATWIJK
+  phones:
+  - nummer: (071) 406 50 00
+    label: algemeen
+  emails:
+  - email: info@katwijk.nl
+    label: algemeen
+  - email: info@katwijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.katwijk.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.katwijk.nl/algemeen/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27030/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27030/katwijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

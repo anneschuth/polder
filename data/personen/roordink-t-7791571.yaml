@@ -3,7 +3,7 @@ name:
   full: T.E. Roordink
   family: Roordink
   given: T.E.
-  initials: T.
+  initials: T.E.
 mandaten:
 - id: c287e509-8fbe-499c-b9aa-7adca02f5486
   organization_id: org:gemeente-duiven
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7794978
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26095/gemeente-duiven
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30524428
 - id: 9589dd0f-c390-4b48-ad73-f0dc21b0345c
   organization_id: org:gemeente-duiven
   post_id: post:raadslid-gemeente-duiven

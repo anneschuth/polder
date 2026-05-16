@@ -3,18 +3,75 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964060'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0631
+  owms: http://standaarden.overheid.nl/owms/terms/kempbedrprk
+  kvk: '57341060'
+  organisatiecode: so0631
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Kempisch Bedrijvenpark
+  roo_id: '24964055'
 names:
 - value: Kempisch Bedrijvenpark
   valid_from: '1900-01-01'
   valid_until: '2024-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2024-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2024-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24964060/Kempisch_Bedrijvenpark
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kempisch+Bedrijvenpark%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kempisch+Bedrijvenpark%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
 contact:
   website: https://www.kempischbedrijvenpark.com
   email: info@kempischbedrijvenpark.com
+  bezoekadres: Diamantweg 10, 5527 LC Hapert
+  postadres: Postbus 11, 5530 AA Bladel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Diamantweg
+    huisnummer: '10'
+    postcode: 5527 LC
+    woonplaats: Hapert
+  - type: Postadres
+    postbus: '11'
+    postcode: 5530 AA
+    woonplaats: Bladel
+  phones:
+  - nummer: (0497) 36 16 94
+    label: algemeen
+  emails:
+  - email: info@kempischbedrijvenpark.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kempischbedrijvenpark.com
+    label: algemeen
+  contact_forms:
+  - url: https://www.kempischbedrijvenpark.com/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2024-01-01'
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964060/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964060/kempisch-bedrijvenpark
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-10-01'

@@ -3,16 +3,57 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30520130'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1111
+  owms: http://standaarden.overheid.nl/owms/terms/regiodebaronie
+  organisatiecode: so1111
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio De Baronie
+  roo_id: '30520136'
 names:
 - value: Regio De Baronie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.breda.nl/e-mailformulier
+  bezoekadres: Claudius Prinsenlaan 10, 4811 DJ Breda
+  postadres: Postbus 90156, 4800 RH Breda
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeente Breda
+    openbare_ruimte: Claudius Prinsenlaan
+    huisnummer: '10'
+    postcode: 4811 DJ
+    woonplaats: Breda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '90156'
+    postcode: 4800 RH
+    ter_attentie_van: Regio De Baronie
+    woonplaats: Breda
+  phones:
+  - nummer: 14 076
+    label: gemeente Breda
+  contact_forms:
+  - url: https://www.breda.nl/e-mailformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-02'
+last_verified: '2026-04-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30520130/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30520130/regio-de-baronie
+  retrieved: '2026-05-16'
+roo_start_datum: '2026-01-20'

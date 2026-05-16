@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   oin: '00000001062000561000'
   roo_id: '38483'
+  owms: http://standaarden.overheid.nl/owms/terms/Vianen_(gemeente)
+  ictu: '00620'
+  organisatiecode: gm0620
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,81 @@ names:
   abbr: Vianen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 42,37
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 42.37
+  aantal_inwoners: 19621
+  inwoners: '463'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 463.0
+  bevat_plaatsen_raw: Everdingen, Hagestein, Hoef en Haag, Ossenwaard UT, Vianen UT,
+    Zijderveld
+  bevat_plaatsen:
+  - Everdingen
+  - Hagestein
+  - Hoef en Haag
+  - Ossenwaard UT
+  - Vianen UT
+  - Zijderveld
+council:
+  total_seats: 15
+  parties:
+  - naam: D66
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Lokaal Alert
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: www.vianen.nl
   email: gemeente@vianen.nl
+  bezoekadres: Voorstraat 30, 4132 AS VIANEN UT
+  postadres: Postbus 46, 4130 EA VIANEN UT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Voorstraat
+    huisnummer: '30'
+    postcode: 4132 AS
+    woonplaats: VIANEN UT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    openbare_ruimte: Postbus 46
+    postbus: '46'
+    postcode: 4130 EA
+    woonplaats: VIANEN UT
+  phones:
+  - nummer: (0347) 36 99 11
+    label: algemeen
+  emails:
+  - email: gemeente@vianen.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.vianen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-08-06'
+last_verified: '2020-08-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38483/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38483/vianen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

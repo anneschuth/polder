@@ -4,23 +4,110 @@ identifiers:
   oin: '00000004000000010000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10219
   roo_id: '28321601'
+  owms: http://standaarden.overheid.nl/owms/terms/rdi
+  kvk: '01175716'
+  rsin: '823426725'
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Rijksinspectie Digitale Infrastructuur
   abbr: RDI
   valid_from: '1900-01-01'
+description:
+  text: Bij de Rijksinspectie Digitale Infrastructuur werken we aan een veilig verbonden
+    Nederland. Een Nederland dat kan rekenen op goede telecommunicatie- en IT-netwerken,
+    die bovendien veilig en betrouwbaar gebruikt kunnen worden. We voeren de wet-
+    en regelgeving uit op dit gebied. En we houden er toezicht op dat iedereen zich
+    aan de regels, eisen en voorwaarden houdt.
+  url: https://www.rdi.nl/over-ons
+doorlichtingen:
+- datum: '2020-05-14'
+  naam_rapport: Doorlichting Agentschap Telecom
+  referentie: https://www.rijksoverheid.nl/documenten/rapporten/2020/05/14/doorlichting-agentschap-telecom
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rdi.nl/contact/melden-storing/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28321601/Rijksinspectie_Digitale_Infrastructuur
+  wooVerzoek:
+    url: https://www.rdi.nl/documenten/formulieren/2022/06/08/woo-verzoek-indienen
+organogram_url: https://www.rdi.nl/documenten/2023/03/16/organogram
+afspraak:
+  email: info@rdi.nl
+  telefoonnummer: (088) 041 60 00
+  url: https://www.rdi.nl/contact
+personnel:
+  aantalFte: 344,5
+  peildatumFte: '2020-12-31'
 contact:
   website: https://www.rdi.nl
   email: info@rdi.nl
+  bezoekadres: Emmasingel 1, 9726 AH Groningen
+  postadres: Postbus 450, 9700 AL Groningen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor
+    openbare_ruimte: Emmasingel
+    huisnummer: '1'
+    postcode: 9726 AH
+    woonplaats: Groningen
+    regio: Noord
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  - type: Postadres
+    postbus: '450'
+    postcode: 9700 AL
+    woonplaats: Groningen
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '450'
+    postcode: 9700 AL
+    woonplaats: Groningen
+  phones:
+  - nummer: (088) 041 60 00
+    label: algemeen
+  emails:
+  - email: info@rdi.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rdi.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rdi.nl/contact
+    label: Algemeen
+  beschrijving: Wij zijn telefonisch bereikbaar op werkdagen van 8.30 uur tot 17.00
+    uur. Of neem contact op via e-mail.
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28321601/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28321601/rdi
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2002-07-22'

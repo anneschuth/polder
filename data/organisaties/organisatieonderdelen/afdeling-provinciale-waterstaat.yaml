@@ -8,9 +8,21 @@ names:
 - value: Afdeling Provinciale Waterstaat
   valid_from: '1900-01-01'
   valid_until: '2017-11-01'
+contact:
+  bezoekadres: Tweebaksmarkt 52, 8911 KZ Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tweebaksmarkt
+    huisnummer: '52'
+    postcode: 8911 KZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2017-11-01'
+last_mutation: '2018-01-10'
+last_verified: '2018-01-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58745/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58745/afdeling-provinciale-waterstaat
+  retrieved: '2026-05-16'

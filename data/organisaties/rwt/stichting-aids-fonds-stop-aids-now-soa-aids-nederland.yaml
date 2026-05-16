@@ -1,16 +1,47 @@
 id: org:oovb-stichting-aids-fonds-stop-aids-now-soa-aids-nederland
 type: rwt
+subname: Aidsfonds
 identifiers:
   roo_id: '27909837'
+  kvk: '41207989'
+  rsin: 008649273
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Stichting Aids Fonds - STOP AIDS NOW! - Soa Aids Nederland
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Condensatorweg 54, 1014 AX Amsterdam
+  postadres: Condensatorweg 54, 1014 AX Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Condensatorweg
+    huisnummer: '54'
+    postcode: 1014 AX
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Condensatorweg 54
+    postcode: 1014 AX
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909837/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909837/stichting-aids-fonds-stop-aids-now-soa-aids-nederland
+  retrieved: '2026-05-16'

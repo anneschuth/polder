@@ -3,17 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28114179'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1058
+  owms: http://standaarden.overheid.nl/owms/terms/cjgdrgt
+  kvk: '76865681'
+  organisatiecode: so1058
+  rsin: '860815729'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Centrum Jeugd en Gezin
+    Drimmelen Geertruidenberg
+  roo_id: '28114173'
 names:
 - value: CJG Drimmelen Geertruidenberg
   valid_from: '1900-01-01'
+description:
+  text: Het CJG geeft advies en ondersteuning bij opvoeden en opgroeien aan ouders,
+    kinderen, jongeren tot 23 jaar en professionals. Wij vallen onder de gemeenten
+    Drimmelen en Geertruidenberg.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28114179/CJG_Drimmelen_Geertruidenberg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22CJG+Drimmelen+Geertruidenberg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22CJG+Drimmelen+Geertruidenberg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
 contact:
   website: https://www.cjgdrimmelengeertruidenberg.nl
   email: kwaliteit@cjgdg.nl
+  bezoekadres: Amerweg 15 A, 4931 NC Geertruidenberg
+  postadres: Amerweg 15A, 4931 NC Geertruidenberg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Amerweg
+    huisnummer: '15'
+    huisnummer_toevoeging: A
+    postcode: 4931 NC
+    woonplaats: Geertruidenberg
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Amerweg
+    huisnummer: 15A
+    postcode: 4931 NC
+    woonplaats: Geertruidenberg
+    regio: WBO
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Amerweg
+    huisnummer: 15A
+    postcode: 4931 NC
+    woonplaats: Geertruidenberg
+    land: Nederland
+  phones:
+  - nummer: (0162) 69 01 20
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cjgdrimmelengeertruidenberg.nl
+    label: algemeen
+  - url: https://www.cjgdrimmelengeertruidenberg.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://cjgdrimmelengeertruidenberg.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: CJG Drimmelen Geertruidenberg
+    url: https://www.linkedin.com/company/cjg-drimmelen-geertruidenberg/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-03-13'
+last_verified: '2022-06-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28114179/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28114179/cjg-drimmelen-geertruidenberg
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-01-01'

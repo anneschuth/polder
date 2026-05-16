@@ -5,20 +5,116 @@ identifiers:
   kvk: '27364178'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10004
   roo_id: '112990'
+  owms: http://standaarden.overheid.nl/owms/terms/Rijkswaterstaat
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Rijkswaterstaat
   abbr: RWS
   valid_from: '1900-01-01'
+description:
+  text: Samen werken aan een veilig, leefbaar en bereikbaar Nederland. Dat is Rijkswaterstaat.
+  url: https://www.rijkswaterstaat.nl/over-ons
+doorlichtingen:
+- naam_rapport: Doorlichting RWS
+  referentie: https://www.rijksoverheid.nl/documenten/rapporten/2016/06/02/doorlichting-rws
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijkswaterstaat.nl/over-ons/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/112990/Rijkswaterstaat
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://open.rijkswaterstaat.nl/open-overheid/onderzoeksrapporten/
+      toelichting: Onderzoeksrapporten
+    - informatiecategorie: Convenanten
+      url: https://open.rijkswaterstaat.nl/open-overheid/convenanten/
+      toelichting: Convernanten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.rijkswaterstaat.nl/open-overheid/woo-verzoeken/
+      toelichting: Woo-verzoeken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://open.rijkswaterstaat.nl/open-overheid/besluiten/
+      toelichting: Besluiten van algemene strekking
+  wooVerzoek:
+    url: https://www.rijkswaterstaat.nl/over-ons/contact/wet-open-overheid-woo-bij-rijkswaterstaat
+organogram_url: https://www.rijkswaterstaat.nl/over-ons/onze-organisatie/organisatiestructuur
+afspraak:
+  url: https://www.rijkswaterstaat.nl/over-ons/contact
+personnel:
+  aantalFte: 9864,0
+  peildatumFte: '2020-12-31'
 contact:
   website: https://www.rijkswaterstaat.nl/
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 2232, 3500 GE Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Het bestuur en de Bestuursstaf van Rijkswaterstaat zijn gehuisvest
+      aan de Rijnstraat in Den Haag. Bezoek https://www.rijkswaterstaat.nl/over-ons/contact/adressen
+      voor meer informatie over de vestigingen van Rijkswaterstaat
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '2232'
+    postcode: 3500 GE
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Griffioenlaan
+    huisnummer: '2'
+    postcode: 3526 LA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (0800) 80 02
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijkswaterstaat.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijkswaterstaat.nl/over-ons/contact/index.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2023-02-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112990/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112990/rws
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

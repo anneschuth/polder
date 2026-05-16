@@ -1,5 +1,6 @@
 id: org:onderdeel-directie-financien-en-bestuursadvisering
 type: organisatieonderdeel
+subname: directie F&B
 identifiers:
   roo_id: '97045'
 classification: organisatieonderdeel
@@ -7,9 +8,31 @@ parent_id: org:agentschap-rvb
 names:
 - value: Directie Financiën en Bestuursadvisering
   valid_from: '1900-01-01'
+description:
+  text: Ondersteunt en adviseert het primaire proces van het RVB en draagt eraan bij
+    dat het RVB als één organisatie naar buiten treedt.
+contact:
+  bezoekadres: Korte Voorhout 7, 2511 CW DEN HAAG
+  postadres: Postbus 16169, 2500 BD DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (088) 115 80 00
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-06'
+last_verified: '2025-12-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97045/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97045/directie-financien-en-bestuursadvisering
+  retrieved: '2026-05-16'

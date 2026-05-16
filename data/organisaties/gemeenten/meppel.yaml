@@ -6,21 +6,185 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0119
   roo_id: '41121'
   wikidata: Q60425
+  owms: http://standaarden.overheid.nl/owms/terms/Meppel_(gemeente)
+  ictu: 00119
+  organisatiecode: gm0119
+  rsin: '806299046'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MEP
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Meppel
   abbr: Meppel
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Meppel werkt met een 2-hoofdige directe en 11 teams. De teams
+    worden aangestuurd door teammanagers.
+  url: https://www.meppel.nl/bestuur-en-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.meppel.nl/direct-regelen/melding-klacht-en-bezwaar/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/41121/Gemeente_Meppel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meppel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Officiële bekendmakingen op overheid.nl
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meppel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Officiële bekendmakingen op overheid.nl
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meppel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Officiële bekendmakingen op overheid.nl
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.meppel.nl/
+      toelichting: Website open.meppel.nl
+    - informatiecategorie: Klachtoordelen
+      url: https://www.meppel.nl/direct-regelen/melding-klacht-en-bezwaar/klacht/
+      toelichting: Meldingen, klachten en bezwaren ambtelijk optreden
+    - informatiecategorie: Klachtoordelen
+      url: https://www.meppel.nl/Bestuurenorganisatie/Contact_reacties/Meldingen_en_klachten/Meldingen_klachten_en_bezwaren
+      toelichting: Meldingen, klachten en bezwaren algemeen
+    - informatiecategorie: Convenanten
+      url: https://meppel.bestuurlijkeinformatie.nl/Agenda/Index/3207740a-f052-4700-9dd4-94a110d01312
+      toelichting: Convenanten via besluitenlijst B&W
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://meppel.bestuurlijkeinformatie.nl/
+      toelichting: Jaarverslag gemeenteraad
+    - informatiecategorie: Beschikkingen
+      url: https://www.meppel.nl/Inwoner/Belastingen_heffingen/WOZ_OZB/Huurders_woningen_en_de_WOZ_waarde
+      toelichting: WOZ
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://meppel.bestuurlijkeinformatie.nl/People/Details/e0e95df0-dd50-41eb-b8e2-394cbb244ed7?categoryId=211604bf-d1dd-4211-986e-5f09d97df533
+      toelichting: Onderzoeken rekenkamer
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://meppel.bestuurlijkeinformatie.nl/
+      toelichting: Raadsstukken
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://omgevingswet.overheid.nl/regels-op-de-kaart/
+      toelichting: Bestemmingsplannen en ruimtelijk beleid
+    - informatiecategorie: Adviezen
+      url: https://www.adviesraadmeppel.nl/
+      toelichting: Website Adviesraad Sociaal Domein Meppel
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://meppel.bestuurlijkeinformatie.nl/Agenda/Index/3207740a-f052-4700-9dd4-94a110d01312
+      toelichting: Bestuursstukken
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://open.meppel.nl/
+      toelichting: Beleidsinformatie
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.meppel.nl/Bestuurenorganisatie/Burgemeester_wethouders/Besluiten_benw
+      toelichting: Besluiten B&W
+  wooVerzoek:
+    url: https://mijn.meppel.nl/aanvragen/4988/persoon/woo-verzoek
+afspraak:
+  telefoonnummer: 14 0522
+  url: https://www.meppel.nl/contact/
+geography:
+  oppervlakte: 58,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 58.0
+  aantal_inwoners: 36616
+  inwoners: '631'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 631.0
+  bevat_plaatsen_raw: Broekhuizen DR, De Schiphorst, Meppel, Nijeveen, Rogat
+  bevat_plaatsen:
+  - Broekhuizen DR
+  - De Schiphorst
+  - Meppel
+  - Nijeveen
+  - Rogat
+council:
+  total_seats: 25
+  parties:
+  - naam: VVD
+    aantal_zetels: 6
+  - naam: Sterk Meppel
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: SteM (Sterk Meppel)
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: https://www.meppel.nl
   email: postbus@meppel.nl
+  bezoekadres: Grote Oever 26, 7941 BJ MEPPEL
+  postadres: Postbus 501, 7940 AM MEPPEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Grote Oever
+    huisnummer: '26'
+    postcode: 7941 BJ
+    woonplaats: MEPPEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '501'
+    postcode: 7940 AM
+    woonplaats: MEPPEL
+  - type: Woo-Adres
+    openbare_ruimte: Grote Oever
+    huisnummer: '26'
+    postbus: '501'
+    postcode: 7941 BJ
+    woonplaats: Meppel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Grote Oever
+    huisnummer: '26'
+    postcode: 7941 BJ
+    woonplaats: MEPPEL
+  phones:
+  - nummer: 14 0522
+    label: algemeen
+  emails:
+  - email: postbus@meppel.nl
+    label: algemeen
+  - email: postbus@meppel.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.meppel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-10'
+last_verified: '2026-04-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/41121/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/41121/meppel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

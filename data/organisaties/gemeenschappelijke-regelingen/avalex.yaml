@@ -5,22 +5,101 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0447
   oin: 00000001809565596000
   kvk: '50696963'
+  owms: http://standaarden.overheid.nl/owms/terms/avalex
+  btw: NL809565596B01
+  organisatiecode: so0447
+  rsin: '809565596'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Reinigingsbedrijf Avalex 2018
+  roo_id: '29476426'
 names:
 - value: Avalex
   valid_from: '1900-01-01'
+description:
+  url: https://www.avalex.nl/over-avalex-2
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.avalex.nl/werkwijze-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28452471/Avalex
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.avalex.nl/over-avalex-2
+  wooVerzoek:
+    url: https://www.avalex.nl/contactoverig/
+organogram_url: https://www.avalex.nl/over-avalex-2
+afspraak:
+  email: info@avalex.nl
+  telefoonnummer: (070) 337 30 00
 contact:
   website: https://www.avalex.nl
   email: info@avalex.nl
+  bezoekadres: Laan van 's-Gravenmade 9, 2495 BD Den Haag
+  postadres: Postbus 16428, 2500 BK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Laan van 's-Gravenmade
+    huisnummer: '9'
+    postcode: 2495 BD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Laan van 's-Gravenmade
+    huisnummer: '9'
+    postbus: '16428'
+    postcode: 2495 BD
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '16428'
+    postcode: 2500 BK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 337 30 00
+    label: algemeen
+  - nummer: (0900) 05 07
+    label: contact centrum
+  emails:
+  - email: info@avalex.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.avalex.nl
+    label: algemeen
+  - url: https://www.avalex.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.avalex.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Avalex
+    url: https://www.facebook.com/avalexnieuws
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-05-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28452471/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28452471/avalex
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2001-04-02'

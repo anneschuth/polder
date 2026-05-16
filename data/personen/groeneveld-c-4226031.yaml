@@ -3,7 +3,7 @@ name:
   full: C.M. Groeneveld
   family: Groeneveld
   given: C.M.
-  initials: C.
+  initials: C.M.
 mandaten:
 - id: 40db114f-6f4d-4ec7-8fa8-031096b81794
   organization_id: org:gemeente-hilversum
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4226033
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28797/gemeente-hilversum
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28670664
 - id: e6535007-a0bb-4cab-91d5-84645b838a0c
   organization_id: org:gemeente-hilversum
   post_id: post:raadslid-gemeente-hilversum

@@ -7,9 +7,28 @@ parent_id: org:onderdeel-defensie-ondersteuningscommando
 names:
 - value: Divisie Personeel & Organisatie Defensie
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Herculeslaan 1, 3584 AB Utrecht
+  postadres: Postbus 90004, 3509 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herculeslaan
+    huisnummer: '1'
+    postcode: 3584 AB
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '90004'
+    postcode: 3509 AA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 218 61 20
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-02'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/43719/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/43719/divisie-personeel-en-organisatie-defensie
+  retrieved: '2026-05-16'

@@ -11,9 +11,20 @@ names:
 contact:
   website: https://www.rijksoverheid.nl/onderwerpen/orkaan-irma
   email: postbuspdbb@minbzk.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: postbuspdbb@minbzk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/onderwerpen/orkaan-irma
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-07-01'
+last_mutation: '2024-07-02'
+last_verified: '2024-07-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23055682/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23055682/programma-wederopbouw
+  retrieved: '2026-05-16'

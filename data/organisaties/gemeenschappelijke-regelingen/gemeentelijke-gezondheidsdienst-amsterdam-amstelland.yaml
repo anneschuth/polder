@@ -1,18 +1,58 @@
 id: org:gr-gemeentelijke-gezondheidsdienst-amsterdam-amstelland
 type: gemeenschappelijke-regeling
+subname: GGD Amsterdam-Amstelland
 identifiers:
   roo_id: '28556535'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0887
+  owms: http://standaarden.overheid.nl/owms/terms/ggdamsaml
+  kvk: '70036896'
+  organisatiecode: so0887
+  rsin: '858113739'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gemeentelijke Gezondheidsdienst Amsterdam-Amstelland
+  roo_id: '29925064'
 names:
 - value: Gemeentelijke gezondheidsdienst Amsterdam-Amstelland
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.ggd.amsterdam.nl/
+  bezoekadres: Nieuwe Achtergracht 100, 1018 WT Amsterdam
+  postadres: Postbus 2200, 1000 CE Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Achtergracht
+    huisnummer: '100'
+    postcode: 1018 WT
+    woonplaats: Amsterdam
+  - type: Postadres
+    postbus: '2200'
+    postcode: 1000 CE
+    woonplaats: Amsterdam
+  phones:
+  - nummer: (020) 555 59 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggd.amsterdam.nl/
+    label: algemeen
+  - url: https://formulier.amsterdam.nl/thema/ggd/info-ggd/Contactformulier-GGD/
+    label: contactformulier
+  contact_forms:
+  - url: https://www.ggd.amsterdam.nl/ggd/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28556535/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28556535/gemeentelijke-gezondheidsdienst-amsterdam-amstelland
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-01-01'

@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '94063'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-wio
+parent_id: org:hoge-college-nationale-ombudsman
 names:
 - value: Beleid en Advies
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2019-02-04'
+last_verified: '2019-02-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94063/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94063/beleid-en-advies
+  retrieved: '2026-05-16'

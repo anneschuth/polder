@@ -1,18 +1,102 @@
 id: org:gr-gemeenschappelijk-orgaan-openbaar-primair-onderwijs-noord-groningen
 type: gemeenschappelijke-regeling
 identifiers:
-  roo_id: '24963569'
+  roo_id: '24963564'
+  owms: http://standaarden.overheid.nl/owms/terms/goopongr
+  organisatiecode: so1068
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijk orgaan openbaar primair onderwijs Noord Groningen
+  roo_id: '24963564'
 names:
+- value: Gemeenschappelijk orgaan openbaar primair onderwijs Noord Groningen
+  valid_from: '2016-10-01'
+  valid_until: '2019-01-01'
 - value: Gemeenschappelijk orgaan openbaar primair onderwijs Noord Groningen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+gr_meta:
+  samenwerkingsvorm:
+    value: Gemeenschappelijk orgaan
+    afkorting: GO
+  bevoegdheidsverkrijgingen:
+  - Delegatie
+  - Mandaat
+  regionaal_samenwerkingsorgaan:
+    naam: Gemeenschappelijk orgaan openbaar primair onderwijs Noord Groningen
+    roo_id: '24963569'
+    owms: http://standaarden.overheid.nl/owms/terms/goopongr
+  bronhouder:
+    naam: Gemeenschappelijk orgaan openbaar primair onderwijs Noord Groningen
+    roo_id: '24963569'
+    owms: http://standaarden.overheid.nl/owms/terms/goopongr
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Gemeente De Marne
+    roo_id: '37471'
+    owms: http://standaarden.overheid.nl/owms/terms/De_Marne
+    toetredings_datum: '1999-12-30'
+    bestuursorganen:
+    - naam: Gemeenteraad
+      owms: http://standaarden.overheid.nl/owms/terms/gemeenteraad
+  - naam: Gemeente Eemsmond
+    roo_id: '28693'
+    owms: http://standaarden.overheid.nl/owms/terms/Eemsmond
+    toetredings_datum: '1999-12-30'
+    bestuursorganen:
+    - naam: Gemeenteraad
+      owms: http://standaarden.overheid.nl/owms/terms/gemeenteraad
+  - naam: Gemeente Winsum
+    roo_id: '37505'
+    owms: http://standaarden.overheid.nl/owms/terms/Winsum_(gemeente)
+    toetredings_datum: '1999-12-30'
+    bestuursorganen:
+    - naam: Gemeenteraad
+      owms: http://standaarden.overheid.nl/owms/terms/gemeenteraad
+  instellingsbesluiten:
+  - https://organisaties-redactie.overheid.nl/cms/s/organisaties/o/24963569
+  - https://lokaleregelgeving.overheid.nl/CVDR416221/1
+  - https://zoek.officielebekendmakingen.nl/stcrt-2016-47188.html
+  wettelijke_grondslagen:
+  - opschrift: Wet gemeenschappelijke regelingen
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0003740
+  bevoegdheden:
+  - kop_artikel: Artikel 3 Doelstelling en belang
+    inhoud_artikel: Het gemeenschappelijk orgaan coördineert en oefent de bevoegdheden
+      van de raad uit als bedoeld in artikel 48 WPO en in de statuten van de stichting,
+      met uitzondering van de opheffing van de scholen en de terugvordering van de
+      scholen.
+  datum_inwerkingtreding: '2016-10-01'
+  datum_uitwerkingtreding: '2019-01-01'
 contact:
   email: algemeen@eemsmond.nl
-valid_from: '1900-01-01'
+  bezoekadres: Hoofdstraat West 1, 9981 AA Uithuizen
+  postadres: Postbus 11, 9980 AA Uithuizen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat West
+    huisnummer: '1'
+    postcode: 9981 AA
+    woonplaats: Uithuizen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '11'
+    postcode: 9980 AA
+    woonplaats: Uithuizen
+  phones:
+  - nummer: '595437555'
+    label: algemeen
+  emails:
+  - email: algemeen@eemsmond.nl
+    label: algemeen
+valid_from: '2016-10-01'
 valid_until: '2019-01-01'
+last_mutation: '2022-11-28'
+last_verified: '2022-11-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963569/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963564/gemeenschappelijk-orgaan-openbaar-primair-onderwijs-noord-groningen
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-12-30'

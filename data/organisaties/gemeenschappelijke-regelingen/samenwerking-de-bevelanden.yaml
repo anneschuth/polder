@@ -5,22 +5,75 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0858
   oin: 00000001853394179000
   kvk: '59262672'
+  owms: http://standaarden.overheid.nl/owms/terms/swdbl
+  organisatiecode: so0858
+  rsin: '853394179'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Samenwerking De Bevelanden
+  roo_id: '28501261'
 names:
 - value: Samenwerking De Bevelanden
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28501281/Samenwerking_De_Bevelanden
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+De+Bevelanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.grdebevelanden.nl
   email: info@grdebevelanden.nl
+  bezoekadres: M.A. de Ruijterlaan 2, 4461 MC Goes
+  postadres: Postbus 2144, 4460 GE Goes
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: M.A. de Ruijterlaan
+    huisnummer: '2'
+    postcode: 4461 MC
+    woonplaats: Goes
+  - type: Postadres
+    postbus: '2144'
+    postcode: 4460 GE
+    woonplaats: Goes
+  phones:
+  - nummer: (0113) 23 91 00
+    label: algemeen
+  emails:
+  - email: info@grdebevelanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.grdebevelanden.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.grdebevelanden.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-04-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28501281/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28501281/samenwerking-de-bevelanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-07-04'

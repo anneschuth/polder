@@ -9,9 +9,32 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: http://www.tuchtcollege-gezondheidszorg.nl
+  bezoekadres: Rijnstraat 50, 2515 XP Den Haag
+  postadres: Postbus 16437, 2500 BK Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoftoren
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16437'
+    postcode: 2500 BK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 371 25 10
+    label: algemeen
+  internet_addresses:
+  - url: http://www.tuchtcollege-gezondheidszorg.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66162/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66162/centraal-tuchtcollege-voor-de-gezondheidszorg
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-01-01'

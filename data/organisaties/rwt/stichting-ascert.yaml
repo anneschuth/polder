@@ -2,14 +2,31 @@ id: org:stichting-ascert
 type: rwt
 identifiers:
   roo_id: '30134001'
+  kvk: 09112654
+  rsin: '808450153'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Stichting Ascert
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Ophemertsedijk
+    huisnummer: '54'
+    postcode: 4007 PB
+    woonplaats: Tiel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30134001/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30134001/stichting-ascert
+  retrieved: '2026-05-16'

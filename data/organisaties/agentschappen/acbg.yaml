@@ -3,17 +3,91 @@ type: agentschap
 identifiers:
   roo_id: '66156'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10110
+  owms: http://standaarden.overheid.nl/owms/terms/Agentschap_College_ter_Beoordeling_van_Geneesmiddelen
+  kvk: '50658131'
+  rsin: '823142802'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: agentschap College ter Beoordeling van Geneesmiddelen
   abbr: aCBG
   valid_from: '1900-01-01'
+description:
+  text: 'Als onafhankelijke autoriteit reguleert het CBG de kwaliteit, werking en
+    veiligheid van een medicijn, en stimuleert het CBG het juiste gebruik door de
+    juiste patiënt.Onze organisatie bestaat uit een agentschap (''het aCBG'') en een
+    zelfstandig bestuursorgaan (''het College''). Het agentschap is verantwoordelijk
+    voor de voorbereiding en uitvoering van besluiten van het College. Het College
+    geeft op basis van die voorbereidende beoordeling een onafhankelijk en deskundig
+    oordeel.Verder is het agentschap verantwoordelijk voor de geneesmiddelenbewaking
+    in Nederland en voor de ontvangst van meldingen van medicijntekorten. En de Nederlandse
+    vertegenwoordigers in de comités van het Europees medicijnagentschap EMA werken
+    bij het agentschap.Naast de beoordeling van medicijnen voor mensen beoordeelt
+    het agentschap ook diergeneesmiddelen en nieuwe voedingsmiddelen. De uiteindelijke
+    verantwoordelijkheid voor de beoordeling daarvan ligt bij het ministerie van LVVN
+    (diergeneesmiddelen) en het ministerie van VWS (nieuwe voedingsmiddelen).Kijk
+    voor Woo-informatie van het CBG als geheel op de pagina van het College:'
+  url: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+      overzichtURL: https://organisaties.overheid.nl/woo/66156/agentschap_College_ter_Beoordeling_van_Geneesmiddelen
+  wooVerzoek:
+    url: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+organogram_url: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+personnel:
+  aantalFte: 426,3
+  peildatumFte: '2023-03-17'
 contact:
   website: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+  bezoekadres: Graadt van Roggenweg 500, 3531 AH Utrecht
+  postadres: Postbus 8275, 3503 RG Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Graadt van Roggenweg
+    huisnummer: '500'
+    postcode: 3531 AH
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '8275'
+    postcode: 3503 RG
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 224 80 00
+    label: algemeen
+  internet_addresses:
+  - url: https://organisaties.overheid.nl/woo/28248840/College_ter_Beoordeling_van_Geneesmiddelen
+    label: WOO-informatie (a)CBG
+  contact_forms:
+  - url: https://www.cbg-meb.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-15'
+last_verified: '2026-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66156/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66156/acbg
+  retrieved: '2026-05-16'

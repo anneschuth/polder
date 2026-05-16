@@ -4,17 +4,49 @@ identifiers:
   roo_id: '28391671'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10200
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Tijdelijk adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Bestuurlijke Adviesraad Kinderopvangtoeslag
   abbr: BAK
   valid_from: '1900-01-01'
   valid_until: '2023-03-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: artikel 1 van het Instellingsbesluit Bestuurlijke Adviesraad Kinderopvangtoeslag
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0043930&artikel=1&z=2020-08-21&g=2020-08-21
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://services.belastingdienst.nl/toeslagen-herstel/bestuurlijke-adviesraad-kinderopvangtoeslag/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://services.belastingdienst.nl/toeslagen-herstel/bestuurlijke-adviesraad-kinderopvangtoeslag/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-03-31'
+last_mutation: '2022-04-05'
+last_verified: '2021-07-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391671/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391671/bak
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-08-21'

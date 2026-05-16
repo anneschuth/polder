@@ -3,17 +3,45 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29005841'
 classification: organisatieonderdeel
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Financial Intelligence Unit Nederland
   abbr: FIU-Nederland
   valid_from: '1900-01-01'
+description:
+  text: De missie van de FIU-Nederland is om samen met haar publieke en private partners,
+    zowel nationaal als internationaal, witwassen, onderliggende delicten en terrorismefinanciering
+    te bestrijden en te voorkomen, om zo onder meer de integriteit van het financiële
+    stelsel te waarborgen. Als FIU-Nederland dragen wij hieraan bij middels excellente
+    financial intelligence en door het vroegtijdig signaleren van nieuwe trends en
+    fenomenen waarover wij onze partners voorlichten zodat wij gezamenlijk optimaal
+    kunnen bijdragen aan het voorkomen en opsporen van misdrijven.
 contact:
   website: https://www.fiu-nederland.nl/
   email: frontoffice.financial-intelligence.lx@politie.nl
+  postadres: Postbus 10638, 2501 HP Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '10638'
+    postcode: 2501 HP
+    woonplaats: Den Haag
+  emails:
+  - email: frontoffice.financial-intelligence.lx@politie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.fiu-nederland.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29005841/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29005841/financial-intelligence-unit-nederland
+  retrieved: '2026-05-16'

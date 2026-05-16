@@ -3,7 +3,7 @@ name:
   full: N.C.M. Kok
   family: Kok
   given: N.C.M.
-  initials: N.
+  initials: N.C.M.
 mandaten:
 - id: f97cbf08-b56b-4fe2-9060-a3cc0a896d81
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864580
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30520653
 - id: b656f948-e632-4722-9af3-4f72c338a0d8
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

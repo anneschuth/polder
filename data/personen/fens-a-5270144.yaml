@@ -5,7 +5,7 @@ name:
   full: A.C.M. Fens
   family: Fens
   given: A.C.M.
-  initials: A.
+  initials: A.C.M.
 birth:
   year: 1929
 mandaten:
@@ -19,6 +19,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5270146
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30656/gemeente-moerdijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28678905
 - id: 4be59588-e3b3-4886-a377-55a11f4416f8
   organization_id: org:gemeente-moerdijk
   post_id: post:raadslid-gemeente-moerdijk

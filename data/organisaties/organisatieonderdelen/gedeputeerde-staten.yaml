@@ -7,12 +7,39 @@ parent_id: org:prov-zh
 names:
 - value: Gedeputeerde Staten
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
+  url: https://www.zuid-holland.nl/politiek-bestuur/
 contact:
   website: https://www.zuid-holland.nl/politiek-bestuur/
-  email: al.koning@pzh.nl
+  email: postbus@overijssel.nl
+  bezoekadres: Zuid-Hollandplein 1, Den Haag
+  postadres: Postbus 90602, Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuid-Hollandplein
+    huisnummer: '1'
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90602'
+    woonplaats: Den Haag
+  phones:
+  - nummer: (038) 499 87 31
+    label: algemeen
+  emails:
+  - email: postbus@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
+  - url: https://www.overijssel.nl/bestuur/gedeputeerde-staten/
+  fax: (058) 292 51 25
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-28'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/17470/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/17470/gedeputeerde-staten
+  retrieved: '2026-05-16'

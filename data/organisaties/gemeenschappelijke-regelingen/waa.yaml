@@ -1,20 +1,90 @@
 id: org:gr-waa
 type: gemeenschappelijke-regeling
+subname: WAA Venlo e.o.
 identifiers:
   roo_id: '27320559'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0285
+  owms: http://standaarden.overheid.nl/owms/terms/wvsvenlo
+  kvk: '14111104'
+  organisatiecode: so0285
+  rsin: 005568687
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkvoorzieningschap Venlo en omstreken
+  roo_id: '29649646'
 names:
 - value: Werkvoorzieningschap Venlo en omstreken
   abbr: WAA
   valid_from: '1900-01-01'
+description:
+  text: Uitvoering Wet Sociale Werkvoorziening voor deelnemende gemeenten
+  url: https://www.waagroep.nl/anbi
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waagroep.nl/anbi
+      overzichtURL: https://organisaties.overheid.nl/woo/27320559/Werkvoorzieningschap_Venlo_en_omstreken
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.waagroep.nl/anbi
+      toelichting: WOO Verwijzing
+  wooVerzoek:
+    url: https://www.waagroep.nl/anbi
+afspraak:
+  email: info@waagroep.nl
 contact:
   website: https://www.waagroep.nl
   email: info@waagroep.nl
+  bezoekadres: Prinsessesingel 10, 5911 HT Venlo
+  postadres: Postbus 3045, 5902 RA Venlo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinsessesingel
+    huisnummer: '10'
+    postcode: 5911 HT
+    woonplaats: Venlo
+  - type: Postadres
+    postbus: '3045'
+    postcode: 5902 RA
+    woonplaats: Venlo
+  - type: Woo-Adres
+    postbus: '3045'
+    postcode: 5902 RA
+    woonplaats: Venlo
+  phones:
+  - nummer: (077) 389 83 83
+    label: algemeen
+  emails:
+  - email: info@waagroep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.waagroep.nl
+    label: algemeen
+  - url: https://www.waagroep.nl/contact
+    label: contact
+  - url: https://www.waagroep.nl/anbi/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-18'
+last_verified: '2026-03-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27320559/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27320559/waa
+  retrieved: '2026-05-16'
+roo_start_datum: '1981-02-01'

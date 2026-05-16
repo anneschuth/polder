@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150948'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Noord-Nederland
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Rademarkt 12, 9711 CV Groningen
+  postadres: Postbus 107, 9400 AC Assen
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische Zaken
+    openbare_ruimte: Rademarkt
+    huisnummer: '12'
+    postcode: 9711 CV
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '107'
+    postcode: 9400 AC
+    woonplaats: Assen
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-21'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150948/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150948/regionale-eenheid-noord-nederland
+  retrieved: '2026-05-16'

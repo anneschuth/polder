@@ -6,21 +6,158 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0034
   roo_id: '28393'
   wikidata: Q83178
+  owms: http://standaarden.overheid.nl/owms/terms/Almere_(gemeente)
+  ictu: '00034'
+  organisatiecode: gm0034
+  rsin: 006462583
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_AER
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Almere
   abbr: Almere
   valid_from: '1900-01-01'
+description:
+  url: https://www.almere.nl/bestuur/wet-open-overheid-woo/organisatiegegevens
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.almere.nl/bestuur/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28393/Gemeente_Almere
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://almere.pcportal.nl/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://eloket.almere.nl/o
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Almere%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Almere%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Almere%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.almere.nl/bestuur/wet-open-overheid-woo/informatie-of-woo-verzoek-indienen
+organogram_url: https://www.almere.nl/bestuur-en-organisatie/organisatie
+afspraak:
+  email: info@almere.nl
+  telefoonnummer: 14 036
+  url: https://www.almere.nl/contact
+geography:
+  oppervlakte: 248,77
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 248.77
+  aantal_inwoners: 232619
+  inwoners: '935'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 935.0
+  bevat_plaatsen_raw: Almere
+  bevat_plaatsen:
+  - Almere
+council:
+  total_seats: 42
+  parties:
+  - naam: D66
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: PVV
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: JA21
+    aantal_zetels: 4
+  - naam: Leefbaar Almere
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: 50PLUS
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: DENK
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Almere Partij
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.almere.nl
   email: info@almere.nl
+  bezoekadres: Stadhuisplein 1, 1315 HR ALMERE
+  postadres: Postbus 200, 1300 AE ALMERE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 1315 HR
+    woonplaats: ALMERE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '200'
+    postcode: 1300 AE
+    woonplaats: ALMERE
+  - type: Woo-Adres
+    toelichting: t.a.v. gemeentelijke Woo-contactfunctionaris
+    postbus: '200'
+    postcode: 1300 AE
+    woonplaats: Almere
+    regio: Noord
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 1315 HR
+    woonplaats: ALMERE
+  phones:
+  - nummer: 14 036
+    label: algemeen
+  emails:
+  - email: info@almere.nl
+    label: algemeen
+  - email: info@almere.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.almere.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.almere.nl/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28393/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28393/almere
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +166,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q83178
   retrieved: '2026-05-09'
+roo_start_datum: '1984-01-01'

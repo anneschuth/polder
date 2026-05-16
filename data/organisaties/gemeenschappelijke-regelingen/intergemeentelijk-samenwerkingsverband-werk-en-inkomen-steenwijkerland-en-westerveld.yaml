@@ -4,24 +4,62 @@ identifiers:
   oin: 00000001815511619000
   kvk: '51373831'
   roo_id: '24967558'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0614
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Intergemeentelijk Samenwerkingsverband Werk en
+    Inkomen Steenwijkerland en Westerveld
+  roo_id: '24967553'
 names:
 - value: Intergemeentelijk Samenwerkingsverband Werk en Inkomen Steenwijkerland en
     Westerveld
   valid_from: '1900-01-01'
   valid_until: '2020-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.igsd-sw.nl
   email: igsd@igsd-sw.nl
+  bezoekadres: De Vesting 11-13, 8332 GL Steenwijk
+  postadres: Postbus 300, 8330 AH Steenwijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Vesting
+    huisnummer: 11-13
+    postcode: 8332 GL
+    woonplaats: Steenwijk
+  - type: Postadres
+    postbus: '300'
+    postcode: 8330 AH
+    woonplaats: Steenwijk
+  phones:
+  - nummer: (0521) 53 89 80
+    label: algemeen
+  emails:
+  - email: igsd@igsd-sw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.igsd-sw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967558/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967558/intergemeentelijk-samenwerkingsverband-werk-en-inkomen-steenwijkerland-en-westerveld
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-03-01'

@@ -7,9 +7,18 @@ parent_id: org:onderdeel-bedrijfsvoering
 names:
 - value: HR
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: 06 21 22 58 52
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-22'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/116566/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/116566/hr
+  retrieved: '2026-05-16'

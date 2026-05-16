@@ -3,17 +3,70 @@ type: adviescollege
 identifiers:
   roo_id: '28355891'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10130
+  owms: http://standaarden.overheid.nl/owms/terms/cybersecrd
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Cyber Security Raad
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Cyber Security Raad, artikel 2
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0031950&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.cybersecurityraad.nl/
   email: info@cybersecurityraad.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW Den Haag
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 751 53 33
+    label: algemeen
+  emails:
+  - email: info@cybersecurityraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cybersecurityraad.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cybersecurityraad.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355891/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355891/cyber-security-raad
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-09-04'

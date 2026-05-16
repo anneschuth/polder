@@ -3,18 +3,96 @@ type: adviescollege
 identifiers:
   roo_id: '29819769'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12362
+  organisatiecode: oorg12362
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Adviescollege toetsing regeldruk
   abbr: ATR
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege toetsing regeldruk (ATR) adviseert voornamelijk over het
+    effect die voorgenomen wet- en regelgeving op de regeldruk heeft. In de meeste
+    gevallen brengt het ATR advies uit tijdens een vroege fase van het wetgevingsproces,
+    bijvoorbeeld bij het opstellen van nieuwe wetten. Het ATR kan echter ook over
+    bestaande wetgeving adviseren. Daarnaast kan het ATR op verzoek advies uitbrengen
+    over regelgeving van medeoverheden en beleidsregels en overige regels van toezichthouders,
+    inspecties en uitvoeringsorganisaties.Het ATR is in 2017 opgericht als tijdelijk
+    adviescollege, maar is op 1 januari 2026 een permanent adviescollege geworden.
+  url: https://www.adviescollegeregeldruk.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Instellingswet Adviescollege toetsing regeldruk
+  referentie: https://wetten.overheid.nl/BWBR0047795/2024-11-26/0#Artikel2
+classifications:
+- type: CAO
+  eind_datum: '2022-12-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2022-12-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/29819769/Adviescollege_toetsing_regeldruk
 contact:
   website: https://www.adviescollegeregeldruk.nl/
   email: info@atr-regeldruk.nl
+  bezoekadres: Rijnstraat 50, 2515 XP Den Haag
+  postadres: Postbus 16228, 2500 BE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '50'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16228'
+    postcode: 2500 BE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16228'
+    postcode: 2500 BE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 310 86 66
+    label: algemeen
+  - nummer: 06 11 37 63 99
+    label: pers
+  emails:
+  - email: info@atr-regeldruk.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviescollegeregeldruk.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviescollegeregeldruk.nl/contact/contactformulier
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Adviescollege toetsing regeldruk
+    url: https://nl.linkedin.com/company/adviescollege-toetsing-regeldruk
 valid_from: '1900-01-01'
 valid_until: '2022-12-01'
+last_mutation: '2026-01-20'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29819769/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29819769/atr
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-06-01'

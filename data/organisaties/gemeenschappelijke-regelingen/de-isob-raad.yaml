@@ -2,8 +2,12 @@ id: org:gr-de-isob-raad
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965815'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Gemeenschappelijk Orgaan Intergemeentelijke Stichting Openbaar Basisonderwijs
+  roo_id: '24965810'
 names:
 - value: De ISOB-raad
   valid_from: '1900-01-01'
@@ -11,9 +15,34 @@ names:
 contact:
   website: https://www.isob.net
   email: info.isobbureau@isobscholen.nl
+  bezoekadres: Sokkerwei 2, 1901 KZ Castricum
+  postadres: Sokkerwei 2, 1901 KZ Castricum
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sokkerwei
+    huisnummer: '2'
+    postcode: 1901 KZ
+    woonplaats: Castricum
+  - type: Postadres
+    openbare_ruimte: Sokkerwei
+    huisnummer: '2'
+    postcode: 1901 KZ
+    woonplaats: Castricum
+  phones:
+  - nummer: (0251) 31 98 88
+    label: algemeen
+  emails:
+  - email: info.isobbureau@isobscholen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.isob.net
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-12-31'
+last_mutation: '2019-04-15'
+last_verified: '2021-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965815/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965815/de-isob-raad
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-11-01'

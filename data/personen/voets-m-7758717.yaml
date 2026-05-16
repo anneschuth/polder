@@ -3,7 +3,7 @@ name:
   full: M.J. Voets
   family: Voets
   given: M.J.
-  initials: M.
+  initials: M.J.
 mandaten:
 - id: b71de41e-3e8a-46b9-8e5d-17e7c02493f4
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758718
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30520635
 - id: 9f980e85-ca4e-439a-8372-4fb0aae0100c
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

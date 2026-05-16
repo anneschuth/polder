@@ -5,20 +5,120 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000157
   oin: '00000003273664060000'
   kvk: '27366406'
+  owms: http://standaarden.overheid.nl/owms/terms/Nederlands-Vlaamse_Accreditatie_Organisatie_voor_het_hoger_onderwijs
+  rsin: '813951008'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Nederlands-Vlaamse Accreditatieorganisatie
   abbr: NVAO
   valid_from: '1900-01-01'
+description:
+  text: De Nederlands-Vlaamse Accreditatieorganisatie (NVAO) is verantwoordelijk voor
+    het accrediteren van bestaande en nieuwe opleidingen binnen het hoger onderwijs
+    in Nederland en Vlaanderen. Ook beoordeelt de NVAO de kwaliteitszorg van instellingen
+    in het hoger onderwijs in Nederland en Vlaanderen, zodat de kwaliteit hiervan
+    op deskundige en onafhankelijke wijze wordt geborgd.
+  url: https://www.nvao.net/nl/over-ons
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op het hoger en wetenschappelijk onderwijs, artikel 5a.2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=whw/article=5a.2
+taken_en_bevoegdheden: De hoofdtaken van de Nederlands-Vlaamse Accreditatieorganisatie
+  (NVAO) zijn:* het beoordelen en het borgen van het niveau en de kwaliteit van het
+  hoger onderwijs in Nederland en Vlaanderen;* het bevorderen van de kwaliteitscultuur
+  binnen het hoger onderwijs.De NVAO vervult deze taken in internationaal perspectief
+  en in de context van het Europese Bolognaproces.
+evaluations:
+- datum: '2022-09-05'
+  referentie: https://www.enqa.eu/review-database/targeted-review-of-nvao-2022/
+- datum: '2017-12-22'
+  kamerstuknummer: TK 34735, nr. 8
+  referentie: https://zoek.officielebekendmakingen.nl/kst-34735-8.html
+- datum: '2013-09-12'
+  kamerstuknummer: TK 32210 nr. 24
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32210-24.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212044/Nederlands-Vlaamse_Accreditatieorganisatie
+afspraak:
+  telefoonnummer: (070) 312 23 00
+personnel:
+  aantalFte: 55,0
+  peildatumFte: '2024-12-31'
+  toelichtingFte: Aantal medewerkers bij de directies Nederland en Vlaanderen & Luxemburg.
 contact:
   website: https://www.nvao.net/nl
+  bezoekadres: Parkstraat 83, 2514 JG Den Haag
+  postadres: Postbus 85498, 2508 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parkstraat
+    huisnummer: '83'
+    postcode: 2514 JG
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '85498'
+    postcode: 2508 CD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '85498'
+    postcode: 2508 CD
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 312 23 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nvao.net/nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.nvao.net/nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: NVAO
+    url: https://www.linkedin.com/company/nvao/
+  - platform: X
+    gebruikersnaam: '@NVAO'
+    url: https://x.com/NVAO
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212044/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212044/nvao
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -32,3 +132,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000157
   retrieved: '2026-05-09'
+roo_start_datum: '2002-01-01'

@@ -3,21 +3,148 @@ type: zbo
 identifiers:
   roo_id: '28212120'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000199
+  owms: http://standaarden.overheid.nl/owms/terms/cvte
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: College voor Toetsen en Examens
   abbr: CvTE
   valid_from: '1900-01-01'
+description:
+  text: Diploma's in Nederland zijn voor een belangrijk deel gebaseerd op landelijke,
+    centrale examens. Het vertrouwen van vervolgopleidingen en werkgevers in diploma’s
+    is afhankelijk van de kwaliteit van die examens. Als College voor Toetsen en Examens
+    (CvTE) zorgen we voor examens die dat vertrouwen waard zijn. Dit doen we voor
+    de sectoren primair onderwijs (po), middelbaar beroepsonderwijs (mbo), voortgezet
+    onderwijs (vo), staatsexamens vo en het staatsexamen Nederlands als tweede taal
+    (Nt2). We werken daarin nauw samen met mensen uit het onderwijs.
+  url: https://www.cvte.nl/over-het-cvte
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet College voor Toetsen en Examens, artikel 2
+  referentie: http://wetten.overheid.nl/BWBR0025364/
+taken_en_bevoegdheden: Het College voor Toetsen en Examens (CvTE) is onder meer verantwoordelijk
+  voor:* het vaststellen en regelen van de centrale examens in het reguliere voortgezet
+  onderwijs;* het vaststellen en regelen van de centrale examens Nederlandse taal
+  en Engels in het mbo;* het vaststellen, regelen en afnemen van de staatsexamens
+  in het voortgezet onderwijs;* het vaststellen, regelen en afnemen het staatsexamen
+  Nederlands als tweede taal;* het regelen en erkennen van de doorstroomtoetsen en
+  toetsen van een leerlingvolgsysteem.
+evaluations:
+- datum: '2020-04-30'
+  kamerstuknummer: TK 35300-VIII nr. 158
+  referentie: https://zoek.officielebekendmakingen.nl/kst-35300-VIII-158.html/
+- datum: '2015-05-01'
+  kamerstuknummer: TK 34000 VIII, nr. 94
+  referentie: https://zoek.officielebekendmakingen.nl/kst-34000-VIII-94.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212120/College_voor_Toetsen_en_Examens
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(dt.title=%22cvte%22)&zv=cvte&col=AlleBekendmakingen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.cvte.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Jaarverslag
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((w.publicatienaam==%22Staatscourant%22))and(dt.title=%22cvte%22)%20AND%20dt.type==%22algemeen%20verbindend%20voorschrift%20(ministeri%C3%ABle%20regeling)%22&zv=cvte&pg=10&col=Staatscourant&svel=Publicatiedatum&svol=Aflopend&sf=ru%7calgemeen+verbindend+voorschrift+(ministeri%c3%able+regeling)
+  wooVerzoek:
+    url: https://www.cvte.nl/contact
+organogram_url: https://wetten.overheid.nl/afbeelding?toestandid=BWBR0045003/2024-06-15_0&naam=271879.png
+afspraak:
+  email: info@cvte.nl
+  telefoonnummer: (030) 284 07 00
+  url: https://www.cvte.nl/contact
+personnel:
+  aantalFte: 69,8
+  peildatumFte: '2023-12-31'
 contact:
   website: https://www.cvte.nl/
   email: info@cvte.nl
+  bezoekadres: Muntstraat 7, 3512 ET Utrecht
+  postadres: Postbus 315, 3500 AH Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muntstraat
+    huisnummer: '7'
+    postcode: 3512 ET
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '315'
+    postcode: 3500 AH
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: Muntstraat
+    huisnummer: '7'
+    postcode: 3512 ET
+    woonplaats: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '315'
+    postcode: 3500 AH
+    woonplaats: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (030) 284 07 00
+    label: algemeen
+  emails:
+  - email: info@cvte.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cvte.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.cvte.nl/over-het-cvte/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: College voor Toetsen en Examens
+    url: https://www.linkedin.com/company/college-voor-toetsen-en-examens/?viewAsMember=true
+  - platform: Instagram
+    gebruikersnaam: '@hetcvte'
+    url: https://www.instagram.com/hetcvte/
+  - platform: YouTube
+    gebruikersnaam: Het College voor Toetsen en Examens
+    url: https://www.youtube.com/user/CollegevoorExamens
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212120/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212120/cvte
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000199
   retrieved: '2026-05-09'
+roo_start_datum: '2009-01-01'

@@ -3,17 +3,103 @@ type: adviescollege
 identifiers:
   roo_id: '28391661'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10199
+  owms: http://standaarden.overheid.nl/owms/terms/acbacun
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Adviescommissie beoordeling aangeboden cultuurbezit uit nalatenschappen
   valid_from: '1900-01-01'
+description:
+  text: De Adviescommissie beoordeling aangeboden cultuurbezit uit nalatenschappen
+    is een onafhankelijke commissie. Deze heeft  de taak de minister van Financiën
+    te adviseren over verzoeken om toepassing van de kwijtscheldingsregeling. Dit
+    is een fiscale regeling die onder de bevoegdheid van de minister van Financiën
+    valt. Het verzoek loopt via de Belastingdienst, die het doorstuurt aan de Adviescommissie
+    beoordeling aangeboden cultuurbezit uit nalatenschappen. De commissie beoordeelt
+    de vraag of het aangeboden object van kunsthistorisch of cultuurhistorisch belang
+    is en brengt hierover advies uit aan de minister van Financiën. Deze commissie
+    bestaat uit een voorzitter, tevens lid, en vier andere leden en vergadert vier
+    keer per jaar.
+  url: https://www.cultureelerfgoed.nl/onderwerpen/collecties-uitbreiden-of-afstoten/kwijtscheldingsregeling/betrokken-partijen
+wettelijke_grondslagen:
+- opschrift: Uitvoeringsbesluit Successiewet 1956, artikel 13
+  referentie: https://wetten.overheid.nl/BWBR0002227/2020-01-01/#Hoofdstuk2_Artikel13
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28391661/Adviescommissie_beoordeling_aangeboden_cultuurbezit_uit_nalatenschappen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=woo+verzoek&startdatum=&einddatum=&onderdeel=Ministerie+van+Financi%C3%ABn
+      toelichting: Deze categorie betreft het voor iedereen openbaar maken van het
+        besluit op een Woo-verzoek, de inhoud van dat verzoek en de documenten die
+        aan de verzoeker verstrekt zijn (incl. inventarislijst). Zo komt deze informatie
+        voor iedereen beschikbaar
+  wooVerzoek:
+    url: https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/standaard_functies/prive/contact/verzoek-wet-open-overheid-woo/overheidsinformatie-openbaar-met-wet-open-overheid
+afspraak:
+  email: adviescommissie.aangeboden.cultuurbezit@minfin.nl
 contact:
   website: https://www.cultureelerfgoed.nl/onderwerpen/collecties-uitbreiden-of-afstoten/kwijtscheldingsregeling
   email: adviescommissie.aangeboden.cultuurbezit@minfin.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW Den Haag
+  postadres: Postbus 20201, 2500 EE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Ministerie van Financiën, Directoraat Generaal Belastingen, Brieven
+      en Beleidsbesluiten
+    postbus: '20201'
+    postcode: 2500 EE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '30206'
+    postcode: 2500 GE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 442 80 00
+    label: algemeen
+  emails:
+  - email: adviescommissie.aangeboden.cultuurbezit@minfin.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.cultureelerfgoed.nl/onderwerpen/collecties-uitbreiden-of-afstoten/kwijtscheldingsregeling
+    label: algemeen
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/erfbelasting-betalen-met-kunst
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-13'
+last_verified: '2026-03-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391661/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391661/adviescommissie-beoordeling-aangeboden-cultuurbezit-uit-nalatenschappen
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-03-11'

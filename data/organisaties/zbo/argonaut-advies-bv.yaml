@@ -3,20 +3,90 @@ type: zbo
 identifiers:
   roo_id: '29942094'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100017
+  kvk: '34233230'
+  organisatiecode: zb100017
+  rsin: '814882687'
 classification: zbo
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Argonaut Advies B.V.
   valid_from: '1900-01-01'
+description:
+  text: Argonaut Advies B.V. is de medisch adviespartner voor gemeenten, zorgverzekeraars,
+    zorgkantoren en centrale overheden en is bevoegd om het openbaar gezag uit te
+    voeren inzake de publieke taak om indicatiestellingen te verstrekken voor een
+    hoog persoonlijk kilometerbudget in het kader van bovenregionaal vervoer voor
+    mensen met een mobiliteitsbeperking (de Valys-regeling).
+  url: https://argonaut.nl/over-ons/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Uitspraak ECLI:NL:CRVB:2018:2554 van de Centrale Raad van Beroep
+  referentie: https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:CRVB:2018:2554
+taken_en_bevoegdheden: Argonaut Advies B.V. is als zelfstandig bestuursorgaan (zbo)
+  bevoegd om het openbaar gezag uit te voeren inzake de publieke taak om indicatiestellingen
+  te verstrekken voor een hoog persoonlijk kilometerbudget in het kader van bovenregionaal
+  vervoer voor mensen met een mobiliteitsbeperking (de Valys-regeling). Deze zbo-taak
+  is het beslissen over aanvragen voor een hoog persoonlijk kilometerbudget voor mensen
+  die, vanwege een mobiliteitsbeperking, niet kunnen reizen met de trein (ook niet
+  met begeleiding).De status van Argonaut als zbo in het kader van deze taak is gebaseerd
+  op de [bestaande jurisprudentie](https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:CRVB:2018:2554)
+  van de Centrale Raad van Beroep (CRvB).
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://argonaut.nl/
   email: info@argonaut.nl
+  bezoekadres: Herculesplein 88, 3584 AA Utrecht
+  postadres: Postbus 446, 3760 AK Soest
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herculesplein
+    huisnummer: '88'
+    postcode: 3584 AA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '446'
+    postcode: 3760 AK
+    woonplaats: Soest
+  phones:
+  - nummer: (088) 229 80 80
+    label: algemeen
+  emails:
+  - email: info@argonaut.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://argonaut.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://argonaut.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Argonaut Advies
+    url: https://nl.linkedin.com/company/argonaut-advies-b.v.
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2026-03-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29942094/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29942094/argonaut-advies-bv
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100017
   retrieved: '2026-05-09'
+roo_start_datum: '2012-01-01'

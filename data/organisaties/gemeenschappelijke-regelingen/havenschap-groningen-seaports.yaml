@@ -3,17 +3,101 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28469398'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0084
+  owms: http://standaarden.overheid.nl/owms/terms/hsgrsp
+  kvk: '64859126'
+  organisatiecode: so0084
+  rsin: '001220500'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Havenschap Groningen Seaports
+  roo_id: '29894744'
 names:
 - value: Havenschap Groningen Seaports
   valid_from: '1900-01-01'
+description:
+  text: Als commerciële exploitant en beheerder van de haven van Delfzijl en de Eemshaven
+    werkt Groningen Seaports aan uw nieuwe bedrijfsvestiging. Wij leggen de rode loper
+    graag voor u uit en zoeken mee naar wat voor uw bedrijf de beste locatie is. Via
+    weg, spoor, diepzee en binnenwater zijn de havengebieden optimaal en snel bereikbaar.
+    U vindt hier een gevarieerd aanbod aan vestigingslocaties en profiteert van moderne
+    faciliteiten, een strategisch gunstige ligging en een stimulerend vestigingsklimaat.Bent
+    u actief in de offshore wind business of datacenterbranche, dan is de Eemshaven
+    de plaats waar u het beste tot uw recht komt. Voor chemische bedrijvigheid of
+    circulaire economische activiteiten is Delfzijl de aangewezen locatie. Benieuwd
+    wat de Eemshaven of de haven van Delfzijl u kan bieden? Neem gerust contact op,
+    dan kijken we gezamenlijk naar de mogelijkheden.
+  url: https://www.groningen-seaports.com/groningen-seaports/organisatieprofiel/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28469398/Havenschap_Groningen_Seaports
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://jaarverslag.groningen-seaports.com/downloads/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Havenschap+Groningen+Seaports%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Havenschap+Groningen+Seaports%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.groningen-seaports.com/contact/
+organogram_url: https://www.groningen-seaports.com/groningen-seaports/organisatiestructuur/
+afspraak:
+  email: a.swart@groningen-seaports.com
+  telefoonnummer: (0596) 64 04 00
+  url: https://www.groningen-seaports.com/contact/
 contact:
   website: https://www.groningen-seaports.com/groningen-seaports/organisatiestructuur
   email: a.swart@groningen-seaports.com
+  bezoekadres: Handelskade Oost 1, 9934 AR Delfzijl
+  postadres: Postbus 20004, 9930 PA Delfzijl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Handelskade Oost
+    huisnummer: '1'
+    postcode: 9934 AR
+    woonplaats: Delfzijl
+  - type: Postadres
+    postbus: '20004'
+    postcode: 9930 PA
+    woonplaats: Delfzijl
+  - type: Woo-Adres
+    postbus: '20004'
+    postcode: 9930 PA
+    woonplaats: Delfzijl
+  phones:
+  - nummer: (0596) 64 04 00
+    label: algemeen
+  - nummer: 06 10 94 58 23
+    label: secretaris
+  emails:
+  - email: a.swart@groningen-seaports.com
+    label: secretaris
+  internet_addresses:
+  - url: https://www.groningen-seaports.com/groningen-seaports/organisatiestructuur
+    label: algemeen
+  contact_forms:
+  - url: https://www.groningen-seaports.com/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28469398/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28469398/havenschap-groningen-seaports
+  retrieved: '2026-05-16'
+roo_start_datum: '1989-04-07'

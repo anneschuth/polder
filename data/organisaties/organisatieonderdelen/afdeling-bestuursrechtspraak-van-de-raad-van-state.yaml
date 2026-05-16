@@ -3,18 +3,33 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28085769'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10039
+  owms: http://standaarden.overheid.nl/owms/terms/Raad_van_State,_afdeling_bestuursrechtspraak
 classification: organisatieonderdeel
 parent_id: org:hoge-college-rvs
 names:
 - value: Afdeling bestuursrechtspraak van de Raad van State
   valid_from: '1900-01-01'
-  valid_until: '2026-06-01'
 contact:
   website: www.raadvanstate.nl
   email: voorlichting@raadvanstate.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 426 44 26
+    label: algemeen
+  emails:
+  - email: voorlichting@raadvanstate.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.raadvanstate.nl
+    label: algemeen
+  fax: (070) 365 13 80
 valid_from: '1900-01-01'
 valid_until: '2026-06-01'
+last_mutation: '2026-04-29'
+last_verified: '2026-04-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28085769/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28085769/afdeling-bestuursrechtspraak-van-de-raad-van-state
+  retrieved: '2026-05-16'

@@ -5,24 +5,86 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0786
   oin: 00000001852255123000
   kvk: '56677936'
+  owms: http://standaarden.overheid.nl/owms/terms/odvelijs
+  btw: NL852255123B01
+  loonheffing: 852255123L01
+  organisatiecode: so0786
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Veluwe IJssel
+  roo_id: '28181378'
 names:
 - value: Omgevingsdienst Veluwe IJssel
   abbr: OVIJ
   valid_from: '1900-01-01'
   valid_until: '2024-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2024-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2024-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28181402/Omgevingsdienst_Veluwe_IJssel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Veluwe+IJssel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Veluwe+IJssel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Veluwe+IJssel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.odveluweijssel.nl
   email: info@ovij.nl
+  bezoekadres: Marktplein 1, 7311 LG Apeldoorn
+  postadres: Postbus 971, 7301 BE Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Marktplein
+    huisnummer: '1'
+    postcode: 7311 LG
+    woonplaats: Apeldoorn
+  - type: Postadres
+    postbus: '971'
+    postcode: 7301 BE
+    woonplaats: Apeldoorn
+  phones:
+  - nummer: (055) 580 17 05
+    label: algemeen
+  emails:
+  - email: info@ovij.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odveluweijssel.nl
+    label: algemeen
+  - url: https://www.odveluweijssel.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.odveluweijssel.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2024-01-01'
+last_mutation: '2025-02-20'
+last_verified: '2025-02-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28181402/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28181402/ovij
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-11-28'

@@ -3,7 +3,7 @@ name:
   full: J.W. Brus
   family: Brus
   given: J.W.
-  initials: J.
+  initials: J.W.
 mandaten:
 - id: 728869ee-f4a7-4abb-a620-d4d0a067f573
   organization_id: org:gemeente-steenwijkerland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1952930
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/24145/gemeente-steenwijkerland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29563635
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1952929

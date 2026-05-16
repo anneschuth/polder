@@ -5,22 +5,105 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0897
   oin: 00000001858230240000
   kvk: '70275602'
+  owms: http://standaarden.overheid.nl/owms/terms/wodw
+  organisatiecode: so0897
+  rsin: '858230240'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkorganisatie Druten Wijchen
+  roo_id: '29561427'
 names:
 - value: Werkorganisatie Druten Wijchen
   valid_from: '1900-01-01'
+description:
+  text: De Werkorganisatie Druten Wijchen is een samenwerkingsverband tussen de gemeenten
+    Druten en Wijchen. Wij trekken samen op om de uitdagingen in ons gebied aan te
+    pakken. Zo willen we het wonen, werken en ondernemen voor inwoners, ondernemers
+    en maatschappelijke organisaties in de gemeenten Druten en Wijchen zo prettig
+    mogelijk maken. Nu én in de toekomst. Samen maken we het verschil.
+  url: https://www.werkorganisatiedrutenwijchen.nl/organisatiestructuur
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.werkorganisatiedrutenwijchen.nl/informatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28205553/Werkorganisatie_Druten_Wijchen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?svel=Publicatiedatum&svol=Aflopend&pg=10&q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and((dt.creator==%22Werkorganisatie%20Druten%20Wijchen%22)or(dt.creator==%22Werkorganisatie%20Druten-Wijchen%22)))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen&pagina=2
+      toelichting: Officiële bekendmakingen van de Werkorganisatie Druten Wijchen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkorganisatie+Druten+Wijchen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://werkorganisatiedrutenwijchen.edataloket.eu/?sort=publicationDate:desc
+    - informatiecategorie: Adviezen
+      url: https://werkorganisatiedrutenwijchen.edataloket.eu/?sort=publicationDate:desc
+    - informatiecategorie: Andere documenten
+      url: https://werkorganisatiedrutenwijchen.edataloket.eu/?sort=publicationDate:desc
+  wooVerzoek:
+    url: https://www.werkorganisatiedrutenwijchen.nl/informatie-opvragen-woo-verzoek
+organogram_url: https://www.werkorganisatiedrutenwijchen.nl/data/images/2/2/6/8/organogram-wdw-extern-v2.png
+afspraak:
+  email: gemeente@wijchen.nl
+  telefoonnummer: (088) 432 70 00
 contact:
   website: https://www.werkorganisatiedrutenwijchen.nl
   email: gemeente@wijchen.nl
+  bezoekadres: Kasteellaan 27, 6602 DB Wijchen
+  postadres: Postbus 9000, 6600 HA Wijchen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kasteellaan
+    huisnummer: '27'
+    postcode: 6602 DB
+    woonplaats: Wijchen
+  - type: Postadres
+    postbus: '9000'
+    postcode: 6600 HA
+    woonplaats: Wijchen
+  - type: Woo-Adres
+    postbus: '9000'
+    postcode: 6602 DB
+    woonplaats: Wijchen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (088) 432 70 00
+    label: gemeente Wijchen
+  - nummer: (088) 432 70 00
+    label: gemeente Druten
+  emails:
+  - email: gemeente@wijchen.nl
+    label: gemeente Wijchen
+  - email: info@druten.nl
+    label: gemeente Druten
+  internet_addresses:
+  - url: https://www.werkorganisatiedrutenwijchen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-05-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28205553/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28205553/werkorganisatie-druten-wijchen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2018-01-01'

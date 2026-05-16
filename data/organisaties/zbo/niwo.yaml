@@ -5,21 +5,138 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000165
   oin: 00000001857161246000
   kvk: '67752004'
+  owms: http://standaarden.overheid.nl/owms/terms/niwo
+  rsin: '857161246'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Nationale en Internationale Wegvervoer Organisatie
   abbr: NIWO
   valid_from: '1900-01-01'
+description:
+  text: Dit zbo heette voor 2017 Stichting Nationale en Internationale Wegvervoer
+    Organisatie. Door de wijziging van privaatrechtelijk (Stichting) naar publiekrechtelijk
+    is het nu Nationale en Internationale Wegvervoer Organisatie (NIWO).
+  url: https://www.niwo.nl/nl/over-de-niwo/doel-en-taak/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+wettelijke_grondslagen:
+- opschrift: Wet wegvervoer goederen artikel 1.1 en 4.1
+  referentie: http://wetten.overheid.nl/BWBR0024800/
+- opschrift: Besluit wegvervoer goederen
+  referentie: http://wetten.overheid.nl/BWBR0033600/
+taken_en_bevoegdheden: Bevorderen van het Nederlandse binnenlandse en grensoverschrijdende
+  beroepsgoederenvervoer over de weg door:* (ingevolge artikel 32 wgw) verlenen en
+  intrekken van vergunningen voor binnenlands beroepsvervoer als bedoeld in artikel
+  8 onderscheidenlijk artikel 12, eerste lid;* verlenen en intrekken van communautaire
+  vergunningen als bedoeld in artikel 10, tweede onderscheidenlijk vierde lid;* verlenen
+  en intrekken van machtigingen strekkende tot het verrichten van grensoverschrijdend
+  vervoer als bedoeld in artikel 25, eerste lid;* afgeven van aanvullende documenten
+  voor grensoverschrijdend beroepsvervoer als bedoeld in artikel 26, eerste lid, respectievelijk
+  tweede lid, onderdeel c;* overige bij of krachtens algemene maatregel van bestuur
+  op te dragen werkzaamheden, zowel ten aanzien van het binnenlands beroepsvervoer
+  als het grensoverschrijdend beroepsvervoer;*  (ingevolgde artikel 7 Besluit goederenvervoer
+  over de weg) bijhouden van een registratie- en signaleringssysteem ter uitvoering
+  van het bepaalde in artikel 12 van de wet;* beheren van gegevensbestanden uit hoofde
+  van haar publieke taken;* deelnemen aan onderhandelingen in het kader van bilaterale
+  verdragen met andere staten, dan wel ter afsluiting van bilaterale verdragen;* bij
+  ministeriële regeling kan de NIWO belast worden met overige taken, waartoe in ieder
+  geval behoort de uitvoering van Verordening (EEG) nummer 391/90.
+evaluations:
+- datum: '2018-11-08'
+  kamerstuknummer: TK 33485 nr. 3
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33485-3.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.niwo.nl/nl/over-de-niwo/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212280/Nationale_en_Internationale_Wegvervoer_Organisatie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.niwo.nl/jaarverslag
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nationale+en+Internationale+Wegvervoer+Organisatie%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.niwo.nl/nl/over-de-niwo/wet-open-overheid-woo/
+organogram_url: https://www.niwo.nl/nl/over-de-niwo/organisatie
+afspraak:
+  email: info@niwo.nl
+  telefoonnummer: (070) 399 20 11
+personnel:
+  aantalFte: 34,0
+  peildatumFte: '2023-01-01'
 contact:
   website: http://www.niwo.nl/
   email: info@niwo.nl
+  bezoekadres: Veraartlaan 10, 2288 GM Rijswijk
+  postadres: Postbus 3004, 2280 MB Rijswijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Veraartlaan
+    huisnummer: '10'
+    postcode: 2288 GM
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '3004'
+    postcode: 2280 MB
+    woonplaats: Rijswijk
+  - type: Woo-Adres
+    toelichting: t.a.v. Woo-contactpersoon
+    postbus: '3004'
+    postcode: 2280 MB
+    woonplaats: Rijswijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 399 20 11
+    label: algemeen
+  emails:
+  - email: info@niwo.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.niwo.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212280/niwo
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +150,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000165
   retrieved: '2026-05-09'
+roo_start_datum: '2017-01-01'

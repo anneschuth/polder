@@ -5,23 +5,115 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0665
   oin: 00000001822328562000
   kvk: '17285571'
+  owms: http://standaarden.overheid.nl/owms/terms/SamenwerkingKempengemeenten
+  organisatiecode: so0665
+  rsin: '822328562'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Samenwerking Kempengemeenten
+  roo_id: '29436968'
 names:
 - value: Samenwerking Kempengemeenten
   valid_from: '1900-01-01'
-  valid_until: '2026-07-01'
+description:
+  text: De colleges van burgemeester en wethouders van de gemeenten Bergeijk, Bladel,
+    Eersel, Oirschot en Reusel-De Mierden en de burgemeesters van de gemeenten Eersel,
+    Oirschot en Reusel-De Mierden, ieder voor zover het hun eigen bevoegdheden betreft
+    nemen deel aan de Gemeenschappelijke Regeling Samenwerking Kempengemeenten.De
+    regeling wordt getroffen ter gezamenlijke behartiging van de afzonderlijke en
+    gemeenschappelijke belangen van de bestuursorganen op het gebied van:- Informatie
+    en communicatie technologie, waaronder Samenwerking geografische informatievoorziening
+    en BAG- De Wmo, Wet gemeentelijke schuldhulpverlening, Jeugdwet, Jeugdhulp, minimaregelingen
+    op grond van de Participatiewet- Vergunningverlening, toezicht en handhaving
+  url: https://www.kempengemeenten.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kempengemeenten.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27965426/Samenwerking_Kempengemeenten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+Kempengemeenten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+Kempengemeenten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+Kempengemeenten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.kempengemeenten.nl/jaarrekening
+      toelichting: Jaarrekeningen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.kempengemeenten.nl/bekendmakingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.kempengemeenten.nl/vergaderstukken-algemeen-bestuur-grsk
+      toelichting: Algemeen Bestuur GR Samenwerking Kempengemeenten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.kempengemeenten.nl/begroting
+      toelichting: Begrotingen
+  wooVerzoek:
+    url: https://www.kempengemeenten.nl/wet-open-overheid-woo
+organogram_url: https://www.kempengemeenten.nl/organogram
+afspraak:
+  telefoonnummer: (088) 497 09 28
 contact:
   website: https://www.kempengemeenten.nl
   email: bestuurssecretariaat@kempengemeenten.nl
+  bezoekadres: Dijk 15, 5521 AW Eersel
+  postadres: Postbus 11, 5540 AA Reusel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dijk
+    huisnummer: '15'
+    postcode: 5521 AW
+    woonplaats: Eersel
+  - type: Woo-Adres
+    toelichting: gemeentehuis Reusel-De Mierden ( Samenwerking Kempengemeenten is
+      daar statutair gevestigd)
+    openbare_ruimte: Kerkplein
+    huisnummer: '3'
+    postcode: 5541 KB
+    woonplaats: Reusel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '11'
+    postcode: 5540 AA
+    woonplaats: Reusel
+  phones:
+  - nummer: (088) 497 09 28
+    label: algemeen
+  emails:
+  - email: bestuurssecretariaat@kempengemeenten.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kempengemeenten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.kempengemeenten.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-07-01'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27965426/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27965426/samenwerking-kempengemeenten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-01-01'

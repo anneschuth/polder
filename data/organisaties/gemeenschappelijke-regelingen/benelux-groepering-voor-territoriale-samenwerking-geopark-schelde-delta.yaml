@@ -1,17 +1,90 @@
 id: org:gr-benelux-groepering-voor-territoriale-samenwerking-geopark-schelde-delta
 type: gemeenschappelijke-regeling
 identifiers:
-  roo_id: '30161061'
+  roo_id: '30161067'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1102
+  owms: https://standaarden.overheid.nl/owms/terms/bgtsgsd
+  kvk: '97712817'
+  organisatiecode: so1102
+  rsin: '868196757'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Benelux Groepering voor Territoriale Samenwerking Geopark Schelde Delta
+  roo_id: '30161067'
 names:
+- value: Benelux Groepering voor Territoriale Samenwerking Geopark Schelde Delta
+  valid_from: '2024-11-27'
 - value: Benelux Groepering voor Territoriale Samenwerking Geopark Schelde Delta
   abbr: BGTS Geopark Schelde Delta
   valid_from: '1900-01-01'
-valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+gr_meta:
+  samenwerkingsvorm:
+    value: Gemeenschappelijk orgaan
+    afkorting: GO
+  bevoegdheidsverkrijgingen:
+  - Mandaat
+  regionaal_samenwerkingsorgaan:
+    naam: Benelux Groepering voor Territoriale Samenwerking Geopark Schelde Delta
+    roo_id: '30161061'
+    tooi: https://identifier.overheid.nl/tooi/id/so/so1102
+    owms: https://standaarden.overheid.nl/owms/terms/bgtsgsd
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Provincie Antwerpen
+    roo_id: '30161660'
+    toetredings_datum: '2024-11-27'
+  - naam: Provincie Noord-Brabant
+    roo_id: '16317'
+    tooi: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    owms: http://standaarden.overheid.nl/owms/terms/Noord-Brabant
+    toetredings_datum: '2024-11-27'
+    bestuursorganen:
+    - naam: Provinciale staten
+      owms: http://standaarden.overheid.nl/owms/terms/provinciale_staten
+  - naam: Provincie Oost-Vlaanderen
+    roo_id: '28153521'
+    toetredings_datum: '2024-11-27'
+  - naam: Provincie West-Vlaanderen
+    roo_id: '30161669'
+    toetredings_datum: '2024-11-27'
+  - naam: Provincie Zeeland
+    roo_id: '18166'
+    tooi: https://identifier.overheid.nl/tooi/id/provincie/pv29
+    owms: http://standaarden.overheid.nl/owms/terms/Zeeland_(provincie)
+    toetredings_datum: '2024-11-27'
+    bestuursorganen:
+    - naam: Provinciale staten
+      owms: http://standaarden.overheid.nl/owms/terms/provinciale_staten
+  instellingsbesluiten:
+  - https://www.benelux.int/wp-content/uploads/2025/02/2025-1-Bijlage-III.pdf
+  datum_inwerkingtreding: '2024-11-27'
+contact:
+  bezoekadres: Abdij 6, 4331 BK Middelburg
+  postadres: Postbus 6001, 4330 LA Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Abdij
+    huisnummer: '6'
+    postcode: 4331 BK
+    woonplaats: Middelburg
+  - type: Postadres
+    postbus: '6001'
+    postcode: 4330 LA
+    woonplaats: Middelburg
+valid_from: '2024-11-27'
 valid_until: null
+last_mutation: '2025-06-19'
+last_verified: '2025-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30161061/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30161067/benelux-groepering-voor-territoriale-samenwerking-geopark-schelde-delta
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-11-27'

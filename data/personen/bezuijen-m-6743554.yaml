@@ -3,7 +3,7 @@ name:
   full: M.J. Bezuijen
   family: Bezuijen
   given: M.J.
-  initials: M.
+  initials: M.J.
 mandaten:
 - id: ee6705f0-2fbe-4459-a44a-a9ae58ca014f
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743555
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28247679
 - id: 2af53f2a-7e95-41fa-9d88-2c63d71dd857
   organization_id: org:gemeente-zoetermeer
   post_id: post:burgemeester-gemeente-zoetermeer

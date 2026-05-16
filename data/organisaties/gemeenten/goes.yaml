@@ -6,21 +6,150 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0664
   roo_id: '33275'
   wikidata: Q10072
+  owms: http://standaarden.overheid.nl/owms/terms/Goes_(gemeente)
+  ictu: '00664'
+  organisatiecode: gm0664
+  rsin: 001598776
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GOE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Goes
   abbr: Goes
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Goes is een gemeente met iets meer dan 40.000 inwoners in de provincie
+    Zeeland. De ambtelijke organisatie bestaat uit vijf afdelingen. Dit zijn de afdelingen
+    Concern, Dienstverlening, Omgeving & Economie, Openbare Ruimte en Samenleving.
+    De gemeentesecretaris vormt samen met de afdelingshoofden en de concerncontroller
+    het Managementteam.
+  url: https://www.goes.nl/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.goes.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/33275/Gemeente_Goes
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goes%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goes%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Goes%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.goes.nl/wet-open-overheid-woo
+organogram_url: https://www.goes.nl/organogram
+afspraak:
+  email: stadskantoor@goes.nl
+  telefoonnummer: 14 0113
+  url: https://www.goes.nl
+geography:
+  oppervlakte: 102,13
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 102.13
+  aantal_inwoners: 40387
+  inwoners: '395'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 395.0
+  bevat_plaatsen_raw: '''s-Heer Arendskerke, ''s-Heer Hendrikskinderen, Goes, Kattendijke,
+    Kloetinge, Wilhelminadorp, Wolphaartsdijk'
+  bevat_plaatsen:
+  - '''s-Heer Arendskerke'
+  - '''s-Heer Hendrikskinderen'
+  - Goes
+  - Kattendijke
+  - Kloetinge
+  - Wilhelminadorp
+  - Wolphaartsdijk
+council:
+  total_seats: 27
+  parties:
+  - naam: Nieuw Goes
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: SGP-ChristenUnie
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Partij voor Goes
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: BVNL
+    aantal_zetels: 1
 contact:
   website: https://www.goes.nl
   email: stadskantoor@goes.nl
+  bezoekadres: M.A. de Ruijterlaan 2, 4461 GE GOES
+  postadres: Postbus 2118, 4460 MC GOES
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: M.A. de Ruijterlaan
+    huisnummer: '2'
+    postcode: 4461 GE
+    woonplaats: GOES
+  - type: Postadres
+    postbus: '2118'
+    postcode: 4460 MC
+    woonplaats: GOES
+  - type: Woo-Adres
+    postbus: '2118'
+    postcode: 4460 MC
+    woonplaats: Goes
+    regio: Zeeland
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: M.A. De Ruijterlaan
+    huisnummer: '2'
+    postcode: 4461 GE
+    ter_attentie_van: Afdeling Dienstverlening
+    woonplaats: GOES
+  phones:
+  - nummer: 14 0113
+    label: algemeen
+  emails:
+  - email: stadskantoor@goes.nl
+    label: algemeen
+  - email: stadskantoor@goes.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.goes.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.goes.nl/afspraak-maken-en-contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33275/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33275/goes
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

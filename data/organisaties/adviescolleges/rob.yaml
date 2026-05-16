@@ -4,17 +4,92 @@ identifiers:
   roo_id: '10432'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10166
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Raad voor het Openbaar Bestuur
   abbr: ROB
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor het Openbaar Bestuur (ROB) is een bij wet ingesteld strategisch
+    adviescollege voor de regering en het parlement. De Raad adviseert over het functioneren
+    en de inrichting van de overheid en democratie met het oog op het vergroten van
+    de doelmatigheid en doeltreffendheid en met bijzondere aandacht voor de beginselen
+    van de democratische rechtsstaat.Daarnaast adviseert de Raad ook over de beleidsmatige
+    aspecten van de financiële verhoudingen in relatie tot bestuurlijke verhoudingen,
+    in het bijzonder waar het de verhoudingen tussen Rijk, gemeenten en provincies
+    betreft. Dit betreft de taken van de Raad voor de financiële verhoudingen die
+    per 1 juli 2017 zijn taken heeft overgedragen aan de ROB en is opgehouden te bestaan.De
+    ROB geeft invulling aan zijn adviestaak door rapporten te schrijven, symposia
+    te organiseren, essaybundels samen te stellen of via het schrijven van artikelen
+    of het geven van lezingen en colleges deel te nemen aan het debat over het functioneren
+    van het openbaar bestuur.De Raad bestaat uit een voorzitter en een vaste kern
+    van acht raadsleden. De leden van de Raad worden door de regering benoemd. De
+    ROB wordt ondersteund door een professionele staf van twaalf mensen.
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de Raad voor het openbaar bestuur, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0008419/2017-07-01/#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.raadopenbaarbestuur.nl
   email: info@raadopenbaarbestuur.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 75 40
+    label: algemeen
+  emails:
+  - email: info@raadopenbaarbestuur.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.raadopenbaarbestuur.nl
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor het Openbaar Bestuur (ROB)
+    url: https://www.linkedin.com/company/raad-voor-het-openbaar-bestuur/
+  - platform: X
+    gebruikersnaam: '@Raad_ROB'
+    url: https://x.com/Raad_ROB
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2025-12-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/10432/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/10432/rob
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-01-01'

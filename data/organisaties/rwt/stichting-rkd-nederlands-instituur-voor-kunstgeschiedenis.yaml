@@ -1,15 +1,34 @@
 id: org:stichting-rkd-nederlands-instituur-voor-kunstgeschiedenis
 type: rwt
+subname: RKD
 identifiers:
   roo_id: '30133635'
+  kvk: '41158853'
+  rsin: '803257727'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting RKD - Nederlands Instituur voor Kunstgeschiedenis
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '5'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133635/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133635/stichting-rkd-nederlands-instituur-voor-kunstgeschiedenis
+  retrieved: '2026-05-16'

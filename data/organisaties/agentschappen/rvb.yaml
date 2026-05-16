@@ -5,23 +5,126 @@ identifiers:
   kvk: '65890604'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10124
   roo_id: '116763'
+  owms: http://standaarden.overheid.nl/owms/terms/rvb
+  rsin: '856305765'
 classification: agentschap
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Volkshuisvesting en Ruimtelijke Ordening
+  roo_id: '29481991'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1171
+  owms: http://standaarden.overheid.nl/owms/terms/minvoro
 names:
 - value: Rijksvastgoedbedrijf
   abbr: RVB
   valid_from: '1900-01-01'
+description:
+  text: Het Rijksvastgoedbedrijf (RVB) beheert de gebouwen en gronden van de Rijksoverheid
+    en Defensie. De dienst valt onder het ministerie van Volkshuisvesting en Ruimtelijke
+    Ordening en is verantwoordelijk voor het beheer en de instandhouding van de grootste
+    en meest diverse vastgoedportefeuille van Nederland, inclusief Caribisch Nederland.
+  url: https://www.rijksvastgoedbedrijf.nl/over
+taken_en_bevoegdheden: Het Rijksvastgoedbedrijf  beheert de gebouwen en gronden van
+  de Rijksoverheid en Defensie. De dienst valt onder het ministerie van Volkshuisvesting
+  en Ruimtelijke Ordening.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksvastgoedbedrijf.nl/contact-ons/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/116763/Rijksvastgoedbedrijf
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening&type=Woo-besluit
+      toelichting: Woo-verzoeken van het Rijksvastgoedbedrijf worden door het ministerie
+        van VRO openbaar gemaakt.
+  wooVerzoek:
+    url: https://www.rijksvastgoedbedrijf.nl/contact-ons/wet-open-overheid-woo
+afspraak:
+  telefoonnummer: (088) 115 80 00
+  url: https://www.rijksvastgoedbedrijf.nl/contact-ons
+personnel:
+  aantalFte: 2290,0
+  peildatumFte: '2024-11-24'
 contact:
   website: https://www.rijksvastgoedbedrijf.nl/
   email: postbus.rvb.woo@rijksoverheid.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW Den Haag
+  postadres: Postbus 16169, 2500 BD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    postcode: 2511 CW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 115 80 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksvastgoedbedrijf.nl/
+    label: algemeen
+  - url: https://www.rijksvastgoedbedrijf.nl/contact
+    label: contactpagina
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/informatie-rijksoverheid/e-mail-sturen
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rijksvastgoedbedrijf
+    url: https://www.linkedin.com/company/rijksvastgoedbedrijf
+  - platform: X
+    gebruikersnaam: RijksvastgoedNL
+    url: https://x.com/RijksvastgoedNL
+  - platform: Instagram
+    gebruikersnaam: RijksvastgoedNL
+    url: https://www.instagram.com/rijksvastgoednl/
+  - platform: Facebook
+    gebruikersnaam: Rijksvastgoedbedrijf
+    url: https://www.facebook.com/Rijksvastgoedbedrijf
+  - platform: YouTube
+    gebruikersnaam: RijksvastgoedbedrijfMinVRO
+    url: https://www.youtube.com/@RijksvastgoedbedrijfMinVRO
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/116763/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/116763/rvb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-07-01'

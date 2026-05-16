@@ -1,15 +1,45 @@
 id: org:stichting-centraal-bureau-voor-genealogie
 type: rwt
+subname: Centraal Bureau voor Genealogie
 identifiers:
   roo_id: '28347275'
+  kvk: '41149193'
+  oin: 00000003411491930000
+  rsin: 002869007
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Centraal Bureau voor Genealogie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Prins Willem-Alexanderhof 22, 2595 BE Den Haag
+  postadres: Prins Willem-Alexanderhof 22, 2595 BE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Willem-Alexanderhof 22
+    postcode: 2595 BE
+    woonplaats: Den Haag
+  - type: Postadres
+    openbare_ruimte: Prins Willem-Alexanderhof 22
+    postcode: 2595 BE
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347275/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347275/stichting-centraal-bureau-voor-genealogie
+  retrieved: '2026-05-16'

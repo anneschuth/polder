@@ -3,15 +3,35 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150960'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Rotterdam
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Doelwater 5, 3011 AH Rotterdam
+  postadres: Postbus 70023, 3000 LD Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Doelwater
+    huisnummer: '5'
+    postcode: 3011 AH
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '70023'
+    postcode: 3000 LD
+    woonplaats: Rotterdam
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-26'
+last_verified: '2025-08-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150960/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150960/regionale-eenheid-rotterdam
+  retrieved: '2026-05-16'

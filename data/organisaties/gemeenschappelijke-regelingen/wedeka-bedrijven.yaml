@@ -3,17 +3,86 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28662773'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0233
+  owms: http://standaarden.overheid.nl/owms/terms/wedeka
+  kvk: '01144234'
+  organisatiecode: so0233
+  rsin: '001374552'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling WEDEKA Bedrijven
+  roo_id: '28662754'
 names:
 - value: Wedeka Bedrijven
   valid_from: '1900-01-01'
+description:
+  url: https://wedeka.nl/organisatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://wedeka.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28662773/Wedeka_Bedrijven
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://wedeka.nl/jaarverslagen
+  wooVerzoek:
+    url: https://wedeka.nl/woo/
+organogram_url: https://wedeka.nl/organisatie/
+afspraak:
+  email: info@wedeka.nl
+  telefoonnummer: (0599) 69 20 00
+  url: https://wedeka.nl/contact/
 contact:
   website: https://www.wedeka.nl
   email: info@wedeka.nl
+  bezoekadres: Electronicaweg 29, 9503 GA Stadskanaal
+  postadres: Postbus 194, 9500 AD Stadskanaal
+  addresses:
+  - type: Bezoekadres
+    toelichting: Wedeka Hoofdkantoor
+    openbare_ruimte: Electronicaweg
+    huisnummer: '29'
+    postcode: 9503 GA
+    woonplaats: Stadskanaal
+  - type: Postadres
+    postbus: '194'
+    postcode: 9500 AD
+    woonplaats: Stadskanaal
+  - type: Woo-Adres
+    postbus: '194'
+    postcode: 9500 AD
+    woonplaats: Stadskanaal
+  phones:
+  - nummer: (0599) 69 20 00
+    label: algemeen
+  emails:
+  - email: info@wedeka.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wedeka.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wedeka.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-22'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28662773/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28662773/wedeka-bedrijven
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-01-01'

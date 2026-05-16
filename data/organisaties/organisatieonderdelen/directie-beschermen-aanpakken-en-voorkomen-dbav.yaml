@@ -3,15 +3,27 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '12200'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bcv
+parent_id: org:onderdeel-directoraat-generaal-straffen-en-beschermen-dgsenb
 names:
 - value: Directie Beschermen, Aanpakken en Voorkomen (DBAV)
   valid_from: '1900-01-01'
 contact:
   website: https://www.rijksoverheid.nl/jenv
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 69 73
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2018-10-23'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12200/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12200/directie-beschermen-aanpakken-en-voorkomen-dbav
+  retrieved: '2026-05-16'

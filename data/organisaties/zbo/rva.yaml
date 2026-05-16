@@ -5,21 +5,117 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000151
   oin: 00000001804322405000
   kvk: '41187815'
+  rsin: '804322405'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Raad voor Accreditatie
   abbr: RvA
   valid_from: '1900-01-01'
+description:
+  text: Accreditatie is het beoordelen of een keuringsinstantie, certificeringsinstantie,
+    inspectie-instantie of een laboratorium (conformiteitsbeoordelingsinstanties)
+    onpartijdig en competent zijn werk uitvoert. Bij een positieve beoordeling wordt
+    door de accreditatie-instantie een formele verklaring afgegeven dat de instantie
+    voldoet aan de eisen die zijn bepaald door Europese geharmoniseerde normen (Staatscourant
+    2010, 3033)  en, indien van toepassing, door aanvullende eisen.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 26,27,28,29,30,31,32,33,34,35
+wettelijke_grondslagen:
+- opschrift: Wet aanwijzing nationale accreditatie-instantie, artikel 2
+  referentie: http://wetten.overheid.nl/BWBR0026591/
+taken_en_bevoegdheden: '* Het uitvoeren van de in verordening (EG) nummer 765/2008
+  (betreffende accreditatie en markttoezicht) opgedragen taken. Hierij kan men denken
+  aan het beoordelen van de bekwaamheid van conformiteitsbeoordelingsinstanties om
+  een specifieke conformiteitsbeoordelingsactiviteit uit te voeren,* het monitoren
+  van de conformiteitsbeoordelingsinstanties waaraan een accreditatieverklaring is
+  verleend* en de werkzaamheden in het kader van de collegiale toetsing.'
+evaluations:
+- datum: '2022-02-24'
+  kamerstuknummer: TK 25268 nr. 203
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-203.html
+- datum: '2016-08-15'
+  kamerstuknummer: TK 25268 nr. 136
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-136.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Centraal Beheer Algemeen Pensioenfonds
+    referentie: https://www.centraalbeheer.nl/zakelijk/pensioen
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rva.nl/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212155/Raad_voor_Accreditatie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Raad+voor+Accreditatie%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rva.nl/publicaties-woo/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rva.nl/jaarverslagen/
+personnel:
+  aantalFte: 93,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.rva.nl
   email: contact@rva.nl
+  bezoekadres: Daalseplein 101, 3511 SX Utrecht
+  postadres: Postbus 2768, 3500 GT Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Daalseplein
+    huisnummer: '101'
+    postcode: 3511 SX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2768'
+    postcode: 3500 GT
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 239 45 00
+    label: algemeen
+  emails:
+  - email: contact@rva.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rva.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212155/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212155/rva
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +129,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000151
   retrieved: '2026-05-09'
+roo_start_datum: '2010-01-01'

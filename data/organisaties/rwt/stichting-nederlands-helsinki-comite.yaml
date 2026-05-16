@@ -2,15 +2,46 @@ id: org:oovb-stichting-nederlands-helsinki-comite
 type: rwt
 identifiers:
   roo_id: '27914571'
+  kvk: '41182679'
+  rsin: 008958348
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Nederlands Helsinki Comité
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Riviervismarkt 5, 2513 AM Den Haag
+  postadres: Postbus 11717, 2502 AS Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Het Nutshuis
+    openbare_ruimte: Riviervismarkt
+    huisnummer: '5'
+    postcode: 2513 AM
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '11717'
+    postcode: 2502 AS
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914571/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914571/stichting-nederlands-helsinki-comite
+  retrieved: '2026-05-16'

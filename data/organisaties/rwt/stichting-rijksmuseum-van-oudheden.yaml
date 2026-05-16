@@ -2,14 +2,32 @@ id: org:stichting-rijksmuseum-van-oudheden
 type: rwt
 identifiers:
   roo_id: '30133719'
+  kvk: '41169522'
+  rsin: '804126380'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Rijksmuseum van Oudheden
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Rapenburg
+    huisnummer: '28'
+    postcode: 2311 EW
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133719/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133719/stichting-rijksmuseum-van-oudheden
+  retrieved: '2026-05-16'

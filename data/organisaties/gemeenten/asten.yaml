@@ -6,21 +6,158 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0743
   roo_id: '30279'
   wikidata: Q9810
+  owms: http://standaarden.overheid.nl/owms/terms/Asten_(gemeente)
+  ictu: '00743'
+  organisatiecode: gm0743
+  rsin: '001600230'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_AST
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Asten
   abbr: Asten
   valid_from: '1900-01-01'
+description:
+  text: Groot genoeg om kansen te krijgen, klein genoeg om kansen te creëren.Bij de
+    gemeente Asten werken we samen aan een fijne en veilige plek om te wonen en te
+    werken voor iedereen. We staan dicht bij onze inwoners en zorgen ervoor dat ze
+    gehoord worden. We hebben een open houding, zijn professioneel, luisteren en denken
+    mee. We zijn flexibel, klantgericht, omgevingsbewust en we hebben oog voor elkaar.
+  url: https://www.werkenbijasten.nl/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.asten.nl/gemeentebestuur-en-organisatie/verzoek-om-informatie-wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/30279/Gemeente_Asten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Asten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.asten.nl/gemeentebestuur-en-organisatie/financiele-stukken
+      toelichting: Jaarrekeningen en begrotingen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Asten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Asten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://asten.bestuurlijkeinformatie.nl/Reports/Details/3fbc47c2-4e6f-459c-bcc0-fb4cb8582d6c
+      toelichting: Besluitenlijsten college van B&W
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://asten.bestuurlijkeinformatie.nl/Reports/Details/cb365290-a99d-4cd6-94de-8fd716be55a2
+      toelichting: Besluitenlijsten raad en commissies
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://asten.bestuurlijkeinformatie.nl/Calendar
+      toelichting: Agenda's en vergaderstukken raad en commissies
+  wooVerzoek:
+    url: https://www.asten.nl/gemeentebestuur-en-organisatie/verzoek-om-informatie-wet-open-overheid
+organogram_url: https://www.werkenbijasten.nl/portal-over-het-bedrijf/organogram
+afspraak:
+  telefoonnummer: (0493) 67 12 12
+  url: https://asten.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 71,39
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 71.39
+  aantal_inwoners: 17484
+  inwoners: '244'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 244.0
+  bevat_plaatsen_raw: Asten, Heusden Gem Asten, Ommel
+  bevat_plaatsen:
+  - Asten
+  - Heusden Gem Asten
+  - Ommel
+council:
+  total_seats: 16
+  parties:
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: Algemeen Belang
+    aantal_zetels: 4
+  - naam: Samen voor Asten
+    aantal_zetels: 3
+  - naam: PGA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: https://www.asten.nl/gemeentebestuur-en-organisatie/contact/openingstijden-en-contact
   email: Gemeente@asten.nl
+  bezoekadres: Koningsplein 3, 5721 GJ ASTEN
+  postadres: Postbus 290, 5720 AG ASTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningsplein
+    huisnummer: '3'
+    postcode: 5721 GJ
+    woonplaats: ASTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '290'
+    postcode: 5720 AG
+    woonplaats: ASTEN
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Koningsplein
+    huisnummer: '3'
+    postcode: 5721 GJ
+    woonplaats: Asten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Postbus
+    openbare_ruimte: Postbus 290
+    postcode: 5720 AG
+    woonplaats: Asten
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Koningsplein
+    huisnummer: '3'
+    postcode: 5721 GJ
+    woonplaats: ASTEN
+  phones:
+  - nummer: (0493) 67 12 12
+    label: algemeen
+  emails:
+  - email: Gemeente@asten.nl
+    label: algemeen
+  - email: gemeente@asten.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.asten.nl/gemeentebestuur-en-organisatie/contact/openingstijden-en-contact
+    label: algemeen
+  contact_forms:
+  - url: https://www.asten.nl/gemeentebestuur-en-organisatie/contact/openingstijden-en-contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-07'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30279/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30279/asten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

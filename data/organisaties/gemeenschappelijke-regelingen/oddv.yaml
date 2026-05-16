@@ -5,23 +5,107 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0787
   oin: 00000001852282229000
   kvk: '56714297'
+  owms: http://standaarden.overheid.nl/owms/terms/odvallei
+  btw: NL852282229B01
+  organisatiecode: so0787
+  rsin: '852282229'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst De Vallei
+  roo_id: '30210807'
 names:
 - value: Omgevingsdienst de Vallei
   abbr: OddV
   valid_from: '1900-01-01'
+description:
+  text: Over onsOmgevingsdienst de Vallei (OddV) draagt bij aan een veilige, duurzame
+    en gezonde leefomgeving. We werken in opdracht van vijf gemeenten en de provincie
+    Gelderland. We werken nauw samen op het gebied van vergunningverlening, toezicht
+    en handhaving van de milieu- en bouwwetgeving. Ook houden we ons bezig met de
+    duurzame omgevingskwaliteit. Daarnaast adviseren we over externe en constructieve
+    veiligheid, luchtkwaliteit, geluidsbelasting en duurzaamheid.Met zo’n 140 collega’s
+    zorgen we voor een betere dienstverlening aan bedrijven en inwoners, minder administratieve
+    lasten en kortere procedures. Zo werken we samen aan een veilig, gezond en leefbaar
+    Valleigebied.
+  url: https://www.oddevallei.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.oddevallei.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/28190818/Omgevingsdienst_de_Vallei
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+de+Vallei%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+de+Vallei%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.oddevallei.nl/
+organogram_url: https://www.oddevallei.nl/wp-content/uploads/sites/4/2024/07/OddV-jaarstukken-2023-V5-WEB.pdf
+afspraak:
+  telefoonnummer: (088) 116 99 00
+  url: https://www.oddevallei.nl/contact/
 contact:
   website: https://www.oddevallei.nl
   email: info@oddevallei.nl
+  bezoekadres: Horapark 4, 6717 LZ Ede
+  postadres: Postbus 9024, 6710 HM Ede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Horapark
+    huisnummer: '4'
+    postcode: 6717 LZ
+    woonplaats: Ede
+    regio: Gelderland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Postadres
+    postbus: '9024'
+    postcode: 6710 HM
+    woonplaats: Ede
+  - type: Woo-Adres
+    postbus: '9024'
+    postcode: 6710 HM
+    woonplaats: Ede
+  phones:
+  - nummer: (088) 116 99 00
+    label: algemeen
+  emails:
+  - email: info@oddevallei.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.oddevallei.nl
+    label: algemeen
+  - url: https://www.oddevallei.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.oddevallei.nl/contactformulier/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28190818/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28190818/oddv
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-11-14'

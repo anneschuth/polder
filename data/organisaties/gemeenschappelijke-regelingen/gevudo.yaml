@@ -3,16 +3,56 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967793'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1071
+  owms: http://standaarden.overheid.nl/owms/terms/gevudo
+  organisatiecode: so1071
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gemeenschappelijke Vuilverwerking Dordrecht en
+    Omstreken
+  roo_id: '24967788'
 names:
 - value: Gemeenschappelijke Vuilverwerking Dordrecht en Omstreken
   abbr: GEVUDO
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Spuiboulevard 300, 3311 GR Dordrecht
+  postadres: Postbus 8, 3300 AA Dordrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Dordrecht
+    openbare_ruimte: Spuiboulevard
+    huisnummer: '300'
+    postcode: 3311 GR
+    woonplaats: Dordrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Gemeente Dordrecht
+    postbus: '8'
+    postcode: 3300 AA
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (078) 770 41 54
+    label: algemeen (Dordrecht)
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2023-03-28'
+last_verified: '2021-02-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967793/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967793/gevudo
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-11-26'

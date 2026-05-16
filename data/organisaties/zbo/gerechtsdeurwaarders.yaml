@@ -4,13 +4,42 @@ identifiers:
   roo_id: '26140725'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000190
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Gerechtsdeurwaarders
   valid_from: '1900-01-01'
+description:
+  text: Opnieuw ingesteld in 2001.Dit is een cluster van zbo’s die niet onder de werking
+    van de kaderwet zelfstandige bestuursorganen valt. De onderliggende onderdelen
+    van dit cluster worden daarom niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Gerechtsdeurwaarderswet, art. 1 aanhef en sub h en art. 30
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=GERECHTSDEURWAARDERSWET
+taken_en_bevoegdheden: 'Als openbaar ambtenaar voert de gerechtsdeurwaarder taken
+  uit die bij wet aan hem toegewezen zijn. Zulke wettelijke taken zijn bijvoorbeeld:
+  het dagvaarden van personen of bedrijven voor de rechter, het opmaken van akten,
+  het betekenen van juridische stukken en het ten uitvoer leggen van vonnissen en
+  andere zgn. executoriale titels.'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-08-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140725/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140725/gerechtsdeurwaarders
+  retrieved: '2026-05-16'
+roo_start_datum: '1934-01-01'

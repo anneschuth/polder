@@ -3,18 +3,123 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24961757'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0685
+  owms: http://standaarden.overheid.nl/owms/terms/regbedtwe
+  kvk: 08216354
+  organisatiecode: so0685
+  rsin: '815078237'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Bedrijventerrein Twente
+  roo_id: '24961752'
 names:
 - value: Regionaal Bedrijventerrein Twente
   abbr: RBT
   valid_from: '1900-01-01'
+description:
+  text: "In de gemeenschappelijke regeling wordt (in hoofdstuk 2 en 3) een beschrijving\
+    \ gegeven van de organisatie van het RBT en de taken en verantwoordelijkheden\
+    \ van het personeel. In aanvulling daarop wordt de administratieve en financiële\
+    \ organisatie beschreven in de financiële verordening, welke op 13 december 2023\
+    \ is vastgesteld door het Algemeen Bestuur. Het Algemeen Bestuur wordt gevormd\
+    \ door leden van de colleges van B&W en GS van de deelnemers. Het Algemeen Bestuur\
+    \ benoemt, vanuit haar midden, de leden van het Dagelijks Bestuur. Het bestuur\
+    \ wordt ondersteund door een secretaris (4 uur per week), die alle uitgaande stukken\
+    \ mede ondertekent en verantwoordelijk is voor de controlling van besluiten van\
+    \ de directeur. Het RBT heeft geen personeel in dienst: werkzaamheden worden verricht\
+    \ door ambtenaren van de deelnemende gemeenten en op detacheringsbasis ingehuurde\
+    \ medewerkers. De projectorganisatie is gevestigd in een voormalig woonhuis in\
+    \ het projectgebied (Columbus 17, Almelo).Per 31-12-2023 kende de projectorganisatie\
+    \ de volgende bezetting:Projectdirecteur\t\t\t\t\t- \t  24 uur per weekProjectmanager\
+    \ / casemanager / secretaris\t\t-\t  36 uur per weekPlaneconoom\t\t\t\t\t-\t \
+    \ 12 uur per weekProjectadministrateur\t\t\t\t-\t  12 uur per weekOfficemanager\t\
+    \t\t\t\t-\t  14 uur per weekTotaal (2,7 FTE)\t\t\t\t\t- \t  98 uur per weekNaast\
+    \ de projectorganisatie is er een flexibele schil. De civieltechnische begeleiding\
+    \ wordt (op regiebasis) verzorgd door het ingenieursbureau van de gemeente Almelo\
+    \ en daarnaast wordt (op regie of opdrachtbasis) gebruik gemaakt van diverse externe\
+    \ deskundigen, zoals juridische adviseurs, duurzaamheid deskundigen, taxateurs,\
+    \ ICT-begeleiding, accountants, fiscalisten en archiefondersteuning.Tot slot is\
+    \ op het XL Businesspark een parkmanager actief (4 uur per week), in opdracht\
+    \ van de coöperatieve vereniging parkmanagement.De projectorganisatie werkt nauw\
+    \ samen met andere organisaties. De communicatie en marketing vindt mede plaats\
+    \ onder de merknaam Port of Twente. Port of Twente bundelt alle kracht van logistiek\
+    \ Twente om de sector te versterken, te verduurzamen en de Twentse economie te\
+    \ ondersteunen. Port of Twente is belangenvereniging, havenbeheerder, grondbedrijf\
+    \ en vestigingsloket in één. Tot slot wordt samengewerkt met de andere topwerklocaties\
+    \ in Twente (Kennispark Twente, High Tech Systems Park, ConnectU en Technology\
+    \ Base) aan een gezamenlijke profilering."
+  url: https://www.portoftwente.com/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.portoftwente.com/xl-businesspark/bestuur/wooverzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/24961757/Regionaal_Bedrijventerrein_Twente
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.portoftwente.com/xl-businesspark/bestuur/bestuurstukken
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.portoftwente.com/xl-businesspark/bestuur/wetregelgeving
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.portoftwente.com/xl-businesspark/bestuur/jaarstukken
+  wooVerzoek:
+    url: https://www.portoftwente.com/xl-businesspark/bestuur/wooverzoek
+afspraak:
+  email: l.hoogenberg@xlpark.nl
+  telefoonnummer: (0546) 85 18 88
+  url: https://www.portoftwente.com/contact
 contact:
   website: http://xlpark.nl
   email: l.hoogenberg@xlpark.nl
+  bezoekadres: Columbus 17, 7609 RM Almelo
+  postadres: Postbus 67, 7600 AB Almelo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Columbus
+    huisnummer: '17'
+    postcode: 7609 RM
+    woonplaats: Almelo
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '67'
+    postcode: 7600 AB
+    woonplaats: Almelo
+  - type: Woo-Adres
+    openbare_ruimte: Columbus
+    huisnummer: '17'
+    postcode: 7609 RM
+    woonplaats: Almelo
+    land: Nederland
+  phones:
+  - nummer: (0546) 85 18 88
+    label: algemeen
+  emails:
+  - email: l.hoogenberg@xlpark.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://xlpark.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.portoftwente.com/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24961757/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24961757/rbt
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-04-05'

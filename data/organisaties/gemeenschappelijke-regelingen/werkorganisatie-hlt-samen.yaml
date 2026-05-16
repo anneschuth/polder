@@ -1,26 +1,107 @@
 id: org:gr-werkorganisatie-hlt-samen
 type: gemeenschappelijke-regeling
+subname: HLT Samen
 identifiers:
   roo_id: '28385407'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0866
   oin: 00000001824347547000
   kvk: '67674712'
+  owms: http://standaarden.overheid.nl/owms/terms/hltsam
+  organisatiecode: so0866
+  rsin: '824347547'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling werkorganisatie HLTsamen
+  roo_id: '29516249'
 names:
 - value: Werkorganisatie HLT Samen
   valid_from: '1900-01-01'
+description:
+  text: HLTsamen is de ambtelijke werkorganisatie van de gemeenten Hillegom, Lisse
+    en Teylingen. Met ongeveer 500 medewerkers ondersteunt HLTsamen de drie gemeentebesturen
+    bij het uitvoeren van hun taken. De organisatie is verantwoordelijk voor een breed
+    scala aan diensten, waaronder ruimtelijke ordening, sociale zaken en economische
+    ontwikkeling. HLTsamen streeft naar efficiënte en innovatieve dienstverlening
+    voor de ruim 80.000 inwoners van de drie gemeenten. De werkorganisatie werkt vanuit
+    verschillende locaties, waaronder gemeentehuizen en kantoren in Hillegom, Lisse
+    en Sassenheim. Daarnaast zijn er diverse teams en commissies die zich richten
+    op specifieke taken en projecten. HLTsamen legt de nadruk op samenwerking, creativiteit
+    en voortdurende ontwikkeling om de gemeenten mooier, beter, veiliger, duurzamer
+    en schoner te maken.
+  url: https://www.werkenbijhltsamen.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hillegom.nl/inwoners-en-ondernemers/meldingen-of-klachten/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28385407/Werkorganisatie_HLT_Samen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkorganisatie+HLT+Samen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werkorganisatie+HLT+Samen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.burgerberichten.nl/HLT/formulieren/b7b132ac-a50a-4683-80a8-14ffccd17fe3/Indienen-Woo-verzoek-Hillegom/questions
+afspraak:
+  email: info@hltsamen.nl
+  telefoonnummer: 14 0252
+  url: https://www.teylingen.nl/bestuur-en-organisatie/hltsamen
 contact:
   website: https://www.werkenbijhltsamen.nl/werkenbij-hltsamen
   email: info@hltsamen.nl
+  bezoekadres: Hoofdstraat 115, 2181 EC Hillegom
+  postadres: Postbus 32, 2180 AA Hillegom
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat
+    huisnummer: '115'
+    postcode: 2181 EC
+    woonplaats: Hillegom
+  - type: Postadres
+    postbus: '32'
+    postcode: 2180 AA
+    woonplaats: Hillegom
+  - type: Woo-Adres
+    postbus: '32'
+    postcode: 2180 AA
+    woonplaats: Hillegom
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: 14 0252
+    label: algemeen
+  emails:
+  - email: info@hltsamen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.werkenbijhltsamen.nl/werkenbij-hltsamen
+    label: algemeen
+  contact_forms:
+  - url: https://www.werkenbijhltsamen.nl/nederlands/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28385407/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28385407/werkorganisatie-hlt-samen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

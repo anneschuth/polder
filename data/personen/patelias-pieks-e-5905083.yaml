@@ -3,7 +3,7 @@ name:
   full: E.C. Patelias-Pieks
   family: Patelias-Pieks
   given: E.C.
-  initials: E.
+  initials: E.C.
 mandaten:
 - id: e1b51754-fc60-422c-8f7e-e8bdf88ee0d2
   organization_id: org:gemeente-overbetuwe
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5905085
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26937/gemeente-overbetuwe
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25255679
 - id: 922baeed-e5d3-4bb5-91ae-9c056d35c3b3
   organization_id: org:gemeente-overbetuwe
   post_id: post:raadslid-gemeente-overbetuwe

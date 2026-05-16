@@ -5,23 +5,90 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0003
   oin: 00000001820191164000
   kvk: '54089484'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_IJsselland
+  organisatiecode: so0003
+  rsin: '820191164'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio IJsselland 2024
+  roo_id: '29750042'
 names:
 - value: Veiligheidsregio IJsselland
   abbr: VR IJsselland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrijsselland.nl/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/24185301/Veiligheidsregio_IJsselland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+IJsselland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+IJsselland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.vrijsselland.nl/wet-open-overheid/
+organogram_url: https://www.vrijsselland.nl/over-veiligheidsregio-ijsselland/
+afspraak:
+  email: info@vrijsselland.nl
+  telefoonnummer: (088) 119 70 00
+  url: https://www.vrijsselland.nl/contact/
 contact:
   website: https://www.vrijsselland.nl
   email: info@vrijsselland.nl
+  bezoekadres: Marsweg 39, 8013 PE Zwolle
+  postadres: Postbus 1453, 8001 BL Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Marsweg
+    huisnummer: '39'
+    postcode: 8013 PE
+    woonplaats: Zwolle
+  - type: Postadres
+    postbus: '1453'
+    postcode: 8001 BL
+    woonplaats: Zwolle
+  - type: Woo-Adres
+    postbus: '1453'
+    postcode: 8001 BL
+    woonplaats: Zwolle
+  phones:
+  - nummer: (088) 119 70 00
+    label: algemeen
+  emails:
+  - email: info@vrijsselland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrijsselland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vrijsselland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-03-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24185301/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24185301/veiligheidsregio-ijsselland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-01-01'

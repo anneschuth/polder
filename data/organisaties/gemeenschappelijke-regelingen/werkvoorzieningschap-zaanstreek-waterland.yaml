@@ -1,9 +1,15 @@
 id: org:gr-werkvoorzieningschap-zaanstreek-waterland
 type: gemeenschappelijke-regeling
+subname: BaanStede
 identifiers:
   roo_id: '24964695'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '34366063'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling inzake werkvoorzieningschap Zaanstreek-Waterland
+  roo_id: '24964690'
 names:
 - value: Werkvoorzieningschap Zaanstreek-Waterland
   valid_from: '1900-01-01'
@@ -11,9 +17,34 @@ names:
 contact:
   website: http://www.baanstede.nl
   email: info@baanstede.nl
+  bezoekadres: Einsteinstraat 103, 1446 VE Purmerend
+  postadres: Postbus 404, 1440 AK Purmerend
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Einsteinstraat
+    huisnummer: '103'
+    postcode: 1446 VE
+    woonplaats: Purmerend
+  - type: Postadres
+    postbus: '404'
+    postcode: 1440 AK
+    woonplaats: Purmerend
+  phones:
+  - nummer: (0299) 46 93 69
+    label: algemeen
+  emails:
+  - email: info@baanstede.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.baanstede.nl
+    label: algemeen
+  fax: (0299) 46 91 69
 valid_from: '1900-01-01'
 valid_until: '2017-11-27'
+last_mutation: '2019-11-25'
+last_verified: '2019-11-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964695/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964695/werkvoorzieningschap-zaanstreek-waterland
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-01-01'

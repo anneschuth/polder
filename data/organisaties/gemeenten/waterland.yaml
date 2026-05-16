@@ -6,21 +6,161 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0852
   roo_id: '32026'
   wikidata: Q9971
+  owms: http://standaarden.overheid.nl/owms/terms/Waterland_(gemeente)
+  ictu: 00852
+  organisatiecode: gm0852
+  rsin: 008340560
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WTL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Waterland
   abbr: Waterland
   valid_from: '1900-01-01'
+description:
+  url: https://www.waterland.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waterland.nl/indienen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/32026/Gemeente_Waterland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://waterland.bestuurlijkeinformatie.nl/
+      toelichting: Raadsstukken gemeenteraad Waterland
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://waterland.bestuurlijkeinformatie.nl/Reports/Details/0f0c9e4c-a26a-4b38-8d78-33a7b10aca9e
+      toelichting: Besluitenlijsten college van Burgemeester en Wethouders
+  wooVerzoek:
+    url: https://www.waterland.nl/indienen-woo-verzoek
+organogram_url: https://lokaleregelgeving.overheid.nl/CVDR715094/1
+afspraak:
+  email: gemeente@waterland.nl
+  telefoonnummer: (0299) 65 85 85
+  url: https://www.waterland.nl/afspraak-maken
+geography:
+  oppervlakte: 115,55
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 115.55
+  aantal_inwoners: 17721
+  inwoners: '153'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 153.0
+  bevat_plaatsen_raw: Broek In Waterland, Ilpendam, Katwoude, Marken, Monnickendam,
+    Purmer, Uitdam, Watergang, Zuiderwoude
+  bevat_plaatsen:
+  - Broek In Waterland
+  - Ilpendam
+  - Katwoude
+  - Marken
+  - Monnickendam
+  - Purmer
+  - Uitdam
+  - Watergang
+  - Zuiderwoude
+council:
+  total_seats: 16
+  parties:
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: WaterlandNatuurlijk
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.waterland.nl
   email: gemeente@waterland.nl
+  bezoekadres: Pierebaan 3, 1141 GV MONNICKENDAM
+  postadres: Postbus 1000, 1140 BA MONNICKENDAM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pierebaan
+    huisnummer: '3'
+    postcode: 1141 GV
+    woonplaats: MONNICKENDAM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1000'
+    postcode: 1140 BA
+    woonplaats: MONNICKENDAM
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '1000'
+    postcode: 1140 BA
+    woonplaats: Monnickendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Pierebaan
+    huisnummer: '3'
+    postcode: 1141 GV
+    woonplaats: Monnickendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Pierebaan
+    huisnummer: '3'
+    postcode: 1141 GV
+    ter_attentie_van: Team VTH
+    woonplaats: MONNICKENDAM
+  phones:
+  - nummer: (0299) 65 85 85
+    label: algemeen
+  emails:
+  - email: gemeente@waterland.nl
+    label: algemeen
+  - email: vergunningen@waterland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.waterland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.waterland.nl/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32026/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32026/waterland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +169,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9971
   retrieved: '2026-05-09'
+roo_start_datum: '1991-01-01'

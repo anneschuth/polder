@@ -3,17 +3,60 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965922'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0098
+  owms: http://standaarden.overheid.nl/owms/terms/Havenschap_Moerdijk
+  kvk: '51320274'
+  organisatiecode: so0098
+  rsin: '002344762'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling bedrijfsvoeringsorganisatie Havenschap Moerdijk
+  roo_id: '29482001'
 names:
 - value: Havenschap Moerdijk
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.portofmoerdijk.nl/
   email: portoffice@portofmoerdijk.nl
+  bezoekadres: Plaza 3, 4782 SL Moerdijk
+  postadres: Postbus 17, 4780 AA Moerdijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Plaza
+    huisnummer: '3'
+    postcode: 4782 SL
+    woonplaats: Moerdijk
+  - type: Postadres
+    postbus: '17'
+    postcode: 4780 AA
+    woonplaats: Moerdijk
+  phones:
+  - nummer: (0168) 38 88 88
+    label: algemeen
+  emails:
+  - email: portoffice@portofmoerdijk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.portofmoerdijk.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965922/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965922/havenschap-moerdijk
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-01-01'

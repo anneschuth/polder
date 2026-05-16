@@ -2,14 +2,42 @@ id: org:oovb-nederlands-bureau-der-motorrijtuigverzekeraars
 type: rwt
 identifiers:
   roo_id: '27909333'
+  kvk: '40408408'
+  rsin: '807824914'
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Nederlands Bureau der Motorrijtuigverzekeraars
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Handelskade 49, 2288 BA Rijswijk
+  postadres: Postbus 3003, 2280 MG Rijswijk ZH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Handelskade 49
+    postcode: 2288 BA
+    woonplaats: Rijswijk
+  - type: Postadres
+    postbus: '3003'
+    postcode: 2280 MG
+    woonplaats: Rijswijk ZH
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909333/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909333/nederlands-bureau-der-motorrijtuigverzekeraars
+  retrieved: '2026-05-16'

@@ -5,8 +5,16 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0460
   oin: 00000001817371072000
   kvk: 01175778
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Fryslan
+  organisatiecode: so0460
+  rsin: '817371072'
+  btw: NL817371072B01
+  loonheffing: 817371072L01
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Fryslân
+  roo_id: '28442403'
 names:
 - value: Veiligheidsregio Fryslân
   abbr: VRF
@@ -14,17 +22,102 @@ names:
 - value: Veiligheidsregio Flevoland
   abbr: VRF
   valid_from: '1900-01-01'
+description:
+  text: De regio heeft tot doel het behartigen van de gemeenschappelijke belangen
+    van de gemeenten op deterreinen van:a. publieke gezondheidszorgb. brandweerzorgc.
+    geneeskundige hulpverlening bij ongevallen en rampend. rampenbestrijding en crisisbeheersinge.
+    het bevorderen van de multidisciplinaire samenwerking en de coördinatie in de
+    uitvoering vanrampenbestrijding en crisisbeheersingf. het in stand houden en beheren
+    van de meldkamerfunctieg. het zijn van een platform voor samenwerking voor aan
+    hulpverlening gelieerde diensten, partnersdan wel organisaties en andere openbare
+    lichamen.
+  url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-frysl%C3%A2n/hoe-ziet-onze-organisatie-eruit/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.veiligheidsregiofryslan.nl/bestuurlijk/openbare-informatie/
+      overzichtURL: https://organisaties.overheid.nl/woo/28442460/Veiligheidsregio_Fryslan
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.veiligheidsregiofryslan.nl/bestuurlijk/openbare-informatie/
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.veiligheidsregiofryslan.nl/bestuurlijk/algemeen-en-dagelijks-bestuur/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Fryslân%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Fryslân%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.veiligheidsregiofryslan.nl/bestuurlijk/kaderbrief-begroting-en-jaarverslag/
+  wooVerzoek:
+    url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-frysl%C3%A2n/contact-en-route/
+organogram_url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-frysl%C3%A2n/hoe-ziet-onze-organisatie-eruit/
+afspraak:
+  email: info@vrfryslan.nl
+  telefoonnummer: (088) 229 99 99
+  url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-frysl%C3%A2n/contact-en-route/
 contact:
   website: https://www.veiligheidsregiofryslan.nl
   email: info@vrfryslan.nl
+  bezoekadres: Harlingertrekweg 58, 8913 HR Leeuwarden
+  postadres: Postbus 612, 8901 BK Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Harlingertrekweg
+    huisnummer: '58'
+    postcode: 8913 HR
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '612'
+    postcode: 8901 BK
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    toelichting: Afdeling juridische zaken
+    postbus: '612'
+    postcode: 8901 BK
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (088) 229 99 99
+    label: algemeen
+  - nummer: (088) 229 99 99
+    label: Woo-contactpersoon
+  emails:
+  - email: info@vrfryslan.nl
+    label: algemeen
+  - email: juridischezaken@vrfryslan.nl
+    label: Woo-verzoek
+  internet_addresses:
+  - url: https://www.veiligheidsregiofryslan.nl
+    label: algemeen
+  - url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-fryslân/contact-en-route
+    label: contactformulier
+  contact_forms:
+  - url: https://www.veiligheidsregiofryslan.nl/over-veiligheidsregio-fryslân/contact-en-route
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2024-10-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28442460/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28442460/vrf
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2007-01-01'

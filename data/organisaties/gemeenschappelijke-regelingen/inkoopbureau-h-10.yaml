@@ -2,18 +2,51 @@ id: org:gr-inkoopbureau-h-10
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965740'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '62335839'
+  organisatiecode: so0838
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Inkoopbureau H-10
+  roo_id: '24965735'
 names:
 - value: Inkoopbureau H-10
   valid_from: '1900-01-01'
   valid_until: '2020-02-20'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-02-20'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.h10inkoop.nl
   email: info@h10inkoop.nl
+  postadres: Postbus 15, 2700 AA Zoetermeer
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '15'
+    postcode: 2700 AA
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (079) 889 60 24
+    label: algemeen
+  emails:
+  - email: info@h10inkoop.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.h10inkoop.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-02-20'
+last_mutation: '2020-07-13'
+last_verified: '2020-07-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965740/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965740/inkoopbureau-h-10
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-11-24'

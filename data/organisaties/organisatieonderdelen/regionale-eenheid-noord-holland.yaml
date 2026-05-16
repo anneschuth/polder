@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150944'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Noord-Holland
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Koudenhorn 2, 2011 JC Haarlem
+  postadres: Postbus 57, 2000 AB Haarlem
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische Zaken
+    openbare_ruimte: Koudenhorn
+    huisnummer: '2'
+    postcode: 2011 JC
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    toelichting: t.a.v. Juridische Zaken
+    postbus: '57'
+    postcode: 2000 AB
+    woonplaats: Haarlem
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-21'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150944/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150944/regionale-eenheid-noord-holland
+  retrieved: '2026-05-16'

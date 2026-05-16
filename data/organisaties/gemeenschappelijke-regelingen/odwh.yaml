@@ -5,23 +5,98 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0455
   oin: 00000001809403407000
   kvk: '27365902'
+  owms: http://standaarden.overheid.nl/owms/terms/odwhol
+  organisatiecode: so0455
+  rsin: '809403407'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst West-Holland
+  roo_id: '29494111'
 names:
 - value: Omgevingsdienst West-Holland
   abbr: ODWH
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28163212/Omgevingsdienst_West-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+West-Holland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+West-Holland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+organogram_url: https://www.odwh.nl/organogram
+afspraak:
+  email: info@odwh.nl
+  telefoonnummer: (071) 408 31 00
+  url: https://www.odwh.nl/contact
 contact:
   website: https://www.odwh.nl
   email: info@odwh.nl
+  bezoekadres: Vondellaan 55, 2332 AA Leiden
+  postadres: Postbus 159, 2300 AD Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vondellaan
+    huisnummer: '55'
+    postcode: 2332 AA
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '159'
+    postcode: 2300 AD
+    woonplaats: Leiden
+  - type: Bezoekadres
+    openbare_ruimte: Vondellaan
+    huisnummer: '55'
+    postcode: 2332 AA
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '159'
+    postcode: 2300 AD
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (071) 408 31 00
+    label: algemeen
+  emails:
+  - email: info@odwh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odwh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odwh.nl/Contact/Contact_met_de_Omgevingsdienst
+    label: Algemeen
+  fax: (071) 408 31 01
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28163212/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28163212/odwh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2000-12-27'

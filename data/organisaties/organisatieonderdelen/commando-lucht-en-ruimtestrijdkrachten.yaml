@@ -3,15 +3,33 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '6048'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-def
+parent_id: org:min-def
 names:
 - value: Commando Lucht-en Ruimtestrijdkrachten
   valid_from: '1900-01-01'
 contact:
   email: mh.verbeek.01@mindef.nl
+  bezoekadres: Luchtmachtplein 1, 4822 ZB Breda
+  postadres: Postbus 8762, 4820 BB Breda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luchtmachtplein
+    huisnummer: '1'
+    postcode: 4822 ZB
+    woonplaats: Breda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '8762'
+    postcode: 4820 BB
+    woonplaats: Breda
+  phones:
+  - nummer: (070) 318 81 88
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-20'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/6048/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/6048/commando-lucht-en-ruimtestrijdkrachten
+  retrieved: '2026-05-16'

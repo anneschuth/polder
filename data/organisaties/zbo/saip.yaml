@@ -3,21 +3,118 @@ type: zbo
 identifiers:
   roo_id: '28212634'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000141
+  kvk: '41152355'
+  rsin: 003038658
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Administratie Indonesische Pensioenen
   abbr: SAIP
   valid_from: '1900-01-01'
+description:
+  text: De Stichting Administratie Indonesische Pensioenen (SAIP) is een zelfstandig
+    bestuursorgaan (zbo) onder het ministerie van Binnenlandse Zaken (BZK). Het bestuur
+    wordt gevormd door een Raad van Beheer, die is belast met beheer van de stichtingsgelden
+    en het toekennen, berekenen, betalen en beheren van de overzeese pensioenen en
+    uitkeringen. Ingevolge de statuten van de SAIP legt de Raad van Beheer door middel
+    van het jaarverslag rekening en verantwoording af aan de ministers van BZK en
+    Financiën. De SAIP beschikt niet over eigen personeel. De uitvoeringswerkzaamheden
+    zijn krachtens een door de Raad van Beheer gesloten overeenkomst met de Stichting
+    Pensioenfonds ABP neergelegd bij dat pensioenfonds. ABP heeft de uitvoering van
+    deze werkzaamheden vervolgens opgedragen aan APG.
+  url: https://www.saip.nl
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet houdende vaststelling regeling ten aanzien van de Stichting tot verzorging
+    en afwikkeling van pensioensaangelegenheden gewezen overheidspersoneel van Indonesië
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/bwbid=BWBR0002180
+taken_en_bevoegdheden: De Stichting Administratie Indonesische Pensioenen (SAIP) heeft
+  de volgende taken:* het zorgdragen voor de uitvoering van de verplichting tot voldoening
+  van de weduwenpensioenen en wezenonderstanden aan de nagelaten betrekkingen van
+  gewezen overheidspersoneel van Indonesië;* het namens de betreffende minister nemen
+  van beslissingen ter uitvoering van de regelingen en aangelegenheden welke verband
+  houden met zogenaamde overzeese pensioenen en uitkeringen.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: http://www.saip.nl
+      overzichtURL: https://organisaties.overheid.nl/woo/28212634/Stichting_Administratie_Indonesische_Pensioenen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Klachtoordelen
+      url: http://www.saip.nl
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: http://www.saip.nl
+      toelichting: te lezen op website gepubliceerde jaarverslagen
+afspraak:
+  email: info.saip@apg.nl
+  telefoonnummer: (045) 579 30 58
+personnel:
+  aantalFte: 1,3
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.saip.nl/
   email: info.saip@apg.nl
+  bezoekadres: Oude Lindestraat 70, 6411 EJ Heerlen
+  postadres: Postbus 1263, 6400 BG Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oude Lindestraat
+    huisnummer: '70'
+    postcode: 6411 EJ
+    woonplaats: Heerlen
+  - type: Postadres
+    postbus: '1263'
+    postcode: 6400 BG
+    woonplaats: Heerlen
+  - type: Woo-Adres
+    openbare_ruimte: Oude Lindestraat
+    huisnummer: '70'
+    postbus: '1263'
+    postcode: 6411 EJ
+    woonplaats: Heerlen
+  phones:
+  - nummer: (045) 579 30 58
+    label: algemeen
+  emails:
+  - email: info.saip@apg.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.saip.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-09'
+last_verified: '2026-02-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212634/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212634/saip
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +123,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000141
   retrieved: '2026-05-09'
+roo_start_datum: '1955-01-01'

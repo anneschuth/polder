@@ -3,18 +3,119 @@ type: agentschap
 identifiers:
   roo_id: '28585304'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10248
+  owms: http://standaarden.overheid.nl/owms/terms/jio
+  kvk: '85036536'
+  rsin: '863481486'
 classification: agentschap
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Justitiële ICT Organisatie
   abbr: JIO
   valid_from: '1900-01-01'
+description:
+  text: 'Wij zijn de Justitiële ICT Organisatie: ICT’ers die het justitieveld door
+    en door kennen. Door onze inspanningen kunnen vele rijkscollega’s hun werk makkelijk
+    en efficiënt doen. Wij zorgen voor de juiste hard- en software op werkplekken,
+    overal in Nederland, in de vorm van op maat gemaakte apps, systemen en applicaties.
+    Wij ontwikkelen veilige cloud-omgevingen, waardoor onze collega’s overal kunnen
+    werken: op een werkplek, thuis en onderweg. En altijd veilig.Kortom: wij zorgen
+    dat ICT werktDe Justitiële ICT Organisatie is een zelfstandig ICT-dienstverlener
+    voor het gehele ministerie van Justitie en Veiligheid. Wij werken onder meer voor
+    de Dienst Justitiële Inrichtingen, de Raad voor de Kinderbescherming, de Immigratie-
+    en Naturalisatiedienst, de Dienst Terugkeer en Vertrek, Reclassering Nederland
+    en de dienst Justis.'
+  url: https://www.justitieleictorganisatie.nl/over-de-justitiele-ict-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.justitieleictorganisatie.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28585304/Justitiele_ICT_Organisatie
+  wooVerzoek:
+    url: https://www.justitieleictorganisatie.nl/woo-verzoek
+organogram_url: https://www.justitieleictorganisatie.nl/binaries/justitieleictorganisatie/documenten/publicaties/2024/10/31/organogram-justitiele-ict-organisatie/Organogram+JIO+geanonimiseerd+01112024.pdf
+afspraak:
+  email: contact@jio.nl
+personnel:
+  aantalFte: 687,0
+  peildatumFte: '2025-01-01'
+  toelichtingFte: Het aantal fte aan formatie
 contact:
   website: https://www.justitieleictorganisatie.nl
   email: contact@jio.nl
+  bezoekadres: Stavorenweg 3, 2803 PT Gouda
+  postadres: Postbus 850, 2800 AW Gouda
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gouda
+    openbare_ruimte: Stavorenweg
+    huisnummer: '3'
+    postcode: 2803 PT
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '850'
+    postcode: 2800 AW
+    woonplaats: Gouda
+  - type: Woo-Adres
+    postbus: '850'
+    postcode: 2800 AW
+    woonplaats: Gouda
+  - type: Woo-Adres
+    openbare_ruimte: Stavorenweg
+    huisnummer: '3'
+    postcode: 2803 PT
+    woonplaats: Gouda
+  phones:
+  - nummer: (088) 075 71 00
+    label: receptie
+  emails:
+  - email: contact@jio.nl
+    label: algemeen
+  - email: ict-servicedesk@jio.nl
+  - email: woo@jio.nl
+    label: Digitale Woo-verzoeken
+  internet_addresses:
+  - url: https://www.justitieleictorganisatie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.justitieleictorganisatie.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Justitiële ICT Organisatie
+    url: https://nl.linkedin.com/company/justiti%C3%ABle_ict_organisatie
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-28'
+last_verified: '2026-05-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28585304/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28585304/jio
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-01-01'

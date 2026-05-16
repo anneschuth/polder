@@ -1,20 +1,93 @@
 id: org:gr-wsd
 type: gemeenschappelijke-regeling
+subname: Werkvoorzieningsschap De Dommel
 identifiers:
   roo_id: '26122498'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0292
+  owms: http://standaarden.overheid.nl/owms/terms/wsd
+  kvk: '17254987'
+  organisatiecode: so0292
+  rsin: '006132406'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling WSD
+  roo_id: '30158285'
 names:
 - value: WSD
   abbr: WSD
   valid_from: '1900-01-01'
+description:
+  text: WSD is het sociaal werkbedrijf voor negen gemeenten binnen de driehoek Den
+    Bosch-Tilburg-Eindhoven. Wij ondersteunen mensen met een afstand tot de arbeidsmarkt
+    bij het vinden van werk. Dit omdat wij geloven in een maatschappij waarin iedereen
+    mee kan doen, ook als je een afstand tot de arbeidsmarkt hebt. Door mensen te
+    begeleiden en te ontwikkelen, zorgen wij voor passend werk. Het liefst bij een
+    reguliere werkgever en als het nodig is bij WSD.
+  url: https://www.wsd-groep.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wsd-groep.nl/contact-wsd
+      overzichtURL: https://organisaties.overheid.nl/woo/26122498/WSD
+  wooVerzoek:
+    url: https://www.wsd-groep.nl/contact
+organogram_url: https://www.wsd-groep.nl/over-wsd-sociaal-werkbedrijf/organogram
+afspraak:
+  email: info@wsd-groep.nl
+  telefoonnummer: (0411) 65 01 11
+  url: https://www.wsd-groep.nl/contact
 contact:
   website: https://www.wsd-groep.nl
   email: info@wsd-groep.nl
+  postadres: Postbus 173, 5280 AD Boxtel
+  bezoekadres: Schouwrooij 20, 5281 RE Boxtel
+  addresses:
+  - type: Postadres
+    postbus: '173'
+    postcode: 5280 AD
+    woonplaats: Boxtel
+  - type: Bezoekadres
+    openbare_ruimte: Schouwrooij
+    huisnummer: '20'
+    postcode: 5281 RE
+    woonplaats: Boxtel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '173'
+    postcode: 5280 AD
+    woonplaats: BOXTEL
+  phones:
+  - nummer: (0411) 65 01 11
+    label: algemeen
+  emails:
+  - email: info@wsd-groep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wsd-groep.nl
+    label: algemeen
+  - url: https://www.wsd-groep.nl/contact.html
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-13'
+last_verified: '2025-09-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26122498/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26122498/wsd
+  retrieved: '2026-05-16'
+roo_start_datum: '2002-01-01'

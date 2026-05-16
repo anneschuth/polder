@@ -4,20 +4,76 @@ identifiers:
   roo_id: '29450269'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb099993
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Autoriteit online Terroristisch en Kinderpornografisch Materiaal
   abbr: ATKM
   valid_from: '1900-01-01'
+description:
+  text: De Autoriteit online Terroristisch en Kinderpornografisch Materiaal (ATKM)
+    ziet toe op het opsporen en laten verwijderen van internetmateriaal met een terroristisch
+    of kinderpornografisch karakter, zodat dit niet verder kan worden verspreid.
+  url: https://www.atkm.nl/over-de-atkm
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,20,21,22,23
+      toelichting: De artikelen 12, 21 en 22 van de Kaderwet zelfstandige bestuursorganen
+        zijn niet van toepassing op de Autoriteit online Terroristisch en Kinderpornografisch
+        Materiaal (ATKM).In afwijking van artikel 20 van de Kaderwet is de ATKM slechts
+        verplicht om aan de minister van Justitie en Veiligheid inlichtingen te verstrekken
+        of inzage te geven in zakelijke gegevens en bescheiden met betrekking tot
+        het gevoerde financi&euml;le beheer en de administratieve organisatie. De
+        ATKM verstrekt aan de minister de gegevens zoals bedoeld in artikel 21, lid
+        1, van de EU-verordening 2021/784.Artikel 23 van de Kaderwet is alleen van
+        toepassing op het door de ATKM gevoerde financi&euml;le beheer en de administratieve
+        organisatie.
+wettelijke_grondslagen:
+- opschrift: EU-verordening 2021/784 van 29 april 2021
+  referentie: https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX%3A32021R0784&from=NL
+- opschrift: Uitvoeringswet verordening terroristische online-inhoud, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0048064/2025-09-05#Paragraaf2_Artikel2
+taken_en_bevoegdheden: De Autoriteit online Terroristisch en Kinderpornografisch Materiaal
+  (ATKM) heeft als voornaamste taken:* terroristisch en kinderpornografisch materiaal
+  op het internet signaleren;* een snelle verwijdering van dergelijk materiaal garanderen,
+  door verwijderingsbevelen aan aanbieders van hostingdiensten uit te vaardigen;*
+  de verspreiding van dergelijk materiaal tegengaan, in samenwerking met de internetsector.
+personnel:
+  aantalFte: 34,0
+  peildatumFte: '2023-12-31'
 contact:
   website: https://www.atkm.nl/
   email: info@atkm.nl
+  phones:
+  - nummer: 06 27 41 28 93
+    label: pers
+  emails:
+  - email: info@atkm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.atkm.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.atkm.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-08'
+last_verified: '2026-04-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29450269/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29450269/atkm
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb099993
   retrieved: '2026-05-09'
+roo_start_datum: '2023-09-01'

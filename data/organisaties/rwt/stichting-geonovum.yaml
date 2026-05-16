@@ -2,17 +2,63 @@ id: org:stichting-geonovum
 type: rwt
 identifiers:
   roo_id: '27912339'
+  kvk: '32122905'
+  oin: 00000001817834175000
+  rsin: '817834175'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Geonovum
   valid_from: '1900-01-01'
+description:
+  text: Geonovum is een overheidsstichting met veel kennis en een rijk netwerk. De
+    overheid beter laten presteren met geo-informatie. Dat is waar wij dagelijks aan
+    werken. We doen dat door de toegankelijkheid van geo-informatie te verbeteren
+    en door de uitwisseling van geo-informatie onderling en met andere soorten gegevens
+    mogelijk te maken met standaarden. Daarnaast helpen we overheidsorganisaties om
+    geo-informatie beter te benutten, door hen te informeren over bestaande voorzieningen.
+    En door organisaties die behoefte hebben aan geo-informatie, te verbinden aan
+    partijen die hen daarmee kunnen helpen.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.geonovum.nl
   email: info@geonovum.nl
+  bezoekadres: Barchman Wuytierslaan 10, 3818 LH Amersfoort
+  postadres: Postbus 508, 3800 AM Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Barchman Wuytierslaan 10
+    postcode: 3818 LH
+    woonplaats: Amersfoort
+  - type: Postadres
+    postbus: '508'
+    postcode: 3800 AM
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (033) 460 41 00
+    label: algemeen
+  emails:
+  - email: info@geonovum.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.geonovum.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912339/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912339/stichting-geonovum
+  retrieved: '2026-05-16'

@@ -3,14 +3,49 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963127'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0515
+  owms: http://standaarden.overheid.nl/owms/terms/swvcolverzeel
+  kvk: '55615856'
+  organisatiecode: so0515
+  rsin: '812099825'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling – Collectief vervoer Zeeuws Vlaanderen
+  roo_id: '29459888'
 names:
 - value: Samenwerkingsverband Collectief Vervoer Zeeuws-Vlaanderen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Stadhuisplein 1, 4530 AA Terneuzen
+  postadres: Postbus 35, 4530 AA Terneuzen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 4530 AA
+    woonplaats: Terneuzen
+  - type: Postadres
+    postbus: '35'
+    postcode: 4530 AA
+    woonplaats: Terneuzen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-20'
+last_verified: '2025-08-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963127/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963127/samenwerkingsverband-collectief-vervoer-zeeuws-vlaanderen
+  retrieved: '2026-05-16'
+roo_start_datum: '2000-04-01'

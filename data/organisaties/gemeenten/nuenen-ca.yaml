@@ -6,21 +6,142 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0820
   roo_id: '24805'
   wikidata: Q9855
+  owms: http://standaarden.overheid.nl/owms/terms/Nuenen,_Gerwen_en_Nederwetten
+  ictu: 00820
+  organisatiecode: gm0820
+  rsin: 001902854
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NGN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Nuenen, Gerwen en Nederwetten
   abbr: Nuenen c.a.
   valid_from: '1900-01-01'
+description:
+  url: https://www.nuenen.nl/over-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.nuenen.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/24805/Gemeente_Nuenen_Gerwen_en_Nederwetten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://nuenen.raadsinformatie.nl/dashboard
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.nuenen.nl/woo-verzoeken
+    - informatiecategorie: Convenanten
+      url: https://open.nuenen.nl/convenanten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nuenen,+Gerwen+en+Nederwetten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://nuenen.begrotingsapp.nl
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nuenen,+Gerwen+en+Nederwetten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nuenen,+Gerwen+en+Nederwetten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://open.nuenen.nl/verzoek-indienen
+afspraak:
+  email: gemeentehuis@nuenen.nl
+  telefoonnummer: (040) 263 16 31
+  url: https://nuenen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 34,11
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 34.11
+  aantal_inwoners: 24473
+  inwoners: '717'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 717.0
+  bevat_plaatsen_raw: Nuenen
+  bevat_plaatsen:
+  - Nuenen
+council:
+  total_seats: 19
+  parties:
+  - naam: D66
+    aantal_zetels: 3
+  - naam: ONS Nuenen, Gerwen en Nederwetten
+    aantal_zetels: 3
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: W70
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Combinatie Nuenen c.a.
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: De Nuenense Mens
+    aantal_zetels: 1
+  - naam: Zelfstandig raadslid
+    aantal_zetels: 1
 contact:
   website: https://www.nuenen.nl
   email: gemeentehuis@nuenen.nl
+  bezoekadres: Jan van Schijnveltlaan 2, 5671 CK NUENEN
+  postadres: Postbus 10000, 5670 GA NUENEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jan van Schijnveltlaan
+    huisnummer: '2'
+    postcode: 5671 CK
+    woonplaats: NUENEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5670 GA
+    woonplaats: NUENEN
+  - type: Woo-Adres
+    postbus: '10000'
+    postcode: 5670 GA
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Jan van Schijnveltlaan
+    huisnummer: '2'
+    postcode: 5671 CK
+    ter_attentie_van: Vergunningen
+    woonplaats: NUENEN
+  phones:
+  - nummer: (040) 263 16 31
+    label: algemeen
+  emails:
+  - email: gemeentehuis@nuenen.nl
+    label: algemeen
+  - email: omgevingsvergunning@nuenen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.nuenen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24805/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24805/nuenen-ca
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

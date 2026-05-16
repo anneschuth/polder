@@ -2,14 +2,32 @@ id: org:stichting-koninklijk-nederlands-normalisatie-instituut
 type: rwt
 identifiers:
   roo_id: '30133378'
+  kvk: '41150051'
+  rsin: 002814237
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Stichting Koninklijk Nederlands Normalisatie Instituut
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Vlinderweg
+    huisnummer: '6'
+    postcode: 2623 AX
+    woonplaats: Delft
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133378/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133378/stichting-koninklijk-nederlands-normalisatie-instituut
+  retrieved: '2026-05-16'

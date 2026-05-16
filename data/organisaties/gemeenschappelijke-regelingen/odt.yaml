@@ -5,23 +5,120 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0892
   oin: 00000001858579509000
   kvk: '71101241'
+  owms: http://standaarden.overheid.nl/owms/terms/odtwente
+  organisatiecode: so0892
+  rsin: '858579509'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Twente
+  roo_id: '29772777'
 names:
 - value: Omgevingsdienst Twente
   abbr: ODT
   valid_from: '1900-01-01'
+description:
+  text: Omgevingsdienst Twente werkt aan een gezonde, veilige en duurzame leefomgeving,
+    zodat iedereen in Twente prettig kan wonen, werken en leven.In opdracht van de
+    veertien Twentse gemeenten en de provincie Overijssel voeren wij taken uit op
+    het gebied van vergunningverlening, toezicht en handhaving.
+  url: https://odtwente.nl/over+ons/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://odtwente.nl/over+ons/woo-verzoek/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28597010/Omgevingsdienst_Twente
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Klachtoordelen
+      url: https://odtwente.nl/over+ons/klachtenregeling/klachtoordelen/default.aspx
+      toelichting: Onder een klachtenoordeel wordt de formele brief verstaan die een
+        overheidsorganisatie stuurt aan de klager, in reactie op de klacht. De klacht
+        moet betrekking hebben op een gedraging van een medewerker van de organisatie.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://odtwente.nl/over+ons/algemeen+bestuur/vastgestelde+stukken/default.aspx
+      toelichting: Jaarplannen en jaarverslagen van  bestuursorganen inzake de  voorgenomen
+        uitvoering van de taak of  de verantwoording van die uitvoering.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://odtwente.nl/over+ons/woo-verzoek/default.aspx
+      toelichting: Pagina voor informatieverzoek of WOO-verzoek en de documenten ter
+        inzage
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://odtwente.nl/over+ons/algemeen+bestuur/vastgestelde+stukken/default.aspx
+      toelichting: Op deze pagina vindt u een overzicht van de vastgestelde documenten.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://odtwente.nl/over+ons/algemeen+bestuur/vergaderingen/default.aspx
+      toelichting: Planning en agenda's vergaderingen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Twente%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://odtwente.nl/over+ons/overzicht+onderzoeksrapporten/default.aspx
+      toelichting: Op deze link zijn de onderzoeksrapporten te raadplegen
+  wooVerzoek:
+    url: https://odtwente.nl/over+ons/woo-verzoek/default.aspx
+afspraak:
+  email: info@odtwente.nl
+  telefoonnummer: (0546) 74 95 00
+  url: https://odtwente.nl/contact/default.aspx
 contact:
   website: https://odtwente.nl
   email: info@odtwente.nl
+  bezoekadres: Haven Zuidzijde 30, 7607 EW Almelo
+  postadres: Postbus 499, 7600 AL Almelo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Haven Zuidzijde
+    huisnummer: '30'
+    postcode: 7607 EW
+    woonplaats: Almelo
+  - type: Postadres
+    postbus: '499'
+    postcode: 7600 AL
+    woonplaats: Almelo
+  - type: Woo-Adres
+    toelichting: De Omgevingsdienst Twente is gevestigd in het Stadhuis in Almelo
+    openbare_ruimte: Haven Zuidzijde
+    huisnummer: '30'
+    postcode: 7607 EW
+    woonplaats: Almelo
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  phones:
+  - nummer: (0546) 74 95 00
+    label: algemeen
+  emails:
+  - email: info@odtwente.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://odtwente.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odtwente.nl/contact/default.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28597010/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28597010/odt
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-10-18'

@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774851
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/37665/gemeente-vught
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30540043
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7771223

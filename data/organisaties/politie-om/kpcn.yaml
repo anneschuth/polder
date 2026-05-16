@@ -4,16 +4,75 @@ identifiers:
   roo_id: '29908881'
 classification: politie
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Korps Politie Caribisch Nederland
   abbr: KPCN
   valid_from: '1900-01-01'
+description:
+  text: "Het Korps Politie Caribisch Nederland staat voor een integere en betrouwbare\
+    \ politie organisatie, die zegt wat ze doet en doet wat ze zegt. Een organisatie\
+    \ die waakzaam en dienstbaar is en daadkrachtig en professioneel optreedt: vriendelijk\
+    \ als het kan, streng als het moet.Dit houdt in dat we:•\tBereikbaar zijn voor\
+    \ iedereen•\tEen goede verbinding hebben met de bewoners en bezoekers van de eilanden•\t\
+    Direct adequaat reageren op noodhulp-meldingen•\tKlant- en doelgericht reageren•\t\
+    Afspraken nakomen•\tOnze eigen grenzen kennen en aangeven naar buiten toe•\tLokale\
+    \ en bovenlokale criminaliteit adequaat aanpakken•\tActief samenwerking zoeken\
+    \ met andere partijen indien nodig•\tInteger en betrouwbaar handelen•\tOnze organisatie\
+    \ zodanig inrichten en opleiden zodat bovenstaande waargemaakt kan"
 contact:
   website: https://www.politiecn.com/
   email: politie@politiecn.com
+  bezoekadres: 'Kaya Libertador Simon Bolivar #4, Kralendijk'
+  addresses:
+  - type: Bezoekadres
+    toelichting: Locatie Bonaire
+    openbare_ruimte: Kaya Libertador Simon Bolivar
+    huisnummer: '#4'
+    woonplaats: Kralendijk
+    land: Bonaire
+  - type: Bezoekadres
+    toelichting: Locatie Saba
+    openbare_ruimte: Samuel A. Charlesstreet
+    huisnummer: '#1'
+    woonplaats: The Bottom
+    land: Saba
+  - type: Bezoekadres
+    toelichting: Locatie Sint Eustatius
+    openbare_ruimte: Father van Tefelenweg
+    huisnummer: '#10'
+    woonplaats: Oranjestad
+    land: Sint Eustatius
+  phones:
+  - nummer: +599 715 80 00
+    label: algemeen Bonaire
+  - nummer: +599 416 37 37
+    label: algemeen Saba
+  - nummer: +599 318 23 33
+    label: algemeen Sint Eustatius
+  emails:
+  - email: politie@politiecn.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.politiecn.com/
+    label: algemeen
+  contact_forms:
+  - url: https://www.politiecn.com/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Korps Politie Caribisch Nederland
+    url: https://www.facebook.com/KorpsPolitieCaribischNederland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-14'
+last_verified: '2025-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908881/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908881/kpcn
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

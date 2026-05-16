@@ -3,7 +3,7 @@ name:
   full: M.F. Eerenberg
   family: Eerenberg
   given: M.F.
-  initials: M.
+  initials: M.F.
 mandaten:
 - id: 6dea31af-4e46-44cd-a02b-8812a2740541
   organization_id: org:gemeente-hilversum
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4225968
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28797/gemeente-hilversum
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25932700
 - id: b3f98879-21de-40f1-a8ff-f5c51b1ae6c8
   organization_id: org:gemeente-hilversum
   post_id: post:raadslid-gemeente-hilversum

@@ -3,7 +3,7 @@ name:
   full: E.J. Veldhuis
   family: Veldhuis
   given: E.J.
-  initials: E.
+  initials: E.J.
 mandaten:
 - id: 4d0ecbc5-5bec-4db6-b1af-d03862ead3e7
   organization_id: org:gemeente-berkelland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7277643
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30550484
 - id: c8cdcc2b-c203-41ef-b142-4d72ed00a5a7
   organization_id: org:gemeente-berkelland
   post_id: post:raadslid-gemeente-berkelland

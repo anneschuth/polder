@@ -2,14 +2,33 @@ id: org:stichting-fonds-kwadraat
 type: rwt
 identifiers:
   roo_id: '30133571'
+  kvk: '41198822'
+  rsin: 005906222
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: stichting Fonds Kwadraat
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Cornelis Dopperkade
+    huisnummer: '5'
+    huisnummer_toevoeging: a
+    postcode: 1077 KL
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133571/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133571/stichting-fonds-kwadraat
+  retrieved: '2026-05-16'

@@ -2,8 +2,13 @@ id: org:gr-bedrijf-voor-werk-en-re-integratie
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966524'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '01177143'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling BWR
+  roo_id: '24966519'
 names:
 - value: Bedrijf voor Werk en Re-integratie
   valid_from: '1900-01-01'
@@ -11,9 +16,33 @@ names:
 contact:
   website: http://www.bwr.nu
   email: info@bwr.nu
+  bezoekadres: Molenraai 1, 9611 TH Sappemeer
+  postadres: Postbus 50, 9610 AB Sappemeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Molenraai
+    huisnummer: '1'
+    postcode: 9611 TH
+    woonplaats: Sappemeer
+  - type: Postadres
+    postbus: '50'
+    postcode: 9610 AB
+    woonplaats: Sappemeer
+  phones:
+  - nummer: (0598) 36 43 64
+    label: algemeen
+  emails:
+  - email: info@bwr.nu
+    label: algemeen
+  internet_addresses:
+  - url: http://www.bwr.nu
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2015-07-01'
+last_mutation: '2019-12-11'
+last_verified: '2019-12-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966524/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966524/bedrijf-voor-werk-en-re-integratie
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-02-01'

@@ -1,26 +1,109 @@
 id: org:gr-syntrophos
 type: gemeenschappelijke-regeling
 identifiers:
-  oin: 00000001852523920000
-  kvk: '57304769'
+  oin: 00000001861843046000
+  kvk: '80896294'
   roo_id: '28427874'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0711
+  owms: http://standaarden.overheid.nl/owms/terms/syntrophos
+  btw: NL861843046B01
+  organisatiecode: so0711
+  rsin: '861843046'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Syntrophos
+  roo_id: '29165842'
 names:
 - value: Syntrophos
   valid_from: '1900-01-01'
+description:
+  text: Syntrophos is het Shared Service Center (SSC) voor de gemeenten Nissewaard
+    en Voorne aan Zee.Wij leveren diensten op het gebied van ICT, GEO-informatie en
+    data. Met ongeveer 55 specialisten staan wij iedere dag klaar voor onze gebruikers.
+    Wij verbinden kennis, middelen en mensen met elkaar om zo een bijdrage te leveren
+    aan de dienstverlening van onze partners.
+  url: https://www.syntrophos.nl/diensten
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.syntrophos.nl/publicaties/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28427874/Syntrophos
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.syntrophos.nl/publicaties/jaarverslagen
+  wooVerzoek:
+    url: https://www.syntrophos.nl/publicaties/woo-verzoek
+organogram_url: https://www.syntrophos.nl/over-syntrophos
+afspraak:
+  email: info@syntrophos.nl
+  telefoonnummer: 01816957000
+  url: https://www.syntrophos.nl/publicaties/woo-verzoek
 contact:
   website: www.syntrophos.nl
   email: info@syntrophos.nl
+  postadres: Uitstraat 8, 3201 EN Spijkenisse
+  bezoekadres: Uitstraat 8, 3201 EN Spijkenisse
+  addresses:
+  - type: Woo-Adres
+    openbare_ruimte: Uitstraat
+    huisnummer: '8'
+    postcode: 3201 EN
+    woonplaats: Spijkenisse
+  - type: Postadres
+    openbare_ruimte: Uitstraat
+    huisnummer: '8'
+    postcode: 3201 EN
+    woonplaats: Spijkenisse
+  - type: Vestigingsadres
+    openbare_ruimte: Uitstraat
+    huisnummer: '8'
+    postcode: 3201 EN
+    woonplaats: Spijkenisse
+  - type: Bezoekadres
+    openbare_ruimte: Uitstraat
+    huisnummer: '8'
+    postcode: 3201 EN
+    woonplaats: Spijkenisse
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: 01816957000
+    label: algemeen
+  emails:
+  - email: info@syntrophos.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.syntrophos.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.syntrophos.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2024-11-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28427874/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28427874/syntrophos
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-02-21'

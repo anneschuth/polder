@@ -6,21 +6,172 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0441
   roo_id: '28858'
   wikidata: Q9955
+  owms: http://standaarden.overheid.nl/owms/terms/Schagen_(gemeente)
+  ictu: '00441'
+  organisatiecode: gm0441
+  rsin: '823646518'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SCH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Schagen
   abbr: Schagen
   valid_from: '1900-01-01'
+description:
+  text: Thuis in gemeente SchagenVan bollenvelden tot aan de kust. Van winkelen in
+    de stad, of uitwaaien aan het strand. Met prachtige dorpen is er voor elk wat
+    wils in de Kop van Noord-Holland. Een gemeente waar je jezelf kunt zijn en waar
+    je je veilig voelt. Waar je kunt groeien en ontwikkelen. Waar je geluk en voldoening
+    vindt. Waar we ons graag thuis voelen.Dat thuisgevoel is anders voor iedereen.
+    Door ons te omringen met de mensen van wie we houden, door ons huis in te richten
+    op een manier die bij ons past en door een omgeving te creëren waarin we ons comfortabel
+    en veilig voelen. Thuis in gemeente Schagen is er voor alle inwoners, ongeacht
+    achtergrond, leeftijd, gender of culturele achtergrond.Samen dragen wij bij aan
+    een veilige, duurzame en gezonde gemeente Schagen. Een gemeente waarin we trots
+    zijn en die we graag laten zien en van ons laten horen. Waar je de mensen om je
+    heen kent, de bakker, de slager en de fietsenmaker, wie je ook bent en wat je
+    ook doet. Thuis is iets bijzonders en persoonlijks.Bij ons kun je jezelf ontwikkelen
+    en groeien in de richting die jij voor ogen hebt. Samen met jouw collega’s is
+    het een plek waar je kunt blijven leren en jezelf uitdagen. Een organisatiecultuur
+    en werkgever die je aangenaam zullen verrassen. Thuis is waar je jas hangt. Thuis
+    is in gemeente Schagen.
+  url: https://www.schagen.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.schagen.nl/woo-besluiten
+      overzichtURL: https://organisaties.overheid.nl/woo/28858/Gemeente_Schagen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/zoeken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://lokaleregelgeving.overheid.nl
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Schagen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.schagen.nl/woo-verzoek
+organogram_url: https://www.schagen.nl/organogram
+afspraak:
+  email: postbus8@schagen.nl
+  telefoonnummer: (0224) 21 04 00
+  url: https://www.schagen.nl/contact
+geography:
+  oppervlakte: 19,35
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 19.35
+  aantal_inwoners: 48778
+  inwoners: '2520'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2520.0
+  bevat_plaatsen_raw: '''t Zand, Burgerbrug, Callantsoog, Dirkshorn, Oudesluis, Oudkarspel,
+    Petten, Schagen, Schagerbrug, Sint Maarten, Sint Maartensbrug, Sint Maartensvlotbrug,
+    Tuitjenhorn, Waarland, Warmenhuizen'
+  bevat_plaatsen:
+  - '''t Zand'
+  - Burgerbrug
+  - Callantsoog
+  - Dirkshorn
+  - Oudesluis
+  - Oudkarspel
+  - Petten
+  - Schagen
+  - Schagerbrug
+  - Sint Maarten
+  - Sint Maartensbrug
+  - Sint Maartensvlotbrug
+  - Tuitjenhorn
+  - Waarland
+  - Warmenhuizen
+council:
+  total_seats: 28
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: JESS LOKAAL
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Seniorenpartij Schagen
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: JessLokaal
+    aantal_zetels: 1
+  - naam: Wens4u
+    aantal_zetels: 1
 contact:
   website: https://www.schagen.nl
   email: postbus8@schagen.nl
+  bezoekadres: Laan 19, 1741 EA SCHAGEN
+  postadres: Postbus 8, 1740 AA SCHAGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Laan
+    huisnummer: '19'
+    postcode: 1741 EA
+    woonplaats: SCHAGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '8'
+    postcode: 1740 AA
+    woonplaats: SCHAGEN
+  - type: Woo-Adres
+    openbare_ruimte: Laan
+    huisnummer: '19'
+    postcode: 1741 EA
+    woonplaats: Schagen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Laan
+    huisnummer: '19'
+    postcode: 1741 EA
+    woonplaats: SCHAGEN
+  phones:
+  - nummer: (0224) 21 04 00
+    label: algemeen
+  emails:
+  - email: postbus8@schagen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.schagen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.schagen.nl/consult
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28858/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28858/schagen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

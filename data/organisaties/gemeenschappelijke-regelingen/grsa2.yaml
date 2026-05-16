@@ -1,27 +1,101 @@
 id: org:gr-grsa2
 type: gemeenschappelijke-regeling
+subname: A2-Samenwerking
 identifiers:
   roo_id: '24964661'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0778
   oin: 00000001851630315000
   kvk: '55263739'
+  owms: http://standaarden.overheid.nl/owms/terms/sama2gem
+  organisatiecode: so0778
+  rsin: '851630315'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Samenwerking A2-gemeenten
+  roo_id: '29516167'
 names:
 - value: Samenwerking A2-gemeenten
   abbr: GRSA2
   valid_from: '1900-01-01'
+description:
+  text: 'Sinds 2004 werken de gemeenten Cranendonck, Heeze-Leende en Valkenswaard
+    samen op het gebied van bedrijfsvoering en het onderdeel Werk & Inkomen. Dit samenwerkingsverband
+    is genoemd naar de snelweg A2 die de 3 gemeenten met elkaar verbindt: A2-Samenwerking.Gezamenlijk
+    bedienen de gemeenten ongeveer 66.000 inwoners.'
+  url: https://www.a2samenwerking.nl/over-a2-samenwerking
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.a2samenwerking.nl/informatie-opvragen-bij-a2-samenwerking-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/24964661/Samenwerking_A2-gemeenten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+A2-gemeenten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerking+A2-gemeenten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.a2samenwerking.nl/informatie-opvragen-bij-a2-samenwerking-wet-open-overheid-woo
+organogram_url: https://cuatro.sim-cdn.nl/a2samenwerking/uploads/factsheet_a2-samenwerking_-_missie_visie_organogram.pdf?cb=GS34bT6P
+afspraak:
+  url: https://www.a2samenwerking.nl/contact
 contact:
   website: https://www.a2samenwerking.nl
   email: info@a2samenwerking.nl
+  bezoekadres: Jan Deckersstraat 2, 5591 HS Heeze
+  postadres: Postbus 10000, 5590 GA Heeze
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Heeze-Leende
+    openbare_ruimte: Jan Deckersstraat
+    huisnummer: '2'
+    postcode: 5591 HS
+    woonplaats: Heeze
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5590 GA
+    woonplaats: Heeze
+  - type: Woo-Adres
+    postbus: '10000'
+    postcode: 5590 GA
+    woonplaats: Heeze
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: (040) 224 14 00
+    label: algemeen
+  emails:
+  - email: info@a2samenwerking.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.a2samenwerking.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.a2samenwerking.nl/a2-samenwerking/contact_42339
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964661/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964661/grsa2
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-01-01'

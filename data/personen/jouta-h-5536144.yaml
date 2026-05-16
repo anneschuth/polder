@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5536146
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/27465436/gemeente-noardeast-fryslan
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29204651
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5536144

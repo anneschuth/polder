@@ -3,17 +3,61 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967607'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0730
+  owms: http://standaarden.overheid.nl/owms/terms/brandwvlmid
+  kvk: '55894186'
+  organisatiecode: so0730
+  rsin: '807611323'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling stadsgewestelijke brandweer
+  roo_id: '24967602'
 names:
 - value: Stadsgewestelijke brandweer Vlissingen-Middelburg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.brandweerstadsgewest.nl
   email: info@brandweerstadsgewest.nl
+  bezoekadres: Stromenweg 7, 4335 JR Middelburg
+  postadres: Postbus 7173, 4330 GD Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stromenweg
+    huisnummer: '7'
+    postcode: 4335 JR
+    woonplaats: Middelburg
+  - type: Postadres
+    postbus: '7173'
+    postcode: 4330 GD
+    woonplaats: Middelburg
+  phones:
+  - nummer: (0118) 49 45 00
+    label: algemeen
+  emails:
+  - email: info@brandweerstadsgewest.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.brandweerstadsgewest.nl
+    label: algemeen
+  fax: (0118) 49 45 10
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967607/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967607/stadsgewestelijke-brandweer-vlissingen-middelburg
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-08-01'

@@ -2,15 +2,45 @@ id: org:oovb-stichting-cordaid
 type: rwt
 identifiers:
   roo_id: '27911259'
+  kvk: '41160054'
+  rsin: '808298276'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Cordaid
   valid_from: '1900-01-01'
-  valid_until: '2023-03-09'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-03-09'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Grote Marktstraat 45, 2511 BH Den Haag
+  postadres: Postbus 16440, 2500 BK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Grote Marktstraat
+    huisnummer: '45'
+    postcode: 2511 BH
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16440'
+    postcode: 2500 BK
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: '2023-03-09'
+last_mutation: '2026-01-20'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27911259/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27911259/stichting-cordaid
+  retrieved: '2026-05-16'

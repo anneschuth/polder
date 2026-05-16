@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '135600'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-deia
+parent_id: org:onderdeel-sg-cluster
 names:
 - value: Centrale Eenheid Strategie
   abbr: CES
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-12-03'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/135600/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/135600/ces
+  retrieved: '2026-05-16'

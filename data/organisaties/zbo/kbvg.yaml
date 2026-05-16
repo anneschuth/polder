@@ -3,18 +3,111 @@ type: zbo
 identifiers:
   roo_id: '27906586'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10009
+  kvk: '27356362'
+  rsin: '810134809'
 classification: zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders
   abbr: KBvG
   valid_from: '1900-01-01'
+description:
+  text: De Koninklijke Beroepsorganisatie van Gerechtsdeurwaarders (KBvG) is een publiekrechtelijke
+    beroepsorganisatie (pbo), ingesteld bij Gerechtsdeurwaarderswet. Alle in Nederland
+    gevestigde (waarnemend, toegevoegd en kandidaat-) gerechtsdeurwaarders zijn lid
+    van de KBvG. De taak van de beroepsorganisatie is de bevordering van de vakbekwaamheid
+    en een goede beroepsuitoefening van de leden.
+  url: https://www.kbvg.nl/over-de-kbvg/organisatie
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kbvg.nl/over-de-kbvg/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27906586/Koninklijke_Beroepsorganisatie_van_Gerechtsdeurwaarders
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.kbvg.nl/over-de-kbvg/jaarverslagen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.kbvg.nl/wetten-en-regels/wetgeving
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.kbvg.nl/wetten-en-regels/test-gerechtsdeurwaardersverordening-en-lagere-regels
+  wooVerzoek:
+    url: https://www.kbvg.nl/over-de-kbvg/wet-open-overheid
+afspraak:
+  email: kbvg@kbvg.nl
+  url: https://www.kbvg.nl/bureau
 contact:
   website: www.kbvg.nl
   email: kbvg@kbvg.nl
+  bezoekadres: Prinses Margrietplantsoen 86, 2595 BR Den Haag
+  postadres: Prinses Margrietplantsoen 86, 2595 BR Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Margrietplantsoen
+    huisnummer: '86'
+    postcode: 2595 BR
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Prinses Margrietplantsoen
+    huisnummer: '86'
+    postcode: 2595 BR
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: WTC Den Haag, Toren E, 22ste verdieping
+    openbare_ruimte: Prinses Margrietplantsoen
+    huisnummer: '86'
+    postcode: 2595 BR
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 890 35 30
+    label: algemeen
+  emails:
+  - email: kbvg@kbvg.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.kbvg.nl
+    label: algemeen
+  - url: www.registergerechtsdeurwaarders.nl
+  - url: www.schuldenwijzer.nl
+  contact_forms:
+  - url: http://www.kbvg.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27906586/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27906586/kbvg
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
+roo_start_datum: '2001-07-16'

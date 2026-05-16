@@ -5,23 +5,103 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0823
   oin: 00000001853378502000
   kvk: '59229381'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Groningen
+  btw: NL085378502B01
+  loonheffing: 085378502L01
+  organisatiecode: so0823
+  rsin: '853378502'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Groningen
+  roo_id: '23862467'
 names:
 - value: Veiligheidsregio Groningen
   abbr: VGR
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://veiligheidsregiogroningen.nl/over-ons-veiligheidsregio-groningen/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/23862472/Veiligheidsregio_Groningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://veiligheidsregiogroningen.nl/wie-bestuurt-de-vrg/convenanten/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Groningen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://veiligheidsregiogroningen.nl/wie-bestuurt-de-vrg/jaarverslagen/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://veiligheidsregiogroningen.nl/over-ons-veiligheidsregio-groningen/woo-verzoek/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Groningen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://veiligheidsregiogroningen.nl/category/documenten/besluitenlijst-bestuur/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Groningen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://veiligheidsregiogroningen.nl/contact/informatie-opvragen/
+organogram_url: https://veiligheidsregiogroningen.nl/over-ons/organisatiestructuur/
+afspraak:
+  email: info@vrgroningen.nl
 contact:
   website: https://www.veiligheidsregiogroningen.nl
   email: info@vrgroningen.nl
+  bezoekadres: Sontweg 10, 9723 AT Groningen
+  postadres: Postbus 66, 9700 AB Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sontweg
+    huisnummer: '10'
+    postcode: 9723 AT
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '66'
+    postcode: 9700 AB
+    woonplaats: Groningen
+  - type: Woo-Adres
+    openbare_ruimte: Sontweg
+    huisnummer: '10'
+    postbus: '66'
+    postcode: 9723 AT
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  phones:
+  - nummer: (088) 162 50 00
+    label: algemeen
+  emails:
+  - email: info@vrgroningen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.veiligheidsregiogroningen.nl
+    label: algemeen
+  - url: https://www.veiligheidsregiogroningen.nl/over_ons/contactformulier
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-03-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23862472/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23862472/vgr
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-01-01'

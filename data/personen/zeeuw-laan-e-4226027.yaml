@@ -3,7 +3,7 @@ name:
   full: E.M. Zeeuw van der Laan
   family: Zeeuw van der Laan
   given: E.M.
-  initials: E.
+  initials: E.M.
 mandaten:
 - id: 65e5c3e2-8cbe-4769-b9e5-cff8b6418fdb
   organization_id: org:gemeente-hilversum
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4226029
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28797/gemeente-hilversum
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28670700
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4226027

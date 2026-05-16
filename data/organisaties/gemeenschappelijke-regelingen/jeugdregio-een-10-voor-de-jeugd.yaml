@@ -5,22 +5,101 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so1105
   oin: 00000003989323570000
   kvk: '98932357'
+  owms: http://standaarden.overheid.nl/owms/terms/tienvoorjeugd
+  organisatiecode: so1105
+  rsin: '868708872'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Jeugdregio Een 10 voor de Jeugd
+  roo_id: '30457079'
 names:
 - value: Jeugdregio Een 10 voor de Jeugd
   valid_from: '1900-01-01'
+description:
+  text: Gemeenschappelijke regeling Jeugdregio Een 10 voor de Jeugd  is een samenwerkingsverband
+    tussen de gemeenten Asten, Deurne, Geldrop-Mierlo, Gemert-Bakel, Helmond, Laarbeek,
+    Nuenen c.a., Someren, Son en Breugel, Veldhoven en Waalre op het gebied van inkoop
+    van Jeugdhulp. Onze organisatie heeft als doel om de beschikbaarheid en kwaliteit
+    van jeugdzorg voor de meest kwetsbare kinderen te verbeteren door het versterken
+    van de regionale samenwerking tussen gemeenten en het beter organiseren van de
+    regionale contractering en subsidiëring van regionale jeugdhulp. Onze organisatie
+    bestaat uit een Algemeen bestuur, Dagelijks bestuur, voorzitter en de ambtelijke
+    organisatie.Bestuurlijke organen:Het Algemeen bestuur is het hoogste besluitvormende
+    orgaan binnen Jeugdregio Een 10 voor de Jeugd. Zij stelt beleidskaders en begrotingen
+    vast en controleert de uitvoering van het beleid. Het Algemeen bestuur bestaat
+    uit vertegenwoordigers van de deelnemende gemeenten; van iedere gemeente één wethouder
+    sociaal domein.Het Dagelijks bestuur is verantwoordelijk voor de dagelijkse leiding
+    en uitvoering van de besluiten van de regeling. Dit omvat het voorbereiden en
+    uitvoeren van beleid, het beheren van financiën en het toezicht houden op de uitvoering
+    van de taken. Een aantal van deze bevoegdheden zijn gemandateerd aan de Directeur.De
+    voorzitter vertegenwoordigt de organisatie in en buiten rechte en zit de vergaderingen
+    van het Algemeen bestuur en Dagelijks bestuur voor.Ambtelijke organisatie:Het
+    openbaar lichaam heeft geen personeel in dienst. De taken van het openbaar lichaam
+    worden uitgevoerd door medewerkers van de deelnemende gemeenten en/of van het
+    openbaar lichaam Gemeenschappelijke regeling Peelgemeenten.Het openbaar lichaam
+    voert een takenpakket uit zoals vastgelegd in de Wet verbetering beschikbaarheid
+    jeugdhulp en daarop gebaseerde wet- en regelgeving met inachtneming van de regiovisie
+    Een 10 voor de Jeugd die door de gemeenteraden van de deelnemende gemeenten is
+    vastgesteld. In aanvulling hierop kan het openbaar lichaam ook andere taken uitvoeren
+    die gerelateerd zijn aan het doel van de organisatie.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://openbareinformatie.10vdj.nl/api/openinfo/documents/a7d5c503-bfa4-43c1-8a82-814d8c08060b
+      overzichtURL: https://organisaties.overheid.nl/woo/30457073/Jeugdregio_Een_10_voor_de_Jeugd
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://openbareinformatie.10vdj.nl/o
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((dt.type==%22ander%20besluit%20van%20algemene%20strekking%22)or(dt.type==%22beleidsregel%22)or(dt.type==%22delegatie-%20of%20mandaatbesluit%22))and((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22))and(cql.textAndIndexes=%22Jeugdregio%22%20and%20cql.textAndIndexes=%22Een%22%20and%20cql.textAndIndexes=%2210%22%20and%20cql.textAndIndexes=%22voor%22%20and%20cql.textAndIndexes=%22de%22%20and%20cql.textAndIndexes=%22Jeugd%22)&zv=Jeugdregio+Een+10+voor+de+Jeugd&col=BladGemeenschappelijkeregeling
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22)and((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22))and(cql.textAndIndexes=%22Jeugdregio%22%20and%20cql.textAndIndexes=%22Een%22%20and%20cql.textAndIndexes=%2210%22%20and%20cql.textAndIndexes=%22voor%22%20and%20cql.textAndIndexes=%22de%22%20and%20cql.textAndIndexes=%22Jeugd%22)&zv=Jeugdregio+Een+10+voor+de+Jeugd&col=BladGemeenschappelijkeregeling
+  wooVerzoek:
+    url: https://openbareinformatie.10vdj.nl/api/openinfo/documents/a7d5c503-bfa4-43c1-8a82-814d8c08060b
 contact:
   website: https://jeugdwmo.nl/een-10-voor-de-jeugd/
   email: info@10vdj.nl
+  bezoekadres: Markt 1, 5751 BE Deurne
+  postadres: Postbus 3, 5750 AA Deurne
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 5751 BE
+    woonplaats: Deurne
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '3'
+    postcode: 5750 AA
+    woonplaats: Deurne
+  phones:
+  - nummer: (088) 501 33 00
+    label: algemeen
+  emails:
+  - email: info@10vdj.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://jeugdwmo.nl/een-10-voor-de-jeugd/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30457073/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30457073/jeugdregio-een-10-voor-de-jeugd
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2026-01-01'

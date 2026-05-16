@@ -3,16 +3,44 @@ type: zbo
 identifiers:
   roo_id: '29908855'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Economie, bedrijven en nationale rekeningen
   abbr: EBN
   valid_from: '1900-01-01'
+description:
+  text: Het departement Economie, bedrijven en nationale rekeningen (EBN) is een organisatieonderdeel
+    van het Centraal Bureau voor de Statistiek (CBS).
+taken_en_bevoegdheden: Het departement Economie, bedrijven en nationale rekeningen
+  (EBN) van het CBS bestaat uit onderstaande afdelingen, die elk zijn onderverdeeld
+  in een aantal teams:EBM (Beleids- en managementsondersteuning):* EBS (Beleidsstaf)*
+  EIO (Innovatie en onderzoek)* EIT (Informatiemanagement en toolexpertise)EOC (Overheidsfinanciën
+  en consumentenprijzen):* ODO (Decentrale overheden)* OCO (Centrale overheden)* OIO
+  (Integratie overheidsfinanciën)* CPI (Consumentenprijzen)ENR (Nationale rekeningen):*
+  SR (Sectorrekeningen)* AGT (Aanbod- en gebruiktabellen)* AMR (Arbeid, milieurekeningen
+  en regio)* PCO (Publicatie, coördinatie en onderzoek)EBD (Bedrijfsstatistieken):*
+  IEB (Industrie, energie en bouw)* PG (Producentenprijzen en goederenproductie* CD
+  (Commerciële dienstverlening)* HT (Handel en transport)* BC (Bedrijvenconjunctuur
+  en coördinatie)EBH (Bedrijfsstatistieken):* GO (Grote ondernemingen)* EHV (Internationale
+  handel verwerking)* EHO (Internationale handel output)* ESP (Statistiekproductie
+  bedrijfseconomische statistieken)* KIO (Informatieontwikkeling en output)ERB (Registers
+  bedrijven):* ERK (Registers en koppelingen)* EPT (Profilen en typeren ondernemingen)De
+  afdelingen en teams zijn overgenomen uit het [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908855/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908855/ebn
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-03'

@@ -3,18 +3,51 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '1950'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-wio
+parent_id: org:hoge-college-nationale-ombudsman
 names:
 - value: Sector Werk, Inkomen en Onderwijs
   abbr: WIO
   valid_from: '1900-01-01'
   valid_until: '2023-09-30'
+description:
+  text: Het behandelen van verzoeken en het doen van onderzoek op de aandachtsgebieden
+    werk, inkomen en onderwijs.
 contact:
   website: http://www.nationaleombudsman.nl/
   email: post@nationaleombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Postbus 93122, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '151'
+    postcode: 2594 AG
+    woonplaats: Den Haag
+    regio: Zuid Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '93122'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+    regio: Zuid Holland
+  phones:
+  - nummer: (070) 356 35 63
+    label: algemeen
+  emails:
+  - email: post@nationaleombudsman.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nationaleombudsman.nl/
+    label: algemeen
+  beschrijving: Het behandelen van verzoeken en het doen van onderzoek op de aandachtsgebieden
+    werk, inkomen en onderwijs.
 valid_from: '1900-01-01'
 valid_until: '2023-09-30'
+last_mutation: '2023-09-28'
+last_verified: '2023-09-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/1950/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/1950/wio
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-11-06'

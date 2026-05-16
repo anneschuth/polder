@@ -4,6 +4,10 @@ identifiers:
   roo_id: '27030703'
   tooi: https://identifier.overheid.nl/tooi/id/col/col02
   oin: 00000006510900001000
+  owms: http://standaarden.overheid.nl/owms/terms/Sint_Eustatius
+  ictu: 09002
+  organisatiecode: col02
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_OCT_BQ3
 classification: caribisch-openbaar-lichaam
 parent_id: null
 names:
@@ -12,14 +16,33 @@ names:
 contact:
   website: https://www.rijksdienstcn.com
   email: info@rijksdienstcn.com
+  bezoekadres: Fort Oranjestraat, Oranjestad, Sint Eustatius
+  addresses:
+  - type: Bezoekadres
+    toelichting: Mazinga Complex A, B
+    openbare_ruimte: Fort Oranjestraat
+    woonplaats: Oranjestad, Sint Eustatius
+  - type: Postadres
+  phones:
+  - nummer: +599 318 33 70
+    label: algemeen
+  emails:
+  - email: info@rijksdienstcn.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksdienstcn.com
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-03-01'
+last_verified: '2019-12-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27030703/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27030703/sint-eustatius
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-10-10'

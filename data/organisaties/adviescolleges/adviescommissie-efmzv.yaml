@@ -3,16 +3,47 @@ type: adviescollege
 identifiers:
   roo_id: '28391701'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10203
+  owms: http://standaarden.overheid.nl/owms/terms/acefmzv
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Adviescommissie EFMZV
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 3.1.8. van de Regeling Europese EZK- en LNV-subsidies
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0036758&hoofdstuk=3&titeldeel=3.1&artikel=3.1.8&z=2021-04-01&g=2021-04-01
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rvo.nl/onderwerpen/efmzv/regelgeving
+  internet_addresses:
+  - url: https://www.rvo.nl/onderwerpen/efmzv/regelgeving
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391701/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391701/adviescommissie-efmzv
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-09-01'

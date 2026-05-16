@@ -7,9 +7,28 @@ parent_id: org:onderdeel-commando-zeestrijdkrachten-czsk
 names:
 - value: Directie Personeel en Organisatie (DP&O)
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Rijkszee- en Marinehaven 1, 1781 ZZ Den Helder
+  postadres: Postbus 10000, 1780 CA Den Helder
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijkszee- en Marinehaven
+    huisnummer: '1'
+    postcode: 1781 ZZ
+    woonplaats: Den Helder
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '10000'
+    postcode: 1780 CA
+    woonplaats: Den Helder
+  phones:
+  - nummer: (0223) 65 90 18
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-02'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/91644/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/91644/directie-personeel-en-organisatie-dp-en-o
+  retrieved: '2026-05-16'

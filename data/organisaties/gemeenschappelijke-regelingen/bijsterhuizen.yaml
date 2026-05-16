@@ -2,18 +2,64 @@ id: org:gr-bijsterhuizen
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27964889'
+  owms: http://standaarden.overheid.nl/owms/terms/bijshuis
+  kvk: '51458667'
+  organisatiecode: so0886
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bijsterhuizen
+  roo_id: '27964883'
 names:
 - value: Bijsterhuizen
   valid_from: '1900-01-01'
   valid_until: '2023-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.bedrijvenparkbijsterhuizen.nl
   email: bijsterhuizen@bijsterhuizen.nl
+  bezoekadres: Kasteellaan 27, 6602 DB Wijchen
+  postadres: Postbus 9000, 6600 HA Wijchen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kasteellaan
+    huisnummer: '27'
+    postcode: 6602 DB
+    woonplaats: Wijchen
+  - type: Postadres
+    postbus: '9000'
+    postcode: 6600 HA
+    woonplaats: Wijchen
+  phones:
+  - nummer: (024) 751 73 64
+    label: algemeen
+  emails:
+  - email: bijsterhuizen@bijsterhuizen.nl
+    label: secretariaat
+  internet_addresses:
+  - url: http://www.bedrijvenparkbijsterhuizen.nl
+    label: algemeen
+  - url: http://www.bedrijvenparkbijsterhuizen.nl/#contactinfo
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2023-01-01'
+last_mutation: '2023-03-28'
+last_verified: '2023-03-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27964889/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27964889/bijsterhuizen
+  retrieved: '2026-05-16'
+roo_start_datum: '1992-10-01'

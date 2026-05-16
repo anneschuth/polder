@@ -1,25 +1,167 @@
 id: org:zbo-nipv
 type: zbo
+subname: Instituut Fysieke Veiligheid (voorheen)
 identifiers:
   roo_id: '28251542'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000185
   oin: 00000001823644510000
   kvk: '56802633'
+  owms: http://standaarden.overheid.nl/owms/terms/nipv
+  rsin: '823644510'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Nederlands Instituut Publieke Veiligheid
   abbr: NIPV
   valid_from: '1900-01-01'
+description:
+  text: Het Nederlands Instituut Publieke Veiligheid (NIPV) is een kennisinstituut
+    dat zich op onder meer crisisbeheersing en brandweerzorg richt. Door middel van
+    onderzoek, onderwijs, informatievoorziening en ondersteuning versterkt het NIPV
+    diverse crisispartners, waaronder de veiligheidsregio’s en het Rijk.
+  url: https://nipv.nl/over-nipv/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet veiligheidsregio's, artikel 66, lid 1
+  referentie: https://wetten.overheid.nl/BWBR0027466/2024-01-01#Paragraaf17_Artikel66
+taken_en_bevoegdheden: Het Nederlands Instituut Publieke Veiligheid (NIPV) heeft de
+  volgende taken:* het verzorgen van officiersopleidingen, alsmede het verzorgen van
+  andere (door de minister van Justitie en Veiligheid aan te wijzen) opleidingen die
+  met een examen zoals bedoeld in artikel 18, lid 4 van de Wet veiligheidsregio's
+  worden afgesloten;* het ontwikkelen van lesstof, oefenstof en leerstof voor bovengenoemde
+  opleidingen;* het ontwikkelen en in stand houden van expertise, door middel van
+  het verzamelen en beheren van relevante kennis en zo nodig door het verrichten van
+  toegepast wetenschappelijk onderzoek;* het ter beschikking stellen van de verzamelde
+  informatie en expertise aan organisaties die werkzaam zijn op het gebied van de
+  brandweerzorg, de rampenbestrijding, de crisisbeheersing en de geneeskundige hulpverlening;*
+  het verwerven en beheren van materieel (inclusief uitrustingen en telecommunicatievoorzieningen)
+  en dit waar nodig ter beschikking te stellen aan de veiligheidsregio's en gemeenten
+  met een gemeentelijke brandweer;* het verrichten van andere werkzaamheden op het
+  gebied van de brandweerzorg, de rampenbestrijding, de crisisbeheersing en de geneeskundige
+  hulpverlening, wat betreft het verzorgen van andere dan de hierboven bedoelde opleidingen
+  en het ontwikkelen van lesstof, oefenstof en leerstof voor dergelijke opleidingen;*
+  het werven en selecteren van kandidaten voor de bovengenoemde opleidingen;* het
+  organiseren van oefeningen;* het verrichten van andere activiteiten die de deskundigheid
+  van personen binnen de brandweerzorg, de rampenbestrijding, de crisisbeheersing
+  en de geneeskundige hulpverlening (of het functioneren van de organisaties waarvoor
+  zij werkzaam zijn) bevorderen;* het verrichten van onderzoek voor en het adviseren
+  van derden om direct of indirect een bijdrage te leveren aan de fysieke veiligheid.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://nipv.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28251542/Nederlands_Instituut_Publieke_Veiligheid
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://nipv.nl/documenten/gegevensbeschermingsbeleid/
+      toelichting: Gegevensbeschermingsbeleid
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://nipv.nl/over-nipv/
+      toelichting: Op https://nipv.nl/over-nipv/jaarplan/ vindt u onze jaarplannen
+        en op https://nipv.nl/over-nipv/jaarverslag/ zijn onze jaarverslagen te vinden.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://nipv.nl/onderzoek-overzicht/
+      toelichting: Via de diverse onderzoekspagina komt u terecht op de volledige
+        onderzoeksrapporten over dat onderwerp. Voor een volledige lijst met alle
+        documenten bezoekt u https://nipv.nl/documenten-zoeken/
+  wooVerzoek:
+    url: https://nipv.nl/woo-verzoek/
+organogram_url: https://nipv.nl/wp-content/uploads/2024/09/20240409-NIPV-Organogram-NIPV.pdf
+afspraak:
+  url: https://nipv.nl/contact/
+personnel:
+  aantalFte: 337,0
+  peildatumFte: '2023-12-31'
 contact:
   website: https://nipv.nl/
   email: info@nipv.nl
+  bezoekadres: Kemperbergerweg 783, 6816 RW Arnhem
+  postadres: Postbus 7010, 6801 HA Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kemperbergerweg
+    huisnummer: '783'
+    postcode: 6816 RW
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '7010'
+    postcode: 6801 HA
+    woonplaats: Arnhem
+  - type: Bezoekadres
+    openbare_ruimte: Chroomstraat
+    huisnummer: '151'
+    postcode: 2718 RJ
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Bezoekadres
+    openbare_ruimte: Zilverstraat
+    huisnummer: '91'
+    postcode: 2718 RP
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '7112'
+    postcode: 2701 AC
+    woonplaats: Zoetermeer
+  - type: Woo-Adres
+    openbare_ruimte: Kemperbergerweg
+    huisnummer: '783'
+    postcode: 6816 RW
+    woonplaats: Arnhem
+    regio: Gelderland
+    land: Nederland
+  phones:
+  - nummer: (088) 274 74 00
+    label: algemeen
+  emails:
+  - email: info@nipv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://nipv.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://nipv.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nederlands Instituut Publieke Veiligheid (NIPV)
+    url: https://www.linkedin.com/company/nederlands-instituut-publieke-veiligheid/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28251542/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28251542/nipv
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -28,3 +170,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000185
   retrieved: '2026-05-09'
+roo_start_datum: '2013-01-01'

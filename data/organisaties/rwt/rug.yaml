@@ -2,17 +2,58 @@ id: org:oovb-rug
 type: rwt
 identifiers:
   roo_id: '29987733'
+  kvk: 01179037
+  oin: 00000003011790370000
+  rsin: 001932706
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Rijksuniversiteit Groningen
   abbr: RUG
   valid_from: '1900-01-01'
 contact:
   website: https://www.rug.nl/
+  postadres: Postbus 72, 9700 AB Groningen
+  bezoekadres: Broerstraat 5, 9712 CP Groningen
+  addresses:
+  - type: Postadres
+    postbus: '72'
+    postcode: 9700 AB
+    woonplaats: Groningen
+  - type: Bezoekadres
+    toelichting: Academiegebouw
+    openbare_ruimte: Broerstraat
+    huisnummer: '5'
+    postcode: 9712 CP
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  internet_addresses:
+  - url: https://www.rug.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rug.nl/about-ug/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: universityofgroningen
+    url: https://www.facebook.com/universityofgroningen
+  - platform: LinkedIn
+    gebruikersnaam: Rijksuniversiteit Groningen
+    url: https://www.linkedin.com/school/rijksuniversiteit-groningen/
+  - platform: Instagram
+    gebruikersnaam: universityofgroningen
+    url: https://www.instagram.com/universityofgroningen/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29987733/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29987733/rug
+  retrieved: '2026-05-16'
+roo_start_datum: '1614-08-23'

@@ -3,15 +3,25 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '48964'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-gl
+parent_id: org:onderdeel-fracties-ek
 names:
 - value: ChristenUnie (CU)
   valid_from: '1900-01-01'
+description:
+  text: 3 zetels
 contact:
   website: https://www.eerstekamer.nl/fractie/christenunie
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/fractie/christenunie
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-09-30'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/48964/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/48964/christenunie-cu
+  retrieved: '2026-05-16'

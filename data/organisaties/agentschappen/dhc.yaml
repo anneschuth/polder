@@ -1,19 +1,71 @@
 id: org:agentschap-dhc
 type: agentschap
+subname: De Huurcommissie
 identifiers:
   roo_id: '97025'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10216
+  owms: http://standaarden.overheid.nl/owms/terms/dhc
+  oin: 00000003273798570000
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Dienst van de Huurcommissie
   abbr: DHC
   valid_from: '1900-01-01'
+description:
+  text: De Dienst van de Huurcommissie ondersteunt de Huurcommissie bij zijn werkzaamheden.
+    De Huurcommissie is een onpartijdige organisatie, een zelfstandig bestuursorgaan
+    (zbo), die geschillen tussen huurders en verhuurders voorkomt, helpt oplossen
+    of daarover een officiële uitspraak doet.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.huurcommissie.nl/
+  bezoekadres: Muzenstraat 61, 2511 WB Den Haag
+  postadres: Postbus 16495, 2500 BL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '61'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16495'
+    postcode: 2500 BL
+    woonplaats: Den Haag
+  phones:
+  - nummer: (0800) 488 72 43
+    label: Informatie Rijksoverheid
+  internet_addresses:
+  - url: https://www.huurcommissie.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.huurcommissie.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2023-03-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97025/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97025/dhc
+  retrieved: '2026-05-16'

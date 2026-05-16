@@ -7,12 +7,16 @@ parent_id: org:onderdeel-kamer
 names:
 - value: VVD
   valid_from: '1900-01-01'
-  valid_until: '2026-09-01'
 contact:
   website: http://www.tweedekamer.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2026-09-01'
+last_mutation: '2026-05-12'
+last_verified: '2025-11-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97117/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97117/vvd
+  retrieved: '2026-05-16'

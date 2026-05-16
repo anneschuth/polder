@@ -5,22 +5,71 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0571
   oin: 00000001809485072000
   kvk: '54518121'
+  owms: http://standaarden.overheid.nl/owms/terms/hcoverijsel
+  btw: NL809485072B01
+  organisatiecode: so0571
+  rsin: '809485072'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Historisch Centrum Overijssel
+  roo_id: '27685506'
 names:
 - value: Historisch Centrum Overijssel
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://historischcentrumoverijssel.nl
   email: contacthco@historischcentrumoverijssel.nl
+  bezoekadres: Eikenstraat 20, 8021 WX Zwolle
+  postadres: Eikenstraat 20, 8021 WX Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eikenstraat
+    huisnummer: '20'
+    postcode: 8021 WX
+    woonplaats: Zwolle
+  - type: Postadres
+    openbare_ruimte: Eikenstraat
+    huisnummer: '20'
+    postcode: 8021 WX
+    woonplaats: Zwolle
+  phones:
+  - nummer: (085) 488 50 00
+    label: algemeen
+  emails:
+  - email: contacthco@historischcentrumoverijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://historischcentrumoverijssel.nl
+    label: algemeen
+  - url: https://historischcentrumoverijssel.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://historischcentrumoverijssel.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-04-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27685511/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27685511/historisch-centrum-overijssel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2000-07-27'

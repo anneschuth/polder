@@ -3,21 +3,137 @@ type: zbo
 identifiers:
   roo_id: '28212096'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000125
+  kvk: '41133717'
+  rsin: '802175533'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Stimuleringsfonds Creatieve Industrie
   valid_from: '1900-01-01'
-  valid_until: '2029-02-01'
+description:
+  text: Het Stimuleringsfonds Creatieve Industrie is het rijkscultuurfonds voor vormgeving,
+    architectuur en digitale cultuur. De taak van het Stimuleringsfonds is om, vanuit
+    het culturele perspectief, de rijke ontwerptraditie die Nederland heeft te continueren
+    en te vernieuwen door het proces van experimenteren, onderzoeken en maken te stimuleren
+    en goed opdrachtgeverschap te bevorderen.
+  url: https://www.stimuleringsfonds.nl/wat-we-doen
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Wet op het specifiek cultuurbeleid, artikel 9
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20het%20specifiek%20cultuurbeleid
+taken_en_bevoegdheden: Het fonds ondersteunt ontwerpers en makers met (inter)nationale
+  projecten, culturele instellingen met eenjarige en meerjarige programma's en talenten
+  in de creatieve industrie. Kerntaak is het stimuleren van cultuur. Een belangrijk
+  thema is het verbeteren van de keten tussen ontwerpers/makers en opdrachtgevers/producenten.
+  Met programma's, evenementen, publicaties en kennisbundeling legt het fonds bovendien
+  zelf actief verbindingen tussen cultuur, ondernemerschap en maatschappelijk engagement.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Zwitserleven
+    referentie: https://www.bplpensioen.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.stimuleringsfonds.nl/opvragen-informatie-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28212096/Stichting_Stimuleringsfonds_Creatieve_Industrie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0047968/2023-03-20/0
+      toelichting: 'Regeling Upstream: Music x Design'
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0048965/2023-12-01
+      toelichting: Regeling vierjarige instellingssubsidie creatieve industrie 2025-2028
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0044491/2021-01-01/0
+      toelichting: Regeling Experiment
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0046101/2022-01-01/0
+      toelichting: Regeling Internationalisering ontwerpsector
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0044490/2021-01-01/0
+      toelichting: Regeling Talentontwikkeling
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0047760/2023-01-01/0
+      toelichting: Regeling Festivals en publiekspresentaties creatieve industrie
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0044493/2021-01-01/0
+      toelichting: Regeling Vormgeving
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0044489/2021-01-01/0
+      toelichting: Regeling Architectuur
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://wetten.overheid.nl/BWBR0044494/2021-01-01/0
+      toelichting: Regeling Digitale cultuur
+  wooVerzoek:
+    url: https://www.stimuleringsfonds.nl/opvragen-informatie-woo-verzoek
+organogram_url: https://cms.stimuleringsfonds.nl/storage/media/organogram.jpg
+afspraak:
+  email: info@stimuleringsfonds.nl
+personnel:
+  aantalFte: 27,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.stimuleringsfonds.nl/
   email: info@stimuleringsfonds.nl
+  bezoekadres: Weena 723, 3013 AM Rotterdam
+  postadres: Postbus 29066, 3001 GB Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Weena
+    huisnummer: '723'
+    postcode: 3013 AM
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '29066'
+    postcode: 3001 GB
+    woonplaats: Rotterdam
+  - type: Woo-Adres
+    postbus: '29066'
+    postcode: 3001 GB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (010) 436 16 00
+    label: algemeen
+  emails:
+  - email: info@stimuleringsfonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.stimuleringsfonds.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2029-02-01'
+last_mutation: '2024-10-30'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212096/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212096/stichting-stimuleringsfonds-creatieve-industrie
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +142,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000125
   retrieved: '2026-05-09'
+roo_start_datum: '2013-01-01'

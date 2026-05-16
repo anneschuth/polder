@@ -2,14 +2,36 @@ id: org:onderdeel-rechtbank-overijssel-locatie-enschede
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048699'
+  kvk: '82940525'
+  rsin: '862663568'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-overijssel
 names:
 - value: Rechtbank Overijssel, locatie Enschede
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Molenstraat 23, 7514 DJ Enschede
+  postadres: Postbus 3343, 7500 DH Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Molenstraat
+    huisnummer: '23'
+    postcode: 7514 DJ
+    woonplaats: Enschede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '3343'
+    postcode: 7500 DH
+    woonplaats: Enschede
+  phones:
+  - nummer: (088) 361 10 62
+    label: algemeen
+  fax: (088) 361 00 86
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2025-07-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048699/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048699/rechtbank-overijssel-locatie-enschede
+  retrieved: '2026-05-16'

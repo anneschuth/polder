@@ -3,18 +3,71 @@ type: adviescollege
 identifiers:
   roo_id: '28391481'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10181
+  owms: http://standaarden.overheid.nl/owms/terms/acveilgron
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege Veiligheid Groningen
   abbr: ACVG
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Tijdelijke wet Groningen, artikel 13c (als permanent adviescollege)
+  referentie: https://wetten.overheid.nl/BWBR0043252/2025-07-17/0#Hoofdstuk5_Artikel13c
+- opschrift: Instellingsbesluit Adviescollege Veiligheid Groningen, artikel 2 (als
+    tijdelijk adviescollege)
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0042932&artikel=2&z=2019-12-24&g=2019-12-24
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://adviescollegeveiligheidgroningen.nl/
   email: contact@adviescollegeveiligheidgroningen.nl
+  postadres: Postbus 93144, 2509 AC Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '93144'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 042 27 77
+    label: secretariaat
+  emails:
+  - email: contact@adviescollegeveiligheidgroningen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://adviescollegeveiligheidgroningen.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://adviescollegeveiligheidgroningen.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-17'
+last_verified: '2025-12-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391481/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391481/acvg
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-09-15'

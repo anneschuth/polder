@@ -3,19 +3,55 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27847196'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0779
+  owms: http://standaarden.overheid.nl/owms/terms/reflexis
+  organisatiecode: so0779
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Verordening openbaar rechtspersoon Reflexis Openbaar Basisonderwijs
+  roo_id: '27847191'
 names:
 - value: Reflexis Openbaar Basisonderwijs
   abbr: Reflexis
   valid_from: '1900-01-01'
-  valid_until: '2022-08-01'
+  valid_until: '2021-08-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2022-08-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.paraatscholen.nl
   email: bestuurskantoor@paraatscholen.nl
+  bezoekadres: Hutteweg 13, 7071 BV Ulft
+  postadres: Postbus 14, 7070 AA Ulft
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hutteweg
+    huisnummer: '13'
+    postcode: 7071 BV
+    woonplaats: Ulft
+  - type: Postadres
+    postbus: '14'
+    postcode: 7070 AA
+    woonplaats: Ulft
+  phones:
+  - nummer: (0315) 21 50 09
+    label: algemeen
+  emails:
+  - email: bestuurskantoor@paraatscholen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.paraatscholen.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: '2022-08-01'
+valid_until: '2021-08-01'
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27847196/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27847196/reflexis
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-01-01'

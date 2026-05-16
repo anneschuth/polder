@@ -7,12 +7,39 @@ parent_id: org:onderdeel-publieke-dienstverlening
 names:
 - value: Subsidieverlening
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (038) 499 88 99
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
+  - url: https://provincie.overijssel.nl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-06-17'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16994/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16994/subsidieverlening
+  retrieved: '2026-05-16'

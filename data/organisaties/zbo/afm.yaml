@@ -5,21 +5,146 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000218
   oin: 00000001008688217000
   kvk: '41207759'
+  rsin: 008688217
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Autoriteit Financiële Markten
   abbr: AFM
   valid_from: '1900-01-01'
+description:
+  text: De Autoriteit Financiële Markten (AFM) ziet erop toe dat de financiële markten
+    op een transparante manier werken. Het toezicht van de AFM spitst zich onder meer
+    toe op sparen, beleggen, verzekeren, lenen, pensioenen, kapitaalmarkten, assetmanagement,
+    accountantsorganisaties en verslaggeving. Tevens oefent de AFM, samen met De Nederlandsche
+    Bank (DNB), toezicht uit op financiële ondernemingen in Caribisch Nederland.
+  url: https://www.afm.nl/nl-nl/over-de-afm
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 21,22,28,33
+      toelichting: De afwijkende bepaling voor artikel 28 van de Kaderwet zelfstandige
+        bestuursorganen is alleen van toepassing op het eerste lid.
+wettelijke_grondslagen:
+- opschrift: Wet op het financieel toezicht, artikel 1:30
+  referentie: https://wetten.overheid.nl/BWBR0020368/2025-11-19/0#Titeldeel1_Hoofdstuk1.2_Afdeling1.2.2_Artikel1:30
+- opschrift: Wet financiële markten BES, artikel 1:6
+  referentie: https://wetten.overheid.nl/BWBR0030883/2023-07-01#Hoofdstuk1_Paragraaf2_Artikel1:6
+- opschrift: Wet toezicht effectenverkeer 1995, artikel 40
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/bwbid=BWBR0007657/article=40
+taken_en_bevoegdheden: De belangrijkste taak van de AFM is het houden van gedragstoezicht
+  op de financiële markten, ter bevordering van een ordelijk en transparant marktproces,
+  zuivere verhoudingen tussen marktpartijen en de bescherming van consumenten. De
+  AFM heeft deze toezichtstaak op grond van de Wet op het financieel toezicht (Wft).
+  Tevens beslist de AFM over de toelating van financiële ondernemingen op de financiële
+  markten. Op financiële ondernemingen in Caribisch Nederland oefent de AFM samen
+  met De Nederlandse Bank (DNB) toezicht uit.
+evaluations:
+- datum: '2021-12-14'
+  kamerstuknummer: "TK \t25268 nr. 202"
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-202.html
+- datum: '2017-03-31'
+  kamerstuknummer: TK 25268 nr. 143
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-143.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: De Nationale APF
+    referentie: https://www.denationaleapf.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.afm.nl/nl-nl/over-de-afm/openbaarheid-informatie---woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212566/Autoriteit_Financiele_Markten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Financiële+Markten%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Financiële+Markten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Autoriteit+Financiële+Markten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.afm.nl/nl-nl/over-de-afm/openbaarheid-informatie---woo
+organogram_url: https://www.afm.nl/~/profmedia/files/afm/organisatie/organogram-nl.pdf
+afspraak:
+  telefoonnummer: (020) 797 20 00
+personnel:
+  aantalFte: 736,0
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.afm.nl/
   email: info@afm.nl
+  bezoekadres: Vijzelgracht 50, 1017 HS Amsterdam
+  postadres: Postbus 11723, 1001 GS Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vijzelgracht
+    huisnummer: '50'
+    postcode: 1017 HS
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '11723'
+    postcode: 1001 GS
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    huisnummer: Postbus 11723
+    postcode: 1001 GS
+  phones:
+  - nummer: (020) 797 20 00
+    label: algemeen
+  emails:
+  - email: info@afm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.afm.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.afm.nl/nl-nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Autoriteit Financiële Markten
+    url: https://www.linkedin.com/company/autoriteit-financiele-markten/
+  - platform: Facebook
+    gebruikersnaam: AFM
+    url: https://www.facebook.com/AutoriteitFM
+  - platform: X
+    gebruikersnaam: '@AutoriteitFM'
+    url: https://twitter.com/AutoriteitFM
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-11'
+last_verified: '2026-01-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212566/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212566/afm
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +158,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000218
   retrieved: '2026-05-09'
+roo_start_datum: '2002-03-01'

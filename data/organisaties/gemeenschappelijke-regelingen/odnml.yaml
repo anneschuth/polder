@@ -5,23 +5,67 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0901
   oin: 00000001858131134000
   kvk: '70077932'
+  owms: http://standaarden.overheid.nl/owms/terms/rudln
+  btw: NL858131134B01
+  loonheffing: 858131134L01
+  organisatiecode: so0901
+  rsin: '858131134'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Noord- en Midden-Limburg
+  roo_id: '30568139'
 names:
 - value: Omgevingsdienst Noord- en Midden-Limburg
   abbr: ODNML
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rudlimburgnoord.nl
   email: info@rudlimburgnoord.nl
+  bezoekadres: Markt 31, 6041 EM Roermond
+  postadres: Postbus 900, 6040 AX Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '31'
+    postcode: 6041 EM
+    woonplaats: Roermond
+  - type: Postadres
+    postbus: '900'
+    postcode: 6040 AX
+    woonplaats: Roermond
+  phones:
+  - nummer: (0475) 35 91 50
+    label: algemeen
+  emails:
+  - email: info@rudlimburgnoord.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rudlimburgnoord.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-05-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27831574/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27831574/odnml
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2017-12-01'

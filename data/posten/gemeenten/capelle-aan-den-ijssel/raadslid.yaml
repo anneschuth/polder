@@ -5,3 +5,12 @@ classification: raadslid
 seat_count: null
 valid_from: '1900-01-01'
 valid_until: null
+roo_functie_id: '21332'
+roo_naam: Raadslid
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/22846/gemeente-capelle-aan-den-ijssel
+  retrieved: '2026-05-16'
+  fields:
+  - roo_functie_id
+  - roo_naam

@@ -4,14 +4,34 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0202
   wikidata: Q2081742
   roo_id: '21112'
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Blija_Buitendijks
+  ictu: 04805
 classification: waterschap
 parent_id: null
 names:
 - value: Blija Buitendijks
   valid_from: '1900-01-01'
   valid_until: '2017-12-20'
+description:
+  text: 'Gebied: Ferwerderadiel.'
+contact:
+  bezoekadres: Ljouwerterdijk 10, 9171 MD Blija
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ljouwerterdijk
+    huisnummer: '10'
+    postcode: 9171 MD
+    woonplaats: Blija
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+  phones:
+  - nummer: (0519) 56 21 66
+    label: algemeen
+  fax: (0519) 56 10 77
 valid_from: '1900-01-01'
 valid_until: '2017-12-20'
+last_mutation: '2019-09-05'
+last_verified: '2019-09-05'
 sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0202
@@ -20,5 +40,5 @@ sources:
   url: https://www.wikidata.org/wiki/Q2081742
   retrieved: '2026-05-13'
 - id: roo
-  url: https://organisaties.overheid.nl/21112/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21112/blija-buitendijks
+  retrieved: '2026-05-16'

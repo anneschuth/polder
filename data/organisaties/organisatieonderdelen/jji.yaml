@@ -3,15 +3,33 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '13150'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bcv
+parent_id: org:onderdeel-landelijke-en-overige-diensten
 names:
 - value: Sectordirectie Justitiële Jeugdinrichtingen
   abbr: JJI
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+description:
+  text: TAAKZorgdragen voor de ontwikkeling en realisatie van het sectoraal uitvoeringsbeleid
+    en toezien op de uitvoering daarvan;verantwoordelijk zijn de kwaliteit van de
+    bedrijfsvoering, het beheer en de verdeling van het sectorale budget alsmede het
+    capaciteitsbeheer.
+contact:
+  postadres: Postbus 30132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 072 56 08
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-10-23'
+last_verified: '2018-10-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13150/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13150/jji
+  retrieved: '2026-05-16'

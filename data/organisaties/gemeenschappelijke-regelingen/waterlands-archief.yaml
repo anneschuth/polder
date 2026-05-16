@@ -3,17 +3,93 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28358687'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1051
+  owms: http://standaarden.overheid.nl/owms/terms/wlarch
+  kvk: '50203711'
+  btw: NL004281664B01
+  organisatiecode: so1051
+  rsin: 004281664
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Waterlands Archief
+  roo_id: '29927030'
 names:
 - value: Waterlands Archief
   valid_from: '1900-01-01'
+description:
+  url: https://waterlandsarchief.nl/over-ons/organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://waterlandsarchief.nl/over-ons/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28358687/Waterlands_Archief
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://waterlandsarchief.nl/over-ons/organisatie
+      toelichting: Uitvoeringsplan en jaarverslagen
+  wooVerzoek:
+    url: https://waterlandsarchief.nl/over-ons/wet-open-overheid-woo
+afspraak:
+  email: info@waterlandsarchief.nl
+  telefoonnummer: (0299) 41 15 30
 contact:
   website: https://waterlandsarchief.nl
   email: info@waterlandsarchief.nl
+  bezoekadres: Wielingenstraat 75, 1441 ZN Purmerend
+  postadres: Wielingenstraat 75, 1441 ZN Purmerend
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wielingenstraat
+    huisnummer: '75'
+    postcode: 1441 ZN
+    woonplaats: Purmerend
+  - type: Postadres
+    openbare_ruimte: Wielingenstraat
+    huisnummer: '75'
+    postcode: 1441 ZN
+    woonplaats: Purmerend
+  - type: Woo-Adres
+    openbare_ruimte: Wielingenstraat
+    huisnummer: '75'
+    postcode: 1441 ZN
+    woonplaats: Purmerend
+    land: Nederland
+  phones:
+  - nummer: (0299) 41 15 30
+    label: algemeen
+  emails:
+  - email: info@waterlandsarchief.nl
+    label: algemeen
+  - email: factuur@waterlandsarchief.nl
+    label: sturen van een factuur
+  - email: educatie@waterlandsarchief.nl
+    label: vragen over educatie
+  internet_addresses:
+  - url: https://waterlandsarchief.nl
+    label: algemeen
+  contact_forms:
+  - url: https://waterlandsarchief.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-01'
+last_verified: '2025-08-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28358687/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28358687/waterlands-archief
+  retrieved: '2026-05-16'
+roo_start_datum: '1971-09-15'

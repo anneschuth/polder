@@ -6,21 +6,163 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0402
   roo_id: '28797'
   wikidata: Q9934
+  owms: http://standaarden.overheid.nl/owms/terms/Hilversum_(gemeente)
+  ictu: '00402'
+  organisatiecode: gm0402
+  rsin: 001941914
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HVS
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Hilversum
   abbr: Hilversum
   valid_from: '1900-01-01'
+description:
+  url: https://werkenbij.hilversum.nl/organogram-gemeente-hilversum
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://hilversum.nl/bestuur-organisatie/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28797/Gemeente_Hilversum
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.hilversum.nl/overzicht-dossiers?title=&field_casenumber_value=&tid=8
+      toelichting: Afgehandelde woo-verzoeken
+    - informatiecategorie: Klachtoordelen
+      url: https://woo.hilversum.nl/overzicht-dossiers?title=&field_casenumber_value=&tid=11
+      toelichting: Afgehandelde klachten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://hilversum.pcportal.nl/
+      toelichting: Voorjaarsnota, eindejaarsrapportage, begroting en jaarverslagen
+    - informatiecategorie: Convenanten
+      url: https://woo.hilversum.nl/overzicht-dossiers?title=&field_casenumber_value=&tid=6
+      toelichting: Convenanten
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hilversum.bestuurlijkeinformatie.nl
+      toelichting: Documenten van de gemeenteraad
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hilversum%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Bekendmakingen van beschikkingen
+    - informatiecategorie: Beschikkingen
+      url: https://open.hilversum.nl/pages/bad658a0a2214fcaa6a137787916b12b
+      toelichting: Subsidieregister
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://hilversum.bestuurlijkeinformatie.nl/Search?q=Ingekomen%20stukken
+      toelichting: Ingekomen stukken bij de gemeenteraad
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hilversum%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Bekendmakingen van overige besluiten van algemene strekking
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://hilversum.bestuurlijkeinformatie.nl/Agenda/Index/1e0e4c22-46a0-409f-8468-0d79db03cd4c
+      toelichting: Documenten college van burgemeester en wethouders
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hilversum%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Bekendmakingen van wet- en regelgeving
+  wooVerzoek:
+    url: https://hilversum.nl/bestuur-organisatie/wet-open-overheid-woo
+afspraak:
+  url: https://hilversum.nl/contact-afspraak/contact-gemeente
+geography:
+  oppervlakte: 46,24
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 46.24
+  aantal_inwoners: 94595
+  inwoners: '2045'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 2045.0
+  bevat_plaatsen_raw: Hilversum
+  bevat_plaatsen:
+  - Hilversum
+council:
+  total_seats: 36
+  parties:
+  - naam: D66
+    aantal_zetels: 7
+  - naam: Hart voor Hilversum
+    aantal_zetels: 6
+  - naam: Democraten Hilversum
+    aantal_zetels: 5
+  - naam: GroenLinks
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: SP
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Fractie Durlacher
+    aantal_zetels: 1
 contact:
   website: https://www.hilversum.nl
   email: gemeente@hilversum.nl
+  bezoekadres: Dudokpark 1, 1217 JE HILVERSUM
+  postadres: Postbus 9900, 1201 GM HILVERSUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dudokpark
+    huisnummer: '1'
+    postcode: 1217 JE
+    woonplaats: HILVERSUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '9900'
+    postcode: 1201 GM
+    woonplaats: HILVERSUM
+  - type: Woo-Adres
+    toelichting: T.a.v. College van burgemeester en wethouders
+    postbus: '9900'
+    postcode: 1201 GM
+    woonplaats: Hilversum
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Oude Enghweg
+    huisnummer: '23'
+    postcode: 1217 JE
+    woonplaats: HILVERSUM
+  phones:
+  - nummer: 14 035
+    label: algemeen
+  emails:
+  - email: gemeente@hilversum.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hilversum.nl
+    label: algemeen
+  contact_forms:
+  - url: https://hilversum.nl/vergunningen/vergunningen-voor-bouwen-verbouwen/omgevingsvergunning-aanvragen
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28797/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28797/hilversum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

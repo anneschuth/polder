@@ -5,24 +5,113 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0697
   oin: 00000001851750126000
   kvk: '55523544'
+  owms: http://standaarden.overheid.nl/owms/terms/ODRU
+  btw: NL851750126B01
+  organisatiecode: so0697
+  rsin: '851750126'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Omgevingsdienst regio Utrecht
+  roo_id: '29479827'
 names:
 - value: Omgevingsdienst regio Utrecht
   abbr: ODRU
   valid_from: '1900-01-01'
-  valid_until: '2025-12-02'
+description:
+  text: De ODRU werkt aan een veilige, duurzame en gezonde fysieke leefomgeving. We
+    ondersteunen en adviseren inwoners en bedrijven op het gebied van milieuvergunningen
+    en zijn gespecialiseerd in milieutoezicht en -handhaving als het gaat om veiligheid,
+    lucht, geluid, energie, afval en bodem.
+  url: https://www.odru.nl/over-ons/wat-doen-wij/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2025-12-02'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2025-12-02'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odru.nl/over-ons/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28651948/Omgevingsdienst_regio_Utrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+regio+Utrecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Hier staan de verordeningen op van de ODRU.
+    - informatiecategorie: Beschikkingen
+      url: https://www.odru.nl/omgeving/bekendmakingen/
+      toelichting: Hier staan bekendmakingen, beschikkingen e.d. die de ODRU namens
+        haar gemeenten doet. Dit doet de ODRU ook op www.officielebekendmakingen.nl.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.odru.nl/over-ons/bestuur/#Bestuursstukken
+      toelichting: Hier staan de agenda en vergaderstukken van de vergaderingen van
+        het Algemeen Bestuur van de ODRU.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odru.nl/over-ons/jaarverslagen/
+      toelichting: Hier staan de jaarverslagen van de ODRU.
+  wooVerzoek:
+    url: https://formulieren.odru.nl/woo-verzoek/startpagina
+organogram_url: https://www.odru.nl/over-ons/organisatie/
+afspraak:
+  email: info@odru.nl
+  telefoonnummer: (088) 022 50 00
 contact:
   website: https://www.odru.nl
   email: info@odru.nl
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 13101, 3507 LC Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '13101'
+    postcode: 3507 LC
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postbus: '13101'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (088) 022 50 00
+    label: algemeen
+  emails:
+  - email: info@odru.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odru.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odru.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-12-02'
+last_mutation: '2026-05-02'
+last_verified: '2023-10-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28651948/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28651948/odru
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-05-24'

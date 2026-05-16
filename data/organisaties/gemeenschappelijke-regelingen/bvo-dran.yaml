@@ -5,23 +5,99 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0905
   oin: 00000001856435065000
   kvk: '66191084'
+  owms: http://standaarden.overheid.nl/owms/terms/bvodran
+  btw: NL856435065B01
+  organisatiecode: so0905
+  rsin: '856435065'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Bedrijfsvoeringsorganisatie Doelgroepenvervoer Regio Arnhem-Nijmegen
+    (DRAN)
+  roo_id: '28117274'
 names:
 - value: Bedrijfsvoeringsorganisatie doelgroepenvervoer regio Arnhem Nijmegen
   abbr: BVO DRAN
   valid_from: '1900-01-01'
+description:
+  text: De achttien gemeenten in de regio Arnhem-Nijmegen werken samen aan het regionale
+    doelgroepenvervoer. Hiervoor is de Bedrijfsvoeringsorganisatie doelgroepenvervoer
+    regio Arnhem-Nijmegen opgericht. Het betreft de gemeenten Arnhem, Berg en Dal,
+    Beuningen, Doesburg, Druten, Duiven, Heumen, Lingewaard, Montferland, Mook en
+    Middelaar, Nijmegen, Overbetuwe, Renkum, Rheden, Rozendaal, Westervoort, Wijchen
+    en Zevenaar.De bedrijfsvoeringsorganisatie brengt de belangen van de deelnemende
+    gemeenten samen op het gebied van aanvullend vervoer. Samen werken we aan het
+    tot stand brengen, ontwikkelen en in stand houden van een kwalitatief hoogwaardig,
+    herkenbaar, efficiënt en eenvoudig te gebruiken vervoersysteem. Dit vervoer rijdt
+    per 1 september 2016 onder de naam Avan.In de bedrijfsvoeringsorganisatie sturen
+    en beheersen de gemeenten samen de uitvoering en ondersteunende processen voor
+    dit aanvullend vervoer.
+  url: https://www.vervoersorganisatie.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28117280/Bedrijfsvoeringsorganisatie_doelgroepenvervoer_regio_Arnhem_Nijmegen
+  wooVerzoek:
+    url: https://www.vervoersorganisatie.nl/over-ons/contactgegevens/
+afspraak:
+  email: info@vervoersorganisatie.nl
+  url: https://www.vervoersorganisatie.nl/over-ons/contactgegevens/
 contact:
   website: https://www.vervoersorganisatie.nl
   email: info@vervoersorganisatie.nl
+  bezoekadres: Eusebiusbuitensingel 53, 6828 HZ Arnhem
+  postadres: Eusebiusbuitensingel 53, 6828 HZ Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Eusebiusbuitensingel
+    huisnummer: '53'
+    postcode: 6828 HZ
+    woonplaats: Arnhem
+  - type: Postadres
+    openbare_ruimte: Eusebiusbuitensingel
+    huisnummer: '53'
+    postcode: 6828 HZ
+    woonplaats: Arnhem
+  - type: Woo-Adres
+    openbare_ruimte: Eusebiusbuitensingel
+    huisnummer: '53'
+    postcode: 6828 HZ
+    woonplaats: Arnhem
+  phones:
+  - nummer: (026) 377 35 98
+    label: algemeen
+  emails:
+  - email: info@vervoersorganisatie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vervoersorganisatie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vervoersorganisatie.nl/over-ons/contactgegevens/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28117280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28117280/bvo-dran
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-04-14'

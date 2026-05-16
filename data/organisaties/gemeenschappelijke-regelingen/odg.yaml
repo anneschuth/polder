@@ -5,23 +5,96 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0721
   oin: 00000001853026786000
   kvk: '58407308'
+  owms: http://standaarden.overheid.nl/owms/terms/odgron
+  btw: NL853026786B01
+  loonheffing: 853026786L01
+  organisatiecode: so0721
+  rsin: '853026786'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Groningen
+  roo_id: '29268027'
 names:
 - value: Omgevingsdienst Groningen
   abbr: ODG
   valid_from: '1900-01-01'
+description:
+  url: https://www.od-groningen.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.od-groningen.nl/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/28515244/Omgevingsdienst_Groningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Groningen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Omgevingsdienst+Groningen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.od-groningen.nl/over-ons/ons-bestuur/vergaderstukken
+      toelichting: Hier vindt u de vergaderstukken van ons Algemeen en Dagelijks Bestuur.
+  wooVerzoek:
+    url: https://www.od-groningen.nl/contact/woo-verzoek/woo-verzoek-indienen
+organogram_url: https://www.od-groningen.nl/over-ons/leden-bestuur-2/organigram
+afspraak:
+  email: info@od-groningen.nl
+  url: https://www.od-groningen.nl/contact
 contact:
   website: https://od-groningen.nl
   email: info@od-groningen.nl
+  bezoekadres: Lloydsweg 17, 9641 KJ Veendam
+  postadres: Postbus 97, 9640 AB Veendam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lloydsweg
+    huisnummer: '17'
+    postcode: 9641 KJ
+    woonplaats: Veendam
+  - type: Postadres
+    postbus: '97'
+    postcode: 9640 AB
+    woonplaats: Veendam
+  - type: Woo-Adres
+    postbus: '97'
+    postcode: 9640 AB
+    woonplaats: Veendam
+  phones:
+  - nummer: (0598) 78 80 00
+    label: algemeen
+  emails:
+  - email: info@od-groningen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://od-groningen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://od-groningen.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-12-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28515244/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28515244/odg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-05-01'

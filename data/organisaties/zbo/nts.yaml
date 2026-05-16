@@ -3,21 +3,135 @@ type: zbo
 identifiers:
   roo_id: '28248847'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000159
+  kvk: '41165849'
+  rsin: 009653636
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Nederlandse Transplantatie Stichting
   abbr: NTS
   valid_from: '1900-01-01'
+description:
+  text: De Nederlandse Transplantatie Stichting (NTS) werkt aan de verbetering van
+    orgaan- en weefseldonatie en -transplantatie. Ze ondersteunt de donorziekenhuizen
+    en transplantatiecentra in Nederland. Sinds de komst van de Wet op de orgaandonatie
+    in 1997 heeft de NTS de taak om donatie en transplantatie in goede banen te leiden.
+    Dat doet ze in opdracht van het ministerie van Volksgezondheid, Welzijn en Sport
+    (VWS).
+  url: https://www.transplantatiestichting.nl/over-nts/wat-doen-wij
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid,Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: Artikel 22 van de Kaderwet is niet van toepassing voor zover het
+        besluiten betreft met betrekking tot het toewijzen van donororganen.
+wettelijke_grondslagen:
+- opschrift: Wet op de orgaandonatie, artikel 24
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20op%20de%20orgaandonatie/article=24
+taken_en_bevoegdheden: De Nederlandse Transplantatie Stichting (NTS) heeft de volgende
+  taken en bevoegdheden op grond van de Wet op de orgaandonatie:* het bemiddelen bij
+  het verkrijgen van donororganen;* het bemiddelen bij het typeren van donororganen;*
+  het bemiddelen bij het vervoeren van donororganen;* het toewijzen van donororganen
+  aan een daarvoor geschikte ontvanger.
+evaluations:
+- datum: '2021-02-19'
+  kamerstuknummer: TK 28140 nr. 111
+  referentie: https://zoek.officielebekendmakingen.nl/kst-28140-111.html
+- datum: '2016-10-17'
+  kamerstuknummer: TK 32772 nr. 19
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32772-19.html
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Pensioenfonds Zorg en Welzijn (PFZW)
+    referentie: https://www.pfzw.nl/particulieren.html
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.transplantatiestichting.nl/search?search=woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28248847/Nederlandse_Transplantatie_Stichting
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.transplantatiestichting.nl/publicaties-en-naslag/nts-jaarverslagen
+  wooVerzoek:
+    url: https://www.transplantatiestichting.nl/search?search=woo
+afspraak:
+  telefoonnummer: (071) 579 57 77
+  url: https://www.transplantatiestichting.nl/over-nts/contact-en-route
+personnel:
+  aantalFte: 96,7
+  peildatumFte: '2025-01-30'
 contact:
   website: http://www.transplantatiestichting.nl/
   email: info@transplantatiestichting.nl
+  bezoekadres: Haagse Schouwweg 6, 2332 KG Leiden
+  postadres: Postbus 2304, 2301 CH Leiden
+  addresses:
+  - type: Bezoekadres
+    toelichting: NTS / Eurotransplant
+    openbare_ruimte: Haagse Schouwweg
+    huisnummer: '6'
+    postcode: 2332 KG
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Nederlandse Transplantatie Stichting
+    postbus: '2304'
+    postcode: 2301 CH
+    woonplaats: Leiden
+  - type: Woo-Adres
+    toelichting: Nederlandse Transplantatie Stichting
+    postbus: '2304'
+    postcode: 2301 CH
+    land: Leiden
+  phones:
+  - nummer: (071) 579 57 77
+    label: algemeen
+  emails:
+  - email: info@transplantatiestichting.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.transplantatiestichting.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.transplantatiestichting.nl/over-nts/contact-en-route
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nederlandse Transplantatie Stichting
+    url: https://www.linkedin.com/company/nederlandse-transplantatie-stichting/
+  - platform: Facebook
+    gebruikersnaam: Orgaandonatie
+    url: https://www.facebook.com/orgaandonatie/
+  - platform: Instagram
+    gebruikersnaam: '@orgaandonatie'
+    url: https://www.instagram.com/orgaandonatie/
+  - platform: YouTube
+    gebruikersnaam: '@transplantatiestichting'
+    url: https://www.youtube.com/@transplantatiestichting
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-21'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248847/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248847/nts
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +140,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000159
   retrieved: '2026-05-09'
+roo_start_datum: '2000-01-01'

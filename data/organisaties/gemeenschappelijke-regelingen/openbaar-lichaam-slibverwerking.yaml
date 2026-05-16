@@ -3,17 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27614798'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1030
+  owms: http://standaarden.overheid.nl/owms/terms/Slibverwerking_2009
+  kvk: '71977988'
+  organisatiecode: so1030
+  rsin: '858925540'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Slibverwerking 2009
+  roo_id: '30303593'
 names:
 - value: Openbaar lichaam Slibverwerking
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.schielandendekrimpenerwaard.nl
   email: info@hhsk.nl
+  bezoekadres: Maasboulevard 123, 3063 GK Rotterdam
+  postadres: Postbus 4059, 3006 AB Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maasboulevard
+    huisnummer: '123'
+    postcode: 3063 GK
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '4059'
+    postcode: 3006 AB
+    woonplaats: Rotterdam
+  phones:
+  - nummer: (010) 453 72 00
+    label: algemeen HHSK
+  emails:
+  - email: info@hhsk.nl
+    label: algemeen HHSK
+  internet_addresses:
+  - url: https://www.schielandendekrimpenerwaard.nl
+    label: algemeen HHSK
+  - url: https://www.schielandendekrimpenerwaard.nl/contact/contactformulier/
+    label: contact HHSK
+  contact_forms:
+  - url: https://www.schielandendekrimpenerwaard.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-07-29'
+last_verified: '2022-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27614798/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27614798/openbaar-lichaam-slibverwerking
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-01-01'

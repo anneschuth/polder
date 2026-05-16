@@ -3,23 +3,110 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '115613'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12373
+  owms: http://standaarden.overheid.nl/owms/terms/dnsttrgvrtr
+  organisatiecode: oorg12373
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:onderdeel-diensten-en-baten-lastenagentschappen
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Dienst Terugkeer en Vertrek
   abbr: DTenV
   valid_from: '1900-01-01'
-  valid_until: '2030-05-01'
 - value: Diensten en baten-lastenagentschappen
   abbr: DTenV
   valid_from: '1900-01-01'
   valid_until: '2030-05-01'
+description:
+  text: Dienst Terugkeer en Vertrek (DTenV) is verantwoordelijk voor het zelfstandige
+    en gedwongen vertrek van vreemdelingen die niet in Nederland mogen blijven. De
+    medewerkers van DTenV opereren zorgvuldig en met respect voor de waardigheid van
+    de vreemdeling.DTenV richt zich op twee doelgroepen:- Illegale vreemdelingen die
+    zijn aangehouden in het kader van het binnenlands (mobiel) vreemdelingentoezicht
+    en vreemdelingen aan wie de toegang is geweigerd in het kader van de grensbewaking.-
+    Uitgeprocedeerde asielzoekers die het land moeten verlaten.Een persoonsgerichte
+    en multidisciplinaire aanpak op basis van casemanagement staat centraal. Deze
+    aanpak wordt uitgevoerd in samenwerking met (keten)partners. Vanuit zijn operationele
+    taak is de DTenV gesprekspartner van bevoegde autoriteiten van herkomstlanden,
+    waaronder diplomatieke vertegenwoordigingen.
+  url: https://www.dienstterugkeerenvertrek.nl/over-dtv/organisatie
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dienstterugkeerenvertrek.nl/service/contact/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/115613/Dienst_Terugkeer_en_Vertrek
+  wooVerzoek:
+    url: https://www.dienstterugkeerenvertrek.nl/service/contact/woo-verzoeken/woo-verzoek-indienen
+organogram_url: https://www.dienstterugkeerenvertrek.nl/over-dtv/organisatie
+afspraak:
+  email: info@dtv.minvenj.nl
+  telefoonnummer: '1400'
+  url: https://www.dienstterugkeerenvertrek.nl/contact/woo-verzoeken/woo-verzoek-indienen
 contact:
   website: http://www.dienstterugkeerenvertrek.nl/
   email: info@dtv.minvenj.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 164, 2501 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    toelichting: Dienst Terugkeer en Vertrek
+    postbus: '164'
+    postcode: 2501 CD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Postbus
+    postbus: '164'
+    postcode: 2501 CD
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    land: Nederland
+  phones:
+  - nummer: '1400'
+    label: algemeen
+  emails:
+  - email: info@dtv.minvenj.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.dienstterugkeerenvertrek.nl/
+    label: algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: DTenV
+    url: https://x.com/DTenV
+  - platform: LinkedIn
+    gebruikersnaam: Dienst Terugkeer en Vertrek (DTenV)
+    url: https://www.linkedin.com/company/dtenv
+  - platform: Instagram
+    gebruikersnaam: dienstterugkeerenvertrek
+    url: https://www.instagram.com/dienstterugkeerenvertrek/
 valid_from: '1900-01-01'
 valid_until: '2030-05-01'
+last_mutation: '2026-05-11'
+last_verified: '2025-10-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115613/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115613/dtenv
+  retrieved: '2026-05-16'

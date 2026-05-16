@@ -3,18 +3,47 @@ type: adviescollege
 identifiers:
   roo_id: '30272993'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12385
+  organisatiecode: oorg12385
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Nederlandse Commissie beoordeling veiligheid voedselcontactmaterialen
   abbr: CBVV
   valid_from: '1900-01-01'
+description:
+  text: De Commissie beoordeling veiligheid voedselcontactmaterialen (CBVV) kijkt
+    of diverse grond- en hulpstoffen en materialen veilig genoeg zijn om gebruikt
+    te worden in voedselcontactmaterialen (bijvoorbeeld voedselverpakkingen, productiemachines,
+    servies en bestek). Dit doet de CBBV voor voedselcontactmaterialen waarvoor geen
+    afgestemde Europese regels gelden. De uitkomsten van de beoordeling worden door
+    de CBBV vastgelegd in een zogenaamde opinie, die vervolgens wordt aangeboden aan
+    de minister van Volksgezondheid, Welzijn en Sport (VWS). De minister van VWS kan
+    vervolgens besluiten of de beoordeelde stoffen/materialen geschikt zijn voor het
+    maken van voedselcontactmaterialen en deze toevoegen aan de bijlage bij de Warenwetregeling
+    verpakkingen en gebruiksartikelen.Deze beoordelingscommissie is geen formeel adviescollege
+    en valt niet onder de Kaderwet adviescolleges.
+  url: https://www.rivm.nl/voedselcontactmaterialen/CBVV
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Nederlandse Commissie beoordeling veiligheid voedselcontactmaterialen,
+    artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0043718/2020-07-01/0/#Artikel2
 contact:
   website: https://www.rivm.nl/voedselcontactmaterialen/CBVV
   email: cbvv@rivm.nl
+  emails:
+  - email: cbvv@rivm.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30272993/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30272993/cbvv
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-07-01'

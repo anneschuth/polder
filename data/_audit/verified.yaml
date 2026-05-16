@@ -2797,7 +2797,7 @@ verified:
   verified_at: '2026-05-14'
   verified_by: Anne Schuth
 - category: ministerie_direct_onderdeel
-  key: org:rvo
+  key: org:agentschap-rvo
   note: RVO is een agentschap
   verified_at: '2026-05-14'
   verified_by: Anne Schuth
@@ -7100,3 +7100,29 @@ verified:
     organisatieonderdeel-record nodig voor deze stadsdeel-positie.
   verified_at: '2026-05-14'
   verified_by: Anne Schuth
+- category: overlapping_open_mandates_different_orgs
+  key: person:spin-p-6643814|org:gemeente-west|org:gemeente-weststellingwerf
+  note: 'Slug-collision: Open Raadsinformatie schrijft raadslidmandaten naar gemeente-west
+    (Amsterdam-stadsdeel, opgeheven 2014-03-19) ipv weststellingwerf. Vervolg-issue
+    voor de OR-fetcher; geen echte dubbele mandaat.'
+  verified_at: '2026-05-15'
+  verified_by: anneschuth
+- category: overlapping_open_mandates_different_orgs
+  key: person:pieper-j-2827982|org:gemeente-beek|org:gemeente-beekdaelen
+  note: 'Gemeentelijke herindeling 2019-01-01: Beek opgegaan in Beekdaelen. Mandaten
+    op de oude gemeente horen valid_until=2018-12-31 te krijgen; vervolg-issue voor
+    data-curatie.'
+  verified_at: '2026-05-15'
+  verified_by: anneschuth
+- category: overlapping_open_mandates_different_orgs
+  key: person:janssen-p-2827870|org:gemeente-beek|org:gemeente-beekdaelen
+  note: 'Idem als pieper-j: gemeentelijke herindeling Beek→Beekdaelen 2019-01-01.'
+  verified_at: '2026-05-15'
+  verified_by: anneschuth
+- category: overlapping_open_mandates_different_orgs
+  key: person:salvino-r-6148458|org:gemeente-sittard|org:gemeente-sittard-geleen
+  note: 'Gemeentelijke fusie 2001-01-01: Sittard, Geleen, Born → Sittard-Geleen. gemeente-sittard
+    verwijst naar opgeheven entiteit; Open Raadsinformatie heeft een fout-mandaat
+    geschreven. Vervolg-issue voor OR-fetcher.'
+  verified_at: '2026-05-15'
+  verified_by: anneschuth

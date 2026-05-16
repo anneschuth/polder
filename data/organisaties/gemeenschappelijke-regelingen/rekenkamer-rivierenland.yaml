@@ -3,17 +3,61 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30465967'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1107
+  owms: http://standaarden.overheid.nl/owms/terms/rekrvl
+  organisatiecode: so1107
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Rivierenland 2025
+  roo_id: '30465973'
 names:
 - value: Rekenkamer Rivierenland
   valid_from: '1900-01-01'
+description:
+  text: De rekenkamer heeft tot taak de doelmatigheid, de doeltreffendheid en de rechtmatigheid
+    van het door het bestuur van de deelnemende gemeenten gevoerde beleid te onderzoeken.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.westbetuwe.nl/rekenkamer-rivierenland
   email: joke.janssen@westbetuwe.nl
+  bezoekadres: Kuipershof 2, 4191 KH Geldermalsen
+  postadres: Postbus 112, 4190 CC Geldermalsen
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeente West Betuwe
+    openbare_ruimte: Kuipershof
+    huisnummer: '2'
+    postcode: 4191 KH
+    woonplaats: Geldermalsen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    toelichting: gemeente West Betuwe
+    postbus: '112'
+    postcode: 4190 CC
+    woonplaats: Geldermalsen
+  phones:
+  - nummer: (0345) 72 88 00
+    label: gemeente West Betuwe
+  emails:
+  - email: joke.janssen@westbetuwe.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.westbetuwe.nl/rekenkamer-rivierenland
+    label: algemeen
+  contact_forms:
+  - url: https://formulieren.westbetuwe.nl/contact-met-rekenkamer-rivierenland/introductie
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-24'
+last_verified: '2025-12-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30465967/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30465967/rekenkamer-rivierenland
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-01-01'

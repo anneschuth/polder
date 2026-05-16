@@ -6,21 +6,169 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0262
   roo_id: '36828'
   wikidata: Q932058
+  owms: http://standaarden.overheid.nl/owms/terms/Lochem_(gemeente)
+  ictu: '00262'
+  organisatiecode: gm0262
+  rsin: '813647320'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LCH
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Lochem
   abbr: Lochem
   valid_from: '1900-01-01'
+description:
+  text: Op de website van de gemeente Lochem is het organisatieschema van de gemeente
+    te vinden. Op deze pagina vind u ook het Organisatiebesluit. In dit organisatiebesluit
+    is beschreven wat de verantwoordelijkheden en bevoegdheden zijn van de organisatie.Op
+    deze pagina staat ook de verwijzing naar het actuele Mandaatbesluit.
+  url: https://www.lochem.nl/bestuur-en-organisatie/organisatieschema
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.lochem.nl/bestuur-en-organisatie/niet-tevreden-over-de-gemeente/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/36828/Gemeente_Lochem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.lochem.nl/bestuur-en-organisatie/niet-tevreden-over-de-gemeente/woo-verzoek
+      toelichting: Informatie over woo-verzoek indienen en overzicht ingediende woo-verzoeken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Lochem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Lochem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: In dit overzicht staat ook de Algemene Plaatselijke Verordening
+        (APV) en de overige lokale regelgeving in de Rubriek Algemeen verbindend voorschrift
+        (verordening).
+    - informatiecategorie: Klachtoordelen
+      url: https://www.lochem.nl/bestuur-en-organisatie/niet-tevreden-over-de-gemeente/klacht-over-de-behandeling-door-een-ambtenaar
+      toelichting: Informatie over indienen klacht en overzicht ingediende klachten
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Lochem%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Een beschikking is een officieel besluit van de gemeente. Tegen
+        een beschikking kunt u een bezwaarschrift indienen.
+  wooVerzoek:
+    url: https://www.lochem.nl/bestuur-en-organisatie/niet-tevreden-over-de-gemeente/woo-verzoek
+organogram_url: https://www.lochem.nl/bestuur-en-organisatie/organisatieschema
+afspraak:
+  email: info@lochem.nl
+  telefoonnummer: (0573) 28 92 22
+  url: https://www.lochem.nl/afspraakmaken
+geography:
+  oppervlakte: 216,70
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 216.7
+  aantal_inwoners: 34213
+  inwoners: '157'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 157.0
+  bevat_plaatsen_raw: Almen, Barchem, Eefde, Epse, Gorssel, Harfsen, Joppe, Kring
+    Van Dorth, Laren GLD, Lochem
+  bevat_plaatsen:
+  - Almen
+  - Barchem
+  - Eefde
+  - Epse
+  - Gorssel
+  - Harfsen
+  - Joppe
+  - Kring Van Dorth
+  - Laren GLD
+  - Lochem
+council:
+  total_seats: 23
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 8
+  - naam: LochemGroen!
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: Meedenken met Lochem
+    aantal_zetels: 1
 contact:
   website: https://www.lochem.nl
   email: info@lochem.nl
+  bezoekadres: Hanzeweg 8, 7241 CR LOCHEM
+  postadres: Postbus 17, 7240 AA LOCHEM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hanzeweg
+    huisnummer: '8'
+    postcode: 7241 CR
+    woonplaats: LOCHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '17'
+    postcode: 7240 AA
+    woonplaats: LOCHEM
+  - type: Woo-Adres
+    openbare_ruimte: Hanzeweg
+    huisnummer: '8'
+    postcode: 7241 CR
+    woonplaats: Lochem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '17'
+    postcode: 7240 AA
+    woonplaats: Lochem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hanzeweg
+    huisnummer: '8'
+    postcode: 7241 CR
+    woonplaats: LOCHEM
+  phones:
+  - nummer: (0573) 28 92 22
+    label: algemeen
+  emails:
+  - email: info@lochem.nl
+    label: algemeen
+  - email: info@lochem.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.lochem.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.lochem.nl/vergunningen-meldingen-en-ontheffingen/omgevingsloket/contact-over-het-omgevingsloket
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-03'
+last_verified: '2026-04-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36828/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36828/lochem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

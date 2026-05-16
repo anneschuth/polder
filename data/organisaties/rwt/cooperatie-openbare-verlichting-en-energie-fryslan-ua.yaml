@@ -2,14 +2,42 @@ id: org:oovb-cooperatie-openbare-verlichting-en-energie-fryslan-ua
 type: rwt
 identifiers:
   roo_id: '27915165'
+  kvk: '01134565'
+  rsin: '819691100'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Coöperatie Openbare Verlichting & Energie Fryslân U.A.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Stadslaan 75, 8651 AC IJlst
+  postadres: Postbus 424, 8600 AK Sneek
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadslaan 75
+    postcode: 8651 AC
+    woonplaats: IJlst
+  - type: Postadres
+    postbus: '424'
+    postcode: 8600 AK
+    woonplaats: Sneek
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-01-27'
+last_verified: '2021-01-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27915165/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27915165/cooperatie-openbare-verlichting-en-energie-fryslan-ua
+  retrieved: '2026-05-16'

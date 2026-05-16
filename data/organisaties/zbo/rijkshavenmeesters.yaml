@@ -4,13 +4,44 @@ identifiers:
   roo_id: '26141219'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000144
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Rijkshavenmeesters
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo’s die niet onder de werking van de kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Scheepvaartverkeerswet, artikel 2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Scheepvaartverkeerswet
+taken_en_bevoegdheden: De Rijkshavenmeester/het Havenbedrijf Rotterdam verricht nautisch
+  beheer/taken voor de Gemeente Rotterdam en het Rijk, zoals ten aanzien van het toelatingsbeleid,
+  het ad hoc opleggen van loodsplicht, het geven van opdrachten voor vaarwegmarkering
+  en het geven van verkeersaanwijzingen.
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2016-12-31'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-12'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141219/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141219/rijkshavenmeesters
+  retrieved: '2026-05-16'
+roo_start_datum: '1988-01-01'

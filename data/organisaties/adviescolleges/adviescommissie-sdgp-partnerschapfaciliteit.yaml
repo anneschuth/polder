@@ -3,17 +3,59 @@ type: adviescollege
 identifiers:
   roo_id: '28391531'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10186
+  owms: http://standaarden.overheid.nl/owms/terms/acsdgppartfac
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Adviescommissie SDGP Partnerschapfaciliteit
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Besluit instelling en bezoldiging adviescommissie SDG
+    Partnerschapfaciliteit
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0042406&artikel=1&z=2020-06-24&g=2020-06-24
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28391531/Adviescommissie_SDGP_Partnerschapfaciliteit
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
 contact:
   website: https://www.rvo.nl/subsidies-financiering/sdg-partnerschapfaciliteit
   email: contactpersoonwoo@minbuza.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.rvo.nl/subsidies-financiering/sdg-partnerschapfaciliteit
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391531/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391531/adviescommissie-sdgp-partnerschapfaciliteit
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-07-16'

@@ -6,21 +6,151 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1978
   roo_id: '27465430'
   wikidata: Q42115473
+  owms: http://standaarden.overheid.nl/owms/terms/Molenlanden
+  rsin: '825766138'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MOL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Molenlanden
   abbr: Molenlanden
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.molenlanden.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27465430/Gemeente_Molenlanden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Molenlanden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Molenlanden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Molenlanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.molenlanden.nl/wet-open-overheid
+organogram_url: https://www.molenlanden.nl/organisatiestructuur
+afspraak:
+  telefoonnummer: 14 0184
+  url: https://www.molenlanden.nl/afspraak-maken#select/
+geography:
+  oppervlakte: 181,79
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 181.79
+  aantal_inwoners: 45625
+  inwoners: '250'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 250.0
+  bevat_plaatsen_raw: Arkel, Bleskensgraaf Ca, Brandwijk, Giessenburg, Goudriaan,
+    Groot-Ammers, Hoogblokland, Hoornaar, Kinderdijk, Langerak, Molenaarsgraaf, Nieuw-Lekkerland,
+    Nieuwpoort, Noordeloos, Ottoland, Oud-Alblas, Schelluinen, Streefkerk, Waal, Wijngaarden
+  bevat_plaatsen:
+  - Arkel
+  - Bleskensgraaf Ca
+  - Brandwijk
+  - Giessenburg
+  - Goudriaan
+  - Groot-Ammers
+  - Hoogblokland
+  - Hoornaar
+  - Kinderdijk
+  - Langerak
+  - Molenaarsgraaf
+  - Nieuw-Lekkerland
+  - Nieuwpoort
+  - Noordeloos
+  - Ottoland
+  - Oud-Alblas
+  - Schelluinen
+  - Streefkerk
+  - Waal
+  - Wijngaarden
+council:
+  total_seats: 28
+  parties:
+  - naam: Doe mee! Molenlanden
+    aantal_zetels: 9
+  - naam: SGP
+    aantal_zetels: 8
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Progressief Molenlanden
+    aantal_zetels: 1
 contact:
   website: https://www.molenlanden.nl/
   email: info@molenlanden.nl
+  bezoekadres: Melkwegplein 1, 2971 XB BLESKENSGRAAF
+  postadres: Postbus 5, 2970 AA BLESKENSGRAAF CA
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Melkwegplein
+    huisnummer: '1'
+    postcode: 2971 XB
+    woonplaats: BLESKENSGRAAF
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '5'
+    postcode: 2970 AA
+    woonplaats: BLESKENSGRAAF CA
+  - type: Woo-Adres
+    postbus: '5'
+    postcode: 2970 AA
+    woonplaats: Bleskensgraaf
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Melkwegplein
+    huisnummer: '1'
+    postcode: 2971 XB
+    ter_attentie_van: Leefomgeving
+    woonplaats: BLESKENSGRAAF
+  phones:
+  - nummer: 14 0184
+    label: algemeen
+  emails:
+  - email: info@molenlanden.nl
+    label: algemeen
+  - email: infobouwzaken@jouwgemeente.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.molenlanden.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.molenlanden.nl/afspraak-maken#select/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-giessenlanden
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27465430/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27465430/molenlanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,5 +159,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q42115473
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-giessenlanden
+roo_start_datum: '2019-01-01'

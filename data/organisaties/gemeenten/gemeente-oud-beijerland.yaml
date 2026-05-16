@@ -5,6 +5,9 @@ identifiers:
   kvk: '24483633'
   roo_id: '34946'
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0584
+  owms: http://standaarden.overheid.nl/owms/terms/Oud-Beijerland_(gemeente)
+  ictu: 00584
+  organisatiecode: gm0584
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,76 @@ names:
   abbr: Oud-Beijerland
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 19,61
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 19.61
+  aantal_inwoners: 23536
+  inwoners: '1200'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1200.0
+  bevat_plaatsen_raw: Oud-Beijerland
+  bevat_plaatsen:
+  - Oud-Beijerland
+council:
+  total_seats: 16
+  parties:
+  - naam: ChristenUnie/SGP
+    aantal_zetels: 5
+  - naam: BINT
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: http://www.oud-beijerland.nl
   email: info@oud-beijerland.nl
+  bezoekadres: W. van Vlietstraat 6, 3262 GM OUD-BEIJERLAND
+  postadres: Postbus 2003, 3260 EA OUD-BEIJERLAND
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: W. van Vlietstraat
+    huisnummer: '6'
+    postcode: 3262 GM
+    woonplaats: OUD-BEIJERLAND
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 2003
+    postbus: '2003'
+    postcode: 3260 EA
+    woonplaats: OUD-BEIJERLAND
+  phones:
+  - nummer: 14 0186
+    label: algemeen
+  emails:
+  - email: info@oud-beijerland.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.oud-beijerland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2025-12-10'
+last_verified: '2025-12-10'
+successor_id: org:gemeente-hoeksche-waard
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34946/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34946/gemeente-oud-beijerland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,4 +93,3 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0584
   retrieved: '2026-05-09'
-successor_id: org:gemeente-hoeksche-waard

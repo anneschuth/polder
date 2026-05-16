@@ -4,13 +4,46 @@ identifiers:
   roo_id: '26141084'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000155
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Notarissen
   valid_from: '1900-01-01'
+description:
+  text: Opnieuw ingesteld in 1999.Dit is een cluster van zbo’s die niet onder de werking
+    van de kaderwet zelfstandige bestuursorganen valt. De onderliggende onderdelen
+    van dit cluster worden daarom niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet op het notarisambt, art. 1 aanhef en sub l en art. 110
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=WET%20OP%20HET%20NOTARISAMBT
+taken_en_bevoegdheden: '* De wet heeft de notaris de bevoegdheid gegeven authentieke
+  akten op te maken, met name op het gebied van:- het personen- en familierecht (het
+  opmaken    van huwelijkse voorwaarden, testamenten, echtscheidingsakten, verklaringen
+  van erfrecht enz.);- het onroerende zaakrecht (het opmaken van akten van levering,
+  hypotheekakten, akten in het kader van een openbare veiling enz.);- het rechtspersonenrecht
+  (het opmaken van oprichtingsakten, statutenwijzigingen, akten van overdracht en
+  uitgifte (emissie) van aandelen, akten van juridische fusie en -splitsing en dergelijke).*
+  Daarnaast kunnen partijen de notaris ook vragen om andere akten voor hen in notariële
+  vorm op te maken.'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-08-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141084/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141084/notarissen
+  retrieved: '2026-05-16'
+roo_start_datum: '1842-01-01'

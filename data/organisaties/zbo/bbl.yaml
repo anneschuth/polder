@@ -3,20 +3,95 @@ type: zbo
 identifiers:
   roo_id: '28212344'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000213
+  kvk: '30277010'
+  rsin: 001598922
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Bureau Beheer Landbouwgronden
   abbr: BBL
   valid_from: '1900-01-01'
+description:
+  text: Het Bureau Beheer Landbouwgronden (BBL) houdt zich bezig met het verwerven
+    van onroerend goed en het doorleveren hiervan aan overheids- en andere organisaties,
+    zodat overheidsdoelen in het landschap op de gebieden van natuur, landbouw, recreatie,
+    landschap, water en milieu behaald kunnen worden.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet agrarisch grondverkeer, artikel 28
+  referentie: https://wetten.overheid.nl/BWBR0003386/2021-07-01#TiteldeelVII_Artikel28
+taken_en_bevoegdheden: Het Bureau Beheer Landbouwgronden (BBL) is belast met de verwerving
+  van onroerend goed dat wordt doorgeleverd aan overheids- en andere organisaties,
+  die daarmee overheidsdoelen in het landelijk gebied realiseren met betrekking tot
+  de thema's natuur, landbouw, recreatie, landschap, water en milieu. Als apart zelfstandig
+  bestuursorgaan valt het BBL onder de beleids- en systeemverantwoordelijkheid van
+  het ministerie van Landbouw, Visserij, Voedselzekerheid en Natuur.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2024-01-01'
+  toelichtingFte: Het BBL heeft geen eigen personeel.
 contact:
   email: bbl@minlnv.nl
+  bezoekadres: Bezuidenhoutseweg 73, 2594 AC Den Haag
+  postadres: Postbus 20401, 2500 EK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20401'
+    postcode: 2500 EK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 379 89 11
+    label: algemeen
+  emails:
+  - email: bbl@minlnv.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-11'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212344/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212344/bbl
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -25,3 +100,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000213
   retrieved: '2026-05-09'
+roo_start_datum: '1982-01-01'

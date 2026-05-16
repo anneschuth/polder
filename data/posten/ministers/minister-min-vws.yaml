@@ -5,3 +5,12 @@ classification: bewindspersoon
 seat_count: 1
 valid_from: '1945-01-01'
 valid_until: null
+roo_functie_id: '28555719'
+roo_naam: Minister van Volksgezondheid, Welzijn en Sport
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/8591/min-vws
+  retrieved: '2026-05-16'
+  fields:
+  - roo_functie_id
+  - roo_naam

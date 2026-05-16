@@ -3,18 +3,71 @@ type: adviescollege
 identifiers:
   roo_id: '28391551'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10188
+  owms: http://standaarden.overheid.nl/owms/terms/rdvdierenaang
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Raad voor dierenaangelegenheden
   abbr: RDA
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: Artikel 10.8. van de Wet dieren
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0030250&hoofdstuk=10&artikel=10.8&z=2021-04-21&g=2021-04-21
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rda.nl/
   email: info@rda.nl
+  bezoekadres: Bezuidenhoutseweg 73, 2594 AC Den Haag
+  postadres: Postbus 20401, 2500 EK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20401'
+    postcode: 2500 EK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 378 52 66
+    label: algemeen
+  emails:
+  - email: info@rda.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rda.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rda.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391551/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391551/rda
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-01-01'

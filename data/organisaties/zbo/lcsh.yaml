@@ -3,21 +3,102 @@ type: zbo
 identifiers:
   roo_id: '27613377'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000323
+  owms: http://standaarden.overheid.nl/owms/terms/lcsh
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Landelijke commissie sociale hygiëne
   abbr: Lcsh
   valid_from: '1900-01-01'
+description:
+  text: De Landelijke commissie sociale hygiëne (Lcsh) voert het Register Sociale
+    Hygiëne. In dit register moet elke onderneming die een alcoholvergunning wenst
+    aan te vragen een leidinggevende hebben geregistreerd. Daarnaast is de Lcsh ook
+    verantwoordelijk voor het erkennen van diploma’s Sociale Hygiëne.
+  url: https://www.registersocialehygiene.nl/over-het-register/landelijke-commissie-sociale-hygiene
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid,Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Alcoholwet, artikel 11a, lid 1
+  referentie: https://wetten.overheid.nl/BWBR0002458/2024-04-01#Paragraaf2a_Artikel11a
+taken_en_bevoegdheden: De taken van de Landelijke commissie sociale hygiëne (Lcsh)
+  zijn:* het voeren van het Register Sociale Hygiëne;* het registreren van personen
+  in het Register;* het raadpleegbaar maken van het Register;* het herbevestigen van
+  registraties uit het oude Register (vóór 1 juli 2023 werd dit gevoerd door de Landelijke
+  Examencommissie van de Stichting Vakbekwaamheid Horeca);* het erkennen van diploma’s
+  Sociale Hygiëne.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.registersocialehygiene.nl/contactformulier
+      overzichtURL: https://organisaties.overheid.nl/woo/27613377/Landelijke_commissie_sociale_hygiene
+  wooVerzoek:
+    url: https://www.registersocialehygiene.nl/contactformulier
+organogram_url: https://www.registersocialehygiene.nl/over-het-register/landelijke-commissie-sociale-hygiene
+afspraak:
+  email: pers@cibg.nl
+  telefoonnummer: (070) 750 07 05
+  url: https://www.registersocialehygiene.nl/contactformulier
 contact:
   website: https://www.registersocialehygiene.nl/
   email: pers@cibg.nl
+  postadres: Postbus 3177, 6401 DR Heerlen
+  bezoekadres: Oranjebuitensingel 25, 2511 VE Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '3177'
+    postcode: 6401 DR
+    woonplaats: Heerlen
+  - type: Woo-Adres
+    toelichting: Landelijke commissie sociale hygiëne
+    postbus: '3177'
+    postcode: 6401 DR
+    woonplaats: Heerlen
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Oranjebuitensingel
+    huisnummer: '25'
+    postcode: 2511 VE
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 750 07 05
+    label: algemeen
+  - nummer: (070) 340 58 32
+    label: pers
+  emails:
+  - email: pers@cibg.nl
+    label: pers
+  internet_addresses:
+  - url: https://www.registersocialehygiene.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.registersocialehygiene.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613377/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613377/lcsh
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000323
   retrieved: '2026-05-09'
+roo_start_datum: '2023-07-01'

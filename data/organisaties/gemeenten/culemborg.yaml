@@ -6,22 +6,153 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0216
   roo_id: '26183'
   wikidata: Q816699
+  owms: http://standaarden.overheid.nl/owms/terms/Culemborg_(gemeente)
+  ictu: '00216'
+  organisatiecode: gm0216
+  rsin: 001486809
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_CUB
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Culemborg
   abbr: Culemborg
   valid_from: '1900-01-01'
-  valid_until: '2032-05-01'
+description:
+  url: https://www.culemborg.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.culemborg.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/26183/Gemeente_Culemborg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&gemeenten=Culemborg
+      toelichting: De actuele wet- en regelgeving van de gemeente Culemborg.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://culemborg.bestuurlijkeinformatie.nl/Reports/Details/ce59414b-488c-4ad6-979b-eb28d9fe7c75
+      toelichting: Vergaderstukken van de gemeenteraad zoals agenda's, notulen en
+        adviesrapporten.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22gemeente%22)and(dt.creator==%22Culemborg%22))))and((dt.type==%22algemeenverbindendverklaring%20van%20cao-bepalingen%22)or(dt.type==%22ander%20besluit%20van%20algemene%20strekking%22)or(dt.type==%22bekendmaking%20aan%20de%20scheepvaart%22)or(dt.type==%22beleidsregel%22)or(dt.type==%22delegatie-%20of%20mandaatbesluit%22)or(dt.type==%22gemeenschappelijke%20regeling%22)or(dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22)or(dt.type==%22verkeersbesluit%20of%20-mededeling%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Overige besluiten van algemene strekking, zoals verkeersbesluiten.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://culemborg.bestuurlijkeinformatie.nl/Reports/Details/e6fe1bfa-ae31-4aff-96b4-dd06e2bc3a39
+      toelichting: Vergaderstukken van het college van Burgemeester en Wethouders
+        (B&W)
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.culemborg.nl/afgehandelde-woo-verzoeken
+      toelichting: Ontvangen Woo-verzoeken en naar aanleiding daarvan openbaar gemaakte
+        documenten.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Culemborg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Een besluit op een specifiek of individueel geval. Bijvoorbeeld
+        het besluit om een vergunning te verlenen.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://findo.nl/dashboard/?short=wf3kz
+      toelichting: Jaarplannen en jaarverslagen zoals de begroting en jaarrekening.
+  wooVerzoek:
+    url: https://www.culemborg.nl/woo-verzoek
+organogram_url: https://www.culemborg.nl/organisatie
+afspraak:
+  telefoonnummer: (0345) 47 77 00
+  url: https://www.culemborg.nl/afspraak-maken
+geography:
+  oppervlakte: 31,23
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 31.23
+  aantal_inwoners: 30413
+  inwoners: '973'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 973.0
+  bevat_plaatsen_raw: Culemborg
+  bevat_plaatsen:
+  - Culemborg
+council:
+  total_seats: 23
+  parties:
+  - naam: PRO
+    aantal_zetels: 7
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: Culemborg van Nu
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
 contact:
   website: https://www.culemborg.nl
   email: info@culemborg.nl
+  bezoekadres: Ridderstraat 250, 4101 BK CULEMBORG
+  postadres: Postbus 136, 4100 AC CULEMBORG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ridderstraat
+    huisnummer: '250'
+    postcode: 4101 BK
+    woonplaats: CULEMBORG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '136'
+    postcode: 4100 AC
+    woonplaats: CULEMBORG
+  - type: Woo-Adres
+    openbare_ruimte: Ridderstraat
+    huisnummer: '250'
+    postbus: '136'
+    postcode: 4101 BK
+    woonplaats: Culemborg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Ridderstraat
+    huisnummer: '250'
+    postcode: 4101 BK
+    woonplaats: CULEMBORG
+  phones:
+  - nummer: (0345) 47 77 00
+    label: algemeen
+  emails:
+  - email: info@culemborg.nl
+    label: algemeen
+  - email: info@culemborg.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.culemborg.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2032-05-01'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26183/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26183/culemborg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

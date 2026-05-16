@@ -6,21 +6,155 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1509
   roo_id: '36780'
   wikidata: Q932031
+  owms: http://standaarden.overheid.nl/owms/terms/Oude_IJsselstreek
+  ictu: 01509
+  organisatiecode: gm1509
+  rsin: '813587219'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OUT
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Oude IJsselstreek
   abbr: Oude IJsselstreek
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/36780/Gemeente_Oude_IJsselstreek
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.oude-ijsselstreek.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oude+IJsselstreek%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oude+IJsselstreek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Oude+IJsselstreek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.oude-ijsselstreek.nl/wet-open-overheid-woo-verzoek
+organogram_url: https://www.oude-ijsselstreek.nl/afdelingen-en-teams
+afspraak:
+  url: https://www.oude-ijsselstreek.nl/afspraak-maken
+geography:
+  oppervlakte: 1,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 1.38
+  aantal_inwoners: 39596
+  inwoners: '28692'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 28692.0
+  bevat_plaatsen_raw: Breedenbroek, Etten, Gendringen, Heelweg, Megchelen, Netterden,
+    Silvolde, Sinderen, Terborg, Ulft, Varsselder, Varsseveld, Voorst Oude IJsselstreek,
+    Westendorp
+  bevat_plaatsen:
+  - Breedenbroek
+  - Etten
+  - Gendringen
+  - Heelweg
+  - Megchelen
+  - Netterden
+  - Silvolde
+  - Sinderen
+  - Terborg
+  - Ulft
+  - Varsselder
+  - Varsseveld
+  - Voorst Oude IJsselstreek
+  - Westendorp
+council:
+  total_seats: 25
+  parties:
+  - naam: Lokaal Belang
+    aantal_zetels: 7
+  - naam: Dorp en Platteland Beweging
+    aantal_zetels: 5
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ADA
+    aantal_zetels: 2
+  - naam: Pro! Oude IJsselstreek
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Burgers op 1
+    aantal_zetels: 1
 contact:
   website: https://www.oude-ijsselstreek.nl
   email: info@oude-ijsselstreek.nl
+  bezoekadres: Staringstraat 25, 7081 BN GENDRINGEN
+  postadres: Postbus 42, 7080 AA GENDRINGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Staringstraat
+    huisnummer: '25'
+    postcode: 7081 BN
+    woonplaats: GENDRINGEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '42'
+    postcode: 7080 AA
+    woonplaats: GENDRINGEN
+  - type: Woo-Adres
+    postbus: '42'
+    postcode: 7080 AA
+    woonplaats: Gendringen
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Staringstraat
+    huisnummer: '25'
+    postcode: 7081 BN
+    ter_attentie_van: Ruimtelijke Ontwikkeling
+    woonplaats: GENDRINGEN
+  phones:
+  - nummer: (0315) 29 22 92
+    label: algemeen
+  emails:
+  - email: info@oude-ijsselstreek.nl
+    label: algemeen
+  - email: info@oude-ijsselstreek.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.oude-ijsselstreek.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.oude-ijsselstreek.nl/contact-met-de-gemeente
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-01'
+last_verified: '2026-05-01'
+predecessor_id:
+- org:gemeente-gendringen
+- org:gemeente-wisch
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36780/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36780/gemeente-oude-ijsselstreek
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,6 +163,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q932031
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-gendringen
-- org:gemeente-wisch
+roo_start_datum: '2005-01-01'

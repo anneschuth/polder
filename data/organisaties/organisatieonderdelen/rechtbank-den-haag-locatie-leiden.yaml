@@ -2,14 +2,37 @@ id: org:onderdeel-rechtbank-den-haag-locatie-leiden
 type: organisatieonderdeel
 identifiers:
   roo_id: '28046859'
+  kvk: '82946175'
+  rsin: '862665796'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-den-haag
 names:
 - value: Rechtbank Den Haag, locatie Leiden
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Witte Singel 1, 2311 BG Leiden
+  postadres: Postbus 11171, 2301 ED Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Witte Singel
+    huisnummer: '1'
+    postcode: 2311 BG
+    woonplaats: Leiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '11171'
+    postcode: 2301 ED
+    woonplaats: Leiden
+  phones:
+  - nummer: (088) 361 20 30
+    label: algemeen
+  fax: (088) 361 06 78
+  beschrijving: https://www.rechtspraak.nl/organisatie-en-contact/organisatie/rechtbanken/rechtbank-den-haag
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-08-17'
+last_verified: '2026-02-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046859/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046859/rechtbank-den-haag-locatie-leiden
+  retrieved: '2026-05-16'

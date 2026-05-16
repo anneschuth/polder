@@ -2,18 +2,62 @@ id: org:onderdeel-rcn
 type: organisatieonderdeel
 identifiers:
   roo_id: '29908968'
+  oin: '00000006510600002000'
 classification: organisatieonderdeel
 parent_id: org:onderdeel-dgkr
 names:
 - value: Rijksdienst Caribisch Nederland
   abbr: RCN
   valid_from: '1900-01-01'
+description:
+  text: De Rijksdienst Caribisch Nederland is de schakel tussen de ministeries die
+    aanwezig zijn op Bonaire, Sint Eustatius en Saba. Ieder ministerie is zelf inhoudelijk
+    verantwoordelijk voor het invoeren en het uitvoeren van beleid van het betreffende
+    ministerie.Voor de juiste uitvoering en ondersteuning doen ze daarbij een beroep
+    op  de centrale dienstverlening van de Rijksdienst Caribisch Nederland.De Rijksdienst
+    Caribisch Nederland biedt deze centrale ondersteuning voor alle werkzame ministeries
+    op de drie eilanden. Bij centrale ondersteuning kunt u denken aan het formele
+    werkgeverschap, bedrijfsvoering zoals facilitaire zaken, huisvesting, ICT, personeelszaken
+    en opleidingen.
+  url: https://www.rijksdienstcn.com/over-de-rijksdienst-caribisch-nederland
 contact:
   website: https://www.rijksdienstcn.com/
   email: info@rijksdienstcn.com
+  bezoekadres: Kaya Internashonal z/n, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: Locatie Bonaire
+    openbare_ruimte: Kaya Internashonal z/n
+    woonplaats: Kralendijk
+    land: Bonaire
+  - type: Bezoekadres
+    toelichting: Locatie Saba
+    openbare_ruimte: Matthew Levenstone road
+    woonplaats: The Bottom
+    land: Saba
+  - type: Bezoekadres
+    toelichting: Locatie Sint Eustatius
+    openbare_ruimte: Cottageroad z/n
+    woonplaats: Oranjestad
+    land: Sint Eustatius
+  phones:
+  - nummer: +599 715 83 33
+    label: algemeen
+  emails:
+  - email: info@rijksdienstcn.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksdienstcn.com/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksdienstcn.com/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908968/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908968/rcn
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

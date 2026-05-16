@@ -3,18 +3,59 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27964857'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1053
+  owms: http://standaarden.overheid.nl/owms/terms/gasdistzeno
+  organisatiecode: so1053
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Gasdistributie Zeist en Omstreken
+  roo_id: '27964851'
 names:
 - value: Gasdistributie Zeist en Omstreken
   abbr: GZO
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+  valid_until: '2023-09-26'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-09-26'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: zeist@zeist.nl
+  bezoekadres: Het Rond 1, 3701 HS Zeist
+  postadres: Postbus 513, 3700 AM Zeist
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Het Rond
+    huisnummer: '1'
+    postcode: 3701 HS
+    woonplaats: Zeist
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '513'
+    postcode: 3700 AM
+    woonplaats: Zeist
+  phones:
+  - nummer: 14 030
+    label: gemeente Zeist
+  emails:
+  - email: zeist@zeist.nl
+    label: gemeente Zeist
 valid_from: '1900-01-01'
-valid_until: '2020-06-19'
+valid_until: '2023-09-26'
+last_mutation: '2025-10-21'
+last_verified: '2020-09-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27964857/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27964857/gzo
+  retrieved: '2026-05-16'
+roo_start_datum: '1959-01-01'

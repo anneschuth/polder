@@ -10,12 +10,23 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Zwolle
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Schuurmanstraat 2, 8011 KP Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schuurmanstraat
+    huisnummer: '2'
+    postcode: 8011 KP
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132404/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132404/zwolle
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'

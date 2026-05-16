@@ -3,7 +3,7 @@ name:
   full: P.W.J. Kouwenberg
   family: Kouwenberg
   given: P.W.J.
-  initials: P.
+  initials: P.W.J.
 mandaten:
 - id: 9c4befe9-9cf9-46d8-96db-b1bfd1d8b714
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767292
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30526341
 - id: 4f54a7bf-63a4-4607-bd56-4795af372825
   organization_id: org:gemeente-zoetermeer
   post_id: post:raadslid-gemeente-zoetermeer

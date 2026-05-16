@@ -5,6 +5,9 @@ identifiers:
   kvk: '01172406'
   roo_id: '37471'
   wikidata: Q840663
+  owms: http://standaarden.overheid.nl/owms/terms/De_Marne
+  ictu: '01663'
+  organisatiecode: gm1663
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,89 @@ names:
   abbr: De Marne
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 240,31
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 240.31
+  aantal_inwoners: 10331
+  inwoners: '42'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 42.0
+  bevat_plaatsen_raw: Eenrum, Hornhuizen, Houwerzijl, Kloosterburen, Lauwersoog, Leens,
+    Mensingeweer, Niekerk de Marne, Pieterburen, Schouwerzijl, Ulrum, Vierhuizen,
+    Warfhuizen, Wehe-Den Hoorn, Westernieland, Zoutkamp, Zuurdijk
+  bevat_plaatsen:
+  - Eenrum
+  - Hornhuizen
+  - Houwerzijl
+  - Kloosterburen
+  - Lauwersoog
+  - Leens
+  - Mensingeweer
+  - Niekerk de Marne
+  - Pieterburen
+  - Schouwerzijl
+  - Ulrum
+  - Vierhuizen
+  - Warfhuizen
+  - Wehe-Den Hoorn
+  - Westernieland
+  - Zoutkamp
+  - Zuurdijk
+council:
+  total_seats: 14
+  parties:
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
 contact:
   website: www.demarne.nl
   email: gemeente@demarne.nl
+  bezoekadres: R. Ritzemastraat 2, 9965 TD LEENS
+  postadres: Postbus 11, 9965 ZG LEENS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: R. Ritzemastraat
+    huisnummer: '2'
+    postcode: 9965 TD
+    woonplaats: LEENS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 11
+    postbus: '11'
+    postcode: 9965 ZG
+    woonplaats: LEENS
+  phones:
+  - nummer: (0595) 57 55 00
+    label: algemeen
+  emails:
+  - email: gemeente@demarne.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.demarne.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37471/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37471/de-marne
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

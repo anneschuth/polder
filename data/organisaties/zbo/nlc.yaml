@@ -3,21 +3,101 @@ type: zbo
 identifiers:
   roo_id: '26141012'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000163
+  kvk: '50514350'
+  rsin: '007166151'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Nederlandse Loodsencorporatie
   abbr: NLC
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Loodsenwet, artikel 6
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0004365&artikel=I&hoofdstuk=III&paragraaf=1&artikel=6
+taken_en_bevoegdheden: 'De gezamenlijke registerloodsen vormen de Nederlandse loodsencorporatie(NLC).
+  Het lidmaatschap van de corporatie is verplicht en vanrechtswege geregeld. De NLC
+  is een openbaar lichaam voor beroep in dezin van artikel 134 van de Grondwet. De
+  corporatie heeft verordenendebevoegdheid ten opzichte van haar leden op een aantal
+  gebieden, zoals deopleiding, beroepsuitoefening en dienstverlening. Handhaving van
+  deverordeningen geschiedt tuchtrechtelijk, door het tuchtcollege loodsen.De corporatie
+  heeft drie organen: de voorzitter, die de corporatie externvertegenwoordigt, de
+  algemene raad, die het dagelijks bestuur vormt, ende ledenvergadering, die de verordeningen
+  vaststelt.'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 2024 - LOODSWEZEN B.V. NEDERLANDS
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=16341&mNch=ndc52sq5dv
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Stichting Beroepspensioenfonds Loodsen (BPLoodsen)
+    referentie: https://www.bploodsen.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.loodswezen.nl
   email: info@loodswezen.nl
+  bezoekadres: Berghaven 16, 3151 HB Hoek van Holland
+  postadres: Postbus 830, 3000 AV Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Berghaven
+    huisnummer: '16'
+    postcode: 3151 HB
+    woonplaats: Hoek van Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '830'
+    postcode: 3000 AV
+    woonplaats: Rotterdam
+  phones:
+  - nummer: (088) 900 25 00
+    label: algemeen
+  emails:
+  - email: info@loodswezen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.loodswezen.nl
+    label: algemeen
+  fax: (088) 900 25 88
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-08-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141012/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141012/nlc
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000163
   retrieved: '2026-05-09'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
+roo_start_datum: '1988-01-01'

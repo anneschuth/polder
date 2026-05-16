@@ -5,22 +5,108 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0444
   oin: 00000001008353475000
   kvk: '50909185'
+  owms: http://standaarden.overheid.nl/owms/terms/ggdru
+  btw: NL008353475B01
+  organisatiecode: so0444
+  rsin: 008353475
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gemeentelijke Gezondheidsdienst Regio Utrecht
+  roo_id: '30102542'
 names:
 - value: Gemeentelijke Gezondheidsdienst Regio Utrecht
   valid_from: '1900-01-01'
+description:
+  text: GGD regio Utrecht is de gemeentelijke gezondheidsdienst van de 26 gemeenten
+    in de regio Utrecht. ‘Gezondheid’ en 'preventie’ zijn dé sleutelwoorden in alles
+    wat wij doen. Vanuit onze brede (sociaal medische) ervaring en deskundigheid bevorderen
+    én beschermen we de gezondheid van alle inwoners.
+  url: https://ggdru.nl/over-de-ggd/wat-doet-de-ggd/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://ggdru.nl/over-de-ggd/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28671968/Gemeentelijke_Gezondheidsdienst_Regio_Utrecht
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://ggdru.nl/over-de-ggd/bestuur/
+  wooVerzoek:
+    url: https://ggdru.nl/over-de-ggd/woo/
+organogram_url: https://ggdru.nl/wp-content/uploads/2024/05/Organogram-2024-nieuwe-versie.png
+afspraak:
+  email: info@ggdru.nl
+  telefoonnummer: (030) 608 60 86
+  url: https://ggdru.nl/over-de-ggd/contact/
 contact:
   website: https://www.ggdru.nl
   email: info@ggdru.nl
+  bezoekadres: De Dreef 5, 3706 BR Zeist
+  postadres: Postbus 51, 3700 AB Zeist
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Dreef
+    huisnummer: '5'
+    postcode: 3706 BR
+    woonplaats: Zeist
+  - type: Postadres
+    postbus: '51'
+    postcode: 3700 AB
+    woonplaats: Zeist
+  - type: Woo-Adres
+    openbare_ruimte: De Dreef
+    huisnummer: '5'
+    postcode: 3706 BR
+    woonplaats: Zeist
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '51'
+    postcode: 3700 AB
+    woonplaats: Zeist
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (030) 608 60 86
+    label: algemeen
+  emails:
+  - email: info@ggdru.nl
+    label: algemeen
+  - email: Directiesecretariaat@ggdru.nl
+    label: Secretariaat
+  internet_addresses:
+  - url: https://www.ggdru.nl
+    label: algemeen
+  - url: https://ggdru.nl/over-de-ggd/contact/
+    label: contactformulier
+  contact_forms:
+  - url: https://ggdru.nl/over-de-ggd/contact/
+    label: Algemeen
+  fax: (030) 608 60 00
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28671968/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28671968/gemeentelijke-gezondheidsdienst-regio-utrecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-01-01'

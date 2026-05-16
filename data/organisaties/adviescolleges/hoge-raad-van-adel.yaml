@@ -3,17 +3,90 @@ type: adviescollege
 identifiers:
   roo_id: '616'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10100
+  owms: http://standaarden.overheid.nl/owms/terms/Hoge_Raad_van_Adel
+  ictu: 04964
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Hoge Raad van Adel
   valid_from: '1900-01-01'
+description:
+  text: Ingesteld bij besluit van de Soevereine Vorst van 24 juni 1814, nr.10. Samenstelling
+    en bevoegdheid zijn geregeld in de Wet op de adeldom van 10 mei 1994, Stb.360.TAAK:-
+    adviseren vana.  de Minister van Algemene Zaken betreffende naamgeving, titulatuur
+    en wapenverlening van leden van het Koninklijk Huis;b. de Minister van Binnenlandse
+    Zaken en Koninkrijksrelaties betreffende alle adelszaken en de samenstelling en
+    wijziging van de wapens van publiekrechtelijke lichamen;c. de besturen van publiekrechtelijke
+    lichamen inzake de samenstelling van de door hen gewenste vlaggen;d. de Minister
+    van Justitie omtrent verzoeken tot naamswijziging, waarbij de namen van adellijke
+    geslachten of van heerlijkheden en dergelijke betrokken zijn;e. de Minister van
+    Defensie inzake ontwerpen van emblemen en medailles van krijgsmachtonderdelen;-
+    het verrichten van de uit het bovenstaande voortvloeiende werkzaamheden;- in het
+    algemeen het verstrekken van advies en voorlichting op genealogisch en heraldisch
+    gebied aan rechtspersonen en particulieren.COLLECTIE:- Archieven Hoge Raad van
+    Adel 1814 - heden;- Genealogische en heraldische handschriften;- Enkele archieven
+    van adellijke families;- Gespecialiseerde bibliotheek.
+wettelijke_grondslagen:
+- opschrift: artikel 6 van de Wet op de adeldom
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0006667&artikel=6
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/616/Hoge_Raad_van_Adel
 contact:
   website: https://www.hogeraadvanadel.nl
   email: info@hogeraadvanadel.nl
+  bezoekadres: Nassaulaan 2 -b, 2514 JS Den Haag
+  postadres: Postbus 16325, 2500 BH Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nassaulaan
+    huisnummer: '2'
+    huisnummer_toevoeging: -b
+    postcode: 2514 JS
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16325'
+    postcode: 2500 BH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 361 42 81
+    label: algemeen
+  emails:
+  - email: info@hogeraadvanadel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hogeraadvanadel.nl
+    label: algemeen
+  - url: https://www.hogeraadvanadel.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/616/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/616/hoge-raad-van-adel
+  retrieved: '2026-05-16'

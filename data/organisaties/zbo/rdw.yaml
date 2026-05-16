@@ -5,20 +5,160 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000149
   oin: 00000001804770694000
   kvk: '27374436'
+  owms: http://standaarden.overheid.nl/owms/terms/RDW_(Dienst_Wegverkeer)
+  rsin: '804770694'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: RDW
   valid_from: '1900-01-01'
+description:
+  text: De RDW (voorheen de Rijksdienst voor het Wegverkeer) is een publieke dienstverlener
+    in de mobiliteitsketen. Als zelfstandig bestuursorgaan voert de RDW een aantal
+    wettelijke en opgedragen taken uit op het gebied van toelating van voertuigen
+    en onderdelen daarvan, toezicht, handhaving, registratie, informatieverstrekking
+    en documentafgifte. Deze taken worden door de RDW in nauwe samenwerking met diverse
+    partners in de mobiliteitsketen uitgevoerd.
+  url: https://www.rdw.nl/over-rdw/organisatie/organisatiestructuur
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+      toelichting: Het afwijken van artikel 15 van de Kaderwet is expliciet vastgelegd
+        in de Wegenverkeerswet 1994, artikel 4a, tweede lid.
+wettelijke_grondslagen:
+- opschrift: Wegenverkeerswet 1994, artikel 4a
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wegenverkeerswet%201994/article=4a
+taken_en_bevoegdheden: 'De RDW heeft vier belangrijke opdrachten van de Nederlandse
+  overheid:* toelating: voertuigen en voertuigonderdelen toelaten op de Nederlandse
+  en Europese markt;* toezicht en controle: toezicht houden op door de RDW erkende
+  bedrijven en controle uitoefenen op de technische staat van voertuigen;* registratie
+  en informatieverstrekking: verzamelen, opslaan, bewerken en beheren van gegevens
+  over voertuigen, hun eigenaren en voertuigdocumenten en het verstrekken van informatie
+  aan belanghebbenden over deze gegevens;* documentafgifte: documenten afgeven die
+  nodig zijn voor voertuigen of eigenaren, zoals kentekenbewijzen, rijbewijzen en
+  het APK-formulier.'
+evaluations:
+- datum: '2022-06-01'
+  kamerstuknummer: TK 25268 nr. 205
+  referentie: https://zoek.officielebekendmakingen.nl/blg-1031300
+- datum: '2016-12-12'
+  kamerstuknummer: TK 25268 nr. 140
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-140.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1927 - RDW
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=22216
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rdw.nl/over-rdw/kwaliteits--en-servicenormen/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212299/RDW
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22zelfstandig%20bestuursorgaan%22)and((dt.creator==%22Dienst%20Wegverkeer%22)or(dt.creator==%22RDW%20(Dienst%20Wegverkeer)%22)))))and((dt.type==%22ander%20besluit%20van%20algemene%20strekking%22)or(dt.type==%22beleidsregel%22)or(dt.type==%22delegatie-%20of%20mandaatbesluit%22)or(dt.type==%22verkeersbesluit%20of%20-mededeling%22)or(dt.type==%22interne%20regeling%22)or(dt.type==%22overige%20overheidsinformatie%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+  wooVerzoek:
+    url: https://www.rdw.nl/over-rdw/kwaliteits--en-servicenormen/wet-open-overheid
+organogram_url: https://www.rdw.nl/over-rdw/organisatie/organisatiestructuur
+afspraak:
+  url: https://www.rdw.nl/over-rdw/contact
+personnel:
+  aantalFte: 1852,9
+  peildatumFte: '2023-12-31'
 contact:
   website: https://www.rdw.nl/
   email: woo@rdw.nl
+  bezoekadres: Skager Rak 10, 9642 CZ Veendam
+  postadres: Postbus 30000, 9640 RA Veendam
+  addresses:
+  - type: Bezoekadres
+    toelichting: Kantoor Veendam
+    openbare_ruimte: Skager Rak
+    huisnummer: '10'
+    postcode: 9642 CZ
+    woonplaats: Veendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Bezoekadres
+    toelichting: Kantoor Zoetermeer
+    openbare_ruimte: Europaweg
+    huisnummer: '205'
+    postcode: 2711 ER
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30000'
+    postcode: 9640 RA
+    woonplaats: Veendam
+  - type: Postadres
+    postbus: '777'
+    postcode: 2700 AT
+    woonplaats: Zoetermeer
+  - type: Woo-Adres
+    toelichting: T.a.v. unit Woo
+    postbus: '777'
+    postcode: 2700 AT
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (088) 008 74 47
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rdw.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rdw.nl/over-rdw/formulieren/contactformulier
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: RDW
+    url: https://www.linkedin.com/company/rdw/
+  - platform: Facebook
+    gebruikersnaam: RDW
+    url: https://www.facebook.com/NLRDW/
+  - platform: YouTube
+    gebruikersnaam: RDW
+    url: https://www.youtube.com/channel/UCrEOO0oHK8yQlrCPyJUVvmA
+  - platform: X
+    gebruikersnaam: '@RDWnl'
+    url: https://x.com/RDWnl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212299/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212299/rdw
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -32,3 +172,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000149
   retrieved: '2026-05-09'
+roo_start_datum: '1996-01-01'

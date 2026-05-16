@@ -6,21 +6,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1842
   roo_id: '36436'
   wikidata: Q952206
+  owms: http://standaarden.overheid.nl/owms/terms/Midden-Delfland
+  ictu: 01842
+  organisatiecode: gm1842
+  rsin: '812579410'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MDF
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Midden-Delfland
   abbr: Midden-Delfland
   valid_from: '1900-01-01'
+description:
+  url: https://www.middendelfland.nl/over-bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.middendelfland.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/36436/Gemeente_Midden-Delfland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Delfland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Delfland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Midden-Delfland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.middendelfland.nl/woo-verzoek
+organogram_url: https://www.middendelfland.nl/organogram
+afspraak:
+  telefoonnummer: (015) 380 41 11
+  url: https://afspraken.middendelfland.nl/internetafspraken
+geography:
+  oppervlakte: 50,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 50.0
+  aantal_inwoners: 19355
+  inwoners: '387'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 387.0
+  bevat_plaatsen_raw: Den Hoorn ZH, Maasland, Schipluiden
+  bevat_plaatsen:
+  - Den Hoorn ZH
+  - Maasland
+  - Schipluiden
+council:
+  total_seats: 17
+  parties:
+  - naam: Mijn Partij
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: OGP
+    aantal_zetels: 2
 contact:
   website: https://www.middendelfland.nl
   email: gemeente@middendelfland.nl
+  bezoekadres: Anna van Raesfeltstraat 37, 2636 HX SCHIPLUIDEN
+  postadres: Postbus 1, 2636 ZG SCHIPLUIDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Anna van Raesfeltstraat
+    huisnummer: '37'
+    postcode: 2636 HX
+    woonplaats: SCHIPLUIDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1'
+    postcode: 2636 ZG
+    woonplaats: SCHIPLUIDEN
+  - type: Woo-Adres
+    toelichting: Gemeente Midden-Delfland - t.a.v. Juridische Zaken
+    postbus: '1'
+    postcode: 2636 ZG
+    woonplaats: Schipluiden
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Anna van Raesfeltstraat
+    huisnummer: '37'
+    postcode: 2636 HX
+    ter_attentie_van: Team ruimte
+    woonplaats: SCHIPLUIDEN
+  phones:
+  - nummer: (015) 380 41 11
+    label: algemeen
+  emails:
+  - email: gemeente@middendelfland.nl
+    label: algemeen
+  - email: gemeente@middendelfland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.middendelfland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://afspraken.middendelfland.nl/internetafspraken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-maasland
+- org:gemeente-schipluiden
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36436/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36436/gemeente-midden-delfland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,6 +144,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q952206
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-maasland
-- org:gemeente-schipluiden
+roo_start_datum: '2004-01-01'

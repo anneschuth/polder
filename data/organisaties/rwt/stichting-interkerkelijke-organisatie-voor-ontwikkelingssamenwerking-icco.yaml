@@ -2,15 +2,43 @@ id: org:oovb-stichting-interkerkelijke-organisatie-voor-ontwikkelingssamenwerkin
 type: rwt
 identifiers:
   roo_id: '27913023'
+  kvk: '56484038'
+  rsin: '852147697'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Interkerkelijke Organisatie voor Ontwikkelingssamenwerking, ICCO
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Joseph Haydnlaan 2-A, 3533 AE Utrecht
+  postadres: Postbus 8190, 3503 RD Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Joseph Haydnlaan 2-A
+    postcode: 3533 AE
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '8190'
+    postcode: 3503 RD
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-28'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913023/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913023/stichting-interkerkelijke-organisatie-voor-ontwikkelingssamenwerking-icco
+  retrieved: '2026-05-16'

@@ -2,14 +2,45 @@ id: org:oovb-stichting-agriterra
 type: rwt
 identifiers:
   roo_id: '27909828'
+  kvk: '41048542'
+  rsin: '002706647'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Agriterra
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Jansbuitensingel 7, 6811 AA Arnhem
+  postadres: Jansbuitensingel 7, 6811 AA Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jansbuitensingel
+    huisnummer: '7'
+    postcode: 6811 AA
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: Jansbuitensingel
+    huisnummer: '7'
+    postcode: 6811 AA
+    woonplaats: Arnhem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909828/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909828/stichting-agriterra
+  retrieved: '2026-05-16'

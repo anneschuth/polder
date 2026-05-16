@@ -3,17 +3,82 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28633724'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1081
+  owms: http://standaarden.overheid.nl/owms/terms/SZHR
+  kvk: '86049925'
+  organisatiecode: so1081
+  rsin: '863844881'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Serviceorganisatie Zorg Holland Rijnland
+  roo_id: '29421845'
 names:
 - value: Serviceorganisatie Zorg Holland Rijnland
   valid_from: '1900-01-01'
+description:
+  text: Serviceorganisatie Zorg Holland Rijnland is een zelfstandige Gemeenschappelijke
+    Regeling van de 13 gemeenten in Holland Rijnland. Serviceorganisatie Zorg Holland
+    Rijnland is een bedrijfsvoeringsorganisatie die namens deze gemeenten alle zaken
+    regelt rond de contracten en betalingen van specialistische jeugdzorg in natura
+    (ZIN).
+  url: https://serviceorganisatiezorghollandrijnland.nl/over-serviceorganisatie-zorg/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://serviceorganisatiezorghollandrijnland.nl/over-serviceorganisatie-zorg/
+      overzichtURL: https://organisaties.overheid.nl/woo/28633724/Serviceorganisatie_Zorg_Holland_Rijnland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://serviceorganisatiezorghollandrijnland.nl/documenten/
+      toelichting: Op deze pagina zijn diverse documenten te vinden zoals verordeningen,
+        regelingen of jaarverslagen
+  wooVerzoek:
+    url: https://serviceorganisatiezorghollandrijnland.nl/over-serviceorganisatie-zorg/
+organogram_url: https://serviceorganisatiezorghollandrijnland.nl/over-serviceorganisatie-zorg/
+afspraak:
+  email: secretariaat@so-zorghollandrijnland.nl
+  telefoonnummer: (071) 523 90 70
 contact:
   website: https://serviceorganisatiezorghollandrijnland.nl/
   email: secretariaat@so-zorghollandrijnland.nl
+  bezoekadres: Schuttersveld 9, 2316 XG Leiden
+  postadres: Schuttersveld 9, 2316 XG Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schuttersveld
+    huisnummer: '9'
+    postcode: 2316 XG
+    woonplaats: Leiden
+  - type: Postadres
+    openbare_ruimte: Schuttersveld
+    huisnummer: '9'
+    postcode: 2316 XG
+    woonplaats: Leiden
+  phones:
+  - nummer: (071) 523 90 70
+    label: algemeen
+  emails:
+  - email: secretariaat@so-zorghollandrijnland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://serviceorganisatiezorghollandrijnland.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://serviceorganisatiezorghollandrijnland.nl/over-serviceorganisatie-zorg/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-12-20'
+last_verified: '2022-04-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28633724/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28633724/serviceorganisatie-zorg-holland-rijnland
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-03-16'

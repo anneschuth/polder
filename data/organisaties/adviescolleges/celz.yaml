@@ -3,18 +3,45 @@ type: adviescollege
 identifiers:
   roo_id: '30259063'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12378
+  organisatiecode: oorg12378
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Commissie Expertisecentra langdurige zorg
   abbr: CElz
   valid_from: '1900-01-01'
   valid_until: '2027-01-01'
+description:
+  text: De Commissie Expertisecentra langdurige zorg (CElz) voert de regie op het
+    inrichten van een (kennis)infrastructuur gericht op specifieke doelgroepen, waarbij
+    sprake is van een (zeer) complexe zorgbehoefte en een laag volume. Dit doet de
+    CElz door het vormen van doelgroepnetwerken, die bestaan uit diverse kennis- en
+    expertisecentra die hooggespecialiseerde kennis en deskundigheid samenbrengen.Deze
+    adviescommissie is geen formeel adviescollege en valt niet onder de Kaderwet adviescolleges.
+  url: https://www.commissiecelz.nl/celz
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Commissie Expertisecentra langdurige zorg, artikel
+    2
+  referentie: https://wetten.overheid.nl/BWBR0042534/2025-01-01#Artikel2
 contact:
   website: https://www.commissiecelz.nl/
+  internet_addresses:
+  - url: https://www.commissiecelz.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.commissiecelz.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2027-01-01'
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30259063/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30259063/celz
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-10-01'

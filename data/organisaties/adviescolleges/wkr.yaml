@@ -3,19 +3,86 @@ type: adviescollege
 identifiers:
   roo_id: '29420981'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12367
+  organisatiecode: oorg12367
 classification: adviescollege
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Wetenschappelijke Klimaatraad
   abbr: WKR
   valid_from: '1900-01-01'
-  valid_until: '2026-11-04'
+description:
+  text: De Wetenschappelijke Klimaatraad voorziet de regering en het parlement van
+    wetenschappelijk onderbouwde adviezen over klimaatbeleid, waarbij voornamelijk
+    naar de lange termijn wordt gekeken. Leden van de raad zijn onafhankelijk en brengen
+    kennis uit diverse vakgebieden met zich mee.
+  url: https://www.wkr.nl/over-de-wkr
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Klimaatwet, artikel 8
+  referentie: https://wetten.overheid.nl/BWBR0042394/2026-01-01/0#Hoofdstuk4_Artikel8
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2026-11-04'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wkr.nl/over-de-wkr/werkwijze-wkr/openbaarheid-en-transparantie
+      overzichtURL: https://organisaties.overheid.nl/woo/29420981/Wetenschappelijke_Klimaatraad
+  wooVerzoek:
+    url: https://www.wkr.nl/over-de-wkr/werkwijze-wkr/openbaarheid-en-transparantie
+afspraak:
+  email: renee.swart@wkr.nl
+  telefoonnummer: (070) 379 70 00
+  url: https://www.wkr.nl/contact
 contact:
   website: https://www.wkr.nl/
   email: renee.swart@wkr.nl
+  postadres: Postbus 20014, 2500 EA Den Haag
+  bezoekadres: Bezuidenhoutseweg 20, 2594 AV Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '20014'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '20'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '20014'
+  phones:
+  - nummer: (070) 379 70 00
+    label: algemeen
+  emails:
+  - email: renee.swart@wkr.nl
+    label: inhoudelijke vragen
+  internet_addresses:
+  - url: https://www.wkr.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.wkr.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-11-04'
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29420981/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29420981/wkr
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-11-05'

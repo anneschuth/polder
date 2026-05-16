@@ -1,25 +1,85 @@
 id: org:oovb-cooperatie-parkeerservice-ua
 type: rwt
+subname: ParkeerService
 identifiers:
   oin: '00000003321703770000'
   kvk: '32170377'
   roo_id: '27908892'
+  owms: http://standaarden.overheid.nl/owms/terms/coopparkserv
+  organisatiecode: '1078'
+  rsin: '822230859'
 classification: rwt
+legal_form: Privaatrechtelijk - Coöperatie
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Coöperatie ParkeerService U.A.
   valid_from: '1900-01-01'
+description:
+  text: Coöperatie ParkeerService U.A. is ontstaan uit ParkeerService NV, het parkeerbedrijf
+    van de gemeente Amersfoort, een stad met diverse parkeeruitdagingen. Zo kent Amersfoort
+    een sterk aanzuigende regiofunctie, een autoluwe historische binnenstad en een
+    grote vraag naar parkeercapaciteit. Door de jaren heen is uitgebreide expertise
+    opgebouwd in parkeermanagement, parkeerbeleid en uitvoering van parkeertaken.In
+    2010 is ParkeerService verzelfstandigd, waarbij gekozen is voor het coöperatiemodel.
+    ParkeerService biedt daarmee een alternatief naast de bestaande mogelijkheden
+    van gemeentelijk of commercieel parkeermanagement. Per 1 januari 2022 zijn dertien
+    gemeenten aangesloten bij ParkeerService, waarbij het zowel om stedelijke als
+    landelijke gemeenten gaat:- Gemeente Alphen aan de Rijn- Gemeente Amersfoort-
+    Gemeente Barneveld- Gemeente Bergen- Gemeente Gouda- Gemeente Hilversum- Gemeente
+    Hoogeveen- Gemeente Lelystad- Gemeente Nieuwegein- Gemeente Nijkerk- Gemeente
+    Woerden- Gemeente Zandvoort- Gemeente Zeist
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.parkeerservice.nl
   email: info@parkeerservice.nl
+  bezoekadres: De Brand 10 - 19, 3823 LH Amersfoort
+  postadres: Postbus 489, 3800 AL Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Brand
+    huisnummer: 10 - 19
+    postcode: 3823 LH
+    woonplaats: Amersfoort
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '489'
+    postcode: 3800 AL
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (033) 247 30 01
+    label: algemeen
+  emails:
+  - email: info@parkeerservice.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.parkeerservice.nl
+    label: algemeen
+  - url: https://www.cooperatieparkeerservice.nl/service/mandaatregister
+    label: mandaatregister
+  contact_forms:
+  - url: https://www.cooperatieparkeerservice.nl/contact/adresgegevens/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908892/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908892/cooperatie-parkeerservice-ua
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2010-12-18'

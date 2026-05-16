@@ -6,21 +6,145 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1774
   roo_id: '25432'
   wikidata: Q9999
+  owms: http://standaarden.overheid.nl/owms/terms/Dinkelland
+  ictu: '01774'
+  organisatiecode: gm1774
+  rsin: '809245206'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_IKL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dinkelland
   abbr: Dinkelland
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dinkelland.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/25432/Gemeente_Dinkelland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dinkelland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dinkelland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dinkelland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.dinkelland.nl/wet-open-overheid
+organogram_url: https://www.dinkelland.nl/bestuur-en-organisatie
+afspraak:
+  email: info@dinkelland.nl
+  telefoonnummer: (0541) 85 41 00
+  url: https://afspraken.noaberkracht.nl/dinkelland
+geography:
+  oppervlakte: 176,82
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 176.82
+  aantal_inwoners: 26958
+  inwoners: '152'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 152.0
+  bevat_plaatsen_raw: Agelo, Denekamp, Deurningen, Lattrop-Breklenkamp, Nutter, Ootmarsum,
+    Oud Ootmarsum, Rossum OV, Saasveld, Tilligte, Weerselo
+  bevat_plaatsen:
+  - Agelo
+  - Denekamp
+  - Deurningen
+  - Lattrop-Breklenkamp
+  - Nutter
+  - Ootmarsum
+  - Oud Ootmarsum
+  - Rossum OV
+  - Saasveld
+  - Tilligte
+  - Weerselo
+council:
+  total_seats: 21
+  parties:
+  - naam: Lokaal Dinkelland
+    aantal_zetels: 8
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: BBB
+    aantal_zetels: 2
+  - naam: Progressief Dinkelland
+    aantal_zetels: 1
 contact:
   website: https://www.dinkelland.nl
   email: info@dinkelland.nl
+  bezoekadres: Nicolaasplein 5, 7591 MA DENEKAMP
+  postadres: Nicolaasplein 5, 7591 MA DENEKAMP
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: DENEKAMP
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: DENEKAMP
+  - type: Woo-Adres
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: Denekamp
+  - type: Woo-Adres
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: Denekamp
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    ter_attentie_van: Omgevingsvergunningen
+    woonplaats: DENEKAMP
+  phones:
+  - nummer: (0541) 85 41 00
+    label: algemeen
+  emails:
+  - email: info@dinkelland.nl
+    label: algemeen
+  - email: info@dinkelland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.dinkelland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-30'
+last_verified: '2026-04-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25432/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25432/dinkelland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +153,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9999
   retrieved: '2026-05-09'
+roo_start_datum: '2002-06-01'

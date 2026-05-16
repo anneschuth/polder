@@ -2,15 +2,43 @@ id: org:oovb-federatie-van-nederlandse-verenigingen-tot-integratie-van-homoseksu
 type: rwt
 identifiers:
   roo_id: '27909063'
+  kvk: '40530156'
+  rsin: 004163849
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Federatie van Nederlandse Verenigingen tot Integratie van Homoseksualiteit
     COC Nederland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Nieuwe Herengracht 49, 1011 RN Amsterdam
+  postadres: Postbus 3836, 1001 AP Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Herengracht 49
+    postcode: 1011 RN
+    woonplaats: Amsterdam
+  - type: Postadres
+    postbus: '3836'
+    postcode: 1001 AP
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909063/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909063/federatie-van-nederlandse-verenigingen-tot-integratie-van-homoseksualiteit-coc-nederland
+  retrieved: '2026-05-16'

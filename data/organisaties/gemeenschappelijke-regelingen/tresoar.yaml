@@ -5,22 +5,107 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0470
   oin: 00000001810711783000
   kvk: '59098147'
+  owms: http://standaarden.overheid.nl/owms/terms/letthoek
+  btw: NL810711783B01
+  organisatiecode: so0470
+  rsin: '810711783'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Tresoar
+  roo_id: '28474228'
 names:
 - value: Tresoar
   valid_from: '1900-01-01'
+description:
+  text: 'Tresoar kent drie afdelingen: Collecties en Informatiebeheer, Publiek en
+    presentatie en Bedrijfsvoering.Onder Collecties en Informatiebeheer vallen de
+    collectievorming, catalogiseren en beschrijven van de collectie en  de conservering.Onder
+    Publiek en presentatie vallen de studiezaal, educatieve activiteiten, communicatie,
+    literaire en museale activiteiten.Onder Bedrijfsvoering vallen ICT, en facilitairNaast
+    de drie afdelingen is er een kleine staf bestaande uit financiële administratie,
+    secretariaat, controller en P&O medewerker.Er is een éénhoofdige directie'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.tresoar.nl/organisatie/bestuur
+      overzichtURL: https://organisaties.overheid.nl/woo/28474242/Tresoar
+  wooVerzoek:
+    url: https://www.tresoar.nl/bezoeken/contact
+organogram_url: https://www.tresoar.nl/organisatie/bestuur
+afspraak:
+  email: info@tresoar.nl
+  telefoonnummer: (058) 789 07 89
+  url: https://www.tresoar.nl/bezoeken/contact
 contact:
   website: https://www.tresoar.nl
   email: info@tresoar.nl
+  bezoekadres: Boterhoek 1, 8911 DH Leeuwarden
+  postadres: Postbus 2637, 8901 AC Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Boterhoek
+    huisnummer: '1'
+    postcode: 8911 DH
+    woonplaats: Leeuwarden
+  - type: Postadres
+    postbus: '2637'
+    postcode: 8901 AC
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    postbus: '2637'
+    postcode: 8901 AC
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    openbare_ruimte: Boterhoek
+    huisnummer: '1'
+    postcode: 8911 DH
+    woonplaats: Leeuwarden
+  phones:
+  - nummer: (058) 789 07 89
+    label: algemeen
+  - nummer: (058) 789 07 89
+    label: algemeen
+  emails:
+  - email: info@tresoar.nl
+    label: algemeen
+  - email: info@tresoar.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.tresoar.nl
+    label: algemeen
+  - url: https://www.tresoar.nl/contact/Pages/Reageer.aspx
+    label: contactformulier
+  - url: www.tresoar.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.tresoar.nl/contact/Pages/Contact.aspx
+    label: Algemeen
+  - url: https://www.tresoar.nl/bezoeken/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-01-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28474242/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28474242/tresoar
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2002-08-29'

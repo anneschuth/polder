@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0786
   roo_id: '34507'
   wikidata: Q9839
+  owms: http://standaarden.overheid.nl/owms/terms/Grave_(gemeente)
+  ictu: 00786
+  organisatiecode: gm0786
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,88 @@ names:
   abbr: Grave
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 27,97
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 27.97
+  aantal_inwoners: 12419
+  inwoners: '444'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 444.0
+  bevat_plaatsen_raw: Escharen, Gassel, Grave, Velp NB
+  bevat_plaatsen:
+  - Escharen
+  - Gassel
+  - Grave
+  - Velp NB
+council:
+  total_seats: 15
+  parties:
+  - naam: Lokale Partij Grave
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Verenigd Progressief Grave
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Liberaal LVC
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: Keerpunt 2010
+    aantal_zetels: 1
 contact:
   website: www.grave.nl
   email: info@grave.nl
+  bezoekadres: Arnoud van Gelderweg 71, 5361 CV GRAVE
+  postadres: Postbus 7, 5360 AA GRAVE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Arnoud van Gelderweg
+    huisnummer: '71'
+    postcode: 5361 CV
+    woonplaats: GRAVE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '7'
+    postcode: 5360 AA
+    woonplaats: GRAVE
+  phones:
+  - nummer: (0486) 47 72 77
+    label: algemeen
+  emails:
+  - email: info@grave.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.grave.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34507/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34507/grave
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

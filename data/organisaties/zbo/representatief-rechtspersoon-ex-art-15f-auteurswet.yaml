@@ -4,13 +4,37 @@ identifiers:
   roo_id: '27613328'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000333
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Representatief rechtspersoon ex art. 15f Auteurswet
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo' s die niet onder de werking van de kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Auteurswet
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0001886
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-11-21'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613328/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613328/representatief-rechtspersoon-ex-art-15f-auteurswet
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-01-01'

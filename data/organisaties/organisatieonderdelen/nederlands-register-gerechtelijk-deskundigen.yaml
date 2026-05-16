@@ -3,14 +3,24 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111683'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dtenv
+parent_id: org:onderdeel-diensten-en-baten-lastenagentschappen
 names:
 - value: Nederlands Register Gerechtelijk Deskundigen
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+contact:
+  postadres: Postbus 12080, 3501 AB Utrecht
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '12080'
+    postcode: 3501 AB
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-12-03'
+last_verified: '2018-12-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111683/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111683/nederlands-register-gerechtelijk-deskundigen
+  retrieved: '2026-05-16'

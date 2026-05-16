@@ -3,7 +3,7 @@ name:
   full: L.A. Jongen
   family: Jongen
   given: L.A.
-  initials: L.
+  initials: L.A.
 mandaten:
 - id: da00a393-a925-431c-b673-2fe9aba19cc5
   organization_id: org:gemeente-kerkrade
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580205
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28635229
 - id: adc82164-b809-443c-b28b-aaa1f61fdf3a
   organization_id: org:gemeente-kerkrade
   post_id: post:raadslid-gemeente-kerkrade

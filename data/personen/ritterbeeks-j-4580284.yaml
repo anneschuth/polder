@@ -3,7 +3,7 @@ name:
   full: J.P.J. Ritterbeeks
   family: Ritterbeeks
   given: J.P.J.
-  initials: J.
+  initials: J.P.J.
 mandaten:
 - id: ee0bfdbb-bb07-4c31-9e79-038e3905f173
   organization_id: org:gemeente-kerkrade
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580286
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28695144
 - id: 092e0a1c-7917-41ab-861a-168c7982b2b4
   organization_id: org:gemeente-kerkrade
   post_id: post:raadslid-gemeente-kerkrade

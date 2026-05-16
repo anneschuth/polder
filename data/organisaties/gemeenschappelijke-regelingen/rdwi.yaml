@@ -1,27 +1,114 @@
 id: org:gr-rdwi
 type: gemeenschappelijke-regeling
+subname: Regionale Sociale Dienst Kromme Rijn Heuvelrug
 identifiers:
   roo_id: '28452428'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0710
   oin: 00000001815258410000
   kvk: '51287609'
+  owms: http://standaarden.overheid.nl/owms/terms/RDWI_KRH
+  organisatiecode: so0710
+  rsin: '815258410'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionale Dienst Werk en Inkomen Kromme Rijn Heuvelrug
+  roo_id: '29529958'
 names:
 - value: Regionale Dienst Werk en Inkomen Kromme Rijn Heuvelrug
   abbr: RDWI
   valid_from: '1900-01-01'
+description:
+  text: De RSD is onderdeel van de Regionale Dienst Werk en Inkomen Kromme Rijn Heuvelrug
+    (RDWI). De RSD is de uitvoeringsorganisatie van de RDWI voor de Participatiewet,
+    de Wet gemeentelijke schuldhulpverlening en aanpalende wetgeving.De RSD is een
+    gemeenschappelijke regeling. De RSD beschikt over een algemeen bestuur, een dagelijks
+    bestuur en een ambtelijke organisatie onder leiding van een directeur.
+  url: https://www.rsdkrh.nl/rdwi
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rsdkrh.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28452428/Regionale_Dienst_Werk_en_Inkomen_Kromme_Rijn_Heuvelrug
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+Dienst+Werk+en+Inkomen+Kromme+Rijn+Heuvelrug%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+Dienst+Werk+en+Inkomen+Kromme+Rijn+Heuvelrug%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.rsdkrh.nl/form/een-verzoek-om-informatie-op-grond-van-de-wet-open-overheid-woo/gegevens-aanvrager-0
+afspraak:
+  url: https://www.rsdkrh.nl/contact
 contact:
   website: https://www.rsdkrh.nl
   email: info@rdskrh.nl
+  bezoekadres: Het Rond 6 e, 3701 HS Zeist
+  postadres: Postbus 13, 3700 AA Zeist
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Het Rond
+    huisnummer: '6'
+    huisnummer_toevoeging: e
+    postcode: 3701 HS
+    woonplaats: Zeist
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '13'
+    postcode: 3700 AA
+    woonplaats: Zeist
+  - type: Woo-Adres
+    openbare_ruimte: Het Rond
+    huisnummer: '6'
+    huisnummer_toevoeging: e
+    postcode: 3701 HS
+    woonplaats: Zeist
+    regio: Kromme Rijn Heuvelrug
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '13'
+    postcode: 3700 AA
+    woonplaats: Zeist
+    regio: Kromme Rijn Heuvelrug
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (030) 692 95 00
+    label: algemeen
+  emails:
+  - email: info@rdskrh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rsdkrh.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rsdkrh.nl/contact
+    label: Algemeen
+  fax: (030) 692 95 14
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28452428/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28452428/rdwi
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-08-01'

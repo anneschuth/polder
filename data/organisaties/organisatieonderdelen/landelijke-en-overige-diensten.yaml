@@ -1,0 +1,38 @@
+id: org:onderdeel-landelijke-en-overige-diensten
+type: organisatieonderdeel
+identifiers:
+  roo_id: '12646'
+classification: organisatieonderdeel
+parent_id: org:onderdeel-directoraat-generaal-straffen-en-beschermen-dgsenb
+names:
+- value: Landelijke en Overige Diensten
+  valid_from: '1900-01-01'
+  valid_until: '2018-11-15'
+contact:
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 30132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 072 50 00
+    label: algemeen
+  internet_addresses:
+  - url: http://www.dji.nl
+    label: algemeen
+valid_from: '1900-01-01'
+valid_until: '2018-11-15'
+last_mutation: '2018-12-03'
+last_verified: '2018-12-03'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/12646/landelijke-en-overige-diensten
+  retrieved: '2026-05-16'

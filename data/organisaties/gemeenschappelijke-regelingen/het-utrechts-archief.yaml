@@ -5,22 +5,100 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0433
   oin: 00000001807024594000
   kvk: '62047302'
+  owms: http://standaarden.overheid.nl/owms/terms/hutrarch
+  organisatiecode: so0433
+  rsin: '807024594'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Het Utrechts Archief
+  roo_id: '30555770'
 names:
 - value: Het Utrechts Archief
   valid_from: '1900-01-01'
+description:
+  text: Het Utrechts Archief verwerft en bewaart de bronnen van de Utrechtse geschiedenis,
+    om ze beschikbaar te stellen aan het publiek. We verbinden de inwoners van de
+    stad en provincie door gezamenlijk het verhaal van de Utrechtse geschiedenis te
+    vertellen. We bieden een aantrekkelijk publieksprogramma en innovatieve digitale
+    dienstverlening. Het Utrechts Archief is een toonaangevend expertisecentrum voor
+    informatiebeheer en deskundig partner voor instellingen en overheden in de regio
+    Utrecht.
+  url: https://hetutrechtsarchief.nl/over-ons/missie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://hetutrechtsarchief.nl/over-ons/missie
+      overzichtURL: https://organisaties.overheid.nl/woo/27426656/Het_Utrechts_Archief
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://hetutrechtsarchief.nl/over-ons/missie
+      toelichting: Financiele jaarstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://hetutrechtsarchief.nl/hulp-bij-onderzoek/vergaderstukken
+      toelichting: vergaderstukken AB vergaderingen Het Utrechts Archief
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://hetutrechtsarchief.nl/over-ons/missie
+      toelichting: Contactmogelijkheden over het indienen van een Woo-verzoek
+afspraak:
+  email: inlichtingen@hetutrechtsarchief.nl
+  telefoonnummer: (030) 286 66 11
+  url: https://hetutrechtsarchief.nl/contact
 contact:
   website: https://hetutrechtsarchief.nl
   email: inlichtingen@hetutrechtsarchief.nl
+  bezoekadres: Alexander Numankade 199 - 201, 3572 KW Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Studiezaal en depot
+    openbare_ruimte: Alexander Numankade
+    huisnummer: 199 - 201
+    postcode: 3572 KW
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '131'
+    postcode: 3500 AC
+    woonplaats: Utrecht
+    regio: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (030) 286 66 11
+    label: algemeen
+  emails:
+  - email: inlichtingen@hetutrechtsarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://hetutrechtsarchief.nl
+    label: algemeen
+  contact_forms:
+  - url: https://hetutrechtsarchief.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27426656/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27426656/het-utrechts-archief
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1998-02-22'

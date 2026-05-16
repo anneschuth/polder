@@ -1,5 +1,6 @@
 id: org:onderdeel-bedrijfscommissie-voor-de-overheid-bdc-o
 type: organisatieonderdeel
+subname: Bedrijfscommissie voor de Overheid (BDC-O)
 identifiers:
   roo_id: '94133'
 classification: organisatieonderdeel
@@ -7,12 +8,41 @@ parent_id: org:onderdeel-commissies
 names:
 - value: Bedrijfscommissie voor de Overheid (BDC-O)
   valid_from: '1900-01-01'
+description:
+  text: Bij een geschil tussen ondernemer en ondernemingsraad over de toepassing van
+    de WOR kan, vóór een eventuele gang naar de rechter, de Bedrijfscommissie worden
+    ingeschakeld voor bemiddeling en advies. De Bedrijfscommissie heeft een eigen,
+    informele geschillenprocedure, die met name is gericht op bemiddeling.
 contact:
   website: http://www.bedrijfscommissieoverheid.nl
   email: BDC-O@caop.nl
+  bezoekadres: Lange Voorhout 13, 2514 EA DEN HAAG
+  postadres: Postbus 556, 2501 CN DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '13'
+    postcode: 2514 EA
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '556'
+    postcode: 2501 CN
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 376 59 97
+    label: algemeen
+  emails:
+  - email: BDC-O@caop.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.bedrijfscommissieoverheid.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94133/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94133/bedrijfscommissie-voor-de-overheid-bdc-o
+  retrieved: '2026-05-16'

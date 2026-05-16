@@ -1,0 +1,40 @@
+id: org:onderdeel-bestuursstaf
+type: organisatieonderdeel
+identifiers:
+  roo_id: '4959'
+classification: organisatieonderdeel
+parent_id: org:min-def
+names:
+- value: Bestuursstaf
+  valid_from: '1900-01-01'
+description:
+  text: De Bestuursstaf maakt het beleid voor het ministerie van Defensie. Het stuurt
+    het departement op hoofdlijnen aan, verdeelt het Defensiebudget en controleert
+    de uitgaven.
+  url: https://www.defensie.nl/organisatie/bestuursstaf
+contact:
+  bezoekadres: Kalvermarkt 32, 2511 CB Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt
+    huisnummer: '32'
+    postcode: 2511 CB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 955 05 50
+    label: algemeen
+  fax: (070) 318 78 88
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2025-05-01'
+last_verified: '2025-08-19'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/4959/bestuursstaf
+  retrieved: '2026-05-16'

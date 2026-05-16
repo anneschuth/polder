@@ -3,18 +3,110 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966159'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0642
+  owms: http://standaarden.overheid.nl/owms/terms/wfrarch
+  kvk: '50152572'
+  btw: NL812527033B01
+  organisatiecode: so0642
+  rsin: '812527033'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Westfries Archief, Regionaal Historisch Centrum
+    voor West-Friesland
+  roo_id: '29924106'
 names:
 - value: Westfries Archief
   abbr: WFA
   valid_from: '1900-01-01'
+description:
+  text: Het Westfries Archief is hét centrum voor informatie beheer in Westfriesland
+    en draagt daarmee bij aan een transparante overheid en tegelijkertijd voor een
+    duurzaam, toegankelijk, betrouwbaar en levend geheugen van Westfriesland.
+  url: https://www.westfriesarchief.nl/organisatie/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.westfriesarchief.nl/woo-zoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/24966159/Westfries_Archief
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.westfriesarchief.nl/woo-zoeken/gemeente-hoorn/
+      toelichting: Woo-verzoek en -besluiten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Westfries%20Archief%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Bekendmakingen via overheid.nl
+    - informatiecategorie: Andere documenten
+      url: https://www.westfriesarchief.nl/organisatie/beleidsplan/
+      toelichting: Beleidsplan
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.westfriesarchief.nl/organisatie/jaarverslagen/
+      toelichting: Jaarverslagen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://wfa.bestuurlijkeinformatie.nl/
+      toelichting: Vergaderingen Algemeen Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.westfriesarchief.nl/organisatie/gemeenschappelijke-regeling/
+      toelichting: Jaarrekeningen
+afspraak:
+  url: https://www.westfriesarchief.nl/contact/
 contact:
   website: http://www.westfriesarchief.nl
   email: info@westfriesarchief.nl
+  bezoekadres: Blauwe Berg 5 c, 1625 NT Hoorn
+  postadres: Postbus 603, 1620 AR Hoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Blauwe Berg
+    huisnummer: '5'
+    huisnummer_toevoeging: c
+    postcode: 1625 NT
+    woonplaats: Hoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '603'
+    postcode: 1620 AR
+    woonplaats: Hoorn
+  phones:
+  - nummer: (0229) 28 25 00
+    label: algemeen
+  emails:
+  - email: info@westfriesarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.westfriesarchief.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.westfriesarchief.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: WestfriesArchief
+    url: https://www.facebook.com/WestfriesArchief/
+  - platform: LinkedIn
+    gebruikersnaam: Westfries Archief
+    url: https://www.linkedin.com/company/westfries-archief/
+  - platform: X
+    gebruikersnaam: Westfries Archief
+    url: https://twitter.com/wfarchief
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966159/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966159/wfa
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-01-01'

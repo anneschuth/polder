@@ -6,21 +6,143 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0221
   roo_id: '35063'
   wikidata: Q165736
+  owms: http://standaarden.overheid.nl/owms/terms/Doesburg_(gemeente)
+  ictu: '00221'
+  organisatiecode: gm0221
+  rsin: 001202728
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DOE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Doesburg
   abbr: Doesburg
   valid_from: '1900-01-01'
+description:
+  text: De gemeentesecretaris stuurt de ambtelijke organisatie Doesburg aan. Deze
+    is georganiseerd rondom drie pijlers, namelijk Fysiek, Samenleving en Dienstverlening.
+    In het organogram is weergeven welke afdelingen binnen de pijlers vallen.Een meer
+    gedetailleerde indeling naar taakvelden die vallen binnen de verschillende afdelingen
+    volgt nog.
+  url: https://www.doesburg.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.doesburg.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/35063/Gemeente_Doesburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doesburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doesburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.doesburg.nl/collegebesluiten
+      toelichting: Openbare besluitenlijsten van het college van Burgemeester en Wethouders
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Doesburg%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://doesburg.raadsinformatie.nl/
+      toelichting: Agenda's, bijbehorende stukken en besluitenlijsten van de raads-
+        en commissievergaderingen
+  wooVerzoek:
+    url: https://www.doesburg.nl/wet-open-overheid-woo
+organogram_url: https://www.doesburg.nl/organisatiestructuur
+afspraak:
+  email: info@doesburg.nl
+  telefoonnummer: (0313) 48 13 13
+  url: https://www.doesburg.nl/afspraak-maken
+geography:
+  oppervlakte: 12,9
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 12.9
+  aantal_inwoners: 11173
+  inwoners: '866'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 866.0
+  bevat_plaatsen_raw: Doesburg
+  bevat_plaatsen:
+  - Doesburg
+council:
+  total_seats: 15
+  parties:
+  - naam: Stadspartij Doesburg
+    aantal_zetels: 6
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.doesburg.nl
   email: info@doesburg.nl
+  bezoekadres: Leigraafseweg 8, 6983 BP DOESBURG
+  postadres: Postbus 100, 6980 AC DOESBURG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Leigraafseweg
+    huisnummer: '8'
+    postcode: 6983 BP
+    woonplaats: DOESBURG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '100'
+    postcode: 6980 AC
+    woonplaats: DOESBURG
+  - type: Woo-Adres
+    postbus: '100'
+    postcode: 6980 AC
+    woonplaats: Doesburg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Leigraafseweg
+    huisnummer: '8'
+    postcode: 6983 BP
+    woonplaats: DOESBURG
+  phones:
+  - nummer: (0313) 48 13 13
+    label: algemeen
+  emails:
+  - email: info@doesburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.doesburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.doesburg.nl/omgevingsvergunningen-loket
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-23'
+last_verified: '2026-04-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/35063/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/35063/doesburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

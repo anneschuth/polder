@@ -3,16 +3,77 @@ type: rwt
 identifiers:
   roo_id: '30443718'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting MEE Dichtbij
   valid_from: '1900-01-01'
+description:
+  text: 'MEE maakt meedoen mogelijk. MEE biedt gratis en onafhankelijk informatie,
+    advies en ondersteuning aan kinderen, jongeren, volwassenen en ouderen, die door
+    hun kwetsbaarheid minder goed mee kunnen in de samenleving. Zoals mensen met een
+    lichamelijke beperking, psychische problemen, licht verstandelijke beperking,
+    moeilijk lerend, niet-aangeboren hersenletsel, chronische ziekte, Autisme en dak-
+    en thuislozen. MEE denkt mee bij alle vragen in het dagelijks leven en voor alle
+    leeftijden (0 tot 100 jaar). Bijvoorbeeld: regelen van zorg, Wet langdurige zorg
+    (Wlz), zorg in natura of een persoonsgebonden budget (PGB), evalueren van zorg,
+    persoonlijk plan, zorg plan, Wet maatschappelijke ondersteuning (Wmo), omgaan
+    met een beperking, huisvesting, solliciteren, arbeid, dagbesteding, vrije tijd,
+    sport, vakantie, reizen met het openbaar vervoer, omgaan met geld, aanpassing
+    aan huis, sociale vaardigheden, vriendschap, relaties, mantelzorg, leerachterstand,
+    pesten, eenzaamheid, schulden, huiselijk geweld, loverboys. MEE biedt ook cursussen,
+    lotgenotencontact, kortdurende ondersteuningstrajecten en beeldvormend onderzoek.
+    Professionals kunnen ook terecht bij MEE voor trainingen, consult, intervisie
+    en coaching on the job. Bijvoorbeeld voor het beter leren herkennen en omgaan
+    met een beperking.'
+  url: https://meedichtbij.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://meedichtbij.nl/
   email: info@meedichtbij.nl
+  bezoekadres: Pallas Athenedreef 10, 3561 PE Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor Utrecht, Gooi en Vecht
+    openbare_ruimte: Pallas Athenedreef
+    huisnummer: '10'
+    postcode: 3561 PE
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor Amstel en Zaan
+    openbare_ruimte: Derkinderenstraat
+    huisnummer: '10'
+    postcode: 1062 DB
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (020) 512 72 72
+    label: algemeen
+  emails:
+  - email: info@meedichtbij.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://meedichtbij.nl/
+    label: algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: meedichtbij
+    url: https://www.instagram.com/meedichtbij/
+  - platform: LinkedIn
+    gebruikersnaam: MEE Dichtbij
+    url: https://nl.linkedin.com/company/mee-dichtbij
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-24'
+last_verified: '2025-11-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30443718/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30443718/stichting-mee-dichtbij
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-01-01'

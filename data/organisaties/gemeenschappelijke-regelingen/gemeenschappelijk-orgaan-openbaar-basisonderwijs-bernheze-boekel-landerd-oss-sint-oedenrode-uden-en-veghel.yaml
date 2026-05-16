@@ -2,8 +2,13 @@ id: org:gr-gemeenschappelijk-orgaan-openbaar-basisonderwijs-bernheze-boekel-land
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962113'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling openbaar onderwijs gemeenten Bernheze, Boekel,
+    Landerd, Oss, Sint-Oedenrode, Uden, Veghel
+  roo_id: '24962108'
 names:
 - value: Gemeenschappelijk orgaan Openbaar Basisonderwijs Bernheze, Boekel, Landerd,
     Oss, Sint-Oedenrode, Uden en Veghel
@@ -12,9 +17,30 @@ names:
 contact:
   website: http://www.oogvoorelkaar.com/Home.aspx
   email: info@stichtingoog.nl
+  bezoekadres: Stadhuisplein 96, 5461 KS Veghel
+  postadres: Postbus 4, 5460 AA Veghel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '96'
+    postcode: 5461 KS
+    woonplaats: Veghel
+  - type: Postadres
+    postbus: '4'
+    postcode: 5460 AA
+    woonplaats: Veghel
+  emails:
+  - email: info@stichtingoog.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.oogvoorelkaar.com/Home.aspx
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2020-10-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962113/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962113/gemeenschappelijk-orgaan-openbaar-basisonderwijs-bernheze-boekel-landerd-oss-sint-oedenrode-uden-en-veghel
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-12-16'

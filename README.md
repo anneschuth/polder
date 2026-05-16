@@ -45,7 +45,7 @@ mandaten:
       staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2022-...
     sources:
       - { id: staatscourant, url: ..., retrieved: 2022-08-20 }
-      - { id: roo, url: https://organisaties.overheid.nl/9632/, retrieved: 2026-05-08 }
+      - { id: roo, url: https://organisaties.overheid.nl/9632/min-bzk, retrieved: 2026-05-08 }
 ```
 
 Volledige schema-definities staan in `schemas/`. Validatie-regels in `src/polder/validate.py`.
@@ -56,7 +56,7 @@ Primaire feeds, deterministisch opgehaald (geen LLM):
 
 | Bron | Endpoint | Formaat | Update | Licentie | Dekking |
 |---|---|---|---|---|---|
-| ROO | `organisaties.overheid.nl`, `api-organisaties.overheid.nl`, dagelijkse `exportOO.xml` | XML/CSV/REST/SRU | dagelijks | CC0 | alle organisatietypes, bestuurders tot SG/DG/burgemeester/dijkgraaf |
+| ROO | `organisaties.overheid.nl`, `api-organisaties.overheid.nl`, dagelijkse `exportOO.xml` | XML/CSV/REST/SRU | dagelijks | CC0 | alle organisatietypes, bestuurders tot SG/DG/burgemeester/dijkgraaf. Polder is een **strict superset**: élk leaf-veld uit ROO komt in YAML terecht (verifieerbaar via `polder roo roundtrip`). Zie [docs/roo_field_map.md](docs/roo_field_map.md). |
 | TOOI | `standaarden.overheid.nl/tooi`, `identifier.overheid.nl/tooi/id/` | SKOS/RDF | gestaag | CC0 | URI-stelsel voor alle organisatietypes |
 | TK OData | `gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/` | OData v4 + Atom SyncFeed | near-realtime | open | TK-personen, fracties, commissies, vanaf 2008-09-01 |
 | Logius COR | `oinregister.logius.nl`, `portaal.digikoppeling.nl/registers/corApi/` | REST | gestaag | open | OIN per organisatie |
@@ -100,13 +100,20 @@ referentie staat in [docs/cli.md](docs/cli.md); hier de korte versie.
 
 ```bash
 uv run polder --help                # overzicht
-uv run polder fetch --help          # 12 fetch-subcommands
+uv run polder fetch --help          # deterministische fetchers (tk, ek, logius, ...)
+uv run polder roo --help            # ROO-pipeline (fetch, functies, resolve, roundtrip)
 uv run polder skill --help          # Claude Code skills
 
 # data ophalen
-uv run polder fetch roo             # ROO exportOO.xml
+uv run polder roo fetch             # ROO exportOO.xml → data/organisaties/
 uv run polder fetch tk              # Tweede Kamer OData
-uv run polder fetch all             # alle deterministische fetchers
+uv run polder fetch all             # alle deterministische fetchers (incl. ROO)
+
+# volledige ROO-pipeline (organisaties + functies/medewerkers)
+uv run polder roo fetch             # 1. organisatie-records
+uv run polder roo functies          # 2. functie/medewerker-proposals → data/_staging/
+uv run polder roo resolve data/_staging/roo-functies-YYYY-MM-DD.json   # 3. auto-merge lanes
+uv run polder roo roundtrip --xml _cache/roo-export-YYYY-MM-DD.xml --data data/organisaties  # 4. verifieer
 
 # valideren, diffen, bouwen
 uv run polder validate

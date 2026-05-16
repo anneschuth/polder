@@ -3,7 +3,7 @@ name:
   full: A.F.L. Groot Zevert
   family: Groot Zevert
   given: A.F.L.
-  initials: A.
+  initials: A.F.L.
 mandaten:
 - id: 760c5a6c-e956-474e-8f5d-b419892d333c
   organization_id: org:gemeente-berkelland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878139
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28623833
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878137

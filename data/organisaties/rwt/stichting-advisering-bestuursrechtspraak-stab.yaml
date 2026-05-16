@@ -2,17 +2,50 @@ id: org:stichting-advisering-bestuursrechtspraak-stab
 type: rwt
 identifiers:
   roo_id: '28226550'
+  kvk: '41159871'
+  rsin: '804172833'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: '"Stichting Advisering (Bestuurs)rechtspraak" (STAB)'
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
 contact:
   website: https://stab.nl
   email: info@stab.nl
+  bezoekadres: Bezuidenhoutseweg 60, 2594 AW Den Haag
+  postadres: Postbus 95928, 2509 CX Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '60'
+    postcode: 2594 AW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '95928'
+    postcode: 2509 CX
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 315 01 50
+    label: algemeen
+  emails:
+  - email: info@stab.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://stab.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28226550/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28226550/stichting-advisering-bestuursrechtspraak-stab
+  retrieved: '2026-05-16'

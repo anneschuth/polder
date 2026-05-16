@@ -5,23 +5,121 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0624
   oin: 00000001811165838000
   kvk: '34370881'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Zaanstreek-Waterland
+  btw: NL811165838B04
+  organisatiecode: so0624
+  rsin: '811165838'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Zaanstreek-Waterland
+  roo_id: '29529652'
 names:
 - value: Veiligheidsregio Zaanstreek-Waterland
   abbr: VrZW
   valid_from: '1900-01-01'
+description:
+  text: Als Veiligheidsregio Zaanstreek-Waterland werken we 24/7 aan de veiligheid
+    van de inwoners van onze regio. Dit doen we door risico's te beperken, 'adequaat'
+    op te treden en de effecten van incidenten, rampen en crisis te beheersen. Samen
+    met inwoners, instellingen, bedrijven én onze partners maken we Zaanstreek-Waterland
+    veiliger. Nederland telt 25 veiligheidsregio's. Een veiligheidsregio is een gebied
+    waarbinnen gemeenten en hulpverleningsdiensten samenwerken ons werkgebied veiliger
+    te maken. Ons werkgebied is Zaanstreek-Waterland. Namens de 7 gemeenten in onze
+    regio voeren we taken uit op het gebied van rampenbestrijding, crisisbeheersing,
+    risicobeheersing, brandweerzorg, geneeskundige hulpverlening en de gemeenschappelijke
+    meldkamer. De burgemeesters van deze gemeenten vormen ons Algemeen Bestuur.
+  url: https://www.veiligheidsregiozaanstreekwaterland.nl/organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.veiligheidsregiozaanstreekwaterland.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28594407/Veiligheidsregio_Zaanstreek-Waterland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.veiligheidsregiozaanstreekwaterland.nl/organisatie/bestuur/agendas-vergaderstukken-en-verslagen
+      toelichting: Agenda's en vergaderstukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zaanstreek-Waterland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Zaanstreek-Waterland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.veiligheidsregiozaanstreekwaterland.nl/organisatie/begrotingen-en-jaarstukken-vrzw
+      toelichting: Jaarstukken
+  wooVerzoek:
+    url: https://www.veiligheidsregiozaanstreekwaterland.nl/contact
+organogram_url: https://www.veiligheidsregiozaanstreekwaterland.nl/organisatie
+afspraak:
+  email: info@vrzw.nl
+  telefoonnummer: (088) 751 20 00
+  url: https://www.veiligheidsregiozaanstreekwaterland.nl/contact
 contact:
   website: https://www.veiligheidsregiozaanstreekwaterland.nl
   email: info@vrzw.nl
+  bezoekadres: Prins Bernhardplein 112, 1508 XB Zaandam
+  postadres: Prins Bernhardplein 112, 1508 XB Zaandam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Bernhardplein
+    huisnummer: '112'
+    postcode: 1508 XB
+    woonplaats: Zaandam
+    regio: Zaanstreek-Waterland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Prins Bernhardplein
+    huisnummer: '112'
+    postcode: 1508 XB
+    woonplaats: Zaandam
+    regio: Zaanstreek-Waterland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Prins Bernhardplein
+    huisnummer: '112'
+    postcode: 1508 XB
+    woonplaats: Zaandam
+    regio: Zaanstreek-Waterland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (088) 751 20 00
+    label: algemeen
+  emails:
+  - email: info@vrzw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.veiligheidsregiozaanstreekwaterland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.veiligheidsregiozaanstreekwaterland.nl/contact
+    label: Algemeen
+  fax: (075) 617 41 41
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28594407/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28594407/vrzw
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2008-01-01'

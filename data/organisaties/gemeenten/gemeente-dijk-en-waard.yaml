@@ -6,21 +6,155 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1980
   roo_id: '28523619'
   wikidata: Q104758977
+  owms: http://standaarden.overheid.nl/owms/terms/Dijk_en_Waard
+  ictu: 01980
+  organisatiecode: gm1980
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DIJ
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dijk en Waard
   abbr: Dijk en Waard
   valid_from: '1900-01-01'
+description:
+  text: https://www.dijkenwaard.nl/gemeentebestuur/college-van-burgemeester-en-wethoudershttps://www.werkenbijdijkenwaard.nl/ons-werk
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dijkenwaard.nl/gemeentebestuur/wet-en-regelgeving/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28523619/Gemeente_Dijk_en_Waard
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://bestuur.dijkenwaard.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Langedijk%22+OR+dt.creator==%22Heerhugowaard%22+OR+dt.creator==%22Dijk+en+Waard%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://bestuur.dijkenwaard.nl/Reports/Details/59c7bb5e-9e15-4cf8-84dc-e27647551fee
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://bestuur.dijkenwaard.nl/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.dijkenwaard.nl/gemeentebestuur/programmabegroting
+      toelichting: De jaarplannen worden in de vorm van de begroting gepubliceerd
+        op de desbetreffende pagina.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Langedijk%22+OR+dt.creator==%22Heerhugowaard%22+OR+dt.creator==%22Dijk+en+Waard%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Langedijk%22+OR+dt.creator==%22Heerhugowaard%22+OR+dt.creator==%22Dijk+en+Waard%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.dijkenwaard.nl/gemeentebestuur/wet-en-regelgeving/woo-verzoek-indienen
+organogram_url: https://www.dijkenwaard.nl/gemeentebestuur/organisatie
+afspraak:
+  telefoonnummer: (072) 575 55 55
+  url: https://www.dijkenwaard.nl/contact-en-openingstijden/maak-een-online-afspraak
+geography:
+  oppervlakte: 67,02
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 67.02
+  aantal_inwoners: 91411
+  inwoners: '1363'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1363.0
+  bevat_plaatsen_raw: Broek Op Langedijk, Heerhugowaard, Koedijk, Noord-Scharwoude,
+    Oudkarspel, Sint Pancras, Zuid-Scharwoude
+  bevat_plaatsen:
+  - Broek Op Langedijk
+  - Heerhugowaard
+  - Koedijk
+  - Noord-Scharwoude
+  - Oudkarspel
+  - Sint Pancras
+  - Zuid-Scharwoude
+council:
+  total_seats: 36
+  parties:
+  - naam: Lokaal Dijk en Waard
+    aantal_zetels: 7
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: Dijk&Waardse Onafhankelijke Partij
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Senioren Dijk en Waard
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Beter voor Dijk en Waard
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: 50PLUS
+    aantal_zetels: 2
 contact:
   website: https://www.dijkenwaard.nl
   email: post@dijkenwaard.nl
+  bezoekadres: Parelhof 1, 1703 EZ HEERHUGOWAARD
+  postadres: Postbus 390, 1700 AJ HEERHUGOWAARD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parelhof
+    huisnummer: '1'
+    postcode: 1703 EZ
+    woonplaats: HEERHUGOWAARD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '390'
+    postcode: 1700 AJ
+    woonplaats: HEERHUGOWAARD
+  - type: Woo-Adres
+    postbus: '390'
+    postcode: 1700 AJ
+    woonplaats: Heerhugowaard
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Parelhof
+    huisnummer: '1'
+    postcode: 1703 EZ
+    ter_attentie_van: VTH
+    woonplaats: HEERHUGOWAARD
+  phones:
+  - nummer: (072) 575 55 55
+    label: algemeen
+  - nummer: (072) 575 55 55
+    label: Omgevingsloket
+  emails:
+  - email: post@dijkenwaard.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dijkenwaard.nl
+    label: algemeen
+  - url: https://www.dijkenwaard.nl/wonen-en-leven/bouwen-en-verbouwen/omgevingsvergunning
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28523619/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28523619/gemeente-dijk-en-waard
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +163,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q104758977
   retrieved: '2026-05-09'
+roo_start_datum: '2022-01-01'

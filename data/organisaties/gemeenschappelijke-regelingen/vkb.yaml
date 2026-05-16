@@ -3,18 +3,76 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28432534'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0089
+  owms: http://standaarden.overheid.nl/owms/terms/Volkskredietbank_Noord-Oost_Groningen
+  kvk: 01173846
+  btw: NL821793901B01
+  organisatiecode: so0089
+  rsin: '821793901'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Volkskredietbank Noord-Oost Groningen
+  roo_id: '28432513'
 names:
 - value: Volkskredietbank Noord-Oost Groningen
   abbr: VKB
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.volkskredietbank.nl/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28432534/Volkskredietbank_Noord-Oost_Groningen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Volkskredietbank+Noord-Oost+Groningen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.vkb.nl
   email: info@vkb.nl
+  bezoekadres: Professor Cleveringaplein 1, 9901 AZ Appingedam
+  postadres: Postbus 130, 9900 AC Appingedam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Professor Cleveringaplein
+    huisnummer: '1'
+    postcode: 9901 AZ
+    woonplaats: Appingedam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '130'
+    postcode: 9900 AC
+    woonplaats: Appingedam
+  phones:
+  - nummer: (0596) 62 96 00
+    label: algemeen
+  emails:
+  - email: info@vkb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vkb.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.volkskredietbank.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-03'
+last_verified: '2026-02-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28432534/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28432534/vkb
+  retrieved: '2026-05-16'
+roo_start_datum: '1967-12-01'

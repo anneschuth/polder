@@ -3,18 +3,115 @@ type: inspectie
 identifiers:
   roo_id: '94018'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12354
+  owms: http://standaarden.overheid.nl/owms/terms/Inspectie_voor_de_Gezondheidszorg
+  kvk: '52511170'
+  oin: I0000003525111700000
+  organisatiecode: oorg12354
+  rsin: '006756402'
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Inspectie Gezondheidszorg en Jeugd
   abbr: IGJ
   valid_from: '1900-01-01'
+description:
+  text: Iedereen moet in Nederland op goede en veilige zorg en jeugdhulp kunnen vertrouwen.
+    Toezichthouden is meer dan ‘controleren op basis van wetten, regels en normen’.
+    Wij agenderen kwaliteit en veiligheid bij partijen in en rondom de zorg en wij
+    stimuleren zorgorganisaties en professionals om (samen) te werken aan het borgen
+    en verbeteren van hun zorg. Waar nodig treden we op. We houden ook toezicht op
+    de kwaliteit en veiligheid van zorg op Bonaire, Sint Eustatius en Saba.
+  url: https://www.igj.nl/over-ons
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.igj.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/94018/Inspectie_Gezondheidszorg_en_Jeugd
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/documenten
+      toelichting: Geanonimiseerde documenten die met een Woo-besluit openbaar zijn
+        gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: http://www.open.minvws.nl/
+      toelichting: 'Sinds begin september 2023 plaatst VWS Woo-besluiten over de coronabestrijding
+        en bijbehorende documenten op een nieuw platform: www.open.minvws.nl. Documenten
+        op dit platform zijn individueel toegankelijk en doorzoekbaar op zoektermen.'
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://toezichtdocumenten.igj.nl/
+      toelichting: Inspectierapporten over zorgaanbieders en bedrijven. Het rapport
+        geeft resultaten weer van een uitgevoerde inspectie ter plaatse of naar aanleiding
+        van een onderzoek. U vindt hier ook maatregelen die de inspectie heeft genomen.
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+afspraak:
+  email: contactpersoonwoo@minvws.nl
+  telefoonnummer: (070) 340 79 11
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
 contact:
   website: http://www.igj.nl
   email: contactpersoonwoo@minvws.nl
+  bezoekadres: Stadsplateau 1, 3521 AZ Utrecht
+  postadres: Postbus 2115, 3500 GC UTRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadsplateau
+    huisnummer: '1'
+    postcode: 3521 AZ
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2115'
+    postcode: 3500 GC
+    woonplaats: UTRECHT
+  - type: Woo-Adres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: DEN HAAG
+    land: Nederland
+  phones:
+  - nummer: (070) 340 79 11
+    label: contactpersoon Woo (VWS)
+  - nummer: (088) 120 50 00
+    label: algemeen
+  emails:
+  - email: contactpersoonwoo@minvws.nl
+    label: contactpersoon Woo (VWS)
+  - email: meldpunt@igj.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.igj.nl
+    label: algemeen
+  - url: https://www.igj.nl/contact/
+    label: contactpagina
+  contact_forms:
+  - url: https://www.igj.nl/contact/contactformulier
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Inspectie Gezondheidszorg en Jeugd
+    url: https://www.linkedin.com/company/igj/
+  - platform: Instagram
+    gebruikersnaam: igjnl
+    url: https://www.instagram.com/igjnl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94018/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94018/igj
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-10-01'

@@ -3,17 +3,61 @@ type: adviescollege
 identifiers:
   roo_id: '28355921'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10133
+  owms: http://standaarden.overheid.nl/owms/terms/kwalinsttolkvert
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Kwaliteitsinstituut beëdigde tolken en vertalers
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 1 van het Instellingsbesluit Kwaliteitsinstituut beëdigde tolken
+    en vertalers
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0034877&artikel=1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.bureauwbtv.nl/commissies/kwaliteitsinstituut-wbtv/
   email: infowbtv@rvr.org
+  postadres: Postbus 2349, 5202 CH 's-Hertogenbosch
+  addresses:
+  - type: Postadres
+    postbus: '2349'
+    postcode: 5202 CH
+    woonplaats: '''s-Hertogenbosch'
+  phones:
+  - nummer: (088) 787 19 20
+    label: algemeen
+  emails:
+  - email: infowbtv@rvr.org
+    label: algemeen
+  internet_addresses:
+  - url: https://www.bureauwbtv.nl/commissies/kwaliteitsinstituut-wbtv/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355921/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355921/kwaliteitsinstituut-beedigde-tolken-en-vertalers
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

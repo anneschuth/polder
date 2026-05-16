@@ -13,9 +13,25 @@ names:
 contact:
   website: http://www.provincie-utrecht.nl
   email: info@provincie-utrecht.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  bezoekadres: Pythagoraslaan 101, 3584 BB Utrecht
+  postadres: Postbus 80300, 3508 TH Utrecht
+  phones:
+  - nummer: (030) 258 22 89
+    label: algemeen
+  emails:
+  - email: info@provincie-utrecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.provincie-utrecht.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: null
+valid_until: '2024-06-01'
+last_mutation: '2024-05-23'
+last_verified: '2024-05-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29456222/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29456222/personeel-en-organisatie
+  retrieved: '2026-05-16'

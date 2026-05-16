@@ -3,17 +3,70 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27230790'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1041
+  owms: http://standaarden.overheid.nl/owms/terms/stark
+  kvk: '72774703'
+  btw: NL859232451B01
+  loonheffing: 859232451L01
+  organisatiecode: so1041
+  rsin: '859232451'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Stark
+  roo_id: '27230785'
 names:
 - value: Stark
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.wijzijnstark.nl
   email: info@wijzijnstark.nl
+  bezoekadres: Europaweg 30, 7903 TM Hoogeveen
+  postadres: Postbus 740, 7900 AS Hoogeveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Europaweg
+    huisnummer: '30'
+    postcode: 7903 TM
+    woonplaats: Hoogeveen
+    regio: Drenthe
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Postadres
+    postbus: '740'
+    postcode: 7900 AS
+    woonplaats: Hoogeveen
+    regio: Drenthe
+    land: Nederland
+  phones:
+  - nummer: (0528) 29 48 11
+    label: algemeen
+  emails:
+  - email: info@wijzijnstark.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wijzijnstark.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wijzijnstark.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-20'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27230790/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27230790/stark
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-10-09'

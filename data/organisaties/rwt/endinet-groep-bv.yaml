@@ -1,16 +1,45 @@
 id: org:oovb-endinet-groep-bv
 type: rwt
+subname: Endinet
 identifiers:
   roo_id: '27909000'
+  kvk: '17182307'
+  rsin: '814884714'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Endinet Groep B.V.
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Wekkerstraat 25, 5652 AN Eindhoven
+  postadres: Postbus 2005, 5600 CA Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wekkerstraat 25
+    postcode: 5652 AN
+    woonplaats: Eindhoven
+  - type: Postadres
+    postbus: '2005'
+    postcode: 5600 CA
+    woonplaats: Eindhoven
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2021-02-27'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909000/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909000/endinet-groep-bv
+  retrieved: '2026-05-16'

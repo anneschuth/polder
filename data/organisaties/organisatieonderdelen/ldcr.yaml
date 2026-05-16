@@ -2,18 +2,67 @@ id: org:onderdeel-ldcr
 type: organisatieonderdeel
 identifiers:
   roo_id: '28116645'
+  kvk: '82986967'
+  rsin: '862681807'
 classification: organisatieonderdeel
-parent_id: org:rechtbank-ldcr
+parent_id: org:rechtbank-raad-voor-de-rechtspraak
 names:
 - value: Landelijk Dienstencentrum voor de Rechtspraak
   abbr: LDCR
   valid_from: '1900-01-01'
+description:
+  text: De bedrijfsvoeringstaken van alle gerechten en andere instanties van de Rechtspraak
+    zijn ondergebracht in het Landelijk Dienstencentrum voor de Rechtspraak (LDCR).
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Indienen-Woo-verzoek.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/28116645/Landelijk_Dienstencentrum_voor_de_Rechtspraak
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2023.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2023 op verzoek openbaar heeft gemaakt.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Raad-voor-de-rechtspraak/Paginas/Woo-besluiten-2022.aspx
+      toelichting: Op deze pagina vindt u informatie die de Raad voor de rechtspraak
+        en het College van afgevaardigden op basis van de Wet open overheid (Woo)
+        in 2022 op verzoek openbaar heeft gemaakt.
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/LDCR
   email: kcc.ldcr@rechtspraak.nl
+  bezoekadres: Uniceflaan 1, 3527 WX Utrecht
+  postadres: Postbus 3175, 3502 GD Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Uniceflaan
+    huisnummer: '1'
+    postcode: 3527 WX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '3175'
+    postcode: 3502 GD
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 361 10 01
+    label: algemeen
+  emails:
+  - email: kcc.ldcr@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/LDCR
+    label: algemeen
+  contact_forms:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Landelijke-diensten/LDCR/Paginas/Contact.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-06-20'
+last_verified: '2026-03-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28116645/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28116645/ldcr
+  retrieved: '2026-05-16'

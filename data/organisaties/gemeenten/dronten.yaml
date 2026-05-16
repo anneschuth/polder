@@ -6,21 +6,139 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0303
   roo_id: '26889'
   wikidata: Q328087
+  owms: http://standaarden.overheid.nl/owms/terms/Dronten_(gemeente)
+  ictu: '00303'
+  organisatiecode: gm0303
+  rsin: 001935823
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_DRO
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Dronten
   abbr: Dronten
   valid_from: '1900-01-01'
+description:
+  url: https://www.dronten.nl/bestuur-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dronten.nl/direct-regelen/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/26889/Gemeente_Dronten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dronten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dronten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dronten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.dronten.nl/bestuur-organisatie/collegebesluiten-2025/
+  wooVerzoek:
+    url: https://eloket.dronten.nl/f/3092/login
+organogram_url: https://www.dronten.nl/bestuur-organisatie/organogram/
+afspraak:
+  telefoonnummer: 14 0321
+  url: https://dronten.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 423,86
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 423.86
+  aantal_inwoners: 45443
+  inwoners: '107'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 107.0
+  bevat_plaatsen_raw: Biddinghuizen, Dronten, Swifterbant
+  bevat_plaatsen:
+  - Biddinghuizen
+  - Dronten
+  - Swifterbant
+council:
+  total_seats: 29
+  parties:
+  - naam: VVD
+    aantal_zetels: 9
+  - naam: Leefbaar Dronten
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Dronten Sociaal
+    aantal_zetels: 1
 contact:
   website: https://www.dronten.nl
   email: gemeente@dronten.nl
+  bezoekadres: De Rede 1, 8251 ER DRONTEN
+  postadres: Postbus 100, 8250 AC DRONTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Rede
+    huisnummer: '1'
+    postcode: 8251 ER
+    woonplaats: DRONTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '100'
+    postcode: 8250 AC
+    woonplaats: DRONTEN
+  - type: Woo-Adres
+    postbus: '100'
+    postcode: 8250 AC
+    woonplaats: Dronten
+    regio: Dronten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: De Rede
+    huisnummer: '1'
+    postcode: 8251 ER
+    ter_attentie_van: Triage Leefomgeving
+    woonplaats: DRONTEN
+  phones:
+  - nummer: 14 0321
+    label: algemeen
+  emails:
+  - email: gemeente@dronten.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dronten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.dronten.nl/contact/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26889/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26889/dronten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -2,14 +2,32 @@ id: org:stichting-isso
 type: rwt
 identifiers:
   roo_id: '30133296'
+  kvk: '41150633'
+  rsin: 002871051
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting ISSO
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    toelichting: 33e etage
+    openbare_ruimte: Weena
+    huisnummer: '505'
+    postcode: 3013 AL
+    woonplaats: Rotterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133296/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133296/stichting-isso
+  retrieved: '2026-05-16'

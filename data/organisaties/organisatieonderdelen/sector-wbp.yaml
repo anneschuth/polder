@@ -9,9 +9,16 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: wbp@minjus.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: wbp@minjus.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/11932/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/11932/sector-wbp
+  retrieved: '2026-05-16'

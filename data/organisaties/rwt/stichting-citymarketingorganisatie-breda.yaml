@@ -2,14 +2,42 @@ id: org:oovb-stichting-citymarketingorganisatie-breda
 type: rwt
 identifiers:
   roo_id: '28347302'
+  kvk: '41106488'
+  rsin: '803339215'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Citymarketingorganisatie Breda
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Stadserf 2, 4811 XS Breda
+  postadres: Stadserf 2, 4811 XS Breda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadserf 2
+    postcode: 4811 XS
+    woonplaats: Breda
+  - type: Postadres
+    openbare_ruimte: Stadserf 2
+    postcode: 4811 XS
+    woonplaats: Breda
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347302/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347302/stichting-citymarketingorganisatie-breda
+  retrieved: '2026-05-16'

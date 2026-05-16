@@ -10,9 +10,21 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+    label: Algemeen
+  fax: (070) 342 79 10
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-24'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/68935/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/68935/mkb
+  retrieved: '2026-05-16'

@@ -3,18 +3,62 @@ type: adviescollege
 identifiers:
   roo_id: '29817012'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12361
+  organisatiecode: oorg12361
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege Rechtspositie Politieke Ambtsdragers
   abbr: ARPA
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege Rechtspositie Politieke Ambtsdragers (ARPA) geeft gevraagd
+    en ongevraagd advies over de arbeidsvoorwaarden van politieke ambtsdragers, bijvoorbeeld
+    ministers, staatssecretarissen en burgemeesters. Deze adviezen worden uitgebracht
+    aan de minister van Binnenlandse Zaken en Koninkrijkrelaties en desgewenst ook
+    aan de Eerste en Tweede Kamer.
+  url: https://adviescollege-rpa.nl/over-ons/
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet adviescollege rechtspositie politieke ambtsdragers, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0045946/2025-02-12/0/#Artikel1
 contact:
   website: https://adviescollege-rpa.nl/
   email: info@adviescollege-rpa.nl
+  bezoekadres: Lange Voorhout 13, 2514 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '13'
+    postcode: 2514 EA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 376 57 46
+    label: algemeen
+  emails:
+  - email: info@adviescollege-rpa.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://adviescollege-rpa.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://adviescollege-rpa.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-16'
+last_verified: '2025-12-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29817012/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29817012/arpa
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-01-01'

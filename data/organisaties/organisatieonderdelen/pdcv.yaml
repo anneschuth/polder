@@ -3,15 +3,22 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29100374'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-pg
+parent_id: org:onderdeel-directoraat-generaal-volksgezondheid
 names:
 - value: Programmadirectie COVID-19 Volksgezondheid
   abbr: PDCV
   valid_from: '1900-01-01'
   valid_until: '2024-06-01'
+description:
+  text: De programmadirectie COVID-19 Volksgezondheid richt zich op de ontwikkeling
+    van beleid op het gebied van COVID-gerelateerde thema’s, zoals vaccineren, testen
+    en traceren, het coronatoegangsbewijs, quarantaine en reizen.
 valid_from: '1900-01-01'
 valid_until: '2024-06-01'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29100374/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29100374/pdcv
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-01-01'

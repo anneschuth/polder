@@ -1,23 +1,76 @@
 id: org:rechtbank-gerechtshof-den-haag
 type: rechterlijke-instantie
+subtype: Gerechtshof
 identifiers:
   oin: '00000004000000056000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10016
   roo_id: '28039061'
+  owms: http://standaarden.overheid.nl/owms/terms/Gerechtshof_Den_Haag
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Gerechtshof Den Haag
   valid_from: '1900-01-01'
+description:
+  text: Gerechtshof Den Haag behandelt zaken in hoger beroep van de rechtbanken Den
+    Haag en Rotterdam, behalve socialezekerheids- en ambtenarenzaken (Centrale Raad
+    van Beroep) en overige zaken op het gebied van bestuursrecht (Raad van State).Gerechtshof
+    Den Haag behandelt zaken uit drie rechtsgebieden in twee afdelingen en één team:•
+    Team Belastingrecht• Afdeling Civiel recht• Afdeling StrafrechtHet team belastingrecht
+    wordt geleid door een teamvoorzitter. De afdelingen Civiel recht en Strafrecht
+    kennen een afdelingsvoorzitter. Binnen deze twee afdelingen bestaat een onderverdeling
+    in teams. De teams vormen zittingscombinaties (meestal 3 raadsheren) die de zaak
+    behandelen.Zo'n zittingscombinatie wordt een kamer genoemd. In de meeste gevallen
+    behandelt een meervoudige kamer de zaken. Een meervoudige kamer bestaat uit drie
+    raadsheren. In een enkelvoudige kamer behandelt één raadsheer de zaak.De raadsheren
+    worden juridisch ondersteund door secretarissen of schrijfjuristen. Zij fungeren
+    meestal ook als griffier tijdens een zitting. De griffier maakt aantekeningen
+    van wat op de zitting wordt gezegd.Daarnaast heeft het hof een bureau bestuur-
+    en bedrijfsondersteuning met stafmedewerkers en een secretariaat voor het bestuur.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Den-Haag
   email: info.gerechtshofdenhaag@rechtspraak.nl
+  bezoekadres: Prins Clauslaan 60, 2595 AJ Den Haag
+  postadres: Postbus 20302, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie
+    openbare_ruimte: Prins Clauslaan
+    huisnummer: '60'
+    postcode: 2595 AJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20302'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 362 23 33
+    label: algemeen/civiele zaken
+  - nummer: (088) 699 26 60
+    label: strafzaken
+  emails:
+  - email: info.gerechtshofdenhaag@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Gerechtshoven/Gerechtshof-Den-Haag
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Paginas/Mailen-met-de-rechtspraak.aspx
+    label: mailen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2019-12-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28039061/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28039061/gerechtshof-den-haag
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -2,8 +2,12 @@ id: org:gr-wedeo
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962552'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Wedeo
+  roo_id: '24962547'
 names:
 - value: Wedeo
   valid_from: '1900-01-01'
@@ -11,9 +15,33 @@ names:
 contact:
   website: http://www.wedeo.nl
   email: info@wedeo.nl
+  bezoekadres: Terborgseweg 106, 7005 BC Doetinchem
+  postadres: Postbus 236, 7000 AE Doetinchem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Terborgseweg
+    huisnummer: '106'
+    postcode: 7005 BC
+    woonplaats: Doetinchem
+  - type: Postadres
+    postbus: '236'
+    postcode: 7000 AE
+    woonplaats: Doetinchem
+  phones:
+  - nummer: (0314) 37 25 00
+    label: algemeen
+  emails:
+  - email: info@wedeo.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.wedeo.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-01-01'
+last_mutation: '2020-10-21'
+last_verified: '2020-10-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962552/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962552/wedeo
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-07-24'

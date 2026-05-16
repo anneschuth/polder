@@ -5,23 +5,136 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0651
   oin: 00000001819754444000
   kvk: 08184751
+  owms: http://standaarden.overheid.nl/owms/terms/gembelktw
+  organisatiecode: so0651
+  rsin: '819754444'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Gemeentelijk Belastingkantoor Twente
+  roo_id: '29755755'
 names:
 - value: Gemeenschappelijke Regeling Gemeentelijk Belastingkantoor Twente
   abbr: GBTwente
   valid_from: '1900-01-01'
+description:
+  text: GBTwente begon in 2009 als samenwerking (Gemeenschappelijke Regeling) op het
+    gebied van gemeentelijke belastingen tussen de gemeenten Borne, Enschede en Hengelo.
+    Het idee achter de samenwerking was om kennis te delen, kosten te besparen en
+    kwetsbaarheid te verminderen. GBTwente is begonnen op de derde etage van het Stadskantoor
+    in Hengelo en is sinds 1 mei 2019 gevestigd aan de Demmersweg 140 in Hengelo onder
+    de huidige naam GBTwente.In 2011 trad de gemeente Losser toe aan de GR. Daarna
+    volgden Haaksbergen (2012), Almelo (2013), Oldenzaal (2013) en Twenterand (2017).
+    Sinds 2016 voert GBTwente ook werkzaamheden uit voor de gemeenten Berkelland en
+    Bronckhorst. Dit gebeurt op basis van een fiscale overeenkomst tussen GBTwente
+    en Berkelland en Bronckhorst. Deze gemeenten zijn dus niet aangesloten bij de
+    Gemeenschappelijke Regeling (GR) met GBTwente zelf.GBTwente bepaalt inmiddels
+    voor 10 gemeenten de WOZ-waarde en verzorgt het proces van heffen en innen van
+    belastingen. Dat zijn Almelo, Berkelland, Borne, Bronckhorst, Enschede, Haaksbergen,
+    Hengelo, Losser, Oldenzaal en Twenterand. In het hele verzorgingsgebied wonen
+    meer dan een half miljoen inwoners voor wie GBTwente jaarlijks ruim 300.000 aanslagen
+    verzorgt. Landelijk behoort GBTwente tot de vijf grootste belastingorganisaties
+    en staat bekend als innovatief. Met ruim 100 medewerkers wil GBTwente belastingen
+    de komende jaren begrijpelijk maken op een persoonlijke manier. Voor gemeenten,
+    maar ook voor inwoners van die gemeenten. Daarmee verandert de rol van uitvoerend
+    naar uitvoerend én adviserend, maar ook van kostenefficiënt naar kostenefficiënt
+    én kwalitatief goed.
+  url: https://gbtwente.nl/wie-we-zijn
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://gbtwente.nl/Over-GBTwente/Wet-open-overheid-Woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28603528/Gemeenschappelijke_Regeling_Gemeentelijk_Belastingkantoor_Twente
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+Regeling+Gemeentelijk+Belastingkantoor+Twente%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://gbtwente.nl/Hulp-nodig/Formulier-Woo-verzoek
+organogram_url: https://gbtwente.nl/Over-GBTwente/Organisatiestructuur
+afspraak:
+  email: info@gbtwente.nl
+  telefoonnummer: (088) 646 48 00
+  url: https://gbtwente.nl/Hulp-nodig
 contact:
   website: https://gbtwente.nl/
   email: info@gbtwente.nl
+  bezoekadres: Demmersweg 140, 7556 BN Hengelo (OV)
+  postadres: Postbus 845, 7550 AV Hengelo (OV)
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Demmersweg
+    huisnummer: '140'
+    postcode: 7556 BN
+    woonplaats: Hengelo (OV)
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Postadres
+    postbus: '845'
+    postcode: 7550 AV
+    woonplaats: Hengelo (OV)
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '845'
+    postcode: 7550 AV
+    woonplaats: Hengelo (OV)
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '845'
+    postcode: 7550 AV
+    woonplaats: Hengelo
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Postadres
+    postbus: '845'
+    postcode: 7550 AV
+    woonplaats: Hengelo
+    regio: Overijssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  phones:
+  - nummer: (088) 646 48 00
+    label: algemeen
+  emails:
+  - email: info@gbtwente.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://gbtwente.nl/
+    label: algemeen
+  - url: https://gbtwente.nl/Hulp-nodig
+    label: contactformulier
+  contact_forms:
+  - url: https://gbtwente.nl/Hulp-nodig
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2025-01-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28603528/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28603528/gbtwente
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-01-01'

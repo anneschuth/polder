@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6728796
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36525/gemeente-zevenaar
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=27511569
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6728794

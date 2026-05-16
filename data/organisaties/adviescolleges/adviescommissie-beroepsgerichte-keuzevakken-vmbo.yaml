@@ -1,18 +1,77 @@
 id: org:commissie-adviescommissie-beroepsgerichte-keuzevakken-vmbo
 type: adviescollege
+subname: Commissie beroepsgerichte keuzevakken vmbo
 identifiers:
   roo_id: '28390722'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10168
+  owms: http://standaarden.overheid.nl/owms/terms/acbgkvmbo
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Adviescommissie beroepsgerichte keuzevakken vmbo
   valid_from: '1900-01-01'
+description:
+  text: De Adviescommissie beroepsgerichte keuzevakken vmbo beoordeelt of nieuwe,
+    beroepsgerichte keuzevakken doorontwikkeld kan worden tot examenvak voor het vmbo.
+    Een nieuw keuzevak kan namelijk alleen als examenvak meetellen wanneer dit officieel
+    is vastgesteld door de minister van Onderwijs, Cultuur en Wetenschap (OCW). De
+    wens om een nieuw keuzevak te ontwikkelen moet eerst door de betreffende school
+    worden gemeld bij de Dienst Uitvoering Onderwijs (DUO), waarna de commissie bepaalt
+    of het nieuwe keuzevak passend is voor het vmbo. Als dat zo is, kan de school
+    verdergaan met het ontwikkelen van een examenprogramma voor dat keuzevak.De commissie
+    is geen formeel adviescollege zoals bedoeld in de Kaderwet adviescolleges. De
+    commissie bestaat uit vertegenwoordigers van de Stichting Platforms vmbo (SPV),
+    SLO (voorheen de Stichting voor de Leerplanontwikkeling) en de Samenwerkingsorganisatie
+    Beroepsonderwijs Bedrijfsleven (SBB).
+  url: https://www.platformsvmbo.nl/themas/keuzevakken/decentrale-keuzevakken
+wettelijke_grondslagen:
+- opschrift: Regeling beroepsgerichte keuzevakken vmbo, artikel 3
+  referentie: https://wetten.overheid.nl/BWBR0038193/2025-02-12/#Artikel3
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.platformsvmbo.nl/
+  bezoekadres: Aidadreef 4, 3561 GE Utrecht
+  postadres: Postbus 59, 7630 AB Ootmarsum
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stichting Platforms vmbo
+    openbare_ruimte: Aidadreef
+    huisnummer: '4'
+    postcode: 3561 GE
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    toelichting: Stichting Platforms vmbo
+    postbus: '59'
+    postcode: 7630 AB
+    woonplaats: Ootmarsum
+  internet_addresses:
+  - url: https://www.platformsvmbo.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.platformsvmbo.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390722/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390722/adviescommissie-beroepsgerichte-keuzevakken-vmbo
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-08-01'

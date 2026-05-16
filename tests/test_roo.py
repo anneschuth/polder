@@ -141,7 +141,8 @@ def test_parse_organisatie_ministerie():
     assert record["valid_from"] == "2010-10-14"
     assert record["valid_until"] is None
     assert record["sources"][0]["id"] == "roo"
-    assert record["sources"][0]["url"] == "https://organisaties.overheid.nl/9632/"
+    # ROO eist non-empty path-segment ná de roo_id; we hangen de polder-slug eraan.
+    assert record["sources"][0]["url"] == "https://organisaties.overheid.nl/9632/bzk"
     assert record["_sub_folder"] == "ministeries"
     assert record["_slug"] == "bzk"
 
@@ -423,6 +424,32 @@ def test_merge_yaml_empty_existing():
     assert merged == new
 
 
+def test_merge_yaml_sentinel_does_not_overwrite_real_valid_from():
+    """Een handmatige of Wikidata-P571-correctie op valid_from mag NIET
+    overschreven worden door ROO's 1900-01-01-sentinel bij her-fetch."""
+    existing = {
+        "id": "org:min-bzk",
+        "valid_from": "1798-03-12",  # echte oprichtingsdatum, gecureerd
+        "valid_until": None,
+    }
+    new = {
+        "id": "org:min-bzk",
+        "valid_from": roo.SENTINEL_VALID_FROM,  # ROO weet het niet
+        "valid_until": None,
+    }
+    merged = roo.merge_yaml(existing, new)
+    assert merged["valid_from"] == "1798-03-12"  # behouden, niet 1900-01-01
+
+
+def test_merge_yaml_real_valid_from_does_overwrite_sentinel():
+    """Andersom: als bestaand de sentinel heeft en ROO/nieuw een echte
+    datum, dan wél updaten."""
+    existing = {"id": "org:x", "valid_from": roo.SENTINEL_VALID_FROM}
+    new = {"id": "org:x", "valid_from": "2017-10-26"}
+    merged = roo.merge_yaml(existing, new)
+    assert merged["valid_from"] == "2017-10-26"
+
+
 # ---------------------------------------------------------------------------
 # write_records (idempotency end-to-end)
 # ---------------------------------------------------------------------------
@@ -449,6 +476,429 @@ def test_write_records_dry_run(tmp_path: Path):
     n = roo.write_records([record], tmp_path, dry_run=True)
     assert n == 1
     assert not (tmp_path / "ministeries" / "bzk.yaml").exists()
+
+
+# ---------------------------------------------------------------------------
+# Extraction helpers — full ROO-superset
+# ---------------------------------------------------------------------------
+
+
+# Real-shape ROO-XML: identifiers via <identificatiecodes><resourceIdentifier
+# p:naam="X">value</resourceIdentifier> rather than losse <oin>/<rsin> children.
+FULL_IDENTIFIERS_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="21849"
+             p:resourceIdentifierTOOI="https://identifier.overheid.nl/tooi/id/gemeente/gm0794"
+             p:resourceIdentifierOWMS="http://standaarden.overheid.nl/owms/terms/Helmond_(gemeente)">
+  <naam>Gemeente Helmond</naam>
+  <afkorting>Helmond</afkorting>
+  <types><type>Gemeente</type></types>
+  <identificatiecodes>
+    <resourceIdentifier p:naam="resourceIdentifierOWMS">http://standaarden.overheid.nl/owms/terms/Helmond_(gemeente)</resourceIdentifier>
+    <resourceIdentifier p:naam="resourceIdentifierTOOI">https://identifier.overheid.nl/tooi/id/gemeente/gm0794</resourceIdentifier>
+    <resourceIdentifier p:naam="Organisatiecode">gm0794</resourceIdentifier>
+    <resourceIdentifier p:naam="systeemId">21849</resourceIdentifier>
+    <resourceIdentifier p:naam="OIN">00000001001600291000</resourceIdentifier>
+    <resourceIdentifier p:naam="KVK-nummer">17272669</resourceIdentifier>
+    <resourceIdentifier p:naam="rsin">001600291</resourceIdentifier>
+    <resourceIdentifier p:naam="ICTU-code">00794</resourceIdentifier>
+    <resourceIdentifier p:naam="ATU">http://publications.europa.eu/resource/authority/atu/NLD_GEM_HLM</resourceIdentifier>
+    <resourceIdentifier p:naam="btw-nummer">NL001600291B01</resourceIdentifier>
+    <resourceIdentifier p:naam="Loonheffingennummer">001600291L01</resourceIdentifier>
+  </identificatiecodes>
+</organisatie>
+"""
+
+
+def test_extract_identifiers_full_eleven_types():
+    node = etree.fromstring(FULL_IDENTIFIERS_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    ids = record["identifiers"]
+    assert ids["roo_id"] == "21849"
+    assert ids["tooi"] == "https://identifier.overheid.nl/tooi/id/gemeente/gm0794"
+    assert ids["owms"] == "http://standaarden.overheid.nl/owms/terms/Helmond_(gemeente)"
+    assert ids["organisatiecode"] == "gm0794"
+    assert ids["oin"] == "00000001001600291000"
+    assert ids["kvk"] == "17272669"
+    assert ids["rsin"] == "001600291"
+    assert ids["ictu"] == "00794"
+    assert ids["atu"] == "http://publications.europa.eu/resource/authority/atu/NLD_GEM_HLM"
+    assert ids["btw"] == "NL001600291B01"
+    assert ids["loonheffing"] == "001600291L01"
+
+
+def test_extract_identifiers_rsin_appears_in_yaml():
+    """Regressie: RSIN werd voorheen wel uit XML gelezen maar nooit naar YAML
+    geschreven (bug in oude `parse_organisatie`). Deze test pint vast dat
+    RSIN nu echt in `record["identifiers"]` zit."""
+    node = etree.fromstring(FULL_IDENTIFIERS_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    assert "rsin" in record["identifiers"]
+    assert record["identifiers"]["rsin"] == "001600291"
+
+
+# Adressen: meerdere <adres>-blokken met BAG-velden.
+ADDRESSES_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="100">
+  <naam>Foo</naam>
+  <types><type>Gemeente</type></types>
+  <adressen>
+    <adres>
+      <adresType>Bezoekadres</adresType>
+      <openbareRuimte>Hoofdstraat</openbareRuimte>
+      <huisnummer>1</huisnummer>
+      <toevoeging>A</toevoeging>
+      <postcode>1234 AB</postcode>
+      <woonplaats>Utrecht</woonplaats>
+      <provincie>https://identifier.overheid.nl/tooi/id/provincie/pv26</provincie>
+    </adres>
+    <adres>
+      <adresType>Postadres</adresType>
+      <postbus>42</postbus>
+      <postcode>5678 CD</postcode>
+      <woonplaats>Utrecht</woonplaats>
+    </adres>
+  </adressen>
+</organisatie>
+"""
+
+
+def test_extract_addresses_structured_and_legacy():
+    node = etree.fromstring(ADDRESSES_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    contact = record["contact"]
+    addrs = contact["addresses"]
+    assert len(addrs) == 2
+    bezoek = next(a for a in addrs if a["type"] == "Bezoekadres")
+    assert bezoek["openbare_ruimte"] == "Hoofdstraat"
+    assert bezoek["huisnummer"] == "1"
+    assert bezoek["huisnummer_toevoeging"] == "A"
+    assert bezoek["postcode"] == "1234 AB"
+    post = next(a for a in addrs if a["type"] == "Postadres")
+    assert post["postbus"] == "42"
+    # Legacy plain-text gegenereerd uit gestructureerde data.
+    assert "Hoofdstraat" in contact["bezoekadres"]
+    assert "Postbus 42" in contact["postadres"]
+
+
+# Classificaties.
+CLASSIFICATIONS_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="1">
+  <naam>X</naam>
+  <types><type>Gemeente</type></types>
+  <classificaties>
+    <classificatie p:type="Woo" p:url="https://example.org/woo">
+      <wettelijkeGrondslagen>
+        <wettelijkeGrondslag>
+          <opschrift>Wet open overheid</opschrift>
+          <referentie>https://wetten.overheid.nl/BWBR0045754</referentie>
+        </wettelijkeGrondslag>
+      </wettelijkeGrondslagen>
+    </classificatie>
+    <classificatie p:type="WNT-instelling" p:url="https://example.org/wnt"/>
+  </classificaties>
+</organisatie>
+"""
+
+
+def test_extract_classifications():
+    node = etree.fromstring(CLASSIFICATIONS_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    cls = record["classifications"]
+    assert len(cls) == 2
+    woo = next(c for c in cls if c["type"] == "Woo")
+    assert woo["url"] == "https://example.org/woo"
+    assert woo["wettelijke_grondslagen"][0]["opschrift"] == "Wet open overheid"
+    wnt = next(c for c in cls if c["type"] == "WNT-instelling")
+    assert wnt["url"] == "https://example.org/wnt"
+    assert "wettelijke_grondslagen" not in wnt
+
+
+def test_extract_classifications_skips_unknown_type():
+    """Een ROO-classificatie-type buiten de schema-enum mag de hele org
+    NIET laten falen op schema-validatie — wel gefilterd + gewaarschuwd."""
+    xml = """
+    <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9" p:systeemId="1">
+      <naam>X</naam>
+      <types><type>Gemeente</type></types>
+      <classificaties>
+        <classificatie p:type="Woo" p:url="https://example.org/woo"/>
+        <classificatie p:type="HeelNieuwType2027" p:url="https://example.org/x"/>
+      </classificaties>
+    </organisatie>
+    """
+    node = etree.fromstring(xml)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    types = {c["type"] for c in record["classifications"]}
+    assert types == {"Woo"}  # HeelNieuwType2027 weggefilterd
+
+
+def test_extract_addresses_skips_unknown_adrestype():
+    """Een onbekend adresType mag de hele org niet laten crashen."""
+    xml = """
+    <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9" p:systeemId="1">
+      <naam>X</naam>
+      <types><type>Gemeente</type></types>
+      <adressen>
+        <adres><adresType>Bezoekadres</adresType><postcode>1234 AB</postcode></adres>
+        <adres><adresType>RuimteStation</adresType><postcode>0000 XX</postcode></adres>
+      </adressen>
+    </organisatie>
+    """
+    node = etree.fromstring(xml)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    addr_types = {a["type"] for a in record["contact"]["addresses"]}
+    assert addr_types == {"Bezoekadres"}
+
+
+# Geografie + raad voor gemeente.
+GEMEENTE_RICH_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="100">
+  <naam>Gemeente Helmond</naam>
+  <afkorting>Helmond</afkorting>
+  <types><type>Gemeente</type></types>
+  <geografie>
+    <oppervlakte p:eenheid="km2">54,56</oppervlakte>
+    <aantalInwoners>96860</aantalInwoners>
+    <inwoners p:eenheid="per km2">1775</inwoners>
+    <bevatPlaatsen>Helmond, Stiphout</bevatPlaatsen>
+  </geografie>
+  <raad>
+    <totaalZetels>37</totaalZetels>
+    <partijen>
+      <partij><naam>Helder Helmond</naam><aantalZetels>8</aantalZetels></partij>
+      <partij><naam>VVD</naam><aantalZetels>5</aantalZetels></partij>
+    </partijen>
+  </raad>
+</organisatie>
+"""
+
+
+def test_extract_geografie_dutch_decimal():
+    node = etree.fromstring(GEMEENTE_RICH_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    geo = record["geography"]
+    # Dutch decimal komma → float.
+    assert geo["oppervlakte_km2"] == 54.56
+    assert geo["aantal_inwoners"] == 96860
+    assert geo["inwoners_per_km2"] == 1775.0
+    assert geo["bevat_plaatsen"] == ["Helmond", "Stiphout"]
+
+
+def test_extract_council():
+    node = etree.fromstring(GEMEENTE_RICH_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    council = record["council"]
+    assert council["total_seats"] == 37
+    assert len(council["parties"]) == 2
+    assert council["parties"][0] == {"naam": "Helder Helmond", "aantal_zetels": 8}
+
+
+# Description (organisatieBeschrijving) + relation_to_ministerie + afspraak.
+INSPECTIE_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="5445">
+  <naam>Inspecteur-Generaal der Krijgsmacht</naam>
+  <afkorting>IGK</afkorting>
+  <types><type>Inspectie</type></types>
+  <relatieMetMinisterie p:systeemId="4958"
+                        p:resourceIdentifierTOOI="https://identifier.overheid.nl/tooi/id/ministerie/mnre1018"
+                        p:resourceIdentifierOWMS="http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie">Defensie</relatieMetMinisterie>
+  <organisatieBeschrijving>
+    <beschrijvingText>De IGK bemiddelt.</beschrijvingText>
+    <url>https://www.defensie.nl/onderwerpen/igk</url>
+  </organisatieBeschrijving>
+  <afspraak>
+    <email>igk@mindef.nl</email>
+    <telefoonnummer>(088) 956 63 23</telefoonnummer>
+  </afspraak>
+  <organogram>
+    <url>https://www.defensie.nl/organogram</url>
+  </organogram>
+  <datumMutatie>2025-10-02</datumMutatie>
+  <datumTerVerificatie>2026-04-09</datumTerVerificatie>
+  <rechtsvorm>Publiekrechtelijk - Onderdeel Staat der Nederlanden</rechtsvorm>
+</organisatie>
+"""
+
+
+def test_extract_relation_description_afspraak_organogram():
+    node = etree.fromstring(INSPECTIE_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    rel = record["relation_to_ministerie"]
+    assert rel["naam"] == "Defensie"
+    assert rel["roo_id"] == "4958"
+    assert rel["tooi"].endswith("mnre1018")
+    assert rel["owms"].endswith("Ministerie_van_Defensie")
+    assert record["description"]["text"] == "De IGK bemiddelt."
+    assert record["description"]["url"] == "https://www.defensie.nl/onderwerpen/igk"
+    assert record["afspraak"] == {
+        "email": "igk@mindef.nl",
+        "telefoonnummer": "(088) 956 63 23",
+    }
+    assert record["organogram_url"] == "https://www.defensie.nl/organogram"
+    assert record["last_mutation"] == "2025-10-02"
+    assert record["last_verified"] == "2026-04-09"
+    assert record["legal_form"] == "Publiekrechtelijk - Onderdeel Staat der Nederlanden"
+
+
+# Contact-block: telefoonnummers, emailadressen, internetadressen.
+CONTACT_XML = """
+<organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+             p:systeemId="1">
+  <naam>X</naam>
+  <types><type>Gemeente</type></types>
+  <contact>
+    <telefoonnummers>
+      <telefoonnummer><nummer>14 030</nummer><label>algemeen</label></telefoonnummer>
+    </telefoonnummers>
+    <emailadressen>
+      <emailadres><email>info@x.nl</email><label>algemeen</label></emailadres>
+    </emailadressen>
+    <internetadressen>
+      <internetadres><url>https://x.nl</url><label>algemeen</label></internetadres>
+    </internetadressen>
+    <contactformulieren>
+      <contactformulier><url>https://x.nl/contact</url><label>Algemeen</label></contactformulier>
+    </contactformulieren>
+  </contact>
+</organisatie>
+"""
+
+
+def test_extract_contact_block():
+    node = etree.fromstring(CONTACT_XML)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    c = record["contact"]
+    assert c["phones"] == [{"nummer": "14 030", "label": "algemeen"}]
+    assert c["emails"] == [{"email": "info@x.nl", "label": "algemeen"}]
+    assert c["internet_addresses"] == [{"url": "https://x.nl", "label": "algemeen"}]
+    assert c["contact_forms"] == [{"url": "https://x.nl/contact", "label": "Algemeen"}]
+    # `email` legacy-veld wordt afgeleid uit `emails[0]`.
+    assert c["email"] == "info@x.nl"
+
+
+# Gemeenschappelijke regeling.
+GR_XML = """
+<regeling xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"
+          p:systeemId="25408161">
+  <titel>BVO Recreatie Midden-Nederland</titel>
+  <citeertitel>BVO RMN</citeertitel>
+  <types><type>Gemeenschappelijke regeling</type></types>
+  <samenwerkingsvorm p:afkorting="BVO">Bedrijfsvoeringsorganisatie</samenwerkingsvorm>
+  <bevoegdheidsverkrijgingen>
+    <bevoegdheidsverkrijging>Delegatie</bevoegdheidsverkrijging>
+  </bevoegdheidsverkrijgingen>
+  <regionaalSamenwerkingsorgaan p:systeemId="25408166">RMN</regionaalSamenwerkingsorgaan>
+  <bronhouder p:systeemId="25408166">RMN</bronhouder>
+  <archiefzorgdrager p:systeemId="25408166">RMN</archiefzorgdrager>
+  <taalcode>nl-NL</taalcode>
+  <registratiehouder>BZK</registratiehouder>
+  <instellingsbesluiten>
+    <referentie>https://example.org/cvdr/410316/1</referentie>
+    <referentie>https://example.org/prb-2016-3821</referentie>
+  </instellingsbesluiten>
+  <wettelijkeGrondslagen>
+    <wettelijkeGrondslag>
+      <opschrift>Wet gemeenschappelijke regelingen</opschrift>
+      <referentie>http://wetten.overheid.nl/jci1.3:c:BWBR0003740</referentie>
+    </wettelijkeGrondslag>
+  </wettelijkeGrondslagen>
+  <bevoegdheden>
+    <bevoegdheid>
+      <kopArtikel>Artikel 4 Bevoegdheden</kopArtikel>
+      <inhoudArtikel>1. Bestuur is bevoegd tot het vaststellen van de organisatiestructuur.</inhoudArtikel>
+    </bevoegdheid>
+  </bevoegdheden>
+  <doel>Centrale dienstverlening voor recreatieschappen.</doel>
+  <datumInwerkingtreding>2016-07-01</datumInwerkingtreding>
+  <datumMutatie>2024-03-15</datumMutatie>
+</regeling>
+"""
+
+
+def test_parse_gemeenschappelijke_regeling():
+    node = etree.fromstring(GR_XML)
+    record = roo.parse_gemeenschappelijke_regeling(node)
+    assert record is not None
+    assert record["type"] == "gemeenschappelijke-regeling"
+    assert record["identifiers"]["roo_id"] == "25408161"
+    # GRs hebben geen eigen afkorting; samenwerkingsvorm-afkorting (BVO/RSO)
+    # blijft in `gr_meta.samenwerkingsvorm.afkorting`, niet in `name.abbr`.
+    assert "abbr" not in record["names"][0]
+    gr = record["gr_meta"]
+    assert gr["citeertitel"] == "BVO RMN"
+    assert gr["doel"].startswith("Centrale dienstverlening")
+    assert gr["samenwerkingsvorm"] == {
+        "value": "Bedrijfsvoeringsorganisatie",
+        "afkorting": "BVO",
+    }
+    assert gr["bevoegdheidsverkrijgingen"] == ["Delegatie"]
+    assert gr["taalcode"] == "nl-NL"
+    assert gr["registratiehouder"] == "BZK"
+    assert len(gr["instellingsbesluiten"]) == 2
+    assert gr["bevoegdheden"][0]["kop_artikel"] == "Artikel 4 Bevoegdheden"
+    assert "vaststellen" in gr["bevoegdheden"][0]["inhoud_artikel"]
+    assert gr["regionaal_samenwerkingsorgaan"]["roo_id"] == "25408166"
+    assert record["valid_from"] == "2016-07-01"
+    assert record["last_mutation"] == "2024-03-15"
+
+
+def test_parse_export_includes_regelingen(tmp_path: Path):
+    """parse_export verwerkt zowel <organisatie> als <regeling> nodes."""
+    full_xml = (
+        b"<?xml version='1.0' encoding='UTF-8'?>\n"
+        b"<overheidsorganisaties xmlns:p='https://organisaties.overheid.nl/static/schema/oo/export/2.6.9'>\n"
+        b"<organisaties><organisatie p:systeemId='1'><naam>Min X</naam>"
+        b"<types><type>Ministerie</type></types></organisatie></organisaties>\n"
+        b"<gemeenschappelijkeRegelingen>" + GR_XML.encode() + b"</gemeenschappelijkeRegelingen>\n"
+        b"</overheidsorganisaties>\n"
+    )
+    target = tmp_path / "export.xml"
+    target.write_bytes(full_xml)
+    records = roo.parse_export(target)
+    assert len(records) == 2
+    types = {r["type"] for r in records}
+    assert types == {"ministerie", "gemeenschappelijke-regeling"}
+
+
+def test_extract_kaderwet_preserves_nested_structure():
+    """`<kaderwet>` heeft vrije nested structuur; we gebruiken _xml_to_dict
+    om alles bit-faithful te bewaren."""
+    xml = """
+    <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9" p:systeemId="1">
+      <naam>X</naam>
+      <types><type>Adviescollege</type></types>
+      <kaderwet>
+        <kaderwetAdviescollege>
+          <kaderwetVanToepassing>ja</kaderwetVanToepassing>
+          <afwijkendeBepalingKaderwet>
+            <artikel>19</artikel>
+            <toelichting>De Onderwijsraad kent ten hoogste negentien leden.</toelichting>
+          </afwijkendeBepalingKaderwet>
+        </kaderwetAdviescollege>
+      </kaderwet>
+    </organisatie>
+    """
+    node = etree.fromstring(xml)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    kw = record["kaderwet"]
+    assert kw["kaderwetAdviescollege"]["kaderwetVanToepassing"] == "ja"
+    assert kw["kaderwetAdviescollege"]["afwijkendeBepalingKaderwet"]["artikel"] == "19"
 
 
 def test_write_records_idempotent_preserves_local_fields(tmp_path: Path):
@@ -492,3 +942,63 @@ def test_write_records_idempotent_preserves_local_fields(tmp_path: Path):
     loaded = yaml.safe_load(target.read_text(encoding="utf-8"))
     assert loaded["identifiers"]["wikidata"] == "Q1727053"
     assert loaded["identifiers"]["oin"] == "00000001003214345000"
+
+
+# ---------------------------------------------------------------------------
+# Helpers (test-gaten dichtmaken)
+# ---------------------------------------------------------------------------
+
+
+def test_roo_org_url_helper():
+    """Centrale URL-builder geeft resolvend formaat voor ROO-website."""
+    from polder.fetchers.roo import PRIMARY_URL, roo_org_url
+
+    assert roo_org_url("21849", "gemeente-helmond") == (
+        "https://organisaties.overheid.nl/21849/gemeente-helmond"
+    )
+    # Slug ontbreekt → fallback `x` (anders 404 op ROO-site).
+    assert roo_org_url("21849", "") == "https://organisaties.overheid.nl/21849/x"
+    assert roo_org_url("21849", None) == "https://organisaties.overheid.nl/21849/x"
+    # roo_id ontbreekt → val terug op de export-URL.
+    assert roo_org_url(None, "ignored") == PRIMARY_URL
+
+
+def test_roo_type_to_internal_longest_match_wins():
+    """Substring-fallback moet de langste TYPE_MAP-key prefereren — ongeacht
+    dict-iteratie-volgorde."""
+    # "zelfstandig bestuursorgaan (zbo)" matcht zowel "zbo" als
+    # "zelfstandig bestuursorgaan"; de langste moet winnen.
+    result = roo.roo_type_to_internal("Zelfstandig Bestuursorgaan (ZBO)")
+    assert result is not None
+    assert result[0] == "zbo"
+
+
+def test_parse_export_gr_slug_collision_resolution(tmp_path: Path):
+    """~290 GRs delen een titel met een andere (versies, fusies). Per
+    collision-set moet een -<roo_id>-suffix worden toegevoegd zodat de
+    slugs uniek blijven."""
+    xml_data = b"""<?xml version="1.0" encoding="UTF-8"?>
+    <overheidsorganisaties xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9">
+      <gemeenschappelijkeRegelingen>
+        <regeling p:systeemId="111">
+          <titel>Samenwerking Sociale Zaken 2016</titel>
+          <citeertitel>Samenwerking SZ 2016</citeertitel>
+          <types><type>Gemeenschappelijke regeling</type></types>
+        </regeling>
+        <regeling p:systeemId="222">
+          <titel>Samenwerking Sociale Zaken 2016</titel>
+          <citeertitel>Samenwerking SZ 2016</citeertitel>
+          <types><type>Gemeenschappelijke regeling</type></types>
+        </regeling>
+      </gemeenschappelijkeRegelingen>
+    </overheidsorganisaties>
+    """
+    xml = tmp_path / "export.xml"
+    xml.write_bytes(xml_data)
+    records = roo.parse_export(xml)
+    slugs = sorted(r["_slug"] for r in records)
+    # Beide records moeten een -<roo_id>-suffix hebben gekregen.
+    assert slugs == ["samenwerking-sz-2016-111", "samenwerking-sz-2016-222"]
+    ids = sorted(r["id"] for r in records)
+    assert all("-" in i for i in ids)
+    assert ids[0] != ids[1]

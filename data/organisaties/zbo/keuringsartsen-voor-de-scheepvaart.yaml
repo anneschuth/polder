@@ -4,13 +4,48 @@ identifiers:
   roo_id: '26140870'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000178
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Keuringsartsen voor de scheepvaart
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo’s die niet onder de Kaderwet zelfstandige bestuursorganen
+    valt. De onderliggende onderdelen van dit cluster worden daarom niet in dit register
+    benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Keuringsreglement voor de zeevaart 2012
+  referentie: http://wetten.overheid.nl/BWBR0017832/
+taken_en_bevoegdheden: Een aantal artsen in en buiten Nederland is door de minister
+  van Infrastructuur en Waterstaat aangewezen als keuringsarts voor de scheepvaart.
+  De in Nederland aangewezen keuringsartsen voor de scheepvaart geven geneeskundige
+  verklaringen voor de binnenvaart en voor de zeevaart af. De in het buitenland aangewezen
+  keuringsartsen voor de scheepvaart geven uitsluitend geneeskundige verklaringen
+  voor de zeevaart af. Daarnaast zijn er keuringsartsen erkend (de betreffende regelgeving
+  maakt een onderscheid tussen aangewezen en erkende keuringsartsen) voor het afgeven
+  van geneeskundige verklaringen voor zeevarenden zonder wachtfunctie en/of veiligheidstaken.De
+  lijst met aangewezen en erkende artsen staat op de website van de Inspectie Leefomgeving
+  en Transport (ILT) en wordt maandelijks geactualiseerd. Deze lijst is [hier](https://www.ilent.nl/onderwerpen/scheepvaart-algemeen/medische-keuring-scheepvaart/keuringsartsen)
+  terug te vinden.
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-09'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140870/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140870/keuringsartsen-voor-de-scheepvaart
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-01-01'

@@ -8,12 +8,30 @@ names:
 - value: Provinciale Staten
   abbr: PS
   valid_from: '1900-01-01'
+description:
+  url: https://www.provincie-utrecht.nl/politiek-bestuur/provinciale-staten
 contact:
   website: https://www.provincie-utrecht.nl/politiek-bestuur/provinciale-staten
   email: statengriffie@provincie-utrecht.nl
+  bezoekadres: Visarenddreef 1, 8232 PH Lelystad
+  postadres: Postbus 80300, 3508 TH Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '80300'
+    postcode: 3508 TH
+    woonplaats: Utrecht
+    land: Nederland
+  emails:
+  - email: statengriffie@provincie-utrecht.nl
+  internet_addresses:
+  - url: https://www.provincie-utrecht.nl/politiek-bestuur/provinciale-staten
+  phones:
+  - nummer: (030) 258 90 70
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-03'
+last_verified: '2026-03-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/64582/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/64582/ps
+  retrieved: '2026-05-16'

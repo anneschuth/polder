@@ -57,6 +57,32 @@
         { "type": "string", "format": "date" },
         { "type": "null" }
       ]
+    },
+    "roo_functie_id": {
+      "type": "string",
+      "description": "ROO <functie systeemId>: link naar het functie-record in ROO."
+    },
+    "roo_naam": {
+      "type": "string",
+      "description": "ROO <functie><naam>: officiële functie-naam zoals ROO die hanteert. Mag afwijken van polder's `label` (polder gebruikt vaak een korter, gestandaardiseerd label)."
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "url", "retrieved"],
+        "properties": {
+          "id": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "retrieved": { "type": "string", "format": "date" },
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+      "description": "Optioneel: per-veld provenance. Posts hadden voorheen geen sources omdat ze afgeleid zijn uit mandaten en organisaties; sinds Phase 3 schrijft de ROO-resolver hier `roo`-entries in voor `roo_functie_id`/`roo_naam`."
     }
   }
 }

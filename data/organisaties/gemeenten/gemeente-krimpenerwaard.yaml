@@ -6,21 +6,172 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1931
   roo_id: '129780'
   wikidata: Q15991891
+  owms: http://standaarden.overheid.nl/owms/terms/Krimpenerwaard
+  ictu: 01931
+  organisatiecode: gm1931
+  rsin: '823953026'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_KIN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Krimpenerwaard
   abbr: Krimpenerwaard
   valid_from: '1900-01-01'
+description:
+  text: 'De ambtelijke organisatie van de gemeente Krimpenerwaard is verdeeld in vier
+    domeinen: Publiek Domein, Sociaal Domein, Ruimtelijk Domein en Domein Bedrijfsvoering.
+    Elk domein bestaat uit verschillende teams. Ieder team heeft een teammanager die
+    de teamleden coacht en richting geeft.DirectieAan het hoofd van de ambtelijke
+    organisatie van de gemeente Krimpenerwaard staat de gemeentesecretaris/directeur.
+    Samen met de andere directieleden is hij verantwoordelijk voor de hele organisatie.'
+  url: https://www.krimpenerwaard.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://woo.krimpenerwaard.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/129780/Gemeente_Krimpenerwaard
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Krimpenerwaard%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Krimpenerwaard%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://woo.krimpenerwaard.nl/jaarplannen-en-jaarverslagen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://krimpenerwaard.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Krimpenerwaard%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.krimpenerwaard.nl/woo-verzoeken
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://woo.krimpenerwaard.nl/onderzoeksrapporten
+  wooVerzoek:
+    url: https://eloket.krimpenerwaard.nl/f/3015/login
+organogram_url: https://www.krimpenerwaard.nl/organisatiestructuur
+afspraak:
+  telefoonnummer: 14 0182
+  url: https://www.krimpenerwaard.nl/afspraak-maken#select/
+geography:
+  oppervlakte: 161,3
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 161.3
+  aantal_inwoners: 57898
+  inwoners: '358'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 358.0
+  bevat_plaatsen_raw: Ammerstol, Bergambacht, Berkenwoude, Gouderak, Haastrecht, Krimpen
+    aan de Lek, Lekkerkerk, Ouderkerk aan den IJssel, Schoonhoven, Stolwijk, Vlist
+  bevat_plaatsen:
+  - Ammerstol
+  - Bergambacht
+  - Berkenwoude
+  - Gouderak
+  - Haastrecht
+  - Krimpen aan de Lek
+  - Lekkerkerk
+  - Ouderkerk aan den IJssel
+  - Schoonhoven
+  - Stolwijk
+  - Vlist
+council:
+  total_seats: 31
+  parties:
+  - naam: Leefbaar Krimpenerwaard
+    aantal_zetels: 7
+  - naam: SGP
+    aantal_zetels: 5
+  - naam: Pro Krimpenerwaard
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VGBK
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.krimpenerwaard.nl/
   email: info@krimpenerwaard.nl
+  bezoekadres: Dorpsplein 8, 2821 AS STOLWIJK
+  postadres: Postbus 51, 2820 AB STOLWIJK
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpsplein
+    huisnummer: '8'
+    postcode: 2821 AS
+    woonplaats: STOLWIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '51'
+    postcode: 2820 AB
+    woonplaats: STOLWIJK
+  - type: Woo-Adres
+    postbus: '51'
+    postcode: 2820 AB
+    woonplaats: Stolwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Dorpsplein
+    huisnummer: '8'
+    postcode: 2821 AS
+    woonplaats: STOLWIJK
+  phones:
+  - nummer: 14 0182
+    label: algemeen
+  emails:
+  - email: info@krimpenerwaard.nl
+    label: algemeen
+  - email: info@krimpenerwaard.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.krimpenerwaard.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.krimpenerwaard.nl/afspraak-maken#select/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-bergambacht
+- org:gemeente-nederlek
+- org:gemeente-ouderkerk
+- org:gemeente-schoonhoven
+- org:gemeente-vlist
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/129780/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,9 +180,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q15991891
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-bergambacht
-- org:gemeente-nederlek
-- org:gemeente-ouderkerk
-- org:gemeente-schoonhoven
-- org:gemeente-vlist
+roo_start_datum: '2015-01-01'

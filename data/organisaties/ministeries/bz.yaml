@@ -1,11 +1,15 @@
 id: org:min-bz
 type: ministerie
+subname: BuZa
 identifiers:
   wikidata: Q1037495
   oin: '00000001003227406000'
   kvk: '27366538'
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
   roo_id: '2515'
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
+  ictu: '04003'
+  rsin: '003227406'
 classification: ministerie
 parent_id: null
 names:
@@ -15,15 +19,130 @@ names:
 - value: Buitenlandse Zaken
   abbr: BZ
   valid_from: '1798-03-12'
+description:
+  text: Het ministerie van Buitenlandse Zaken (BZ) is ieder uur van de dag ergens
+    in de wereld actief. Zo is het ministerie er voor u als u voor korte of langere
+    tijd naar het buitenland gaat. Ook behartigt BZ de internationale betrekkingen,
+    vanuit Den Haag en via een netwerk van ruim 150 posten over de hele wereld. Daarnaast
+    geeft het ministerie van Buitenlandse Zaken, in overleg met andere ministeries,
+    vorm aan het Europa van de toekomst.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/organisatie/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/2515/Buitenlandse_Zaken
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.iob-evaluatie.nl/publicaties?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen
+      toelichting: Onderzoeksrapporten Internationaal Onderzoek en Beleidsevaluatie
+        (IOB)
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://wetten.overheid.nl/
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=adr&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Rapport
+      toelichting: Onderzoeksrapporten Auditdienst Rijk
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)%20AND%20((dt.creator==%22Ministerie%20van%20Buitenlandse%20Zaken%22%20OR%20dt.creator==%22Ministerie%20van%20Ontwikkelingssamenwerking%22%20OR%20dt.creator==%22Ministerie%20van%20Buitenlandse%20Zaken%22))%20AND%20((dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22%20OR%20dt.type==%22gemeenschappelijke%20regeling%22%20OR%20dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22%20OR%20dt.type==%22AMvB%22%20OR%20dt.type==%22Ministeri%C3%ABle%20regeling%22%20OR%20dt.type==%22RijksAMvB%22%20OR%20dt.type==%22Rijkswet%22%20OR%20dt.type==%22Verbeterblad%22%20OR%20dt.type==%22Wet%22%20OR%20dt.type==%22Verdrag%22)))%20AND%20w.jaargang==%222024%22&zv=&pg=10&col=&svel=Kenmerkendedatum&svol=Aflopend
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=&dateRange=specific&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Jaarplan
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Woo-besluit
+      toelichting: Woo-verzoeken vanaf mei 2022
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://wetten.overheid.nl/uitgebreid_zoeken/zoekresultaat/titelf/1/tekstf/1/d/26-05-2025/dx/0/evm/buza/zd/26-05-2025/ds/0/dt/1/db/3/sd/01-01-2024/ed/01-01-2025
+    - informatiecategorie: Convenanten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=&dateRange=specific&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Convenant
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Regeling
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeri%C3%ABle+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksfinancien.nl/2025
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten?trefwoord=&dateRange=specific&startdatum=&einddatum=&onderdeel=Ministerie+van+Buitenlandse+Zaken&type=Jaarverslag
+    - informatiecategorie: Adviezen
+      url: https://www.raadvanstate.nl/adviezen?zoeken=true&zoeken_term=&pager_rows=100&actualiteit=jaar&kalenderjaar=2024&Zoe_Selected_facet%3AMinisterie=17
+    - informatiecategorie: Adviezen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22ministerie%22)and((dt.creator==%22Ministerie%20van%20Buitenlandse%20Zaken%20(MINBUZA)%22)or(dt.creator==%22Ministerie%20van%20Buitenlandse%20Zaken%22)or(dt.creator==%22Ministerie%20van%20Ontwikkelingssamenwerking%22)))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))%20AND%20dt.type==%22advies%20Raad%20van%20State%22&zv=&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=ru%7cadvies+Raad+van+State
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22+OR+dt.creator==%22Ministerie+van+Ontwikkelingssamenwerking%22+OR+dt.creator==%22Ministerie+van+Buitenlandse+Zaken%22))+AND+((dt.type==%22convenant%22)))
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken/documenten/publicaties/2023/10/31/organogram-buitenlandse-zaken-2023
+afspraak:
+  telefoonnummer: (070) 348 64 86
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken
   email: woo@minbuza.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 20061, 2500 EB Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20061'
+    postcode: 2500 EB
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: T.a.v. Woo-contactpersoon     Woo@minbuza.nl
+    postbus: '20061'
+    postcode: 2500 EB
+    woonplaats: Den Haag
+    land: Nederland
+  phones:
+  - nummer: (070) 348 64 86
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-buitenlandse-zaken
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/informatie-rijksoverheid/e-mail-sturen
+    label: Algemeen
+  fax: (070) 348 48 48
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/2515/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/2515/bz
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1037495
   retrieved: '2026-05-09'
@@ -35,3 +154,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
   retrieved: '2026-05-09'
+roo_start_datum: '1798-03-12'

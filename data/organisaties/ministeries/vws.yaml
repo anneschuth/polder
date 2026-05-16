@@ -2,30 +2,133 @@ id: org:min-vws
 type: ministerie
 identifiers:
   wikidata: Q1056190
-  oin: 00000004003182447002
+  oin: 00000002003182447001
   kvk: '52511170'
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
   roo_id: '8591'
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
+  ictu: '04012'
+  organisatiecode: mnre1025
+  rsin: '006756402'
 classification: ministerie
 parent_id: null
 names:
 - value: Volksgezondheid, Welzijn en Sport
   abbr: VWS
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
 - value: Volksgezondheid, Welzijn en Sport
   abbr: VWS
   valid_from: '2021-01-01'
   valid_until: null
+description:
+  text: Het ministerie van Volksgezondheid, Welzijn en Sport (VWS) werkt aan een gezond,
+    fit en veerkrachtig Nederland. Dat doen wij door een gezonde leefstijl, voldoende
+    beweging en goede voeding te stimuleren. Ook bieden we Nederland goede (top)sportvoorzieningen.
+    En we zetten ons in voor goede, betaalbare en voor iedereen toegankelijke zorg
+    en ondersteuning.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/8591/Volksgezondheid_Welzijn_en_Sport
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22+OR+dt.creator==%22Ministerie+van+Cultuur,+Recreatie+en+Maatschappelijk+Werk%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Sociale+Zaken+en+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Welzijn,+Volksgezondheid+en+Cultuur%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Deze categorie gaat over besluiten van het ministerie die voor
+        meerdere mensen of bedrijven gelden. Het zijn dus geen besluiten voor één
+        persoon, maar algemene regels of aanwijzingen die breder van toepassing zijn.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Volksgezondheid%2C+Welzijn+en+Sport&type=Woo-besluit
+      toelichting: Wob-/Woo-besluiten en openbaar gemaakte documenten m.b.t. andere
+        onderwerpen dan Covid19 voor 1 juli 2025
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22+OR+dt.creator==%22Ministerie+van+Cultuur,+Recreatie+en+Maatschappelijk+Werk%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Sociale+Zaken+en+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Welzijn,+Volksgezondheid+en+Cultuur%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit gaat om wetten, regelingen en andere algemene regels die door
+        het ministerie worden vastgesteld en voor iedereen gelden.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.minvws.nl/
+      toelichting: Woo-besluiten over andere onderwerpen dan Covid19 vanaf 1 juli
+        2025 en alle Wob-/Woo-besluiten over Covid19
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22+OR+dt.creator==%22Ministerie+van+Cultuur,+Recreatie+en+Maatschappelijk+Werk%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Sociale+Zaken+en+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Welzijn,+Volksgezondheid+en+Cultuur%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Een beschikking is een formele, schriftelijke beslissing van een
+        overheidsorganisatie. Beschikkingen gaan over specifieke, individuele gevallen
+        (bijvoorbeeld een bedrijf, een inwoner, een overtreding) – ze zijn niet op
+        iedereen van toepassing.
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22+OR+dt.creator==%22Ministerie+van+Cultuur,+Recreatie+en+Maatschappelijk+Werk%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Sociale+Zaken+en+Volksgezondheid%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid+en+Milieuhygiëne%22+OR+dt.creator==%22Ministerie+van+Welzijn,+Volksgezondheid+en+Cultuur%22+OR+dt.creator==%22Ministerie+van+Volksgezondheid,+Welzijn+en+Sport%22))+AND+((dt.type==%22convenant%22)))
+      toelichting: Een convenant is een schriftelijke set van afspraken tussen een
+        overheidsorganisatie en één of meer andere partijen. Het doel van de afspraken
+        is het voorbereiden of realiseren van beleid of het uitvoeren van een overheidstaak.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rijksfinancien.nl/
+      toelichting: Een jaarverslag beschrijft achteraf wat er in een jaar daadwerkelijk
+        is gedaan, bereikt en uitgegeven/besteed door het ministerie.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/rapporten
+      toelichting: Het ministerie van geeft regelmatig opdracht aan instellingen en
+        bureaus om onderzoek te doen op haar vakgebied.
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/organogram
+afspraak:
+  telefoonnummer: (070) 340 79 11
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport
   email: contactpersoonwoo@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 340 79 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8591/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8591/vws
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q1056190
   retrieved: '2026-05-09'

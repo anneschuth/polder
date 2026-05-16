@@ -3,16 +3,59 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967843'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0175
+  owms: http://standaarden.overheid.nl/owms/terms/spsoub
+  kvk: '54377102'
+  organisatiecode: so0175
+  rsin: '802314181'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Sportpark Souburgh
+  roo_id: '24967838'
 names:
 - value: Sportpark Souburgh
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: g.rodts@alblasserdam.nl
+  bezoekadres: Groeneweg 33, 4223 ME Hoornaar
+  postadres: Cortgene 2, 2951 ED Alblasserdam
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeente Molenlanden
+    openbare_ruimte: Groeneweg
+    huisnummer: '33'
+    postcode: 4223 ME
+    woonplaats: Hoornaar
+  - type: Postadres
+    openbare_ruimte: Cortgene
+    huisnummer: '2'
+    postcode: 2951 ED
+    woonplaats: Alblasserdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: 14 078
+    label: algemeen
+  emails:
+  - email: g.rodts@alblasserdam.nl
+    label: Secretaris
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-16'
+last_verified: '2020-08-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967843/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967843/sportpark-souburgh
+  retrieved: '2026-05-16'
+roo_start_datum: '1990-01-01'

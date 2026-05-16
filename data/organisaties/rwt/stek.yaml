@@ -2,15 +2,34 @@ id: org:stichting-stek
 type: rwt
 identifiers:
   roo_id: '30134039'
+  kvk: '41157019'
+  rsin: '800883792'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Emissiepreventie Koudetechniek
   abbr: STEK
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Gooimeer
+    huisnummer: '4'
+    huisnummer_toevoeging: '15'
+    postcode: 1411 DC
+    woonplaats: Naarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30134039/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30134039/stek
+  retrieved: '2026-05-16'

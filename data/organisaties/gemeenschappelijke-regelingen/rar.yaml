@@ -1,20 +1,85 @@
 id: org:gr-rar
 type: gemeenschappelijke-regeling
+subname: RAR
 identifiers:
   roo_id: '28573897'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0188
+  owms: http://standaarden.overheid.nl/owms/terms/rarchrl
+  kvk: '50372378'
+  btw: NL808906823B01
+  organisatiecode: so0188
+  rsin: '808906823'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Archief Rivierenland
+  roo_id: '28573871'
 names:
 - value: Regionaal Archief Rivierenland
   abbr: RAR
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://regionaalarchiefrivierenland.nl/bestuur-en-bestuursstukken
+      overzichtURL: https://organisaties.overheid.nl/woo/28573897/Regionaal_Archief_Rivierenland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://regionaalarchiefrivierenland.nl/bestuur-en-bestuursstukken
+      toelichting: Financiële jaarstukken
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://rarivierenland.notubiz.nl/
+      toelichting: Vergaderstukken Algemeen Bestuur en Dagelijks Bestuur RAR
 contact:
   website: https://www.regionaalarchiefrivierenland.nl
   email: info@regionaalarchiefrivierenland.nl
+  bezoekadres: J.S. de Jongplein 3, 4001 WG Tiel
+  postadres: J.S. de Jongplein 3, 4001 WG Tiel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: J.S. de Jongplein
+    huisnummer: '3'
+    postcode: 4001 WG
+    woonplaats: Tiel
+  - type: Postadres
+    openbare_ruimte: J.S. de Jongplein
+    huisnummer: '3'
+    postcode: 4001 WG
+    woonplaats: Tiel
+  phones:
+  - nummer: (0344) 61 22 30
+    label: algemeen
+  emails:
+  - email: info@regionaalarchiefrivierenland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regionaalarchiefrivierenland.nl
+    label: algemeen
+  - url: https://www.regionaalarchiefrivierenland.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.regionaalarchiefrivierenland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2024-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28573897/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28573897/rar
+  retrieved: '2026-05-16'
+roo_start_datum: '1999-01-01'

@@ -1,22 +1,155 @@
 id: org:zbo-stichting-nederlandse-algemene-kwaliteitsdienst-tuinbouw
 type: zbo
+subname: Naktuinbouw
 identifiers:
   roo_id: '28212452'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000133
+  kvk: '41150707'
+  rsin: 002878264
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Nederlandse Algemene Kwaliteitsdienst Tuinbouw
   valid_from: '1900-01-01'
+description:
+  text: De Stichting Nederlandse Algemene Kwaliteitsdienst Tuinbouw (Naktuinbouw)
+    is per 1 januari 2000 ontstaan uit een fusie van de Stichting Nederlandse Algemene
+    Keuringsdienst voor Bloemisterij en Boomkwekerijgewassen met de Stichting Nederlandse
+    Algemene Keuringsdienst voor Groente- en Bloemzaden. Naktuinbouw onderzoekt teeltmateriaal
+    (zoals zaden, stekken en jonge planten) en nieuwe plantenrassen die door tuinbouwondernemers
+    worden geproduceerd. Daarnaast keurt en inspecteert Naktuinbouw zaad- en plantmateriaal
+    en toetst deze op ziekten en plagen.
+  url: https://www.naktuinbouw.nl/over-ons/de-organisatie
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Zaaizaad- en Plantgoedwet 2005, artikel 19
+  referentie: https://wetten.overheid.nl/BWBR0018040/2025-01-01#Hoofdstuk3_Artikel19
+taken_en_bevoegdheden: '* Bevordert en bewaakt de kwaliteit van producten, processen
+  en ketens in de tuinbouw gericht op teeltmateriaal, zowel nationaal als internationaal.*
+  Het uitvoeren van fytosanitaire export- en importinspecties en het waarmerken van
+  het fytosanitaire certificaat.'
+evaluations:
+- datum: '2023-12-22'
+  kamerstuknummer: TK 25268 nr. 221
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-221.html
+- datum: '2017-12-19'
+  kamerstuknummer: TK 25268 nr. 157
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-157.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Nationale-Nederlanden
+    referentie: https://www.nn.nl/Particulier/Pensioen.htm
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.naktuinbouw.nl/over-ons/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28212452/Stichting_Nederlandse_Algemene_Kwaliteitsdienst_Tuinbouw
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Klachtoordelen
+      url: https://www.naktuinbouw.nl/over-ons/bezwaar-of-klacht-indienen
+      toelichting: Bekijk hier onze klachtenprocedure
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.naktuinbouw.nl/woo
+      toelichting: Bekijk hier de Woo-verzoeken en -besluiten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.naktuinbouw.nl/kennis-educatie/kennis-wet-en-regelgeving
+      toelichting: Regelgeving
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.naktuinbouw.nl/over-ons/onze-uitingen
+      toelichting: Jaarverslagen
+  wooVerzoek:
+    url: https://www.naktuinbouw.nl/over-ons/wet-open-overheid-woo
+organogram_url: https://www.naktuinbouw.nl/download?guid=7faa2c6e-6c6b-6dcf-acf3-e307d2bf1d44
+afspraak:
+  email: info@naktuinbouw.nl
+  telefoonnummer: (071) 332 62 62
+  url: https://www.naktuinbouw.nl/contact
+personnel:
+  aantalFte: 395,0
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.naktuinbouw.nl/
   email: info@naktuinbouw.nl
+  bezoekadres: Sotaweg 22, 2371 GD Roelofarendsveen
+  postadres: Postbus 40, 2370 AA Roelofarendsveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sotaweg
+    huisnummer: '22'
+    postcode: 2371 GD
+    woonplaats: Roelofarendsveen
+  - type: Postadres
+    postbus: '40'
+    postcode: 2370 AA
+    woonplaats: Roelofarendsveen
+  - type: Woo-Adres
+    postbus: '40'
+    postcode: 2370 AA
+    woonplaats: Roelofarendsveen
+  phones:
+  - nummer: (071) 332 62 62
+    label: algemeen
+  emails:
+  - email: info@naktuinbouw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.naktuinbouw.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.naktuinbouw.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Naktuinbouw
+    url: https://www.linkedin.com/company/naktuinbouw/
+  - platform: Facebook
+    gebruikersnaam: Naktuinbouw
+    url: https://www.facebook.com/Naktuinbouw#
+  - platform: Instagram
+    gebruikersnaam: '@naktuinbouw'
+    url: https://www.instagram.com/naktuinbouw
+  - platform: YouTube
+    gebruikersnaam: '@Naktuinbouwfilm'
+    url: https://www.youtube.com/user/Naktuinbouwfilm
+  - platform: X
+    gebruikersnaam: '@Naktuinbouw'
+    url: https://x.com/naktuinbouw
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212452/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212452/stichting-nederlandse-algemene-kwaliteitsdienst-tuinbouw
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000133
   retrieved: '2026-05-09'
+roo_start_datum: '1966-01-01'

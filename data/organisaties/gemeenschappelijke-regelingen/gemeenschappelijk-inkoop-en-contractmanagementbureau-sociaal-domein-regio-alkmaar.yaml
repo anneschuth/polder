@@ -1,20 +1,68 @@
 id: org:gr-gemeenschappelijk-inkoop-en-contractmanagementbureau-sociaal-domein-regio-alkmaar
 type: gemeenschappelijke-regeling
+subname: GISD Regio Alkmaar
 identifiers:
   roo_id: '30565832'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1112
+  owms: http://standaarden.overheid.nl/owms/terms/gisdalkmaar
+  organisatiecode: so1112
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GISD Regio Alkmaar
+  roo_id: '30565838'
 names:
 - value: Gemeenschappelijk Inkoop- en contractmanagementbureau Sociaal Domein Regio
     Alkmaar
   valid_from: '1900-01-01'
+description:
+  text: Het GISD Regio Alkmaar behartigt de belangen van de gemeenten op het terrein
+    van uitvoering van de taken als bedoeld in artikel 4 van deze regeling op de onderdelen
+    jeugdhulp, maatschappelijke ondersteuning en leerlingenvervoer binnen het sociaal
+    domein.
+  url: https://hulpinregioalkmaar.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://hulpinregioalkmaar.nl/over-ons
   email: contractmanagement@alkmaar.nl
+  bezoekadres: James Wattstraat 30, 1817 DC Alkmaar
+  postadres: James Wattstraat 30, 1817 DC Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: James Wattstraat
+    huisnummer: '30'
+    postcode: 1817 DC
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: James Wattstraat
+    huisnummer: '30'
+    postcode: 1817 DC
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: 14 072
+    label: gemeente Alkmaar
+  emails:
+  - email: contractmanagement@alkmaar.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-29'
+last_verified: '2026-04-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30565832/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30565832/gemeenschappelijk-inkoop-en-contractmanagementbureau-sociaal-domein-regio-alkmaar
+  retrieved: '2026-05-16'
+roo_start_datum: '2026-01-01'

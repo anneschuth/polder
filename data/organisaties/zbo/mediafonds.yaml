@@ -4,18 +4,66 @@ identifiers:
   roo_id: '26141439'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000120
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stimuleringsfonds Nederlandse Culturele Mediaproducties
   abbr: Mediafonds
   valid_from: '1900-01-01'
   valid_until: '2016-12-31'
+description:
+  text: Deze zbo wikkelt louter nog lopende zaken af.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Mediawet 2008, artikel 2.125
+  referentie: http://wetten.overheid.nl/BWBR0025028/Hoofdstuk2/Titel25/Afdeling255
+taken_en_bevoegdheden: Verstrekken van financiële bijdragen ten behoeve van de ontwikkeling
+  en vervaardiging van programmaonderdelen die van bijzondere Nederlandse culturele
+  aard zijn en die worden verzorgd door omroepverenigingen, de Nederlandse Programma
+  Stichting, de educatieve omroepinstelling, dan wel kerkgenootschappen of genootschappen
+  op geestelijke grondslag die zendtijd hebben verkregen voor landelijke omroep, de
+  instellingen die zendtijd hebben verkregen voor regionale omroep, alsmede de Wereldomroep,
+  dan wel door twee of meer van hen gezamenlijk.
+personnel:
+  aantalFte: 13,0
+  peildatumFte: '2016-12-31'
 contact:
   website: http://www.mediafonds.nl/
   email: info@mediafonds.nl
+  bezoekadres: Herengracht 609, 1017 CE Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herengracht
+    huisnummer: '609'
+    postcode: 1017 CE
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+  phones:
+  - nummer: (020) 623 39 01
+    label: algemeen
+  emails:
+  - email: info@mediafonds.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.mediafonds.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2016-12-31'
+last_mutation: '2019-09-05'
+last_verified: '2019-09-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141439/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141439/mediafonds
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

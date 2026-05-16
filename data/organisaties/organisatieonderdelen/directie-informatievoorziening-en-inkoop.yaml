@@ -3,16 +3,42 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '12441'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dp-en-o
+parent_id: org:onderdeel-psg-cluster
 names:
 - value: Directie Informatievoorziening en Inkoop
   valid_from: '1900-01-01'
+description:
+  text: De directie Informatievoorziening & Inkoop (DI&I) is verantwoordelijk voor
+    de JenV-brede ICT-infrastructuur door het inrichten en beheren van centrale voorzieningen.
+    De directie adviseert, faciliteert en ondersteunt de ambtelijke top, de DG-en
+    en op verzoek van deze de JenV-onderdelen over (beleidsmatige) vraagstukken op
+    het gebied van informatievoorziening en de beheersing van grote ICT-projecten.
+    Strategisch leveranciers management is ingericht voor Microsoft (ook voor het
+    Rijk) en Oracle en de directie heeft de bedrijfsjuridische functie voor JenV in
+    huis. Daarnaast formuleert DI&I JenV-brede kaders en adviezen om als ministerie
+    rechtmatig, efficiënt en duurzaam te kunnen inkopen en aan te sluiten op Europese
+    en Rijksbrede ontwikkelingen zowel voor IV als voor inkoop.
 contact:
   website: J.s.cammeraat@minjenv.nl
   email: secretariaatDII@minjenv.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 79 11
+    label: algemeen
+  emails:
+  - email: secretariaatDII@minjenv.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-10-15'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12441/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12441/directie-informatievoorziening-en-inkoop
+  retrieved: '2026-05-16'

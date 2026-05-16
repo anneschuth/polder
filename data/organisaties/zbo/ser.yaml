@@ -3,8 +3,18 @@ type: zbo
 identifiers:
   roo_id: '29908865'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10223
+  owms: http://standaarden.overheid.nl/owms/terms/Sociaal_Economische_Raad
+  kvk: '27363950'
+  organisatiecode: oorg10223
+  rsin: 002306906
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Sociaal-economische en ruimtelijke statistieken
   abbr: SER
@@ -12,11 +22,75 @@ names:
 - value: Sociaal-Economische Raad
   abbr: SER
   valid_from: '1900-01-01'
+description:
+  text: Het departement Sociaal-economische en ruimtelijke statistieken (SER) van
+    het CBS bestaat uit onderstaande afdelingen, die elk zijn onderverdeeld in een
+    aantal teams:SBM (Beleids- en managementsondersteuning):* SIM (Informatiemanagement)*
+    SBS (Beleidsstaf)SQS (Quartaire sector):* SGZ (Gezondheid en zorg)* SND (Onderwijs)*
+    SRV (Rechtsbescherming en veiligheid)* SCT (Cultuur, toerisme en technologie)SLO
+    (Leefomgeving):* SRR (Regio en ruimte)* SVW (Vastgoed en woningmarkt)* SLN (Landbouw
+    en natuur)* SMI (Milieu)* SEN (Energie)SES (Demografische en sociaal-economische
+    statistieken):* SAM (Arbeidsmarkt)* SDE (Demografie)* SOZ (Sociale zekerheid)*
+    SET (Sociaal-economisch totaalbeeld)* CN (Caribisch Nederland)SAL (Arbeid, inkomen
+    en leefsituatie):* SPR (Productie)* SDV (Dynamische verwerking)* SAD (Arbeid,
+    dynamiek en mobiliteit)* SIL (Leefsituatie inkomen en samenhang)SVV (Verkeer en
+    vervoer):* SGV (Goederenvervoer)* SGP (Personenvervoer)De afdelingen en teams
+    zijn overgenomen uit het [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1095 - SOCIAAL ECONOMISCHE RAAD, SER
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=21618
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbare lichamen voor beroep en bedrijf (Artikel 1.2, lid 1e, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
+  bezoekadres: Bezuidenhoutseweg 60, 2594 AW Den Haag
+  postadres: Postbus 90405, 2509 LK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '60'
+    postcode: 2594 AW
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90405'
+    postcode: 2509 LK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 349 94 99
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ser.nl/nl
+    label: algemeen
+  - url: https://www.ser.nl/nl/ser/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-21'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908865/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908865/ser
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
+roo_start_datum: '2004-01-03'

@@ -6,21 +6,141 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0302
   roo_id: '38081'
   wikidata: Q931997
+  owms: http://standaarden.overheid.nl/owms/terms/Nunspeet_(gemeente)
+  ictu: '00302'
+  organisatiecode: gm0302
+  rsin: 001831185
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NUN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Nunspeet
   abbr: Nunspeet
   valid_from: '1900-01-01'
+description:
+  url: https://www.nunspeet.nl/bestuur-organisatie/bedrijfsvoering
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://woo.nunspeet.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/38081/Gemeente_Nunspeet
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://nunspeet.raadsinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nunspeet%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.nunspeet.nl/bestuur-organisatie/college-van-burgemeester-en-wethouders/besluitenlijsten-bekijken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nunspeet%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nunspeet%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.nunspeet.nl/woo-verzoeken
+  wooVerzoek:
+    url: https://www.nunspeet.nl/woo-verzoek
+organogram_url: https://www.nunspeet.nl/bestuur-organisatie/organisatiestructuur
+afspraak:
+  url: https://www.nunspeet.nl/afspraak-maken
+geography:
+  oppervlakte: 129,49
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 129.49
+  aantal_inwoners: 29688
+  inwoners: '229'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 229.0
+  bevat_plaatsen_raw: Elspeet, Hulshorst, Nunspeet, Vierhouten
+  bevat_plaatsen:
+  - Elspeet
+  - Hulshorst
+  - Nunspeet
+  - Vierhouten
+council:
+  total_seats: 21
+  parties:
+  - naam: SGP
+    aantal_zetels: 7
+  - naam: Gemeentebelang
+    aantal_zetels: 5
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: Lux21
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: PvdA/GroenLinks
+    aantal_zetels: 1
 contact:
   website: https://www.nunspeet.nl
   email: gemeente@nunspeet.nl
+  bezoekadres: Markt 1, 8071 GJ NUNSPEET
+  postadres: Postbus 79, 8070 AB NUNSPEET
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 8071 GJ
+    woonplaats: NUNSPEET
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '79'
+    postcode: 8070 AB
+    woonplaats: NUNSPEET
+  - type: Woo-Adres
+    toelichting: T.a.v. Woo-contactpersoon
+    postbus: '79'
+    postcode: 8070 AB
+    woonplaats: Nunspeet
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 8071 GJ
+    woonplaats: NUNSPEET
+  phones:
+  - nummer: (0341) 25 99 11
+    label: algemeen
+  emails:
+  - email: gemeente@nunspeet.nl
+    label: algemeen
+  - email: vergunningen@nunspeet.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.nunspeet.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38081/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38081/nunspeet
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +149,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q931997
   retrieved: '2026-05-09'
+roo_start_datum: '1972-01-01'

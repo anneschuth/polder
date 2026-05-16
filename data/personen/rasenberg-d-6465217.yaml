@@ -3,7 +3,7 @@ name:
   full: D.H.C.A. Rasenberg
   family: Rasenberg
   given: D.H.C.A.
-  initials: D.
+  initials: D.H.C.A.
 mandaten:
 - id: 207d4f2b-6cc1-44c8-b604-4bee50e9d7b9
   organization_id: org:gemeente-vught
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6465219
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37665/gemeente-vught
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29009025
 - id: 78d9cde4-a830-4ea4-b8e1-dd77623741ca
   organization_id: org:gemeente-vught
   post_id: post:raadslid-gemeente-vught

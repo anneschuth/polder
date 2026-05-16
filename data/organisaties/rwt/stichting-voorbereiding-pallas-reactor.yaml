@@ -2,14 +2,45 @@ id: org:oovb-stichting-voorbereiding-pallas-reactor
 type: rwt
 identifiers:
   roo_id: '27917631'
+  kvk: '59456302'
+  rsin: '853497308'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Stichting Voorbereiding Pallas-reactor
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Comeniusstraat 8 -2e etage, 1817 MS Alkmaar
+  postadres: Postbus 1092, 1810 KB Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Comeniusstraat
+    huisnummer: '8'
+    huisnummer_toevoeging: -2e etage
+    postcode: 1817 MS
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1092'
+    postcode: 1810 KB
+    woonplaats: Alkmaar
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917631/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917631/stichting-voorbereiding-pallas-reactor
+  retrieved: '2026-05-16'

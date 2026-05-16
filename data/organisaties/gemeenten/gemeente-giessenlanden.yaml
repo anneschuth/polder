@@ -6,6 +6,9 @@ identifiers:
   roo_id: '34252'
   wikidata: Q1124998
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0689
+  owms: http://standaarden.overheid.nl/owms/terms/Giessenlanden
+  ictu: 00689
+  organisatiecode: gm0689
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,79 @@ names:
   abbr: Giessenlanden
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 65,12
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 65.12
+  aantal_inwoners: 14429
+  inwoners: '221'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 221.0
+  bevat_plaatsen_raw: Arkel, Giessenburg, Hoogblokland, Hoornaar, Noordeloos, Schelluinen
+  bevat_plaatsen:
+  - Arkel
+  - Giessenburg
+  - Hoogblokland
+  - Hoornaar
+  - Noordeloos
+  - Schelluinen
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: Fractie Renes
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: www.giessenlanden.nl
   email: gemeente@giessenlanden.nl
+  bezoekadres: Groeneweg 33, 4223 ME HOORNAAR
+  postadres: Postbus 1, 4223 ZG HOORNAAR
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Groeneweg
+    huisnummer: '33'
+    postcode: 4223 ME
+    woonplaats: HOORNAAR
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Postbus 1
+    postbus: '1'
+    postcode: 4223 ZG
+    woonplaats: HOORNAAR
+  phones:
+  - nummer: (0183) 58 38 38
+    label: algemeen
+  emails:
+  - email: gemeente@giessenlanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.giessenlanden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
+successor_id: org:gemeente-molenlanden
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34252/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34252/gemeente-giessenlanden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -33,4 +100,3 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0689
   retrieved: '2026-05-09'
-successor_id: org:gemeente-molenlanden

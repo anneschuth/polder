@@ -5,22 +5,89 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0570
   oin: 00000001810182440000
   kvk: '53929667'
+  owms: http://standaarden.overheid.nl/owms/terms/gronarch
+  organisatiecode: so0570
+  rsin: '810182440'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Historisch Centrum ‘Groninger Archieven’
+  roo_id: '27685468'
 names:
 - value: Regionaal Historisch Centrum ‘Groninger Archieven’
   valid_from: '1900-01-01'
+description:
+  text: 'De Groninger Archieven zijn de bron van het rijke en tastbare verleden van
+    stad en provincie Groningen. We verzamelen en beheren. Daarnaast maken we historisch
+    en hedendaags materiaal vindbaar en bruikbaar. Dat is niet alleen onze wettelĳke
+    taak als beheerder van (overheids)archieven. Het is ook onze missie: om het verleden
+    levend te houden. Voor en door onderzoekers, media, musea en iedereen die nieuwsgierig
+    is naar de Groninger geschiedenis.De Groninger Archieven zijn voluit het Regionaal
+    Historisch Centrum Groninger Archieven. We laten als professionele collectiebeheerder
+    een zo groot mogelijk publiek kennis maken met onze fysieke en digitale collecties.
+    Daarnaast zijn wij een actieve bemiddelaar om historische en actuele informatie
+    over stad en provincie Groningen breed in te zetten. En voor de aangesloten overheden
+    zijn wij een gedegen partner.'
+  url: https://www.groningerarchieven.nl/over-ons/wie-zijn-wij
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/27685473/Regionaal_Historisch_Centrum_Groninger_Archieven
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.groningerarchieven.nl/over-ons/wie-zijn-wij
+afspraak:
+  telefoonnummer: (050) 599 20 00
 contact:
   website: https://www.groningerarchieven.nl
   email: info@groningerarchieven.nl
+  bezoekadres: Cascadeplein 4, 9726 AD Groningen
+  postadres: Postbus 30040, 9700 RM Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Cascadeplein
+    huisnummer: '4'
+    postcode: 9726 AD
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '30040'
+    postcode: 9700 RM
+    woonplaats: Groningen
+  phones:
+  - nummer: (050) 599 20 00
+    label: algemeen
+  emails:
+  - email: info@groningerarchieven.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.groningerarchieven.nl
+    label: algemeen
+  - url: https://www.groningerarchieven.nl/over-ons/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-12-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27685473/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27685473/regionaal-historisch-centrum-groninger-archieven
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2001-10-26'

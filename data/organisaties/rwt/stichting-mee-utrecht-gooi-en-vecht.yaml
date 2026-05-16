@@ -1,16 +1,40 @@
 id: org:oovb-stichting-mee-utrecht-gooi-en-vecht
 type: rwt
+subname: MEE Utrecht, Gooi & Vecht
 identifiers:
   roo_id: '27914139'
+  kvk: '30152505'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting MEE Utrecht, Gooi & Vecht
   valid_from: '1900-01-01'
   valid_until: '2025-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2025-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Pallas-Athenedreef 10, 3561 PE Utrecht
+  postadres: Postbus 9168, 3506 GD Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pallas-Athenedreef 10
+    postcode: 3561 PE
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '9168'
+    postcode: 3506 GD
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: '2025-01-01'
+last_mutation: '2025-11-24'
+last_verified: '2025-11-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914139/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914139/stichting-mee-utrecht-gooi-en-vecht
+  retrieved: '2026-05-16'

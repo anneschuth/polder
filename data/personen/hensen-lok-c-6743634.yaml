@@ -3,7 +3,7 @@ name:
   full: C.D. Hensen-Lok
   family: Hensen-Lok
   given: C.D.
-  initials: C.
+  initials: C.D.
 mandaten:
 - id: 3726c32d-5db7-4f66-b792-c5e5986fe75a
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743636
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30387414
 - id: 35136f7c-39a2-4460-9cf8-72e078f545f8
   organization_id: org:gemeente-zoetermeer
   post_id: post:raadslid-gemeente-zoetermeer

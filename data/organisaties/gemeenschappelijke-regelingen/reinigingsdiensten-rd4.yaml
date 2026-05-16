@@ -3,17 +3,79 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965482'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0412
+  owms: http://standaarden.overheid.nl/owms/terms/rd4
+  kvk: '52719421'
+  organisatiecode: so0412
+  rsin: '806274402'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Reinigingsdiensten Rd4
+  roo_id: '30271856'
 names:
 - value: Reinigingsdiensten Rd4
   valid_from: '1900-01-01'
+description:
+  text: De gemeenschappelijke regeling Reinigingsdiensten Rd4 heeft de volledige afvalzorgplicht
+    voor de gemeenten Beekdaelen, Brunssum, Eijsden-Margraten, Gulpen-Wittem, Heerlen,
+    Kerkrade, Landgraaf, Simpelveld, Vaals en Voerendaal. Dit doet zij door een zo
+    optimaal mogelijke exploitatie en beheer (maatschappelijke, financieel en milieu)
+    van de gehele afvalketen, namelijk het inzamelen, sorteren en bewerken van afval-
+    en grondstoffen afkomstig uit de deelnemende gemeenten, reinigen van de openbare
+    ruimten en daarmee samenhangende taken, het bestrijden van onkruid, het opruimen
+    van afval dumpingen, het verrichten van transportwerkzaamheden, het bestrijden
+    van gladheid, het verrichten van kringloopactiviteiten en het vermarkten van afval-
+    en grondstofstromen. Daarnaast beheert en exploiteert Rd4 8 grondstoffenparken
+    en 3 RD4U kringloopwinkels.Tevens heeft Rd4 de taak om de deelnemende gemeenten
+    te adviseren t.a.v. beleid.
+  url: https://www.rd4.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rd4.nl
   email: secretariaat@rd4.nl
+  bezoekadres: Nijverheidsweg 4 A, 6422 PD Heerlen
+  postadres: Postbus 641, 6400 AP Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nijverheidsweg
+    huisnummer: '4'
+    huisnummer_toevoeging: A
+    postcode: 6422 PD
+    woonplaats: Heerlen
+  - type: Postadres
+    postbus: '641'
+    postcode: 6400 AP
+    woonplaats: Heerlen
+  phones:
+  - nummer: (045) 543 71 00
+    label: algemeen
+  emails:
+  - email: secretariaat@rd4.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rd4.nl
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Linkedin.com/company/reinigingsdiensten-rd4
+    url: https://www.linkedin.com/company/reinigingsdiensten-rd4/mycompany/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2024-07-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965482/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965482/reinigingsdiensten-rd4
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-01-01'

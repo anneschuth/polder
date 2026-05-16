@@ -3,14 +3,31 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '12653'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bcv
+parent_id: org:onderdeel-landelijke-en-overige-diensten
 names:
 - value: Directie Finance & Control
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+description:
+  text: De directie Finance & Control is verantwoordelijk voor de professionele inrichting
+    van en sturing op de financiële processen en de control op de kwantitatieve en
+    kwalitatieve processen van DJI binnen de door het kerndepartement gestelde kaders.
+contact:
+  postadres: Postbus 30132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '30132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 072 52 00
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-10-23'
+last_verified: '2018-10-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12653/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12653/directie-finance-en-control
+  retrieved: '2026-05-16'

@@ -4,21 +4,99 @@ identifiers:
   roo_id: '28963273'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12357
   oin: '00000004000000016000'
+  owms: http://standaarden.overheid.nl/owms/terms/Staatstoezicht_op_de_Mijnen
+  organisatiecode: oorg12357
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Klimaat en Groene Groei
+  roo_id: '29481996'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
+  owms: http://standaarden.overheid.nl/owms/terms/minklgrgr
 names:
 - value: Staatstoezicht op de Mijnen
   abbr: SodM
   valid_from: '1900-01-01'
+description:
+  text: Staatstoezicht op de Mijnen (SodM) maakt zich sterk voor de veiligheid van
+    de mens en de bescherming van het milieu bij energiewinning en het benutten van
+    de ondergrond, nu en in de toekomst.
+  url: https://www.sodm.nl/over-ons
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.sodm.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28963273/Staatstoezicht_op_de_Mijnen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.sodm.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Wob-verzoek
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.sodm.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Rapport
+    - informatiecategorie: Beschikkingen
+      url: https://www.sodm.nl/documenten?trefwoord=beschikking&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Alle+documenten
+    - informatiecategorie: Adviezen
+      url: https://www.sodm.nl/documenten?trefwoord=advies
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.sodm.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Jaarverslag
+      toelichting: Jaarverslagen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.sodm.nl/documenten?trefwoord=&startdatum=&einddatum=&onderwerp=Alle+onderwerpen&onderdeel=Alle+onderdelen&type=Jaarplan
+      toelichting: Jaarplannen
+  wooVerzoek:
+    url: https://www.sodm.nl/contact
+organogram_url: https://www.sodm.nl/documenten/publicaties/2022/04/14/organogram-staatstoezicht-op-de-mijnen
+afspraak:
+  email: info@sodm.nl
+  url: https://www.sodm.nl/contact
 contact:
   website: https://www.sodm.nl
   email: info@sodm.nl
+  bezoekadres: Henri Faasdreef 312, 2492 JP Den Haag
+  postadres: Postbus 204037, 2490 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Henri Faasdreef
+    huisnummer: '312'
+    postcode: 2492 JP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '204037'
+    postcode: 2490 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '24037'
+    postcode: 2490 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 379 84 00
+    label: algemeen
+  emails:
+  - email: info@sodm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.sodm.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.sodm.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28963273/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28963273/sodm
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

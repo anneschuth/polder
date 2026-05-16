@@ -2,18 +2,62 @@ id: org:gr-milieuparken-geul-en-maas
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967041'
+  owms: http://standaarden.overheid.nl/owms/terms/milpargenm
+  kvk: '52015823'
+  organisatiecode: so0590
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Milieuparken Geul en Maas
+  roo_id: '24967036'
 names:
 - value: Milieuparken Geul en Maas
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+  valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.milieuparkengeulenmaas.nl
   email: info@besteuitafval.nl
+  bezoekadres: Markt 50, 6231 LS Meerssen
+  postadres: Postbus 90, 6230 AB Meerssen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '50'
+    postcode: 6231 LS
+    woonplaats: Meerssen
+  - type: Postadres
+    postbus: '90'
+    postcode: 6230 AB
+    woonplaats: Meerssen
+  phones:
+  - nummer: 14 043
+    label: algemeen
+  emails:
+  - email: info@besteuitafval.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.milieuparkengeulenmaas.nl
+    label: algemeen
 valid_from: '1900-01-01'
-valid_until: '2020-06-19'
+valid_until: '2021-01-01'
+last_mutation: '2022-12-12'
+last_verified: '2022-12-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967041/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967041/milieuparken-geul-en-maas
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-11-01'

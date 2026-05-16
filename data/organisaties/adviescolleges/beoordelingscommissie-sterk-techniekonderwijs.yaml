@@ -1,19 +1,59 @@
 id: org:adviescollege-beoordelingscommissie-sterk-techniekonderwijs
 type: adviescollege
+subname: Beoordelingscommissie technisch vmbo 2018-2023
 identifiers:
   roo_id: '28390732'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10169
+  organisatiecode: oorg10169
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Tijdelijk adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Beoordelingscommissie sterk techniekonderwijs
   valid_from: '1900-01-01'
   valid_until: '2024-12-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit beoordelingscommissie technisch
+    vmbo 2018–2023
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0041757&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.sterktechniekonderwijs.nl/regelingen/beoordelingscommissie
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.sterktechniekonderwijs.nl/regelingen/beoordelingscommissie
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2024-12-31'
+last_mutation: '2025-02-06'
+last_verified: '2023-12-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390732/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390732/beoordelingscommissie-sterk-techniekonderwijs
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-12-01'

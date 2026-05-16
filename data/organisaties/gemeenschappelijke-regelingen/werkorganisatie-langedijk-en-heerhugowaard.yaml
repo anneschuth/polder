@@ -2,17 +2,55 @@ id: org:gr-werkorganisatie-langedijk-en-heerhugowaard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28315307'
+  owms: http://standaarden.overheid.nl/owms/terms/woldhhw
+  kvk: '76520021'
+  organisatiecode: so1056
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkorganisatie Langedijk en Heerhugowaard
+  roo_id: '28315293'
 names:
 - value: Werkorganisatie Langedijk en Heerhugowaard
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.heerhugowaard.nl
+  bezoekadres: Parelhof 1, 1703 EZ Heerhugowaard
+  postadres: Postbus 390, 1700 AJ Heerhugowaard
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Heerhugowaard
+    openbare_ruimte: Parelhof
+    huisnummer: '1'
+    postcode: 1703 EZ
+    woonplaats: Heerhugowaard
+  - type: Postadres
+    postbus: '390'
+    postcode: 1700 AJ
+    woonplaats: Heerhugowaard
+  phones:
+  - nummer: 14 072
+    label: algemeen Heerhugowaard
+  internet_addresses:
+  - url: https://www.heerhugowaard.nl
+    label: algemeen Heerhugowaard
+  - url: https://www.e-inwoner.nl/prod/fr/heerhugowaard/CRS2_Vragen_aan_de_gemeente/new
+    label: contact Heerhugowaard
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2022-11-29'
+last_verified: '2022-11-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28315307/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28315307/werkorganisatie-langedijk-en-heerhugowaard
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-10-01'

@@ -7,11 +7,24 @@ parent_id: org:onderdeel-vertegenwoordiging
 names:
 - value: Comité van de Regios
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   email: hvleeuwen@ipo.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 888 12 33
+    label: algemeen
+  emails:
+  - email: hvleeuwen@ipo.nl
+    label: algemeen
+  fax: (070) 888 12 80
 valid_from: '1900-01-01'
 valid_until: null
+last_verified: '2026-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16070/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16070/comite-van-de-regios
+  retrieved: '2026-05-16'

@@ -2,8 +2,12 @@ id: org:gr-streekarchief-rijnlands-midden
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962427'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Streekarchief Rijnlands Midden
+  roo_id: '24962422'
 names:
 - value: Streekarchief Rijnlands Midden
   valid_from: '1900-01-01'
@@ -11,9 +15,33 @@ names:
 contact:
   website: http://www.streekarchiefrijnlandsmidden.nl
   email: rijnlandsmidden@alphenaandenrijn.nl
+  bezoekadres: Burgemeester Visserpark 28, 2405 CR Alphen aan den Rijn
+  postadres: Postbus 13, 2400 AA Alphen aan den Rijn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Visserpark
+    huisnummer: '28'
+    postcode: 2405 CR
+    woonplaats: Alphen aan den Rijn
+  - type: Postadres
+    postbus: '13'
+    postcode: 2400 AA
+    woonplaats: Alphen aan den Rijn
+  phones:
+  - nummer: (0172) 46 52 65
+    label: algemeen
+  emails:
+  - email: rijnlandsmidden@alphenaandenrijn.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.streekarchiefrijnlandsmidden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2020-10-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962427/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962427/streekarchief-rijnlands-midden
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-01-01'

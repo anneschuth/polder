@@ -5,22 +5,114 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0263
   oin: 00000001001721951000
   kvk: '37153583'
+  owms: http://standaarden.overheid.nl/owms/terms/wvschnknm
+  btw: NL001721951B01
+  organisatiecode: so0263
+  rsin: 001721951
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Zaffier
+  roo_id: '29516095'
 names:
 - value: Zaffier
   valid_from: '1900-01-01'
+description:
+  text: Je wilt graag grip houden op je eigen situatie. Maar wat als er iets gebeurt
+    in je leven waardoor dit (tijdelijk) niet lukt? Je hebt bijvoorbeeld zorgen over
+    je inkomen of je wilt inburgeren in Nederland. Woon je in de gemeente Alkmaar,
+    Bergen, Castricum, Dijk en Waard, Heiloo of Uitgeest? Dan ondersteunt Zaffier
+    je bij al je vragen over werk, geldzaken of inburgering.Zaffier ondersteunt inwoners
+    bij werk, geldzaken en inburgeringMet een groot netwerk en goed opgeleide specialisten
+    maken we gebruik van kansen en talenten. En gaan we voor ontwikkeling. Binnen
+    en buiten de regio. Inwoners kunnen op ons terugvallen. Inwoners hebben één aanspreekpunt
+    en kunnen makkelijk bij ons terecht. Fysiek of online.We kijken samen naar wat
+    er nodig is. Zo houden inwoners zelf grip op de situatie en de ondersteuning die
+    zij krijgen. Wetten, regels en beleid geven grenzen. Maar zijn niet allesbepalend.
+    Het gaat erom dat de inwoner zelf weer verder kan. Ook al is dat met wat ondersteuning.
+    Het is ons doel dat iedereen mee doet. Dat iedereen in de maatschappij een plek
+    krijgt. Met genoeg financiële middelen om van te leven. Een plek waar iemand tot
+    zijn recht komt. Maar tot die tijd, doen we het samen.Want samen kom je verder!
+  url: https://www.zaffier.nl/de-organisatie/wie-is-zaffier
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/woo/28682655/Zaffier
+      overzichtURL: https://organisaties.overheid.nl/woo/29225988/Zaffier
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zaffier%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zaffier%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.zaffier.nl/de-organisatie/bestuur-zaffier/dagelijks-bestuur
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.zaffier.nl/de-organisatie/bestuur-zaffier/algemeen-bestuur-ab
+  wooVerzoek:
+    url: https://www.zaffier.nl/contact
+organogram_url: https://www.zaffier.nl/de-organisatie/ons-organogram
+afspraak:
+  email: info@zaffier.nl
+  telefoonnummer: (088) 404 60 00
+  url: https://mijnzaken.zaffier.nl/zaak/create/webformulier?ztc_aanvrager_type=unknown&afronden=1&aanvrager=betrokkene-natuurlijk_persoon-100&zaaktype_id=332&sessreset=1
 contact:
   website: https://zaffier.nl
   email: info@zaffier.nl
+  postadres: Postbus 9150, 1800 GD Alkmaar
+  bezoekadres: Mallegatsplein 10, 1815 AG Alkmaar
+  addresses:
+  - type: Postadres
+    postbus: '9150'
+    postcode: 1800 GD
+    woonplaats: Alkmaar
+  - type: Bezoekadres
+    toelichting: Zaffier Centrum
+    openbare_ruimte: Mallegatsplein
+    huisnummer: '10'
+    postcode: 1815 AG
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    postbus: '9150'
+    postcode: 1800 GD
+    woonplaats: Alkmaar
+  phones:
+  - nummer: (088) 404 60 00
+    label: algemeen
+  emails:
+  - email: info@zaffier.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://zaffier.nl
+    label: algemeen
+  contact_forms:
+  - url: https://zaffier.nl/contact
+    label: Algemeen
+  fax: (072) 567 88 00
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29225988/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29225988/zaffier
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1974-01-01'

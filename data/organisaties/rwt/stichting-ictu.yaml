@@ -1,18 +1,74 @@
 id: org:stichting-ictu
 type: rwt
+subname: ICTU
 identifiers:
   roo_id: '27912852'
+  kvk: '27198742'
+  oin: 00000003271987420000
+  rsin: '809718522'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting ICTU
   valid_from: '1900-01-01'
+description:
+  text: ICTU is een onafhankelijke advies- en projectenorganisatie binnen de overheid.
+    Wij werken vanuit de overtuiging dat ICT de overheid vooruit helpt bij maatschappelijke
+    vraagstukken.ICTU helpt overheden bij het verbeteren van hun dienstverlening met
+    ICT, in dienst van het openbaar bestuur. Samen met onze opdrachtgevers realiseren
+    we kwalitatief hoogwaardige digitale dienstverlening. We verbinden kennis aan
+    kunde, en oplossingen aan vraagstukken. Met oog voor de balans tussen techniek
+    en gebruik, tussen innovatie en werkbare oplossingen. Zodat burgers en bedrijven
+    zaken die ze doen met de overheid veilig en makkelijk digitaal kunnen afhandelen.
+    ICTU is in 2001 opgericht als overheidsstichting zonder winstdoel.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
 contact:
   website: https://www.ictu.nl
   email: info@ictu.nl
+  bezoekadres: Wilhelmina van Pruisenwg 104, 2595 AN Den Haag
+  postadres: Postbus 84011, 2508 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenwg 104
+    postcode: 2595 AN
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '84011'
+    postcode: 2508 AA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 700 09 00
+    label: algemeen
+  emails:
+  - email: info@ictu.nl
+    label: algemeen
+  - email: redactie@ictu.nl
+    label: redactie
+  - email: reactie@ictu.nl
+    label: klacht
+  internet_addresses:
+  - url: https://www.ictu.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ictu.nl/hoe-bereikt-u-ons#
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912852/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912852/stichting-ictu
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-04-11'

@@ -3,7 +3,7 @@ name:
   full: G.B.I. Topma - Damhuis
   family: Topma - Damhuis
   given: G.B.I.
-  initials: G.
+  initials: G.B.I.
 mandaten:
 - id: 78a7e330-d07f-4b4a-96d2-b970334ede17
   organization_id: org:gemeente-meppel
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7777932
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/41121/gemeente-meppel
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30525736
 - id: 08b13c6d-d795-4202-a275-ebdfa3fcf9b1
   organization_id: org:gemeente-meppel
   post_id: post:raadslid-gemeente-meppel

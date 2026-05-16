@@ -6,21 +6,160 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0090
   roo_id: '21462'
   wikidata: Q507065
+  owms: http://standaarden.overheid.nl/owms/terms/Smallingerland
+  ictu: 00090
+  organisatiecode: gm0090
+  rsin: 001022799
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SML
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Smallingerland
   abbr: Smallingerland
   valid_from: '1900-01-01'
+description:
+  text: Smallingerland is een gemeente in Friesland met ruim 56.000 inwoners, goed
+    bereikbaar in het hart van Noord-Nederland, nabij Groningen en Drenthe. Rondom
+    onze hoofdplaats Drachten liggen 13 dorpen verspreid over de unieke Friese Wouden.
+  url: https://smallingerland.nl/Onderwerpen/Bestuur_en_organisatie/Werken_bij_Smallingerland/De_organisatie_ketens_en_teams
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://smallingerland.nl/Onderwerpen/Klacht_en_bezwaar/Verzoek_informatie_Wet_open_overheid_Woo
+      overzichtURL: https://organisaties.overheid.nl/woo/21462/Gemeente_Smallingerland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Smallingerland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: 'Restcategorie besluiten van algemene strekking, zoals: verkeersbeluiten
+        of aanwijzingsbesluit functionarissen.'
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Smallingerland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Verordeningen, beleidsregels, visiedocumenten en regelementen.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://smallingerland.notubiz.nl/
+      toelichting: Vergaderstukken en besluitenlijst van de raad, inclusief agenda
+        en ingekomen stukken.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://smallingerland.nl/Onderwerpen/Klacht_en_bezwaar/Verzoek_informatie_Wet_open_overheid_Woo
+      toelichting: Ontvangen Woo-verzoeken en naar aanleiding daarvan openbaar gemaakte
+        documenten.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Smallingerland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Omgevings- en evenementenvergunningen in het gemeenteblad.
+  wooVerzoek:
+    url: https://smallingerland.nl/Onderwerpen/Klacht_en_bezwaar/Verzoek_informatie_Wet_open_overheid_Woo
+afspraak:
+  telefoonnummer: (0512) 58 12 34
+  url: https://smallingerland.nl/afspraak_maken#select/
+geography:
+  oppervlakte: 126,14
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 126.14
+  aantal_inwoners: 57188
+  inwoners: '453'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 453.0
+  bevat_plaatsen_raw: Boornbergum, De Tike, De Veenhoop, De Wilgen, Drachten, Drachtstercompagnie,
+    Goengahuizen, Houtigehage, Kortehemmen, Nijega, Opeinde, Oudega Smallingerland,
+    Rottevalle, Smalle Ee
+  bevat_plaatsen:
+  - Boornbergum
+  - De Tike
+  - De Veenhoop
+  - De Wilgen
+  - Drachten
+  - Drachtstercompagnie
+  - Goengahuizen
+  - Houtigehage
+  - Kortehemmen
+  - Nijega
+  - Opeinde
+  - Oudega Smallingerland
+  - Rottevalle
+  - Smalle Ee
+council:
+  total_seats: 31
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: PRO
+    aantal_zetels: 5
+  - naam: Smallingerlands Belang
+    aantal_zetels: 4
+  - naam: Eerste Lokale Partij
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 2
+  - naam: FNP
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: https://www.smallingerland.nl
   email: gemeente@smallingerland.nl
+  bezoekadres: Gauke Boelensstraat 2, 9203 RM DRACHTEN
+  postadres: Postbus 10000, 9200 HA DRACHTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gauke Boelensstraat
+    huisnummer: '2'
+    postcode: 9203 RM
+    woonplaats: DRACHTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '10000'
+    postcode: 9200 HA
+    woonplaats: DRACHTEN
+  - type: Woo-Adres
+    openbare_ruimte: Gauke Boelensstraat
+    huisnummer: '2'
+    postcode: 9203 RM
+    woonplaats: Drachten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  phones:
+  - nummer: (0512) 58 12 34
+    label: algemeen
+  emails:
+  - email: gemeente@smallingerland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.smallingerland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21462/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21462/gemeente-smallingerland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -5,3 +5,12 @@ classification: bewindspersoon
 seat_count: 1
 valid_from: '2002-07-22'
 valid_until: null
+roo_functie_id: '14281'
+roo_naam: Minister van Justitie en Veiligheid
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/11906/min-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - roo_functie_id
+  - roo_naam

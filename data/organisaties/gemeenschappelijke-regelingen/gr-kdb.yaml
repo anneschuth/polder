@@ -3,18 +3,114 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966380'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0269
+  owms: http://standaarden.overheid.nl/owms/terms/wrkbkdb
+  kvk: '27364205'
+  btw: NL810842634B01
+  organisatiecode: so0269
+  rsin: '810842634'
 classification: gemeenschappelijke-regeling
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkbedrijven Kust-, Duin- en Bollenstreek (GR
+    KDB)
+  roo_id: '30241104'
 names:
 - value: Gemeenschappelijke regeling werkbedrijven Kust-, Duin- en Bollenstreek
   abbr: GR KDB
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeenschappelijke regeling werkbedrijven Kust-, Duin- en Bollenstreek
+    (GR KDB) is een gemeenschappelijke regeling van 7 deelnemende gemeenten en daarmee
+    een openbaar lichaam. De regeling behartigt de belangen van de deelnemende gemeenten
+    op het gebied van het uitvoeren van de Wet sociale werkvoorziening (WSW), de participatievoorziening
+    beschut werk als bedoeld in artikel 10b van de Participatiewet en het plaatsen
+    van werkzoekenden (re-integratie), al dan niet met een arbeidsbeperking, bij werkgevers.
+    Provalu is de uitvoeringsorganisatie die de verschillende modules voor de GR KDB
+    uitvoert.De GR KDB kent een modulaire opbouw waardoor gemeenten zelf beslissen
+    of zij deelnemen aan één of meerdere modules. De gemeenten die deelnemen zijn:
+    Hillegom, Katwijk, Lisse, Noordwijk, Oegstgeest, Teylingen en Wassenaar. Alle
+    zeven gemeenten nemen deel aan de module WSW. Aan de module beschut werk en re-integratie
+    nemen vijf van de zeven gemeenten deel (Katwijk, Hillegom, Lisse, Teylingen en
+    Noordwijk). De samenwerking tussen GR KDB en Provalu is geregeld in een aanwijzingsbesluit,
+    een samenwerkingsovereenkomst en een jaarovereenkomst.'
+  url: https://www.provalu.nl/over-ons/gemeenschappelijke-regeling-kust-duin-en-bollenstreek/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.provalu.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/24966380/Gemeenschappelijke_regeling_werkbedrijven_Kust-_Duin-_en_Bollenstreek
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+regeling+werkbedrijven+Kust-,+Duin-+en+Bollenstreek%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Officiële bekendmakingen
+  wooVerzoek:
+    url: https://www.provalu.nl/contact/
+afspraak:
+  email: info@provalu.nl
+  telefoonnummer: (0252) 26 21 00
+  url: https://www.provalu.nl/contact/
 contact:
   website: https://www.provalu.nl/
   email: info@provalu.nl
+  bezoekadres: Nijverheidsweg 22, 2215 MH Voorhout
+  postadres: Postbus 43, 2215 MH Voorhout
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nijverheidsweg
+    huisnummer: '22'
+    postcode: 2215 MH
+    woonplaats: Voorhout
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '43'
+    postcode: 2215 MH
+    woonplaats: Voorhout
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Nijverheidsweg
+    huisnummer: '22'
+    postcode: 2215 MH
+    woonplaats: Voorhout
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (0252) 26 21 00
+    label: Algemeen
+  emails:
+  - email: info@provalu.nl
+    label: klacht
+  - email: info@provalu.nl
+    label: Algemeen
+  internet_addresses:
+  - url: https://www.provalu.nl/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Provalu
+    url: https://nl.linkedin.com/company/provalu
+  fax: (0252) 26 21 11
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-18'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966380/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966380/gr-kdb
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-01-01'

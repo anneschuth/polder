@@ -7,11 +7,25 @@ parent_id: org:onderdeel-dp-en-o
 names:
 - value: Bureau Ondersteuning Medezeggenschap (BOM)
   valid_from: '1900-01-01'
+description:
+  text: .
 contact:
   email: directiesecretariaatdpeno.nl@minvenj.nl
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 75 11
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2017-03-21'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12468/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12468/bureau-ondersteuning-medezeggenschap-bom
+  retrieved: '2026-05-16'

@@ -3,21 +3,137 @@ type: zbo
 identifiers:
   roo_id: '28212308'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000140
+  owms: http://standaarden.overheid.nl/owms/terms/Stichting_Airport_Coordination_Netherlands
+  kvk: '77889975'
+  rsin: '861187076'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Airport Coordination Netherlands
   abbr: ACNL
   valid_from: '1900-01-01'
+description:
+  text: Airport Coordination Netherlands (ACNL) is de instantie die binnen Nederland
+    verantwoordelijk is voor de seizoensplanning van vluchten, evenals het toewijzen
+    van vliegveldslots (aankomst- en vertrektijden van vliegtuigen) aan luchtvaartmaatschappijen
+    en het toezicht houden op het gebruik van deze slots. ACNL voert deze taken, in
+    overeenstemming met Europese regelgeving, uit voor de luchthavens Amsterdam Airport
+    Schiphol, Rotterdam The Hague Airport en Eindhoven Airport.
+  url: https://slotcoordination.nl/about-acnl/missions/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 18,21,22
+      toelichting: EU-regelgeving dwingt ACNL af te wijken van bepalingen omtrent
+        de goedkeuring van de tarieven, de begroting en de jaarrekening, evenals beleidsregels
+        en het vernietigingsrecht van de minister.
+wettelijke_grondslagen:
+- opschrift: Wet luchtvaart, artikel 8a.64
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0005555
+taken_en_bevoegdheden: Airport Coordination Netherlands (ACNL) heeft de volgende taken
+  en bevoegheden:* het toewijzen van slots aan luchtvaartmaatschapppijen;* het bestuderen
+  van en adviseren over ontwikkelingen op het gebied van vliegbewegingen;* het periodiek
+  rapporteren aan het ministerie van Infrastructuur en Waterstaat.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+- type: Woo
+  url: https://wetten.overheid.nl/BWBR0045754/2024-08-01
+woo:
+  wooInformatie:
+    urls:
+      url: https://slotcoordination.nl/besluit-wet-open-overheid/?preview=true
+      overzichtURL: https://organisaties.overheid.nl/woo/28212308/Airport_Coordination_Netherlands
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://slotcoordination.nl/besluit-wet-open-overheid/?preview=true
+  wooVerzoek:
+    url: https://slotcoordination.nl/contact/
+afspraak:
+  email: info@slotcoordination.nl
+  telefoonnummer: (020) 405 97 30
+  url: https://slotcoordination.nl/contact/
+personnel:
+  aantalFte: 9,0
+  peildatumFte: '2024-05-29'
 contact:
   website: http://www.slotcoordination.nl/
   email: info@slotcoordination.nl
+  bezoekadres: Evert van de Beekstraat 1-23, 1118 CL Schiphol
+  postadres: Evert van de Beekstraat 1 - 23, 1118 CL Schiphol
+  addresses:
+  - type: Bezoekadres
+    toelichting: The Base A
+    openbare_ruimte: Evert van de Beekstraat
+    huisnummer: 1-23
+    postcode: 1118 CL
+    woonplaats: Schiphol
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Woo-Adres
+    toelichting: The Base A
+    openbare_ruimte: Evert van de Beekstraat
+    huisnummer: 1-23
+    postcode: 1118 CL
+    woonplaats: Schiphol
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    toelichting: The Base A
+    openbare_ruimte: Evert van de Beekstraat
+    huisnummer: 1 - 23
+    postcode: 1118 CL
+    woonplaats: Schiphol
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (020) 405 97 30
+    label: algemeen
+  emails:
+  - email: info@slotcoordination.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.slotcoordination.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://slotcoordination.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-06'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212308/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212308/acnl
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +142,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000140
   retrieved: '2026-05-09'
+roo_start_datum: '1998-01-01'

@@ -2,14 +2,42 @@ id: org:oovb-stichting-united-work
 type: rwt
 identifiers:
   roo_id: '28347608'
+  kvk: '67143555'
+  rsin: '856848074'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting United Work
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Tongelsestraat 254, 5613 DV Eindhoven
+  postadres: Tongelsestraat 254, 5613 DV Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tongelsestraat 254
+    postcode: 5613 DV
+    woonplaats: Eindhoven
+  - type: Postadres
+    openbare_ruimte: Tongelsestraat 254
+    postcode: 5613 DV
+    woonplaats: Eindhoven
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347608/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347608/stichting-united-work
+  retrieved: '2026-05-16'

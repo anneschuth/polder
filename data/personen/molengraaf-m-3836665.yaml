@@ -3,7 +3,7 @@ name:
   full: M.J. Molengraaf
   family: Molengraaf
   given: M.J.
-  initials: M.
+  initials: M.J.
 mandaten:
 - id: f3d7cbec-42f3-46ae-8ad2-4f629ab99299
   organization_id: org:gemeente-gorinchem
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836666
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30894/gemeente-gorinchem
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28776474
 - id: 5311116b-296f-4abd-a7cc-b08d82b7b298
   organization_id: org:gemeente-gorinchem
   post_id: post:wethouder-gemeente-gorinchem

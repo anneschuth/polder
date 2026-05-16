@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '58736'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-kcc
+parent_id: org:onderdeel-continue-processen
 names:
 - value: Afdeling Personeel & Organisatie
   valid_from: '1900-01-01'
@@ -11,9 +11,17 @@ names:
 - value: Afdeling Personeel en Organisatie
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+contact:
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2021-12-13'
+last_verified: '2021-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/58736/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/58736/afdeling-personeel-en-organisatie
+  retrieved: '2026-05-16'

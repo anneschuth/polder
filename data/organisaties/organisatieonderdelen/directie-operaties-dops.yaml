@@ -3,15 +3,33 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '56541'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-kmar-cn
+parent_id: org:onderdeel-koninklijke-marechaussee
 names:
 - value: Directie Operaties (DOPS)
   valid_from: '1900-01-01'
 contact:
   email: mtj.messerschmidt@mindef.nl
+  bezoekadres: Kalvermarkt 32, 2511 CB Den Haag
+  postadres: Postbus 90615, 2509 LP Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt
+    huisnummer: '32'
+    postcode: 2511 CB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90615'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 951 02 24
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-18'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/56541/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/56541/directie-operaties-dops
+  retrieved: '2026-05-16'

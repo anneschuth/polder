@@ -3,7 +3,7 @@ name:
   full: L.C. Pols
   family: Pols
   given: L.C.
-  initials: L.
+  initials: L.C.
 mandaten:
 - id: 7ebd44ac-db8b-48b4-bc94-4fd9083a01b1
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780779
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28790944
 - id: c9013168-f343-4600-8597-e67780a23c26
   organization_id: org:gemeente-krimpenerwaard
   post_id: post:raadslid-gemeente-krimpenerwaard

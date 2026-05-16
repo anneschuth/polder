@@ -6,21 +6,122 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1773
   roo_id: '34399'
   wikidata: Q10017
+  owms: http://standaarden.overheid.nl/owms/terms/Olst-Wijhe
+  ictu: '01773'
+  organisatiecode: gm1773
+  rsin: 001932603
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OWI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Olst-Wijhe
   abbr: Olst-Wijhe
   valid_from: '1900-01-01'
+description:
+  url: https://www.olst-wijhe.nl/inwoners
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.olst-wijhe.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/34399/Gemeente_Olst-Wijhe
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Olst-Wijhe%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Olst-Wijhe%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Olst-Wijhe%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://dloket.olst-wijhe.nl/formulieren-nieuw/formulier/start/KPvuHycRTnZ6JrYpkPJljOF0kuFMf2xs9iKRgJ2avNKphNfVqP
+organogram_url: https://www.olst-wijhe.nl/search?facets%5Bcategory%5D=offici%C3%ABle+publicatie&page=1&query=organogram
+afspraak:
+  email: gemeente@olst-wijhe.nl
+  telefoonnummer: 14 0570
+  url: https://afspraken.olst-wijhe.nl/
+geography:
+  oppervlakte: 118,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 118.38
+  aantal_inwoners: 19079
+  inwoners: '161'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 161.0
+  bevat_plaatsen_raw: Marle, Olst, Welsum, Wesepe, Wijhe
+  bevat_plaatsen:
+  - Marle
+  - Olst
+  - Welsum
+  - Wesepe
+  - Wijhe
+council:
+  total_seats: 17
+  parties:
+  - naam: GroenLinks-PvdA-D66
+    aantal_zetels: 6
+  - naam: Gemeentebelangen Olst-Wijhe
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
 contact:
   website: https://www.olst-wijhe.nl
   email: gemeente@olst-wijhe.nl
+  bezoekadres: Raadhuisplein 1, 8131 BN WIJHE
+  postadres: Postbus 23, 8130 AA WIJHE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 8131 BN
+    woonplaats: WIJHE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '23'
+    postcode: 8130 AA
+    woonplaats: WIJHE
+  - type: Woo-Adres
+    postbus: '23'
+    postcode: 8130 AA
+    woonplaats: WIJHE
+  phones:
+  - nummer: 14 0570
+    label: algemeen
+  emails:
+  - email: gemeente@olst-wijhe.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.olst-wijhe.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-26'
+last_verified: '2026-04-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34399/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34399/olst-wijhe
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +130,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q10017
   retrieved: '2026-05-09'
+roo_start_datum: '2002-03-26'

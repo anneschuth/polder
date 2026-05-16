@@ -3,21 +3,72 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '8766'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:onderdeel-directoraat-generaal-volksgezondheid
 names:
 - value: Directie Publieke Gezondheid
   abbr: PG
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
 - value: Directoraat-Generaal Volksgezondheid
   abbr: PG
   valid_from: '1900-01-01'
+description:
+  text: De directie Publieke Gezondheid (PG) streeft naar een (mentaal) gezonde bevolking
+    en het terugdringen van sociaal-economische gezondheidsverschillen. De directie
+    PG is verantwoordelijk voor het stelsel van de Publieke Gezondheid dat is vastgelegd
+    in de Wet Publieke Gezondheid. De publieke gezondheidszorg omvat gezondheidsbeschermende
+    en gezondheidsbevorderende maatregelen voor de bevolking of specifieke groepen
+    daaruit, waaronder het voorkómen en het vroegtijdig opsporen van ziekten. De directie
+    PG is daarnaast verantwoordelijk voor een aantal medisch-ethische onderwerpen
+    en is coördinerend opdrachtgever van de Gezondheidsraad, RIVM en ZonMw.Aandachtsgebieden*
+    Versterken van het stelsel van de Publieke Gezondheid. Het betreft de samenwerking
+    tussen Rijk, het RIVM, gemeenten en GGD’en met betrekking tot onder andere het
+    lokale gezondheidsbeleid, de jeugdgezondheidszorg, de ouderengezondheidszorg,
+    seksuele gezondheid en medische milieukunde. Daarnaast streven we naar paraatheid
+    ten aanzien van (grensoverschrijdende) gezondheidsdreigingen zoals Chemische Biologische
+    Radiologische en Nucleaire dreigingen (CBRN) en gezondheidsdreigingen door klimaatverandering.*
+    Voorkómen en het vroegtijdig opsporen van ziekten door het programmatisch aanbieden
+    van bevolkingsonderzoeken, zoals de screening op kanker en pre- en neonatale screening;
+    inclusief het verkennen van nieuwe mogelijkheden, zoals de inzet van DNA-technologie
+    in preventie en de zorg.* Het Gezond en Actief Leven Akkoord (GALA) dat is vastgesteld
+    tussen het Rijk, Gemeenten, zorgverzekeraars en GGD-en met als doel een Gezonde
+    Generatie 2040. Het betreft afspraken over onder meer het versterken van preventie
+    in het zorgstelsel en de verbinding tussen het zorg- en het sociaal/gemeentelijke
+    domein (link met Integraal Zorg Akkoord); en het stimuleren van een gezonde leefstijl
+    en vitaal ouder worden.* ‘Health in all policies’ stimuleren, omdat het beleid
+    buiten het VWS-domein een grote impact heeft op de gezondheid en instroom in de
+    zorg. Het gaat hierbij om enerzijds sociale beleidsterreinen zoals armoedebeleid
+    en onderwijs en anderzijds de fysieke leefomgeving en het klimaat.* Coördinatie
+    Programma’s Kansrijke start, Valpreventie, Mentale gezondheid en Gezonde leefomgeving.*
+    Medisch-ethische onderwerpen, zoals wetgeving en beleid op afstammingsvraagstukken,
+    aanpak onbedoelde zwangerschap, abortus, de embryowet en levenseinde.
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/organogram
   email: _dienstpostbusSecretariaatPG@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 68 83
+    label: algemeen
+  emails:
+  - email: _dienstpostbusSecretariaatPG@minvws.nl
+    label: algemeen
+  - email: of.scheidel@minvws.nl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8766/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8766/pg
+  retrieved: '2026-05-16'

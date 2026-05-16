@@ -3,7 +3,7 @@ name:
   full: P.C.M. Klomp-Lever
   family: Klomp-Lever
   given: P.C.M.
-  initials: P.
+  initials: P.C.M.
 mandaten:
 - id: d88c25c5-3d35-4f17-a832-54d4c2df4203
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7783057
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=24783869
 - id: 38189037-2e12-497c-ab8e-2565c3af751c
   organization_id: org:gemeente-krimpenerwaard
   post_id: post:raadslid-gemeente-krimpenerwaard

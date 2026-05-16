@@ -3,16 +3,52 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29787076'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1088
+  owms: http://standaarden.overheid.nl/owms/terms/grhartrkr
+  organisatiecode: so1088
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Groene Hart Rekenkamer
+  roo_id: '29787082'
 names:
 - value: Groene Hart Rekenkamer
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.groenehartrekenkamer.nl/
+  postadres: Postbus 1086, 2800 BB Gouda
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Burgemeester Jamesplein
+    huisnummer: '1'
+    postcode: 2803 PG
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1086'
+    postcode: 2800 BB
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: 14 0182
+    label: gemeente Gouda
+  internet_addresses:
+  - url: https://www.groenehartrekenkamer.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.groenehartrekenkamer.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-27'
+last_verified: '2025-05-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29787076/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29787076/groene-hart-rekenkamer
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

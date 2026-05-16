@@ -6,20 +6,140 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0650
   roo_id: '45778'
   wikidata: Q3086208
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Zuiderzeeland
+  rsin: '808201980'
 classification: waterschap
 parent_id: null
 names:
 - value: Zuiderzeeland
   valid_from: '1900-01-01'
+description:
+  text: 'Waterschap Zuiderzeeland is de waterbeheerder in Flevoland en een klein deel
+    van Friesland en Overijssel. Wij beheren in dit gebied alle dijken, watergangen,
+    gemalen en waterzuiveringen. Hiermee zorgen we voor veiligheid en voldoende en
+    schoon water.Dat doen wij in samenwerking met gemeenten, provincies, natuurorganisaties,
+    andere waterschappen, maatschappelijke organisaties en belangenbehartigers.Gebied:
+    Almere, De Fryske Marren, Dronten, Lelystad, Noordoostpolder, Steenwijkerland,
+    Urk en Zeewolde.'
+  url: https://www.zuiderzeeland.nl/over-ons/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zuiderzeeland.nl/woo-verzoek-indienen-of-informatie-aanvragen
+      overzichtURL: https://organisaties.overheid.nl/woo/45778/Zuiderzeeland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Zuiderzeeland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Zuiderzeeland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.zuiderzeeland.nl/begroting
+      toelichting: Begroting, meerjarenbegroting, jaarplannen, jaarstukken, bestuursrapportages,
+        kadernota’s
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zuiderzeeland.nl/dijkgraaf-en-heemraden
+      toelichting: Besluitenlijst college van Dijkgraaf en Heemraden
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.zuiderzeeland.nl/agenda-en-vergaderstukken-algemeen-bestuur/
+      toelichting: Vergaderstukken Algemeen Bestuur
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22waterschap%22)and(dt.creator==%22Waterschap%20Zuiderzeeland%22))))and((dt.type==%22andere%20beschikking%22)or(dt.type==%22andere%20vergunning%22)or(dt.type==%22omgevingsvergunning%22)or(dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+      toelichting: Watervergunning
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.zuiderzeeland.nl/portaal
+      toelichting: Openbaar gemaakte informatie Woo-verzoeken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Zuiderzeeland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22)))
+      toelichting: Andere besluiten van algemene strekking en beleidsregels
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Zuiderzeeland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Zuiderzeeland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Algemeen verbindend voorschriften (verordeningen), Gemeenschappelijke
+        regelingen en Ruimtelijk plannen of omgevingsdocumenten
+  wooVerzoek:
+    url: https://mijn.zuiderzeeland.nl/Aanvraag-Woo-verzoek/
+organogram_url: https://www.zuiderzeeland.nl/over-ons/organisatie/organogram
+afspraak:
+  email: waterschap@zuiderzeeland.nl
+  telefoonnummer: (0320) 27 49 11
+  url: https://www.zuiderzeeland.nl/contact/contact-met-ons
 contact:
   website: https://www.zuiderzeeland.nl
   email: waterschap@zuiderzeeland.nl
+  bezoekadres: Lindelaan 20, 8224 KT Lelystad
+  postadres: Postbus 229, 8200 AE Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lindelaan
+    huisnummer: '20'
+    postcode: 8224 KT
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '229'
+    postcode: 8200 AE
+    woonplaats: Lelystad
+  - type: Woo-Adres
+    toelichting: Waterschap Zuiderzeeland,  Afdeling Juridische zaken
+    openbare_ruimte: Lindelaan
+    huisnummer: '20'
+    postbus: '229'
+    postcode: 8224 KT
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Lindelaan
+    huisnummer: '20'
+    postcode: 8224 KT
+    ter_attentie_van: Team Waterprocedures
+    woonplaats: LELYSTAD
+  - type: Postadres Omgevingsloket
+    postbus: '229'
+    postcode: 8200 AE
+    ter_attentie_van: Team Waterprocedures
+    woonplaats: LELYSTAD
+  phones:
+  - nummer: (0320) 27 49 11
+    label: algemeen
+  emails:
+  - email: waterschap@zuiderzeeland.nl
+    label: algemeen
+  - email: waterprocedures@zuiderzeeland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.zuiderzeeland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/45778/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/45778/zuiderzeeland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

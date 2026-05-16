@@ -4,21 +4,84 @@ identifiers:
   oin: '00000004000000075000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10040
   roo_id: '98735'
+  owms: http://standaarden.overheid.nl/owms/terms/fmh
+  organisatiecode: oorg10040
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: FMHaaglanden
   abbr: FMH
   valid_from: '1900-01-01'
+description:
+  text: "FMH levert facilitaire producten en diensten binnen het Rijk in de Haagse\
+    \ regio. Dit doen zij met ruim 600 medewerkers rondom de werkplekken van circa\
+    \ 30.000 rijkscollega’s zodat zij comfortabel kunnen werken.Het verzorgingsgebied\
+    \ van FMH bestaat uit de volgende departementen:•\tBinnenlandse Zaken en Koninkrijksrelaties\
+    \ (BZK)•\tBuitenlandse Zaken (BZ)•\tEconomische Zaken en klimaat (EZK)•\tInfrastructuur\
+    \ en Waterstaat (IenW)•\tJustitie en Veiligheid (JenV)•\tLandbouw, Natuur en Voedselkwaliteit\
+    \ (LNV)•\tOnderwijs, Cultuur en Wetenschap (OCW)•\tSociale Zaken en Werkgelegenheid\
+    \ (SZW)•\tVolksgezondheid, Welzijn en Sport (VWS)•\tFinanciën (Fin), alleen vervoerFMH\
+    \ werkt landelijk nauw samen met de drie andere Concern Dienstverleners van het\
+    \ Rijk (CDV’s):•\thet Centrum voor Facilitaire Dienstverlening van de Belastingdienst\
+    \ (B/CFD)•\tRijkswaterstaat (RWS) en•\tde Dienst Justitiële Inrichtingen (DJI)Deze\
+    \ CDV’s verzorgen de facilitaire dienstverlening voor rijksorganisaties buiten\
+    \ de Haagse regio."
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.fmhaaglanden.nl/
   email: FMHSecretariaat@rijksoverheid.nl
+  bezoekadres: Koningskade 4, 2596 AA Den Haag
+  postadres: Postbus 20011, 2500 AA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '4'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 AA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 311 86 12
+    label: algemeen
+  emails:
+  - email: FMHSecretariaat@rijksoverheid.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.fmhaaglanden.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.fmhaaglanden.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98735/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98735/fmh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

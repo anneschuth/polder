@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '30158352'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-boa
+parent_id: org:onderdeel-plaatsvervangend-secretaris-generaal
 names:
 - value: Directie-I
   valid_from: '1900-01-01'
@@ -13,9 +13,28 @@ names:
 contact:
   website: http://www.rekenkamer.nl
   email: directiesecretariaat@rekenkamer.nl
+  bezoekadres: Lange Voorhout 8, 2514 ED Den Haag
+  postadres: Postbus 20015, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout 8
+    postcode: 2514 ED
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20015'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  emails:
+  - email: directiesecretariaat@rekenkamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rekenkamer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-07-02'
+last_mutation: '2025-06-16'
+last_verified: '2026-01-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30158352/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30158352/directie-i
+  retrieved: '2026-05-16'

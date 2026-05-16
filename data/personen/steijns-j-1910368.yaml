@@ -3,7 +3,7 @@ name:
   full: J.M.A.F. Steijns
   family: Steijns
   given: J.M.A.F.
-  initials: J.
+  initials: J.M.A.F.
 mandaten:
 - id: e0845cad-0c5b-4341-a3ff-f74e21890139
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910515
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=132300
 - id: d353998d-64a5-49cd-9d49-8bd2a5c3873a
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

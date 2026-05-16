@@ -4,6 +4,9 @@ identifiers:
   roo_id: '29407'
   wikidata: Q683658
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0070
+  owms: http://standaarden.overheid.nl/owms/terms/Franekeradeel
+  ictu: '00070'
+  organisatiecode: gm0070
 classification: gemeente
 parent_id: null
 names:
@@ -11,19 +14,92 @@ names:
   abbr: Franekeradeel
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 109,16
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 109.16
+  aantal_inwoners: 20265
+  inwoners: '185'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 185.0
+  bevat_plaatsen_raw: Achlum, Boer, Dongjum, Firdgum, Franeker, Herbaijum, Hitzum,
+    Klooster Lidlum, Oosterbierum, Peins, Pietersbierum, Ried, Schalsum, Sexbierum,
+    Tzum, Tzummarum, Zweins
+  bevat_plaatsen:
+  - Achlum
+  - Boer
+  - Dongjum
+  - Firdgum
+  - Franeker
+  - Herbaijum
+  - Hitzum
+  - Klooster Lidlum
+  - Oosterbierum
+  - Peins
+  - Pietersbierum
+  - Ried
+  - Schalsum
+  - Sexbierum
+  - Tzum
+  - Tzummarum
+  - Zweins
+council:
+  total_seats: 20
+  parties:
+  - naam: FNP
+    aantal_zetels: 5
+  - naam: Gemeentebelang Franekeradeel
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: www.franekeradeel.nl
   email: info@franekeradeel.nl
+  bezoekadres: Harlingerweg 18, 8801 PA FRANEKER
+  postadres: Postbus 58, 8800 AB FRANEKER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Harlingerweg
+    huisnummer: '18'
+    postcode: 8801 PA
+    woonplaats: FRANEKER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 58
+    postbus: '58'
+    postcode: 8800 AB
+    woonplaats: FRANEKER
+  phones:
+  - nummer: (0517) 38 03 80
+    label: algemeen
+  emails:
+  - email: info@franekeradeel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.franekeradeel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-23'
+last_verified: '2018-01-23'
+successor_id: org:gemeente-waadhoeke
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29407/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29407/gemeente-franekeradeel
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q683658
   retrieved: '2026-05-09'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0070
   retrieved: '2026-05-09'
-successor_id: org:gemeente-waadhoeke

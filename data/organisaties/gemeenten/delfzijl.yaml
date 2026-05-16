@@ -6,6 +6,9 @@ identifiers:
   roo_id: '28652'
   wikidata: Q133131333
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0010
+  owms: http://standaarden.overheid.nl/owms/terms/Delfzijl_(gemeente)
+  ictu: '00010'
+  organisatiecode: gm0010
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,103 @@ names:
   abbr: Delfzijl
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 226,7
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 226.7
+  aantal_inwoners: 24864
+  inwoners: '109'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 109.0
+  bevat_plaatsen_raw: Bierum, Borgsweer, Delfzijl, Farmsum, Godlinze, Holwierde, Krewerd,
+    Losdorp, Meedhuizen, Spijk GN, Termunten, Termunterzijl, Wagenborgen, Woldendorp
+  bevat_plaatsen:
+  - Bierum
+  - Borgsweer
+  - Delfzijl
+  - Farmsum
+  - Godlinze
+  - Holwierde
+  - Krewerd
+  - Losdorp
+  - Meedhuizen
+  - Spijk GN
+  - Termunten
+  - Termunterzijl
+  - Wagenborgen
+  - Woldendorp
+council:
+  total_seats: 19
+  parties:
+  - naam: Fractie 2014
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Lijst Stulp
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: Partij voor de Vrijheid
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: Seniorenpartij Delfzijl
+    aantal_zetels: 1
 contact:
   website: www.delfzijl.nl
   email: gemeente@delfzijl.nl
+  bezoekadres: Johan van den Kornputpln 10, 9934 EA DELFZIJL
+  postadres: Postbus 20000, 9930 PA DELFZIJL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Johan van den Kornputpln
+    huisnummer: '10'
+    postcode: 9934 EA
+    woonplaats: DELFZIJL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '20000'
+    postcode: 9930 PA
+    woonplaats: DELFZIJL
+  phones:
+  - nummer: 14 0596
+    label: algemeen
+  emails:
+  - email: gemeente@delfzijl.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.delfzijl.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2025-03-28'
+last_verified: '2025-03-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28652/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28652/delfzijl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

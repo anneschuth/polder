@@ -6,21 +6,149 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1641
   roo_id: '39485'
   wikidata: Q9792
+  owms: http://standaarden.overheid.nl/owms/terms/Maasgouw
+  ictu: '01641'
+  organisatiecode: gm1641
+  rsin: '816963253'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MGW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Maasgouw
   abbr: Maasgouw
   valid_from: '1900-01-01'
+description:
+  text: Tien kernen en ruim 24.000 inwoners, een belangrijke binnenvaarthaven, veel
+    ruimte voor de zorg, een rijke historie, de Maasplassen én een mooie, bosrijke
+    natuur. Dat is Maasgouw. Een nog jonge gemeente in Midden-Limburg die volop in
+    ontwikkeling is.
+  url: https://www.gemeentemaasgouw.nl/over-gemeente-maasgouw
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentemaasgouw.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/39485/Gemeente_Maasgouw
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maasgouw%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maasgouw%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maasgouw%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.gemeentemaasgouw.nl/wet-open-overheid
+organogram_url: https://www.gemeentemaasgouw.nl/over-gemeente-maasgouw
+afspraak:
+  email: info@gemeentemaasgouw.nl
+  telefoonnummer: (0475) 85 25 00
+  url: https://www.gemeentemaasgouw.nl/
+geography:
+  oppervlakte: 58,12
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 58.12
+  aantal_inwoners: 24377
+  inwoners: '419'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 419.0
+  bevat_plaatsen_raw: Beegden, Heel, Linne, Maasbracht, Ohe en Laak, Stevensweert,
+    Thorn, Wessem
+  bevat_plaatsen:
+  - Beegden
+  - Heel
+  - Linne
+  - Maasbracht
+  - Ohe en Laak
+  - Stevensweert
+  - Thorn
+  - Wessem
+council:
+  total_seats: 19
+  parties:
+  - naam: Lokaal Belang
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Lokaal Belang
+    aantal_zetels: 3
+  - naam: LVM
+    aantal_zetels: 1
+  - naam: PRO
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentemaasgouw.nl
   email: info@gemeentemaasgouw.nl
+  bezoekadres: Markt 36, 6051 DZ MAASBRACHT
+  postadres: Postbus 7000, 6050 AA MAASBRACHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '36'
+    postcode: 6051 DZ
+    woonplaats: MAASBRACHT
+  - type: Postadres
+    postbus: '7000'
+    postcode: 6050 AA
+    woonplaats: MAASBRACHT
+  - type: Woo-Adres
+    openbare_ruimte: Markt
+    huisnummer: '36'
+    postcode: 6051 DZ
+    woonplaats: Maasbracht
+    regio: Limburg
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '36'
+    postcode: 6051 DZ
+    woonplaats: MAASBRACHT
+  phones:
+  - nummer: (0475) 85 25 00
+    label: algemeen
+  emails:
+  - email: info@gemeentemaasgouw.nl
+    label: algemeen
+  - email: dienstverlening@servicecentrum-mer.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentemaasgouw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
+predecessor_id:
+- org:gemeente-heel
+- org:gemeente-maasbracht
+- org:gemeente-thorn
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39485/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39485/maasgouw
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,7 +157,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9792
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-heel
-- org:gemeente-maasbracht
-- org:gemeente-thorn
+roo_start_datum: '2007-01-01'

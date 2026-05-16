@@ -3,19 +3,92 @@ type: zbo
 identifiers:
   roo_id: '30150441'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb099991
+  owms: http://standaarden.overheid.nl/owms/terms/asrwlzuitv
+  kvk: '62360337'
+  rsin: '854786636'
 classification: zbo
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: ASR Wlz-uitvoerder B.V.
   valid_from: '1900-01-01'
+description:
+  text: ASR Wlz-uitvoerder B.V. is een uitvoerder van de Wet langdurige zorg (Wlz),
+    zoals bedoeld in artikel 4.1.1 van die wet.
+  url: https://www.asr.nl/verzekeringen/zorgverzekering/wlz
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet langdurige zorg, artikel 4.1.1
+  referentie: https://wetten.overheid.nl/BWBR0035917/2025-01-01#Hoofdstuk4_Paragraaf1_Artikel4.1.1
+taken_en_bevoegdheden: ASR Wlz-uitvoerder B.V. is verantwoordelijk voor het uitvoeren
+  van de taken zoals beschreven in paragraaf 2 van hoofdstuk 4 (artikelen 4.2.1 tot
+  en met 4.2.6) van de Wet langdurige zorg (Wlz).
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30150441/ASR_Wlz-uitvoerder_BV
 contact:
   website: https://www.asr.nl/verzekeringen/zorgverzekering
+  postadres: Postbus 2072, 3500 HB Utrecht
+  bezoekadres: Archimedeslaan 10, 3584 BA Utrecht
+  addresses:
+  - type: Postadres
+    toelichting: Algemeen vestigingsadres
+    postbus: '2072'
+    postcode: 3500 HB
+    woonplaats: Utrecht
+  - type: Bezoekadres
+    toelichting: Algemeen vestigingsadres
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '10'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '2072'
+    postcode: 3500 HB
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 699 79 30
+    label: algemeen
+  internet_addresses:
+  - url: https://www.asr.nl/verzekeringen/zorgverzekering
+    label: algemeen
+  contact_forms:
+  - url: https://www.asr.nl/contact/zorgverzekering
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: a.s.r. verzekeringen
+    url: https://www.linkedin.com/company/asrverzekeringen/
+  - platform: Facebook
+    gebruikersnaam: asr
+    url: https://www.facebook.com/asrverzekeringen/
+  - platform: Instagram
+    gebruikersnaam: '@asrverzekeringen'
+    url: https://www.instagram.com/asrverzekeringen/#
+  - platform: YouTube
+    gebruikersnaam: a.s.r. verzekeringen
+    url: https://www.youtube.com/user/asrnedverzekeraar
+  - platform: X
+    gebruikersnaam: '@asr'
+    url: https://twitter.com/asr
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-11-12'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30150441/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30150441/asr-wlz-uitvoerder-bv
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb099991
   retrieved: '2026-05-09'
+roo_start_datum: '2015-01-01'

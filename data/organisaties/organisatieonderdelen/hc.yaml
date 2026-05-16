@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '48960'
 classification: organisatieonderdeel
-parent_id: org:hoge-college-gl
+parent_id: org:onderdeel-commissies-ek
 names:
 - value: Huishoudelijke Commissie
   abbr: HC
@@ -14,9 +14,22 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
-valid_until: null
+valid_until: '2023-06-12'
+last_mutation: '2023-06-13'
+last_verified: '2023-06-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/48960/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/48960/hc
+  retrieved: '2026-05-16'

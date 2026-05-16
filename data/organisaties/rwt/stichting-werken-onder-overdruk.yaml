@@ -2,14 +2,32 @@ id: org:stichting-werken-onder-overdruk
 type: rwt
 identifiers:
   roo_id: '30133827'
+  kvk: '34307106'
+  rsin: '819705585'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Stichting Werken onder Overdruk
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Ambachtsweg
+    huisnummer: '27'
+    postcode: 2641 KS
+    woonplaats: Pijnacker
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133827/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133827/stichting-werken-onder-overdruk
+  retrieved: '2026-05-16'

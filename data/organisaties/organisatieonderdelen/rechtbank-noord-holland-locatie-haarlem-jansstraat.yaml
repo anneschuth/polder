@@ -7,9 +7,25 @@ parent_id: org:rechtbank-noord-holland
 names:
 - value: Rechtbank Noord-Holland, locatie Haarlem, Jansstraat
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Jansstraat 81, 2011 RW Haarlem
+  postadres: Postbus 1621, 2003 BR Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jansstraat
+    huisnummer: '81'
+    postcode: 2011 RW
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1621'
+    postcode: 2003 BR
+    woonplaats: Haarlem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-23'
+last_verified: '2026-03-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048525/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048525/rechtbank-noord-holland-locatie-haarlem-jansstraat
+  retrieved: '2026-05-16'

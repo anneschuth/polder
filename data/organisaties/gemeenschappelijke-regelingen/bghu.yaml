@@ -5,23 +5,78 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0796
   oin: 00000001852712716000
   kvk: '57735654'
+  owms: http://standaarden.overheid.nl/owms/terms/bghu
+  organisatiecode: so0796
+  rsin: '852712716'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Belastingsamenwerking gemeenten en hoogheemraadschap
+    Utrecht 2020
+  roo_id: '28981472'
 names:
 - value: Belastingsamenwerking gemeenten en hoogheemraadschap Utrecht
   abbr: BghU
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28401347/Belastingsamenwerking_gemeenten_en_hoogheemraadschap_Utrecht
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Belastingsamenwerking+gemeenten+en+hoogheemraadschap+Utrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://bghu.nl
   email: https://bghu.nl/contact
+  bezoekadres: Stadsplateau 1, 3521 AZ Utrecht
+  postadres: Postbus 5150, 3502 JD Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stadskantoor Utrecht
+    openbare_ruimte: Stadsplateau
+    huisnummer: '1'
+    postcode: 3521 AZ
+    woonplaats: Utrecht
+  - type: Postadres
+    postbus: '5150'
+    postcode: 3502 JD
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 064 02 00
+    label: algemeen
+  emails:
+  - email: https://bghu.nl/contact
+    label: contactpagina
+  internet_addresses:
+  - url: https://bghu.nl
+    label: algemeen
+  contact_forms:
+  - url: https://bghu.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-07-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28401347/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28401347/bghu
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-12-01'

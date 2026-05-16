@@ -3,6 +3,7 @@ type: gemeente
 identifiers:
   roo_id: '30316'
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0653
+  owms: http://standaarden.overheid.nl/owms/terms/Gaasterlan-Sleat
 classification: gemeente
 parent_id: null
 names:
@@ -10,16 +11,78 @@ names:
   abbr: Gaasterlân-Sleat
   valid_from: '1900-01-01'
   valid_until: '2014-01-01'
+geography:
+  oppervlakte: 209,29
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 209.29
+  aantal_inwoners: 10286
+  inwoners: '49'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 49.0
+  bevat_plaatsen_raw: Bakhuizen, Balk, Elahuizen, Harich, Kolderwolde, Mirns, Nijemirdum,
+    Oudega Gaast Sleat, Oudemirdum, Rijs, Ruigahuizen, Sloten FR, Sondel, Wijckel
+  bevat_plaatsen:
+  - Bakhuizen
+  - Balk
+  - Elahuizen
+  - Harich
+  - Kolderwolde
+  - Mirns
+  - Nijemirdum
+  - Oudega Gaast Sleat
+  - Oudemirdum
+  - Rijs
+  - Ruigahuizen
+  - Sloten FR
+  - Sondel
+  - Wijckel
+council:
+  total_seats: 15
+  parties:
+  - naam: FNP
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: http://www.gaasterlan-sleat.nl
   email: info@gaasterlan-sleat.nl
+  bezoekadres: Dubbelstraat 1, 8561 BC BALK
+  postadres: Postbus 101, 8500 AC JOURE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dubbelstraat
+    huisnummer: '1'
+    postcode: 8561 BC
+    woonplaats: BALK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '101'
+    postcode: 8500 AC
+    woonplaats: JOURE
+  phones:
+  - nummer: (0514) 60 81 11
+    label: algemeen
+  emails:
+  - email: info@gaasterlan-sleat.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.gaasterlan-sleat.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2014-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
+successor_id: org:gemeente-de-friese-meren
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30316/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30316/gemeente-gaasterlan-sleat
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0653
   retrieved: '2026-05-09'
-successor_id: org:gemeente-de-friese-meren

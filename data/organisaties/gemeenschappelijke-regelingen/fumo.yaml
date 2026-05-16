@@ -1,27 +1,128 @@
 id: org:gr-fumo
 type: gemeenschappelijke-regeling
+subname: Friese Uitvoeringsdienst Milieu en Omgeving
 identifiers:
   roo_id: '24474641'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0794
   oin: 00000001852608263000
   kvk: '57499470'
+  owms: http://standaarden.overheid.nl/owms/terms/fumo
+  btw: NL852608263B01
+  loonheffing: 852608263L01
+  organisatiecode: so0794
+  rsin: '852608263'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Fryske Utfieringstsjinst Miljeu en Omjouwing -
+    2022
+  roo_id: '28833066'
 names:
 - value: Fryske Utfieringstsjinst Miljeu en Omjouwing
   abbr: FUMO
   valid_from: '1900-01-01'
+description:
+  text: De Fryske Utfieringstsjinst Miljeu en Omjouwing (FUMO) is de omgevingsdienst
+    van Fryslân. De FUMO geeft advies, verstrekt vergunningen en houdt toezicht op
+    het gebied van natuur- en milieuwet- en regelgeving. Dat doet de FUMO voor de
+    bedrijven en inwoners van Fryslân, in opdracht van alle 18 Friese gemeenten, de
+    provincie Fryslân en Wetterskip Fryslân; de deelnemers.
+  url: https://www.fumo.nl/over-de-fumo
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.fumo.nl/zelf-regelen/woo-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/24474641/Fryske_Utfieringstsjinst_Miljeu_en_Omjouwing
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryske+Utfieringstsjinst+Miljeu+en+Omjouwing%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryske+Utfieringstsjinst+Miljeu+en+Omjouwing%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Fryske+Utfieringstsjinst+Miljeu+en+Omjouwing%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woogle.wooverheid.nl
+      toelichting: Zoekwoord FUMO of Fryske Utfieringstsjinst Miljeu en Omjouwing
+  wooVerzoek:
+    url: https://www.fumo.nl/zelf-regelen/woo-verzoeken
+organogram_url: https://www.fumo.nl/organisatie
+afspraak:
+  email: info@fumo.nl
+  telefoonnummer: (0566) 75 03 00
+  url: https://www.fumo.nl/contact
 contact:
   website: https://www.fumo.nl
   email: info@fumo.nl
+  bezoekadres: J.W. de Visserwei 10, 9001 ZE Grou
+  postadres: J.W. de Visserwei 10, 9001 ZE GROU
+  addresses:
+  - type: Bezoekadres
+    toelichting: Bezoek alleen op afspraak
+    openbare_ruimte: J.W. de Visserwei
+    huisnummer: '10'
+    postcode: 9001 ZE
+    woonplaats: Grou
+    regio: Friesland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Bezoek alleen op afspraak
+    openbare_ruimte: J.W. de Visserwei
+    huisnummer: '10'
+    postcode: 9001 ZE
+    woonplaats: Grou
+    regio: Friesland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: J.W. de Visserwei
+    huisnummer: '10'
+    postcode: 9001 ZE
+    woonplaats: GROU
+    regio: Friesland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  phones:
+  - nummer: (0566) 75 03 00
+    label: algemeen
+  emails:
+  - email: info@fumo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.fumo.nl
+    label: algemeen
+  - url: https://www.fumo.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.fumo.nl/contact
+    label: Algemeen
+  - url: https://www.fumo.nl/zelf-regelen/formulier-woo-verzoek-indienen
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24474641/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24474641/fumo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-12-25'

@@ -6,22 +6,165 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0753
   roo_id: '28932'
   wikidata: Q9816
+  owms: http://standaarden.overheid.nl/owms/terms/Best_(gemeente)
+  ictu: '00753'
+  organisatiecode: gm0753
+  rsin: 001902623
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BST
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Best
   abbr: Best
   valid_from: '1900-01-01'
-  valid_until: '2027-12-31'
+description:
+  text: 'Dorps wonen met veel voorzieningen, maar ook dicht bij de stad én de rust
+    van de natuur. Alle bestemmingen zijn binnen handbereik door de ligging tussen
+    de snelwegen A2 en A58, een ondergronds treinstation in het centrum en Eindhoven
+    Airport dichtbij. Best is van alle gemakken voorzien: basisscholen, een middelbare
+    school, een ruim winkelaanbod, musea, een bibliotheek, een bioscoop, sportvoorzieningen
+    en vele recreatiemogelijkheden. Best is een toegangspoort tot het Nationaal Landschap
+    Het Groene Woud en maakt deel uit van de Brainport regio, het hightech hart van
+    Brabant.'
+  url: https://www.gemeentebest.nl/over-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentebest.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28932/Gemeente_Best
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.gemeentebest.nl/woo-verzoek
+      toelichting: Wijze indienen Woo-verzoeken en genomen Woo-besluiten en documenten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://best2025.kadernota.nl/
+      toelichting: Kaderbrief waarin vooruit wordt gekeken op de komende twee jaar.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Best%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.gemeentebest.nl/openbare-besluitenlijsten
+      toelichting: Openbare besluitenlijsten college van burgemeester en wethouders
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Best%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.gemeentebest.nl/financiele-stukken
+      toelichting: Financiële stukken, bijvoorbeeld behorende bij de planning en control
+        cyclus.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Best%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://best.notubiz.nl/
+      toelichting: Vergaderstukken gemeenteraad en college
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://best.notubiz.nl/modules/1/ingekomen_stukken/view
+      toelichting: Ingekomen stukken gemeenteraad
+    - informatiecategorie: Klachtoordelen
+      url: https://www.gemeentebest.nl/klachten
+      toelichting: Wijze indienen klachten en klachtenoverzicht
+  wooVerzoek:
+    url: https://www.gemeentebest.nl/woo-verzoek
+organogram_url: https://www.gemeentebest.nl/gemeentelijke-organisatie
+afspraak:
+  email: info@gemeentebest.nl
+  telefoonnummer: (0499) 36 09 11
+  url: https://www.gemeentebest.nl/afspraak-maken
+geography:
+  oppervlakte: 35,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 35.0
+  aantal_inwoners: 31699
+  inwoners: '905'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 905.0
+  bevat_plaatsen_raw: Best
+  bevat_plaatsen:
+  - Best
+council:
+  total_seats: 23
+  parties:
+  - naam: Best-Anders
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 3
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: Best Open
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Jongerenpartij JO
+    aantal_zetels: 1
 contact:
   website: https://www.gemeentebest.nl
   email: info@gemeentebest.nl
+  bezoekadres: Dorpsplein 2, 5683 GA BEST
+  postadres: Postbus 50, 5680 AB BEST
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dorpsplein
+    huisnummer: '2'
+    postcode: 5683 GA
+    woonplaats: BEST
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '50'
+    postcode: 5680 AB
+    woonplaats: BEST
+  - type: Woo-Adres
+    openbare_ruimte: Dorpsplein
+    huisnummer: '2'
+    postcode: 5683 GA
+    woonplaats: Best
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '50'
+    postcode: 5680 AB
+  phones:
+  - nummer: (0499) 36 09 11
+    label: algemeen
+  emails:
+  - email: info@gemeentebest.nl
+    label: algemeen
+  - email: vergunningen@gembest.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gemeentebest.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.gemeentebest.nl/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2027-12-31'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28932/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28932/best
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

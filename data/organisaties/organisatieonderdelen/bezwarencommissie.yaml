@@ -7,12 +7,31 @@ parent_id: org:prov-zh
 names:
 - value: Bezwarencommissie
   valid_from: '1900-01-01'
+description:
+  text: Bezwaarschriften gericht tegen besluiten van Gedeputeerde Staten worden ter
+    advisering aan de bezwarencommissie voorgelegd. De commissie kent achttien leden
+    en is samengesteld uit externe leden. De bezwarencommissie is verdeeld in een
+    tweetal kamers, een algemene kamer en een rechtspositionele kamer.
 contact:
   website: https://www.zuid-holland.nl/online-regelen/bezwaar/bezwaar-beslissing/
   email: AWBSECR@pzh.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (070) 441 60 93
+    label: algemeen
+  emails:
+  - email: AWBSECR@pzh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zuid-holland.nl/online-regelen/bezwaar/bezwaar-beslissing/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-07'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/54866/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/54866/bezwarencommissie
+  retrieved: '2026-05-16'

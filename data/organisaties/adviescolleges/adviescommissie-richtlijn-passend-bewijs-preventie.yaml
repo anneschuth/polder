@@ -3,17 +3,42 @@ type: adviescollege
 identifiers:
   roo_id: '30272436'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12384
+  organisatiecode: oorg12384
 classification: adviescollege
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Adviescommissie richtlijn passend bewijs preventie
   valid_from: '1900-01-01'
   valid_until: '2025-12-31'
+description:
+  text: De Adviescommissie richtlijn passend bewijs preventie is ingesteld om een
+    richtlijn te ontwikkelen die is toegespitst op het bewijzen van het nut van een
+    preventiemaatregel bij gezondheidsvraagstukken. Om te kunnen bepalen of een preventiemaatregel
+    effect heeft op de gezondheid, is er bewijs nodig. De richtlijn die door de commissie
+    wordt ontwikkeld, geeft aan wanneer dit bewijs van een passend niveau is.Deze
+    adviescommissie is geen formeel adviescollege en valt niet onder de Kaderwet adviescolleges.
+  url: https://wetten.overheid.nl/BWBR0050934/2025-04-11
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit Adviescommissie richtlijn passend bewijs preventie,
+    artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0050934/2025-04-11#Artikel2
 contact:
   website: https://wetten.overheid.nl/BWBR0050934/2025-04-11
 valid_from: '1900-01-01'
 valid_until: '2025-12-31'
+last_mutation: '2025-08-05'
+last_verified: '2025-08-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30272436/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30272436/adviescommissie-richtlijn-passend-bewijs-preventie
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-04-11'

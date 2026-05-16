@@ -3,17 +3,63 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966587'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0536
+  owms: http://standaarden.overheid.nl/owms/terms/iswzoutr
+  kvk: '51324873'
+  organisatiecode: so0536
+  rsin: 002973108
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling sociale werkvoorziening Zuid-Oost Utrecht
+  roo_id: '29560633'
 names:
 - value: Instituut voor Sociale Werkvoorziening Zuid-Oost Utrecht
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.iw4.nl
   email: info@iw4.nl
+  bezoekadres: Transformatorstraat 1, 3903 LT Veenendaal
+  postadres: Transformatorstraat 1, 3903 LT Veenendaal
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Transformatorstraat
+    huisnummer: '1'
+    postcode: 3903 LT
+    woonplaats: Veenendaal
+  - type: Postadres
+    openbare_ruimte: Transformatorstraat
+    huisnummer: '1'
+    postcode: 3903 LT
+    woonplaats: Veenendaal
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  phones:
+  - nummer: (0318) 56 39 00
+    label: algemeen
+  emails:
+  - email: info@iw4.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.iw4.nl
+    label: algemeen
+  fax: (0318) 56 39 01
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-30'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966587/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966587/instituut-voor-sociale-werkvoorziening-zuid-oost-utrecht
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-12-18'

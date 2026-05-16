@@ -1,20 +1,123 @@
 id: org:agentschap-dpc
 type: agentschap
+subname: Publiek en Communicatie
 identifiers:
   roo_id: '94546'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10115
+  owms: http://standaarden.overheid.nl/owms/terms/Dienst_Publiek_en_Communicatie
+  kvk: '27365932'
+  rsin: '821770627'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Algemene Zaken
+  roo_id: '123'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1010
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Algemene_Zaken
 names:
 - value: Dienst Publiek en Communicatie
   abbr: DPC
   valid_from: '1900-01-01'
+description:
+  text: '"De Dienst Publiek en Communicatie (DPC) staat voor overheidscommunicatie
+    die verbindt en begint bij wat mensen beweegt. Dat doet DPC door oog te hebben
+    voor wat mensen in de samenleving bezighoudt en nodig hebben. Ook volgt DPC haar
+    vakgebied op de voet. DPC past de opgedane inzichten toe in de rechtstreekse communicatie
+    met het publiek. Deze komen tot uitdrukking in de ondersteuning en advisering
+    aan de communicatiecollega’s binnen de overheid. Alles met als einddoel om overheid
+    en samenleving dichter bij elkaar te brengen."De Dienst Publiek en Communicatie
+    is als publieke dienstverlener verantwoordelijk voor de informatievoorziening
+    vanuit de Rijksoverheid naar alle inwoners van ons land. Ook ondersteunt DPC de
+    communicatiediscipline binnen de Rijksoverheid door het uitwisselen en delen van
+    kennis. Als categorie Communicatie sluit en beheert DPC (raam)overeenkomsten voor
+    de inkoop van communicatieproducten en –diensten voor het Rijk.DPC werkt actief
+    samen met ministeries en andere overheids- en uitvoeringsorganisaties met als
+    doel gezamenlijk stappen te zetten om de communicatie richting mensen in de samenleving
+    zo gemakkelijk en praktisch mogelijk te kunnen aanbieden. Denk daarbij aan het
+    aanbieden van informatie bij belangrijke levensgebeurtenissen op Rijksoverheid.nl.DPC
+    is een agentschap van het ministerie van Algemene Zaken (AZ).'
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram/dienst-publiek-en-communicatie
+taken_en_bevoegdheden: "Het agentschap Publiek en Communicatie is belast met:a.\t\
+  Ondersteunen van de rijksoverheid bij het gezamenlijk verbeteren van de communicatie\
+  \ met publiek en professionals.b.\tOntwikkelen en in stand houden van gemeenschappelijke\
+  \ voorzieningen ten behoeve van de overheidscommunicatie.c.\tRijksbreed adviseren,\
+  \ begeleiden en inkoop van communicatiebestedingen als Inkoop Uitvoeringscentrum\
+  \ (IUC) en aankoopcentrale voor de categorie communicatiehttps://wetten.overheid.nl/BWBR0017416/2010-02-27https://wetten.overheid.nl/BWBR0019219/2010-04-29"
+doorlichtingen:
+- datum: '2021-04-15'
+  naam_rapport: Doorlichtingsrapport Dienst Publiek en Communicatie (DPC)
+  referentie: https://www.rijksoverheid.nl/documenten/rapporten/2021/04/15/doorlichtingsrapport-dienst-publiek-en-communicatie-dpc
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/94546/Dienst_Publiek_en_Communicatie
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Algemene+Zaken&type=Woo-besluit
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/organisatie/organogram
+afspraak:
+  telefoonnummer: (070) 356 42 49
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-algemene-zaken/contact
+personnel:
+  aantalFte: 235,5
+  peildatumFte: '2024-11-01'
+  toelichtingFte: https://www.rijksoverheid.nl/documenten/publicaties/2024/04/02/overzicht-fte-directies-communicatie-rijksoverheid-2024
 contact:
   website: http://www.rijksoverheid.nl/ministeries/az/organisatie/organogram/dienst-publiek-en-communicatie
   email: woo@minaz.nl
+  bezoekadres: Buitenhof 34, 2513 AH Den Haag
+  postadres: Postbus 20006, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Buitenhof 34
+    postcode: 2513 AH
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20006'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20006'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 356 42 49
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/ministeries/az/organisatie/organogram/dienst-publiek-en-communicatie
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/contact/contactgids/dienst-publiek-en-communicatie
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-19'
+last_verified: '2026-04-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94546/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94546/dpc
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-01-01'

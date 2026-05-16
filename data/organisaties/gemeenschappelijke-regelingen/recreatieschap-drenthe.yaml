@@ -3,17 +3,70 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28355225'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0422
+  owms: http://standaarden.overheid.nl/owms/terms/Recreatieschap_Drenthe
+  kvk: '52124479'
+  organisatiecode: so0422
+  rsin: 003828591
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling recreatieschap Drenthe
+  roo_id: '28355193'
 names:
 - value: Recreatieschap Drenthe
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.recreatieschapdrenthe.nl
   email: info@recreatieschap.nl
+  bezoekadres: Drift 11 c, 7991 AA Dwingeloo
+  postadres: Drift 11 c, 7991 AA Dwingeloo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Drift
+    huisnummer: '11'
+    huisnummer_toevoeging: c
+    postcode: 7991 AA
+    woonplaats: Dwingeloo
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    openbare_ruimte: Drift
+    huisnummer: '11'
+    huisnummer_toevoeging: c
+    postcode: 7991 AA
+    woonplaats: Dwingeloo
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  phones:
+  - nummer: (0521) 59 32 10
+    label: algemeen
+  emails:
+  - email: info@recreatieschap.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.recreatieschapdrenthe.nl
+    label: algemeen
+  - url: https://www.recreatieschapdrenthe.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.recreatieschapdrenthe.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2021-03-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355225/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355225/recreatieschap-drenthe
+  retrieved: '2026-05-16'
+roo_start_datum: '1998-10-13'

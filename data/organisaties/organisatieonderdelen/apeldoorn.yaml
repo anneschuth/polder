@@ -9,9 +9,29 @@ names:
   abbr: APELDOORN
   valid_from: '1900-01-01'
   valid_until: '2020-04-28'
+description:
+  text: 'Taak:'
+contact:
+  bezoekadres: John F Kennedylaan 8, 7314 PS APELDOORN
+  postadres: Postbus 9050, 7300 GM APELDOORN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: John F Kennedylaan 8
+    postcode: 7314 PS
+    woonplaats: APELDOORN
+  - type: Postadres
+    postbus: '9050'
+    postcode: 7300 GM
+    woonplaats: APELDOORN
+  phones:
+  - nummer: (055) 528 64 92
+    label: algemeen
+  fax: (055) 528 37 50
 valid_from: '1900-01-01'
 valid_until: '2020-04-28'
+last_mutation: '2020-08-06'
+last_verified: '2020-08-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71439/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71439/apeldoorn
+  retrieved: '2026-05-16'

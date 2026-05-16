@@ -2,14 +2,42 @@ id: org:oovb-stichting-wandelnet
 type: rwt
 identifiers:
   roo_id: '27917820'
+  kvk: '41201226'
+  rsin: 006648836
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Wandelnet
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Berkenweg 30, 3818 LB Amersfoort
+  postadres: Postbus 846, 3800 AV Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Berkenweg 30
+    postcode: 3818 LB
+    woonplaats: Amersfoort
+  - type: Postadres
+    postbus: '846'
+    postcode: 3800 AV
+    woonplaats: Amersfoort
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917820/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917820/stichting-wandelnet
+  retrieved: '2026-05-16'

@@ -6,21 +6,165 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0847
   roo_id: '21622'
   wikidata: Q9868
+  owms: http://standaarden.overheid.nl/owms/terms/Someren_(gemeente)
+  ictu: 00847
+  organisatiecode: gm0847
+  rsin: '001600345'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SOM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Someren
   abbr: Someren
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.someren.nl/meldingen-klachten-en-overlast/woo-verzoek-1
+      overzichtURL: https://organisaties.overheid.nl/woo/21622/Gemeente_Someren
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://eloket.someren.nl/o/search?q=agenda
+      toelichting: Agenda's college van burgemeester en wethouders
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://eloket.someren.nl/o/search?q=besluitenlijst
+      toelichting: Besluitenlijsten college van burgemeester en wethouders vanaf 2026
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://someren.notubiz.nl/
+      toelichting: Vergaderstukken van raad en raadscommissies
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.someren.nl/gemeente-bestuur-en-organisatie/besluitenlijst-college
+      toelichting: Besluitenlijsten college van burgemeester en wethouders 2025
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://someren.notubiz.nl/modules/8/Bestuursdocumenten/view?month=all&year=all&week=all&module_filter%5Bselect%5D%5B51%5D=gremium%7C4074&module_filter%5Bselect%5D%5B45%5D=Besluitenlijst&module_filter%5Brange%5D%5B44%5D%5Bdata_type%5D=datetime&module_filter%5Brange%5D%5B7%5D%5Bdata_type%5D=datetime&section=
+      toelichting: Besluitenlijsten gemeenteraad
+    - informatiecategorie: Andere documenten
+      url: https://someren.archiefweb.eu/?subsite=zosomeren#archive
+      toelichting: Archief website www.zosomeren.nl
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://someren.notubiz.nl/modules/8/Bestuursdocumenten?month=all&year=all&week=all&module_filter%5Bselect%5D%5B51%5D=gremium%7C8064&module_filter%5Bselect%5D%5B45%5D=Besluitenlijst&module_filter%5Brange%5D%5B44%5D%5Bdata_type%5D=datetime&module_filter%5Brange%5D%5B7%5D%5Bdata_type%5D=datetime&section=&sort=&sort_dir=asc
+      toelichting: Besluitenlijsten commissie Ruimte
+    - informatiecategorie: Andere documenten
+      url: https://someren.archiefweb.eu/#archive
+      toelichting: Archief website www.someren.nl
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://someren.notubiz.nl/modules/8/Bestuursdocumenten?month=all&year=all&week=all&module_filter%5Bselect%5D%5B51%5D=gremium%7C8063&module_filter%5Bselect%5D%5B45%5D=Besluitenlijst&module_filter%5Brange%5D%5B44%5D%5Bdata_type%5D=datetime&module_filter%5Brange%5D%5B7%5D%5Bdata_type%5D=datetime&section=&sort=&sort_dir=asc
+      toelichting: Besluitenlijsten commissie Burger en Bestuur
+    - informatiecategorie: Andere documenten
+      url: https://someren.archiefweb.eu/?subsite=somerennatuurlijkduurzaam#archive
+      toelichting: Archief website www.somerennatuurlijkduurzaam.nl
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Someren%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Someren%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Andere documenten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Someren%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Bekendmakingen van beschikkingen
+  wooVerzoek:
+    url: https://www.someren.nl/meldingen-klachten-en-overlast/woo-verzoek-1
+organogram_url: http://www.someren.nl/organogram
+afspraak:
+  email: gemeente@someren.nl
+  telefoonnummer: (0493) 49 48 88
+  url: https://afspraken.someren.nl/internet_afspraken/
+geography:
+  oppervlakte: 80,10
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 80.1
+  aantal_inwoners: 20471
+  inwoners: '255'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 255.0
+  bevat_plaatsen_raw: Lierop, Someren
+  bevat_plaatsen:
+  - Lierop
+  - Someren
+council:
+  total_seats: 19
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Gemeenschapslijst
+    aantal_zetels: 5
+  - naam: Wij zijn Someren/VVD
+    aantal_zetels: 4
+  - naam: LSH
+    aantal_zetels: 3
+  - naam: SDS & PRO
+    aantal_zetels: 1
+  - naam: SDS & PRO
+    aantal_zetels: 1
 contact:
   website: https://www.someren.nl
   email: gemeente@someren.nl
+  bezoekadres: Wilhelminaplein 1, 5711 EK SOMEREN
+  postadres: Postbus 290, 5710 AG SOMEREN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: '1'
+    postcode: 5711 EK
+    woonplaats: SOMEREN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '290'
+    postcode: 5710 AG
+    woonplaats: SOMEREN
+  - type: Woo-Adres
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: '1'
+    postcode: 5711 EK
+    woonplaats: Someren
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Woo-Adres
+    postbus: '290'
+    postcode: 5710 AG
+    woonplaats: Someren
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Wilhelminaplein
+    huisnummer: '1'
+    postcode: 5711 EK
+    woonplaats: SOMEREN
+  phones:
+  - nummer: (0493) 49 48 88
+    label: algemeen
+  emails:
+  - email: gemeente@someren.nl
+    label: algemeen
+  - email: gemeente@someren.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.someren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21622/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21622/someren
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

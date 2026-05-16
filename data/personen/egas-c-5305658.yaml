@@ -3,7 +3,7 @@ name:
   full: C.A. Egas
   family: Egas
   given: C.A.
-  initials: C.
+  initials: C.A.
 mandaten:
 - id: 8d1985b6-c994-4830-9fcd-99b48c48f794
   organization_id: org:gemeente-molenlanden
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5305660
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/27465430/gemeente-molenlanden
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=27514201
 - id: 604c46d7-d177-4470-a638-c687b84ca62d
   organization_id: org:gemeente-molenlanden
   post_id: post:raadslid-gemeente-molenlanden

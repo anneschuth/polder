@@ -6,21 +6,140 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0197
   roo_id: '36483'
   wikidata: Q275909
+  owms: http://standaarden.overheid.nl/owms/terms/Aalten_(gemeente)
+  ictu: 00197
+  organisatiecode: gm0197
+  rsin: '813584784'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_LTE
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Aalten
   abbr: Aalten
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Aalten kent een 2-hoofdige directie, één stafafdeling en 6 teams.De
+    behandeling van de Woo verzoeken is ondergebracht bij de Woo-Coördinator, team
+    Bestuursondersteuning en VeiligheidContactpersoon is de beleidscoördinator Digitale
+    Informatievoorziening
+  url: https://www.aalten.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.aalten.nl/informatie-opvragen-bij-de-gemeente-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/36483/Gemeente_Aalten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Aalten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Aalten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Aalten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.burgerberichten.nl/aalten/formulieren/8db9de9a-901a-4931-aef6-34d9782713b4/Verzoek-om-informatie-o-g-v--de-Wet-open-overheid/introduction
+afspraak:
+  email: gemeente@aalten.nl
+  telefoonnummer: (0543) 49 33 33
+  url: https://aalten.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 97,04
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 97.04
+  aantal_inwoners: 27608
+  inwoners: '284'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 284.0
+  bevat_plaatsen_raw: Aalten, Bredevoort, De Heurne, Dinxperlo
+  bevat_plaatsen:
+  - Aalten
+  - Bredevoort
+  - De Heurne
+  - Dinxperlo
+council:
+  total_seats: 21
+  parties:
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: GemeenteBelangen
+    aantal_zetels: 4
+  - naam: BBB-HMV
+    aantal_zetels: 4
+  - naam: Progressieve Partij
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.aalten.nl
   email: gemeente@aalten.nl
+  bezoekadres: Hofstraat 8, 7121 DM AALTEN
+  postadres: Postbus 119, 7120 AC AALTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hofstraat
+    huisnummer: '8'
+    postcode: 7121 DM
+    woonplaats: AALTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '119'
+    postcode: 7120 AC
+    woonplaats: AALTEN
+  - type: Woo-Adres
+    toelichting: Gemeentekantoor (publieksdiensten)
+    postbus: '119'
+    postcode: 7120 ACC
+    woonplaats: Aalten
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hofstraat
+    huisnummer: '8'
+    postcode: 7121 DM
+    woonplaats: AALTEN
+  phones:
+  - nummer: (0543) 49 33 33
+    label: algemeen
+  emails:
+  - email: gemeente@aalten.nl
+    label: algemeen
+  - email: gemeente@aalten.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.aalten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://aalten.mijnafspraakmaken.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36483/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36483/aalten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

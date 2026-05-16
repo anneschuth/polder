@@ -3,18 +3,137 @@ type: adviescollege
 identifiers:
   roo_id: '28532131'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10236
+  owms: http://standaarden.overheid.nl/owms/terms/acoeni
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege Openbaarheid en Informatiehuishouding
   abbr: ACOI
   valid_from: '1900-01-01'
+description:
+  text: 'Het Adviescollege Openbaarheid en Informatiehuishouding (ACOI) is een onafhankelijk
+    adviesorgaan van de overheid, dat in 2022 is ingesteld om de toepassing van de
+    Wet open overheid, de Woo, te bevorderen. De taken die daarbij horen, zijn bepaald
+    door deze wet.Onze missieHet ACOI hecht aan een democratie waaraan iedere burger
+    actief kan deelnemen en kan volgen wat de overheid doet. Dat betekent dat iedereen
+    zoveel mogelijk toegang moet hebben tot de informatie die de overheid heeft. De
+    missie van het college is om aanjager te zijn van die openbaarheid.Onze kerntakenAdvisering:
+    ACOI geeft adviezen aan regering en parlement over beleid en wetgeving rond openbaarheid
+    en goed beheer van overheidsinformatie. Deze adviezen zijn relevant voor de centrale
+    overheid, gemeenten, provincies en waterschappen. Het ACOI doet zelf onafhankelijk
+    onderzoek of geeft opdracht voor onderzoek ter voorbereiding van zijn adviezen
+    en werkwijzers.Bemiddeling: ACOI heeft een ombudsfunctie speciaal voor journalisten,
+    onderzoekers en maatschappelijke organisaties die een ‘beroepsmatig belang’ hebben
+    bij openbaarmaking van overheidsinformatie. Wanneer zij een klacht hebben over
+    de afhandeling van hun Woo-verzoek, kan ACOI bemiddelen tussen hen en de betreffende
+    overheidsorganisatie.Kennisdeling: ACOI bevordert de kennis die nodig is om de
+    transitie naar een open bestuurscultuur te realiseren. Kennisdeling vindt plaats
+    in verschillende vormen, zoals bijeenkomsten,  leerkringen, en gerichte trainingen.
+    Ook maakt ACOI werkwijzers (''richtsnoeren'') die overheidsorganisaties helpen
+    bij de uitvoering van de Woo. De belangrijkste doelgroepen zijn ambtenaren die
+    de Woo uitvoeren, journalisten, onderzoekers en andere burgers als mogelijke gebruikers
+    van de Woo.'
+  url: https://www.acoi.nl/adviescollege/
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet open overheid, artikel 7.1
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0045754&hoofdstuk=7&artikel=7.1&z=2022-05-01&g=2022-05-01
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.acoi.nl/woo-contactpersoon/
+      overzichtURL: https://organisaties.overheid.nl/woo/28532131/Adviescollege_Openbaarheid_en_Informatiehuishouding
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.acoi.nl/publicaties/?type=adviescollege-vergadering&sorteer=recent
+      toelichting: Voor alle openbaargemaakte documenten kunt u naar www.acoi.nl/publicaties
+        gaan
+    - informatiecategorie: Adviezen
+      url: https://www.acoi.nl/publicaties/?type=adviezen&sorteer=recent
+      toelichting: Voor alle openbaargemaakte documenten kunt u naar https://www.acoi.nl/publicaties
+        gaan.
+    - informatiecategorie: Adviezen
+      url: https://www.acoi.nl/publicaties/?type=bemiddelingen&sorteer=recent
+      toelichting: Let op! Deze adviezen zijn gegeven n.a.v. bemiddelingstrajecten
+  wooVerzoek:
+    url: https://www.acoi.nl/woo-contactpersoon/
+organogram_url: https://www.acoi.nl/adviescollege/collegebureau/
+afspraak:
+  email: info@acoi.nl
+  telefoonnummer: (070) 426 66 43
+  url: https://www.acoi.nl/adviescollege/contact/
 contact:
   website: https://www.acoi.nl/
   email: info@acoi.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 18601, 2502 EP Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '18601'
+    postcode: 2502 EP
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '18601'
+    postcode: 2502 EP
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 66 43
+    label: algemeen
+  emails:
+  - email: info@acoi.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.acoi.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.acoi.nl/adviescollege/contactformulier/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Adviescollege Openbaarheid en Informatiehuishouding (ACOI)
+    url: https://www.linkedin.com/company/adviescollege-openbaarheid-en-informatiehuishouding/
+  - platform: Bluesky
+    gebruikersnaam: Adviescollege
+    url: https://bsky.app/profile/adviescollege.bsky.social
+  - platform: Mastodon
+    gebruikersnaam: '@acoi'
+    url: https://mastodon.nl/@acoi/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-07'
+last_verified: '2026-01-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28532131/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28532131/acoi
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-05-01'

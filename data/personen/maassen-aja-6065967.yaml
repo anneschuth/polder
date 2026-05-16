@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6065969
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/38936/gemeente-rotterdam
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28624063
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6065967

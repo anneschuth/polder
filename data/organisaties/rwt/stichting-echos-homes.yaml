@@ -2,14 +2,33 @@ id: org:stichting-echos-homes
 type: rwt
 identifiers:
   roo_id: '30134027'
+  kvk: '41265129'
+  rsin: '805449589'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting ECHOS homes
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    toelichting: 3e etage
+    openbare_ruimte: Prins Willem-Alexanderlaan
+    huisnummer: '1429'
+    postcode: 7312 GB
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30134027/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30134027/stichting-echos-homes
+  retrieved: '2026-05-16'

@@ -4,20 +4,106 @@ identifiers:
   roo_id: '28248910'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000203
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: College Sanering Zorginstellingen
   abbr: CSZ
   valid_from: '1900-01-01'
+description:
+  url: https://www.collegesanering.nl/college-sanering
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet toelating zorginstellingen, artikel 19
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20toelating%20zorginstellingen/article=19
+taken_en_bevoegdheden: '* Verstrekken van subsidie, die geheel of gedeeltelijk voorziet
+  in de financiële gevolgen van (onder andere) (gedeeltelijke) sluiting van zorginstellingen
+  en toezicht houden op de sanering;* beslissen dat goedkeuring is vereist voor verhuur,
+  vervreemding of aan enig beperkt recht onderwerpen van gebouwen of delen daarvan,
+  die blijvend niet meer voor de zorginstelling zullen worden gebruikt. Hierbij beslissen
+  omtrent storting boekresultaat in het Algemeen Fonds Bijzondere Ziektekosten;* verstrekken
+  van subsidie bij wijziging of opheffing van de vestigingsplaats van een centrale
+  post voor het ambulancevervoer, alsmede sanering van ambulancevervoer ingeval een
+  vergunning is ingetrokken;* op verzoek van de Minister van Volksgezondheid, Welzijn
+  en Sport bijzondere opdrachten uitvoeren.'
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.collegesanering.nl/werkwijze/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28248910/College_Sanering_Zorginstellingen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22College+sanering+zorginstellingen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.collegesanering.nl/werkwijze/wet-en-regelgeving
+organogram_url: https://www.collegesanering.nl/college-sanering
+afspraak:
+  email: info@collegesanering.nl
+  telefoonnummer: (030) 297 12 00
+  url: https://www.collegesanering.nl/service/contact
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.collegesanering.nl/
   email: info@collegesanering.nl
+  bezoekadres: Pythagoraslaan 6-8, 3584 BB Utrecht
+  postadres: Postbus 3148, 3502 GC Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pythagoraslaan
+    huisnummer: 6-8
+    postcode: 3584 BB
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '3148'
+    postcode: 3502 GC
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '3148'
+    postcode: 3502 GC
+    woonplaats: Utrecht
+    regio: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (030) 297 12 00
+    label: algemeen
+  emails:
+  - email: info@collegesanering.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.collegesanering.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28248910/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28248910/csz
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +112,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000203
   retrieved: '2026-05-09'
+roo_start_datum: '1983-01-01'

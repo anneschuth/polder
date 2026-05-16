@@ -3,17 +3,70 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28651881'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0775
+  owms: http://standaarden.overheid.nl/owms/terms/bureauovl
+  kvk: '54702976'
+  organisatiecode: so0775
+  rsin: '851408527'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bureau Openbare Verlichting Lek-Merwede
+  roo_id: '30196652'
 names:
 - value: Bureau Openbare Verlichting
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.bureau-ovl.nl
   email: administratie@bureau-ovl.nl
+  bezoekadres: Ambachtsstraat 1 E, 3371 XA Hardinxveld-Giessendam
+  postadres: Ambachtsstraat 1 E, 3371 XA Hardinxveld-Giessendam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ambachtsstraat
+    huisnummer: '1'
+    huisnummer_toevoeging: E
+    postcode: 3371 XA
+    woonplaats: Hardinxveld-Giessendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Ambachtsstraat
+    huisnummer: '1'
+    huisnummer_toevoeging: E
+    postcode: 3371 XA
+    woonplaats: Hardinxveld-Giessendam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (0184) 63 07 08
+    label: algemeen
+  emails:
+  - email: administratie@bureau-ovl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.bureau-ovl.nl
+    label: algemeen
+  - url: https://www.bureau-ovl.nl/contact.html
+    label: contactformulier
+  contact_forms:
+  - url: https://www.bureau-ovl.nl/contact.html
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28651881/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28651881/bureau-openbare-verlichting
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-01-01'

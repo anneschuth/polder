@@ -6,21 +6,145 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/provincie/pv29
   roo_id: '18166'
   wikidata: Q705
+  owms: http://standaarden.overheid.nl/owms/terms/Zeeland_(provincie)
+  ictu: '04213'
+  rsin: '001710230'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_PR_ZEEL
 classification: provincie
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
 names:
 - value: Provincie Zeeland
   abbr: ZE
   valid_from: '1900-01-01'
+description:
+  text: Alle informatie over de Provincie Zeeland, zowel organisatie als provinciaal
+    bestuur, vindt u op de website https://www.zeeland.nl/.
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Provincies (Artikel 1.2, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zeeland.nl/loket/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/18166/Provincie_Zeeland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zeeland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/agendas-en-besluitenlijsten-gedeputeerde-staten
+      toelichting: Op deze pagina vindt u de agenda's en besluitenlijsten van Gedeputeerde
+        Staten.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/woo-verzoeken-en-besluiten
+      toelichting: Op deze pagina vindt u de Woo-verzoeken, -besluiten en openbaar
+        gemaakte documenten.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zeeland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/bij-provinciale-staten-ter-behandeling-ingekomen
+      toelichting: Op deze pagina vindt u de bij Provinciale Staten ingekomen stukken.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/vergaderstukken-en-verslagen-van-provinciale-staten
+      toelichting: Op deze pagina vindt u de vergaderingen met bijbehorende stukken
+        van Provinciale Staten en van de Statencommissies.
+    - informatiecategorie: Convenanten
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/convenanten
+      toelichting: Op deze pagina vindt u de convenanten van Provincie Zeeland.
+    - informatiecategorie: Andere documenten
+      url: https://es-connector.zeeland.nl/
+      toelichting: Technische URL naar publicatieplatform provincie Zeeland, niet
+        voor extern bezoek relevant.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zeeland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.zeeland.nl/loket/woo-categorieen-actieve-openbaarmaking/jaarplannen-en-jaarverslagen-van-bestuursorganen
+      toelichting: Op deze pagina vindt u de jaarplannen en jaarverslagen van Provincie
+        Zeeland.
+  wooVerzoek:
+    url: https://www.zeeland.nl/loket/woo-verzoek
+organogram_url: https://www.zeeland.nl/over-ons/de-organisatie
+afspraak:
+  url: https://www.zeeland.nl/contact
 contact:
   website: https://www.zeeland.nl
   email: provincie@zeeland.nl
+  bezoekadres: Abdij 6, 4331 BK Middelburg
+  postadres: Postbus 6001, 4330 LA Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Abdij
+    huisnummer: '6'
+    postcode: 4331 BK
+    woonplaats: Middelburg
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '6001'
+    postcode: 4330 LA
+    woonplaats: Middelburg
+    land: Nederland
+  - type: Postadres
+    postbus: '6001'
+    postcode: 4330 LA
+    woonplaats: Middelburg
+    land: Nederland
+  phones:
+  - nummer: (0118) 63 10 11
+    label: algemeen
+  emails:
+  - email: provincie@zeeland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zeeland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zeeland.nl/contact
+    label: Algemeen
+  - url: https://www.zeeland.nl
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Facebook Provincie Zeeland
+    url: https://www.facebook.com/provinciezeeland
+  - platform: X
+    gebruikersnaam: X/Twitter Provincie Zeeland
+    url: https://www.twitter.com/provzeeland
+  - platform: LinkedIn
+    gebruikersnaam: LinkedIn Provincie Zeeland
+    url: https://www.linkedin.com/company/provinciezeeland
+  - platform: Instagram
+    gebruikersnaam: Instagram Provincie Zeeland
+    url: https://www.instagram.com/provinciezeeland
+  - platform: YouTube
+    gebruikersnaam: YouTube Provincie Zeeland
+    url: https://www.youtube.com/@provzld
+  fax: (0118) 62 69 49
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/18166/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/18166/ze
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

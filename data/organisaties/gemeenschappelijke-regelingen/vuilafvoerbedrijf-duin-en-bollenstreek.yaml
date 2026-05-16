@@ -3,17 +3,60 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963771'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0310
+  owms: http://standaarden.overheid.nl/owms/terms/vafbdenb
+  kvk: '50438670'
+  organisatiecode: so0310
+  rsin: 002528411
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Vuilafvoerbedrijf Duin- en Bollenstreek
+  roo_id: '28842217'
 names:
 - value: Vuilafvoerbedrijf Duin- en Bollenstreek
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://vuilafvoerbedrijf.nl
   email: info@meerlanden.nl
+  bezoekadres: ’s-Gravendamseweg 77, 2215 TG Voorhout
+  postadres: Postbus 123, 2215 ZJ Voorhout
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: ’s-Gravendamseweg
+    huisnummer: '77'
+    postcode: 2215 TG
+    woonplaats: Voorhout
+  - type: Postadres
+    postbus: '123'
+    postcode: 2215 ZJ
+    woonplaats: Voorhout
+  phones:
+  - nummer: (0252) 21 33 42
+    label: algemeen
+  emails:
+  - email: info@meerlanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://vuilafvoerbedrijf.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-31'
+last_verified: '2022-11-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963771/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963771/vuilafvoerbedrijf-duin-en-bollenstreek
+  retrieved: '2026-05-16'
+roo_start_datum: '1972-04-10'

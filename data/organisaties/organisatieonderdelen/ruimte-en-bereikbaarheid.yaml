@@ -3,16 +3,24 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111740'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-provinciale-organisatie
 names:
 - value: Ruimte en Bereikbaarheid
   valid_from: '1900-01-01'
 contact:
   website: https://www.overijssel.nl
   email: Overijsselloket@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (038) 499 80 90
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111740/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111740/ruimte-en-bereikbaarheid
+  retrieved: '2026-05-16'

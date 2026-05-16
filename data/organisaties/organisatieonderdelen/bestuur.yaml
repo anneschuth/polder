@@ -3,16 +3,46 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '16803'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-bestuurs-en-concernzaken
 names:
 - value: Bestuur
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   website: https://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8012 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (038) 499 93 63
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  contact_forms:
+  - url: https://ipo.nl/contact
+    label: Algemeen
+  fax: (070) 888 12 80
+  bezoekadres: Luttenbergstraat 2, 8012 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-03-19'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16803/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16803/bestuur
+  retrieved: '2026-05-16'

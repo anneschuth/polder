@@ -7,11 +7,25 @@ parent_id: org:onderdeel-wodc
 names:
 - value: Afdeling Documentaire Informatievoorziening (DIV)
   valid_from: '1900-01-01'
+description:
+  text: De Informatiedesk is alleen bereikbaar per email-adres
 contact:
   email: wodc-informatiedesk@minjus.nl
+  postadres: Postbus 20132, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20132'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  emails:
+  - email: wodc-informatiedesk@minjus.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2011-05-30'
+last_verified: '2025-08-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12548/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12548/afdeling-documentaire-informatievoorziening-div
+  retrieved: '2026-05-16'

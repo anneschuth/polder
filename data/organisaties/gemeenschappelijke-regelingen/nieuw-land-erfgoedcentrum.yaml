@@ -2,8 +2,12 @@ id: org:gr-nieuw-land-erfgoedcentrum
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964956'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Nieuw Land Erfgoedcentrum
+  roo_id: '24964951'
 names:
 - value: Nieuw Land Erfgoedcentrum
   valid_from: '1900-01-01'
@@ -11,9 +15,31 @@ names:
 contact:
   website: http://www.nieuwlanderfgoed.nl
   email: info@nieuwlanderfgoed.nl
+  bezoekadres: 8200 AB Lelystad
+  postadres: Postbus 55, 8200 AB Lelystad
+  addresses:
+  - type: Bezoekadres
+    postcode: 8200 AB
+    woonplaats: Lelystad
+  - type: Postadres
+    postbus: '55'
+    postcode: 8200 AB
+    woonplaats: Lelystad
+  phones:
+  - nummer: (0320) 22 59 00
+    label: algemeen
+  emails:
+  - email: info@nieuwlanderfgoed.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.nieuwlanderfgoed.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-07-01'
+last_mutation: '2019-04-15'
+last_verified: '2020-10-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964956/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964956/nieuw-land-erfgoedcentrum
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-01-31'

@@ -3,7 +3,7 @@ name:
   full: P.E. Weijman
   family: Weijman
   given: P.E.
-  initials: P.
+  initials: P.E.
 mandaten:
 - id: ec579ef8-39af-49f3-9bb1-fc2a43cade75
   organization_id: org:gemeente-woensdrecht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7219982
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32470/gemeente-woensdrecht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30568729
 - id: a1a8035d-9920-4aec-98eb-77e23c7d852d
   organization_id: org:gemeente-woensdrecht
   post_id: post:raadslid-gemeente-woensdrecht

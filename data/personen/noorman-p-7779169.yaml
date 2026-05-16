@@ -3,7 +3,7 @@ name:
   full: P.M. Noorman
   family: Noorman
   given: P.M.
-  initials: P.
+  initials: P.M.
 mandaten:
 - id: 9ac0de9f-a4d4-4743-b5d1-81df4fb99356
   organization_id: org:gemeente-harderwijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7779171
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/32835/gemeente-harderwijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30541064
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7779169

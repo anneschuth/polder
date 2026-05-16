@@ -2,6 +2,8 @@ id: org:onderdeel-rechtbank-overijssel-locatie-zwolle
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048692'
+  kvk: '82940525'
+  rsin: '862663568'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-overijssel
 names:
@@ -9,9 +11,28 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: infobalie.rb-ove.zwolle@rechtspraak.nl
+  bezoekadres: Schuurmanstraat 2, 8011 KP Zwolle
+  postadres: Postbus 10067, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schuurmanstraat
+    huisnummer: '2'
+    postcode: 8011 KP
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10067'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  emails:
+  - email: infobalie.rb-ove.zwolle@rechtspraak.nl
+    label: algemeen
+  fax: (088) 361 00 61
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-12-30'
+last_verified: '2025-07-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048692/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048692/rechtbank-overijssel-locatie-zwolle
+  retrieved: '2026-05-16'

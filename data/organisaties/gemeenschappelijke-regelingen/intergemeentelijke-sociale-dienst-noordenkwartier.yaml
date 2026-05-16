@@ -2,18 +2,55 @@ id: org:gr-intergemeentelijke-sociale-dienst-noordenkwartier
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965798'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0603
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Intergemeentelijke Sociale Dienst Noordenkwartier
+  roo_id: '24965793'
 names:
 - value: Intergemeentelijke Sociale Dienst Noordenkwartier
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.noordenkwartier.nl
   email: info@noordenkwartier.nl
+  bezoekadres: Schoolstraat 50, 9301 KC Roden
+  postadres: Postbus 107, 9300 AC Roden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Schoolstraat
+    huisnummer: '50'
+    postcode: 9301 KC
+    woonplaats: Roden
+  - type: Postadres
+    postbus: '107'
+    postcode: 9300 AC
+    woonplaats: Roden
+  phones:
+  - nummer: (050) 599 46 45
+    label: algemeen
+  emails:
+  - email: info@noordenkwartier.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.noordenkwartier.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2021-03-09'
+last_verified: '2021-03-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965798/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965798/intergemeentelijke-sociale-dienst-noordenkwartier
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

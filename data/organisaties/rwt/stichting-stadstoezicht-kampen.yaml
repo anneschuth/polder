@@ -2,15 +2,43 @@ id: org:oovb-stichting-stadstoezicht-kampen
 type: rwt
 identifiers:
   roo_id: '27916614'
+  kvk: 05076873
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Stadstoezicht Kampen
   valid_from: '1900-01-01'
   valid_until: '2020-12-31'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Voorstraat 26, 8261 HS Kampen
+  postadres: Voorstraat 26, 8261 HS Kampen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Voorstraat 26
+    postcode: 8261 HS
+    woonplaats: Kampen
+  - type: Postadres
+    openbare_ruimte: Voorstraat 26
+    postcode: 8261 HS
+    woonplaats: Kampen
 valid_from: '1900-01-01'
 valid_until: '2020-12-31'
+last_mutation: '2023-04-03'
+last_verified: '2023-04-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27916614/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27916614/stichting-stadstoezicht-kampen
+  retrieved: '2026-05-16'

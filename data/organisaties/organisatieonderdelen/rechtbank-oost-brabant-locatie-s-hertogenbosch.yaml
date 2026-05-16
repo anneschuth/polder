@@ -9,9 +9,28 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: info.rechtbanksHertogenbosch@rechtspraak.nl
+  bezoekadres: Leeghwaterlaan 8, 5223 BA ’s-Hertogenbosch
+  postadres: Postbus 70584, 5201 CZ ’s-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie ’s-Hertogenbosch
+    openbare_ruimte: Leeghwaterlaan
+    huisnummer: '8'
+    postcode: 5223 BA
+    woonplaats: ’s-Hertogenbosch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '70584'
+    postcode: 5201 CZ
+    woonplaats: ’s-Hertogenbosch
+  emails:
+  - email: info.rechtbanksHertogenbosch@rechtspraak.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-05'
+last_verified: '2024-10-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048639/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048639/rechtbank-oost-brabant-locatie-s-hertogenbosch
+  retrieved: '2026-05-16'

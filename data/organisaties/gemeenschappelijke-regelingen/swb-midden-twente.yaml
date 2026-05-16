@@ -3,17 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28285552'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0245
+  owms: http://standaarden.overheid.nl/owms/terms/swbmidtwe
+  kvk: '50866850'
+  organisatiecode: so0245
+  rsin: 001888900
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Sociaal Werkleerbedrijf “Midden Twente”
+  roo_id: '30241973'
 names:
 - value: SWB Midden Twente
   valid_from: '1900-01-01'
+description:
+  url: https://www.swb.nl/over-swb/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.swbgroep.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/28285552/SWB_Midden_Twente
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.swb.nl/wet-open-overheid-woo/
+      toelichting: Jaarstukken
+  wooVerzoek:
+    url: https://www.swbgroep.nl/woo-verzoek-indienen/
+afspraak:
+  email: info@swb.nl
+  telefoonnummer: (074) 249 22 22
+  url: https://www.swb.nl/contact/
 contact:
   website: https://www.swb.nl/wp
   email: info@swb.nl
+  bezoekadres: Wegtersweg 14, 7556 BR Hengelo
+  postadres: Postbus 122, 7550 AC Hengelo
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wegtersweg
+    huisnummer: '14'
+    postcode: 7556 BR
+    woonplaats: Hengelo
+  - type: Postadres
+    postbus: '122'
+    postcode: 7550 AC
+    woonplaats: Hengelo
+  - type: Woo-Adres
+    postbus: '122'
+    postcode: 7550 AC
+    woonplaats: Hengelo
+  phones:
+  - nummer: (074) 249 22 22
+    label: algemeen
+  emails:
+  - email: info@swb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.swb.nl/wp
+    label: algemeen
+  - url: https://www.swb.nl/wp/contact
+    label: contact
+  contact_forms:
+  - url: https://www.swb.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28285552/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28285552/swb-midden-twente
+  retrieved: '2026-05-16'
+roo_start_datum: '1969-01-01'

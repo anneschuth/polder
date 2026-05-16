@@ -4,22 +4,141 @@ identifiers:
   roo_id: '28212627'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000174
   oin: 00000004185618890000
+  organisatiecode: zb000174
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Kiesraad
   valid_from: '1900-01-01'
+description:
+  text: De Kiesraad is verantwoordelijk voor de verkiezingen in Nederland en ziet
+    erop toe dat deze eerlijk en transparant verlopen.
+  url: https://www.kiesraad.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 10,12,13,14,15,21,25,26,27,28,29
+      toelichting: Omdat de adviestaak bij de Kiesraad niet de hoofdtaak is, gelden
+        enkele bepalingen zoals bedoeld in artikel 3 van de Kaderwet adviescolleges
+        niet. Artikel 12, lid 3 en artikel 15, lid 1, 3, 4 en 5 gelden wel.Artikel
+        21 en artikel 29 zijn uitgesloten.
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,21,22
+      toelichting: Leden van de Kiesraad worden door de Kroon benoemd. Met het oog
+        op de onafhankelijke positie van de Kiesraad is het niet wenselijk dat de
+        minister beleidsregels kan vaststellen en door de Kiesraad genomen besluiten
+        kan vernietigen.
+wettelijke_grondslagen:
+- opschrift: Kieswet, artikel A 2
+  referentie: https://wetten.overheid.nl/BWBR0004627/2025-08-01#AfdelingI_HoofdstukA_Paragraaf2_ArtikelA2
+taken_en_bevoegdheden: De Kiesraad heeft de volgende taken:* het adviseren van de
+  regering en de beide Kamers der Staten-Generaal over uitvoeringstechnische aangelegenheden
+  die het kiesrecht of de verkiezingen betreffen (artikel A2 Kieswet);* het als centraal
+  stembureau optreden voor de verkiezingen van de leden van:<br />a. de Tweede Kamer
+  (artikel E II, tweede lid, Kieswet); <br />b. de Eerste Kamer (artikel S I, eerste
+  lid, Kieswet); <br />c. het Europees Parlement (artikel Y9, eerste lid, Kieswet);*
+  het adviseren van overheden, politieke partijen, media en burgers in verkiezingstijd
+  en het optreden als deskundig adviseur in rechtsgedingen.
+evaluations:
+- datum: '2024-08-14'
+  kamerstuknummer: TK 30985 nr. 65
+  referentie: https://zoek.officielebekendmakingen.nl/kst-30985-65.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kiesraad.nl/over-ons/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212627/Kiesraad
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kiesraad%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.kiesraad.nl/over-ons/wet-open-overheid
+afspraak:
+  email: kiesraad@kiesraad.nl
+  telefoonnummer: (070) 426 62 66
+personnel:
+  aantalFte: 38,5
+  peildatumFte: '2023-07-01'
 contact:
   website: https://www.kiesraad.nl
   email: kiesraad@kiesraad.nl
+  bezoekadres: Muzenstraat 85, 2511 WB Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Zurichtoren
+    openbare_ruimte: Muzenstraat
+    huisnummer: '85'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 62 66
+    label: algemeen
+  emails:
+  - email: kiesraad@kiesraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kiesraad.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.kiesraad.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Kiesraad
+    url: https://www.linkedin.com/company/kiesraad/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212627/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212627/kiesraad
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1917-12-14'

@@ -2,18 +2,56 @@ id: org:gr-uitvoeringsorganisatie-jeugdzorg-ijsselland
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24962402'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '63560119'
+  organisatiecode: so0867
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Uitvoeringsorganisatie Jeugdzorg IJsselland
+  roo_id: '24962397'
 names:
 - value: Uitvoeringsorganisatie Jeugdzorg IJsselland
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2018-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.zwolle.nl
   email: postbus@zwolle.nl
+  bezoekadres: Lübeckplein 2, 8017 JZ Zwolle
+  postadres: Postbus 10007, 8000 GA Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lübeckplein
+    huisnummer: '2'
+    postcode: 8017 JZ
+    woonplaats: Zwolle
+  - type: Postadres
+    postbus: '10007'
+    postcode: 8000 GA
+    woonplaats: Zwolle
+  phones:
+  - nummer: 14 038
+    label: algemeen
+  emails:
+  - email: postbus@zwolle.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zwolle.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2020-07-21'
+last_verified: '2020-07-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24962402/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24962402/uitvoeringsorganisatie-jeugdzorg-ijsselland
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-11-01'

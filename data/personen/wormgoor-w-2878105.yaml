@@ -3,7 +3,7 @@ name:
   full: W.A. Wormgoor
   family: Wormgoor
   given: W.A.
-  initials: W.
+  initials: W.A.
 mandaten:
 - id: 09f012ce-eb98-4f8a-a7ac-5edd9d96bc1f
   organization_id: org:gemeente-berkelland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2878107
     retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29492226
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878105

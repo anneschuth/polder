@@ -3,17 +3,57 @@ type: rechterlijke-instantie
 identifiers:
   roo_id: '28044796'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10037
+  owms: http://standaarden.overheid.nl/owms/terms/phr
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Parket bij de Hoge Raad
   valid_from: '1900-01-01'
+description:
+  text: De procureur-generaal bij de Hoge Raad vormt met zijn plaatsvervanger en de
+    advocaten-generaal het parket. Het parket behoort niet tot het openbaar ministerie
+    en is onafhankelijk. De belangrijkste taak van het parket is het geven van onafhankelijk
+    advies aan de Hoge Raad over hoe te oordelen in een gegeven cassatieberoep.Daarnaast
+    heeft de procureur-generaal bij de Hoge Raad een aantal bijzondere taken.Voor
+    de samenstelling van het parket zie www.hogeraad.nl
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.hogeraad.nl
   email: pg@hogeraad.nl
+  bezoekadres: Korte Voorhout 8, 2511 EK ’s-Gravenhage
+  postadres: Postbus 20303, 2500 EH ’s-Gravenhage
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '8'
+    postcode: 2511 EK
+    woonplaats: ’s-Gravenhage
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20303'
+    postcode: 2500 EH
+    woonplaats: ’s-Gravenhage
+  phones:
+  - nummer: (070) 361 13 11
+    label: algemeen
+  emails:
+  - email: pg@hogeraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.hogeraad.nl
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Hoge-Raad-der-Nederlanden/Over-de-Hoge-Raad/Parket/Paginas/default.aspx
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2025-05-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28044796/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28044796/parket-bij-de-hoge-raad
+  retrieved: '2026-05-16'

@@ -10,12 +10,23 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Leeuwarden
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Tesselschadestraat 140, 8913 HC Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Tesselschadestraat
+    huisnummer: '140'
+    postcode: 8913 HC
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132337/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132337/leeuwarden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'

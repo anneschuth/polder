@@ -3,14 +3,37 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '66160'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-cvz
+parent_id: org:onderdeel-secretariaten-van-raden-en-commissies
 names:
 - value: Klachtadviescommissie Inspectie Gezondheidszorg
   valid_from: '1900-01-01'
   valid_until: '2024-07-01'
+description:
+  text: 'Ingesteld bij Instellingsbesluit Klachtadviescommissie Inspectie voor de
+    Gezondheidszorg (Stcrt, 2007, nr. 238).Voorzitter: mr. P.W. de Vries'
+contact:
+  bezoekadres: St. Jacobsstraat 16, 3511 BS Utrecht
+  postadres: Postbus 2680, 3500 GR Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: St. Jacobsstraat
+    huisnummer: '16'
+    postcode: 3511 BS
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2680'
+    postcode: 3500 GR
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 233 87 87
+    label: algemeen
+  fax: (030) 232 19 12
 valid_from: '1900-01-01'
 valid_until: '2024-07-01'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66160/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66160/klachtadviescommissie-inspectie-gezondheidszorg
+  retrieved: '2026-05-16'

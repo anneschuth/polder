@@ -3,15 +3,35 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150936'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Limburg
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Prins Bisschopsingel 53, 6212 AB Maastricht
+  postadres: Postbus 1230, 6201 BE Maastricht
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische zaken
+    openbare_ruimte: Prins Bisschopsingel
+    huisnummer: '53'
+    postcode: 6212 AB
+    woonplaats: Maastricht
+  - type: Postadres
+    toelichting: t.a.v Juridische Zaken
+    postbus: '1230'
+    postcode: 6201 BE
+    woonplaats: Maastricht
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-18'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150936/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150936/regionale-eenheid-limburg
+  retrieved: '2026-05-16'

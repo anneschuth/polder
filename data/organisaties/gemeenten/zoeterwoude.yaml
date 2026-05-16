@@ -6,21 +6,137 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0638
   roo_id: '39267'
   wikidata: Q218259
+  owms: http://standaarden.overheid.nl/owms/terms/Zoeterwoude_(gemeente)
+  ictu: 00638
+  organisatiecode: gm0638
+  rsin: 001797839
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ZOU
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Zoeterwoude
   abbr: Zoeterwoude
   valid_from: '1900-01-01'
+description:
+  url: https://www.zoeterwoude.nl/gemeenteraad-en-bestuur/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zoeterwoude.nl/gemeenteraad-en-bestuur/beleid-en-regelgeving/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/39267/Gemeente_Zoeterwoude
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zoeterwoude%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zoeterwoude%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zoeterwoude%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zoeterwoude.nl/gemeenteraad-en-bestuur/het-college/b-en-w-besluitenlijst
+      toelichting: Besluitenlijst
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://zoeterwoude.qualigraf.nl/app/
+      toelichting: Agenda's en Evenementen
+  wooVerzoek:
+    url: https://www.zoeterwoude.nl/wooformulier
+organogram_url: https://www.zoeterwoude.nl/gemeenteraad-en-bestuur/gemeentelijke-organisatie
+afspraak:
+  email: gemeente@zoeterwoude.nl
+  telefoonnummer: (071) 580 63 00
+  url: https://www.zoeterwoude.nl/contact
+geography:
+  oppervlakte: 21,68
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 21.68
+  aantal_inwoners: 10355
+  inwoners: '477'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 477.0
+  bevat_plaatsen_raw: Gelderswoude, Zoeterwoude
+  bevat_plaatsen:
+  - Gelderswoude
+  - Zoeterwoude
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Progressief Zoeterwoude
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Belang Van Zoeterwoude
+    aantal_zetels: 2
+  - naam: Zoeterwoude Zelfstandig Vooruit
+    aantal_zetels: 1
 contact:
   website: https://www.zoeterwoude.nl
   email: gemeente@zoeterwoude.nl
+  bezoekadres: Noordbuurtseweg 27, 2381 ET ZOETERWOUDE
+  postadres: Postbus 34, 2380 AA ZOETERWOUDE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Noordbuurtseweg
+    huisnummer: '27'
+    postcode: 2381 ET
+    woonplaats: ZOETERWOUDE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '34'
+    postcode: 2380 AA
+    woonplaats: ZOETERWOUDE
+  - type: Woo-Adres
+    postbus: '34'
+    postcode: 2381 ET
+    woonplaats: Zoeterwoude
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Noordbuurtseweg
+    huisnummer: '27'
+    postcode: 2381 ET
+    ter_attentie_van: Omgevingsloket Zoeterwoude
+    woonplaats: ZOETERWOUDE
+  phones:
+  - nummer: (071) 580 63 00
+    label: algemeen
+  emails:
+  - email: gemeente@zoeterwoude.nl
+    label: algemeen
+  - email: omgevingsloket@zoeterwoude.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.zoeterwoude.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39267/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39267/zoeterwoude
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

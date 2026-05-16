@@ -5,23 +5,80 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0425
   oin: 00000001806755891000
   kvk: 01183237
+  owms: http://standaarden.overheid.nl/owms/terms/Samenwerkingsverband_Noord-Nederland
+  btw: NL806755891B01
+  loonheffing: 806755891L03
+  organisatiecode: so0425
+  rsin: '806755891'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling SNN
+  roo_id: '30352920'
 names:
 - value: Samenwerkingsverband Noord-Nederland
   abbr: SNN
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28487804/Samenwerkingsverband_Noord-Nederland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Samenwerkingsverband+Noord-Nederland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.snn.nl
   email: info@snn.nl
+  bezoekadres: Leonard Springerlaan 15, 9727 KB Groningen
+  postadres: Postbus 779, 9700 AT Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Leonard Springerlaan
+    huisnummer: '15'
+    postcode: 9727 KB
+    woonplaats: Groningen
+    land: Nederland
+  - type: Postadres
+    postbus: '779'
+    postcode: 9700 AT
+    woonplaats: Groningen
+    land: Nederland
+  phones:
+  - nummer: (050) 522 49 00
+    label: algemeen
+  emails:
+  - email: info@snn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.snn.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.snn.nl/bezoek-bel-of-mail-ons
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2024-08-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28487804/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28487804/snn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1992-07-01'

@@ -3,18 +3,84 @@ type: inspectie
 identifiers:
   roo_id: '29213982'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12356
+  owms: http://standaarden.overheid.nl/owms/terms/insveildef
+  organisatiecode: oorg12356
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Inspectie Veiligheid Defensie
   abbr: IVD
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie Veiligheid Defensie (IVD) houdt toezicht op de fysieke en sociale
+    veiligheid bij Defensie. Zij beoordeelt de werking van beleid en de uitvoering
+    van regelgeving in de praktijk en onderzoekt ernstige voorvallen. Met haar toezicht
+    wil de inspectie de veiligheidscultuur en het lerend vermogen van Defensie versterken.
+    Het werken zo veilig mogelijk maken is een gezamenlijke opgave van de defensieorganisatie.
+    Elke medewerker moet zich bewust zijn van veiligheidsrisico’s. Veiligheid vergt
+    aandacht, steeds weer.
+  url: https://www.ivd.nl/over-de-ivd
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ivd.nl/contact/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/29213982/Inspectie_Veiligheid_Defensie
+  wooVerzoek:
+    url: https://www.ivd.nl/contact/woo
+afspraak:
+  email: ivd@mindef.nl
+  url: https://www.ivd.nl/contact/woo
 contact:
   website: https://www.ivd.nl/
   email: ivd@mindef.nl
+  bezoekadres: Koningskade 4, 2596 AA Den Haag
+  postadres: Postbus 20701, 2500 ES Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '4'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    toelichting: MPC 58B
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    toelichting: MPC 58B
+    postbus: '20701'
+    postcode: 2500 ES
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  emails:
+  - email: ivd@mindef.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ivd.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ivd.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-04'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29213982/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29213982/ivd
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-05-31'

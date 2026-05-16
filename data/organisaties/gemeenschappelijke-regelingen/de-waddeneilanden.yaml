@@ -1,19 +1,75 @@
 id: org:gr-de-waddeneilanden
 type: gemeenschappelijke-regeling
+subname: Samenwerkingsverband De Waddeneilanden
 identifiers:
   roo_id: '28094089'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1034
+  owms: http://standaarden.overheid.nl/owms/terms/svwad
+  kvk: '50685643'
+  organisatiecode: so1034
+  rsin: '822874581'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling De Waddeneilanden 2024
+  roo_id: '30317788'
 names:
 - value: De Waddeneilanden
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.dewaddeneilanden.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28094089/De_Waddeneilanden
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22De+Waddeneilanden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
 contact:
   website: https://www.dewaddeneilanden.nl
   email: info@dewaddeneilanden.nl
+  bezoekadres: Waddenpromenade 1, 8861 NT Harlingen
+  postadres: Postbus 203, 8860 AE Harlingen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Waddenpromenade
+    huisnummer: '1'
+    postcode: 8861 NT
+    woonplaats: Harlingen
+  - type: Postadres
+    postbus: '203'
+    postcode: 8860 AE
+    woonplaats: Harlingen
+  phones:
+  - nummer: (0517) 74 00 00
+    label: algemeen
+  emails:
+  - email: info@dewaddeneilanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dewaddeneilanden.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.dewaddeneilanden.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-13'
+last_verified: '2024-11-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28094089/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28094089/de-waddeneilanden
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-01-01'

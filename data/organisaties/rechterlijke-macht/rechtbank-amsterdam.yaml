@@ -1,22 +1,67 @@
 id: org:rechtbank-amsterdam
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000025000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10018
   roo_id: '28046811'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Amsterdam
+  kvk: '82951462'
+  rsin: '862667872'
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Amsterdam
   valid_from: '1900-01-01'
+description:
+  text: Rechtbank Amsterdam is bevoegd om in haar arrondissement recht te spreken
+    in eerste aanleg. Dit betekent dat de rechtbank de eerste instantie is die een
+    juridisch oordeel over een zaak of conflict geeft. Daarna kan een procespartij
+    (bijvoorbeeld de veroordeelde of het Openbaar Ministerie (om.nl)) in hoger beroep
+    gaan bij gerechtshof Amsterdam. Bij rechtbank Amsterdam werken ongeveer 200 rechters
+    en 800 andere medewerkers.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Amsterdam
+  bezoekadres: Parnassusweg 280, 1076 AV Amsterdam
+  postadres: Postbus 84500, 1080 BN Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusweg
+    huisnummer: '280'
+    postcode: 1076 AV
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '84500'
+    postcode: 1080 BN
+    woonplaats: Amsterdam
+  phones:
+  - nummer: (088) 361 70 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Amsterdam
+    label: algemeen
+  social_media:
+  - platform: Instagram
+    gebruikersnaam: '@amsterdamserechtbank'
+    url: https://www.instagram.com/amsterdamserechtbank/
+  - platform: LinkedIn
+    gebruikersnaam: Rechtbank Amsterdam
+    url: https://www.linkedin.com/company/16252357/admin/dashboard/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046811/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046811/rechtbank-amsterdam
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

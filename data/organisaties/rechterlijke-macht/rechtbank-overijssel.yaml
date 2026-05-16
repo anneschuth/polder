@@ -1,23 +1,48 @@
 id: org:rechtbank-overijssel
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000151000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10026
   roo_id: '28048677'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Overijssel
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Overijssel
   valid_from: '1900-01-01'
+description:
+  text: De rechtbank Overijssel staat voor goede, tijdige en begrijpelijke rechtspraak
+    en spreekt recht in Almelo, Enschede en Zwolle.De rechtbank Overijssel is de eerste
+    instantie die in zijn arrondissement een juridisch oordeel geeft over een zaak
+    of conflict. Daarna kan een procespartij (bijvoorbeeld de veroordeelde of het
+    Openbaar Ministerie (om.nl)) in hoger beroep gaan bij gerechtshof Arnhem-Leeuwarden.
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Overijssel
   email: infobalie.rb-ove.zwolle@rechtspraak.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (088) 361 55 55
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Overijssel
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048677/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048677/rechtbank-overijssel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

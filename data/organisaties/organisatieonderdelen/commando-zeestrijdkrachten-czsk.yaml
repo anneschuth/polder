@@ -3,13 +3,32 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '6288'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-def
+parent_id: org:min-def
 names:
 - value: Commando Zeestrijdkrachten (CZSK)
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Rijkszee- en Marinehaven 1, 1781 ZZ Den Helder
+  postadres: Postbus 10000, 1780 CA Den Helder
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijkszee- en Marinehaven
+    huisnummer: '1'
+    postcode: 1781 ZZ
+    woonplaats: Den Helder
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '10000'
+    postcode: 1780 CA
+    woonplaats: Den Helder
+  phones:
+  - nummer: (070) 318 81 88
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-25'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/6288/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/6288/commando-zeestrijdkrachten-czsk
+  retrieved: '2026-05-16'

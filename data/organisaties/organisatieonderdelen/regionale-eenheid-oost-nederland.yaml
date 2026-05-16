@@ -3,15 +3,35 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29150956'
 classification: organisatieonderdeel
-parent_id: org:politie-pdc
+parent_id: org:politie
 names:
 - value: Regionale Eenheid Oost-Nederland
   valid_from: '1900-01-01'
+organogram_url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 contact:
   website: https://www.politie.nl/contact/
+  bezoekadres: Europaweg 79, 7336 AK Apeldoorn
+  postadres: Postbus 618, 7300 AP Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    toelichting: t.a.v. Juridische Zaken
+    openbare_ruimte: Europaweg
+    huisnummer: '79'
+    postcode: 7336 AK
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '618'
+    postcode: 7300 AP
+    woonplaats: Apeldoorn
+  contact_forms:
+  - url: https://www.politie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-21'
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29150956/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29150956/regionale-eenheid-oost-nederland
+  retrieved: '2026-05-16'

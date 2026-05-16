@@ -3,7 +3,7 @@ name:
   full: M.R.G. Adriaansen
   family: Adriaansen
   given: M.R.G.
-  initials: M.
+  initials: M.R.G.
 mandaten:
 - id: 133b5d23-1c69-41e3-a60b-420c203c3c19
   organization_id: org:gemeente-woensdrecht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7219973
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32470/gemeente-woensdrecht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=83137
 - id: d5173a1a-ba3f-4c80-a57f-28e9b81ac10e
   organization_id: org:gemeente-woensdrecht
   post_id: post:raadslid-gemeente-woensdrecht

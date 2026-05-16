@@ -3,18 +3,102 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28223323'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1067
+  owms: http://standaarden.overheid.nl/owms/terms/tecbas
+  kvk: '51373653'
+  organisatiecode: so1067
+  rsin: '823248161'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Technology Base
+  roo_id: '28223317'
 names:
 - value: Technology Base
   valid_from: '1900-01-01'
-  valid_until: '2026-12-01'
+description:
+  text: Gemeenschappelijke Regeling met een Algemeen- en Dagelijks Bestuur en een
+    projectorganisatie die verantwoordelijk is voor de dagelijkse organisatie op het
+    Technology Base bedrijventerrein en luchthaven.
+  url: https://www.technologybase.nl/de-organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.technologybase.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28223323/Technology_Base
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Technology+Base%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Technology+Base%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.technologybase.nl/contact
+organogram_url: https://www.technologybase.nl/locatie/de-organisatie
+afspraak:
+  email: info@technologybase.nl
+  telefoonnummer: (053) 480 00 90
 contact:
   website: https://www.technologybase.nl
   email: info@technologybase.nl
+  bezoekadres: Vliegveldstraat 230, 7524 PK Enschede
+  postadres: Vliegveldstraat 230 gebouw 230, 7524 PK Enschede
+  addresses:
+  - type: Bezoekadres
+    toelichting: Projectbureau Technology Base - gebouw 230
+    openbare_ruimte: Vliegveldstraat
+    huisnummer: '230'
+    postcode: 7524 PK
+    woonplaats: Enschede
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    openbare_ruimte: Vliegveldstraat
+    huisnummer: '230'
+    huisnummer_toevoeging: gebouw 230
+    postcode: 7524 PK
+    woonplaats: Enschede
+    regio: Twente
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Vliegveldstraat
+    huisnummer: '230'
+    postcode: 7524 PK
+    woonplaats: Enschede
+    land: Nederland
+  phones:
+  - nummer: (053) 480 00 90
+    label: algemeen
+  emails:
+  - email: info@technologybase.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.technologybase.nl
+    label: algemeen
+  - url: https://www.technologybase.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.technologybase.nl/contact
+    label: Algemeen
+  - url: https://www.technologybase.nl/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2026-12-01'
+last_mutation: '2026-02-02'
+last_verified: '2024-12-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28223323/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28223323/technology-base
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-07-18'

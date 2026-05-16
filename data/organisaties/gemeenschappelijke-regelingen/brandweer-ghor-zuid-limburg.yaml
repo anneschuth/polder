@@ -2,8 +2,13 @@ id: org:gr-brandweer-ghor-zuid-limburg
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965273'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '52280438'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Brandweer Zuid-Limburg
+  roo_id: '24965268'
 names:
 - value: Brandweer-GHOR Zuid-Limburg
   valid_from: '1900-01-01'
@@ -11,9 +16,33 @@ names:
 contact:
   website: http://www.brandweer.nl/zuid-limburg
   email: info@brwzl.nl
+  bezoekadres: Zürichstraat 10, 6135 LP Sittard
+  postadres: Postbus 35, 6269 ZG Margraten
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zürichstraat
+    huisnummer: '10'
+    postcode: 6135 LP
+    woonplaats: Sittard
+  - type: Postadres
+    postbus: '35'
+    postcode: 6269 ZG
+    woonplaats: Margraten
+  phones:
+  - nummer: (088) 450 74 50
+    label: algemeen
+  emails:
+  - email: info@brwzl.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.brandweer.nl/zuid-limburg
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2012-01-01'
+last_mutation: '2020-02-11'
+last_verified: '2020-02-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965273/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965273/brandweer-ghor-zuid-limburg
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-01-01'

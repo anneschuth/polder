@@ -4,23 +4,104 @@ identifiers:
   oin: '00000004154426440000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10136
   roo_id: '28355951'
+  owms: http://standaarden.overheid.nl/owms/terms/rsj
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Raad voor strafrechtstoepassing en jeugdbescherming
   abbr: RSJ
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor Strafrechtstoepassing en Jeugdbescherming (RSJ) is een onafhankelijk
+    orgaan met een rechtsprekende en adviserende taak.Justitiabelen en jeugdigen bevinden
+    zich in een afhankelijke positie. Zij hebben daarom bescherming nodig tegen te
+    ver gaande inbreuken op hun (grond)rechten of een willekeurige toepassing daarvan.
+    De overheid is verantwoordelijk voor de zorg van justitiabelen en jeugdigen. De
+    RSJ draagt hier aan bij.
+  url: https://www.rsj.nl/over-de-rsj
+wettelijke_grondslagen:
+- opschrift: artikel 2 van de Instellingswet Raad voor strafrechtstoepassing en jeugdbescherming
+    2015
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0036510&hoofdstuk=2&paragraaf=1&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28355951/Raad_voor_strafrechtstoepassing_en_jeugdbescherming
+  wooVerzoek:
+    url: https://www.rsj.nl/contact
+organogram_url: https://www.rsj.nl/over-de-rsj
+afspraak:
+  email: info@rsj.nl
+  telefoonnummer: (070) 361 93 00
+  url: https://www.rsj.nl/contact
 contact:
   website: https://www.rsj.nl/
   email: info@rsj.nl
+  bezoekadres: Korte Voorhout 8, 2511 EK Den Haag
+  postadres: Postbus 30137, 2500 GC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '8'
+    postcode: 2511 EK
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '30137'
+    postcode: 2500 GC
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '8'
+    postcode: 2511 EK
+    woonplaats: Den Haag
+    regio: Zuid Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 361 93 00
+    label: algemeen
+  emails:
+  - email: info@rsj.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rsj.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rsj.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355951/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355951/rsj
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-07-01'

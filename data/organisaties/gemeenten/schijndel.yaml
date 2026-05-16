@@ -2,6 +2,9 @@ id: org:gemeente-schijndel
 type: gemeente
 identifiers:
   roo_id: '22562'
+  owms: http://standaarden.overheid.nl/owms/terms/Schijndel_(gemeente)
+  ictu: 00844
+  organisatiecode: gm0844
 classification: gemeente
 parent_id: null
 names:
@@ -9,12 +12,58 @@ names:
   abbr: Schijndel
   valid_from: '1900-01-01'
   valid_until: '2017-01-01'
+geography:
+  oppervlakte: 41,63
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 41.63
+  aantal_inwoners: 23337
+  inwoners: '560'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 560.0
+  bevat_plaatsen_raw: Schijndel
+  bevat_plaatsen:
+  - Schijndel
+council:
+  total_seats: 18
+  parties:
+  - naam: DORP-ABS
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: PvdA
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 3
 contact:
   website: http://www.schijndel.nl
   email: info@schijndel.nl
+  bezoekadres: Markt 20, 5482 NG SCHIJNDEL
+  postadres: Postbus 5, 5480 AA SCHIJNDEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '20'
+    postcode: 5482 NG
+    woonplaats: SCHIJNDEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '5'
+    postcode: 5480 AA
+    woonplaats: SCHIJNDEL
+  phones:
+  - nummer: (073) 544 09 99
+    label: algemeen
+  emails:
+  - email: info@schijndel.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.schijndel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22562/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22562/schijndel
+  retrieved: '2026-05-16'

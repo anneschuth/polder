@@ -1,19 +1,64 @@
 id: org:gr-participatiebedrijf-zuid-kennemerland
 type: gemeenschappelijke-regeling
+subname: Spaarne Werkt
 identifiers:
   roo_id: '28614674'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0267
+  owms: http://standaarden.overheid.nl/owms/terms/wvszknmld
+  kvk: '34340686'
+  btw: NL826077663B01
+  organisatiecode: so0267
+  rsin: 001003495
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling betreffende het Participatiebedrijf Zuid-Kennemerland
+  roo_id: '29695539'
 names:
 - value: Participatiebedrijf Zuid-Kennemerland
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.spaarnewerkt.nl
   email: info@spaarnewerkt.nl
+  bezoekadres: Spieringweg 835, 2142 ED Cruquius
+  postadres: Postbus 297, 2130 AG Hoofddorp
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Spieringweg
+    huisnummer: '835'
+    postcode: 2142 ED
+    woonplaats: Cruquius
+  - type: Postadres
+    postbus: '297'
+    postcode: 2130 AG
+    woonplaats: Hoofddorp
+  phones:
+  - nummer: (023) 543 47 67
+    label: algemeen
+  emails:
+  - email: info@spaarnewerkt.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.spaarnewerkt.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2024-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28614674/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28614674/participatiebedrijf-zuid-kennemerland
+  retrieved: '2026-05-16'
+roo_start_datum: '1986-01-01'

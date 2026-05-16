@@ -5,6 +5,9 @@ identifiers:
   kvk: '30286180'
   roo_id: '31912'
   wikidata: Q952948
+  owms: http://standaarden.overheid.nl/owms/terms/Lingewaal
+  ictu: '00733'
+  organisatiecode: gm0733
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,75 @@ names:
   abbr: Lingewaal
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 54,59
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 54.59
+  aantal_inwoners: 11153
+  inwoners: '204'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 204.0
+  bevat_plaatsen_raw: Asperen, Herwijnen, Heukelum, Spijk Gem Lingewaal, Vuren
+  bevat_plaatsen:
+  - Asperen
+  - Herwijnen
+  - Heukelum
+  - Spijk Gem Lingewaal
+  - Vuren
+council:
+  total_seats: 15
+  parties:
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: www.lingewaal.nl
   email: info@lingewaal.nl
+  bezoekadres: Raadhuisplein 3, 4147 AN ASPEREN
+  postadres: Postbus 1014, 4147 ZG ASPEREN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '3'
+    postcode: 4147 AN
+    woonplaats: ASPEREN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: Postbus 1014
+    postbus: '1014'
+    postcode: 4147 ZG
+    woonplaats: ASPEREN
+  phones:
+  - nummer: (0345) 63 40 00
+    label: algemeen
+  emails:
+  - email: info@lingewaal.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.lingewaal.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-07-16'
+last_verified: '2020-07-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31912/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31912/lingewaal
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

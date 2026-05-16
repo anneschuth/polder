@@ -1,26 +1,144 @@
 id: org:agentschap-rvo
 type: agentschap
 identifiers:
-  oin: '00000004000000006000'
+  oin: 00000003273785290000
   roo_id: '28325623'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10005
+  owms: http://standaarden.overheid.nl/owms/terms/RVO
+  kvk: '27378529'
+  rsin: '822555025'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Rijksdienst voor Ondernemend Nederland
   abbr: RVO
   valid_from: '1900-01-01'
+description:
+  text: De Rijksdienst voor Ondernemend Nederland (RVO) ondersteunt, adviseert en
+    stimuleert ondernemend Nederland. Dit doen we op drie maatschappelijke transities:1.  klimaat-
+    en energietransitie,2.  transitie naar een duurzaam landbouw- en voedselsysteem
+    en3.  transitie naar toekomstbestendige en digitale economie.Dat gebeurt zowel
+    op nationaal als internationaal niveau. We voeren opdrachten uit voor vele departementen,
+    provincies en de EU. Daarnaast dragen we bij aan een betrouwbare, toegankelijke
+    en begrijpelijke overheid, door te streven naar excellente dienstverlening.
+  url: https://www.rvo.nl/onderwerpen/over-ons
+taken_en_bevoegdheden: 'De Rijksdienst voor Ondernemend Nederland (RVO) is onderdeel
+  van het ministerie van Economische Zaken en Klimaat. RVO werkt in opdracht van ministeries,
+  decentrale overheden en de Europese Unie. Er zijn zes vestigingen: in Assen, Den
+  Haag, Roermond, Groningen, Utrecht en Zwolle.'
+doorlichtingen:
+- datum: '2022-04-22'
+  naam_rapport: Doorlichting Rijksdienst voor Ondernemend Nederland
+  referentie: https://archief.rijksfinancien.nl/evaluaties/doorlichting-agentschap?hoofdstuk=&jaar=&status=
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rvo.nl/onderwerpen/juridische-zaken/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28325623/Rijksdienst_voor_Ondernemend_Nederland
+  wooVerzoek:
+    url: https://www.rvo.nl/onderwerpen/juridische-zaken/woo
+organogram_url: https://www.rvo.nl/onderwerpen/over-ons/organisatie#organogram
+afspraak:
+  telefoonnummer: (088) 042 42 42
+personnel:
+  aantalFte: 6883,0
+  peildatumFte: '2025-06-30'
+  toelichtingFte: 77% regulier vaste ambtenaar / 23% overig
 contact:
   website: https://www.rvo.nl/
   email: openoverheid@rvo.nl
+  bezoekadres: Prinses Beatrixlaan 2, 2595 AL Den Haag
+  postadres: Postbus 93144, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Beatrixlaan
+    huisnummer: '2'
+    postcode: 2595 AL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93144'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Bezoekadres
+    openbare_ruimte: Schepersmaat
+    huisnummer: '2'
+    postcode: 9405 TA
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '1492'
+    postcode: 8001 BL
+    woonplaats: Zwolle
+    land: Nederland
+  phones:
+  - nummer: (088) 042 42 42
+    label: Zakelijk
+  - nummer: (088) 042 47 47
+    label: Particulier
+  internet_addresses:
+  - url: https://www.rvo.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rvo.nl/over-ons/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rijksdienst voor Ondernemend Nederland (RVO)
+    url: https://www.linkedin.com/company/rijksdienstvoorondernemendnederland
+  - platform: Facebook
+    gebruikersnaam: Rijksdienst voor Ondernemend Nederland
+    url: https://nl-nl.facebook.com/rijksdienstvoorondernemendnederland
+  - platform: Instagram
+    gebruikersnaam: RVO.nl
+    url: https://www.instagram.com/rvo.nl/
+  - platform: YouTube
+    gebruikersnaam: Rijksdienst voor Ondernemend Nederland
+    url: https://www.youtube.com/user/rvonederland
+  - platform: X
+    gebruikersnaam: Rijksdienst voor Ondernemend Nederland
+    url: https://twitter.com/RVO_Nederland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28325623/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28325623/rvo
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/abdeluheb-choho-algemeen-directeur-bij-de-rijksdienst-voor-ondernemend-nederland
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging
+roo_start_datum: '2014-01-01'

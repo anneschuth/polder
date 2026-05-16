@@ -2,14 +2,31 @@ id: org:stichting-nl-confidential
 type: rwt
 identifiers:
   roo_id: '30133508'
+  kvk: '77009169'
+  rsin: '860871162'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting NL Confidential
   valid_from: '1900-01-01'
+contact:
+  postadres: Postbus 200, 3870 CE Hoevelaken
+  addresses:
+  - type: Postadres
+    postbus: '200'
+    postcode: 3870 CE
+    woonplaats: Hoevelaken
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133508/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133508/stichting-nl-confidential
+  retrieved: '2026-05-16'

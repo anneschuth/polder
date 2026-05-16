@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '117172'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Commissie voor Europese Zaken (EUZA)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/euza
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/euza
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-11'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/117172/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/117172/commissie-voor-europese-zaken-euza
+  retrieved: '2026-05-16'

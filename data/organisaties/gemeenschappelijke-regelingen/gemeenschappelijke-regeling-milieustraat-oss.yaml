@@ -1,0 +1,81 @@
+id: org:gr-gemeenschappelijke-regeling-milieustraat-oss
+type: gemeenschappelijke-regeling
+identifiers:
+  roo_id: '24964519'
+classification: gemeenschappelijke-regeling
+parent_id: null
+names:
+- value: Gemeenschappelijke Regeling milieustraat Oss
+  valid_from: '2017-01-01'
+policy_areas:
+- naam: natuur en milieu | afval
+  tooi: https://identifier.overheid.nl/tooi/def/thes/top/c_d96f9cd3
+gr_meta:
+  doel: Deze gemeenschappelijke regeling zorgt voor het beheer van de milieustraat
+    voor Oss en Landerd. Omdat we dit samen doen kunnen we grof huishoudelijk afval
+    op een goedkopere manier inzamelen.
+  samenwerkingsvorm:
+    value: '''Regeling zonder meer'''
+    afkorting: RZM
+  bevoegdheidsverkrijgingen:
+  - Mandaat
+  bronhouder:
+    naam: Gemeente Oss
+    roo_id: '37907'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0828
+    owms: http://standaarden.overheid.nl/owms/terms/Oss_(gemeente)
+  taalcode: nl-NL
+  registratiehouder: Ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  deelnemende_organisaties:
+  - naam: Gemeente Landerd
+    roo_id: '32885'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1685
+    owms: http://standaarden.overheid.nl/owms/terms/Landerd
+    toetredings_datum: '2017-01-01'
+  - naam: Gemeente Oss
+    roo_id: '37907'
+    tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0828
+    owms: http://standaarden.overheid.nl/owms/terms/Oss_(gemeente)
+    toetredings_datum: '2017-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet milieubeheer
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0003245
+  - opschrift: Wet gemeenschappelijke regelingen
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0003740
+  bevoegdheden:
+  - inhoud_artikel: Inzameling grove afvalstoffen.
+  datum_inwerkingtreding: '2017-01-01'
+contact:
+  bezoekadres: Maaskade 28, 5347 KD Oss
+  postadres: Diezestraat 6, 5347 JH Oss
+  addresses:
+  - type: Bezoekadres
+    toelichting: Duurzaamheidsplein Oss
+    openbare_ruimte: Maaskade
+    huisnummer: '28'
+    postcode: 5347 KD
+    woonplaats: Oss
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    openbare_ruimte: Diezestraat
+    huisnummer: '6'
+    postcode: 5347 JH
+    woonplaats: Oss
+  phones:
+  - nummer: 06 52 62 70 49
+    label: Duurzaamheidsplein Oss
+  - nummer: 14 0412
+    label: gemeente Oss
+  internet_addresses:
+  - url: https://loket.oss.nl/Loket/product/d27eee5d812101e82bbb4b1e27ef40e6
+    label: algemeen
+  - url: https://www.oss.nl/contact.htm
+    label: contact gemeente Oss
+valid_from: '2017-01-01'
+valid_until: null
+last_mutation: '2022-02-16'
+last_verified: '2020-09-07'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/24964519/gemeenschappelijke-regeling-milieustraat-oss
+  retrieved: '2026-05-16'

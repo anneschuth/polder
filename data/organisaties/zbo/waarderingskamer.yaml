@@ -5,20 +5,140 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000115
   oin: 00000001803577059000
   kvk: '27348648'
+  rsin: '803577059'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Waarderingskamer
   valid_from: '1900-01-01'
+description:
+  text: De Waarderingskamer controleert of Nederlandse gemeenten de Wet waardering
+    onroerende zaken (Wet WOZ) op de juiste manier uitvoeren.
+  url: https://www.waarderingskamer.nl/over-ons/wie-zijn-wij
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 9,15
+wettelijke_grondslagen:
+- opschrift: Wet waardering onroerende zaken, artikel 4
+  referentie: https://wetten.overheid.nl/BWBR0007119/2025-01-01#HoofdstukII_Artikel4
+taken_en_bevoegdheden: De belangrijkste taken van de Waarderingskamer zijn:* het toezicht
+  houden op de waardebepaling en de waardevaststelling van onroerende zaken (met het
+  oog op de belastingheffing door het Rijk, de gemeenten en de waterschappen) en de
+  overige in de Wet WOZ geregelde onderwerpen, zodat diverse belastingen gelijkwaardig
+  en doelmatig kunnen worden geheven;* het op verzoek of eigen initiatief adviseren
+  van de staatssecretaris van Financiën over wet- en regelgeving en beleid wat betreft
+  de Wet WOZ, evenals ontwikkelingen op het gebied van de WOZ;* het behandelen van
+  geschillen tussen gemeenten en andere gebruikers van waardegegevens (zoals het Rijk
+  en de waterschappen) over de uitvoering van de Wet WOZ;* het geven van voorlichting
+  aan gemeenten en andere WOZ-belanghebbenden.
+evaluations:
+- datum: '2022-10-14'
+  kamerstuknummer: TK 25268 nr. 211
+  referentie: https://zoek.officielebekendmakingen.nl/blg-1054618
+- datum: '2017-01-11'
+  kamerstuknummer: TK 25268 nr. 142
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-142.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1637 - PROVINCIALE SECTOR
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=15491
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.waarderingskamer.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212594/Waarderingskamer
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.waarderingskamer.nl/over-ons/wat-wij-doen
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.waarderingskamer.nl/wet-open-overheid/woo-documenten
+    - informatiecategorie: Convenanten
+      url: https://www.waarderingskamer.nl/voor-gemeenten/gegevensbeheer/convenant-woz-ict-standaarden
+      toelichting: Convenant WOZ-ICT standaarden
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waarderingskamer%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.waarderingskamer.nl/wet-open-overheid
+afspraak:
+  telefoonnummer: (070) 311 05 55
+personnel:
+  aantalFte: 21,5
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.waarderingskamer.nl/
   email: info@waarderingskamer.nl
+  bezoekadres: Anna van Saksenlaan 10, 2593 HT Den Haag
+  postadres: Postbus 93210, 2509 AE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Anna van Saksenlaan
+    huisnummer: '10'
+    postcode: 2593 HT
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '93210'
+    postcode: 2509 AE
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '93210'
+    postcode: 2509 AE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 311 05 55
+    label: algemeen
+  emails:
+  - email: info@waarderingskamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.waarderingskamer.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.waarderingskamer.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Waarderingskamer
+    url: https://www.linkedin.com/company/waarderingskamer/?originalSubdomain=nl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212594/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212594/waarderingskamer
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -32,3 +152,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000115
   retrieved: '2026-05-09'
+roo_start_datum: '1995-01-01'

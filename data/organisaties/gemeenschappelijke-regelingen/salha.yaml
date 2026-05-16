@@ -3,18 +3,118 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28482239'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0186
+  owms: http://standaarden.overheid.nl/owms/terms/salha
+  kvk: '53526872'
+  organisatiecode: so0186
+  rsin: 004103749
 classification: gemeenschappelijke-regeling
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Streekarchief Langstraat Heusden Altena 2024
+  roo_id: '29486633'
 names:
 - value: Streekarchief Langstraat Heusden Altena
   abbr: SALHA
   valid_from: '1900-01-01'
+description:
+  text: Het Streekarchief Langstraat Heusden Altena is een gemeenschappelijke regeling
+    voor de zorg en het beheer van de archieven van de gemeenten Altena, Heusden en
+    Waalwijk. Het Streekarchief heeft een algemeen bestuur en een dagelijks bestuur,
+    die beide worden gevormd door vertegenwoordigers van de drie deelnemende gemeenten.Samenstelling
+    algemeen bestuur:dhr. S. Sheikkariem (wethouder gemeente Altena), liddhr. H. Tanis
+    (wethouder gemeente Altena), lidmw. W. van Hees (burgemeester gemeente Heusden),
+    liddhr. P.L.S. van Steen (wethouder gemeente Heusden), liddhr. F. Spierings (wethouder
+    gemeente Waalwijk), liddhr. A. de Jong (wethouder gemeente Waalwijk), lidmw. M.
+    Heijmans-van Bruggen (streekarchivaris), secretarisSamenstelling dagelijks bestuur:dhr.
+    S. Sheikkariem (wethouder gemeente Altena), lidmw. W. van Hees (burgemeester gemeente
+    Heusden), voorzitterdhr. F. Spierings (wethouder gemeente Waalwijk), lidmw. M.
+    Heijmans-van Bruggen (streekarchivaris), secretaris
+  url: https://salha.nl/over-ons/medewerkers
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/woo/28482239/Streekarchief_Langstraat_Heusden_Altena
+      overzichtURL: https://organisaties.overheid.nl/woo/28482239/Streekarchief_Langstraat_Heusden_Altena
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Streekarchief+Langstraat+Heusden+Altena%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://salha.nl/over-ons/bestuur
+      toelichting: Begroting, Jaarverslag, Jaarrekening
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://salha.nl/over-ons/beleid
+      toelichting: Beleidsplan
+  wooVerzoek:
+    url: https://forms.office.com/Pages/ResponsePage.aspx?id=bW3caQKp7kiHnwEjIgSzUysyNbopx6hEulIkTE3yjeRUNk5QUzU1TUxBT1kyVkFDNEFKQjcxN0VSRC4u
+afspraak:
+  email: info@salha.nl
+  telefoonnummer: (0416) 66 19 01
+  url: https://salha.nl/bezoekersinformatie/contact
 contact:
   website: https://www.salha.nl
   email: info@salha.nl
+  postadres: Pelsestraat 17, 5256 AT Heusden
+  bezoekadres: Pelsestraat 17, 5256 AT Heusden
+  addresses:
+  - type: Postadres
+    openbare_ruimte: Pelsestraat
+    huisnummer: '17'
+    postcode: 5256 AT
+    woonplaats: Heusden
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Pelsestraat
+    huisnummer: '17'
+    postcode: 5256 AT
+    woonplaats: Heusden
+    regio: Noord Brabant
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Pelsestraat
+    huisnummer: '17'
+    postcode: 5256 AT
+    woonplaats: Heusden
+    regio: Noord Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (0416) 66 19 01
+    label: algemeen
+  emails:
+  - email: info@salha.nl
+    label: algemeen
+  - email: studiezaal@salha.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.salha.nl
+    label: algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Streekarchief Langstraat Heusden Altena
+    url: https://www.facebook.com/StreekarchiefLangstraatHeusdenAltena
+  - platform: LinkedIn
+    gebruikersnaam: Streekarchief Langstraat Heusden Altena
+    url: https://nl.linkedin.com/company/streekarchief-langstraat-heusden-altena
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2022-05-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28482239/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28482239/salha
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-07-01'

@@ -2,18 +2,79 @@ id: org:onderdeel-cpb
 type: organisatieonderdeel
 identifiers:
   roo_id: '28963276'
+  oin: 00000004000000018000
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ezk
+parent_id: org:min-ezk
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Centraal Planbureau
   abbr: CPB
   valid_from: '1900-01-01'
+description:
+  text: Het Centraal Planbureau (CPB) levert als onafhankelijk onderzoeksinstituut
+    beleidsrelevante economische analyses en ramingen. We doen onderzoek naar de Nederlandse
+    economie en het sociaaleconomisch beleid in den brede. Voor beleidsmakers en het
+    bredere publiek vertalen we wetenschappelijke inzichten naar de dagelijkse beleidspraktijk,
+    waarmee we een nuchtere, feitelijke basis leveren.
+  url: https://www.cpb.nl/wat-doen-wij
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.cpb.nl/indienen-van-een-woo-verzoek-bij-het-cpb
+      overzichtURL: https://organisaties.overheid.nl/woo/28963276/Centraal_Planbureau
+organogram_url: https://www.cpb.nl/wie-werken-er-bij-en-met-ons
+afspraak:
+  url: https://www.cpb.nl/contact
 contact:
   website: https://www.cpb.nl
   email: info@cpb.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 80510, 2508 GM Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '80510'
+    postcode: 2508 GM
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: t.a.v. directiesecretaris Sabine Hoff
+    postbus: '80510'
+    postcode: 2508 GM
+    woonplaats: Den Haag
+    regio: Zuid Holland
+    land: Nederland
+  phones:
+  - nummer: (088) 984 60 00
+    label: algemeen
+  - nummer: (088) 678 62 42
+    label: WOO-verzoeken
+  emails:
+  - email: info@cpb.nl
+    label: algemeen
+  - email: bibliotheek@cpb.nl
+    label: over CPB publicaties
+  internet_addresses:
+  - url: https://www.cpb.nl
+    label: algemeen
+  - url: https://www.cpb.nl/contactformulier
+    label: contact
+  contact_forms:
+  - url: https://www.cpb.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-06-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28963276/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28963276/cpb
+  retrieved: '2026-05-16'

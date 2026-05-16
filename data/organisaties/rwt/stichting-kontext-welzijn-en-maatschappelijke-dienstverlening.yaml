@@ -1,16 +1,46 @@
 id: org:oovb-stichting-kontext-welzijn-en-maatschappelijke-dienstverlening
 type: rwt
+subname: Stichting Kontext
 identifiers:
   roo_id: '27913329'
+  kvk: '41227208'
+  oin: I0000001805854812000
+  rsin: '805854812'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Kontext, Welzijn en Maatschappelijke Dienstverlening
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Oostvest 60, 2011 AK Haarlem
+  postadres: Postbus 4098, 2003 EB Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oostvest 60
+    postcode: 2011 AK
+    woonplaats: Haarlem
+  - type: Postadres
+    postbus: '4098'
+    postcode: 2003 EB
+    woonplaats: Haarlem
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27913329/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27913329/stichting-kontext-welzijn-en-maatschappelijke-dienstverlening
+  retrieved: '2026-05-16'

@@ -3,18 +3,100 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28214760'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0289
+  owms: http://standaarden.overheid.nl/owms/terms/wvsava
+  kvk: '53132157'
+  organisatiecode: so0289
+  rsin: 002887691
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkbedrijf Arbeid Voor Allen (WAVA) 2024
+  roo_id: '29575287'
 names:
 - value: Werkbedrijf Arbeid Voor Allen
   abbr: WAVA
   valid_from: '1900-01-01'
+description:
+  text: 'MidZuid is de uitvoeringsorganisatie voor de GR WAVA waarin de vier Dongemond
+    gemeenten zijn vertegenwoordigd. WAVA heeft tot doel in zijn rechtsgebied de Wsw
+    uit te voeren en daarnaast zo doelmatig mogelijk taken en bevoegdheden op het
+    terrein van werkgeversdienstverlening, beschut werk, gesubsidieerde arbeid en
+    arbeidsre-integratie, die voortvloeien uit de Participatiewet uit te voeren.Samen
+    met onze partners verbindt MidZuid mensen duurzaam met werk. Eerder deden we dit
+    vanuit de sociale werkplaats; nu in een breed netwerk als sociaal werkbedrijf.
+    De vier gemeenten in de regio Dongemond zijn gezamenlijk eigenaar van deze organisatie.
+    Zo geven we uitvoering en betekenis aan: samen groeien in werk!'
+  url: https://www.midzuid.nl/midzuid
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.midzuid.nl/midzuid/onze-organisatie
+      overzichtURL: https://organisaties.overheid.nl/woo/28214760/Werkbedrijf_Arbeid_Voor_Allen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.midzuid.nl/midzuid/publicaties#jaarrekeningen_en_verslagen
+      toelichting: Jaarrekeningen en jaarverslagen vanaf 2017 tot heden
+  wooVerzoek:
+    url: https://www.midzuid.nl/midzuid/onze-organisatie
+organogram_url: https://www.midzuid.nl/midzuid/onze-organisatie
+afspraak:
+  email: info@midzuid.nl
+  telefoonnummer: (0162) 37 40 00
+  url: https://www.midzuid.nl/contact
 contact:
   website: https://www.midzuid.nl
   email: info@midzuid.nl
+  bezoekadres: Wilhelminakanaal Noord 3, 4902 VR Oosterhout
+  postadres: Wilhelminakanaal Noord 3, 4902 VR Oosterhout
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelminakanaal Noord
+    huisnummer: '3'
+    postcode: 4902 VR
+    woonplaats: Oosterhout
+  - type: Postadres
+    openbare_ruimte: Wilhelminakanaal Noord
+    huisnummer: '3'
+    postcode: 4902 VR
+    woonplaats: Oosterhout
+  - type: Woo-Adres
+    openbare_ruimte: Wilhelminakanaal Noord
+    huisnummer: '3'
+    postcode: 4902 VR
+    woonplaats: Oosterhout
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (0162) 37 40 00
+    label: algemeen
+  emails:
+  - email: info@midzuid.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.midzuid.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.midzuid.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-08-22'
+last_verified: '2026-02-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28214760/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28214760/wava
+  retrieved: '2026-05-16'
+roo_start_datum: '1954-01-21'

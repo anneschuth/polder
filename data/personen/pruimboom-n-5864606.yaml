@@ -3,7 +3,7 @@ name:
   full: N.H.F. Pruimboom
   family: Pruimboom
   given: N.H.F.
-  initials: N.
+  initials: N.H.F.
 mandaten:
 - id: a39e3611-4d74-4542-bc4d-b9594535ed9a
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864608
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28626313
 - id: 4e56b205-8cf2-4cb4-8b3b-7819fef56e5e
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

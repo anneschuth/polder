@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '112994'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ienw
+parent_id: org:onderdeel-commissies-en-raden
 names:
 - value: Technische commissie bodem
   abbr: Tcb
@@ -16,9 +16,27 @@ names:
 contact:
   website: http://www.tcbodem.nl/
   email: info@tcbodem.nl
+  postadres: Postbus 30947, 2500 GX Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '30947'
+    postcode: 2500 GX
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 456 65 96
+    label: algemeen
+  emails:
+  - email: info@tcbodem.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.tcbodem.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2020-05-25'
+last_verified: '2020-05-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/112994/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/112994/tcb
+  retrieved: '2026-05-16'

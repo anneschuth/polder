@@ -3,18 +3,95 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28563621'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1073
+  owms: http://standaarden.overheid.nl/owms/terms/regioan
+  kvk: '81903421'
+  btw: NL862263682B01
+  organisatiecode: so1073
+  rsin: '862263682'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio Arnhem-Nijmegen
+  roo_id: '30505949'
 names:
 - value: Groene Metropoolregio Arnhem-Nijmegen
   abbr: GMR
   valid_from: '1900-01-01'
+description:
+  text: 'Onze uitdaging:  er is een enorme druk op de regio om te wonen, te werken,
+    te bezoeken, te studeren en te ontspannen. En tegelijkertijd is er de zorg voor
+    onze natuurlijke omgeving, die daarbij voor eco­systeem­diensten als drinkwater
+    zorgt. Daarom moeten we investeren in woningbouw, bereikbaarheid, economie, duurzaamheid,
+    natuur, landschap, recreatie en toerisme.Onze vijf opgaven: voor de deelnemende
+    gemeenten werken we aan vijf opgaven: -Groene groeiregio (ruimtelijke opgaven
+    en woningbouw. -Productieve regio (economie en arbeidsmarkt).- Ontspannen regio
+    (leefbaarheid, natuur en landschap, cultuur en erfgoed).-Verbonden regio (mobiliteit
+    en bereikbaarheid). - Circulaire regio (circulariteit, duurzaamheid, klimaat en
+    energie)'
+  url: https://www.gmr.nl/over-ons/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gmr.nl/kennisbank/woo-wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28563621/Groene_Metropoolregio_Arnhem-Nijmegen
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&datumop=15-10-2024&date-input--2=15-10-2024&filter-id--ss-samenwerkingsorganen=groene&samenwerkingsorganen=Groene+Metropoolregio+Arnhem-Nijmegen&indeling=
+  wooVerzoek:
+    url: https://www.gmr.nl/contact/
 contact:
   website: https://www.gmr.nl/
   email: info@gmr.nl
+  bezoekadres: Nieuwe Stationsstraat 10, 6811 KS Arnhem
+  postadres: Nieuwe Stationsstraat 10, 6811 KS Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Stationsstraat
+    huisnummer: '10'
+    postcode: 6811 KS
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: Nieuwe Stationsstraat
+    huisnummer: '10'
+    postcode: 6811 KS
+    woonplaats: Arnhem
+    regio: regio Arnhem-nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: 06 10 16 91 43
+    label: algemeen
+  - nummer: 06 46 73 73 74
+    label: algemeen
+  emails:
+  - email: info@gmr.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gmr.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.gmr.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Groene Metropoolregio Arnhem-Nijmegen - regio Arnhem Nijmegen
+      - GMR
+    url: https://www.linkedin.com/company/67108932/admin/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-09'
+last_verified: '2026-03-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28563621/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28563621/gmr
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-01-01'

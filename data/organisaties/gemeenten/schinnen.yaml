@@ -6,6 +6,9 @@ identifiers:
   roo_id: '32166'
   wikidata: Q9782
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0962
+  owms: http://standaarden.overheid.nl/owms/terms/Schinnen_(gemeente)
+  ictu: 00962
+  organisatiecode: gm0962
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,73 @@ names:
   abbr: Schinnen
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 24,13
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 24.13
+  aantal_inwoners: 12950
+  inwoners: '536'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 536.0
+  bevat_plaatsen_raw: Amstenrade, Doenrade, Oirsbeek, Puth, Schinnen, Sweikhuizen
+  bevat_plaatsen:
+  - Amstenrade
+  - Doenrade
+  - Oirsbeek
+  - Puth
+  - Schinnen
+  - Sweikhuizen
+council:
+  total_seats: 15
+  parties:
+  - naam: Vernieuwingsgroep
+    aantal_zetels: 6
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
 contact:
   website: www.schinnen.nl
   email: info@schinnen.nl
+  bezoekadres: Scalahof 1, 6365 BK SCHINNEN
+  postadres: Postbus 50, 6365 ZH SCHINNEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Scalahof
+    huisnummer: '1'
+    postcode: 6365 BK
+    woonplaats: SCHINNEN
+  - type: Postadres
+    openbare_ruimte: Postbus 50
+    postbus: '50'
+    postcode: 6365 ZH
+    woonplaats: SCHINNEN
+  phones:
+  - nummer: 14 046
+    label: algemeen
+  emails:
+  - email: info@schinnen.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.schinnen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2026-04-07'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32166/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32166/schinnen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

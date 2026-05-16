@@ -3,16 +3,41 @@ type: zbo
 identifiers:
   roo_id: '29908850'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Dataservices, research en innovatie
   abbr: DRI
   valid_from: '1900-01-01'
+description:
+  text: Het departement Dataservices, research en innovatie (DRI) is een organisatieonderdeel
+    van het Centraal Bureau voor de Statistiek (CBS).
+taken_en_bevoegdheden: Het departement Dataservices, research en innovatie (DRI) van
+  het CBS bestaat uit onderstaande afdelingen, waarvan meerdere zijn onderverdeeld
+  in een aantal teams:DBM (Beleid- en Managementondersteuning)DRD (Research en Development):*
+  DMD (Methodologie Den Haag)* DMH (Methodologie Heerlen)* DOD (Procesontwikkeling
+  Den Haag)* DOH (Procesontwikkeling Heerlen)DBS (Beleidsstatistiek):* DBS1 (Beleidsstatistiek
+  I)* DBS2 (Beleidsstatistiek II)* DBS3 (Beleidsstatistiek III)DVZ (Dataverzameling):*
+  DOC (Onderzoekscoördinatie)* DVL (Vragenlijstontwikkeling en -bouw)* DOS (Opleidingen,
+  berichtgeverscommunicatie en steekproeven)* DEL (Enquêtebeheer en logistiek)* DCC
+  (Contactcenter)* DVW (Veldwerk)* DIN (Innovatie waarnemen)* DOB (Ontwikkeling en
+  beheer)DDS (Dataservices):* DMC (Microdata services)* DSC (Data service centrum
+  & secure data services)De afdelingen en teams zijn overgenomen uit het [CBS-organogram](https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf).
+organogram_url: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 contact:
   website: https://www.cbs.nl/-/media/_pdf/organogram-nl.pdf
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-01'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908850/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908850/dri
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-03'

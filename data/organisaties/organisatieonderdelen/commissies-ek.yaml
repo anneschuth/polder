@@ -1,0 +1,26 @@
+id: org:onderdeel-commissies-ek
+type: organisatieonderdeel
+identifiers:
+  roo_id: '48943'
+classification: organisatieonderdeel
+parent_id: org:hoge-college-eerste-kamer-der-staten-generaal
+names:
+- value: Commissies EK
+  valid_from: '1900-01-01'
+description:
+  url: https://www.eerstekamer.nl/begrip/eerste_kamercommissies_algemene
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies
+    label: algemeen
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2024-04-09'
+last_verified: '2026-04-07'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/48943/commissies-ek
+  retrieved: '2026-05-16'

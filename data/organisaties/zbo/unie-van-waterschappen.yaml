@@ -2,17 +2,55 @@ id: org:koepel-unie-van-waterschappen
 type: zbo
 identifiers:
   roo_id: '21209'
+  owms: http://standaarden.overheid.nl/owms/terms/Unie_van_Waterschappen
+  kvk: '40407706'
+  ictu: 04854
+  rsin: 002813233
 classification: zbo
 parent_id: null
 names:
 - value: Unie van Waterschappen
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://unievanwaterschappen.nl/
   email: info@uvw.nl
+  bezoekadres: Koningskade 40, 2596 AA Den Haag
+  postadres: Postbus 93218, 2509 AE Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningskade
+    huisnummer: '40'
+    postcode: 2596 AA
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93218'
+    postcode: 2509 AE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 351 97 51
+    label: algemeen
+  emails:
+  - email: info@uvw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://unievanwaterschappen.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-05-22'
+last_verified: '2026-01-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21209/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21209/unie-van-waterschappen
+  retrieved: '2026-05-16'

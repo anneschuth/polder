@@ -4,14 +4,46 @@ identifiers:
   roo_id: '28212217'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10227
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Adviescollege Meten en Berekenen Stikstof
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: artikel 2 van de Instellingsregeling Adviescollege Meten en Berekenen
+    Stikstof
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0042959&artikel=2
+classifications:
+- type: CAO
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2021-09-27'
+last_verified: '2021-09-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212217/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212217/adviescollege-meten-en-berekenen-stikstof
+  retrieved: '2026-05-16'

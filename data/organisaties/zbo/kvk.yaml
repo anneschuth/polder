@@ -6,20 +6,125 @@ identifiers:
   oin: '00000001006033404000'
   kvk: '59581883'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Kamer van Koophandel
   abbr: KVK
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Participatie
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de Kamer van Koophandel, Artikel 2
+  referentie: http://wetten.overheid.nl/BWBR0034331/
+taken_en_bevoegdheden: 'Het stimuleren van economische ontwikkeling door middel van
+  het informeren en ondersteunen op het gebied van ondernemen en innovatie van personen
+  die een onderneming drijven of overwegen een onderneming op te richten. Zie ook:
+  https://www.kvk.nl/over-kvk/dit-is-onze-opdracht.'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kvk.nl/over-kvk/kvk-en-de-wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212139/Kamer_van_Koophandel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((w.publicatienaam==%22Staatscourant%22))%20AND%20dt.type==%22convenant%22%20AND%20w.organisatietype==%22ministerie%22%20AND%20dt.creator==%22Ministerie%20van%20Economische%20Zaken%22%20AND%20dt.subject==%22Economie%20%7C%20Organisatie%20en%20beleid%22&zv=&pg=10&col=Staatscourant&svel=Publicatiedatum&svol=Aflopend&sf=on%7cEconomie+%7c+Organisatie+en+beleid
+      toelichting: Staatscourantpublicaties
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kamer+van+Koophandel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.kvk.nl/woo-publicaties/wetOpenOverheid/012/
+    - informatiecategorie: Convenanten
+      url: https://www.kvk.nl/woo-publicaties/wetOpenOverheid/011/
+      toelichting: Gepubliceerd op KVK.nl
+  wooVerzoek:
+    url: https://www.kvk.nl/over-kvk/kvk-en-de-wet-open-overheid/
+organogram_url: https://www.kvk.nl/over-kvk/organisatie/
+afspraak:
+  telefoonnummer: (088) 585 15 85
+  url: https://www.kvk.nl/hulp-en-contact/
+personnel:
+  aantalFte: 1581,0
+  peildatumFte: '2024-12-31'
+  toelichtingFte: Vast personeel
 contact:
   website: http://www.kvk.nl/
   email: woo@kvk.nl
+  bezoekadres: Sint Jacobsstraat 300, 3511 BT Utrecht
+  postadres: Postbus 48, 3500 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sint Jacobsstraat
+    huisnummer: '300'
+    postcode: 3511 BT
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '48'
+    postcode: 3500 AA
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    openbare_ruimte: St.-Jacobsstraat
+    huisnummer: '300'
+    postbus: '48'
+    postcode: 3500 AA
+    woonplaats: Utrecht
+    land: Nederland
+  phones:
+  - nummer: (088) 585 15 85
+    label: algemeen
+  internet_addresses:
+  - url: http://www.kvk.nl/
+    label: algemeen
+  - url: https://www.kvk.nl/hulp-en-contact/
+    label: algemeen
+  - url: https://www.kvk.nl/over-kvk/dit-is-onze-opdracht/
+    label: algemeen
+  contact_forms:
+  - url: https://www.kvk.nl/hulp-en-contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212139/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212139/kvk
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -33,3 +138,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000184
   retrieved: '2026-05-09'
+roo_start_datum: '1921-01-01'

@@ -7,9 +7,21 @@ parent_id: org:rechtbank-zeeland-west-brabant
 names:
 - value: Rechtbank Zeeland-West-Brabant, locatie Tilburg
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Piusplein 50, 5038 WN Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Piusplein
+    huisnummer: '50'
+    postcode: 5038 WN
+    woonplaats: Tilburg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-22'
+last_verified: '2025-05-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048752/rechtbank-zeeland-west-brabant-locatie-tilburg
+  retrieved: '2026-05-16'

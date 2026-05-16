@@ -4,13 +4,37 @@ identifiers:
   roo_id: '27613356'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000303
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Sociale Zaken en Werkgelegenheid
+  roo_id: '19087'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1073
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid
 names:
 - value: Bedrijfstakpensioenfondsen
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo' s die niet onder de werking van de Kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet verplichte deelneming in een bedrijfstakpensioenfonds 2000
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0012092
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-08-20'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27613356/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27613356/bedrijfstakpensioenfondsen
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-01-01'

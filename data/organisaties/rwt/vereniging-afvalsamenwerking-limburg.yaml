@@ -2,14 +2,43 @@ id: org:oovb-vereniging-afvalsamenwerking-limburg
 type: rwt
 identifiers:
   roo_id: '27918694'
+  kvk: '40205278'
+  rsin: '814850893'
 classification: rwt
+legal_form: Privaatrechtelijk - Vereniging
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Vereniging Afvalsamenwerking Limburg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Mosae Forum 10, 6211 DW Maastricht
+  postadres: Postbus 1992, 6201 BZ Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Mosae Forum
+    huisnummer: '10'
+    postcode: 6211 DW
+    woonplaats: Maastricht
+  - type: Postadres
+    postbus: '1992'
+    postcode: 6201 BZ
+    woonplaats: Maastricht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918694/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918694/vereniging-afvalsamenwerking-limburg
+  retrieved: '2026-05-16'

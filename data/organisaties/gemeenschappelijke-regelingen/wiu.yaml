@@ -2,8 +2,14 @@ id: org:gr-wiu
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967718'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: 01169476
+  organisatiecode: so1040
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werk in Uitvoering
+  roo_id: '24967713'
 names:
 - value: Werk in Uitvoering
   abbr: WiU
@@ -11,9 +17,32 @@ names:
   valid_until: '2019-02-01'
 contact:
   website: https://afeer.nl
+  bezoekadres: Garst 6, 9673 AE Winschoten
+  postadres: Postbus 117, 9670 AC Winschoten
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Garst
+    huisnummer: '6'
+    postcode: 9673 AE
+    woonplaats: Winschoten
+  - type: Postadres
+    postbus: '117'
+    postcode: 9670 AC
+    woonplaats: Winschoten
+  phones:
+  - nummer: (0597) 45 36 66
+    label: algemeen
+  internet_addresses:
+  - url: https://afeer.nl
+    label: algemeen
+  - url: https://afeer.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2019-02-01'
+last_mutation: '2020-02-11'
+last_verified: '2020-02-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967718/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967718/wiu
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-07-01'

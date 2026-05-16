@@ -5,22 +5,81 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0520
   oin: 00000001816994055000
   kvk: '14131474'
+  owms: http://standaarden.overheid.nl/owms/terms/ggdzlim
+  organisatiecode: so0520
+  rsin: '816994055'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling GGD Zuid-Limburg
+  roo_id: '29563125'
 names:
 - value: Geneeskundige Gezondheidsdienst Zuid-Limburg
   abbr: GGD ZL
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdzl.nl/over-de-ggd/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28567750/Geneeskundige_Gezondheidsdienst_Zuid-Limburg
+  wooVerzoek:
+    url: https://www.ggdzl.nl/over-de-ggd/wet-open-overheid/woo-verzoek-indienen-formulier/
+organogram_url: https://www.ggdzl.nl/over-de-ggd/taken-en-activiteiten/
+afspraak:
+  telefoonnummer: (088) 880 50 00
+  url: https://www.ggdzl.nl/contact/contactformulier/
 contact:
   website: https://www.ggdzl.nl
+  bezoekadres: Het Overloon 2, 6411 TE Heerlen
+  postadres: Postbus 33, 6400 AA Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Het Overloon
+    huisnummer: '2'
+    postcode: 6411 TE
+    woonplaats: Heerlen
+  - type: Postadres
+    postbus: '33'
+    postcode: 6400 AA
+    woonplaats: Heerlen
+  - type: Woo-Adres
+    postbus: '33'
+    postcode: 6400 AA
+    woonplaats: Heerlen
+  phones:
+  - nummer: (088) 880 50 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdzl.nl
+    label: algemeen
+  - url: https://www.ggdzl.nl/contact/contactformulier/
+    label: contactformulier
+  contact_forms:
+  - url: https://www.ggdzl.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-10-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28567750/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28567750/ggd-zl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-01-01'

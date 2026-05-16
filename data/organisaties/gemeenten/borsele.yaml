@@ -6,21 +6,151 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0654
   roo_id: '23011'
   wikidata: Q10071
+  owms: http://standaarden.overheid.nl/owms/terms/Borsele_(gemeente)
+  ictu: '00654'
+  organisatiecode: gm0654
+  rsin: 001598752
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BOR
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Borsele
   abbr: Borsele
   valid_from: '1900-01-01'
+description:
+  url: https://www.borsele.nl/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.borsele.nl/woo-verzoek-0
+      overzichtURL: https://organisaties.overheid.nl/woo/23011/Gemeente_Borsele
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://borsele.raadsinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Borsele%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Borsele%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.borsele.nl/beleidsdocumenten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Borsele%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.borsele.nl/woo-verzoek
+organogram_url: https://www.borsele.nl/organisatiestructuur
+afspraak:
+  email: info@borsele.nl
+  telefoonnummer: (0113) 23 83 83
+  url: https://www.borsele.nl/contactformulier
+geography:
+  oppervlakte: 194,47
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 194.47
+  aantal_inwoners: 23186
+  inwoners: '119'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 119.0
+  bevat_plaatsen_raw: '''s-Gravenpolder, ''s-Heer Abtskerke, ''s-Heerenhoek, Baarland,
+    Borssele, Driewegen, Ellewoutsdijk, Heinkenszand, Hoedekenskerke, Kwadendamme,
+    Lewedorp, Nieuwdorp, Nisse, Oudelande, Ovezande'
+  bevat_plaatsen:
+  - '''s-Gravenpolder'
+  - '''s-Heer Abtskerke'
+  - '''s-Heerenhoek'
+  - Baarland
+  - Borssele
+  - Driewegen
+  - Ellewoutsdijk
+  - Heinkenszand
+  - Hoedekenskerke
+  - Kwadendamme
+  - Lewedorp
+  - Nieuwdorp
+  - Nisse
+  - Oudelande
+  - Ovezande
+council:
+  total_seats: 19
+  parties:
+  - naam: Lokale Partij Borsele
+    aantal_zetels: 7
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: SGP/Christenunie
+    aantal_zetels: 1
 contact:
   website: https://www.borsele.nl
   email: info@borsele.nl
+  bezoekadres: Stenevate 10, 4451 KB HEINKENSZAND
+  postadres: Postbus 1, 4450 AA HEINKENSZAND
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stenevate
+    huisnummer: '10'
+    postcode: 4451 KB
+    woonplaats: HEINKENSZAND
+  - type: Postadres
+    postbus: '1'
+    postcode: 4450 AA
+    woonplaats: HEINKENSZAND
+  - type: Woo-Adres
+    toelichting: Het college van burgemeester en wethouders
+    postbus: '1'
+    postcode: 4450 AA
+    woonplaats: Heinkenszand
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stenevate
+    huisnummer: '10'
+    postcode: 4451 KB
+    ter_attentie_van: team ruimtelijke ontwikkeling
+    woonplaats: HEINSKENSZAND
+  phones:
+  - nummer: (0113) 23 83 83
+    label: algemeen
+  emails:
+  - email: info@borsele.nl
+    label: algemeen
+  - email: info@borsele.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.borsele.nl
+    label: algemeen
+  contact_forms:
+  - url: https://borsele.mijnafspraakmaken.nl
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23011/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23011/borsele
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +159,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q10071
   retrieved: '2026-05-09'
+roo_start_datum: '1970-01-01'

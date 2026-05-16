@@ -4,15 +4,57 @@ identifiers:
   roo_id: '28470033'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Interdepartementale Commissie Bedrijfsvoering Rijksdienst
   abbr: ICBR
   valid_from: '1900-01-01'
+description:
+  text: 'De ICBR is ambtelijk voorportaal van de Raad voor Bestuur en Justitie (RBJ)
+    en verzorgt  (via het zogeheten SGO Voorportaal) in die rol de voorbereiding van
+    de besluitvorming in de RBJ over belangrijke wetgeving en beleidsonderwerpen  op
+    het terrein van de bedrijfsvoering rijksdienst. De ICBR staat voor het rijksbreed
+    sturen op een doelmatige en doeltreffende bedrijfsvoering. De commissies heeft
+    tot taak op dit terrein de in het eerste lid genoemde terreinen desgevraagd of
+    uit eigen beweging te adviseren over wet- en regelgeving en beleidsinitiatieven.Leden:
+    de hoogst verantwoordelijke ambtenaren voor de bedrijfsvoering van alle ministeries,
+    de plaatsvervangend SG''s of de (hoofd)directeuren bedrijfsvoering. Voorzitter
+    is de directeur-generaal Organisatie en Bedrijfsvoering Rijk van het ministerie
+    van BZK.'
+wettelijke_grondslagen:
+- opschrift: Besluit instelling Interdepartementale Commissie Bestuur, Overheid en
+    Publieke Dienstverlening en Interdepartementale Commissie Bedrijfsvoering Rijksdienst
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0022000
 contact:
   website: https://www.rijksoverheid.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 426 64 26
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-07-25'
+last_verified: '2022-11-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28470033/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28470033/icbr
+  retrieved: '2026-05-16'

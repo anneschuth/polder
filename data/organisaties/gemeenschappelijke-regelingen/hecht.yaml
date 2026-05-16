@@ -5,22 +5,105 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0522
   oin: 00000001814990770000
   kvk: '27365105'
+  owms: http://standaarden.overheid.nl/owms/terms/rdoghm
+  btw: NL814990770B01
+  organisatiecode: so0522
+  rsin: '814990770'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Hecht
+  roo_id: '30155626'
 names:
 - value: Hecht
   valid_from: '1900-01-01'
+description:
+  text: Regionaal samenwerkingsorgaan openbare gezondheidszorg van 18 gemeenten in
+    Hollands Midden, met als onderdelen de GGD Hollands Midden, de RAV Hollands Midden
+    en het ZVH Hollands Midden.
+  url: https://wijzijnhecht.nl/wij-zijn-hecht/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://wijzijnhecht.nl/wij-zijn-hecht/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/25853743/Hecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://wijzijnhecht.nl/documenten/?skw=&category=9&sub_category=0
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+dienst+openbare+gezondheidszorg+Hollands+Midden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regionale+dienst+openbare+gezondheidszorg+Hollands+Midden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://wijzijnhecht.nl/wij-zijn-hecht/woo/
+organogram_url: https://wijzijnhecht.nl/wp-content/uploads/sites/2/2024/06/Organogram-Hecht-eenvoudig.png
+afspraak:
+  email: info@wijzijnhecht.nl
+  telefoonnummer: (088) 308 30 00
+  url: https://wijzijnhecht.nl/contact/
 contact:
   website: https://wijzijnhecht.nl/contact/
   email: info@wijzijnhecht.nl
+  bezoekadres: Parmentierweg 49, 2316 ZV Leiden
+  postadres: Postbus 121, 2300 AC Leiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parmentierweg
+    huisnummer: '49'
+    postcode: 2316 ZV
+    woonplaats: Leiden
+    regio: Hollands Midden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '121'
+    postcode: 2300 AC
+    woonplaats: Leiden
+    regio: Hollands Midden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Parmentierweg
+    huisnummer: '49'
+    postbus: '121'
+    postcode: 2300 AC
+    woonplaats: Leiden
+    regio: Hollands Midden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 308 30 00
+    label: algemeen
+  emails:
+  - email: info@wijzijnhecht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://wijzijnhecht.nl/contact/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25853743/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25853743/hecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-01-01'

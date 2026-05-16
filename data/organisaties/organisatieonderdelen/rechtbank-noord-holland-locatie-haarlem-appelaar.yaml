@@ -7,9 +7,25 @@ parent_id: org:rechtbank-noord-holland
 names:
 - value: Rechtbank Noord-Holland, locatie Haarlem, Appelaar
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Simon de Vrieshof 1, 2019 HA Haarlem
+  postadres: Postbus 1621, 2003 BR Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Simon de Vrieshof
+    huisnummer: '1'
+    postcode: 2019 HA
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1621'
+    postcode: 2003 BR
+    woonplaats: Haarlem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-23'
+last_verified: '2026-03-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048518/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048518/rechtbank-noord-holland-locatie-haarlem-appelaar
+  retrieved: '2026-05-16'

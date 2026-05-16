@@ -3,18 +3,101 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28196445'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0688
+  owms: http://standaarden.overheid.nl/owms/terms/foodvalley
+  kvk: '53751930'
+  organisatiecode: so0688
+  rsin: '851002626'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Regio Foodvalley
+  roo_id: '29771733'
 names:
 - value: Regio Foodvalley
   abbr: RFv
   valid_from: '1900-01-01'
+description:
+  text: https://www.regiofoodvalley.nl/over-ons/over-regio-foodvalley
+  url: https://www.regiofoodvalley.nl/over-ons/samenwerkende-gemeenten/algemeen-bestuur
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.regiofoodvalley.nl/kennisbank/informatieverzoek-of-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28196445/Regio_Foodvalley
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://regiofoodvalley.notubiz.nl/
+      toelichting: Zie stukken Algemeen Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://regiofoodvalley.notubiz.nl/
+      toelichting: Zie stukken Algemeen Bestuur
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://regiofoodvalley.notubiz.nl/
+      toelichting: Zie stukken Algemeen Bestuur
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://regiofoodvalley.notubiz.nl/
+      toelichting: Hier treft u de agenda's, besluitenlijsten en bijbehorende stukken
+        aan van het Algemeen Bestuur.
+  wooVerzoek:
+    url: https://www.regiofoodvalley.nl/kennisbank/informatieverzoek-of-woo-verzoek
+organogram_url: https://www.regiofoodvalley.nl/fileadmin/regiofoodvalley.nl/documenten/2024/Opmaak_WIe-is-Wie_V31.pdf
+afspraak:
+  email: info@regiofoodvalley.nl
+  telefoonnummer: (0318) 68 06 67
+  url: https://www.regiofoodvalley.nl/over-ons/regiobureau
 contact:
   website: https://www.regiofoodvalley.nl
   email: info@regiofoodvalley.nl
+  bezoekadres: Bunschoterplein 1a, 6711 CD Ede
+  postadres: Postbus 9022, 6710 HK Ede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bunschoterplein
+    huisnummer: 1a
+    postcode: 6711 CD
+    woonplaats: Ede
+  - type: Postadres
+    postbus: '9022'
+    postcode: 6710 HK
+    woonplaats: Ede
+  - type: Woo-Adres
+    toelichting: Gebouw De Manenberg
+    openbare_ruimte: Bunschoterplein
+    huisnummer: 1a
+    postcode: 6711 CD
+    woonplaats: Ede
+  phones:
+  - nummer: (0318) 68 06 67
+    label: algemeen
+  emails:
+  - email: info@regiofoodvalley.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiofoodvalley.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.regiofoodvalley.nl/over-ons/regiobureau
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-29'
+last_verified: '2025-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28196445/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28196445/rfv
+  retrieved: '2026-05-16'
+roo_start_datum: '2011-02-09'

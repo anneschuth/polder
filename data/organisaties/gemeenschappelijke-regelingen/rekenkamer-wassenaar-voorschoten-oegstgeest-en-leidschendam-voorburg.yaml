@@ -1,19 +1,88 @@
 id: org:gr-rekenkamer-wassenaar-voorschoten-oegstgeest-en-leidschendam-voorburg
 type: gemeenschappelijke-regeling
+subname: Rekenkamer WVOLV
 identifiers:
   roo_id: '29546209'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1097
+  owms: http://standaarden.overheid.nl/owms/terms/rkwvolv
+  organisatiecode: so1097
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Wassenaar, Voorschoten, Oegstgeest
+    en Leidschendam-Voorburg
+  roo_id: '29546214'
 names:
 - value: Rekenkamer Wassenaar, Voorschoten, Oegstgeest en Leidschendam-Voorburg
   valid_from: '1900-01-01'
+description:
+  url: https://www.rekenkamerwvolv.nl/werkwijze/over-de-rekenkamer/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rekenkamerwvolv.nl/werkwijze/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/29546209/Rekenkamer_Wassenaar_Voorschoten_Oegstgeest_en_Leidschendam-Voorburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rekenkamerwvolv.nl/onderzoeken/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rekenkamerwvolv.nl/jaarstukken/
+  wooVerzoek:
+    url: https://www.rekenkamerwvolv.nl/werkwijze/wet-open-overheid/
+organogram_url: https://www.rekenkamerwvolv.nl/wp-content/uploads/2025/07/2025-07-07-Organogram-Rekenkamer-WVOLV.pdf
+afspraak:
+  email: info@rekenkamerwvolv.nl
+  telefoonnummer: 06 25 50 31 07
+  url: https://www.rekenkamerwvolv.nl/contact/
 contact:
   website: https://www.rekenkamerwvolv.nl/
   email: info@rekenkamerwvolv.nl
+  postadres: Postbus 393, 2250 AJ Voorschoten
+  bezoekadres: Leidseweg 25, 2252 LA Voorschoten
+  addresses:
+  - type: Postadres
+    postbus: '393'
+    postcode: 2250 AJ
+    woonplaats: Voorschoten
+  - type: Bezoekadres
+    openbare_ruimte: Leidseweg
+    huisnummer: '25'
+    postcode: 2252 LA
+    woonplaats: Voorschoten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '393'
+    postcode: 2250 AJ
+    woonplaats: Voorschoten
+  phones:
+  - nummer: 06 25 50 31 07
+    label: algemeen
+  emails:
+  - email: info@rekenkamerwvolv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rekenkamerwvolv.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rekenkamerwvolv.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rekenkamer WWVOLV
+    url: https://www.linkedin.com/in/rekenkamerwvolv/detail/recent-activity/shares/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29546209/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29546209/rekenkamer-wassenaar-voorschoten-oegstgeest-en-leidschendam-voorburg
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

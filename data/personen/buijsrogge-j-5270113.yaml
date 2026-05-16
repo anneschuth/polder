@@ -3,7 +3,7 @@ name:
   full: J.O.A. Buijsrogge
   family: Buijsrogge
   given: J.O.A.
-  initials: J.
+  initials: J.O.A.
 mandaten:
 - id: 478c98cf-f309-4f62-8001-326eb2585d2c
   organization_id: org:gemeente-moerdijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5270115
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30656/gemeente-moerdijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30567263
 - id: 999b50dd-3d68-4943-bd10-57c903fa7ad1
   organization_id: org:gemeente-moerdijk
   post_id: post:raadslid-gemeente-moerdijk

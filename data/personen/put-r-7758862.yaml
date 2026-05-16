@@ -3,7 +3,7 @@ name:
   full: R.K. Put
   family: Put
   given: R.K.
-  initials: R.
+  initials: R.K.
 mandaten:
 - id: 4c513ace-7b9d-41d2-ac3f-ec39fe529ca9
   organization_id: org:gemeente-steenwijkerland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758863
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/24145/gemeente-steenwijkerland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30569872
 - id: 37987ace-d15c-4112-a0f3-6706096775d4
   organization_id: org:gemeente-steenwijk
   post_id: post:raadslid-gemeente-steenwijk

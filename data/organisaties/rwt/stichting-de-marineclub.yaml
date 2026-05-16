@@ -2,14 +2,32 @@ id: org:stichting-de-marineclub
 type: rwt
 identifiers:
   roo_id: '30133348'
+  kvk: '41241412'
+  rsin: '804450225'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Stichting De Marineclub
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    toelichting: D05-001
+    openbare_ruimte: Fort Harssens
+    huisnummer: '9'
+    postcode: 1781 ZZ
+    woonplaats: Den Helder
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133348/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133348/stichting-de-marineclub
+  retrieved: '2026-05-16'

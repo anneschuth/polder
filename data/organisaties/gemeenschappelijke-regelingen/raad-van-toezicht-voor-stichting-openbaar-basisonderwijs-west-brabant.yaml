@@ -2,8 +2,13 @@ id: org:gr-raad-van-toezicht-voor-stichting-openbaar-basisonderwijs-west-brabant
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965525'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so1069
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling raad van toezicht Openbaar Basisonderwijs West-Brabant
+  roo_id: '24965520'
 names:
 - value: Raad van toezicht voor Stichting Openbaar Basisonderwijs West-Brabant
   valid_from: '1900-01-01'
@@ -11,9 +16,34 @@ names:
 contact:
   website: https://obo-wbr.nl
   email: info@obo-wbr.nl
+  bezoekadres: Vijfhuizenberg 157, 4708 AJ Roosendaal
+  postadres: Vijfhuizenberg 157, 4708 AJ Roosendaal
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vijfhuizenberg
+    huisnummer: '157'
+    postcode: 4708 AJ
+    woonplaats: Roosendaal
+  - type: Postadres
+    openbare_ruimte: Vijfhuizenberg
+    huisnummer: '157'
+    postcode: 4708 AJ
+    woonplaats: Roosendaal
+  phones:
+  - nummer: (0165) 54 82 60
+    label: algemeen
+  emails:
+  - email: info@obo-wbr.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://obo-wbr.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-08-01'
+last_mutation: '2021-01-14'
+last_verified: '2021-01-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965525/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965525/raad-van-toezicht-voor-stichting-openbaar-basisonderwijs-west-brabant
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-01-01'

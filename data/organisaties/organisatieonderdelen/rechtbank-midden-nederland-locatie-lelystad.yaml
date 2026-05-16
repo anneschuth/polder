@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-midden-nederland-locatie-lelystad
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048458'
+  kvk: '82940444'
+  rsin: '862663489'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-midden-nederland
 names:
 - value: Rechtbank Midden-Nederland, locatie Lelystad
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Stationsplein 15, 8232 DL Lelystad
+  postadres: Postbus 2035, 8203 AA Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '15'
+    postcode: 8232 DL
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '2035'
+    postcode: 8203 AA
+    woonplaats: Lelystad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-10'
+last_verified: '2026-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048458/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048458/rechtbank-midden-nederland-locatie-lelystad
+  retrieved: '2026-05-16'

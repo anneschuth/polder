@@ -3,15 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '2516'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-bz
+parent_id: org:min-bz
 names:
 - value: Algemene leiding/Bestuur
   valid_from: '1900-01-01'
 contact:
   email: vadv@minbuza.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_verified: '2025-07-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/2516/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/2516/algemene-leidingbestuur
+  retrieved: '2026-05-16'

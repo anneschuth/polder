@@ -3,7 +3,7 @@ name:
   full: P.W. Wetzel-Gerressen
   family: Wetzel-Gerressen
   given: P.W.
-  initials: P.
+  initials: P.W.
 mandaten:
 - id: 49b381fd-2ce4-4b9e-9b53-72150c76b6bf
   organization_id: org:gemeente-duiven
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7791528
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26095/gemeente-duiven
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30524401
 - id: 3fc96de3-4139-401d-a5a1-2c3ed6d59c2e
   organization_id: org:gemeente-duiven
   post_id: post:raadslid-gemeente-duiven

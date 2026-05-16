@@ -1,15 +1,45 @@
 id: org:oovb-stichting-jeugdbescherming-noord-en-veilig-thuis-groningen
 type: rwt
+subname: Jeugdbescherming Noord en Veilig Thuis Groningen
 identifiers:
   roo_id: '28347392'
+  kvk: 04075970
+  oin: 00000003040759700000
+  rsin: '813850782'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Jeugdbescherming Noord en Veilig Thuis Groningen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Leonard Springerlaan 13, 9727 KB Groningen
+  postadres: Postbus 1203, 9701 BE Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Leonard Springerlaan 13
+    postcode: 9727 KB
+    woonplaats: Groningen
+  - type: Postadres
+    postbus: '1203'
+    postcode: 9701 BE
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347392/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347392/stichting-jeugdbescherming-noord-en-veilig-thuis-groningen
+  retrieved: '2026-05-16'

@@ -4,21 +4,113 @@ identifiers:
   roo_id: '28181915'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000312
   oin: '00000004115051224000'
+  owms: http://standaarden.overheid.nl/owms/terms/img
+  kvk: '94101736'
+  rsin: '866636377'
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Instituut Mijnbouwschade Groningen
   abbr: IMG
   valid_from: '1900-01-01'
+description:
+  text: De organisatie van het IMG (schadedoormijnbouw.nl)
+  url: https://www.schadedoormijnbouw.nl/de-organisatie-van-het-img
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 12,21,22
+wettelijke_grondslagen:
+- opschrift: Tijdelijke wet Groningen
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0043252
+taken_en_bevoegdheden: Het IMG heeft tot taak om schade af te handelen die is ontstaan
+  door beweging van de bodem als gevolg van de aanleg of exploitatie van een mijnbouwwerk
+  ten behoeve van het winnen van gas uit het Groningenveld of als gevolg van de gasopslag
+  Norg. Dat doet het IMG door onafhankelijk te besluiten over aanvragen tot vergoeding
+  van schade. Het kan om alle vormen van schade gaan, zoals fysieke schade aan gebouwen
+  en objecten, waardedaling van woningen en immateriële schade. Ook moet het IMG meldingen
+  van mogelijk acuut onveilige situaties (AOS) afhandelen. Het IMG is gebonden aan
+  de kaders van de Tijdelijke wet Groningen, het civiele aansprakelijkheids- en schadevergoedingsrecht
+  en de Algemene wet bestuursrecht.
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.schadedoormijnbouw.nl/woo-en-wob-verzoeken
+      overzichtURL: https://organisaties.overheid.nl/woo/28181915/Instituut_Mijnbouwschade_Groningen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.schadedoormijnbouw.nl/publicaties-registratie
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.schadedoormijnbouw.nl/publicaties-registratie
+    - informatiecategorie: Klachtoordelen
+      url: https://www.schadedoormijnbouw.nl/publicaties-registratie
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Instituut+Mijnbouwschade+Groningen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.schadedoormijnbouw.nl/woo-verzoek-indienen
+afspraak:
+  telefoonnummer: (0800) 444 41 11
+personnel:
+  aantalFte: 762,0
+  peildatumFte: '2022-12-31'
 contact:
   website: https://www.schadedoormijnbouw.nl/
   email: contact@schadedoormijnbouw.nl
+  bezoekadres: Cascadeplein 10 (alleen op afspraak), 9726 AD Groningen
+  postadres: Antwoordnummer 3061, 8000 WB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Cascadeplein
+    huisnummer: '10'
+    huisnummer_toevoeging: (alleen op afspraak)
+    postcode: 9726 AD
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Antwoordnummer 3061
+    postcode: 8000 WB
+    woonplaats: Zwolle
+  - type: Woo-Adres
+    openbare_ruimte: Antwoordnummer
+    huisnummer: '3061'
+    postcode: 8000 WB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (0800) 444 41 11
+    label: algemeen
+  emails:
+  - email: contact@schadedoormijnbouw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.schadedoormijnbouw.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28181915/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28181915/img
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -27,3 +119,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000312
   retrieved: '2026-05-09'
+roo_start_datum: '2020-07-01'

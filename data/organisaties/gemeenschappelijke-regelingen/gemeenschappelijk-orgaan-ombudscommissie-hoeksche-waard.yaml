@@ -2,8 +2,12 @@ id: org:gr-gemeenschappelijk-orgaan-ombudscommissie-hoeksche-waard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28261941'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling ombudscommissie Hoeksche Waard
+  roo_id: '28261923'
 names:
 - value: gemeenschappelijk orgaan ombudscommissie Hoeksche Waard
   valid_from: '1900-01-01'
@@ -11,9 +15,33 @@ names:
 contact:
   website: http://www.ombudscommissiehoekschewaard.nl
   email: info@ombudscommissiehoekschewaard.nl
+  bezoekadres: Waleplein 2, 3291 CZ Strijen
+  postadres: Postbus 5881, 3290 EA Strijen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Waleplein
+    huisnummer: '2'
+    postcode: 3291 CZ
+    woonplaats: Strijen
+  - type: Postadres
+    postbus: '5881'
+    postcode: 3290 EA
+    woonplaats: Strijen
+  phones:
+  - nummer: (078) 674 82 51
+    label: algemeen
+  emails:
+  - email: info@ombudscommissiehoekschewaard.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ombudscommissiehoekschewaard.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2022-11-29'
+last_verified: '2022-11-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28261941/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28261941/gemeenschappelijk-orgaan-ombudscommissie-hoeksche-waard
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-01-01'

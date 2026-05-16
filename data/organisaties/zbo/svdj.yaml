@@ -4,20 +4,142 @@ identifiers:
   roo_id: '28212111'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000119
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stimuleringsfonds voor de Journalistiek
   abbr: SVDJ
   valid_from: '1900-01-01'
+description:
+  text: Het Stimuleringsfonds voor de Journalistiek stimuleert de kwaliteit, diversiteit
+    en onafhankelijkheid van de journalistiek door met geld, kennis en onderzoek de
+    vernieuwing van de journalistieke infrastructuur in Nederland te bevorderen. Dit
+    gebeurt onder meer door subsidieregelingen, onderzoek en door het organiseren
+    van evenementen op het gebied van innovatie, onderzoeksjournalistiek en  regionale
+    en lokale journalistiek. Daarnaast deelt het Fonds via de nieuwspagina op de website
+    de meest recente ontwikkelingen in de journalistieke sector.Het Stimuleringsfonds
+    ontvangt als zelfstandig bestuursorgaan (ZBO) jaarlijks een bijdrage van het ministerie
+    van Onderwijs, Cultuur en Wetenschap, waaruit alle activiteiten worden gefinancierd.
+  url: https://www.svdj.nl/over-svdj/
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+      toelichting: De afwijking van artikel 22 betreft besluiten die betrekking hebben
+        op de taakuitoefening (Tweede Kamer 2007-2008, 25268, nr. 50, mededeling minister
+        van Onderwijs, Cultuur en Wetenschap).
+wettelijke_grondslagen:
+- opschrift: Mediawet 2008, artikel 8.1
+  referentie: http://wetten.overheid.nl/BWBR0025028/Hoofdstuk8/Titel81/
+taken_en_bevoegdheden: Het Stimuleringsfonds voor de Journalistiek (SvdJ) heeft de
+  volgende taken:* het handhaven en bevorderen van de pluriformiteit van de pers,
+  voor zover die van belang is voor informeren en opinievorming;* het verlenen van
+  financiële steun aan de pers;* het verrichten dan wel doen verrichten van onderzoek
+  met betrekking tot het functioneren van de pers.
+evaluations:
+- datum: '2018-03-12'
+  kamerstuknummer: TK 32827 nr. 124
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32827-124.html/
+- datum: '2011-12-06'
+  kamerstuknummer: TK 32827 nr.28
+  referentie: https://zoek.officielebekendmakingen.nl/kst-32827-28.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.svdj.nl/woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28212111/Stimuleringsfonds_voor_de_Journalistiek
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stimuleringsfonds+voor+de+journalistiek%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.svdj.nl/woo-verzoek-indienen/
+afspraak:
+  email: info@svdj.nl
+  telefoonnummer: (070) 361 71 11
+personnel:
+  aantalFte: 17,0
+  peildatumFte: '2024-11-18'
 contact:
   website: http://www.svdj.nl
   email: info@svdj.nl
+  bezoekadres: Koninginnegracht 46, 2514 AD Den Haag
+  postadres: Koninginnegracht 46, 2514 AD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '46'
+    postcode: 2514 AD
+    woonplaats: Den Haag
+  - type: Postadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '46'
+    postcode: 2514 AD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '46'
+    postcode: 2514 AD
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Den Haag
+  phones:
+  - nummer: (070) 361 71 11
+    label: algemeen
+  emails:
+  - email: info@svdj.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.svdj.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.svdj.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Stimuleringsfonds voor de Journalistiek
+    url: https://www.linkedin.com/company/stimuleringsfonds-voor-de-journalistiek/
+  - platform: Instagram
+    gebruikersnaam: '@svdj_nieuws'
+    url: https://www.instagram.com/svdj_nieuws/
+  - platform: X
+    gebruikersnaam: '@SVDJnieuws'
+    url: https://twitter.com/SVDJnieuws
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-19'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212111/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212111/svdj
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +148,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000119
   retrieved: '2026-05-09'
+roo_start_datum: '1988-01-01'

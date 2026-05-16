@@ -3,17 +3,113 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27965193'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0011
+  owms: http://standaarden.overheid.nl/owms/terms/regmidhol
+  kvk: '54529905'
+  organisatiecode: so0011
+  rsin: 003731418
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regio Midden-Holland
+  roo_id: '30512991'
 names:
 - value: Regio Midden-Holland
   valid_from: '1900-01-01'
+description:
+  text: De samenwerking in Regio Midden-Holland is een netwerksamenwerking tussen
+    de vijf gemeenten en andere partijen, zoals onderwijs, bedrijfsleven, andere overheden
+    en kennisinstituten. De samenwerking richt zich op de regionale ambities. Sturing
+    vindt plaats op de gezamenlijke inzet van de gemeenten in het netwerk en de sturing
+    van de (lichte) gemeenschappelijke regeling.De bestuurlijke overleggen/ tafels
+    bestaan uit de wethouders van de deelnemende gemeenten die vanwege hun portefeuille
+    betrokken zijn bij de bestuurlijke tafels. Gezamenlijk werken zij aan de regionale
+    ambities en de speerpunten die zij binnen hun overleg bepalen.Het algemeen bestuur
+    van Regio Midden-Holland is formeel het bestuur van de gemeenschappelijke regeling.Het
+    dagelijks bestuur draagt zorg voor de dagelijkse besturing van de gemeenschappelijke
+    regeling.
+  url: https://www.regiomiddenholland.nl/over+2/Bestuur/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.regiomiddenholland.nl/over+2/wet+open+overheid+woo/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/27965193/Regio_Midden-Holland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.regiomiddenholland.nl/Vergaderingen/Regionaal+platform+en+AB+Regio+Midden-Holland/default.aspx
+      toelichting: Hier vindt u de agenda's en bijbehorende stukken van het Algemeen
+        Bestuur.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.regiomiddenholland.nl/over+2/Financien/default.aspx#folder=616437
+      toelichting: Hier vindt u onze jaarrekening en begroting.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.regiomiddenholland.nl/over+2/Verordeningen+en+regelingen/default.aspx
+      toelichting: Hier vindt u onze verordeningen en regelingen.
+  wooVerzoek:
+    url: https://www.regiomiddenholland.nl/over+2/wet+open+overheid+woo/default.aspx
+afspraak:
+  email: info@regiomiddenholland.nl
+  url: https://www.regiomiddenholland.nl/contact/default.aspx
 contact:
   website: https://www.regiomiddenholland.nl
   email: info@regiomiddenholland.nl
+  bezoekadres: Burgemeester Jamesplein 1, 2803 PG Gouda
+  postadres: Postbus 305, 2800 AH Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Jamesplein
+    huisnummer: '1'
+    postcode: 2803 PG
+    woonplaats: Gouda
+  - type: Postadres
+    postbus: '305'
+    postcode: 2800 AH
+    woonplaats: Gouda
+  - type: Woo-Adres
+    postbus: '305'
+    postcode: 2800 AH
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: 14 0182
+    label: algemeen
+  emails:
+  - email: info@regiomiddenholland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiomiddenholland.nl
+    label: algemeen
+  - url: https://www.regiomiddenholland.nl/shortcuts/sendcontactmessage.aspx
+    label: contact
+  contact_forms:
+  - url: https://www.regiomiddenholland.nl/shortcuts/sendcontactmessage.aspx
+    label: Algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: '@MiddenHolland'
+    url: https://twitter.com/MiddenHolland
+  - platform: LinkedIn
+    gebruikersnaam: Regio Midden-Holland
+    url: https://www.linkedin.com/company/regio-midden-holland/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-29'
+last_verified: '2024-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27965193/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27965193/regio-midden-holland
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-04-01'

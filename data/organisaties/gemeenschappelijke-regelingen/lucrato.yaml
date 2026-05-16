@@ -3,17 +3,106 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27763294'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0899
+  owms: http://standaarden.overheid.nl/owms/terms/lucrato
+  kvk: 08214160
+  btw: NL001299931B01
+  organisatiecode: so0899
+  rsin: 001299931
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Lucrato
+  roo_id: '29559600'
 names:
 - value: Lucrato
   valid_from: '1900-01-01'
+description:
+  text: We openen kansen voor kandidaten, werkgevers én de samenleving. Voor de gemeenten
+    Apeldoorn, Epe en Heerde helpen we mensen vanuit de Participatiewet duurzaam aan
+    werk. De naam Lucrato staat voor ‘winst’.Wij geloven dat werken op meerdere manieren
+    winst oplevert. Sociale, maatschappelijke en economische winst. Winst voor werkzoekenden
+    én voor werkgevers.
+  url: https://www.lucrato.nl/over-lucrato
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.lucrato.nl/informatieverzoek-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27763294/Lucrato
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.lucrato.nl/over-lucrato/jaarverslagen
+      toelichting: Meerjarenbegrotingen
+    - informatiecategorie: Klachtoordelen
+      url: https://www.lucrato.nl/assets/bestanden/klachtenregeling-ter-verstrekking-aan-klager-algemeen-versie-4.pdf
+      toelichting: Klachtenregeling
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.lucrato.nl/informatieverzoek-woo-wet-open-overheid/
+      toelichting: Uitleg en mogelijkheid Woo-verzoeken
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.lucrato.nl/jaarverslag/
+      toelichting: Jaarverslagen en Meerjarenbegroting
+  wooVerzoek:
+    url: https://www.lucrato.nl/informatieverzoek-woo
+organogram_url: https://www.lucrato.nl/over-lucrato
+afspraak:
+  telefoonnummer: (055) 549 25 00
 contact:
   website: https://www.lucrato.nl
   email: info@lucrato.nl
+  bezoekadres: Egerlaan 15, 7334 AD Apeldoorn
+  postadres: Egerlaan 15, 7334 AD Apeldoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Egerlaan
+    huisnummer: '15'
+    postcode: 7334 AD
+    woonplaats: Apeldoorn
+  - type: Postadres
+    openbare_ruimte: Egerlaan
+    huisnummer: '15'
+    postcode: 7334 AD
+    woonplaats: Apeldoorn
+  - type: Woo-Adres
+    toelichting: Ingang 3
+    openbare_ruimte: Egerlaan
+    huisnummer: '15'
+    postcode: 7334 AD
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (055) 549 25 00
+    label: algemeen
+  emails:
+  - email: info@lucrato.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.lucrato.nl
+    label: algemeen
+  - url: https://www.lucrato.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.lucrato.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-15'
+last_verified: '2024-03-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27763294/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27763294/lucrato
+  retrieved: '2026-05-16'
+roo_start_datum: '1973-01-01'

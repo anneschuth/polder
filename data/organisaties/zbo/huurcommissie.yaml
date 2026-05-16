@@ -5,18 +5,125 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000187
   oin: '00000004000000061000'
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Huurcommissie
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 20,22
+      toelichting: Voor artikel 22 is er slechts voor het eerste lid een afwijkende
+        bepaling. Voor de rest van het artikel zijn er geen wijkende bepalingen in
+        de wettelijke grondslag van deze zbo.
+wettelijke_grondslagen:
+- opschrift: Uitvoeringswet huurprijzen woonruimte, artikel 3a tot en met 8
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=uitvoeringswet%20huurprijzen%20woonruimte
+taken_en_bevoegdheden: '* Het doen van een uitspaak over de redelijkheid van de overeengekomen
+  aanvangshuur of de voorgestelde verhoging, danwel verlaging, van de huurprijs;*
+  uitspraak doen over de verhoging van de huurprijs na de totstandkoming van voorzieningen,
+  veranderingen of toevoegingen;* uitspraak doen over de in rekening te brengen huurprijs
+  bij vermindering van het woongenot als gevolg van een gebrek of over de redelijkheid
+  van een gebruikersvergoeding;* het desgevraagd aan de rechter verstrekken van nadere
+  inlichtingen over een door haar gedane uitspraak;* het desgevraagd verstrekken van
+  een verklaring aan de Minister voor Wonen en Rijksdienst en publiekrechtelijke lichamen
+  over de aan een woonruimte toe te kennen kwaliteit, de gebreken of tekortkomingen
+  in het onderhoud en een voor de woonruimte redelijk te achten huurprijs;* het desgevraagd
+  aan de minister verstrekken van gegevens die nodig zijn in het kader van het te
+  voeren volkshuisvestingsbeleid;* het verstrekken van een verklaring omtrent de redelijkheid
+  van de huurprijs en de juistheid van gegevens.'
+evaluations:
+- datum: '2017-01-02'
+  kamerstuknummer: TK 25268 nr. 141
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-141.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.huurcommissie.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28212619/Huurcommissie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.huurcommissie.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Alle+onderdelen&type=Wob-verzoek
+      toelichting: De huidige WOO verzoeken bij de Huurcommissie
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.huurcommissie.nl/documenten/jaarverslagen/2023/05/16/jaarverslag-2022
+      toelichting: Jaarverslag 2022
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://www.huurcommissie.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Alle+onderdelen&type=beleidsboek
+      toelichting: Beleidsboeken
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.huurcommissie.nl/over-ons/eerdere-uitspraken
+      toelichting: Het Openbaar Register van eerdere uitspraken door de Huurcommissie
+personnel:
+  aantalFte: 76,0
+  peildatumFte: '2020-12-31'
 contact:
   website: https://www.huurcommissie.nl/
+  bezoekadres: Muzenstraat 61, 2511 WB Den Haag
+  postadres: Postbus 16495, 2500 BL Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '61'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16495'
+    postcode: 2500 BL
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '61'
+    postcode: 2511 WB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (070) 375 42 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.huurcommissie.nl/
+    label: algemeen
+  - url: https://www.rijksoverheid.nl/contact/informatie-rijksoverheid/e-mail-sturen
+    label: contact
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212619/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212619/huurcommissie
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -25,3 +132,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000187
   retrieved: '2026-05-09'
+roo_start_datum: '2010-04-01'

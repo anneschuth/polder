@@ -5,23 +5,121 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0719
   oin: 00000003573549440000
   kvk: '57354944'
+  owms: http://standaarden.overheid.nl/owms/terms/weils
+  btw: NL852544741B01
+  loonheffing: 852544741L01
+  organisatiecode: so0719
+  rsin: '852544741'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Werk en Inkomen Lekstroom
+  roo_id: '29515976'
 names:
 - value: Werk en Inkomen Lekstroom
   abbr: WIL
   valid_from: '1900-01-01'
+description:
+  text: Werk en Inkomen Lekstroom (WIL) helpt inwoners van de Lekstroomgemeenten Houten,
+    IJsselstein, Lopik en Nieuwegein en onze klanten gericht vooruit op het gebied
+    van werk, inkomen en schulden. Ons doel is dat mensen weer mee kunnen doen en
+    perspectief hebben.Wat doet WIL?WIL verstrekt bijstandsuitkeringen aan mensen
+    die het écht nodig hebben en begeleidt hen naar werk, betaald of onbetaald. Daarnaast
+    biedt WIL hulp bij schulden en financiële ondersteuning aan mensen met een laag
+    inkomen.
+  url: https://www.wil-lekstroom.nl/over-wil/ons-doel
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wil-lekstroom.nl/over-wil/regelgeving-en-verordeningen/overheidsinformatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28123461/Werk_en_Inkomen_Lekstroom
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.wil-lekstroom.nl/over-wil/bestuur/stukken-algemeen-bestuur
+      toelichting: Vergaderstukken van het algemeen bestuur
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werk+en+Inkomen+Lekstroom%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Verordeningen e.d. van WIL
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.wil-lekstroom.nl/WOO-verzoeken
+      toelichting: Woo-verzoeken en -besluiten en de opgevraagde documenten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Werk+en+Inkomen+Lekstroom%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Plannen, regelingen en beleidsregels van WIL
+  wooVerzoek:
+    url: https://www.wil-lekstroom.nl/over-wil/regelgeving-en-verordeningen/overheidsinformatie-opvragen-woo-verzoek
+organogram_url: https://www.wil-lekstroom.nl/sites/default/files/documents/Organogram%20WIL.pdf
+afspraak:
+  telefoonnummer: (030) 702 23 00
+  url: https://www.wil-lekstroom.nl/contact-wil
 contact:
   website: https://www.wil-lekstroom.nl
   email: info@wil-lekstroom.nl
+  bezoekadres: Stadsplein 1 b, 3431 LZ Nieuwegein
+  postadres: Postbus 2708, 3430 GC Nieuwegein
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stadshuis
+    openbare_ruimte: Stadsplein
+    huisnummer: '1'
+    huisnummer_toevoeging: b
+    postcode: 3431 LZ
+    woonplaats: Nieuwegein
+    regio: UT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Postadres
+    postbus: '2708'
+    postcode: 3430 GC
+    woonplaats: Nieuwegein
+  - type: Woo-Adres
+    openbare_ruimte: Stadsplein
+    huisnummer: '1'
+    huisnummer_toevoeging: b 3e verdieping
+    postcode: 3431 LZ
+    woonplaats: Nieuwegein
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (030) 702 23 00
+    label: algemeen
+  emails:
+  - email: info@wil-lekstroom.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wil-lekstroom.nl
+    label: algemeen
+  - url: https://open.wil-lekstroom.nl
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Werk en Inkomen Lekstroom
+    url: https://www.linkedin.com/company/werk-en-inkomen-lekstroom/posts/?feedView=all
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28123461/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28123461/wil
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-01-01'

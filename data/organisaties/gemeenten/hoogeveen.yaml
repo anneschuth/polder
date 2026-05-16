@@ -6,21 +6,170 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0118
   roo_id: '37770'
   wikidata: Q208012
+  owms: http://standaarden.overheid.nl/owms/terms/Hoogeveen_(gemeente)
+  ictu: 00118
+  organisatiecode: gm0118
+  rsin: 001268193
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HOV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Hoogeveen
   abbr: Hoogeveen
   valid_from: '1900-01-01'
+description:
+  url: https://www.werkenbijdeswo.nl/over-de-swo/organisatiestructuur
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hoogeveen.nl/raad-en-college/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/37770/Gemeente_Hoogeveen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogeveen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogeveen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.hoogeveen.nl/raad-en-college/woo-besluiten
+      toelichting: Hier vindt u de Woo-verzoeken en -besluiten van Hoogeveen
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://hoogeveen.raadsinformatie.nl/modules/1/ingekomen_stukken/view
+      toelichting: Hier vindt u de ingekomen stukken van de gemeenteraad van Hoogeveen
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hoogeveen.raadsinformatie.nl/dashboard
+      toelichting: Hier vindt u de raadsstukken van gemeente Hoogeveen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.hoogeveen.nl/organisatie/begroting-en-jaarstukken/
+      toelichting: Hier vindt u de begroting  van gemeente Hoogeveen.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.hoogeveen.nl/raad-en-college/college-van-bw/collegebesluiten/
+      toelichting: Hier vindt u de collegebesluiten van het college van B&W van de
+        gemeente Hoogeveen. De agenda's volgen binnenkort.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hoogeveen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://openformulieren.hoogeveen.nl/woo-verzoek-indienen/startpagina
+organogram_url: https://www.werkenbijdeswo.nl/over-de-swo/organisatiestructuur
+afspraak:
+  telefoonnummer: 14 0528
+  url: https://www.hoogeveen.nl/afspraak-maken
+geography:
+  oppervlakte: 129,25
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 129.25
+  aantal_inwoners: 56781
+  inwoners: '439'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 439.0
+  bevat_plaatsen_raw: Alteveer Gem Hoogeveen, Elim, Fluitenberg, Hollandscheveld,
+    Hoogeveen, Nieuweroord, Nieuwlande, Noordscheschut, Pesse, Stuifzand, Tiendeveen
+  bevat_plaatsen:
+  - Alteveer Gem Hoogeveen
+  - Elim
+  - Fluitenberg
+  - Hollandscheveld
+  - Hoogeveen
+  - Nieuweroord
+  - Nieuwlande
+  - Noordscheschut
+  - Pesse
+  - Stuifzand
+  - Tiendeveen
+council:
+  total_seats: 31
+  parties:
+  - naam: Gemeentebelangen (GB)
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: Echt Hoogeveen
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.hoogeveen.nl
   email: info@hoogeveen.nl
+  bezoekadres: Raadhuisplein 1, 7901 BP HOOGEVEEN
+  postadres: Postbus 20000, 7900 PA HOOGEVEEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7901 BP
+    woonplaats: HOOGEVEEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '20000'
+    postcode: 7900 PA
+    woonplaats: HOOGEVEEN
+  - type: Woo-Adres
+    postbus: '20000'
+    postcode: 7900 PA
+    woonplaats: Hoogeveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7901 BP
+    woonplaats: HOOGEVEEN
+  phones:
+  - nummer: 14 0528
+    label: algemeen
+  emails:
+  - email: info@hoogeveen.nl
+    label: algemeen
+  - email: info@hoogeveen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.hoogeveen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.hoogeveen.nl/afspraak-maken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37770/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37770/hoogeveen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -6,21 +6,147 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1729
   roo_id: '34134'
   wikidata: Q9767
+  owms: http://standaarden.overheid.nl/owms/terms/Gulpen-Wittem
+  ictu: 01729
+  organisatiecode: gm1729
+  rsin: '807385177'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_GUW
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Gulpen-Wittem
   abbr: Gulpen-Wittem
   valid_from: '1900-01-01'
+description:
+  url: https://www.gulpen-wittem.nl/bestuur/hoe-werkt-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gulpen-wittem.nl/bestuur/regelgeving-en-publicaties/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/34134/Gemeente_Gulpen-Wittem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gulpenwittem.bestuurlijkeinformatie.nl/Reports/Details/4045f1fe-069b-4b66-8581-b94f9e898fe1
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://gulpenwittem.bestuurlijkeinformatie.nl/Reports
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gulpen-Wittem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gulpen-Wittem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://gulpenwittem.bestuurlijkeinformatie.nl/Reports/Details/4ba0ede0-ac25-4556-a9f7-6bd54dd7be18
+    - informatiecategorie: Klachtoordelen
+      url: https://www.gulpen-wittem.nl/onderwerpen/klachten-bezwaar-en-beroep/jaaroverzichten-klachten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://gulpenwittem.bestuurlijkeinformatie.nl/Reports/Details/11aa9837-e3a2-4845-8e09-8c7f301c8510
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gulpen-Wittem%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.gulpen-wittem.nl/bestuur/regelgeving-en-publicaties/woo-verzoek
+afspraak:
+  email: info@gulpen-wittem.nl
+  telefoonnummer: 14 043
+  url: https://www.gulpen-wittem.nl/afspraak/
+geography:
+  oppervlakte: 73,15
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 73.15
+  aantal_inwoners: 13945
+  inwoners: '190'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 190.0
+  bevat_plaatsen_raw: Beutenaken, Elkenrade, Epen, Eys, Gulpen, Heijenrath, Ingber,
+    Mechelen, Reijmerstok, Slenaken, Wijlre, Wittem
+  bevat_plaatsen:
+  - Beutenaken
+  - Elkenrade
+  - Epen
+  - Eys
+  - Gulpen
+  - Heijenrath
+  - Ingber
+  - Mechelen
+  - Reijmerstok
+  - Slenaken
+  - Wijlre
+  - Wittem
+council:
+  total_seats: 15
+  parties:
+  - naam: PRO Gulpen-Wittem
+    aantal_zetels: 4
+  - naam: DOE'22
+    aantal_zetels: 3
+  - naam: Fractie Franssen
+    aantal_zetels: 3
+  - naam: GWL, Gulpen-Wittem Lokaal
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: https://www.gulpen-wittem.nl
   email: info@gulpen-wittem.nl
+  bezoekadres: Willem Vliegenstraat 12, 6271 DA GULPEN
+  postadres: Postbus 56, 6270 AB GULPEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willem Vliegenstraat
+    huisnummer: '12'
+    postcode: 6271 DA
+    woonplaats: GULPEN
+  - type: Postadres
+    postbus: '56'
+    postcode: 6270 AB
+    woonplaats: GULPEN
+  - type: Woo-Adres
+    postbus: '56'
+    postcode: 6270 AB
+    woonplaats: Gulpen
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Willem Vliegenstraat
+    huisnummer: '12'
+    postcode: 6271 DA
+    woonplaats: GULPEN
+  phones:
+  - nummer: 14 043
+    label: algemeen
+  emails:
+  - email: info@gulpen-wittem.nl
+    label: algemeen
+  - email: info@gulpen-wittem.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.gulpen-wittem.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/34134/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/34134/gemeente-gulpen-wittem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +155,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9767
   retrieved: '2026-05-09'
+roo_start_datum: '1999-01-01'

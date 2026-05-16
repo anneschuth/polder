@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '29342'
   wikidata: Q850722
+  owms: http://standaarden.overheid.nl/owms/terms/Het_Bildt
+  ictu: '00063'
+  organisatiecode: gm0063
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,71 @@ names:
   abbr: Het Bildt
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 116,51
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 116.51
+  aantal_inwoners: 10963
+  inwoners: '94'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 94.0
+  bevat_plaatsen_raw: Minnertsga, Nij Altoenae, Oudebildtzijl, St.-Annaparochie, St.-Jacobiparochie,
+    Vrouwenparochie, Westhoek
+  bevat_plaatsen:
+  - Minnertsga
+  - Nij Altoenae
+  - Oudebildtzijl
+  - St.-Annaparochie
+  - St.-Jacobiparochie
+  - Vrouwenparochie
+  - Westhoek
+council:
+  total_seats: 15
+  parties:
+  - naam: Frije Bilkerts
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: Werkgroep het Bildt
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
 contact:
   website: www.hetbildt.nl
   email: info@hetbildt.nl
+  bezoekadres: Van Harenstraat 47, 9076 BT ST.-ANNAPAROCHIE
+  postadres: Postbus 34, 9076 ZN ST.-ANNAPAROCHIE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Van Harenstraat
+    huisnummer: '47'
+    postcode: 9076 BT
+    woonplaats: ST.-ANNAPAROCHIE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 34
+    postbus: '34'
+    postcode: 9076 ZN
+    woonplaats: ST.-ANNAPAROCHIE
+  phones:
+  - nummer: (0518) 40 92 34
+    label: algemeen
+  emails:
+  - email: info@hetbildt.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.hetbildt.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-16'
+last_verified: '2018-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29342/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29342/het-bildt
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q850722
   retrieved: '2026-05-09'

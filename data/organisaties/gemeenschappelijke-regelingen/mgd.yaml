@@ -5,24 +5,127 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0853
   oin: 00000001855652378000
   kvk: '64401588'
+  owms: http://standaarden.overheid.nl/owms/terms/mgemdb
+  btw: NL855652378B01
+  organisatiecode: so0853
+  rsin: '855652378'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling samenwerkingsorganisatie Boxtel – Sint-Michielsgestel
+  roo_id: '29575099'
 names:
 - value: MijnGemeenteDichtbij
   abbr: MGD
   valid_from: '1900-01-01'
-  valid_until: '2027-10-03'
+description:
+  text: MijnGemeenteDichtbij is gevormd door twee zelfstandige gemeenten, Boxtel en
+    Sint-Michielsgestel. zij hebben een eigen gemeenteraad en college van B&W. Deze
+    worden ondersteund door één personele organisatie, waar ongeveer 470 collega’s
+    werkzaam in zijn. Deze samenwerking noemen we een Gemeenschappelijke Regeling
+    (samenwerkingsorganisatie Boxtel – Sint-Michielsgestel).
+  url: https://open.mijngemeentedichtbij.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.mijngemeentedichtbij.nl/openbare-informatie#:~:text=Wil%20je%20de%20informatie%20toch,vast%20in%20een%20Woo%2Dbesluit.
+      overzichtURL: https://organisaties.overheid.nl/woo/25178344/MijnGemeenteDichtbij
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.mijngemeentedichtbij.nl/woo-verzoeken
+      toelichting: Met een Woo-verzoek vraagt iemand om overheidsinformatie openbaar
+        te maken. Iedereen kan een Woo-verzoek indienen. Bekijk op deze pagina een
+        overzicht van lopende en afgehandelde Woo-verzoeken.
+    - informatiecategorie: Klachtoordelen
+      url: https://open.mijngemeentedichtbij.nl/openbare-informatie/klachten
+      toelichting: MGD maakt klachten jaarlijks geanonimiseerd openbaar. In het derde
+        kwartaal van 2023 volgt hier een overzicht van de klachten die in 2022 zijn
+        ingediend en door ons zijn beoordeeld.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22MijnGemeenteDichtbij%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22MijnGemeenteDichtbij%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.mijngemeentedichtbij.nl/openbare-informatie/financiele-stukken
+      toelichting: Gedurende het jaar zijn er verschillende momenten waarop de directie
+        inzicht geeft in de financiële situatie van de organisatie. Bekijk bijvoorbeeld
+        onze begroting en kadernota waarin we uitleggen waar we geld aan uitgeven.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.mijngemeentedichtbij.nl/openbare-informatie/openbare-besluiten-bestuur-mgd
+      toelichting: Het Algemeen Bestuur vergadert gemiddeld vier keer per jaar. Na
+        afloop publiceert de directiesecretaris hier de vastgestelde openbare besluitenlijsten.
+  wooVerzoek:
+    url: https://open.mijngemeentedichtbij.nl/woo-verzoeken
+organogram_url: https://open.mijngemeentedichtbij.nl/organogram-mijngemeentedichtbij
+afspraak:
+  email: info@mijngemeentedichtbij.nl
+  telefoonnummer: (0411) 65 59 11
+  url: https://www.boxtel.nl/contact
 contact:
   website: https://open.mijngemeentedichtbij.nl/
   email: info@mijngemeentedichtbij.nl
+  bezoekadres: Markt 1, 5281 AT Boxtel
+  postadres: Postbus 10000, 5280 DA Boxtel
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Boxtel
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 5281 AT
+    woonplaats: Boxtel
+    regio: Noord-Brabant
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Postadres
+    postbus: '10000'
+    postcode: 5280 DA
+    woonplaats: Boxtel
+    regio: Noord-Brabant
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Gemeentehuis Boxtel
+    postbus: '10000'
+    postcode: 5280 DA
+    woonplaats: Boxtel
+    land: Nederland
+  phones:
+  - nummer: (0411) 65 59 11
+    label: Boxtel
+  - nummer: (073) 553 11 11
+    label: Sint-Michielsgestel
+  emails:
+  - email: info@mijngemeentedichtbij.nl
+    label: Algemeen
+  internet_addresses:
+  - url: https://open.mijngemeentedichtbij.nl/
+    label: Algemeen
+  contact_forms:
+  - url: https://open.mijngemeentedichtbij.nl/contactformulier
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2027-10-03'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25178344/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25178344/mgd
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-07-01'

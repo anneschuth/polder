@@ -3,17 +3,65 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '98010'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:min-jenv
 names:
 - value: Nationaal Coördinator Terrorismebestrijding en Veiligheid
   abbr: NCTV
   valid_from: '1900-01-01'
+description:
+  text: De Nationaal Coördinator Terrorismebestrijding en Veiligheid (NCTV) beschermt
+    Nederland tegen bedreigingen die de maatschappij kunnen ontwrichten. Samen met
+    zijn partners binnen overheid, wetenschap en bedrijfsleven zorgt de NCTV ervoor
+    dat de Nederlandse vitale infrastructuur veilig is én blijft.De NCTV is binnen
+    de Rijksoverheid verantwoordelijk voor terrorismebestrijding, cyber security,
+    nationale veiligheid, crisisbeheersing en statelijke dreigingen. Samen met zijn
+    partners uit het veiligheidsdomein maakt de NCTV zich sterk voor een veilig en
+    stabiel Nederland. De focus ligt op het voorkomen en beperken van maatschappelijke
+    ontwrichting.Hoofdopdrachten:* Nederland digitaal veilig maken* Aanslagen voorkomen
+    en extremisme en terrorisme bestrijden* Nederland weerbaar maken tegen dreigingen
+    door statelijke actorenTaken:* Het identificeren en duiden van dreigingen en risico’s*
+    Het bewaken en beveiligen van personen, objecten, diensten en evenementen* Het
+    (doen) verhogen van cybersecurity* Het (doen) verhogen van de weerbaarheid van
+    vitale sectoren, burgers, bedrijven, structuren en netwerken* Het realiseren van
+    optimale crisisbeheersing en crisiscommunicatieDe NCTV en zijn medewerkers vallen
+    onder de verantwoordelijkheid van de minister van Justitie en Veiligheid. Organisatorisch
+    en beheersmatig is de organisatie van de NCTV ondergebracht bij het ministerie
+    van Justitie en Veiligheid, op vergelijkbare wijze als een directoraat-generaal.
+organogram_url: https://www.nctv.nl/organisatie/organisatie-indeling
 contact:
   website: https://www.nctv.nl
   email: communicatie@nctv.minjenv.nl
+  bezoekadres: Turfmarkt 147, 2511 DP Den Haag
+  postadres: Postbus 16950, 2500 BZ Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Ministerie van Justitie en Veiligheid
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16950'
+    postcode: 2500 BZ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 751 50 50
+    label: algemeen
+  emails:
+  - email: communicatie@nctv.minjenv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nctv.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.nctv.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-10'
+last_verified: '2025-12-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98010/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98010/nctv
+  retrieved: '2026-05-16'

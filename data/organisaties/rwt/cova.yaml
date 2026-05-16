@@ -1,24 +1,88 @@
 id: org:stichting-cova
 type: rwt
+subname: COVA
 identifiers:
   roo_id: '27910935'
+  kvk: '24134320'
+  btw: NL004586372B01
+  loonheffing: 004586372L01
+  rsin: 004586372
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Klimaat en Groene Groei
+  roo_id: '29481996'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
+  owms: http://standaarden.overheid.nl/owms/terms/minklgrgr
 names:
 - value: Stichting Centraal Orgaan Voorraadvorming Aardolieproducten
   abbr: COVA
   valid_from: '1900-01-01'
+description:
+  text: De Stichting Centraal Orgaan Voorraadvorming Aardolieproducten (COVA) is een
+    Rechtspersoon met een Wettelijke Taak. COVA is de centrale, onafhankelijke, organisatie
+    die in opdracht van de minister van Klimaat en Groene Groei, strategische olievoorraden
+    voor Nederland aanhoudt. De verplichte olievoorraad bestaat voor maximaal 2/3
+    uit ruwe aardolie en minimaal 1/3 uit geraffineerd product. De product voorraad
+    bestaat uit benzine, diesel en kerosine met een onderlinge verdeling naar rato
+    van het binnenlands gebruik.
+  url: https://cova.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/27910935/Stichting_Centraal_Orgaan_Voorraadvorming_Aardolieproducten
+organogram_url: https://cova.nl/over-cova/#organisatie
 contact:
   website: https://cova.nl
   email: cova@cova.nl
+  bezoekadres: Boompjes 40, 3011 XB Rotterdam
+  postadres: Boompjes 40, 3011 XB Rotterdam
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gebouw Willemswerf 14e Etage
+    openbare_ruimte: Boompjes 40
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Boompjes 40
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+  - type: Woo-Adres
+    toelichting: Gebouw Willemswerf 14e etage
+    openbare_ruimte: Boompjes
+    huisnummer: '40'
+    postcode: 3011 XB
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (010) 413 47 40
+    label: algemeen
+  emails:
+  - email: cova@cova.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://cova.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-09'
+last_verified: '2026-01-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27910935/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27910935/cova
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
   fields:
   - rwt-status
+roo_start_datum: '1978-09-07'

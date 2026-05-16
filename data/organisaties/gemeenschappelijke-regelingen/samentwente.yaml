@@ -5,22 +5,95 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0005
   oin: 00000001804302285000
   kvk: 08195873
+  owms: http://standaarden.overheid.nl/owms/terms/Regio_Twente
+  organisatiecode: so0005
+  rsin: '804302285'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling SamenTwente
+  roo_id: '29516186'
 names:
 - value: SamenTwente
   valid_from: '1900-01-01'
+description:
+  url: https://samentwente.nl/samentwente/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://samentwente.nl/footer/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/28460136/SamenTwente
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22SamenTwente%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22SamenTwente%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://samentwente.nl/footer/woo/
+organogram_url: https://samentwente.nl/samentwente/organogrammen/
+afspraak:
+  url: https://samentwente.nl/contact/
 contact:
   website: https://samentwente.nl/
   email: info@samentwente.nl
+  bezoekadres: Nijverheidstraat 30, 7511 JM Enschede
+  postadres: Postbus 1400, 7500 BK Enschede
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nijverheidstraat
+    huisnummer: '30'
+    postcode: 7511 JM
+    woonplaats: Enschede
+  - type: Postadres
+    postbus: '1400'
+    postcode: 7500 BK
+    woonplaats: Enschede
+  - type: Woo-Adres
+    openbare_ruimte: Nijverheidstraat
+    huisnummer: '30'
+    postcode: 7511 JM
+    woonplaats: Enschede
+  - type: Woo-Adres
+    openbare_ruimte: Nijverheidstraat
+    huisnummer: '30'
+    postcode: 7511 JM
+    woonplaats: Enschede
+  phones:
+  - nummer: (053) 487 65 43
+    label: algemeen
+  emails:
+  - email: info@samentwente.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://samentwente.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://samentwente.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28460136/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28460136/samentwente
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1995-05-01'

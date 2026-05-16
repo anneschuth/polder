@@ -3,18 +3,71 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30209825'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1103
+  owms: http://standaarden.overheid.nl/owms/terms/nova
+  kvk: '97682918'
+  organisatiecode: so1103
+  rsin: '827988643'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Noord-Veluws Archief
+  roo_id: '30209831'
 names:
 - value: Noord-Veluws Archief
   abbr: NoVA
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://noordveluwsarchief.nl/
   email: info@noordveluwsarchief.nl
+  bezoekadres: Zuiderzeestraatweg Oost 19, 8081 LA Elburg
+  postadres: Postbus 70, 8080 AB Elburg
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Elburg
+    openbare_ruimte: Zuiderzeestraatweg Oost
+    huisnummer: '19'
+    postcode: 8081 LA
+    woonplaats: Elburg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '70'
+    postcode: 8080 AB
+    woonplaats: Elburg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  phones:
+  - nummer: (0525) 68 87 17
+    label: algemeen
+  emails:
+  - email: info@noordveluwsarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://noordveluwsarchief.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://noordveluwsarchief.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: noordveluwsarchief
+    url: https://facebook.com/noordveluwsarchief
+  - platform: Instagram
+    gebruikersnaam: noordveluwsarchiefnova
+    url: https://instagram.com/noordveluwsarchiefnova
+  - platform: LinkedIn
+    gebruikersnaam: noordveluwsarchief
+    url: https://www.linkedin.com/company/noordveluwsarchief/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-15'
+last_verified: '2026-02-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30209825/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30209825/nova
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-07-01'

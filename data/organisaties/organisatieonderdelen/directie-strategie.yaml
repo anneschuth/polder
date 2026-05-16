@@ -3,14 +3,31 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '12383'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-deia
+parent_id: org:onderdeel-sg-cluster
 names:
 - value: Directie Strategie
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
+description:
+  text: "TAAK-\tTijdig signaleren van achterliggende en toekomstgerichte vragen\\\
+    ;-\tOntwikkelen van basisconcepten ten behoeve van beleid  en besturing."
+contact:
+  postadres: Postbus 20301, 2500 EH Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20301'
+    postcode: 2500 EH
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 370 72 11
+    label: algemeen
+  fax: (070) 370 79 05
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-12-03'
+last_verified: '2018-12-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/12383/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/12383/directie-strategie
+  retrieved: '2026-05-16'

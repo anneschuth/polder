@@ -3,17 +3,85 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964810'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0836
+  owms: http://standaarden.overheid.nl/owms/terms/heeschwest
+  kvk: '61765481'
+  btw: NL854478723B01
+  organisatiecode: so0836
+  rsin: '854478723'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Heesch West
+  roo_id: '30127526'
 names:
 - value: Heesch West
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://heeschwest.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/24964810/Heesch_West
+  wooVerzoek:
+    url: https://heeschwest.nl/contact/
+organogram_url: https://heeschwest.nl/contact/
+afspraak:
+  email: info@heeschwest.nl
 contact:
   website: https://heeschwest.nl
   email: info@heeschwest.nl
+  bezoekadres: Wolvenhoek 1, 5211 HH 's-Hertogenbosch
+  postadres: Postbus 5, 5340 BA Oss
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wolvenhoek
+    huisnummer: '1'
+    postcode: 5211 HH
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '5'
+    postcode: 5340 BA
+    woonplaats: Oss
+  - type: Postadres
+    postbus: '5'
+    postcode: 5340 BA
+    woonplaats: Oss
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  phones:
+  - nummer: 06 25 77 16 50
+    label: Projectcoördinator GR HW
+  - nummer: 06 21 14 39 96
+    label: Secretariaat afd. E & E
+  emails:
+  - email: info@heeschwest.nl
+    label: algemeen
+  - email: j.beijer@s-hertogenbosch.nl
+    label: Projectcoördinator GR HW
+  internet_addresses:
+  - url: https://heeschwest.nl
+    label: algemeen
+  contact_forms:
+  - url: https://heeschwest.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2026-04-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964810/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964810/heesch-west
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-06-14'

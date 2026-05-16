@@ -5,22 +5,99 @@ identifiers:
   kvk: '54700655'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10006
   roo_id: '28582677'
+  owms: http://standaarden.overheid.nl/owms/terms/Inspectie_Leefomgeving_en_Transport
+  organisatiecode: oorg10006
+  rsin: '851407742'
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Inspectie Leefomgeving en Transport
   abbr: ILT
   valid_from: '1900-01-01'
+description:
+  text: De Inspectie Leefomgeving en Transport (ILT) is de toezichthouder van het
+    ministerie van Infrastructuur en Waterstaat. Met 1.600 medewerkers werkt de ILT
+    dagelijks aan veiligheid, vertrouwen en duurzaamheid in transport, infrastructuur,
+    milieu en wonen.
+  url: https://www.ilent.nl/over-ilt
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ilent.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/28582677/Inspectie_Leefomgeving_en_Transport
+  wooVerzoek:
+    url: https://www.ilent.nl/contact
+organogram_url: https://www.ilent.nl/documenten/organisatie/over-de-ilt/het-werk-van-de-ilt/publicaties/organogram
+afspraak:
+  telefoonnummer: (088) 489 00 00
+  url: https://www.ilent.nl/contact
 contact:
   website: https://www.ilent.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 16191, 2500 BD Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Centrale vestiging
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16191'
+    postcode: 2500 BD
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '16191'
+    postcode: 2500 BD
+    woonplaats: Den Haag
+    regio: Zuid-Holland
+    land: Nederland
+  phones:
+  - nummer: (088) 489 00 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ilent.nl
+    label: algemeen
+  - url: https://www.ilent.nl/contact
+    label: contactformulier
+  - url: http://www.luchtvaartautoriteit.nl
+    label: ILT-Luchtvaartautoriteit
+  contact_forms:
+  - url: https://www.ilent.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: '@inspectielent'
+    url: https://x.com/InspectieLenT
+  - platform: Instagram
+    gebruikersnaam: ILT in beeld
+    url: https://www.instagram.com/ilt_in_beeld/
+  - platform: LinkedIn
+    gebruikersnaam: Inspectie Leefomgeving en Transport
+    url: http://www.linkedin.com/company/inspectie-leefomgeving-en-transport
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-06-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28582677/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28582677/ilt
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-01-01'

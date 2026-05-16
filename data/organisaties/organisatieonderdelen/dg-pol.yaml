@@ -3,17 +3,31 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111126'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:min-jenv
 names:
 - value: Directoraat-Generaal Politie en Veiligheidregio's (DGPenV)
   abbr: DG POL
   valid_from: '1900-01-01'
+description:
+  text: 'In het DG Politie staat de verantwoordelijkheid centraal van de minister
+    van Veiligheid en Justitie voor het functioneren van de politieorganisatie en
+    het leveren van politiezorg. Doel is om de kwaliteit en het presterend vermogen
+    van de politieorganisatie te verhogen waardoor Nederland veiliger wordt.Per 1
+    juli 2012 bestaat DG Politie uit drie directies / portefeuilles:Portefeuille Bedrijfsvoering
+    Politie: mr. A.F. Gaastra (directeur), tel: 070 – 426 74 97Portefeuille Regie
+    en Control: vacaturePortefeuille Politieel beleid en Taakuitvoering: mr. M.N.
+    Cramwinckel (directeur), tel: 070 – 426 69 95'
 contact:
   website: https://www.politie.nl/
   email: gieta.jethu@dgv.minvenj.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-09-16'
+last_verified: '2019-11-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111126/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111126/dg-pol
+  retrieved: '2026-05-16'

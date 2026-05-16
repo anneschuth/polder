@@ -6,21 +6,116 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0661
   roo_id: '94242'
   wikidata: Q2422832
+  owms: http://standaarden.overheid.nl/owms/terms/Waterschap_Scheldestromen
+  ictu: 04861
+  rsin: '850108275'
 classification: waterschap
 parent_id: null
 names:
 - value: Scheldestromen
   valid_from: '1900-01-01'
-  valid_until: '2040-10-17'
+description:
+  text: Zie organogram.
+  url: https://scheldestromen.nl/over-ons/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://scheldestromen.nl/loket/open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/94242/Scheldestromen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://scheldestromen.begrotingsapp.nl/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Scheldestromen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Scheldestromen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Scheldestromen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://scheldestromen.waterschapsinformatie.nl/
+      toelichting: Vergaderstukken AV
+  wooVerzoek:
+    url: https://scheldestromen.nl/loket/open-overheid
+organogram_url: https://scheldestromen.nl/over-ons/organogram
+afspraak:
+  email: info@scheldestromen.nl
+  telefoonnummer: (088) 246 10 00
+  url: https://scheldestromen.nl/contact
 contact:
   website: https://scheldestromen.nl
   email: info@scheldestromen.nl
+  bezoekadres: Kanaalweg 1, 4337 PA Middelburg
+  postadres: Postbus 1000, 4330 ZW Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kanaalweg
+    huisnummer: '1'
+    postcode: 4337 PA
+    woonplaats: Middelburg
+  - type: Postadres
+    postbus: '1000'
+    postcode: 4330 ZW
+    woonplaats: Middelburg
+  - type: Woo-Adres
+    postbus: '1000'
+    postcode: 4330 ZW
+    woonplaats: Middelburg
+    land: Nederland
+  - type: Postadres Omgevingsloket
+    postbus: '1000'
+    postcode: 4330 ZW
+    woonplaats: Middelburg
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Kanaalweg
+    huisnummer: '1'
+    postcode: 4337 PA
+    woonplaats: MIDDELBURG
+  phones:
+  - nummer: (088) 246 10 00
+    label: algemeen
+  emails:
+  - email: info@scheldestromen.nl
+    label: algemeen
+  - email: vergunning@scheldestromen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://scheldestromen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://scheldestromen.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2040-10-17'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:ws-zeeuws-vlaanderen
+- org:ws-zeeuwse-eilanden
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94242/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94242/scheldestromen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -32,6 +127,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0661
   retrieved: '2026-05-09'
-predecessor_id:
-- org:ws-zeeuws-vlaanderen
-- org:ws-zeeuwse-eilanden
+roo_start_datum: '2011-01-01'

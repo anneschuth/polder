@@ -5,23 +5,141 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0828
   oin: 00000001853051549000
   kvk: '58465316'
+  owms: http://standaarden.overheid.nl/owms/terms/BAR-organisatie
+  btw: NL853051549B01
+  loonheffing: 853051549L01
+  organisatiecode: so0828
+  rsin: '853051549'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling De Bedrijfsvoeringspartner
+  roo_id: '29492016'
 names:
 - value: De Bedrijfsvoeringspartner
   abbr: DBP
   valid_from: '1900-01-01'
+description:
+  text: De BedrijfsvoeringsPartner verzorgt alle taken van gemeentelijke bedrijfsvoering.
+    Van financiën tot HRM, van juridische advisering tot administraties, van automatisering
+    en informatiebeheer tot inkoopadvies. Het bestuur is bestuurlijk verantwoordelijk
+    als werkgever. Het bestuur richt zich op goed werkgeverschap en goede dienstverlening
+    aan de deelnemende gemeenten. Vanuit elke deelnemende gemeente is een wethouder
+    vertegenwoordigd in het bestuur. De dagelijkse leiding van De BedrijfsvoeringsPartner
+    ligt bij de directeur die tevens secretaris is van het bestuur. De organisatie
+    is onderverdeeld in 2 clusters; Mens & Faciliteiten en Informatisering & Automatisering.
+    Ieder cluster heeft een eigen concernmanager en meerdere teams. Elk cluster en
+    team heeft in principe zijn eigen focus en specialiteit, maar er wordt gewerkt
+    vanuit het idee dat samenwerking over de grenzen van teams, clusters en de organisatie
+    heen is een ‘must’ voor een optimaal eindresultaat.Het cluster Mens & Faciliteiten
+    biedt dienstverlening voor de mens – zowel in- als extern – en voor de faciliteiten
+    om het werk te kunnen doen. Dit cluster bestaat uit 8 teams; HR-services & Advies,
+    HR-specialisten & Communicatie, Facilitair advies & Managementondersteuning, Facility
+    services, Zorgadministratie, Uitkeringsadministratie, Financiële administratie
+    en Juridische dienstverlening.Het cluster Informatisering & Automatisering biedt
+    dienstverlening omtrent informatisering en automatisering. Het cluster bestaat
+    uit 7 teams; Automatisering, Applicatiebeheer, Informatieadvies, Informatiediensten,
+    Informatiebeheer, Financieel advies en Inkoopadvies.
+  url: https://www.debedrijfsvoeringspartner.nl/de-bedrijfsvoeringspartner/organisatiestructuur/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ridderkerk.nl/direct-regelen/melding-klacht-en-bezwaar/gemeentelijke-organisatie/informatieverzoeken-en-woo-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/28467849/De_Bedrijfsvoeringspartner
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22BAR-organisatie%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22BAR-organisatie%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.debedrijfsvoeringspartner.nl/publicatie-categorie/jaarplannen-en-verslagen/
+      toelichting: Hier vindt u de jaarplannen en jaarverslagen van De BedrijfsvoeringsPartner.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ridderkerk.nl/publicaties/woo-verzoeken/
+      toelichting: DBP publiceert Woo-verzoeken, - besluiten en openbaar gemaakte
+        stukken op de websites van de deelnemende gemeenten.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.debedrijfsvoeringspartner.nl/publicatie-categorie/publicaties-bestuurlijke-stukken/
+      toelichting: Hier vindt u de vergaderstukken en verslagen van het bestuur van
+        De BedrijfsvoeringsPartner.
+  wooVerzoek:
+    url: https://www.ridderkerk.nl/direct-regelen/melding-klacht-en-bezwaar/gemeentelijke-organisatie/informatieverzoeken-en-woo-verzoeken/
+organogram_url: https://www.debedrijfsvoeringspartner.nl/de-bedrijfsvoeringspartner/organisatiestructuur/
+afspraak:
+  url: https://www.debedrijfsvoeringspartner.nl/contact/
 contact:
   website: https://www.debedrijfsvoeringspartner.nl/
   email: info@debedrijfsvoeringpartner.nl
+  bezoekadres: Koningsplein 1, 2981 EA Ridderkerk
+  postadres: Postbus 271, 2980 AG Ridderkerk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningsplein
+    huisnummer: '1'
+    postcode: 2981 EA
+    woonplaats: Ridderkerk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '271'
+    postcode: 2980 AG
+    woonplaats: Ridderkerk
+  - type: Bezoekadres
+    openbare_ruimte: Binnenhof
+    huisnummer: '1'
+    postcode: 2991 AA
+    woonplaats: Barendrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    postbus: '271'
+    postcode: 2980 AG
+    woonplaats: Ridderkerk
+  phones:
+  - nummer: (0180) 45 12 34
+    label: algemeen
+  emails:
+  - email: info@debedrijfsvoeringpartner.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.debedrijfsvoeringspartner.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.debedrijfsvoeringspartner.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: De BedrijfsvoeringsPartner
+    url: https://www.facebook.com/DeBedrijfsvoeringsPartner/
+  - platform: Instagram
+    gebruikersnaam: werkenbijdbp
+    url: https://www.instagram.com/werkenbijdbp/
+  - platform: LinkedIn
+    gebruikersnaam: De BedrijfsvoeringsPartner
+    url: https://www.linkedin.com/company/de-bedrijfsvoeringspartner/posts/?feedView=all
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28467849/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28467849/dbp
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2014-01-01'

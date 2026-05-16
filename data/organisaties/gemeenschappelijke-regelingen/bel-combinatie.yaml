@@ -1,26 +1,118 @@
 id: org:gr-bel-combinatie
 type: gemeenschappelijke-regeling
+subname: BEL gemeenten
 identifiers:
   roo_id: '28355164'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0756
   oin: 00000001818523918000
   kvk: '32170392'
+  owms: http://standaarden.overheid.nl/owms/terms/BEL_Combinatie
+  organisatiecode: so0756
+  rsin: '818523918'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling BEL Combinatie
+  roo_id: '30478770'
 names:
 - value: BEL Combinatie
   valid_from: '1900-01-01'
+description:
+  text: 'De BEL Combinatie levert alle producten en diensten voor de gemeenten Blaricum,
+    Eemnes en Laren.Blaricum, Eemnes en Laren (BEL) hebben op 1 januari 2008 hun gemeentelijke
+    organisaties samengevoegd tot een nieuwe werkorganisatie: de BEL Combinatie.De
+    BEL Combinatie verzorgt de dienstverlening en de totstandkoming en uitvoering
+    van het beleid voor de 3 gemeenten. De 3 zelfstandige gemeentebesturen waken ervoor
+    dat dat blijft afgestemd op wat in hun dorp nodig is.'
+  url: https://www.belcombinatie.nl/BEL_Combinatie/Organisatie/Organogram
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.belcombinatie.nl/Bestuur_BEL_Combinatie/BEL_bestuur/Wet_open_overheid_Woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28355164/BEL_Combinatie
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.belcombinatie.nl/Bestuur_BEL_Combinatie/Financiele_stukken/Jaarrekeningen_BEL
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22BEL+Combinatie%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22BEL+Combinatie%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://belcombinatie.nl/Bestuur_BEL_Combinatie/BEL_bestuur/Besluitenlijsten_agenda_en_stukken_AB
+      toelichting: 'financiële stukken zijn te vinden op: https://www.belcombinatie.nl/Bestuur_BEL_Combinatie'
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.belcombinatie.nl/Bestuur_BEL_Combinatie/BEL_bestuur/Besluitenlijsten_agenda_en_stukken_AB
+  wooVerzoek:
+    url: https://www.belcombinatie.nl/Bestuur_BEL_Combinatie/BEL_bestuur/Wet_open_overheid_Woo
+organogram_url: https://www.belcombinatie.nl/BEL_Combinatie/Organisatie/Organogram
+afspraak:
+  email: info@belcombinatie.nl
+  telefoonnummer: 14 035
+  url: https://afspraken.belcombinatie.nl/internetafspraken/
 contact:
   website: https://www.belcombinatie.nl
   email: info@belcombinatie.nl
+  bezoekadres: Zuidersingel 5, 3755 AZ Eemnes
+  postadres: Postbus 71, 3755 ZH Eemnes
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuidersingel
+    huisnummer: '5'
+    postcode: 3755 AZ
+    woonplaats: Eemnes
+  - type: Bezoekadres
+    openbare_ruimte: Zuidersingel
+    huisnummer: '5'
+    postcode: 3755 AZ
+    woonplaats: Eemnes
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: Fysieke post kunt u richten aan de BEL Combinatie via de aangegeven
+      postbus te Eemnes.
+    postbus: '71'
+    postcode: 3755 ZH
+  - type: Postadres
+    postbus: '71'
+    postcode: 3755 ZH
+    woonplaats: Eemnes
+  phones:
+  - nummer: 14 035
+    label: algemeen
+  emails:
+  - email: info@belcombinatie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.belcombinatie.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.belcombinatie.nl/Configuratie/Footer_nieuw/BEL_Combinatie
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-12-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355164/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355164/bel-combinatie
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2008-01-01'

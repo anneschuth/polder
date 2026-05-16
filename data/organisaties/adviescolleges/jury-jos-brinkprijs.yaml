@@ -4,16 +4,56 @@ identifiers:
   roo_id: '28357373'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10146
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Jury Jos Brinkprijs
   valid_from: '1900-01-01'
   valid_until: '2017-04-25'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit jury Jos Brink homo-emancipatieprijs, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0025130/2008-12-10#Artikel2
+classifications:
+- type: CAO
+  eind_datum: '2017-04-25'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2017-04-25'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2017-04-25'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.josbrinkprijs.nl/
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.josbrinkprijs.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-04-25'
+last_mutation: '2025-08-15'
+last_verified: '2025-08-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28357373/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28357373/jury-jos-brinkprijs
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-12-10'

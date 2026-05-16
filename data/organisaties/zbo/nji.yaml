@@ -3,21 +3,96 @@ type: zbo
 identifiers:
   roo_id: '29562353'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb100004
+  kvk: '30216128'
+  rsin: '816886969'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Nederlands Jeugdinstituut/NJi
   abbr: NJi
   valid_from: '1900-01-01'
+description:
+  text: Het Nederlands Jeugdinstituut (NJi) is een nationaal kenniscentrum dat zich
+    inzet om ieder kind een kansrijke jeugd te bieden. Om dat doel te bereiken, verzamelt
+    het NJi kennis over opgroeien en verrijkt, duidt en deelt het deze. Ook helpt
+    het NJi bij het toepassen van de verzamelde kennis en beheert het de uitvoering
+    van het deel van het Erasmusprogramma dat betrekking heeft op de jeugd, zoals
+    vastgelegd in het Uitvoeringsbesluit Uitvoeringswet Erasmusprogramma en programma
+    Europees Solidariteitskorps VWS.
+  url: https://www.nji.nl/over-het-nji
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Uitvoeringsbesluit Uitvoeringswet Erasmusprogramma en programma Europees
+    Solidariteitskorps VWS, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0045541/2021-08-31#Artikel2
+taken_en_bevoegdheden: Het Nederlands Jeugdinstituut (NJi) heeft de volgende taken:*
+  het verzamelen van actuele kennis over het opgroeien van kinderen;* het verrijken,
+  duiden en delen van deze kennis;* het onder de aandacht brengen van de verzamelde
+  kennis en het helpen bij de toepassing ervan;* het beheren van de uitvoering van
+  het Erasmusprogramma, waar dit betrekking heeft op de jeugd.
+personnel:
+  aantalFte: 132,0
+  peildatumFte: '2023-12-31'
 contact:
   website: https://www.nji.nl/
   email: info@nji.nl
+  bezoekadres: Churchilllaan 11, 3527 GV Utrecht
+  postadres: Postbus 19221, 3501 DE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Churchilllaan
+    huisnummer: '11'
+    postcode: 3527 GV
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '19221'
+    postcode: 3501 DE
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 230 63 44
+    label: algemeen
+  emails:
+  - email: info@nji.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nji.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nji.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Nederlands Jeugdinstituut
+    url: https://www.linkedin.com/company/nederlands-jeugdinstituut/
+  - platform: Facebook
+    gebruikersnaam: Nederlands Jeugdinstituut
+    url: https://www.facebook.com/NederlandsJeugdinstituut
+  - platform: Instagram
+    gebruikersnaam: '@het_nji'
+    url: https://www.instagram.com/het_nji/
+  - platform: X
+    gebruikersnaam: '@hetnji'
+    url: https://x.com/hetnji
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29562353/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29562353/nji
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb100004
   retrieved: '2026-05-09'
+roo_start_datum: '2007-01-01'

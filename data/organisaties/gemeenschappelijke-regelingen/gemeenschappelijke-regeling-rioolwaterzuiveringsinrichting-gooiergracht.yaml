@@ -3,17 +3,58 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27964969'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0798
+  owms: http://standaarden.overheid.nl/owms/terms/rwziggveem
+  kvk: '64397289'
+  organisatiecode: so0798
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gooiergracht en Vijzelgemaal Eemmeer
+  roo_id: '27964963'
 names:
 - value: Gemeenschappelijke regeling Rioolwaterzuiveringsinrichting Gooiergracht
   valid_from: '1900-01-01'
   valid_until: '2023-12-31'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2023-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2023-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: info@blaricum.nl
+  bezoekadres: Kerklaan 16, 1261 JB Blaricum
+  postadres: Postbus 71, 3755 ZH Eemnes
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Blaricum
+    openbare_ruimte: Kerklaan 16
+    postcode: 1261 JB
+    woonplaats: Blaricum
+  - type: Postadres
+    postbus: '71'
+    postcode: 3755 ZH
+    woonplaats: Eemnes
+  phones:
+  - nummer: 14 035
+    label: gemeente Blaricum
+  emails:
+  - email: info@blaricum.nl
+    label: gemeente Blaricum
 valid_from: '1900-01-01'
 valid_until: '2023-12-31'
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27964969/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27964969/gemeenschappelijke-regeling-rioolwaterzuiveringsinrichting-gooiergracht
+  retrieved: '2026-05-16'
+roo_start_datum: '1960-01-01'

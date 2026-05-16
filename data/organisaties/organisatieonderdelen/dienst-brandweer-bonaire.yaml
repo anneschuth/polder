@@ -9,9 +9,25 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: brandweer@bonairegov.com
+  bezoekadres: Flamingo Airport, Plaza Medardo S.V. Thielman 1, 0099 AA Bonaire
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Flamingo Airport, Plaza Medardo S.V. Thielman
+    huisnummer: '1'
+    postcode: 0099 AA
+    woonplaats: Bonaire
+  - type: Postadres
+  phones:
+  - nummer: 005997177729
+    label: algemeen
+  - nummer: '005997175600.228'
+  emails:
+  - email: brandweer@bonairegov.com
+    label: algemeen
+  fax: 005997176550
 valid_from: '1900-01-01'
 valid_until: null
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111918/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111918/dienst-brandweer-bonaire
+  retrieved: '2026-05-16'

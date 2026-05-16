@@ -6,21 +6,173 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1699
   roo_id: '25983'
   wikidata: Q835083
+  owms: http://standaarden.overheid.nl/owms/terms/Noordenveld
+  ictu: 01699
+  organisatiecode: gm1699
+  rsin: '806300619'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NOV
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Noordenveld
   abbr: Noordenveld
   valid_from: '1900-01-01'
+description:
+  url: https://www.noordenveld.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.noordenveld.nl/informatieverzoek-woo-verzoek#contact-2529
+      overzichtURL: https://organisaties.overheid.nl/woo/25983/Gemeente_Noordenveld
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.noordenveld.nl/begroting-en-jaarstukken
+      toelichting: Dit laat zien wat we het komende jaar doen, of wat we het afgelopen
+        jaar gedaan hebben, noemen we dit jaarstukken, de kadernota en voortgangsrapportages.
+        In de begroting kijken we financieel vooruit. In de jaarrekening kijken we
+        terug.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordenveld%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://noordenveld.bestuurlijkeinformatie.nl/Calendar
+      toelichting: Deze documenten bespreekt de gemeenteraad. Dat kan een brief van
+        een inwoner zijn. Of een voorstel van het college waarover de raad stemt.
+        Wil de raad een voorstel wijzigen, dan heet dat een amendement. Moties zijn
+        voorstellen vanuit de raad.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordenveld%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noordenveld%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://noordenveld.zaaksysteem.nl/zaak/create/webformulier?ztc_aanvrager_type=unknown&sessreset=1&aanvrager=betrokkene-natuurlijk_persoon-628&afronden=1&zaaktype_id=2613
+organogram_url: https://www.noordenveld.nl/organisatie
+afspraak:
+  email: postbus@noordenveld.nl
+  telefoonnummer: (088) 050 88 88
+  url: https://www.noordenveld.nl/contact-en-openingstijden
+geography:
+  oppervlakte: 205,36
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 205.36
+  aantal_inwoners: 31737
+  inwoners: '154'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 154.0
+  bevat_plaatsen_raw: Alteveer Gem Noordenveld, Een, Een-West, Foxwolde, Huis Ter
+    Heide DR, Langelo, Leutingewolde, Lieveren, Matsloot, Nietap, Nieuw-Roden, Norg,
+    Peest, Peize, Roden, Roderesch, Roderwolde, Steenbergen DR, Veenhuizen, Westervelde,
+    Zuidvelde
+  bevat_plaatsen:
+  - Alteveer Gem Noordenveld
+  - Een
+  - Een-West
+  - Foxwolde
+  - Huis Ter Heide DR
+  - Langelo
+  - Leutingewolde
+  - Lieveren
+  - Matsloot
+  - Nietap
+  - Nieuw-Roden
+  - Norg
+  - Peest
+  - Peize
+  - Roden
+  - Roderesch
+  - Roderwolde
+  - Steenbergen DR
+  - Veenhuizen
+  - Westervelde
+  - Zuidvelde
+council:
+  total_seats: 22
+  parties:
+  - naam: Gemeentebelangen
+    aantal_zetels: 9
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: Lijst Groen Noordenveld
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.noordenveld.nl
   email: postbus@noordenveld.nl
+  bezoekadres: Raadhuisstraat 1, 9301 AA RODEN
+  postadres: Postbus 109, 9300 AC RODEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 9301 AA
+    woonplaats: RODEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '109'
+    postcode: 9300 AC
+    woonplaats: RODEN
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postbus: '109'
+    postcode: 9301 AA
+    woonplaats: Roden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisstraat
+    huisnummer: '1'
+    postcode: 9301 AA
+    woonplaats: RODEN
+  phones:
+  - nummer: (088) 050 88 88
+    label: algemeen
+  emails:
+  - email: postbus@noordenveld.nl
+    label: algemeen
+  - email: postbus@noordenveld.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.noordenveld.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.noordenveld.nl/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-19'
+last_verified: '2026-04-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25983/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25983/noordenveld
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +181,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q835083
   retrieved: '2026-05-09'
+roo_start_datum: '1998-01-01'

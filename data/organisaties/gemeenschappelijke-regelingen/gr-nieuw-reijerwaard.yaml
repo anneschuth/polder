@@ -3,17 +3,100 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28452393'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0776
+  owms: http://standaarden.overheid.nl/owms/terms/nwrwd
+  kvk: '54921074'
+  organisatiecode: so0776
+  rsin: '851492290'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Nieuw Reijerwaard
+  roo_id: '29529741'
 names:
 - value: GR Nieuw Reijerwaard
   valid_from: '1900-01-01'
+description:
+  text: 'De gemeenten Barendrecht, Ridderkerk en Rotterdam hebben gezamenlijk de ontwikkeling
+    van Nieuw Reijerwaard op zich genomen. Hiertoe hebben zij per 1 januari 2012 de
+    Gemeenschappelijke Regeling Nieuw Reijerwaard (GRNR) opgericht. Nieuw Reijerwaard
+    biedt de ruimte om een duurzaam en toekomstbestendig bedrijventerrein te ontwikkelen
+    voor het AgroVersFood-cluster in Barendrecht en Ridderkerk. Er is 96 hectare beschikbaar
+    voor bedrijven. De ontwikkeling van Nieuw Reijerwaard is uiterlijk in 2030 afgerond.
+    De ontwikkeling van Nieuw Reijerwaard is mede mogelijk gemaakt door de Provincie
+    Zuid-Holland.Nieuw Reijerwaard is een plek waar het goed toeven is voor iedereen:
+    ondernemers, medewerkers, omwonenden en weggebruikers. Het bedrijventerrein is
+    centraal gelegen in de regio Rotterdam nabij verkeersknooppunt Ridderster (A15/A16).
+    Nieuw Reijerwaard is onderdeel van het overkoepelende Dutch Fresh Port.'
+  url: https://www.nieuwreijerwaard.eu/wie-zijn-we/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nieuwreijerwaard.eu/wat-doen-we/woo-publicaties-nieuw-reijerwaard/
+      overzichtURL: https://organisaties.overheid.nl/woo/28452393/GR_Nieuw_Reijerwaard
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(cql.textAndIndexes=%22nieuw%22%20and%20cql.textAndIndexes=%22reijerwaard%22)%20AND%20dt.creator==%22GR%20Nieuw%20Reijerwaard%22&zv=nieuw+reijerwaard&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=po%7cGR+Nieuw+Reijerwaard
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(cql.textAndIndexes=%22nieuw%22%20and%20cql.textAndIndexes=%22reijerwaard%22)%20AND%20dt.creator==%22GR%20Nieuw%20Reijerwaard%22&zv=nieuw+reijerwaard&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=po%7cGR+Nieuw+Reijerwaard
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.nieuwreijerwaard.eu/wat-doen-we/woo-publicaties-nieuw-reijerwaard/
+  wooVerzoek:
+    url: https://www.nieuwreijerwaard.eu/wat-doen-we/woo-publicaties-nieuw-reijerwaard/
+afspraak:
+  email: info@nieuwreijerwaard.eu
+  telefoonnummer: (0180) 20 00 30
+  url: https://www.nieuwreijerwaard.eu/contact/
 contact:
   website: https://www.nieuwreijerwaard.eu
   email: info@nieuwreijerwaard.eu
+  bezoekadres: Voorweg 25, 2988 CG Ridderkerk
+  postadres: Postbus 4010, 2980 GA Ridderkerk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Voorweg
+    huisnummer: '25'
+    postcode: 2988 CG
+    woonplaats: Ridderkerk
+  - type: Postadres
+    postbus: '4010'
+    postcode: 2980 GA
+    woonplaats: Ridderkerk
+  - type: Woo-Adres
+    postbus: '4010'
+    postcode: 2980 GA
+    woonplaats: Ridderkerk
+    regio: Zuid-Holland
+  phones:
+  - nummer: (0180) 20 00 30
+    label: algemeen
+  emails:
+  - email: info@nieuwreijerwaard.eu
+    label: algemeen
+  internet_addresses:
+  - url: https://www.nieuwreijerwaard.eu
+    label: algemeen
+  contact_forms:
+  - url: https://www.nieuwreijerwaard.eu/www/Contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-26'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28452393/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28452393/gr-nieuw-reijerwaard
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-01-01'

@@ -2,14 +2,31 @@ id: org:stichting-prenatale-screening-regio-utrecht-en-omstreken
 type: rwt
 identifiers:
   roo_id: '30133965'
+  kvk: '30222101'
+  rsin: '817484024'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting Prenatale Screening Regio Utrecht en Omstreken
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Mercatorlaan
+    huisnummer: '1200'
+    postcode: 3528 BL
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133965/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133965/stichting-prenatale-screening-regio-utrecht-en-omstreken
+  retrieved: '2026-05-16'

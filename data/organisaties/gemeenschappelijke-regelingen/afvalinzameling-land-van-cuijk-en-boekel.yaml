@@ -2,8 +2,14 @@ id: org:gr-afvalinzameling-land-van-cuijk-en-boekel
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28114657'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXX
+  kvk: '77194705'
+  organisatiecode: so1059
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Afvalinzameling Land van Cuijk en Boekel
+  roo_id: '28114651'
 names:
 - value: Afvalinzameling Land van Cuijk en Boekel
   valid_from: '1900-01-01'
@@ -11,9 +17,31 @@ names:
 contact:
   website: https://www.afvalaanbieden.nl/
   email: info@afvalaanbieden.nl
+  bezoekadres: Gildekamp 8, 5431 SP Cuijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gildekamp
+    huisnummer: '8'
+    postcode: 5431 SP
+    woonplaats: Cuijk
+  - type: Postadres
+  phones:
+  - nummer: (0485) 33 83 52
+    label: algemeen
+  emails:
+  - email: info@afvalaanbieden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.afvalaanbieden.nl/
+    label: algemeen
+  - url: https://www.afvalaanbieden.nl/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2020-11-25'
+last_verified: '2022-03-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28114657/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28114657/afvalinzameling-land-van-cuijk-en-boekel
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-01-01'

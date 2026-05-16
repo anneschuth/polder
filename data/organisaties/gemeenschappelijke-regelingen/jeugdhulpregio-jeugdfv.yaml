@@ -3,17 +3,44 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '30462583'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1106
+  owms: http://standaarden.overheid.nl/owms/terms/jhrjfv
+  kvk: '97248525'
+  organisatiecode: so1106
+  rsin: '867968795'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Jeugdhulpregio JeugdFV
+  roo_id: '30462589'
 names:
 - value: Jeugdhulpregio JeugdFV
   valid_from: '1900-01-01'
 contact:
   website: https://www.jeugdfv.nl
   email: info@jeugdfv.nl
+  postadres: Antwoordnummer 40, 6710 VB Ede
+  addresses:
+  - type: Postadres
+    toelichting: Gemeente Ede t.a.v. Jeugdhulpregio JeugdFV
+    openbare_ruimte: Antwoordnummer
+    huisnummer: '40'
+    postcode: 6710 VB
+    woonplaats: Ede
+  emails:
+  - email: info@jeugdfv.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.jeugdfv.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.jeugdfv.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-16'
+last_verified: '2025-12-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30462583/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30462583/jeugdhulpregio-jeugdfv
+  retrieved: '2026-05-16'
+roo_start_datum: '2025-11-01'

@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '115806'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Financiën
+  roo_id: '68820'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1090
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Financien
 names:
 - value: Commissie voor Financiën (FIN)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/fin
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/fin
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115806/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115806/commissie-voor-financien-fin
+  retrieved: '2026-05-16'

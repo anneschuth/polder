@@ -1,18 +1,48 @@
 id: org:oovb-raad-onderwijs-arbeidsmarkt
 type: rwt
+subname: ROA
 identifiers:
   roo_id: '29908942'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Raad onderwijs arbeidsmarkt
   valid_from: '1900-01-01'
+description:
+  url: https://www.roacn.com/about
 contact:
   website: https://www.roacn.com
   email: office@roacn.com
+  phones:
+  - nummer: +599 717 54 50
+    label: algemeen
+  emails:
+  - email: office@roacn.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.roacn.com
+    label: algemeen
+  contact_forms:
+  - url: https://www.roacn.com/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Raad Onderwijs Arbeidsmarkt
+    url: https://www.facebook.com/roacn
+  - platform: LinkedIn
+    gebruikersnaam: Raad Onderwijs Arbeidsmarkt CN
+    url: https://www.linkedin.com/in/raad-onderwijs-arbeidsmarkt-cn-3a9161174/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-14'
+last_verified: '2025-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908942/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908942/raad-onderwijs-arbeidsmarkt
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

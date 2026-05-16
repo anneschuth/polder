@@ -2,14 +2,48 @@ id: org:stichting-expertisecentrum-forensische-psychiatrie
 type: rwt
 identifiers:
   roo_id: '27912096'
+  kvk: '30191503'
+  rsin: '813660129'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Expertisecentrum Forensische Psychiatrie
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Churchilllaan 11 -16e etage, 3527 GV Utrecht
+  postadres: Churchilllaan 11 -16e etage, 3527 GV Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Churchilllaan
+    huisnummer: '11'
+    huisnummer_toevoeging: -16e etage
+    postcode: 3527 GV
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    openbare_ruimte: Churchilllaan
+    huisnummer: '11'
+    huisnummer_toevoeging: -16e etage
+    postcode: 3527 GV
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912096/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912096/stichting-expertisecentrum-forensische-psychiatrie
+  retrieved: '2026-05-16'

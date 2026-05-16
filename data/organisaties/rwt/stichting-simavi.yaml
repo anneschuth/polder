@@ -2,14 +2,42 @@ id: org:oovb-stichting-simavi
 type: rwt
 identifiers:
   roo_id: '27916101'
+  kvk: '40594571'
+  rsin: '001017603'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Simavi
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Naritaweg 135, 1043 BS Amsterdam
+  postadres: Naritaweg 135, 1043 BS Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Naritaweg 135
+    postcode: 1043 BS
+    woonplaats: Amsterdam
+  - type: Postadres
+    openbare_ruimte: Naritaweg 135
+    postcode: 1043 BS
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27916101/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27916101/stichting-simavi
+  retrieved: '2026-05-16'

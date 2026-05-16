@@ -3,21 +3,139 @@ type: zbo
 identifiers:
   roo_id: '28212316'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000168
+  kvk: '34367959'
+  rsin: '800829074'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Luchtverkeersleiding Nederland
   abbr: LVNL
   valid_from: '1900-01-01'
+description:
+  text: LVNL is verantwoordelijk voor het beheer van het burgerluchtruim en alles
+    wat daarbij komt kijken. We doen dat sinds 1923 en sinds 1993 als Zelfstandig
+    Bestuursorgaan (ZBO).In de Wet luchtvaart zijn de wettelijke taken van LVNL vastgelegd.
+    Daaronder vallen:- Het verlenen van luchtverkeersdiensten binnen het vluchtinformatiegebied
+    Amsterdam.- Het verlenen van communicatie-, navigatie- en plaatsbepalingsdiensten.-
+    Het verlenen van luchtvaartinlichtingendiensten en het uitgeven van luchtvaartpublicaties
+    en -kaarten.- Het verzorgen of laten verzorgen van opleidingen voor luchtverkeersbeveiliging
+    en het verlenen van luchtvaartnavigatiediensten.- Het adviseren van de minister
+    van Infrastructuur en Waterstaat en de minister van Defensie over aangelegenheden
+    op het gebied van de luchtverkeersbeveiliging en het verlenen van luchtvaartnavigatiediensten.-
+    Het verrichten van andere bij of krachtens de Wet luchtvaart opgedragen taken.
+  url: https://www.lvnl.nl/organisatie
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: 15,18
+wettelijke_grondslagen:
+- opschrift: Wet Luchtvaart, artikel 5.22
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20luchtvaart/article=5.22
+taken_en_bevoegdheden: '* Het veilig en efficient afhandelen van het luchtverkeer
+  op en rond de luchthavens Amsterdam Airport Schiphol, Rotterdam Airport, Groningen
+  Airport Eelde en Maastricht Aachen Airport en boven Nederland tot 24.500 voet;*
+  het vernieuwen en beheren van technische systemen;* het verstrekken van luchtvaartinlichtingen;*
+  het verzorgen van opleidingen voor luchtverkeersleiding;* het verzorgen van luchtvaartkaarten
+  en publicaties.'
+evaluations:
+- datum: '2019-11-28'
+  kamerstuknummer: TK 31936 nr. 703
+  referentie: https://zoek.officielebekendmakingen.nl/kst-31936-703.html
+- datum: '2014-11-17'
+  kamerstuknummer: TK 31936 nr. 230
+  referentie: https://zoek.officielebekendmakingen.nl/kst-31936-230.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 4101 - Luchtverkeersleiding Nederland
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=22394
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212316/Luchtverkeersleiding_Nederland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Luchtverkeersleiding+Nederland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Luchtverkeersleiding+Nederland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.lvnl.nl/contact#anchor-5d347c169f4c4b19811ab7a2e9554442
+afspraak:
+  email: info@lvnl.nl
+  url: https://www.lvnl.nl/contact
+personnel:
+  aantalFte: 1122,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.lvnl.nl/
   email: info@lvnl.nl
+  bezoekadres: Stationsplein ZuidWest 1001, 1117 CV Schiphol
+  postadres: Postbus 75200, 1117 ZT Schiphol
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein ZuidWest
+    huisnummer: '1001'
+    postcode: 1117 CV
+    woonplaats: Schiphol
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '75200'
+    postcode: 1117 ZT
+    woonplaats: Schiphol
+  - type: Woo-Adres
+    toelichting: T.a.v. secretariaat P&D/Business Support
+    postbus: '75200'
+    postcode: 1117 ZT
+    woonplaats: Schiphol
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (020) 406 20 00
+    label: algemeen
+  emails:
+  - email: info@lvnl.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.lvnl.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-11'
+last_verified: '2026-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212316/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212316/lvnl
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +144,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000168
   retrieved: '2026-05-09'
+roo_start_datum: '1993-01-01'

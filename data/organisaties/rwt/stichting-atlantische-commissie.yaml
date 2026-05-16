@@ -2,15 +2,46 @@ id: org:oovb-stichting-atlantische-commissie
 type: rwt
 identifiers:
   roo_id: '27910080'
+  kvk: '41149134'
+  rsin: 003521795
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Stichting Atlantische Commissie
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Riviervismarkt 5, 2513 AM Den Haag
+  postadres: Emmapark 12, 2595 ET Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Het Nutshuis
+    openbare_ruimte: Riviervismarkt
+    huisnummer: '5'
+    postcode: 2513 AM
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Emmapark 12
+    postcode: 2595 ET
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2026-03-17'
+last_verified: '2026-03-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27910080/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27910080/stichting-atlantische-commissie
+  retrieved: '2026-05-16'

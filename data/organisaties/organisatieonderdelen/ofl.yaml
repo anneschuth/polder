@@ -3,18 +3,66 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '30225753'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12376
+  organisatiecode: oorg12376
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-ienw
+parent_id: org:min-ienw
 names:
 - value: Overlegorgaan Fysieke Leefomgeving
   abbr: OFL
   valid_from: '1900-01-01'
+description:
+  text: 'Het Overlegorgaan Fysieke Leefomgeving (OFL) is een onafhankelijk orgaan
+    voor overleg en samenwerking. In het OFL ontmoeten rijksoverheid, burgers, maatschappelijke
+    organisaties en bedrijfsleven elkaar voor overleg en samenwerking op het gebied
+    van de fysieke leefomgeving: de omgeving waar we wonen, werken, reizen en recre&euml;ren.
+    Daarbij horen onder meer onderwerpen als klimaat, landbouw, natuur, energie en
+    water. Onderwerpen die direct impact hebben op mensen in hun omgeving.'
+  url: https://www.overlegorgaanfysiekeleefomgeving.nl/over+ofl/default.aspx
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/30225753/Overlegorgaan_Fysieke_Leefomgeving
+afspraak:
+  email: info@ofl.nl
+  url: https://www.overlegorgaanfysiekeleefomgeving.nl/Beheer/Formulierenmodule/970328.aspx?t=Contact
 contact:
   website: https://www.overlegorgaanfysiekeleefomgeving.nl/
   email: info@ofl.nl
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 20901, 2500 EX Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20901'
+    postcode: 2500 EX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  emails:
+  - email: info@ofl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overlegorgaanfysiekeleefomgeving.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.overlegorgaanfysiekeleefomgeving.nl/Beheer/Formulierenmodule/970328.aspx?t=Contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-29'
+last_verified: '2026-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30225753/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30225753/ofl
+  retrieved: '2026-05-16'
+roo_start_datum: '1992-09-18'

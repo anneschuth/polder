@@ -3,7 +3,7 @@ name:
   full: L.J.A.M. Vossenberg
   family: Vossenberg
   given: L.J.A.M.
-  initials: L.
+  initials: L.J.A.M.
 mandaten:
 - id: a6460de0-ceb8-415d-a66b-d42a5b4677c8
   organization_id: org:gemeente-oss
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5864646
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37907/gemeente-oss
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28626283
 - id: 002d6af4-4f28-4df7-aae3-d47aa8cbe3de
   organization_id: org:gemeente-oss
   post_id: post:raadslid-gemeente-oss

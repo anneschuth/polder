@@ -3,17 +3,67 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24961668'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0103
+  owms: http://standaarden.overheid.nl/owms/terms/ombpa7
+  kvk: 01179858
+  organisatiecode: so0103
+  rsin: '800140941'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bedrijvenparken A7 c.a. 2009
+  roo_id: '29618854'
 names:
 - value: Ontwikkelingsmaatschappij Bedrijvenparken A7 Heerenveen-Joure
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.heerenveen.nl
   email: gemeente@heerenveen.nl
+  bezoekadres: Crackstraat 2, 8441 ES Heerenveen
+  postadres: Postbus 15000, 8440 GA Heerenveen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Heerenveen
+    openbare_ruimte: Crackstraat
+    huisnummer: '2'
+    postcode: 8441 ES
+    woonplaats: Heerenveen
+  - type: Postadres
+    postbus: '15000'
+    postcode: 8440 GA
+    woonplaats: Heerenveen
+  phones:
+  - nummer: (0513) 61 76 17
+    label: gemeente Heerenveen
+  - nummer: 14 0513
+    label: gemeente Heerenveen
+  emails:
+  - email: gemeente@heerenveen.nl
+    label: gemeente Heerenveen
+  internet_addresses:
+  - url: https://www.heerenveen.nl
+    label: gemeente Heerenveen
+  contact_forms:
+  - url: https://www.heerenveen.nl/contact-overzicht/adressen-en-openingstijden/
+    label: Algemeen
+  fax: (0513) 61 74 75
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-06'
+last_verified: '2025-01-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24961668/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24961668/ontwikkelingsmaatschappij-bedrijvenparken-a7-heerenveen-joure
+  retrieved: '2026-05-16'
+roo_start_datum: '1992-01-16'

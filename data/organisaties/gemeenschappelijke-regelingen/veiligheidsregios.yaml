@@ -7,9 +7,14 @@ parent_id: null
 names:
 - value: Veiligheidsregio's
   valid_from: '1900-01-01'
+policy_areas:
+- naam: openbare orde en veiligheid
+  tooi: https://identifier.overheid.nl/tooi/def/thes/top/c_d58b78ca
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-12'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30474198/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30474198/veiligheidsregios
+  retrieved: '2026-05-16'

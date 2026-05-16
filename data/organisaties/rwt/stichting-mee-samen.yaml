@@ -2,14 +2,45 @@ id: org:oovb-stichting-mee-samen
 type: rwt
 identifiers:
   roo_id: '27914130'
+  kvk: '59327871'
+  rsin: '853424469'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting MEE Samen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Dokter Klinkertweg 8 a, 8025 BS Zwolle
+  postadres: Postbus 517, 8000 AM Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dokter Klinkertweg
+    huisnummer: '8'
+    huisnummer_toevoeging: a
+    postcode: 8025 BS
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '517'
+    postcode: 8000 AM
+    woonplaats: Zwolle
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-13'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914130/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914130/stichting-mee-samen
+  retrieved: '2026-05-16'

@@ -5,23 +5,68 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0090
   oin: 00000001007924641000
   kvk: 01179048
+  owms: http://standaarden.overheid.nl/owms/terms/gkrbdr
+  organisatiecode: so0090
+  rsin: 007924641
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Gemeentelijke Kredietbank Drenthe
+  roo_id: '27223376'
 names:
 - value: Gemeentelijke Kredietbank Drenthe
   abbr: GKB
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.degkb.nl
   email: info@degkb.nl
+  bezoekadres: Overcingellaan 15, 9401 LA Assen
+  postadres: Postbus 426, 9400 AK Assen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Overcingellaan
+    huisnummer: '15'
+    postcode: 9401 LA
+    woonplaats: Assen
+  - type: Postadres
+    postbus: '426'
+    postcode: 9400 AK
+    woonplaats: Assen
+  phones:
+  - nummer: (0592) 36 60 99
+    label: algemeen
+  emails:
+  - email: info@degkb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.degkb.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.degkb.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2021-12-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27223381/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27223381/gkb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1953-01-01'

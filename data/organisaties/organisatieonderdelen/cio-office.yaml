@@ -10,9 +10,32 @@ names:
 - value: CIO office
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+description:
+  text: De Chief Information Officer (CIO) van VWS adviseert bestuurders, beleidsmedewerkers
+    en de bestuursraad gevraagd en ongevraagd over de informatie- en ICT-aspecten
+    van beleid, uitvoering en bedrijfsvoering.De CIO zorgt ervoor dat alles wat met
+    informatievoorziening en ICT te maken heeft binnen VWS in samenhang gebeurt, en
+    volgens afspraken die met de zorgsector, binnen het Rijk en binnen VWS gemaakt
+    zijn.
+contact:
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2024-11-21'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29788020/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29788020/cio-office
+  retrieved: '2026-05-16'

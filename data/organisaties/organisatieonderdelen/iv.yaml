@@ -2,6 +2,7 @@ id: org:onderdeel-iv
 type: organisatieonderdeel
 identifiers:
   roo_id: '29679051'
+  oin: 00000004177599711000
 classification: organisatieonderdeel
 parent_id: org:onderdeel-dgbd
 names:
@@ -11,12 +12,31 @@ names:
 - value: afdeling Integrale Veiligheid
   abbr: IV
   valid_from: '1900-01-01'
+description:
+  text: "TakenDe afdeling IV stelt gemeenten in staat om hun bestuurlijke en ambtelijke\
+    \ takken op het brede terrein van het tegengaan van overlast en onveiligheid adequaat\
+    \ uit te oefenen. De belangrijkste thema's daarbij zijn:•\tOverlast door jeugdgroepen;•\t\
+    Overlast bij betaalde voetbalwedstrijden en andere grootschalige evenementen;•\t\
+    Overlast in de wijk en woonoverlast;•\tUitgaansoverlast, al dan niet veroorzaakt\
+    \ door drank en drugs;•\tVerbeteren van de veiligheidsbeleving;•\tBevorderen van\
+    \ intergemeentelijke en interdisciplinaire samenwerking."
 contact:
   email: a.linssen@minvenj.nl
   website: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29679051/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29679051/iv
+  retrieved: '2026-05-16'

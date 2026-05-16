@@ -2,18 +2,69 @@ id: org:stichting-carnegie-stichting
 type: rwt
 identifiers:
   roo_id: '27908820'
+  kvk: '41149745'
+  rsin: '002712714'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Buitenlandse Zaken
+  roo_id: '2515'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1013
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Buitenlandse_Zaken
 names:
 - value: Carnegie-Stichting
   valid_from: '1900-01-01'
-  valid_until: '2020-06-19'
+description:
+  text: De heer Andrew Carnegie heeft bij akte van 7 oktober 1903 de naar hem genoemde
+    stichting ingesteld, staande onder de Nederlandse wet en strekkende tot het bouwen,
+    inrichten en onderhouden van een rechtsgebouw en een boekerij ten behoeve van
+    het Permanente Hof van Arbitrage. In die akte is Den Haag als zetel der stichting
+    aangewezen, met de bepaling dat de Nederlandse Regering, aan welke ten voorschreven
+    einde en bij voorzegde alte 1,5 miljoen dollars ter beschikking zijn gesteld,
+    zal aanwijzen bestuurders, staande onder behoorlijk toezicht, en daarenboven voorschriften
+    vaststellen volgens welke het beheer over de stichting gevoerd zal worden. Bij
+    k.b. van 30 mei 1904 zijn die voorschriften goedgekeurd welke zijn belichaamd
+    in de statuten, vastgesteld bij notariële akte van 6 juni 1904, gewijzigd op 29
+    april 1953. Volgens art. 3 bestaat het bestuur uit vijf leden, allen Nederlanders,
+    van wie er vier worden benoemd door de Koningin, terwijl de Raad van Beheer van
+    het Permanente Hof Arbitrage het vijfde lid zal aanwijzen. Het bestuur wordt uitgeoefend
+    onder toezicht van een Raad, welke - ingevolge art. 4 bestaat uit 9 leden.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-06-19'
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
 contact:
   website: https://www.vredespaleis.nl
   email: reception@carnegie-stichting.nl
+  bezoekadres: Carnegieplein 2, 2517 KJ Den Haag
+  postadres: Carnegieplein 2, 2517 KJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Carnegieplein 2
+    postcode: 2517 KJ
+    woonplaats: Den Haag
+  - type: Postadres
+    openbare_ruimte: Carnegieplein 2
+    postcode: 2517 KJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 302 42 42
+    label: algemeen
+  emails:
+  - email: reception@carnegie-stichting.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vredespaleis.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2020-06-19'
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27908820/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27908820/carnegie-stichting
+  retrieved: '2026-05-16'

@@ -4,18 +4,78 @@ identifiers:
   roo_id: '28355971'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10138
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Adviescommissie tot benoeming leden Adviescommissie restitutieverzoeken cultuurgoederen
     en Tweede Wereldoorlog
   valid_from: '1900-01-01'
   valid_until: '2022-12-31'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Besluit instelling Adviescommissie tot benoeming leden
+    Adviescommissie restitutieverzoeken cultuurgoederen en Tweede Wereldoorlog
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0038283&artikel=2
+classifications:
+- type: CAO
+  eind_datum: '2022-12-31'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2022-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2022-12-31'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.restitutiecommissie.nl/
   email: info@restitutiecommissie.nl
+  bezoekadres: Prins Willem-Alexanderhof 20, 2595 BE Den Haag
+  postadres: Postbus 556, 2501 CN Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prins Willem-Alexanderhof
+    huisnummer: '20'
+    postcode: 2595 BE
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '556'
+    postcode: 2501 CN
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 376 59 92
+    label: algemeen
+  emails:
+  - email: info@restitutiecommissie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.restitutiecommissie.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.restitutiecommissie.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-12-31'
+last_mutation: '2025-06-11'
+last_verified: '2025-06-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355971/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355971/adviescommissie-tot-benoeming-leden-adviescommissie-restitutieverzoeken-cultuurgoederen-en-tweede-wereldoorlog
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-07-16'

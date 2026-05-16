@@ -1,27 +1,103 @@
 id: org:gr-kompas
 type: gemeenschappelijke-regeling
+subname: ISD Kompas
 identifiers:
   roo_id: '28287022'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0451
   oin: 00000001810794652000
   kvk: '53709373'
+  owms: http://standaarden.overheid.nl/owms/terms/kompas
+  organisatiecode: so0451
+  rsin: '810794652'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling van Kompas, Gemeentelijk collectief voor werk,
+    inkomen & zorg
+  roo_id: '29419245'
 names:
 - value: Kompas, Gemeentelijk collectief voor werk, inkomen & zorg
   abbr: Kompas
   valid_from: '1900-01-01'
+description:
+  text: ISD Kompas is de sociale dienst van gemeente Beekdaelen, gemeente Simpelveld
+    en gemeente Voerendaal.
+  url: https://www.isd-kompas.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28287022/Kompas_Gemeentelijk_collectief_voor_werk_inkomen__zorg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kompas,+Gemeentelijk+collectief+voor+werk,+inkomen+&+zorg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Kompas,+Gemeentelijk+collectief+voor+werk,+inkomen+&+zorg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.isd-kompas.nl/contact
+organogram_url: https://www.isd-kompas.nl/de-organisatie
+afspraak:
+  email: info@isd-kompas.nl
+  telefoonnummer: (045) 575 33 99
+  url: https://www.isd-kompas.nl/contactgegevens
 contact:
   website: https://www.isd-kompas.nl
   email: info@isd-kompas.nl
+  bezoekadres: Deweverplein 1, 6361 BZ Nuth
+  postadres: Postbus 22021, 6360 AA Nuth
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Deweverplein
+    huisnummer: '1'
+    postcode: 6361 BZ
+    woonplaats: Nuth
+  - type: Postadres
+    postbus: '22021'
+    postcode: 6360 AA
+    woonplaats: Nuth
+  - type: Woo-Adres
+    postbus: '22021'
+    postcode: 6360 AA
+    woonplaats: Nuth
+  phones:
+  - nummer: (045) 575 33 99
+    label: gemeente Voerendaal
+  - nummer: (045) 544 83 83
+    label: gemeente Simpelveld
+  - nummer: (088) 450 20 00
+    label: gemeente Beekdaelen
+  emails:
+  - email: info@isd-kompas.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.isd-kompas.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.isd-kompas.nl/contactgegevens
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28287022/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28287022/kompas
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2002-01-01'

@@ -4,16 +4,72 @@ identifiers:
   roo_id: '29908954'
 classification: rwt
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Reclassering Caribisch Nederland
   abbr: SRCN
   valid_from: '1900-01-01'
+description:
+  text: 'Stichting Reclassering Caribisch Nederland is een zelfstandige stichting,
+    werkzaam op drie eilanden in de Caribische Regio: Bonaire, St. Eustatius en Saba.
+    17 medewerkers zetten zich in voor veiligheid in de samenleving. De meesten werken
+    als Reclasseringswerkers, zij zijn degenen die het werk met de cliënten uitvoeren.
+    Er wordt samengewerkt met een kleine staf van een administratief medewerker, een
+    coördinator administratie en een beleidsadviseur. De organisatie wordt aangestuurd
+    door de Directeur/Bestuurder. Een Raad van Toezicht houdt toezicht op de organisatie,
+    bovendien leggen wij structureel verantwoording af aan de over onze werkzaamheden
+    en financiën aan het Ministerie van Justitie en Veiligheid in Nederland, van wie
+    wij subsidie ontvangen en de Raad voor de Rechtshandhaving.'
+  url: https://www.reclassering-cn.com/wie-zijn-we
 contact:
   website: https://www.reclassering-cn.com/
   email: administratie@reclassering-cn.com
+  bezoekadres: Kaya L.D. Gerharts 8, Kralendijk
+  postadres: Postbus 777, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    toelichting: Locatie Bonaire
+    openbare_ruimte: Kaya L.D. Gerharts
+    huisnummer: '8'
+    woonplaats: Kralendijk
+    land: Bonaire
+  - type: Bezoekadres
+    toelichting: Locatie Saba
+    openbare_ruimte: Upper Road
+    woonplaats: The Bottom
+    land: Saba
+  - type: Bezoekadres
+    toelichting: Locatie Sint Eustatius
+    openbare_ruimte: Queen Beatrixroad
+    huisnummer: '14'
+    woonplaats: Oranjestad
+    land: Sint Eustatius
+  - type: Postadres
+    postbus: '777'
+    woonplaats: Kralendijk
+    land: Bonaire
+  phones:
+  - nummer: +599 717 32 88
+    label: algemeen
+  emails:
+  - email: administratie@reclassering-cn.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.reclassering-cn.com/
+    label: algemeen
+  contact_forms:
+  - url: https://www.reclassering-cn.com/contact-locatie
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-14'
+last_verified: '2025-01-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29908954/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29908954/srcn
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

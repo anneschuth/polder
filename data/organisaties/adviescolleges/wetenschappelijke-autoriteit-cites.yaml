@@ -3,16 +3,63 @@ type: adviescollege
 identifiers:
   roo_id: '28391591'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10192
+  owms: http://standaarden.overheid.nl/owms/terms/wetautcites
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Wetenschappelijke autoriteit CITES
   valid_from: '1900-01-01'
+description:
+  text: 'CITES (Convention on International Trade in Endangered Species) is een internationaal
+    verdrag met als doel de bescherming van bedreigde planten- en diersoorten. Deze
+    soorten lopen het risico om uit te sterven door (internationale) handel, vandaar
+    dat er in het CITES-verdrag afspraken zijn gemaakt over het handelen in en het
+    vervoeren van bedreigde soorten. Binnen de Europese Unie (EU) is er voor de uitvoering
+    van CITES een basisverordening opgesteld: [Verordening (EG) nr. 338/97](https://eur-lex.europa.eu/legal-content/NL/ALL/?uri=celex%3A31997R0338).
+    Artikel 13, tweede lid, van de basisverordening verplicht elke EU-lidstaat om
+    ten minste één wetenschappelijke autoriteit aan te wijzen op het gebied van CITES.
+    In Nederland is de instelling van deze wetenschappelijke autoriteit geregeld in
+    de Omgevingswet.De Kaderwet adviescolleges is niet van toepassing op de wetenschappelijke
+    autoriteit CITES, daarom is de autoriteit geen formeel adviescollege.'
+  url: https://www.rvo.nl/onderwerpen/cites/dit-cites
+wettelijke_grondslagen:
+- opschrift: Omgevingswet, artikel 17.5a
+  referentie: https://wetten.overheid.nl/BWBR0037885/2026-02-18/0#Hoofdstuk17_Afdeling17.1_Paragraaf17.1.2_Artikel17.5a
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rvo.nl/onderwerpen/cites/dit-cites
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.rvo.nl/onderwerpen/cites/dit-cites
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28391591/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28391591/wetenschappelijke-autoriteit-cites
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-01-01'

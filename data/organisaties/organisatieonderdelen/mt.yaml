@@ -8,11 +8,38 @@ names:
 - value: Managementteam DGBel
   abbr: MT
   valid_from: '1900-01-01'
+description:
+  text: Taak:Het managementteam houdt zich bezig met de sturing van de gehele Belastingdienst
+    en met de aansturing van het DGBel. Naast een co???rdinerende taak binnen het
+    netwerk van de groepsraad (die samengesteld is uit het MT en vertegenwoordigers
+    van de kantoren en facilitaire bedrijven van de Belastingdienst) heeft het MT
+    onder meer een taak op het terrein van de dagelijkse contacten met de relevante
+    omgeving van de dienst, inclusief de bewindslieden.
 contact:
   website: www.belastingdienst.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW 'S-GRAVENHAGE
+  postadres: Postbus 30206, 2500 GE 'S-GRAVENHAGE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout 7
+    postcode: 2511 CW
+    woonplaats: '''S-GRAVENHAGE'
+  - type: Postadres
+    postbus: '30206'
+    postcode: 2500 GE
+    woonplaats: '''S-GRAVENHAGE'
+  phones:
+  - nummer: (070) 342 80 00
+    label: algemeen
+  internet_addresses:
+  - url: www.belastingdienst.nl
+    label: algemeen
+  fax: (070) 342 79 17
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-24'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/68928/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/68928/mt
+  retrieved: '2026-05-16'

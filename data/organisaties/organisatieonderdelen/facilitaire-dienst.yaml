@@ -10,11 +10,23 @@ names:
 - value: Facilitaire dienst
   valid_from: '1900-01-01'
   valid_until: '2021-08-23'
+description:
+  text: 'Taak :'
 contact:
   email: bureau@nationaleombudsman.nl
+  bezoekadres: Bezuidenhoutseweg 151, 2594 AG Den Haag
+  postadres: Postbus 93122, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  emails:
+  - email: bureau@nationaleombudsman.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-08-23'
+last_mutation: '2024-11-21'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/132861/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/132861/facilitaire-dienst
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '13300'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-jenv
+parent_id: org:min-jenv
 names:
 - value: Instellingen
   valid_from: '1900-01-01'
@@ -11,9 +11,14 @@ names:
 contact:
   website: http://www.halt.nl
   email: info@halt.nl
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2018-11-15'
+last_mutation: '2018-12-03'
+last_verified: '2018-12-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/13300/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/13300/instellingen
+  retrieved: '2026-05-16'

@@ -2,14 +2,43 @@ id: org:oovb-stichting-watermaatschappij-amsterdam
 type: rwt
 identifiers:
   roo_id: '27917838'
+  kvk: '41216593'
+  oin: 00000003412165930000
+  rsin: '805224014'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Watermaatschappij Amsterdam
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Korte Ouderkerkerdijk 7, 1096 AC Amsterdam
+  postadres: Postbus 94370, 1090 GJ Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Ouderkerkerdijk 7
+    postcode: 1096 AC
+    woonplaats: Amsterdam
+  - type: Postadres
+    postbus: '94370'
+    postcode: 1090 GJ
+    woonplaats: Amsterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917838/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917838/stichting-watermaatschappij-amsterdam
+  retrieved: '2026-05-16'

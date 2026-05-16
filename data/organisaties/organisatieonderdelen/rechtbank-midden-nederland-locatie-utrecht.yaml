@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-midden-nederland-locatie-utrecht
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048465'
+  kvk: '82940444'
+  rsin: '862663489'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-midden-nederland
 names:
 - value: Rechtbank Midden-Nederland, locatie Utrecht
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Vrouwe Justitiaplein 1, 3511 EX Utrecht
+  postadres: Postbus 16005, 3500 DA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Vrouwe Justitiaplein
+    huisnummer: '1'
+    postcode: 3511 EX
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '16005'
+    postcode: 3500 DA
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-10'
+last_verified: '2026-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048465/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048465/rechtbank-midden-nederland-locatie-utrecht
+  retrieved: '2026-05-16'

@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29975474'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-def
+parent_id: org:onderdeel-koninklijke-marechaussee
 names:
 - value: Koninklijke Marechaussee Caribisch Nederland
   abbr: KMar CN
@@ -11,12 +11,40 @@ names:
 - value: Koninklijke Marechaussee
   abbr: KMar CN
   valid_from: '1900-01-01'
+description:
+  text: De Koninklijke Marechaussee (KMar) is een militaire politieorganisatie die
+    valt onder het ministerie van Defensie. De marechaussee werkt vanuit een gevarieerd
+    takenpakket en wordt over de hele wereld ingezet. De KMar is al ruim anderhalve
+    eeuw actief in het Caribisch gebied.Sinds 10 oktober 2010 is de Koninklijke Marechaussee
+    ook verantwoordelijk voor de grensbewaking, beveiliging en politietaken op de
+    luchthavens van Caribisch Nederland. Deze taken worden uitgevoerd in samenwerking
+    tussen militaire medewerkers en Rijksambtenaren van de Rijksdienst Caribisch Nederland.
+    Deze unieke combinatie is te zien in de onderscheidingstekens van het RCN personeel
+    en de militaire personeel van de KMar. Gezamenlijk zetten de medewerkers zich
+    in om de grenzen van Bonaire, Saba en Sint Eustatius te bewaken en zo bij de dragen
+    aan de veiligheid van Caribisch Nederland.
 contact:
   website: https://www.rijksdienstcn.com/justitie-veiligheid/koninklijke-marechaussee/contact
   email: kmar.carib.bonaire@mindef.nl
+  phones:
+  - nummer: +599 715 93 51
+    label: algemeen Bonaire
+  - nummer: +599 416 22 23
+    label: algemeen Saba
+  - nummer: +599 318 23 57
+    label: algemeen Sint Eustatius
+  emails:
+  - email: kmar.carib.bonaire@mindef.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksdienstcn.com/justitie-veiligheid/koninklijke-marechaussee/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-18'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29975474/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29975474/kmar-cn
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-10-10'

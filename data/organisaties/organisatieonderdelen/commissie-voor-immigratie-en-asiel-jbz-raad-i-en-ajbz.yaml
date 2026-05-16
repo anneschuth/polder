@@ -3,15 +3,36 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '115807'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie voor Immigratie & Asiel / JBZ-Raad (I&A/JBZ)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/i_a_jbz
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/i_a_jbz
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-15'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/115807/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/115807/commissie-voor-immigratie-en-asiel-jbz-raad-i-en-ajbz
+  retrieved: '2026-05-16'

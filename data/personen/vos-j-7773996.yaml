@@ -3,7 +3,7 @@ name:
   full: J.W. Vos
   family: Vos
   given: J.W.
-  initials: J.
+  initials: J.W.
 mandaten:
 - id: 0b20744e-dca1-459e-8f6a-661e86fb6cd8
   organization_id: org:gemeente-harderwijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7773998
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32835/gemeente-harderwijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30541156
 - id: c97082cb-f68f-43f0-8cc8-e48001dd213c
   organization_id: org:gemeente-harderwijk
   post_id: post:raadslid-gemeente-harderwijk

@@ -6,21 +6,143 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0532
   roo_id: '29758'
   wikidata: Q9962
+  owms: http://standaarden.overheid.nl/owms/terms/Stede_Broec_(gemeente)
+  ictu: '00532'
+  organisatiecode: gm0532
+  rsin: '004620732'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SBC
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Stede Broec
   abbr: Stede Broec
   valid_from: '1900-01-01'
+description:
+  url: https://www.stedebroec.nl/bestuur-en-organisatie/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.stedebroec.nl/direct-regelen/openbare-informatie/verzoeken-om-informatie/informatie-of-woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/29758/Gemeente_Stede_Broec
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.stedebroec.nl/bestuur-en-organisatie/besluitenlijst-college-van-burgemeester-en-wethouders-bw/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.stedebroec.nl/woo-verzoeken/
+    - informatiecategorie: Convenanten
+      url: https://www.stedebroec.nl/convenanten/
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stede+Broec%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stede+Broec%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.stedebroec.nl/bestuur-en-organisatie/financien/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stede+Broec%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.stedebroec.nl/direct-regelen/openbare-informatie/verzoeken-om-informatie/informatie-of-woo-verzoek/
+organogram_url: https://www.sed-organisatie.nl/over-de-sed/
+afspraak:
+  url: https://www.stedebroec.nl/contact/
+geography:
+  oppervlakte: 16,42
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 16.42
+  aantal_inwoners: 22445
+  inwoners: '1366'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1366.0
+  bevat_plaatsen_raw: Bovenkarspel, Grootebroek, Lutjebroek
+  bevat_plaatsen:
+  - Bovenkarspel
+  - Grootebroek
+  - Lutjebroek
+council:
+  total_seats: 19
+  parties:
+  - naam: Rechts Stede Broec
+    aantal_zetels: 6
+  - naam: Open en Duidelijk Stede Broec
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: PRO
+    aantal_zetels: 1
+  - naam: STEM van Stede Broec
+    aantal_zetels: 1
 contact:
   website: https://www.stedebroec.nl
   email: gemeente@stedebroec.nl
+  bezoekadres: De Middend 2, 1611 KW BOVENKARSPEL
+  postadres: Postbus 20, 1610 AA BOVENKARSPEL
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Middend
+    huisnummer: '2'
+    postcode: 1611 KW
+    woonplaats: BOVENKARSPEL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '20'
+    postcode: 1610 AA
+    woonplaats: BOVENKARSPEL
+  - type: Woo-Adres
+    openbare_ruimte: De Middend
+    huisnummer: '2'
+    postcode: 1611 KW
+    woonplaats: Bovenkarspel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: De Middend
+    huisnummer: '2'
+    postcode: 1611 KW
+    woonplaats: BOVENKARSPEL
+  phones:
+  - nummer: (0228) 51 01 11
+    label: algemeen
+  emails:
+  - email: gemeente@stedebroec.nl
+    label: algemeen
+  - email: www.sed-organisatie.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.stedebroec.nl
+    label: algemeen
+  contact_forms:
+  - url: https://openformulieren.stedebroec.nl/contactformulier/startpagina
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29758/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29758/stede-broec
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +151,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9962
   retrieved: '2026-05-09'
+roo_start_datum: '1979-01-01'

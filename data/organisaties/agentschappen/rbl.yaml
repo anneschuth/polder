@@ -3,18 +3,102 @@ type: agentschap
 identifiers:
   roo_id: '28977374'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10041
+  owms: http://standaarden.overheid.nl/owms/terms/rbl
+  kvk: '89584082'
+  organisatiecode: oorg10041
+  rsin: '865030030'
 classification: agentschap
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Rijksorganisatie Beveiliging en Logistiek
   abbr: RBL
   valid_from: '1900-01-01'
+description:
+  text: RBL is een agentschap van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+    en levert een belangrijke bijdrage aan onze rechtsstaat. Enerzijds door de beveiliging
+    van rijkslocaties, rijksevenementen en bijzondere beveiligingsopdrachten en anderzijds
+    door het vervoer van vertrouwelijke of gerubriceerde zendingen. RBL levert haar
+    diensten aan alle organisaties binnen de Rijksoverheid.
+  url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/over-ons
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/service/contact/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28977374/Rijksorganisatie_Beveiliging_en_Logistiek
+  wooVerzoek:
+    url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/service/contact/woo-verzoek-indienen
+organogram_url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/over-ons
+afspraak:
+  url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/contact
 contact:
   website: https://www.rijksorganisatiebeveiligingenlogistiek.nl/
   email: rbo@rijksoverheid.nl
+  postadres: Postbus 20011, 2500 EA Den Haag
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  addresses:
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  - type: Bezoekadres
+    toelichting: Rijkskantoor Beatrixpark
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    toelichting: Afdeling Bedrijfsvoering, Woo-coördinator
+    postbus: '20011'
+    postcode: 2500 AE
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 758 56 21
+    label: Rijksbeveiliging
+  - nummer: (070) 758 56 08
+    label: Rijkslogistiek
+  emails:
+  - email: rbo@rijksoverheid.nl
+    label: Rijksbeveiliging
+  - email: ipkd@rijksoverheid.nl
+    label: Rijkslogistiek
+  internet_addresses:
+  - url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-27'
+last_verified: '2026-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28977374/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28977374/rbl
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-01-01'

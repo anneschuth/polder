@@ -3,17 +3,88 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965848'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0532
+  owms: http://standaarden.overheid.nl/owms/terms/kredbnklim
+  kvk: '50871641'
+  organisatiecode: so0532
+  rsin: '814339608'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling voor Sociale Kredietverlening en Schuldhulpverlening
+    in Limburg
+  roo_id: '29484672'
 names:
 - value: Kredietbank Limburg
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24965848/Kredietbank_Limburg
+  wooVerzoek:
+    url: https://kredietbanklimburg.nl/info/contact
+organogram_url: https://kredietbanklimburg.nl/info/overige-informatie/over-ons
+afspraak:
+  telefoonnummer: (088) 101 99 99
+  url: https://kredietbanklimburg.nl/info/contact
 contact:
   website: https://www.kredietbanklimburg.nl
   email: info@kblb.nl
+  bezoekadres: Markt 1 A, 6161 GE Geleen
+  postadres: Postbus 1183, 6160 BD Geleen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Bezoekadres Geleen
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    huisnummer_toevoeging: A
+    postcode: 6161 GE
+    woonplaats: Geleen
+  - type: Postadres
+    postbus: '1183'
+    postcode: 6160 BD
+    woonplaats: Geleen
+  - type: Woo-Adres
+    toelichting: Bezoekadres Geleen
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    huisnummer_toevoeging: A
+    postcode: 6161 GE
+    woonplaats: Geleen
+  - type: Woo-Adres
+    postbus: '1183'
+    postcode: 6160 BD
+    woonplaats: Geleen
+  phones:
+  - nummer: (088) 101 99 99
+    label: algemeen
+  emails:
+  - email: info@kblb.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kredietbanklimburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.kredietbanklimburg.nl/info/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2024-10-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965848/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965848/kredietbank-limburg
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-02-21'

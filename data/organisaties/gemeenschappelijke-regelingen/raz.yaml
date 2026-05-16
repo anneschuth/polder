@@ -3,18 +3,111 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28675115'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0797
+  owms: http://standaarden.overheid.nl/owms/terms/rekmetrams
+  kvk: '34366966'
+  oin: I0000003343669660000
+  organisatiecode: so0797
+  rsin: '002564440'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Amsterdam-Zaanstad
+  roo_id: '29616286'
 names:
 - value: Rekenkamer Amsterdam-Zaanstad
   abbr: RAZ
   valid_from: '1900-01-01'
+description:
+  text: 'De Rekenkamer Amsterdam-Zaanstad onderzoekt hoe het bestuur van de gemeenten
+    Amsterdam en Zaanstad het gemeentelijke beleid uitvoert. We controleren of het
+    bestuur volgens de regels werkt, de afgesproken doelen waarmaakt en of het daaraan
+    niet meer geld uitgeeft dan nodig.We zijn onafhankelijk en bepalen zelf waar we
+    onderzoek naar doen. Onze onderzoeken gaan over allerlei onderwerpen: van toegankelijkheid
+    van buurthuizen tot het groenbeleid van de gemeente. En van klimaatbestendig bouwen
+    tot het beheer van sport- en speeltoestellen in de openbare ruimte. We hebben
+    ruime bevoegdheden om informatie te verzamelen die wij voor een onderzoek nuttig
+    vinden.'
+  url: https://www.rekenkamer.amsterdam.nl/over-ons/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rekenkamer.amsterdam.nl/informatie/klachtenregeling/
+      overzichtURL: https://organisaties.overheid.nl/woo/28675115/Rekenkamer_Amsterdam-Zaanstad
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.rekenkamer.amsterdam.nl/publicaties/jaarverslagen/
+      toelichting: Jaarverslagen en jaarrekeningen
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.rekenkamer.amsterdam.nl/onderzoek/
+      toelichting: Onderzoeksrapporten en bestuurlijke rapporten
+  wooVerzoek:
+    url: https://www.rekenkamer.amsterdam.nl/informatie/klachtenregeling/
+organogram_url: https://www.rekenkamer.amsterdam.nl/content/uploads/2024/10/Organogram-Rekenkamer-Amsterdam-Zaanstad.png
+afspraak:
+  email: info@rekenkamer-amsterdam.nl
+  url: https://www.rekenkamer.amsterdam.nl/over-ons/contact/
 contact:
   website: https://www.rekenkamer.amsterdam.nl
   email: info@rekenkamer-amsterdam.nl
+  bezoekadres: Weesperstraat 105 A - 6e verdieping, 1018 VN Amsterdam
+  postadres: Weesperstraat 105 A, 1018 VN Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Weesperstraat
+    huisnummer: '105'
+    huisnummer_toevoeging: A - 6e verdieping
+    postcode: 1018 VN
+    woonplaats: Amsterdam
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Weesperstraat
+    huisnummer: '105'
+    huisnummer_toevoeging: A
+    postcode: 1018 VN
+    woonplaats: Amsterdam
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Weesperstraat
+    huisnummer: '105'
+    huisnummer_toevoeging: A
+    postcode: 1018 VN
+    woonplaats: Amsterdam
+    regio: Noord-Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (020) 303 63 00
+    label: algemeen
+  emails:
+  - email: info@rekenkamer-amsterdam.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rekenkamer.amsterdam.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rekenkamer.amsterdam.nl/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Rekenkamer Amsterdam-Zaanstad
+    url: https://www.linkedin.com/company/rekenkamer-amsterdam-zaanstad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28675115/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28675115/raz
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-06-01'

@@ -7,11 +7,37 @@ parent_id: org:onderdeel-commissies
 names:
 - value: CIO-Beraad
   valid_from: '1900-01-01'
+description:
+  text: 'Als een van de vijf ambtelijke voorportalen voor de ICBR coördineert deze
+    commissie de informatievoorziening en het ICT-beleid van de rijksdienst, borgt
+    het rijksbrede beleid, en doet voorstellen voor de ontwikkeling van nieuwe kaders
+    en standaarden. De commissie adviseert onder meer de eigen ambtelijke en politieke
+    leiding gevraagd en ongevraagd over de doelstelling, uitvoering, kosten en risico''s
+    van grote ICT projecten.Leden: Chief Information Officers van de ministeries en
+    de Hoge Colleges van Staat.'
 contact:
   email: postbus.cioberaad@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  emails:
+  - email: postbus.cioberaad@minbzk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/94320/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/94320/cio-beraad
+  retrieved: '2026-05-16'

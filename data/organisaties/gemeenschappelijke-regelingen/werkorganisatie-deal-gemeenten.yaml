@@ -2,17 +2,54 @@ id: org:gr-werkorganisatie-deal-gemeenten
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966630'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '52159949'
+  organisatiecode: so0663
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkorganisatie gemeenten Delfzijl, Eemsmond,
+    Appingedam en Loppersum
+  roo_id: '24966625'
 names:
 - value: Werkorganisatie DEAL-Gemeenten
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   email: info@werkorganisatiedeal.nl
+  bezoekadres: Gevelsteen 12, 9934 LN Delfzijl
+  postadres: Gevelsteen 12, 9934 LN Delfzijl
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Gevelsteen
+    huisnummer: '12'
+    postcode: 9934 LN
+    woonplaats: Delfzijl
+  - type: Postadres
+    openbare_ruimte: Gevelsteen
+    huisnummer: '12'
+    postcode: 9934 LN
+    woonplaats: Delfzijl
+  phones:
+  - nummer: (0596) 63 97 00
+    label: algemeen
+  emails:
+  - email: info@werkorganisatiedeal.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2021-03-09'
+last_verified: '2021-09-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966630/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966630/werkorganisatie-deal-gemeenten
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-12-01'

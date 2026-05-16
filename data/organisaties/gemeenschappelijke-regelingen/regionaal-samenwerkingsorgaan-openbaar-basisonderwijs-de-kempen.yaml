@@ -3,17 +3,64 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967306'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1075
+  owms: http://standaarden.overheid.nl/owms/terms/rsoobokemp
+  organisatiecode: so1075
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Regionaal samenwerkingsverband openbaar basisonderwijs De Kempen
+  roo_id: '24967301'
 names:
 - value: Regionaal samenwerkingsorgaan openbaar basisonderwijs De Kempen
   valid_from: '1900-01-01'
+description:
+  text: Samenwerkingsverband van gemeenten om gezamenlijk zorg te dragen voor aanbod
+    van openbaar onderwijs in de betreffende gemeenten.
+  url: https://lokaleregelgeving.overheid.nl/CVDR39655/
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+organogram_url: https://lokaleregelgeving.overheid.nl/CVDR39655/1#artikel_4.
+afspraak:
+  email: info@rbobdekempen.nl
+  url: https://www.rbobdekempen.nl/Contact
 contact:
   website: https://www.rbobdekempen.nl
   email: info@rbobdekempen.nl
+  bezoekadres: Provincialeweg 74, 5503 HJ Veldhoven
+  postadres: Provincialeweg 74, 5503 HJ Veldhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Provincialeweg
+    huisnummer: '74'
+    postcode: 5503 HJ
+    woonplaats: Veldhoven
+  - type: Postadres
+    openbare_ruimte: Provincialeweg
+    huisnummer: '74'
+    postcode: 5503 HJ
+    woonplaats: Veldhoven
+  phones:
+  - nummer: (040) 230 15 60
+    label: algemeen
+  emails:
+  - email: info@rbobdekempen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rbobdekempen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rbobdekempen.nl/Contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-29'
+last_verified: '2024-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967306/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967306/regionaal-samenwerkingsorgaan-openbaar-basisonderwijs-de-kempen
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-05-01'

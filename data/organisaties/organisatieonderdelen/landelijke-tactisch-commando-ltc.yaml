@@ -3,13 +3,32 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '131752'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-kmar-cn
+parent_id: org:onderdeel-koninklijke-marechaussee
 names:
 - value: Landelijke Tactisch Commando (LTC)
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Hobbemalaan 5, 3712 AZ Huis ter Heide (Utrecht)
+  postadres: Postbus 90615, 2509 LP Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hobbemalaan
+    huisnummer: '5'
+    postcode: 3712 AZ
+    woonplaats: Huis ter Heide (Utrecht)
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '90615'
+    postcode: 2509 LP
+    woonplaats: Den Haag
+  phones:
+  - nummer: (0577) 45 59 85
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-19'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/131752/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/131752/landelijke-tactisch-commando-ltc
+  retrieved: '2026-05-16'

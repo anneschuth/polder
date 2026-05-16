@@ -9,11 +9,33 @@ names:
   abbr: P-DGBEL
   valid_from: '1900-01-01'
   valid_until: '2020-04-28'
+description:
+  text: 'Taak:'
 contact:
   email: dgbel_secretariaatb@minfin.nl
+  bezoekadres: Korte Voorhout 7, 2511 CW 'S-GRAVENHAGE
+  postadres: Postbus 20201, 2500 EE 'S-GRAVENHAGE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout 7
+    postcode: 2511 CW
+    woonplaats: '''S-GRAVENHAGE'
+  - type: Postadres
+    postbus: '20201'
+    postcode: 2500 EE
+    woonplaats: '''S-GRAVENHAGE'
+  phones:
+  - nummer: (070) 342 84 35
+    label: algemeen
+  emails:
+  - email: dgbel_secretariaatb@minfin.nl
+    label: algemeen
+  fax: (070) 342 74 27
 valid_from: '1900-01-01'
 valid_until: '2020-04-28'
+last_mutation: '2020-08-06'
+last_verified: '2020-08-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/106706/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/106706/p-dgbel
+  retrieved: '2026-05-16'

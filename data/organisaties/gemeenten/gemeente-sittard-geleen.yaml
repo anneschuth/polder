@@ -6,21 +6,171 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1883
   roo_id: '29280'
   wikidata: Q9781
+  owms: http://standaarden.overheid.nl/owms/terms/Sittard-Geleen
+  ictu: 01883
+  organisatiecode: gm1883
+  rsin: 001906562
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SIG
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Sittard-Geleen
   abbr: Sittard-Geleen
   valid_from: '1900-01-01'
+description:
+  text: https://www.sittard-geleen.nl/Bestuur/Organisatie
+  url: https://lokaleregelgeving.overheid.nl/CVDR660912
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.sittard-geleen.nl/Bestuur/Beleid/Woo_verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/29280/Gemeente_Sittard-Geleen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sittard-Geleen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Subsidieverplichtingen anders dan met beschikking
+      url: https://www.sittard-geleen.nl/Inwoners/Verenigingsloket/Subsidies_vrijwilligersorganisaties
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sittard-Geleen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sittard-Geleen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.sittard-geleen.nl/Bestuur/Beleid/Onderzoek_jaarverslagen_rapporten
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://sittardgeleen.bestuurlijkeinformatie.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://www.sittard-geleen.nl/Inwoners/Actueel/Bekendmakingen
+      toelichting: (website van de gemeente Sittard-Geleen)
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.sittard-geleen.nl/Bestuur/Beleid/Onderzoek_jaarverslagen_rapporten
+  wooVerzoek:
+    url: https://mijn.sittard-geleen.nl/MijnOmgeving/formulier/nl-NL/DefaultEnvironment/scWOOverzoek.aspx/scStartScenario/fInlogkeuze
+organogram_url: https://www.sittard-geleen.nl/Bestuur/Organisatie/Ambtelijke_organisatie
+afspraak:
+  url: https://sittard-geleen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 80,53
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 80.53
+  aantal_inwoners: 92461
+  inwoners: '1148'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1148.0
+  bevat_plaatsen_raw: Born, Buchten, Einighausen, Geleen, Grevenbicht, Guttecoven,
+    Holtum, Limbricht, Munstergeleen, Obbicht, Papenhoven, Sittard, Windraak
+  bevat_plaatsen:
+  - Born
+  - Buchten
+  - Einighausen
+  - Geleen
+  - Grevenbicht
+  - Guttecoven
+  - Holtum
+  - Limbricht
+  - Munstergeleen
+  - Obbicht
+  - Papenhoven
+  - Sittard
+  - Windraak
+council:
+  total_seats: 37
+  parties:
+  - naam: GOB
+    aantal_zetels: 10
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: PRO
+    aantal_zetels: 4
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Stadspartij Sittard-Geleen
+    aantal_zetels: 3
+  - naam: PVV
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: JA21
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
+  - naam: PIT
+    aantal_zetels: 1
+  - naam: Lokaal Sittard-Geleen-Born
+    aantal_zetels: 1
 contact:
   website: https://www.sittard-geleen.nl
   email: info@sittard-geleen.nl
+  bezoekadres: Hub Dassenplein 1, 6131 LB SITTARD
+  postadres: Postbus 18, 6130 AA SITTARD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hub Dassenplein
+    huisnummer: '1'
+    postcode: 6131 LB
+    woonplaats: SITTARD
+  - type: Postadres
+    postbus: '18'
+    postcode: 6130 AA
+    woonplaats: SITTARD
+  - type: Woo-Adres
+    toelichting: (Postbus 18,  6130 AA)
+    openbare_ruimte: Markt
+    huisnummer: '1'
+    postcode: 6161 GE
+    woonplaats: Geleen
+    regio: Sittard-Geleen
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Hub Dassenplein
+    huisnummer: '1'
+    postcode: 6131 LB
+    woonplaats: SITTARD
+  phones:
+  - nummer: 14 046
+    label: algemeen
+  emails:
+  - email: info@sittard-geleen.nl
+    label: algemeen
+  - email: balievergunningen@sittard-geleen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.sittard-geleen.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+predecessor_id:
+- org:gemeente-born
+- org:gemeente-geleen
+- org:gemeente-sittard
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29280/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29280/gemeente-sittard-geleen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,7 +179,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9781
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-born
-- org:gemeente-geleen
-- org:gemeente-sittard
+roo_start_datum: '2001-01-01'

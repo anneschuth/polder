@@ -2,8 +2,17 @@ id: org:stichting-sab
 type: rwt
 identifiers:
   roo_id: '30134045'
+  kvk: '41133541'
+  oin: 00000001801883568000
+  rsin: '801883568'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: SAB Stichting Afvalstoffen & Vaardocumenten Binnenvaart
   abbr: SAB
@@ -11,12 +20,22 @@ names:
 - value: Stichting Afvalstoffen & Vaardocumenten Binnenvaart
   abbr: SAB
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Waalhaven Z.z.
+    huisnummer: '19'
+    postcode: 3089 JH
+    woonplaats: Rotterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30134045/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30134045/sab
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'

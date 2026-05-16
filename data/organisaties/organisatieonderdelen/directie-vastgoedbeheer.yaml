@@ -1,5 +1,6 @@
 id: org:onderdeel-directie-vastgoedbeheer
 type: organisatieonderdeel
+subname: Directie VB
 identifiers:
   roo_id: '97046'
 classification: organisatieonderdeel
@@ -7,9 +8,30 @@ parent_id: org:agentschap-rvb
 names:
 - value: Directie Vastgoedbeheer
   valid_from: '1900-01-01'
+description:
+  text: Is verantwoordelijk voor het beheer van de gebouwen, gebouwgebonden (technische)
+    installaties, terreinen en gronden van het RVB. Daarnaast realiseert de directie
+    kleine projecten die bij (her)ontwikkeling, transformatie of transacties.
+contact:
+  bezoekadres: Korte Voorhout 7 via C4.78, 2511 CW DEN HAAG
+  postadres: Postbus 16169, 2500 BD DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    huisnummer_toevoeging: via C4.78
+    postcode: 2511 CW
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: DEN HAAG
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-11-19'
+last_verified: '2025-12-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97046/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97046/directie-vastgoedbeheer
+  retrieved: '2026-05-16'

@@ -7,11 +7,34 @@ parent_id: org:onderdeel-iz
 names:
 - value: Attachées
   valid_from: '1900-01-01'
+description:
+  text: 'TAAK: Het is van belang dat VWS heldere standpunten heeft in de internationale
+    besluitvormingsprocessen, standpunten die ook binnen VWS en met andere ministeries
+    in Den Haag goed zijn afgestemd. Attachées behartigen deze standpunten van VWS
+    bij de Europese Unie, bij ambassades en internationale organisaties.'
 contact:
   email: regine.aalders@minbuza.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 72 54
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98587/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98587/attachees
+  retrieved: '2026-05-16'

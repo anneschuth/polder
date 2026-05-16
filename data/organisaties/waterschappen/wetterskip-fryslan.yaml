@@ -1,25 +1,122 @@
 id: org:waterschap-wetterskip-fryslan
 type: waterschap
 identifiers:
-  oin: 00000001001032823000
-  kvk: 01178978
+  oin: 00000001812535303000
+  kvk: '01174741'
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0653
   roo_id: '21134'
   wikidata: Q1970347
+  owms: http://standaarden.overheid.nl/owms/terms/Wetterskip_Fryslan
+  ictu: 04811
+  rsin: '812535303'
 classification: waterschap
 parent_id: null
 names:
 - value: Wetterskip Fryslân
   valid_from: '1900-01-01'
+description:
+  text: 'Gebied: Achtkarspelen, Ameland, Dantumadiel, De Fryske Marren, Harlingen,
+    Heerenveen, Leeuwarden, Noardeast-Fryslân, Ooststellingwerf, Opsterland, Schiermonnikoog,
+    Smallingerland, Súdwest Fryslân, Terschelling, Tytsjerksteradiel, Vlieland, Waadhoeke,
+    Westerkwartier en Weststellingwerf.'
+  url: https://www.wetterskipfryslan.nl/over-ons
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.wetterskipfryslan.nl/openoverheid
+      overzichtURL: https://organisaties.overheid.nl/woo/21134/Wetterskip_Fryslan
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.wetterskipfryslan.nl/bestuur-en-organisatie/bestuur/Vergaderdata-algemeen-bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wetterskipfryslan.nl/over-ons/begroting
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.wetterskipfryslan.nl/melden-en-regelen/vergunningen-wetten-en-regels/openbaar-gemaakte-woo-besluiten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wetterskip+Fryslân%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wetterskip+Fryslân%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wetterskip+Fryslân%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.wetterskipfryslan.nl/openoverheid
+organogram_url: https://www.wetterskipfryslan.nl/bestuur-en-organisatie
+afspraak:
+  email: info@wetterskipfryslan.nl
+  telefoonnummer: (058) 292 22 22
+  url: https://www.wetterskipfryslan.nl/contact
 contact:
   website: https://www.wetterskipfryslan.nl
   email: info@wetterskipfryslan.nl
+  bezoekadres: Fryslânplein 3, 8914 BZ Leeuwarden
+  postadres: Postbus 36, 8900 AA Leeuwarden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Fryslânplein
+    huisnummer: '3'
+    postcode: 8914 BZ
+    woonplaats: Leeuwarden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    postbus: '36'
+    postcode: 8900 AA
+    woonplaats: Leeuwarden
+  - type: Woo-Adres
+    postbus: '36'
+    postcode: 8900 AA
+    woonplaats: Leeuwarden
+    land: Nederland
+  - type: Postadres Omgevingsloket
+    postbus: '36'
+    postcode: 8900 AA
+    woonplaats: LEEUWARDEN
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Fryslânplein
+    huisnummer: '3'
+    postcode: 8914 BZ
+    woonplaats: LEEUWARDEN
+  phones:
+  - nummer: (058) 292 22 22
+    label: algemeen
+  emails:
+  - email: info@wetterskipfryslan.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wetterskipfryslan.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wetterskipfryslan.nl/contact
+    label: Omgevingsloket
+  fax: (058) 292 22 23
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-20'
+last_verified: '2026-04-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21134/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21134/wetterskip-fryslan
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

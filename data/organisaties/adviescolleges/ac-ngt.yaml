@@ -3,18 +3,67 @@ type: adviescollege
 identifiers:
   roo_id: '29515152'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12360
+  owms: http://standaarden.overheid.nl/owms/terms/acngt
+  organisatiecode: oorg12360
 classification: adviescollege
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Adviescollege Nederlandse Gebarentaal
   abbr: AC-NGT
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege Nederlandse Gebarentaal is ingesteld om het ministerie van
+    Binnenlandse Zaken en Koninkrijksrelaties te adviseren over het bevorderen van
+    het gebruik van de Nederlandse Gebarentaal (NGT) in de samenleving, zowel gevraagd
+    als ongevraagd. Daarbij is het belangrijkste doel van het Adviescollege om de
+    Nederlandse samenleving goed toegankelijk te maken voor gebarentaligen.
+  url: https://www.adviescollegengt.nl/team
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet erkenning Nederlandse Gebarentaal, artikel 8
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0045012
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.adviescollegengt.nl/
   email: contact@adviescollegengt.nl
+  emails:
+  - email: contact@adviescollegengt.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviescollegengt.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviescollegengt.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: Adviescollege Ngt
+    url: https://www.facebook.com/adviesngt
+  - platform: Instagram
+    gebruikersnaam: '@adviesngt'
+    url: https://www.instagram.com/adviesngt/
+  - platform: X
+    gebruikersnaam: '@adviesngt'
+    url: https://x.com/adviesngt
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29515152/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29515152/ac-ngt
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-07-01'

@@ -3,13 +3,23 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '114831'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-bck
+parent_id: org:onderdeel-bestuurs-en-concernzaken
 names:
 - value: Trendbureau
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (038) 499 98 89
+    label: algemeen
+  - nummer: (038) 499 94 94
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-06-13'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/114831/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/114831/trendbureau
+  retrieved: '2026-05-16'

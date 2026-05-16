@@ -6,21 +6,176 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1876
   roo_id: '36916'
   wikidata: Q747999
+  owms: http://standaarden.overheid.nl/owms/terms/Bronckhorst
+  ictu: 01876
+  organisatiecode: gm1876
+  rsin: '813647290'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BCK
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Bronckhorst
   abbr: Bronckhorst
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.bronckhorst.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/36916/Gemeente_Bronckhorst
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Adviezen
+      url: https://open.bronckhorst.nl/adviescolleges
+      toelichting: Adviescolleges
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.bronckhorst.nl/b-en-w-besluiten
+      toelichting: B en w besluiten
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.bronckhorst.nl/alle-woo-verzoeken
+      toelichting: Woo-verzoeken
+    - informatiecategorie: Convenanten
+      url: https://open.bronckhorst.nl/convenanten
+      toelichting: Convenanten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.bronckhorst.nl/jaarplannen
+      toelichting: Jaarplannen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bronckhorst%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Klachtoordelen
+      url: https://open.bronckhorst.nl/klachten
+      toelichting: Klachten
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bronckhorst%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://open.bronckhorst.nl/onderzoeken
+      toelichting: Onderzoeken
+    - informatiecategorie: Beschikkingen
+      url: https://open.bronckhorst.nl/beschikkingen
+      toelichting: Beschikkingen
+  wooVerzoek:
+    url: https://www.bronckhorst.nl/woo-verzoek-indienen
+organogram_url: https://open.bronckhorst.nl/organisatiegegevens
+afspraak:
+  url: http://www.bronckhorst.nl/
+geography:
+  oppervlakte: 300,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 300.0
+  aantal_inwoners: 35983
+  inwoners: '119'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 119.0
+  bevat_plaatsen_raw: Baak, Bronkhorst, Drempt, Halle, Hengelo GLD, Hoog-Keppel, Hummelo,
+    Keijenborg, Laag-Keppel, Olburgen, Rha, Steenderen, Toldijk, Vierakker, Vorden,
+    Wichmond, Zelhem
+  bevat_plaatsen:
+  - Baak
+  - Bronkhorst
+  - Drempt
+  - Halle
+  - Hengelo GLD
+  - Hoog-Keppel
+  - Hummelo
+  - Keijenborg
+  - Laag-Keppel
+  - Olburgen
+  - Rha
+  - Steenderen
+  - Toldijk
+  - Vierakker
+  - Vorden
+  - Wichmond
+  - Zelhem
+council:
+  total_seats: 26
+  parties:
+  - naam: GBB
+    aantal_zetels: 10
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 3
+  - naam: Lokaal Bronckhorst
+    aantal_zetels: 2
+  - naam: BVNL
+    aantal_zetels: 1
 contact:
   website: https://www.bronckhorst.nl
   email: info@bronckhorst.nl
+  bezoekadres: Elderinkweg 2, 7255 KA HENGELO GLD
+  postadres: Postbus 200, 7255 ZJ HENGELO GLD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Elderinkweg
+    huisnummer: '2'
+    postcode: 7255 KA
+    woonplaats: HENGELO GLD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '200'
+    postcode: 7255 ZJ
+    woonplaats: HENGELO GLD
+  - type: Woo-Adres
+    openbare_ruimte: Elderinkweg
+    huisnummer: '2'
+    postcode: 7255 KA
+    woonplaats: HENGELO GLD
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Elderinkweg
+    huisnummer: '2'
+    postcode: 7255 KA
+    woonplaats: HENGELO GLD
+  phones:
+  - nummer: (0575) 75 02 50
+    label: algemeen
+  emails:
+  - email: info@bronckhorst.nl
+    label: algemeen
+  - email: info@bronckhorst.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.bronckhorst.nl
+    label: algemeen
+  contact_forms:
+  - url: http://www.bronckhorst.nl/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
+predecessor_id:
+- org:gemeente-hummelo-en-keppel
+- org:gemeente-steenderen
+- org:gemeente-vorden
+- org:gemeente-zelhem
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36916/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36916/bronckhorst
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,8 +184,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q747999
   retrieved: '2026-05-09'
-predecessor_id:
-- org:gemeente-hummelo-en-keppel
-- org:gemeente-steenderen
-- org:gemeente-vorden
-- org:gemeente-zelhem
+roo_start_datum: '2005-01-01'

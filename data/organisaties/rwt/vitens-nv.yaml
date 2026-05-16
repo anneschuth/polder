@@ -2,14 +2,42 @@ id: org:oovb-vitens-nv
 type: rwt
 identifiers:
   roo_id: '27918883'
+  kvk: 05069581
+  rsin: '810584384'
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Vitens N.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Oude Veerweg 1, 8019 BE Zwolle
+  postadres: Postbus 1205, 8001 BE Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oude Veerweg 1
+    postcode: 8019 BE
+    woonplaats: Zwolle
+  - type: Postadres
+    postbus: '1205'
+    postcode: 8001 BE
+    woonplaats: Zwolle
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27918883/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27918883/vitens-nv
+  retrieved: '2026-05-16'

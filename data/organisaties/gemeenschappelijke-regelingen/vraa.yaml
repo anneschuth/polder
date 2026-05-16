@@ -5,23 +5,122 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0636
   oin: 00000001818694877000
   kvk: '34380742'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Amsterdam-Amstelland
+  organisatiecode: so0636
+  rsin: '818694877'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Amsterdam-Amstelland 2024
+  roo_id: '30573490'
 names:
 - value: Veiligheidsregio Amsterdam-Amstelland
   abbr: VrAA
   valid_from: '1900-01-01'
+description:
+  text: ‘Uw regio’ is een veiligheidsregio. Veiligheid is dus heel belangrijk voor
+    ons. En uiteraard voor jou. Het lijkt bijna een vanzelfsprekend iets, veiligheid.
+    Als het zo lijkt, komt dat door de sterke samenwerking binnen Veiligheidsregio
+    Amsterdam-Amstelland. Continu wordt er alles aan gedaan om veiligheid te waarborgen
+    of weer te verkrijgen.In tijden van crisis hoor je het woord ‘veiligheidsregio’
+    wellicht vaker vallen. Dan zijn we er ook voor je, in tijden van crisis. Door
+    met onze partners te zorgen voor een slagvaardige crisisbeheersing, brandweerzorg
+    en geneeskundige hulpverlening. Uiteraard willen we getroffenen zo goed mogelijk
+    helpen, (materiële) schade beperken en zo spoedig mogelijk terugkeren naar de
+    normale situatie.Ook wanneer het rustig is, wanneer die ‘normale situatie’ er
+    is, zijn we actief voor je. Continu zijn we in overleg om te anticiperen op risico’s,
+    samen te leren, crises te voorkomen en ervoor te zorgen dat onze regio een veilige
+    regio is.
+  url: https://veiligheidsregioaa.nl/jouw-regio/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://veiligheidsregioaa.nl/organisatie/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/24964586/Veiligheidsregio_Amsterdam-Amstelland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Amsterdam-Amstelland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Op deze pagina zijn de andere besluiten van algemene strekking
+        van de VrAA te vinden
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Amsterdam-Amstelland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Op deze pagina zijn de algemeen verbinden voorschriften van de
+        VrAA te vinden
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://veiligheidsregioaa.nl/organisatie/documenten/
+      toelichting: Op deze pagina zijn de financiële documenten te vinden
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://veiligheidsregioaa.nl/organisatie/documenten/woo-besluiten/
+      toelichting: Op deze pagina zijn al deze documenten te vinden, de nieuwe Woo
+        besluiten en de oude Wob besluiten.
+  wooVerzoek:
+    url: https://veiligheidsregioaa.nl/organisatie/wet-open-overheid/
+organogram_url: https://veiligheidsregioaa.nl/organisatie/
+afspraak:
+  email: informatie@veiligheidsregioaa.nl
+  telefoonnummer: (020) 555 65 50
 contact:
   website: https://veiligheidsregioaa.nl/
   email: informatie@veiligheidsregioaa.nl
+  postadres: Postbus 92171, 1090 AD Amsterdam
+  bezoekadres: Ringdijk 98, 1097 AH Amsterdam
+  addresses:
+  - type: Postadres
+    postbus: '92171'
+    postcode: 1090 AD
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Bezoekadres
+    openbare_ruimte: Ringdijk
+    huisnummer: '98'
+    postcode: 1097 AH
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '92171'
+    postcode: 1090 AD
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  phones:
+  - nummer: (020) 555 65 50
+    label: algemeen
+  emails:
+  - email: informatie@veiligheidsregioaa.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://veiligheidsregioaa.nl/
+    label: algemeen
+  - url: https://veiligheidsregioaa.nl/algemeen/secundaire-navigatie/contact/
+    label: contact
+  contact_forms:
+  - url: https://veiligheidsregioaa.nl/algemeen/secundaire-navigatie/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964586/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964586/vraa
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2008-01-01'

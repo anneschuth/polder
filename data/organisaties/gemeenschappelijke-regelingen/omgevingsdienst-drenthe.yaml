@@ -5,22 +5,89 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0821
   oin: 00000001853234565000
   kvk: '58911650'
+  owms: http://standaarden.overheid.nl/owms/terms/ruddr
+  organisatiecode: so0821
+  rsin: '853234565'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Drenthe
+  roo_id: '29679169'
 names:
 - value: Omgevingsdienst Drenthe
   valid_from: '1900-01-01'
+description:
+  url: https://oddrenthe.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://oddrenthe.nl/woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/25250057/Omgevingsdienst_Drenthe
+  wooVerzoek:
+    url: https://oddrenthe.nl/woo-verzoek/
+afspraak:
+  email: info@oddrenthe.nl
+  telefoonnummer: (0800) 91 02
+  url: https://oddrenthe.nl/contact/
 contact:
   website: https://oddrenthe.nl/
   email: info@oddrenthe.nl
+  bezoekadres: Westerbrink 1, 9405 BJ Assen
+  postadres: Postbus 1017, 9400 BA Assen
+  addresses:
+  - type: Bezoekadres
+    toelichting: vestiging Assen
+    openbare_ruimte: Westerbrink
+    huisnummer: '1'
+    postcode: 9405 BJ
+    woonplaats: Assen
+  - type: Postadres
+    postbus: '1017'
+    postcode: 9400 BA
+    woonplaats: Assen
+  - type: Woo-Adres
+    toelichting: vestiging Assen
+    openbare_ruimte: Westerbrink
+    huisnummer: '1'
+    postcode: 9405 BJ
+    woonplaats: ASSEN
+    regio: Drenthe
+    land: Nederland
+  phones:
+  - nummer: (0800) 91 02
+    label: algemeen
+  emails:
+  - email: info@oddrenthe.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://oddrenthe.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://oddrenthe.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25250057/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25250057/omgevingsdienst-drenthe
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-07-01'

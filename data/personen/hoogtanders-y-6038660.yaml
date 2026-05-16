@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6038662
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/31636/gemeente-roermond
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29147959
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6038660

@@ -3,7 +3,7 @@ name:
   full: R.H.J. Fransen
   family: Fransen
   given: R.H.J.
-  initials: R.
+  initials: R.H.J.
 mandaten:
 - id: 5ff7013f-1991-47f2-8362-9bf04efc6d1d
   organization_id: org:gemeente-laarbeek
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4681477
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/25516/gemeente-laarbeek
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30576043
 - id: f3a6a32e-2176-4185-a189-60370d59aa1b
   organization_id: org:gemeente-laarbeek
   post_id: post:raadslid-gemeente-laarbeek

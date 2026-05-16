@@ -2,15 +2,46 @@ id: org:oovb-caiw-diensten-bv
 type: rwt
 identifiers:
   roo_id: '27980616'
+  kvk: '27237487'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Caiw Diensten B.V.
   valid_from: '1900-01-01'
   valid_until: '2020-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2020-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+contact:
+  bezoekadres: Industriestraat 30, 2671 CT Naaldwijk
+  postadres: Postbus 45, 2670 AA Naaldwijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Industriestraat
+    huisnummer: '30'
+    postcode: 2671 CT
+    woonplaats: Naaldwijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '45'
+    postcode: 2670 AA
+    woonplaats: Naaldwijk
 valid_from: '1900-01-01'
 valid_until: '2020-01-01'
+last_mutation: '2021-02-27'
+last_verified: '2021-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27980616/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27980616/caiw-diensten-bv
+  retrieved: '2026-05-16'

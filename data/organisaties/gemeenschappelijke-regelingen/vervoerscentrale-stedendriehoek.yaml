@@ -1,19 +1,93 @@
 id: org:gr-vervoerscentrale-stedendriehoek
 type: gemeenschappelijke-regeling
+subname: PlusOV
 identifiers:
   roo_id: '27965321'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0872
+  owms: http://standaarden.overheid.nl/owms/terms/vcstdr
+  kvk: '65530225'
+  organisatiecode: so0872
+  rsin: '856149317'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling PlusOV
+  roo_id: '30407386'
 names:
 - value: Vervoerscentrale Stedendriehoek
   valid_from: '1900-01-01'
+description:
+  text: PlusOV is de regionale vervoerscentrale van de gemeenten Apeldoorn, Brummen,
+    Deventer, Epe, Hattem, Heerde, Lochem, Voorst en Zutphen. In opdracht van deze
+    gemeenten vervoeren wij u, uw kind of uw cliënt graag zo prettig mogelijk.PlusOV
+    vervoert mensen volgens vaste routes, op vaste dagen en tijdstippen. Denk hierbij
+    aan leerlingenvervoer en vervoer naar locaties voor dagbesteding en dagbehandeling.
+    Ook vervoeren we op afroep mensen die geen eigen vervoer hebben of geen gebruik
+    kunnen maken van eigen vervoer of openbaar vervoer. Bijvoorbeeld omdat ze te ver
+    van een bushalte afwonen of omdat er geen openbaar vervoer in de buurt is. We
+    vervoeren volgens de afspraken die de 9 gemeenten hierover samen hebben gemaakt.
+  url: https://www.plusov.nl/over-plusov
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/27965321/Vervoerscentrale_Stedendriehoek
+  wooVerzoek:
+    url: https://www.plusov.nl/contact
+afspraak:
+  url: https://www.plusov.nl/contact
 contact:
   website: https://www.plusov.nl
   email: info@plusov.nl
+  bezoekadres: Hanzeweg 8, 7241 CR Lochem
+  postadres: Postbus 44, 7240 AA Lochem
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeentehuis Lochem
+    openbare_ruimte: Hanzeweg
+    huisnummer: '8'
+    postcode: 7241 CR
+    woonplaats: Lochem
+  - type: Postadres
+    postbus: '44'
+    postcode: 7240 AA
+    woonplaats: Lochem
+  - type: Woo-Adres
+    postbus: '44'
+    postcode: 7240 AA
+    woonplaats: Lochem
+  phones:
+  - nummer: (088) 758 76 55
+    label: groepsvervoer
+  - nummer: (088) 758 76 54
+    label: reizen op afroep
+  emails:
+  - email: info@plusov.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.plusov.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.plusov.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-12-08'
+last_verified: '2025-10-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27965321/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27965321/vervoerscentrale-stedendriehoek
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-03-10'

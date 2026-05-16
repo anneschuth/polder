@@ -5,7 +5,7 @@ name:
   full: B.R. Arends
   family: Arends
   given: B.R.
-  initials: B.
+  initials: B.R.
 birth:
   year: 1966
 mandaten:
@@ -19,6 +19,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6598026
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36327/gemeente-westland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=27461453
 - id: 960d7271-2dbb-4473-b36f-0ea564135b70
   organization_id: org:gemeente-west
   post_id: post:burgemeester-gemeente-west

@@ -3,18 +3,114 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28556477'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0505
+  owms: http://standaarden.overheid.nl/owms/terms/rbedrmidnl
+  kvk: '56972563'
+  btw: NL808570559B01
+  organisatiecode: so0505
+  rsin: '808570559'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Reinigingsbedrijf Midden Nederland
+  roo_id: '29730417'
 names:
 - value: Reinigingsbedrijf Midden Nederland
   abbr: RMN
   valid_from: '1900-01-01'
+description:
+  text: RMN (Reinigingsbedrijf Midden Nederland) is in 2000 opgericht. Inmiddels is
+    RMN uitgegroeid tot een gemeenschappelijke regeling van de volgende zes gemeenten:BaarnBunnikNieuwegeinSoestIJsselsteinZeistDeze
+    zes gemeenten zijn eigenaar van RMN en vertegenwoordigd in het algemeen en dagelijks
+    bestuur van RMN.RMN is voor de deelnemende gemeenten de vanzelfsprekende samenwerkingspartij
+    als het gaat over inzameling van grondstoffen en restafval en een schone, hele
+    en veilige buitenruimte. Wij zijn de afval- en grondstoffenexpert, opereren zelfbewust
+    en dragen actief bij aan circulaire doelen en duurzaamheidsdoelen.
+  url: https://www.rmn.nl/over-rmn/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rmn.nl/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/28556477/Reinigingsbedrijf_Midden_Nederland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Reinigingsbedrijf+Midden+Nederland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.rmn.nl/contact/
+organogram_url: https://www.rmn.nl/over-rmn/
+afspraak:
+  email: info@rmn.nl
+  telefoonnummer: (0900) 603 92 22
+  url: https://www.rmn.nl/contact/
 contact:
   website: https://www.rmn.nl/
   email: info@rmn.nl
+  bezoekadres: Lange Brinkweg 81, 3764 AB Soest
+  postadres: Postbus 203, 3760 AE Soest
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Brinkweg
+    huisnummer: '81'
+    postcode: 3764 AB
+    woonplaats: Soest
+  - type: Postadres
+    postbus: '203'
+    postcode: 3760 AE
+    woonplaats: Soest
+  - type: Woo-Adres
+    postbus: '203'
+    postcode: 3760 AE
+    woonplaats: Soest
+  - type: Woo-Adres
+    openbare_ruimte: Lange Brinkweg
+    huisnummer: '81'
+    postcode: 3764 AB
+    woonplaats: Soest
+  phones:
+  - nummer: (0900) 603 92 22
+    label: algemeen
+  - nummer: (035) 603 92 22
+    label: algemeen
+  emails:
+  - email: info@rmn.nl
+    label: algemeen
+  - email: info@rmn.nl
+    label: algemeen
+  - email: info@rmn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rmn.nl/
+    label: algemeen
+  - url: https://www.rmn.nl
+    label: algemeen
+  - url: https://www.rmn.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.rmn.nl/contact
+    label: Algemeen
+  - url: https://www.rmn.nl/
+    label: Algemeen
+  - url: https://www.rmn.nl/contact/contactgegevens/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-12-09'
+last_verified: '2025-12-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28556477/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28556477/rmn
+  retrieved: '2026-05-16'
+roo_start_datum: '2008-01-01'

@@ -6,21 +6,164 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0569
   roo_id: '26403'
   wikidata: Q948866
+  owms: http://standaarden.overheid.nl/owms/terms/Nieuwkoop_(gemeente)
+  ictu: 00569
+  organisatiecode: gm0569
+  rsin: '816172638'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_NWK
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Nieuwkoop
   abbr: Nieuwkoop
   valid_from: '1900-01-01'
+description:
+  text: 'Gemeente Nieuwkoop is de gemeente voor de kernen: Ter Aar, Korteraar, Langeraar,
+    De Meije (gedeeltelijk), Nieuwkoop, Nieuwveen, Noordeinde, Noorden, Noordse Dorp,
+    Papenveer, Vrouwenakker, Woerdense Verlaat en Zevenhoven. Via de link vindt u
+    informatie over de inrichting van de organisatie en werkwijze.'
+  url: https://www.nieuwkoop.nl/hoe-werkt-de-gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nieuwkoop.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/26403/Gemeente_Nieuwkoop
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://vng.nl/brieven
+      toelichting: Hier staan de brieven van de Vereniging voor Nederlandse Gemeenten
+        (VNG). Dit zijn ingekomen stukken voor de gemeenteraad van gemeente Nieuwkoop.
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://mijnloket.nieuwkoop.nl/o/search?q=INKR
+      toelichting: Hier staan de openbare ingekomen stukken aan de gemeenteraad. (zie
+        voor brieven van de VNG de website van de VNG).
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nieuwkoop%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nieuwkoop%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.raadnieuwkoop.nl/
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Nieuwkoop%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://mijnloket.nieuwkoop.nl/o/search?q=%22besluit%20op%20WOO%20Verzoek%22
+      toelichting: Hier kunt u de Woo-verzoeken, -besluiten en bijgevoegde documenten
+        van de Gemeente Nieuwkoop vinden. Klik op de link 'Dossier' voor alle documenten
+        per WOO-verzoek.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://mijnloket.nieuwkoop.nl/o/dossier/0569540015
+      toelichting: Hier staan de jaarstukken van de gemeente Nieuwkoop
+  wooVerzoek:
+    url: https://mijnloket.nieuwkoop.nl/f/3033/login
+organogram_url: https://cuatro.sim-cdn.nl/nieuwkoop/uploads/organogram1.png?cb=kxsMkh_q
+afspraak:
+  email: info@nieuwkoop.nl
+  telefoonnummer: 14 0172
+  url: https://nieuwkoop.mijnafspraakmaken.nl/Client/
+geography:
+  oppervlakte: 90,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 90.0
+  aantal_inwoners: 29728
+  inwoners: '330'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 330.0
+  bevat_plaatsen_raw: Nieuwkoop, Nieuwveen, Noorden, Ter Aar, Vrouwenakker, Woerdense
+    Verlaat, Zevenhoven
+  bevat_plaatsen:
+  - Nieuwkoop
+  - Nieuwveen
+  - Noorden
+  - Ter Aar
+  - Vrouwenakker
+  - Woerdense Verlaat
+  - Zevenhoven
+council:
+  total_seats: 21
+  parties:
+  - naam: Samen Beter Nieuwkoop
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Natuurlijk Nieuwkoop
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: SGP-ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.nieuwkoop.nl
   email: info@nieuwkoop.nl
+  bezoekadres: Teylersplein 1, 2441 LE NIEUWVEEN
+  postadres: Postbus 1, 2460 AA TER AAR
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Teylersplein
+    huisnummer: '1'
+    postcode: 2441 LE
+    woonplaats: NIEUWVEEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1'
+    postcode: 2460 AA
+    woonplaats: TER AAR
+  - type: Woo-Adres
+    toelichting: Postbus 1
+    postbus: '2460'
+    postcode: 2460 AA
+    woonplaats: Ter Aar
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Teylersplein
+    huisnummer: '1'
+    postcode: 2441 LE
+    ter_attentie_van: team RO
+    woonplaats: NIEUWVEEN
+  phones:
+  - nummer: 14 0172
+    label: algemeen
+  emails:
+  - email: info@nieuwkoop.nl
+    label: algemeen
+  - email: info@nieuwkoop.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.nieuwkoop.nl
+    label: algemeen
+  contact_forms:
+  - url: https://nieuwkoop.mijnafspraakmaken.nl/Client/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26403/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26403/nieuwkoop
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

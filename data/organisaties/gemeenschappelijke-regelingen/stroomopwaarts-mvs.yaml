@@ -5,21 +5,105 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0851
   oin: 00000001855010496000
   kvk: '62911872'
+  owms: http://standaarden.overheid.nl/owms/terms/stowmvs
+  organisatiecode: so0851
+  rsin: '855010496'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Stroomopwaarts MVS
+  roo_id: '29942061'
 names:
 - value: Stroomopwaarts MVS
   valid_from: '1900-01-01'
+description:
+  text: Over StroomopwaartsStroomopwaarts is er voor de inwoners van Maassluis, Vlaardingen
+    en Schiedam op hun weg naar werk. Wij gaan bij mensen op zoek naar hun eigen kracht
+    en bieden begeleiding, training, opleiding en als dat nodig is een tijdelijk inkomen.
+    Ook voor mensen met een arbeidsbeperking. Dit doen wij vanuit het Werkplein, het
+    Werkleerbedrijf, samen met maatschappelijke partners en met lokale ondernemers.Sinds
+    1 juli 2015 bestaat Stroomopwaarts en voert namens de gemeenten Maassluis, Vlaardingen
+    en Schiedam het gedeelte Werk en Inkomen uit. Ook de sociale werkplaatsen van
+    deze gemeenten zijn van Stroomopwaarts. Deze sociale werkplaatsen noemen wij het
+    Werkleerbedrijf.ParticipatiewetStroomopwaarts voert namens de gemeenten Maassluis,
+    Vlaardingen en Schiedam regelingen uit. Dit betreft de regelingen:ParticipatiewetSchuldhulpverleningIOAZ
+    (Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte gewezen zelfstandigen)IOAW
+    (Wet inkomensvoorziening oudere en gedeeltelijk arbeidsongeschikte gewezen werkzoekenden)Sociaal
+    ondernemenStroomopwaarts is dé partner in sociaal ondernemen. Het Werkgeversservicepunt
+    (WSP) van Stroomopwaarts geeft ondernemers advies over de mogelijkheden om sociaal
+    te ondernemen en adviseert over mogelijke regelingen vanuit het Rijk. Daarnaast
+    denken de accountmanagers van het WSP graag mee over detachering of plaatsing
+    van medewerkers met een afstand tot de arbeidsmarkt en bieden de mogelijkheid
+    werk uit te besteden aan het Werkleerbedrijf van Stroomopwaarts.Nieuwe Wet InburgeringStroomopwaarts
+    helpt nieuwkomers in Maassluis, Vlaardingen en Schiedam op weg om aan hun inburgeringsplicht
+    te voldoen en om bekend te raken in hun nieuwe woonplaats. We bieden ondersteuning
+    bij het leren van de Nederlandse taal, het bereiken van (financiële) zelfredzaamheid
+    en de toeleiding naar participatieactiviteiten en (vrijwilligers)werk. Vanuit
+    een persoonlijk Plan Inburgering en Participatie bieden we begeleiding op maat.
+  url: https://www.stroomopwaarts.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.stroomopwaarts.nl/over-ons/wetten/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28468580/Stroomopwaarts_MVS
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stroomopwaarts+MVS%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Stroomopwaarts+MVS%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.stroomopwaarts.nl/over-ons/wetten/wet-open-overheid-woo
+organogram_url: https://www.stroomopwaarts.nl/over-ons/bestuur
+afspraak:
+  url: https://zaaksysteem.stroomopwaarts.nl/zaak/create/webformulier?aanvrager=betrokkene-natuurlijk_persoon-1982&ztc_aanvrager_type=unknown&zaaktype_id=330&afronden=1&sessreset=1
 contact:
   website: https://www.stroomopwaarts.nl
+  bezoekadres: Broersvest 110, 3112 DG Schiedam
+  postadres: Postbus 205, 3140 AE Maassluis
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Broersvest
+    huisnummer: '110'
+    postcode: 3112 DG
+    woonplaats: Schiedam
+  - type: Postadres
+    postbus: '205'
+    postcode: 3140 AE
+    woonplaats: Maassluis
+  - type: Woo-Adres
+    postbus: '205'
+    postcode: 3140 AE
+    woonplaats: Maassluis
+  internet_addresses:
+  - url: https://www.stroomopwaarts.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.stroomopwaarts.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28468580/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28468580/stroomopwaarts-mvs
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-02-01'

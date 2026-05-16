@@ -5,22 +5,67 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0768
   oin: 00000001814487567000
   kvk: '52454037'
+  owms: http://standaarden.overheid.nl/owms/terms/rhcda
+  organisatiecode: so0768
+  rsin: '814487567'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling RHC Drents Archief
+  roo_id: '27948951'
 names:
 - value: RHC Drents Archief
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.drentsarchief.nl
   email: info@drentsarchief.nl
+  bezoekadres: Brink 4, 9401 HS Assen
+  postadres: Postbus 595, 9400 AN Assen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brink
+    huisnummer: '4'
+    postcode: 9401 HS
+    woonplaats: Assen
+  - type: Postadres
+    postbus: '595'
+    postcode: 9400 AN
+    woonplaats: Assen
+  phones:
+  - nummer: (0592) 31 35 23
+    label: algemeen
+  emails:
+  - email: info@drentsarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.drentsarchief.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.drentsarchief.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2022-04-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27948957/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27948957/rhc-drents-archief
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2005-09-11'

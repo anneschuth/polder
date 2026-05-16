@@ -3,7 +3,7 @@ name:
   full: B.S. Pastoor
   family: Pastoor
   given: B.S.
-  initials: B.
+  initials: B.S.
 mandaten:
 - id: dacc708f-b113-48fe-9989-2a15e7fd9549
   organization_id: org:gemeente-schiermonnikoog
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6134849
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23540/gemeente-schiermonnikoog
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=25252323
 - id: d705cf6c-3f08-4fef-906e-18e4b53b8ad0
   organization_id: org:gemeente-schiermonnikoog
   post_id: post:raadslid-gemeente-schiermonnikoog

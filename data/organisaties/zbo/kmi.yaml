@@ -4,20 +4,69 @@ identifiers:
   roo_id: '26141535'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000111
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Keurmerkinstituut jeugdzorg
   abbr: KMI
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Artikel 3.4 Jeugdwet
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0034925&hoofdstuk=3&artikel=3.4
+taken_en_bevoegdheden: Het Keurmerkinstituut jeugdzorg onderzoekt en beoordeelt producten,
+  diensten en organisaties, en verzorgt opleidingen om zijn kennis te verspreiden.
+  Daarnaast geeft het Keurmerkinstituut jeugdzorg ondersteuning bij het opzetten van
+  een keurmerk of erkenningsregeling.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.keurmerk.nl
   email: post@keurmerk.nl
+  bezoekadres: Groeneweg 2 e, 2718 AA Zoetermeer
+  postadres: Postbus 45, 2700 AA Zoetermeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Groeneweg
+    huisnummer: '2'
+    huisnummer_toevoeging: e
+    postcode: 2718 AA
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '45'
+    postcode: 2700 AA
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (079) 363 70 00
+    label: algemeen
+  emails:
+  - email: post@keurmerk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.keurmerk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141535/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141535/kmi
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000111
   retrieved: '2026-05-09'
+roo_start_datum: '2015-01-01'

@@ -3,6 +3,9 @@ type: gemeente
 identifiers:
   roo_id: '28197'
   wikidata: Q518739
+  owms: http://standaarden.overheid.nl/owms/terms/Rijnwaarden
+  ictu: 00196
+  organisatiecode: gm0196
 classification: gemeente
 parent_id: null
 names:
@@ -10,15 +13,67 @@ names:
   abbr: Rijnwaarden
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 47,86
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 47.86
+  aantal_inwoners: 11017
+  inwoners: '230'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 230.0
+  bevat_plaatsen_raw: Aerdt, Herwen, Lobith, Pannerden, Spijk GLD, Tolkamer
+  bevat_plaatsen:
+  - Aerdt
+  - Herwen
+  - Lobith
+  - Pannerden
+  - Spijk GLD
+  - Tolkamer
+council:
+  total_seats: 15
+  parties:
+  - naam: Belangen Gelders Eiland
+    aantal_zetels: 5
+  - naam: Lijst Lobith-Tolkamer
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 2
 contact:
   website: http://www.rijnwaarden.nl
   email: rijnwaarden@rijnwaarden.nl
+  bezoekadres: Markt 5, 6915 AH LOBITH
+  postadres: Postbus 49, 6916 ZG TOLKAMER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '5'
+    postcode: 6915 AH
+    woonplaats: LOBITH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    openbare_ruimte: Postbus 49
+    postbus: '49'
+    postcode: 6916 ZG
+    woonplaats: TOLKAMER
+  phones:
+  - nummer: (0316) 56 56 00
+    label: algemeen
+  emails:
+  - email: rijnwaarden@rijnwaarden.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijnwaarden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2026-04-11'
+last_verified: '2026-04-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28197/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28197/rijnwaarden
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q518739
   retrieved: '2026-05-09'

@@ -1,27 +1,107 @@
 id: org:gr-ggd-hn
 type: gemeenschappelijke-regeling
+subname: GGD Hollands Noorden
 identifiers:
   roo_id: '28356722'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0340
   oin: 00000001817205767000
   kvk: '37159559'
+  owms: http://standaarden.overheid.nl/owms/terms/ggdholn
+  organisatiecode: so0340
+  rsin: '817205767'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Gemeentelijke Gezondheidsdienst Hollands Noorden
+  roo_id: '30241138'
 names:
 - value: Gemeentelijke Gezondheidsdienst Hollands Noorden
   abbr: GGD HN
   valid_from: '1900-01-01'
+description:
+  url: https://www.ggdhollandsnoorden.nl/over-ggd-hollands-noorden/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://openpub.ggdhollandsnoorden.nl/zelf-een-woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28356722/Gemeentelijke_Gezondheidsdienst_Hollands_Noorden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeentelijke+Gezondheidsdienst+Hollands+Noorden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeentelijke+Gezondheidsdienst+Hollands+Noorden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://openpub.ggdhollandsnoorden.nl/zelf-een-woo-verzoek-indienen/
+organogram_url: https://ggdhollandsnoorden.bestuurlijkeinformatie.nl/Reports/Item/9ef7c957-b694-4d9d-8f32-40dde587423a
+afspraak:
+  email: info@ggdhollandsnoorden.nl
+  telefoonnummer: (088) 010 05 00
+  url: https://www.ggdhollandsnoorden.nl/contact/
 contact:
   website: https://www.ggdhollandsnoorden.nl
   email: info@ggdhollandsnoorden.nl
+  bezoekadres: Hertog Aalbrechtweg 22, 1823 DL Alkmaar
+  postadres: Postbus 9276, 1800 GG Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hertog Aalbrechtweg
+    huisnummer: '22'
+    postcode: 1823 DL
+    woonplaats: Alkmaar
+  - type: Postadres
+    postbus: '9276'
+    postcode: 1800 GG
+    woonplaats: Alkmaar
+  - type: Woo-Adres
+    openbare_ruimte: Hertog Aalbrechtweg
+    huisnummer: '22'
+    postcode: 1823 DL
+    woonplaats: Alkmaar
+  - type: Woo-Adres
+    postbus: '9276'
+    postcode: 1800 GG
+    woonplaats: Alkmaar
+  phones:
+  - nummer: (088) 010 05 00
+    label: algemeen
+  emails:
+  - email: info@ggdhollandsnoorden.nl
+    label: algemeen
+  - email: juridisch@ggdhn.nl
+    label: WOO verzoek
+  - email: fg@ggdhn.nl
+    label: AVG
+  internet_addresses:
+  - url: https://www.ggdhollandsnoorden.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ggdhollandsnoorden.nl/contact.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28356722/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28356722/ggd-hn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2007-04-01'

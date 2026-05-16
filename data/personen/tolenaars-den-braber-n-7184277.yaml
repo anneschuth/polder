@@ -3,7 +3,7 @@ name:
   full: N.A. Tolenaars-den Braber
   family: Tolenaars-den Braber
   given: N.A.
-  initials: N.
+  initials: N.A.
 mandaten:
 - id: 999d277f-7f78-47a5-824c-aee30f0c40a2
   organization_id: org:gemeente-moerdijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774333
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30656/gemeente-moerdijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30567216
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7184277

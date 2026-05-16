@@ -4,6 +4,9 @@ identifiers:
   roo_id: '26367'
   wikidata: Q778989
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0081
+  owms: http://standaarden.overheid.nl/owms/terms/Leeuwarderadeel
+  ictu: 00081
+  organisatiecode: gm0081
 classification: gemeente
 parent_id: null
 names:
@@ -11,15 +14,70 @@ names:
   abbr: Leeuwarderadeel
   valid_from: '1900-01-01'
   valid_until: '2018-01-01'
+geography:
+  oppervlakte: 41,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 41.38
+  aantal_inwoners: 10435
+  inwoners: '252'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 252.0
+  bevat_plaatsen_raw: Alde Leie, Britsum, Feinsum, Hijum, Jelsum, Koarnjum, Stiens
+  bevat_plaatsen:
+  - Alde Leie
+  - Britsum
+  - Feinsum
+  - Hijum
+  - Jelsum
+  - Koarnjum
+  - Stiens
+council:
+  total_seats: 15
+  parties:
+  - naam: PvdA
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: GBL Gemeentebelangen Leeuwarderadeel
+    aantal_zetels: 3
+  - naam: FNP
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.leeuwarderadeel.nl
   email: info@leeuwarderadeel.nl
+  bezoekadres: Ljipstrjitte 1, 9051 AR STIENS
+  postadres: Postbus 24, 9050 AA STIENS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Ljipstrjitte
+    huisnummer: '1'
+    postcode: 9051 AR
+    woonplaats: STIENS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 24
+    postbus: '24'
+    postcode: 9050 AA
+    woonplaats: STIENS
+  phones:
+  - nummer: (058) 257 66 66
+    label: algemeen
+  emails:
+  - email: info@leeuwarderadeel.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.leeuwarderadeel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2018-01-01'
+last_mutation: '2018-01-16'
+last_verified: '2018-01-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26367/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26367/gemeente-leeuwarderadeel
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q778989
   retrieved: '2026-05-09'

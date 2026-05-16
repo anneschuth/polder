@@ -1,24 +1,60 @@
 id: org:rechtbank-rnn
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000143000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10024
   roo_id: '28048578'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Noord-Nederland
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Noord-Nederland
   abbr: RNN
   valid_from: '1900-01-01'
+description:
+  text: Rechtbank Noord-Nederland is bevoegd om in haar arrondissement recht te spreken
+    in eerste aanleg.Tegen uitspraken van de rechtbank Noord-Nederland staat veelal
+    hoger beroep open bij gerechtshof Arnhem-Leeuwarden.Het algemeen postadres is
+    alleen bestemd voor niet-zaaksgebonden correspondentie.Voor zaaksgebonden correspondentie
+    verwijzen wij u naar het postadres onder het betreffende rechtsgebied op Rechtspraak.nl.Zie
+    daarvoor:https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland/Contact/Paginas/default.aspx#2a45c9eb-d13c-465f-a2bc-579cee1ece6b094f42c7-dbf3-499e-b88f-802843249aee1
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland
   email: info.rechtbanknoordnederland@rechtspraak.nl
+  postadres: Postbus 781, 9700 AT Groningen
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    toelichting: Voor niet-zaaksgebonden correspondentie
+    postbus: '781'
+    postcode: 9700 AT
+    woonplaats: Groningen
+  phones:
+  - nummer: (088) 361 44 44
+    label: algemeen
+  emails:
+  - email: info.rechtbanknoordnederland@rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland
+    label: algemeen
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Noord-Nederland/Contact/Paginas/default.aspx#0a6bfe83-fad6-46ab-8ad5-fc272d18931ae893f1c3-a940-4db6-ac46-3e1545b67a541
+    label: zaaksgebonden
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048578/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048578/rnn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

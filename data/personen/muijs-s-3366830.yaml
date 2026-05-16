@@ -3,7 +3,7 @@ name:
   full: S.E. Muijs
   family: Muijs
   given: S.E.
-  initials: S.
+  initials: S.E.
 mandaten:
 - id: 664aee3e-5cd1-443a-b4cd-ee3eb0487b29
   organization_id: org:gemeente-diemen
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366832
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/21518/gemeente-diemen
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28637758
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366830

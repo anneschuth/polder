@@ -3,17 +3,65 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24347072'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0699
+  owms: http://standaarden.overheid.nl/owms/terms/cnbnzk
+  kvk: '34375970'
+  organisatiecode: so0699
+  rsin: '821846012'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Centraal Nautisch Beheer Noordzeekanaalgebied
+  roo_id: '24347067'
 names:
 - value: Centraal Nautisch Beheer Noordzeekanaalgebied
   abbr: CNB
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24347072/Centraal_Nautisch_Beheer_Noordzeekanaalgebied
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Centraal+Nautisch+Beheer+Noordzeekanaalgebied%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.portofamsterdam.com/nl
+  bezoekadres: De Ruijterkade 7, 1013 AA Amsterdam
+  postadres: Postbus 19406, 1000 GK Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Ruijterkade
+    huisnummer: '7'
+    postcode: 1013 AA
+    woonplaats: Amsterdam
+  - type: Postadres
+    postbus: '19406'
+    postcode: 1000 GK
+    woonplaats: Amsterdam
+  phones:
+  - nummer: 14 020
+    label: gemeente Amsterdam
+  internet_addresses:
+  - url: https://www.portofamsterdam.com/nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-22'
+last_verified: '2020-08-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24347072/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24347072/cnb
+  retrieved: '2026-05-16'
+roo_start_datum: '1994-04-01'

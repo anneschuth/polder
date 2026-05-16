@@ -3,7 +3,7 @@ name:
   full: E.H. Elgersma
   family: Elgersma
   given: E.H.
-  initials: E.
+  initials: E.H.
 mandaten:
 - id: 4223ca97-3b56-4829-beba-7ce2da3da454
   organization_id: org:gemeente-steenwijkerland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7760157
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/24145/gemeente-steenwijkerland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30569836
 - id: 7b78e82b-cfe3-4c9e-89c0-ea904bbbf31e
   organization_id: org:gemeente-steenwijk
   post_id: post:raadslid-gemeente-steenwijk

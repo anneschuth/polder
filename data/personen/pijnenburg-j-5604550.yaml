@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5604552
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/34584/gemeente-oirschot
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=123782
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5604550

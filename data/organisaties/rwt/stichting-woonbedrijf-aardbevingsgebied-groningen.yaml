@@ -1,15 +1,39 @@
 id: org:stichting-woonbedrijf-aardbevingsgebied-groningen
 type: rwt
+subname: SWAGG
 identifiers:
   roo_id: '28347662'
+  kvk: '73864293'
+  rsin: '859691123'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Stichting Woonbedrijf Aardbevingsgebied Groningen
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Paterswoldseweg 1, 9726 BA Groningen
+  postadres: Paterswoldseweg 1, 9726 BA Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Paterswoldseweg 1
+    postcode: 9726 BA
+    woonplaats: Groningen
+  - type: Postadres
+    openbare_ruimte: Paterswoldseweg 1
+    postcode: 9726 BA
+    woonplaats: Groningen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28347662/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28347662/stichting-woonbedrijf-aardbevingsgebied-groningen
+  retrieved: '2026-05-16'

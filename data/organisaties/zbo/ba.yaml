@@ -3,21 +3,129 @@ type: zbo
 identifiers:
   roo_id: '28211988'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000214
+  owms: http://standaarden.overheid.nl/owms/terms/barchreg
+  kvk: '54213878'
+  rsin: '851216742'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Bureau Architectenregister
   abbr: BA
   valid_from: '1900-01-01'
+description:
+  text: 'Op basis van de Wet op de architectentitel dragen wij medeverantwoordelijkheid
+    voor de vakbekwaamheid van 14.000 interieurarchitecten, architecten, tuin- en
+    landschapsarchitecten en stedenbouwkundigen (te noemen ''architect''). Hierbij
+    streven wij de doelstellingen van de Wet op de architectentitel na: het waarborgen
+    van een vakbekwame beroepsuitoefening van de architect en daarmee de bevordering
+    van de kwaliteit van het landschap en de gebouwde omgeving, het implementeren
+    van Europese richtlijnen voor de vier titels en de bescherming van de consument.'
+  url: https://www.architectenregister.nl/wie-wij-zijn
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Onafhankelijkheid,Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de architectentitel, artikel 2a
+  referentie: https://wetten.overheid.nl/BWBR0004189/2021-08-26/#HoofdstukIII
+taken_en_bevoegdheden: De Wet op de architectentitel kent het Bureau Architectenregister
+  (BA) vier categorieën taken en bevoegdheden toe:* het beheer van het register;*
+  werkzaamheden als bevoegde autoriteit;* werkzaamheden met betrekking tot regelingen
+  van de Wet op de architectentitel;* overige wettelijke taken en bevoegdheden.Daarnaast
+  voert het Architectenregister de zelfstandige route van de Beroepservaringperiode
+  uit en coördineert samen met het College van Rijksbouwmeester & Rijksadviseurs periodiek
+  onderzoek naar de stand van de architectuur.
+evaluations:
+- datum: '2020-03-30'
+  kamerstuknummer: TK 25268 nr. 184
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-184.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28211988/Bureau_Architectenregister
+afspraak:
+  email: info@architectenregister.nl
+  telefoonnummer: (070) 346 70 20
+personnel:
+  aantalFte: 9,4
+  peildatumFte: '2024-09-30'
 contact:
   website: https://www.architectenregister.nl/
   email: info@architectenregister.nl
+  bezoekadres: Nassaulaan 9, 2514 JS Den Haag
+  postadres: Nassaulaan 9, 2514 JS Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nassaulaan
+    huisnummer: '9'
+    postcode: 2514 JS
+    woonplaats: Den Haag
+  - type: Postadres
+    openbare_ruimte: Nassaulaan
+    huisnummer: '9'
+    postcode: 2514 JS
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Nassaulaan
+    huisnummer: '9'
+    postcode: 2514 JS
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 346 70 20
+    label: algemeen
+  emails:
+  - email: info@architectenregister.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.architectenregister.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.architectenregister.nl/wie-wij-zijn/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Architectenregister
+    url: https://www.linkedin.com/company/bureau-architectenregister/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28211988/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28211988/ba
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +134,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000214
   retrieved: '2026-05-09'
+roo_start_datum: '1988-10-01'

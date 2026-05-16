@@ -1,15 +1,44 @@
 id: org:oovb-stichting-tot-instandhouding-van-molens-in-de-alblasserwaard-en-de-vijfheerenlanden
 type: rwt
+subname: SIMAV
 identifiers:
   roo_id: '27917298'
+  kvk: '41118792'
+  rsin: 004851377
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting tot Instandhouding van Molens in de Alblasserwaard en de Vijfheerenlanden
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Nieuwe Veer 42, 2959 AK Streefkerk
+  postadres: Nieuwe Veer 42, 2959 AK Streefkerk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Veer 42
+    postcode: 2959 AK
+    woonplaats: Streefkerk
+  - type: Postadres
+    openbare_ruimte: Nieuwe Veer 42
+    postcode: 2959 AK
+    woonplaats: Streefkerk
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-24'
+last_verified: '2021-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917298/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917298/stichting-tot-instandhouding-van-molens-in-de-alblasserwaard-en-de-vijfheerenlanden
+  retrieved: '2026-05-16'

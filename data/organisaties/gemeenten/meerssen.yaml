@@ -6,21 +6,153 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0938
   roo_id: '23819'
   wikidata: Q9772
+  owms: http://standaarden.overheid.nl/owms/terms/Meerssen_(gemeente)
+  ictu: 00938
+  organisatiecode: gm0938
+  rsin: 001910693
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MRN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Meerssen
   abbr: Meerssen
   valid_from: '1900-01-01'
+description:
+  url: https://www.meerssen.nl/bestuur_en_organisatie/afdelingen/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.meerssen.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/23819/Gemeente_Meerssen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.meerssen.nl/woo-verzoeken
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://meerssen.notubiz.nl/
+    - informatiecategorie: Adviezen
+      url: https://open.meerssen.nl/adviezen-van-adviescolleges
+    - informatiecategorie: Convenanten
+      url: https://open.meerssen.nl/convenanten
+    - informatiecategorie: Beschikkingen
+      url: https://open.meerssen.nl/beschikkingen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meerssen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meerssen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://open.meerssen.nl/jaarplannen-en-verslagen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://open.meerssen.nl/besluitenlijsten-bestuur
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://open.meerssen.nl/onderzoeksrapporten
+    - informatiecategorie: Klachtoordelen
+      url: https://open.meerssen.nl/klachtoordelen
+  wooVerzoek:
+    url: https://open.meerssen.nl/verzoek-indienen
+organogram_url: https://www.meerssen.nl/bestand/bestuur_en_organisatie/afdelingen/ambtelijke_organisatie//organogram_790465
+afspraak:
+  email: info@meerssen.nl
+  telefoonnummer: 14 043
+  url: https://www.meerssen.nl/contact_en_openingstijden/maak_een_afspraak/
+geography:
+  oppervlakte: 27,69
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 27.69
+  aantal_inwoners: 18454
+  inwoners: '666'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 666.0
+  bevat_plaatsen_raw: Bunde, Geulle, Meerssen, Moorveld, Ulestraten
+  bevat_plaatsen:
+  - Bunde
+  - Geulle
+  - Meerssen
+  - Moorveld
+  - Ulestraten
+council:
+  total_seats: 16
+  parties:
+  - naam: Lokaal DNA
+    aantal_zetels: 7
+  - naam: BRUG-M
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: PRO
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Fractie Gulikers
+    aantal_zetels: 1
 contact:
   website: https://www.meerssen.nl
   email: info@meerssen.nl
+  bezoekadres: Markt 50, 6231 LS MEERSSEN
+  postadres: Postbus 90, 6230 AB MEERSSEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Markt
+    huisnummer: '50'
+    postcode: 6231 LS
+    woonplaats: MEERSSEN
+  - type: Postadres
+    postbus: '90'
+    postcode: 6230 AB
+    woonplaats: MEERSSEN
+  - type: Woo-Adres
+    postbus: '90'
+    postcode: 6230 AB
+    woonplaats: Meerssen
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Markt
+    huisnummer: '50'
+    postcode: 6231 LS
+    ter_attentie_van: Klantenburo
+    woonplaats: MEERSSEN
+  phones:
+  - nummer: 14 043
+    label: algemeen
+  emails:
+  - email: info@meerssen.nl
+    label: algemeen
+  - email: KlantenburoRuimte@meerssen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.meerssen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://eloket.meerssen.nl/f/617/login
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-03'
+last_verified: '2026-05-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23819/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23819/meerssen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

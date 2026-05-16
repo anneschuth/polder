@@ -3,16 +3,66 @@ type: adviescollege
 identifiers:
   roo_id: '28355941'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10135
+  owms: http://standaarden.overheid.nl/owms/terms/polondraad
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Politieonderwijsraad
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 82 van de Politiewet 2012
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0031788&hoofdstuk=8&paragraaf=2&artikel=82
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.politieonderwijsraad.nl/
+  bezoekadres: Koninginnegracht 62, 2514 AG Den Haag
+  postadres: Postbus 25842, 2502 HV Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koninginnegracht
+    huisnummer: '62'
+    postcode: 2514 AG
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '25842'
+    postcode: 2502 HV
+    woonplaats: Den Haag
+  phones:
+  - nummer: (088) 169 90 80
+    label: algemeen
+  internet_addresses:
+  - url: https://www.politieonderwijsraad.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.politieonderwijsraad.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355941/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355941/politieonderwijsraad
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-01-01'

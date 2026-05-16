@@ -1,24 +1,67 @@
 id: org:oovb-ndw
 type: rwt
+subname: Nationale Databank Wegverkeersgegevens
 identifiers:
   oin: 00000004127736109000
   roo_id: '28355859'
+  owms: http://standaarden.overheid.nl/owms/terms/ndw
 classification: rwt
 parent_id: null
 names:
 - value: Nationaal Dataportaal Wegverkeer
   abbr: NDW
   valid_from: '1900-01-01'
+description:
+  text: In NDW werken Nederlandse overheden samen aan het inwinnen, combineren, opslaan
+    en distribueren van mobiliteitsdata.Deze gegevens zijn essentieel voor het managen
+    van het verkeer, ze voeden talloze verkeersinformatiediensten en vormen een stevige
+    basis onder het mobiliteitsbeleid in ons land.Data van en over het wegverkeer
+    zijn onze core business. We regelen de inwinning ervan, zien toe op de kwaliteit,
+    we verrijken data, slaan ze op en stellen ze beschikbaar.NDW is een initiatief
+    van de volgende partners:- Gemeente Amsterdam- Gemeente Den Haag- Gemeente Rotterdam-
+    Gemeente Utrecht- Metropoolregio Rotterdam Den Haag- Provincie Drenthe- Provincie
+    Flevoland- Provincie Fryslân- Provincie Gelderland- Provincie Groningen- Provincie
+    Limburg- Provincie Noord-Brabant- Provincie Noord-Holland- Provincie Overijssel-
+    Provincie Utrecht- Provincie Zeeland- Provincie Zuid-Holland- Rijkswaterstaat-
+    Vervoerregio Amsterdam
 contact:
   website: https://www.ndw.nu
+  bezoekadres: Archimedeslaan 6, 3584 BA Utrecht
+  postadres: Postbus 24016, 3502 MA Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Provinciehuis Utrecht
+    openbare_ruimte: Archimedeslaan
+    huisnummer: '6'
+    postcode: 3584 BA
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '24016'
+    postcode: 3502 MA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 797 34 35
+    label: secretariaat
+  internet_addresses:
+  - url: https://www.ndw.nu
+    label: algemeen
+  - url: https://www.ndw.nu/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.ndw.nu/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355859/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355859/ndw
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-07-06'

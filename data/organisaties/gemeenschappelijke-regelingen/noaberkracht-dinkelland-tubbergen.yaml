@@ -5,22 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0705
   oin: 00000001852070706000
   kvk: '56315619'
+  owms: http://standaarden.overheid.nl/owms/terms/Noaberkracht_Dinkelland_Tubbergen
+  btw: NL852070706B01
+  loonheffing: 852070706L01
+  organisatiecode: so0705
+  rsin: '852070706'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Noaberkracht Dinkelland Tubbergen
+  roo_id: '29991127'
 names:
 - value: Noaberkracht Dinkelland Tubbergen
   valid_from: '1900-01-01'
+description:
+  text: Sinds 2013 werkt één ambtelijke organisatie voor de gemeente Dinkelland én
+    de gemeente Tubbergen. De ambtelijke organisatie heet ‘Noaberkracht Dinkelland
+    Tubbergen’. Medewerkers die voor 2013 werkzaam waren bij Dinkelland of Tubbergen,
+    zijn in dienst bij de bedrijfsvoeringsorganisatie Noaberkracht Dinkelland Tubbergen.
+    Noaberkracht Dinkelland Tubbergen heeft een bestuur, dat bestaat uit beide colleges
+    van burgemeester en wethouders.
+  url: https://werkenbijnoaberkracht.nl/organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28463968/Noaberkracht_Dinkelland_Tubbergen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noaberkracht+Dinkelland+Tubbergen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noaberkracht+Dinkelland+Tubbergen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Noaberkracht+Dinkelland+Tubbergen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://werkenbijnoaberkracht.nl/contact
+organogram_url: https://werkenbijnoaberkracht.nl/organisatie
+afspraak:
+  email: info@noaberkracht.nl
+  telefoonnummer: (0541) 85 41 00
+  url: https://werkenbijnoaberkracht.nl/contact
 contact:
   website: https://www.dinkelland.nl/noaberkracht
   email: info@noaberkracht.nl
+  bezoekadres: Nicolaasplein 5, 7591 MA Denekamp
+  postadres: Postbus 11, 7590 AA Denekamp
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Dinkelland
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: Denekamp
+  - type: Postadres
+    postbus: '11'
+    postcode: 7590 AA
+    woonplaats: Denekamp
+  - type: Woo-Adres
+    openbare_ruimte: Nicolaasplein
+    huisnummer: '5'
+    postcode: 7591 MA
+    woonplaats: Denekamp
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  phones:
+  - nummer: (0541) 85 41 00
+    label: gemeente Dinkelland
+  emails:
+  - email: info@noaberkracht.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dinkelland.nl/noaberkracht
+    label: gemeente Dinkelland
+  - url: https://www.tubbergen.nl/noaberkracht-dinkelland-tubbergen
+    label: gemeente Tubbergen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28463968/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28463968/noaberkracht-dinkelland-tubbergen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-09-20'

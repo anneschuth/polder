@@ -7,12 +7,39 @@ parent_id: org:onderdeel-directoraat-generaal-openbaar-bestuur-en-democratische-
 names:
 - value: Directie Democratie en Bestuur
   valid_from: '1900-01-01'
+description:
+  text: De directie Democratie en Bestuur zet zich in voor een goed functionerend
+    democratisch systeem en in het bijzonder de rol van burgers en politiek ambtsdragers.
+    De directie heeft een brede sociaal-maatschappelijke oriëntatie en draagt bij
+    aan de oplossing van spanningen, dilemma’s en actuele vraagstukken op het snijvlak
+    van politiek, bestuur en samenleving.
 contact:
   website: http://www.rijksoverheid.nl/
   email: rene.bagchus@minbzk.nl
+  bezoekadres: Turfmarkt 147, 2511 DP DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Turfmarkt
+    huisnummer: '147'
+    postcode: 2511 DP
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 80 05
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/64619/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/64619/directie-democratie-en-bestuur
+  retrieved: '2026-05-16'

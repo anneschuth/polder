@@ -6,21 +6,130 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0279
   roo_id: '38050'
   wikidata: Q939964
+  owms: http://standaarden.overheid.nl/owms/terms/Scherpenzeel_(gemeente)
+  ictu: 00279
+  organisatiecode: gm0279
+  rsin: 001104469
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_SRP
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Scherpenzeel
   abbr: Scherpenzeel
   valid_from: '1900-01-01'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.scherpenzeel.nl/informatie-opvragen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/38050/Gemeente_Scherpenzeel
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Scherpenzeel%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Scherpenzeel%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Scherpenzeel%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.scherpenzeel.nl/woo-verzoeken
+  wooVerzoek:
+    url: https://www.scherpenzeel.nl/form/contactformulier/onderwerp-0-4
+organogram_url: https://www.scherpenzeel.nl/ambtelijke-structuur
+afspraak:
+  email: informatiebeheer@scherpenzeel.nl
+  telefoonnummer: (033) 277 23 24
+geography:
+  oppervlakte: 13,85
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 13.85
+  aantal_inwoners: 10674
+  inwoners: '770'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 770.0
+  bevat_plaatsen_raw: Scherpenzeel GLD
+  bevat_plaatsen:
+  - Scherpenzeel GLD
+council:
+  total_seats: 15
+  parties:
+  - naam: SGP
+    aantal_zetels: 4
+  - naam: GemeenteBelangen Scherpenzeel
+    aantal_zetels: 4
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: PRO Scherpenzeel
+    aantal_zetels: 1
 contact:
   website: https://www.scherpenzeel.nl
   email: informatiebeheer@scherpenzeel.nl
+  bezoekadres: Stationsweg 389a, 3925 CC SCHERPENZEEL GLD
+  postadres: Postbus 100, 3925 ZJ SCHERPENZEEL GLD
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsweg
+    huisnummer: 389a
+    postcode: 3925 CC
+    woonplaats: SCHERPENZEEL GLD
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '100'
+    postcode: 3925 ZJ
+    woonplaats: SCHERPENZEEL GLD
+  - type: Woo-Adres
+    postbus: '100'
+    postcode: 3925 ZJ
+    woonplaats: SCHERPENZEEL GLD
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stationsweg
+    postcode: 3925 CC
+    woonplaats: SCHERPENZEEL GLD
+  phones:
+  - nummer: (033) 277 23 24
+    label: algemeen
+  emails:
+  - email: informatiebeheer@scherpenzeel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.scherpenzeel.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.scherpenzeel.nl/form/contactformulier-bouwen-wonen-groen-en-verkeer/uw-onderwerp-0
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-14'
+last_verified: '2026-05-14'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/38050/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/38050/scherpenzeel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

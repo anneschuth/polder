@@ -6,6 +6,8 @@ identifiers:
   kvk: '95206957'
   tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
   roo_id: '29481996'
+  owms: http://standaarden.overheid.nl/owms/terms/minklgrgr
+  rsin: '867041328'
 classification: ministerie
 parent_id: null
 names:
@@ -16,14 +18,98 @@ names:
 - value: Klimaat en Groene Groei
   abbr: KGG
   valid_from: '2024-07-02'
+description:
+  text: Het ministerie van Klimaat en Groene Groei werkt samen met zijn partners aan
+    een schoner en sterker Nederland. Door te werken aan een klimaatneutrale samenleving
+    en door te investeren in mensen, innovatie en duurzame energie. Zodat we de kansen
+    kunnen pakken voor een duurzame toekomst en ervoor zorgen dat iedereen hieraan
+    een bijdrage kan leveren. Nu én later.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei
+classifications:
+- type: CAO
+  eind_datum: '2026-02-23'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2026-02-23'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2026-02-23'
+  wettelijke_grondslagen:
+  - opschrift: Minister (Artikel 1.2, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2026-02-23'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei/contact-met-kgg/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/29481996/Klimaat_en_Groene_Groei
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei/contact-met-kgg/woo-verzoek-indienen
+organogram_url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei/organisatie/organogram
+afspraak:
+  telefoonnummer: (070) 379 89 11
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei
+  bezoekadres: Bezuidenhoutseweg 73, 2594 AC Den Haag
+  postadres: Postbus 20401, 2500 EK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postbus: '20401'
+    postcode: 2594 AC
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20401'
+    postcode: 2500 EK
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '73'
+    postcode: 2594 AC
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  phones:
+  - nummer: (070) 379 89 11
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei
+    label: algemeen
+  contact_forms:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-klimaat-en-groene-groei/contact-met-kgg
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: ministeriekgg
+    url: https://www.linkedin.com/company/ministeriekgg
+  - platform: X
+    gebruikersnaam: ministeriekgg
+    url: https://www.twitter.com/ministeriekgg
+  - platform: Instagram
+    gebruikersnaam: ministeriekgg
+    url: https://www.instagram.com/ministeriekgg
+  - platform: Bluesky
+    gebruikersnaam: ministeriekgg
+    url: https://bsky.app/profile/ministeriekgg.bsky.social
 valid_from: '1900-01-01'
-valid_until: null
+valid_until: '2026-02-23'
+last_mutation: '2026-02-24'
+last_verified: '2026-02-24'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29481996/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29481996/kgg
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q127057188
   retrieved: '2026-05-09'
@@ -35,3 +121,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/ministerie/mnre1182
   retrieved: '2026-05-09'
+roo_start_datum: '2024-07-02'

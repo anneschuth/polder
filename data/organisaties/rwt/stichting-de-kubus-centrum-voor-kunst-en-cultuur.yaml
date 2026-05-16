@@ -2,14 +2,42 @@ id: org:oovb-stichting-de-kubus-centrum-voor-kunst-en-cultuur
 type: rwt
 identifiers:
   roo_id: '27911574'
+  kvk: '41247036'
+  rsin: '804906415'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting De Kubus Centrum voor Kunst & Cultuur
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Agorabaan 3, 8224 JS Lelystad
+  postadres: Postbus 354, 8200 AJ Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Agorabaan 3
+    postcode: 8224 JS
+    woonplaats: Lelystad
+  - type: Postadres
+    postbus: '354'
+    postcode: 8200 AJ
+    woonplaats: Lelystad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27911574/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27911574/stichting-de-kubus-centrum-voor-kunst-en-cultuur
+  retrieved: '2026-05-16'

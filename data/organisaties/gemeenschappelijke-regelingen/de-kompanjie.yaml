@@ -2,18 +2,56 @@ id: org:gr-de-kompanjie
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967702'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '51395266'
+  organisatiecode: so0662
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling werkorganisatie gemeenten Pekela en Veendam
+  roo_id: '24967697'
 names:
 - value: De Kompanjie
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2021-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.dekompanjie.nl
   email: info@dekompanjie.nl
+  bezoekadres: Raadhuisplein 5, 9641 AW Veendam
+  postadres: Postbus 85, 9640 AB Veendam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '5'
+    postcode: 9641 AW
+    woonplaats: Veendam
+  - type: Postadres
+    postbus: '85'
+    postcode: 9640 AB
+    woonplaats: Veendam
+  phones:
+  - nummer: (0598) 65 22 22
+    label: algemeen
+  emails:
+  - email: info@dekompanjie.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.dekompanjie.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2019-09-16'
+last_verified: '2020-12-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967702/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967702/de-kompanjie
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-12-01'

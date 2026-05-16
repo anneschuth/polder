@@ -4,14 +4,47 @@ identifiers:
   roo_id: '28390803'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10177
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Defensie
+  roo_id: '4958'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1018
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Defensie
 names:
 - value: Adviescommissie Uitkeringsregeling chroom-6 Defensie
   valid_from: '1900-01-01'
   valid_until: '2021-12-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit Adviescommissie Uitkeringsregeling
+    chroom-6 Defensie
+  referentie: https://wetten.overheid.nl/jci1.3:c:BWBR0044967&z=2021-03-26&g=2021-03-26
+classifications:
+- type: CAO
+  eind_datum: '2021-12-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2021-12-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2021-12-01'
+last_mutation: '2021-09-27'
+last_verified: '2021-09-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28390803/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28390803/adviescommissie-uitkeringsregeling-chroom-6-defensie
+  retrieved: '2026-05-16'
+roo_start_datum: '2021-02-15'

@@ -1,27 +1,136 @@
 id: org:gr-ggd-nog
 type: gemeenschappelijke-regeling
+subname: GGD Noord- en Oost-Gelderland
 identifiers:
   roo_id: '28339424'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0558
   oin: 00000001813713638000
   kvk: '51158957'
+  owms: http://standaarden.overheid.nl/owms/terms/gtgdnog
+  btw: NL813713638B01
+  loonheffing: 813713638L01
+  organisatiecode: so0558
+  rsin: '813713638'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD Noord- en Oost-Gelderland
+  roo_id: '29499877'
 names:
 - value: Gemeentelijke Gezondheidsdienst Noord- en Oost-Gelderland
   abbr: GGD NOG
   valid_from: '1900-01-01'
+description:
+  text: De GGD is de gezondheidsdienst van en voor de gemeenten Aalten, Apeldoorn,
+    Berkelland, Bronckhorst, Brummen, Doetinchem, Elburg, Epe, Ermelo, Hattem, Harderwijk,
+    Heerde, Lochem, Montferland, Nunspeet, Oldebroek, Oost Gelre, Oude IJsselstreek,
+    Putten, Voorst, Winterswijk en Zutphen.De GGD biedt actief 'Een gezond houvast'
+    en bewaakt, beschermt en bevordert de gezondheid van de inwoners van de regio
+    Noord- en Oost-Gelderland.
+  url: https://www.ggdnog.nl/over-de-ggd
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdnog.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28339424/Gemeentelijke_Gezondheidsdienst_Noord-_en_Oost-Gelderland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.ggdnog.nl/vergaderingen-dagelijks-bestuur-2025
+      toelichting: Agenda en vastgestelde openbare besluitenlijst dagelijks bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.ggdnog.nl/beleid-en-begroting
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ggdnog.nl/wet-open-overheid
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.ggdnog.nl/vergaderingen-algemeen-bestuur-2025
+      toelichting: Agenda en vergaderstukken algemeen bestuur GGD NOG
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://www.ggdnog.nl/vergaderingen-algemeen-bestuur-2025
+      toelichting: Vergaderstukken algemeen bestuur GGD NOG, incl. ingekomen stukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&samenwerkingsorganen=Gemeentelijke%20Gezondheidsdienst%20Noord-%20en%20Oost-Gelderland
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://lokaleregelgeving.overheid.nl/ZoekResultaat?datumrange=op&samenwerkingsorganen=Gemeentelijke%20Gezondheidsdienst%20Noord-%20en%20Oost-Gelderland
+      toelichting: Regelgeving van GGD NOG (geconsolideerd, met alle wijzigingen)
+  wooVerzoek:
+    url: https://www.ggdnog.nl/wet-open-overheid
+organogram_url: https://lokaleregelgeving.overheid.nl/CVDR721058/1#bijlage_1
+afspraak:
+  url: https://www.ggdnog.nl/locaties
 contact:
   website: https://www.ggdnog.nl
   email: ggd@ggdnog.nl
+  bezoekadres: Rijksstraatweg 65, 7231 AC Warnsveld
+  postadres: Postbus 3, 7200 AA Zutphen
+  addresses:
+  - type: Bezoekadres
+    toelichting: GGD-kantoor
+    openbare_ruimte: Rijksstraatweg
+    huisnummer: '65'
+    postcode: 7231 AC
+    woonplaats: Warnsveld
+  - type: Postadres
+    postbus: '3'
+    postcode: 7200 AA
+    woonplaats: Zutphen
+  - type: Woo-Adres
+    postbus: '3'
+    postcode: 7200 AA
+    woonplaats: Zutphen
+    land: Nederland
+  phones:
+  - nummer: (088) 443 30 00
+    label: algemeen
+  emails:
+  - email: ggd@ggdnog.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdnog.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ggdnog.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: GGD NOG op Facebook
+    url: https://www.facebook.com/ggdnog
+  - platform: X
+    gebruikersnaam: GGD NOG op Twitter
+    url: https://twitter.com/ggdnog
+  - platform: LinkedIn
+    gebruikersnaam: GGD NOG op Linkedin
+    url: https://nl.linkedin.com/company/ggd-noord--en-oost-gelderland
+  - platform: Instagram
+    gebruikersnaam: GGD NOG op Instagram
+    url: https://www.instagram.com/ggdnog
+  - platform: YouTube
+    gebruikersnaam: GGD NOG op YouTube
+    url: https://www.youtube.com/channel/UCIl59fAkok1wo_u-x130Vow
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28339424/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28339424/ggd-nog
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2004-12-31'

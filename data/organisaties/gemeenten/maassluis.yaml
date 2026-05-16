@@ -6,21 +6,158 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0556
   roo_id: '30349'
   wikidata: Q497130
+  owms: http://standaarden.overheid.nl/owms/terms/Maassluis_(gemeente)
+  ictu: '00556'
+  organisatiecode: gm0556
+  rsin: '001320257'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_MSL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Maassluis
   abbr: Maassluis
   valid_from: '1900-01-01'
+description:
+  url: https://www.maassluis.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.maassluis.nl/informatie-opvragen-bij-de-gemeente-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/30349/Gemeente_Maassluis
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maassluis%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://cuatro.sim-cdn.nl/maassluis/uploads/Overzicht%20Woo-verzoeken%202025.pdf?cb=qDe5Zfg3
+      toelichting: Woo-verzoeken 2025
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maassluis%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maassluis%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maassluis.raadsinformatie.nl/modules/9/besluitenlijsten/view
+      toelichting: Besluitenlijsten gemeenteraad
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maassluis.raadsinformatie.nl/modules/8/raadsinformatiebrieven/view
+      toelichting: Raadsinformatiebrieven
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://maassluis.raadsinformatie.nl/modules/1/ingekomen_stukken/view
+      toelichting: Ingekomen stukken gemeenteraad
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maassluis.raadsinformatie.nl/modules/6/moties/view
+      toelichting: Moties
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maassluis.raadsinformatie.nl/modules/3/toezeggingen/view
+      toelichting: Toezeggingen
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Maassluis%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://maassluis.notubiz.nl/dashboard
+      toelichting: Agenda's commissies en gemeenteraad - Debat op Dinsdag -
+  wooVerzoek:
+    url: https://www.maassluis.nl/informatie-opvragen-bij-de-gemeente-woo
+organogram_url: https://www.maassluis.nl/organisatie
+afspraak:
+  telefoonnummer: 14 010
+  url: https://www.maassluis.nl/afspraak-maken
+geography:
+  oppervlakte: 10,15
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 10.15
+  aantal_inwoners: 37125
+  inwoners: '3657'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 3657.0
+  bevat_plaatsen_raw: Maassluis
+  bevat_plaatsen:
+  - Maassluis
+council:
+  total_seats: 25
+  parties:
+  - naam: Leefbaar Maessluys
+    aantal_zetels: 11
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: D66
+    aantal_zetels: 1
+  - naam: VSP
+    aantal_zetels: 1
 contact:
   website: https://www.maassluis.nl
   email: gemeente@maassluis.nl
+  bezoekadres: Koningshoek 93050, 3144 BA MAASSLUIS
+  postadres: Postbus 55, 3140 AB MAASSLUIS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningshoek
+    huisnummer: '93050'
+    postcode: 3144 BA
+    woonplaats: MAASSLUIS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '55'
+    postcode: 3140 AB
+    woonplaats: MAASSLUIS
+  - type: Woo-Adres
+    postbus: '55'
+    postcode: 3140 AB
+    woonplaats: Maassluis
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Koningshoek
+    huisnummer: '93050'
+    postcode: 3144 BA
+    woonplaats: MAASSLUIS
+  phones:
+  - nummer: 14 010
+    label: algemeen
+  emails:
+  - email: gemeente@maassluis.nl
+    label: algemeen
+  - email: gemeente@maassluis.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.maassluis.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.maassluis.nl/afspraak-maken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30349/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30349/maassluis
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

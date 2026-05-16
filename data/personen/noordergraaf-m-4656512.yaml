@@ -3,7 +3,7 @@ name:
   full: M.C. Noordergraaf
   family: Noordergraaf
   given: M.C.
-  initials: M.
+  initials: M.C.
 mandaten:
 - id: d5a5c7d8-6500-4aff-bdfb-e222f75402cf
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780769
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28281282
 - id: f7d430d7-3dda-48c0-9a0b-f79922f88840
   organization_id: org:gemeente-krimpenerwaard
   post_id: post:raadslid-gemeente-krimpenerwaard

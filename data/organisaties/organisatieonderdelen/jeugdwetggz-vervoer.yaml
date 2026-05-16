@@ -7,12 +7,26 @@ parent_id: org:gr-omnibuzz
 names:
 - value: Jeugdwet/GGZ vervoer
   valid_from: '1900-01-01'
+afspraak:
+  email: ggz-vervoer@omnibuzz.nl
+  telefoonnummer: (0900) 331 05 50
 contact:
   website: http://www.omnibuzz.nl
   email: ggz-vervoer@omnibuzz.nl
+  phones:
+  - nummer: (0900) 331 05 50
+    label: algemeen
+  emails:
+  - email: ggz-vervoer@omnibuzz.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.omnibuzz.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-18'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30301666/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30301666/jeugdwetggz-vervoer
+  retrieved: '2026-05-16'

@@ -3,16 +3,23 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '111474'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-kobra
+parent_id: org:onderdeel-portefeuille-politieorganisatie-en-middelen
 names:
 - value: Financiën DGP
   abbr: FDGPol
   valid_from: '1900-01-01'
 contact:
   email: jan.nuijen@dgv.minvenj.nl
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
 valid_from: '1900-01-01'
 valid_until: null
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/111474/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/111474/fdgpol
+  retrieved: '2026-05-16'

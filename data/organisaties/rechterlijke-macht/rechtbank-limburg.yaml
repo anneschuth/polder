@@ -1,22 +1,46 @@
 id: org:rechtbank-limburg
 type: rechterlijke-instantie
+subtype: Rechtbank
 identifiers:
   oin: '00000004000000146000'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10021
   roo_id: '28048404'
+  owms: http://standaarden.overheid.nl/owms/terms/Rechtbank_Limburg
 classification: rechterlijke-instantie
 parent_id: null
 names:
 - value: Rechtbank Limburg
   valid_from: '1900-01-01'
+description:
+  text: De rechtbank Limburg heeft twee (zittings)locaties:• Maastricht (hier zetelt
+    tevens het gerechtsbestuur)• RoermondBij de rechtbank Limburg werken ongeveer
+    640 medewerkers, waarvan 120 rechters.
+  url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Limburg/Over-de-rechtbank/Paginas/Organisatie.aspx
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Limburg
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  phones:
+  - nummer: (088) 361 22 22
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken/Rechtbank-Limburg
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048404/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048404/rechtbank-limburg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -289,6 +289,38 @@ def test_check_bsn_patterns_unit(tmp_path: Path) -> None:
     assert issues[0].field == "note"
 
 
+def test_bsn_pattern_allows_rsin_in_identifiers(tmp_path: Path) -> None:
+    """RSIN is een 9-cijferige rechtspersoon-ID, geen BSN. Mag in
+    identifiers.rsin staan zonder dat de BSN-check fired."""
+    from polder.validate import Record
+
+    rec = Record(
+        path=tmp_path / "x.yaml",
+        category="organisaties",
+        data={
+            "id": "org:gemeente-helmond",
+            "identifiers": {"rsin": "001600291", "kvk": "17272669"},
+        },
+        schema_name="organisatie.schema.json",
+    )
+    issues = check_bsn_patterns([rec])
+    assert issues == []
+
+
+def test_bsn_pattern_still_fires_on_persoon_records(tmp_path: Path) -> None:
+    """Bij persoon-records mag de BSN-check ook in identifiers wel firen."""
+    from polder.validate import Record
+
+    rec = Record(
+        path=tmp_path / "p.yaml",
+        category="personen",
+        data={"id": "person:x", "identifiers": {"vreemd": "123456789"}},
+        schema_name="persoon.schema.json",
+    )
+    issues = check_bsn_patterns([rec])
+    assert len(issues) == 1
+
+
 # ---------------------------------------------------------------------------
 # Overlappende mandaten
 # ---------------------------------------------------------------------------

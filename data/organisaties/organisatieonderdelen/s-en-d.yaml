@@ -1,5 +1,6 @@
 id: org:onderdeel-s-en-d
 type: organisatieonderdeel
+subname: Directie S&D
 identifiers:
   roo_id: '97042'
 classification: organisatieonderdeel
@@ -8,11 +9,37 @@ names:
 - value: Directie Strategie en Digitalisering
   abbr: S&D
   valid_from: '1900-01-01'
+description:
+  text: Is de schakel tussen de departementen, beleidsmakers, vastgoedhoudende diensten,
+    mede-overheden en maatschappelijke organisaties en het RVB op strategisch niveau.
 contact:
   website: http://www.rijksoverheid.nl
+  bezoekadres: Korte Voorhout 7 via S4.10, 2511 CW DEN HAAG
+  postadres: Postbus 16169, 2500 BD DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Voorhout
+    huisnummer: '7'
+    huisnummer_toevoeging: via S4.10
+    postcode: 2511 CW
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16169'
+    postcode: 2500 BD
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (088) 115 99 11
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl
+    label: algemeen
+  - url: www.vastgoedvanhetrijk.nl
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-12-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97042/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97042/s-en-d
+  retrieved: '2026-05-16'

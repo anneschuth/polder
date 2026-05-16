@@ -2,14 +2,45 @@ id: org:stichting-centrum-voor-criminaliteitspreventie-en-veiligheid
 type: rwt
 identifiers:
   roo_id: '27910998'
+  kvk: '27268679'
+  rsin: '813382270'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Stichting Centrum voor Criminaliteitspreventie en Veiligheid
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Churchilllaan 11 -18e et., 3527 GV Utrecht
+  postadres: Postbus 14069, 3508 SC Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Churchilllaan
+    huisnummer: '11'
+    huisnummer_toevoeging: -18e et.
+    postcode: 3527 GV
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '14069'
+    postcode: 3508 SC
+    woonplaats: Utrecht
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2025-07-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27910998/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27910998/stichting-centrum-voor-criminaliteitspreventie-en-veiligheid
+  retrieved: '2026-05-16'

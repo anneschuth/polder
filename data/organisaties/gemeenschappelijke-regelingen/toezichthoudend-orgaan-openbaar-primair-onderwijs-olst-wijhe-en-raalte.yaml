@@ -3,16 +3,51 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965177'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1077
+  owms: http://standaarden.overheid.nl/owms/terms/thoopoowr
+  organisatiecode: so1077
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling toezichthoudend orgaan openbaar primair onderwijs
+    Olst-Wijhe en Raalte
+  roo_id: '24965172'
 names:
 - value: Toezichthoudend orgaan openbaar primair onderwijs Olst-Wijhe en Raalte
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   email: gemeente@olst-wijhe.nl
+  bezoekadres: Raadhuisplein 1, 8131 BN Wijhe
+  postadres: Postbus 23, 8130 AA Wijhe
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeente Olst-Wijhe
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 8131 BN
+    woonplaats: Wijhe
+  - type: Postadres
+    toelichting: Gemeente Olst-Wijhe
+    postbus: '23'
+    postcode: 8130 AA
+    woonplaats: Wijhe
+  phones:
+  - nummer: 14 0570
+    label: algemeen
+  emails:
+  - email: gemeente@olst-wijhe.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-31'
+last_verified: '2020-10-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965177/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965177/toezichthoudend-orgaan-openbaar-primair-onderwijs-olst-wijhe-en-raalte
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-01-01'

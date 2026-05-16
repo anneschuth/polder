@@ -2,18 +2,62 @@ id: org:gr-de-oude-rijnzone
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24963289'
+  owms: http://standaarden.overheid.nl/owms/terms/ouderijnz
+  kvk: '63657198'
+  organisatiecode: so0818
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling De Oude Rijnzone
+  roo_id: '24963284'
 names:
 - value: De Oude Rijnzone
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.ouderijnzone.nl
   email: info@ouderijnzone.nl
+  bezoekadres: Stadhuisplein 1, 2405 SH Alphen aan den Rijn
+  postadres: Postbus 13, 2400 AA Alphen aan den Rijn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stadhuisplein
+    huisnummer: '1'
+    postcode: 2405 SH
+    woonplaats: Alphen aan den Rijn
+  - type: Postadres
+    postbus: '13'
+    postcode: 2400 AA
+    woonplaats: Alphen aan den Rijn
+  phones:
+  - nummer: (0172) 46 49 17
+    label: algemeen
+  emails:
+  - email: info@ouderijnzone.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ouderijnzone.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2023-03-28'
+last_verified: '2023-03-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24963289/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24963289/de-oude-rijnzone
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-12-20'

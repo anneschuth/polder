@@ -3,7 +3,7 @@ name:
   full: L.C.C. Baten
   family: Baten
   given: L.C.C.
-  initials: L.
+  initials: L.C.C.
 mandaten:
 - id: 38f6ebde-e7fb-477c-a998-3237ce8edb2d
   organization_id: org:gemeente-krimpenerwaard
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7780825
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/129780/gemeente-krimpenerwaard
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30529660
 - id: b5dbe272-db81-415f-a6e7-7d6d3adce18a
   organization_id: org:gemeente-krimpenerwaard
   post_id: post:raadslid-gemeente-krimpenerwaard

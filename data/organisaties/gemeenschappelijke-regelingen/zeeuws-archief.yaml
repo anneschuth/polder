@@ -5,22 +5,90 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0567
   oin: 00000001808907189000
   kvk: '20169353'
+  owms: http://standaarden.overheid.nl/owms/terms/zeeuwsarch
+  btw: NL808907189B01
+  organisatiecode: so0567
+  rsin: '808907189'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Zeeuws archief
+  roo_id: '30504482'
 names:
 - value: Zeeuws archief
   valid_from: '1900-01-01'
+description:
+  text: Het Zeeuws Archief is het Regionaal Historisch Centrum (RHC) van Zeeland.
+    Het beheert en bewaart de archieven en collecties van Zeeuwse overheden, particulieren
+    en bedrijven. Daarnaast is het Zeeuws Archief specialist in digitale duurzaamheid;
+    het biedt digitale opslag, authenticiteit en toegankelijkheid in het Zeeuws e-Depot.
+  url: https://www.zeeuwsarchief.nl/over-ons/wie-wij-zijn-en-wat-wij-doen/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zeeuwsarchief.nl/over-ons/contact/
+      overzichtURL: https://organisaties.overheid.nl/woo/24967623/Zeeuws_archief
+  wooVerzoek:
+    url: https://www.zeeuwsarchief.nl/over-ons/contact/
+afspraak:
+  email: info@zeeuwsarchief.nl
+  telefoonnummer: (0118) 67 88 00
+  url: https://www.zeeuwsarchief.nl/plan-je-bezoek/openingstijden/
 contact:
   website: http://www.zeeuwsarchief.nl
   email: info@zeeuwsarchief.nl
+  bezoekadres: Hofplein 16, 4331 CK Middelburg
+  postadres: Postbus 70, 4330 AB Middelburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hofplein
+    huisnummer: '16'
+    postcode: 4331 CK
+    woonplaats: Middelburg
+  - type: Postadres
+    postbus: '70'
+    postcode: 4330 AB
+    woonplaats: Middelburg
+  - type: Woo-Adres
+    postbus: '70'
+    postcode: 4330 AB
+    woonplaats: Middelburg
+    land: Nederland
+  phones:
+  - nummer: (0118) 67 88 00
+    label: algemeen
+  emails:
+  - email: info@zeeuwsarchief.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.zeeuwsarchief.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zeeuwsarchief.nl/over-ons/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-03-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967623/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967623/zeeuws-archief
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2000-05-06'

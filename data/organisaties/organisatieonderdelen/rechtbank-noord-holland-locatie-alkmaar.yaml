@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-noord-holland-locatie-alkmaar
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048532'
+  kvk: '82941742'
+  rsin: '862664184'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-noord-holland
 names:
 - value: Rechtbank Noord-Holland, locatie Alkmaar
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Kruseman van Eltenweg 2, 1817 BC Alkmaar
+  postadres: Postbus 251, 1800 BG Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kruseman van Eltenweg
+    huisnummer: '2'
+    postcode: 1817 BC
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '251'
+    postcode: 1800 BG
+    woonplaats: Alkmaar
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-23'
+last_verified: '2026-03-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048532/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048532/rechtbank-noord-holland-locatie-alkmaar
+  retrieved: '2026-05-16'

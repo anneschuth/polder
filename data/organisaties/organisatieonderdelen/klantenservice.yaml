@@ -7,12 +7,45 @@ parent_id: org:gr-omnibuzz
 names:
 - value: Klantenservice
   valid_from: '1900-01-01'
+description:
+  text: Klanten kunnen bij de Klantenservice terecht voor:- Algemene klantinformatie-
+    Registreren van rekeningrijden, indicaties, hulpmiddelen, vervoerspecificaties-
+    Maken en verzenden van vervoerspassen- Doorgeven van een verloren of defecte vervoerspas-
+    Opvragen van rittenoverzicht- Opvragen van facturen- Registratie van begeleidingskaarten-
+    Het indienen van klachten
+  url: https://www.omnibuzz.nl/overons/taken
+organogram_url: https://www.omnibuzz.nl/overons/organogram
+afspraak:
+  email: info@omnibuzz.nl
+  telefoonnummer: (0900) 331 05 50
 contact:
   website: https://www.omnibuzz.nl/contact
   email: info@omnibuzz.nl
+  bezoekadres: Geerweg 3, 6135 KB Sittard
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Geerweg
+    huisnummer: '3'
+    postcode: 6135 KB
+    woonplaats: Sittard
+    land: Nederland
+  phones:
+  - nummer: (0900) 331 05 50
+    label: algemeen
+  emails:
+  - email: info@omnibuzz.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.omnibuzz.nl/contact
+    label: algemeen
+  contact_forms:
+  - url: https://www.omnibuzz.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-08-21'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29339388/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29339388/klantenservice
+  retrieved: '2026-05-16'

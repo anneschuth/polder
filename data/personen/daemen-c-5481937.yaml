@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5481938
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/33391/gemeente-nijmegen
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28716200
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481937

@@ -1,21 +1,104 @@
 id: org:gr-ovb
 type: gemeenschappelijke-regeling
+subname: Openbaar Lichaam OV-bureau
 identifiers:
   roo_id: '28141665'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0587
+  owms: http://standaarden.overheid.nl/owms/terms/ovbgrdr
+  kvk: '51432781'
+  organisatiecode: so0587
+  rsin: '814380128'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Openbaar Lichaam OV-bureau van de gemeente Groningen
+    en de provincies Groningen en Drenthe
+  roo_id: '28141653'
 names:
 - value: Openbaar Lichaam OV-bureau van de gemeente Groningen en de provincies Groningen
     en Drenthe
   abbr: OVB
   valid_from: '1900-01-01'
+description:
+  text: Openbaar Lichaam OV-bureau van de gemeente Groningen en de provincies Groningen
+    en Drenthe is opgericht in 2004 door de provincies Groningen en Drenthe en de
+    gemeente Groningen om samen invulling te geven aan het opdrachtgeverschap voor
+    het openbaar (bus)vervoer. De gedachte achter de samenwerking is krachten  bundelen
+    om vervoerkundige, maatschappelijke en om financiële meerwaarde te creëren voor
+    het openbaar vervoer in het gebied. Openbaar (bus)vervoer is daarbij een belangrijk
+    onderdeel van het bredere verkeers- en vervoersbeleid in de regio.
+  url: https://ovbureau.nl/het-ov-bureau-groningen-drenthe/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://organisaties.overheid.nl/woo/28141665/Openbaar_Lichaam_OV-bureau_van_de_gemeente_Groningen_en_de_provincies_Groningen_en_Drenthe
+      overzichtURL: https://organisaties.overheid.nl/woo/28141665/Openbaar_Lichaam_OV-bureau_van_de_gemeente_Groningen_en_de_provincies_Groningen_en_Drenthe
+  wooVerzoek:
+    url: https://organisaties.overheid.nl/woo/28141665/Openbaar_Lichaam_OV-bureau_van_de_gemeente_Groningen_en_de_provincies_Groningen_en_Drenthe
+organogram_url: https://ovbureau.nl/het-ov-bureau-groningen-drenthe/
+afspraak:
+  email: info@ovbureau.nl
+  telefoonnummer: (0592) 39 69 00
+  url: https://ovbureau.nl/contact/
 contact:
   website: https://www.ovbureau.nl
   email: info@ovbureau.nl
+  bezoekadres: Overcingellaan 15 e, 9401 LA Assen
+  postadres: Postbus 189, 9400 AD Assen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Overcingellaan
+    huisnummer: '15'
+    huisnummer_toevoeging: e
+    postcode: 9401 LA
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '189'
+    postcode: 9400 AD
+    woonplaats: Assen
+  - type: Woo-Adres
+    openbare_ruimte: Overcingellaan
+    huisnummer: '15'
+    huisnummer_toevoeging: e
+    postcode: 9401 LA
+    woonplaats: Assen
+    regio: Groningen-Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  phones:
+  - nummer: (0592) 39 69 00
+    label: algemeen
+  emails:
+  - email: info@ovbureau.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ovbureau.nl
+    label: algemeen
+  - url: https://ovbureau.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://ovbureau.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-07-07'
+last_verified: '2024-10-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28141665/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28141665/ovb
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

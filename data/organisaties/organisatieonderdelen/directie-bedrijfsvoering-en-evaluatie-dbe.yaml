@@ -3,13 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28538687'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-mivd
+parent_id: org:onderdeel-bestuursstaf
 names:
 - value: Directie Bedrijfsvoering en Evaluatie (DBE)
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-02'
+last_verified: '2025-08-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28538687/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28538687/directie-bedrijfsvoering-en-evaluatie-dbe
+  retrieved: '2026-05-16'

@@ -7,12 +7,41 @@ parent_id: org:onderdeel-bureau-algemene-bestuursdienst
 names:
 - value: ABDTOPConsult
   valid_from: '1900-01-01'
+description:
+  text: In 2010 stemde de Ministerraad in met de oprichting van ABDTOPConsult. ABDTOPConsult
+    is een klein team van ervaren topambtenaren dat snel inzetbaar is bij complexe
+    of urgente vraagstukken. De leden zijn benoemd door de ministerraad. ABDTOPConsult
+    is van en voor de (rijks)overheid.
 contact:
   website: http://www.algemenebestuursdienst.nl
   email: abd@minbzk.nl
+  bezoekadres: Muzenstraat 95, 2511 WB DEN HAAG
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Muzenstraat
+    huisnummer: '95'
+    postcode: 2511 WB
+    woonplaats: DEN HAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: (070) 426 76 65
+    label: algemeen
+  emails:
+  - email: abd@minbzk.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.algemenebestuursdienst.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/116761/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/116761/abdtopconsult
+  retrieved: '2026-05-16'

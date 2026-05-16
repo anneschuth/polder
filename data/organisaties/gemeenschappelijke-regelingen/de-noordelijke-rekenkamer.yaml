@@ -3,18 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27620811'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0598
+  owms: http://standaarden.overheid.nl/owms/terms/noordrekenk
+  kvk: '55365191'
+  organisatiecode: so0598
+  rsin: '851672024'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling de Noordelijke Rekenkamer
+  roo_id: '29771679'
 names:
 - value: de Noordelijke Rekenkamer
   valid_from: '1900-01-01'
-  valid_until: '2032-01-31'
+description:
+  url: https://www.noordelijkerekenkamer.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.noordelijkerekenkamer.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/27620811/de_Noordelijke_Rekenkamer
+  wooVerzoek:
+    url: https://www.noordelijkerekenkamer.nl/contact
+organogram_url: https://www.noordelijkerekenkamer.nl/over-ons
+afspraak:
+  email: info@noordelijkerekenkamer.nl
+  telefoonnummer: (0592) 30 47 90
+  url: https://www.noordelijkerekenkamer.nl/contact
 contact:
   website: https://www.noordelijkerekenkamer.nl
   email: info@noordelijkerekenkamer.nl
+  bezoekadres: Dr. Nassaulaan 5, 9401 HJ Assen
+  postadres: Dr. Nassaulaan 5, 9401 HJ Assen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dr. Nassaulaan
+    huisnummer: '5'
+    postcode: 9401 HJ
+    woonplaats: Assen
+  - type: Postadres
+    openbare_ruimte: Dr. Nassaulaan
+    huisnummer: '5'
+    postcode: 9401 HJ
+    woonplaats: Assen
+  - type: Woo-Adres
+    openbare_ruimte: Dr Nassaulaan
+    huisnummer: '5'
+    postcode: 9401 HJ
+    woonplaats: Assen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+    land: Nederland
+  phones:
+  - nummer: (0592) 30 47 90
+    label: algemeen
+  - nummer: 06 89 99 01 13
+    label: algemeen
+  emails:
+  - email: info@noordelijkerekenkamer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.noordelijkerekenkamer.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.noordelijkerekenkamer.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2032-01-31'
+last_mutation: '2026-05-12'
+last_verified: '2026-05-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27620811/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27620811/de-noordelijke-rekenkamer
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-05'

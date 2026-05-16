@@ -3,7 +3,7 @@ name:
   full: M.R. Amweg
   family: Amweg
   given: M.R.
-  initials: M.
+  initials: M.R.
 mandaten:
 - id: d14f741b-1d66-44b9-8580-5773c2701500
   organization_id: org:gemeente-zoetermeer
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767295
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30526323
 - id: a01e9ed8-93ff-4b35-a101-97f7d577e079
   organization_id: org:gemeente-zoetermeer
   post_id: post:raadslid-gemeente-zoetermeer

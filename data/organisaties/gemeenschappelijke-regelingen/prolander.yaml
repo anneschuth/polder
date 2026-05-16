@@ -3,17 +3,61 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27965097'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0871
+  owms: http://standaarden.overheid.nl/owms/terms/prolan
+  kvk: '64463052'
+  organisatiecode: so0871
+  rsin: '855676590'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Prolander
+  roo_id: '27965091'
 names:
 - value: Prolander
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.prolander.nl
   email: info@pro­lan­der.nl
+  bezoekadres: Westerbrink 1, 9405 BJ Assen
+  postadres: Postbus 50040, 9400 LA Assen
+  addresses:
+  - type: Bezoekadres
+    toelichting: Provinciehuis Drenthe
+    openbare_ruimte: Westerbrink
+    huisnummer: '1'
+    postcode: 9405 BJ
+    woonplaats: Assen
+  - type: Postadres
+    postbus: '50040'
+    postcode: 9400 LA
+    woonplaats: Assen
+  phones:
+  - nummer: (0592) 36 50 00
+    label: algemeen
+  emails:
+  - email: info@pro­lan­der.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.prolander.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2019-08-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27965097/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27965097/prolander
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-01'

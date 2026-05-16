@@ -2,14 +2,42 @@ id: org:oovb-stichting-verkeersonderneming
 type: rwt
 identifiers:
   roo_id: '27917487'
+  kvk: '50819429'
+  rsin: '822945502'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Verkeersonderneming
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Subsidie (Artikel 1.3, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Wilhelminakade 909, 3072 AP Rotterdam
+  postadres: Boompjes 200, 3011 XD Rotterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Wilhelminakade 909
+    postcode: 3072 AP
+    woonplaats: Rotterdam
+  - type: Postadres
+    openbare_ruimte: Boompjes 200
+    postcode: 3011 XD
+    woonplaats: Rotterdam
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27917487/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27917487/stichting-verkeersonderneming
+  retrieved: '2026-05-16'

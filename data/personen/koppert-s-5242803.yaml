@@ -3,7 +3,7 @@ name:
   full: S.A. Koppert
   family: Koppert
   given: S.A.
-  initials: S.
+  initials: S.A.
 mandaten:
 - id: dc98a092-6d13-47c0-a3da-1eaf9ede0b2f
   organization_id: org:gemeente-midden-delfland
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5242805
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36436/gemeente-midden-delfland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28629849
 - id: d42f0f42-ed37-4bb8-9d8a-ebc53f239f58
   organization_id: org:gemeente-midden-delfland
   post_id: post:raadslid-gemeente-midden-delfland

@@ -2,16 +2,35 @@ id: org:onderdeel-defensie-ondersteuningscommando
 type: organisatieonderdeel
 identifiers:
   roo_id: '5469'
+  ictu: '03654'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-def
+parent_id: org:min-def
 names:
 - value: Defensie Ondersteuningscommando
   valid_from: '1900-01-01'
 contact:
   website: http://www.nlda.nl
+  bezoekadres: Herculeslaan 1, 3584 AB Utrecht
+  postadres: Postbus 90004, 3509 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herculeslaan
+    huisnummer: '1'
+    postcode: 3584 AB
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '90004'
+    postcode: 3509 AA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (030) 218 41 22
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-26'
+last_verified: '2025-06-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/5469/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/5469/defensie-ondersteuningscommando
+  retrieved: '2026-05-16'

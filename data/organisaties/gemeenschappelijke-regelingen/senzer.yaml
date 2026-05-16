@@ -1,26 +1,106 @@
 id: org:gr-senzer
 type: gemeenschappelijke-regeling
+subname: Senzer
 identifiers:
   roo_id: '24966840'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0863
   oin: 00000003172649640000
   kvk: '17264964'
+  owms: http://standaarden.overheid.nl/owms/terms/wadp
+  organisatiecode: so0863
+  rsin: 003530486
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Senzer
+  roo_id: '30574598'
 names:
 - value: Senzer
   valid_from: '1900-01-01'
+description:
+  text: Als werkbedrijf voor de arbeidsmarktregio Helmond-De Peel voeren we de Participatiewet
+    uit voor zeven gemeenten. We bedienen daarmee een regio met 250.000 inwoners.
+    Via ons werken ruim 2.000 mensen bij honderden bedrijven. Ook verzorgen we inkomensondersteuning
+    voor 4.500 bijstandscliënten en zorgen we voor honderden mensen voor zinvolle
+    maatschappelijke participatie.
+  url: https://www.senzer.nl/over-senzer
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.senzer.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/24966840/Senzer
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Senzer%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Senzer%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.senzer.nl/over-senzer/wet-open-overheid
+organogram_url: https://www.senzer.nl/sites/default/files/2024-10/Organogram_versimpeld_compleet_RGB_2024.pdf
+afspraak:
+  email: info@senzer.nl
+  telefoonnummer: (0492) 58 24 44
+  url: https://www.senzer.nl/contact
 contact:
   website: https://www.senzer.nl/contact
   email: info@senzer.nl
+  bezoekadres: Montgomeryplein 6, 5705 AX Helmond
+  postadres: Postbus 272, 5700 AG Helmond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Montgomeryplein
+    huisnummer: '6'
+    postcode: 5705 AX
+    woonplaats: Helmond
+  - type: Postadres
+    postbus: '272'
+    postcode: 5700 AG
+    woonplaats: Helmond
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '272'
+    postcode: 5700 AG
+    woonplaats: Helmond
+    land: Nederland
+  phones:
+  - nummer: (0492) 58 24 44
+    label: algemeen
+  emails:
+  - email: info@senzer.nl
+    label: algemeen
+  - email: wetopenoverheid@senzer.nl
+    label: verzoek Woo
+  internet_addresses:
+  - url: https://www.senzer.nl/contact
+    label: algemeen
+  contact_forms:
+  - url: https://www.senzer.nl
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2024-10-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966840/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966840/senzer
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-01-01'

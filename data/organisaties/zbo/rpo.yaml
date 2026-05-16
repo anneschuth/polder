@@ -1,23 +1,108 @@
 id: org:zbo-rpo
 type: zbo
+subname: Regionale Publieke Omroep
 identifiers:
   roo_id: '26141373'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000127
+  kvk: '66111374'
+  rsin: '856399127'
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting Regionale Publieke Omroep
   abbr: RPO
   valid_from: '1900-01-01'
+description:
+  text: De Regionale Publieke Omroep (RPO) is een door de Mediawet ingestelde stichting
+    die de samenwerking tussen publieke omroepen in verschillende regio's bevordert.
+    Daarnaast treedt de RPO op als coördinatieorgaan voor deze omroepen.
+  url: https://www.stichtingrpo.nl/over-rpo/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Mediawet 2008, artikel 2.60a
+  referentie: https://wetten.overheid.nl/BWBR0025028/2025-09-11/#Hoofdstuk2_Titeldeel2.3_Paragraaf2.3.1_Artikel2.60a
+taken_en_bevoegdheden: De belangrijkste taken van de Regionale Publieke Omroep (RPO)
+  zijn:* het bevorderen van samenwerking tussen publieke omroepen op regionaal niveau;*
+  het coördineren van publieke omroepen op regionaal niveau, met het oog op de uitvoering
+  van hun publieke mediaopdracht* de behartiging van zaken die voor de regionale publieke
+  mediadienst en de regionale publieke media-instellingen van gemeenschappelijk belang
+  zijn;* het sluiten van cao's en het vaststellen van betalingsnormen voor het werk
+  dat freelancers leveren, mede in naam van de regionale publieke media-instellingen;*
+  de bevordering van een doelmatige inzet van geld dat bestemd is voor het verzorgen
+  en verspreiden van het media-aanbod, evenals het bevorderen van geïntegreerde financiële
+  verslaglegging en verantwoording;* het inrichten, in stand houden, beheren, exploiteren
+  en regelen van het gebruik van organen, diensten en faciliteiten (zoals studio’s
+  en distributie-infrastructuren) die nodig zijn voor een goede uitvoering van de
+  publieke mediaopdracht op regionaal niveau.
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/26141373/Stichting_Regionale_Publieke_Omroep
+afspraak:
+  email: contact@stichtingrpo.nl
+  telefoonnummer: (085) 788 60 40
+personnel:
+  aantalFte: 7,1
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.stichtingrpo.nl/
   email: contact@stichtingrpo.nl
+  bezoekadres: Joop van den Endeplein 1, 1217 WJ Hilversum
+  postadres: Postbus 913, 1200 AX Hilversum
+  addresses:
+  - type: Bezoekadres
+    toelichting: Mediacentrum, derde verdieping
+    openbare_ruimte: Joop van den Endeplein
+    huisnummer: '1'
+    postcode: 1217 WJ
+    woonplaats: Hilversum
+  - type: Postadres
+    postbus: '913'
+    postcode: 1200 AX
+    woonplaats: Hilversum
+  - type: Woo-Adres
+    postbus: '913'
+    postcode: 1200 AX
+    woonplaats: Hilversum
+  phones:
+  - nummer: (085) 788 60 40
+    label: algemeen
+  emails:
+  - email: contact@stichtingrpo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.stichtingrpo.nl/
+    label: algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Regionale Publieke Omroep (RPO)
+    url: https://www.linkedin.com/company/stichtingrpo/?originalSubdomain=nl
+  - platform: X
+    gebruikersnaam: '@stichtingrpo'
+    url: https://x.com/stichtingrpo
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-07'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26141373/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26141373/rpo
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -26,3 +111,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000127
   retrieved: '2026-05-09'
+roo_start_datum: '2016-01-01'

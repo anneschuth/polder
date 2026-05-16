@@ -6,21 +6,206 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1982
   roo_id: '28523612'
   wikidata: Q107242476
+  owms: http://standaarden.overheid.nl/owms/terms/Land_van_Cuijk
+  ictu: 01982
+  organisatiecode: gm1982
+  rsin: '826458385'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_CUI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Land van Cuijk
   abbr: Land van Cuijk
   valid_from: '1900-01-01'
+description:
+  url: https://www.gemeentelandvancuijk.nl/bestuur-en-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gemeentelandvancuijk.nl/informatie-opvragen-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/28523612/Gemeente_Land_van_Cuijk
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.gemeentelandvancuijk.nl/besluitenlijsten-college-van-bw?zoek=besluitenlijsten
+      toelichting: Besluitenlijsten College van B&W gemeente Land van Cuijk
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://landvancuijk.edataloket.eu/?category=6
+    - informatiecategorie: Ontwerpen van wet- en regelgeving met adviesaanvraag
+      url: https://landvancuijk.edataloket.eu/?category=3
+    - informatiecategorie: Beschikkingen
+      url: https://landvancuijk.edataloket.eu/category=18
+      toelichting: Op het besluit betrekking hebbende stukken bij omgevingsdocumenten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://landvancuijk.edataloket.eu/?category=2
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://landvancuijk.edataloket.eu/?category=1
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sint+Anthonis%22+OR+dt.creator==%22Mill+en+Sint+Hubert%22+OR+dt.creator==%22Boxmeer%22+OR+dt.creator==%22Cuijk%22+OR+dt.creator==%22Grave%22+OR+dt.creator==%22Land+van+Cuijk%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sint+Anthonis%22+OR+dt.creator==%22Mill+en+Sint+Hubert%22+OR+dt.creator==%22Boxmeer%22+OR+dt.creator==%22Cuijk%22+OR+dt.creator==%22Grave%22+OR+dt.creator==%22Land+van+Cuijk%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Sint+Anthonis%22+OR+dt.creator==%22Mill+en+Sint+Hubert%22+OR+dt.creator==%22Boxmeer%22+OR+dt.creator==%22Cuijk%22+OR+dt.creator==%22Grave%22+OR+dt.creator==%22Land+van+Cuijk%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://landvancuijk.edataloket.eu/?category=14
+    - informatiecategorie: Subsidieverplichtingen anders dan met beschikking
+      url: https://landvancuijk.edataloket.eu/?category=13
+    - informatiecategorie: Adviezen
+      url: https://landvancuijk.edataloket.eu/?category=10
+    - informatiecategorie: Beschikkingen
+      url: https://landvancuijk.edataloket.eu/?category=16
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://landvancuijk.edataloket.eu/?category=14
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://landvancuijk.edataloket.eu/?category=15
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://landvancuijk.edataloket.eu/?category=8
+    - informatiecategorie: Convenanten
+      url: https://landvancuijk.edataloket.eu/?category=11
+    - informatiecategorie: Klachtoordelen
+      url: https://landvancuijk.edataloket.eu/?category=17
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://landvancuijk.begrotingsapp.nl/
+  wooVerzoek:
+    url: https://www.gemeentelandvancuijk.nl/formulieren/woo-verzoek
+organogram_url: https://indd.adobe.com/view/f6d8fc68-3b23-4efa-a71f-9b21023e45a4
+afspraak:
+  url: https://landvancuijk.mijnafspraakmaken.nl/Client/
+geography:
+  oppervlakte: 57,02
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 57.02
+  aantal_inwoners: 93645
+  inwoners: '1642'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1642.0
+  bevat_plaatsen_raw: Beers, Beugen, Boxmeer, Cuijk, Escharen, Gassel, Grave, Groeningen,
+    Haps, Holthees, Katwijk NB, Landhorst, Langenboom, Ledeacker, Linden, Maashees,
+    Mill, Oeffelt, Oploo, Overloon, Rijkevoort, Rijkevoort-De Walsert, Sambeek, Sint
+    Agatha, Sint Anthonis, Sint Hubert, Stevensbeek, Velp NB, Vianen NB, Vierlingsbeek,
+    Vortum-Mullem, Wanroij, Westerbeek, Wilbertoord
+  bevat_plaatsen:
+  - Beers
+  - Beugen
+  - Boxmeer
+  - Cuijk
+  - Escharen
+  - Gassel
+  - Grave
+  - Groeningen
+  - Haps
+  - Holthees
+  - Katwijk NB
+  - Landhorst
+  - Langenboom
+  - Ledeacker
+  - Linden
+  - Maashees
+  - Mill
+  - Oeffelt
+  - Oploo
+  - Overloon
+  - Rijkevoort
+  - Rijkevoort-De Walsert
+  - Sambeek
+  - Sint Agatha
+  - Sint Anthonis
+  - Sint Hubert
+  - Stevensbeek
+  - Velp NB
+  - Vianen NB
+  - Vierlingsbeek
+  - Vortum-Mullem
+  - Wanroij
+  - Westerbeek
+  - Wilbertoord
+council:
+  total_seats: 37
+  parties:
+  - naam: CDA
+    aantal_zetels: 10
+  - naam: Team Lokaal
+    aantal_zetels: 10
+  - naam: Liberaal LVC
+    aantal_zetels: 5
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.landvancuijk.nl
   email: gemeente@landvancuijk.nl
+  bezoekadres: Raadhuisplein 1, 5831 JX BOXMEER
+  postadres: Postbus 177, 5830 AD BOXMEER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 5831 JX
+    woonplaats: BOXMEER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '177'
+    postcode: 5830 AD
+    woonplaats: BOXMEER
+  - type: Woo-Adres
+    openbare_ruimte: Louis Jansenplein
+    huisnummer: '1'
+    postbus: '7'
+    postcode: 5431 BV
+    woonplaats: Cuijk
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 5831 JX
+    woonplaats: BOXMEER
+  phones:
+  - nummer: (0485) 85 40 00
+    label: algemeen
+  emails:
+  - email: gemeente@landvancuijk.nl
+    label: algemeen
+  - email: gemeente@landvancuijk.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.landvancuijk.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-06'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28523612/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28523612/gemeente-land-van-cuijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +214,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q107242476
   retrieved: '2026-05-09'
+roo_start_datum: '2022-01-01'

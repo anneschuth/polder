@@ -7,12 +7,40 @@ parent_id: org:onderdeel-natuur-en-milieu
 names:
 - value: Team Contractering (NMCO)
   valid_from: '1900-01-01'
+description:
+  text: 'Taak :'
 contact:
   website: http://www.overijssel.nl
   email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, 8011 EE Zwolle
+  postadres: Postbus 10078, 8000 GB Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    postcode: 8011 EE
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: Zwolle
+  phones:
+  - nummer: (038) 499 85 33
+    label: algemeen
+  - nummer: (038) 499 85 00
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.overijssel.nl
+    label: algemeen
+  - url: http://provincie.overijssel.nl/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-29'
+last_verified: '2026-01-29'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/16874/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16874/team-contractering-nmco
+  retrieved: '2026-05-16'

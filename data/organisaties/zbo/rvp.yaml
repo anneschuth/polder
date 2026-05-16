@@ -4,20 +4,129 @@ identifiers:
   roo_id: '28212408'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000152
 classification: zbo
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Raad voor plantenrassen
   abbr: RvP
   valid_from: '1900-01-01'
+description:
+  text: Per 1 februari 2006 zijn de Raad voor het kwekersrecht, de Commissie voor
+    de samenstelling van rassenlijst voor landbouwgewassen, de Commissie voor de samenstelling
+    van rassenlijst voor bosbouwgewassen en de Commissie Toelating groenterassen gebundeld
+    in de Raad voor plantenrassen.Sinds 1 januari 2008 wordt de Raad voor plantenrassen
+    ondersteund door het Bureau Administratie en Documentatie van Naktuinbouw, afdeling
+    Rassen & Proeven.
+  url: https://www.raadvoorplantenrassen.nl/nl/over-de-raad/
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Zaaizaad- en Plantgoedwet 2005, artikel 2
+  referentie: http://wetten.overheid.nl/BWBR0018040/
+taken_en_bevoegdheden: De Raad voor plantenrassen is verantwoordelijk voor:* de verlening
+  van kwekersrecht;* de toelating van landbouwrassen;* de toelating van rassen en
+  opstanden van bosbouwgewassen;* de toelating van groenterassen met behulp van de
+  zogenaamde B-lijst.De Raad is tevens houder van het Nederlands Rassenregister.
+evaluations:
+- datum: '2023-12-22'
+  kamerstuknummer: TK 25268 nr. 221
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-221.html
+- datum: '2017-12-19'
+  kamerstuknummer: TK 25268 nr. 157
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-157.html
+- datum: '2012-01-24'
+  kamerstuknummer: TK 25268 nr. 75
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-75.html
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Nationale-Nederlanden
+    referentie: https://www.nn.nl/Particulier/Pensioen.htm
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28212408/Raad_voor_plantenrassen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.raadvoorplantenrassen.nl/nl/actueel/themas/jaarverslagen/
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.raadvoorplantenrassen.nl/nl/actueel/themas/methodiekenonderzoek/
+    - informatiecategorie: Convenanten
+      url: https://www.raadvoorplantenrassen.nl/nl/actueel/themas/wet-open-overheid/
+  wooVerzoek:
+    url: https://www.raadvoorplantenrassen.nl/nl/contact/
+afspraak:
+  email: teamsupport@rasraad.nl
+  telefoonnummer: (071) 332 61 21
+personnel:
+  aantalFte: 6,1
+  peildatumFte: '2024-03-20'
+  toelichtingFte: De administratieve en juridische ondersteuning van de Raad (gezamenlijk
+    6,1 fte) is sinds 1 januari 2008 ondergebracht bij Naktuinbouw.
 contact:
   website: https://www.raadvoorplantenrassen.nl/
   email: teamsupport@rasraad.nl
+  bezoekadres: Sotaweg 22, 2371 GD Roelofarendsveen
+  postadres: Postbus 14, 2370 AA Roelofarendsveen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sotaweg
+    huisnummer: '22'
+    postcode: 2371 GD
+    woonplaats: Roelofarendsveen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Woo-Adres
+    openbare_ruimte: Sotaweg
+    huisnummer: '22'
+    postcode: 2371 GD
+    woonplaats: Roelofarendsveen
+  - type: Postadres
+    postbus: '14'
+    postcode: 2370 AA
+    woonplaats: Roelofarendsveen
+  phones:
+  - nummer: (071) 332 61 21
+    label: algemeen
+  emails:
+  - email: teamsupport@rasraad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.raadvoorplantenrassen.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.raadvoorplantenrassen.nl/nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor plantenrassen
+    url: https://www.linkedin.com/company/raadvoorplantenrassen/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-02-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212408/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212408/rvp
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000152
   retrieved: '2026-05-09'
+roo_start_datum: '2006-01-01'

@@ -3,7 +3,7 @@ name:
   full: M.C. Klink
   family: Klink
   given: M.C.
-  initials: M.
+  initials: M.C.
 mandaten:
 - id: a267aaf4-0e4d-42e1-9867-7a2a85877d54
   organization_id: org:gemeente-molenlanden
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5305780
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/27465430/gemeente-molenlanden
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28663910
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5305778

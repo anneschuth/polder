@@ -3,15 +3,22 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29065946'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
 names:
 - value: College van Voorzitter en Ondervoorzitters
   valid_from: '1900-01-01'
+description:
+  url: https://www.eerstekamer.nl/commissies/cvo
 contact:
   website: https://www.eerstekamer.nl/commissies/cvo
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/cvo
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-14'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29065946/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29065946/college-van-voorzitter-en-ondervoorzitters
+  retrieved: '2026-05-16'

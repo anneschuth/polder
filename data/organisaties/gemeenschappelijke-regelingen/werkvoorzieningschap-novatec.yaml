@@ -2,18 +2,57 @@ id: org:gr-werkvoorzieningschap-novatec
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965903'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  organisatiecode: so0235
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Novatec 2006
+  roo_id: '24965898'
 names:
 - value: Werkvoorzieningschap Novatec
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.novatec.nl
   email: info@novatec.nl
+  bezoekadres: Feithsweg 4, 9356 AS Tolbert
+  postadres: Postbus 8, 9356 ZG Tolbert
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Feithsweg
+    huisnummer: '4'
+    postcode: 9356 AS
+    woonplaats: Tolbert
+  - type: Postadres
+    postbus: '8'
+    postcode: 9356 ZG
+    woonplaats: Tolbert
+  phones:
+  - nummer: (0594) 28 37 00
+    label: algemeen
+  emails:
+  - email: info@novatec.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.novatec.nl
+    label: algemeen
+  - url: http://www.novatec.nl/over-novatec/contact
+    label: contact
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965903/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965903/werkvoorzieningschap-novatec
+  retrieved: '2026-05-16'
+roo_start_datum: '2006-06-01'

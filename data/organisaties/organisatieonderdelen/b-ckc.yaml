@@ -9,11 +9,33 @@ names:
   abbr: B-CKC
   valid_from: '1900-01-01'
   valid_until: '2019-01-02'
+description:
+  text: Taak:Het Centrum voor Kennis en Communicatie is het onderdeel van de Belastingdienst
+    dat zich bezighoudt met leren en opleiden, communiceren en organisatie- en personeelsontwikkeling.
 contact:
   website: http://www.belastingdienst.nl
+  bezoekadres: Herman Gorterstraat 75, 3511 EW UTRECHT
+  postadres: Postbus 18200, 3501 CE UTRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Herman Gorterstraat 75
+    postcode: 3511 EW
+    woonplaats: UTRECHT
+  - type: Postadres
+    postbus: '18200'
+    postcode: 3501 CE
+    woonplaats: UTRECHT
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  internet_addresses:
+  - url: http://www.belastingdienst.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-02'
+last_mutation: '2021-12-17'
+last_verified: '2021-12-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71100/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71100/b-ckc
+  retrieved: '2026-05-16'

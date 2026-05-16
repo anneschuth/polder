@@ -2,14 +2,32 @@ id: org:stichting-wo2net
 type: rwt
 identifiers:
   roo_id: '30133917'
+  kvk: '89651715'
+  rsin: '865055993'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Stichting WO2NET
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Vijzelstraat
+    huisnummer: '32'
+    postcode: 1017 HL
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133917/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133917/stichting-wo2net
+  retrieved: '2026-05-16'

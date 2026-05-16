@@ -3,16 +3,38 @@ type: adviescollege
 identifiers:
   roo_id: '30259084'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12380
+  organisatiecode: oorg12380
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Commissie risicobeoordeling nieuwe drugs
   valid_from: '1900-01-01'
+description:
+  text: De commissie risicobeoordeling nieuwe drugs is een adviescommissie die het
+    Coördinatiepunt Assessment en Monitoring nieuwe drugs (CAM), dat is ondergebracht
+    bij het Rijksinstituut voor Volksgezondheid en Milieu (RIVM), ondersteunt. Naast
+    deze ondersteunde taak is de commissie verantwoordelijk voor het (zo breed mogelijk)
+    uitwisselen van informatie over trends op het gebied van drugs en drugsgebruik,
+    het beoordelen van de risico's van nieuwe drugs (op een onafhankelijke, slagvaardige
+    en multidisciplinaire manier) en het toetsen en evalueren van de risicobeoordelingsprocedure.Deze
+    adviescommissie is geen formeel adviescollege en valt niet onder de Kaderwet adviescolleges.
+  url: https://www.rivm.nl/drugs/commissie-risicobeoordeling-nieuwe-drugs
+wettelijke_grondslagen:
+- opschrift: Besluit commissie risicobeoordeling nieuwe drugs 2003, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0016260/2020-01-01/0/#Artikel2
 contact:
   website: https://www.rivm.nl/drugs/commissie-risicobeoordeling-nieuwe-drugs
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30259084/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30259084/commissie-risicobeoordeling-nieuwe-drugs
+  retrieved: '2026-05-16'
+roo_start_datum: '2003-01-01'

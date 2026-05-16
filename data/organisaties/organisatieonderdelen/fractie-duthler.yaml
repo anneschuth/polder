@@ -3,14 +3,20 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '27845758'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-gl
+parent_id: org:onderdeel-fracties-ek
 names:
 - value: Fractie-Duthler
   valid_from: '1900-01-01'
   valid_until: '2019-06-10'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2019-06-10'
+last_mutation: '2019-06-23'
+last_verified: '2019-06-23'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27845758/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27845758/fractie-duthler
+  retrieved: '2026-05-16'

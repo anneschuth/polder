@@ -7,9 +7,28 @@ parent_id: org:rechtbank-gelderland
 names:
 - value: Rechtbank Gelderland, locatie Apeldoorn
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Stationsstraat 104, 7311 MJ Apeldoorn
+  postadres: Postbus 9008, 7200 GJ Zutphen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsstraat
+    huisnummer: '104'
+    postcode: 7311 MJ
+    woonplaats: Apeldoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9008'
+    postcode: 7200 GJ
+    woonplaats: Zutphen
+  phones:
+  - nummer: (088) 361 20 00
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-08-20'
+last_verified: '2026-02-26'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28046942/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28046942/rechtbank-gelderland-locatie-apeldoorn
+  retrieved: '2026-05-16'

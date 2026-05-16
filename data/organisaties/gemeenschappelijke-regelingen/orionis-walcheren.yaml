@@ -4,22 +4,112 @@ identifiers:
   roo_id: '28568418'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0703
   oin: 00000001823540388000
+  owms: http://standaarden.overheid.nl/owms/terms/orionis
+  kvk: '54622107'
+  organisatiecode: so0703
+  rsin: '851375777'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Orionis Walcheren
+  roo_id: '30509760'
 names:
 - value: Orionis Walcheren
   valid_from: '1900-01-01'
+description:
+  text: "Orionis Walcheren ondersteunt de 120.000 inwoners van de gemeenten Middelburg,\
+    \ Veere en Vlissingen op het gebied van werk, inkomen en schuldenOnze dienstverleningBij\
+    \ Orionis Walcheren kunt u terecht voor verschillende zaken:•\twe zijn een werkleerbedrijf;•\t\
+    u kunt bij ons een Participatiewet uitkering, bijzondere bijstand en minimaregelingen\
+    \ aanvragen;•\twe bieden schuldhulpverlening.Onze missieWij geloven dat iedereen\
+    \ ertoe doet. En dat werk en ontwikkeling voorwaarden zijn om mee te doen in de\
+    \ maatschappij.We staan voortdurend in verbinding met de inwoners van Walcheren.\
+    \ Vanuit oprechte belangstelling doen we wat nodig is voor een actief en zelfstandig\
+    \ leven voor iedereen die ons nodig heeft.•\tSamen met partners ontwikkelen en\
+    \ begeleiden we naar werk•\tAls werk niet gelijk lukt, zorgen we snel voor tijdelijk\
+    \ en/of extra inkomen•\tWe ondersteunen bij geldzorgen door schuldhulpverlening\
+    \ en preventie•\tWe zorgen voor beschut en beschermd werk voor mensen met een\
+    \ afstand tot de arbeidsmarkt"
+  url: https://www.orioniswalcheren.nl/organisatie
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.orioniswalcheren.nl/organisatie/wet-open-overheid-woo/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28568418/Orionis_Walcheren
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.orioniswalcheren.nl/organisatie/wet-open-overheid-woo
+      toelichting: Vastgestelde Notulen Vergaderingen Algemeen Bestuur
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Orionis+Walcheren%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Orionis+Walcheren%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.orioniswalcheren.nl/organisatie/wetgeving/verordeningen-en-beleidsregels
+      toelichting: Verordeningen en beleidsregels
+  wooVerzoek:
+    url: https://www.orioniswalcheren.nl/organisatie/wet-open-overheid-woo/woo-verzoek
+organogram_url: https://www.orioniswalcheren.nl/organisatie
+afspraak:
+  url: https://www.orioniswalcheren.nl/contact-afspraak-maken/afspraak-maken
 contact:
   website: https://www.orioniswalcheren.nl
   email: kcc@orioniswalcheren.nl
+  bezoekadres: Oostsouburgseweg 10, 4382 NH Vlissingen
+  postadres: Postbus 1, 4380 AA Vlissingen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Oostsouburgseweg
+    huisnummer: '10'
+    postcode: 4382 NH
+    woonplaats: Vlissingen
+  - type: Postadres
+    postbus: '1'
+    postcode: 4380 AA
+    woonplaats: Vlissingen
+  - type: Woo-Adres
+    openbare_ruimte: Oostsouburgseweg
+    huisnummer: '10'
+    postcode: 4382 NH
+    woonplaats: Vlissingen
+  phones:
+  - nummer: (0118) 43 27 00
+    label: algemeen
+  emails:
+  - email: kcc@orioniswalcheren.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.orioniswalcheren.nl
+    label: algemeen
+  - url: https://www.orioniswalcheren.nl/contact-afspraak-maken/contactformulier.html
+    label: contact
+  contact_forms:
+  - url: https://www.orioniswalcheren.nl/contact-afspraak-maken.html
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-04-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28568418/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28568418/orionis-walcheren
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2012-01-01'

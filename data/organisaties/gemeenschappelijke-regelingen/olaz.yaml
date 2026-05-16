@@ -3,18 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28158039'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0328
+  owms: http://standaarden.overheid.nl/owms/terms/olaz
+  kvk: '59455195'
+  organisatiecode: so0328
+  rsin: '800618324'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Openbaar Lichaam Afvalstoffenverwerking Zeeland
+    (OLAZ)
+  roo_id: '30500501'
 names:
 - value: Openbaar Lichaam Afvalstoffenverwijdering Zeeland
   abbr: OLAZ
   valid_from: '1900-01-01'
+description:
+  text: O.L.A.Z. staat voor Openbaar Lichaam Afvalstoffenverwijdering Zeeland. In
+    O.L.A.Z. werken alle 13 Zeeuwse gemeenten samen op het gebied van de verwerking
+    van huishoudelijk afval. Het doel van O.L.A.Z. is de gezamenlijke belangen van
+    de deelnemers te behartigen op dit gebied.
+  url: https://www.olazzeeland.nl/over-olaz/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28158039/Openbaar_Lichaam_Afvalstoffenverwijdering_Zeeland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://riszzeland.notubiz/dossiers/25736
+  wooVerzoek:
+    url: https://www.olazzeeland.nl/contact
+afspraak:
+  email: info@olazzeeland.nl
+  url: https://www.olazzeeland.nl/contact/
 contact:
   website: https://www.olazzeeland.nl
   email: info@olazzeeland.nl
+  bezoekadres: Kerkplein 1, 4421 AA Kapelle
+  postadres: Postbus 79, 4420 AC Kapelle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kerkplein
+    huisnummer: '1'
+    postcode: 4421 AA
+    woonplaats: Kapelle
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '79'
+    postcode: 4420 AC
+    woonplaats: Kapelle
+    land: Nederland
+  - type: Postadres
+    postbus: '79'
+    postcode: 4420 AC
+    woonplaats: Kapelle
+  phones:
+  - nummer: 06 13 54 63 40
+    label: Mobiel
+  emails:
+  - email: info@olazzeeland.nl
+    label: algemeen
+  - email: h.vermaire@kapelle.nl
+  internet_addresses:
+  - url: https://www.olazzeeland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.olazzeeland.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28158039/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28158039/olaz
+  retrieved: '2026-05-16'
+roo_start_datum: '2009-09-01'

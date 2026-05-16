@@ -3,7 +3,7 @@ name:
   full: A.J.C. Snijders-Mahr
   family: Snijders-Mahr
   given: A.J.C.
-  initials: A.
+  initials: A.J.C.
 mandaten:
 - id: 50afb6db-6dbe-4d08-b060-f99ec8aed5f4
   organization_id: org:gemeente-kerkrade
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580299
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29010706
 - id: 6b0d0faf-1ebe-4bfe-8999-4a3b1aebb283
   organization_id: org:gemeente-kerkrade
   post_id: post:raadslid-gemeente-kerkrade

@@ -1,20 +1,55 @@
 id: org:onderdeel-provinciale-organisatie
 type: organisatieonderdeel
 identifiers:
-  roo_id: '15650'
+  roo_id: '16795'
 classification: organisatieonderdeel
-parent_id: org:prov-gr
+parent_id: org:prov-ov
 names:
 - value: Provinciale Organisatie
   valid_from: '1900-01-01'
 - value: Provinciale organisatie
   valid_from: '1900-01-01'
+description:
+  text: Overijssel wil een provincie zijn, waarin mensenzich thuis voelen. Een provincie,
+    die transparant is in haar handelen, die beloften waarmaakt en afgerekend kan
+    worden op haar prestaties. Een provincie, die professioneel en betrouwbaar is,
+    die oog en oor heeft voor haar burgers en voor wat zich in de omgeving afspeelt.
+    Een provincie die zich richt op de toekomst en uitstraalt dat samenwerking niet
+    alleen binnen de muren van het provinciehuis, maar ook daarbuiten een vanzelfsprekendheid
+    is.
 contact:
   website: https://www.flevoland.nl/wie-zijn-we
-  email: info@flevoland.nl
+  email: overijsselloket@overijssel.nl
+  bezoekadres: Luttenbergstraat 2, Zwolle
+  postadres: Postbus 10078, 8000 GB ZWOLLE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Luttenbergstraat
+    huisnummer: '2'
+    woonplaats: Zwolle
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '10078'
+    postcode: 8000 GB
+    woonplaats: ZWOLLE
+  phones:
+  - nummer: (038) 499 88 99
+    label: algemeen
+  emails:
+  - email: overijsselloket@overijssel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.overijssel.nl
+    label: algemeen
+  fax: (0592) 36 57 77
+  contact_forms:
+  - url: https://www.flevoland.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-02-29'
+last_verified: '2026-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/15650/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/16795/provinciale-organisatie
+  retrieved: '2026-05-16'

@@ -3,16 +3,43 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '71917'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-boa
+parent_id: org:onderdeel-plaatsvervangend-secretaris-generaal
 names:
 - value: Directie Communicatie
   abbr: COM
   valid_from: '1900-01-01'
+description:
+  text: 'Wat is de waarde van beleid als mensen het niet kennen? Of de noodzaak ervan
+    niet zien? De directie Communicatie zorgt voor de communicatieve ondersteuning
+    van het beleid en denkt daarbij vanuit de personen voor wie het beleid bestemd
+    is: welke informatie hebben zij nodig? Hoe denken zij over de zaak? Waarover praten
+    zij?   De directie adviseert de bewindspersonen en beleidsambtenaren bij de ontwikkeling
+    van het beleid, verzorgt de perscontacten en begeleidt bij externe optredens.
+    Verder realiseren de communicatieadviseurs campagnes, begeleiden ze communicatieonderzoek,
+    geven ze OCW-collega''s redactionele adviezen en beantwoorden ze vragen van het
+    publiek. Ook verzorgt Communicatie in- en extern gerichte publicaties en de website
+    van het ministerie van OCW.'
 contact:
   website: http://www.rijksoverheid.nl/ministeries/ocw
+  bezoekadres: Rijnstraat 50, 2515 BJ Den Haag
+  postadres: Postbus 16375, 2500 BJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rijnstraat 50
+    postcode: 2515 BJ
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '16375'
+    postcode: 2500 BJ
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/ministeries/ocw
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2026-01-30'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/71917/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/71917/com
+  retrieved: '2026-05-16'

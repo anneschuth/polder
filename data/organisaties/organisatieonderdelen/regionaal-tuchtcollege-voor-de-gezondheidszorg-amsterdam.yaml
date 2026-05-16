@@ -9,9 +9,25 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.tuchtcollege-gezondheidszorg.nl
+  postadres: Postbus 84500, 1080 BN Amsterdam
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '84500'
+    postcode: 1080 BN
+    woonplaats: Amsterdam
+  phones:
+  - nummer: (088) 371 25 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.tuchtcollege-gezondheidszorg.nl
+    label: algemeen
+  fax: (088) 371 25 09
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66165/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66165/regionaal-tuchtcollege-voor-de-gezondheidszorg-amsterdam
+  retrieved: '2026-05-16'

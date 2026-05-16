@@ -3,17 +3,77 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28494013'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0190
+  owms: http://standaarden.overheid.nl/owms/terms/starvpr
+  kvk: '75092816'
+  organisatiecode: so0190
+  rsin: '860139268'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Regionaal Historisch Centrum Voorne-Putten Goeree-Overflakkee
+  roo_id: '30493963'
 names:
 - value: Regionaal Historisch Centrum Voorne-Putten Goeree-Overflakkee
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://streekarchiefvp.nl/organisatie/
+      overzichtURL: https://organisaties.overheid.nl/woo/28494013/Regionaal_Historisch_Centrum_Voorne-Putten_Goeree-Overflakkee
+  wooVerzoek:
+    url: https://streekarchiefvp.nl/organisatie/
+organogram_url: https://streekarchiefvp.nl/organisatie/
+afspraak:
+  email: info@streekarchiefvp.nl
+  telefoonnummer: (0181) 34 99 99
+  url: https://streekarchiefvp.nl/organisatie/
 contact:
   website: https://streekarchiefvp.nl
   email: info@streekarchiefvp.nl
+  bezoekadres: Hendrik van Wijnstraat 1, 3232 TR Brielle
+  postadres: Postbus 79, 3230 AB Brielle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hendrik van Wijnstraat
+    huisnummer: '1'
+    postcode: 3232 TR
+    woonplaats: Brielle
+  - type: Postadres
+    postbus: '79'
+    postcode: 3230 AB
+    woonplaats: Brielle
+  phones:
+  - nummer: (0181) 34 99 99
+    label: algemeen
+  emails:
+  - email: info@streekarchiefvp.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://streekarchiefvp.nl
+    label: algemeen
+  - url: https://www.streekarchiefvp.nl/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.streekarchiefvp.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-25'
+last_verified: '2024-11-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28494013/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28494013/regionaal-historisch-centrum-voorne-putten-goeree-overflakkee
+  retrieved: '2026-05-16'
+roo_start_datum: '1984-02-01'

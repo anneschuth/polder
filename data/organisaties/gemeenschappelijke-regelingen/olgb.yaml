@@ -5,23 +5,102 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0552
   oin: 00000001806661136000
   kvk: '53919378'
+  owms: http://standaarden.overheid.nl/owms/terms/olgb
+  organisatiecode: so0552
+  rsin: '806661136'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling gezamenlijke brandweer voor het haven- en industriegebied
+    van Rotterdam
+  roo_id: '30439465'
 names:
 - value: Openbaar Lichaam Gezamenlijke Brandweer
   abbr: O.L.G.B.
   valid_from: '1900-01-01'
+description:
+  text: De Gezamenlijke Brandweer is een samenwerkingsverband tussen ongeveer zestig
+    bedrijven in het haven- en industriegebied van Rotterdam en de Gemeente Rotterdam.
+    De organisatie verzorgt in dit gebied de brandbestrijding en hulpverlening en
+    heeft daarbij de verplichting tot het in stand houden van een bedrijfsbrandweer
+    (gelet op artikel 3, lid 1 en artikel 31 van de Wet veiligheidsregio’s) overgenomen
+    van de bedrijven, die aangesloten zijn. Dit noemen we de zogenaamde 'ledenbedrijven'.
+    Zowel de bedrijven als de Gemeente Rotterdam financieren de totale preparatieve
+    en repressieve brandweerzorg die de Gezamenlijke Brandweer levert.
+  url: https://www.gezamenlijke-brandweer.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.gezamenlijke-brandweer.nl/woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/24967058/Openbaar_Lichaam_Gezamenlijke_Brandweer
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://www.gezamenlijke-brandweer.nl/convenanten/
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.gezamenlijke-brandweer.nl/woo-verzoeken-en-besluiten/
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.gezamenlijke-brandweer.nl/jaarplannen-en-jaarverslagen/
+  wooVerzoek:
+    url: https://www.gezamenlijke-brandweer.nl/woo-verzoek/
+organogram_url: https://gezamenlijb7dc228e1c.blob.core.windows.net/blobgezamenlijb7dc228e1c/wp-content/uploads/2024/10/20241001-Organogram-zonder-namen.pdf
+afspraak:
+  email: info@gez-brandweer.nl
+  url: https://www.gezamenlijke-brandweer.nl/contact/
 contact:
   website: https://www.gezamenlijke-brandweer.nl
   email: info@gez-brandweer.nl
+  bezoekadres: Moezelweg 150, 3198 LS Europoort Rotterdam​
+  postadres: Postbus 1300, 3180 AH Rozenburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Moezelweg
+    huisnummer: '150'
+    postcode: 3198 LS
+    woonplaats: Europoort Rotterdam​
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1300'
+    postcode: 3180 AH
+    woonplaats: Rozenburg
+  - type: Woo-Adres
+    openbare_ruimte: Moezelweg
+    huisnummer: '150'
+    postcode: 3198 LS
+    woonplaats: Europoort
+    regio: Rotterdam
+  phones:
+  - nummer: (088) 511 00 00
+    label: algemeen
+  emails:
+  - email: info@gez-brandweer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.gezamenlijke-brandweer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-11-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967058/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967058/olgb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1998-01-01'

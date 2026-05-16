@@ -5,22 +5,96 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0485
   oin: 00000001808305311000
   kvk: '20164916'
+  owms: http://standaarden.overheid.nl/owms/terms/GGD_West-Brabant
+  organisatiecode: so0485
+  rsin: '808305311'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD West-Brabant 2024
+  roo_id: '29728067'
 names:
 - value: GGD West-Brabant
   valid_from: '1900-01-01'
+description:
+  text: 'Bij GGD West-Brabant streven we naar een gezonde en veilige leefomgeving
+    voor iedereen. Onze kernboodschap is helder: “Wij maken samen gezond gewoon”.
+    Dit betekent dat we gezondheid en welzijn voor iedereen toegankelijk willen maken
+    door middel van preventie, samenwerking en innovatie.Wij zetten ons in voor het
+    bewaken, beschermen en bevorderen van de gezondheid en veiligheid van alle inwoners
+    van West-Brabant. Ook voor jou staan wij klaar!We werken samen met onze partners
+    aan een toekomst waarin iedereen de kans krijgt om gezond op te groeien en te
+    leven.'
+  url: https://www.ggdwb.nl/over-de-ggd/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdwb.nl/over-de-ggd/publicaties/wet-open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28186089/GGD_West-Brabant
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22GGD+West-Brabant%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.ggdwb.nl/over-de-ggd/publicaties/wet-open-overheid/
+organogram_url: https://www.ggdwb.nl/app/uploads/sites/3/2024/10/GGD_Organogram2024-versie-zonder-namen.png
+afspraak:
+  telefoonnummer: (088) 639 20 00
+  url: https://www.ggdwb.nl/contact/
 contact:
   website: https://www.ggdwestbrabant.nl
   email: info@ggdwestbrabant.nl
+  bezoekadres: Doornboslaan 225-227, 4816 CZ Breda
+  postadres: Postbus 3024, 5003 DA Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Doornboslaan
+    huisnummer: 225-227
+    postcode: 4816 CZ
+    woonplaats: Breda
+  - type: Postadres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+  - type: Woo-Adres
+    postbus: '3024'
+    postcode: 5003 DA
+    woonplaats: Tilburg
+  phones:
+  - nummer: (088) 639 20 00
+    label: algemeen
+  emails:
+  - email: info@ggdwestbrabant.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdwestbrabant.nl
+    label: algemeen
+  - url: https://www.ggdwestbrabant.nl/contact
+    label: contact
+  fax: (076) 521 60 62
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28186089/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28186089/ggd-west-brabant
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-03-10'

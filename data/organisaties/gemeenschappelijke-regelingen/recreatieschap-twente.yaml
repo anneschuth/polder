@@ -3,16 +3,59 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28544652'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1079
+  owms: http://standaarden.overheid.nl/owms/terms/rcstw
+  kvk: '85145742'
+  organisatiecode: so1079
+  rsin: '863525325'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Recreatieschap Twente
+  roo_id: '28544646'
 names:
 - value: Recreatieschap Twente
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28544652/Recreatieschap_Twente
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Recreatieschap+Twente%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
 contact:
   website: https://www.enschede.nl
+  bezoekadres: Nijverheidstraat 30, 7511 JM Enschede
+  postadres: Postbus 1400, 7500 BK Enschede
+  addresses:
+  - type: Bezoekadres
+    toelichting: Recreatieschap Twente
+    openbare_ruimte: Nijverheidstraat
+    huisnummer: '30'
+    postcode: 7511 JM
+    woonplaats: Enschede
+  - type: Postadres
+    postbus: '1400'
+    postcode: 7500 BK
+    woonplaats: Enschede
+  phones:
+  - nummer: 14 053
+    label: Gemeente Enschede
+  internet_addresses:
+  - url: https://www.enschede.nl
+    label: Gemeente Enschede
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-10-18'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28544652/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28544652/recreatieschap-twente
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-01-01'

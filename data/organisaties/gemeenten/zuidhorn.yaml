@@ -5,6 +5,9 @@ identifiers:
   kvk: 01182779
   roo_id: '37541'
   wikidata: Q210234
+  owms: http://standaarden.overheid.nl/owms/terms/Zuidhorn_(gemeente)
+  ictu: '00056'
+  organisatiecode: gm0056
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,89 @@ names:
   abbr: Zuidhorn
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 128,37
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 128.37
+  aantal_inwoners: 18676
+  inwoners: '145'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 145.0
+  bevat_plaatsen_raw: Aduard, Briltil, Den Ham GN, Den Horn, Grijpskerk, Kommerzijl,
+    Lauwerzijl, Niehove, Niezijl, Noordhorn, Oldehove, Pieterzijl, Saaksum, Visvliet,
+    Zuidhorn
+  bevat_plaatsen:
+  - Aduard
+  - Briltil
+  - Den Ham GN
+  - Den Horn
+  - Grijpskerk
+  - Kommerzijl
+  - Lauwerzijl
+  - Niehove
+  - Niezijl
+  - Noordhorn
+  - Oldehove
+  - Pieterzijl
+  - Saaksum
+  - Visvliet
+  - Zuidhorn
+council:
+  total_seats: 17
+  parties:
+  - naam: ChristenUnie
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: GroenLinks
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.zuidhorn.nl
   email: gemeente@zuidhorn.nl
+  bezoekadres: Hooiweg 9, 9801 AJ ZUIDHORN
+  postadres: Postbus 3, 9800 AA ZUIDHORN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hooiweg
+    huisnummer: '9'
+    postcode: 9801 AJ
+    woonplaats: ZUIDHORN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 3
+    postbus: '3'
+    postcode: 9800 AA
+    woonplaats: ZUIDHORN
+  phones:
+  - nummer: (0594) 50 88 88
+    label: algemeen
+  emails:
+  - email: gemeente@zuidhorn.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.zuidhorn.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2026-04-09'
+last_verified: '2026-04-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37541/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37541/zuidhorn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

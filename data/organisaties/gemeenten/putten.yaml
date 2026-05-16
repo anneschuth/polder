@@ -6,21 +6,152 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0273
   roo_id: '37873'
   wikidata: Q939948
+  owms: http://standaarden.overheid.nl/owms/terms/Putten_(gemeente)
+  ictu: '00273'
+  organisatiecode: gm0273
+  rsin: 001831227
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_PTN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Putten
   abbr: Putten
   valid_from: '1900-01-01'
+description:
+  text: De gemeentelijke organisatie van Putten is in de basis een afdelingsmodel.
+    De organisatie bestaat uit drie afdelingen:- Dienstverlening- Samenleving- RuimteIedere
+    afdeling heeft een eigen manager en iedere afdeling bestaat uit vier teams. Alleen
+    het team Buitendienst heeft een eigen leidinggevende, de bedrijfsleider. Zie voor
+    de teams het organogram. In de organisatieregeling is aangegeven welk team verantwoordelijk
+    is voor welke onderwerpen.
+  url: https://www.putten.nl/Bestuur/Organisatie/Organisatie_gemeente_Putten
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.putten.nl/Bestuur/Wet_open_overheid_Woo
+      overzichtURL: https://organisaties.overheid.nl/woo/37873/Gemeente_Putten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Putten%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Putten%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.putten.nl/jaarrekening
+      toelichting: Begroting en jaarrekening
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Putten%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.putten.nl/Bestuur/College_van_B_en_W/besluitenlijsten
+      toelichting: Besluitenlijsten van het college van burgemeester en wethouders
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://putten.raadsinformatie.nl/
+      toelichting: Vergaderstukken gemeenteraad
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.putten.nl/Bestuur/Gemeenteraad/Rekenkamer
+      toelichting: Onderzoeksrapporten rekenkamer
+  wooVerzoek:
+    url: https://www.putten.nl/Bestuur/Wet_open_overheid_Woo
+organogram_url: https://www.putten.nl/Bestuur/Organisatie
+afspraak:
+  telefoonnummer: (0341) 35 96 11
+  url: https://afspraken.putten.nl
+geography:
+  oppervlakte: 87,5
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 87.5
+  aantal_inwoners: 25170
+  inwoners: '287'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 287.0
+  bevat_plaatsen_raw: Putten
+  bevat_plaatsen:
+  - Putten
+council:
+  total_seats: 21
+  parties:
+  - naam: SGP
+    aantal_zetels: 5
+  - naam: Wij Putten
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Gemeentebelangen
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 1
 contact:
   website: https://www.putten.nl
   email: info@putten.nl
+  bezoekadres: Fontanusplein 1, 3881 BZ PUTTEN
+  postadres: Postbus 400, 3880 AK PUTTEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Fontanusplein
+    huisnummer: '1'
+    postcode: 3881 BZ
+    woonplaats: PUTTEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '400'
+    postcode: 3880 AK
+    woonplaats: PUTTEN
+  - type: Woo-Adres
+    postbus: '400'
+    postcode: 3881 AK
+    woonplaats: Putten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Fontanusplein
+    huisnummer: '1'
+    postcode: 3881 BZ
+    woonplaats: PUTTEN
+  phones:
+  - nummer: (0341) 35 96 11
+    label: algemeen
+  emails:
+  - email: info@putten.nl
+    label: algemeen
+  - email: info@putten.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.putten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://afspraken.putten.nl
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-15'
+last_verified: '2026-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/37873/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/37873/putten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

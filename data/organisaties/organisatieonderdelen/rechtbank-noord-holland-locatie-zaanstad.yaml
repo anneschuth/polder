@@ -2,6 +2,8 @@ id: org:onderdeel-rechtbank-noord-holland-locatie-zaanstad
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048546'
+  kvk: '82941742'
+  rsin: '862664184'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-noord-holland
 names:
@@ -9,9 +11,32 @@ names:
   valid_from: '1900-01-01'
 contact:
   email: kantonzaanstad@rechtspraak.nl
+  bezoekadres: Rembrandtstraat 23, 1506 LS Zaandam
+  postadres: Postbus 1165, 1500 AD Zaandam
+  addresses:
+  - type: Bezoekadres
+    toelichting: Let op! In 2025 is deze locatie tijdelijk gesloten in verband met
+      verbouwingswerkzaamheden
+    openbare_ruimte: Rembrandtstraat
+    huisnummer: '23'
+    postcode: 1506 LS
+    woonplaats: Zaandam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1165'
+    postcode: 1500 AD
+    woonplaats: Zaandam
+  phones:
+  - nummer: (088) 361 11 68
+    label: algemeen
+  emails:
+  - email: kantonzaanstad@rechtspraak.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-27'
+last_verified: '2026-03-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048546/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048546/rechtbank-noord-holland-locatie-zaanstad
+  retrieved: '2026-05-16'

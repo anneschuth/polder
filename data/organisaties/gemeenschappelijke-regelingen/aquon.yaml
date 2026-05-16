@@ -3,17 +3,67 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27596379'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0698
+  owms: http://standaarden.overheid.nl/owms/terms/aquon
+  kvk: '52811751'
+  organisatiecode: so0698
+  rsin: '823338848'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling AQUON 2018
+  roo_id: '27596374'
 names:
 - value: AQUON
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.aquon.nl/
   email: info@aquon.nl
+  bezoekadres: De Blomboogerd 12, 4003 BX Tiel
+  postadres: Postbus 328, 4000 AH Tiel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Blomboogerd
+    huisnummer: '12'
+    postcode: 4003 BX
+    woonplaats: Tiel
+  - type: Postadres
+    postbus: '328'
+    postcode: 4000 AH
+    woonplaats: Tiel
+  phones:
+  - nummer: (088) 030 25 00
+    label: algemeen
+  - nummer: (088) 030 25 25
+    label: financiële administratie
+  emails:
+  - email: info@aquon.nl
+    label: algemeen
+  - email: facturen@aquon.nl
+    label: financiën
+  internet_addresses:
+  - url: https://www.aquon.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.aquon.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-10-18'
+last_verified: '2022-05-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27596379/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27596379/aquon
+  retrieved: '2026-05-16'
+roo_start_datum: '2010-12-17'

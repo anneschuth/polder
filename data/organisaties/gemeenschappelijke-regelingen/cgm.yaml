@@ -1,20 +1,71 @@
 id: org:gr-cgm
 type: gemeenschappelijke-regeling
+subname: Werkorganisatie gemeenten Cuijk, Grave, Mill en Sint Hubert
 identifiers:
   roo_id: '28060097'
+  owms: http://standaarden.overheid.nl/owms/terms/Werkorganisatie_CGM
+  kvk: '59212969'
+  organisatiecode: so0834
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Werkorganisatie CGM
+  roo_id: '28060091'
 names:
 - value: Werkorganisatie CGM
   abbr: CGM
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.cgm.nl
   email: gemeente@cuijk.nl
+  bezoekadres: Louis Jansenplein 1, 5431 BV Cuijk
+  postadres: Postbus 7, 5360 AA Grave
+  addresses:
+  - type: Bezoekadres
+    toelichting: Gemeentehuis Cuijk
+    openbare_ruimte: Louis Jansenplein
+    huisnummer: '1'
+    postcode: 5431 BV
+    woonplaats: Cuijk
+  - type: Postadres
+    postbus: '7'
+    postcode: 5360 AA
+    woonplaats: Grave
+  phones:
+  - nummer: (0485) 39 66 00
+    label: Cuijk
+  - nummer: (0486) 47 72 77
+    label: Grave
+  - nummer: (0485) 46 03 00
+    label: Mill en Sint Hubert
+  emails:
+  - email: gemeente@cuijk.nl
+    label: Cuijk
+  - email: info@grave.nl
+    label: Grave
+  - email: info@gemeente-mill.nl
+    label: Mill en Sint Hubert
+  internet_addresses:
+  - url: https://www.cgm.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.cgm.nl/cgm-home/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2022-03-15'
+last_verified: '2022-03-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28060097/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28060097/cgm
+  retrieved: '2026-05-16'
+roo_start_datum: '2013-10-01'

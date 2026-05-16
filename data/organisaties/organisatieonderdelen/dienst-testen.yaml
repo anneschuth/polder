@@ -3,16 +3,41 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29103543'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dbpz
+parent_id: org:onderdeel-plaatsvervangend-sg-psg
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Dienst Testen
   valid_from: '1900-01-01'
   valid_until: '2023-01-09'
+description:
+  text: 'Let op: Dienst Testen stopt per 1 september 2023.Dienst Testen is opgericht
+    door het ministerie van VWS om de Nederlandse testcapaciteit in kaart te brengen
+    en te vergroten. Dienst Testen regisseert de samenwerking tussen betrokken partijen
+    als GGD''s en laboratoria, koopt testmaterialen in en zorgt voor een soepel lopende
+    testketen.Op 1 september 2023 houdt Dienst Testen op te bestaan. Dit komt door
+    het beëindigen van de testoperatie sinds 18 maart 2023. Vanaf 1 september 2023
+    gaat de Landelijke Functie Opschaling Infectieziektebestrijding (LFI) over het
+    testen bij een pandemie. De LFI is onderdeel van het RIVM en gaat zorgen voor
+    de voorbereiding op een toekomstige pandemie en (tijdens een nieuwe pandemie)
+    zorgen voor snelle opschaling en aansturing van de medisch-operationele processen.
+    Meer over de LFI leest u op de website van het RIVM.Sinds 1 juli 2023 is Dienst
+    Testen niet meer telefonisch te bereiken. Vanaf die datum kunt u ons alleen contacten
+    via e-mail: DT-secretariaat@minvws.nlDienst Testen werd in 2020 opgericht om het
+    testen op corona in Nederland mogelijk te maken en te regelen.'
 contact:
   website: https://www.diensttesten.nl/
+  internet_addresses:
+  - url: https://www.diensttesten.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2023-01-09'
+last_mutation: '2024-07-01'
+last_verified: '2024-06-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29103543/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29103543/dienst-testen
+  retrieved: '2026-05-16'

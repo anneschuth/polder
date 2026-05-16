@@ -6,21 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0642
   roo_id: '39296'
   wikidata: Q244692
+  owms: http://standaarden.overheid.nl/owms/terms/Zwijndrecht_(gemeente)
+  ictu: '00642'
+  organisatiecode: gm0642
+  rsin: 002118890
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ZWI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Zwijndrecht
   abbr: Zwijndrecht
   valid_from: '1900-01-01'
+description:
+  url: https://www.zwijndrecht.nl/Alle_onderwerpen/Over_de_gemeente
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.zwijndrecht.nl/Alle_onderwerpen/Nieuws/Bekendmakingen/Woo_verzoek_Wet_open_overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/39296/Gemeente_Zwijndrecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwijndrecht%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwijndrecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zwijndrecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Bij vertegenwoordigende organen ingekomen stukken
+      url: https://www.zwijndrecht.nl/Alle_onderwerpen/College_en_gemeenteraad/Gemeenteraad
+      toelichting: Raad Zwijndrecht
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.zwijndrecht.nl/Alle_onderwerpen/College_en_gemeenteraad/College_van_burgemeester_en_wethouders/Meer_informatie/Collegebesluiten
+      toelichting: Besluiten van het College van Burgemeester en Wethouders
+  wooVerzoek:
+    url: https://www.zwijndrecht.nl/Alle_onderwerpen/Nieuws/Bekendmakingen/Woo_verzoek_Wet_open_overheid
+afspraak:
+  telefoonnummer: 14 078
+  url: https://www.zwijndrecht.nl/Contact/Afspraak_maken
+geography:
+  oppervlakte: 22,77
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 22.77
+  aantal_inwoners: 44819
+  inwoners: '1968'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1968.0
+  bevat_plaatsen_raw: Heerjansdam, Zwijndrecht
+  bevat_plaatsen:
+  - Heerjansdam
+  - Zwijndrecht
+council:
+  total_seats: 26
+  parties:
+  - naam: ABZ Algemeen Belang Zwijndrecht
+    aantal_zetels: 12
+  - naam: ChristenUnie/SGP
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
+  - naam: Partij voor de Rechtsstaat
+    aantal_zetels: 1
 contact:
   website: https://www.zwijndrecht.nl
   email: gemeente@zwijndrecht.nl
+  bezoekadres: Raadhuisplein 3, 3331 BT ZWIJNDRECHT
+  postadres: Postbus 15, 3330 AA ZWIJNDRECHT
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '3'
+    postcode: 3331 BT
+    woonplaats: ZWIJNDRECHT
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '15'
+    postcode: 3330 AA
+    woonplaats: ZWIJNDRECHT
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '3'
+    postbus: '15'
+    postcode: 3331 BT
+    woonplaats: Zwijndrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '3'
+    postcode: 3331 BT
+    ter_attentie_van: Omgevingsloket Zwijndrecht
+    woonplaats: ZWIJNDRECHT
+  phones:
+  - nummer: 14 078
+    label: algemeen
+  emails:
+  - email: gemeente@zwijndrecht.nl
+    label: algemeen
+  - email: gemeente@zwijndrecht.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.zwijndrecht.nl
+    label: algemeen
+  contact_forms:
+  - url: https://loket.zwijndrecht.nl/aanvraag?schema=informatieverzoekdoorderde
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/39296/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/39296/zwijndrecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

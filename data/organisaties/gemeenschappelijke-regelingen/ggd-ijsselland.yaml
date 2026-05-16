@@ -5,22 +5,103 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0670
   oin: 00000001001900298000
   kvk: '50594761'
+  owms: http://standaarden.overheid.nl/owms/terms/GGD_IJsselland
+  organisatiecode: so0670
+  rsin: 001900298
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD IJsselland
+  roo_id: '30478873'
 names:
 - value: GGD IJsselland
   valid_from: '1900-01-01'
+description:
+  text: Dit doet GGD IJsselland:- Beleidsadvisering aan gemeenten;- Forensische zorg;-
+    Gezondheidsbevordering;- Infectieziektebestrijding;- Inspectie hygiëne en veiligheid;-
+    Inspectie kindercentra;- Inkoop regionale Jeugdzorg- Jeugdgezondheidszorg;- Maatschappelijke
+    zorg;- Milieu en gezondheid;- Rampen en crises;- Reizigerszorg;- Rijksvaccinatieprogramma;-
+    Seksuele gezondheid;- Toezicht Wmo;- Tuberculosebestrijding.
+  url: https://www.ggdijsselland.nl/over-de-ggd/dit-doet-ggd-ijsselland/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdijsselland.nl/over-de-ggd/dit-doet-ggd-ijsselland/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/23055759/GGD_IJsselland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22GGD+IJsselland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22GGD+IJsselland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22GGD+IJsselland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://www.ggdijsselland.nl/over-de-ggd/dit-doet-ggd-ijsselland/open-overheid/woo-contactformulier/
+afspraak:
+  email: info@ggdijsselland.nl
+  telefoonnummer: (038) 428 14 28
+  url: https://www.ggdijsselland.nl/home/ik-wil-een-afspraak-maken/
 contact:
   website: https://www.ggdijsselland.nl/over-de-ggd/contact/contact-ggd-ijsselland-algemeen/
   email: info@ggdijsselland.nl
+  bezoekadres: Zeven Alleetjes 1, 8011 CV Zwolle
+  postadres: Postbus 1453, 8001 BL Zwolle
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zeven Alleetjes
+    huisnummer: '1'
+    postcode: 8011 CV
+    woonplaats: Zwolle
+    land: Nederland
+  - type: Postadres
+    postbus: '1453'
+    postcode: 8001 BL
+    woonplaats: Zwolle
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Zeven Alleetjes
+    huisnummer: '1'
+    postcode: 8011 CV
+    woonplaats: ZWOLLE
+  phones:
+  - nummer: (038) 428 14 28
+    label: algemeen
+  emails:
+  - email: info@ggdijsselland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdijsselland.nl/over-de-ggd/contact/contact-ggd-ijsselland-algemeen/
+    label: contactformulier
+  - url: https://www.ggdijsselland.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ggdijsselland.nl/over-de-ggd/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23055759/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23055759/ggd-ijsselland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-01-01'

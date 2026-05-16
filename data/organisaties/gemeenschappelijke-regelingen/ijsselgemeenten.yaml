@@ -5,23 +5,91 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0829
   oin: 00000001854442996000
   kvk: '61679720'
+  owms: http://standaarden.overheid.nl/owms/terms/ijsselgem
+  btw: NL854442996B01
+  organisatiecode: so0829
+  rsin: '854442996'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling IJSSELgemeenten 2023
+  roo_id: '29562156'
 names:
 - value: IJSSELgemeenten
   valid_from: '1900-01-01'
-  valid_until: '2027-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.capelleaandenijssel.nl/informatie-opvragen-via-wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27882927/IJSSELgemeenten
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Andere documenten
+      url: https://www.ijsselgemeenten.nl
+  wooVerzoek:
+    url: https://www.capelleaandenijssel.nl/informatie-opvragen-via-wet-open-overheid-woo
+organogram_url: https://www.ijsselgemeenten.nl/onze-organisatie
+afspraak:
+  url: https://www.ijsselgemeenten.nl/contact-sociale-zaken
 contact:
   website: https://www.ijsselgemeenten.nl
   email: socialezaken@ijsselgemeenten.nl
+  bezoekadres: Rivierweg 111, 2903 AR Capelle aan den IJssel
+  postadres: Postbus 566, 2900 AN Capelle aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    toelichting: gemeentehuis Capelle aan den IJssel
+    openbare_ruimte: Rivierweg
+    huisnummer: '111'
+    postcode: 2903 AR
+    woonplaats: Capelle aan den IJssel
+    regio: Rijnmond
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '566'
+    postcode: 2900 AN
+    woonplaats: Capelle aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '70'
+    postcode: 2900 AB
+    woonplaats: Capelle aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (010) 284 84 57
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ijsselgemeenten.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.ijsselgemeenten.nl/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2027-01-01'
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27882927/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27882927/ijsselgemeenten
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2015-01-01'

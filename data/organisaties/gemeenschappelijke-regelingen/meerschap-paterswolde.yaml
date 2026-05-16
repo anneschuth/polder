@@ -3,17 +3,83 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '23142738'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0191
+  owms: http://standaarden.overheid.nl/owms/terms/Meerschap_Paterswolde
+  kvk: '50910000'
+  btw: NL009727152B01
+  organisatiecode: so0191
+  rsin: 009727152
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Meerschap Paterswolde 2019
+  roo_id: '28844762'
 names:
 - value: Meerschap Paterswolde
   valid_from: '1900-01-01'
+description:
+  text: Gemeenschappelijke regeling van gemeente Groningen en gemeente Tynaarlo
+  url: https://www.meerschap-paterswolde.nl/het-meerschap/het-meerschap-info
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/23142738/Meerschap_Paterswolde
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meerschap+Paterswolde%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Meerschap+Paterswolde%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+afspraak:
+  email: info@meerschap-paterswolde.nl
 contact:
   website: https://www.meerschap-paterswolde.nl
   email: info@meerschap-paterswolde.nl
+  bezoekadres: Veenweg 46, 9752 XS Haren
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Veenweg
+    huisnummer: '46'
+    postcode: 9752 XS
+    woonplaats: Haren
+  - type: Bezoekadres
+    toelichting: Tevens postadres
+    openbare_ruimte: Veenweg
+    huisnummer: '46'
+    postcode: 9752 XS
+    woonplaats: Haren
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  phones:
+  - nummer: (050) 525 53 81
+    label: algemeen
+  emails:
+  - email: info@meerschap-paterswolde.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.meerschap-paterswolde.nl
+    label: algemeen
+  beschrijving: We hebben op ons vaste telefoonnummer standaard de voicemail aanstaan,
+    wilt u aub een bericht inspreken met uw telefoonnummer dan bellen we zo spoedig
+    mogelijk terug.
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-04-07'
+last_verified: '2026-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23142738/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23142738/meerschap-paterswolde
+  retrieved: '2026-05-16'
+roo_start_datum: '1961-01-01'

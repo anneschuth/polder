@@ -2,14 +2,33 @@ id: org:onderdeel-rechtbank-noord-holland-locatie-haarlemmermeer
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048539'
+  kvk: '82941742'
+  rsin: '862664184'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-noord-holland
 names:
 - value: Rechtbank Noord-Holland, locatie Haarlemmermeer
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Duizendbladweg 100, 1171 VA Badhoevedorp
+  postadres: Postbus 1621, 2003 BR Haarlem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Justitieel Complex Schiphol
+    openbare_ruimte: Duizendbladweg
+    huisnummer: '100'
+    postcode: 1171 VA
+    woonplaats: Badhoevedorp
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '1621'
+    postcode: 2003 BR
+    woonplaats: Haarlem
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2022-09-23'
+last_verified: '2026-03-31'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048539/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048539/rechtbank-noord-holland-locatie-haarlemmermeer
+  retrieved: '2026-05-16'

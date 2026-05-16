@@ -6,21 +6,163 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0086
   roo_id: '31946'
   wikidata: Q840632
+  owms: http://standaarden.overheid.nl/owms/terms/Opsterland
+  ictu: 00086
+  organisatiecode: gm0086
+  rsin: 001950149
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_OPT
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Opsterland
   abbr: Opsterland
   valid_from: '1900-01-01'
+description:
+  url: https://www.opsterland.nl/onze-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.opsterland.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/31946/Gemeente_Opsterland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Opsterland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://www.opsterland.nl/rapporten
+      toelichting: Rapporten rekenkamer Opsterland
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Opsterland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://opsterland.begrotingsapp.nl/
+      toelichting: Begroting en jaarstukken
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Opsterland%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.opsterland.nl/besluiten-b-en-w
+      toelichting: Besluitenlijsten burgemeester en wethouders
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://opsterland.bestuurlijkeinformatie.nl/
+      toelichting: Vergaderstukken gemeenteraad
+  wooVerzoek:
+    url: https://www.opsterland.nl/wet-open-overheid
+afspraak:
+  url: https://afspraakmaken.opsterland.nl/
+geography:
+  oppervlakte: 227,68
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 227.68
+  aantal_inwoners: 30068
+  inwoners: '132'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 132.0
+  bevat_plaatsen_raw: Bakkeveen, Beetsterzwaag, Frieschepalen, Gorredijk, Hemrik,
+    Jonkerslan, Langezwaag, Lippenhuizen, Luxwoude, Nij Beets, Olterterp, Siegerswoude,
+    Terwispel, Tijnje, Ureterp, Wijnjewoude
+  bevat_plaatsen:
+  - Bakkeveen
+  - Beetsterzwaag
+  - Frieschepalen
+  - Gorredijk
+  - Hemrik
+  - Jonkerslan
+  - Langezwaag
+  - Lippenhuizen
+  - Luxwoude
+  - Nij Beets
+  - Olterterp
+  - Siegerswoude
+  - Terwispel
+  - Tijnje
+  - Ureterp
+  - Wijnjewoude
+council:
+  total_seats: 22
+  parties:
+  - naam: Opsterlands Belang
+    aantal_zetels: 8
+  - naam: FNP
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.opsterland.nl
   email: gemeente@opsterland.nl
+  bezoekadres: Hoofdstraat 82, 9244 CR BEETSTERZWAAG
+  postadres: Postbus 10000, 9244 ZP BEETSTERZWAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hoofdstraat
+    huisnummer: '82'
+    postcode: 9244 CR
+    woonplaats: BEETSTERZWAAG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Woo-Adres
+    toelichting: 'Bezoekadres:'
+    openbare_ruimte: Hoofdstraat
+    huisnummer: '82'
+    postcode: 9244 CR
+    woonplaats: Beetsterzwaag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Woo-Adres
+    toelichting: 'Postadres:'
+    postbus: '10000'
+    postcode: 9244 ZP
+    woonplaats: Beetsterzwaag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+    land: Nederland
+  - type: Postadres
+    postbus: '10000'
+    postcode: 9244 ZP
+    woonplaats: BEETSTERZWAAG
+  phones:
+  - nummer: (0512) 38 62 22
+    label: algemeen
+  emails:
+  - email: gemeente@opsterland.nl
+    label: algemeen
+  - email: gemeente@opsterland.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.opsterland.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-25'
+last_verified: '2026-04-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31946/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31946/opsterland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

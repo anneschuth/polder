@@ -6,21 +6,171 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0718
   roo_id: '27711'
   wikidata: Q10084
+  owms: http://standaarden.overheid.nl/owms/terms/Vlissingen_(gemeente)
+  ictu: 00718
+  organisatiecode: gm0718
+  rsin: 001710369
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_VLI
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Vlissingen
   abbr: Vlissingen
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Vlissingen is gelegen in de provincie Zeeland en omvat de stad
+    Vlissingen, de dorpen Oost-Souburg en Ritthem, en omliggende gebieden. Vlissingen
+    is bekend om haar strategische ligging aan de Westerschelde, met een belangrijke
+    havenfunctie, maritieme geschiedenis en toeristische aantrekkingskracht vanwege
+    haar stranden en boulevard. De gemeente streeft naar een duurzame toekomst, met
+    aandacht voor economische ontwikkeling, leefbaarheid en toegankelijkheid. Naast
+    de lokale dienstverlening zet de gemeente zich actief in op gebiedsontwikkeling,
+    infrastructuur, en sociale voorzieningen om een aantrekkelijke woon- en werkomgeving
+    te creëren voor haar inwoners en bedrijven.
+  url: https://www.vlissingen.nl/gemeentelijke-organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vlissingen.nl/wet-open-overheid-woo
+      overzichtURL: https://organisaties.overheid.nl/woo/27711/Gemeente_Vlissingen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Vlissingen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Vlissingen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Vlissingen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Vlissingen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://vlissingen.raadsinformatie.nl/
+      toelichting: Openbare informatiedocumenten Gemeenteraad
+    - informatiecategorie: Klachtoordelen
+      url: https://eloket.vlissingen.nl/o
+      toelichting: De categorie klachtoordelen wordt gepubliceerd op Djuma Open Info
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.vlissingen.nl/besluitenlijsten-bw-2025
+      toelichting: Openbare besluitenlijst college van B&W gemeente Vlissingen 2025
+  wooVerzoek:
+    url: https://eloket.vlissingen.nl/f/1583/login
+organogram_url: https://cuatro.sim-cdn.nl/vlissingenebee90/uploads/2025-09_organogram_gemeente_vlissingen_naamloos.pdf?cb=32nHEYBI
+afspraak:
+  email: gemeente@vlissingen.nl
+  telefoonnummer: (0118) 48 70 00
+  url: https://vlissingen.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 344,97
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 344.97
+  aantal_inwoners: 45878
+  inwoners: '132'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 132.0
+  bevat_plaatsen_raw: Oost-Souburg, Ritthem, Vlissingen
+  bevat_plaatsen:
+  - Oost-Souburg
+  - Ritthem
+  - Vlissingen
+council:
+  total_seats: 27
+  parties:
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 4
+  - naam: Lokale Partij Vlissingen
+    aantal_zetels: 3
+  - naam: Partij Souburg-Ritthem
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: Forum voor Democratie
+    aantal_zetels: 2
+  - naam: POV
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 2
+  - naam: 50PLUS
+    aantal_zetels: 2
+  - naam: Pro Vlissingen
+    aantal_zetels: 1
+  - naam: SP
+    aantal_zetels: 1
 contact:
   website: https://www.vlissingen.nl
   email: gemeente@vlissingen.nl
+  bezoekadres: Paul Krugerstraat 1, 4382 MA VLISSINGEN
+  postadres: Postbus 3000, 4380 GV VLISSINGEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Paul Krugerstraat
+    huisnummer: '1'
+    postcode: 4382 MA
+    woonplaats: VLISSINGEN
+  - type: Postadres
+    postbus: '3000'
+    postcode: 4380 GV
+    woonplaats: VLISSINGEN
+  - type: Woo-Adres
+    toelichting: Adres voor indienen Woo-verzoek
+    openbare_ruimte: Paul Krugerstraat
+    huisnummer: '1'
+    postbus: '3000'
+    postcode: 4382 MA
+    woonplaats: Vlissingen
+    regio: Zeeland
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Paul Krugerstraat
+    huisnummer: '1'
+    postcode: 4382 MA
+    ter_attentie_van: Team Leefomgeving
+    woonplaats: VLISSINGEN
+  phones:
+  - nummer: (0118) 48 70 00
+    label: algemeen
+  emails:
+  - email: gemeente@vlissingen.nl
+    label: algemeen
+  - email: gemeente@vlissingen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.vlissingen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.vlissingen.nl/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-03'
+last_verified: '2026-05-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27711/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27711/vlissingen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

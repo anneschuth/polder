@@ -3,20 +3,85 @@ type: zbo
 identifiers:
   roo_id: '28251534'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000061
+  kvk: '65365682'
+  rsin: '856082181'
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: WaarborgHolland B.V.
   valid_from: '1900-01-01'
+description:
+  text: Deze organisatie is onderdeel van het cluster Waarborginstellingen.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '22'
+wettelijke_grondslagen:
+- opschrift: Waarborgwet 2019
+  referentie: https://wetten.overheid.nl/BWBR0042284/
+taken_en_bevoegdheden: Het keuren van aangeboden voorwerpen op hun gehalte aan platina,
+  goud, palladium en zilver en het stempelen van deze gebruiksvoorwerpen.
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Pensioenfonds Metaal en Techniek (PMT)
+    referentie: https://www.pmt.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 13,0
+  peildatumFte: '2019-12-31'
 contact:
   website: http://www.waarborg.nl/
   email: info@waarborg.nl
+  bezoekadres: Stationsplein 9 a, 2801 AK Gouda
+  postadres: Postbus 1075, 2800 BB Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '9'
+    huisnummer_toevoeging: a
+    postcode: 2801 AK
+    woonplaats: Gouda
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '1075'
+    postcode: 2800 BB
+    woonplaats: Gouda
+  phones:
+  - nummer: (0182) 58 93 00
+    label: algemeen
+  emails:
+  - email: info@waarborg.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.waarborg.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-05'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28251534/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28251534/waarborgholland-bv
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000061
   retrieved: '2026-05-09'
+roo_start_datum: '2004-01-01'

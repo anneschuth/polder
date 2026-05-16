@@ -3,17 +3,95 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966707'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0222
+  owms: http://standaarden.overheid.nl/owms/terms/rsvoorput
+  kvk: '53216075'
+  organisatiecode: so0222
+  rsin: 004496942
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling voor het recreatiegebied Voorne-Putten
+  roo_id: '29530022'
 names:
 - value: Recreatieschap Voorne-Putten
   valid_from: '1900-01-01'
+description:
+  text: Recreatieschap Voorne-Putten is een gemeenschappelijke regeling gebaseerd
+    op de Wet Gemeenschappelijke Regelingen. Deelnemers van het recreatieschap zijn
+    de gemeenten Voorne aan Zee en Nissewaard. Zij kent een Algemeen Bestuur (AB)
+    en een Dagelijks Bestuur (DB).
+  url: https://www.recreatieschapvoorneputten.nl/organisatie/default.aspx
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.recreatieschapvoorneputten.nl/contact/woo/default.aspx
+      overzichtURL: https://organisaties.overheid.nl/woo/24966707/Recreatieschap_Voorne-Putten
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.recreatieschapvoorneputten.nl/contact/woo/default.aspx
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Recreatieschap%20Voorne-Putten%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Recreatieschap%20Voorne-Putten%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.recreatieschapvoorneputten.nl/organisatie/vergaderingen/default.aspx
+  wooVerzoek:
+    url: https://www.recreatieschapvoorneputten.nl/contact/woo/default.aspx
+organogram_url: https://www.recreatieschapvoorneputten.nl/organisatie/bestuur/default.aspx
+afspraak:
+  email: voorneputten@staatsbosbeheer.nl
+  telefoonnummer: (010) 298 10 10
+  url: https://www.recreatieschapvoorneputten.nl/contact/default.aspx
 contact:
   website: https://www.recreatieschapvoorneputten.nl/default.aspx
   email: voorneputten@staatsbosbeheer.nl
+  bezoekadres: Overschieseweg 310, 3112 NC Schiedam
+  postadres: Postbus 2, 3800 AA Amersfoort
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Overschieseweg
+    huisnummer: '310'
+    postcode: 3112 NC
+    woonplaats: Schiedam
+  - type: Postadres
+    postbus: '2'
+    postcode: 3800 AA
+    woonplaats: Amersfoort
+  - type: Woo-Adres
+    postbus: '2'
+    postcode: 3800 AA
+    woonplaats: Amersfoort
+  phones:
+  - nummer: (010) 298 10 10
+    label: algemeen
+  emails:
+  - email: voorneputten@staatsbosbeheer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.recreatieschapvoorneputten.nl/default.aspx
+    label: algemeen
+  contact_forms:
+  - url: https://www.recreatieschapvoorneputten.nl/contact/default.aspx
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-25'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966707/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966707/recreatieschap-voorne-putten
+  retrieved: '2026-05-16'
+roo_start_datum: '1989-01-01'

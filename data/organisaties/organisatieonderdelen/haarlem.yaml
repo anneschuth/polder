@@ -10,12 +10,23 @@ parent_id: org:onderdeel-rvdk
 names:
 - value: Haarlem
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: Jansweg 15, 2011 KL Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jansweg
+    huisnummer: '15'
+    postcode: 2011 KL
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30132327/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30132327/haarlem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-13'

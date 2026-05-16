@@ -2,8 +2,13 @@ id: org:gr-bedrijfsvoeringsorganisatie-vijfheerenlanden
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '27012848'
+  owms: http://standaarden.overheid.nl/owms/terms/bvovhl
+  organisatiecode: so0898
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling bedrijfsvoeringsorganisatie Vijfheerenlanden
+  roo_id: '27012843'
 names:
 - value: Bedrijfsvoeringsorganisatie Vijfheerenlanden
   valid_from: '1900-01-01'
@@ -11,9 +16,28 @@ names:
 contact:
   website: https://www.vijfheerenlanden.nl
   email: info@vijfheerenlanden.nl
+  postadres: Postbus 11, 4140 AA Leerdam
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+    postbus: '11'
+    postcode: 4140 AA
+    woonplaats: Leerdam
+  phones:
+  - nummer: (088) 599 70 00
+    label: algemeen
+  emails:
+  - email: info@vijfheerenlanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vijfheerenlanden.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2019-04-15'
+last_verified: '2019-04-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27012848/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27012848/bedrijfsvoeringsorganisatie-vijfheerenlanden
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-01-01'

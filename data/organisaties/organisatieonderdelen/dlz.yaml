@@ -3,21 +3,53 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '8696'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-vws
+parent_id: org:onderdeel-directoraat-generaal-langdurige-zorg
 names:
 - value: Directie Langdurige Zorg
   abbr: DLZ
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
 - value: Directoraat-Generaal Langdurige Zorg
   abbr: DLZ
   valid_from: '1900-01-01'
+description:
+  text: Mensen met een blijvende behoefte aan zorg en ondersteuning willen zo veel
+    mogelijk hun eigen leven leiden. Samen met mensen die belangrijk voor hen zijn
+    en op een plek waar ze zich thuis voelen. Zij kunnen waar nodig een beroep doen
+    op langdurige zorg, waar zorgverleners met plezier werken en bijdragen aan kwaliteit
+    van leven. De toegankelijkheid, kwaliteit en betaalbaarheid van de langdurige
+    zorg is niet vanzelfsprekend. Vernieuwing van de langdurige zorg is en blijft
+    nodig. De directie Langdurige Zorg (LZ) wil vooropgaan in de vernieuwing van de
+    langdurige zorg. Vernieuwen doen we samen met onze partners en de mensen om wie
+    het gaat.Aandachtsgebieden* Toegankelijkheid en voldoende passend aanbod.* Kwaliteit
+    van de langdurige zorg stimuleren en faciliteren waar nodig en gewenst.* Vereenvoudigen
+    van het (regionaal samen)werken in de praktijk en leren van casuïstiek.* Ontwikkelen
+    van de kennisinfrastructuur voor de langdurige zorg en deze adequaat onderhouden.*
+    Dementie.* Palliatieve zorg.* Toekomstbestendige Ouderenzorg.
+  url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/organogram/dg-langdurige-zorg
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/organisatie/organogram/dg-langdurige-zorg
   email: DLZ-directiesecretariaat@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  emails:
+  - email: DLZ-directiesecretariaat@minvws.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8696/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8696/dlz
+  retrieved: '2026-05-16'

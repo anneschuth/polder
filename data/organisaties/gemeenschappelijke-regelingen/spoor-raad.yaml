@@ -3,16 +3,50 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24966260'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1076
+  owms: http://standaarden.overheid.nl/owms/terms/spoorraad
+  organisatiecode: so1076
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Stichting Primair Openbaar Onderwijs in de Regio
+    Waterland en Oostzaan (SPOOR-raad)
+  roo_id: '24966255'
 names:
 - value: SPOOR-raad
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: http://www.stichtingspoor.nl/
+  bezoekadres: Waterlandlaan 30, 1441 MP Purmerend
+  postadres: Postbus 20, 1530 AA Wormer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Waterlandlaan
+    huisnummer: '30'
+    postcode: 1441 MP
+    woonplaats: Purmerend
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '20'
+    postcode: 1530 AA
+    woonplaats: Wormer
+  phones:
+  - nummer: (0299) 82 09 00
+    label: algemeen
+  internet_addresses:
+  - url: http://www.stichtingspoor.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-03-31'
+last_verified: '2020-10-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24966260/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24966260/spoor-raad
+  retrieved: '2026-05-16'
+roo_start_datum: '2004-07-01'

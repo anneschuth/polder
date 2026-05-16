@@ -193,6 +193,29 @@ CATEGORIES: dict[str, Category] = {
         "Bijna altijd een vergeten end_date op de uitgaande ambtenaar, "
         "of twee person-records voor dezelfde persoon (dup).",
     ),
+    # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
+    # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
+    # cache-bestand staat — dan run je `polder roo fetch` eerst.
+    "roo_missing_org": Category(
+        "roo_missing_org",
+        "error",
+        "Organisatie staat in ROO-export-XML maar niet in data/organisaties/. "
+        "Polder claimt een ROO-superset te zijn; dit zou niet voor mogen komen.",
+    ),
+    "roo_field_drift": Category(
+        "roo_field_drift",
+        "review",
+        "Organisatie's `last_mutation` is ouder bij ons dan in ROO. "
+        "Betekent dat er een daily fetcher-run gemist is.",
+    ),
+    "roo_stale_appointment": Category(
+        "roo_stale_appointment",
+        "review",
+        "ROO noemt een medewerker die volgens polder al uit functie is "
+        "(end_date in mandaat). Vereist een geresolvde staging-file "
+        "(`polder roo functies` + `polder roo resolve`); "
+        "checker leest `data/_staging/roo-functies-*.resolved.json`.",
+    ),
 }
 
 
@@ -398,6 +421,13 @@ def run_audit(
     _check_ministerie_direct_posts(posts, findings)
     _check_overlapping_open_mandates(persons, org_parent, findings)
     _check_single_seat_both_open(persons, posts, findings)
+
+    # ROO-superset checks (Phase 5). Skip stilletjes als geen XML-cache.
+    cache = _latest_roo_cache(data_dir.parent)
+    if cache is not None:
+        _check_roo_superset(orgs, cache, findings)
+    # Stale-appointment check leest een resolved staging-file (Phase 3).
+    _check_roo_stale_appointments(persons, data_dir / "_staging", findings)
 
     report = AuditReport(findings=findings)
 
@@ -1191,6 +1221,163 @@ def _check_single_seat_both_open(
                 f"{post_id}: {len(holders)} personen met open mandaat — {descriptions}",
             )
         )
+
+
+def _latest_roo_cache(repo_root: Path) -> Path | None:
+    """Vind het meest recente `roo-export-*.xml` in `_cache/`."""
+    cache_dir = repo_root / "_cache"
+    if not cache_dir.exists():
+        return None
+    candidates = sorted(cache_dir.glob("roo-export-*.xml"))
+    return candidates[-1] if candidates else None
+
+
+def _check_roo_stale_appointments(
+    persons: list[tuple[Path, dict]],
+    staging_dir: Path,
+    findings: list[Finding],
+) -> None:
+    """Lees `data/_staging/roo-functies-*.resolved.json` en flag medewerkers
+    waarvan ROO ze nog actief noemt maar polder een `end_date` heeft.
+
+    Skipt stilletjes als geen resolved staging-file bestaat.
+    """
+    import json as _json
+
+    if not staging_dir.exists():
+        return
+    resolved_files = sorted(staging_dir.glob("roo-functies-*.resolved.json"))
+    if not resolved_files:
+        return
+    latest = resolved_files[-1]
+    try:
+        with latest.open("r", encoding="utf-8") as fh:
+            payload = _json.load(fh)
+    except (OSError, _json.JSONDecodeError):
+        return
+
+    proposals = payload.get("proposals") if isinstance(payload, dict) else payload
+    if not isinstance(proposals, list):
+        return
+
+    # Index polder-mandaten op (person_id, post_id) → end_date.
+    closed_mandaten: dict[tuple[str, str], str] = {}
+    for _, d in persons:
+        pid = d.get("id")
+        if not isinstance(pid, str):
+            continue
+        for m in d.get("mandaten") or []:
+            if not isinstance(m, dict):
+                continue
+            post = m.get("post_id")
+            end = m.get("end_date")
+            if isinstance(post, str) and isinstance(end, str):
+                closed_mandaten[(pid, post)] = end
+
+    for prop in proposals:
+        if not isinstance(prop, dict):
+            continue
+        post_id = prop.get("resolved_post_id")
+        if not isinstance(post_id, str):
+            continue
+        for med in prop.get("medewerkers") or []:
+            if not isinstance(med, dict):
+                continue
+            person_id = med.get("resolved_person_id")
+            if not isinstance(person_id, str):
+                continue
+            end = closed_mandaten.get((person_id, post_id))
+            if end is None:
+                continue
+            roo_end = med.get("end_date")
+            if roo_end and roo_end <= end:
+                # ROO weet ook dat de persoon weg is, geen drift.
+                continue
+            findings.append(
+                Finding(
+                    "roo_stale_appointment",
+                    f"{person_id}|{post_id}",
+                    f"ROO noemt {med.get('naam')!r} nog actief op {post_id}, "
+                    f"maar polder-mandaat heeft end_date={end}",
+                )
+            )
+
+
+def _check_roo_superset(
+    orgs: list[tuple[Path, dict]],
+    cache_path: Path,
+    findings: list[Finding],
+) -> None:
+    """Vergelijk polder-orgs met laatste ROO-export-XML.
+
+    Twee categorieën:
+    - `roo_missing_org`: ROO heeft een organisatie die wij niet hebben.
+    - `roo_field_drift`: ROO's `<datumMutatie>` is nieuwer dan onze
+      `last_mutation` — betekent dat de daily fetcher achterloopt.
+    """
+    # Lazy import: lxml is een fetcher-dep en mag de hot path van
+    # `polder audit` (zonder cache) niet vertragen.
+    from lxml import etree
+
+    from polder.fetchers.roo import _attr_systeemid, _localname
+
+    try:
+        tree = etree.parse(str(cache_path))
+    except (OSError, etree.XMLSyntaxError):
+        return
+    root = tree.getroot()
+
+    # Index polder-orgs op roo_id.
+    polder_by_roo_id: dict[str, tuple[Path, dict]] = {}
+    for path, d in orgs:
+        rid = (d.get("identifiers") or {}).get("roo_id")
+        if rid:
+            polder_by_roo_id[str(rid)] = (path, d)
+
+    for org_node in root.iter():
+        local = _localname(org_node.tag).lower()
+        if local not in ("organisatie", "regeling"):
+            continue
+        sysid = _attr_systeemid(org_node)
+        if not sysid:
+            continue
+
+        # Naam voor de error-message.
+        naam = ""
+        for c in org_node:
+            if _localname(c.tag).lower() in ("naam", "titel") and (c.text or "").strip():
+                naam = c.text.strip()
+                break
+
+        if sysid not in polder_by_roo_id:
+            findings.append(
+                Finding(
+                    "roo_missing_org",
+                    f"roo:{sysid}",
+                    f"ROO bevat {naam!r} (roo_id={sysid}) maar polder niet",
+                )
+            )
+            continue
+
+        # Field-drift: vergelijk datumMutatie.
+        roo_mutation = ""
+        for c in org_node:
+            if _localname(c.tag).lower() == "datummutatie" and (c.text or "").strip():
+                roo_mutation = c.text.strip()
+                break
+        if not roo_mutation:
+            continue
+        path, polder_d = polder_by_roo_id[sysid]
+        polder_mutation = polder_d.get("last_mutation")
+        if polder_mutation and roo_mutation > polder_mutation:
+            findings.append(
+                Finding(
+                    "roo_field_drift",
+                    f"roo:{sysid}",
+                    f"{path.name}: polder last_mutation={polder_mutation} "
+                    f"maar ROO datumMutatie={roo_mutation}",
+                )
+            )
 
 
 def summary(report: AuditReport) -> tuple[int, int]:

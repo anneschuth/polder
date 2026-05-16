@@ -2,14 +2,42 @@ id: org:stichting-infrastructuur-kwaliteitsborging-bodembeheer
 type: rwt
 identifiers:
   roo_id: '27912951'
+  kvk: '24304306'
+  rsin: '808899375'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Infrastructuur Kwaliteitsborging Bodembeheer
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Burgemeester van Reenensingel 10, 2803 PA Gouda
+  postadres: Postbus 420, 2800 AK Gouda
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester van Reenensingel 10
+    postcode: 2803 PA
+    woonplaats: Gouda
+  - type: Postadres
+    postbus: '420'
+    postcode: 2800 AK
+    woonplaats: Gouda
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27912951/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27912951/stichting-infrastructuur-kwaliteitsborging-bodembeheer
+  retrieved: '2026-05-16'

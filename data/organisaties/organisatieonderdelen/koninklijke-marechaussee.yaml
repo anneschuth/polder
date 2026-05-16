@@ -1,0 +1,35 @@
+id: org:onderdeel-koninklijke-marechaussee
+type: organisatieonderdeel
+identifiers:
+  ictu: '03441'
+  roo_id: '6638'
+classification: organisatieonderdeel
+parent_id: org:min-def
+names:
+- value: Koninklijke Marechaussee
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Kalvermarkt 32, 2511 CB Den Haag
+  postadres: Postbus 90200, 3509 BE Utrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kalvermarkt
+    huisnummer: '32'
+    postcode: 2511 CB
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '90200'
+    postcode: 3509 BE
+    woonplaats: Utrecht
+  phones:
+  - nummer: (0800) 18 14
+    label: algemeen
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2026-02-20'
+last_verified: '2025-08-19'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/6638/koninklijke-marechaussee
+  retrieved: '2026-05-16'

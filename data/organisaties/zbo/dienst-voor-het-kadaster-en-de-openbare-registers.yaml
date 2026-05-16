@@ -1,24 +1,153 @@
 id: org:zbo-dienst-voor-het-kadaster-en-de-openbare-registers
 type: zbo
+subname: Kadaster
 identifiers:
   roo_id: '28212603'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000195
   oin: 00000001802327497000
   kvk: 08215619
+  rsin: '802327497'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Dienst voor het kadaster en de openbare registers
   valid_from: '1900-01-01'
+description:
+  text: Het Kadaster houdt bij wie in Nederland welke vastgoedrechten heeft, voor
+    zowel grond als gebouwen. Dit vloeit voort uit de wettelijke taak om de openbare
+    registers van de Basisregistratie Kadaster en de Basisregistratie Topografie te
+    (onder)houden. Het Kadaster registreert niet alleen gegevens van woningen, schepen,
+    luchtvaartuigen, percelen en wegen, maar ook van ondergrondse kabel- en leidingnetwerken.
+  url: https://www.kadaster.nl/over-ons/het-kadaster
+kaderwet:
+  kaderwetZbo:
+    instellingsmotief: Regelgebonden uitvoering
+    kaderwetVanToepassing: ja
+    afwijkendeBepalingKaderwet:
+      artikel: '15'
+      toelichting: Artikel 15 van de Kaderwet zelfstandige bestuursorganen is niet
+        van toepassing omdat medewerkers van het Kadaster een eigen CAO-regeling hebben.
+wettelijke_grondslagen:
+- opschrift: Organisatiewet Kadaster, artikel 2
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Organisatiewet%20Kadaster/article=2
+taken_en_bevoegdheden: Het Kadaster heeft de volgende taken en bevoegdheden:* het
+  registreren van vastgoed;* het vervaardigen, verzamelen, houden en bijwerken van
+  geografische gegevens en het landsdekkend cartografisch weergeven daarvan (op grond
+  van artikel 3 van de Kadasterwet);* het bevorderen van de rechtszekerheid bij het
+  maatschappelijk verkeer in vastgoed, inclusief schepen en luchtvaartuigen, door
+  het inwinnen, accepteren, muteren, beheren en verstrekken van informatie over vastgoed;*
+  het in stand houden van een net van zogenaamde coördinaatpunten (de Rijksdriehoeksmeting);*
+  meewerken aan het landinrichtingsproces.
+evaluations:
+- datum: '2021-03-29'
+  kamerstuknummer: TK 25268 nr. 198
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-198.html
+- datum: '2015-12-17'
+  kamerstuknummer: TK 25268 nr. 129
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-129.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 4090 - KADASTER CAO
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=21271
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: ABP
+    referentie: https://www.abp.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kadaster.nl/over-ons/beleid/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28212603/Dienst_voor_het_kadaster_en_de_openbare_registers
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dienst+voor+het+kadaster+en+de+openbare+registers%22))+AND+((dt.type==%22convenant%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Dienst+voor+het+kadaster+en+de+openbare+registers%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://formulieren.kadaster.nl/woo-verzoek
+afspraak:
+  url: https://www.kadaster.nl/over-ons/het-kadaster/contact
+personnel:
+  aantalFte: 1844,0
+  peildatumFte: '2024-12-31'
 contact:
   website: https://www.kadaster.nl/
   email: woo-contactpersoon@kadaster.nl
+  bezoekadres: Hofstraat 110, 7311 KZ Apeldoorn
+  postadres: Postbus 9046, 7300 GH Apeldoorn
+  addresses:
+  - type: Woo-Adres
+    toelichting: Kadaster, ter attentie van Juridische Zaken
+    postbus: '9046'
+    postcode: 7300 GH
+    woonplaats: Apeldoorn
+  - type: Bezoekadres
+    openbare_ruimte: Hofstraat
+    huisnummer: '110'
+    postcode: 7311 KZ
+    woonplaats: Apeldoorn
+  - type: Postadres
+    postbus: '9046'
+    postcode: 7300 GH
+    woonplaats: Apeldoorn
+  phones:
+  - nummer: (088) 183 20 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kadaster.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://formulieren.kadaster.nl/contact_kadaster
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Kadaster
+    url: https://www.linkedin.com/company/kadaster/
+  - platform: Facebook
+    gebruikersnaam: Het Kadaster
+    url: https://www.facebook.com/HetKadaster
+  - platform: Instagram
+    gebruikersnaam: '@kadaster.nl'
+    url: https://www.instagram.com/kadaster.nl
+  - platform: YouTube
+    gebruikersnaam: '@HetKadaster'
+    url: https://www.youtube.com/user/HetKadaster
+  - platform: X
+    gebruikersnaam: '@KadasterWebcare'
+    url: https://x.com/Kadasterwebcare
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-04-22'
+last_verified: '2026-04-22'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212603/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212603/dienst-voor-het-kadaster-en-de-openbare-registers
+  retrieved: '2026-05-16'
 - id: ar_rwt
   url: https://www.rekenkamer.nl/onderwerpen/instellingen-op-afstand-van-het-rijk/rechtspersonen-met-een-wettelijke-taak
   retrieved: '2026-05-13'
@@ -32,3 +161,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000195
   retrieved: '2026-05-09'
+roo_start_datum: '1994-01-01'

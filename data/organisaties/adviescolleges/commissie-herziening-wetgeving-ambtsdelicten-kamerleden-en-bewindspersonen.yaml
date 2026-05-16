@@ -4,14 +4,47 @@ identifiers:
   roo_id: '28355881'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10129
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie herziening wetgeving ambtsdelicten Kamerleden en bewindspersonen
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: artikel 1 van de Instellingsregeling Commissie herziening wetgeving ambtsdelicten
+    Kamerleden en bewindspersonen
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0041150&artikel=1
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2021-12-01'
+last_verified: '2021-03-11'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28355881/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28355881/commissie-herziening-wetgeving-ambtsdelicten-kamerleden-en-bewindspersonen
+  retrieved: '2026-05-16'
+roo_start_datum: '2020-12-12'

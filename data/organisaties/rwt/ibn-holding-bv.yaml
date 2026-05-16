@@ -2,16 +2,50 @@ id: org:oovb-ibn-holding-bv
 type: rwt
 identifiers:
   roo_id: '27994344'
+  kvk: '16089226'
+  rsin: '806726714'
 classification: rwt
+legal_form: Privaatrechtelijk - Besloten vennootschap (BV)
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: IBN Holding B.V.
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: https://www.ibn.nl/
+  bezoekadres: Hockeyweg 5, 5405 NC Uden
+  postadres: Hockeyweg 5, 5405 NC Uden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hockeyweg
+    huisnummer: '5'
+    postcode: 5405 NC
+    woonplaats: Uden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    openbare_ruimte: Hockeyweg
+    huisnummer: '5'
+    postcode: 5405 NC
+    woonplaats: Uden
+  internet_addresses:
+  - url: https://www.ibn.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-08-28'
+last_verified: '2023-08-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27994344/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27994344/ibn-holding-bv
+  retrieved: '2026-05-16'

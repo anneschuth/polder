@@ -5,21 +5,91 @@ identifiers:
   kvk: '50688049'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10102
   roo_id: '28175219'
+  owms: http://standaarden.overheid.nl/owms/terms/Nederlandse_Voedsel_en_Warenautoriteit
+  rsin: 001932779
 classification: inspectie
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Nederlandse Voedsel- en Warenautoriteit
   abbr: NVWA
   valid_from: '1900-01-01'
+description:
+  url: https://www.nvwa.nl/over-de-nvwa/wat-doet-de-nvwa/opbouw-van-de-nederlandse-voedsel-en-warenautoriteit
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.nvwa.nl/over-de-nvwa/contact/woo-verzoek-indienen-bij-de-nvwa
+      overzichtURL: https://organisaties.overheid.nl/woo/28175219/Nederlandse_Voedsel-_en_Warenautoriteit
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.nvwa.nl/over-de-nvwa/publicaties/woo-besluiten
+  wooVerzoek:
+    url: https://formulieren.nvwa.nl/formulier/nl-NL/Extern/sc0910_IndienenWooVerzoek.aspx
+afspraak:
+  telefoonnummer: (088) 223 33 33
+  url: https://www.nvwa.nl/over-de-nvwa/contact
 contact:
   website: https://www.nvwa.nl/
   email: contactpersoonwoo@nvwa.nl
+  bezoekadres: Catharijnesingel 59, 3511 GG Utrecht
+  postadres: Postbus 43006, 3540 AA Utrecht
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor
+    openbare_ruimte: Catharijnesingel
+    huisnummer: '59'
+    postcode: 3511 GG
+    woonplaats: Utrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '43006'
+    postcode: 3540 AA
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    toelichting: NVWA Divisie Juridische Zaken Team Openbaarmaking
+    postbus: '43006'
+    postcode: 3540 AA
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 223 33 33
+    label: algemeen
+  - nummer: +31 88 223 22 33
+    label: vanuit het buitenland
+  internet_addresses:
+  - url: https://www.nvwa.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.nvwa.nl/over-de-nvwa/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2024-10-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28175219/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28175219/nvwa
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

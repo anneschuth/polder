@@ -2,14 +2,42 @@ id: org:oovb-nv-rendo
 type: rwt
 identifiers:
   roo_id: '27909225'
+  kvk: '04052476'
+  rsin: '806201344'
 classification: rwt
+legal_form: Privaatrechtelijk - Naamloze vennootschap (NV)
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: N.V. RENDO
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Bijlagen (Bijlagen van de WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249
+contact:
+  bezoekadres: Setheweg 1, 7942 LA Meppel
+  postadres: Postbus 18, 7940 AA Meppel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Setheweg 1
+    postcode: 7942 LA
+    woonplaats: Meppel
+  - type: Postadres
+    postbus: '18'
+    postcode: 7940 AA
+    woonplaats: Meppel
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2021-02-17'
+last_verified: '2021-02-17'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27909225/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27909225/nv-rendo
+  retrieved: '2026-05-16'

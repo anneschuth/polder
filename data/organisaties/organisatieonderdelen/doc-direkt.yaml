@@ -3,16 +3,44 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '97027'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-obf
+parent_id: org:onderdeel-shared-service-organisatie
 names:
 - value: Doc-Direkt
   valid_from: '1900-01-01'
+description:
+  text: Per 1 januari 2011 is Doc-Direkt de nieuwe rijksbrede shared service organisatie.
+    Doc-Direkt beheert en bewerkt archieven voor een toegankelijke, tijdige en transparante
+    informatievoorziening van de rijksoverheid. De organisatie is samengesteld uit
+    de archiefdiensten van de ministeries, het semi-statisch archief van de Belastingdienst
+    en de Centrale Archief Selectiedienst (CAS).Doc-Direkt zorgt ervoor dat de rijksoverheid
+    op het vlak van documentaire informatiehuishouding op orde is.
 contact:
   website: http://www.rijksoverheid.nl/
   email: andre.dijkhuijs@minbzk.nl
+  bezoekadres: Diepenhorstlaan 20, 2288 EW RIJSWIJK
+  postadres: Postbus 20011, 2500 EA DEN HAAG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Diepenhorstlaan
+    huisnummer: '20'
+    postcode: 2288 EW
+    woonplaats: RIJSWIJK
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: DEN HAAG
+  phones:
+  - nummer: 06 52 41 15 12
+    label: algemeen
+  internet_addresses:
+  - url: http://www.rijksoverheid.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-07-02'
+last_verified: '2025-02-27'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/97027/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/97027/doc-direkt
+  retrieved: '2026-05-16'

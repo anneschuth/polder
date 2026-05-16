@@ -3,7 +3,7 @@ name:
   full: G.H. Brands
   family: Brands
   given: G.H.
-  initials: G.
+  initials: G.H.
 mandaten:
 - id: c93cdd00-8a57-4010-b634-9c5489670174
   organization_id: org:gemeente-duiven
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3432762
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/26095/gemeente-duiven
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28620980
 - id: 8bce908d-c619-4f42-b84b-12b7e6b548e8
   organization_id: org:gemeente-duiven
   post_id: post:raadslid-gemeente-duiven

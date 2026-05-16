@@ -1,26 +1,116 @@
 id: org:gr-participatiebedrijf-kempenplus
 type: gemeenschappelijke-regeling
+subname: KempenPlus
 identifiers:
   roo_id: '28618297'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1055
   oin: '00000003172677620000'
   kvk: '17267762'
+  owms: http://standaarden.overheid.nl/owms/terms/kempenplus
+  organisatiecode: so1055
+  rsin: 001902635
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling “Participatiebedrijf KempenPlus”
+  roo_id: '30176589'
 names:
 - value: Participatiebedrijf KempenPlus
   valid_from: '1900-01-01'
+description:
+  text: KempenPlus is het participatiebedrijf van de Kempengemeenten Bergeijk, Bladel,
+    Eersel en Reusel-De Mierden. Ook wordt bepaalde dienstverlening uitgevoerd voor
+    de inwoners van de gemeente Oirschot. Wij zijn verantwoordelijk voor de uitvoering
+    van de Participatiewet, (delen van) de Inburgeringswet en de Wet sociale werkvoorziening
+    in de aangesloten gemeenten.Zo doen we dat in de KempenWe helpen de inwoners van
+    de Kempengemeenten, die daar ondersteuning bij nodig hebben, om terug aan het
+    werk te gaan. Bij voorkeur bereiken we, o.a. met training en coaching, dat cliënten
+    aan het werk gaan bij reguliere werkgevers. Lukt dat niet, dan kunnen ze net als
+    onze medewerkers met Sw-indicatie aan de slag in een beschutte werkomgeving bij
+    of via KempenPlus. Voor cliënten die (nog) niet kunnen werken, zoeken we een andere
+    zinvolle tijdsbesteding zoals vrijwilligerswerk.Inwoners die daar nood aan hebben,
+    helpen we met een uitkering aan een (tijdelijke) inkomensvoorziening.KempenPlus
+    is gevestigd in Bladel en met 750 medewerkers één van de grootste werkgevers in
+    de regio.Dienstverlening richting werkgeversAls werkgever heb je behoefte aan
+    goede, gemotiveerde medewerkers. En of je één medewerker zoekt of bij wijze van
+    spreken tientallen, dat maakt niet uit. We bemiddelen, detacheren of nemen bijvoorbeeld
+    de bemensing van een hele productielijn over.Onze vaste groep medewerkers bestaat
+    uit ca. 600 mensen. Daarnaast hebben we - mede dankzij onze samenwerking met UWV
+    - continu de beschikking over een wisselend bestand van een paar honderd kandidaten.
+    Dat we je kunnen helpen, is dus wel bijna zeker. Goed om te weten is dat al onze
+    medewerkers een plusje hebben. Je invulling aan ‘sociaal en maatschappelijk verantwoord
+    ondernemen’ heb je dus ook meteen geregeld.
+  url: https://www.kempenplus.com/over-kempenplus-0
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.kempenplus.com/Informatie-opvragen-Wet-open-overheid-Woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28618297/Participatiebedrijf_KempenPlus
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.kempenplus.com/beleidsregels-en-verordeningen
+  wooVerzoek:
+    url: https://www.kempenplus.com/Informatie-opvragen-Wet-open-overheid-Woo-verzoek
+organogram_url: https://www.kempenplus.com/over-kempenplus-0
+afspraak:
+  email: info@kempenplus.com
+  telefoonnummer: (0497) 33 12 00
+  url: https://www.kempenplus.com/contact
 contact:
   website: https://www.kempenplus.com
   email: info@kempenplus.com
+  bezoekadres: Raambrug 8, 5531 AG Bladel
+  postadres: Postbus 10, 5530 AA Bladel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raambrug
+    huisnummer: '8'
+    postcode: 5531 AG
+    woonplaats: Bladel
+  - type: Postadres
+    postbus: '10'
+    postcode: 5530 AA
+    woonplaats: Bladel
+  - type: Woo-Adres
+    postbus: '10'
+    postcode: 5530 AA
+    woonplaats: Bladel
+  phones:
+  - nummer: (0497) 33 12 00
+    label: algemeen
+  emails:
+  - email: info@kempenplus.com
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kempenplus.com
+    label: algemeen
+  contact_forms:
+  - url: https://www.kempenplus.com/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-06-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28618297/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28618297/participatiebedrijf-kempenplus
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2019-07-01'

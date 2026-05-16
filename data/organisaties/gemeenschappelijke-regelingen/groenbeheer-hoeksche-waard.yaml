@@ -2,17 +2,52 @@ id: org:gr-groenbeheer-hoeksche-waard
 type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24964328'
+  owms: http://standaarden.overheid.nl/owms/terms/XXXXX
+  kvk: '56439202'
+  organisatiecode: so0878
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Groenbeheer Hoeksche Waard
+  roo_id: '24964323'
 names:
 - value: Groenbeheer Hoeksche Waard
   valid_from: '1900-01-01'
   valid_until: '2017-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2017-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
 contact:
   website: http://www.groenbeheerhw.nl
+  bezoekadres: Handelsweg 100, 2988 DC Ridderkerk
+  postadres: Postbus 4103, 2980 GC Ridderkerk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Handelsweg
+    huisnummer: '100'
+    postcode: 2988 DC
+    woonplaats: Ridderkerk
+  - type: Postadres
+    postbus: '4103'
+    postcode: 2980 GC
+    woonplaats: Ridderkerk
+  phones:
+  - nummer: (0900) 200 50 05
+    label: algemeen
+  internet_addresses:
+  - url: http://www.groenbeheerhw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-01-01'
+last_mutation: '2020-01-28'
+last_verified: '2020-01-28'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24964328/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24964328/groenbeheer-hoeksche-waard
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-01-01'

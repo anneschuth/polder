@@ -3,7 +3,7 @@ name:
   full: A.J.M. Haverkamp
   family: Haverkamp
   given: A.J.M.
-  initials: A.
+  initials: A.J.M.
 mandaten:
 - id: 8efd412c-1380-4964-9418-06b6dce4c82f
   organization_id: org:gemeente-moerdijk
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774329
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/30656/gemeente-moerdijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29678403
 - id: b81f0b01-cfdd-4fe5-8154-40dd2fe80cec
   organization_id: org:gemeente-moerdijk
   post_id: post:raadslid-gemeente-moerdijk

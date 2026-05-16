@@ -3,17 +3,64 @@ type: adviescollege
 identifiers:
   roo_id: '29819725'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12366
+  organisatiecode: oorg12366
 classification: adviescollege
+advisory_kind: Eenmalig adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Staatscommissie tegen Discriminatie en Racisme
   valid_from: '1900-01-01'
+description:
+  text: De Staatscommissie tegen Discriminatie en Racisme is een eenmalig adviescollege
+    en doet wetenschappelijk onderzoek naar discriminatie en racisme in Nederland.
+    Het belangrijkste doel van de commissie is om discriminatie en racisme effectiever
+    aan te pakken, door inzicht te verschaffen in de aard, omvang en oorzaken hiervan.
+    De commissie adviseert de regering onder meer over betere waarborgen en het verbeteren
+    van beleid en regelgeving om discriminatie en racisme te voorkomen en tegen te
+    gaan, evenals de effecten van dergelijk beleid. Daarnaast onderzoekt de commissie
+    of er sprake is van discriminatie en etnisch profileren in de werkwijze en organisatiecultuur
+    van (semi)overheidsinstanties en uitvoeringsinstanties. De commissie verkent tevens
+    de mogelijkheden om onderscheid op grond van ras en nationaliteit in risicoprofielen
+    alleen toe te passen om mensen te beschermen en te ondersteunen. De werkzaamheden
+    van de commissie richten zich op zowel Europees als op Caribisch Nederland.
+  url: https://www.staatscommissietegendiscriminatieenracisme.nl/over-ons
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit staatscommissie tegen discriminatie en racisme, artikel
+    1
+  referentie: https://wetten.overheid.nl/BWBR0046655/2022-05-13/0#Artikel1
 contact:
   website: https://www.staatscommissietegendiscriminatieenracisme.nl/
   email: info@staatscommissietegendiscriminatieenracisme.nl
+  emails:
+  - email: info@staatscommissietegendiscriminatieenracisme.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.staatscommissietegendiscriminatieenracisme.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.staatscommissietegendiscriminatieenracisme.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Staatscommissie tegen Discriminatie en Racisme
+    url: https://www.linkedin.com/company/staatscommissie-tegen-discriminatie-en-racisme/
+  - platform: X
+    gebruikersnaam: '@commissietdenr'
+    url: https://twitter.com/commissietdenr
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-03-13'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29819725/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29819725/staatscommissie-tegen-discriminatie-en-racisme
+  retrieved: '2026-05-16'
+roo_start_datum: '2022-05-01'

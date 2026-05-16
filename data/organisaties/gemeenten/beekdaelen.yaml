@@ -6,21 +6,154 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1954
   roo_id: '27465412'
   wikidata: Q29957432
+  owms: http://standaarden.overheid.nl/owms/terms/Beekdaelen
+  rsin: '859177865'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_BDL
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Beekdaelen
   abbr: Beekdaelen
   valid_from: '1900-01-01'
+description:
+  url: https://www.beekdaelen.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.beekdaelen.nl/open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/27465412/Gemeente_Beekdaelen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beekdaelen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beekdaelen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.beekdaelen.nl/vergaderingen-college-en-besluiten
+      toelichting: Vergaderdocumenten College B&W Beekdaelen
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.beekdaelen.nl/kadernota-begroting-bestuursrapportages-en-jaarrekening
+      toelichting: Begroting en jaarrekening
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Beekdaelen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://beekdaelen.bestuurlijkeinformatie.nl/
+      toelichting: Vergaderdocumenten gemeenteraad
+  wooVerzoek:
+    url: https://www.beekdaelen.nl/woo-verzoek-indienen
+organogram_url: https://www.beekdaelen.nl/organisatie
+afspraak:
+  telefoonnummer: (088) 450 20 00
+  url: https://www.beekdaelen.nl/afspraak-maken
+geography:
+  oppervlakte: 78,32
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 78.32
+  aantal_inwoners: 35903
+  inwoners: '458'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 458.0
+  bevat_plaatsen_raw: Amstenrade, Bingelrade, Doenrade, Hulsberg, Jabeek, Merkelbeek,
+    Nuth, Oirsbeek, Puth, Schimmert, Schinnen, Schinveld, Sweikhuizen, Wijnandsrade
+  bevat_plaatsen:
+  - Amstenrade
+  - Bingelrade
+  - Doenrade
+  - Hulsberg
+  - Jabeek
+  - Merkelbeek
+  - Nuth
+  - Oirsbeek
+  - Puth
+  - Schimmert
+  - Schinnen
+  - Schinveld
+  - Sweikhuizen
+  - Wijnandsrade
+council:
+  total_seats: 25
+  parties:
+  - naam: Vernieuwingsgroep
+    aantal_zetels: 8
+  - naam: VVD
+    aantal_zetels: 4
+  - naam: Beekdaelen Lokaal
+    aantal_zetels: 4
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PRO
+    aantal_zetels: 3
+  - naam: D66
+    aantal_zetels: 1
+  - naam: BBB
+    aantal_zetels: 1
 contact:
   website: https://www.beekdaelen.nl/
   email: gemeente@beekdaelen.nl
+  bezoekadres: Deweverplein 1, 6361 BZ NUTH
+  postadres: Postbus 22000, 6360 AA NUTH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Deweverplein
+    huisnummer: '1'
+    postcode: 6361 BZ
+    woonplaats: NUTH
+  - type: Postadres
+    postbus: '22000'
+    postcode: 6360 AA
+    woonplaats: NUTH
+  - type: Woo-Adres
+    postbus: '22000'
+    postcode: 6360 AA
+    woonplaats: Nuth
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Deweverplein
+    huisnummer: '1'
+    postcode: 6361 BZ
+    woonplaats: NUTH
+  phones:
+  - nummer: (088) 450 20 00
+    label: algemeen
+  emails:
+  - email: gemeente@beekdaelen.nl
+    label: algemeen
+  - email: gemeente@beekdaelen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.beekdaelen.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.beekdaelen.nl/afspraak-maken
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-08'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27465412/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27465412/beekdaelen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +162,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q29957432
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

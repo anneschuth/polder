@@ -3,7 +3,7 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '28604877'
 classification: organisatieonderdeel
-parent_id: org:agentschap-koop
+parent_id: org:agentschap-logius
 names:
 - value: Kennis- en Exploitatiecentrum Officiële Overheidspublicaties
   abbr: KOOP
@@ -11,9 +11,44 @@ names:
 contact:
   website: https://www.koopoverheid.nl
   email: servicedesk@koop.overheid.nl
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Rijkskantoor Beatrixpark
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 700 05 26
+    label: servicedesk
+  - nummer: (070) 700 05 25
+    label: secretariaat
+  emails:
+  - email: servicedesk@koop.overheid.nl
+    label: servicedesk
+  - email: secretariaat@koop.overheid.nl
+    label: secretariaat
+  internet_addresses:
+  - url: https://www.koopoverheid.nl
+    label: algemeen
+  - url: https://www.koopoverheid.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.koopoverheid.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-01-05'
+last_verified: '2026-03-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28604877/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28604877/koop
+  retrieved: '2026-05-16'
+roo_start_datum: '2012-01-01'

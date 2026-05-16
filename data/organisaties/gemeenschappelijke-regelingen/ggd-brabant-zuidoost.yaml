@@ -5,22 +5,99 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0358
   oin: 00000001812723703000
   kvk: '50451154'
+  owms: http://standaarden.overheid.nl/owms/terms/GGD_Brabant-Zuidoost
+  organisatiecode: so0358
+  rsin: '818677053'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling GGD Brabant-Zuidoost 2024
+  roo_id: '29579787'
 names:
 - value: GGD Brabant-Zuidoost
   valid_from: '1900-01-01'
+description:
+  text: De GGD Brabant-Zuidoost streeft naar gezondheidswinst voor alle inwoners in
+    haar regio en helpt mensen om met fysieke, sociale en emotionele uitdagingen om
+    te gaan en daarin zoveel mogelijk eigen regie te voeren. We bewaken, beschermen
+    en bevorderen de gezondheid van iedereen met speciale aandacht voor kwetsbare
+    mensen.
+  url: https://www.ggdbzo.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.ggdbzo.nl/woo-verzoeken/
+      overzichtURL: https://organisaties.overheid.nl/woo/25250114/GGD_Brabant-Zuidoost
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.ggdbzo.nl/publicaties/
+  wooVerzoek:
+    url: https://www.ggdbzo.nl/woo-verzoeken/
+organogram_url: https://www.ggdbzo.nl/app/uploads/sites/2/2024/11/Organogram_2025_v2.pdf
+afspraak:
+  email: klantcontactcentrum@ggdbzo.nl
+  telefoonnummer: (088) 003 11 00
+  url: https://www.ggdbzo.nl/contact/
 contact:
   website: https://www.ggdbzo.nl/
   email: klantcontactcentrum@ggdbzo.nl
+  bezoekadres: Clausplein 10, 5611 XP Eindhoven
+  postadres: Postbus 8684, 5605 KR Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Clausplein
+    huisnummer: '10'
+    postcode: 5611 XP
+    woonplaats: Eindhoven
+  - type: Woo-Adres
+    openbare_ruimte: Clausplein
+    huisnummer: '10'
+    postcode: 5611 XP
+    woonplaats: Eindhoven
+    regio: Brabant-Zuidoost
+    land: Nederland
+  - type: Postadres
+    postbus: '8684'
+    postcode: 5605 KR
+    woonplaats: Eindhoven
+    regio: Brabant-Zuidoost
+    land: Nederland
+  phones:
+  - nummer: (088) 003 11 00
+    label: algemeen
+  emails:
+  - email: klantcontactcentrum@ggdbzo.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ggdbzo.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ggdbzo.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25250114/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25250114/ggd-brabant-zuidoost
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2006-01-01'

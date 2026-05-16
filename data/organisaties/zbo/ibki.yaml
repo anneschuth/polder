@@ -4,20 +4,77 @@ identifiers:
   roo_id: '28212326'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000124
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Stichting Vakopleiding Automobiel- en Motorrijwielbedrijf
   abbr: IBKI
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet rijonderricht motorrijtuigen 1993, artikel 2
+  referentie: http://wetten.overheid.nl/BWBR0006073
+- opschrift: Wegenverkeerswet 1994
+  referentie: http://wetten.overheid.nl/BWBR0006622
+- opschrift: Regeling rijonderricht motorrijtuigen 2009
+  referentie: http://wetten.overheid.nl/BWBR0025890
+taken_en_bevoegdheden: '* Afnemen examen Rij-instructeur;* Houden van register certificaten
+  rij-instructeur;* Afnemen examens keurmeester APK;* Afnemen examens LPG-technicus.'
+evaluations:
+- datum: '2018-09-17'
+  kamerstuknummer: TK 33147 nr. 6
+  referentie: https://zoek.officielebekendmakingen.nl/kst-33147-6.html
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+personnel:
+  aantalFte: 63,0
+  peildatumFte: '2020-12-31'
 contact:
   website: http://www.ibki.nl/
   email: info@ibki.nl
+  bezoekadres: Structuurbaan 2, 3439 MB Nieuwegein
+  postadres: Postbus 2360, 3430 DV Nieuwegein
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Structuurbaan
+    huisnummer: '2'
+    postcode: 3439 MB
+    woonplaats: Nieuwegein
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+  - type: Postadres
+    postbus: '2360'
+    postcode: 3430 DV
+    woonplaats: Nieuwegein
+  phones:
+  - nummer: (030) 608 77 66
+    label: algemeen
+  emails:
+  - email: info@ibki.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.ibki.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-01-31'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212326/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212326/ibki
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000124
   retrieved: '2026-05-09'
+roo_start_datum: '1995-01-01'

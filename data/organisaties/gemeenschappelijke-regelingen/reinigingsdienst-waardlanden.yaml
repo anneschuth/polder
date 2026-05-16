@@ -3,17 +3,97 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28416053'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0333
+  owms: http://standaarden.overheid.nl/owms/terms/rdwaardl
+  kvk: '50472836'
+  organisatiecode: so0333
+  rsin: '802199987'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bedrijfsvoeringsorganisatie Reinigingsdienst Waardlanden
+  roo_id: '29925043'
 names:
 - value: Reinigingsdienst Waardlanden
   valid_from: '1900-01-01'
+description:
+  text: Reinigingsdienst Waardlanden is een samenwerkingsverband van de gemeenten
+    Gorinchem, Hardinxveld-Giessendam, Molenlanden en Vijfheerenlanden. Deze gemeenschappelijke
+    regeling verzorgt voor en namens de vier gemeenten de afvalinzameling. De taken
+    van de afvalinzameling en verwerking zijn formeel aan Waardlanden overgedragen.
+    Waardlanden voert deze taken uit op basis van de vastgestelde afvalstoffenverordeningen
+    en gemeentelijk beleid van de deelnemende gemeenten. Het bestuur van Waardlanden
+    wordt gevormd door een wethouder uit elk van de vier gemeenten.Naast de  afval-
+    en grondstoffeninzameling (nzamelings- en veegroutes) voor de gemeenten Gorinchem,
+    Hardinxveld-Giessendam, Molenlanden en Vijfheerenlanden zijn er een aantal milieustraten.
+    Tevens rijden er in de regio dagelijks extra servicewagens rond om altijd flexibel
+    te kunnen inspringen, zijn er milieucoaches en educaties op scholen  voor hulp
+    en tips over minder afval en nog beter scheiden en proberen de toezichthouders
+    proberen (ernstige) vervuiling tegen te gaan.
+  url: https://www.waardlanden.nl
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28416053/Reinigingsdienst_Waardlanden
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Reinigingsdienst+Waardlanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.waardlanden.nl/inwoners/contact
+organogram_url: https://www.waardlanden.nl/inwoners/over-ons/wet-open-overheid/organogram
+afspraak:
+  email: info@waardlanden.nl
+  telefoonnummer: (0183) 68 11 11
+  url: https://www.waardlanden.nl/inwoners/contact
 contact:
   website: https://www.waardlanden.nl
   email: info@waardlanden.nl
+  bezoekadres: Boezem 3, 4206 CA Gorinchem
+  postadres: Postbus 555, 4200 AN Gorinchem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Industrieterrein Papland
+    openbare_ruimte: Boezem
+    huisnummer: '3'
+    postcode: 4206 CA
+    woonplaats: Gorinchem
+  - type: Postadres
+    postbus: '555'
+    postcode: 4200 AN
+    woonplaats: Gorinchem
+  phones:
+  - nummer: (0183) 68 11 11
+    label: algemeen
+  emails:
+  - email: info@waardlanden.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.waardlanden.nl
+    label: algemeen
+  - url: https://www.waardlanden.nl/particulieren/contact
+    label: contactformulier
+  contact_forms:
+  - url: https://www.waardlanden.nl/particulieren/contact
+    label: Algemeen
+  fax: (0183) 63 76 00
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28416053/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28416053/reinigingsdienst-waardlanden
+  retrieved: '2026-05-16'
+roo_start_datum: '2016-01-01'

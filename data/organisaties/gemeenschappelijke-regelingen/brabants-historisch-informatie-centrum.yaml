@@ -5,22 +5,100 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0608
   oin: 00000001813565376000
   kvk: '64250636'
+  owms: http://standaarden.overheid.nl/owms/terms/bhic
+  btw: NL813565376B01
+  loonheffing: 813565376L01
+  organisatiecode: so0608
+  rsin: '813565376'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Brabants Historisch informatie Centrum 2024
+  roo_id: '30453543'
 names:
 - value: Brabants Historisch Informatie Centrum
   valid_from: '1900-01-01'
+description:
+  text: Het Brabants Historisch Informatie Centrum (BHIC) is het Regionaal Historisch
+    Centrum (RHC) van Noord-Brabant. We zijn een archiefinstelling met bijna 40 km.
+    aan papieren archieven.Daarnaast beschikken we over een duurzame digitale archiefbewaarplaats
+    (E-depot).Het werkgebied van het BHIC beslaat de Provincie Noord-Brabant, 9 gemeenten,
+    3 waterschappen en 12 gemeenschappelijke regelingen.Voor de organisaties in dit
+    uitgebreide werkgebied zijn we adviseur, archiefbewaarplaats en zijn we voor een
+    aantal overheden ook toezichthouder en archivaris.Ook bewaren en beheren we diverse
+    particuliere archieven en collecties.
+  url: https://www.bhic.nl/over-ons/het-bhic
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.bhic.nl/over-ons/cookies-en-privacy
+      overzichtURL: https://organisaties.overheid.nl/woo/28577797/Brabants_Historisch_Informatie_Centrum
+  wooVerzoek:
+    url: https://www.bhic.nl/over-ons/cookies-en-privacy
+organogram_url: https://www.bhic.nl/media/organigram_bhic_okt_2024.jpg
+afspraak:
+  url: https://www.bhic.nl/contact/openingstijden-en-sluitingsdata
 contact:
   website: http://www.bhic.nl
   email: info@bhic.nl
+  bezoekadres: Zuid-Willemsvaart 2, 5211 NW ’s-Hertogenbosch
+  postadres: Postbus 81, 5201 AB 's-Hertogenbosch
+  addresses:
+  - type: Bezoekadres
+    toelichting: De Citadel
+    openbare_ruimte: Zuid-Willemsvaart
+    huisnummer: '2'
+    postcode: 5211 NW
+    woonplaats: ’s-Hertogenbosch
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Postadres
+    postbus: '81'
+    postcode: 5201 AB
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '81'
+    postcode: 5201 AB
+    woonplaats: '''s-Hertogenbosch'
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (073) 681 85 00
+    label: algemeen
+  emails:
+  - email: info@bhic.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.bhic.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.bhic.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28577797/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28577797/brabants-historisch-informatie-centrum
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2005-02-02'

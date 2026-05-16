@@ -3,17 +3,49 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29819687'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1090
+  owms: http://standaarden.overheid.nl/owms/terms/rekenkamermo
+  organisatiecode: so1090
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Rekenkamer Medemblik Opmeer
+  roo_id: '29819693'
 names:
 - value: Rekenkamer Medemblik - Opmeer
   valid_from: '1900-01-01'
+description:
+  text: De gemeenten Medemblik en Opmeer hebben samen één Rekenkamer (RK). Deze RK
+    is een onafhankelijke commissie die onderzoek doet naar de doeltreffendheid (resultaat),
+    doelmatigheid (kosten) en rechtmatigheid (regels en besluiten) van het gemeentelijk
+    beleid.
+  url: https://www.medemblik.nl/raad-en-bestuur/rekenkamer
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.medemblik.nl/raad-en-bestuur/rekenkamer
   email: guido.brummelkamp@rekenkamermedemblik.nl
+  postadres: Postbus 45, 1687 ZG Wognum
+  addresses:
+  - type: Postadres
+    postbus: '45'
+    postcode: 1687 ZG
+    woonplaats: Wognum
+  emails:
+  - email: guido.brummelkamp@rekenkamermedemblik.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.medemblik.nl/raad-en-bestuur/rekenkamer
+    label: gemeente Medemblik
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-02-25'
+last_verified: '2025-02-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29819687/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29819687/rekenkamer-medemblik-opmeer
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

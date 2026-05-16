@@ -5,7 +5,7 @@ name:
   full: A.M. Brouwers
   family: Brouwers
   given: A.M.
-  initials: A.
+  initials: A.M.
 birth:
   year: 1940
 mandaten:
@@ -19,6 +19,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4681406
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/25516/gemeente-laarbeek
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=79476
 - id: bfd430af-2b51-4ceb-9a52-a2539e4c062e
   organization_id: org:gemeente-laarbeek
   post_id: post:raadslid-gemeente-laarbeek

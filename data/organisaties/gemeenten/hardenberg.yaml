@@ -6,21 +6,185 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0160
   roo_id: '32576'
   wikidata: Q3916626
+  owms: http://standaarden.overheid.nl/owms/terms/Hardenberg
+  ictu: '00160'
+  organisatiecode: gm0160
+  rsin: 001584157
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_HBG
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Hardenberg
   abbr: Hardenberg
   valid_from: '1900-01-01'
+description:
+  text: 'Op deze pagina leggen we uit hoe de ambtelijke organisatie van onze gemeente
+    is opgebouwd. En welk domein verantwoordelijk is voor welke taken.Aan het hoofd
+    van onze organisatie staat de gemeentesecretaris / algemeen directeur. Deze persoon
+    is verantwoordelijk voor de afdelingen Concernstaf en Concerncontrol. En geeft
+    leiding aan het CMT (Concern Management Team).Het concernmanagementteam (CMT)
+    bepaalt de organisatiebrede kaders. Het CMT bestaat uit de algemeen directeur
+    en de vier concernmanagers (Ruimtelijk Domein, Maatschappelijk Domein, Openbaar
+    Gebied en Bedrijfsvoering). Het CMT overlegt elke week over organisatiebrede onderwerpen
+    en voorstellen. En overlegt meerdere keren per jaar met het college.Het concern
+    bestaat uit verschillende clusters. Zij werken aan de verbinding tussen samenleving,
+    bestuur en organisatie. Taken die onder het concern vallen zijn: control, informatieveiligheid
+    en gegevensbescherming, bestuurs- en managementondersteuning (zoals secretariaat
+    collegeleden), openbare orde & veiligheid, organisatieontwikkeling en informatiemanagement.Een
+    uitgebreid overzicht van de domeinen (afdelingen) en teams vindt u via bijgaand
+    website-adres.'
+  url: https://www.hardenberg.nl/organisatie/organisatiestructuur/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.hardenberg.nl/gemeente/contact-met-de-gemeente/meer/indienen-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/32576/Gemeente_Hardenberg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://hardenberg.raadsinformatie.nl/
+      toelichting: De link geeft u een overzicht van de raadsvergaderingen met bijbehorende
+        stukken
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hardenberg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Hardenberg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.hardenberg.nl/contact/woo-verzoek
+organogram_url: https://www.hardenberg.nl/organisatie/organisatiestructuur/organogram
+afspraak:
+  email: gemeente@hardenberg.nl
+  url: https://www.hardenberg.nl/contact/afspraak
+geography:
+  oppervlakte: 317,24
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 317.24
+  aantal_inwoners: 64116
+  inwoners: '202'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 202.0
+  bevat_plaatsen_raw: Ane, Anerveen, Anevelde, Balkbrug, Bergentheim, Brucht, Bruchterveld,
+    Collendoorn, De Krim, Dedemsvaart, Den Velde, Diffelen, Gramsbergen, Hardenberg,
+    Heemserveen, Holtheme, Holthone, Hoogenweg, Kloosterhaar, Loozen, Lutten, Marienberg,
+    Radewijk, Rheeze, Rheezerveen, Schuinesloot, Sibculo, Slagharen, Venebrugge
+  bevat_plaatsen:
+  - Ane
+  - Anerveen
+  - Anevelde
+  - Balkbrug
+  - Bergentheim
+  - Brucht
+  - Bruchterveld
+  - Collendoorn
+  - De Krim
+  - Dedemsvaart
+  - Den Velde
+  - Diffelen
+  - Gramsbergen
+  - Hardenberg
+  - Heemserveen
+  - Holtheme
+  - Holthone
+  - Hoogenweg
+  - Kloosterhaar
+  - Loozen
+  - Lutten
+  - Marienberg
+  - Radewijk
+  - Rheeze
+  - Rheezerveen
+  - Schuinesloot
+  - Sibculo
+  - Slagharen
+  - Venebrugge
+council:
+  total_seats: 32
+  parties:
+  - naam: DOEN'22
+    aantal_zetels: 10
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: OpKoers.nu
+    aantal_zetels: 2
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 2
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: https://www.hardenberg.nl
   email: gemeente@hardenberg.nl
+  bezoekadres: Stephanuspark 1, 7772 HZ HARDENBERG
+  postadres: Postbus 500, 7770 BA HARDENBERG
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stephanuspark
+    huisnummer: '1'
+    postcode: 7772 HZ
+    woonplaats: HARDENBERG
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '500'
+    postcode: 7770 BA
+    woonplaats: HARDENBERG
+  - type: Woo-Adres
+    postbus: '500'
+    postcode: 7770 BA
+    woonplaats: Hardenberg
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Stephanuspark
+    huisnummer: '1'
+    postcode: 7772 HZ
+    woonplaats: HARDENBERG
+  phones:
+  - nummer: 14 0523
+    label: algemeen
+  emails:
+  - email: gemeente@hardenberg.nl
+    label: algemeen
+  - email: gemeente@hardenberg.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.hardenberg.nl
+    label: algemeen
+  contact_forms:
+  - url: http://mijn.hardenberg.nl/aanvragen/163/onbekend/contactformulier-gemeente-hardenberg
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32576/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32576/hardenberg
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +193,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q3916626
   retrieved: '2026-05-09'
+roo_start_datum: '1941-05-01'

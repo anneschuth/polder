@@ -5,7 +5,7 @@ name:
   full: B.W. Aptroot
   family: Aptroot
   given: B.W.
-  initials: B.
+  initials: B.W.
 birth:
   year: 1977
 mandaten:
@@ -19,6 +19,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6743588
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/28493/gemeente-zoetermeer
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28621271
 - id: d810c381-9b89-4e69-8af4-99b2fbfdd64b
   organization_id: org:gemeente-zoetermeer
   post_id: post:raadslid-gemeente-zoetermeer

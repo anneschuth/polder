@@ -6,22 +6,138 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1723
   roo_id: '28359'
   wikidata: Q9809
+  owms: http://standaarden.overheid.nl/owms/terms/Alphen-Chaam
+  ictu: '01723'
+  organisatiecode: gm1723
+  rsin: '805640101'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_AAC
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Alphen-Chaam
   abbr: Alphen-Chaam
   valid_from: '1900-01-01'
-  valid_until: '2026-09-30'
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28359/Gemeente_Alphen-Chaam
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Alphen-Chaam%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Alphen-Chaam%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Alphen-Chaam%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.alphen-chaam.nl/woo
+organogram_url: https://www.abg.nl/documents/Organogram-ABG-gemeenten-en-organisatie.pdf
+afspraak:
+  telefoonnummer: (014) 013
+  url: https://www.alphen-chaam.nl/afspraak
+geography:
+  oppervlakte: 93,63
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 93.63
+  aantal_inwoners: 10495
+  inwoners: '112'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 112.0
+  bevat_plaatsen_raw: Alphen NB, Bavel Ac, Chaam, Galder, Strijbeek, Ulvenhout Ac
+  bevat_plaatsen:
+  - Alphen NB
+  - Bavel Ac
+  - Chaam
+  - Galder
+  - Strijbeek
+  - Ulvenhout Ac
+council:
+  total_seats: 15
+  parties:
+  - naam: Lokaal Krachtig
+    aantal_zetels: 6
+  - naam: GemeenteBelangen SamenwerkingsVerband (GBSV)
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 1
 contact:
   website: https://www.alphen-chaam.nl
   email: info@alphen-chaam.nl
+  bezoekadres: Willibrordplein 1, 5131 AV ALPHEN NB
+  postadres: Postbus 3, 5130 AA ALPHEN NB
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willibrordplein
+    huisnummer: '1'
+    postcode: 5131 AV
+    woonplaats: ALPHEN NB
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '3'
+    postcode: 5130 AA
+    woonplaats: ALPHEN NB
+  - type: Woo-Adres
+    postbus: '3'
+    postcode: 5130 AA
+    woonplaats: Alphen NB
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Willibrordplein
+    huisnummer: '1'
+    postcode: 5131 AV
+    woonplaats: Alphen NB
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Willibrordplein
+    huisnummer: '1'
+    postcode: 5131 AV
+    woonplaats: ALPHEN
+  phones:
+  - nummer: (014) 013
+    label: algemeen
+  emails:
+  - email: info@alphen-chaam.nl
+    label: algemeen
+  - email: info@alphen-chaam.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.alphen-chaam.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.alphen-chaam.nl/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2026-09-30'
+last_mutation: '2026-05-07'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28359/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28359/alphen-chaam
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +146,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9809
   retrieved: '2026-05-09'
+roo_start_datum: '1997-01-01'

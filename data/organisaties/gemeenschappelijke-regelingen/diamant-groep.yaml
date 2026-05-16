@@ -3,17 +3,91 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24967735'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0506
+  owms: http://standaarden.overheid.nl/owms/terms/diamant-groep
+  kvk: '17257648'
+  organisatiecode: so0506
+  rsin: '813792332'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Diamant-groep
+  roo_id: '24967730'
 names:
 - value: Diamant-groep
   valid_from: '1900-01-01'
+description:
+  text: De Diamant-groep is een ontwikkel- en werkbedrijf met als doel mensen met
+    een afstand tot de arbeidsmarkt actief te laten deelnemen aan de samenleving.
+    Hierbij werken wij nauw samen met gemeenten in de regio. Bij de uitvoering van
+    de Participatiewet zoeken wij actief naar nieuwe initiatieven en ideeën.
+  url: https://diamant-groep.nl/over-ons/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://diamant-groep.nl/wet-open-overheid-woo/
+      overzichtURL: https://organisaties.overheid.nl/woo/24967735/Diamant-groep
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://diamant-groep.nl/over-ons/jaarverslag/
+      toelichting: Jaarstukken vanaf 2021
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://diamant-groep.nl/over-ons/bestuur/
+      toelichting: agenda's en verslagen bestuursvergadering
+  wooVerzoek:
+    url: https://diamant-groep.nl/wet-open-overheid-woo/
+organogram_url: https://diamant-groep.nl/over-ons/bestuur/
+afspraak:
+  email: info@diamant-groep.nl
 contact:
   website: https://www.diamant-groep.nl/
   email: info@diamant-groep.nl
+  bezoekadres: Zevenheuvelenweg 14, 5048 AN Tilburg
+  postadres: Postbus 5033, 5004 EA Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zevenheuvelenweg
+    huisnummer: '14'
+    postcode: 5048 AN
+    woonplaats: Tilburg
+  - type: Postadres
+    postbus: '5033'
+    postcode: 5004 EA
+    woonplaats: Tilburg
+  - type: Woo-Adres
+    openbare_ruimte: Zevenheuvelenweg
+    huisnummer: '14'
+    postbus: '5033'
+    postcode: 5048 AN
+    woonplaats: Tilburg
+    land: Nederland
+  phones:
+  - nummer: (013) 464 19 11
+    label: algemeen
+  emails:
+  - email: info@diamant-groep.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.diamant-groep.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2024-07-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24967735/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24967735/diamant-groep
+  retrieved: '2026-05-16'
+roo_start_datum: '2005-01-01'

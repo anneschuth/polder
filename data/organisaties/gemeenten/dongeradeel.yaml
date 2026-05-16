@@ -5,6 +5,9 @@ identifiers:
   kvk: '01173214'
   roo_id: '22362'
   wikidata: Q851299
+  owms: http://standaarden.overheid.nl/owms/terms/Dongeradeel
+  ictu: 00058
+  organisatiecode: gm0058
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,105 @@ names:
   abbr: Dongeradeel
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 291,58
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 291.58
+  aantal_inwoners: 23902
+  inwoners: '81'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 81.0
+  bevat_plaatsen_raw: Aalsum, Anjum, Bornwird, Brantgum, Dokkum, Ee, Engwierum, Foudgum,
+    Hantum, Hantumeruitburen, Hantumhuizen, Hiaure, Holwerd, Jouswier, Lioessens,
+    Metslawier, Moddergat, Morra, Nes Gem Dongeradeel, Niawier, Oosternijkerk, Oostrum
+    FR, Paesens, Raard, Ternaard, Waaxens Gem Dongeradeel, Wetsens, Wierum
+  bevat_plaatsen:
+  - Aalsum
+  - Anjum
+  - Bornwird
+  - Brantgum
+  - Dokkum
+  - Ee
+  - Engwierum
+  - Foudgum
+  - Hantum
+  - Hantumeruitburen
+  - Hantumhuizen
+  - Hiaure
+  - Holwerd
+  - Jouswier
+  - Lioessens
+  - Metslawier
+  - Moddergat
+  - Morra
+  - Nes Gem Dongeradeel
+  - Niawier
+  - Oosternijkerk
+  - Oostrum FR
+  - Paesens
+  - Raard
+  - Ternaard
+  - Waaxens Gem Dongeradeel
+  - Wetsens
+  - Wierum
+council:
+  total_seats: 19
+  parties:
+  - naam: CDA
+    aantal_zetels: 6
+  - naam: Fryske Nasjonale Partij
+    aantal_zetels: 5
+  - naam: ChristenUnie
+    aantal_zetels: 2
+  - naam: Algemeen Belang Dongeradeel
+    aantal_zetels: 2
+  - naam: Dongeradeel Sociaal
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 1
+  - naam: PvdA
+    aantal_zetels: 1
 contact:
   website: www.dongeradeel.nl
   email: info@ddfk.nl
+  bezoekadres: Koningstraat 13, 9101 LP DOKKUM
+  postadres: Postbus 13, 9290 AA KOLLUM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningstraat
+    huisnummer: '13'
+    postcode: 9101 LP
+    woonplaats: DOKKUM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv21
+  - type: Postadres
+    openbare_ruimte: Postbus 13
+    postbus: '13'
+    postcode: 9290 AA
+    woonplaats: KOLLUM
+  phones:
+  - nummer: (0519) 29 88 88
+    label: algemeen
+  emails:
+  - email: info@ddfk.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.dongeradeel.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22362/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22362/dongeradeel
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

@@ -5,6 +5,9 @@ identifiers:
   kvk: '17272622'
   roo_id: '21356'
   wikidata: Q9882
+  owms: http://standaarden.overheid.nl/owms/terms/Woudrichem_(gemeente)
+  ictu: 00874
+  organisatiecode: gm0874
 classification: gemeente
 parent_id: null
 names:
@@ -12,15 +15,78 @@ names:
   abbr: Woudrichem
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 51,6
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 51.6
+  aantal_inwoners: 14443
+  inwoners: '279'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 279.0
+  bevat_plaatsen_raw: Almkerk, Andel, Giessen, Rijswijk NB, Uitwijk, Waardhuizen,
+    Woudrichem
+  bevat_plaatsen:
+  - Almkerk
+  - Andel
+  - Giessen
+  - Rijswijk NB
+  - Uitwijk
+  - Waardhuizen
+  - Woudrichem
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: Progressief Altena
+    aantal_zetels: 3
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: AltenaLokaal
+    aantal_zetels: 3
+  - naam: VVD
+    aantal_zetels: 1
 contact:
   website: http://www.woudrichem.nl
   email: gemeente@woudrichem.nl
+  bezoekadres: Raadhuisplein 1, 4285 CP WOUDRICHEM
+  postadres: Postbus 6, 4285 ZG WOUDRICHEM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 4285 CP
+    woonplaats: WOUDRICHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    openbare_ruimte: Postbus 6
+    postbus: '6'
+    postcode: 4285 ZG
+    woonplaats: WOUDRICHEM
+  phones:
+  - nummer: (0183) 30 81 00
+    label: algemeen
+  emails:
+  - email: gemeente@woudrichem.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.woudrichem.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-06-08'
+last_verified: '2020-06-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21356/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21356/woudrichem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

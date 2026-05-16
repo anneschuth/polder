@@ -3,17 +3,67 @@ type: adviescollege
 identifiers:
   roo_id: '28360904'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10156
+  owms: http://standaarden.overheid.nl/owms/terms/acgidsprop
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Adviescommissie Gids proportionaliteit
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 2 van het Instellingsbesluit Adviescommissie Gids proportionaliteit
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0039543&artikel=2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.pianoo.nl/nl/regelgeving/gids-proportionaliteit
   email: info@adviescommissiegidsp.nl
+  bezoekadres: Prinses Beatrixlaan 2, 2595 AL Den Haag
+  postadres: Postbus 93144, 2509 AC Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Prinses Beatrixlaan
+    huisnummer: '2'
+    postcode: 2595 AL
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '93144'
+    postcode: 2509 AC
+    woonplaats: Den Haag
+  emails:
+  - email: info@adviescommissiegidsp.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.pianoo.nl/nl/regelgeving/gids-proportionaliteit
+    label: algemeen
+  contact_forms:
+  - url: https://www.pianoo.nl/nl/over-pianoo/vragenloket
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-19'
+last_verified: '2026-03-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360904/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360904/adviescommissie-gids-proportionaliteit
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-06-01'

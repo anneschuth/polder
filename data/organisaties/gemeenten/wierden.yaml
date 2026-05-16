@@ -6,21 +6,156 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0189
   roo_id: '31127'
   wikidata: Q10025
+  owms: http://standaarden.overheid.nl/owms/terms/Wierden_(gemeente)
+  ictu: 00189
+  organisatiecode: gm0189
+  rsin: 001584182
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_WID
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Wierden
   abbr: Wierden
   valid_from: '1900-01-01'
+description:
+  text: De gemeente Wierden is een moderne gemeente in Twente op de grens van stad
+    en platteland met bijna 25.000 inwoners. Een gemeente die volop in ontwikkeling
+    is. Niet alleen op het gebied van wonen, werken en recreëren, maar ook als organisatie.
+    Onder de noemer 'Expeditie Wierden' werken we er aan onze organisatie nog beter
+    aan te laten sluiten op de wensen van de inwoners. Want dat is tenslotte waar
+    we het allemaal voor doen! Ieder voor zich in een eigen functie, maar vooral samen
+    in deze kleine, maar fijne organisatie.
+  url: https://www.wierden.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://open.wierden.nl/
+      overzichtURL: https://organisaties.overheid.nl/woo/31127/Gemeente_Wierden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wierden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wierden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Wierden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://wierden.notubiz.nl/modules/12/besluitenlijsten/view
+      toelichting: Op deze pagina vindt u de besluiten die het college van burgemeester
+        en wethouders heeft genomen.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://wierden.notubiz.nl/
+      toelichting: Op deze pagina vindt u de agenda's van de gemeenteraad.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.wierden.nl/woo-besluiten
+      toelichting: Besluiten in het kader van de Woo worden op deze pagina gepubliceerd.
+  wooVerzoek:
+    url: https://eloket.wierden.nl/f/1489/login
+organogram_url: https://www.wierden.nl/organisatie?origin=/over-de-organisatie
+afspraak:
+  email: gemeente@wierden.nl
+  telefoonnummer: (0546) 58 08 00
+  url: https://wierden.mijnafspraakmaken.nl/
+geography:
+  oppervlakte: 94,35
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 94.35
+  aantal_inwoners: 25547
+  inwoners: '270'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 270.0
+  bevat_plaatsen_raw: Enter, Hoge Hexel, Notter, Wierden, Zuna
+  bevat_plaatsen:
+  - Enter
+  - Hoge Hexel
+  - Notter
+  - Wierden
+  - Zuna
+council:
+  total_seats: 21
+  parties:
+  - naam: Nieuw Enter Wierden (NEW)
+    aantal_zetels: 9
+  - naam: CDA
+    aantal_zetels: 5
+  - naam: VVD
+    aantal_zetels: 3
+  - naam: Progressief Wierden
+    aantal_zetels: 2
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: SGP
+    aantal_zetels: 1
 contact:
   website: https://www.wierden.nl
   email: gemeente@wierden.nl
+  bezoekadres: Pouliestraat 3, 7642 EB WIERDEN
+  postadres: Postbus 43, 7640 AA WIERDEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pouliestraat
+    huisnummer: '3'
+    postcode: 7642 EB
+    woonplaats: WIERDEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv23
+  - type: Postadres
+    postbus: '43'
+    postcode: 7640 AA
+    woonplaats: WIERDEN
+  - type: Woo-Adres
+    openbare_ruimte: Pouliestraat
+    huisnummer: '3'
+    postcode: 7642 EB
+    woonplaats: Wierden
+    regio: Twente
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Pouliestraat
+    huisnummer: '3'
+    postcode: 7642 EB
+    woonplaats: WIERDEN
+  phones:
+  - nummer: (0546) 58 08 00
+    label: algemeen
+  emails:
+  - email: gemeente@wierden.nl
+    label: algemeen
+  - email: bouwenenwonen@wierden.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.wierden.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wierden.nl/contact-en-openingstijden
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/31127/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/31127/wierden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

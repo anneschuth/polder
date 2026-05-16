@@ -6,22 +6,196 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0114
   roo_id: '22781'
   wikidata: Q14641
+  owms: http://standaarden.overheid.nl/owms/terms/Emmen_(gemeente)
+  ictu: '00114'
+  organisatiecode: gm0114
+  rsin: 001969316
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_EMM
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Emmen
   abbr: Emmen
   valid_from: '1900-01-01'
-  valid_until: '2030-12-31'
+description:
+  text: Bij de gemeente Emmen staan de doelen en wensen van het bestuur (raad en college)
+    centraal. De griffie helpt daarbij de raad en de medewerkers van de organisatie
+    helpen het college. De gemeente Emmen bestaat uit 40 teams. Als u een brief van
+    ons krijgt, dan ziet u daarin de afkorting van het team wat uw vraag behandelt.
+    Hieronder leest u wat de volledige naam van het team is.
+  url: https://gemeente.emmen.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://gemeente.emmen.nl/woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/22781/Gemeente_Emmen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Emmen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten. De gemeente kan regels bijvoorbeeld in een algemeen verbindend
+        voorschrift vastleggen.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Emmen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Dit zijn de regels die de overheid voorschrijft. De Rijksoverheid
+        maakt wetten. De gemeente kan regels bijvoorbeeld in een algemeen verbindend
+        voorschrift vastleggen.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://gemeente.emmen.nl/besluitenlijst
+      toelichting: In de besluitenlijst ziet u de besluiten die het bestuur van de
+        gemeente Emmen (het college van Burgemeester en Wethouders) heeft genomen.
+        De agenda's van de collegevergaderingen publiceert de gemeente Emmen  nog
+        niet.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://emmen.bestuurlijkeinformatie.nl/Calendar
+      toelichting: De gemeenteraad bepaalt in hoofdlijnen het beleid van de gemeente
+        en controleert of het beleid goed wordt uitgevoerd. Hier vindt u de agenda
+        en vergaderstukken van de gemeenteraad van Emmen. Ook kunt u vergaderingen
+        live volgen of terugkijken.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://gemeente.emmen.nl/korte-versie-begroting-2024
+      toelichting: In de begroting staat wat we komend jaar gaan doen en waar geld
+        naartoe gaat. In de halfjaarrapportage beschrijven we hoe de situatie is ten
+        opzichte van de begroting. Na het begrotingsjaar wordt er een jaarverslag
+        met een jaarrekening opgesteld.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22gemeente%22)and(dt.creator==%22Emmen%22))))and((dt.type==%22ruimtelijk%20plan%20of%20omgevingsdocument%22)or(dt.type==%22Beschikking%22)or(dt.type==%22andere%20beschikking%22)or(dt.type==%22andere%20vergunning%22)or(dt.type==%22evenementenvergunning%22)or(dt.type==%22exploitatievergunning%22)or(dt.type==%22omgevingsvergunning%22)or(dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22))and((w.publicatienaam==%22Gemeenteblad%22))&zv=&col=Gemeenteblad
+      toelichting: Beschikkingen zijn besluiten over specifieke gevallen. Als u bijvoorbeeld
+        bezwaar maakt tegen bouwplannen in uw straat, dan neemt het college B&W hierover
+        een besluit. Dit heet een beschikking.
+  wooVerzoek:
+    url: https://gemeente.emmen.nl/woo-verzoek
+afspraak:
+  email: gemeente@emmen.nl
+  telefoonnummer: 14 0591
+  url: https://gemeente.emmen.nl/afspraak-of-contact
+geography:
+  oppervlakte: 350,0
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 350.0
+  aantal_inwoners: 109881
+  inwoners: '313'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 313.0
+  bevat_plaatsen_raw: Barger-Compascuum, Emmen, Emmer-Compascuum, Erica, Klazienaveen,
+    Klazienaveen-Noord, Nieuw-Amsterdam, Nieuw-Dordrecht, Nieuw-Schoonebeek, Nieuw-Weerdinge,
+    Roswinkel, Schoonebeek, Veenoord, Weiteveen, Zandpol, Zwartemeer
+  bevat_plaatsen:
+  - Barger-Compascuum
+  - Emmen
+  - Emmer-Compascuum
+  - Erica
+  - Klazienaveen
+  - Klazienaveen-Noord
+  - Nieuw-Amsterdam
+  - Nieuw-Dordrecht
+  - Nieuw-Schoonebeek
+  - Nieuw-Weerdinge
+  - Roswinkel
+  - Schoonebeek
+  - Veenoord
+  - Weiteveen
+  - Zandpol
+  - Zwartemeer
+council:
+  total_seats: 39
+  parties:
+  - naam: Wakker Emmen
+    aantal_zetels: 14
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: PvdA
+    aantal_zetels: 4
+  - naam: Forum voor Democratie
+    aantal_zetels: 4
+  - naam: PVV
+    aantal_zetels: 2
+  - naam: D66
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Veilig Emmen
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Hart voor Emmen
+    aantal_zetels: 1
+  - naam: 50PLUS
+    aantal_zetels: 1
+  - naam: GroenLinks
+    aantal_zetels: 1
 contact:
   website: https://www.emmen.nl
   email: gemeente@emmen.nl
+  bezoekadres: Raadhuisplein 1, 7811 AP EMMEN
+  postadres: Postbus 30001, 7800 RA EMMEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7811 AP
+    woonplaats: EMMEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv22
+  - type: Postadres
+    postbus: '30001'
+    postcode: 7800 RA
+    woonplaats: EMMEN
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    postcode: 7811 AP
+    woonplaats: Emmen
+    regio: Drenthe
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '1'
+    postcode: 7811 AP
+    woonplaats: EMMEN
+  phones:
+  - nummer: 14 0591
+    label: algemeen
+  emails:
+  - email: gemeente@emmen.nl
+    label: algemeen
+  - email: gemeente@emmen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.emmen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://gemeente.emmen.nl/afspraak-of-contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2030-12-31'
+last_mutation: '2026-05-09'
+last_verified: '2026-05-09'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22781/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22781/emmen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

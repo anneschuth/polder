@@ -3,18 +3,71 @@ type: adviescollege
 identifiers:
   roo_id: '29515187'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg12363
+  owms: http://standaarden.overheid.nl/owms/terms/coldeskfindienst
+  organisatiecode: oorg12363
 classification: adviescollege
 parent_id: null
 names:
 - value: College Deskundigheid Financiële Dienstverlening
   abbr: CDFD
   valid_from: '1900-01-01'
+description:
+  text: Het College Deskundigheid Financiële Dienstverlening adviseert en ondersteunt
+    het ministerie van Financiën op het gebied van vakbekwaamheid met betrekking tot
+    de Wet op het financieel toezicht (Wft). Ook adviseert het College over examens
+    en toetsen op het gebied van de Wft.
+  url: https://cdfd.nl/organisatie/
+wettelijke_grondslagen:
+- opschrift: Instellings- en mandaatbesluit College Deskundigheid Financiële Dienstverlening
+    Wft, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0035213/2020-04-01#Paragraaf2_Artikel2
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/29515187/College_Deskundigheid_Financiele_Dienstverlening
 contact:
   website: https://cdfd.nl/
   email: info@cdfd.nl
+  bezoekadres: Lange Voorhout 13, 2514 EL Den Haag
+  postadres: Postbus 556, 2501 CN Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Lange Voorhout
+    huisnummer: '13'
+    postcode: 2514 EL
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '556'
+    postcode: 2501 CN
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '556'
+    postcode: 2501 CN
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 376 58 60
+    label: algemeen
+  emails:
+  - email: info@cdfd.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://cdfd.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://cdfd.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-01-20'
+last_verified: '2026-01-20'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29515187/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29515187/cdfd
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-07-01'

@@ -2,15 +2,28 @@ id: org:stichting-censis
 type: rwt
 identifiers:
   roo_id: '30133839'
+  kvk: '24316547'
+  rsin: '810053123'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
 names:
 - value: Centrale (stichting) van Internaten voor Schippers- en kermisjeugd (CENSIS)
   abbr: CENSIS
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Maria Montessorilaan
+    huisnummer: '11'
+    postcode: 3312 KJ
+    woonplaats: Dordrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133839/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133839/censis
+  retrieved: '2026-05-16'

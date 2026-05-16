@@ -3,18 +3,111 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '25853721'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0315
+  owms: http://standaarden.overheid.nl/owms/terms/rdmaasld
+  kvk: '50904809'
+  btw: NL003606703B01
+  loonheffing: 003606703L01
+  organisatiecode: so0315
+  rsin: '003606703'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Reinigingsdienst Maasland
+  roo_id: '30070657'
 names:
 - value: Reinigingsdienst Maasland
   abbr: RD Maasland
   valid_from: '1900-01-01'
+description:
+  text: 'RD Maasland zamelt afval in met een missie: zoveel mogelijk grondstoffen
+    uit het afval halen, zodat deze opnieuw tot product kunnen worden verwerkt. Zo
+    dragen we bij aan een circulaire economie.Wij zijn een regionaal afval inzamelbedrijf  met
+    als werkgebied de gemeenten Beesel, Horst aan de Maas, Leudal, Maasgouw, Roerdalen
+    en Echt-Susteren. Deze gemeenten zijn naast eigenaar tevens onze belangrijkste
+    opdrachtgevers. Daarnaast voeren wij diensten uit in opdracht van particulieren
+    en bedrijven. Ook beheren en exploiteren we milieuparken in Roggel en Maasbracht.
+    Ons bedrijf is gevestigd in Haelen in de gemeente Leudal.'
+  url: https://www.rdmaasland.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rdmaasland.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/25853721/Reinigingsdienst_Maasland
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Reinigingsdienst+Maasland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.rdmaasland.nl/contact
+organogram_url: https://www.rdmaasland.nl/over-ons
+afspraak:
+  telefoonnummer: (0475) 59 46 32
+  url: https://www.rdmaasland.nl/contact
 contact:
   website: https://www.rdmaasland.nl
   email: info@rdmaasland.nl
+  bezoekadres: de Giesel 17, 6081 PG Haelen
+  postadres: de Giesel 17, 6081 PG Haelen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: de Giesel
+    huisnummer: '17'
+    postcode: 6081 PG
+    woonplaats: Haelen
+  - type: Postadres
+    openbare_ruimte: de Giesel
+    huisnummer: '17'
+    postcode: 6081 PG
+    woonplaats: Haelen
+  - type: Woo-Adres
+    openbare_ruimte: De Giesel
+    huisnummer: '17'
+    postcode: 6081 PG
+    woonplaats: Haelen
+  phones:
+  - nummer: (0475) 59 46 32
+    label: algemeen
+  emails:
+  - email: info@rdmaasland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rdmaasland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.rdmaasland.nl/leudal/contact
+    label: Algemeen
+  - url: https://www.rdmaasland.nl/contact
+    label: Algemeen
+  - url: https://www.rdmaasland.nl/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: RD Maasland
+    url: https://www.facebook.com/p/RD-Maasland-100057231078222/
+  - platform: Instagram
+    gebruikersnaam: rdmaasland
+    url: https://www.instagram.com/rdmaasland/
+  - platform: LinkedIn
+    gebruikersnaam: RD Maasland
+    url: https://nl.linkedin.com/company/rd-maasland
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/25853721/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/25853721/rd-maasland
+  retrieved: '2026-05-16'
+roo_start_datum: '1963-01-14'

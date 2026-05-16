@@ -1,27 +1,125 @@
 id: org:gr-od-nhn
 type: gemeenschappelijke-regeling
+subname: Regionale Uitvoeringsdienst Noord-Holland Noord (RUD NHN)
 identifiers:
   roo_id: '28018889'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0827
   oin: 00000001852981806000
   kvk: '58315373'
+  owms: http://standaarden.overheid.nl/owms/terms/odnhn
+  btw: NL852981806B01
+  organisatiecode: so0827
+  rsin: '852981806'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Omgevingsdienst Noord-Holland Noord
+  roo_id: '29592716'
 names:
 - value: Omgevingsdienst Noord-Holland Noord
   abbr: OD NHN
   valid_from: '1900-01-01'
+description:
+  text: Per juli 2013 is de oprichting van de Regionale Uitvoeringsdienst Noord-Holland
+    Noord (RUD NHN) een feit. De milieudiensten Regio Alkmaar, Kop van Noord-Holland,
+    West Friesland en de provincie Noord-Holland zijn per 1 januari 2014 in deze regionale
+    organisatie gefuseerd.De dienst heet per 1 juli 2019 Omgevingsdienst Noord-Holland
+    Noord (OD NHN).De OD NHN is in 2014 als Regionale Uitvoeringsdienst Noord-Holland
+    Noord (RUD NHN) daadwerkelijk van start gegaan als een 'no-nonsens'-organisatie
+    in de uitvoering van haar (milieu)taken. De Omgevingsdienst verzorgt voor zijn
+    opdrachtgevers de vergunningverlening, toezicht en handhaving en staat hen bij
+    met specialistisch advies. Dit doen we bijvoorbeeld op het gebied van milieu,
+    veiligheid, duurzaamheid en circulaire economie.
+  url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Over_de_Omgevingsdienst_Noord_Holland_Noord
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Woo_verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/28018889/Omgevingsdienst_Noord-Holland_Noord
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22rud%22%20and%20cql.textAndIndexes=%22nhn%22)%20AND%20w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22&zv=rud+nhn&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=ds%7cBlad+gemeenschappelijke+regeling
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Woo_verzoek
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22rud%22%20and%20cql.textAndIndexes=%22nhn%22)&pg=10&svel=Publicatiedatum&svol=Aflopend&zv=rud%2bnhn&col=
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?zv=od+nhn&pg=10&col=
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.odnhn.nl/Menu/Over_ons/Opdrachtgevers/Begroting
+  wooVerzoek:
+    url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Woo_verzoek
+organogram_url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Over_de_Omgevingsdienst_Noord_Holland_Noord
+afspraak:
+  email: postbus@odnhn.nl
+  telefoonnummer: (088) 102 13 00
+  url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Algemeen/Contact
 contact:
   website: https://www.odnhn.nl
   email: postbus@odnhn.nl
+  bezoekadres: Dampten 2, 1624 NR Hoorn
+  postadres: Postbus 2095, 1620 EB Hoorn
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dampten
+    huisnummer: '2'
+    postcode: 1624 NR
+    woonplaats: Hoorn
+  - type: Postadres
+    postbus: '2095'
+    postcode: 1620 EB
+    woonplaats: Hoorn
+  - type: Woo-Adres
+    openbare_ruimte: Dampten
+    huisnummer: '2'
+    postbus: '2095'
+    postcode: 1624 NR
+    woonplaats: Hoorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+    land: Nederland
+  phones:
+  - nummer: (088) 102 13 00
+    label: algemeen
+  emails:
+  - email: postbus@odnhn.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.odnhn.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.odnhn.nl/Menu/Over_ons/Over_de_OD_NHN/Algemeen/Contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Omgevingsdienst Noord-Holland Noord
+    url: https://www.linkedin.com/company/35437946
+  fax: (0229) 26 53 11
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28018889/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28018889/od-nhn
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-07-11'

@@ -6,19 +6,107 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/waterschap/ws0155
   roo_id: '21102'
   wikidata: Q2192659
+  owms: http://standaarden.overheid.nl/owms/terms/wsagv
+  ictu: 04804
+  rsin: '805933992'
 classification: waterschap
 parent_id: null
 names:
 - value: Amstel, Gooi en Vecht
   valid_from: '1900-01-01'
+description:
+  text: 'Gebied: Aalsmeer, Amstelveen, Amsterdam, Blaricum, De Bilt, De Ronde Venen,
+    Diemen, Gooise Meren, Haarlemmermeer, Hilversum, Huizen, Kaag en Braassem, Laren,
+    Nieuwkoop, Ouder-Amstel, Stichtse Vecht, Uithoorn, Utrecht, Weesp en Wijdemeren.'
+  url: https://www.agv.nl/over-ons/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 1294 - WERKEN VOOR WATERSCHAPPEN
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=24352
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Waterschappen (Artikel 1.2, lid 1d, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.agv.nl/zelf-regelen/waterschapsloket/democratie-en-inspraak/wet-open-overheid-verzoek/informatie-voor-het-indienen-van-een-woo-verzoek/
+      overzichtURL: https://organisaties.overheid.nl/woo/21102/Amstel_Gooi_en_Vecht
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Amstel,+Gooi+en+Vecht%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Amstel,+Gooi+en+Vecht%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Waterschap+Amstel,+Gooi+en+Vecht%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.agv.nl/zelf-regelen/waterschapsloket/democratie-en-inspraak/wet-open-overheid-verzoek/woo-verzoek-indienen/
+organogram_url: https://www.agv.nl/over-ons/organogram/
+afspraak:
+  telefoonnummer: (088) 464 67 00
+  url: https://www.agv.nl/contact/contactformulier/
 contact:
   website: https://www.agv.nl/
+  bezoekadres: Korte Ouderkerkerdijk 7, 1096 AC Amsterdam
+  postadres: Postbus 94370, 1090 GJ Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Ouderkerkerdijk
+    huisnummer: '7'
+    postcode: 1096 AC
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '94370'
+    postcode: 1090 GJ
+    woonplaats: Amsterdam
+  - type: Woo-Adres
+    toelichting: Postadres
+    postbus: '94370'
+    postcode: 1090 GJ
+    woonplaats: Amsterdam
+    land: Nederland
+  - type: Postadres Omgevingsloket
+    postbus: '94370'
+    postcode: 1090 GJ
+    woonplaats: AMSTERDAM
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Korte Ouderkerkerdijk
+    huisnummer: '7'
+    postcode: 1096 AC
+    woonplaats: AMSTERDAM
+  phones:
+  - nummer: (088) 464 67 00
+    label: algemeen
+  internet_addresses:
+  - url: https://www.agv.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.agv.nl/contact/
+    label: Algemeen
+  - url: https://www.agv.nl/contact/contactformulier/
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21102/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21102/amstel-gooi-en-vecht
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +118,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/waterschap/ws0155
   retrieved: '2026-05-09'
+roo_start_datum: '2017-01-01'

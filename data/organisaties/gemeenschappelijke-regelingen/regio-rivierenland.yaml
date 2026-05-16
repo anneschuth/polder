@@ -5,22 +5,113 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0026
   oin: 00000001007733008000
   kvk: '52059391'
+  owms: http://standaarden.overheid.nl/owms/terms/Regio_Rivierenland
+  btw: NL007733008B07
+  organisatiecode: so0026
+  rsin: 007733008
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Regeling Regio Rivierenland
+  roo_id: '30405547'
 names:
 - value: Regio Rivierenland
   valid_from: '1900-01-01'
+description:
+  text: In Regio Rivierenland bundelen gemeenten hun krachten. We voeren gemeentelijke
+    taken uit én regionale beleidsprocessen. Dat doen we met ongeveer 80 vaste collega’s
+    en 40 collega’s binnen onze flexibele schil.Wat wij doen:Met 7 diensten voeren
+    we gemeentelijke taken uit, zoals leerplicht, inkoop, wmo-jeugd etc.Via onze programma’s
+    en projecten in FruitDelta hebben we een aanjagende en faciliterende rol in regionale
+    samenwerking op bijvoorbeeld de thema's wonen, economie, energie, arbeidsmigranten
+    en mobiliteit.Binnen bedrijfsvoering ondersteunen we onze collega’s met deskundige
+    en efficiënte dienstverlening, zodat zij met hun werk betekenisvol voor de samenleving
+    kunnen zijn.
+  url: https://www.regiorivierenland.nl/over-regio-rivierenland/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.regiorivierenland.nl/over-regio-rivierenland/open-overheid/
+      overzichtURL: https://organisaties.overheid.nl/woo/28582024/Regio_Rivierenland
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+Rivierenland%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.regiorivierenland.nl/over-regio-rivierenland/open-overheid/woo-dossiers/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Regio+Rivierenland%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Andere documenten
+      url: https://regiorivierenland.archiefweb.eu/
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://regiorivierenland.notubiz.nl/
+  wooVerzoek:
+    url: https://www.regiorivierenland.nl/over-regio-rivierenland/open-overheid/woo-verzoek-indienen/
+organogram_url: https://www.regiorivierenland.nl/over-regio-rivierenland/ons-bestuur-en-mt/
+afspraak:
+  email: info@regiorivierenland.nl
+  telefoonnummer: (0344) 63 85 55
+  url: https://www.regiorivierenland.nl/contact/
 contact:
   website: https://www.regiorivierenland.nl
   email: info@regiorivierenland.nl
+  bezoekadres: Burgemeester Van Lidth de Jeudelaan 3, 4001 VK Tiel
+  postadres: Postbus 137, 4000 AC Tiel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Van Lidth de Jeudelaan
+    huisnummer: '3'
+    postcode: 4001 VK
+    woonplaats: Tiel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '137'
+    postcode: 4000 AC
+    woonplaats: Tiel
+  - type: Woo-Adres
+    postbus: '137'
+    postcode: 4000 AC
+    woonplaats: Tiel
+  phones:
+  - nummer: (0344) 63 85 55
+    label: algemeen
+  emails:
+  - email: info@regiorivierenland.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.regiorivierenland.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.regiorivierenland.nl/contact/
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: regiorivierenland
+    url: https://www.linkedin.com/company/regiorivierenland?trk=tyah
+  fax: (0344) 63 85 00
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28582024/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28582024/regio-rivierenland
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '1986-01-01'

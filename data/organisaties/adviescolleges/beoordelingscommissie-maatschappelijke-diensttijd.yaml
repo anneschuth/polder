@@ -4,16 +4,33 @@ identifiers:
   roo_id: '30493953'
 classification: adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Beoordelingscommissie Maatschappelijke Diensttijd
   abbr: Beoordelingscommissie MDT
   valid_from: '1900-01-01'
   valid_until: '2027-07-01'
+description:
+  text: De Beoordelingscommissie Maatschappelijke Diensttijd (MDT) beoordeelt aanvragen
+    voor MDT-subsidies. Deze subsidies kunnen door maatschappelijke organisaties en
+    onderwijsinstellingen gebruikt worden om projecten op te zetten die gericht zijn
+    op de ontwikkeling van jongeren tussen de 12 en 30 jaar.
+  url: https://www.dus-i.nl/subsidies/jeugd/maatschappelijke-diensttijd
+wettelijke_grondslagen:
+- opschrift: Instellingsbesluit beoordelingscommissie MDT, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0048996/2023-12-07/0#Artikel2
 contact:
   website: https://www.dus-i.nl/subsidies/jeugd/maatschappelijke-diensttijd
 valid_from: '1900-01-01'
 valid_until: '2027-07-01'
+last_mutation: '2026-02-19'
+last_verified: '2026-02-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30493953/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30493953/beoordelingscommissie-maatschappelijke-diensttijd
+  retrieved: '2026-05-16'
+roo_start_datum: '2023-06-01'

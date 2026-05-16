@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1702
   roo_id: '21660'
   wikidata: Q9865
+  owms: http://standaarden.overheid.nl/owms/terms/Sint_Anthonis
+  ictu: '01702'
+  organisatiecode: gm1702
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,85 @@ names:
   abbr: Sint Anthonis
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 99,81
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 99.81
+  aantal_inwoners: 11577
+  inwoners: '115'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 115.0
+  bevat_plaatsen_raw: Landhorst, Ledeacker, Oploo, Rijkevoort-De Walsert, Sint Anthonis,
+    Stevensbeek, Wanroij, Westerbeek
+  bevat_plaatsen:
+  - Landhorst
+  - Ledeacker
+  - Oploo
+  - Rijkevoort-De Walsert
+  - Sint Anthonis
+  - Stevensbeek
+  - Wanroij
+  - Westerbeek
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: Sint Anthonis Nu
+    aantal_zetels: 6
+  - naam: VVD
+    aantal_zetels: 2
 contact:
   website: www.sintanthonis.nl
   email: postbus@sintanthonis.nl
+  bezoekadres: Brink 3, 5845 BH SINT ANTHONIS
+  postadres: Postbus 40, 5845 ZG SINT ANTHONIS
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Brink
+    huisnummer: '3'
+    postcode: 5845 BH
+    woonplaats: SINT ANTHONIS
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '40'
+    postcode: 5845 ZG
+    woonplaats: SINT ANTHONIS
+  phones:
+  - nummer: (0485) 38 88 88
+    label: algemeen
+  emails:
+  - email: postbus@sintanthonis.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.sintanthonis.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2022-03-15'
+last_verified: '2022-03-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/21660/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/21660/gemeente-sint-anthonis
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -30,3 +103,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9865
   retrieved: '2026-05-09'
+roo_start_datum: '1995-07-04'

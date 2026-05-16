@@ -3,16 +3,50 @@ type: adviescollege
 identifiers:
   roo_id: '28360830'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10149
+  owms: http://standaarden.overheid.nl/owms/terms/acbsmkbkred
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Adviescommissie Borgstelling MKB-kredieten
   valid_from: '1900-01-01'
+wettelijke_grondslagen:
+- opschrift: artikel 3.11.5. van de Regeling nationale EZ-subsidies
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0035474&hoofdstuk=3&titeldeel=3.11&artikel=3.11.5
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rvo.nl/subsidies-financiering/bmkb
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.rvo.nl/subsidies-financiering/bmkb
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-13'
+last_verified: '2026-03-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28360830/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28360830/adviescommissie-borgstelling-mkb-kredieten
+  retrieved: '2026-05-16'
+roo_start_datum: '2014-12-19'

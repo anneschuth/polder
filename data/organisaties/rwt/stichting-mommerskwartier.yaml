@@ -1,15 +1,44 @@
 id: org:oovb-stichting-mommerskwartier
 type: rwt
+subname: TextielMuseum TextielLab by TextielMuseum
 identifiers:
   roo_id: '27914247'
+  kvk: '18085741'
+  rsin: '817214653'
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
 names:
 - value: Stichting Mommerskwartier
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Invloed (Artikel 1.3, lid 1b, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+contact:
+  bezoekadres: Goirkestraat 96, 5046 GN Tilburg
+  postadres: Postbus 4265, 5004 JG Tilburg
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Goirkestraat 96
+    postcode: 5046 GN
+    woonplaats: Tilburg
+  - type: Postadres
+    postbus: '4265'
+    postcode: 5004 JG
+    woonplaats: Tilburg
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-06-19'
+last_verified: '2019-06-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27914247/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27914247/stichting-mommerskwartier
+  retrieved: '2026-05-16'

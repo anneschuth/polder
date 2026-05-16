@@ -3,17 +3,133 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28150337'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1048
+  owms: http://standaarden.overheid.nl/owms/terms/afeer
+  kvk: 01169476
+  btw: NL822946610B01
+  organisatiecode: so1048
+  rsin: '002072300'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Afeer 2025
+  roo_id: '30405619'
 names:
 - value: Afeer
   valid_from: '1900-01-01'
+description:
+  text: Sociale Werkvoorziening
+  url: https://www.afeer.nl/over-afeer/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.afeer.nl/over-afeer/
+      overzichtURL: https://organisaties.overheid.nl/woo/28150337/Afeer
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Andere documenten
+      url: https://www.afeer.nl/app/uploads/2025/11/tertiaalrapportage-2-2025.pdf?x71146
+      toelichting: Tertiaalrapportage T2 2025 Afeer
+    - informatiecategorie: Andere documenten
+      url: https://www.afeer.nl/app/uploads/2026/03/05a.-Tertiaalrapportage-3_2025-def.pdf?x91290
+      toelichting: Tertiaalrapportage 2025 - 3
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.afeer.nl/app/uploads/2024/07/Begroting-2025.pdf?x42345
+      toelichting: 'Jaarplan: Begroting Afeer 2025'
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://www.afeer.nl/app/uploads/2023/07/Financiele-verordening-Afeer-2023.pdf?x42345
+      toelichting: Financiële verordening Afeer 2023
+    - informatiecategorie: Andere documenten
+      url: https://www.afeer.nl/app/uploads/2025/08/tertiaalrapportage-2025-1.pdf?x27649
+      toelichting: Tertiaalrapportage T1 2025
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://www.afeer.nl/app/uploads/2025/04/Financiele-verordening-2024.pdf?x27649
+      toelichting: Financiële verordening Afeer 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.afeer.nl/app/uploads/2025/08/Begroting-2026.pdf?x27649
+      toelichting: Begroting Afeer 2026
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.afeer.nl/app/uploads/2025/08/Jaarverslag-en-jaarrekening-2024.pdf?x27649
+      toelichting: Jaarrekening Afeer 2024
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.afeer.nl/app/uploads/2024/07/Jaarverslag-jaarrekening-Afeer-2023.pdf?x42345
+      toelichting: Jaarverslag 2023
+  wooVerzoek:
+    url: https://www.afeer.nl/over-afeer/
+organogram_url: https://www.afeer.nl/app/uploads/2025/10/2025-04-15-Organogram-GR-Afeer-%E2%80%93-hoofdstructuur-%E2%80%93-teams-afdelingen.pdf?x27649
+afspraak:
+  email: woo@afeer.nl
+  url: https://www.afeer.nl/over-afeer/
 contact:
   website: https://afeer.nl
   email: woo@afeer.nl
+  bezoekadres: A.J. Romijnweg 17, 9672 AH Winschoten
+  postadres: Postbus 117, 9670 AC Winschoten
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor Afeer
+    openbare_ruimte: A.J. Romijnweg
+    huisnummer: '17'
+    postbus: '117'
+    postcode: 9672 AH
+    woonplaats: Winschoten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    postbus: '117'
+    postcode: 9670 AC
+    woonplaats: Winschoten
+  - type: Woo-Adres
+    postbus: '117'
+    postcode: 9670 AC
+    woonplaats: Winschoten
+  - type: Bezoekadres
+    openbare_ruimte: A.J. Romijnweg
+    huisnummer: '17'
+    postcode: 9672 AH  winschoten
+    woonplaats: Winschoten
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+    land: Nederland
+  - type: Postadres
+    postbus: '117'
+    postcode: 9670 AC  winschoten
+    woonplaats: Winschoten
+    land: Nederland
+  - type: Vestigingsadres
+    openbare_ruimte: Winschoter Hogebrug 1
+    huisnummer: '1'
+    postcode: 9697 XB
+    woonplaats: Blijham
+  phones:
+  - nummer: (0597) 45 36 66
+    label: hoofdkantoor
+  emails:
+  - email: woo@afeer.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://afeer.nl
+    label: algemeen
+  - url: https://afeer.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.afeer.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2025-12-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28150337/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28150337/afeer
+  retrieved: '2026-05-16'
+roo_start_datum: '2019-02-01'

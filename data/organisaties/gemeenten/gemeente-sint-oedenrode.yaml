@@ -4,6 +4,9 @@ identifiers:
   roo_id: '40795'
   wikidata: Q50885806
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0846
+  owms: http://standaarden.overheid.nl/owms/terms/Sint-Oedenrode
+  ictu: 00846
+  organisatiecode: gm0846
 classification: gemeente
 parent_id: null
 names:
@@ -11,19 +14,65 @@ names:
   abbr: Sint-Oedenrode
   valid_from: '1900-01-01'
   valid_until: '2017-01-01'
+geography:
+  oppervlakte: 64,25
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 64.25
+  aantal_inwoners: 17910
+  inwoners: '278'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 278.0
+  bevat_plaatsen_raw: Sint-Oedenrode
+  bevat_plaatsen:
+  - Sint-Oedenrode
+council:
+  total_seats: 19
+  parties:
+  - naam: DGS/BVT
+    aantal_zetels: 6
+  - naam: HvR (HartvoorRooi)
+    aantal_zetels: 5
+  - naam: CDA
+    aantal_zetels: 4
+  - naam: VVD
+    aantal_zetels: 4
 contact:
   website: http://www.sint-oedenrode.nl
   email: info@sint-oedenrode.nl
+  bezoekadres: Burgemeester Wernerplein 1, 5492 GD SINT-OEDENRODE
+  postadres: Postbus 44, 5490 AA SINT-OEDENRODE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Burgemeester Wernerplein
+    huisnummer: '1'
+    postcode: 5492 GD
+    woonplaats: SINT-OEDENRODE
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '44'
+    postcode: 5490 AA
+    woonplaats: SINT-OEDENRODE
+  phones:
+  - nummer: (0413) 48 19 11
+    label: algemeen
+  emails:
+  - email: info@sint-oedenrode.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.sint-oedenrode.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2017-01-01'
+last_mutation: '2018-01-26'
+last_verified: '2018-01-26'
+successor_id: org:gemeente-meierijstad
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/40795/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/40795/gemeente-sint-oedenrode
+  retrieved: '2026-05-16'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q50885806
   retrieved: '2026-05-09'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/gemeente/gm0846
   retrieved: '2026-05-09'
-successor_id: org:gemeente-meierijstad

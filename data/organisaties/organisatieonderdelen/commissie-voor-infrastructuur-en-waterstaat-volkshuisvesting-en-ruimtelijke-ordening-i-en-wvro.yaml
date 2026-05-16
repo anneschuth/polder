@@ -3,16 +3,37 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '98880'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Commissie voor Infrastructuur en Waterstaat/ Volkshuisvesting en Ruimtelijke
     Ordening (I&W/VRO)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/i_w_vro
+  bezoekadres: Kazernestraat 52, 2514 CV Den Haag
+  postadres: Postbus 20017, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kazernestraat 52
+    postcode: 2514 CV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20017'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/i_w_vro
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-21'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/98880/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/98880/commissie-voor-infrastructuur-en-waterstaat-volkshuisvesting-en-ruimtelijke-ordening-i-en-wvro
+  retrieved: '2026-05-16'

@@ -3,17 +3,87 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28222289'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0861
+  owms: http://standaarden.overheid.nl/owms/terms/avri
+  kvk: '64766950'
+  organisatiecode: so0861
+  rsin: '855828390'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Avri
+  roo_id: '29528843'
 names:
 - value: Avri
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28222289/Avri
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Avri%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Avri%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Avri%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
 contact:
   website: https://www.avri.nl
   email: info@avri.nl
+  bezoekadres: Meersteeg 15, 4191 NK Geldermalsen
+  postadres: Postbus 290, 4190 CG Geldermalsen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Meersteeg
+    huisnummer: '15'
+    postcode: 4191 NK
+    woonplaats: Geldermalsen
+  - type: Postadres
+    postbus: '290'
+    postcode: 4190 CG
+    woonplaats: Geldermalsen
+  - type: Woo-Adres
+    openbare_ruimte: Meersteeg
+    huisnummer: '15'
+    postbus: '290'
+    postcode: 4191 NK
+    woonplaats: Geldermalsen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (0345) 58 53 53
+    label: algemeen
+  - nummer: (0345) 58 53 81
+    label: bedrijfsafval
+  emails:
+  - email: info@avri.nl
+    label: algemeen
+  - email: bedrijfsafval@avri.nl
+    label: bedrijfsafval
+  internet_addresses:
+  - url: https://www.avri.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.avri.nl/inwoners/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2023-07-20'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28222289/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28222289/avri
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-12-01'

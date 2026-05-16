@@ -3,18 +3,109 @@ type: adviescollege
 identifiers:
   roo_id: '66176'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10262
+  owms: http://standaarden.overheid.nl/owms/terms/rvvolksgezsam
+  organisatiecode: oorg10262
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
 names:
 - value: Raad voor Volksgezondheid en Samenleving
   abbr: RVS
   valid_from: '1900-01-01'
+description:
+  text: De Raad voor Volksgezondheid en Samenleving (RVS) adviseert de regering en
+    het parlement bij beleids- en besluitvorming waarbij de thema's volksgezondheid,
+    zorg en samenleving een rol spelen. Dit doet de RVS door onder meer vraagstukken
+    te agenderen, hierover te informeren en aan politiek en maatschappelijk debat
+    richting te geven voor. Tevens is de praktische uitvoering van beleid een belangrijk
+    aandachtspunt van de RVS.
+  url: https://www.raadrvs.nl/over-de-rvs
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet op de Raad voor volksgezondheid en samenleving, artikel 1
+  referentie: https://wetten.overheid.nl/BWBR0035852/2023-10-05/#Artikel1
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.raadrvs.nl/contact
+      overzichtURL: https://organisaties.overheid.nl/woo/66176/Raad_voor_Volksgezondheid_en_Samenleving
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.raadrvs.nl/documenten
+      toelichting: zoekopdracht op werkagenda
+    - informatiecategorie: Adviezen
+      url: https://www.raadrvs.nl/documenten?trefwoord=&periode%2Dvan=&periode%2Dtot=&type=Advies
+  wooVerzoek:
+    url: https://www.raadrvs.nl/contact
+afspraak:
+  url: https://www.raadrvs.nl/contact
 contact:
   website: https://www.raadrvs.nl/
   email: mail@raadrvs.nl
+  bezoekadres: Bezuidenhoutseweg 30, 2594 AV Den Haag
+  postadres: Postbus 19404, 2500 CK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Bezuidenhoutseweg
+    huisnummer: '30'
+    postcode: 2594 AV
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '19404'
+    postcode: 2500 CK
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    postbus: '19404'
+    postcode: 2500 CK
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 50 60
+    label: algemeen
+  emails:
+  - email: mail@raadrvs.nl
+    label: algemeen
+  - email: bedrijfsvoering@raadrvs.nl
+    label: Woo-verzoeken
+  internet_addresses:
+  - url: https://www.raadrvs.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.raadrvs.nl/service/contact
+    label: Algemeen
+  social_media:
+  - platform: LinkedIn
+    gebruikersnaam: Raad voor Volksgezondheid & Samenleving (RVS)
+    url: https://www.linkedin.com/company/raad-voor-volksgezondheid-en-samenleving-rv&s-/
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/66176/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/66176/rvs
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-01-01'

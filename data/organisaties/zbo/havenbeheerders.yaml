@@ -4,13 +4,46 @@ identifiers:
   roo_id: '26140778'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000188
 classification: zbo
+legal_form: Privaatrechtelijk - Overig
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Havenbeheerders
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo’s die niet onder de werking van de kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Wet voorkoming verontreiniging door schepen, Artikel 6
+  referentie: http://wetten.overheid.nl/cgi-bin/deeplink/law1/title=Wet%20voorkoming%20verontreiniging%20door%20schepen
+taken_en_bevoegdheden: '* De beheerder van een aangewezen haven draagt zorg voor een
+  toereikende voorziening voor het in ontvangst nemen van scheepsafval en overige
+  schadelijke stoffen afkomstig van schepen. Deze taak kan worden uitgevoerd door
+  een zogenoemde houder van een havenontvangstvoorziening.* Daarnaast kan de havenbeheerder
+  op grond van de Wet havenstaatscontrole de toegang van een schip, dat op een zogenoemde
+  zwarte of grijze lijst staat, tot zijn haven weigeren.'
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2016-12-31'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-08-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/26140778/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/26140778/havenbeheerders
+  retrieved: '2026-05-16'
+roo_start_datum: '1983-01-01'

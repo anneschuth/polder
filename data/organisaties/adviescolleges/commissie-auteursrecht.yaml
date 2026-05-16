@@ -3,16 +3,55 @@ type: adviescollege
 identifiers:
   roo_id: '28220141'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10254
+  owms: http://standaarden.overheid.nl/owms/terms/cieautrcht
+  organisatiecode: oorg10254
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+advisory_kind: Permanent adviescollege
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Commissie auteursrecht
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetAdviescollege:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Wet adviesstelsel Justitie, artikel 3
+  referentie: https://wetten.overheid.nl/BWBR0008808/2019-01-01/#Artikel3
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid/organisatie/organogram/commissies-ministerie-van-jenv/commissie-auteursrecht
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
+  internet_addresses:
+  - url: https://www.rijksoverheid.nl/ministeries/ministerie-van-justitie-en-veiligheid/organisatie/organogram/commissies-ministerie-van-jenv/commissie-auteursrecht
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-29'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28220141/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28220141/commissie-auteursrecht
+  retrieved: '2026-05-16'
+roo_start_datum: '1997-01-01'

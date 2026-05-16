@@ -6,22 +6,182 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0202
   roo_id: '32510'
   wikidata: Q1310
+  owms: http://standaarden.overheid.nl/owms/terms/Arnhem_(gemeente)
+  ictu: '00202'
+  organisatiecode: gm0202
+  rsin: 001825112
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ARN
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Arnhem
   abbr: Arnhem
   valid_from: '1900-01-01'
-  valid_until: '2030-12-31'
+description:
+  text: 'De gemeentelijke organisatie heeft een tweehoofdigedirectie: de gemeentesecretaris
+    ende concerndirecteur. Onder hun leiding is deorganisatie verdeeld in zeven onderdelen,die
+    we clusters noemen. Elk cluster is verantwoordelijkvoor een specifieke groep takendie
+    bij elkaar horen. Binnen elk cluster zijn erverschillende afdelingen. Elke afdeling
+    heefteen afdelingshoofd. Deze afdelingshoofdenwerken nauw samen met de clustermanagerom
+    het cluster te leiden. Samen vormen ze hetCluster Management Team, afgekort als
+    CMT.'
+  url: https://www.arnhem.nl/Bestuur/organisatie/Staat_van_de_Organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.arnhem.nl/woo
+      overzichtURL: https://organisaties.overheid.nl/woo/32510/Gemeente_Arnhem
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Convenanten
+      url: https://arnhem.bestuurlijkeinformatie.nl/Search?q=convenant
+      toelichting: Dit zijn documenten waarin afspraken zijn vastgelegd tussen de
+        gemeente en één of meer partijen.
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.arnhem.nl/Bestuur/financien
+      toelichting: De jaarplannen en jaarverslagen van de bestuursorganen.
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Arnhem%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+      toelichting: Beschikkingen in de zin van de Algemene wet bestuursrecht (Awb),
+        zoals besluiten die voor een specifiek geval gelden en niet van algemene strekking
+        zijn.
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://arnhem.bestuurlijkeinformatie.nl/
+      toelichting: Agenda’s, besluiten en besluitenlijsten van vergaderingen van het
+        college van burgemeester en wethouders (B&W).
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://arnhem.maps.arcgis.com/apps/webappviewer/index.html?id=ccc471b8ef5c45afb8f91bc7f486c6cc
+      toelichting: Open data van de gemeente op de kaart.
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://woo.arnhem.nl/
+      toelichting: Publicatie Woo-verzoeken.
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.arnhem.nl/Bestuur/Bestuurlijke_informatie/Bestuurlijke_informatie
+      toelichting: In het Bestuurlijk Informatiesysteem bevinden zich de vergaderstukken
+        en besluiten van de gemeenteraad en het college van burgemeester en wethouders.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://arnhem.incijfers.nl/
+      toelichting: Arnhem in Cijfers. Informatie over de stad en haar inwoners. Van
+        heel  Arnhem en per stadsdeel, wijk en buurt.
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Arnhem%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+      toelichting: Verkeersbesluiten of mededelingen.
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Arnhem%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Ruimtelijke plannen/omgevingsdocumenten.
+    - informatiecategorie: Onderzoeksrapporten
+      url: https://opendata.arnhem.nl/
+      toelichting: Alle open data van de gemeente.
+  wooVerzoek:
+    url: https://www.arnhem.nl/Bestuur/Bestuurlijke_informatie/wet_open_overheid
+organogram_url: https://www.arnhem.nl/Bestuur/organisatie/Staat_van_de_Organisatie
+afspraak:
+  telefoonnummer: (0800) 18 09
+  url: https://www.arnhem.nl/algemeen/contact
+geography:
+  oppervlakte: 101,53
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 101.53
+  aantal_inwoners: 171822
+  inwoners: '1692'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1692.0
+  bevat_plaatsen_raw: Arnhem
+  bevat_plaatsen:
+  - Arnhem
+council:
+  total_seats: 37
+  parties:
+  - naam: PRO
+    aantal_zetels: 9
+  - naam: VVD
+    aantal_zetels: 5
+  - naam: D66
+    aantal_zetels: 4
+  - naam: Arnhem Centraal
+    aantal_zetels: 4
+  - naam: BurgerBelang Arnhem
+    aantal_zetels: 3
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 2
+  - naam: DENK
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 2
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: Volt
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
 contact:
   website: https://www.arnhem.nl
   email: woo@arnhem.nl
+  bezoekadres: Koningstraat 38, 6811 DG ARNHEM
+  postadres: Postbus 9029, 6800 EL ARNHEM
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Koningstraat
+    huisnummer: '38'
+    postcode: 6811 DG
+    woonplaats: ARNHEM
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '9029'
+    postcode: 6800 EL
+    woonplaats: ARNHEM
+  - type: Woo-Adres
+    postbus: '9029'
+    postcode: 6800 EL
+    woonplaats: Arnhem
+    regio: Gelderland
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: Koningstraat
+    huisnummer: '38'
+    postcode: 6811 DG
+    woonplaats: ARNHEM
+  phones:
+  - nummer: (0800) 18 09
+    label: algemeen
+  internet_addresses:
+  - url: https://www.arnhem.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.arnhem.nl/algemeen/contact
+    label: Algemeen
+  - url: https://www.arnhem.nl/algemeen/contact
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: '2030-12-31'
+last_mutation: '2026-05-07'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32510/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32510/arnhem
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

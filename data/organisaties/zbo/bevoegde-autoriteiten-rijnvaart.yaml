@@ -4,13 +4,53 @@ identifiers:
   roo_id: '27623527'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000110
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Cluster van zbo's
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Bevoegde autoriteiten Rijnvaart
   valid_from: '1900-01-01'
+description:
+  text: Dit is een cluster van zbo' s die niet onder de werking van de Kaderwet zelfstandige
+    bestuursorganen valt. De onderliggende onderdelen van dit cluster worden daarom
+    niet in dit register benoemd.
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Aanwijzing bevoegde autoriteiten reglementen CCR
+  referentie: http://wetten.overheid.nl/BWBR0019146
+- opschrift: Binnenvaartwet
+  referentie: http://wetten.overheid.nl/BWBR0023009/
+taken_en_bevoegdheden: Afgifte van een certificaat van onderzoek voor schepen in de
+  Rijnvaart. Daarbij wordt beoordeeld of een vaartuig voldoet aan de richtlijnen en
+  geen gevaar oplevert voor de veiligheid voor een zich aan boord bevindend persoon,
+  of de scheepvaart.Het betreft feitelijk uitsluitend de Commissie van Deskundigen
+  (van het reglement onderzoek schepen op de Rijn).
+classifications:
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+personnel:
+  aantalFte: 0,0
+  peildatumFte: '2018-12-31'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-08-20'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/27623527/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/27623527/bevoegde-autoriteiten-rijnvaart
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-01-01'

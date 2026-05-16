@@ -3,17 +3,91 @@ type: adviescollege
 identifiers:
   roo_id: '28351140'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10106
+  owms: http://standaarden.overheid.nl/owms/terms/aclg
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Adviescollege Levenslanggestraften
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege Levenslanggestraften adviseert de staatssecretaris van Justitie
+    en Veiligheid of een levenslanggestrafte zich, na 25 jaar van de straf te hebben
+    uitgezeten, kan voorbereiden op een eventuele terugkeer in de samenleving. Een
+    levenslange gevangenisstraf zonder enig zicht op strafvermindering of vervroegde
+    vrijlating is namelijk in strijd met artikel 3 van het Europees Verdrag van de
+    Rechten van de Mens. Dit is vastgesteld in een uitspraak die het Europees Hof
+    voor de Rechten van de Mens op 14 december 2000 heeft gedaan. Daarom wordt er
+    voor levenslanggestraften een zogenaamde 'ambtshalve gratieprocedure' opgestart
+    nadat zij 28 jaar van hun straf hebben uitgezeten. Tijdens deze procedure heeft
+    het Adviescollege Levenslanggestraften een informerende rol. De uitkomst van de
+    procedure kan zijn dat een levenslanggestrafte (onder voorwaarden) op vrije voeten
+    komt, al kan een dergelijke herbeoordeling er ook toe leiden dat de gestrafte
+    vast blijft zitten.Dit college valt niet onder de Kaderwet adviescolleges en is
+    dus geen formeel adviescollege in de zin van die wet.
+  url: https://www.adviescollegelevenslanggestraften.nl/over-het-adviescollege-levenslanggestraften/
+wettelijke_grondslagen:
+- opschrift: Besluit Adviescollege levenslanggestraften, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0038779/2023-12-01/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28351140/Adviescollege_Levenslanggestraften
 contact:
   website: https://www.adviescollegelevenslanggestraften.nl/
   email: adviescollege.levenslanggestraften@​rechtspraak.nl
+  bezoekadres: Walburgstraat 2-4, 6811 CD Arnhem
+  postadres: Postbus 9030, 6800 EM Arnhem
+  addresses:
+  - type: Bezoekadres
+    toelichting: Paleis van Justitie
+    openbare_ruimte: Walburgstraat
+    huisnummer: 2-4
+    postcode: 6811 CD
+    woonplaats: Arnhem
+  - type: Postadres
+    postbus: '9030'
+    postcode: 6800 EM
+    woonplaats: Arnhem
+  - type: Woo-Adres
+    postbus: '9030'
+    postcode: 6800 EM
+    woonplaats: Arnhem
+  emails:
+  - email: adviescollege.levenslanggestraften@​rechtspraak.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.adviescollegelevenslanggestraften.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.adviescollegelevenslanggestraften.nl/contact/
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-13'
+last_verified: '2026-03-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28351140/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28351140/adviescollege-levenslanggestraften
+  retrieved: '2026-05-16'
+roo_start_datum: '2017-03-01'

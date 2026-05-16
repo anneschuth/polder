@@ -4,20 +4,103 @@ identifiers:
   oin: 00000002807487090000
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10245
   roo_id: '704'
+  ictu: 05806
 classification: hoge-college
 parent_id: null
 names:
 - value: Kanselarij der Nederlandse Orden
   valid_from: '1900-01-01'
+description:
+  text: "De Kanselarij der Nederlandse Orden is de organisatie die:-\thet Kapittel\
+    \ voor de Civiele Orden en het Kapittel der Militaire Willems-Orde huisvest en\
+    \ ondersteunt bij hun advisering over de voorstellen voor Koninklijke onderscheidingen-\t\
+    zorg draagt voor het beheer van de versierselen van de onderscheidingen en voor\
+    \ de correcte verzending ervan aan degenen die ze uitreiken-\tzorgt dat registers\
+    \ worden aangehouden van onderscheiden personen-\tin de persoon van de Kanselier\
+    \ der Nederlandse Orden de zuiverheid en waardigheid van de Orden bewaaktDe dagelijkse\
+    \ leiding is in handen van de directeur, die daarnaast secretaris van het Kapittel\
+    \ voor de Civiele Orden is."
+  url: https://www.lintjes.nl/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.lintjes.nl/documenten/formulieren/2023/04/07/informatie-over-en-formulier-voor-het-indienen-van-een-woo-verzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/704/Kanselarij_der_Nederlandse_Orden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://www.lintjes.nl/documenten?q=besluit
+      toelichting: Woo -besluiten en besluiten op bezwaar
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/stcrt-2020-30551.html
+      toelichting: Mandaat regeling directeur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.lintjes.nl/organisatie/jaarverslagen
+      toelichting: De jaarverslagen van de Kanselarij der Nederlandse Orden, het Kapittel
+        voor de Civiele Orden en het Kapittel der Militaire Willems-Orde.
+  wooVerzoek:
+    url: https://www.lintjes.nl/documenten/formulieren/2023/04/07/informatie-over-en-formulier-voor-het-indienen-van-een-woo-verzoek
+afspraak:
+  email: info@kanselarij.nl
+  telefoonnummer: (070) 375 12 00
+  url: https://www.lintjes.nl
 contact:
   website: http://www.lintjes.nl
   email: info@kanselarij.nl
+  bezoekadres: Nassaulaan 18, 2514 JT Den Haag
+  postadres: Postbus 30436, 2500 GK Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nassaulaan 18
+    postcode: 2514 JT
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '30436'
+    postcode: 2500 GK
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    openbare_ruimte: Nassaulaan
+    huisnummer: '18'
+    postcode: 2514 JT
+    woonplaats: Den Haag
+    regio: Zuid - Holland
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '30436'
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 375 12 00
+    label: algemeen
+  emails:
+  - email: info@kanselarij.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.lintjes.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/704/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/704/kanselarij-der-nederlandse-orden
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

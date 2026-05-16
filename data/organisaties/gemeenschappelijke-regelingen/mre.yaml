@@ -3,18 +3,102 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28557431'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0831
+  owms: http://standaarden.overheid.nl/owms/terms/metregein
+  kvk: '17245531'
+  btw: NL801703712B01
+  loonheffing: 801703712L03
+  organisatiecode: so0831
+  rsin: '801703712'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Metropoolregio Eindhoven 2024
+  roo_id: '29544570'
 names:
 - value: Metropoolregio Eindhoven
   abbr: MRE
   valid_from: '1900-01-01'
+description:
+  text: Metropoolregio Eindhoven (MRE) is een bestuurlijke samenwerking tussen 21
+    gemeenten in het zuidoosten van de provincie Noord-Brabant op basis van de Wet
+    gemeenschappelijke regelingen (Wgr). Het betreft de gemeenten Asten, Bergeijk,
+    Best, Bladel, Cranendonck, Deurne, Eersel, Eindhoven, Geldrop-Mierlo, Gemert-Bakel,
+    Heeze-Leende, Helmond, Laarbeek, Nuenen c.a., Oirschot, Reusel-de Mierden, Son
+    en Breugel, Someren, Valkenswaard, Veldhoven en Waalre.
+  url: https://metropoolregioeindhoven.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://metropoolregioeindhoven.nl/over-ons/offici%C3%ABle-publicaties
+      overzichtURL: https://organisaties.overheid.nl/woo/28557431/Metropoolregio_Eindhoven
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://metropoolregioeindhoven.nl/netwerk/algemeen-bestuur
+      toelichting: Vergaderstukken en verslagen Algemeen Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://metropoolregioeindhoven.nl/over-ons/planning-en-control
+      toelichting: Taken en uitvoering
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Metropoolregio+Eindhoven%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Metropoolregio+Eindhoven%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+      toelichting: Verordeningen en beleidsregels
+  wooVerzoek:
+    url: https://metropoolregioeindhoven.nl/over-ons/offici%C3%ABle-publicaties
+organogram_url: https://metropoolregioeindhoven.nl/over-ons
+afspraak:
+  telefoonnummer: (040) 259 45 94
 contact:
   website: https://metropoolregioeindhoven.nl
   email: info@metropoolregioeindhoven.nl
+  bezoekadres: Raiffeisenstraat 18, 5611 CH Eindhoven
+  postadres: Postbus 985, 5600 AZ Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raiffeisenstraat
+    huisnummer: '18'
+    postcode: 5611 CH
+    woonplaats: Eindhoven
+  - type: Postadres
+    postbus: '985'
+    postcode: 5600 AZ
+    woonplaats: Eindhoven
+  - type: Woo-Adres
+    postbus: '985'
+    postcode: 5600 AZ
+    woonplaats: Eindhoven
+    land: Nederland
+  phones:
+  - nummer: (040) 259 45 94
+    label: algemeen
+  emails:
+  - email: info@metropoolregioeindhoven.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://metropoolregioeindhoven.nl
+    label: algemeen
+  contact_forms:
+  - url: https://metropoolregioeindhoven.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-15'
+last_verified: '2024-10-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28557431/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28557431/mre
+  retrieved: '2026-05-16'
+roo_start_datum: '2015-01-01'

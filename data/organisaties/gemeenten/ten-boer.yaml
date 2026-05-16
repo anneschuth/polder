@@ -4,6 +4,9 @@ identifiers:
   oin: '00000001001220615000'
   kvk: 01183249
   roo_id: '32134'
+  owms: http://standaarden.overheid.nl/owms/terms/Ten_Boer_(gemeente)
+  ictu: 00009
+  organisatiecode: gm0009
 classification: gemeente
 parent_id: null
 names:
@@ -11,15 +14,79 @@ names:
   abbr: Ten Boer
   valid_from: '1900-01-01'
   valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 45,71
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 45.71
+  aantal_inwoners: 7272
+  inwoners: '159'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 159.0
+  bevat_plaatsen_raw: Garmerwolde, Lellens, Sint Annen, Ten Boer, Ten Post, Thesinge,
+    Winneweer, Woltersum
+  bevat_plaatsen:
+  - Garmerwolde
+  - Lellens
+  - Sint Annen
+  - Ten Boer
+  - Ten Post
+  - Thesinge
+  - Winneweer
+  - Woltersum
+council:
+  total_seats: 13
+  parties:
+  - naam: ChristenUnie
+    aantal_zetels: 3
+  - naam: CDA
+    aantal_zetels: 3
+  - naam: Algemeen Belang
+    aantal_zetels: 3
+  - naam: GroenLinks
+    aantal_zetels: 2
+  - naam: PvdA
+    aantal_zetels: 2
 contact:
   website: http://www.tenboer.nl
   email: gemeente@tenboer.nl
+  bezoekadres: Hendrik Westerstraat 24, 9791 CT TEN BOER
+  postadres: Postbus 7, 9790 AA TEN BOER
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Hendrik Westerstraat
+    huisnummer: '24'
+    postcode: 9791 CT
+    woonplaats: TEN BOER
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+  - type: Postadres
+    openbare_ruimte: Postbus 7
+    postbus: '7'
+    postcode: 9790 AA
+    woonplaats: TEN BOER
+  phones:
+  - nummer: (050) 302 88 88
+    label: algemeen
+  emails:
+  - email: gemeente@tenboer.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.tenboer.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2020-03-05'
+last_verified: '2020-03-05'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/32134/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/32134/ten-boer
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

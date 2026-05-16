@@ -3,7 +3,7 @@ name:
   full: M.A. Hasslacher
   family: Hasslacher
   given: M.A.
-  initials: M.
+  initials: M.A.
 mandaten:
 - id: 6e272eb9-6aa5-4221-abf1-e501e5ee5346
   organization_id: org:gemeente-assen
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2374465
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23236/gemeente-assen
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28648427
 - id: 5553cd1a-80b9-4c60-a0ce-97346d975555
   organization_id: org:gemeente-assen
   post_id: post:raadslid-gemeente-assen

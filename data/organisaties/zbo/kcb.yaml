@@ -1,25 +1,128 @@
 id: org:zbo-kcb
 type: zbo
+subname: Kwaliteits-Controle-Bureau
 identifiers:
   roo_id: '28212434'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000135
   oin: 00000001002877429000
   kvk: '40407410'
+  rsin: 002877429
 classification: zbo
+legal_form: Privaatrechtelijk - Stichting
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Landbouw, Visserij, Voedselzekerheid en Natuur
+  roo_id: '22387697'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1153
+  owms: http://standaarden.overheid.nl/owms/terms/minlavivona
 names:
 - value: Stichting Kwaliteits-Controle-Bureau
   abbr: KCB
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: ja
+wettelijke_grondslagen:
+- opschrift: Landbouwkwaliteitswet, Artikel 8
+  referentie: http://wetten.overheid.nl/BWBR0002755/
+taken_en_bevoegdheden: '* De belangrijkste taak van het KCB is het inspecteren van
+  verse groenten en fruit, snijbloemen en potplanten. Het KCB verricht:* de import-
+  en exportinspectie (kwaliteit) van verse groenten en fruit;* de kwaliteitscontrole
+  van verse groenten en fruit die binnen Nederland worden verhandeld, met uitzondering
+  van het detailhandelsstadium;* de importinspectie (fytosanitair) van verse groenten
+  en fruit, snijbloemen en potplanten en van plantaardige producten die niet onder
+  een specifieke sector vallen, ook wel ‘diverse producten’ genaamd;* de bemonstering-
+  en monitoring activiteiten ten behoeve van de export naar specifieke bestemmingen,
+  onder andere de ‘Monitoring vruchtgroenten’ bestemd voor Japan, USA en Canada.;*
+  Daarnaast voert het KCB voor de overheid een aantal projecten uit, zoals Survey
+  Tuta Absoluta in de eindteelt van tomaat en Survey Afrikaanse fruitmot in de eindteelt
+  van paprika. De fytosanitaire exportinspectie van de plantaardige producten en de
+  afgifte van fytosanitaire exportcertificaten gebeuren door NVWA-ambtenaren.;* Het
+  waarmerken van fytosanitaire certificaten met een CITES-bijschrijving vindt eveneens
+  plaats door NVWA-ambtenaren. De aanvraag van de fytosanitaire exportinspecties en
+  verzoeken tot afgifte van fytosanitaire exportcertifcaten worden door het KCB in
+  ontvangst genomen.;'
+evaluations:
+- datum: '2023-12-22'
+  kamerstuknummer: TK 25268 nr. 221
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-221.html
+- datum: '2017-12-19'
+  kamerstuknummer: TK 25268 nr. 157
+  referentie: https://zoek.officielebekendmakingen.nl/kst-25268-157.html
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: 3928 - KWALITEITS CONTROLE BUREAU
+    referentie: https://www.uitvoeringarbeidsvoorwaardenwetgeving.nl/mozard/!suite92.scherm1007?mObj=27116&mNch=46ivrr3i5e
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: a.s.r.
+    referentie: https://www.asr.nl/pensioen
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Openbaar gezag (Artikel 1.3, lid 1a, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.3&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://kcb.nl/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/28212434/Stichting_Kwaliteits-Controle-Bureau
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://kcb.nl/over/jaarverslag
+      toelichting: Jaarverslag KCB
+personnel:
+  aantalFte: 223,0
+  peildatumFte: '2024-04-01'
 contact:
   website: http://www.kcb.nl/
   email: kcb@kcb.nl
+  bezoekadres: Louis Pasteurlaan 6, 2719 EE Zoetermeer
+  postadres: Postbus 420, 2700 AK Zoetermeer
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Louis Pasteurlaan
+    huisnummer: '6'
+    postcode: 2719 EE
+    woonplaats: Zoetermeer
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '420'
+    postcode: 2700 AK
+    woonplaats: Zoetermeer
+  phones:
+  - nummer: (088) 308 82 00
+    label: algemeen
+  emails:
+  - email: kcb@kcb.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.kcb.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://kcb.nl/contactkcb
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-01-21'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28212434/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28212434/kcb
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -28,3 +131,4 @@ sources:
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000135
   retrieved: '2026-05-09'
+roo_start_datum: '1998-01-01'

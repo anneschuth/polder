@@ -3,7 +3,7 @@ name:
   full: E.H.S. Beckers
   family: Beckers
   given: E.H.S.
-  initials: E.
+  initials: E.H.S.
 mandaten:
 - id: 4ac699a8-fd30-44c0-a12e-b363db158bbc
   organization_id: org:gemeente-maastricht
@@ -15,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910557
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32664/gemeente-maastricht
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28636885
 - id: 168aa02f-cd14-4e5a-87cb-02c3964ba23f
   organization_id: org:gemeente-maastricht
   post_id: post:raadslid-gemeente-maastricht

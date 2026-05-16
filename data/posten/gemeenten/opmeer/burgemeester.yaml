@@ -5,3 +5,12 @@ classification: burgemeester
 seat_count: 1
 valid_from: '1900-01-01'
 valid_until: null
+roo_functie_id: '22753'
+roo_naam: Burgemeester
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/26028/gemeente-opmeer
+  retrieved: '2026-05-16'
+  fields:
+  - roo_functie_id
+  - roo_naam

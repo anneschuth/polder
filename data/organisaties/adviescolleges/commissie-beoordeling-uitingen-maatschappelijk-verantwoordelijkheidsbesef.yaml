@@ -3,16 +3,56 @@ type: adviescollege
 identifiers:
   roo_id: '28356011'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10142
+  owms: http://standaarden.overheid.nl/owms/terms/ciebeoorduitmvb
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Commissie beoordeling uitingen maatschappelijk verantwoordelijkheidsbesef
   valid_from: '1900-01-01'
+description:
+  text: De Commissie beoordeling uitingen maatschappelijk verantwoordelijkheidsbesef
+    adviseert de minister van Onderwijs, Cultuur en Wetenschap (OCW) indien deze een
+    besluit wenst te nemen op grond van artikel 6.11, eerste lid, van de Wet op het
+    hoger onderwijs en wetenschappelijk onderzoek. Bij het nemen van een dergelijk
+    besluit beoordeelt de commissie of een uiting discriminatoir is in de zin van
+    bestaande wet- en regelgeving volgens eerdere uitspraken van de (straf)rechter
+    en het College voor de Rechten van de Mens, of op een andere manier duidelijk
+    in strijd is met de kernwaarden van de Nederlandse democratische rechtstaat. Daarnaast
+    beoordeelt de commissie of de uiting, gelet op de context waarin deze is gedaan,
+    valt onder een grondrecht, de academische vrijheid of een ander fundamenteel recht
+    en adviseert over hoe de betrokken (grond)rechten tegen elkaar moeten worden afgewogen.
+  url: https://wetten.overheid.nl/BWBR0005682/2025-01-01/#Hoofdstuk6_Titeldeel2_Artikel6.11
+wettelijke_grondslagen:
+- opschrift: Regeling Commissie beoordeling uitingen maatschappelijk verantwoordelijkheidsbesef,
+    artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0040133/2020-01-01/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
 contact:
   website: https://wetten.overheid.nl/BWBR0005682/2025-01-01/#Hoofdstuk6_Titeldeel2_Artikel6.11
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2026-02-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28356011/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28356011/commissie-beoordeling-uitingen-maatschappelijk-verantwoordelijkheidsbesef
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-01-01'

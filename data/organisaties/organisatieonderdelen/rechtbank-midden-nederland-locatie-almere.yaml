@@ -2,14 +2,32 @@ id: org:onderdeel-rechtbank-midden-nederland-locatie-almere
 type: organisatieonderdeel
 identifiers:
   roo_id: '28048472'
+  kvk: '82940444'
+  rsin: '862663489'
 classification: organisatieonderdeel
 parent_id: org:rechtbank-midden-nederland
 names:
 - value: Rechtbank Midden-Nederland, locatie Almere
   valid_from: '1900-01-01'
+contact:
+  bezoekadres: De Diagonaal 37, 1315 XK Almere
+  postadres: Postbus 2035, 8203 AA Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Diagonaal
+    huisnummer: '37'
+    postcode: 1315 XK
+    woonplaats: Almere
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+  - type: Postadres
+    postbus: '2035'
+    postcode: 8203 AA
+    woonplaats: Lelystad
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2019-09-09'
+last_verified: '2026-01-19'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28048472/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28048472/rechtbank-midden-nederland-locatie-almere
+  retrieved: '2026-05-16'

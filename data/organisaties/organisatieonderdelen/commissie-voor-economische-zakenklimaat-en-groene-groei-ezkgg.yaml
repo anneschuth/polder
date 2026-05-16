@@ -3,15 +3,25 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '29066026'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-hc
+parent_id: org:onderdeel-commissies-ek
+relation_to_ministerie:
+  naam: Economische Zaken en Klimaat
+  roo_id: '10621'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1045
+  owms: http://standaarden.overheid.nl/owms/terms/minez
 names:
 - value: Commissie voor Economische Zaken/Klimaat & Groene Groei (EZ/KGG)
   valid_from: '1900-01-01'
 contact:
   website: https://www.eerstekamer.nl/commissies/ez_kgg
+  internet_addresses:
+  - url: https://www.eerstekamer.nl/commissies/ez_kgg
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-09-25'
+last_verified: '2026-04-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29066026/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29066026/commissie-voor-economische-zakenklimaat-en-groene-groei-ezkgg
+  retrieved: '2026-05-16'

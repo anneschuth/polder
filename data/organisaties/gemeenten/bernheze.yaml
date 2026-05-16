@@ -6,21 +6,144 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm1721
   roo_id: '33233'
   wikidata: Q9815
+  owms: http://standaarden.overheid.nl/owms/terms/Bernheze
+  ictu: '01721'
+  organisatiecode: gm1721
+  rsin: '001160771'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_EEZ
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Bernheze
   abbr: Bernheze
   valid_from: '1900-01-01'
+description:
+  text: Onze vijf beloften aan uIn Bernheze streven we naar een gemeenschap waarin
+    het fijn wonen is voor iedereen. Met meer dan 200 medewerkers zorgen we voor leefbare
+    kernen, duurzame landbouw en economie en een weerbare en veilige samenleving.Hoewel
+    politiek belangrijk is, merkt u in uw dagelijks leven vooral onze dienstverlening.
+    Of het nu gaat om het ophalen van afval, het aanvragen van een paspoort of het
+    doen van een geboorte- of verhuisaangifte. Wij willen dat dit gewoon goed geregeld
+    is.Daarom beloven we u 5 dingen. U kunt ons hieraan houden. Dit houdt ons scherp
+    en zorgt ervoor dat u tevreden bent.
+  url: https://www.bernheze.org/bestuur-en-organisatie/over-ons/
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.bernheze.org/bestuur-en-organisatie/openbaarmakingen
+      overzichtURL: https://organisaties.overheid.nl/woo/33233/Gemeente_Bernheze
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bernheze%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bernheze%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Bernheze%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.bernheze.org/bestuur-en-organisatie/openbaarmakingen
+organogram_url: https://www.bernheze.org/data/downloadables/4/3/8/0/organisatiestructuur-gemeente-bernheze.pdf
+afspraak:
+  email: gemeente@bernheze.org
+  telefoonnummer: (0412) 45 88 88
+  url: https://www.bernheze.org/contact/openingstijden-en-contact-gemeentehuis/
+geography:
+  oppervlakte: 90,38
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 90.38
+  aantal_inwoners: 32947
+  inwoners: '364'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 364.0
+  bevat_plaatsen_raw: Heesch, Heeswijk-Dinther, Loosbroek, Nistelrode, Vinkel, Vorstenbosch
+  bevat_plaatsen:
+  - Heesch
+  - Heeswijk-Dinther
+  - Loosbroek
+  - Nistelrode
+  - Vinkel
+  - Vorstenbosch
+council:
+  total_seats: 23
+  parties:
+  - naam: CDA
+    aantal_zetels: 9
+  - naam: Lokaal
+    aantal_zetels: 6
+  - naam: Progressief Bernheze
+    aantal_zetels: 3
+  - naam: Centrumrechts Bernheze
+    aantal_zetels: 3
+  - naam: SP
+    aantal_zetels: 1
+  - naam: ONS Bernheze
+    aantal_zetels: 1
 contact:
   website: https://www.bernheze.org
   email: gemeente@bernheze.org
+  bezoekadres: De Misse 6, 5384 BZ HEESCH
+  postadres: Postbus 19, 5384 ZG HEESCH
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: De Misse
+    huisnummer: '6'
+    postcode: 5384 BZ
+    woonplaats: HEESCH
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '19'
+    postcode: 5384 ZG
+    woonplaats: HEESCH
+  - type: Woo-Adres
+    openbare_ruimte: De Misse
+    huisnummer: '6'
+    postcode: 5384 BZ
+    woonplaats: Heesch
+    land: Nederland
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: De Misse
+    huisnummer: '6'
+    postcode: 5384 BZ
+    woonplaats: HEESCH
+  phones:
+  - nummer: (0412) 45 88 88
+    label: algemeen
+  emails:
+  - email: gemeente@bernheze.org
+    label: algemeen
+  - email: bouwenenwonen@bernheze.org
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.bernheze.org
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/33233/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/33233/bernheze
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
@@ -29,3 +152,4 @@ sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q9815
   retrieved: '2026-05-09'
+roo_start_datum: '1995-01-28'

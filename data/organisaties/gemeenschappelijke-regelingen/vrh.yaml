@@ -5,23 +5,112 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0044
   oin: 00000001803316732000
   kvk: '27363691'
+  owms: http://standaarden.overheid.nl/owms/terms/Veiligheidsregio_Haaglanden
+  btw: NL803316732B01
+  loonheffing: 803316732L03
+  organisatiecode: so0044
+  rsin: '803316732'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Veiligheidsregio Haaglanden 2025
+  roo_id: '30090871'
 names:
 - value: Veiligheidsregio Haaglanden
   abbr: VRH
   valid_from: '1900-01-01'
+description:
+  text: Veiligheidsregio Haaglanden bestaat uit de Brandweer en de GHOR
+  url: https://www.vrh.nl/over-de-vrh?_gl=1*e7s3qg*_up*MQ..*_ga*NjI1ODIzNjQwLjE3MjU1NDI2NTA.*_ga_EZYGFHVPJ5*MTcyNTU0MjY0OC4xLjAuMTcyNTU0MjY0OC4wLjAuMA..
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.vrh.nl/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28472901/Veiligheidsregio_Haaglanden
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Haaglanden%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Haaglanden%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Veiligheidsregio+Haaglanden%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+  wooVerzoek:
+    url: https://www.vrh.nl/wet-open-overheid?_gl=1*1fboez6*_up*MQ..*_ga*MTk3MzQ2Mzk4MC4xNzI5ODU3ODM2*_ga_EZYGFHVPJ5*MTcyOTg1NzgzNS4xLjEuMTcyOTg1Nzg0My4wLjAuMA..
+afspraak:
+  email: info@vrh.nl
+  telefoonnummer: (088) 886 80 00
+  url: https://www.vrh.nl/contact?_gl=1*1v8mxhr*_up*MQ..*_ga*MTU4NzM3MTA4Mi4xNzI5ODU3NjU4*_ga_EZYGFHVPJ5*MTcyOTg1NzY1Ni4xLjAuMTcyOTg1NzY1Ni4wLjAuMA..
 contact:
   website: https://www.vrh.nl
   email: info@vrh.nl
+  bezoekadres: Dedemsvaartweg 1, 2545 AP Den Haag
+  postadres: Postbus 52155, 2505 CD Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Dedemsvaartweg
+    huisnummer: '1'
+    postcode: 2545 AP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  - type: Postadres
+    postbus: '52155'
+    postcode: 2505 CD
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '52155'
+    postcode: 2505 CD
+    woonplaats: Den Haag
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Dedemsvaartweg
+    huisnummer: '1'
+    postcode: 2545 AP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+    land: Nederland
+  phones:
+  - nummer: (088) 886 80 00
+    label: algemeen
+  emails:
+  - email: info@vrh.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.vrh.nl
+    label: algemeen
+  - url: http://www.haaglandenveilig.nl
+    label: algemeen
+  - url: https://www.vrh.nl/contact
+    label: contact
+  contact_forms:
+  - url: https://www.vrh.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-07'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28472901/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28472901/vrh
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2009-01-01'

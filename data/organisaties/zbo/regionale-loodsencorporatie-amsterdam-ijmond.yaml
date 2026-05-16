@@ -3,20 +3,77 @@ type: zbo
 identifiers:
   roo_id: '28359398'
   tooi: https://identifier.overheid.nl/tooi/id/zbo/zb000328
+  kvk: '50514733'
+  rsin: '822781049'
 classification: zbo
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
+zbo_kind: Afzonderlijke zbo
 parent_id: null
+relation_to_ministerie:
+  naam: Infrastructuur en Waterstaat
+  roo_id: '112773'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1130
+  owms: http://standaarden.overheid.nl/owms/terms/minienw
 names:
 - value: Regionale Loodsencorporatie Amsterdam-IJmond
   valid_from: '1900-01-01'
+kaderwet:
+  kaderwetZbo:
+    kaderwetVanToepassing: nee
+wettelijke_grondslagen:
+- opschrift: Loodsenwet, artikel 10
+  referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0004365&artikel=I&hoofdstuk=III&paragraaf=2&artikel=10
+classifications:
+- type: Pensioenfonds
+  wettelijke_grondslagen:
+  - opschrift: Stichting Beroepspensioenfonds Loodsen (BPLoodsen)
+    referentie: https://www.bploodsen.nl/
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Zelfstandige bestuursorganen, andere rechtspersonen (Artikel 1.2, lid
+      1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://ijmond.loodswezen.nl/nl
   email: amsterdam-ijmond@loodswezen.nl
+  bezoekadres: Kanaaldijk 242, 1975 AJ IJmuiden
+  postadres: Kanaaldijk 242, 1975 AJ IJmuiden
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kanaaldijk
+    huisnummer: '242'
+    postcode: 1975 AJ
+    woonplaats: IJmuiden
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    openbare_ruimte: Kanaaldijk
+    huisnummer: '242'
+    postcode: 1975 AJ
+    woonplaats: IJmuiden
+  phones:
+  - nummer: (0255) 56 45 45
+    label: algemeen
+  emails:
+  - email: amsterdam-ijmond@loodswezen.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ijmond.loodswezen.nl/nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-05'
+last_verified: '2026-03-03'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28359398/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28359398/regionale-loodsencorporatie-amsterdam-ijmond
+  retrieved: '2026-05-16'
 - id: tooi
   url: https://identifier.overheid.nl/tooi/id/zbo/zb000328
   retrieved: '2026-05-09'
+roo_start_datum: '2019-01-01'

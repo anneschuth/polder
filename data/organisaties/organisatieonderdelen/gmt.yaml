@@ -3,17 +3,58 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '8663'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-cz
+parent_id: org:onderdeel-directoraat-generaal-curatieve-zorg
 names:
 - value: Directie Geneesmiddelen en Medische Technologie
   abbr: GMT
   valid_from: '1900-01-01'
-  valid_until: '2021-01-01'
+description:
+  text: 'Geneesmiddelen - waaronder vaccins, medische hulpmiddelen, bloedproducten,
+    menselijke weefsels en (donor-) organen - zijn van wezenlijk belang voor de gezondheidszorg.
+    De overheid heeft hier een bijzondere verantwoordelijkheid voor. Nederlanders
+    moeten verzekerd zijn van doelmatige zorg met kwalitatief hoogwaardige en veilige
+    producten. De directie GMT schept de voorwaarden voor de beschikbaarheid en leveringszekerheid,
+    toegankelijkheid, veiligheid, kwaliteit en betaalbaarheid van medische producten
+    die aan de eisen van de tijd voldoen en doelmatig worden gebruikt. Duurzaamheid
+    speelt hierbij een grote rol.De directie GMT heeft binnen VWS de meeste raakvlakken
+    met de ‘markt’ en opereert in een internationale context van innovatie, wereldwijd
+    opererende bedrijven en productie- en leveringsketens. In een dergelijk krachtenveld
+    is een zorgvuldige afweging van alle belangen noodzakelijk.Aandachtsgebieden*
+    Beschikbaarheid medische producten: productie en toeleveringsketens weerbaar maken
+    en tekorten ondervangen tegen maatschappelijk aanvaardbare prijzen.* Dure geneesmiddelen:
+    het creëren van toekomstbestendig beleid voor dure geneesmiddelen waarbij betaalbaarheid,
+    kwaliteit en toegankelijkheid worden gewaarborgd.* Duurzaamheid: medische producten
+    verduurzamen zonder negatieve gevolgen voor veiligheid, kwaliteit, beschikbaarheid
+    en betaalbaarheid.* Extramurale farmaceutische zorg: betere farmaceutische patiëntenzorg
+    in de eerste lijn door optimaliseren van rollen en taken.* Toekomstbestendige
+    prijs- en vergoedingsinstrumenten voor geneesmiddelen: in de Wet geneesmiddelenprijzen
+    (Wgp) en het Geneesmiddelenvergoedingsysteem (GVS) meer wendbaarheid inbouwen
+    zodat er meer aandacht is voor de effecten op beschikbaarheid van bepaalde geneesmiddelen.*
+    Hiernaast zijn innovatie en de internationale context twee belangrijke rode draden
+    die vrijwel alles raken wat de directie doet.'
 contact:
   email: y.vd.beukel@minvws.nl
+  bezoekadres: Parnassusplein 5, 2511 VX Den Haag
+  postadres: Postbus 20350, 2500 EJ Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Parnassusplein
+    huisnummer: '5'
+    postcode: 2511 VX
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20350'
+    postcode: 2500 EJ
+    woonplaats: Den Haag
+  phones:
+  - nummer: (070) 340 72 15
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2021-01-01'
+last_mutation: '2026-04-14'
+last_verified: '2025-05-15'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/8663/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/8663/gmt
+  retrieved: '2026-05-16'

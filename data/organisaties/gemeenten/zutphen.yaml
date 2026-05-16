@@ -6,21 +6,148 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0301
   roo_id: '36962'
   wikidata: Q15858232
+  owms: http://standaarden.overheid.nl/owms/terms/Zutphen_(gemeente)
+  ictu: '00301'
+  organisatiecode: gm0301
+  rsin: '813584620'
+  atu: http://publications.europa.eu/resource/authority/atu/NLD_GEM_ZUT
 classification: gemeente
 parent_id: null
 names:
 - value: Gemeente Zutphen
   abbr: Zutphen
   valid_from: '1900-01-01'
+description:
+  url: https://zutphen.nl/organisatie/organogram
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://zutphen.nl/informatieverzoek
+      overzichtURL: https://organisaties.overheid.nl/woo/36962/Gemeente_Zutphen
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.zutphen.nl/
+      toelichting: Op deze pagina vindt u de gepubliceerde Woo-verzoeken en besluiten
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zutphen%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zutphen%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+    - informatiecategorie: Beschikkingen
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Zutphen%22))+AND+((dt.type==%22ongewenstverklaring+vreemdeling%22+OR+dt.type==%22vervreemding+erfgoed%22+OR+dt.type==%22Beschikking%22+OR+dt.type==%22andere+beschikking%22+OR+dt.type==%22andere+vergunning%22+OR+dt.type==%22evenementenvergunning%22+OR+dt.type==%22exploitatievergunning%22+OR+dt.type==%22omgevingsvergunning%22+OR+dt.type==%22vergunning+voor+activiteiten+op+of+in+oppervlaktewater%22)))
+  wooVerzoek:
+    url: https://zutphen.nl/informatieverzoek
+organogram_url: https://zutphen.nl/sites/default/files/Organogram%20gemeente%20Zutphen%20(2).pdf
+afspraak:
+  url: https://zutphen.nl/contact/contact-opnemen
+geography:
+  oppervlakte: 42,93
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 42.93
+  aantal_inwoners: 49292
+  inwoners: '1148'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 1148.0
+  bevat_plaatsen_raw: Warnsveld, Zutphen
+  bevat_plaatsen:
+  - Warnsveld
+  - Zutphen
+council:
+  total_seats: 28
+  parties:
+  - naam: GroenLinks-PvdA
+    aantal_zetels: 7
+  - naam: D66
+    aantal_zetels: 5
+  - naam: Forum voor Democratie
+    aantal_zetels: 3
+  - naam: Kies Bewust Lokaal
+    aantal_zetels: 2
+  - naam: SP
+    aantal_zetels: 2
+  - naam: VVD
+    aantal_zetels: 2
+  - naam: Burgerbelang
+    aantal_zetels: 2
+  - naam: CDA
+    aantal_zetels: 1
+  - naam: ChristenUnie
+    aantal_zetels: 1
+  - naam: Partij voor de Dieren
+    aantal_zetels: 1
+  - naam: Stadspartij Zutphen Warnsveld
+    aantal_zetels: 1
+  - naam: HOI Zutphen
+    aantal_zetels: 1
 contact:
   website: https://www.zutphen.nl
   email: info@zutphen.nl
+  bezoekadres: '''s Gravenhof 2, 7201 DN ZUTPHEN'
+  postadres: Postbus 41, 7200 AA ZUTPHEN
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: '''s Gravenhof'
+    huisnummer: '2'
+    postcode: 7201 DN
+    woonplaats: ZUTPHEN
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '41'
+    postcode: 7200 AA
+    woonplaats: ZUTPHEN
+  - type: Woo-Adres
+    openbare_ruimte: '''s Gravenhof'
+    huisnummer: '2'
+    postcode: 7201 DN
+    woonplaats: Zutphen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Bezoekadres Omgevingsloket
+    openbare_ruimte: '''s Gravenhof'
+    huisnummer: '2'
+    postcode: 7201 DN
+    woonplaats: ZUTPHEN
+  phones:
+  - nummer: 14 0575
+    label: algemeen
+  emails:
+  - email: info@zutphen.nl
+    label: algemeen
+  - email: info@zutphen.nl
+    label: Omgevingsloket
+  internet_addresses:
+  - url: https://www.zutphen.nl
+    label: algemeen
+  contact_forms:
+  - url: https://zutphen.nl/contact/contact-opnemen
+    label: Omgevingsloket
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/36962/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/36962/zutphen
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

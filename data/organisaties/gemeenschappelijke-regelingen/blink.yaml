@@ -3,17 +3,85 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '24965050'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0740
+  owms: http://standaarden.overheid.nl/owms/terms/blink
+  kvk: '62142941'
+  btw: NL815023996B01
+  organisatiecode: so0740
+  rsin: '854682569'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling reiniging Blink 2025
+  roo_id: '29991178'
 names:
 - value: Blink
   valid_from: '1900-01-01'
+description:
+  text: Van afval tot grondstofBlink is een gemeenschappelijke regeling tussen de
+    gemeenten Asten, Deurne, Gemert-Bakel, Heeze-Leende, Helmond, Laarbeek, Nuenen,
+    Someren en Son en Breugel. Het servicegebied van Blink in de Peelregio (Zuidoost-Brabant)
+    omvat zo'n 118.000 huisaansluitingen.Blink is hier namens deze gemeenten actief
+    op het gebied van afvalinzameling, grondstoffenbeheer, reiniging en onderhoud
+    van de openbare ruimte en beheer van de milieustraten.
+  url: https://mijnblink.nl/over-ons
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/24965050/Blink
+organogram_url: https://mijnblink.nl/organisatie-en-beleid
+afspraak:
+  email: klantenservice@mijnblink.nl
+  url: https://mijnblink.nl/hoe-kunnen-we-u-helpen
 contact:
   website: https://mijnblink.nl/
   email: klantenservice@mijnblink.nl
+  bezoekadres: Zuid Koninginnewal 4, 5701 NT Helmond
+  postadres: Gerstdijk 1, 5704 RG Helmond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Zuid Koninginnewal
+    huisnummer: '4'
+    postcode: 5701 NT
+    woonplaats: Helmond
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Gerstdijk
+    huisnummer: '1'
+    postcode: 5704 RG
+    woonplaats: Helmond
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+    land: Nederland
+  phones:
+  - nummer: (0800) 04 92
+    label: algemeen
+  emails:
+  - email: klantenservice@mijnblink.nl
+    label: algemeen
+  - email: bestuur@mijnblink.nl
+    label: indienen WOO-verzoek
+  internet_addresses:
+  - url: https://mijnblink.nl/
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-04'
+last_verified: '2026-05-06'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/24965050/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/24965050/blink
+  retrieved: '2026-05-16'
+roo_start_datum: '2001-01-01'

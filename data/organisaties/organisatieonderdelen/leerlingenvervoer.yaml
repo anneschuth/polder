@@ -7,12 +7,27 @@ parent_id: org:gr-omnibuzz
 names:
 - value: Leerlingenvervoer
   valid_from: '1900-01-01'
+organogram_url: https://www.omnibuzz.nl/overons/organogram
+afspraak:
+  email: leerlingenvervoer@omnibuzz.nl
+  telefoonnummer: (0900) 250 00 00
 contact:
   website: http://www.omnibuzz.nl
   email: leerlingenvervoer@omnibuzz.nl
+  phones:
+  - nummer: (0900) 250 00 00
+    label: algemeen
+  emails:
+  - email: leerlingenvervoer@omnibuzz.nl
+    label: algemeen
+  internet_addresses:
+  - url: http://www.omnibuzz.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-08-18'
+last_verified: '2026-05-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30210833/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30210833/leerlingenvervoer
+  retrieved: '2026-05-16'

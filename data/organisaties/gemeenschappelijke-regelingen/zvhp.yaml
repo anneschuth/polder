@@ -3,18 +3,54 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '29445594'
   tooi: https://identifier.overheid.nl/tooi/id/so/so1099
+  owms: http://standaarden.overheid.nl/owms/terms/zvhps
+  kvk: '92067506'
+  organisatiecode: so1099
+  rsin: '865873057'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Zorg- en Veiligheidshuis Parkstad
+  roo_id: '29445598'
 names:
 - value: Zorg- en Veiligheidshuis Parkstad
   abbr: ZVHP
   valid_from: '1900-01-01'
+classifications:
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.zorgenveiligheidshuisparkstad.nl
   email: zorgenveiligheidshuis@zvhparkstad.nl
+  bezoekadres: Kloosterweg 1, 6412 CN Heerlen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kloosterweg
+    huisnummer: '1'
+    postcode: 6412 CN
+    woonplaats: Heerlen
+    land: Nederland
+  phones:
+  - nummer: (045) 567 67 57
+    label: algemeen
+  emails:
+  - email: zorgenveiligheidshuis@zvhparkstad.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.zorgenveiligheidshuisparkstad.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.zorgenveiligheidshuisparkstad.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-10'
+last_verified: '2026-02-10'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29445594/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29445594/zvhp
+  retrieved: '2026-05-16'
+roo_start_datum: '2024-01-01'

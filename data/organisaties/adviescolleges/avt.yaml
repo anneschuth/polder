@@ -3,18 +3,83 @@ type: adviescollege
 identifiers:
   roo_id: '28351150'
   tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10107
+  owms: http://standaarden.overheid.nl/owms/terms/acverlttbs
 classification: adviescollege
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
 parent_id: null
+relation_to_ministerie:
+  naam: Justitie en Veiligheid
+  roo_id: '11906'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1058
+  owms: http://standaarden.overheid.nl/owms/terms/minjenv
 names:
 - value: Adviescollege Verloftoetsing TBS
   abbr: AVT
   valid_from: '1900-01-01'
+description:
+  text: Het Adviescollege Verloftoetsing TBS (AVT) is een onafhankelijk en multidisciplinair
+    orgaan dat ingediende verlofaanvragen van tbs'ers (of andere personen die in inrichtingen
+    verblijven waar tbs met verpleging wordt uitgevoerd) beoordeelt. Hierbij toetst
+    het AVT of het geven van verlof aan een tbs'er veilig en verantwoord is. Op basis
+    van deze toetsing brengt het AVT vervolgens een advies uit aan de minister van
+    Justitie en Veiligheid.Dit college valt niet onder de Kaderwet adviescolleges
+    en is dus geen formeel adviescollege in de zin van die wet.
+  url: https://www.verlofadviescollege.nl/over-het-avt
+wettelijke_grondslagen:
+- opschrift: Besluit Adviescollege Verloftoetsing tbs, artikel 2
+  referentie: https://wetten.overheid.nl/BWBR0022548/2013-10-19/#Artikel2
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28351150/Adviescollege_Verloftoetsing_TBS
 contact:
   website: https://www.verlofadviescollege.nl/
   email: secretariaat@avt.minjus.nl
+  postadres: Postbus 24019, 3502 MA Utrecht
+  addresses:
+  - type: Postadres
+    postbus: '24019'
+    postcode: 3502 MA
+    ter_attentie_van: Bureau AVT
+    woonplaats: Utrecht
+  - type: Woo-Adres
+    postbus: '24019'
+    postcode: 3502 MA
+    ter_attentie_van: Bureau AVT
+    woonplaats: Utrecht
+  phones:
+  - nummer: (088) 071 39 00
+    label: algemeen
+  emails:
+  - email: secretariaat@avt.minjus.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.verlofadviescollege.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.verlofadviescollege.nl/service/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-13'
+last_verified: '2026-03-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28351150/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28351150/avt
+  retrieved: '2026-05-16'
+roo_start_datum: '2007-10-01'

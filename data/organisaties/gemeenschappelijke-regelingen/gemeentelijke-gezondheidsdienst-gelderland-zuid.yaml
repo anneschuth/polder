@@ -5,23 +5,119 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0720
   oin: 00000001800334930000
   kvk: 09212724
+  owms: http://standaarden.overheid.nl/owms/terms/ggdglz
+  organisatiecode: so0720
+  rsin: '800334930'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Gemeentelijke Gezondheidsdienst Gelderland-Zuid
+  roo_id: '29516037'
 names:
 - value: Gemeentelijke Gezondheidsdienst Gelderland-Zuid
   abbr: GGD Gelderland-Zuid
   valid_from: '1900-01-01'
+description:
+  text: 'GGD Gelderland-Zuid zorgt voor de gezondheid van de inwoners in de regio
+    Gelderland-Zuid. Dit doen wij in opdracht van de gemeenten in Gelderland-Zuid
+    en van de landelijke overheid. Dit gebeurt op de volgende manieren:- Signaleren
+    en voorkomen van gezondheidsproblemen.- Acuut optreden bij gevaar voor de volksgezondheid,
+    o.a. bij rampen.- Zorg toegankelijk maken voor verschillende doelgroepen.- Bevorderen
+    van samenwerking met partners in gezondheid en veiligheid.De meeste GGD-taken
+    liggen vast in de Wet publieke gezondheid. Andere relevante wetten voor de taken
+    die wij uitvoeren, zijn: de Wet kinderopvang, Wet op de lijkbezorging, Jeugdwet,
+    Wet maatschappelijke ondersteuning en Wet veiligheidsregio’s.'
+  url: https://ggdgelderlandzuid.nl/over-de-ggd/wat-doen-wij/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://secure.ggdgelderlandzuid.nl/dir/informatie-of-woo-verzoek-indienen/
+      overzichtURL: https://organisaties.overheid.nl/woo/28402094/Gemeentelijke_Gezondheidsdienst_Gelderland-Zuid
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://ggdgelderlandzuid.nl/over-de-ggd/publicaties/besluiten-dpg-db/
+      toelichting: Besluit DPG/DB
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://ggdgelderlandzuid.nl/professionals/gemeenten/ggd-en-gemeente/bestuursoverleg-dbenab/
+      toelichting: Vergaderstukken bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://ggdgelderlandzuid.nl/over-de-ggd/publicaties/jaarverslagen/
+      toelichting: Jaarverslagen
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Gemeentelijke%20Gezondheidsdienst%20Gelderland-Zuid%22))))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))&zv=&col=AlleBekendmakingen
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://ggdgelderlandzuid.nl/over-de-ggd/publicaties/besluiten-dpg-db/
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((((w.organisatietype==%22regionaal%20samenwerkingsorgaan%22)and(dt.creator==%22Gemeentelijke%20Gezondheidsdienst%20Gelderland-Zuid%22))))and(dt.type==%22algemeen%20verbindend%20voorschrift%20(verordening)%22)and((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22))&zv=&col=BladGemeenschappelijkeregeling
+  wooVerzoek:
+    url: https://ggdgelderlandzuid.nl/contact/opvragen-overheidsinformatie/
+organogram_url: https://ggdgelderlandzuid.nl/over-de-ggd/wat-doen-wij/organogram/
+afspraak:
+  email: info@ggdgelderlandzuid.nl
+  telefoonnummer: (088) 144 71 44
+  url: https://ggdgelderlandzuid.nl/contact/
 contact:
   website: https://ggdgelderlandzuid.nl
   email: info@ggdgelderlandzuid.nl
+  bezoekadres: Professor Bellefroidstraat 22, 6525 AE Nijmegen
+  postadres: Postbus 1120, 6501 BC Nijmegen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Professor Bellefroidstraat
+    huisnummer: '22'
+    postcode: 6525 AE
+    woonplaats: Nijmegen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+  - type: Postadres
+    postbus: '1120'
+    postcode: 6501 BC
+    woonplaats: Nijmegen
+  - type: Woo-Adres
+    postbus: '1120'
+    postcode: 6501 BC
+    woonplaats: Nijmegen
+    regio: Gelderland-Zuid
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+    land: Nederland
+  phones:
+  - nummer: (088) 144 71 44
+    label: algemeen
+  - nummer: (088) 144 73 00
+    label: locatie Rivierenland
+  emails:
+  - email: info@ggdgelderlandzuid.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ggdgelderlandzuid.nl
+    label: algemeen
+  contact_forms:
+  - url: https://ggdgelderlandzuid.nl/over-de-ggd/contactform
+    label: Algemeen
+  fax: (024) 322 69 80
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-09-25'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28402094/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28402094/gemeentelijke-gezondheidsdienst-gelderland-zuid
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2013-07-01'

@@ -3,13 +3,19 @@ type: organisatieonderdeel
 identifiers:
   roo_id: '22660934'
 classification: organisatieonderdeel
-parent_id: org:onderdeel-deia
+parent_id: org:onderdeel-sg-cluster
 names:
 - value: Project- Programma- en Adviescentrum (PPAC)
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Bezoekadres
+  - type: Postadres
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2020-09-22'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/22660934/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/22660934/project-programma-en-adviescentrum-ppac
+  retrieved: '2026-05-16'

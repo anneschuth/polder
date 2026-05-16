@@ -1,28 +1,107 @@
 id: org:gr-wbl
 type: gemeenschappelijke-regeling
+subname: Waterschapsbedrijf Limburg
 identifiers:
   oin: 00000001001702580000
   kvk: '50453483'
   roo_id: '28484277'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0486
+  owms: http://standaarden.overheid.nl/owms/terms/wbl
+  btw: NL001702580B01
+  organisatiecode: so0486
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Waterschapsbedrijf Limburg
+  roo_id: '28484271'
 names:
 - value: Gemeenschappelijke Regeling Waterschapsbedrijf Limburg
   abbr: WBL
   valid_from: '1900-01-01'
   valid_until: '2025-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2025-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  eind_datum: '2025-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28484277/Gemeenschappelijke_Regeling_Waterschapsbedrijf_Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Vergaderstukken decentrale overheden
+      url: https://www.wbl.nl/over-wbl/bestuur/vergaderstukken/
+      toelichting: Agenda's en vergaderstukken Algemeen Bestuur
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://www.wbl.nl/over-wbl/publicaties/jaarverslagen/
+      toelichting: Jaarverslagen (sociaal/financieel/technologisch)
+    - informatiecategorie: Convenanten
+      url: https://lokaleregelgeving.overheid.nl/CVDR642785/1
+      toelichting: Gemeenschappelijke Regeling
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+Regeling+Waterschapsbedrijf+Limburg%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and(cql.textAndIndexes=%22waterschapsbedrijf%22%20and%20cql.textAndIndexes=%22limburg%22)%20AND%20w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22%20AND%20dt.creator==%22Gemeenschappelijke%20Regeling%20Waterschapsbedrijf%20Limburg%22&zv=waterschapsbedrijf+limburg&pg=10&col=&svel=Publicatiedatum&svol=Aflopend&sf=po%7cGemeenschappelijke+Regeling+Waterschapsbedrijf+Limburg
+      toelichting: Bekendmakingen
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Gemeenschappelijke+Regeling+Waterschapsbedrijf+Limburg%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.wbl.nl/contact/
+organogram_url: https://www.wbl.nl/over-wbl/organigram/
+afspraak:
+  email: info@wbl.nl
 contact:
   website: https://www.wbl.nl
   email: info@wbl.nl
+  bezoekadres: Maria Theresialaan 99, 6043 CX Roermond
+  postadres: Postbus 1315, 6040 KH Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Maria Theresialaan
+    huisnummer: '99'
+    postcode: 6043 CX
+    woonplaats: Roermond
+  - type: Postadres
+    postbus: '1315'
+    postcode: 6040 KH
+    woonplaats: Roermond
+  - type: Woo-Adres
+    postbus: '1315'
+    postcode: 6040 KH
+    woonplaats: Roermond
+  phones:
+  - nummer: (088) 842 00 00
+    label: algemeen
+  emails:
+  - email: info@wbl.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.wbl.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.wbl.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2025-01-01'
+last_mutation: '2026-05-04'
+last_verified: '2026-05-04'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28484277/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28484277/wbl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2003-12-15'

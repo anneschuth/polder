@@ -2,14 +2,32 @@ id: org:stichting-tot-beheer-van-huis-doorn
 type: rwt
 identifiers:
   roo_id: '30133544'
+  kvk: '41178405'
+  rsin: 003001891
 classification: rwt
+legal_form: Privaatrechtelijk - Stichting
 parent_id: null
+relation_to_ministerie:
+  naam: Onderwijs, Cultuur en Wetenschap
+  roo_id: '71852'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1109
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap
 names:
 - value: Stichting tot Beheer van Huis Doorn
   valid_from: '1900-01-01'
+contact:
+  addresses:
+  - type: Vestigingsadres
+    openbare_ruimte: Langbroekerweg
+    huisnummer: '10'
+    postcode: 3941 MT
+    woonplaats: Doorn
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-05-16'
+last_verified: '2025-05-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30133544/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30133544/stichting-tot-beheer-van-huis-doorn
+  retrieved: '2026-05-16'

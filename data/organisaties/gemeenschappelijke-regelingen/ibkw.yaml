@@ -3,18 +3,86 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28125156'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0906
+  owms: http://standaarden.overheid.nl/owms/terms/ibkw
+  kvk: '70569614'
+  btw: NL858377949B01
+  loonheffing: 858377949L01
+  organisatiecode: so0906
+  rsin: '858377949'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling bedrijfsvoeringsorganisatie Ingenieursbureau Krimpenerwaard
+  roo_id: '29529638'
 names:
 - value: Ingenieursbureau Krimpenerwaard
   abbr: IBKW
   valid_from: '1900-01-01'
+description:
+  text: IBKW is een Gemeenschappelijke Regeling bedrijfsvoeringsorganisatie van de
+    gemeenten Krimpen aan den IJssel en Krimpenerwaard.Wij nemen als bedrijfsvoeringsorganisatie
+    geen besluiten (behalve betreffende onze eigen bedrijfsvoering) en zijn uitsluitend
+    adviserend en uitvoerend voor onze twee deelnemers bezig.Onze taak is die van
+    intern ingenieursbureau op het gebied van civiele techniek. Ons werk ligt dus
+    in de openbare ruimte. Wij bereiden projecten voor en voeren directie bij de uitvoering.
+    Het beheer van de openbare ruimte, het vaststellen van het beleid, het organiseren
+    van participatie en het nemen van besluiten zoals vaststellen van ontwerpen en
+    kredieten zijn een gemeentelijke verantwoordelijkheid.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28125156/Ingenieursbureau_Krimpenerwaard
+afspraak:
+  email: mail@ibkw.nl
 contact:
   website: https://ibkw.nl
   email: mail@ibkw.nl
+  bezoekadres: Raadhuisplein 4, 2922 AD Krimpen aan den IJssel
+  postadres: Raadhuisplein 4, 2922 AD Krimpen aan den IJssel
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '4'
+    postcode: 2922 AD
+    woonplaats: Krimpen aan den IJssel
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '4'
+    postcode: 2922 AD
+    woonplaats: Krimpen aan den IJssel
+  - type: Woo-Adres
+    openbare_ruimte: Raadhuisplein
+    huisnummer: '4'
+    postcode: 2922 AD
+    woonplaats: Krimpen aan den IJssel
+  phones:
+  - nummer: (0180) 51 44 55
+    label: algemeen
+  emails:
+  - email: mail@ibkw.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://ibkw.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-02-18'
+last_verified: '2026-02-16'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28125156/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28125156/ibkw
+  retrieved: '2026-05-16'
+roo_start_datum: '2018-01-01'

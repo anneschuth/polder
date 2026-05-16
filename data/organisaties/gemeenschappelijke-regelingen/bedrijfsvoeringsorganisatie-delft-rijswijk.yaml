@@ -5,19 +5,57 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0884
   oin: 00000001857839160000
   kvk: '69343454'
+  owms: http://standaarden.overheid.nl/owms/terms/bvodrw
+  organisatiecode: so0884
+  rsin: '857839160'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Bedrijfsvoeringsorganisatie Delft-Rijswijk
+  roo_id: '28306597'
 names:
 - value: Bedrijfsvoeringsorganisatie Delft-Rijswijk
   valid_from: '1900-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+contact:
+  bezoekadres: Stationsplein 1, 2611 BV Delft
+  postadres: Postbus 78, 2600 ME Delft
+  addresses:
+  - type: Bezoekadres
+    toelichting: Stadskantoor Gemeente Delft
+    openbare_ruimte: Stationsplein
+    huisnummer: '1'
+    postcode: 2611 BV
+    woonplaats: Delft
+  - type: Postadres
+    postbus: '78'
+    postcode: 2600 ME
+    woonplaats: Delft
+  phones:
+  - nummer: 14 015
+    label: gemeente Delft
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2021-03-08'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28306603/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28306603/bedrijfsvoeringsorganisatie-delft-rijswijk
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2016-07-03'

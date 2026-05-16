@@ -27,6 +27,8 @@ Pad naar één staging-file. Voorbeelden:
 
 De skill detecteert het staging-type uit de filenaam-prefix en uit de aanwezige velden (`organization_chain` voor abd-nieuws v0.3+, `staatscourant_url` plus `decision_reference` voor staatscourant, `type` is `person_post` of `org_structure` voor organogram).
 
+**Niet voor ROO-functies/medewerkers.** Bestanden met prefix `roo-functies-*.json` (output van `polder roo functies`) hebben een andere shape (`proposals[]` met `roo_functie_id`, `roo_functie_naam`, `parent_org_id`, `medewerkers[]` met `roo_medewerker_id` en `evidence_snippet`). Die worden door `polder roo resolve` afgehandeld; alleen de resterende unresolved-records (`roo-functies-*.unresolved.json`) komen daarna eventueel via deze skill voor menselijke disambiguation aan bod.
+
 ## Output
 
 Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde records als de input, plus per record:

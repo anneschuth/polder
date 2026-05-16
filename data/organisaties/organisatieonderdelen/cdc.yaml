@@ -10,9 +10,17 @@ names:
   valid_from: '1900-01-01'
 contact:
   website: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+  phones:
+  - nummer: (0800) 05 43
+    label: algemeen
+  contact_forms:
+  - url: https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/contact-op-maat/start-contact-op-maat
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2024-10-28'
+last_verified: '2026-01-12'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/29680311/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/29680311/cdc
+  retrieved: '2026-05-16'

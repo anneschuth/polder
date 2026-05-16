@@ -3,17 +3,92 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28475728'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0469
+  owms: http://standaarden.overheid.nl/owms/terms/plschpld
+  kvk: '52394832'
+  btw: NL804162591B01
+  organisatiecode: so0469
+  rsin: '804162591'
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling Bedrijfsvoeringsorganisatie Plassenschap Loosdrecht
+    e.o.
+  roo_id: '29128446'
 names:
 - value: Plassenschap Loosdrecht e.o.
   valid_from: '1900-01-01'
+description:
+  text: Activiteit omschrijvinga. het beheer van de eigendommen en het vaststellen
+    van de kaders voor de taakuitvoering ten behoeve van uitvoerende derde partijen
+    en het maken van afspraken met deze derde partijen;b. het aanleggen, onderhouden
+    en eventueel exploiteren van recreatieve voorzieningen en het uitvoeren van andere
+    werken verband houdend met deze taak;c. het in stand houden en verbeteren van
+    het natuur- en landschapsschoon voor zover samenhangend met deze taak;d. het financiële
+    beheer, contractmanagement en de communicatieve taken die benodigd zijn voor uitvoering
+    van de taken bedoeld onder a. tot en met c.
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      overzichtURL: https://organisaties.overheid.nl/woo/28475728/Plassenschap_Loosdrecht_eo
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Overige besluiten van algemene strekking
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Plassenschap+Loosdrecht+e.o.%22))+AND+((dt.type==%22algemeenverbindendverklaring+van+cao-bepalingen%22+OR+dt.type==%22ander+besluit+van+algemene+strekking%22+OR+dt.type==%22bekendmaking+aan+de+scheepvaart%22+OR+dt.type==%22beleidsregel%22+OR+dt.type==%22delegatie-+of+mandaatbesluit%22+OR+dt.type==%22circulaire%22+OR+dt.type==%22verkeersbesluit+of+-mededeling%22)))
+    - informatiecategorie: Wetten en algemeen verbindende voorschriften
+      url: https://zoek.officielebekendmakingen.nl/resultaten?q=((c.product-area==%22officielepublicaties%22)+AND+((dt.creator==%22Plassenschap+Loosdrecht+e.o.%22))+AND+((dt.type==%22algemeen+verbindend+voorschrift+(verordening)%22+OR+dt.type==%22gemeenschappelijke+regeling%22+OR+dt.type==%22ruimtelijk+plan+of+omgevingsdocument%22+OR+dt.type==%22AMvB%22+OR+dt.type==%22Ministeriële+regeling%22+OR+dt.type==%22RijksAMvB%22+OR+dt.type==%22Rijkswet%22+OR+dt.type==%22Verbeterblad%22+OR+dt.type==%22Wet%22+OR+dt.type==%22Verdrag%22)))
+  wooVerzoek:
+    url: https://www.wijdemeren.nl/afspraak
+organogram_url: https://www.wijdemeren.nl/4/Organisatiestructuur/Organogram-Wijdemeren.pdf
+afspraak:
+  url: https://www.wijdemeren.nl/afspraak
 contact:
   website: www.wijdemeren.nl
   email: info@wijdemeren.nl
+  bezoekadres: Rading 1, 1231 KB Loosdrecht
+  postadres: Postbus 190, 1230 AD Loosdrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Rading
+    huisnummer: '1'
+    postcode: 1231 KB
+    woonplaats: Loosdrecht
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+  - type: Postadres
+    postbus: '190'
+    postcode: 1230 AD
+    woonplaats: Loosdrecht
+  - type: Woo-Adres
+    openbare_ruimte: Rading
+    huisnummer: '1'
+    postcode: 1231 KB
+    woonplaats: Loosdrecht
+  phones:
+  - nummer: (035) 655 95 95
+    label: algemeen
+  emails:
+  - email: info@wijdemeren.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.wijdemeren.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-03-02'
+last_verified: '2026-03-02'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28475728/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28475728/plassenschap-loosdrecht-eo
+  retrieved: '2026-05-16'
+roo_start_datum: '1957-07-05'

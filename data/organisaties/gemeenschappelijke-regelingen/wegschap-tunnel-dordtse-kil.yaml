@@ -3,18 +3,66 @@ type: gemeenschappelijke-regeling
 identifiers:
   roo_id: '28445713'
   tooi: https://identifier.overheid.nl/tooi/id/so/so0081
+  owms: http://standaarden.overheid.nl/owms/terms/wstdk
+  kvk: '54377366'
+  btw: NL004079851B01
+  organisatiecode: so0081
+  rsin: 004079851
 classification: gemeenschappelijke-regeling
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke regeling voor het Wegschap tunnel Dordtse Kil
+  roo_id: '28445692'
 names:
 - value: Wegschap Tunnel Dordtse Kil
   valid_from: '1900-01-01'
-  valid_until: '2019-01-01'
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2019-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
 contact:
   website: https://www.kiltunnel.nl
   email: info@kiltunnel.nl
+  bezoekadres: Kiltunnelweg 100, 3316 ES Dordrecht
+  postadres: Kiltunnelweg 100, 3316 ES Dordrecht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kiltunnelweg
+    huisnummer: '100'
+    postcode: 3316 ES
+    woonplaats: Dordrecht
+  - type: Postadres
+    openbare_ruimte: Kiltunnelweg
+    huisnummer: '100'
+    postcode: 3316 ES
+    woonplaats: Dordrecht
+  phones:
+  - nummer: (078) 654 08 35
+    label: algemeen
+  emails:
+  - email: info@kiltunnel.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.kiltunnel.nl
+    label: algemeen
+  contact_forms:
+  - url: https://www.kiltunnel.nl/contact
+    label: Algemeen
 valid_from: '1900-01-01'
 valid_until: '2019-01-01'
+last_mutation: '2022-10-18'
+last_verified: '2022-06-01'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28445713/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28445713/wegschap-tunnel-dordtse-kil
+  retrieved: '2026-05-16'
+roo_start_datum: '1989-01-01'

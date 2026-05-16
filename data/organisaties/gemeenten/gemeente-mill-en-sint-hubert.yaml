@@ -6,6 +6,9 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0815
   roo_id: '23083'
   wikidata: Q9853
+  owms: http://standaarden.overheid.nl/owms/terms/Mill_en_Sint_Hubert
+  ictu: 00815
+  organisatiecode: gm0815
 classification: gemeente
 parent_id: null
 names:
@@ -13,15 +16,80 @@ names:
   abbr: Mill en St. Hubert
   valid_from: '1900-01-01'
   valid_until: '2022-01-01'
+classifications:
+- type: CAO
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Gemeenten
+    referentie: https://www.caogemeenten.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl/
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  eind_datum: '2022-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Gemeenten (Artikel 1.2, lid 1c, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+geography:
+  oppervlakte: 53,08
+  oppervlakte_eenheid: km2
+  oppervlakte_km2: 53.08
+  aantal_inwoners: 10831
+  inwoners: '204'
+  inwoners_eenheid: per km2
+  inwoners_per_km2: 204.0
+  bevat_plaatsen_raw: Langenboom, Mill, Sint Hubert, Wilbertoord
+  bevat_plaatsen:
+  - Langenboom
+  - Mill
+  - Sint Hubert
+  - Wilbertoord
+council:
+  total_seats: 15
+  parties:
+  - naam: CDA
+    aantal_zetels: 7
+  - naam: Algemeen Belang '90
+    aantal_zetels: 4
+  - naam: Vier Kernen Partij
+    aantal_zetels: 4
 contact:
   website: www.gemeente-mill.nl
   email: info@gemeente-mill.nl
+  bezoekadres: Kerkstraat 1, 5451 BM MILL
+  postadres: Postbus 7, 5360 AA GRAVE
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kerkstraat
+    huisnummer: '1'
+    postcode: 5451 BM
+    woonplaats: MILL
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+  - type: Postadres
+    postbus: '7'
+    postcode: 5360 AA
+    woonplaats: GRAVE
+  phones:
+  - nummer: (0485) 46 03 00
+    label: algemeen
+  emails:
+  - email: info@gemeente-mill.nl
+    label: algemeen
+  internet_addresses:
+  - url: www.gemeente-mill.nl
+    label: algemeen
 valid_from: '1900-01-01'
 valid_until: '2022-01-01'
+last_mutation: '2022-02-18'
+last_verified: '2022-02-18'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/23083/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/23083/gemeente-mill-en-sint-hubert
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'

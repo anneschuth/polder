@@ -5,23 +5,122 @@ identifiers:
   tooi: https://identifier.overheid.nl/tooi/id/so/so0734
   oin: 00000001814029450000
   kvk: '58272445'
+  owms: http://standaarden.overheid.nl/owms/terms/rhclim
+  btw: NL814029450B01
+  organisatiecode: so0734
+  rsin: '814029450'
 classification: gemeenschappelijke-regeling
+legal_form: Publiekrechtelijk - Eigen rechtspersoonlijkheid
 parent_id: null
+hoort_bij_gemeenschappelijke_regeling:
+  naam: Gemeenschappelijke Regeling Historisch Centrum Limburg 2020
+  roo_id: '28411272'
 names:
 - value: Historisch Centrum Limburg
   abbr: HCL
   valid_from: '1900-01-01'
+description:
+  text: Het Historisch Centrum Limburg (HCL) is een gemeenschappelijke regeling met
+    het Rijk, de gemeente Maastricht en de gemeente Heerlen als deelnemer. Zij kent
+    daarnaast 24 DVO-partners (Provincie, Waterschap, gemeenten en gemeenschappelijke
+    regelingen) die hun archieven hebben ondergebracht bij het HCL. De deelnemers
+    zijn vertegenwoordigd in het bestuur van het HCL.Het Historisch Centrum Limburg
+    (HCL) beheert en bewaart de analoge en digitale archieven en collecties van Limburgse
+    overheidsorganisaties, particulieren en bedrijven. Binnen het HCL werken we met
+    bijna 70 collega’s samen vanuit onze locaties in Maastricht en Heerlen. Op beide
+    locaties bevinden zich studiezalen waar bezoekers – op afspraak – archiefstukken
+    kunnen raadplegen. Ook zijn steeds meer Limburgse archieven en collecties online
+    te raadplegen. We beheren meer dan 30 kilometer analoge archieven en zitten midden
+    in een transitie van analoog naar digitaal.Het HCL is partner voor overheden bij
+    het borgen van de duurzame toegankelijkheid en betrouwbaarheid van hun archieven,
+    zowel fysiek als digitaal. Archiefwet- en regelgeving verplicht overheidsorganisaties
+    te voldoen aan de wettelijke vereisten ten aanzien van hun informatie- en archiefbeheer.
+    Het HCL houdt daarbij toezicht en geeft adviezen.
+  url: https://historischcentrumlimburg.nl/
+classifications:
+- type: WNT-instelling
+  url: https://www.topinkomens.nl/voor-wnt-instellingen/wnt-register
+  wettelijke_grondslagen:
+  - opschrift: Gemeenschappelijke regelingen, andere rechtspersonen (Artikel 1.2,
+      lid 1h, WNT)
+    referentie: http://wetten.overheid.nl/jci1.3:c:BWBR0032249&paragraaf=1&artikel=1.2&lid=1
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://historischcentrumlimburg.nl/over-ons/wet-open-overheid
+      overzichtURL: https://organisaties.overheid.nl/woo/28411284/Historisch_Centrum_Limburg
+  wooIndex:
+    documentLocatie:
+    - informatiecategorie: Agenda’s en besluitenlijsten bestuurscolleges
+      url: https://historischcentrumlimburg.nl/over-ons/beleid-en-jaarverslagen
+      toelichting: Bestuursbesluiten
+    - informatiecategorie: Jaarplannen en jaarverslagen
+      url: https://historischcentrumlimburg.nl/over-ons/beleid-en-jaarverslagen
+  wooVerzoek:
+    url: https://historischcentrumlimburg.nl/over-ons/wet-open-overheid
+afspraak:
+  email: info@hclimburg.nl
+  telefoonnummer: (043) 328 55 00
 contact:
   website: https://www.historischcentrumlimburg.nl
   email: info@hclimburg.nl
+  bezoekadres: Sint Pieterstraat 7, 6211 JM Maastricht
+  postadres: Sint Pieterstraat 7, 6211 JM Maastricht
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Sint Pieterstraat
+    huisnummer: '7'
+    postcode: 6211 JM
+    woonplaats: Maastricht
+    land: Nederland
+  - type: Postadres
+    openbare_ruimte: Sint Pieterstraat
+    huisnummer: '7'
+    postcode: 6211 JM
+    woonplaats: Maastricht
+    land: Nederland
+  - type: Woo-Adres
+    openbare_ruimte: Sint Pieterstraat
+    huisnummer: '7'
+    postcode: 6211 JM
+    woonplaats: Maastricht
+    regio: Limburg
+    land: Nederland
+  phones:
+  - nummer: (043) 328 55 00
+    label: algemeen
+  emails:
+  - email: info@hclimburg.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.historischcentrumlimburg.nl
+    label: algemeen
+  contact_forms:
+  - url: https://historischcentrumlimburg.nl/over-ons/contact
+    label: Algemeen
+  social_media:
+  - platform: Facebook
+    gebruikersnaam: hclimburg
+    url: https://www.facebook.com/hclimburg
+  - platform: LinkedIn
+    gebruikersnaam: hclimburg
+    url: https://nl.linkedin.com/company/hclimburg
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2025-09-25'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/28411284/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/28411284/hcl
+  retrieved: '2026-05-16'
 - id: logius_cor
   url: https://oinregister.logius.nl/pubproxy/organisations/public
   retrieved: '2026-05-09'
   fields:
   - oin
+roo_start_datum: '2005-02-01'

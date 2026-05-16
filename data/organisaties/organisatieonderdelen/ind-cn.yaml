@@ -8,12 +8,49 @@ names:
 - value: Immigratie- en Naturalisatiedienst Caribisch Nederland
   abbr: IND-CN
   valid_from: '1900-01-01'
+description:
+  text: De IND-CN behandelt aanvragen voor toelating van vreemdelingen en Nederlanders
+    (niet zijnde eilandskinderen of toeristen) die zich in Caribisch Nederland willen
+    vestigen. Ook behandelt de IND-CN aanvragen voor verlenging van het toeristisch
+    verblijf en van toegelaten personen die Nederlander willen worden.
+  url: https://www.rijksdienstcn.com/immigratie-naturalisatie
 contact:
   website: https://www.rijksdienstcn.com/immigratie-naturalisatie
   email: IND@rijksdienstCN.com
+  bezoekadres: Kaya Gresia 11, Kralendijk
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kaya Gresia
+    huisnummer: '11'
+    woonplaats: Kralendijk
+    land: Bonaire
+  - type: Bezoekadres
+    openbare_ruimte: Cottageroad z/n
+    woonplaats: Oranjestad
+    land: Sint Eustatius
+  - type: Bezoekadres
+    openbare_ruimte: Cap. Matthew Levenstone Street z/n
+    woonplaats: The Bottom
+    land: Saba
+  phones:
+  - nummer: +599 715 8330
+    label: algemeen
+  - nummer: +599 318 3377
+    label: Sint Eustatius
+  - nummer: +599 416 3805
+    label: Saba
+  emails:
+  - email: IND@rijksdienstCN.com
+    label: algemeen
+  - email: INDStatia@rijksdienstcn.com
+    label: Sint Eustatius
+  - email: INDSaba@rijksdienstcn.com
+    label: Saba
 valid_from: '1900-01-01'
 valid_until: null
+last_mutation: '2025-10-13'
+last_verified: '2025-10-13'
 sources:
 - id: roo
-  url: https://organisaties.overheid.nl/30405531/
-  retrieved: '2026-05-13'
+  url: https://organisaties.overheid.nl/30405531/ind-cn
+  retrieved: '2026-05-16'
