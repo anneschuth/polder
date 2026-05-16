@@ -161,12 +161,28 @@ def test_plan_dry_run_kewal(mini_polder: Path) -> None:
     assert "applied_via:apply-staging" in fields
 
 
-def test_skip_low_confidence(mini_polder: Path) -> None:
+def test_confidence_floor_only_without_resolver_recommendation(mini_polder: Path) -> None:
+    """De ruwe confidence-floor geldt alleen als er géén merge_recommendation
+    is. Zonder resolver-oordeel blokkeert lage confidence nog steeds."""
     p = _kewal_proposal()
     p["confidence"] = 0.80
+    p.pop("merge_recommendation", None)
     _, skipped = plan_apply([p], mini_polder / "data")
     assert len(skipped) == 1
     assert any("drempel" in r for r in skipped[0].reasons)
+
+
+def test_auto_merge_recommendation_overrules_confidence_floor(mini_polder: Path) -> None:
+    """Een expliciete merge_recommendation=auto-merge is gezaghebbend en
+    overrulet de ruwe confidence-floor. ABD-records hebben structureel
+    confidence ~0.86-0.92 (skill-cap zonder 2e bron) maar de resolver/enrich
+    heeft via _recompute_merge al op person>=0.95 + org-veilig besloten."""
+    p = _kewal_proposal()
+    p["confidence"] = 0.80  # ruwe skill-score laag
+    assert p["merge_recommendation"] == "auto-merge"
+    actions, _ = plan_apply([p], mini_polder / "data")
+    assert actions  # niet geblokkeerd door de floor
+    assert any(a.type == "create-org" for a in actions)
 
 
 def test_skip_red_avg(mini_polder: Path) -> None:
@@ -201,12 +217,26 @@ def test_create_person_even_with_familyname_collision(mini_polder: Path) -> None
     assert "create-person" in types
 
 
-def test_only_high_confidence_filter(mini_polder: Path) -> None:
+def test_only_high_confidence_floor_applies_without_recommendation(mini_polder: Path) -> None:
+    """only_high_confidence verhoogt de floor naar 0.95, maar alleen voor
+    proposals zonder resolver-oordeel."""
     p = _kewal_proposal()
     p["confidence"] = 0.90
+    p.pop("merge_recommendation", None)
     actions, skipped = plan_apply([p], mini_polder / "data", only_high_confidence=True)
     assert actions == []
     assert skipped
+
+
+def test_only_high_confidence_respects_auto_merge_recommendation(mini_polder: Path) -> None:
+    """Met merge_recommendation=auto-merge komt een ABD-record (confidence
+    0.90) ook onder only_high_confidence door: het resolver-oordeel is
+    gezaghebbend, de ruwe floor wordt niet toegepast."""
+    p = _kewal_proposal()
+    p["confidence"] = 0.90
+    assert p["merge_recommendation"] == "auto-merge"
+    actions, _ = plan_apply([p], mini_polder / "data", only_high_confidence=True)
+    assert actions
 
 
 def test_skip_persons_flag(mini_polder: Path) -> None:

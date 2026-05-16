@@ -601,25 +601,33 @@ def plan_apply(
         reasons: list[str] = []
         confidence = float(proposal.get("confidence", 0.0))
 
-        if confidence < confidence_floor:
-            skipped.append(
-                SkippedProposal(
-                    proposal=proposal,
-                    reasons=[f"confidence {confidence:.2f} < drempel {confidence_floor:.2f}"],
-                )
-            )
-            continue
-
         # Honoreer `merge_recommendation` van de resolver als die gezet is.
-        # De resolver heeft daarin al de inhoudelijke confidence-check gedaan
-        # (org/post/person ieder ≥ 0.85, geen ambiguïteit); apply hoeft die
-        # logica dus niet te dupliceren.
+        # De resolver/enrich heeft daarin al de inhoudelijke confidence-check
+        # gedaan (person ≥ 0.95, org-zijde veilig, two-source); apply hoeft
+        # die logica niet te dupliceren. Belangrijk: een expliciete
+        # `merge_recommendation` is gezaghebbend en overrulet de ruwe
+        # `confidence`-floor. Het top-level `confidence`-veld is de
+        # skill-eigen score (bv. ABD-only cap op 0.92), niet het
+        # resolver-oordeel; daarop terugvallen zou een doordachte
+        # auto-merge alsnog onterecht blokkeren.
         rec = proposal.get("merge_recommendation")
         if rec is not None and rec != "auto-merge":
             skipped.append(
                 SkippedProposal(
                     proposal=proposal,
                     reasons=[f"merge_recommendation={rec!r} (geen auto-merge)"],
+                )
+            )
+            continue
+
+        # Alleen terugvallen op de ruwe confidence-floor als de resolver
+        # géén expliciet oordeel gaf (rec is None). Met rec == "auto-merge"
+        # is de inhoudelijke check al gebeurd.
+        if rec is None and confidence < confidence_floor:
+            skipped.append(
+                SkippedProposal(
+                    proposal=proposal,
+                    reasons=[f"confidence {confidence:.2f} < drempel {confidence_floor:.2f}"],
                 )
             )
             continue

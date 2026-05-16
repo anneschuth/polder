@@ -1,0 +1,31 @@
+id: person:zande-avd-1952
+name:
+  full: Em. prof. dr. André van der Zande
+  family: Zande
+  given: Em. prof. dr. André van der
+  initials: E.P.D.A.V.D.
+birth:
+  year: 1952
+mandaten:
+- id: mandate-post-dg-rivm-min-vws-2011-01-01
+  organization_id: org:onderdeel-rivm-min-vws
+  post_id: post:dg-rivm-min-vws
+  role: directeur-generaal, Rijksinstituut voor Volksgezondheid en Milieu (RIVM),
+    ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2011-01-01'
+  end_date: '2018-06-28'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/02/andre-van-der-zande-verlaat-de-rijksdienst-en-ontvangt-koninklijke-onderscheiding
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-07-02
+  confidence: 0.8
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/02/andre-van-der-zande-verlaat-de-rijksdienst-en-ontvangt-koninklijke-onderscheiding
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
