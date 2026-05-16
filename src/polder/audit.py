@@ -1114,19 +1114,28 @@ def _normalize_initials_compact(initials: str | None) -> str:
 _ROEPNAAM_RE = re.compile(r"\(([^)]+)\)")
 
 
-def _holder_source_urls(mandate: dict) -> set[str]:
-    """De bron-URLs van een mandaat (genormaliseerd, zonder trailing slash).
+_PERSON_SPECIFIC_URL_RE = re.compile(
+    r"algemenebestuursdienst\.nl/actueel/nieuws/\d{4}/\d{2}/\d{2}/[a-z]"
+    r"|id\.openraadsinformatie\.nl/\d+"
+)
 
-    Twee records die dezelfde bron-URL op het mandaat voor déze post citeren,
-    citeren hetzelfde benoemings-document — dat is hetzelfde benoemings-feit
-    over één persoon, ongeacht hoe de slugs verschillen (#76, ABD/ORI dups).
+
+def _holder_source_urls(mandate: dict) -> set[str]:
+    """Persoon-specifieke bron-URLs van een mandaat (genormaliseerd).
+
+    Alleen URLs die over één benoeming van één persoon gaan tellen als
+    identiteits-signaal: een ABD-nieuwsbericht (datum-pad + slug) of een
+    open-raadsinformatie-persoon-id. Generieke landingspagina's
+    (``organisaties.overheid.nl/<org>``, ``github.com/...``) worden
+    bewust genegeerd: twee verschillende ambtenaren bij dezelfde
+    organisatie delen die en zijn niet dezelfde persoon (#76).
     """
     urls: set[str] = set()
     for s in mandate.get("sources") or []:
         if not isinstance(s, dict):
             continue
         u = str(s.get("url") or "").strip().rstrip("/").lower()
-        if u:
+        if u and _PERSON_SPECIFIC_URL_RE.search(u):
             urls.add(u)
     return urls
 
@@ -1156,15 +1165,27 @@ def _given_sets_compatible(a: dict, b: dict) -> bool:
     return any(_given_names_compatible(x, y) for x in va for y in vb)
 
 
-def _shared_roepnaam(a: dict, b: dict) -> bool:
-    """True als een niet-triviale (>=3 letters) roepnaam-variant exact gedeeld is.
+def _shared_roepnaam(a: dict, b: dict) -> set[str]:
+    """Gedeelde niet-triviale (>=3 letters) roepnaam-varianten.
 
-    'Annelies' in 'Ir. J.E.M. (Annelies) Opstraat' == given 'Annelies' van de
-    andere slug. Sterk genoeg om initialen-mismatch (formele vs roepnaam-
-    initiaal) te overrulen — maar alleen bij gelijke familienaam (caller).
+    'Annelies' in 'Ir. J.E.M. (Annelies) Opstraat' == given 'Annelies' van
+    de andere slug. Geeft de gedeelde set terug (leeg = geen match).
     """
-    shared = {v for v in _roepnaam_variants(a) & _roepnaam_variants(b) if len(v) >= 3}
-    return bool(shared)
+    return {v for v in _roepnaam_variants(a) & _roepnaam_variants(b) if len(v) >= 3}
+
+
+def _roepnaam_overrules_initials(shared: set[str], ia: str, ib: str) -> bool:
+    """Mag een gedeelde roepnaam een initialen-mismatch overrulen?
+
+    Alleen als minstens één initiaal-set feitelijk de *roepnaam-initiaal* is
+    (één letter, gelijk aan de beginletter van een gedeelde roepnaam). Dat
+    vangt 'J.E.M.' (formeel) vs 'A.' (roepnaam-initiaal van 'Annelies').
+    Het overruled NIET 'J.P.' vs 'J.M.' — twee formele middel-initialen die
+    echt verschillen, ook al delen ze de roepnaam 'Jan'. Conservatief: bij
+    twijfel niet samenvoegen.
+    """
+    roep_initials = {v[0] for v in shared if v}
+    return (len(ia) == 1 and ia in roep_initials) or (len(ib) == 1 and ib in roep_initials)
 
 
 def _same_open_holder_identity(
@@ -1173,12 +1194,14 @@ def _same_open_holder_identity(
 ) -> bool:
     """True als twee open-mandaat-holders waarschijnlijk dezelfde persoon zijn.
 
-    Conservatief en gebonden aan gelijke familienaam. Daarbinnen geldt als
-    same-person: (b) een gedeelde bron-URL op het mandaat voor déze post
-    (zelfde benoemings-document), óf (a) compatibele initialen én een
-    compatibele voornaam-variant (roepnaam uit ``full`` meegenomen). Twee
-    echt-verschillende personen met dezelfde familienaam (Suzan vs Sophie
-    Hermans) collapsen niet — die blijven aparte holders.
+    Conservatief en gebonden aan gelijke familienaam, plus een harde
+    geboortejaar-grens. Daarbinnen geldt als same-person: (b) een gedeeld
+    persoon-specifiek benoemings-document op het mandaat voor déze post
+    (ABD-nieuws of ORI-persoon-id), óf (a) een naam-match waarbij een hard
+    initialen-conflict altijd blokkeert tenzij het puur een formele-vs-
+    roepnaam-initiaal-verschil is. Twee echt-verschillende personen met
+    dezelfde familienaam (Suzan vs Sophie Hermans; J.P. vs J.M. de Vries)
+    collapsen niet.
     """
     name_a, mand_a = a[3], a[4]
     name_b, mand_b = b[3], b[4]
@@ -1194,19 +1217,26 @@ def _same_open_holder_identity(
     if isinstance(by_a, int) and isinstance(by_b, int) and by_a != by_b:
         return False
 
-    # (b) Gedeeld benoemings-document op het mandaat voor deze post.
+    # (b) Gedeeld persoon-specifiek benoemings-document op het mandaat voor
+    # deze post (ABD-nieuws of ORI-persoon-id; generieke org-URLs tellen niet).
     if _holder_source_urls(mand_a) & _holder_source_urls(mand_b):
         return True
 
-    # (a) Naam-gebaseerd. Een exact gedeelde roepnaam (>=3 letters) is sterk
-    # genoeg om een initialen-mismatch (formele 'J.E.M.' vs roepnaam 'A.') te
-    # overrulen. Anders: compatibele initialen + compatibele voornaam-variant.
-    if _shared_roepnaam(name_a, name_b):
-        return True
+    # (a) Naam-gebaseerd. Een hard initialen-conflict (twee formele sets die
+    # ná de beginletter verschillen, bv. 'J.P.' vs 'J.M.') blokkeert altijd —
+    # ook bij een gedeelde roepnaam. Een gedeelde roepnaam overruled alleen
+    # de mildere mismatch waarbij één set de roepnaam-initiaal is ('J.E.M.'
+    # vs 'A.' voor 'Annelies').
     ia = _normalize_initials_compact(name_a.get("initials"))
     ib = _normalize_initials_compact(name_b.get("initials"))
-    if ia and ib and ia != ib and not (ia.startswith(ib) or ib.startswith(ia)):
-        return False
+    initials_conflict = bool(
+        ia and ib and ia != ib and not (ia.startswith(ib) or ib.startswith(ia))
+    )
+    shared = _shared_roepnaam(name_a, name_b)
+    if initials_conflict:
+        return bool(shared) and _roepnaam_overrules_initials(shared, ia, ib)
+    if shared:
+        return True
     return _given_sets_compatible(name_a, name_b)
 
 

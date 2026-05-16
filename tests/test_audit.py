@@ -962,6 +962,100 @@ def test_single_seat_collapses_on_shared_source_url(fake_data: Path) -> None:
     assert "single_seat_both_open" not in _categories_in(report)
 
 
+def test_single_seat_hard_initials_conflict_with_shared_roepnaam(
+    fake_data: Path,
+) -> None:
+    """Twee echte 'Jan de Vries' (J.P. vs J.M., geen geboortejaar) delen de
+    roepnaam 'Jan' maar hebben botsende formele middel-initialen => NIET
+    samenvoegen, wel flaggen (#76 regressie: roepnaam-override mag een hard
+    initialen-conflict niet overrulen)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "vries-jp-aaaa1111",
+        {
+            "id": "person:vries-jp-aaaa1111",
+            "name": {
+                "full": "J.P. (Jan) de Vries",
+                "family": "Vries",
+                "given": "Jan",
+                "initials": "J.P.",
+            },
+            "mandaten": [
+                {
+                    **m,
+                    "sources": [{"id": "a", "url": "https://a/1", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "vries-jm-bbbb2222",
+        {
+            "id": "person:vries-jm-bbbb2222",
+            "name": {
+                "full": "J.M. (Jan) de Vries",
+                "family": "Vries",
+                "given": "Jan",
+                "initials": "J.M.",
+            },
+            "mandaten": [
+                {
+                    **m,
+                    "id": "m2",
+                    "sources": [{"id": "b", "url": "https://b/2", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_generic_shared_url_does_not_collapse(fake_data: Path) -> None:
+    """Twee verschillende ambtenaren bij dezelfde organisatie delen een
+    generieke org-landingspagina als bron. Die mag GEEN identiteits-signaal
+    zijn => wel flaggen (#76 regressie: branch b alleen persoon-specifieke
+    URLs)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    generic = [
+        {
+            "id": "oo",
+            "url": "https://organisaties.overheid.nl/30046/gemeente-lelystad",
+            "retrieved": "2026-01-01",
+        }
+    ]
+    # Zelfde familie (zodat alleen branch b ze nog zou kunnen collapsen),
+    # maar duidelijk verschillende voornamen + initialen => twee personen.
+    _write_person(
+        fake_data,
+        "bergh-n-1",
+        {
+            "id": "person:bergh-n-1",
+            "name": {"family": "Bergh", "given": "Nynke", "initials": "N."},
+            "mandaten": [{**m, "sources": generic}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "bergh-c-2",
+        {
+            "id": "person:bergh-c-2",
+            "name": {"family": "Bergh", "given": "Cor", "initials": "C."},
+            "mandaten": [{**m, "id": "m2", "sources": generic}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
 # ---------------------------------------------------------------------------
 # Phase 5: ROO superset audit-checks
 # ---------------------------------------------------------------------------
