@@ -1,18 +1,28 @@
 ---
 import Base from '~/layouts/Base.astro';
 import { loadAll, personDisplayName, personUrl, isMandateCurrent } from '~/lib/data';
+import type { Person } from '~/lib/data';
 
 const { people } = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Sort key follows Dutch convention: by family name, then given name.
+// The tussenvoegsel ("van der", "de") is not the sort head - "van der Laan"
+// files under L. Display name stays given-first; only the sort changes.
+const sortKey = (p: Person) =>
+  [p.name?.family ?? personDisplayName(p), p.name?.given ?? '']
+    .join(' ')
+    .toLocaleLowerCase('nl');
 
 const indexed = people
   .map((p) => ({
     p,
     name: personDisplayName(p),
+    key: sortKey(p),
     current: (p.mandaten ?? []).filter(isMandateCurrent).length,
     total: (p.mandaten ?? []).length,
   }))
-  .sort((a, b) => a.name.localeCompare(b.name, 'nl'));
+  .sort((a, b) => a.key.localeCompare(b.key, 'nl'));
 
 const byLetter = new Map<string, typeof indexed>();
 for (const item of indexed) {
