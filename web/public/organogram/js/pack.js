@@ -1,13 +1,62 @@
 import { loadJSON } from "./fetcher.js";
 import { isActiveOn } from "./util.js";
 
-const NODE_W = 130;
-const NODE_H = 36;
-const COMPOUND_W = 200;
-const COMPOUND_H = 52;
+const NODE_W = 150;
+const NODE_H = 48;
+const COMPOUND_W = 210;
+const COMPOUND_H = 62;
 const ZOOM_MS = 700;
 const GRID_THRESHOLD = 12;
 const GRID_COLS = 10;
+
+// Label-tekst: 11px font, gewrapt over max 2 regels. Gemiddelde
+// glyph-breedte bij 11px ≈ 6px; CHARS_PER_LINE houdt ~10px padding aan
+// elke kant van NODE_W/COMPOUND_W aan.
+const LABEL_LINE_H = 13;
+const charsPerLine = (boxW) => Math.max(6, Math.floor((boxW - 20) / 6));
+
+// Breek een label over maximaal `maxLines` regels op woordgrens. Te lange
+// woorden worden hard gesplitst; de laatste regel krijgt een ellipsis als
+// er nog tekst over is. Geeft een array van regelstrings terug.
+function wrapLabel(text, boxW, maxLines) {
+  const max = charsPerLine(boxW);
+  const words = String(text || "").split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = "";
+  for (let i = 0; i < words.length; i += 1) {
+    let word = words[i];
+    // Woord langer dan een regel: hard afbreken.
+    while (word.length > max) {
+      if (line) {
+        lines.push(line);
+        line = "";
+        if (lines.length === maxLines) break;
+      }
+      lines.push(word.slice(0, max - 1) + "-");
+      word = word.slice(max - 1);
+      if (lines.length === maxLines) break;
+    }
+    if (lines.length === maxLines) break;
+    const candidate = line ? `${line} ${word}` : word;
+    if (candidate.length <= max) {
+      line = candidate;
+    } else {
+      if (line) lines.push(line);
+      line = word;
+      if (lines.length === maxLines) break;
+    }
+  }
+  if (line && lines.length < maxLines) lines.push(line);
+  // Resterende tekst die niet meer paste: ellipsis op de laatste regel.
+  const used = lines.join(" ").replace(/-(?= )/g, "").length;
+  const full = String(text || "").length;
+  if (lines.length === maxLines && used < full) {
+    let last = lines[maxLines - 1];
+    if (last.length >= max) last = last.slice(0, max - 1);
+    lines[maxLines - 1] = last.replace(/\s+$/, "") + "…";
+  }
+  return lines.length ? lines : [""];
+}
 
 // Sibling-gap en level-height groeien met focus-diepte: bij root staan
 // onderdelen dicht op elkaar; bij inzoom op een directie krijgen kinderen
@@ -160,17 +209,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     enter
       .append("text")
       .attr("class", "node-label")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-      .text((d) => truncate(d.data.label || "", 18));
+      .attr("text-anchor", "middle");
 
-    // Tweede regel voor compound posts (post met 1 active mandate inline).
+    // Tweede label-element voor de persoonsnaam bij compound posts.
     enter
       .filter((d) => compoundPersonName(d) !== null)
       .append("text")
       .attr("class", "node-label node-subline")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle");
+      .attr("text-anchor", "middle");
 
     enter.on("mouseenter", (event, d) => {
       if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
@@ -187,21 +233,47 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       .attr("height", (d) => nodeHeight(d))
       .attr("x", (d) => -nodeWidth(d) / 2)
       .attr("y", (d) => -nodeHeight(d) / 2);
-    // Hoofdlabel: bij compound iets omhoog, anders gecentreerd.
-    merged.select("text.node-label").each(function (d) {
+    // Hoofdlabel: gewrapt over max 2 regels, verticaal gecentreerd in de
+    // box. Bij compound posts krijgt het label 1 regel zodat de
+    // persoonsnaam eronder past.
+    merged.selectAll("text.node-label:not(.node-subline)").each(function (d) {
       const sub = compoundPersonName(d);
-      const el = d3.select(this);
-      if (sub !== null) {
-        el.attr("y", -9).text(truncate(d.data.label || "", 28));
-      } else {
-        el.attr("y", 0).text(truncate(d.data.label || "", 18));
-      }
+      const boxW = nodeWidth(d);
+      const maxLines = sub !== null ? 1 : 2;
+      const lines = wrapLabel(d.data.label || "", boxW, maxLines);
+      renderTspans(d3.select(this), lines, sub !== null);
     });
-    // Subline (persoon-naam) bij compound.
+    // Subline (persoon-naam) bij compound, onder het label.
     merged.select("text.node-subline").each(function (d) {
       const sub = compoundPersonName(d);
       if (sub === null) return;
-      d3.select(this).attr("y", 11).text(truncate(sub, 28));
+      const lines = wrapLabel(sub, nodeWidth(d), 1);
+      const sel = d3.select(this);
+      sel.selectAll("tspan").remove();
+      sel
+        .append("tspan")
+        .attr("x", 0)
+        .attr("y", LABEL_LINE_H * 0.9)
+        .attr("dominant-baseline", "central")
+        .text(lines[0]);
+    });
+  }
+
+  // Plaats label-regels als <tspan>s, verticaal gecentreerd. Bij een
+  // subline (compound post) schuift het blok omhoog zodat de naam eronder
+  // ruimte heeft.
+  function renderTspans(textSel, lines, hasSubline) {
+    textSel.selectAll("tspan").remove();
+    const n = lines.length;
+    const centerY = hasSubline ? -LABEL_LINE_H * 0.55 : 0;
+    const firstY = centerY - ((n - 1) * LABEL_LINE_H) / 2;
+    lines.forEach((ln, i) => {
+      textSel
+        .append("tspan")
+        .attr("x", 0)
+        .attr("y", firstY + i * LABEL_LINE_H)
+        .attr("dominant-baseline", "central")
+        .text(ln);
     });
   }
 
@@ -628,9 +700,4 @@ function linkPath(source, target) {
   const ty = target.y - NODE_H / 2;
   const my = (sy + ty) / 2;
   return `M${source.x},${sy} C${source.x},${my} ${target.x},${my} ${target.x},${ty}`;
-}
-
-function truncate(s, n) {
-  if (s.length <= n) return s;
-  return s.slice(0, n - 1) + "…";
 }
