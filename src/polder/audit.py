@@ -575,16 +575,21 @@ def _days_between(a: str, b: str) -> int | None:
 
 
 def _periods_collide(s1: str, e1: str | None, s2: str, e2: str | None) -> bool:
-    """Twee dienstverband-periodes 'botsen' als ze overlappen of vlak na
-    elkaar beginnen (binnen 31 dagen). Geen exacte datumgelijkheid vereist:
-    een fetcher die elke run een nieuw mandaat met de run-datum aanmaakt
-    levert dezelfde rol met een paar dagen verschil in start_date."""
-    near = _days_between(s1, s2)
-    if near is not None and near <= 31:
-        return True
-    # Strikte overlap: de periodes delen minstens één hele dag. Randpunt-
-    # aansluiting (mandaat A eindigt op de dag dat B begint) is GEEN
-    # botsing — dat is een normale opeenvolgende termijn (Kamerlid-wissel).
+    """Twee dienstverband-periodes 'botsen' als ze hetzelfde dienstverband
+    lijken te zijn, dubbel ingevoerd. Geen exacte datumgelijkheid vereist.
+
+    Twee gevallen:
+
+    1. Strikte overlap: de periodes delen minstens één hele dag. Randpunt-
+       aansluiting (A eindigt op de dag dat B begint) telt NIET — dat is
+       een normale opeenvolgende termijn.
+    2. Bijna-gelijke start (binnen 31 dagen) waarbij minstens één periode
+       open is (``end_date`` null). Dat is het ORI-fetcher-patroon: per
+       run een nieuw open mandaat met de run-datum als start_date. Twee
+       *afgesloten* periodes die kort na elkaar beginnen maar niet
+       overlappen zijn juist legitiem (korte opeenvolgende Kamerlid-
+       termijnen na schorsing/formatiewissel), dus die sluiten we uit.
+    """
     try:
         d1s = date.fromisoformat(s1[:10])
         d2s = date.fromisoformat(s2[:10])
@@ -592,7 +597,11 @@ def _periods_collide(s1: str, e1: str | None, s2: str, e2: str | None) -> bool:
         d2e = date.fromisoformat(e2[:10]) if e2 else date.max
     except (ValueError, TypeError):
         return False
-    return d1s < d2e and d2s < d1e
+    if d1s < d2e and d2s < d1e:
+        return True
+    near = _days_between(s1, s2)
+    both_closed = e1 is not None and e2 is not None
+    return near is not None and near <= 31 and not both_closed
 
 
 def _check_dup_mandate(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
