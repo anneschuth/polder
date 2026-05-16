@@ -26,6 +26,7 @@ from polder.fetchers.ek_scrape import (
     ensure_org_and_post,
     extract_index_entries,
     fetch_lid_pagina,
+    merge_person,
     parse_lid_pagina,
 )
 
@@ -341,3 +342,112 @@ def test_cli_dry_run(
     assert rc == 0
     captured = capsys.readouterr()
     assert "Wrote" in captured.err
+
+
+# ---------------------------------------------------------------------------
+# merge_person met managed_source_id=ek_scrape
+# ---------------------------------------------------------------------------
+
+
+def test_merge_person_ek_verwijdert_stale_ek_only_mandaat():
+    """Een EK-only senator-mandaat zonder live-tegenhanger wordt opgeruimd
+    wanneer ek_scrape mergt met managed_source_id=ek_scrape — hetzelfde
+    stale-seat-scenario als bij de TK-fetcher, nu voor de Eerste Kamer."""
+    existing = {
+        "id": "person:foo-b-1970",
+        "name": {"full": "Foo Bar", "family": "Bar"},
+        "mandaten": [
+            {
+                "id": "stale-ek",
+                "organization_id": ORG_ID_EERSTE_KAMER,
+                "post_id": POST_ID_SENATOR,
+                "role": "Senator",
+                "start_date": "2019-06-11",
+                "end_date": "2023-06-12",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://ek/old", "retrieved": "2025-01-01"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://ek/p", "retrieved": "2025-01-01"}],
+    }
+    new = {
+        "id": "person:foo-b-1970",
+        "name": {"full": "Foo Bar", "family": "Bar"},
+        "mandaten": [
+            {
+                "id": "fresh-ek",
+                "organization_id": ORG_ID_EERSTE_KAMER,
+                "post_id": POST_ID_SENATOR,
+                "role": "Senator",
+                "start_date": "2023-06-13",
+                "end_date": None,
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://ek/new", "retrieved": "2026-05-16"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://ek/p", "retrieved": "2026-05-16"}],
+    }
+    merged = merge_person(existing, new, managed_source_id=SOURCE_ID)
+    ids = {m["id"] for m in merged["mandaten"]}
+    assert "stale-ek" not in ids
+    assert "fresh-ek" in ids
+
+
+def test_merge_person_ek_behoudt_tk_mandaat_van_dezelfde_persoon():
+    """Iemand die zowel TK- als EK-lid was: de EK-merge mag het stale
+    EK-mandaat opruimen maar nooit het TK-mandaat aanraken — dat wordt door
+    een andere fetcher beheerd."""
+    existing = {
+        "id": "person:dual-c-1965",
+        "name": {"full": "Dual Career", "family": "Career"},
+        "mandaten": [
+            {
+                "id": "tk-mandaat",
+                "organization_id": "org:tweede-kamer",
+                "post_id": "post:kamerlid",
+                "role": "Kamerlid voor CDA",
+                "start_date": "2010-06-17",
+                "end_date": "2017-03-22",
+                "sources": [
+                    {"id": "tk_odata", "url": "https://tk/x", "retrieved": "2025-01-01"},
+                ],
+            },
+            {
+                "id": "stale-ek",
+                "organization_id": ORG_ID_EERSTE_KAMER,
+                "post_id": POST_ID_SENATOR,
+                "role": "Senator",
+                "start_date": "2019-06-11",
+                "end_date": "2023-06-12",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://ek/old", "retrieved": "2025-01-01"},
+                ],
+            },
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://ek/p", "retrieved": "2025-01-01"}],
+    }
+    new = {
+        "id": "person:dual-c-1965",
+        "name": {"full": "Dual Career", "family": "Career"},
+        "mandaten": [
+            {
+                "id": "fresh-ek",
+                "organization_id": ORG_ID_EERSTE_KAMER,
+                "post_id": POST_ID_SENATOR,
+                "role": "Senator",
+                "start_date": "2023-06-13",
+                "end_date": None,
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://ek/new", "retrieved": "2026-05-16"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://ek/p", "retrieved": "2026-05-16"}],
+    }
+    merged = merge_person(existing, new, managed_source_id=SOURCE_ID)
+    ids = {m["id"] for m in merged["mandaten"]}
+    assert "tk-mandaat" in ids  # andere fetcher, blijft staan
+    assert "stale-ek" not in ids
+    assert "fresh-ek" in ids
