@@ -88,9 +88,9 @@ def test_skill_md_describes_classification_mapping() -> None:
     """Elke ABD-classification uit de mapping moet expliciet in SKILL.md staan."""
     body = _read_skill_md()
     for classification in ABD_CLASSIFICATIONS:
-        assert (
-            classification in body
-        ), f"{classification} ontbreekt in SKILL.md. Mapping moet expliciet zijn."
+        assert classification in body, (
+            f"{classification} ontbreekt in SKILL.md. Mapping moet expliciet zijn."
+        )
 
 
 def test_skill_md_mentions_red_avg_skip_rule() -> None:
@@ -138,9 +138,9 @@ def test_person_post_classification_in_abd_set_or_absent() -> None:
         if proposal["type"] != "person_post":
             continue
         if "classification" in proposal:
-            assert (
-                proposal["classification"] in ABD_CLASSIFICATIONS
-            ), f"Onbekende classification {proposal['classification']}"
+            assert proposal["classification"] in ABD_CLASSIFICATIONS, (
+                f"Onbekende classification {proposal['classification']}"
+            )
 
 
 def test_no_red_avg_posts_in_output() -> None:
@@ -152,9 +152,9 @@ def test_no_red_avg_posts_in_output() -> None:
             for field in ("post_id", "child_name", "evidence", "person_name")
         ).lower()
         for forbidden in RED_AVG_KEYWORDS:
-            assert (
-                forbidden not in haystack
-            ), f"Rood-AVG-keyword '{forbidden}' aanwezig in proposal: {proposal}"
+            assert forbidden not in haystack, (
+                f"Rood-AVG-keyword '{forbidden}' aanwezig in proposal: {proposal}"
+            )
 
 
 def test_classification_mapping_consistent_in_skill_md() -> None:
@@ -164,9 +164,9 @@ def test_classification_mapping_consistent_in_skill_md() -> None:
     consistent zijn met de enums uit schemas/post.schema.json.
     """
     for title, classification in TITLE_TO_CLASSIFICATION.items():
-        assert (
-            classification in ABD_CLASSIFICATIONS
-        ), f"Mapping {title} -> {classification} verwijst naar onbekende classification"
+        assert classification in ABD_CLASSIFICATIONS, (
+            f"Mapping {title} -> {classification} verwijst naar onbekende classification"
+        )
 
 
 def test_example_output_has_both_proposal_types() -> None:

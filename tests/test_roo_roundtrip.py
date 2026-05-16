@@ -206,9 +206,9 @@ def test_end_to_end_roundtrip_full_coverage(tmp_path: Path):
     total_matched = sum(f.matched for f in report.fields.values())
     assert total_seen > 0, "Round-trip moet ten minste één leaf zien"
     coverage = total_matched / total_seen
-    assert (
-        coverage >= 0.99
-    ), f"End-to-end coverage onder 99%: {coverage:.2%}\n{format_report(report, top_n=10)}"
+    assert coverage >= 0.99, (
+        f"End-to-end coverage onder 99%: {coverage:.2%}\n{format_report(report, top_n=10)}"
+    )
     assert report.missing_records == []
 
 

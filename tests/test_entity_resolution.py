@@ -106,9 +106,9 @@ def test_example_output_matched_or_proposed() -> None:
     data = _read_output()
     matched = data["matched_id"]
     proposed = data["proposed_id"]
-    assert (matched is None) != (
-        proposed is None
-    ), "Precies één van matched_id of proposed_id moet gevuld zijn."
+    assert (matched is None) != (proposed is None), (
+        "Precies één van matched_id of proposed_id moet gevuld zijn."
+    )
 
 
 def test_matched_id_follows_slug_convention() -> None:
@@ -124,18 +124,18 @@ def test_proposed_id_follows_slug_convention() -> None:
     if proposed is not None:
         assert proposed.startswith("person:"), f"proposed_id moet met 'person:' starten: {proposed}"
         body = proposed.split(":", 1)[1]
-        assert PROPOSED_SLUG_BODY_RE.match(
-            body
-        ), f"proposed_id-body voldoet niet aan <family>-<initials>-<year>: {proposed}"
+        assert PROPOSED_SLUG_BODY_RE.match(body), (
+            f"proposed_id-body voldoet niet aan <family>-<initials>-<year>: {proposed}"
+        )
 
 
 def test_alternative_candidates_present_when_below_high_confidence() -> None:
     data = _read_output()
     if float(data["confidence"]) < 0.95:
         alts = data.get("alternative_candidates")
-        assert (
-            isinstance(alts, list) and len(alts) >= 1
-        ), "alternative_candidates moet aanwezig zijn als confidence < 0.95"
+        assert isinstance(alts, list) and len(alts) >= 1, (
+            "alternative_candidates moet aanwezig zijn als confidence < 0.95"
+        )
         for alt in alts:
             assert "id" in alt
             assert "score" in alt
