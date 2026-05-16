@@ -10,13 +10,19 @@ mandaten:
   post_id: post:directeur-particulieren-belastingdienst-min-fin
   role: directeur Particulieren bij de Belastingdienst van het ministerie van Financiën
   start_date: '2020-03-15'
-  end_date: null
+  end_date: '2022-01-17'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/21/besim-jawad-directeur-particulieren-bij-de-belastingdienst
     retrieved: '2026-05-14'
     fields:
     - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/21/besim-jawad-overleden
+    retrieved: '2026-05-16'
+    fields:
+    - end_date
+    - applied_via:apply-staging:overlijden
   appointment:
     decision: ABD-nieuwsbericht 2020-02-21
   confidence: 0.9

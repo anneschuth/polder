@@ -11,13 +11,19 @@ mandaten:
   role: directeur Netwerkontwikkeling bij Rijkswaterstaat Noord-Nederland, ministerie
     van Infrastructuur en Waterstaat
   start_date: '2021-08-01'
-  end_date: null
+  end_date: '2025-04-25'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/22/linda-rose-santhagens-directeur-netwerkontwikkeling-bij-rijkswaterstaat-noord-nederland
     retrieved: '2026-05-15'
     fields:
     - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/26/linda-rose-santhagens-overleden
+    retrieved: '2026-05-16'
+    fields:
+    - end_date
+    - applied_via:apply-staging:overlijden
   appointment:
     decision: ABD-nieuwsbericht 2021-07-22
   confidence: 0.92

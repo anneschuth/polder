@@ -11,13 +11,19 @@ mandaten:
   role: directeur Shared Service Center ICT bij het Ministerie van Binnenlandse Zaken
     en Koninkrijksrelaties
   start_date: '2022-03-01'
-  end_date: null
+  end_date: '2023-09-26'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/11/erik-joustra-directeur-shared-service-center-ict-bij-bzk
     retrieved: '2026-05-13'
     fields:
     - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/28/erik-joustra-overleden
+    retrieved: '2026-05-16'
+    fields:
+    - end_date
+    - applied_via:apply-staging:overlijden
   appointment:
     decision: ABD-nieuwsbericht 2022-01-11
   confidence: 0.92
