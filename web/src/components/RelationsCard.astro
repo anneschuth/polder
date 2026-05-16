@@ -1,0 +1,72 @@
+---
+import OrgLink from '~/components/OrgLink.astro';
+import type { Organization } from '~/lib/data';
+
+interface Props {
+  parent?: Organization | null;
+  children?: Organization[];
+  siblings?: Organization[];
+  predecessors?: { id: string; org: Organization | undefined }[];
+  successors?: { id: string; org: Organization | undefined }[];
+}
+
+const {
+  parent,
+  children = [],
+  siblings = [],
+  predecessors = [],
+  successors = [],
+} = Astro.props;
+
+const hasAny = Boolean(
+  parent ||
+    children.length ||
+    siblings.length ||
+    predecessors.length ||
+    successors.length,
+);
+---
+
+{hasAny && (
+  <div class="stack">
+    {parent && (
+      <p><span class="muted">Onderdeel van</span><br /><OrgLink org={parent} /></p>
+    )}
+    {predecessors.length > 0 && (
+      <p>
+        <span class="muted">Voorganger(s)</span><br />
+        {predecessors.map((it, i) => (
+          <>{i > 0 && ', '}<OrgLink org={it.org} fallbackId={it.id} /></>
+        ))}
+      </p>
+    )}
+    {successors.length > 0 && (
+      <p>
+        <span class="muted">Opvolger(s)</span><br />
+        {successors.map((it, i) => (
+          <>{i > 0 && ', '}<OrgLink org={it.org} fallbackId={it.id} /></>
+        ))}
+      </p>
+    )}
+    {siblings.length > 0 && (
+      <details open={siblings.length <= 12}>
+        <summary>Zusterorganisaties ({siblings.length})</summary>
+        <ul>
+          {siblings.map((s) => (
+            <li><OrgLink org={s} /><span class="muted"> · {s.type}</span></li>
+          ))}
+        </ul>
+      </details>
+    )}
+    {children.length > 0 && (
+      <details open={children.length <= 20}>
+        <summary>Onderdelen ({children.length})</summary>
+        <ul>
+          {children.map((c) => (
+            <li><OrgLink org={c} /><span class="muted"> · {c.type}</span></li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </div>
+)}

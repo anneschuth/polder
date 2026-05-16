@@ -20,6 +20,7 @@ const sorted = sortedMandates(mandaten ?? []);
         <th>Organisatie</th>
         <th>Post</th>
         <th>Periode</th>
+        <th>Benoeming</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@ const sorted = sortedMandates(mandaten ?? []);
         const post = m.post_id ? data.postById.get(m.post_id) : null;
         const isCurrent = !m.end_date;
         const period = `${m.start_date ?? '?'} – ${m.end_date ?? 'heden'}`;
+        const ap = m.appointment;
         return (
           <tr>
             <td>
@@ -52,6 +54,19 @@ const sorted = sortedMandates(mandaten ?? []);
               ) : null}
             </td>
             <td>{period}</td>
+            <td>
+              {ap ? (
+                <>
+                  {ap.decision && <span>{ap.decision}</span>}
+                  {ap.kb_nummer && <span class="muted"> · {ap.kb_nummer}</span>}
+                  {ap.staatscourant_url && (
+                    <> · <a href={ap.staatscourant_url} rel="external">Staatscourant</a></>
+                  )}
+                </>
+              ) : (
+                <span class="muted">–</span>
+              )}
+            </td>
           </tr>
         );
       })}

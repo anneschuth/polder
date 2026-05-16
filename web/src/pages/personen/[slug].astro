@@ -1,8 +1,22 @@
 ---
 import Base from '~/layouts/Base.astro';
+import Card from '~/components/Card.astro';
+import Timeline from '~/components/Timeline.astro';
 import MandaatTimeline from '~/components/MandaatTimeline.astro';
+import Identifiers from '~/components/Identifiers.astro';
 import SourceList from '~/components/SourceList.astro';
-import { loadAll, personDisplayName, type Person } from '~/lib/data';
+import {
+  loadAll,
+  personDisplayName,
+  careerSummary,
+  personExternalLinks,
+  currentName,
+  orgUrl,
+  postUrl,
+  isMandateCurrent,
+  sortedMandates,
+  type Person,
+} from '~/lib/data';
 
 export async function getStaticPaths() {
   const { people } = loadAll();
@@ -17,46 +31,37 @@ interface Props {
 }
 
 const { person } = Astro.props;
+const data = loadAll();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const name = personDisplayName(person);
 const honorifics = (person.name?.honorifics_pre ?? []).join(' ');
 const honorificsPost = (person.name?.honorifics_post ?? []).join(' ');
-const externals: { label: string; url: string }[] = [];
-const ids = person.identifiers ?? {};
-if (ids.wikidata) externals.push({ label: 'Wikidata', url: `https://www.wikidata.org/wiki/${ids.wikidata}` });
-if (ids.tk_id) externals.push({ label: 'Tweede Kamer', url: `https://www.tweedekamer.nl/kamerleden_en_commissies/alle_kamerleden/${ids.tk_id}` });
-if (ids.ek_id) externals.push({ label: 'Eerste Kamer', url: `https://www.eerstekamer.nl/persoon/${ids.ek_id}` });
+const externals = personExternalLinks(person);
+const career = careerSummary(person);
+
+const allMandaten = sortedMandates(person.mandaten ?? []);
+const current = allMandaten.filter((m) => isMandateCurrent(m));
+
+const hasIdentifiers = Object.values(person.identifiers ?? {}).some(
+  (v) => v != null && v !== '',
+);
+
+const GENDER: Record<string, string> = { m: 'man', f: 'vrouw', x: 'anders' };
+
+const ICON_USER = 'person';
+const ICON_CLOCK = 'history';
+const ICON_TABLE = 'list';
+const ICON_ID = 'diploma';
 ---
 <Base title={name} description={`Polder-record voor ${name}`}>
   <article class="stack">
     <header class="stack">
       <p class="muted">Persoon · <code>{person.id}</code></p>
-      <h1>{honorifics && <span class="muted">{honorifics} </span>}{name}{honorificsPost && <span class="muted"> {honorificsPost}</span>}</h1>
-      <dl class="grid grid-2">
-        {person.birth?.year && (
-          <div>
-            <dt class="muted">Geboortejaar</dt>
-            <dd>{person.birth.year}</dd>
-          </div>
-        )}
-        {person.gender && (
-          <div>
-            <dt class="muted">Gender</dt>
-            <dd>{person.gender}</dd>
-          </div>
-        )}
-        {person.name?.family && (
-          <div>
-            <dt class="muted">Familienaam</dt>
-            <dd>{person.name.family}</dd>
-          </div>
-        )}
-        {person.name?.initials && (
-          <div>
-            <dt class="muted">Initialen</dt>
-            <dd>{person.name.initials}</dd>
-          </div>
-        )}
-      </dl>
+      <h1>
+        {honorifics && <span class="muted">{honorifics} </span>}{name}
+        {honorificsPost && <span class="muted"> {honorificsPost}</span>}
+      </h1>
+      {career && <p class="career">{career}</p>}
       {externals.length > 0 && (
         <p>
           {externals.map((e, i) => (
@@ -69,10 +74,65 @@ if (ids.ek_id) externals.push({ label: 'Eerste Kamer', url: `https://www.eerstek
       )}
     </header>
 
-    <section>
-      <h2>Mandaten</h2>
-      <MandaatTimeline mandaten={person.mandaten ?? []} />
-    </section>
+    <div class="sections">
+      {current.length > 0 && (
+        <Card title="Huidige functie(s)" icon={ICON_USER}>
+          <ul>
+            {current.map((m) => {
+              const org = data.orgById.get(m.organization_id);
+              const post = m.post_id ? data.postById.get(m.post_id) : null;
+              return (
+                <li>
+                  <strong>{m.role ?? post?.label ?? 'Mandaat'}</strong>
+                  {org && <> · <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
+                  {post && <> · <a href={postUrl(post.slug, base)}>{post.label}</a></>}
+                  {m.start_date && <span class="muted"> · sinds {m.start_date}</span>}
+                </li>
+              );
+            })}
+          </ul>
+        </Card>
+      )}
+
+      <Card title="Persoonsgegevens" icon={ICON_USER}>
+        <dl class="deflist">
+          {person.birth?.year && (
+            <div><dt class="muted">Geboortejaar</dt><dd>{person.birth.year}</dd></div>
+          )}
+          {person.gender && (
+            <div><dt class="muted">Geslacht</dt><dd>{GENDER[person.gender] ?? person.gender}</dd></div>
+          )}
+          {person.name?.family && (
+            <div><dt class="muted">Familienaam</dt><dd>{person.name.family}</dd></div>
+          )}
+          {person.name?.given && (
+            <div><dt class="muted">Voornaam</dt><dd>{person.name.given}</dd></div>
+          )}
+          {person.name?.tussenvoegsel && (
+            <div><dt class="muted">Tussenvoegsel</dt><dd>{person.name.tussenvoegsel}</dd></div>
+          )}
+          {person.name?.initials && (
+            <div><dt class="muted">Initialen</dt><dd>{person.name.initials}</dd></div>
+          )}
+        </dl>
+      </Card>
+
+      {hasIdentifiers && (
+        <Card title="Identifiers" icon={ICON_ID}>
+          <Identifiers identifiers={person.identifiers} kind="person" />
+        </Card>
+      )}
+
+      <Card title="Loopbaan" icon={ICON_CLOCK}>
+        <Timeline mandaten={person.mandaten ?? []} />
+      </Card>
+
+      {allMandaten.length > 0 && (
+        <Card title="Mandaten (tabel)" icon={ICON_TABLE} collapsible>
+          <MandaatTimeline mandaten={person.mandaten ?? []} />
+        </Card>
+      )}
+    </div>
 
     <SourceList sources={person.sources} />
   </article>

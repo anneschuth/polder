@@ -1,0 +1,21 @@
+---
+// Thin wrapper around the design-system <nldd-tag>. Keeps the existing
+// Badge call sites (label / tone / href / title) unchanged.
+interface Props {
+  label: string;
+  tone?: 'default' | 'lint' | 'warn';
+  href?: string;
+  title?: string;
+}
+
+const { label, tone = 'default', href, title } = Astro.props;
+const color = tone === 'lint' ? 'accent' : tone === 'warn' ? 'warning' : 'neutral';
+---
+
+{href ? (
+  <a class="badge-link" href={href} title={title} rel="external">
+    <nldd-tag color={color} size="sm" text={label}></nldd-tag>
+  </a>
+) : (
+  <nldd-tag color={color} size="sm" text={label} title={title}></nldd-tag>
+)}

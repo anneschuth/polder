@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  /** An <nldd-icon> name (see the design-system icon library). */
+  icon?: string;
+  accent?: string;
+  span?: number;
+  collapsible?: boolean;
+  open?: boolean;
+}
+
+const { title, icon, accent, collapsible, open = false } = Astro.props;
+
+// Render nothing when the body has no real markup. Components that bail out
+// on empty data render nothing (good) but a truthy-bug can leak a stray "0"
+// or whitespace; treat content with no element tags as empty so the section
+// never appears.
+const body = await Astro.slots.render('default');
+const hasBody = /<[a-z]/i.test(body);
+
+const style = accent ? `--card-accent: ${accent};` : undefined;
+---
+
+{hasBody && (
+  <section class="section" style={style}>
+    {collapsible ? (
+      <details open={open}>
+        <summary class="section-head">
+          {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
+          {title}
+        </summary>
+        <nldd-divider></nldd-divider>
+        <Fragment set:html={body} />
+      </details>
+    ) : (
+      <Fragment>
+        <h2 class="section-head">
+          {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
+          {title}
+        </h2>
+        <nldd-divider></nldd-divider>
+        <Fragment set:html={body} />
+      </Fragment>
+    )}
+  </section>
+)}

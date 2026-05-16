@@ -1,7 +1,19 @@
 ---
 import Base from '~/layouts/Base.astro';
+import Card from '~/components/Card.astro';
+import Badge from '~/components/Badge.astro';
 import SourceList from '~/components/SourceList.astro';
-import { loadAll, currentName, orgUrl, personUrl, personDisplayName, isMandateCurrent, type Post } from '~/lib/data';
+import {
+  loadAll,
+  currentName,
+  orgUrl,
+  postUrl,
+  personUrl,
+  personDisplayName,
+  isMandateCurrent,
+  orgAccent,
+  type Post,
+} from '~/lib/data';
 
 export async function getStaticPaths() {
   const { posts } = loadAll();
@@ -20,71 +32,109 @@ const data = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const org = data.orgById.get(post.organization_id);
-const mandates = (data.mandatesByPost.get(post.id) ?? []).sort((a, b) => {
+const accent = orgAccent(org?.type);
+const mandates = (data.mandatesByPost.get(post.id) ?? []).slice().sort((a, b) => {
   const ac = isMandateCurrent(a.mandate) ? 0 : 1;
   const bc = isMandateCurrent(b.mandate) ? 0 : 1;
   return ac - bc || (b.mandate.start_date ?? '').localeCompare(a.mandate.start_date ?? '');
 });
 const current = mandates.filter((m) => isMandateCurrent(m.mandate));
 const historical = mandates.filter((m) => !isMandateCurrent(m.mandate));
+const siblingPosts = (data.postsByOrg.get(post.organization_id) ?? [])
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => a.label.localeCompare(b.label, 'nl'));
+
+const ICON_INFO = 'info-circle';
+const ICON_USER = 'person';
+const ICON_CLOCK = 'history';
+const ICON_BRIEFCASE = 'business-suitcase';
 ---
 <Base title={post.label}>
   <article class="stack">
     <header class="stack">
       <p class="muted">
         Post
-        {org && (
-          <> bij <a href={orgUrl(org, base)}>{currentName(org)}</a></>
-        )}
+        {org && <> bij <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
         · <code>{post.id}</code>
       </p>
       <h1>{post.label}</h1>
-      <dl class="grid grid-2">
-        {post.classification && (
-          <div><dt class="muted">Classificatie</dt><dd>{post.classification}</dd></div>
-        )}
-        {post.valid_from && (
-          <div><dt class="muted">Geldig vanaf</dt><dd>{post.valid_from}</dd></div>
-        )}
-        {post.valid_until && (
-          <div><dt class="muted">Geldig tot</dt><dd>{post.valid_until}</dd></div>
-        )}
-      </dl>
     </header>
 
-    {current.length > 0 && (
-      <section>
-        <h2>Huidige bezetter{current.length > 1 ? 's' : ''} ({current.length})</h2>
-        <ul>
-          {current.map(({ person, mandate }) => (
-            <li>
-              <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
-              {mandate.start_date && <span class="muted"> · sinds {mandate.start_date}</span>}
-              {mandate.role && mandate.role !== post.label && <span class="muted"> · rol: {mandate.role}</span>}
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
+    <div class="sections">
+      <Card title="Kerngegevens" icon={ICON_INFO} accent={accent}>
+        <div class="stack">
+          {post.classification && (
+            <div class="badge-row"><Badge label={post.classification} tone="lint" /></div>
+          )}
+          <dl class="deflist">
+            {org && (
+              <div><dt class="muted">Organisatie</dt><dd><a href={orgUrl(org, base)}>{currentName(org)}</a></dd></div>
+            )}
+            {post.seat_count != null && (
+              <div><dt class="muted">Aantal zetels</dt><dd>{post.seat_count}</dd></div>
+            )}
+            {post.valid_from && (
+              <div><dt class="muted">Geldig vanaf</dt><dd>{post.valid_from}</dd></div>
+            )}
+            {post.valid_until && (
+              <div><dt class="muted">Geldig tot</dt><dd>{post.valid_until}</dd></div>
+            )}
+            {post.roo_functie_id && (
+              <div><dt class="muted">ROO-functie-id</dt><dd><code>{post.roo_functie_id}</code></dd></div>
+            )}
+            {post.roo_naam && post.roo_naam !== post.label && (
+              <div><dt class="muted">ROO-naam</dt><dd>{post.roo_naam}</dd></div>
+            )}
+          </dl>
+        </div>
+      </Card>
 
-    {historical.length > 0 && (
-      <section>
-        <h2>Eerdere bezetters ({historical.length})</h2>
-        <table class="data">
-          <thead>
-            <tr><th>Persoon</th><th>Periode</th></tr>
-          </thead>
-          <tbody>
-            {historical.map(({ person, mandate }) => (
-              <tr>
-                <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
-                <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? '?'}</td>
-              </tr>
+      {current.length > 0 && (
+        <Card title={`Huidige bezetter${current.length > 1 ? 's' : ''} (${current.length})`} icon={ICON_USER} accent={accent}>
+          <ul>
+            {current.map(({ person, mandate }) => (
+              <li>
+                <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
+                {mandate.start_date && <span class="muted"> · sinds {mandate.start_date}</span>}
+                {mandate.role && mandate.role !== post.label && (
+                  <span class="muted"> · rol: {mandate.role}</span>
+                )}
+              </li>
             ))}
-          </tbody>
-        </table>
-      </section>
-    )}
+          </ul>
+        </Card>
+      )}
+
+      {siblingPosts.length > 0 && (
+        <Card title="Verwante posten" icon={ICON_BRIEFCASE} accent={accent} collapsible open={siblingPosts.length <= 15}>
+          <ul>
+            {siblingPosts.map((p) => (
+              <li>
+                <a href={postUrl(p.slug, base)}>{p.label}</a>
+                {p.classification && <span class="muted"> · {p.classification}</span>}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
+      {historical.length > 0 && (
+        <Card title={`Eerdere bezetters (${historical.length})`} icon={ICON_CLOCK} accent={accent} collapsible open={historical.length <= 20}>
+          <table class="data">
+            <thead>
+              <tr><th>Persoon</th><th>Periode</th></tr>
+            </thead>
+            <tbody>
+              {historical.map(({ person, mandate }) => (
+                <tr>
+                  <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
+                  <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? '?'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Card>
+      )}
+    </div>
 
     <SourceList sources={post.sources} />
   </article>

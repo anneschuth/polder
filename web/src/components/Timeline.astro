@@ -1,0 +1,120 @@
+---
+import {
+  loadAll,
+  sortedMandates,
+  currentName,
+  currentAbbr,
+  orgUrl,
+  postUrl,
+  classificationAccent,
+  classificationLabel,
+  type Mandate,
+} from '~/lib/data';
+
+interface Props {
+  mandaten: Mandate[];
+  max?: number;
+}
+
+const { mandaten, max = 200 } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const data = loadAll();
+const sorted = sortedMandates(mandaten ?? []).slice(0, max);
+const total = (mandaten ?? []).length;
+
+const now = new Date();
+const nowFrac = now.getFullYear() + now.getMonth() / 12;
+
+// Fractional year (YYYY-MM) so short mandates and current ones are placed
+// precisely instead of snapping to whole years (which pushed a mandate that
+// started this year off the right edge of the track).
+const frac = (d?: string | null): number | null => {
+  if (!d) return null;
+  const y = Number(d.slice(0, 4));
+  if (!Number.isFinite(y)) return null;
+  const mo = Number(d.slice(5, 7));
+  return y + (Number.isFinite(mo) ? (mo - 1) / 12 : 0);
+};
+
+const starts = sorted.map((m) => frac(m.start_date)).filter((n): n is number => n != null);
+const ends = sorted.map((m) => frac(m.end_date) ?? nowFrac);
+let minY = starts.length ? Math.floor(Math.min(...starts)) : now.getFullYear() - 1;
+let maxY = Math.ceil(Math.max(nowFrac, ...ends));
+if (maxY <= minY) maxY = minY + 1;
+const spanY = maxY - minY;
+
+const midY = Math.round(minY + spanY / 2);
+const axisYears = [minY, midY, maxY];
+
+const clamp = (n: number) => Math.min(100, Math.max(0, n));
+const pct = (y: number) => clamp(((y - minY) / spanY) * 100);
+
+// Legend: one entry per distinct classification present, in first-seen order.
+const seen = new Set<string>();
+const legend: { label: string; color: string }[] = [];
+for (const m of sorted) {
+  const c = m.post_id ? data.postById.get(m.post_id)?.classification : null;
+  const key = c ?? 'overig';
+  if (seen.has(key)) continue;
+  seen.add(key);
+  legend.push({
+    label: classificationLabel(key),
+    color: classificationAccent(key),
+  });
+}
+---
+
+{sorted.length === 0 ? (
+  <p class="muted">Geen mandaten bekend.</p>
+) : (
+  <div class="tl">
+    <div class="tl-axis">
+      {axisYears.map((y) => <span>{y}</span>)}
+    </div>
+    {sorted.map((m) => {
+      const org = data.orgById.get(m.organization_id);
+      const post = m.post_id ? data.postById.get(m.post_id) : null;
+      const isCurrent = !m.end_date;
+      const sy = frac(m.start_date) ?? minY;
+      const ey = frac(m.end_date) ?? nowFrac;
+      const left = pct(sy);
+      const right = pct(Math.max(ey, sy));
+      const width = Math.max(1.5, Math.min(right - left, 100 - left));
+      const accent = classificationAccent(post?.classification);
+      const period = `${m.start_date ?? '?'} – ${m.end_date ?? 'heden'}`;
+      return (
+        <div class="tl-row">
+          <div class="tl-track">
+            <span
+              class={`tl-bar${isCurrent ? ' tl-bar--current' : ''}`}
+              style={`left:${left}%;width:${width}%;--bar-accent:${accent};`}
+              title={period}
+            ></span>
+          </div>
+          <div class="tl-label">
+            <strong>{m.role ?? post?.label ?? 'Mandaat'}</strong>
+            {org && (
+              <a href={orgUrl(org, base)}>
+                {currentName(org)}
+                {currentAbbr(org) && <span class="muted"> ({currentAbbr(org)})</span>}
+              </a>
+            )}
+            {post && <a href={postUrl(post.slug, base)}>· {post.label}</a>}
+            <span class="tl-period">{period}{isCurrent && ' · lopend'}</span>
+          </div>
+        </div>
+      );
+    })}
+    {total > max && <p class="muted">Eerste {max} van {total} mandaten getoond.</p>}
+    {legend.length > 0 && (
+      <div class="tl-legend">
+        {legend.map((l) => (
+          <span class="seat-legend">
+            <span class="seat-dot" style={`background:${l.color};`}></span>
+            {l.label}
+          </span>
+        ))}
+      </div>
+    )}
+  </div>
+)}

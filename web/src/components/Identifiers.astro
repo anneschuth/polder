@@ -1,0 +1,68 @@
+---
+interface Props {
+  identifiers?: Record<string, string | undefined>;
+  kind: 'org' | 'person';
+}
+
+const { identifiers, kind } = Astro.props;
+const entries = Object.entries(identifiers ?? {}).filter(([, v]) => v != null && v !== '');
+
+const LABELS: Record<string, string> = {
+  oin: 'OIN',
+  tooi: 'TOOI',
+  owms: 'OWMS',
+  wikidata: 'Wikidata',
+  roo_id: 'ROO-id',
+  organisatiecode: 'Organisatiecode',
+  kvk: 'KvK',
+  rsin: 'RSIN',
+  ictu: 'ICTU',
+  atu: 'ATU (EU)',
+  btw: 'BTW',
+  loonheffing: 'Loonheffing',
+  tk_persoon_id: 'Tweede Kamer-id',
+  abd_id: 'ABD-id',
+  allmanak_id: 'Almanak-id',
+};
+
+function linkFor(key: string, value: string): string | null {
+  if (/^https?:\/\//.test(value)) return value; // tooi/owms/atu are URLs
+  if (key === 'wikidata') return `https://www.wikidata.org/wiki/${value}`;
+  if (key === 'roo_id' && kind === 'org') return `https://organisaties.overheid.nl/${value}/`;
+  return null;
+}
+
+// Show a short readable token instead of a raw multi-segment URL so the
+// value never overflows the card. The full URL stays as the link href.
+function displayValue(value: string): string {
+  if (!/^https?:\/\//.test(value)) return value;
+  try {
+    const u = new URL(value);
+    const last = u.pathname.split('/').filter(Boolean).pop();
+    return last ? `${u.hostname}/…/${last}` : u.hostname;
+  } catch {
+    return value;
+  }
+}
+---
+
+{entries.length > 0 && (
+  <dl class="deflist">
+    {entries.map(([k, v]) => {
+      const href = linkFor(k, v as string);
+      const shown = displayValue(v as string);
+      return (
+        <div>
+          <dt>{LABELS[k] ?? k}</dt>
+          <dd>
+            {href ? (
+              <a href={href} rel="external" title={v}><code>{shown}</code></a>
+            ) : (
+              <code>{shown}</code>
+            )}
+          </dd>
+        </div>
+      );
+    })}
+  </dl>
+)}

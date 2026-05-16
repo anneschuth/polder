@@ -1,0 +1,130 @@
+---
+import type { OrgContact, OrgAddress } from '~/lib/data';
+
+interface Props {
+  contact?: OrgContact;
+  afspraak?: { email?: string; telefoonnummer?: string; url?: string };
+  organogram_url?: string;
+}
+
+const { contact, afspraak, organogram_url } = Astro.props;
+const c = contact ?? {};
+
+function formatAddress(a: OrgAddress): string {
+  const line1 = [a.openbare_ruimte, a.huisnummer, a.huisnummer_toevoeging]
+    .filter(Boolean)
+    .join(' ');
+  const pb = a.postbus ? `Postbus ${a.postbus}` : null;
+  const an = a.antwoordnummer ? `Antwoordnummer ${a.antwoordnummer}` : null;
+  const line2 = [a.postcode, a.woonplaats].filter(Boolean).join(' ');
+  return [a.ter_attentie_van, line1 || pb || an, line2, a.land]
+    .filter(Boolean)
+    .join(', ');
+}
+
+const hasAny =
+  c.website ||
+  c.email ||
+  c.fax ||
+  c.addresses?.length ||
+  c.phones?.length ||
+  c.emails?.length ||
+  c.internet_addresses?.length ||
+  c.contact_forms?.length ||
+  c.social_media?.length ||
+  afspraak?.email ||
+  afspraak?.telefoonnummer ||
+  afspraak?.url ||
+  organogram_url;
+---
+
+{hasAny && (
+  <dl class="deflist">
+    {c.website && (
+      <div>
+        <dt>Website</dt>
+        <dd><a href={c.website} rel="external">{c.website.replace(/^https?:\/\//, '')}</a></dd>
+      </div>
+    )}
+    {(c.addresses ?? []).map((a) => (
+      <div>
+        <dt>{a.type ?? 'Adres'}</dt>
+        <dd>{formatAddress(a)}</dd>
+      </div>
+    ))}
+    {(c.phones ?? []).length > 0 && (
+      <div>
+        <dt>Telefoon</dt>
+        <dd>
+          {(c.phones ?? []).map((p, i) => (
+            <>{i > 0 && <br />}{p.nummer}{p.label && <span class="muted"> ({p.label})</span>}</>
+          ))}
+        </dd>
+      </div>
+    )}
+    {(c.emails ?? []).length > 0 ? (
+      <div>
+        <dt>E-mail</dt>
+        <dd>
+          {(c.emails ?? []).map((e, i) => (
+            <>{i > 0 && <br />}<a href={`mailto:${e.email}`}>{e.email}</a>{e.label && <span class="muted"> ({e.label})</span>}</>
+          ))}
+        </dd>
+      </div>
+    ) : c.email ? (
+      <div>
+        <dt>E-mail</dt>
+        <dd><a href={`mailto:${c.email}`}>{c.email}</a></dd>
+      </div>
+    ) : null}
+    {(c.internet_addresses ?? []).length > 0 && (
+      <div>
+        <dt>Webadressen</dt>
+        <dd>
+          {(c.internet_addresses ?? []).map((u, i) => (
+            <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? u.url.replace(/^https?:\/\//, '')}</a></>
+          ))}
+        </dd>
+      </div>
+    )}
+    {(c.contact_forms ?? []).length > 0 && (
+      <div>
+        <dt>Contactformulieren</dt>
+        <dd>
+          {(c.contact_forms ?? []).map((u, i) => (
+            <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? 'Formulier'}</a></>
+          ))}
+        </dd>
+      </div>
+    )}
+    {(c.social_media ?? []).length > 0 && (
+      <div>
+        <dt>Social media</dt>
+        <dd>
+          {(c.social_media ?? []).map((s, i) => (
+            <>{i > 0 && ' · '}<a href={s.url} rel="external">{s.platform ?? s.url}{s.gebruikersnaam ? ` (${s.gebruikersnaam})` : ''}</a></>
+          ))}
+        </dd>
+      </div>
+    )}
+    {c.fax && (
+      <div><dt>Fax</dt><dd>{c.fax}</dd></div>
+    )}
+    {(afspraak?.email || afspraak?.telefoonnummer || afspraak?.url) && (
+      <div>
+        <dt>Afspraak maken</dt>
+        <dd>
+          {afspraak?.url && <><a href={afspraak.url} rel="external">Afspraak maken</a><br /></>}
+          {afspraak?.telefoonnummer && <>{afspraak.telefoonnummer}<br /></>}
+          {afspraak?.email && <a href={`mailto:${afspraak.email}`}>{afspraak.email}</a>}
+        </dd>
+      </div>
+    )}
+    {organogram_url && (
+      <div>
+        <dt>Organogram</dt>
+        <dd><a href={organogram_url} rel="external">Bekijk organisatiestructuur</a></dd>
+      </div>
+    )}
+  </dl>
+)}

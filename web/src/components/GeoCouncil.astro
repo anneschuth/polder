@@ -1,0 +1,91 @@
+---
+import Badge from '~/components/Badge.astro';
+import type { OrgGeography, OrgCouncil } from '~/lib/data';
+
+interface Props {
+  geography?: OrgGeography;
+  council?: OrgCouncil;
+}
+
+const { geography, council } = Astro.props;
+const g = geography;
+const c = council;
+
+const nlInt = (n?: number) =>
+  n == null ? null : n.toLocaleString('nl-NL', { maximumFractionDigits: 0 });
+
+// Stable ramp for council parties, using design-system palette tokens only
+// (no invented colors). These NLDD families all have a -650 shade.
+const SEAT_COLORS = [
+  'var(--primitives-color-lintblauw-650)',
+  'var(--primitives-color-groen-650)',
+  'var(--primitives-color-oranje-650)',
+  'var(--primitives-color-paars-650)',
+  'var(--primitives-color-violet-650)',
+  'var(--primitives-color-rood-650)',
+  'var(--primitives-color-donkergeel-650)',
+];
+const parties = (c?.parties ?? []).filter((p) => (p.aantal_zetels ?? 0) > 0);
+const seatTotal =
+  c?.total_seats ?? parties.reduce((s, p) => s + (p.aantal_zetels ?? 0), 0);
+---
+
+{(g || c) && (
+  <div class="stack">
+    {g && (
+      <div class="stat-row">
+        {g.oppervlakte_km2 != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.oppervlakte_km2)}</div>
+            <div class="stat-lbl">km² oppervlakte</div>
+          </div>
+        )}
+        {g.aantal_inwoners != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.aantal_inwoners)}</div>
+            <div class="stat-lbl">inwoners</div>
+          </div>
+        )}
+        {g.inwoners_per_km2 != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.inwoners_per_km2)}</div>
+            <div class="stat-lbl">inwoners / km²</div>
+          </div>
+        )}
+      </div>
+    )}
+    {g?.bevat_plaatsen && g.bevat_plaatsen.length > 0 && (
+      <div>
+        <p class="muted" style="margin:0 0 .35rem;">Plaatsen</p>
+        <div class="badge-row">
+          {g.bevat_plaatsen.map((pl) => <Badge label={pl} />)}
+        </div>
+      </div>
+    )}
+    {parties.length > 0 && (
+      <div>
+        <p class="muted" style="margin:0 0 .35rem;">
+          Raad · {seatTotal} zetels
+        </p>
+        <div class="seatbar">
+          {parties.map((p, i) => (
+            <span
+              style={`flex:${p.aantal_zetels};background:${SEAT_COLORS[i % SEAT_COLORS.length]};`}
+              title={`${p.naam}: ${p.aantal_zetels}`}
+            >
+              {p.aantal_zetels}
+            </span>
+          ))}
+        </div>
+        <div class="badge-row" style="margin-top:.5rem;">
+          {parties.map((p, i) => (
+            <span class="seat-legend">
+              <span class="seat-dot" style={`background:${SEAT_COLORS[i % SEAT_COLORS.length]};`}></span>
+              <nldd-tag color="neutral" size="sm" text={`${p.naam} · ${p.aantal_zetels}`}></nldd-tag>
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+)}

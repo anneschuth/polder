@@ -1,0 +1,55 @@
+---
+import Badge from '~/components/Badge.astro';
+import type { OrgWoo, OrgClassification } from '~/lib/data';
+
+interface Props {
+  woo?: OrgWoo;
+  classifications?: OrgClassification[];
+}
+
+const { woo, classifications } = Astro.props;
+const docs = woo?.wooIndex?.documentLocatie ?? [];
+const wInfo = woo?.wooInformatie?.urls;
+const cls = classifications ?? [];
+
+const hasAny =
+  wInfo?.url || wInfo?.overzichtURL || woo?.wooVerzoek?.url || docs.length > 0 || cls.length > 0;
+---
+
+{hasAny && (
+  <div class="stack">
+    {cls.length > 0 && (
+      <div class="badge-row">
+        {cls.map((c) => {
+          const g = (c.wettelijke_grondslagen ?? [])[0];
+          const href = c.url ?? g?.referentie;
+          return <Badge label={c.value ? `${c.type}: ${c.value}` : c.type} tone="lint" href={href} title={g?.opschrift} />;
+        })}
+      </div>
+    )}
+    {(wInfo?.url || wInfo?.overzichtURL || woo?.wooVerzoek?.url) && (
+      <p>
+        {wInfo?.url && <><a href={wInfo.url} rel="external">Woo-informatie</a><br /></>}
+        {wInfo?.overzichtURL && <><a href={wInfo.overzichtURL} rel="external">Woo-overzicht</a><br /></>}
+        {woo?.wooVerzoek?.url && <a href={woo.wooVerzoek.url} rel="external">Woo-verzoek indienen</a>}
+      </p>
+    )}
+    {docs.length > 0 && (
+      <details>
+        <summary>{docs.length} informatiecategorieën</summary>
+        <ul>
+          {docs.map((d) => (
+            <li>
+              {d.url ? (
+                <a href={d.url} rel="external">{d.informatiecategorie ?? d.url}</a>
+              ) : (
+                d.informatiecategorie
+              )}
+              {d.toelichting && <div class="muted" style="font-size:.85rem;">{d.toelichting}</div>}
+            </li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </div>
+)}

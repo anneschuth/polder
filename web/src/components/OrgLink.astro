@@ -1,0 +1,20 @@
+---
+import { currentName, currentAbbr, orgUrl, type Organization } from '~/lib/data';
+
+interface Props {
+  org?: Organization;
+  fallbackId?: string;
+}
+
+const { org, fallbackId } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+{org ? (
+  <a href={orgUrl(org, base)}>
+    {currentName(org)}
+    {currentAbbr(org) && <span class="muted"> ({currentAbbr(org)})</span>}
+  </a>
+) : (
+  <code>{fallbackId}</code>
+)}
