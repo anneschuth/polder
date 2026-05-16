@@ -51,21 +51,31 @@ const hasAny = Boolean(
     {siblings.length > 0 && (
       <details open={siblings.length <= 12}>
         <summary>Zusterorganisaties ({siblings.length})</summary>
-        <ul>
+        <nldd-list>
           {siblings.map((s) => (
-            <li><OrgLink org={s} /><span class="muted"> · {s.type}</span></li>
+            <nldd-list-item>
+              <nldd-title-cell size={5}>
+                <span><OrgLink org={s} /></span>
+                <span slot="supporting-text">{s.type}</span>
+              </nldd-title-cell>
+            </nldd-list-item>
           ))}
-        </ul>
+        </nldd-list>
       </details>
     )}
     {children.length > 0 && (
       <details open={children.length <= 20}>
         <summary>Onderdelen ({children.length})</summary>
-        <ul>
+        <nldd-list>
           {children.map((c) => (
-            <li><OrgLink org={c} /><span class="muted"> · {c.type}</span></li>
+            <nldd-list-item>
+              <nldd-title-cell size={5}>
+                <span><OrgLink org={c} /></span>
+                <span slot="supporting-text">{c.type}</span>
+              </nldd-title-cell>
+            </nldd-list-item>
           ))}
-        </ul>
+        </nldd-list>
       </details>
     )}
   </div>

@@ -91,30 +91,39 @@ const ICON_BRIEFCASE = 'business-suitcase';
 
       {current.length > 0 && (
         <Card title={`Huidige bezetter${current.length > 1 ? 's' : ''} (${current.length})`} icon={ICON_USER} accent={accent}>
-          <ul>
-            {current.map(({ person, mandate }) => (
-              <li>
-                <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
-                {mandate.start_date && <span class="muted"> · sinds {mandate.start_date}</span>}
-                {mandate.role && mandate.role !== post.label && (
-                  <span class="muted"> · rol: {mandate.role}</span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <nldd-list>
+            {current.map(({ person, mandate }) => {
+              const meta = [
+                mandate.start_date ? `sinds ${mandate.start_date}` : null,
+                mandate.role && mandate.role !== post.label ? `rol: ${mandate.role}` : null,
+              ].filter(Boolean).join(' · ');
+              return (
+                <nldd-list-item href={personUrl(person.slug, base)}>
+                  <nldd-title-cell
+                    size={5}
+                    text={personDisplayName(person)}
+                    supporting-text={meta || undefined}
+                  ></nldd-title-cell>
+                </nldd-list-item>
+              );
+            })}
+          </nldd-list>
         </Card>
       )}
 
       {siblingPosts.length > 0 && (
         <Card title="Verwante posten" icon={ICON_BRIEFCASE} accent={accent} collapsible open={siblingPosts.length <= 15}>
-          <ul>
+          <nldd-list>
             {siblingPosts.map((p) => (
-              <li>
-                <a href={postUrl(p.slug, base)}>{p.label}</a>
-                {p.classification && <span class="muted"> · {p.classification}</span>}
-              </li>
+              <nldd-list-item href={postUrl(p.slug, base)}>
+                <nldd-title-cell
+                  size={5}
+                  text={p.label}
+                  supporting-text={p.classification || undefined}
+                ></nldd-title-cell>
+              </nldd-list-item>
             ))}
-          </ul>
+          </nldd-list>
         </Card>
       )}
       {historical.length > 0 && (

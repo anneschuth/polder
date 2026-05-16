@@ -20,7 +20,7 @@ const innerH = height - padTop - padBottom;
 const maxCount = Math.max(1, ...chartData.map((y) => y.count));
 const yearSpan = chartData.length || 1;
 const barW = innerW / yearSpan;
-const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+const barColor = 'var(--primitives-color-lintblauw-500)';
 
 const yTicks = 4;
 const tickValues = Array.from({ length: yTicks + 1 }, (_, i) => Math.round((maxCount / yTicks) * i));
@@ -39,8 +39,8 @@ const tickValues = Array.from({ length: yTicks + 1 }, (_, i) => Math.round((maxC
           const y = padTop + innerH - (v / maxCount) * innerH;
           return (
             <>
-              <line x1={padLeft} x2={width - padRight} y1={y} y2={y} stroke="#e5e5e5" stroke-width="1" />
-              <text x={padLeft - 6} y={y + 4} font-size="11" text-anchor="end" fill="#555">{fmt(v)}</text>
+              <line x1={padLeft} x2={width - padRight} y1={y} y2={y} style="stroke: var(--primitives-color-coolgray-100);" stroke-width="1" />
+              <text x={padLeft - 6} y={y + 4} font-size="11" text-anchor="end" style="fill: var(--semantics-content-secondary-color);">{fmt(v)}</text>
             </>
           );
         })}
@@ -58,10 +58,10 @@ const tickValues = Array.from({ length: yTicks + 1 }, (_, i) => Math.round((maxC
           if (i % 5 !== 0 && i !== chartData.length - 1) return null;
           const x = padLeft + i * barW + barW / 2;
           return (
-            <text x={x} y={height - padBottom + 16} font-size="11" text-anchor="middle" fill="#555">{d.year}</text>
+            <text x={x} y={height - padBottom + 16} font-size="11" text-anchor="middle" style="fill: var(--semantics-content-secondary-color);">{d.year}</text>
           );
         })}
-        <line x1={padLeft} x2={width - padRight} y1={padTop + innerH} y2={padTop + innerH} stroke="#999" stroke-width="1" />
+        <line x1={padLeft} x2={width - padRight} y1={padTop + innerH} y2={padTop + innerH} style="stroke: var(--primitives-color-coolgray-300);" stroke-width="1" />
       </svg>
     </section>
 

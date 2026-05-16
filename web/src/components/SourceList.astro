@@ -6,18 +6,27 @@ interface Props {
 }
 
 const { sources } = Astro.props;
+
+const meta = (s: Source) => {
+  const parts: string[] = [];
+  if (s.retrieved) parts.push(`opgehaald ${s.retrieved}`);
+  if (s.fields && s.fields.length > 0) parts.push(`velden: ${s.fields.join(', ')}`);
+  return parts.join(' · ');
+};
 ---
 {(sources ?? []).length > 0 && (
   <section>
     <h2>Bronnen</h2>
-    <ul>
+    <nldd-list>
       {(sources ?? []).map((s) => (
-        <li>
-          {s.url ? <a href={s.url} rel="external">{s.id}</a> : s.id}
-          {s.retrieved && <span class="muted"> · opgehaald {s.retrieved}</span>}
-          {s.fields && s.fields.length > 0 && <span class="muted"> · velden: {s.fields.join(', ')}</span>}
-        </li>
+        <nldd-list-item href={s.url || undefined}>
+          <nldd-text-cell
+            size="sm"
+            text={s.id}
+            supporting-text={meta(s) || undefined}
+          ></nldd-text-cell>
+        </nldd-list-item>
       ))}
-    </ul>
+    </nldd-list>
   </section>
 )}

@@ -172,14 +172,17 @@ const ICON_PEOPLE = 'users';
         {nameHistory.length > 0 && (
           <details>
             <summary>Naamhistorie ({nameHistory.length})</summary>
-            <ul>
+            <nldd-list>
               {nameHistory.map((n) => (
-                <li>
-                  {n.value}{n.abbr && <span class="muted"> ({n.abbr})</span>}
-                  <span class="muted"> · {n.valid_from ?? '?'} – {n.valid_until ?? 'heden'}</span>
-                </li>
+                <nldd-list-item>
+                  <nldd-title-cell
+                    size={5}
+                    text={n.abbr ? `${n.value} (${n.abbr})` : n.value}
+                    supporting-text={`${n.valid_from ?? '?'} – ${n.valid_until ?? 'heden'}`}
+                  ></nldd-title-cell>
+                </nldd-list-item>
               ))}
-            </ul>
+            </nldd-list>
           </details>
         )}
       </Card>
@@ -228,34 +231,32 @@ const ICON_PEOPLE = 'users';
             {grondslagen.length > 0 && (
               <div>
                 <p class="muted" style="margin:0 0 .35rem;">Wettelijke grondslagen</p>
-                <ul>
+                <nldd-list>
                   {grondslagen.map((g) => (
-                    <li>
-                      {g.referentie ? (
-                        <a href={g.referentie} rel="external">{g.opschrift ?? g.referentie}</a>
-                      ) : (
-                        g.opschrift
-                      )}
-                    </li>
+                    <nldd-list-item href={g.referentie || undefined}>
+                      <nldd-title-cell
+                        size={5}
+                        text={g.opschrift ?? g.referentie}
+                      ></nldd-title-cell>
+                    </nldd-list-item>
                   ))}
-                </ul>
+                </nldd-list>
               </div>
             )}
             {evaluations.length > 0 && (
               <div>
                 <p class="muted" style="margin:0 0 .35rem;">Evaluaties</p>
-                <ul>
+                <nldd-list>
                   {evaluations.map((e) => (
-                    <li>
-                      {e.referentie ? (
-                        <a href={e.referentie} rel="external">{e.naam_rapport ?? e.kamerstuknummer ?? e.datum}</a>
-                      ) : (
-                        e.naam_rapport ?? e.kamerstuknummer ?? e.datum
-                      )}
-                      {e.datum && <span class="muted"> · {e.datum}</span>}
-                    </li>
+                    <nldd-list-item href={e.referentie || undefined}>
+                      <nldd-title-cell
+                        size={5}
+                        text={e.naam_rapport ?? e.kamerstuknummer ?? e.datum}
+                        supporting-text={e.datum || undefined}
+                      ></nldd-title-cell>
+                    </nldd-list-item>
                   ))}
-                </ul>
+                </nldd-list>
               </div>
             )}
           </div>
@@ -280,14 +281,17 @@ const ICON_PEOPLE = 'users';
 
       {posts.length > 0 && (
         <Card title={`Posten (${posts.length})`} icon={ICON_BRIEFCASE} accent={accent}>
-          <ul>
+          <nldd-list>
             {posts.map((p) => (
-              <li>
-                <a href={postUrl(p.slug, base)}>{p.label}</a>
-                {p.classification && <span class="muted"> · {p.classification}</span>}
-              </li>
+              <nldd-list-item href={postUrl(p.slug, base)}>
+                <nldd-title-cell
+                  size={5}
+                  text={p.label}
+                  supporting-text={p.classification || undefined}
+                ></nldd-title-cell>
+              </nldd-list-item>
             ))}
-          </ul>
+          </nldd-list>
         </Card>
       )}
 
@@ -295,23 +299,24 @@ const ICON_PEOPLE = 'users';
         <Card title="Mensen via posten" icon={ICON_PEOPLE} accent={accent}>
           <div class="stack">
             {postGroups.map(({ post, entries }) => (
-              <div>
-                <p style="margin:0 0 .35rem;">
+              <nldd-list>
+                <p slot="header" style="margin:0;">
                   <a href={postUrl(post.slug, base)}><strong>{post.label}</strong></a>
                   <span class="muted"> · {entries.filter((e) => isMandateCurrent(e.mandate)).length} lopend</span>
                 </p>
-                <ul>
-                  {entries.slice(0, 50).map(({ person, mandate }) => (
-                    <li>
-                      <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
-                      <span class="muted"> · {mandate.start_date ?? '?'} – {mandate.end_date ?? 'heden'}</span>
-                    </li>
-                  ))}
-                </ul>
+                {entries.slice(0, 50).map(({ person, mandate }) => (
+                  <nldd-list-item href={personUrl(person.slug, base)}>
+                    <nldd-title-cell
+                      size={5}
+                      text={personDisplayName(person)}
+                      supporting-text={`${mandate.start_date ?? '?'} – ${mandate.end_date ?? 'heden'}`}
+                    ></nldd-title-cell>
+                  </nldd-list-item>
+                ))}
                 {entries.length > 50 && (
-                  <p class="muted">Eerste 50 van {entries.length} getoond.</p>
+                  <p slot="footer" class="muted">Eerste 50 van {entries.length} getoond.</p>
                 )}
-              </div>
+              </nldd-list>
             ))}
           </div>
         </Card>

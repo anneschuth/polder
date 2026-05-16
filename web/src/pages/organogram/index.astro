@@ -55,10 +55,10 @@ const dataBase = `${base}/organogram/data`;
   .organogram-controls input[type="search"] {
     width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 1px solid var(--primitives-color-coolgray-200, #b7c0cc);
+    border: 1px solid var(--primitives-color-coolgray-200);
     border-radius: 4px;
     font: inherit;
-    background: #fff;
+    background: var(--primitives-color-coolgray-0);
     color: inherit;
   }
   .organogram-controls .search-results {
@@ -66,8 +66,8 @@ const dataBase = `${base}/organogram/data`;
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
-    border: 1px solid var(--primitives-color-coolgray-200, #b7c0cc);
+    background: var(--primitives-color-coolgray-0);
+    border: 1px solid var(--primitives-color-coolgray-200);
     border-top: none;
     max-height: 24rem;
     overflow-y: auto;
@@ -82,12 +82,12 @@ const dataBase = `${base}/organogram/data`;
   }
   .organogram-controls #timeslider {
     flex: 1;
-    accent-color: var(--primitives-color-lintblauw-500, #0058a3);
+    accent-color: var(--primitives-color-lintblauw-500);
   }
   .organogram-controls #timelabel {
     min-width: 4rem;
     font-variant-numeric: tabular-nums;
-    color: var(--semantics-content-secondary-color, #555);
+    color: var(--semantics-content-secondary-color);
   }
 
   /* Canvas is a sibling of <main> — already full-bleed by virtue of not
@@ -96,9 +96,9 @@ const dataBase = `${base}/organogram/data`;
     position: relative;
     height: 75vh;
     overflow: hidden;
-    background: var(--semantics-surfaces-background-color, #fff);
-    border-top: 1px solid var(--primitives-color-coolgray-100, #d9dee5);
-    border-bottom: 1px solid var(--primitives-color-coolgray-100, #d9dee5);
+    background: var(--semantics-surfaces-background-color);
+    border-top: 1px solid var(--primitives-color-coolgray-100);
+    border-bottom: 1px solid var(--primitives-color-coolgray-100);
   }
   .organogram-canvas #chart {
     width: 100%;
@@ -110,8 +110,8 @@ const dataBase = `${base}/organogram/data`;
     left: 0;
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
-    color: var(--semantics-content-secondary-color, #555);
-    background: color-mix(in srgb, var(--semantics-surfaces-background-color, #fff) 85%, transparent);
+    color: var(--semantics-content-secondary-color);
+    background: color-mix(in srgb, var(--semantics-surfaces-background-color) 85%, transparent);
     pointer-events: none;
   }
 </style>
