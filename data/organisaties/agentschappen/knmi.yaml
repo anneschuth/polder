@@ -19,15 +19,7 @@ names:
   abbr: KNMI
   valid_from: '1900-01-01'
 description:
-  text: Nationaal kennisinstituut voor weer, klimaat en seismologieHet KNMI adviseert
-    en waarschuwt de samenleving om risico’s met een atmosferische of seismologische
-    oorsprong terug te dringen. Daarvoor ontwikkelt het KNMI hoogwaardige kennis,
-    verricht waarnemingen en zet die om in producten en diensten die de veiligheidsrisico’s
-    verminderen, bijdragen aan een duurzame samenleving en economische mogelijkheden
-    bevorderen.Het KNMI verzorgt ook de meteorologische en seismische berichtgeving
-    voor Caribisch Nederland. Dit zijn de bijzondere gemeenten Bonaire, Sint Eustatius
-    en Saba (de BES-eilanden). Het KNMI werkt nauw samen met meteorologische diensten
-    in de regio en met Météo France.
+  text: Nationaal kennisinstituut voor weer, klimaat en seismologieHet KNMI adviseert en waarschuwt de samenleving om risico’s met een atmosferische of seismologische oorsprong terug te dringen. Daarvoor ontwikkelt het KNMI hoogwaardige kennis, verricht waarnemingen en zet die om in producten en diensten die de veiligheidsrisico’s verminderen, bijdragen aan een duurzame samenleving en economische mogelijkheden bevorderen.Het KNMI verzorgt ook de meteorologische en seismische berichtgeving voor Caribisch Nederland. Dit zijn de bijzondere gemeenten Bonaire, Sint Eustatius en Saba (de BES-eilanden). Het KNMI werkt nauw samen met meteorologische diensten in de regio en met Météo France.
   url: https://www.knmi.nl/over-het-knmi/over
 classifications:
 - type: CAO
@@ -53,10 +45,7 @@ woo:
     documentLocatie:
       informatiecategorie: Andere documenten
       url: https://www.knmi.nl/kennis-en-datacentrum
-      toelichting: Kennis en uitleg over onderwerpen op het gebied van weer, klimaat
-        en seismologie. Verder onder meer een verwijziging naar klimaatdata met informatie
-        over weer in het verleden. Experts kunnen terecht bij de KNMI Climate Explorer
-        en KNMI Dataplatform.
+      toelichting: Kennis en uitleg over onderwerpen op het gebied van weer, klimaat en seismologie. Verder onder meer een verwijziging naar klimaatdata met informatie over weer in het verleden. Experts kunnen terecht bij de KNMI Climate Explorer en KNMI Dataplatform.
   wooVerzoek:
     url: https://www.knmi.nl/over-het-knmi/contact/contactformulier
 organogram_url: https://knmi-wwwknminl-prd.s3.eu-west-1.amazonaws.com/system/readmore_links/files/000/000/142/original/KNMI_organogram_nl.pdf?1709128290
@@ -110,3 +99,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/03/ellen-verolme-directeur-knmi
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging

@@ -277,3 +277,76 @@ def test_merge_person_does_not_duplicate_existing_mandaat(mini_persons: Path) ->
     mandate_ids = [m["id"] for m in canonical["mandaten"]]
     # m-dup-1 hoort er één keer in (de bestaande), niet dubbel.
     assert mandate_ids.count("m-dup-1") == 1
+
+
+def test_merge_org_consolidates_identifiers_and_sources(mini_data: Path) -> None:
+    """Dup-org draagt de stabiele ROO-identifier; canonical mist die.
+
+    De ROO-superset-import landde voor sommige entiteiten twee records:
+    een schoon `org:onderdeel-<x>` zonder identifiers en een
+    `org:onderdeel-<x>-min-<y>` mét de `roo_id`. Bij merge mag die
+    identifier niet verloren gaan met het dup-file.
+    """
+    dup_path = mini_data / "organisaties" / "organisatieonderdelen" / "aivd-min-bzk.yaml"
+    dup = yaml.safe_load(dup_path.read_text(encoding="utf-8"))
+    dup["identifiers"] = {"roo_id": "9633", "tooi": "oorg-aivd"}
+    dup_path.write_text(yaml.safe_dump(dup, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "org",
+            "org:onderdeel-aivd-min-bzk",
+            "org:onderdeel-aivd",
+            "--apply",
+            "--data",
+            str(mini_data),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+
+    canonical = yaml.safe_load(
+        (mini_data / "organisaties" / "organisatieonderdelen" / "aivd.yaml").read_text(
+            encoding="utf-8"
+        )
+    )
+    # roo_id + tooi van de dup zijn overgenomen.
+    assert canonical["identifiers"] == {"roo_id": "9633", "tooi": "oorg-aivd"}
+    # Beide bron-URLs aanwezig, geen dubbele.
+    source_urls = sorted(s["url"] for s in canonical["sources"])
+    assert source_urls == ["https://x", "https://y"]
+
+
+def test_merge_org_canonical_identifier_wins_on_conflict(mini_data: Path) -> None:
+    """Bij conflicterende identifier-key behoudt canonical zijn eigen waarde."""
+    canonical_path = mini_data / "organisaties" / "organisatieonderdelen" / "aivd.yaml"
+    canonical = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
+    canonical["identifiers"] = {"roo_id": "CANONICAL-9633"}
+    canonical_path.write_text(
+        yaml.safe_dump(canonical, sort_keys=False, allow_unicode=True), encoding="utf-8"
+    )
+    dup_path = mini_data / "organisaties" / "organisatieonderdelen" / "aivd-min-bzk.yaml"
+    dup = yaml.safe_load(dup_path.read_text(encoding="utf-8"))
+    dup["identifiers"] = {"roo_id": "DUP-9633", "oin": "00000001"}
+    dup_path.write_text(yaml.safe_dump(dup, sort_keys=False, allow_unicode=True), encoding="utf-8")
+
+    runner = CliRunner()
+    result = runner.invoke(
+        app,
+        [
+            "merge",
+            "org",
+            "org:onderdeel-aivd-min-bzk",
+            "org:onderdeel-aivd",
+            "--apply",
+            "--data",
+            str(mini_data),
+        ],
+    )
+    assert result.exit_code == 0, result.output
+
+    canonical = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
+    # Canonical roo_id behouden, oin van dup toegevoegd.
+    assert canonical["identifiers"] == {"roo_id": "CANONICAL-9633", "oin": "00000001"}

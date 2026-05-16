@@ -19,11 +19,7 @@ names:
   abbr: RBL
   valid_from: '1900-01-01'
 description:
-  text: RBL is een agentschap van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
-    en levert een belangrijke bijdrage aan onze rechtsstaat. Enerzijds door de beveiliging
-    van rijkslocaties, rijksevenementen en bijzondere beveiligingsopdrachten en anderzijds
-    door het vervoer van vertrouwelijke of gerubriceerde zendingen. RBL levert haar
-    diensten aan alle organisaties binnen de Rijksoverheid.
+  text: RBL is een agentschap van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties en levert een belangrijke bijdrage aan onze rechtsstaat. Enerzijds door de beveiliging van rijkslocaties, rijksevenementen en bijzondere beveiligingsopdrachten en anderzijds door het vervoer van vertrouwelijke of gerubriceerde zendingen. RBL levert haar diensten aan alle organisaties binnen de Rijksoverheid.
   url: https://www.rijksorganisatiebeveiligingenlogistiek.nl/over-ons
 classifications:
 - type: CAO
@@ -101,4 +97,9 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/28977374/rbl
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/15/boudewijn-van-nus-directeur-rijksorganisatie-beveiliging-en-logistiek-bij-bzk
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 roo_start_datum: '2023-01-01'

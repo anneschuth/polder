@@ -19,24 +19,8 @@ names:
   abbr: RvIG
   valid_from: '1900-01-01'
 description:
-  text: 'De Rijksdienst voor Identiteitsgegevens (RvIG) is de beheerder van de stelsels
-    van de identiteitsgegevens. RvIG is een baten-lastendienst en onderdeel van het
-    ministerie van Binnenlandse Zaken en Koninkrijksrelaties.RvIG is opgebouwd uit
-    vier directies.Directie Uitvoering:De uitvoerende taken van RvIG zijn samengebracht
-    in de directie Uitvoering. Binnen deze directie vinden de contacten plaats met
-    de gemeenten, afnemers, en burgers aangaande de primaire processen van RvIG.Directie
-    Informatievoorziening en Systemen:De Directie Informatievoorziening en Systemen
-    heeft als belangrijkste taak te zorgen voor de continuïteit van het systeemlandschap
-    van RvIG.Directie Innovatie en ontwikkeling:Door programma’s, projecten en innovatie
-    expliciet te beleggen bij de Directie Innovatie en Ontwikkeling, ontstaat een
-    situatie waarin het dagelijkse beheer in alle rust kan plaatsvinden en er expliciet
-    gestuurd kan worden op vernieuwing.Directie Bestuur en Bedrijfsvoering:De directie
-    Bestuur en Bedrijfsvoering is verantwoordelijk voor de (basis)functies die kaderstellend,
-    adviserend, toetsend en ondersteunend zijn voor het goed functioneren van RvIG.
-    Daarnaast haalt de directie signalen van o.a. afnemers, opdrachtgevers en gebruikers
-    actief naar binnen voert intern regie op een juiste uitvoering. De directie Bestuur
-    en Bedrijfsvoering bestaat uit vier afdelingen: Strategie & Regie, Communicatie,
-    HR & Organisatie en Financiën en Inkoop.'
+  text: 'De Rijksdienst voor Identiteitsgegevens (RvIG) is de beheerder van de stelsels van de identiteitsgegevens. RvIG is een baten-lastendienst en onderdeel van het ministerie van Binnenlandse Zaken en Koninkrijksrelaties.RvIG is opgebouwd uit vier directies.Directie Uitvoering:De uitvoerende taken van RvIG zijn samengebracht in de directie Uitvoering. Binnen deze directie vinden de contacten plaats met de gemeenten, afnemers, en burgers aangaande de primaire processen van RvIG.Directie Informatievoorziening en Systemen:De Directie Informatievoorziening en Systemen heeft als belangrijkste taak te zorgen voor de continuïteit van het systeemlandschap van RvIG.Directie Innovatie en ontwikkeling:Door programma’s, projecten en innovatie expliciet te beleggen bij de Directie Innovatie en Ontwikkeling, ontstaat een situatie waarin het dagelijkse beheer in alle rust kan plaatsvinden en er expliciet gestuurd kan worden op vernieuwing.Directie Bestuur en Bedrijfsvoering:De directie Bestuur en Bedrijfsvoering
+    is verantwoordelijk voor de (basis)functies die kaderstellend, adviserend, toetsend en ondersteunend zijn voor het goed functioneren van RvIG. Daarnaast haalt de directie signalen van o.a. afnemers, opdrachtgevers en gebruikers actief naar binnen voert intern regie op een juiste uitvoering. De directie Bestuur en Bedrijfsvoering bestaat uit vier afdelingen: Strategie & Regie, Communicatie, HR & Organisatie en Financiën en Inkoop.'
   url: https://www.rvig.nl/over-ons
 classifications:
 - type: CAO
@@ -88,8 +72,7 @@ contact:
     provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
     land: Nederland
   - type: Woo-Adres
-    toelichting: T.a.v. directie Constitutionele Zaken en Wetgeving afdeling Juridisch
-      Adviseur - Woo-verzoeken
+    toelichting: T.a.v. directie Constitutionele Zaken en Wetgeving afdeling Juridisch Adviseur - Woo-verzoeken
     postbus: '20011'
     postcode: 2500 EA
     woonplaats: Den Haag
@@ -121,3 +104,8 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/12/esther-stegman-directeur-informatievoorziening-en-systemen-bij-rvig
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
