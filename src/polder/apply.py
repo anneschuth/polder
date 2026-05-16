@@ -1683,11 +1683,21 @@ def _validate_record(action: ApplyAction) -> str | None:
     return None
 
 
-def execute_apply(actions: list[ApplyAction], data_dir: Path) -> int:
+def execute_apply(
+    actions: list[ApplyAction],
+    data_dir: Path,
+    *,
+    skipped: list[tuple[ApplyAction, str]] | None = None,
+) -> int:
     """Schrijf alle acties weg. Retourneert het aantal aangepaste files.
 
     Elk record gaat eerst door een Pydantic-pass (`_validate_record`); een
     record dat niet valideert wordt overgeslagen en gelogd, niet weggeschreven.
+
+    Een overgeslagen record is geen onschuldig geval — het betekent dat een
+    upstream parse/resolve-stap een schema-ongeldig record produceerde (#44).
+    Geef een lijst mee via `skipped` om die gevallen op te vangen; de caller
+    hoort daarop hard te falen in plaats van stilletjes minder te schrijven.
     """
     import logging
 
@@ -1702,6 +1712,8 @@ def execute_apply(actions: list[ApplyAction], data_dir: Path) -> int:
                 action.target_path.name,
                 err,
             )
+            if skipped is not None:
+                skipped.append((action, err))
             continue
         action.target_path.parent.mkdir(parents=True, exist_ok=True)
         payload = action.record

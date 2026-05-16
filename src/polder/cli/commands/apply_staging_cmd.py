@@ -117,9 +117,21 @@ def apply_staging(
         typer.echo("Run met --apply om echt te schrijven.")
         raise typer.Exit(code=0)
 
-    written = execute_apply(actions, data)
+    skipped: list[tuple[object, str]] = []
+    written = execute_apply(actions, data, skipped=skipped)
     typer.echo("")
     typer.echo(f"Geschreven: {written} files.")
+
+    if skipped:
+        typer.echo("")
+        typer.echo(
+            f"apply-staging: {len(skipped)} record(s) overgeslagen omdat ze niet "
+            "schema-valideren (zie log). Dit duidt op een upstream parse/resolve-fout.",
+            err=True,
+        )
+        for action, err in skipped[:10]:
+            typer.echo(f"  - {action.type} {action.target_path.name}: {err}", err=True)
+        raise typer.Exit(code=1)
 
     # Roep validate aan op de data-tree.
     from polder.validate import exit_code, run_all_checks
