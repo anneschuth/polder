@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7776740
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/35934/gemeente-achtkarspelen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30525391
-- id: 1f1718f2-2268-438c-9620-3d19c1ee3c7d
-  organization_id: org:gemeente-achtkarspelen
-  post_id: post:raadslid-gemeente-achtkarspelen
-  role: Raadslid gemeente Achtkarspelen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7776740
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7757322

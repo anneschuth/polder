@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774150
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/32728/gemeente-leeuwarden
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30559878
-- id: b7bb2993-821f-40af-8a59-077f7a9845a3
-  organization_id: org:gemeente-leeuwarden
-  post_id: post:raadslid-gemeente-leeuwarden
-  role: Raadslid gemeente Leeuwarden
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7774150
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7774148

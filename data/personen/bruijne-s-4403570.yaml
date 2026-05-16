@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4403572
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/24950/gemeente-hoorn
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28649973
-- id: 26050ff2-4f61-4844-bcd2-856afd997b8a
-  organization_id: org:gemeente-hoorn
-  post_id: post:raadslid-gemeente-hoorn
-  role: Raadslid gemeente Hoorn
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4403572
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4403570

@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7762697
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/21320/gemeente-peel-en-maas
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30536543
-- id: 01a99689-8ceb-45b5-ab7d-31a44ef24338
-  organization_id: org:gemeente-peel-en-maas
-  post_id: post:raadslid-gemeente-peel-en-maas
-  role: Raadslid gemeente Peel En Maas
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7762697
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7762696

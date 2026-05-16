@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7758995
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/38122/gemeente-utrecht
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30536413
-- id: 3081fac8-764a-4d5e-8cac-9d6f093ef023
-  organization_id: org:gemeente-utrecht
-  post_id: post:raadslid-gemeente-utrecht
-  role: Raadslid gemeente Utrecht
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7758995
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7757648

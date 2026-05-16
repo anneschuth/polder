@@ -14,33 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6148564
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/29280/gemeente-sittard-geleen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28672222
-- id: 4feb6ccd-2af8-47a9-9d1e-6ffcd7521d80
-  organization_id: org:gemeente-sittard
-  post_id: post:raadslid-gemeente-sittard
-  role: Raadslid gemeente Sittard
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6148564
-    retrieved: '2026-05-13'
-- id: 8b3197c7-41b7-4cd3-bb3e-1a0f9debaee1
-  organization_id: org:gemeente-sittard-geleen
-  post_id: post:raadslid-gemeente-sittard-geleen
-  role: Raadslid gemeente Sittard Geleen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6148564
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6148562

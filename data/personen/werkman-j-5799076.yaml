@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5799078
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/23566/gemeente-ooststellingwerf
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=29029408
-- id: a0f3814c-3fed-4ad2-bc4b-7af89a95d456
-  organization_id: org:gemeente-oost
-  post_id: post:burgemeester-gemeente-oost
-  role: Burgemeester gemeente Oost
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5799078
-    retrieved: '2026-05-09'
-- id: 832aad96-4cb3-45fb-80de-b97ca4325323
-  organization_id: org:gemeente-ooststellingwerf
-  post_id: post:burgemeester-gemeente-ooststellingwerf
-  role: Burgemeester gemeente Ooststellingwerf
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5799078
-    retrieved: '2026-05-13'
-- id: d9252be4-bc36-42a7-bd39-74f788c433be
-  organization_id: org:gemeente-oost
-  post_id: post:burgemeester-gemeente-oost
-  role: Burgemeester gemeente Oost
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5799078
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5799076

@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7785574
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36525/gemeente-zevenaar
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30537790
-- id: a307b335-bc73-469c-938f-2c0fceac6572
-  organization_id: org:gemeente-zevenaar
-  post_id: post:raadslid-gemeente-zevenaar
-  role: Raadslid gemeente Zevenaar
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7785574
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7764626

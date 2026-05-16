@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6688209
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/26666/gemeente-winterswijk
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30534573
-- id: 270170f2-c9df-485a-aa18-bb660094eab1
-  organization_id: org:gemeente-winterswijk
-  post_id: post:raadslid-gemeente-winterswijk
-  role: Raadslid gemeente Winterswijk
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6688209
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6688207

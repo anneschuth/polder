@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7750631
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/37907/gemeente-oss
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=29469238
-- id: 50eb5dbd-560c-4b53-bbf7-c7b33ad1e731
-  organization_id: org:gemeente-oss
-  post_id: post:gemeentesecretaris-gemeente-oss
-  role: Gemeentesecretaris gemeente Oss
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7750631
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5865364

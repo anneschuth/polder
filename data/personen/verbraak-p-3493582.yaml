@@ -14,33 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7782852
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/25008/gemeente-echt-susteren
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30561804
-- id: e0444799-b6a9-4178-bb8a-a82fbbe93996
-  organization_id: org:gemeente-echt
-  post_id: post:raadslid-gemeente-echt
-  role: Raadslid gemeente Echt
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7782852
-    retrieved: '2026-05-13'
-- id: 68c32f2b-6209-471b-90d0-aa1861ba91f7
-  organization_id: org:gemeente-echt-susteren
-  post_id: post:raadslid-gemeente-echt-susteren
-  role: Raadslid gemeente Echt Susteren
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7782852
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3493582

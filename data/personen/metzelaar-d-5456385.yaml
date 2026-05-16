@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5456387
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/26403/gemeente-nieuwkoop
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30566646
-- id: 2cee7188-c8ad-4228-b877-04a9e2fdff2b
-  organization_id: org:gemeente-nieuwkoop
-  post_id: post:raadslid-gemeente-nieuwkoop
-  role: Raadslid gemeente Nieuwkoop
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5456387
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5456385

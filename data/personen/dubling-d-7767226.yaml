@@ -18,43 +18,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7767227
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/29037/gemeente-weststellingwerf
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30548139
-- id: 0c0a038a-11c5-47b4-bd5e-6e1d062907e5
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7767227
-    retrieved: '2026-05-09'
-- id: b57a5277-238f-4402-982c-d57604eb4dfa
-  organization_id: org:gemeente-weststellingwerf
-  post_id: post:raadslid-gemeente-weststellingwerf
-  role: Raadslid gemeente Weststellingwerf
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7767227
-    retrieved: '2026-05-13'
-- id: f6c44aa0-d7cb-4cb2-84c9-8d694e4d7d57
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7767227
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7767226

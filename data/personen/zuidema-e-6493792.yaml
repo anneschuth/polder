@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6493794
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/23087139/gemeente-waadhoeke
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28646088
-- id: c50d8c58-2262-43a4-902a-2f6801b179fa
-  organization_id: org:gemeente-waadhoeke
-  post_id: post:raadslid-gemeente-waadhoeke
-  role: Raadslid gemeente Waadhoeke
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6493794
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6493792

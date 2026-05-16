@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3174241
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/40352/gemeente-buren
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=25496298
-- id: 9ed05d2d-476e-4d84-9cf3-cf471bdbad77
-  organization_id: org:gemeente-buren
-  post_id: post:raadslid-gemeente-buren
-  role: Raadslid gemeente Buren
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3174241
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3174239

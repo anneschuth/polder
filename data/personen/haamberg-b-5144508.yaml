@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5144510
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27430/gemeente-losser
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=78303
-- id: b68a3bc5-16de-4f3f-9744-46a02041c926
-  organization_id: org:gemeente-losser
-  post_id: post:raadslid-gemeente-losser
-  role: Raadslid gemeente Losser
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5144510
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5144508

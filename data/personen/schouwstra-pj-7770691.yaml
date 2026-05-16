@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770692
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27465436/gemeente-noardeast-fryslan
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30532775
-- id: e0db89d0-3f9d-41cf-95e7-24d537286922
-  organization_id: org:gemeente-noardeast-fryslan
-  post_id: post:raadslid-gemeente-noardeast-fryslan
-  role: Raadslid gemeente Noardeast Fryslan
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7770692
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7770691

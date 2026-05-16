@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7404747
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/34584/gemeente-oirschot
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30572256
-- id: a9df2588-8a5b-4c96-be26-520b87d0e40c
-  organization_id: org:gemeente-oirschot
-  post_id: post:raadslid-gemeente-oirschot
-  role: Raadslid gemeente Oirschot
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7404747
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7404746

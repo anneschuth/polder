@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7762536
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/24482/gemeente-leudal
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30518937
-- id: fd09cec0-d0d4-4c09-818c-00e27d023e16
-  organization_id: org:gemeente-leudal
-  post_id: post:raadslid-gemeente-leudal
-  role: Raadslid gemeente Leudal
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7762536
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7762535

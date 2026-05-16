@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7781162
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36239/gemeente-twenterand
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30547824
-- id: e0b6f03e-4e58-402b-8037-11ac14dd74de
-  organization_id: org:gemeente-twenterand
-  post_id: post:raadslid-gemeente-twenterand
-  role: Raadslid gemeente Twenterand
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7781162
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7781160

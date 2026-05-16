@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553909
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27465454/gemeente-westerkwartier
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=27539284
-- id: 5341dbf4-42ee-4f20-8b79-588b2885b400
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6553909
-    retrieved: '2026-05-09'
-- id: c9c72d64-3ee6-4cb2-813a-37aec4e8bd7a
-  organization_id: org:gemeente-westerkwartier
-  post_id: post:raadslid-gemeente-westerkwartier
-  role: Raadslid gemeente Westerkwartier
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6553909
-    retrieved: '2026-05-13'
-- id: 674d9a70-17ca-429d-ad86-9bf444a47884
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6553909
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553907

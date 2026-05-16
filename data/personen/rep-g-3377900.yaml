@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7565203
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/28523619/gemeente-dijk-en-waard
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28600019
-- id: 69fcbb8c-d452-417b-9c1c-71f873b65fbd
-  organization_id: org:gemeente-dijk-en-waard
-  post_id: post:wethouder-gemeente-dijk-en-waard
-  role: Wethouder gemeente Dijk En Waard
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7565203
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3377900

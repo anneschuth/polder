@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7137172
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/21559/gemeente-beesel
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30538947
-- id: 020b978e-1748-421c-94fb-07467640a140
-  organization_id: org:gemeente-beesel
-  post_id: post:raadslid-gemeente-beesel
-  role: Raadslid gemeente Beesel
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7137172
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7137171

@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6205170
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/26139/gemeente-stadskanaal
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=25519608
-- id: 166923ac-3866-49f7-8781-c80ce6b477bc
-  organization_id: org:gemeente-stadskanaal
-  post_id: post:raadslid-gemeente-stadskanaal
-  role: Raadslid gemeente Stadskanaal
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6205170
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6205168

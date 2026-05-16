@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5559017
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27985/gemeente-noordwijk
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30565382
-- id: 98a2b670-019c-49d5-b853-09096c3e7560
-  organization_id: org:gemeente-noord
-  post_id: post:raadslid-gemeente-noord
-  role: Raadslid gemeente Noord
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5559017
-    retrieved: '2026-05-09'
-- id: 85f149b3-42bb-4849-83ff-ce3694ae8bcf
-  organization_id: org:gemeente-noord
-  post_id: post:raadslid-gemeente-noord
-  role: Raadslid gemeente Noord
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5559017
-    retrieved: '2026-05-13'
-- id: 764df1f7-abb6-499b-b35e-267dc6040abf
-  organization_id: org:gemeente-noordwijk
-  post_id: post:raadslid-gemeente-noordwijk
-  role: Raadslid gemeente Noordwijk
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5559017
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5559015

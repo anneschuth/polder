@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7205459
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/38261/gemeente-houten
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28069202
-- id: e55fb53a-5f42-413f-b860-8d387c6b30a4
-  organization_id: org:gemeente-houten
-  post_id: post:raadslid-gemeente-houten
-  role: Raadslid gemeente Houten
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7205459
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4450531

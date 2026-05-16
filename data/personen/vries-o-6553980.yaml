@@ -14,7 +14,7 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6553982
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
 - id: 3549a27d-5ae2-4ee2-8533-eb09926486c7
   organization_id: org:gemeente-west
   post_id: post:griffier-gemeente-west
@@ -31,26 +31,6 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
-- id: 3b2d7a66-5f8f-498a-a91c-71f8d159dbc6
-  organization_id: org:gemeente-westerkwartier
-  post_id: post:griffier-gemeente-westerkwartier
-  role: Griffier gemeente Westerkwartier
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6553982
-    retrieved: '2026-05-13'
-- id: 871fcd91-d438-4d81-86cb-6014df9d088f
-  organization_id: org:gemeente-west
-  post_id: post:griffier-gemeente-west
-  role: Griffier gemeente West
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6553982
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6553980

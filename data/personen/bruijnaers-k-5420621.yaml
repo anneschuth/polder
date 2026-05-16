@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5420623
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/33458/gemeente-nederweert
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=29590720
-- id: 4d4c63e4-1765-4db1-a0d1-bb7e858d8580
-  organization_id: org:gemeente-nederweert
-  post_id: post:raadslid-gemeente-nederweert
-  role: Raadslid gemeente Nederweert
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5420623
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5420621

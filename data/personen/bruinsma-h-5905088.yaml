@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5905090
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/26937/gemeente-overbetuwe
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=25255698
-- id: d832d4ec-5433-4a14-99ec-1419b4359500
-  organization_id: org:gemeente-overbetuwe
-  post_id: post:raadslid-gemeente-overbetuwe
-  role: Raadslid gemeente Overbetuwe
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5905090
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5905088

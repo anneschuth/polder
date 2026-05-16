@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4580354
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/40395/gemeente-kerkrade
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30519385
-- id: 72e227e4-998f-4f40-ad41-ec63891a90b8
-  organization_id: org:gemeente-kerkrade
-  post_id: post:raadslid-gemeente-kerkrade
-  role: Raadslid gemeente Kerkrade
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4580354
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4580352

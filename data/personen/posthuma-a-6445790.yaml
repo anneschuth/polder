@@ -5,26 +5,6 @@ name:
   given: Arnold
   initials: A.
 mandaten:
-- id: 0ff3b5bf-ab27-4666-86c8-a06958621b86
-  organization_id: org:gemeente-voorschoten
-  post_id: post:raadslid-gemeente-voorschoten
-  role: Raadslid gemeente Voorschoten
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6445792
-    retrieved: '2026-05-09'
-- id: 84f1b887-6334-468c-9381-845455048f3c
-  organization_id: org:gemeente-voorschoten
-  post_id: post:raadslid-gemeente-voorschoten
-  role: Raadslid gemeente Voorschoten
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6445792
-    retrieved: '2026-05-13'
 - id: mandate-post-afdelingshoofd-inlichtingen-en-opsporingsdienst-min-ienw-2023-09-01
   organization_id: org:onderdeel-inlichtingen-en-opsporingsdienst-ilt-min-ienw
   post_id: post:afdelingshoofd-inlichtingen-en-opsporingsdienst-min-ienw
@@ -57,6 +37,16 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-08-07
   confidence: 0.92
+- id: 0ff3b5bf-ab27-4666-86c8-a06958621b86
+  organization_id: org:gemeente-voorschoten
+  post_id: post:raadslid-gemeente-voorschoten
+  role: Raadslid gemeente Voorschoten
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6445792
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6445790

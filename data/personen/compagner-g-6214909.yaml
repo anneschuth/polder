@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6214911
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/24378/gemeente-staphorst
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=122563
-- id: 2396cc18-3926-4fe8-b3ed-5645a8da42c4
-  organization_id: org:gemeente-staphorst
-  post_id: post:raadslid-gemeente-staphorst
-  role: Raadslid gemeente Staphorst
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6214911
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6214909
