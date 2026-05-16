@@ -8,21 +8,12 @@ name:
 birth:
   year: 1957
 mandaten:
-- id: wd-9579deb3800f
-  organization_id: org:min-az
-  post_id: post:minister-min-az
-  role: Minister van Algemene Zaken
-  start_date: '2024-07-02'
-  sources:
-  - id: wikidata
-    url: https://www.wikidata.org/wiki/Q22338116#P39
-    retrieved: '2026-05-13'
-  end_date: '2026-02-23'
 - id: wd-6920b2c6c482
   organization_id: org:min-az
   post_id: post:minister-president
   role: Minister-president van Nederland
   start_date: '2024-07-02'
+  end_date: '2026-02-23'
   sources:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q22338116#P39
@@ -30,20 +21,6 @@ mandaten:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22479
     retrieved: '2026-05-13'
-    fields:
-    - applied_via:apply-staging
-  end_date: '2026-02-23'
-- id: mandate-post-minister-president-min-az-2024-07-02
-  organization_id: org:min-az
-  post_id: post:minister-president-min-az
-  role: Minister-President en Minister belast met de leiding van het Ministerie van
-    Algemene Zaken
-  start_date: '2024-07-02'
-  end_date: '2026-02-23'
-  sources:
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22479
-    retrieved: '2026-05-09'
     fields:
     - applied_via:apply-staging
   - id: staatscourant
@@ -56,6 +33,16 @@ mandaten:
     decision: Besluit van 2 juli 2024, nr. 2024001701
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22479
   confidence: 0.92
+- id: wd-9579deb3800f
+  organization_id: org:min-az
+  post_id: post:minister-min-az
+  role: Minister van Algemene Zaken
+  start_date: '2024-07-02'
+  end_date: '2026-02-23'
+  sources:
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q22338116#P39
+    retrieved: '2026-05-13'
 sources:
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q22338116

@@ -21,7 +21,7 @@ def test_resolve_proposal_full_match(polder_index) -> None:
     proposal = {
         "person_name": "Mark Rutte",
         "organization_id": "org:min-az",
-        "post_id": "post:minister-president-min-az",
+        "post_id": "post:minister-president",
         "role": "minister-president",
         "start_date": "2010-10-14",
         "end_date": "2024-07-02",
@@ -32,7 +32,7 @@ def test_resolve_proposal_full_match(polder_index) -> None:
     result = resolve_proposal(proposal, polder_index)
 
     assert result["resolved_organization_id"] == "org:min-az"
-    assert result["resolved_post_id"] == "post:minister-president-min-az"
+    assert result["resolved_post_id"] == "post:minister-president"
     assert result["resolved_person_id"] == "person:rutte-m-1967"
     assert result["resolution_confidence"]["organization"] >= 0.95
     assert result["resolution_confidence"]["post"] >= 0.85
@@ -285,11 +285,12 @@ def test_resolve_proposal_minister_zonder_portefeuille_rewriter(polder_index) ->
     assert r["resolved_post_id"] == "post:minister-zp-klimaat-en-groene-groei"
 
 
-def test_resolve_proposal_post_prefers_canonical_min_suffix(polder_index) -> None:
-    """Bij meerdere keyword-matches kiest de resolver de slug met canonical
-    ``-min-<afk>``-suffix. Voorkomt dat apply een verzonnen alternatief
-    aanmaakt naast een al-bestaande canonical post (zoals een tijdelijke
-    ``post:minister-president-az`` naast ``post:minister-president-min-az``).
+def test_resolve_proposal_post_prefers_existing_canonical(polder_index) -> None:
+    """Een proposal met een verzonnen post-slug resolvet naar de bestaande
+    canonical post in plaats van een nieuwe aan te maken. Voorkomt dat apply
+    een duplicaat aanmaakt naast ``post:minister-president`` (het Kabinet
+    Minister-President-bug: ROO maakte ooit een tweede
+    ``post:minister-president-min-az`` voor hetzelfde ambt).
     """
     from polder.resolve.proposal import resolve_proposal
 
@@ -303,7 +304,7 @@ def test_resolve_proposal_post_prefers_canonical_min_suffix(polder_index) -> Non
         "confidence": 0.99,
     }
     result = resolve_proposal(proposal, polder_index)
-    assert result["resolved_post_id"] == "post:minister-president-min-az"
+    assert result["resolved_post_id"] == "post:minister-president"
 
 
 def test_resolve_proposal_post_role_keyword_disambiguates(polder_index) -> None:
