@@ -1,6 +1,6 @@
 let overlayEl = null;
 
-export function openFlatOverlay(data) {
+export function openFlatOverlay(data, onItemClick) {
   closeOverlay();
 
   const overlay = document.createElement("div");
@@ -34,7 +34,7 @@ export function openFlatOverlay(data) {
   list.className = "overlay-list";
 
   const items = data.items || [];
-  renderItems(list, items);
+  renderItems(list, items, onItemClick);
 
   filter.addEventListener("input", () => {
     const q = filter.value.trim().toLowerCase();
@@ -45,7 +45,7 @@ export function openFlatOverlay(data) {
             (it.label_full || "").toLowerCase().includes(q),
         )
       : items;
-    renderItems(list, filtered);
+    renderItems(list, filtered, onItemClick);
   });
 
   panel.appendChild(header);
@@ -59,19 +59,29 @@ export function openFlatOverlay(data) {
   filter.focus();
 }
 
-function renderItems(list, items) {
+function renderItems(list, items, onItemClick) {
   list.innerHTML = "";
   for (const it of items) {
     const li = document.createElement("li");
+    const clickable = typeof onItemClick === "function" && it.id;
+    // Klikbare items zijn een <button> (toetsenbord + screenreader);
+    // niet-resolvebare items blijven platte tekst.
+    const row = document.createElement(clickable ? "button" : "div");
+    row.className = "overlay-item";
+    if (clickable) {
+      row.type = "button";
+      row.addEventListener("click", () => onItemClick(it));
+    }
     const strong = document.createElement("strong");
     strong.textContent = it.label || it.id;
-    li.appendChild(strong);
+    row.appendChild(strong);
     if (it.label_full && it.label_full !== it.label) {
       const span = document.createElement("span");
       span.className = "muted";
       span.textContent = it.label_full;
-      li.appendChild(span);
+      row.appendChild(span);
     }
+    li.appendChild(row);
     list.appendChild(li);
   }
 }

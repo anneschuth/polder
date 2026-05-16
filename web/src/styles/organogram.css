@@ -24,35 +24,35 @@ g.node rect {
 g.node.root rect,
 g.node.ministerie rect,
 g.node.post rect {
-  fill: var(--primitives-color-donkerblauw-500, #003e6b);
-  stroke: var(--primitives-color-donkerblauw-500, #003e6b);
+  fill: var(--primitives-color-donkerblauw-500);
+  stroke: var(--primitives-color-donkerblauw-500);
 }
 
 g.node.bestuurslaag rect {
-  fill: var(--primitives-color-lintblauw-50, #e3effe);
-  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+  fill: var(--primitives-color-lintblauw-50);
+  stroke: var(--primitives-color-lintblauw-500);
   stroke-dasharray: 4 3;
 }
 
 g.node.category-tree rect {
-  fill: var(--primitives-color-lintblauw-25, #f0f7ff);
-  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+  fill: var(--primitives-color-lintblauw-25);
+  stroke: var(--primitives-color-lintblauw-500);
 }
 
 g.node.category-flat rect {
-  fill: var(--primitives-color-coolgray-25, #f5f6f9);
-  stroke: var(--primitives-color-coolgray-400, #7f8da0);
+  fill: var(--primitives-color-coolgray-25);
+  stroke: var(--primitives-color-coolgray-400);
 }
 
 g.node.onderdeel rect,
 g.node.leaf rect {
-  fill: #fff;
-  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+  fill: var(--primitives-color-neutral-0, Canvas);
+  stroke: var(--primitives-color-lintblauw-500);
 }
 
 g.node.person rect {
-  fill: var(--primitives-color-lintblauw-50, #e3effe);
-  stroke: var(--primitives-color-lintblauw-500, #0058a3);
+  fill: var(--primitives-color-lintblauw-50);
+  stroke: var(--primitives-color-lintblauw-500);
 }
 
 g.node:hover rect {
@@ -68,11 +68,16 @@ path.link.inactive {
 }
 
 text.node-label {
-  fill: var(--semantics-content-color, #1a1a1a);
+  fill: var(--semantics-content-color);
   font-family: inherit;
-  font-size: 13px;
+  font-size: 11px;
   pointer-events: none;
   user-select: none;
+}
+
+text.node-label.node-subline {
+  font-size: 10px;
+  opacity: 0.85;
 }
 
 g.node.root text.node-label,
@@ -83,7 +88,7 @@ g.node.post text.node-label {
 
 path.link {
   fill: none;
-  stroke: var(--primitives-color-coolgray-300, #9aa5b5);
+  stroke: var(--primitives-color-coolgray-300);
   stroke-width: 1.25;
   opacity: 0.7;
 }
@@ -92,12 +97,12 @@ path.link {
 
 #breadcrumb {
   font-size: 0.875rem;
-  color: var(--semantics-content-secondary-color, #5a6473);
+  color: var(--semantics-content-secondary-color);
 }
 
 #breadcrumb .crumb {
   cursor: pointer;
-  color: var(--primitives-color-lintblauw-500, #0058a3);
+  color: var(--primitives-color-lintblauw-500);
   pointer-events: auto;
 }
 
@@ -107,14 +112,14 @@ path.link {
 
 #breadcrumb .sep {
   margin: 0 0.4em;
-  color: var(--primitives-color-coolgray-300, #9aa5b5);
+  color: var(--primitives-color-coolgray-300);
 }
 
 /* # Search results dropdown (HTML rendered by search.js) */
 
 .search-result {
   padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid var(--primitives-color-coolgray-75, #e2e6eb);
+  border-bottom: 1px solid var(--primitives-color-coolgray-75);
   cursor: pointer;
 }
 
@@ -124,7 +129,7 @@ path.link {
 
 .search-result:hover,
 .search-result.active {
-  background: var(--primitives-color-lintblauw-25, #f0f7ff);
+  background: var(--primitives-color-lintblauw-25);
 }
 
 .search-result .kind-tag {
@@ -132,8 +137,128 @@ path.link {
   margin-left: 0.5em;
   padding: 0.05em 0.4em;
   border-radius: 3px;
-  background: var(--primitives-color-coolgray-50, #ebeef2);
-  color: var(--semantics-content-secondary-color, #5a6473);
+  background: var(--primitives-color-coolgray-50);
+  color: var(--semantics-content-secondary-color);
   font-size: 0.75rem;
   font-weight: 500;
+}
+
+/* # Flat-overlay modal (HTML rendered by overlay.js) */
+
+.overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: rgb(0 0 0 / 45%);
+}
+
+.overlay-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(900px, 100%);
+  max-height: 100%;
+  background: var(--primitives-color-neutral-0, Canvas);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 25%);
+  overflow: hidden;
+}
+
+.overlay-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--primitives-color-coolgray-75);
+}
+
+.overlay-header h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.overlay-close {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--semantics-content-secondary-color);
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.overlay-close:hover {
+  background: var(--primitives-color-coolgray-50);
+}
+
+.overlay-filter {
+  margin: 0.85rem 1.25rem 0;
+  padding: 0.45rem 0.65rem;
+  font: inherit;
+  border: 1px solid var(--primitives-color-coolgray-200);
+  border-radius: 4px;
+}
+
+.overlay-filter:focus-visible {
+  outline: 2px solid var(--primitives-color-lintblauw-500);
+  outline-offset: 1px;
+}
+
+.overlay-list {
+  margin: 0;
+  padding: 0.75rem 1.25rem 1.25rem;
+  overflow-y: auto;
+  list-style: none;
+  columns: 16rem;
+  column-gap: 1.5rem;
+}
+
+.overlay-list li {
+  break-inside: avoid;
+  margin: 0;
+}
+
+.overlay-item {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0.4rem;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+}
+
+button.overlay-item {
+  cursor: pointer;
+}
+
+button.overlay-item:hover,
+button.overlay-item:focus-visible {
+  background: var(--primitives-color-lintblauw-25);
+  outline: none;
+}
+
+button.overlay-item:focus-visible {
+  outline: 2px solid var(--primitives-color-lintblauw-500);
+  outline-offset: -2px;
+}
+
+.overlay-item strong {
+  font-weight: 600;
+}
+
+.overlay-item .muted {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--semantics-content-secondary-color);
 }

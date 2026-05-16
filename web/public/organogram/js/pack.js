@@ -1,13 +1,62 @@
 import { loadJSON } from "./fetcher.js";
 import { isActiveOn } from "./util.js";
 
-const NODE_W = 130;
-const NODE_H = 36;
-const COMPOUND_W = 200;
-const COMPOUND_H = 52;
+const NODE_W = 150;
+const NODE_H = 48;
+const COMPOUND_W = 210;
+const COMPOUND_H = 62;
 const ZOOM_MS = 700;
 const GRID_THRESHOLD = 12;
 const GRID_COLS = 10;
+
+// Label-tekst: 11px font, gewrapt over max 2 regels. Gemiddelde
+// glyph-breedte bij 11px ≈ 6px; CHARS_PER_LINE houdt ~10px padding aan
+// elke kant van NODE_W/COMPOUND_W aan.
+const LABEL_LINE_H = 13;
+const charsPerLine = (boxW) => Math.max(6, Math.floor((boxW - 20) / 6));
+
+// Breek een label over maximaal `maxLines` regels op woordgrens. Te lange
+// woorden worden hard gesplitst; de laatste regel krijgt een ellipsis als
+// er nog tekst over is. Geeft een array van regelstrings terug.
+function wrapLabel(text, boxW, maxLines) {
+  const max = charsPerLine(boxW);
+  const words = String(text || "").split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = "";
+  for (let i = 0; i < words.length; i += 1) {
+    let word = words[i];
+    // Woord langer dan een regel: hard afbreken.
+    while (word.length > max) {
+      if (line) {
+        lines.push(line);
+        line = "";
+        if (lines.length === maxLines) break;
+      }
+      lines.push(word.slice(0, max - 1) + "-");
+      word = word.slice(max - 1);
+      if (lines.length === maxLines) break;
+    }
+    if (lines.length === maxLines) break;
+    const candidate = line ? `${line} ${word}` : word;
+    if (candidate.length <= max) {
+      line = candidate;
+    } else {
+      if (line) lines.push(line);
+      line = word;
+      if (lines.length === maxLines) break;
+    }
+  }
+  if (line && lines.length < maxLines) lines.push(line);
+  // Resterende tekst die niet meer paste: ellipsis op de laatste regel.
+  const used = lines.join(" ").replace(/-(?= )/g, "").length;
+  const full = String(text || "").length;
+  if (lines.length === maxLines && used < full) {
+    let last = lines[maxLines - 1];
+    if (last.length >= max) last = last.slice(0, max - 1);
+    lines[maxLines - 1] = last.replace(/\s+$/, "") + "…";
+  }
+  return lines.length ? lines : [""];
+}
 
 // Sibling-gap en level-height groeien met focus-diepte: bij root staan
 // onderdelen dicht op elkaar; bij inzoom op een directie krijgen kinderen
@@ -160,17 +209,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     enter
       .append("text")
       .attr("class", "node-label")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle")
-      .text((d) => truncate(d.data.label || "", 18));
+      .attr("text-anchor", "middle");
 
-    // Tweede regel voor compound posts (post met 1 active mandate inline).
+    // Tweede label-element voor de persoonsnaam bij compound posts.
     enter
       .filter((d) => compoundPersonName(d) !== null)
       .append("text")
       .attr("class", "node-label node-subline")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "middle");
+      .attr("text-anchor", "middle");
 
     enter.on("mouseenter", (event, d) => {
       if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
@@ -187,21 +233,47 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       .attr("height", (d) => nodeHeight(d))
       .attr("x", (d) => -nodeWidth(d) / 2)
       .attr("y", (d) => -nodeHeight(d) / 2);
-    // Hoofdlabel: bij compound iets omhoog, anders gecentreerd.
-    merged.select("text.node-label").each(function (d) {
+    // Hoofdlabel: gewrapt over max 2 regels, verticaal gecentreerd in de
+    // box. Bij compound posts krijgt het label 1 regel zodat de
+    // persoonsnaam eronder past.
+    merged.selectAll("text.node-label:not(.node-subline)").each(function (d) {
       const sub = compoundPersonName(d);
-      const el = d3.select(this);
-      if (sub !== null) {
-        el.attr("y", -9).text(truncate(d.data.label || "", 28));
-      } else {
-        el.attr("y", 0).text(truncate(d.data.label || "", 18));
-      }
+      const boxW = nodeWidth(d);
+      const maxLines = sub !== null ? 1 : 2;
+      const lines = wrapLabel(d.data.label || "", boxW, maxLines);
+      renderTspans(d3.select(this), lines, sub !== null);
     });
-    // Subline (persoon-naam) bij compound.
+    // Subline (persoon-naam) bij compound, onder het label.
     merged.select("text.node-subline").each(function (d) {
       const sub = compoundPersonName(d);
       if (sub === null) return;
-      d3.select(this).attr("y", 11).text(truncate(sub, 28));
+      const lines = wrapLabel(sub, nodeWidth(d), 1);
+      const sel = d3.select(this);
+      sel.selectAll("tspan").remove();
+      sel
+        .append("tspan")
+        .attr("x", 0)
+        .attr("y", LABEL_LINE_H * 0.9)
+        .attr("dominant-baseline", "central")
+        .text(lines[0]);
+    });
+  }
+
+  // Plaats label-regels als <tspan>s, verticaal gecentreerd. Bij een
+  // subline (compound post) schuift het blok omhoog zodat de naam eronder
+  // ruimte heeft.
+  function renderTspans(textSel, lines, hasSubline) {
+    textSel.selectAll("tspan").remove();
+    const n = lines.length;
+    const centerY = hasSubline ? -LABEL_LINE_H * 0.55 : 0;
+    const firstY = centerY - ((n - 1) * LABEL_LINE_H) / 2;
+    lines.forEach((ln, i) => {
+      textSel
+        .append("tspan")
+        .attr("x", 0)
+        .attr("y", firstY + i * LABEL_LINE_H)
+        .attr("dominant-baseline", "central")
+        .text(ln);
     });
   }
 
@@ -238,6 +310,19 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     return d.data.id || `_${d.depth}_${d.data.label || ""}`;
   }
 
+  // True als deze node (potentieel) kinderen kan tonen: een bestuurslaag of
+  // category-tree, een org met children/posten in geheugen, of een org met
+  // een nog niet geladen bundle. Een niet-geladen bundle telt mee zodat
+  // handleClick zo'n node als uitklapbaar behandelt vóór de eerste load.
+  function canHaveChildren(data) {
+    if (!data) return false;
+    if (data.kind === "bestuurslaag" || data.kind === "category-tree") return true;
+    if (data.children && data.children.length) return true;
+    if (data.posten && data.posten.length) return true;
+    if (data.bundle) return true;
+    return false;
+  }
+
   async function handleClick(d) {
     if (d.data.kind === "category-flat" && onFlatTile) {
       onFlatTile(d);
@@ -255,37 +340,68 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
         return;
       }
     }
-    if (d.data.kind === "bestuurslaag" || d.data.kind === "category-tree") {
-      d.data._collapsed = !d.data._collapsed;
+    if (!canHaveChildren(d.data)) {
+      // Echte leaf: gewoon inzoomen, geen toggle.
+      focusOn(d);
+      return;
+    }
+
+    const isOpen = !d.data._collapsed && childrenAccessor(d.data) != null;
+    if (isOpen) {
+      // Al opengeklapt → dichtklappen en uitzoomen naar de parent. Parent-id
+      // vóór redraw vastleggen; redraw herbouwt de hierarchy.
+      const parentId = d.parent ? nodeId(d.parent) : null;
+      d.data._collapsed = true;
       redraw();
-      const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
+      const target =
+        (parentId && rootHierarchy.find((n) => nodeId(n) === parentId)) ||
+        rootHierarchy.find((n) => nodeId(n) === d.data.id) ||
+        rootHierarchy;
       focusOn(target);
       return;
     }
+
+    // Dicht → openklappen. Bundle eerst laden als die nog niet binnen is.
     if (d.data.bundle && (!d.data.children || d.data.children.length === 0)) {
       try {
         const subtree = await loadJSON(d.data.bundle);
-        d.data.children = subtree.children || [];
+        d.data.children = (subtree.children || []).map(collapseSubtreeNode);
         d.data.posten = subtree.posten || [];
         for (const key of ["names", "valid_from", "valid_until", "type", "classification"]) {
           if (subtree[key] !== undefined) d.data[key] = subtree[key];
         }
-        redraw();
-        const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
-        focusOn(target);
-        return;
       } catch (err) {
         console.error("bundle load failed", err);
         return;
       }
     }
-    focusOn(d);
+    d.data._collapsed = false;
+    redraw();
+    const target = rootHierarchy.find((n) => nodeId(n) === d.data.id) || rootHierarchy;
+    focusOn(target);
   }
 
   function centerOn(target, instant = false) {
-    const subtreeNodes = target.descendants();
-    const xs = subtreeNodes.map((n) => n.x);
-    const ys = subtreeNodes.map((n) => n.y);
+    // Zoom op de aangeklikte node + zijn dichtstbijzijnde kinderen, op een
+    // leesbare schaal, gecentreerd op de node zelf. De d3.tree-layout
+    // spreidt een brede kinderrij over duizenden pixels uit; de hele rij
+    // inpassen zou tot een onleesbare mini-strip uitzoomen. Liever ingezoomd
+    // op de org en horizontaal pannen door de onderdelen.
+    const kids = (target.children || []).filter(
+      (n) => Number.isFinite(n.x) && Number.isFinite(n.y),
+    );
+    if (!Number.isFinite(target.x) || !Number.isFinite(target.y)) return;
+    // Verticale extent (node + kinderrijen) bepaalt de schaal samen met een
+    // horizontaal venster van de ~8 kinderen het dichtst bij de node-x.
+    const NEAR = 8;
+    const near = kids
+      .map((n) => ({ n, d: Math.abs(n.x - target.x) }))
+      .sort((a, b) => a.d - b.d)
+      .slice(0, NEAR)
+      .map((o) => o.n);
+    const frame = [target, ...near];
+    const xs = frame.map((n) => n.x);
+    const ys = [target, ...kids].map((n) => n.y);
     const minX = Math.min(...xs) - NODE_W / 2 - 20;
     const maxX = Math.max(...xs) + NODE_W / 2 + 20;
     const minY = Math.min(...ys) - NODE_H / 2 - 20;
@@ -293,9 +409,14 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
     const subW = Math.max(maxX - minX, NODE_W * 3);
     const subH = Math.max(maxY - minY, NODE_H * 3);
     const fit = Math.min(width / subW, height / subH);
-    const scale = Math.max(0.2, Math.min(fit, 1.5));
-    const tx = width / 2 - ((minX + maxX) / 2) * scale;
-    const ty = height / 2 - ((minY + maxY) / 2) * scale;
+    // Ondergrens 0.55 zodat tegels altijd leesbaar blijven, bovengrens 1.5.
+    const scale = Math.max(0.55, Math.min(fit, 1.5));
+    // Altijd op de aangeklikte node centreren — niet op het midden van een
+    // bounding box die door de brede layout ver van de node kan liggen.
+    const cx = target.x;
+    const cy = (minY + maxY) / 2;
+    const tx = width / 2 - cx * scale;
+    const ty = height / 2 - cy * scale;
     const transform = d3.zoomIdentity.translate(tx, ty).scale(scale);
     const sel = instant ? svg : svg.transition().duration(ZOOM_MS);
     sel.call(zoomBehavior.transform, transform);
@@ -360,21 +481,76 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
 
   async function focusByPath(pathStr) {
     if (!pathStr) return;
-    // Path is path/of/slugs (without prefixes), used historically to
-    // record state. We only need the deepest segment because ids are
-    // unique across the dataset. Delegate to focusById which handles
-    // bundle-loading + uncollapsing along the way.
     const segments = pathStr.split("/").filter(Boolean);
     if (!segments.length) return;
-    const last = segments[segments.length - 1];
-    const fullId = last.startsWith("layer:") ||
-      last.startsWith("cat:") ||
-      last.startsWith("post:") ||
-      last.startsWith("person:") ||
-      last.startsWith("org:")
-      ? last
-      : `org:${last}`;
-    return focusById(fullId);
+    // Volg de keten gericht door rootData: per segment de matchende child
+    // zoeken, en als die een nog-niet-geladen bundle heeft die laden vóór
+    // we dieper gaan. Zo halen we precies de bundles op het pad op (bv.
+    // alleen min-bzk), niet blind de hele wereld. Faalt een segment, val
+    // dan terug op de generieke zoek-via-id (focusById) met de eindslug.
+    let node = rootData;
+    for (const seg of segments) {
+      let next = (node.children || []).find((c) => idMatches(c.id, seg));
+      if (!next) {
+        for (const p of node.posten || []) {
+          if (idMatches(p.id, seg)) {
+            next = p;
+            break;
+          }
+        }
+      }
+      if (!next) {
+        // Segment niet zichtbaar onder de huidige node — laad de bundle van
+        // node (indien aanwezig) en probeer opnieuw.
+        if (node.bundle && (!node.children || node.children.length === 0)) {
+          try {
+            const subtree = await loadJSON(node.bundle);
+            node.children = (subtree.children || []).map(collapseSubtreeNode);
+            node.posten = subtree.posten || [];
+          } catch (e) {
+            break;
+          }
+          next = (node.children || []).find((c) => idMatches(c.id, seg));
+        }
+      }
+      if (!next) break;
+      next._collapsed = false;
+      // Laad de bundle van de gevonden node zodat het volgende segment
+      // (zijn kind) vindbaar is.
+      if (next.bundle && (!next.children || next.children.length === 0)) {
+        try {
+          const subtree = await loadJSON(next.bundle);
+          next.children = (subtree.children || []).map(collapseSubtreeNode);
+          next.posten = subtree.posten || [];
+        } catch (e) {
+          // Geen bundle of mislukt — de subtree kan al inline aanwezig zijn.
+        }
+      }
+      node = next;
+    }
+    // Uncollapse de hele keten naar de gevonden eindnode en focus erop.
+    // Lukte de gerichte walk niet, val terug op id-zoek met de eindslug.
+    const endId = node && node.id;
+    if (!endId || node === rootData) {
+      return focusById(segments[segments.length - 1]);
+    }
+    const path = findInData(rootData, endId);
+    if (path) for (const n of path) n._collapsed = false;
+    redraw();
+    const found = rootHierarchy.find((n) => idMatches(nodeId(n), endId));
+    if (found) focusOn(found);
+    else return focusById(segments[segments.length - 1]);
+  }
+
+  // Matcht een node-id tegen een query. Exacte match, of — als de query
+  // geen prefix (`<type>:`) heeft — match op de slug ongeacht het type, zodat
+  // een prefix-loze deeplink-segment ook een post: of person: node vindt.
+  function idMatches(candidateId, query) {
+    if (!candidateId) return false;
+    if (candidateId === query) return true;
+    if (query.includes(":")) return false;
+    const colon = candidateId.indexOf(":");
+    return colon >= 0 && candidateId.slice(colon + 1) === query;
   }
 
   // Walk the raw data tree (ignoring _collapsed) looking for a node id,
@@ -385,11 +561,15 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   // post zooms in on the person as effectively as a person node would.
   function findInData(node, id, path = []) {
     const here = [...path, node];
-    if (node.id === id) return here;
-    if (id.startsWith("person:")) {
-      for (const p of node.posten || []) {
+    if (idMatches(node.id, id)) return here;
+    // Posten hangen in posten[], niet in children[]. Match op de post-id
+    // zelf (een deeplink kan eindigen op een post-slug), en — voor een
+    // person-query of prefix-loze slug — op de mandaat-persoon.
+    for (const p of node.posten || []) {
+      if (idMatches(p.id, id)) return [...here, p];
+      if (id.startsWith("person:") || !id.includes(":")) {
         for (const m of p.mandaten || []) {
-          if (m.person_id === id) return [...here, p];
+          if (idMatches(m.person_id, id)) return [...here, p];
         }
       }
     }
@@ -401,7 +581,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
   }
 
   async function focusById(id) {
-    let found = rootHierarchy.find((n) => nodeId(n) === id);
+    let found = rootHierarchy.find((n) => idMatches(nodeId(n), id));
     if (found) {
       focusOn(found);
       return;
@@ -425,7 +605,7 @@ export function createChart(container, rootData, onCrumbChange, options = {}) {
       if (!nextCandidate) break;
       try {
         const subtree = await loadJSON(nextCandidate.bundle);
-        nextCandidate.children = subtree.children || [];
+        nextCandidate.children = (subtree.children || []).map(collapseSubtreeNode);
         nextCandidate.posten = subtree.posten || [];
       } catch (e) {
         // Mark as visited so we don't loop forever on a broken bundle.
@@ -480,6 +660,20 @@ function wrapWideRows(root, sp) {
 }
 
 
+// Markeer een nieuw uit een bundle geladen subtree-node als dichtgeklapt,
+// zodat hij niet meteen zijn eigen kinderen toont (per-laag openklappen).
+// Alleen nodes die zelf kinderen/posten/een bundle hebben krijgen de flag;
+// echte leaves blijven ongemoeid zodat ze als leaf-klik werken.
+function collapseSubtreeNode(node) {
+  if (!node || typeof node !== "object") return node;
+  const hasKids =
+    (node.children && node.children.length) ||
+    (node.posten && node.posten.length) ||
+    node.bundle;
+  if (hasKids) node._collapsed = true;
+  return node;
+}
+
 function hasOwnDates(d) {
   return (
     d.valid_from !== undefined ||
@@ -506,9 +700,4 @@ function linkPath(source, target) {
   const ty = target.y - NODE_H / 2;
   const my = (sy + ty) / 2;
   return `M${source.x},${sy} C${source.x},${my} ${target.x},${my} ${target.x},${ty}`;
-}
-
-function truncate(s, n) {
-  if (s.length <= n) return s;
-  return s.slice(0, n - 1) + "…";
 }
