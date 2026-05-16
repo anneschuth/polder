@@ -63,14 +63,32 @@ USER_AGENT = "polder/0.0.1 (https://github.com/anneschuth/polder; anne.schuth@gm
 # Mapping van ORI-rolnaam (zoals in `Membership.role`) naar polder
 # post-classificatie. Rollen die geen gemeentelijk mandaat representeren
 # (Member, Voorzitter zonder context, Gastspreker, ...) worden geskipt.
+#
+# Griffier vs Raadsgriffier: een gemeente heeft één gemeentegriffier, maar
+# ORI labelt de hele griffie (commissiegriffiers, raadsadviseurs,
+# griffiemedewerkers) als `Griffier` zonder onderscheidend veld — geen
+# sub-organisatie, geen functie-detail, geen startdatum. Een scan over 135
+# gemeenten met ORI-data: `Griffier` is multi-seat bij 18 gemeenten
+# (Utrecht 12, Berkelland 5), terwijl `Raadsgriffier` consistent precies de
+# echte griffier markeert (23 van 24 gemeenten exact 1; de twee labels
+# sluiten elkaar uit op één gemeente na). Daarom: `Raadsgriffier` naar de
+# single-seat `griffier`-post, `Griffier` naar de multi-seat
+# `griffiemedewerker`-post.
 ROLE_TO_CLASSIFICATION: dict[str, str] = {
     "Raadslid": "raadslid",
     "Wethouder": "wethouder",
     "Burgemeester": "burgemeester",
     "Gemeentesecretaris": "gemeentesecretaris",
     "Raadsgriffier": "griffier",
-    "Griffier": "griffier",
+    "Griffier": "griffiemedewerker",
 }
+
+# Classificaties met precies één zetel per organisatie (`post.seat_count == 1`).
+# `griffiemedewerker` staat hier bewust niet in: de griffie heeft meerdere
+# medewerkers.
+_SINGLE_SEAT_CLASSIFICATIONS: frozenset[str] = frozenset(
+    {"burgemeester", "gemeentesecretaris", "griffier"}
+)
 
 
 # ---------------------------------------------------------------------------
@@ -700,6 +718,7 @@ _POST_LABELS: dict[str, str] = {
     "burgemeester": "Burgemeester",
     "gemeentesecretaris": "Gemeentesecretaris",
     "griffier": "Raadsgriffier",
+    "griffiemedewerker": "Griffiemedewerker",
 }
 
 
@@ -730,6 +749,7 @@ def ensure_org_and_posts(
             "organization_id": org_id,
             "label": f"{label} {bare.replace('-', ' ').title()}",
             "classification": classification,
+            "seat_count": 1 if classification in _SINGLE_SEAT_CLASSIFICATIONS else None,
             "valid_from": "1900-01-01",
             "valid_until": None,
         }

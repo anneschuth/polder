@@ -57,6 +57,7 @@ PostClassification = Literal[
     "officier-van-justitie",
     "gezaghebber",
     "griffier",
+    "griffiemedewerker",
     "overig",
 ]
 
