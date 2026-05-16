@@ -21,6 +21,7 @@ from dataclasses import dataclass, field
 from datetime import date as _date
 from pathlib import Path
 
+from polder.backfill._budget import CostBudget
 from polder.llm import prefilters
 from polder.llm.runner import run_skill
 
@@ -38,6 +39,7 @@ class BackfillResult:
     parsed: int = 0
     failed: int = 0
     rate_limited: bool = False
+    cost_capped: bool = False
     cost_usd: float = 0.0
     input_tokens: int = 0
     output_tokens: int = 0
@@ -207,19 +209,22 @@ def backfill(
         result.notes.append(f"Geen kandidaten in {cache_dir}")
         return result
 
+    budget = CostBudget(max_cost_usd)
+
     if parallel <= 1:
         for path in candidates:
+            if budget.exceeded():
+                result.notes.append(
+                    f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
+                )
+                break
             status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
             _merge(result, status, deltas)
+            budget.add(deltas.cost_usd)
             if status == "rate_limit" and abort_on_rate_limit:
                 result.rate_limited = True
                 result.notes.append(
                     f"rate-limit op {path.name}, afgebroken na {result.parsed} parsed"
-                )
-                break
-            if max_cost_usd is not None and result.cost_usd >= max_cost_usd:
-                result.notes.append(
-                    f"cost-cap ${max_cost_usd:.2f} bereikt na {result.parsed} parsed"
                 )
                 break
         return result
@@ -227,8 +232,12 @@ def backfill(
     def worker(paths: list[Path]) -> BackfillResult:
         local = BackfillResult(source="abd-nieuws")
         for path in paths:
+            if budget.exceeded():
+                local.cost_capped = True
+                break
             status, deltas = _process_one(path, staging_dir, use_cache=use_cache, model=model)
             _merge(local, status, deltas)
+            budget.add(deltas.cost_usd)
             if status == "rate_limit" and abort_on_rate_limit:
                 local.rate_limited = True
                 break
@@ -243,6 +252,14 @@ def backfill(
             if sub.rate_limited and abort_on_rate_limit:
                 result.rate_limited = True
                 result.notes.append("rate-limit gedetecteerd in worker")
+            if sub.cost_capped:
+                result.cost_capped = True
+
+    if result.cost_capped and max_cost_usd is not None:
+        result.notes.append(
+            f"cost-cap ${max_cost_usd:.2f} bereikt (parallel), "
+            f"totaal ${budget.spent_usd:.2f} na {result.parsed} parsed"
+        )
 
     return result
 

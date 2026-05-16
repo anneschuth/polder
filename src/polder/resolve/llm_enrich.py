@@ -330,7 +330,7 @@ def _apply_skill_result(
                 f"llm-enrich: matched_existing {chosen} ({conf:.2f})",
             )
             if conf >= _MIN_PERSON_CONF_FOR_AUTOMERGE:
-                out["merge_recommendation"] = _recompute_merge(out)
+                out["merge_recommendation"], out["merge_reason"] = _recompute_merge(out)
             stats.matched_existing += 1
             return out
 
@@ -360,7 +360,7 @@ def _apply_skill_result(
             f"llm-enrich: create_new ({conf:.2f})",
         )
         if conf >= _MIN_PERSON_CONF_FOR_AUTOMERGE:
-            out["merge_recommendation"] = _recompute_merge(out)
+            out["merge_recommendation"], out["merge_reason"] = _recompute_merge(out)
         stats.created_new += 1
         return out
 
@@ -436,8 +436,8 @@ def _org_side_ok_for_automerge(proposal: dict[str, Any]) -> bool:
     return False
 
 
-def _recompute_merge(proposal: dict[str, Any]) -> str:
-    """Hercompute merge_recommendation na een geslaagde LLM-enrich.
+def _recompute_merge(proposal: dict[str, Any]) -> tuple[str, str]:
+    """Hercompute `(merge_recommendation, merge_reason)` na LLM-enrich.
 
     Policy:
     - `person` confidence is niet-onderhandelbaar: < 0.95 → needs-review.
@@ -448,16 +448,29 @@ def _recompute_merge(proposal: dict[str, Any]) -> str:
     - post-zijde: post-confidence ≥ 0.95 OF `propose_post_creation` met
       een door de resolver voorgestelde slug. De create-post-actie in
       apply heeft een eigen ABD-rol-vs-bewindspersoon-guard als vangnet.
+
+    `merge_reason` is altijd niet-leeg, zodat een handmatige reviewer ziet
+    welke check een needs-review tegenhield (#33).
     """
     rc = proposal.get("resolution_confidence") or {}
-    if float(rc.get("person") or 0) < 0.95:
-        return "needs-review"
+    person_conf = float(rc.get("person") or 0)
+    if person_conf < 0.95:
+        return "needs-review", (
+            f"low_person_confidence: person {person_conf:.2f} < 0.95 "
+            "(two-source-rule, identiteit niet zeker)"
+        )
     if not _org_side_ok_for_automerge(proposal):
-        return "needs-review"
+        org_conf = float(rc.get("organization") or 0)
+        return "needs-review", (
+            f"org_side_not_automergeable: org {org_conf:.2f} < 0.95 en geen "
+            "veilig valideerbare resolver-status"
+        )
     post_conf = float(rc.get("post") or 0)
     if post_conf < 0.95 and not proposal.get("propose_post_creation"):
-        return "needs-review"
-    return "auto-merge"
+        return "needs-review", (
+            f"low_post_confidence: post {post_conf:.2f} < 0.95 en geen propose_post_creation"
+        )
+    return "auto-merge", "post_enrich_strong: person ≥ 0.95, org/post auto-mergeable"
 
 
 def enrich_resolved(
@@ -511,10 +524,11 @@ def enrich_resolved(
             # eerdere no_match (person 0.0) blijft onaangeroerd.
             rc = proposal.get("resolution_confidence") or {}
             if float(rc.get("person") or 0) >= _MIN_PERSON_CONF_FOR_AUTOMERGE:
-                recomputed = _recompute_merge(proposal)
+                recomputed, recomputed_reason = _recompute_merge(proposal)
                 if recomputed != proposal.get("merge_recommendation"):
                     proposal = dict(proposal)
                     proposal["merge_recommendation"] = recomputed
+                    proposal["merge_reason"] = recomputed_reason
                     stats.recomputed += 1
             enriched.append(proposal)
             continue

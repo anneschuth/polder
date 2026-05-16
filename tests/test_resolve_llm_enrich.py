@@ -17,15 +17,26 @@ def _conf(person=0.96, org=0.96, post=0.96):
     return {"person": person, "organization": org, "post": post}
 
 
+def _assert_reason(reason: str, must_contain: str) -> None:
+    """Elke recommendation moet een niet-lege, informatieve reden hebben (#33)."""
+    assert isinstance(reason, str)
+    assert reason.strip()
+    assert must_contain in reason
+
+
 def test_recompute_merge_person_below_threshold_blocks() -> None:
     # person < 0.95 is niet-onderhandelbaar (kern two-source-rule).
     p = {"resolution_confidence": _conf(person=0.94), "resolution_notes": "org: proposal_id_exact"}
-    assert _recompute_merge(p) == "needs-review"
+    rec, reason = _recompute_merge(p)
+    assert rec == "needs-review"
+    _assert_reason(reason, "low_person_confidence")
 
 
 def test_recompute_merge_all_high_is_automerge() -> None:
     p = {"resolution_confidence": _conf(), "resolution_notes": "org: proposal_id_exact"}
-    assert _recompute_merge(p) == "auto-merge"
+    rec, reason = _recompute_merge(p)
+    assert rec == "auto-merge"
+    _assert_reason(reason, "post_enrich_strong")
 
 
 def test_recompute_merge_chain_partial_org_allowed() -> None:
@@ -35,7 +46,9 @@ def test_recompute_merge_chain_partial_org_allowed() -> None:
         "resolution_confidence": _conf(org=0.85),
         "resolution_notes": "org: chain_partial_exact; post: exact",
     }
-    assert _recompute_merge(p) == "auto-merge"
+    rec, reason = _recompute_merge(p)
+    assert rec == "auto-merge"
+    _assert_reason(reason, "post_enrich_strong")
 
 
 def test_recompute_merge_post_creation_allowed_when_org_safe() -> None:
@@ -45,7 +58,9 @@ def test_recompute_merge_post_creation_allowed_when_org_safe() -> None:
         "resolution_notes": "org: proposal_id_exact; post: creatable_from_role",
         "propose_post_creation": True,
     }
-    assert _recompute_merge(p) == "auto-merge"
+    rec, reason = _recompute_merge(p)
+    assert rec == "auto-merge"
+    _assert_reason(reason, "post_enrich_strong")
 
 
 def test_recompute_merge_org_no_match_needs_ministerie_chain() -> None:
@@ -55,7 +70,9 @@ def test_recompute_merge_org_no_match_needs_ministerie_chain() -> None:
         "resolution_notes": "org: no_match; post: not_in_data",
         "organization_chain": [{"level": "directie", "name": "Eurowerkgroep"}],
     }
-    assert _recompute_merge(p) == "needs-review"
+    rec, reason = _recompute_merge(p)
+    assert rec == "needs-review"
+    _assert_reason(reason, "org_side_not_automergeable")
 
 
 def test_recompute_merge_org_no_match_with_ministerie_chain_ok() -> None:
@@ -69,7 +86,9 @@ def test_recompute_merge_org_no_match_with_ministerie_chain_ok() -> None:
             {"level": "directie", "name": "directie Begrotingszaken"},
         ],
     }
-    assert _recompute_merge(p) == "auto-merge"
+    rec, reason = _recompute_merge(p)
+    assert rec == "auto-merge"
+    _assert_reason(reason, "post_enrich_strong")
 
 
 def test_chain_supports_org_creation_requires_two_levels_ministerie_top() -> None:

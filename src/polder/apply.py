@@ -1649,16 +1649,62 @@ def _build_person_record(
 # ---------------------------------------------------------------------------
 
 
+_ACTION_MODEL = {
+    "create-org": "Organisatie",
+    "create-post": "Post",
+    "create-person": "Persoon",
+    "append-mandaat": "Persoon",
+    "close-mandaat": "Persoon",
+}
+
+
+def _validate_record(action: ApplyAction) -> str | None:
+    """Pydantic-pass op `action.record` vóór het op disk landt.
+
+    Retourneer een foutstring als het record niet valideert, anders None.
+    Vangt o.a. `start_date: YYYY-MM` (date_from_datetime_parsing) aan de
+    schrijfkant af, in plaats van pas bij de validate-stap ná het schrijven
+    (#44).
+    """
+    from pydantic import ValidationError
+
+    from polder.lib import models
+
+    model_name = _ACTION_MODEL.get(action.type)
+    if model_name is None:
+        return None
+    model_cls = getattr(models, model_name, None)
+    if model_cls is None:
+        return None
+    try:
+        model_cls.model_validate(action.record)
+    except ValidationError as exc:
+        return f"{model_name}-validatie faalde: {exc.errors()[:3]}"
+    return None
+
+
 def execute_apply(actions: list[ApplyAction], data_dir: Path) -> int:
-    """Schrijf alle acties weg. Retourneert het aantal aangepaste files."""
+    """Schrijf alle acties weg. Retourneert het aantal aangepaste files.
+
+    Elk record gaat eerst door een Pydantic-pass (`_validate_record`); een
+    record dat niet valideert wordt overgeslagen en gelogd, niet weggeschreven.
+    """
+    import logging
+
+    log = logging.getLogger("polder.apply")
     written = 0
     for action in actions:
+        err = _validate_record(action)
+        if err is not None:
+            log.error(
+                "apply: skip %s -> %s (record valideert niet: %s)",
+                action.type,
+                action.target_path.name,
+                err,
+            )
+            continue
         action.target_path.parent.mkdir(parents=True, exist_ok=True)
-        if action.type == "append-mandaat":
-            # `record` is de volledige nieuwe persoon-yaml (oud + extra mandaat).
-            payload = action.record
-        else:
-            payload = action.record
+        payload = action.record
         with action.target_path.open("w", encoding="utf-8") as f:
             yaml.safe_dump(payload, f, sort_keys=False, allow_unicode=True)
         written += 1

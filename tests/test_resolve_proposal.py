@@ -325,3 +325,80 @@ def test_resolve_proposal_post_role_keyword_disambiguates(polder_index) -> None:
     result = resolve_proposal(proposal, polder_index)
 
     assert result["resolved_post_id"] == "post:staatssecretaris-min-def"
+
+
+# ---------------------------------------------------------------------------
+# #33: elke recommendation moet een niet-lege, informatieve merge_reason hebben
+# ---------------------------------------------------------------------------
+
+
+def _assert_has_reason(result: dict, must_contain: str) -> None:
+    reason = result.get("merge_reason")
+    assert isinstance(reason, str), f"merge_reason ontbreekt: {result.get('merge_reason')!r}"
+    assert reason.strip(), "merge_reason is leeg"
+    assert must_contain in reason, f"verwacht {must_contain!r} in {reason!r}"
+
+
+def test_merge_reason_present_on_auto_merge(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:min-az",
+        "post_id": "post:minister-president-min-az",
+        "role": "minister-president",
+        "start_date": "2010-10-14",
+        "event_type": "benoeming",
+        "confidence": 0.95,
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["merge_recommendation"] == "auto-merge"
+    _assert_has_reason(result, "all_fields_strong")
+
+
+def test_merge_reason_present_on_skip(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    result = resolve_proposal({"event_type": "geen_benoeming", "person_name": None}, polder_index)
+    assert result["merge_recommendation"] == "skip"
+    _assert_has_reason(result, "no_event")
+
+
+def test_merge_reason_present_on_low_proposal_confidence(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:min-az",
+        "post_id": "post:minister-president-min-az",
+        "confidence": 0.5,
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["merge_recommendation"] == "needs-review"
+    _assert_has_reason(result, "low_confidence")
+
+
+def test_merge_reason_present_on_unknown_org(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "organization_id": "org:bestaat-niet",
+        "post_id": "post:minister-president-min-az",
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["merge_recommendation"] == "needs-review"
+    _assert_has_reason(result, "low_confidence")
+
+
+def test_merge_reason_present_on_ambiguous_person(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "drs. H.W.M. Schoof",
+        "organization_id": "org:min-az",
+        "post_id": "post:minister-president-min-az",
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["merge_recommendation"] == "needs-review"
+    _assert_has_reason(result, "ambiguous_person")

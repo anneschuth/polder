@@ -384,6 +384,7 @@ def resolve_proposal(
             resolution_notes="Geen benoemings-event; niets te resolven.",
             propose_post_creation=False,
             merge_recommendation="skip",
+            merge_reason="no_event: geen benoemings-event of person_name in proposal",
         )
         return out
 
@@ -411,7 +412,7 @@ def resolve_proposal(
 
     propose_post_creation = post.post_id is None and bool(proposal.get("post_id"))
 
-    rec = _recommend_merge(org, post, person, proposal)
+    rec, reason = _recommend_merge(org, post, person, proposal)
 
     out.update(
         resolved_organization_id=org.organization_id,
@@ -426,6 +427,7 @@ def resolve_proposal(
         resolution_notes=notes,
         propose_post_creation=propose_post_creation,
         merge_recommendation=rec,
+        merge_reason=reason,
     )
     return out
 
@@ -441,8 +443,10 @@ def _format_notes(org: OrgMatch, post: PostMatch, person: PersonMatch) -> str:
     return "; ".join(parts)
 
 
-def _recommend_merge(org: OrgMatch, post: PostMatch, person: PersonMatch, proposal: dict) -> str:
-    """Bepaal `merge_recommendation`.
+def _recommend_merge(
+    org: OrgMatch, post: PostMatch, person: PersonMatch, proposal: dict
+) -> tuple[str, str]:
+    """Bepaal `(merge_recommendation, merge_reason)`.
 
     Auto-merge: alle drie velden ≥ 0.85 én proposal-confidence ≥ 0.85 (als
     aanwezig) én geen ambiguïteit.
@@ -451,20 +455,41 @@ def _recommend_merge(org: OrgMatch, post: PostMatch, person: PersonMatch, propos
     geresolveerd. Dan is dit een echte benoeming waar de persoon nog niet
     in de polder-database staat. Apply kan create-person triggeren met
     UUID-suffix slug. Markeer als auto-merge.
+
+    `merge_reason` is altijd een niet-lege string: bij needs-review/skip de
+    concrete blokkade, bij auto-merge welk pad de merge toestond. Zonder
+    reden is een needs-review-proposal niet handmatig te reviewen (#33).
     """
     proposal_conf = proposal.get("confidence")
     if isinstance(proposal_conf, int | float) and proposal_conf < 0.85:
-        return "needs-review"
+        return "needs-review", (
+            f"low_confidence: proposal-confidence {proposal_conf:.2f} < drempel 0.85"
+        )
 
     if "ambiguous" in person.method:
-        return "needs-review"
+        n = len(person.candidates)
+        cands = ", ".join(person.candidates[:3]) if person.candidates else "onbekend"
+        return "needs-review", (
+            f"ambiguous_person: {n} kandidaten met deze familienaam "
+            f"({cands}), geen onderscheidend signaal"
+        )
 
     # Person no_match maar org en post stevig: nieuwe persoon aanmaken.
     if person.method == "no_match" and org.confidence >= 0.85 and post.confidence >= 0.85:
-        return "auto-merge"
+        return "auto-merge", (
+            "creatable_new_person: persoon niet in data/personen, "
+            f"org ({org.confidence:.2f}) en post ({post.confidence:.2f}) sterk geresolveerd"
+        )
 
     # Alle drie velden moeten ≥ 0.85 zijn
     if org.confidence < 0.85 or post.confidence < 0.85 or person.confidence < 0.85:
-        return "needs-review"
+        weak: list[str] = []
+        if org.confidence < 0.85:
+            weak.append(f"org {org.confidence:.2f} ({org.method})")
+        if post.confidence < 0.85:
+            weak.append(f"post {post.confidence:.2f} ({post.method})")
+        if person.confidence < 0.85:
+            weak.append(f"person {person.confidence:.2f} ({person.method})")
+        return "needs-review", "low_confidence: " + ", ".join(weak) + " < drempel 0.85"
 
-    return "auto-merge"
+    return "auto-merge", "all_fields_strong: org/post/person allemaal ≥ 0.85"
