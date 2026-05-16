@@ -1234,3 +1234,71 @@ def test_dup_mandate_ignores_consecutive_terms(fake_data: Path) -> None:
     )
     report = run_audit(fake_data)
     assert "dup_mandate" not in _categories_in(report)
+
+
+def test_prune_removes_only_stale_entries(fake_data: Path) -> None:
+    """prune verwijdert stale verified-entries, behoudt matchende."""
+    from typer.testing import CliRunner
+
+    from polder.cli.commands.audit_cmd import app
+
+    # Twee personen met zelfde familie+geboortejaar → quasi_dup_family_birth.
+    for slug, initials in [("dijk-a-1980", "A."), ("dijk-b-1980", "B.")]:
+        _write_person(
+            fake_data,
+            slug,
+            {
+                "id": f"person:{slug}",
+                "name": {"family": "Dijk", "initials": initials},
+                "birth": {"year": 1980},
+                "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+            },
+        )
+
+    # Eén matchende entry (live finding) + één stale entry (geen finding).
+    audit_dir = fake_data / "_audit"
+    audit_dir.mkdir()
+    verified_path = audit_dir / "verified.yaml"
+    verified_path.write_text(
+        yaml.safe_dump(
+            {
+                "verified": [
+                    {
+                        "category": "quasi_dup_family_birth",
+                        "key": "dijk|1980",
+                        "note": "Echte verschillende personen",
+                        "verified_at": "2026-05-11",
+                        "verified_by": "anneschuth",
+                    },
+                    {
+                        "category": "quasi_dup_family_birth",
+                        "key": "ditbestaatniet|1900",
+                        "note": "Stale: finding bestaat niet meer",
+                        "verified_at": "2026-05-11",
+                        "verified_by": "anneschuth",
+                    },
+                ]
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+
+    runner = CliRunner()
+
+    # Dry-run: meldt 1 stale, schrijft niets weg.
+    result = runner.invoke(app, ["prune", "--data", str(fake_data)])
+    assert result.exit_code == 0, result.output
+    assert "stale:           1" in result.output
+    assert "ditbestaatniet|1900" in result.output
+    raw = yaml.safe_load(verified_path.read_text(encoding="utf-8"))
+    assert len(raw["verified"]) == 2  # nog niets verwijderd
+
+    # --apply: verwijdert alleen de stale entry.
+    result = runner.invoke(app, ["prune", "--apply", "--data", str(fake_data)])
+    assert result.exit_code == 0, result.output
+    raw = yaml.safe_load(verified_path.read_text(encoding="utf-8"))
+    assert len(raw["verified"]) == 1
+    kept = raw["verified"][0]
+    assert kept["key"] == "dijk|1980"
+    assert kept["note"] == "Echte verschillende personen"
