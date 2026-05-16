@@ -5,22 +5,6 @@ name:
   given: Adrie
   initials: A.
 mandaten:
-- id: 96ead916-83f7-419c-8f69-3cbcf09077e1
-  organization_id: org:gemeente-waadhoeke
-  post_id: post:raadslid-gemeente-waadhoeke
-  role: Raadslid gemeente Waadhoeke
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6493740
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/23087139/gemeente-waadhoeke
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=23240994
 - id: b608ee7c-b147-4951-bc31-09f832395fc8
   organization_id: org:gemeente-waadhoeke
   post_id: post:raadslid-gemeente-waadhoeke
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6493740
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23087139/gemeente-waadhoeke
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=23240994
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6493738

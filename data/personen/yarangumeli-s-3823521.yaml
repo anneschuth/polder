@@ -5,22 +5,6 @@ name:
   given: Serkan
   initials: S.
 mandaten:
-- id: 9db7ad77-7c2b-4202-aa2e-e9ba228b7dd6
-  organization_id: org:gemeente-geldrop-mierlo
-  post_id: post:raadslid-gemeente-geldrop-mierlo
-  role: Raadslid gemeente Geldrop
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3823524
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=24562512
 - id: f80bbd28-9603-48a0-ba20-ab76a0935645
   organization_id: org:gemeente-geldrop-mierlo
   post_id: post:raadslid-gemeente-geldrop-mierlo
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3823524
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=24562512
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823521

@@ -5,22 +5,6 @@ name:
   given: Geert
   initials: G.F.E.
 mandaten:
-- id: bc214aae-7f2f-4047-b6b1-b2eacb4248e8
-  organization_id: org:gemeente-rotterdam
-  post_id: post:raadslid-gemeente-rotterdam
-  role: Raadslid gemeente Rotterdam
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6066122
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/38936/gemeente-rotterdam
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=29531208
 - id: 908f8c69-89cb-4ffd-8d71-05f357b69d59
   organization_id: org:gemeente-rotterdam
   post_id: post:raadslid-gemeente-rotterdam
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6066122
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/38936/gemeente-rotterdam
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29531208
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6066120

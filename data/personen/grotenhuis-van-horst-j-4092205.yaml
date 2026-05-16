@@ -5,22 +5,6 @@ name:
   given: Joke
   initials: J.
 mandaten:
-- id: e7773085-4334-417c-bd3d-4ae7ed9444ef
-  organization_id: org:gemeente-heerde
-  post_id: post:raadslid-gemeente-heerde
-  role: Raadslid gemeente Heerde
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4092207
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/23411/gemeente-heerde
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=76619
 - id: d377b6df-ef73-476b-98f6-b8cba615bb89
   organization_id: org:gemeente-heerde
   post_id: post:raadslid-gemeente-heerde
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4092207
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23411/gemeente-heerde
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=76619
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4092205

@@ -5,22 +5,6 @@ name:
   given: Marike
   initials: M.S.
 mandaten:
-- id: 5b22a504-2102-4295-a731-9ab63f8522cf
-  organization_id: org:gemeente-rotterdam
-  post_id: post:raadslid-gemeente-rotterdam
-  role: Raadslid gemeente Rotterdam
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6065949
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/38936/gemeente-rotterdam
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=28624177
 - id: 8004a455-ed85-4060-912e-f9b5204984eb
   organization_id: org:gemeente-rotterdam
   post_id: post:raadslid-gemeente-rotterdam
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6065949
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/38936/gemeente-rotterdam
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28624177
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6065947

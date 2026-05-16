@@ -5,22 +5,6 @@ name:
   given: N.R.H.
   initials: N.R.H.
 mandaten:
-- id: 625a91b8-d761-45b0-b544-e543810beed9
-  organization_id: org:gemeente-harderwijk
-  post_id: post:raadslid-gemeente-harderwijk
-  role: Raadslid gemeente Harderwijk
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7777792
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/32835/gemeente-harderwijk
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=30541120
 - id: e3e38804-2dee-440e-9402-6d6ee04285bf
   organization_id: org:gemeente-harderwijk
   post_id: post:raadslid-gemeente-harderwijk
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7777792
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/32835/gemeente-harderwijk
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30541120
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7777790
