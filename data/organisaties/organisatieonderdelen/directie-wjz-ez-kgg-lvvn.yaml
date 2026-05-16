@@ -1,7 +1,7 @@
 id: org:onderdeel-directie-wjz-ez-kgg-lvvn
 type: organisatieonderdeel
 classification: organisatieonderdeel
-parent_id: org:min-economische-zaken
+parent_id: org:min-economische-zaken-2026
 names:
 - value: Directie Wetgeving en Juridische Zaken
   valid_from: '2026-05-16'
@@ -13,3 +13,16 @@ sources:
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/07/29/bram-van-den-hout-mt-lid-bestuur-en-kwaliteit-bij-de-gemeenschappelijke-directie-wjz-van-ezk-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: roo
+  url: https://organisaties.overheid.nl/9098/dwjz
+  retrieved: '2026-05-16'
+- id: roo
+  url: https://organisaties.overheid.nl/71973/wjz
+  retrieved: '2026-05-16'
+identifiers:
+  roo_id: '9098'
