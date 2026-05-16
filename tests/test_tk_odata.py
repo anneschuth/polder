@@ -436,6 +436,165 @@ def test_merge_person_mandaat_id_blijft_stabiel():
     assert merged["mandaten"][0]["id"] == "stable-uuid-1"
 
 
+def test_merge_sources_dedupes_op_id_en_url():
+    """Eén bron-id met verschillende URL's mag niet samenvallen."""
+    existing = {
+        "id": "person:x-y-1980",
+        "name": {"full": "X Y", "family": "Y"},
+        "mandaten": [
+            {
+                "id": "m1",
+                "post_id": POST_ID_KAMERLID,
+                "start_date": "2023-09-26",
+                "end_date": "2023-10-25",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/seat-a", "retrieved": "2025-01-01"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2025-01-01"}],
+    }
+    new = {
+        "id": "person:x-y-1980",
+        "name": {"full": "X Y", "family": "Y"},
+        "mandaten": [
+            {
+                "id": "m1-fresh",
+                "post_id": POST_ID_KAMERLID,
+                "start_date": "2023-09-26",
+                "end_date": "2023-10-25",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/seat-a", "retrieved": "2026-05-13"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2026-05-13"}],
+    }
+    merged = merge_person(existing, new)
+    srcs = merged["mandaten"][0]["sources"]
+    # Zelfde (id, url): één entry, nieuwe retrieved-datum wint.
+    assert len(srcs) == 1
+    assert srcs[0]["retrieved"] == "2026-05-13"
+
+
+def test_merge_mandaten_verwijdert_stale_tk_only_mandaat():
+    """Het Teunissen-scenario: oude fetcher voegde zetels samen en stempelde de
+    verkeerde end_date. Een re-fetch met de juiste splitsing moet de stale
+    TK-only mandaat verwijderen, niet ernaast laten staan."""
+    existing = {
+        "id": "person:teunissen-c-1985",
+        "name": {"full": "Christine Teunissen", "family": "Teunissen"},
+        "mandaten": [
+            {
+                "id": "stale",
+                "organization_id": ORG_ID_TWEEDE_KAMER,
+                "post_id": POST_ID_KAMERLID,
+                "role": "Kamerlid voor PvdD",
+                "start_date": "2023-09-26",
+                "end_date": "2023-10-25",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/seat-old", "retrieved": "2025-01-01"},
+                    {"id": SOURCE_ID, "url": "https://tk/seat-merged", "retrieved": "2025-01-01"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2025-01-01"}],
+    }
+    new = {
+        "id": "person:teunissen-c-1985",
+        "name": {"full": "Christine Teunissen", "family": "Teunissen"},
+        "mandaten": [
+            {
+                "id": "fresh-closed",
+                "organization_id": ORG_ID_TWEEDE_KAMER,
+                "post_id": POST_ID_KAMERLID,
+                "role": "Kamerlid voor PvdD",
+                "start_date": "2023-09-26",
+                "end_date": "2023-10-25",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/seat-old", "retrieved": "2026-05-13"},
+                ],
+            },
+            {
+                "id": "fresh-open",
+                "organization_id": ORG_ID_TWEEDE_KAMER,
+                "post_id": POST_ID_KAMERLID,
+                "role": "Kamerlid voor PvdD",
+                "start_date": "2023-10-26",
+                "end_date": None,
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/seat-merged", "retrieved": "2026-05-13"},
+                ],
+            },
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2026-05-13"}],
+    }
+    merged = merge_person(existing, new)
+    spans = sorted((m["start_date"], m["end_date"]) for m in merged["mandaten"])
+    assert spans == [("2023-09-26", "2023-10-25"), ("2023-10-26", None)]
+    # Stable id van de bestaande gematchte mandaat blijft behouden.
+    by_start = {m["start_date"]: m for m in merged["mandaten"]}
+    assert by_start["2023-09-26"]["id"] == "stale"
+    assert by_start["2023-10-26"]["end_date"] is None
+
+
+def test_merge_mandaten_behoudt_niet_tk_mandaat_zonder_match():
+    """Een Staatscourant/ABD-mandaat zonder live TK-tegenhanger blijft staan."""
+    existing = {
+        "id": "person:foo-b-1970",
+        "name": {"full": "Foo Bar", "family": "Bar"},
+        "mandaten": [
+            {
+                "id": "sc-mandaat",
+                "organization_id": "org:min-az",
+                "post_id": "post:minister-min-az",
+                "role": "Minister",
+                "start_date": "2024-07-02",
+                "end_date": None,
+                "sources": [
+                    {"id": "staatscourant", "url": "https://stcrt/123", "retrieved": "2024-07-02"},
+                ],
+            },
+            {
+                "id": "stale-tk",
+                "organization_id": ORG_ID_TWEEDE_KAMER,
+                "post_id": POST_ID_KAMERLID,
+                "role": "Kamerlid voor VVD",
+                "start_date": "2021-03-31",
+                "end_date": "2024-07-01",
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/old", "retrieved": "2025-01-01"},
+                ],
+            },
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2025-01-01"}],
+    }
+    new = {
+        "id": "person:foo-b-1970",
+        "name": {"full": "Foo Bar", "family": "Bar"},
+        "mandaten": [
+            {
+                "id": "fresh-tk",
+                "organization_id": ORG_ID_TWEEDE_KAMER,
+                "post_id": POST_ID_KAMERLID,
+                "role": "Kamerlid voor VVD",
+                "start_date": "2025-11-12",
+                "end_date": None,
+                "sources": [
+                    {"id": SOURCE_ID, "url": "https://tk/new", "retrieved": "2026-05-13"},
+                ],
+            }
+        ],
+        "sources": [{"id": SOURCE_ID, "url": "https://tk/p", "retrieved": "2026-05-13"}],
+    }
+    merged = merge_person(existing, new)
+    ids = {m["id"] for m in merged["mandaten"]}
+    # Staatscourant-mandaat blijft, stale TK-only verdwijnt, nieuwe TK erbij.
+    assert "sc-mandaat" in ids
+    assert "stale-tk" not in ids
+    assert "fresh-tk" in ids
+
+
 # ---------------------------------------------------------------------------
 # ensure_org_and_post
 # ---------------------------------------------------------------------------
