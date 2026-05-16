@@ -28,8 +28,5 @@ jobs:
       - name: Sync dependencies
         run: uv sync
 
-      - name: Diagnose help rendering (temporary)
-        run: uv run python scripts/diagnose_help_render.py
-
       - name: Run pytest
         run: uv run pytest -q -p no:cacheprovider
