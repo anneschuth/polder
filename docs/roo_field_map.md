@@ -82,7 +82,7 @@ Totaal velden: **129**.
 | 99.98% | 4532 / 4533 | `/classificaties/classificatie@type` |
 | 99.95% | 3817 / 3819 | `/classificaties/classificatie@url` |
 | 99.95% | 1869 / 1870 | `/contact/telefoonnummers/telefoonnummer/label` |
-| 99.95% | 3699 / 3701 | `/woo/wooIndex/documentLocatie/informatiecategorie` |
+| 99.95% | 3700 / 3702 | `/woo/wooIndex/documentLocatie/informatiecategorie` |
 | 99.94% | 1759 / 1760 | `/contact/emailadressen/emailadres/label` |
 | 99.94% | 1746 / 1747 | `/relatieMetMinisterie@systeemId` |
 | 99.94% | 1746 / 1747 | `/relatieMetMinisterie@resourceIdentifierTOOI` |
@@ -99,10 +99,10 @@ Totaal velden: **129**.
 | 99.87% | 761 / 762 | `/woo/wooVerzoek/url` |
 | 99.85% | 656 / 657 | `/afspraak/url` |
 | 99.83% | 599 / 600 | `/afspraak/telefoonnummer` |
-| 99.83% | 1792 / 1795 | `/woo/wooIndex/documentLocatie/toelichting` |
+| 99.83% | 1793 / 1796 | `/woo/wooIndex/documentLocatie/toelichting` |
 | 99.82% | 1124 / 1126 | `@resourceIdentifierOWMS` |
 | 99.79% | 472 / 473 | `/afspraak/email` |
-| 99.78% | 3693 / 3701 | `/woo/wooIndex/documentLocatie/url` |
+| 99.78% | 3694 / 3702 | `/woo/wooIndex/documentLocatie/url` |
 | 99.78% | 895 / 897 | `/contact/contactformulieren/contactformulier/url` |
 | 99.77% | 866 / 868 | `/woo/wooInformatie/urls/overzichtURL` |
 | 99.73% | 726 / 728 | `/woo/wooInformatie/urls/url` |
