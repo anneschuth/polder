@@ -15,6 +15,8 @@ from typing import Any, Literal
 import yaml
 from jsonschema import Draft202012Validator
 
+from polder.lib.casing import canonicalize_leading_case
+
 Severity = Literal["error", "warning"]
 
 # Map directory under data/ -> schema filename.
@@ -573,6 +575,62 @@ def _walk_strings(value: Any, path: str) -> Iterator[tuple[str, str]]:
             yield from _walk_strings(v, child)
 
 
+def check_casing(records: Iterable[Record]) -> list[ValidationIssue]:
+    """Org-name/post-label/mandaat-role hoort met een hoofdletter te
+    beginnen (tenzij gecureerde eigennaam). Lowercase-start => warning.
+
+    Soft check: faalt CI niet standaard, wel onder --strict. `polder
+    fix-casing` trekt dit recht; deze check voorkomt regressie. Interne
+    casing-collisions worden hier niet gevangen (geen veilig algoritme),
+    alleen het eerste teken.
+    """
+    issues: list[ValidationIssue] = []
+    for rec in records:
+        data = rec.data
+        if not isinstance(data, dict):
+            continue
+        if rec.category == "organisaties":
+            for i, n in enumerate(data.get("names") or []):
+                if not isinstance(n, dict):
+                    continue
+                v = n.get("value")
+                if isinstance(v, str) and v and canonicalize_leading_case(v) != v:
+                    issues.append(
+                        ValidationIssue(
+                            severity="warning",
+                            path=rec.path,
+                            field=f"names[{i}].value",
+                            message=f"naam begint met kleine letter: {v!r}",
+                        )
+                    )
+        elif rec.category == "posten":
+            v = data.get("label")
+            if isinstance(v, str) and v and canonicalize_leading_case(v) != v:
+                issues.append(
+                    ValidationIssue(
+                        severity="warning",
+                        path=rec.path,
+                        field="label",
+                        message=f"label begint met kleine letter: {v!r}",
+                    )
+                )
+        elif rec.category == "personen":
+            for i, m in enumerate(data.get("mandaten") or []):
+                if not isinstance(m, dict):
+                    continue
+                v = m.get("role")
+                if isinstance(v, str) and v and canonicalize_leading_case(v) != v:
+                    issues.append(
+                        ValidationIssue(
+                            severity="warning",
+                            path=rec.path,
+                            field=f"mandaten[{i}].role",
+                            message=f"role begint met kleine letter: {v!r}",
+                        )
+                    )
+    return issues
+
+
 def run_all_checks(
     data_dir: Path,
     schemas_dir: Path,
@@ -595,6 +653,7 @@ def run_all_checks(
     issues.extend(check_birth_year_only(records))
     issues.extend(check_bsn_patterns(records))
     issues.extend(check_role_classification_mismatch(records, idx))
+    issues.extend(check_casing(records))
 
     return issues
 

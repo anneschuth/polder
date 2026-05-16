@@ -274,6 +274,59 @@ def test_bsn_pattern_does_not_fire_on_postcode_or_kvk(data_dir: Path, schemas_di
     assert not any("BSN-achtig" in i.message for i in issues)
 
 
+def test_check_casing_warns_on_lowercase_start(tmp_path: Path) -> None:
+    from polder.validate import Record, check_casing
+
+    org = Record(
+        path=tmp_path / "o.yaml",
+        category="organisaties",
+        data={"id": "org:x", "names": [{"value": "directie Foo"}]},
+        schema_name="organisatie.schema.json",
+    )
+    post = Record(
+        path=tmp_path / "p.yaml",
+        category="posten",
+        data={"id": "post:y", "label": "directeur Foo"},
+        schema_name="post.schema.json",
+    )
+    persoon = Record(
+        path=tmp_path / "q.yaml",
+        category="personen",
+        data={"id": "person:z", "mandaten": [{"role": "minister van OCW"}]},
+        schema_name="persoon.schema.json",
+    )
+    issues = check_casing([org, post, persoon])
+    assert len(issues) == 3
+    assert all(i.severity == "warning" for i in issues)
+    assert {i.field for i in issues} == {"names[0].value", "label", "mandaten[0].role"}
+
+
+def test_check_casing_clean_on_correct_and_protected(tmp_path: Path) -> None:
+    from polder.validate import Record, check_casing
+
+    recs = [
+        Record(
+            path=tmp_path / "a.yaml",
+            category="organisaties",
+            data={"id": "org:a", "names": [{"value": "Directie Foo"}]},
+            schema_name="organisatie.schema.json",
+        ),
+        Record(
+            path=tmp_path / "b.yaml",
+            category="organisaties",
+            data={"id": "org:b", "names": [{"value": "pSG Cluster"}]},
+            schema_name="organisatie.schema.json",
+        ),
+        Record(
+            path=tmp_path / "c.yaml",
+            category="organisaties",
+            data={"id": "org:c", "names": [{"value": "het participatiebedrijf"}]},
+            schema_name="organisatie.schema.json",
+        ),
+    ]
+    assert check_casing(recs) == []
+
+
 def test_check_bsn_patterns_unit(tmp_path: Path) -> None:
     from polder.validate import Record
 
