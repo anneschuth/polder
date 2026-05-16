@@ -759,7 +759,7 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             record = _strip_unsupported_identifiers(record)
 
-            write_person(record, args.out, dry_run=args.dry_run)
+            write_person(record, args.out, dry_run=args.dry_run, managed_source_id=SOURCE_ID)
             if _has_active_mandaat(record):
                 n_current += 1
             else:

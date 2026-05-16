@@ -414,30 +414,34 @@ def _merge_sources(
     return list(by_key.values())
 
 
-def _is_tk_only_mandaat(mandaat: dict[str, Any]) -> bool:
-    """True als alle bronnen van dit mandaat van de TK-fetcher komen.
+def _is_managed_only_mandaat(mandaat: dict[str, Any], managed_source_id: str) -> bool:
+    """True als alle bronnen van dit mandaat ``managed_source_id`` zijn.
 
-    Zo'n mandaat is volledig door deze fetcher beheerd: bij een re-fetch is de
-    live TK-set de autoriteit. Een TK-only mandaat zonder live-tegenhanger is
-    een artefact van een oudere fetcher-versie (bv. de oude logica die
-    opeenvolgende fractiezetels samenvoegde en de verkeerde end_date stempelde)
-    en moet verdwijnen. Mandaten met een niet-TK-bron (Staatscourant, ABD,
-    wikidata, handmatig) raken we nooit aan.
+    Zo'n mandaat is volledig door één fetcher beheerd: bij een re-fetch is de
+    live set van die fetcher de autoriteit. Een managed-only mandaat zonder
+    live-tegenhanger is een artefact van een oudere fetcher-versie (bv. de oude
+    logica die opeenvolgende zetels samenvoegde en de verkeerde end_date
+    stempelde) en moet verdwijnen. Mandaten met een andere bron (Staatscourant,
+    ABD, wikidata, handmatig, of een andere fetcher) raken we nooit aan.
     """
     sources = [s for s in (mandaat.get("sources") or []) if isinstance(s, dict)]
     if not sources:
         return False
-    return all(s.get("id") == SOURCE_ID for s in sources)
+    return all(s.get("id") == managed_source_id for s in sources)
 
 
 def _merge_mandaten(
-    existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
+    existing: list[dict[str, Any]] | None,
+    new: list[dict[str, Any]] | None,
+    *,
+    managed_source_id: str = SOURCE_ID,
 ) -> list[dict[str, Any]]:
     """Match op (post_id, start_date) — vervang nieuwe waar match, behoud rest.
 
-    Stale TK-only mandaten (geen live-tegenhanger) worden verwijderd: de live
-    TK-set is de autoriteit voor wat deze fetcher beheert. Niet-TK mandaten
-    blijven altijd staan, ook zonder match.
+    Stale managed-only mandaten (geen live-tegenhanger) worden verwijderd: de
+    live set van ``managed_source_id`` is de autoriteit voor wat die fetcher
+    beheert. Mandaten met een andere bron blijven altijd staan, ook zonder
+    match.
     """
     by_key: dict[tuple[str, str], dict[str, Any]] = {}
     for mandaat in existing or []:
@@ -449,10 +453,10 @@ def _merge_mandaten(
     new_keys = {
         (m.get("post_id", ""), m.get("start_date", "")) for m in (new or []) if isinstance(m, dict)
     }
-    # Drop alleen als er daadwerkelijk een live TK-set is om tegen af te zetten.
+    # Drop alleen als er daadwerkelijk een live set is om tegen af te zetten.
     if new:
         for key in list(by_key):
-            if key not in new_keys and _is_tk_only_mandaat(by_key[key]):
+            if key not in new_keys and _is_managed_only_mandaat(by_key[key], managed_source_id):
                 del by_key[key]
 
     for mandaat in new or []:
@@ -470,10 +474,18 @@ def _merge_mandaten(
     return sorted(by_key.values(), key=lambda m: m.get("start_date", ""))
 
 
-def merge_person(existing: dict[str, Any], new: dict[str, Any]) -> dict[str, Any]:
-    """Deep-merge bestaande persoon-record met nieuwe TK-data.
+def merge_person(
+    existing: dict[str, Any],
+    new: dict[str, Any],
+    *,
+    managed_source_id: str = SOURCE_ID,
+) -> dict[str, Any]:
+    """Deep-merge bestaande persoon-record met nieuwe fetcher-data.
 
-    TK-data wint voor velden die hij vult, lokale toevoegingen blijven staan.
+    Nieuwe data wint voor velden die hij vult, lokale toevoegingen blijven
+    staan. ``managed_source_id`` bepaalt welke fetcher de mandaten beheert:
+    stale mandaten van die bron zonder live-tegenhanger worden opgeruimd.
+    Default ``tk_odata`` (TK-fetcher); ``ek_scrape.py`` geeft zijn eigen id.
     """
     if not existing:
         return dict(new)
@@ -485,7 +497,9 @@ def merge_person(existing: dict[str, Any], new: dict[str, Any]) -> dict[str, Any
         elif key == "sources":
             merged["sources"] = _merge_sources(merged.get("sources"), value)
         elif key == "mandaten":
-            merged["mandaten"] = _merge_mandaten(merged.get("mandaten"), value)
+            merged["mandaten"] = _merge_mandaten(
+                merged.get("mandaten"), value, managed_source_id=managed_source_id
+            )
         elif key == "name":
             current = dict(merged.get("name") or {})
             for nk, nv in (value or {}).items():
@@ -515,8 +529,14 @@ def write_person(
     out_dir: Path,
     *,
     dry_run: bool = False,
+    managed_source_id: str = SOURCE_ID,
 ) -> Path:
-    """Schrijf een persoon-record. Personen liggen vlak onder ``out_dir``."""
+    """Schrijf een persoon-record. Personen liggen vlak onder ``out_dir``.
+
+    ``managed_source_id`` wordt doorgegeven aan ``merge_person`` zodat de
+    juiste fetcher zijn eigen stale mandaten opruimt. Default ``tk_odata``;
+    ``ek_scrape.py`` geeft ``ek_scrape``.
+    """
     target = _target_path(out_dir, record)
 
     existing: dict[str, Any] = {}
@@ -524,7 +544,7 @@ def write_person(
         with target.open("r", encoding="utf-8") as fh:
             existing = yaml.safe_load(fh) or {}
 
-    merged = merge_person(existing, record)
+    merged = merge_person(existing, record, managed_source_id=managed_source_id)
     merged = _ordered_for_dump(merged)
 
     if dry_run:
