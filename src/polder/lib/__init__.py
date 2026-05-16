@@ -6,6 +6,7 @@ Importeer `Polder` als ingang naar de dataset:
 >>> p = Polder.local("./polder")  # doctest: +SKIP
 """
 
+from polder.lib.casing import canonicalize_leading_case
 from polder.lib.dataset import Polder
 from polder.lib.initials import compact_initials, format_initials, merge_initials
 from polder.lib.models import (
@@ -47,6 +48,7 @@ __all__ = [
     "PostRepo",
     "Repo",
     "Source",
+    "canonicalize_leading_case",
     "compact_initials",
     "format_initials",
     "merge_initials",

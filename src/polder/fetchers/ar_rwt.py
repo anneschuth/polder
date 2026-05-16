@@ -39,6 +39,8 @@ import httpx
 import yaml
 from bs4 import BeautifulSoup, Tag
 
+from polder.lib.casing import canonicalize_leading_case
+
 logger = logging.getLogger("polder.fetchers.ar_rwt")
 
 __all__ = [
@@ -313,7 +315,7 @@ def _build_new_record(rwt: dict[str, Any]) -> dict[str, Any]:
         "type": "rwt",
         "classification": "rwt",
         "parent_id": None,
-        "names": [{"value": name, "valid_from": "1900-01-01"}],
+        "names": [{"value": canonicalize_leading_case(name), "valid_from": "1900-01-01"}],
         "valid_from": "1900-01-01",
         "valid_until": None,
         "sources": [_make_source_entry()],

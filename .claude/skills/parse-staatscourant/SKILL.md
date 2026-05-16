@@ -55,7 +55,7 @@ Elk proposal heeft:
 - `existing_person_id` (string of null): polder-slug bij match, anders null.
 - `organization_id` (string): slug van de organisatie waar het KB op slaat.
 - `post_id` (string): slug van de post (bijv. `post:sg-min-bzk`). **NOOIT** een ABD-functie (raadadviseur, directeur, afdelingshoofd, SG, DG, IG, kwartiermaker, projectleider) mappen op `post:minister-*` of `post:staatssecretaris-*`. Een ambtenaar is geen bewindspersoon.
-- `role` (string): tekst zoals "Secretaris-Generaal van het Ministerie van BZK".
+- `role` (string): tekst zoals "Secretaris-generaal van het ministerie van BZK". **Casing**: begin de `role` met een hoofdletter op de functietitel (`Secretaris-generaal`, `Directeur`, `Minister`, `Staatssecretaris`, ...), ook als het KB anders schrijft. Uitzondering: gevestigde afkortingsvormen (`pSG`, `plv.`). Het afgeleide `role`-veld wordt gecanonicaliseerd; een letterlijke `evidence_snippet` behoudt de bron-casing (quote-or-die).
 - `start_date` (ISO 8601): ingangsdatum van de benoeming.
 - `end_date` (ISO 8601 of null): null voor benoeming, datum voor ontslag.
 - `decision_reference` (string): KB-nummer plus datum, bijv. "KB nr. 2026-001234, 15 april 2026".

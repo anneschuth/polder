@@ -64,6 +64,8 @@ Persoon-op-post:
 
 Het `child_id` veld komt later via een aparte entity-resolution-skill of handmatige review. De parser stelt alleen `child_name` voor.
 
+**Casing**: begin `child_name` met een hoofdletter op het eerste woord (organisatie-prefix `Afdeling`, `Directie`, `Directoraat-generaal`, `Cluster`, `Bureau`, ...), ook als het organogram klein schrijft. Inhoudswoorden in een organisatienaam krijgen een hoofdletter ("Directie Ruimtelijke Ontwikkeling", niet "Directie Ruimtelijke ontwikkeling"). Uitzondering: gevestigde afkortingsvormen (`pSG`, `plv.`) en eigennamen die in de bron bewust met een kleine letter beginnen. De afgeleide `child_name` wordt gecanonicaliseerd; de letterlijke `evidence` behoudt de bron-casing.
+
 ## Stappen voor de LLM
 
 ### Vision-modus (PDF of PNG)

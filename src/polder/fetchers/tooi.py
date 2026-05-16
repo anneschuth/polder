@@ -67,6 +67,8 @@ import httpx
 import yaml
 from lxml import etree
 
+from polder.lib.casing import canonicalize_leading_case
+
 logger = logging.getLogger("polder.fetchers.tooi")
 
 __all__ = [
@@ -750,7 +752,7 @@ def _build_historic_record(
     valid_from = org.begin_datum or "1900-01-01"
     valid_until = org.eind_datum
 
-    name_value = org.naam_excl_soort or org.label or name
+    name_value = canonicalize_leading_case(org.naam_excl_soort or org.label or name)
     name_entry: dict[str, Any] = {
         "value": name_value,
         "valid_from": valid_from,
@@ -1027,7 +1029,7 @@ def apply_history_to_records(
             valid_from = hv_begin.get(org.uri) or org.begin_datum or "1900-01-01"
         else:
             valid_from = org.begin_datum or "1900-01-01"
-        name_value = org.naam_excl_soort or org.label or org.uri
+        name_value = canonicalize_leading_case(org.naam_excl_soort or org.label or org.uri)
         name_entry: dict[str, Any] = {
             "value": name_value,
             "valid_from": valid_from,

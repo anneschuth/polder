@@ -16,6 +16,8 @@ from typing import Any, Literal
 
 import yaml
 
+from polder.lib.casing import canonicalize_leading_case
+
 ActionType = Literal[
     "create-org", "create-post", "create-person", "append-mandaat", "close-mandaat"
 ]
@@ -1022,7 +1024,7 @@ def _build_org_record(
     parent_id: str | None,
     proposal: dict[str, Any],
 ) -> dict[str, Any]:
-    name = str(entry.get("name", "")).strip()
+    name = canonicalize_leading_case(str(entry.get("name", "")).strip())
     today = _today_iso()
     source_url = _detect_source_url(proposal) or "https://example.invalid"
     source_id = _detect_source_id(proposal)
@@ -1186,7 +1188,7 @@ def _synthesize_org_unit_from_role(
         "type": "organisatieonderdeel",
         "classification": "organisatieonderdeel",
         "parent_id": parent_id,
-        "names": [{"value": raw[0].upper() + raw[1:], "valid_from": valid_from}],
+        "names": [{"value": canonicalize_leading_case(raw), "valid_from": valid_from}],
         "valid_from": valid_from,
         "valid_until": None,
         "sources": [
@@ -1219,7 +1221,7 @@ def _build_post_record(
     record = {
         "id": post_id,
         "organization_id": organization_id,
-        "label": role,
+        "label": canonicalize_leading_case(role),
         "classification": classification,
         "valid_from": valid_from,
         "valid_until": None,
@@ -1700,7 +1702,7 @@ def _build_mandaat(
         "id": f"mandate-{_slugify(post_id)}-{start_date}",
         "organization_id": organization_id,
         "post_id": post_id,
-        "role": proposal.get("role", ""),
+        "role": canonicalize_leading_case(proposal.get("role", "")),
         "start_date": start_date,
         "end_date": end_date,
         "sources": [

@@ -32,6 +32,8 @@ import httpx
 import yaml
 from lxml import etree
 
+from polder.lib.casing import canonicalize_leading_case
+
 logger = logging.getLogger("polder.fetchers.roo")
 
 ROO_PUBLIC_BASE = "https://organisaties.overheid.nl"
@@ -1598,6 +1600,21 @@ def _strip_private(record: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in record.items() if not k.startswith("_")}
 
 
+def _canonicalize_names(record: dict[str, Any]) -> None:
+    """Trek de casing van `names[].value` recht, in-place.
+
+    Centrale chokepoint: alle ROO-record-paden (organisatie, GR,
+    organisatieonderdeel) lopen via `write_records`, dus hier
+    canonicaliseren dekt ze allemaal — robuuster dan per call-site.
+    Raakt `abbr` of andere velden niet aan.
+    """
+    for entry in record.get("names") or []:
+        if isinstance(entry, dict):
+            v = entry.get("value")
+            if isinstance(v, str) and v:
+                entry["value"] = canonicalize_leading_case(v)
+
+
 def _ordered_for_dump(record: dict[str, Any]) -> dict[str, Any]:
     """Zet velden in een leesbare volgorde voor YAML-output."""
     order = [
@@ -1730,6 +1747,7 @@ def write_records(
         target = target_dir / f"{slug}.yaml"
 
         clean = _strip_private(record)
+        _canonicalize_names(clean)
 
         tooi = (clean.get("identifiers") or {}).get("tooi")
         if (

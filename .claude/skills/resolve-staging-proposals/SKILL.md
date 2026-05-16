@@ -66,6 +66,7 @@ Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde
 4. **Confidence per veld.** `resolution_confidence` is een object met aparte floats voor `organization`, `post`, `person`. Niet één globale score.
 5. **Two-source rule respecteren.** Een staatscourant-only match mag tot 0.95; abd-nieuws-only blijft op 0.85 ook als de skill perfect matcht.
 6. **Geen privé-data toevoegen.** Geen geboortemaand of -dag, geen contactgegevens, nooit BSN.
+7. **Casing canonicaliseren.** Als je een `role`, organisatie-`name` of post-`label` doorgeeft die niet aan een bestaand record matcht (dus een nieuw voorstel wordt), begin die met een hoofdletter op de functietitel/organisatie-prefix. Uitzondering: gevestigde afkortingsvormen (`pSG`, `plv.`) en eigennamen die in de bron bewust met een kleine letter beginnen. De `apply`-laag canonicaliseert dit ook nog, maar lever het meteen correct aan zodat de diff klopt.
 
 ## Voorbeeld
 
