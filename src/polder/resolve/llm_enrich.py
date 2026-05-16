@@ -64,6 +64,10 @@ class EnrichStats:
     quote_or_die_rejected: int = 0
     """evidence_snippet niet teruggevonden in source-url content; geweigerd."""
 
+    recomputed: int = 0
+    """Al-ge-enrichte proposals waarvan merge_recommendation bij een rerun
+    veranderde door een gewijzigde _recompute_merge-policy (geen skill-call)."""
+
     total_cost_usd: float = 0.0
 
 
@@ -475,8 +479,11 @@ def enrich_resolved(
     waarde geaccepteerd, omdat de skill zelf al de quote-or-die-rule honoreert
     en re-fetchen per proposal traag is). Tests gebruiken een echte hook.
 
-    Het is veilig om dit op een al-LLM-ge-enriched lijst te draaien (idempotent
-    via `llm_enrich` key — die slaat de pass over).
+    Het is veilig om dit op een al-LLM-ge-enriched lijst te draaien: de dure
+    skill- en Wikidata-calls worden overgeslagen via de `llm_enrich` key.
+    De goedkope `merge_recommendation` wordt wél opnieuw afgeleid met de
+    huidige `_recompute_merge`-policy, zodat een policy-wijziging propageert
+    bij een rerun zonder de hele enrich-machinerie opnieuw te draaien.
     """
     if runner is None:
         from polder.llm.runner import run_skill
@@ -495,6 +502,20 @@ def enrich_resolved(
             enriched.append(proposal)
             continue
         if "llm_enrich" in proposal:
+            # Dure delen overslaan, maar de merge_recommendation opnieuw
+            # afleiden met de actuele policy. Alleen voor proposals waar
+            # de eerdere enrich een zekere persoon-match opleverde
+            # (person-confidence ≥ _MIN_PERSON_CONF_FOR_AUTOMERGE) — dat
+            # is exact het contract waaronder _recompute_merge in de
+            # normale flow draait (zie de call-sites in _apply_*). Een
+            # eerdere no_match (person 0.0) blijft onaangeroerd.
+            rc = proposal.get("resolution_confidence") or {}
+            if float(rc.get("person") or 0) >= _MIN_PERSON_CONF_FOR_AUTOMERGE:
+                recomputed = _recompute_merge(proposal)
+                if recomputed != proposal.get("merge_recommendation"):
+                    proposal = dict(proposal)
+                    proposal["merge_recommendation"] = recomputed
+                    stats.recomputed += 1
             enriched.append(proposal)
             continue
 

@@ -305,6 +305,45 @@ def test_idempotent_on_already_enriched_records() -> None:
     assert calls == []
     assert stats.candidates == 0
     assert out == [proposal]
+    assert stats.recomputed == 0
+
+
+def test_already_enriched_high_conf_recomputes_merge_without_runner() -> None:
+    # Al-ge-enrichte proposal: dure delen overslaan, maar merge_recommendation
+    # opnieuw afleiden met de actuele policy. person 0.96 + org veilig +
+    # post-creatie => onder de nieuwe policy auto-merge, geen runner-call.
+    proposal = {
+        "person_name": "Emine Özyenici",
+        "llm_enrich": {"outcome": "matched_existing", "confidence": 0.96},
+        "resolution_confidence": _conf(person=0.96, org=0.85, post=0.0),
+        "resolution_notes": "org: chain_partial_exact; post: not_in_data; person: family_given",
+        "propose_post_creation": True,
+        "merge_recommendation": "needs-review",
+    }
+    runner, calls = _make_runner(_FakeResult(text="{}"))
+    out, stats = enrich_resolved([proposal], runner=runner)
+    assert calls == []  # geen skill-call
+    assert stats.recomputed == 1
+    assert out[0]["merge_recommendation"] == "auto-merge"
+    # Origineel niet gemuteerd (defensieve kopie).
+    assert proposal["merge_recommendation"] == "needs-review"
+
+
+def test_already_enriched_no_match_not_recomputed() -> None:
+    # Eerdere no_match (person 0.0) blijft onaangeroerd: geen recompute,
+    # geen flip, geen runner-call.
+    proposal = {
+        "person_name": "Mark Vermeer",
+        "llm_enrich": {"outcome": "no_match", "confidence": 0.0},
+        "resolution_confidence": _conf(person=0.0, org=0.85, post=0.0),
+        "resolution_notes": "org: chain_partial_exact; person: no_match",
+        "merge_recommendation": "needs-review",
+    }
+    runner, calls = _make_runner(_FakeResult(text="{}"))
+    out, stats = enrich_resolved([proposal], runner=runner)
+    assert calls == []
+    assert stats.recomputed == 0
+    assert out[0]["merge_recommendation"] == "needs-review"
 
 
 def test_malformed_skill_output_counts_as_error() -> None:
