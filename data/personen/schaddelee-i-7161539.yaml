@@ -5,16 +5,6 @@ name:
   given: Ineke
   initials: I.
 mandaten:
-- id: mandate-ori-74bad7c4a1567f11
-  organization_id: org:gemeente-gouda
-  post_id: post:raadslid-gemeente-gouda
-  role: Raadslid gemeente Gouda
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7161541
-    retrieved: '2026-05-13'
 - id: mandate-ori-4d416424c1919614
   organization_id: org:gemeente-gouda
   post_id: post:raadslid-gemeente-gouda
@@ -25,6 +15,9 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3849427
     retrieved: '2026-05-09'
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7161541
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7161539
