@@ -5,9 +5,10 @@ import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
   description?: string;
+  background?: 'default' | 'tinted';
 }
 
-const { title, description } = Astro.props;
+const { title, description, background = 'default' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 // First path segment after the base, used to mark the active nav item.
@@ -39,7 +40,7 @@ const releases = `${repo}/releases/latest`;
     <slot name="head" />
   </head>
   <body>
-    <nldd-app-view background="tinted">
+    <nldd-app-view background={background}>
       <nldd-page>
         <nldd-top-navigation-bar
           slot="header"
