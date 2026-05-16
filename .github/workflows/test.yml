@@ -1,4 +1,4 @@
-name: validate
+name: test
 
 on:
   pull_request:
@@ -9,12 +9,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: validate-${{ github.ref }}
+  group: test-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  validate:
-    name: validate
+  test:
+    name: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,5 +28,5 @@ jobs:
       - name: Sync dependencies
         run: uv sync
 
-      - name: Run polder-validate
-        run: uv run polder-validate
+      - name: Run pytest
+        run: uv run pytest -q -p no:cacheprovider
