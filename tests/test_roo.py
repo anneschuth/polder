@@ -620,6 +620,45 @@ def test_extract_classifications():
     assert "wettelijke_grondslagen" not in wnt
 
 
+def test_extract_classifications_skips_unknown_type():
+    """Een ROO-classificatie-type buiten de schema-enum mag de hele org
+    NIET laten falen op schema-validatie — wel gefilterd + gewaarschuwd."""
+    xml = """
+    <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9" p:systeemId="1">
+      <naam>X</naam>
+      <types><type>Gemeente</type></types>
+      <classificaties>
+        <classificatie p:type="Woo" p:url="https://example.org/woo"/>
+        <classificatie p:type="HeelNieuwType2027" p:url="https://example.org/x"/>
+      </classificaties>
+    </organisatie>
+    """
+    node = etree.fromstring(xml)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    types = {c["type"] for c in record["classifications"]}
+    assert types == {"Woo"}  # HeelNieuwType2027 weggefilterd
+
+
+def test_extract_addresses_skips_unknown_adrestype():
+    """Een onbekend adresType mag de hele org niet laten crashen."""
+    xml = """
+    <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9" p:systeemId="1">
+      <naam>X</naam>
+      <types><type>Gemeente</type></types>
+      <adressen>
+        <adres><adresType>Bezoekadres</adresType><postcode>1234 AB</postcode></adres>
+        <adres><adresType>RuimteStation</adresType><postcode>0000 XX</postcode></adres>
+      </adressen>
+    </organisatie>
+    """
+    node = etree.fromstring(xml)
+    record = roo.parse_organisatie(node)
+    assert record is not None
+    addr_types = {a["type"] for a in record["contact"]["addresses"]}
+    assert addr_types == {"Bezoekadres"}
+
+
 # Geografie + raad voor gemeente.
 GEMEENTE_RICH_XML = """
 <organisatie xmlns:p="https://organisaties.overheid.nl/static/schema/oo/export/2.6.9"

@@ -29,7 +29,17 @@ app = typer.Typer(
 
 
 def _delegate(fn, argv: list[str]) -> None:
-    code = fn(argv)
+    from lxml.etree import XMLSyntaxError
+
+    try:
+        code = fn(argv)
+    except XMLSyntaxError as exc:
+        typer.echo(
+            f"ROO-cache XML is corrupt of afgekapt: {exc}. "
+            f"Verwijder het cache-bestand en draai opnieuw.",
+            err=True,
+        )
+        raise typer.Exit(code=2) from exc
     raise typer.Exit(code=code or 0)
 
 
@@ -134,6 +144,8 @@ def roo_roundtrip(
 ) -> None:
     """Round-trip reconstructie-test: verifieer dat élk ROO-leaf-veld in
     polder's YAMLs zit. Print coverage-rapport naar stdout."""
+    from lxml.etree import XMLSyntaxError
+
     from polder.roo_roundtrip import emit_field_map, format_report, run_roundtrip
 
     if not xml.exists():
@@ -143,7 +155,15 @@ def roo_roundtrip(
         typer.echo(f"Data-directory bestaat niet: {data}", err=True)
         raise typer.Exit(code=2)
 
-    report = run_roundtrip(xml, data)
+    try:
+        report = run_roundtrip(xml, data)
+    except XMLSyntaxError as exc:
+        typer.echo(
+            f"ROO-cache XML is corrupt of afgekapt: {exc}. "
+            f"Verwijder het cache-bestand en draai opnieuw.",
+            err=True,
+        )
+        raise typer.Exit(code=2) from exc
     typer.echo(format_report(report, top_n=top))
 
     if emit_field_map_to is not None:

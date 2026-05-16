@@ -222,21 +222,55 @@ def download_export(cache_dir: Path, *, today: str | None = None) -> Path:
         return target
 
     logger.info("Download ROO-export van %s", PRIMARY_URL)
+    degraded = False
     try:
         with httpx.Client(timeout=HTTP_TIMEOUT, follow_redirects=True) as client:
             response = client.get(PRIMARY_URL)
             response.raise_for_status()
             payload = response.content
     except httpx.HTTPError as exc:
-        logger.warning("Primaire ROO-download faalde (%s); val terug op REST-API", exc)
+        # FALLBACK_URL is `exportOO_ministeries.xml` — een SUBSET (alleen
+        # ministeries). Een run hierop is gedegradeerd: ~95% van de
+        # organisaties ontbreekt. Luid loggen zodat downstream NOOIT een
+        # "organisatie verdwenen"-conclusie op deze data baseert.
+        logger.error(
+            "Primaire ROO-download faalde (%s); val terug op ministeries-only "
+            "subset %s. DIT IS EEN GEDEGRADEERDE RUN — niet alle organisaties "
+            "aanwezig, geen deletes/diff-conclusies op baseren.",
+            exc,
+            FALLBACK_URL,
+        )
+        degraded = True
         with httpx.Client(timeout=HTTP_TIMEOUT, follow_redirects=True) as client:
             response = client.get(FALLBACK_URL)
             response.raise_for_status()
             payload = response.content
 
-    target.write_bytes(payload)
+    # Atomic write: schrijf naar .tmp + os.replace zodat een gekild proces
+    # geen half-geschreven cache-file achterlaat die `target.exists() and
+    # st_size > 0` permanent als "geldig" beschouwt.
+    import os
+    import tempfile
+
+    fd, tmp = tempfile.mkstemp(prefix=f".{target.name}.", suffix=".tmp", dir=str(cache_dir))
+    try:
+        with os.fdopen(fd, "wb") as fh:
+            fh.write(payload)
+        os.replace(tmp, target)
+    except BaseException:
+        try:
+            os.unlink(tmp)
+        except FileNotFoundError:
+            pass
+        raise
+
     digest = hashlib.sha256(payload).hexdigest()[:12]
-    logger.info("ROO-export geschreven naar %s (sha256:%s)", target, digest)
+    logger.info(
+        "ROO-export geschreven naar %s (sha256:%s)%s",
+        target,
+        digest,
+        " [GEDEGRADEERD: ministeries-only]" if degraded else "",
+    )
     return target
 
 
@@ -462,6 +496,19 @@ def _parse_adres(adres: etree._Element) -> dict[str, str] | None:
     return out or None
 
 
+# Schema-enum voor adresType (organisatie.schema.json $defs.address.type).
+_KNOWN_ADDRESS_TYPES = frozenset(
+    {
+        "Bezoekadres",
+        "Postadres",
+        "Woo-Adres",
+        "Vestigingsadres",
+        "Bezoekadres Omgevingsloket",
+        "Postadres Omgevingsloket",
+    }
+)
+
+
 def _extract_addresses(node: etree._Element) -> list[dict[str, str]]:
     container = _direct_child(node, "adressen")
     if container is None:
@@ -469,8 +516,17 @@ def _extract_addresses(node: etree._Element) -> list[dict[str, str]]:
     result: list[dict[str, str]] = []
     for adres in _direct_children(container, "adres"):
         parsed = _parse_adres(adres)
-        if parsed and parsed.get("type"):
-            result.append(parsed)
+        if not parsed or not parsed.get("type"):
+            continue
+        if parsed["type"] not in _KNOWN_ADDRESS_TYPES:
+            logger.warning(
+                "Onbekend adresType %r (niet in schema-enum); sla adres over. "
+                "Voeg toe aan schema + _KNOWN_ADDRESS_TYPES als ROO dit "
+                "structureel levert.",
+                parsed["type"],
+            )
+            continue
+        result.append(parsed)
     return result
 
 
@@ -608,6 +664,15 @@ def _extract_grondslagen(container: etree._Element | None) -> list[dict[str, str
     return result
 
 
+# Schema-enum voor classificatie-types (organisatie.schema.json). ROO kan
+# een nieuw type introduceren; dan filteren we het weg met een warning in
+# plaats van de hele organisatie hard te laten falen op schema-validatie
+# tijdens de dagelijkse run.
+_KNOWN_CLASSIFICATION_TYPES = frozenset(
+    {"Woo", "WNT-instelling", "Overheidswerkgever", "CAO", "Pensioenfonds", "Arbeidsvoorwaarden"}
+)
+
+
 def _extract_classifications(node: etree._Element) -> list[dict[str, Any]]:
     container = _direct_child(node, "classificaties")
     if container is None:
@@ -616,6 +681,14 @@ def _extract_classifications(node: etree._Element) -> list[dict[str, Any]]:
     for c in _direct_children(container, "classificatie"):
         ctype = _attr_by_localname(c, "type")
         if not ctype:
+            continue
+        if ctype not in _KNOWN_CLASSIFICATION_TYPES:
+            logger.warning(
+                "Onbekend classificatie-type %r (niet in schema-enum); "
+                "sla over. Voeg toe aan schema + _KNOWN_CLASSIFICATION_TYPES "
+                "als ROO dit structureel levert.",
+                ctype,
+            )
             continue
         entry: dict[str, Any] = {"type": ctype}
         url = _attr_by_localname(c, "url")
@@ -1616,7 +1689,9 @@ def _existing_tooi_to_path(out_dir: Path) -> dict[str, Path]:
     index: dict[str, Path] = {}
     if not out_dir.exists():
         return index
-    for path in out_dir.rglob("*.yaml"):
+    # `sorted` zodat bij twee records met dezelfde TOOI-id deterministisch
+    # bepaald wordt welke "wint" — anders is dat filesystem-afhankelijk.
+    for path in sorted(out_dir.rglob("*.yaml")):
         try:
             with path.open("r", encoding="utf-8") as fh:
                 data = yaml.safe_load(fh) or {}

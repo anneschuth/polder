@@ -323,6 +323,36 @@ def test_roo_fetch_dry_run_delegates(tmp_path: Path) -> None:
     assert "--out" in argv
 
 
+def test_roo_functies_delegates(tmp_path: Path) -> None:
+    """`polder roo functies` delegeert naar roo_functies.main met de juiste argv."""
+    captured: dict[str, list[str]] = {}
+
+    def fake_main(argv: list[str] | None = None) -> int:
+        captured["argv"] = list(argv or [])
+        return 0
+
+    with patch("polder.fetchers.roo_functies.main", side_effect=fake_main):
+        code, _out = _run(
+            ["roo", "functies", "--cache", str(tmp_path / "_c"), "--out", str(tmp_path / "s")]
+        )
+    assert code == 0
+    assert "--cache" in captured["argv"]
+    assert "--out" in captured["argv"]
+
+
+def test_roo_fetch_corrupt_xml_nette_exit(tmp_path: Path) -> None:
+    """Een corrupt cache-bestand geeft exit 2 + nette melding, geen stacktrace."""
+    from lxml.etree import XMLSyntaxError
+
+    def boom(argv: list[str] | None = None) -> int:
+        raise XMLSyntaxError("Premature end of data", None, 1, 1)
+
+    with patch("polder.fetchers.roo.main", side_effect=boom):
+        code, out = _run(["roo", "fetch", "--cache", str(tmp_path)])
+    assert code == 2
+    assert "corrupt" in out.lower() or "afgekapt" in out.lower()
+
+
 def test_fetch_tk_dry_run_delegates(tmp_path: Path) -> None:
     captured: dict[str, list[str]] = {}
 
