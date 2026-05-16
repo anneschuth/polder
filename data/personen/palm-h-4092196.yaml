@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4092197
     retrieved: '2026-05-13'
+- id: 90af86c5-9477-4359-8341-e1899e3d07e4
+  organization_id: org:gemeente-heerde
+  post_id: post:raadslid-gemeente-heerde
+  role: Raadslid gemeente Heerde
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/4092197
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4092196
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q112443397
   retrieved: '2026-05-13'

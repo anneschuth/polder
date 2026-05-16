@@ -21,6 +21,16 @@ mandaten:
     fields:
     - confirmed_current
     - roo_medewerker_id=28629757
+- id: 91bdf0a1-eb2e-4700-84e3-9f1ef285f148
+  organization_id: org:gemeente-geldrop-mierlo
+  post_id: post:raadslid-gemeente-geldrop-mierlo
+  role: Raadslid gemeente Geldrop Mierlo
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/3823542
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823540

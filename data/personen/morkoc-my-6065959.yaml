@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6065961
     retrieved: '2026-05-13'
+- id: 2340023c-29a1-40a7-8d43-48dc30bd112d
+  organization_id: org:gemeente-rotterdam
+  post_id: post:raadslid-gemeente-rotterdam
+  role: Raadslid gemeente Rotterdam
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6065961
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6065959
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q131007954
   retrieved: '2026-05-13'

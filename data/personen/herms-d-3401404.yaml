@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769858
     retrieved: '2026-05-13'
+- id: 08e98dae-8a25-4111-a116-58e576d7078b
+  organization_id: org:gemeente-druten
+  post_id: post:raadslid-gemeente-druten
+  role: Raadslid gemeente Druten
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769858
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3401404
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q130379921
   retrieved: '2026-05-13'
