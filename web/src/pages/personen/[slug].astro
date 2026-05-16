@@ -42,6 +42,10 @@ const career = careerSummary(person);
 const allMandaten = sortedMandates(person.mandaten ?? []);
 const current = allMandaten.filter((m) => isMandateCurrent(m));
 
+const hasIdentifiers = Object.values(person.identifiers ?? {}).some(
+  (v) => v != null && v !== '',
+);
+
 const GENDER: Record<string, string> = { m: 'man', f: 'vrouw', x: 'anders' };
 
 const ICON_USER =
@@ -74,7 +78,7 @@ const ICON_ID =
       )}
     </header>
 
-    <div class="card-grid">
+    <div class="sections">
       {current.length > 0 && (
         <Card title="Huidige functie(s)" icon={ICON_USER}>
           <ul>
@@ -94,18 +98,8 @@ const ICON_ID =
         </Card>
       )}
 
-      <Card title="Loopbaan" icon={ICON_CLOCK} span={2}>
-        <Timeline mandaten={person.mandaten ?? []} />
-      </Card>
-
-      {allMandaten.length > 0 && (
-        <Card title="Mandaten (tabel)" icon={ICON_TABLE} span={2} collapsible>
-          <MandaatTimeline mandaten={person.mandaten ?? []} />
-        </Card>
-      )}
-
       <Card title="Persoonsgegevens" icon={ICON_USER}>
-        <dl class="grid grid-2">
+        <dl class="deflist">
           {person.birth?.year && (
             <div><dt class="muted">Geboortejaar</dt><dd>{person.birth.year}</dd></div>
           )}
@@ -127,9 +121,21 @@ const ICON_ID =
         </dl>
       </Card>
 
-      <Card title="Identifiers" icon={ICON_ID}>
-        <Identifiers identifiers={person.identifiers} kind="person" />
+      {hasIdentifiers && (
+        <Card title="Identifiers" icon={ICON_ID}>
+          <Identifiers identifiers={person.identifiers} kind="person" />
+        </Card>
+      )}
+
+      <Card title="Loopbaan" icon={ICON_CLOCK}>
+        <Timeline mandaten={person.mandaten ?? []} />
       </Card>
+
+      {allMandaten.length > 0 && (
+        <Card title="Mandaten (tabel)" icon={ICON_TABLE} collapsible>
+          <MandaatTimeline mandaten={person.mandaten ?? []} />
+        </Card>
+      )}
     </div>
 
     <SourceList sources={person.sources} />

@@ -8,33 +8,36 @@ interface Props {
   open?: boolean;
 }
 
-const { title, icon, accent, span, collapsible, open = false } = Astro.props;
+const { title, icon, accent, collapsible, open = false } = Astro.props;
 
-// Render nothing when no body content was passed. This keeps the card-grid
-// free of empty cells for orgs/persons that lack a given data dimension.
+// Render nothing when the body has no real markup. Components that bail out
+// on empty data render nothing (good) but a truthy-bug can leak a stray "0"
+// or whitespace; treat content with no element tags as empty so the section
+// never appears.
 const body = await Astro.slots.render('default');
-const hasBody = body.trim().length > 0;
+const hasBody = /<[a-z]/i.test(body);
 
 const style = accent ? `--card-accent: ${accent};` : undefined;
-const cls = ['card', span && span > 1 ? `span-${span}` : null].filter(Boolean).join(' ');
 ---
 
 {hasBody && (
-  <section class={cls} style={style}>
+  <section class="section" style={style}>
     {collapsible ? (
       <details open={open}>
-        <summary>
+        <summary class="section-head">
           {icon && <span class="card-icon" set:html={icon} />}
           {title}
         </summary>
+        <nldd-divider></nldd-divider>
         <Fragment set:html={body} />
       </details>
     ) : (
       <Fragment>
-        <h2>
+        <h2 class="section-head">
           {icon && <span class="card-icon" set:html={icon} />}
           {title}
         </h2>
+        <nldd-divider></nldd-divider>
         <Fragment set:html={body} />
       </Fragment>
     )}

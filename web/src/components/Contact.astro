@@ -26,12 +26,12 @@ const hasAny =
   c.website ||
   c.email ||
   c.fax ||
-  (c.addresses && c.addresses.length) ||
-  (c.phones && c.phones.length) ||
-  (c.emails && c.emails.length) ||
-  (c.internet_addresses && c.internet_addresses.length) ||
-  (c.contact_forms && c.contact_forms.length) ||
-  (c.social_media && c.social_media.length) ||
+  c.addresses?.length ||
+  c.phones?.length ||
+  c.emails?.length ||
+  c.internet_addresses?.length ||
+  c.contact_forms?.length ||
+  c.social_media?.length ||
   afspraak?.email ||
   afspraak?.telefoonnummer ||
   afspraak?.url ||
@@ -39,80 +39,92 @@ const hasAny =
 ---
 
 {hasAny && (
-  <div class="stack">
+  <dl class="deflist">
     {c.website && (
-      <p>
-        <span class="muted">Website</span><br />
-        <a href={c.website} rel="external">{c.website.replace(/^https?:\/\//, '')}</a>
-      </p>
+      <div>
+        <dt>Website</dt>
+        <dd><a href={c.website} rel="external">{c.website.replace(/^https?:\/\//, '')}</a></dd>
+      </div>
     )}
     {(c.addresses ?? []).map((a) => (
-      <p>
-        <span class="muted">{a.type ?? 'Adres'}</span><br />
-        {formatAddress(a)}
-      </p>
+      <div>
+        <dt>{a.type ?? 'Adres'}</dt>
+        <dd>{formatAddress(a)}</dd>
+      </div>
     ))}
     {(c.phones ?? []).length > 0 && (
-      <p>
-        <span class="muted">Telefoon</span><br />
-        {(c.phones ?? []).map((p, i) => (
-          <>{i > 0 && <br />}{p.nummer}{p.label && <span class="muted"> ({p.label})</span>}</>
-        ))}
-      </p>
+      <div>
+        <dt>Telefoon</dt>
+        <dd>
+          {(c.phones ?? []).map((p, i) => (
+            <>{i > 0 && <br />}{p.nummer}{p.label && <span class="muted"> ({p.label})</span>}</>
+          ))}
+        </dd>
+      </div>
     )}
     {(c.emails ?? []).length > 0 ? (
-      <p>
-        <span class="muted">E-mail</span><br />
-        {(c.emails ?? []).map((e, i) => (
-          <>{i > 0 && <br />}<a href={`mailto:${e.email}`}>{e.email}</a>{e.label && <span class="muted"> ({e.label})</span>}</>
-        ))}
-      </p>
+      <div>
+        <dt>E-mail</dt>
+        <dd>
+          {(c.emails ?? []).map((e, i) => (
+            <>{i > 0 && <br />}<a href={`mailto:${e.email}`}>{e.email}</a>{e.label && <span class="muted"> ({e.label})</span>}</>
+          ))}
+        </dd>
+      </div>
     ) : c.email ? (
-      <p>
-        <span class="muted">E-mail</span><br />
-        <a href={`mailto:${c.email}`}>{c.email}</a>
-      </p>
+      <div>
+        <dt>E-mail</dt>
+        <dd><a href={`mailto:${c.email}`}>{c.email}</a></dd>
+      </div>
     ) : null}
     {(c.internet_addresses ?? []).length > 0 && (
-      <p>
-        <span class="muted">Webadressen</span><br />
-        {(c.internet_addresses ?? []).map((u, i) => (
-          <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? u.url.replace(/^https?:\/\//, '')}</a></>
-        ))}
-      </p>
+      <div>
+        <dt>Webadressen</dt>
+        <dd>
+          {(c.internet_addresses ?? []).map((u, i) => (
+            <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? u.url.replace(/^https?:\/\//, '')}</a></>
+          ))}
+        </dd>
+      </div>
     )}
     {(c.contact_forms ?? []).length > 0 && (
-      <p>
-        <span class="muted">Contactformulieren</span><br />
-        {(c.contact_forms ?? []).map((u, i) => (
-          <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? 'Formulier'}</a></>
-        ))}
-      </p>
+      <div>
+        <dt>Contactformulieren</dt>
+        <dd>
+          {(c.contact_forms ?? []).map((u, i) => (
+            <>{i > 0 && <br />}<a href={u.url} rel="external">{u.label ?? 'Formulier'}</a></>
+          ))}
+        </dd>
+      </div>
     )}
     {(c.social_media ?? []).length > 0 && (
-      <p>
-        <span class="muted">Social media</span><br />
-        {(c.social_media ?? []).map((s, i) => (
-          <>{i > 0 && ' · '}<a href={s.url} rel="external">{s.platform ?? s.url}{s.gebruikersnaam ? ` (${s.gebruikersnaam})` : ''}</a></>
-        ))}
-      </p>
+      <div>
+        <dt>Social media</dt>
+        <dd>
+          {(c.social_media ?? []).map((s, i) => (
+            <>{i > 0 && ' · '}<a href={s.url} rel="external">{s.platform ?? s.url}{s.gebruikersnaam ? ` (${s.gebruikersnaam})` : ''}</a></>
+          ))}
+        </dd>
+      </div>
     )}
     {c.fax && (
-      <p><span class="muted">Fax</span><br />{c.fax}</p>
+      <div><dt>Fax</dt><dd>{c.fax}</dd></div>
     )}
     {(afspraak?.email || afspraak?.telefoonnummer || afspraak?.url) && (
-      <p>
-        <span class="muted">Afspraak maken</span><br />
-        {afspraak?.url && <><a href={afspraak.url} rel="external">Afspraak maken</a><br /></>}
-        {afspraak?.telefoonnummer && <>{afspraak.telefoonnummer}<br /></>}
-        {afspraak?.email && <a href={`mailto:${afspraak.email}`}>{afspraak.email}</a>}
-      </p>
+      <div>
+        <dt>Afspraak maken</dt>
+        <dd>
+          {afspraak?.url && <><a href={afspraak.url} rel="external">Afspraak maken</a><br /></>}
+          {afspraak?.telefoonnummer && <>{afspraak.telefoonnummer}<br /></>}
+          {afspraak?.email && <a href={`mailto:${afspraak.email}`}>{afspraak.email}</a>}
+        </dd>
+      </div>
     )}
     {organogram_url && (
-      <p>
-        <span class="muted">Organogram</span><br />
-        <a href={organogram_url} rel="external">Bekijk organisatiestructuur</a>
-      </p>
+      <div>
+        <dt>Organogram</dt>
+        <dd><a href={organogram_url} rel="external">Bekijk organisatiestructuur</a></dd>
+      </div>
     )}
-  </div>
+  </dl>
 )}

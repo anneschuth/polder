@@ -64,13 +64,13 @@ const ICON_BRIEFCASE =
       <h1>{post.label}</h1>
     </header>
 
-    <div class="card-grid">
+    <div class="sections">
       <Card title="Kerngegevens" icon={ICON_INFO} accent={accent}>
         <div class="stack">
           {post.classification && (
             <div class="badge-row"><Badge label={post.classification} tone="lint" /></div>
           )}
-          <dl class="grid grid-2">
+          <dl class="deflist">
             {org && (
               <div><dt class="muted">Organisatie</dt><dd><a href={orgUrl(org, base)}>{currentName(org)}</a></dd></div>
             )}
@@ -109,6 +109,18 @@ const ICON_BRIEFCASE =
         </Card>
       )}
 
+      {siblingPosts.length > 0 && (
+        <Card title="Verwante posten" icon={ICON_BRIEFCASE} accent={accent} collapsible open={siblingPosts.length <= 15}>
+          <ul>
+            {siblingPosts.map((p) => (
+              <li>
+                <a href={postUrl(p.slug, base)}>{p.label}</a>
+                {p.classification && <span class="muted"> · {p.classification}</span>}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
       {historical.length > 0 && (
         <Card title={`Eerdere bezetters (${historical.length})`} icon={ICON_CLOCK} accent={accent} collapsible open={historical.length <= 20}>
           <table class="data">
@@ -124,19 +136,6 @@ const ICON_BRIEFCASE =
               ))}
             </tbody>
           </table>
-        </Card>
-      )}
-
-      {siblingPosts.length > 0 && (
-        <Card title="Verwante posten" icon={ICON_BRIEFCASE} accent={accent} collapsible open={siblingPosts.length <= 15}>
-          <ul>
-            {siblingPosts.map((p) => (
-              <li>
-                <a href={postUrl(p.slug, base)}>{p.label}</a>
-                {p.classification && <span class="muted"> · {p.classification}</span>}
-              </li>
-            ))}
-          </ul>
         </Card>
       )}
     </div>

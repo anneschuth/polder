@@ -18,12 +18,13 @@ const {
   successors = [],
 } = Astro.props;
 
-const hasAny =
+const hasAny = Boolean(
   parent ||
-  children.length ||
-  siblings.length ||
-  predecessors.length ||
-  successors.length;
+    children.length ||
+    siblings.length ||
+    predecessors.length ||
+    successors.length,
+);
 ---
 
 {hasAny && (

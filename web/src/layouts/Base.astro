@@ -120,93 +120,104 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         color: var(--semantics-content-secondary-color, #555);
       }
 
-      /* ---- Card dashboard ---- */
-      .card-grid {
-        display: grid;
-        gap: 1.25rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        align-items: start;
+      /* ---- Section + definition-list layout ----
+         No card boxes. One continuous page: each data block is a section
+         with a heading + underline rule, followed by a dense label/value
+         grid. Works for thin entities (no empty boxes) and rich ones alike. */
+      .sections {
+        display: flex;
+        flex-direction: column;
+        gap: 2.25rem;
       }
-      .card-grid .span-2 {
-        grid-column: span 2;
-      }
-      @media (max-width: 48rem) {
-        .card-grid .span-2 {
-          grid-column: span 1;
-        }
-      }
-      .card {
-        background: var(--semantics-surfaces-background-color, #fff);
-        border: 1px solid var(--primitives-color-coolgray-200, #d9dee5);
-        border-radius: 10px;
-        padding: 1.25rem 1.5rem;
-        border-top: 3px solid
-          var(--card-accent, var(--primitives-color-lintblauw-500, #0058a3));
-        min-width: 0;
-      }
-      .card > h2 {
-        margin: 0 0 0.75rem;
-        font-size: 1.05rem;
+      .section > .section-head {
+        margin: 0 0 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         gap: 0.5rem;
         color: var(--semantics-content-color, #1a1a1a);
       }
-      .card .card-icon {
+      .section > details > nldd-divider,
+      .section > nldd-divider {
+        margin: 0 0 1rem;
+      }
+      .section .card-icon {
         color: var(--card-accent, var(--primitives-color-lintblauw-500, #0058a3));
         flex: none;
       }
-      .card > details > summary {
+      .section > details > summary {
         cursor: pointer;
         color: var(--semantics-content-secondary-color, #555);
         margin-bottom: 0.5rem;
       }
+      /* Dense label/value grid. Label is a fixed muted column, value next to
+         it. Auto-fills 2-3 columns on wide screens, 1 on narrow. */
+      .deflist {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        gap: 0.55rem 2.5rem;
+        align-items: baseline;
+      }
+      .deflist > div {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        gap: 0 1rem;
+        align-items: baseline;
+      }
+      .deflist dt {
+        color: var(--semantics-content-secondary-color, #555);
+        font-size: 0.9rem;
+      }
+      .deflist dd {
+        margin: 0;
+      }
+      @media (max-width: 32rem) {
+        .deflist > div {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+      }
+      /* Long URLs / codes wrap instead of overflowing. */
+      .section a,
+      .section code,
+      .deflist dd {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       .lede {
         font-size: 1.05rem;
-        line-height: 1.5;
+        line-height: 1.6;
         color: var(--semantics-content-secondary-color, #555);
-        max-width: 56ch;
       }
       .career {
         font-size: 1.05rem;
         line-height: 1.5;
       }
 
-      /* ---- Badges / chips ---- */
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-        padding: 0.15rem 0.55rem;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        line-height: 1.4;
-        background: var(--primitives-color-coolgray-50, #ebeef2);
-        color: var(--semantics-content-secondary-color, #555);
-        border: 1px solid var(--primitives-color-coolgray-200, #d9dee5);
+      /* ---- Chips: <nldd-tag>, optionally wrapped in a link ---- */
+      .badge-link {
         text-decoration: none;
-      }
-      a.badge:hover {
-        border-color: var(--primitives-color-lintblauw-500, #0058a3);
-      }
-      .badge--lint {
-        background: color-mix(
-          in srgb,
-          var(--primitives-color-lintblauw-500, #0058a3) 12%,
-          #fff
-        );
-        color: var(--primitives-color-lintblauw-500, #0058a3);
-        border-color: transparent;
-      }
-      .badge--warn {
-        background: #fdf2e0;
-        color: #8a5a00;
-        border-color: transparent;
+        display: inline-flex;
       }
       .badge-row {
         display: flex;
         flex-wrap: wrap;
         gap: 0.4rem;
+        align-items: center;
+      }
+      .seat-legend {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .seat-dot {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 999px;
+        flex: none;
       }
 
       /* ---- Graphical mandate timeline ---- */
@@ -233,12 +244,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         height: 1.5rem;
         background: var(--primitives-color-coolgray-50, #ebeef2);
         border-radius: 4px;
+        overflow: hidden;
       }
       .tl-bar {
         position: absolute;
         top: 0;
         bottom: 0;
         min-width: 3px;
+        max-width: 100%;
         border-radius: 4px;
         background: var(--bar-accent, var(--primitives-color-lintblauw-500, #0058a3));
         display: block;

@@ -81,8 +81,9 @@ const seatTotal =
         </div>
         <div class="badge-row" style="margin-top:.5rem;">
           {parties.map((p, i) => (
-            <span class="badge" style={`border-color:${SEAT_COLORS[i % SEAT_COLORS.length]};`}>
-              {p.naam} · {p.aantal_zetels}
+            <span class="seat-legend">
+              <span class="seat-dot" style={`background:${SEAT_COLORS[i % SEAT_COLORS.length]};`}></span>
+              <nldd-tag color="neutral" size="sm" text={`${p.naam} · ${p.aantal_zetels}`}></nldd-tag>
             </span>
           ))}
         </div>
