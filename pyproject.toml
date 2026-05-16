@@ -38,6 +38,7 @@ dependencies = [
 dev = [
     "pytest>=8.0",
     "ruff>=0.15.12",
+    "pre-commit>=4.0",
 ]
 
 [project.scripts]
@@ -69,6 +70,7 @@ packages = ["src/polder"]
 dev-dependencies = [
     "pytest>=8.0",
     "ruff>=0.15.12",
+    "pre-commit>=4.0",
 ]
 
 [tool.ruff]
