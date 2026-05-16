@@ -1,16 +1,23 @@
-id: person:re-l-b505f808
+id: person:linders-bf-b505f808
 name:
   full: Drs. B.F. (Frank) Linders RE
-  family: RE
-  given: B.F. Linders
-  initials: B.L.
+  family: Linders
+  given: Frank
+  initials: B.F.
+sources:
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/07/24/frank-linders-afdelingshoofd-voor-de-keten-inning--betalingsverkeer-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 mandaten:
 - id: mandate-post-afdelingshoofd-keten-inning-betalingsverkeer-ibs-belastingdienst-min-fin-2023-10-01
   organization_id: org:onderdeel-afdeling-inning-betalingsverkeer-ibs-belastingdienst-min-fin
   post_id: post:afdelingshoofd-keten-inning-betalingsverkeer-ibs-belastingdienst-min-fin
-  role: afdelingshoofd keten Inning & Betalingsverkeer bij het onderdeel Integratie
-    Business Services van de directie Informatievoorziening van de Belastingdienst
-    bij het ministerie van Financiën
+  role: afdelingshoofd keten Inning & Betalingsverkeer bij het onderdeel Integratie Business Services van de directie Informatievoorziening van de Belastingdienst bij het ministerie van Financiën
   start_date: '2023-10-01'
   end_date: null
   sources:
@@ -22,9 +29,3 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-07-24
   confidence: 0.92
-sources:
-- id: abd_nieuws
-  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/07/24/frank-linders-afdelingshoofd-voor-de-keten-inning--betalingsverkeer-bij-de-belastingdienst
-  retrieved: '2026-05-15'
-  fields:
-  - applied_via:apply-staging

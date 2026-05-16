@@ -1,15 +1,23 @@
-id: person:msc-dl-41a4a16e
+id: person:de-leeuw-e-1981
 name:
   full: E. (Esther) de Leeuw MSc
-  family: MSc
-  given: E. de Leeuw
-  initials: E.D.L.
+  family: de Leeuw
+  given: Esther
+  initials: E.
+sources:
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 mandaten:
 - id: mandate-post-algemeen-directeur-klantinteractie-services-belastingdienst-min-fin-2020-10-05
   organization_id: org:onderdeel-directie-klantinteractie-services-belastingdienst-min-fin
   post_id: post:algemeen-directeur-klantinteractie-services-belastingdienst-min-fin
-  role: algemeen directeur Klantinteractie & Services, Belastingdienst, ministerie
-    van Financiën
+  role: algemeen directeur Klantinteractie & Services, Belastingdienst, ministerie van Financiën
   start_date: '2020-10-05'
   end_date: null
   sources:
@@ -24,8 +32,7 @@ mandaten:
 - id: mandate-post-algemeen-directeur-klantinteractie-services-belastingdienst-2020-10-05
   organization_id: org:onderdeel-directie-klantinteractie-services-belastingdienst
   post_id: post:algemeen-directeur-klantinteractie-services-belastingdienst
-  role: algemeen directeur Klantinteractie & Services bij de Belastingdienst bij het
-    ministerie van Financiën
+  role: algemeen directeur Klantinteractie & Services bij de Belastingdienst bij het ministerie van Financiën
   start_date: '2020-10-05'
   end_date: null
   sources:
@@ -37,9 +44,3 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-09-15
   confidence: 0.92
-sources:
-- id: abd_nieuws
-  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
-  retrieved: '2026-05-15'
-  fields:
-  - applied_via:apply-staging

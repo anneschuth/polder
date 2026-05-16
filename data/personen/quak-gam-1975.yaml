@@ -1,9 +1,18 @@
-id: person:ra-q-df4e5323
+id: person:quak-gam-1975
 name:
   full: G.A.M. (Gerda) Quak RA
-  family: RA
-  given: G.A.M. Quak
+  family: Quak
+  given: Gerda
   initials: G.A.M.
+sources:
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/15/gerda-quak-plaatsvervangend-secretaris-generaal-bij-financien
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 mandaten:
 - id: mandate-post-psg-min-fin-2023-11-01
   organization_id: org:min-fin
@@ -20,9 +29,3 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-09-15
   confidence: 0.92
-sources:
-- id: abd_nieuws
-  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/09/15/gerda-quak-plaatsvervangend-secretaris-generaal-bij-financien
-  retrieved: '2026-05-15'
-  fields:
-  - applied_via:apply-staging
