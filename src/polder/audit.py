@@ -1188,6 +1188,12 @@ def _same_open_holder_identity(
     if not fam_a or not fam_b or fam_a != fam_b:
         return False
 
+    # Twee bekende, verschillende geboortejaren = twee personen, ongeacht
+    # gedeelde naam of bron-URL. Conservatieve harde grens vóór elke branch.
+    by_a, by_b = name_a.get("_birth_year"), name_b.get("_birth_year")
+    if isinstance(by_a, int) and isinstance(by_b, int) and by_a != by_b:
+        return False
+
     # (b) Gedeeld benoemings-document op het mandaat voor deze post.
     if _holder_source_urls(mand_a) & _holder_source_urls(mand_b):
         return True
@@ -1667,9 +1673,11 @@ def _check_single_seat_both_open(
             post_id = m.get("post_id")
             if not post_id or post_id not in single_seat_posts:
                 continue
-            open_holders[post_id].append(
-                (pid, m.get("start_date") or "?", path.name, d.get("name") or {}, m)
-            )
+            name = dict(d.get("name") or {})
+            by = (d.get("birth") or {}).get("year")
+            if isinstance(by, int):
+                name["_birth_year"] = by
+            open_holders[post_id].append((pid, m.get("start_date") or "?", path.name, name, m))
 
     for post_id, holders in open_holders.items():
         if len(holders) < 2:
