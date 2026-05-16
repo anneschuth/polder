@@ -5,7 +5,96 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 
-from polder.resolve.llm_enrich import enrich_resolved
+from polder.resolve.llm_enrich import (
+    _chain_supports_org_creation,
+    _org_side_ok_for_automerge,
+    _recompute_merge,
+    enrich_resolved,
+)
+
+
+def _conf(person=0.96, org=0.96, post=0.96):
+    return {"person": person, "organization": org, "post": post}
+
+
+def test_recompute_merge_person_below_threshold_blocks() -> None:
+    # person < 0.95 is niet-onderhandelbaar (kern two-source-rule).
+    p = {"resolution_confidence": _conf(person=0.94), "resolution_notes": "org: proposal_id_exact"}
+    assert _recompute_merge(p) == "needs-review"
+
+
+def test_recompute_merge_all_high_is_automerge() -> None:
+    p = {"resolution_confidence": _conf(), "resolution_notes": "org: proposal_id_exact"}
+    assert _recompute_merge(p) == "auto-merge"
+
+
+def test_recompute_merge_chain_partial_org_allowed() -> None:
+    # org-confidence 0.85 maar status chain_partial_exact: apply valideert
+    # de chain top-down, dus auto-merge mag.
+    p = {
+        "resolution_confidence": _conf(org=0.85),
+        "resolution_notes": "org: chain_partial_exact; post: exact",
+    }
+    assert _recompute_merge(p) == "auto-merge"
+
+
+def test_recompute_merge_post_creation_allowed_when_org_safe() -> None:
+    # propose_post_creation mag auto-merge mits person hoog en org veilig.
+    p = {
+        "resolution_confidence": _conf(post=0.0),
+        "resolution_notes": "org: proposal_id_exact; post: creatable_from_role",
+        "propose_post_creation": True,
+    }
+    assert _recompute_merge(p) == "auto-merge"
+
+
+def test_recompute_merge_org_no_match_needs_ministerie_chain() -> None:
+    # org: no_match met losse 1-niveau chain (EU-gremium) blijft needs-review.
+    p = {
+        "resolution_confidence": _conf(org=0.0),
+        "resolution_notes": "org: no_match; post: not_in_data",
+        "organization_chain": [{"level": "directie", "name": "Eurowerkgroep"}],
+    }
+    assert _recompute_merge(p) == "needs-review"
+
+
+def test_recompute_merge_org_no_match_with_ministerie_chain_ok() -> None:
+    # org: no_match maar chain ≥2 niveaus met ministerie-top: apply kan
+    # de onderdelen veilig top-down aanmaken.
+    p = {
+        "resolution_confidence": _conf(org=0.0),
+        "resolution_notes": "org: no_match; post: exact",
+        "organization_chain": [
+            {"level": "ministerie", "name": "ministerie van Financiën"},
+            {"level": "directie", "name": "directie Begrotingszaken"},
+        ],
+    }
+    assert _recompute_merge(p) == "auto-merge"
+
+
+def test_chain_supports_org_creation_requires_two_levels_ministerie_top() -> None:
+    assert not _chain_supports_org_creation({"organization_chain": []})
+    assert not _chain_supports_org_creation(
+        {"organization_chain": [{"level": "ministerie", "name": "X"}]}
+    )
+    assert not _chain_supports_org_creation(
+        {"organization_chain": [{"level": "directie", "name": "X"}, {"level": "afdeling"}]}
+    )
+    assert _chain_supports_org_creation(
+        {"organization_chain": [{"level": "ministerie"}, {"level": "directie"}]}
+    )
+
+
+def test_org_side_high_confidence_always_ok() -> None:
+    assert _org_side_ok_for_automerge(
+        {"resolution_confidence": {"organization": 0.96}, "resolution_notes": ""}
+    )
+
+
+def test_org_side_no_match_without_chain_blocked() -> None:
+    assert not _org_side_ok_for_automerge(
+        {"resolution_confidence": {"organization": 0.0}, "resolution_notes": "org: no_match"}
+    )
 
 
 @dataclass

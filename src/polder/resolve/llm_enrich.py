@@ -374,16 +374,84 @@ def _append_note(existing: str, addition: str) -> str:
     return f"{existing}; {addition}"
 
 
+def _chain_supports_org_creation(proposal: dict[str, Any]) -> bool:
+    """True als de organization_chain veilig genoeg is om er via apply
+    nieuwe organisatieonderdelen onder te laten aanmaken.
+
+    Vangnet aan de resolver-kant, bovenop de top-down hardening in
+    `apply._build_chain_create_actions`. Eist een chain van ≥ 2 niveaus
+    waarvan het bovenste niveau een ministerie is. Dat sluit losse,
+    contextloze entries uit zoals `[{level: directie, name: Eurowerkgroep}]`
+    (een EU-gremium, geen NL-overheidseenheid) die anders een parentloos
+    org-record zouden worden.
+    """
+    chain = proposal.get("organization_chain") or proposal.get("organization_chain_inferred")
+    if not isinstance(chain, list) or len(chain) < 2:
+        return False
+    top = chain[0]
+    if not isinstance(top, dict):
+        return False
+    return str(top.get("level", "")).strip().lower() == "ministerie"
+
+
+# Org-resolutie-statussen waarbij de org-zijde veilig genoeg is voor
+# auto-merge, ook als de numerieke org-confidence < 0.95 is. De
+# apply-laag valideert de chain top-down (ministerie moet bestaan,
+# parent-tracking, hiërarchie-check), dus deze statussen + een geldige
+# chain zijn betrouwbaarder dan een vlakke confidence-drempel.
+_SAFE_ORG_METHODS = {
+    "proposal_id_exact",
+    "proposal_id_via_alias",
+    "chain_partial_exact",
+    "chain_partial_via_alias",
+}
+
+
+def _org_side_ok_for_automerge(proposal: dict[str, Any]) -> bool:
+    """True als de org-zijde auto-merge mag, gegeven de resolver-status.
+
+    - org-confidence ≥ 0.95: altijd ok.
+    - status in _SAFE_ORG_METHODS: ok (apply valideert de chain).
+    - org: no_match: alleen ok mét een chain die `_chain_supports_org_creation`
+      passeert (≥ 2 niveaus, ministerie-top). Dubbel slot: hier én in
+      apply._build_chain_create_actions.
+    """
+    rc = proposal.get("resolution_confidence") or {}
+    if float(rc.get("organization") or 0) >= 0.95:
+        return True
+    notes = str(proposal.get("resolution_notes") or "")
+    for token in notes.split(";"):
+        token = token.strip()
+        if not token.startswith("org:"):
+            continue
+        status = token[4:].strip()
+        if status in _SAFE_ORG_METHODS:
+            return True
+        if status == "no_match":
+            return _chain_supports_org_creation(proposal)
+    return False
+
+
 def _recompute_merge(proposal: dict[str, Any]) -> str:
     """Hercompute merge_recommendation na een geslaagde LLM-enrich.
 
-    Eenvoudige policy: alleen als alle drie confidences ≥ 0.95 en er geen
-    propose_post_creation is, kan het auto-merge worden. Anders needs-review.
+    Policy:
+    - `person` confidence is niet-onderhandelbaar: < 0.95 → needs-review.
+      Dit is de kern van de two-source-rule (identiteit moet zeker zijn).
+    - org-zijde mag auto-merge via `_org_side_ok_for_automerge`: ofwel
+      org-confidence ≥ 0.95, ofwel een resolver-status die de apply-laag
+      veilig kan valideren (chain top-down, ministerie-hardening).
+    - post-zijde: post-confidence ≥ 0.95 OF `propose_post_creation` met
+      een door de resolver voorgestelde slug. De create-post-actie in
+      apply heeft een eigen ABD-rol-vs-bewindspersoon-guard als vangnet.
     """
     rc = proposal.get("resolution_confidence") or {}
-    if any(float(rc.get(k) or 0) < 0.95 for k in ("organization", "post", "person")):
+    if float(rc.get("person") or 0) < 0.95:
         return "needs-review"
-    if proposal.get("propose_post_creation"):
+    if not _org_side_ok_for_automerge(proposal):
+        return "needs-review"
+    post_conf = float(rc.get("post") or 0)
+    if post_conf < 0.95 and not proposal.get("propose_post_creation"):
         return "needs-review"
     return "auto-merge"
 
