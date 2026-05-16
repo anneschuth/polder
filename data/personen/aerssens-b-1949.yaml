@@ -1,17 +1,23 @@
-id: person:ra-a-1949
+id: person:aerssens-b-1949
 name:
   full: B. (Barbara) Aerssens RA
-  family: RA
-  given: B. Aerssens
-  initials: B.A.
-birth:
-  year: 1949
+  family: Aerssens
+  given: Barbara
+  initials: B.
+sources:
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/18/barbara-aerssens-afdelingshoofd-shared-service-organisatie-switch-regio-zuid-west-bij-de-belastingdienst
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 mandaten:
 - id: mandate-post-afdelingshoofd-sso-switch-regio-zuidwest-belastingdienst-min-fin-2022-09-19
   organization_id: org:onderdeel-afdeling-sso-switch-regio-zuidwest-belastingdienst-min-fin
   post_id: post:afdelingshoofd-sso-switch-regio-zuidwest-belastingdienst-min-fin
-  role: afdelingshoofd Shared Service Organisatie Switch (regio Zuid-West) bij de
-    Belastingdienst
+  role: afdelingshoofd Shared Service Organisatie Switch (regio Zuid-West) bij de Belastingdienst
   start_date: '2022-09-19'
   end_date: null
   sources:
@@ -26,8 +32,7 @@ mandaten:
 - id: mandate-post-afdelingshoofd-sso-switch-regio-zuid-west-belastingdienst-iv-min-fin-2022-09-19
   organization_id: org:onderdeel-sso-switch-belastingdienst-iv-min-fin
   post_id: post:afdelingshoofd-sso-switch-regio-zuid-west-belastingdienst-iv-min-fin
-  role: Afdelingshoofd Shared Service Organisatie Switch (regio Zuid-West), Belastingdienst
-    IV-organisatie, Ministerie van Financiën
+  role: Afdelingshoofd Shared Service Organisatie Switch (regio Zuid-West), Belastingdienst IV-organisatie, Ministerie van Financiën
   start_date: '2022-09-19'
   end_date: null
   sources:
@@ -39,9 +44,3 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-08-18
   confidence: 0.88
-sources:
-- id: abd_nieuws
-  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/18/barbara-aerssens-afdelingshoofd-shared-service-organisatie-switch-regio-zuid-west-bij-de-belastingdienst
-  retrieved: '2026-05-15'
-  fields:
-  - applied_via:apply-staging
