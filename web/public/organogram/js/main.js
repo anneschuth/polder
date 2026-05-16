@@ -24,6 +24,15 @@ function gotoPerson(personId) {
   window.location.href = `${siteBase()}/personen/${slug}/`;
 }
 
+// Navigeer naar de organisatie-detailpagina. De route is
+// /organisaties/<type>/<slug>/ waar <type> de mapnaam is (meervoud, bv.
+// "gemeenten") en <slug> de org-id zonder org:-prefix.
+function gotoOrg(orgType, orgId) {
+  if (!orgType || !orgId) return;
+  const slug = orgId.replace(/^org:/, "");
+  window.location.href = `${siteBase()}/organisaties/${orgType}/${slug}/`;
+}
+
 // DOM references are looked up inside bootstrap() each run so the viz
 // can be re-initialised after Astro View Transitions swap the page DOM.
 let container = null;
@@ -201,6 +210,7 @@ function tileToNode(tile) {
       kind: "category-flat",
       label: tile.label,
       bundle: tile.bundle,
+      org_type: tile.org_type,
       _count: tile.count,
       children: [],
     };
@@ -222,8 +232,18 @@ function tileToNode(tile) {
 
 async function handleFlatTile(node) {
   if (!node.data.bundle) return;
-  const data = await loadJSON(node.data.bundle);
-  openFlatOverlay(data);
+  let data;
+  try {
+    data = await loadJSON(node.data.bundle);
+  } catch (err) {
+    console.error("flat-tile bundle load failed", err);
+    return;
+  }
+  // Type voor de detail-route is het enkelvoudige org_type van de tile
+  // (gemeente, zbo, waterschap, …) — dat is wat de Astro-route
+  // /organisaties/<type>/<slug>/ verwacht (zie orgUrl in lib/data.ts).
+  const orgType = node.data.org_type;
+  openFlatOverlay(data, (item) => gotoOrg(orgType, item.id));
 }
 
 function pathOf(hierNode) {
