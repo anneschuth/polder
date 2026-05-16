@@ -3,22 +3,6 @@ name:
   full: Ernst-Paul Nas
   family: Ernst-Paul
 mandaten:
-- id: mandate-post-directeur-elektriciteit-pzg-klimaat-energie-min-ezk-2019-10-01
-  organization_id: org:min-ezk
-  post_id: post:directeur-elektriciteit-pzg-klimaat-energie-min-ezk
-  role: Directeur Elektriciteit tevens plaatsvervangend directeur-generaal Klimaat
-    & Energie
-  start_date: '2019-10-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/26/ernst-paul-nas-directeur-elektriciteit-tevens-pdg-klimaat-en-energie-bij-ezk
-    retrieved: '2026-05-16'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2019-09-26
-  confidence: 0.92
 - id: mandate-post-directeur-elektriciteit-pdg-klimaat-energie-min-ezk-2019-09-26
   organization_id: org:onderdeel-directie-elektriciteit-dg-klimaat-energie-min-ezk
   post_id: post:directeur-elektriciteit-pdg-klimaat-energie-min-ezk
@@ -29,6 +13,11 @@ mandaten:
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/26/ernst-paul-nas-directeur-elektriciteit-tevens-pdg-klimaat-en-energie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/26/ernst-paul-nas-directeur-elektriciteit-tevens-pdg-klimaat-en-energie-bij-ezk
     retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging

@@ -5,25 +5,11 @@ name:
   given: Dimitri
   initials: D.
 mandaten:
-- id: mandate-post-mt-lid-patient-zorgordening-min-vws-2020-08-01
-  organization_id: org:onderdeel-directie-patient-zorgordening-min-vws
-  post_id: post:mt-lid-patient-zorgordening-min-vws
-  role: MT-lid Patiënt en Zorgordening, ministerie van Volksgezondheid, Welzijn en Sport
-  start_date: '2020-08-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/03/dimitri-schakelaar-mt-lid-patient-en-zorgordening-bij-vws
-    retrieved: '2026-05-16'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2020-06-03
-  confidence: 0.92
 - id: mandate-post-mt-lid-patient-en-zorgordening-min-vws-2020-08-01
   organization_id: org:onderdeel-directie-patient-en-zorgordening-min-vws
   post_id: post:mt-lid-directie-patient-en-zorgordening-min-vws
-  role: MT-lid Patiënt en Zorgordening, ministerie van Volksgezondheid, Welzijn en Sport
+  role: MT-lid Patiënt en Zorgordening, ministerie van Volksgezondheid, Welzijn en
+    Sport
   start_date: '2020-08-01'
   end_date: null
   sources:
@@ -38,7 +24,8 @@ mandaten:
 - id: mandate-post-mt-lid-gezond-en-veilig-werken-min-szw-2025-09-01
   organization_id: org:onderdeel-directie-gvw-min-szw
   post_id: post:mt-lid-gezond-en-veilig-werken-min-szw
-  role: Managementteamlid (MT-lid) Gezond en Veilig Werken (G&VW) bij de directie G&VW van het ministerie van Sociale Zaken en Werkgelegenheid (SZW)
+  role: Managementteamlid (MT-lid) Gezond en Veilig Werken (G&VW) bij de directie
+    G&VW van het ministerie van Sociale Zaken en Werkgelegenheid (SZW)
   start_date: '2025-09-01'
   end_date: null
   sources:
