@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-directeur-asea-min-szw-2023-04-01
   organization_id: org:onderdeel-asea-min-szw
   post_id: post:directeur-asea-min-szw
-  role: Directeur Arbeidsmarkt en Sociaal-Economische Aangelegenheden, ministerie
-    van Sociale Zaken en Werkgelegenheid
+  role: Directeur Arbeidsmarkt en Sociaal-Economische Aangelegenheden, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2023-04-01'
   end_date: null
   sources:
@@ -24,8 +23,7 @@ mandaten:
 - id: mandate-post-afdelingshoofd-collectieve-sector-inkomensbeleid-min-szw-2019-06-01
   organization_id: org:onderdeel-afdeling-collectieve-sector-inkomensbeleid-min-szw
   post_id: post:afdelingshoofd-collectieve-sector-inkomensbeleid-min-szw
-  role: Afdelingshoofd Collectieve Sector en Inkomensbeleid, directie Arbeidsmarkt
-    en Sociaal-Economische Aangelegenheden, ministerie van Sociale Zaken en Werkgelegenheid
+  role: Afdelingshoofd Collectieve Sector en Inkomensbeleid, directie Arbeidsmarkt en Sociaal-Economische Aangelegenheden, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2019-06-01'
   end_date: null
   sources:
@@ -40,8 +38,7 @@ mandaten:
 - id: mandate-post-afdelingshoofd-collectieve-sector-en-inkomensbeleid-asea-min-szw-2019-06-01
   organization_id: org:onderdeel-afdeling-collectieve-sector-en-inkomensbeleid-asea-min-szw
   post_id: post:afdelingshoofd-collectieve-sector-en-inkomensbeleid-asea-min-szw
-  role: Afdelingshoofd Collectieve Sector en Inkomensbeleid, directie Arbeidsmarkt
-    en Sociaal-Economische Aangelegenheden, ministerie van Sociale Zaken en Werkgelegenheid
+  role: Afdelingshoofd Collectieve Sector en Inkomensbeleid, directie Arbeidsmarkt en Sociaal-Economische Aangelegenheden, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2019-06-01'
   end_date: null
   sources:
@@ -56,6 +53,14 @@ mandaten:
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/24/elise-splint-directeur-arbeidsmarkt-en-sociaal-economische-aangelegenheden-bij-szw
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/05/15/elise-splint-afdelingshoofd-collectieve-sector-en-inkomensbeleid-bij-szw
   retrieved: '2026-05-15'
   fields:
   - applied_via:apply-staging

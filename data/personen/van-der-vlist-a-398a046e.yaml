@@ -35,9 +35,29 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-04-01
   confidence: 0.9
+- id: mandate-post-waarnemend-psg-min-ezk-2026-04-20
+  organization_id: org:onderdeel-sg-min-ezk
+  post_id: post:waarnemend-psg-min-ezk
+  role: Waarnemend plaatsvervangend secretaris-generaal (pSG), ministerie van Economische Zaken en Klimaat (EZK)
+  start_date: '2026-04-20'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/04/15/aart-van-der-vlist-waarnemend-plaatsvervangend-secretaris-generaal-bij-ezk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-04-15
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/23/aart-van-der-vlist-consultant-bij-abdtopconsult
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/01/aart-van-der-vlist-directeur-informatievoorziening-en-cio-bij-de-politie
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

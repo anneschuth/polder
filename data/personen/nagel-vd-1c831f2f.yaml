@@ -9,8 +9,7 @@ mandaten:
 - id: mandate-post-directeur-pieter-baan-centrum-nifp-min-jenv-2020-09-01
   organization_id: org:onderdeel-nifp-dji-min-jenv
   post_id: post:directeur-pieter-baan-centrum-nifp-min-jenv
-  role: Directeur Pieter Baan Centrum van het NIFP bij de Dienst Justitiële Inrichtingen
-    bij het ministerie van Justitie en Veiligheid
+  role: Directeur Pieter Baan Centrum van het NIFP bij de Dienst Justitiële Inrichtingen bij het ministerie van Justitie en Veiligheid
   start_date: '2020-09-01'
   end_date: null
   sources:
@@ -22,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-06-04
   confidence: 0.9
+- id: mandate-post-directeur-pieter-baan-centrum-nifp-dji-min-jenv-2020-09-01
+  organization_id: org:onderdeel-pieter-baan-centrum-nifp-dji
+  post_id: post:directeur-pieter-baan-centrum-nifp-dji-min-jenv
+  role: Directeur Pieter Baan Centrum van het NIFP bij de Dienst Justitiële Inrichtingen bij het ministerie van Justitie en Veiligheid
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/arjan-van-den-nagel-directeur-pieter-baan-centrum-bij-jenv
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-04
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/arjan-van-den-nagel-directeur-pieter-baan-centrum-bij-jenv

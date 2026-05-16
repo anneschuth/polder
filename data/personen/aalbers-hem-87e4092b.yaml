@@ -20,9 +20,44 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2018-04-17
   confidence: 0.92
+- id: mandate-post-hoofd-operatien-eenheid-oost-nederland-nationale-politie-2023-06-01
+  organization_id: org:onderdeel-eenheid-oost-nederland-nationale-politie
+  post_id: post:hoofd-operatien-plaatsvervangend-politiechef-eenheid-oost-nederland
+  role: Hoofd Operatiën, Eenheid Oost-Nederland, Nationale Politie
+  start_date: '2023-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/01/jolanda-aalbers-hoofd-operatien-eenheid-oost-nederland-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-06-01
+  confidence: 0.92
+- id: mandate-post-hoofd-operatien-plaatsvervangend-politiechef-eenheid-oost-nederland-2024-12-01
+  organization_id: org:onderdeel-eenheid-oost-nederland-nationale-politie
+  post_id: post:hoofd-operatien-plaatsvervangend-politiechef-eenheid-oost-nederland
+  role: Hoofd Operatiën / plaatsvervangend politiechef, eenheid Oost-Nederland, Nationale Politie
+  start_date: '2024-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/13/jolanda-aalbers-plaatsvervangend-politiechef-in-oost-nederland
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-12-13
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/04/17/jolanda-aalbers-hoofd-bedrijfsvoering-eenheid-oost-nederland-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/01/jolanda-aalbers-hoofd-operatien-eenheid-oost-nederland-bij-de-politie
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

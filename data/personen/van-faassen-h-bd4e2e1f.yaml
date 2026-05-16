@@ -7,8 +7,7 @@ mandaten:
 - id: mandate-post-programmadirecteur-covid19-min-vws-2020-09-14
   organization_id: org:onderdeel-programmadirectie-covid-19-min-vws
   post_id: post:programmadirecteur-covid19-min-vws
-  role: Programmadirecteur COVID-19 bij het ministerie van Volksgezondheid, Welzijn
-    en Sport
+  role: Programmadirecteur COVID-19 bij het ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2020-09-14'
   end_date: null
   sources:
@@ -20,9 +19,29 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-07-13
   confidence: 0.92
+- id: mandate-post-extra-directeur-publieke-gezondheid-min-vws-2020-03-19
+  organization_id: org:onderdeel-directie-publieke-gezondheid-min-vws
+  post_id: post:directeur-publieke-gezondheid-corona-min-vws
+  role: Extra directeur Publieke Gezondheid bij het ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2020-03-19'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/19/henri-van-faassen-extra-directeur-publieke-gezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-03-19
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/13/henri-van-faassen-kwartiermaker-beoogd-programmadirecteur-voor-de-op-te-richten-programmadirectie-covid-19
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/19/henri-van-faassen-extra-directeur-publieke-gezondheid-bij-vws
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

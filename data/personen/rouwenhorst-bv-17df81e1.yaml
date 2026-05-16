@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-directeur-informatiebeleid-cio-min-vws-2022-06-01
   organization_id: org:onderdeel-directie-informatiebeleid-min-vws
   post_id: post:directeur-informatiebeleid-cio-min-vws
-  role: Directeur Informatiebeleid, tevens CIO, ministerie van Volksgezondheid, Welzijn
-    en Sport
+  role: Directeur Informatiebeleid, tevens CIO, ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2022-06-01'
   end_date: null
   sources:
@@ -24,8 +23,7 @@ mandaten:
 - id: mandate-post-duo-directeur-informatiebeleid-min-vws-2020-10-12
   organization_id: org:onderdeel-directie-informatiebeleid-min-vws
   post_id: post:directeur-informatiebeleid-cio-min-vws
-  role: Tijdelijk duo-directeur Informatiebeleid, ministerie van Volksgezondheid,
-    Welzijn en Sport
+  role: Tijdelijk duo-directeur Informatiebeleid, ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2020-10-12'
   end_date: null
   sources:
@@ -40,6 +38,11 @@ mandaten:
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/02/bianca-rouwenhorst-directeur-informatiebeleid-tevens-cio-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/10/09/bianca-rouwenhorst-tijdelijk-duo-directeur-informatiebeleid-bij-vws
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

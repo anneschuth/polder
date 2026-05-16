@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-directeur-beleid-bestuursondersteuning-dji-min-jenv-2021-07-15
   organization_id: org:onderdeel-directie-beleid-bestuursondersteuning-dji-min-jenv
   post_id: post:directeur-beleid-bestuursondersteuning-dji-min-jenv
-  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen
-    (DJI), ministerie van Justitie en Veiligheid
+  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen (DJI), ministerie van Justitie en Veiligheid
   start_date: '2021-07-15'
   end_date: null
   sources:
@@ -24,8 +23,7 @@ mandaten:
 - id: mandate-post-directeur-beleid-en-bestuursondersteuning-dji-min-jenv-2021-07-15
   organization_id: org:agentschap-dji
   post_id: post:directeur-beleid-en-bestuursondersteuning-dji-min-jenv
-  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen,
-    ministerie van Justitie en Veiligheid
+  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen, ministerie van Justitie en Veiligheid
   start_date: '2021-07-15'
   end_date: null
   sources:
@@ -37,6 +35,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-05-10
   confidence: 0.85
+- id: mandate-post-directeur-beleid-bestuursondersteuning-dji-2021-07-15
+  organization_id: org:agentschap-dji
+  post_id: post:directeur-beleid-bestuursondersteuning-dji
+  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Instellingen
+  start_date: '2021-07-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/10/chantal-van-steijn-directeur-beleid-en-bestuursondersteuning-bij-dji
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-05-10
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/10/chantal-van-steijn-directeur-beleid-en-bestuursondersteuning-bij-dji

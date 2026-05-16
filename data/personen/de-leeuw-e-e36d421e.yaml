@@ -19,9 +19,27 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-09-15
   confidence: 0.9
+- id: mandate-post-algemeen-directeur-klantinteractie-services-belastingdienst-min-fin-2020-10-05
+  organization_id: org:onderdeel-directie-klantinteractie-services-belastingdienst-min-fin
+  post_id: post:algemeen-directeur-klantinteractie-services-belastingdienst-min-fin
+  role: Algemeen directeur Klantinteractie & Services, Belastingdienst, ministerie van Financiën
+  start_date: '2020-10-05'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-09-15
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging
+- id: polder
+  url: https://github.com/anneschuth/polder
+  retrieved: '2026-05-16'

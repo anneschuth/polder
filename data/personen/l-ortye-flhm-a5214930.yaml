@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-mt-lid-crisisbeheersing-infectieziekten-pg-min-vws-2019-09-23
   organization_id: org:onderdeel-pg-min-vws
   post_id: post:mt-lid-crisisbeheersing-infectieziekten-pg-min-vws
-  role: MT-lid Crisisbeheersing en Infectieziekten, directie Publieke Gezondheid,
-    ministerie van Volksgezondheid, Welzijn en Sport
+  role: MT-lid Crisisbeheersing en Infectieziekten, directie Publieke Gezondheid, ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2019-09-23'
   end_date: null
   sources:
@@ -24,8 +23,52 @@ mandaten:
 - id: mandate-post-mt-lid-crisisbeheersing-infectieziekten-directie-pg-min-vws-2019-09-23
   organization_id: org:onderdeel-directie-pg-min-vws
   post_id: post:mt-lid-crisisbeheersing-infectieziekten-directie-pg-min-vws
-  role: MT-lid Crisisbeheersing en Infectieziekten bij de directie Publieke Gezondheid,
-    ministerie van Volksgezondheid, Welzijn en Sport
+  role: MT-lid Crisisbeheersing en Infectieziekten bij de directie Publieke Gezondheid, ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2019-09-23'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/26/francine-lortye-mt-lid-crisisbeheersing-en-infectieziekten-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-08-26
+  confidence: 0.92
+- id: mandate-post-hoofd-regionale-woningbouwontwikkeling-monz-min-vro-2025-12-01
+  organization_id: org:onderdeel-afdeling-regionale-woningbouwontwikkeling-monz-min-vro
+  post_id: post:hoofd-regionale-woningbouwontwikkeling-monz-min-vro
+  role: Hoofd Regionale Woningbouwontwikkeling MONZ, ministerie van Volkshuisvesting en Ruimtelijke Ordening
+  start_date: '2025-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/29/francine-lortye-hoofd-regionale-woningbouwontwikkeling-monz-bij-vro
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-10-29
+  confidence: 0.92
+- id: mandate-post-kwartiermaker-programmadirecteur-pandemische-paraatheid-dg-volksgezondheid-min-vws-2021-09-30
+  organization_id: org:onderdeel-dg-volksgezondheid-min-vws
+  post_id: post:kwartiermaker-programmadirecteur-pandemische-paraatheid-dg-volksgezondheid-min-vws
+  role: Kwartiermaker/beoogd programmadirecteur Pandemische paraatheid publieke gezondheid, directoraat-generaal Volksgezondheid, ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2021-09-30'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/30/francine-lortye-kwartiermaker-beoogd-programmadirecteur-pandemische-paraatheid-publieke-gezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-09-30
+  confidence: 0.88
+- id: mandate-post-mt-lid-crisisbeheersing-infectieziekten-directie-publieke-gezondheid-min-vws-2019-09-23
+  organization_id: org:onderdeel-directie-publieke-gezondheid-min-vws
+  post_id: post:mt-lid-crisisbeheersing-infectieziekten-directie-publieke-gezondheid-min-vws
+  role: MT-lid Crisisbeheersing en Infectieziekten bij de directie Publieke Gezondheid bij het ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2019-09-23'
   end_date: null
   sources:
@@ -40,6 +83,11 @@ mandaten:
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/26/francine-lortye-mt-lid-crisisbeheersing-en-infectieziekten-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/10/29/francine-lortye-hoofd-regionale-woningbouwontwikkeling-monz-bij-vro
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

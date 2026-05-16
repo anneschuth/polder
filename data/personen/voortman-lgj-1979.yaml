@@ -47,10 +47,36 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(fea952f8-26f5-4e68-85e3-d573bbfbd8a6)
     retrieved: '2026-05-13'
+- id: mandate-ori-46d0250c083f228f
+  organization_id: org:gemeente-utrecht
+  post_id: post:wethouder-gemeente-utrecht
+  role: Wethouder gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6329569
+    retrieved: '2026-05-13'
+- id: mandate-ori-dc4173c438ef2cd4
+  organization_id: org:gemeente-utrecht
+  post_id: post:raadslid-gemeente-utrecht
+  role: Raadslid gemeente Utrecht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7758972
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(39023322-8e6c-4cb4-b42d-c5bf80377dd6)
   retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q2783559
+  retrieved: '2026-05-09'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/7758971
+  retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/6329568
   retrieved: '2026-05-09'

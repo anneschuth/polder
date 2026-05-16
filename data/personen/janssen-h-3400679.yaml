@@ -15,12 +15,25 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400681
     retrieved: '2026-05-09'
+- id: mandate-ori-ded515fe876a1085
+  organization_id: org:gemeente-druten
+  post_id: post:raadslid-gemeente-druten
+  role: Raadslid gemeente Druten
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7769856
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400679
   retrieved: '2026-05-09'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q139355511
+  retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/3401394
   retrieved: '2026-05-13'
 birth:
   year: 1948

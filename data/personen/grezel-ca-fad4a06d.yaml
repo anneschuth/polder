@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-directeur-programma-nieuwe-openheid-min-vws-2021-10-01
   organization_id: org:onderdeel-directie-programma-nieuwe-openheid-min-vws
   post_id: post:directeur-programma-nieuwe-openheid-min-vws
-  role: Directeur Programma nieuwe openheid bij het ministerie van Volksgezondheid,
-    Welzijn en Sport
+  role: Directeur Programma nieuwe openheid bij het ministerie van Volksgezondheid, Welzijn en Sport
   start_date: '2021-10-01'
   end_date: null
   sources:
@@ -24,6 +23,11 @@ mandaten:
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/24/charlotte-grezel-directeur-programma-nieuwe-openheid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/24/charlotte-grezel-directeur-programma-nieuwe-openheid
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

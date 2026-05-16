@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-mt-lid-pvd-directeur-emancipatie-min-ocw-2019-01-01
   organization_id: org:onderdeel-directie-emancipatie-min-ocw
   post_id: post:mt-lid-plv-directeur-emancipatie-min-ocw
-  role: MT-lid en plaatsvervangend directeur, directie Emancipatie, ministerie van
-    Onderwijs, Cultuur en Wetenschap
+  role: MT-lid en plaatsvervangend directeur, directie Emancipatie, ministerie van Onderwijs, Cultuur en Wetenschap
   start_date: '2019-01-01'
   end_date: null
   sources:
@@ -24,8 +23,7 @@ mandaten:
 - id: mandate-post-mt-lid-plaatsvervangend-directeur-emancipatie-min-ocw-2019-01-01
   organization_id: org:onderdeel-emancipatie-min-ocw
   post_id: post:mt-lid-plaatsvervangend-directeur-emancipatie-min-ocw
-  role: MT-lid en plaatsvervangend directeur bij de directie Emancipatie, ministerie
-    van Onderwijs, Cultuur en Wetenschap
+  role: MT-lid en plaatsvervangend directeur bij de directie Emancipatie, ministerie van Onderwijs, Cultuur en Wetenschap
   start_date: '2019-01-01'
   end_date: null
   sources:
@@ -37,9 +35,44 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2018-11-21
   confidence: 0.92
+- id: mandate-post-programmadirecteur-maatschappelijke-diensttijd-min-ocw-2022-05-16
+  organization_id: org:min-ocw
+  post_id: post:programmadirecteur-maatschappelijke-diensttijd-min-ocw
+  role: Programmadirecteur Maatschappelijke Diensttijd, Ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-04
+  confidence: 0.9
+- id: mandate-post-programmadirecteur-mdt-min-ocw-2022-05-16
+  organization_id: org:onderdeel-mdt-min-ocw
+  post_id: post:programmadirecteur-mdt-min-ocw
+  role: Programmadirecteur Maatschappelijke Diensttijd, Ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-04
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/21/elmer-burke-mt-lid-emancipatie-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

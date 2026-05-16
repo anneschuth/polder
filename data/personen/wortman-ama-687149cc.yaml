@@ -8,8 +8,7 @@ mandaten:
 - id: mandate-post-mt-lid-afdeling-loopbaan-ontwikkeling-directie-arbeidsverhoudingen-min-szw-2021-12-01
   organization_id: org:onderdeel-afdeling-loopbaan-ontwikkeling-min-szw
   post_id: post:mt-lid-afdeling-loopbaan-ontwikkeling-directie-arbeidsverhoudingen-min-szw
-  role: MT-lid Arbeidsverhoudingen / leidinggevende afdeling Loopbaan & Ontwikkeling,
-    directie Arbeidsverhoudingen, ministerie van Sociale Zaken en Werkgelegenheid
+  role: MT-lid Arbeidsverhoudingen / leidinggevende afdeling Loopbaan & Ontwikkeling, directie Arbeidsverhoudingen, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2021-12-01'
   end_date: null
   sources:
@@ -24,8 +23,7 @@ mandaten:
 - id: mandate-post-mt-lid-arbeidsverhoudingen-afdeling-lo-min-szw-2021-12-01
   organization_id: org:onderdeel-afdeling-lo-directie-arbeidsverhoudingen-min-szw
   post_id: post:mt-lid-arbeidsverhoudingen-afdeling-lo-min-szw
-  role: MT-lid Arbeidsverhoudingen / hoofd afdeling Loopbaan & Ontwikkeling, directie
-    Arbeidsverhoudingen, ministerie van Sociale Zaken en Werkgelegenheid
+  role: MT-lid Arbeidsverhoudingen / hoofd afdeling Loopbaan & Ontwikkeling, directie Arbeidsverhoudingen, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2021-12-01'
   end_date: null
   sources:
@@ -37,9 +35,29 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-12-09
   confidence: 0.92
+- id: mandate-post-mt-lid-arbeidsverhoudingen-min-szw-2021-12-01
+  organization_id: org:onderdeel-directie-av-dg-werk-min-szw
+  post_id: post:mt-lid-arbeidsverhoudingen-min-szw
+  role: MT-lid Arbeidsverhoudingen, Directie Arbeidsverhoudingen, ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/09/annemiek-wortman-mt-lid-arbeidsverhoudingen
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-09
+  confidence: 0.89
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/09/annemiek-wortman-mt-lid-arbeidsverhoudingen-bij-szw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/09/annemiek-wortman-mt-lid-arbeidsverhoudingen
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging
