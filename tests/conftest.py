@@ -1,22 +1,21 @@
 """Shared pytest fixtures and test-session setup.
 
-Typer/Rich render `--help` into a box whose width follows the terminal.
-On a developer machine that box is wide; in CI there is no TTY and Rich
-falls back to an 80-column default, which word-wraps long option names
-like ``--dry-run`` across lines and breaks the substring assertions in
-the help tests.
+Typer renders ``--help`` through a Rich ``Console`` whose width comes
+from ``typer.rich_utils.MAX_WIDTH`` / ``_TERMINAL_WIDTH``. Both default
+to ``None``, so Rich auto-detects: on a developer machine the real
+terminal width leaks through and the help fits on one line, but under
+``CliRunner`` in CI (no TTY) Rich falls back to 80 columns. At 80 cols
+long options like ``--commit`` and ``--parallel`` wrap across lines, so
+they no longer appear as a contiguous substring and the help-text
+assertions fail.
 
-Rich reads ``COLUMNS`` from the environment when it constructs a
-``Console``. Set it at import time (before any test module imports the
-Typer app and before the first ``CliRunner`` invocation) so the help
-output is deterministic regardless of where the suite runs.
+Pinning ``MAX_WIDTH`` directly is the knob ``_get_rich_console`` reads;
+unlike a ``COLUMNS`` env var it does not depend on import/fixture
+ordering. Setting it at import time covers every test module that
+imports the Typer app.
 """
 
-import os
+import typer.rich_utils as _rich_utils
 
-os.environ.setdefault("COLUMNS", "200")
-os.environ.setdefault("LINES", "50")
-# A developer shell often already exports a narrow COLUMNS; override it
-# so local runs match CI instead of masking the wrapping bug.
-os.environ["COLUMNS"] = "200"
-os.environ["LINES"] = "50"
+_rich_utils.MAX_WIDTH = 200
+_rich_utils._TERMINAL_WIDTH = 200
