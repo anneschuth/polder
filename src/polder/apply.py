@@ -221,14 +221,40 @@ def _detect_source_url(proposal: dict[str, Any]) -> str | None:
 def _classification_from_role(role: str) -> str | None:
     """Map een role-string naar een post-classification, of None bij geen match.
 
-    Gebruikt word-boundary regex zodat `"minister"` matched op
-    `"minister-president"` maar NIET op `"ministerie van X"`. Anders
-    krijgt een Chief Information Security Officer-rol bij een ministerie
-    onterecht `bewindspersoon` toegewezen.
+    Classificeert ALLEEN op de leidende rol-frase: het deel vóór de eerste
+    komma/puntkomma. ABD-labels zijn "Roltitel, Organisatie-eenheid,
+    Ministerie" — de organisatie-context erna mag de classificatie niet
+    sturen. Zonder die begrenzing krijgt "MT-lid Curatieve Zorg, DG
+    Curatieve Zorg, VWS" ten onrechte `abd-tmg` (door "DG" verderop), en
+    "hoofd van de Auditdienst Rijk" valt door de generieke `hoofd`-
+    catch-all op `abd-afdelingshoofd` terwijl het een directeur/tmg-tier
+    functie is.
+
+    Word-boundary regex blijft zodat `minister` wel `minister-president`
+    maar niet `ministerie van X` matcht. De generieke `hoofd`-catch-all
+    matcht alleen als `hoofd` het BEGIN van de leidende frase is (na
+    honorifics), niet ergens midden in ("hoofd van de Auditdienst" begint
+    met hoofd en is bewust afdelingshoofd-tier; "plaatsvervangend hoofd
+    van dienst" idem — maar "lid ... hoofd ..." niet).
     """
-    role_l = role.lower()
+    head = re.split(r"[,;]", role, maxsplit=1)[0]
+    head_l = _ROLE_HONORIFIC_RE.sub("", head).strip().lower()
+    # Strip leidende rang-bepalingen die de functie-classificatie niet
+    # veranderen ("plaatsvervangend directeur" blijft directeur-tier,
+    # "waarnemend secretaris-generaal" blijft tmg). Daarna classificeren
+    # we op het EERSTE betekenisdragende rol-woord: een keyword telt
+    # alleen als de (ontdane) frase ermee begint. Zo wordt "hoofd Bureau
+    # Secretaris-Generaal" een afdelingshoofd (begint met 'hoofd'), niet
+    # tmg door 'secretaris-generaal' verderop; en "raadadviseur ...
+    # Minister-President" wordt None i.p.v. bewindspersoon.
+    anchored = re.sub(
+        r"^(plaatsvervangend|waarnemend|adjunct|beoogd|tijdelijk|interim|"
+        r"loco|wnd\.?|plv\.?|a\.i\.|constituerend)\s+",
+        "",
+        head_l,
+    ).strip()
     for keyword, classification in ROLE_TO_CLASSIFICATION:
-        if re.search(rf"\b{re.escape(keyword)}\b", role_l):
+        if re.match(rf"{re.escape(keyword)}\b", anchored):
             return classification
     return None
 
@@ -1501,17 +1527,40 @@ def _plan_person(
     # Anders hangt apply een mandaat aan de verkeerde bestaande persoon
     # (bv. "Mark Vermeer" -> bestaande "Henk Vermeer" via family_unique).
     # We laten resolved_id vallen zodat verderop een NIEUW person-record
-    # ontstaat met een eigen slug. Idempotente exact-slug-detectie verderop
-    # vangt het geval dat het tóch dezelfde persoon blijkt.
+    # ontstaat met een eigen slug.
+    #
+    # KRITIEK: voor ABD-personen zonder publiek geboortejaar is de nieuwe
+    # slug `familie-initialen-<sha1>` terwijl het zwak-gematchte bestaande
+    # record vaak op een jaar eindigt. Die botsen nooit, dus de idempotente
+    # exact-slug-detectie hieronder vangt dit geval NIET. Zonder maatregel
+    # ontstaat een onzichtbaar duplicaat dat de dedup-tooling niet
+    # terugvindt. Daarom:
+    #   - met geboortejaar: nieuwe slug is stabiel/collidable -> nieuw
+    #     record aanmaken is veilig (idempotentie + quasi_dup vangen het).
+    #   - zonder geboortejaar: te riskant om automatisch aan te maken ->
+    #     skip naar needs-review zodat een mens de identiteit bevestigt
+    #     i.p.v. een onzichtbaar duplicaat of een fout-append.
     if resolved_id is not None:
         person_conf = (proposal.get("resolution_confidence") or {}).get("person")
         if person_conf is not None and float(person_conf) < person_match_floor:
+            weak_birth_year = _extract_birth_year(proposal)
+            if weak_birth_year is None:
+                return SkippedProposal(
+                    proposal=proposal,
+                    reasons=[
+                        f"weak-person-match: resolved_person_id {resolved_id!r} "
+                        f"person-confidence {float(person_conf):.2f} < floor "
+                        f"{person_match_floor:.2f} en geen geboortejaar voor een "
+                        "stabiele slug; needs-review (geen fout-append, geen "
+                        "onzichtbaar duplicaat)"
+                    ],
+                )
             proposal = dict(proposal)
             proposal["resolved_person_id"] = None
             proposal.setdefault("_apply_notes", []).append(
                 f"resolved_person_id {resolved_id!r} genegeerd: person-confidence "
                 f"{float(person_conf):.2f} < floor {person_match_floor:.2f}; "
-                "nieuw person-record aangemaakt"
+                "nieuw person-record (stabiele jaar-slug, collidable)"
             )
             resolved_id = None
 

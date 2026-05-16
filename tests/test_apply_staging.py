@@ -774,6 +774,36 @@ def test_classification_word_boundary() -> None:
     )
 
 
+def test_classification_anchors_on_leading_role_phrase() -> None:
+    """Regressie (hostile review): classificeer op de leidende rol-frase,
+    niet op keywords die in de trailing organisatie-context staan."""
+    from polder.apply import _classification_from_role as c
+
+    # 'DG' in de org-context na de komma mag MT-lid niet tot tmg promoten
+    assert (
+        c("MT-lid Curatieve Zorg (CZ) bij het directoraat-generaal Curatieve Zorg")
+        == "abd-afdelingshoofd"
+    )
+    # leidend 'hoofd' wint van 'secretaris-generaal' verderop in de frase
+    assert c("hoofd Bureau Secretaris-Generaal, ministerie van X") == "abd-afdelingshoofd"
+    # hoofd van de Auditdienst: leidend 'hoofd' -> afdelingshoofd-tier
+    assert c("hoofd van de Auditdienst Rijk, ministerie van Financien") == "abd-afdelingshoofd"
+    # raadadviseur is geen ABD-classificatie; 'Minister-President' verderop
+    # mag het niet tot bewindspersoon maken
+    assert c("raadadviseur bij het Kabinet Minister-President") is None
+    # rang-bepalingen veranderen de tier niet
+    assert c("Plaatsvervangend secretaris-generaal, ministerie van LNV") == "abd-tmg"
+    assert c("Waarnemend directeur-generaal Politie") == "abd-tmg"
+    assert c("Plaatsvervangend directeur Wetgeving") == "abd-directeur"
+    # echte gevallen blijven correct
+    assert c("Directeur Digitale Overheid, DGDOO, BZK") == "abd-directeur"
+    assert (
+        c("Hoofd afdeling Basisinfrastructuur en Dienstverlening, directie X")
+        == "abd-afdelingshoofd"
+    )
+    assert c("Minister van Volksgezondheid, Welzijn en Sport") == "bewindspersoon"
+
+
 def test_chain_unknown_ministerie_skipped(mini_polder: Path) -> None:
     """Een chain met een onbekende ministerie-entry mag NIET tot create-org leiden.
 
