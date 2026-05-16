@@ -28,6 +28,8 @@ from typing import Literal
 
 import yaml
 
+from polder.validate import _is_organisatie_bsn_safe_field
+
 Severity = Literal["error", "review"]
 
 
@@ -258,8 +260,11 @@ PLACEHOLDER_RX = re.compile(
     re.IGNORECASE,
 )
 
-# Reeks van precies 9 cijfers, geen omliggende cijfers. BSN-pattern.
-BSN_RX = re.compile(r"(?<!\d)\d{9}(?!\d)")
+# Reeks van precies 9 cijfers die niet grenst aan een ander
+# alfanumeriek teken. Een echte BSN staat op zichzelf; 9 cijfers
+# midden in een hex-GUID (`...b88f-802843249aee1`) of langere code is
+# geen BSN.
+BSN_RX = re.compile(r"(?<![0-9A-Za-z])\d{9}(?![0-9A-Za-z])")
 
 # Velden die we voor BSN scannen. Heuristisch: korte naam-velden, niet
 # identifiers (waar OIN-achtige 18-cijfer-codes wel mogen).
@@ -595,7 +600,7 @@ def _check_placeholders(
                     findings.append(Finding(cat, f"{rid}|name.{nk}", f"{p.name}: name.{nk}={nv!r}"))
 
 
-def _scan_for_bsn(value: object, path: str = "") -> list[tuple[str, str]]:
+def _scan_for_bsn(value: object, path: str = "", *, is_org: bool = False) -> list[tuple[str, str]]:
     """Yield (field-path, matched-9-digit-string) voor strings die op BSN lijken.
 
     Skip velden waar 9-cijferige reeksen legitiem zijn:
@@ -603,29 +608,37 @@ def _scan_for_bsn(value: object, path: str = "") -> list[tuple[str, str]]:
     - `sources[].url` (URLs bevatten vaak ORI-ID's etc)
     - `sources[].id` en `sources[].retrieved`
     - `appointment.staatscourant_url` etc
+
+    Voor organisatie-records geldt daarnaast dezelfde structurele
+    allowlist als de validator (`_is_organisatie_bsn_safe_field`):
+    telefoonnummers, wettelijke grondslagen, gr_meta, afspraak, woo.
+    Persoon- en post-records worden onverkort gescand (echte
+    BSN-bescherming).
     """
     hits: list[tuple[str, str]] = []
     # Skip hele subtrees onder bekende identifier/URL-velden
     skipped_keys = {"identifiers", "url", "id", "retrieved", "kvk", "oin", "rsin"}
     if isinstance(value, str):
-        for m in BSN_RX.finditer(value):
-            hits.append((path, m.group(0)))
+        if not (is_org and _is_organisatie_bsn_safe_field(path)):
+            for m in BSN_RX.finditer(value):
+                hits.append((path, m.group(0)))
     elif isinstance(value, dict):
         for k, v in value.items():
             if k in skipped_keys:
                 continue
             sub = f"{path}.{k}" if path else str(k)
-            hits.extend(_scan_for_bsn(v, sub))
+            hits.extend(_scan_for_bsn(v, sub, is_org=is_org))
     elif isinstance(value, list):
         for i, item in enumerate(value):
-            hits.extend(_scan_for_bsn(item, f"{path}[{i}]"))
+            hits.extend(_scan_for_bsn(item, f"{path}[{i}]", is_org=is_org))
     return hits
 
 
 def _check_bsn(items: list[tuple[Path, dict]], label: str, findings: list[Finding]) -> None:
+    is_org = label == "orgs"
     for p, d in items:
         rid = d.get("id", p.name)
-        for field_path, match in _scan_for_bsn(d):
+        for field_path, match in _scan_for_bsn(d, is_org=is_org):
             findings.append(
                 Finding(
                     "bsn_in_text",

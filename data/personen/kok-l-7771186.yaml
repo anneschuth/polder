@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7771188
     retrieved: '2026-05-13'
+- id: 4c121462-d0c5-413c-b11c-dc7717b2d282
+  organization_id: org:gemeente-vught
+  post_id: post:raadslid-gemeente-vught
+  role: Raadslid gemeente Vught
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7771188
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7771186
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q22007161
   retrieved: '2026-05-13'

@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5798958
     retrieved: '2026-05-13'
+- id: e1318853-7088-4c04-9642-b06027b4f741
+  organization_id: org:gemeente-ooststellingwerf
+  post_id: post:raadslid-gemeente-ooststellingwerf
+  role: Raadslid gemeente Ooststellingwerf
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5798958
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5798956
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2881849
   retrieved: '2026-05-13'

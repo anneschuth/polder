@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6643790
     retrieved: '2026-05-13'
+- id: e2806d30-75d0-4017-9c45-3c95f0cb126e
+  organization_id: org:gemeente-weststellingwerf
+  post_id: post:raadslid-gemeente-weststellingwerf
+  role: Raadslid gemeente Weststellingwerf
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6643790
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6643788
   retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q29421993
+  retrieved: '2026-05-11'

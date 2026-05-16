@@ -21,6 +21,16 @@ mandaten:
     fields:
     - confirmed_current
     - roo_medewerker_id=28267879
+- id: 08265247-5887-437c-8157-3653d607ba7d
+  organization_id: org:gemeente-waadhoeke
+  post_id: post:raadslid-gemeente-waadhoeke
+  role: Raadslid gemeente Waadhoeke
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6493764
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6493762

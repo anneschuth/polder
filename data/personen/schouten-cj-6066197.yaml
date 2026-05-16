@@ -15,7 +15,20 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6066198
     retrieved: '2026-05-13'
+- id: d022b0f7-c557-4cba-80f5-c18f9745aca8
+  organization_id: org:gemeente-rotterdam
+  post_id: post:burgemeester-gemeente-rotterdam
+  role: Burgemeester gemeente Rotterdam
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6066198
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6066197
+  retrieved: '2026-05-13'
+- id: wikidata
+  url: https://www.wikidata.org/wiki/Q2625041
   retrieved: '2026-05-13'
