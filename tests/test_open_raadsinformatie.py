@@ -227,11 +227,35 @@ def test_build_mandaat_skip_gastspreker():
     assert mandaat is None
 
 
-def test_build_mandaat_uniek_id():
-    a = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
-    b = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
+def test_build_mandaat_id_stabiel_over_runs():
+    """Issue #64: zelfde zetel → zelfde mandaat-id, ongeacht run of dag.
+
+    De id wordt afgeleid van (organization_id, post_id), niet uit een
+    per-run uuid4. Twee aanroepen op verschillende dagen voor dezelfde
+    raadszetel leveren dezelfde id, zodat reruns idempotent zijn.
+    """
+    a = build_mandaat(
+        raw_membership=_membership_raw(role="Wethouder"),
+        gemeente_slug="utrecht",
+        today="2026-05-09",
+    )
+    b = build_mandaat(
+        raw_membership=_membership_raw(role="Wethouder"),
+        gemeente_slug="utrecht",
+        today="2026-05-13",
+    )
     assert a is not None and b is not None
-    assert a["id"] != b["id"]
+    assert a["id"] == b["id"]
+    assert a["id"].startswith("mandate-ori-")
+
+
+def test_build_mandaat_id_verschilt_per_zetel():
+    """Verschillende post/org → verschillende id (geen collisie)."""
+    weth = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
+    raad = build_mandaat(raw_membership=_membership_raw(role="Raadslid"), gemeente_slug="utrecht")
+    ams = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="amsterdam")
+    assert weth is not None and raad is not None and ams is not None
+    assert len({weth["id"], raad["id"], ams["id"]}) == 3
 
 
 def test_role_to_classification_dekt_alle_polder_rollen():
@@ -525,6 +549,50 @@ def test_merge_person_mandaat_id_blijft_stabiel():
     merged = merge_person(existing, new)
     assert len(merged["mandaten"]) == 1
     assert merged["mandaten"][0]["id"] == "stable-uuid"
+
+
+def test_ori_rerun_geen_dubbel_mandaat_bij_slug_drift(tmp_path: Path):
+    """Issue #64: drie ORI-runs mogen geen dubbele open mandaten geven,
+    ook niet wanneer de persoon-slug tussen runs verandert.
+
+    Het bug-pad: ORI levert in run 2 net andere initialen → andere
+    person-slug → ander YAML-bestand → ``merge_person`` ziet geen
+    bestaand record en de snap-naar-open-mandaat-logica in
+    ``_merge_mandaten`` wordt nooit bereikt. Vóór de fix kreeg elk
+    bestand een vers uuid4-mandaat (490 dubbels in productie). Met een
+    deterministische, zetel-gebaseerde id is het mandaat over alle runs
+    byte-identiek qua id, zodat downstream-dedup ze als één zetel ziet.
+    """
+    runs = [
+        ("2026-05-09", "Schilderman, Susanne", "S."),
+        ("2026-05-13", "Schilderman, Susanne", "S.M."),  # ORI-drift in initialen
+        ("2026-05-16", "Schilderman, Susanne", "S."),
+    ]
+    mandaat_ids: set[str] = set()
+    written: list[Path] = []
+    for day, name, _initials in runs:
+        rec = person_to_polder_record(
+            person_raw=_person_raw(name=name),
+            memberships_raw=[_membership_raw(role="Wethouder")],
+            gemeente_slug="utrecht",
+            today=day,
+        )
+        assert rec is not None
+        # Forceer het slug-drift-pad: schrijf naar een per-run pad zodat
+        # er geen bestaand record is om tegen te mergen (het bug-pad).
+        target = write_person(rec, tmp_path / day)
+        written.append(target)
+        for m in rec["mandaten"]:
+            mandaat_ids.add(m["id"])
+
+    # Drie runs, één unieke mandaat-id: idempotent ondanks slug-drift.
+    assert len(mandaat_ids) == 1
+    # En elk geschreven record heeft precies één open mandaat (geen
+    # interne dubbeling).
+    for path in written:
+        data = yaml.safe_load(path.read_text())
+        open_mandaten = [m for m in data["mandaten"] if m["end_date"] is None]
+        assert len(open_mandaten) == 1
 
 
 # ---------------------------------------------------------------------------

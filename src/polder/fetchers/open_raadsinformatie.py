@@ -20,13 +20,13 @@ Tracking issue: https://github.com/anneschuth/polder/issues/16
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import logging
 import re
 import sys
 import time
 import unicodedata
-import uuid
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -550,6 +550,22 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     return record
 
 
+def _seat_mandaat_id(organization_id: str, post_id: str) -> str:
+    """Deterministische mandaat-id voor één open raadszetel.
+
+    ORI levert geen stabiele membership-id en geen echte start_date. Een
+    ``uuid.uuid4()`` per run maakte elke nachtelijke rerun een nieuw open
+    mandaat voor dezelfde zetel aan (issue #64), ook in het pad waar
+    ``_merge_mandaten`` niet wordt aangeroepen (persoon-resolutie kiest een
+    andere slug, zie #46/#47/#55). Door de id af te leiden van
+    ``(organization_id, post_id)`` collapsen reruns naar dezelfde id,
+    ongeacht het persoon-pad. Een raadszetel heeft per definitie één open
+    bezetter; ``build_mandaat`` produceert alleen open mandaten.
+    """
+    digest = hashlib.sha1(f"ori|{organization_id}|{post_id}".encode()).hexdigest()
+    return f"mandate-ori-{digest[:16]}"
+
+
 def build_mandaat(
     *,
     raw_membership: dict[str, Any],
@@ -575,7 +591,7 @@ def build_mandaat(
         _ori_url(membership_id) if membership_id else f"{ORI_ELASTIC_BASE}/ori_{bare}/_search"
     )
     return {
-        "id": str(uuid.uuid4()),
+        "id": _seat_mandaat_id(org_id, post_id),
         "organization_id": org_id,
         "post_id": post_id,
         "role": role_label,
