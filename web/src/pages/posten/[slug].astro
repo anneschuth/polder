@@ -44,14 +44,10 @@ const siblingPosts = (data.postsByOrg.get(post.organization_id) ?? [])
   .filter((p) => p.id !== post.id)
   .sort((a, b) => a.label.localeCompare(b.label, 'nl'));
 
-const ICON_INFO =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>';
-const ICON_USER =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>';
-const ICON_CLOCK =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>';
-const ICON_BRIEFCASE =
-  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>';
+const ICON_INFO = 'info-circle';
+const ICON_USER = 'person';
+const ICON_CLOCK = 'history';
+const ICON_BRIEFCASE = 'business-suitcase';
 ---
 <Base title={post.label}>
   <article class="stack">

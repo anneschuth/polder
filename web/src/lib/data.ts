@@ -481,25 +481,84 @@ export function personExternalLinks(p: Person): { label: string; url: string }[]
   return out;
 }
 
-/** Accent color per org type, used by Card/Timeline. Falls back to coolgray. */
-export function orgAccent(type: string | undefined): string {
-  const map: Record<string, string> = {
-    ministerie: 'var(--primitives-color-lintblauw-500, #0058a3)',
-    agentschap: 'var(--primitives-color-lintblauw-500, #0058a3)',
-    inspectie: '#1f7a8c',
-    zbo: '#6b4fa0',
-    rwt: '#6b4fa0',
-    adviescollege: '#6b4fa0',
-    'hoge-college': '#9a3b6c',
-    gemeente: '#2e7d4f',
-    provincie: '#1f7a8c',
-    waterschap: '#1f7a8c',
-    'gemeenschappelijke-regeling': '#2e7d4f',
-    politie: '#3a3f8c',
-    'openbaar-ministerie': '#3a3f8c',
-    'rechterlijke-instantie': '#9a3b6c',
-    'caribisch-openbaar-lichaam': '#2e7d4f',
-    organisatieonderdeel: 'var(--primitives-color-coolgray-400, #7f8da0)',
-  };
-  return map[type ?? ''] ?? 'var(--primitives-color-coolgray-400, #7f8da0)';
+/**
+ * Accent color for section headings/icons. The design-system has no
+ * per-org-type palette, so we use the single NLDD accent token everywhere
+ * rather than inventing colors.
+ */
+export function orgAccent(_type?: string | undefined): string {
+  return 'var(--primitives-color-accent-500)';
+}
+
+/**
+ * Timeline bar color per post classification — one distinct design-system
+ * palette token per kind of office (no invented colors). Each token is a
+ * real NLDD palette family with a usable dark shade.
+ */
+const CLASSIFICATION_COLOR: Record<string, string> = {
+  bewindspersoon: 'var(--primitives-color-lintblauw-550)',
+  kamerlid: 'var(--primitives-color-hemelblauw-750)',
+  statenlid: 'var(--primitives-color-lichtblauw-750)',
+  raadslid: 'var(--primitives-color-donkerblauw-750)',
+  'commissaris-vd-koning': 'var(--primitives-color-paars-650)',
+  gedeputeerde: 'var(--primitives-color-violet-650)',
+  wethouder: 'var(--primitives-color-roze-750)',
+  burgemeester: 'var(--primitives-color-robijnrood-750)',
+  'abd-tmg': 'var(--primitives-color-donkergroen-750)',
+  'abd-directeur': 'var(--primitives-color-groen-550)',
+  'abd-afdelingshoofd': 'var(--primitives-color-mosgroen-750)',
+  'abd-projectleider': 'var(--primitives-color-mintgroen-650)',
+  gemeentesecretaris: 'var(--primitives-color-donkerbruin-750)',
+  provinciesecretaris: 'var(--primitives-color-bruin-750)',
+  griffier: 'var(--primitives-color-donkergeel-550)',
+  dijkgraaf: 'var(--primitives-color-groen-550)',
+  'db-waterschap': 'var(--primitives-color-mosgroen-750)',
+  'ab-waterschap': 'var(--primitives-color-mintgroen-650)',
+  'voorzitter-hcs': 'var(--primitives-color-geel-750)',
+  'lid-hcs': 'var(--primitives-color-donkergeel-550)',
+  'rvb-zbo': 'var(--primitives-color-oranje-550)',
+  rechter: 'var(--primitives-color-rood-550)',
+  'officier-van-justitie': 'var(--primitives-color-robijnrood-750)',
+  gezaghebber: 'var(--primitives-color-oranje-550)',
+  overig: 'var(--primitives-color-coolgray-500)',
+};
+
+/** Human-readable label per classification, for the timeline legend. */
+export const CLASSIFICATION_LABEL: Record<string, string> = {
+  bewindspersoon: 'Bewindspersoon',
+  kamerlid: 'Kamerlid',
+  statenlid: 'Statenlid',
+  raadslid: 'Raadslid',
+  'commissaris-vd-koning': 'Commissaris van de Koning',
+  gedeputeerde: 'Gedeputeerde',
+  wethouder: 'Wethouder',
+  burgemeester: 'Burgemeester',
+  'abd-tmg': 'ABD-topmanagement',
+  'abd-directeur': 'ABD-directeur',
+  'abd-afdelingshoofd': 'ABD-afdelingshoofd',
+  'abd-projectleider': 'ABD-projectleider',
+  gemeentesecretaris: 'Gemeentesecretaris',
+  provinciesecretaris: 'Provinciesecretaris',
+  griffier: 'Griffier',
+  dijkgraaf: 'Dijkgraaf',
+  'db-waterschap': 'DB waterschap',
+  'ab-waterschap': 'AB waterschap',
+  'voorzitter-hcs': 'Voorzitter hoog college',
+  'lid-hcs': 'Lid hoog college',
+  'rvb-zbo': 'Bestuur ZBO',
+  rechter: 'Rechter',
+  'officier-van-justitie': 'Officier van justitie',
+  gezaghebber: 'Gezaghebber',
+  overig: 'Overig',
+};
+
+export function classificationAccent(classification?: string): string {
+  return (
+    CLASSIFICATION_COLOR[classification ?? ''] ??
+    'var(--primitives-color-coolgray-500)'
+  );
+}
+
+export function classificationLabel(classification?: string): string {
+  return CLASSIFICATION_LABEL[classification ?? ''] ?? 'Overig';
 }

@@ -1,6 +1,7 @@
 ---
 interface Props {
   title: string;
+  /** An <nldd-icon> name (see the design-system icon library). */
   icon?: string;
   accent?: string;
   span?: number;
@@ -25,7 +26,7 @@ const style = accent ? `--card-accent: ${accent};` : undefined;
     {collapsible ? (
       <details open={open}>
         <summary class="section-head">
-          {icon && <span class="card-icon" set:html={icon} />}
+          {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
           {title}
         </summary>
         <nldd-divider></nldd-divider>
@@ -34,7 +35,7 @@ const style = accent ? `--card-accent: ${accent};` : undefined;
     ) : (
       <Fragment>
         <h2 class="section-head">
-          {icon && <span class="card-icon" set:html={icon} />}
+          {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
           {title}
         </h2>
         <nldd-divider></nldd-divider>

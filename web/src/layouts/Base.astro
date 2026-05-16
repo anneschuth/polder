@@ -138,19 +138,26 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        color: var(--semantics-content-color, #1a1a1a);
+        color: var(--semantics-content-color);
       }
       .section > details > nldd-divider,
       .section > nldd-divider {
         margin: 0 0 1rem;
       }
       .section .card-icon {
-        color: var(--card-accent, var(--primitives-color-lintblauw-500, #0058a3));
+        color: var(--card-accent, var(--primitives-color-accent-500));
         flex: none;
+        display: inline-flex;
+        width: 1.15rem;
+        height: 1.15rem;
+      }
+      .section .card-icon svg {
+        width: 100%;
+        height: 100%;
       }
       .section > details > summary {
         cursor: pointer;
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
         margin-bottom: 0.5rem;
       }
       /* Dense label/value grid. Label is a fixed muted column, value next to
@@ -168,7 +175,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         align-items: baseline;
       }
       .deflist dt {
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
         font-size: 0.9rem;
       }
       .deflist dd {
@@ -190,7 +197,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       .lede {
         font-size: 1.05rem;
         line-height: 1.6;
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
       }
       .career {
         font-size: 1.05rem;
@@ -230,8 +237,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         display: flex;
         justify-content: space-between;
         font-size: 0.75rem;
-        color: var(--semantics-content-secondary-color, #555);
-        border-bottom: 1px solid var(--primitives-color-coolgray-100, #d9dee5);
+        color: var(--semantics-content-secondary-color);
+        border-bottom: 1px solid var(--primitives-color-coolgray-100);
         padding-bottom: 0.2rem;
       }
       .tl-row {
@@ -242,7 +249,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       .tl-track {
         position: relative;
         height: 1.5rem;
-        background: var(--primitives-color-coolgray-50, #ebeef2);
+        background: var(--primitives-color-coolgray-50);
         border-radius: 4px;
         overflow: hidden;
       }
@@ -253,13 +260,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         min-width: 3px;
         max-width: 100%;
         border-radius: 4px;
-        background: var(--bar-accent, var(--primitives-color-lintblauw-500, #0058a3));
+        background: var(--bar-accent, var(--primitives-color-accent-500));
         display: block;
       }
       .tl-bar--current {
         background-image: repeating-linear-gradient(
           45deg,
-          rgba(255, 255, 255, 0.35) 0 6px,
+          color-mix(in srgb, var(--primitives-color-coolgray-0) 35%, transparent)
+            0 6px,
           transparent 6px 12px
         );
       }
@@ -271,7 +279,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         align-items: baseline;
       }
       .tl-label .tl-period {
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
+      }
+      .tl-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem 1rem;
+        margin-top: 0.5rem;
+        padding-top: 0.6rem;
+        font-size: 0.8rem;
+        color: var(--semantics-content-secondary-color);
+        border-top: 1px solid var(--primitives-color-coolgray-100);
       }
       @media (max-width: 40rem) {
         .tl-axis {
@@ -293,14 +311,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         height: 1.6rem;
         border-radius: 4px;
         overflow: hidden;
-        border: 1px solid var(--primitives-color-coolgray-200, #d9dee5);
+        border: 1px solid var(--primitives-color-coolgray-200);
       }
       .seatbar > span {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 0.7rem;
-        color: #fff;
+        color: var(--primitives-color-coolgray-0);
         white-space: nowrap;
         overflow: hidden;
       }
@@ -315,7 +333,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       }
       .stat .stat-lbl {
         font-size: 0.8rem;
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
       }
       .stack {
         display: flex;

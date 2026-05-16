@@ -14,18 +14,16 @@ const c = council;
 const nlInt = (n?: number) =>
   n == null ? null : n.toLocaleString('nl-NL', { maximumFractionDigits: 0 });
 
-// Stable color ramp for council parties (no chart lib).
+// Stable ramp for council parties, using design-system palette tokens only
+// (no invented colors). These NLDD families all have a -650 shade.
 const SEAT_COLORS = [
-  '#0058a3',
-  '#2e7d4f',
-  '#9a3b6c',
-  '#c46210',
-  '#6b4fa0',
-  '#1f7a8c',
-  '#8a5a00',
-  '#3a3f8c',
-  '#7f8da0',
-  '#a03b3b',
+  'var(--primitives-color-lintblauw-650)',
+  'var(--primitives-color-groen-650)',
+  'var(--primitives-color-oranje-650)',
+  'var(--primitives-color-paars-650)',
+  'var(--primitives-color-violet-650)',
+  'var(--primitives-color-rood-650)',
+  'var(--primitives-color-donkergeel-650)',
 ];
 const parties = (c?.parties ?? []).filter((p) => (p.aantal_zetels ?? 0) > 0);
 const seatTotal =

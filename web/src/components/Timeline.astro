@@ -6,7 +6,8 @@ import {
   currentAbbr,
   orgUrl,
   postUrl,
-  orgAccent,
+  classificationAccent,
+  classificationLabel,
   type Mandate,
 } from '~/lib/data';
 
@@ -47,6 +48,20 @@ const axisYears = [minY, midY, maxY];
 
 const clamp = (n: number) => Math.min(100, Math.max(0, n));
 const pct = (y: number) => clamp(((y - minY) / spanY) * 100);
+
+// Legend: one entry per distinct classification present, in first-seen order.
+const seen = new Set<string>();
+const legend: { label: string; color: string }[] = [];
+for (const m of sorted) {
+  const c = m.post_id ? data.postById.get(m.post_id)?.classification : null;
+  const key = c ?? 'overig';
+  if (seen.has(key)) continue;
+  seen.add(key);
+  legend.push({
+    label: classificationLabel(key),
+    color: classificationAccent(key),
+  });
+}
 ---
 
 {sorted.length === 0 ? (
@@ -65,7 +80,7 @@ const pct = (y: number) => clamp(((y - minY) / spanY) * 100);
       const left = pct(sy);
       const right = pct(Math.max(ey, sy));
       const width = Math.max(1.5, Math.min(right - left, 100 - left));
-      const accent = orgAccent(org?.type);
+      const accent = classificationAccent(post?.classification);
       const period = `${m.start_date ?? '?'} – ${m.end_date ?? 'heden'}`;
       return (
         <div class="tl-row">
@@ -91,5 +106,15 @@ const pct = (y: number) => clamp(((y - minY) / spanY) * 100);
       );
     })}
     {total > max && <p class="muted">Eerste {max} van {total} mandaten getoond.</p>}
+    {legend.length > 0 && (
+      <div class="tl-legend">
+        {legend.map((l) => (
+          <span class="seat-legend">
+            <span class="seat-dot" style={`background:${l.color};`}></span>
+            {l.label}
+          </span>
+        ))}
+      </div>
+    )}
   </div>
 )}
