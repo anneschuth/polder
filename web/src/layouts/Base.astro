@@ -9,6 +9,23 @@ interface Props {
 
 const { title, description } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// First path segment after the base, used to mark the active nav item.
+const path = Astro.url.pathname.replace(base, '').replace(/^\/+/, '');
+const section = path.split('/')[0] ?? '';
+
+// Icons omitted for now: NLDD 0.8.43's icon set lacks a role/post-badge and
+// an org-chart glyph, so Posten/Organogram had no honest icon. See
+// web/docs/nldd-feature-requests.md entry 5.
+const nav = [
+  { href: `${base}/personen/`, text: 'Personen', match: 'personen' },
+  { href: `${base}/organisaties/`, text: 'Organisaties', match: 'organisaties' },
+  { href: `${base}/posten/`, text: 'Posten', match: 'posten' },
+  { href: `${base}/stats/`, text: 'Statistieken', match: 'stats' },
+  { href: `${base}/organogram/`, text: 'Organogram', match: 'organogram' },
+];
+const repo = 'https://github.com/anneschuth/polder';
+const releases = `${repo}/releases/latest`;
 ---
 <!doctype html>
 <html lang="nl">
@@ -22,38 +39,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <slot name="head" />
   </head>
   <body>
-    <nldd-app-view background="default">
+    <nldd-app-view background="tinted">
       <nldd-page>
         <nldd-top-navigation-bar
           slot="header"
           logo-title="Polder"
-          logo-subtitle="Publieke Overheid: Leden, Dienstverbanden, Eenheden, Rollen"
           logo-href={`${base}/`}
         >
+          {nav.map((item) => (
+            <nldd-menu-bar-item
+              slot="global"
+              href={item.href}
+              text={item.text}
+              current={section === item.match ? true : undefined}
+            ></nldd-menu-bar-item>
+          ))}
           <nldd-menu-bar-item
-            slot="global"
-            href={`${base}/personen/`}
-            text="Personen"
+            slot="utility"
+            href={releases}
+            text="Download"
+            icon="download"
           ></nldd-menu-bar-item>
           <nldd-menu-bar-item
-            slot="global"
-            href={`${base}/organisaties/`}
-            text="Organisaties"
-          ></nldd-menu-bar-item>
-          <nldd-menu-bar-item
-            slot="global"
-            href={`${base}/posten/`}
-            text="Posten"
-          ></nldd-menu-bar-item>
-          <nldd-menu-bar-item
-            slot="global"
-            href={`${base}/stats/`}
-            text="Statistieken"
-          ></nldd-menu-bar-item>
-          <nldd-menu-bar-item
-            slot="global"
-            href={`${base}/organogram/`}
-            text="Organogram"
+            slot="utility"
+            href={repo}
+            text="GitHub"
+            icon="code"
           ></nldd-menu-bar-item>
         </nldd-top-navigation-bar>
         <main>
@@ -91,13 +102,6 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
          top-nav fixed at the top while content scrolls underneath. */
       nldd-app-view {
         height: 100vh;
-      }
-      /* Force the global menu-bar to show even at narrow widths.
-         Top-nav only renders global items when it has `.has-global-items`
-         on the host or above a container-width threshold; we use the
-         class hook so the links are visible. */
-      nldd-top-navigation-bar {
-        --_force-global: 1;
       }
       main {
         max-width: 72rem;
@@ -366,19 +370,5 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         background: var(--primitives-color-coolgray-25);
       }
     </style>
-
-    <script>
-      // The top-navigation-bar only shows global menu items when the host
-      // has the `has-global-items` class (see top-navigation-bar.styles.js
-      // selectors `:host(.has-global-items) &`). The class is normally
-      // toggled by the component itself based on slotted content, but in
-      // SSR-rendered Astro markup the slot-change can race the class
-      // application — set it explicitly once the component is defined.
-      customElements.whenDefined('nldd-top-navigation-bar').then(() => {
-        for (const nav of document.querySelectorAll('nldd-top-navigation-bar')) {
-          nav.classList.add('has-global-items');
-        }
-      });
-    </script>
   </body>
 </html>
