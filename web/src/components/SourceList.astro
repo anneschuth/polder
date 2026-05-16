@@ -1,11 +1,14 @@
 ---
 import type { Source } from '~/lib/data';
+import EditLink from '~/components/EditLink.astro';
 
 interface Props {
   sources?: Source[];
+  /** Optioneel: veldpad → GitHub-edit-URL. Toont per bron een edit-icoon. */
+  editFor?: (fieldPath: string) => string | undefined;
 }
 
-const { sources } = Astro.props;
+const { sources, editFor } = Astro.props;
 
 const meta = (s: Source) => {
   const parts: string[] = [];
@@ -18,13 +21,16 @@ const meta = (s: Source) => {
   <section>
     <h2>Bronnen</h2>
     <nldd-list>
-      {(sources ?? []).map((s) => (
+      {(sources ?? []).map((s, i) => (
         <nldd-list-item href={s.url || undefined}>
           <nldd-text-cell
             size="sm"
             text={s.id}
             supporting-text={meta(s) || undefined}
           ></nldd-text-cell>
+          {editFor && (
+            <span slot="end"><EditLink href={editFor(`sources[${i}]`)} /></span>
+          )}
         </nldd-list-item>
       ))}
     </nldd-list>

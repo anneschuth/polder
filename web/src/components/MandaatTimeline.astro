@@ -1,14 +1,23 @@
 ---
 import { loadAll, sortedMandates, currentName, currentAbbr, orgUrl, postUrl, type Mandate } from '~/lib/data';
+import EditLink from '~/components/EditLink.astro';
 
 interface Props {
   mandaten: Mandate[];
+  /** Optioneel: veldpad → GitHub-edit-URL. Toont per rij een edit-icoon. */
+  editFor?: (fieldPath: string) => string | undefined;
 }
 
-const { mandaten } = Astro.props;
+const { mandaten, editFor } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const data = loadAll();
-const sorted = sortedMandates(mandaten ?? []);
+const orig = mandaten ?? [];
+const sorted = sortedMandates(orig);
+// Originele YAML-positie op object-identiteit (ids kunnen dubbel zijn).
+const mandatePath = (m: Mandate) => {
+  const i = orig.indexOf(m);
+  return i >= 0 ? `mandaten[${i}]` : '';
+};
 ---
 {sorted.length === 0 ? (
   <p class="muted">Geen mandaten bekend.</p>
@@ -66,6 +75,7 @@ const sorted = sortedMandates(mandaten ?? []);
               ) : (
                 <span class="muted">–</span>
               )}
+              {editFor && <EditLink href={editFor(mandatePath(m))} />}
             </td>
           </tr>
         );

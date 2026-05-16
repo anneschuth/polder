@@ -1,10 +1,119 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, dirname, basename } from 'node:path';
+import { join, relative, dirname, basename, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
+import { parseDocument, isMap, isSeq, isPair, isScalar } from 'yaml';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DATA_ROOT = join(HERE, '..', '..', '..', 'data');
+
+const GITHUB_REPO = 'anneschuth/polder';
+const GITHUB_BRANCH = 'main';
+
+/**
+ * Repo-relatief POSIX-pad voor de GitHub-URL. De data leeft altijd onder
+ * een `data/`-map in de repo-root; we knippen alles vóór het laatste
+ * `data/`-segment weg. Robuust tegen worktree-builds (waar het absolute
+ * pad een worktree-mapnaam bevat die niet in de GitHub-repo voorkomt).
+ */
+function toRepoRelPosix(absPath: string): string {
+  const posix = absPath.split(sep).join('/');
+  const marker = '/data/';
+  const i = posix.lastIndexOf(marker);
+  if (i >= 0) return posix.slice(i + 1); // "data/personen/<slug>.yaml"
+  return relative(DATA_ROOT, absPath).split(sep).join('/');
+}
+
+/**
+ * Bouwt een index van YAML-veldpad naar 1-based [startRegel, eindRegel].
+ *
+ * Paden volgen exact hoe de templates velden adresseren, bv.
+ * `birth.year`, `name.full`, `mandaten[0]`, `sources[1].url`.
+ * Gebruikt het `yaml`-pakket (CST met byte-offsets); `js-yaml` blijft de
+ * bron voor de datawaarden zelf. Beide parsers lezen dezelfde bytes.
+ */
+function buildLineIndex(rawText: string): Record<string, [number, number]> {
+  const index: Record<string, [number, number]> = {};
+
+  // Prefix-tabel van newline-offsets; offsetToLine = aantal newlines voor
+  // offset + 1 (1-based).
+  const nlOffsets: number[] = [];
+  for (let i = 0; i < rawText.length; i++) {
+    if (rawText[i] === '\n') nlOffsets.push(i);
+  }
+  const offsetToLine = (offset: number): number => {
+    let lo = 0;
+    let hi = nlOffsets.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (nlOffsets[mid] < offset) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo + 1;
+  };
+
+  try {
+    const doc = parseDocument(rawText, { keepSourceTokens: true });
+    if (!doc || doc.contents == null) return index;
+
+    const record = (path: string, startOffset: number, endOffset: number) => {
+      if (!path) return;
+      // Trailing newline van een blok hoort niet bij de laatste regel.
+      const end = endOffset > startOffset ? endOffset - 1 : endOffset;
+      index[path] = [offsetToLine(startOffset), offsetToLine(end)];
+    };
+
+    const visit = (node: unknown, path: string) => {
+      if (isMap(node)) {
+        for (const pair of node.items) {
+          if (!isPair(pair) || !isScalar(pair.key)) continue;
+          const key = String(pair.key.value);
+          const childPath = path ? `${path}.${key}` : key;
+          const keyRange = pair.key.range;
+          const valRange = (pair.value as { range?: [number, number, number] })
+            ?.range;
+          if (keyRange) {
+            const start = keyRange[0];
+            const end = valRange ? valRange[2] : keyRange[2];
+            record(childPath, start, end);
+          }
+          visit(pair.value, childPath);
+        }
+      } else if (isSeq(node)) {
+        node.items.forEach((item, i) => {
+          const childPath = `${path}[${i}]`;
+          const r = (item as { range?: [number, number, number] })?.range;
+          if (r) record(childPath, r[0], r[2]);
+          visit(item, childPath);
+        });
+      }
+    };
+
+    visit(doc.contents, '');
+  } catch {
+    // Onverwachte YAML-vorm: lege index, site bouwt nog steeds.
+    return {};
+  }
+
+  return index;
+}
+
+/**
+ * GitHub web-editor URL voor een veld op een persoon, of `undefined` als
+ * het veld niet in de regel-index voorkomt (dan rendert de template geen
+ * icoon). Branch is hard `main`: de gepubliceerde site bouwt van `main` en
+ * regelnummers kloppen alleen daar.
+ */
+export function editUrl(
+  rec: { _file?: string; _lines?: Record<string, [number, number]> },
+  fieldPath: string,
+): string | undefined {
+  const file = rec._file;
+  const range = rec._lines?.[fieldPath];
+  if (!file || !range) return undefined;
+  const [a, b] = range;
+  return `https://github.com/${GITHUB_REPO}/edit/${GITHUB_BRANCH}/${file}#L${a}-L${b}`;
+}
 
 export interface Source {
   id: string;
@@ -59,6 +168,10 @@ export interface Person {
   mandaten?: Mandate[];
   sources?: Source[];
   identifiers?: PersonIdentifiers;
+  /** Repo-relatief POSIX-pad van het bron-YAML, voor GitHub-edit-links. */
+  _file?: string;
+  /** YAML-veldpad → 1-based [startRegel, eindRegel]. Zie buildLineIndex. */
+  _lines?: Record<string, [number, number]>;
   [key: string]: unknown;
 }
 
@@ -204,6 +317,10 @@ export interface Organization {
   successor_id?: string[] | string | null;
   predecessor_id?: string[] | string | null;
   sources?: Source[];
+  /** Repo-relatief POSIX-pad van het bron-YAML, voor GitHub-edit-links. */
+  _file?: string;
+  /** YAML-veldpad → 1-based [startRegel, eindRegel]. Zie buildLineIndex. */
+  _lines?: Record<string, [number, number]>;
   [key: string]: unknown;
 }
 
@@ -220,6 +337,10 @@ export interface Post {
   roo_functie_id?: string;
   roo_naam?: string;
   sources?: Source[];
+  /** Repo-relatief POSIX-pad van het bron-YAML, voor GitHub-edit-links. */
+  _file?: string;
+  /** YAML-veldpad → 1-based [startRegel, eindRegel]. Zie buildLineIndex. */
+  _lines?: Record<string, [number, number]>;
   [key: string]: unknown;
 }
 
@@ -235,10 +356,6 @@ function walkYaml(root: string): string[] {
   }
   walk(root);
   return out;
-}
-
-function loadYaml<T>(path: string): T {
-  return yaml.load(readFileSync(path, 'utf8')) as T;
 }
 
 function slugFromId(id: string): string {
@@ -270,24 +387,33 @@ export function loadAll(): Loaded {
   const postFiles = walkYaml(join(DATA_ROOT, 'posten'));
 
   const people: Person[] = peopleFiles.map((f) => {
-    const p = loadYaml<Person>(f);
+    const rawText = readFileSync(f, 'utf8');
+    const p = yaml.load(rawText) as Person;
     p.slug = slugFromId(p.id);
+    p._file = toRepoRelPosix(f);
+    p._lines = buildLineIndex(rawText);
     return p;
   });
 
   const orgs: Organization[] = orgFiles.map((f) => {
-    const o = loadYaml<Organization>(f);
+    const rawText = readFileSync(f, 'utf8');
+    const o = yaml.load(rawText) as Organization;
     o.slug = slugFromId(o.id);
     if (!o.type) {
       const rel = relative(join(DATA_ROOT, 'organisaties'), f);
       o.type = rel.split('/')[0] ?? 'overig';
     }
+    o._file = toRepoRelPosix(f);
+    o._lines = buildLineIndex(rawText);
     return o;
   });
 
   const posts: Post[] = postFiles.map((f) => {
-    const p = loadYaml<Post>(f);
+    const rawText = readFileSync(f, 'utf8');
+    const p = yaml.load(rawText) as Post;
     p.slug = slugFromId(p.id);
+    p._file = toRepoRelPosix(f);
+    p._lines = buildLineIndex(rawText);
     return p;
   });
 
