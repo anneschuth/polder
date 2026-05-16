@@ -5,22 +5,6 @@ name:
   given: Marjolein
   initials: M.
 mandaten:
-- id: c8c534e1-307a-4451-8b83-bc2414dbd0a5
-  organization_id: org:gemeente-emmen
-  post_id: post:gemeentesecretaris-gemeente-emmen
-  role: Gemeentesecretaris gemeente Emmen
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3611657
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 11d0c7b7-5062-44cf-995e-522b6b95b0f7
   organization_id: org:gemeente-emmen
   post_id: post:gemeentesecretaris-gemeente-emmen

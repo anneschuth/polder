@@ -5,22 +5,6 @@ name:
   given: Gijs
   initials: G.
 mandaten:
-- id: 92bd6787-cc01-4f75-9f16-0590e582f88a
-  organization_id: org:gemeente-utrecht
-  post_id: post:griffier-gemeente-utrecht
-  role: Griffier gemeente Utrecht
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6329632
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 5cf18ec1-607f-48d1-95e1-1e7224d2d68b
   organization_id: org:gemeente-utrecht
   post_id: post:griffier-gemeente-utrecht

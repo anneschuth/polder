@@ -5,22 +5,6 @@ name:
   given: Linda
   initials: L.
 mandaten:
-- id: 5639c5d6-f209-40e6-9889-ee01472c7ae4
-  organization_id: org:gemeente-druten
-  post_id: post:griffier-gemeente-druten
-  role: Griffier gemeente Druten
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3400930
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 8a60638b-51c8-498b-872c-afd5f801467e
   organization_id: org:gemeente-druten
   post_id: post:griffier-gemeente-druten

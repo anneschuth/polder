@@ -6,22 +6,6 @@ name:
   initials: Y.V.
   tussenvoegsel: van
 mandaten:
-- id: 8931b54d-6bef-436d-99ae-20c2aad60494
-  organization_id: org:gemeente-bergeijk
-  post_id: post:griffier-gemeente-bergeijk
-  role: Griffier gemeente Bergeijk
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/2858672
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: afe7eab3-104b-400a-8801-66a179ad7514
   organization_id: org:gemeente-bergeijk
   post_id: post:griffier-gemeente-bergeijk

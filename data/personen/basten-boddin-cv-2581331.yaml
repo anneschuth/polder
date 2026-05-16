@@ -6,22 +6,6 @@ name:
   initials: C.V.
   tussenvoegsel: van
 mandaten:
-- id: 14010ce2-2077-43a6-ba75-2516d635dcb5
-  organization_id: org:gemeente-beek
-  post_id: post:burgemeester-gemeente-beek
-  role: Burgemeester gemeente Beek
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/2581333
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 926dbb98-ee7e-40a0-9a0d-95c6ab623570
   organization_id: org:gemeente-beek
   post_id: post:burgemeester-gemeente-beek

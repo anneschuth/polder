@@ -9,22 +9,6 @@ name:
 birth:
   year: 1962
 mandaten:
-- id: f6515d82-25d7-4f88-aea2-50f12e95709c
-  organization_id: org:gemeente-steenwijkerland
-  post_id: post:burgemeester-gemeente-steenwijkerland
-  role: Burgemeester gemeente Steenwijkerland
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/1952884
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 8a3577b2-fdf4-46f0-a887-6af19748835b
   organization_id: org:gemeente-steenwijkerland
   post_id: post:burgemeester-gemeente-steenwijkerland

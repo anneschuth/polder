@@ -5,22 +5,6 @@ name:
   given: J.L.
   initials: J.L.
 mandaten:
-- id: 3d20ff7f-2347-424c-9f04-d385e0cb6791
-  organization_id: org:gemeente-culemborg
-  post_id: post:burgemeester-gemeente-culemborg
-  role: Burgemeester gemeente Culemborg
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3267652
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 18b3cc5c-c85a-4bb6-898e-78c887fa7d7d
   organization_id: org:gemeente-culemborg
   post_id: post:burgemeester-gemeente-culemborg

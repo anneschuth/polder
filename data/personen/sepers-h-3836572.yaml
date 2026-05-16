@@ -5,22 +5,6 @@ name:
   given: H.
   initials: H.
 mandaten:
-- id: e07915b0-a4ae-4eac-80b9-2837a7ac73ab
-  organization_id: org:gemeente-gorinchem
-  post_id: post:griffier-gemeente-gorinchem
-  role: Griffier gemeente Gorinchem
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3836574
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: af1add29-1074-4386-afe6-78d9eb26d563
   organization_id: org:gemeente-gorinchem
   post_id: post:griffier-gemeente-gorinchem

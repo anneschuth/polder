@@ -5,22 +5,6 @@ name:
   given: M.
   initials: M.
 mandaten:
-- id: 6e0daeb5-7e0e-43a7-b6ca-487cd256e764
-  organization_id: org:gemeente-berkelland
-  post_id: post:griffier-gemeente-berkelland
-  role: Griffier gemeente Berkelland
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7139066
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: ecf97fbb-ad97-47bc-9ea0-80e99ec001fe
   organization_id: org:gemeente-berkelland
   post_id: post:griffier-gemeente-berkelland

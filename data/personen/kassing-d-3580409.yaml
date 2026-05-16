@@ -5,22 +5,6 @@ name:
   given: Diane
   initials: D.
 mandaten:
-- id: cff1b819-10ef-4fd3-a256-c07372bfd971
-  organization_id: org:gemeente-elburg
-  post_id: post:griffier-gemeente-elburg
-  role: Griffier gemeente Elburg
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3580411
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: fc12be1d-d524-4f6d-8d6f-075c08911218
   organization_id: org:gemeente-elburg
   post_id: post:griffier-gemeente-elburg

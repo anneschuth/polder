@@ -5,22 +5,6 @@ name:
   given: Daniëlle
   initials: D.
 mandaten:
-- id: 95d5bdce-e0dd-4882-9cc9-ee31e06ad641
-  organization_id: org:gemeente-utrecht
-  post_id: post:griffier-gemeente-utrecht
-  role: Griffier gemeente Utrecht
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6329623
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 2f1fd5e8-fd41-41e7-8b1a-b5def02fb681
   organization_id: org:gemeente-utrecht
   post_id: post:griffier-gemeente-utrecht
