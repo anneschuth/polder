@@ -195,6 +195,29 @@ CATEGORIES: dict[str, Category] = {
         "Bijna altijd een vergeten end_date op de uitgaande ambtenaar, "
         "of twee person-records voor dezelfde persoon (dup).",
     ),
+    "dup_org_identifier": Category(
+        "dup_org_identifier",
+        "review",
+        "Twee organisatie-records delen een tooi/oin/roo_id maar hebben "
+        "verschillende `id`. Bijna altijd dezelfde organisatie twee keer "
+        "ingelezen door verschillende fetchers (scraper-slug vs "
+        "ROO-naam-slug vs afkorting-slug). Merge naar één canoniek record.",
+    ),
+    "dup_post_role_org": Category(
+        "dup_post_role_org",
+        "review",
+        "Twee post-records met dezelfde organization_id en (genormaliseerd) "
+        "dezelfde rol/label. Vaak één functie meerdere keren aangemaakt door "
+        "verschillende bronnen. Soms legitiem (echt twee zetels).",
+    ),
+    "dup_mandate": Category(
+        "dup_mandate",
+        "review",
+        "Persoon heeft twee mandaten die identiek zijn op "
+        "(organization_id, start_date, end_date) en op post of rol. "
+        "Vrijwel altijd hetzelfde dienstverband dubbel ingevoerd door "
+        "twee bronnen (bv. Wikidata + tk_odata) onder twee post-ids.",
+    ),
     # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
     # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
     # cache-bestand staat — dan run je `polder roo fetch` eerst.
@@ -426,6 +449,9 @@ def run_audit(
     _check_ministerie_direct_posts(posts, findings)
     _check_overlapping_open_mandates(persons, org_parent, findings)
     _check_single_seat_both_open(persons, posts, findings)
+    _check_dup_org_identifier(orgs, findings)
+    _check_dup_post_role_org(posts, findings)
+    _check_dup_mandate(persons, findings)
 
     # ROO-superset checks (Phase 5). Skip stilletjes als geen XML-cache.
     cache = _latest_roo_cache(data_dir.parent)
@@ -465,6 +491,102 @@ def _check_dup_ids(items: list[tuple[Path, dict]], label: str, findings: list[Fi
     for dup_id, n in c.items():
         if n > 1:
             findings.append(Finding(cat, dup_id, f"{dup_id} ({n}x)"))
+
+
+def _normalize_label(text: str | None) -> str:
+    """Lowercase, strip non-alphanumerics. 'minister van X' en 'Minister voor
+    X' collapsen niet (van/voor blijft), maar casing/punctuatie wel."""
+    if not text:
+        return ""
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def _check_dup_org_identifier(orgs: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee org-records met verschillende `id` maar gedeelde tooi/oin/roo_id.
+    Verschillende fetchers (scraper, ROO-naam, afkorting) maken elk een eigen
+    slug; deze check vangt dat de `dup_id_*`-check mist omdat de ids verschillen.
+    """
+    # (identifier-veld, waarde) -> lijst van (org_id, bestandsnaam)
+    by_ident: dict[tuple[str, str], list[tuple[str, str]]] = defaultdict(list)
+    for p, d in orgs:
+        oid = d.get("id")
+        idents = d.get("identifiers")
+        if not oid or not isinstance(idents, dict):
+            continue
+        for field_name in ("tooi", "oin", "roo_id"):
+            val = idents.get(field_name)
+            if val:
+                by_ident[(field_name, str(val))].append((oid, p.name))
+    for (field_name, val), members in sorted(by_ident.items()):
+        distinct_ids = {oid for oid, _ in members}
+        if len(distinct_ids) > 1:
+            ids_str = ", ".join(sorted(distinct_ids))
+            findings.append(
+                Finding(
+                    "dup_org_identifier",
+                    f"{field_name}|{val}",
+                    f"{field_name}={val} gedeeld door {len(distinct_ids)} org-records: {ids_str}",
+                )
+            )
+
+
+def _check_dup_post_role_org(posts: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee post-records, zelfde organization_id, genormaliseerd dezelfde
+    rol/label. Eén functie dubbel aangemaakt door verschillende bronnen."""
+    by_key: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for _, d in posts:
+        pid = d.get("id")
+        org = d.get("organization_id")
+        label = _normalize_label(d.get("label") or d.get("role"))
+        if not pid or not org or not label:
+            continue
+        by_key[(str(org), label)].append(str(pid))
+    for (org, label), pids in sorted(by_key.items()):
+        distinct = sorted(set(pids))
+        if len(distinct) > 1:
+            findings.append(
+                Finding(
+                    "dup_post_role_org",
+                    f"{org}|{label}",
+                    f"{org} heeft {len(distinct)} posts met zelfde rol: {', '.join(distinct)}",
+                )
+            )
+
+
+def _check_dup_mandate(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee mandaten binnen één persoon die identiek zijn op
+    (organization_id, start_date, end_date) plus post of rol. Hetzelfde
+    dienstverband dubbel ingevoerd onder twee post-ids."""
+    for p, d in persons:
+        mandates = d.get("mandates")
+        if not isinstance(mandates, list):
+            continue
+        seen: dict[tuple, str] = {}
+        for m in mandates:
+            if not isinstance(m, dict):
+                continue
+            org = m.get("organization_id")
+            start = m.get("start_date")
+            end = m.get("end_date")
+            post = m.get("post_id")
+            role = _normalize_label(m.get("role"))
+            if not org or not start:
+                continue
+            # Match op org+periode+post, en (los daarvan) op org+periode+rol.
+            for variant in ((org, start, end, "post", post), (org, start, end, "role", role)):
+                if variant[-1] in (None, ""):
+                    continue
+                if variant in seen:
+                    findings.append(
+                        Finding(
+                            "dup_mandate",
+                            f"{d.get('id', p.name)}|{org}|{start}",
+                            f"{p.name}: dubbel mandaat {org} {start}->{end} "
+                            f"({variant[3]}={variant[4]})",
+                        )
+                    )
+                else:
+                    seen[variant] = m.get("id", "?")
 
 
 def _check_mandaat(
