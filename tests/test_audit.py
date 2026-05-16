@@ -1035,7 +1035,9 @@ def test_dup_mandate_flags_double_entry(fake_data: Path) -> None:
             "name": {"family": "Jansen"},
             "birth": {"year": 1970},
             "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
-            "mandates": [
+            # NL-sleutel `mandaten` (data gebruikt deze; `mandates` bestaat
+            # nergens). Identieke periode onder twee post-ids.
+            "mandaten": [
                 {
                     "id": "a",
                     "organization_id": "org:min-test",
@@ -1059,3 +1061,77 @@ def test_dup_mandate_flags_double_entry(fake_data: Path) -> None:
     )
     report = run_audit(fake_data)
     assert "dup_mandate" in _categories_in(report)
+
+
+def test_dup_mandate_flags_near_duplicate_start(fake_data: Path) -> None:
+    """Zelfde org+rol, start_date een paar dagen uit elkaar (ORI-fetcher
+    die per run een nieuw mandaat met de run-datum aanmaakt)."""
+    _write_person(
+        fake_data,
+        "spin-p-1970",
+        {
+            "id": "person:spin-p-1970",
+            "name": {"family": "Spin"},
+            "birth": {"year": 1970},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "a",
+                    "organization_id": "org:gemeente-test",
+                    "post_id": "post:raadslid-gemeente-test",
+                    "role": "Raadslid gemeente Test",
+                    "start_date": "2026-05-09",
+                    "end_date": None,
+                    "sources": [{"id": "ori", "url": "https://t", "retrieved": "2026-05-09"}],
+                },
+                {
+                    "id": "b",
+                    "organization_id": "org:gemeente-test",
+                    "post_id": "post:raadslid-gemeente-test",
+                    "role": "Raadslid gemeente Test",
+                    "start_date": "2026-05-13",
+                    "end_date": None,
+                    "sources": [{"id": "ori", "url": "https://t", "retrieved": "2026-05-13"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_mandate" in _categories_in(report)
+
+
+def test_dup_mandate_ignores_consecutive_terms(fake_data: Path) -> None:
+    """Opeenvolgende termijnen (A eindigt op de dag dat B begint) zijn
+    geen duplicaat."""
+    _write_person(
+        fake_data,
+        "ephraim-o-1965",
+        {
+            "id": "person:ephraim-o-1965",
+            "name": {"family": "Ephraim"},
+            "birth": {"year": 1965},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "a",
+                    "organization_id": "org:tweede-kamer",
+                    "post_id": "post:kamerlid",
+                    "role": "Kamerlid",
+                    "start_date": "2021-05-13",
+                    "end_date": "2023-08-02",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+                {
+                    "id": "b",
+                    "organization_id": "org:tweede-kamer",
+                    "post_id": "post:kamerlid",
+                    "role": "Kamerlid",
+                    "start_date": "2023-08-02",
+                    "end_date": "2023-12-05",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_mandate" not in _categories_in(report)

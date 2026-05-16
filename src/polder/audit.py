@@ -566,40 +566,89 @@ def _check_dup_post_role_org(posts: list[tuple[Path, dict]], findings: list[Find
             )
 
 
+def _days_between(a: str, b: str) -> int | None:
+    """Aantal dagen tussen twee ISO-datums (absoluut). None bij parse-fout."""
+    try:
+        return abs((date.fromisoformat(a[:10]) - date.fromisoformat(b[:10])).days)
+    except (ValueError, TypeError):
+        return None
+
+
+def _periods_collide(s1: str, e1: str | None, s2: str, e2: str | None) -> bool:
+    """Twee dienstverband-periodes 'botsen' als ze overlappen of vlak na
+    elkaar beginnen (binnen 31 dagen). Geen exacte datumgelijkheid vereist:
+    een fetcher die elke run een nieuw mandaat met de run-datum aanmaakt
+    levert dezelfde rol met een paar dagen verschil in start_date."""
+    near = _days_between(s1, s2)
+    if near is not None and near <= 31:
+        return True
+    # Strikte overlap: de periodes delen minstens één hele dag. Randpunt-
+    # aansluiting (mandaat A eindigt op de dag dat B begint) is GEEN
+    # botsing — dat is een normale opeenvolgende termijn (Kamerlid-wissel).
+    try:
+        d1s = date.fromisoformat(s1[:10])
+        d2s = date.fromisoformat(s2[:10])
+        d1e = date.fromisoformat(e1[:10]) if e1 else date.max
+        d2e = date.fromisoformat(e2[:10]) if e2 else date.max
+    except (ValueError, TypeError):
+        return False
+    return d1s < d2e and d2s < d1e
+
+
 def _check_dup_mandate(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
-    """Twee mandaten binnen één persoon die identiek zijn op
-    (organization_id, start_date, end_date) plus post of rol. Hetzelfde
-    dienstverband dubbel ingevoerd onder twee post-ids."""
+    """Twee mandaten binnen één persoon voor dezelfde organisatie en rol
+    (of post) met botsende periodes. Hetzelfde dienstverband dubbel
+    ingevoerd: ofwel onder twee post-ids (Wikidata + tk_odata), ofwel
+    door een fetcher die per run een nieuw mandaat met de run-datum als
+    start_date aanmaakt in plaats van het bestaande te updaten.
+
+    Bewust geen exacte datumgelijkheid: dat miste het tweede patroon.
+    """
     for p, d in persons:
-        mandates = d.get("mandates")
+        # Data gebruikt de Nederlandse sleutel `mandaten`. `mandates`
+        # bestaat nergens in data of fixtures; geen fallback.
+        mandates = d.get("mandaten")
         if not isinstance(mandates, list):
             continue
-        seen: dict[tuple, str] = {}
+        # Groepeer per (org, rol) en per (org, post); binnen een groep
+        # zoeken we botsende periodes.
+        groups: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
         for m in mandates:
             if not isinstance(m, dict):
                 continue
             org = m.get("organization_id")
             start = m.get("start_date")
-            end = m.get("end_date")
-            post = m.get("post_id")
-            role = _normalize_label(m.get("role"))
             if not org or not start:
                 continue
-            # Match op org+periode+post, en (los daarvan) op org+periode+rol.
-            for variant in ((org, start, end, "post", post), (org, start, end, "role", role)):
-                if variant[-1] in (None, ""):
-                    continue
-                if variant in seen:
+            role = _normalize_label(m.get("role"))
+            post = m.get("post_id")
+            if role:
+                groups[(org, "role", role)].append(m)
+            if post:
+                groups[(org, "post", str(post))].append(m)
+        reported: set[tuple[str, str]] = set()
+        for (org, kind, val), members in groups.items():
+            if len(members) < 2:
+                continue
+            for i, a in enumerate(members):
+                for b in members[i + 1 :]:
+                    sa, sb = a.get("start_date"), b.get("start_date")
+                    if not _periods_collide(sa, a.get("end_date"), sb, b.get("end_date")):
+                        continue
+                    ids = tuple(sorted((a.get("id", "?"), b.get("id", "?"))))
+                    dedup_key = (org, ids[0] + "|" + ids[1])
+                    if dedup_key in reported:
+                        continue
+                    reported.add(dedup_key)
                     findings.append(
                         Finding(
                             "dup_mandate",
-                            f"{d.get('id', p.name)}|{org}|{start}",
-                            f"{p.name}: dubbel mandaat {org} {start}->{end} "
-                            f"({variant[3]}={variant[4]})",
+                            f"{d.get('id', p.name)}|{org}|{sa}",
+                            f"{p.name}: dubbel mandaat {org} "
+                            f"({kind}={val}) {sa}->{a.get('end_date')} "
+                            f"vs {sb}->{b.get('end_date')}",
                         )
                     )
-                else:
-                    seen[variant] = m.get("id", "?")
 
 
 def _check_mandaat(
