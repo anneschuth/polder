@@ -11,10 +11,17 @@ fixes in this branch:
    secretarissen to gemeenten that no longer exist (Geldrop vs
    Geldrop-Mierlo).
 
+3. ``build_mandaat`` stamped a fresh ``uuid.uuid4()`` per run, so the
+   same person on the same seat got a new mandate-id every night even
+   when the merge-snap path was never reached (issue #64).
+
 This script rewrites mandates that point at an abolished gemeente to the
-successor, then collapses duplicate open ORI mandates on the same post into
-one (earliest start_date wins, sources merged). It never deletes a person
-record. Run with ``--apply`` to write; default is a dry run.
+successor, rewrites every ORI mandate-id to the deterministic
+membership-derived id (so the on-disk data matches what the fixed
+fetcher now produces and re-runs are idempotent), then collapses
+duplicate open ORI mandates on the same post into one (earliest
+start_date wins, sources merged). It never deletes a person record. Run
+with ``--apply`` to write; default is a dry run.
 """
 
 from __future__ import annotations
@@ -26,7 +33,22 @@ from typing import Any
 
 import yaml
 
+from polder.fetchers.open_raadsinformatie import _ori_mandaat_id
+
 SOURCE_ID = "open_raadsinformatie"
+
+
+def _membership_id_from_url(url: str) -> str:
+    """`https://id.openraadsinformatie.nl/3067673` -> `3067673`.
+
+    The fetcher builds the ORI source-url as
+    ``_ori_url(membership_id)``; the last path segment is the stable
+    Membership-`@id`. Backfilling the deterministic mandate-id from this
+    means we don't have to re-fetch ORI.
+    """
+    if "openraadsinformatie.nl/" not in url:
+        return ""
+    return url.rstrip("/").rsplit("/", 1)[-1]
 
 
 def _load(path: Path) -> dict[str, Any]:
@@ -111,6 +133,20 @@ def repair_person(doc: dict[str, Any], successor: dict[str, str]) -> bool:
             new_org = successor[org]
             m["post_id"] = _retarget_post_id(m.get("post_id", ""), org, new_org)
             m["organization_id"] = new_org
+            changed = True
+
+    # 1b. Rewrite ORI mandate ids to the deterministic, membership-derived
+    #     id (issue #64). Existing records still carry the per-run uuid4;
+    #     without this, the next ORI run computes a different id and the
+    #     fragile snap-in-merge path has to catch the duplicate again.
+    #     Same membership -> same id, so re-runs are now idempotent on disk.
+    for m in mandaten:
+        if not isinstance(m, dict) or not _is_ori(m):
+            continue
+        membership_id = _membership_id_from_url(_ori_ref(m))
+        new_id = _ori_mandaat_id(membership_id, m.get("organization_id", ""), m.get("post_id", ""))
+        if m.get("id") != new_id:
+            m["id"] = new_id
             changed = True
 
     # 2. Collapse duplicate open ORI mandates that are the *same seat*

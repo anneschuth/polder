@@ -5,20 +5,11 @@ name:
   given: Abigail
   initials: A.I.
 mandaten:
-- id: b8369766-39ee-4316-9160-b11911e3e1f8
-  organization_id: org:gemeente-rotterdam
-  post_id: post:wethouder-gemeente-rotterdam
-  role: Wethouder gemeente Rotterdam
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6066200
-    retrieved: '2026-05-09'
 - id: mandate-post-plaatsvervangend-secretaris-generaal-min-vws-2019-10-01
   organization_id: org:onderdeel-sg-min-vws
   post_id: post:plaatsvervangend-secretaris-generaal-min-vws
-  role: plaatsvervangend secretaris-generaal, ministerie van Volksgezondheid, Welzijn en Sport
+  role: plaatsvervangend secretaris-generaal, ministerie van Volksgezondheid, Welzijn
+    en Sport
   start_date: '2019-10-01'
   end_date: null
   sources:
@@ -43,6 +34,16 @@ mandaten:
     fields:
     - applied_via:apply-staging
   confidence: 0.85
+- id: mandate-ori-5c63c834766173ef
+  organization_id: org:gemeente-rotterdam
+  post_id: post:wethouder-gemeente-rotterdam
+  role: Wethouder gemeente Rotterdam
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6066200
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6066199
