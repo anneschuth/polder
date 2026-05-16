@@ -550,19 +550,30 @@ def parse_person(raw: dict[str, Any]) -> dict[str, Any] | None:
     return record
 
 
-def _seat_mandaat_id(organization_id: str, post_id: str) -> str:
-    """Deterministische mandaat-id voor één open raadszetel.
+def _ori_mandaat_id(membership_id: str, organization_id: str, post_id: str) -> str:
+    """Deterministische mandaat-id voor één ORI-bezetting.
 
-    ORI levert geen stabiele membership-id en geen echte start_date. Een
-    ``uuid.uuid4()`` per run maakte elke nachtelijke rerun een nieuw open
-    mandaat voor dezelfde zetel aan (issue #64), ook in het pad waar
-    ``_merge_mandaten`` niet wordt aangeroepen (persoon-resolutie kiest een
-    andere slug, zie #46/#47/#55). Door de id af te leiden van
-    ``(organization_id, post_id)`` collapsen reruns naar dezelfde id,
-    ongeacht het persoon-pad. Een raadszetel heeft per definitie één open
-    bezetter; ``build_mandaat`` produceert alleen open mandaten.
+    Een ``uuid.uuid4()`` per run maakte elke nachtelijke rerun een nieuw
+    open mandaat aan voor dezelfde persoon op dezelfde zetel (issue #64),
+    ook in het pad waar ``_merge_mandaten`` niet wordt bereikt (de
+    persoon-resolutie kiest tussen runs een andere slug door
+    initialen-drift, zie #46/#47/#55).
+
+    ORI levert per Membership een stabiele ``@id`` (zichtbaar in elke
+    bestaande source-url, ``id.openraadsinformatie.nl/<membership_id>``).
+    Die identificeert precies één persoon op één post en is stabiel tussen
+    runs, dus daaruit afgeleid is de id idempotent én uniek per bezetter.
+    Dat laatste is essentieel: één post zoals
+    ``post:raadslid-gemeente-druten`` heeft tientallen gelijktijdige
+    bezetters; een id puur uit ``(org, post)`` zou die allemaal op één id
+    laten botsen.
+
+    Fallback op ``(organization_id, post_id)`` alleen wanneer ORI geen
+    membership-id levert (zeldzaam, en dan is meervoudige bezetting van
+    diezelfde post sowieso niet te onderscheiden).
     """
-    digest = hashlib.sha1(f"ori|{organization_id}|{post_id}".encode()).hexdigest()
+    basis = membership_id.strip() or f"{organization_id}|{post_id}"
+    digest = hashlib.sha1(f"ori|{basis}".encode()).hexdigest()
     return f"mandate-ori-{digest[:16]}"
 
 
@@ -591,7 +602,7 @@ def build_mandaat(
         _ori_url(membership_id) if membership_id else f"{ORI_ELASTIC_BASE}/ori_{bare}/_search"
     )
     return {
-        "id": _seat_mandaat_id(org_id, post_id),
+        "id": _ori_mandaat_id(membership_id, org_id, post_id),
         "organization_id": org_id,
         "post_id": post_id,
         "role": role_label,

@@ -5,22 +5,6 @@ name:
   given: J.B.
   initials: J.B.
 mandaten:
-- id: 44f62de4-f461-4cff-a841-87fcb75a4848
-  organization_id: org:gemeente-berkelland
-  post_id: post:raadslid-gemeente-berkelland
-  role: Raadslid gemeente Berkelland
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/2878039
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=24581535
 - id: mandate-post-directeur-bestuurszaken-uwv-2021-06-15
   organization_id: org:onderdeel-directie-bestuurszaken-uwv
   post_id: post:directeur-bestuurszaken-uwv
@@ -36,6 +20,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-04-16
   confidence: 0.92
+- id: mandate-ori-a4b94e57db93f6ba
+  organization_id: org:gemeente-berkelland
+  post_id: post:raadslid-gemeente-berkelland
+  role: Raadslid gemeente Berkelland
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/2878039
+    retrieved: '2026-05-13'
+  - id: roo
+    url: https://organisaties.overheid.nl/36670/gemeente-berkelland
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=24581535
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2878037

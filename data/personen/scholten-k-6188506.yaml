@@ -5,22 +5,6 @@ name:
   given: Karin
   initials: K.
 mandaten:
-- id: 06189bcd-ebbc-4031-9e63-a8ea0a1dc66a
-  organization_id: org:gemeente-soest
-  post_id: post:wethouder-gemeente-soest
-  role: Wethouder gemeente Soest
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6188508
-    retrieved: '2026-05-09'
-  - id: roo
-    url: https://organisaties.overheid.nl/38312/gemeente-soest
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=28750028
 - id: mandate-post-afdelingshoofd-topinkomens-en-economische-advisering-min-bzk-2022-03-01
   organization_id: org:onderdeel-afdeling-topinkomens-en-economische-advisering-min-bzk
   post_id: post:afdelingshoofd-topinkomens-en-economische-advisering-min-bzk
@@ -37,6 +21,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-02-02
   confidence: 0.91
+- id: mandate-ori-2e718fc6f5783015
+  organization_id: org:gemeente-soest
+  post_id: post:wethouder-gemeente-soest
+  role: Wethouder gemeente Soest
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6188508
+    retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/38312/gemeente-soest
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28750028
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6188506

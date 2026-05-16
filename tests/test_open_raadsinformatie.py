@@ -228,19 +228,19 @@ def test_build_mandaat_skip_gastspreker():
 
 
 def test_build_mandaat_id_stabiel_over_runs():
-    """Issue #64: zelfde zetel → zelfde mandaat-id, ongeacht run of dag.
+    """Issue #64: zelfde Membership → zelfde mandaat-id, ongeacht run of dag.
 
-    De id wordt afgeleid van (organization_id, post_id), niet uit een
-    per-run uuid4. Twee aanroepen op verschillende dagen voor dezelfde
-    raadszetel leveren dezelfde id, zodat reruns idempotent zijn.
+    De id wordt afgeleid van de stabiele ORI Membership-`@id`, niet uit
+    een per-run uuid4. Twee aanroepen op verschillende dagen voor dezelfde
+    bezetting leveren dezelfde id, zodat reruns idempotent zijn.
     """
     a = build_mandaat(
-        raw_membership=_membership_raw(role="Wethouder"),
+        raw_membership=_membership_raw(ori_id="6329499", role="Wethouder"),
         gemeente_slug="utrecht",
         today="2026-05-09",
     )
     b = build_mandaat(
-        raw_membership=_membership_raw(role="Wethouder"),
+        raw_membership=_membership_raw(ori_id="6329499", role="Wethouder"),
         gemeente_slug="utrecht",
         today="2026-05-13",
     )
@@ -249,13 +249,37 @@ def test_build_mandaat_id_stabiel_over_runs():
     assert a["id"].startswith("mandate-ori-")
 
 
-def test_build_mandaat_id_verschilt_per_zetel():
-    """Verschillende post/org → verschillende id (geen collisie)."""
-    weth = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="utrecht")
-    raad = build_mandaat(raw_membership=_membership_raw(role="Raadslid"), gemeente_slug="utrecht")
-    ams = build_mandaat(raw_membership=_membership_raw(role="Wethouder"), gemeente_slug="amsterdam")
-    assert weth is not None and raad is not None and ams is not None
-    assert len({weth["id"], raad["id"], ams["id"]}) == 3
+def test_build_mandaat_id_uniek_per_bezetter_zelfde_post():
+    """Meervoudige bezetting: twee raadsleden op dezelfde post moeten
+    verschillende mandaat-id's krijgen.
+
+    Een gemeenteraad heeft tientallen gelijktijdige raadsleden op
+    ``post:raadslid-gemeente-X``. De id mag dus niet puur uit
+    ``(org, post)`` komen (dat liet ze allemaal botsen), maar uit de
+    per-persoon-stabiele Membership-`@id`.
+    """
+    lid_a = build_mandaat(
+        raw_membership=_membership_raw(ori_id="111", role="Raadslid"),
+        gemeente_slug="druten",
+    )
+    lid_b = build_mandaat(
+        raw_membership=_membership_raw(ori_id="222", role="Raadslid"),
+        gemeente_slug="druten",
+    )
+    assert lid_a is not None and lid_b is not None
+    assert lid_a["post_id"] == lid_b["post_id"]
+    assert lid_a["id"] != lid_b["id"]
+
+
+def test_build_mandaat_id_fallback_zonder_membership_id():
+    """Zonder ORI Membership-id valt de id terug op (org, post) en blijft
+    deterministisch (geen uuid4)."""
+    m = build_mandaat(
+        raw_membership={"@type": "Membership", "role": "Burgemeester"},
+        gemeente_slug="utrecht",
+    )
+    assert m is not None
+    assert m["id"].startswith("mandate-ori-")
 
 
 def test_role_to_classification_dekt_alle_polder_rollen():
@@ -559,9 +583,10 @@ def test_ori_rerun_geen_dubbel_mandaat_bij_slug_drift(tmp_path: Path):
     person-slug → ander YAML-bestand → ``merge_person`` ziet geen
     bestaand record en de snap-naar-open-mandaat-logica in
     ``_merge_mandaten`` wordt nooit bereikt. Vóór de fix kreeg elk
-    bestand een vers uuid4-mandaat (490 dubbels in productie). Met een
-    deterministische, zetel-gebaseerde id is het mandaat over alle runs
-    byte-identiek qua id, zodat downstream-dedup ze als één zetel ziet.
+    bestand een vers uuid4-mandaat (490 dubbels in productie). Met een id
+    afgeleid van de stabiele ORI Membership-`@id` is het mandaat over
+    alle runs byte-identiek qua id, zodat downstream-dedup het als één
+    bezetting ziet.
     """
     runs = [
         ("2026-05-09", "Schilderman, Susanne", "S."),

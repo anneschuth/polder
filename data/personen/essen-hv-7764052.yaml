@@ -6,16 +6,6 @@ name:
   initials: H.V.
   tussenvoegsel: van
 mandaten:
-- id: 91451fa7-4846-465f-aa74-95560ffab125
-  organization_id: org:gemeente-rijswijk
-  post_id: post:raadslid-gemeente-rijswijk
-  role: Raadslid gemeente Rijswijk
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7770862
-    retrieved: '2026-05-09'
 - id: mandate-post-directeur-nationale-ombudsman-2018-11-08
   organization_id: org:hoge-college-nationale-ombudsman
   post_id: post:directeur-nationale-ombudsman
@@ -31,6 +21,16 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2018-08-23
   confidence: 0.92
+- id: mandate-ori-b0d237da8113a42d
+  organization_id: org:gemeente-rijswijk
+  post_id: post:raadslid-gemeente-rijswijk
+  role: Raadslid gemeente Rijswijk
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7770862
+    retrieved: '2026-05-09'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7764052
