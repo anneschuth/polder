@@ -5,22 +5,6 @@ name:
   given: Ilona
   initials: I.
 mandaten:
-- id: 0330391f-a02a-4e0e-b553-41c89ce35453
-  organization_id: org:gemeente-heerde
-  post_id: post:raadslid-gemeente-heerde
-  role: Raadslid gemeente Heerde
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4092100
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/23411/gemeente-heerde
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=29232371
 - id: 1a0bfdbb-3aa9-4a8f-a7d2-9e26cbbfffc6
   organization_id: org:gemeente-heerde
   post_id: post:raadslid-gemeente-heerde
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4092100
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/23411/gemeente-heerde
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29232371
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4092098

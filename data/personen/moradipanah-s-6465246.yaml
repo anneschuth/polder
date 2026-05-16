@@ -5,22 +5,6 @@ name:
   given: Shahrzad
   initials: S.
 mandaten:
-- id: a4bd28a4-eb29-4574-9f5f-6dfb22349312
-  organization_id: org:gemeente-vught
-  post_id: post:raadslid-gemeente-vught
-  role: Raadslid gemeente Vught
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6465247
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/37665/gemeente-vught
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=30540070
 - id: 01c1fd13-a200-4b33-9141-cfb9200c6d56
   organization_id: org:gemeente-vught
   post_id: post:raadslid-gemeente-vught
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6465247
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37665/gemeente-vught
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30540070
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6465246

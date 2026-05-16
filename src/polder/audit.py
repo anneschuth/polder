@@ -195,6 +195,29 @@ CATEGORIES: dict[str, Category] = {
         "Bijna altijd een vergeten end_date op de uitgaande ambtenaar, "
         "of twee person-records voor dezelfde persoon (dup).",
     ),
+    "dup_org_identifier": Category(
+        "dup_org_identifier",
+        "review",
+        "Twee organisatie-records delen een tooi/oin/roo_id maar hebben "
+        "verschillende `id`. Bijna altijd dezelfde organisatie twee keer "
+        "ingelezen door verschillende fetchers (scraper-slug vs "
+        "ROO-naam-slug vs afkorting-slug). Merge naar één canoniek record.",
+    ),
+    "dup_post_role_org": Category(
+        "dup_post_role_org",
+        "review",
+        "Twee post-records met dezelfde organization_id en (genormaliseerd) "
+        "dezelfde rol/label. Vaak één functie meerdere keren aangemaakt door "
+        "verschillende bronnen. Soms legitiem (echt twee zetels).",
+    ),
+    "dup_mandate": Category(
+        "dup_mandate",
+        "review",
+        "Persoon heeft twee mandaten die identiek zijn op "
+        "(organization_id, start_date, end_date) en op post of rol. "
+        "Vrijwel altijd hetzelfde dienstverband dubbel ingevoerd door "
+        "twee bronnen (bv. Wikidata + tk_odata) onder twee post-ids.",
+    ),
     # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
     # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
     # cache-bestand staat — dan run je `polder roo fetch` eerst.
@@ -426,6 +449,9 @@ def run_audit(
     _check_ministerie_direct_posts(posts, findings)
     _check_overlapping_open_mandates(persons, org_parent, findings)
     _check_single_seat_both_open(persons, posts, findings)
+    _check_dup_org_identifier(orgs, findings)
+    _check_dup_post_role_org(posts, findings)
+    _check_dup_mandate(persons, findings)
 
     # ROO-superset checks (Phase 5). Skip stilletjes als geen XML-cache.
     cache = _latest_roo_cache(data_dir.parent)
@@ -465,6 +491,173 @@ def _check_dup_ids(items: list[tuple[Path, dict]], label: str, findings: list[Fi
     for dup_id, n in c.items():
         if n > 1:
             findings.append(Finding(cat, dup_id, f"{dup_id} ({n}x)"))
+
+
+def _normalize_label(text: str | None) -> str:
+    """Lowercase, strip non-alphanumerics. 'minister van X' en 'Minister voor
+    X' collapsen niet (van/voor blijft), maar casing/punctuatie wel."""
+    if not text:
+        return ""
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def _check_dup_org_identifier(orgs: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee org-records met verschillende `id` maar een gedeelde
+    organisatie-specifieke identifier (tooi/roo_id/owms).
+
+    Verschillende fetchers (scraper, ROO-naam, afkorting) maken elk een eigen
+    slug; deze check vangt dat de `dup_id_*`-check mist omdat de ids verschillen.
+
+    Bewust *niet* op oin/rsin/kvk: dat zijn rechtspersoon-identifiers, geen
+    organisatie-identifiers. In het Nederlandse overheidsmodel valt een
+    adviescollege, inspectie, RWT of onderdeel juridisch onder de
+    rechtspersoon van zijn moederorganisatie en deelt daarom diens
+    oin/rsin/kvk (ROO modelleert dit zo: AWTI/Inspectie Onderwijs delen de
+    OCW-OIN, Werkse! deelt de OIN van gemeente Delft). Dat is geen duplicaat.
+    Een gedeelde tooi-code (oorg####/gm####/mnre####/ws####) of roo_id wijst
+    wél op hetzelfde organisatie-record onder twee slugs. owms valt af: er
+    staat een placeholder-waarde "XXXXX" in tientallen GR-records, en owms
+    is sowieso een naam-slug die niet uniek per organisatie hoeft te zijn.
+    """
+    # (identifier-veld, waarde) -> lijst van (org_id, bestandsnaam)
+    by_ident: dict[tuple[str, str], list[tuple[str, str]]] = defaultdict(list)
+    for p, d in orgs:
+        oid = d.get("id")
+        idents = d.get("identifiers")
+        if not oid or not isinstance(idents, dict):
+            continue
+        for field_name in ("tooi", "roo_id"):
+            val = idents.get(field_name)
+            if val:
+                by_ident[(field_name, str(val))].append((oid, p.name))
+    for (field_name, val), members in sorted(by_ident.items()):
+        distinct_ids = {oid for oid, _ in members}
+        if len(distinct_ids) > 1:
+            ids_str = ", ".join(sorted(distinct_ids))
+            findings.append(
+                Finding(
+                    "dup_org_identifier",
+                    f"{field_name}|{val}",
+                    f"{field_name}={val} gedeeld door {len(distinct_ids)} org-records: {ids_str}",
+                )
+            )
+
+
+def _check_dup_post_role_org(posts: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee post-records, zelfde organization_id, genormaliseerd dezelfde
+    rol/label. Eén functie dubbel aangemaakt door verschillende bronnen."""
+    by_key: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for _, d in posts:
+        pid = d.get("id")
+        org = d.get("organization_id")
+        label = _normalize_label(d.get("label") or d.get("role"))
+        if not pid or not org or not label:
+            continue
+        by_key[(str(org), label)].append(str(pid))
+    for (org, label), pids in sorted(by_key.items()):
+        distinct = sorted(set(pids))
+        if len(distinct) > 1:
+            findings.append(
+                Finding(
+                    "dup_post_role_org",
+                    f"{org}|{label}",
+                    f"{org} heeft {len(distinct)} posts met zelfde rol: {', '.join(distinct)}",
+                )
+            )
+
+
+def _days_between(a: str, b: str) -> int | None:
+    """Aantal dagen tussen twee ISO-datums (absoluut). None bij parse-fout."""
+    try:
+        return abs((date.fromisoformat(a[:10]) - date.fromisoformat(b[:10])).days)
+    except (ValueError, TypeError):
+        return None
+
+
+def _periods_collide(s1: str, e1: str | None, s2: str, e2: str | None) -> bool:
+    """Twee dienstverband-periodes 'botsen' als ze hetzelfde dienstverband
+    lijken te zijn, dubbel ingevoerd. Geen exacte datumgelijkheid vereist.
+
+    Twee gevallen:
+
+    1. Strikte overlap: de periodes delen minstens één hele dag. Randpunt-
+       aansluiting (A eindigt op de dag dat B begint) telt NIET — dat is
+       een normale opeenvolgende termijn.
+    2. Bijna-gelijke start (binnen 31 dagen) waarbij minstens één periode
+       open is (``end_date`` null). Dat is het ORI-fetcher-patroon: per
+       run een nieuw open mandaat met de run-datum als start_date. Twee
+       *afgesloten* periodes die kort na elkaar beginnen maar niet
+       overlappen zijn juist legitiem (korte opeenvolgende Kamerlid-
+       termijnen na schorsing/formatiewissel), dus die sluiten we uit.
+    """
+    try:
+        d1s = date.fromisoformat(s1[:10])
+        d2s = date.fromisoformat(s2[:10])
+        d1e = date.fromisoformat(e1[:10]) if e1 else date.max
+        d2e = date.fromisoformat(e2[:10]) if e2 else date.max
+    except (ValueError, TypeError):
+        return False
+    if d1s < d2e and d2s < d1e:
+        return True
+    near = _days_between(s1, s2)
+    both_closed = e1 is not None and e2 is not None
+    return near is not None and near <= 31 and not both_closed
+
+
+def _check_dup_mandate(persons: list[tuple[Path, dict]], findings: list[Finding]) -> None:
+    """Twee mandaten binnen één persoon voor dezelfde organisatie en rol
+    (of post) met botsende periodes. Hetzelfde dienstverband dubbel
+    ingevoerd: ofwel onder twee post-ids (Wikidata + tk_odata), ofwel
+    door een fetcher die per run een nieuw mandaat met de run-datum als
+    start_date aanmaakt in plaats van het bestaande te updaten.
+
+    Bewust geen exacte datumgelijkheid: dat miste het tweede patroon.
+    """
+    for p, d in persons:
+        # Data gebruikt de Nederlandse sleutel `mandaten`. `mandates`
+        # bestaat nergens in data of fixtures; geen fallback.
+        mandates = d.get("mandaten")
+        if not isinstance(mandates, list):
+            continue
+        # Groepeer per (org, rol) en per (org, post); binnen een groep
+        # zoeken we botsende periodes.
+        groups: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
+        for m in mandates:
+            if not isinstance(m, dict):
+                continue
+            org = m.get("organization_id")
+            start = m.get("start_date")
+            if not org or not start:
+                continue
+            role = _normalize_label(m.get("role"))
+            post = m.get("post_id")
+            if role:
+                groups[(org, "role", role)].append(m)
+            if post:
+                groups[(org, "post", str(post))].append(m)
+        reported: set[tuple[str, str]] = set()
+        for (org, kind, val), members in groups.items():
+            if len(members) < 2:
+                continue
+            for i, a in enumerate(members):
+                for b in members[i + 1 :]:
+                    sa, sb = a.get("start_date"), b.get("start_date")
+                    if not _periods_collide(sa, a.get("end_date"), sb, b.get("end_date")):
+                        continue
+                    ids = tuple(sorted((a.get("id", "?"), b.get("id", "?"))))
+                    dedup_key = (org, ids[0] + "|" + ids[1])
+                    if dedup_key in reported:
+                        continue
+                    reported.add(dedup_key)
+                    findings.append(
+                        Finding(
+                            "dup_mandate",
+                            f"{d.get('id', p.name)}|{org}|{sa}",
+                            f"{p.name}: dubbel mandaat {org} "
+                            f"({kind}={val}) {sa}->{a.get('end_date')} "
+                            f"vs {sb}->{b.get('end_date')}",
+                        )
+                    )
 
 
 def _check_mandaat(

@@ -5,22 +5,6 @@ name:
   given: Hans
   initials: H.
 mandaten:
-- id: 393362b0-13ac-4665-86cd-788b700df89b
-  organization_id: org:gemeente-vught
-  post_id: post:raadslid-gemeente-vught
-  role: Raadslid gemeente Vught
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6465231
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/37665/gemeente-vught
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=29491368
 - id: ec7a10d2-c375-4a58-bf97-3da33dc11386
   organization_id: org:gemeente-vught
   post_id: post:raadslid-gemeente-vught
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6465231
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37665/gemeente-vught
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=29491368
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6465229

@@ -918,3 +918,220 @@ def test_roo_stale_appointment_skipped_when_roo_also_ended(fake_data: Path) -> N
     )
     report = run_audit(fake_data, today="2026-05-15")
     assert "roo_stale_appointment" not in _categories_in(report)
+
+
+# ---------------------------------------------------------------------------
+# dup_org_identifier / dup_post_role_org / dup_mandate
+# ---------------------------------------------------------------------------
+
+
+def _write_org(data: Path, subdir: str, slug: str, doc: dict) -> None:
+    d = data / "organisaties" / subdir
+    d.mkdir(parents=True, exist_ok=True)
+    (d / f"{slug}.yaml").write_text(yaml.safe_dump(doc, sort_keys=False), encoding="utf-8")
+
+
+def test_dup_org_identifier_flags_shared_tooi(fake_data: Path) -> None:
+    """Twee org-records met dezelfde tooi-code maar verschillende id zijn
+    hetzelfde organisatie-record onder twee slugs."""
+    base = {
+        "type": "hoge-college",
+        "names": [{"value": "Eerste Kamer", "lang": "nl"}],
+        "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+    }
+    _write_org(
+        fake_data,
+        "hoge-colleges",
+        "ek-a",
+        {
+            **base,
+            "id": "org:ek-a",
+            "identifiers": {"tooi": "https://identifier.overheid.nl/tooi/id/oorg/oorg10001"},
+        },
+    )
+    _write_org(
+        fake_data,
+        "hoge-colleges",
+        "ek-b",
+        {
+            **base,
+            "id": "org:ek-b",
+            "identifiers": {"tooi": "https://identifier.overheid.nl/tooi/id/oorg/oorg10001"},
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_org_identifier" in _categories_in(report)
+
+
+def test_dup_org_identifier_ignores_shared_oin(fake_data: Path) -> None:
+    """Een gedeelde OIN is rechtspersoon-niveau (adviescollege onder een
+    ministerie); dat mag GEEN duplicaat-finding opleveren."""
+    _write_org(
+        fake_data,
+        "adviescolleges",
+        "awti",
+        {
+            "id": "org:adviescollege-awti",
+            "type": "adviescollege",
+            "names": [{"value": "AWTI", "lang": "nl"}],
+            "identifiers": {
+                "oin": "00000001003214400000",
+                "tooi": "https://identifier.overheid.nl/tooi/id/oorg/oorg10253",
+            },
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_org(
+        fake_data,
+        "ministeries",
+        "ocw",
+        {
+            "id": "org:min-ocw",
+            "type": "ministerie",
+            "names": [{"value": "OCW", "lang": "nl"}],
+            "identifiers": {
+                "oin": "00000001003214400000",
+                "tooi": "https://identifier.overheid.nl/tooi/id/ministerie/mnre1109",
+            },
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_org_identifier" not in _categories_in(report)
+
+
+def test_dup_post_role_org_flags_same_role_same_org(fake_data: Path) -> None:
+    """Twee posts, zelfde org, genormaliseerd dezelfde rol."""
+    # Echte casus: labels verschillen alleen in casing/interpunctie
+    # ("ministerie" vs "Ministerie"). _normalize_label collapst dat wel,
+    # maar "en integratie" vs "integratie" bewust niet (conservatief).
+    for slug, label in (
+        ("directeur-si-a", "directeur Samenleving en Integratie, ministerie van SZW"),
+        ("directeur-si-b", "Directeur Samenleving en Integratie, Ministerie van SZW"),
+    ):
+        (fake_data / "posten" / f"{slug}.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "id": f"post:{slug}",
+                    "organization_id": "org:min-test",
+                    "label": label,
+                    "classification": "ambtenaar",
+                },
+                sort_keys=False,
+            ),
+            encoding="utf-8",
+        )
+    report = run_audit(fake_data)
+    assert "dup_post_role_org" in _categories_in(report)
+
+
+def test_dup_mandate_flags_double_entry(fake_data: Path) -> None:
+    """Persoon met twee mandaten identiek op org+periode onder twee posten."""
+    _write_person(
+        fake_data,
+        "jansen-j-1970",
+        {
+            "id": "person:jansen-j-1970",
+            "name": {"family": "Jansen"},
+            "birth": {"year": 1970},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            # NL-sleutel `mandaten` (data gebruikt deze; `mandates` bestaat
+            # nergens). Identieke periode onder twee post-ids.
+            "mandaten": [
+                {
+                    "id": "a",
+                    "organization_id": "org:min-test",
+                    "post_id": "post:minister-min-test",
+                    "role": "Minister",
+                    "start_date": "2022-01-10",
+                    "end_date": "2024-07-02",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+                {
+                    "id": "b",
+                    "organization_id": "org:min-test",
+                    "post_id": "post:minister-zp-test",
+                    "role": "Minister",
+                    "start_date": "2022-01-10",
+                    "end_date": "2024-07-02",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_mandate" in _categories_in(report)
+
+
+def test_dup_mandate_flags_near_duplicate_start(fake_data: Path) -> None:
+    """Zelfde org+rol, start_date een paar dagen uit elkaar (ORI-fetcher
+    die per run een nieuw mandaat met de run-datum aanmaakt)."""
+    _write_person(
+        fake_data,
+        "spin-p-1970",
+        {
+            "id": "person:spin-p-1970",
+            "name": {"family": "Spin"},
+            "birth": {"year": 1970},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "a",
+                    "organization_id": "org:gemeente-test",
+                    "post_id": "post:raadslid-gemeente-test",
+                    "role": "Raadslid gemeente Test",
+                    "start_date": "2026-05-09",
+                    "end_date": None,
+                    "sources": [{"id": "ori", "url": "https://t", "retrieved": "2026-05-09"}],
+                },
+                {
+                    "id": "b",
+                    "organization_id": "org:gemeente-test",
+                    "post_id": "post:raadslid-gemeente-test",
+                    "role": "Raadslid gemeente Test",
+                    "start_date": "2026-05-13",
+                    "end_date": None,
+                    "sources": [{"id": "ori", "url": "https://t", "retrieved": "2026-05-13"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_mandate" in _categories_in(report)
+
+
+def test_dup_mandate_ignores_consecutive_terms(fake_data: Path) -> None:
+    """Opeenvolgende termijnen (A eindigt op de dag dat B begint) zijn
+    geen duplicaat."""
+    _write_person(
+        fake_data,
+        "ephraim-o-1965",
+        {
+            "id": "person:ephraim-o-1965",
+            "name": {"family": "Ephraim"},
+            "birth": {"year": 1965},
+            "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+            "mandaten": [
+                {
+                    "id": "a",
+                    "organization_id": "org:tweede-kamer",
+                    "post_id": "post:kamerlid",
+                    "role": "Kamerlid",
+                    "start_date": "2021-05-13",
+                    "end_date": "2023-08-02",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+                {
+                    "id": "b",
+                    "organization_id": "org:tweede-kamer",
+                    "post_id": "post:kamerlid",
+                    "role": "Kamerlid",
+                    "start_date": "2023-08-02",
+                    "end_date": "2023-12-05",
+                    "sources": [{"id": "t", "url": "https://t", "retrieved": "2026-01-01"}],
+                },
+            ],
+        },
+    )
+    report = run_audit(fake_data)
+    assert "dup_mandate" not in _categories_in(report)

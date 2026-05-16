@@ -5,22 +5,6 @@ name:
   given: Naomi
   initials: N.
 mandaten:
-- id: c3ea1a28-d8ce-49d6-9184-370fe10287cb
-  organization_id: org:gemeente-vught
-  post_id: post:raadslid-gemeente-vught
-  role: Raadslid gemeente Vught
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7771192
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/37665/gemeente-vught
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=30539998
 - id: fa19dcf1-8908-4df4-adb5-1b86d6761379
   organization_id: org:gemeente-vught
   post_id: post:raadslid-gemeente-vught
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7771192
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/37665/gemeente-vught
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=30539998
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7771190

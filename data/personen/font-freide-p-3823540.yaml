@@ -5,22 +5,6 @@ name:
   given: Paul
   initials: P.
 mandaten:
-- id: 2fe43062-fcf8-4174-9965-06cdf5871f0c
-  organization_id: org:gemeente-geldrop-mierlo
-  post_id: post:raadslid-gemeente-geldrop-mierlo
-  role: Raadslid gemeente Geldrop
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3823542
-    retrieved: '2026-05-13'
-  - id: roo
-    url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
-    retrieved: '2026-05-16'
-    fields:
-    - confirmed_current
-    - roo_medewerker_id=28629757
 - id: 91bdf0a1-eb2e-4700-84e3-9f1ef285f148
   organization_id: org:gemeente-geldrop-mierlo
   post_id: post:raadslid-gemeente-geldrop-mierlo
@@ -31,6 +15,12 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3823542
     retrieved: '2026-05-09'
+  - id: roo
+    url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
+    retrieved: '2026-05-16'
+    fields:
+    - confirmed_current
+    - roo_medewerker_id=28629757
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823540
