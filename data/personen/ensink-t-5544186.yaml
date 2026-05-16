@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5544188
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/25983/gemeente-noordenveld
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=25680364
-- id: daff7b31-e81f-4032-b378-529762491cd4
-  organization_id: org:gemeente-noord
-  post_id: post:raadslid-gemeente-noord
-  role: Raadslid gemeente Noord
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5544188
-    retrieved: '2026-05-09'
-- id: 46a9f222-c328-472e-ad2a-3b0d2d28f67e
-  organization_id: org:gemeente-noord
-  post_id: post:raadslid-gemeente-noord
-  role: Raadslid gemeente Noord
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5544188
-    retrieved: '2026-05-13'
-- id: 48139975-b98e-4079-85bf-a8afca212545
-  organization_id: org:gemeente-noordenveld
-  post_id: post:raadslid-gemeente-noordenveld
-  role: Raadslid gemeente Noordenveld
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5544188
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5544186

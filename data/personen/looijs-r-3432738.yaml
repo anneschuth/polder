@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3432740
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/26095/gemeente-duiven
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=29112258
-- id: 52fc54c0-6032-4e17-ba4a-cbdacb129611
-  organization_id: org:gemeente-duiven
-  post_id: post:raadslid-gemeente-duiven
-  role: Raadslid gemeente Duiven
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3432740
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3432738

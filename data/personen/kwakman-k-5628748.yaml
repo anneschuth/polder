@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5628750
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/30046/gemeente-lelystad
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30569397
-- id: e74676d0-be26-46f9-b07b-21cbce3beffe
-  organization_id: org:gemeente-lelystad
-  post_id: post:raadslid-gemeente-lelystad
-  role: Raadslid gemeente Lelystad
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5628750
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5628748

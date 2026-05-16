@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3611807
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/22781/gemeente-emmen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30561432
-- id: 800dd4b1-2016-4f5a-b928-1e749b5e7ca7
-  organization_id: org:gemeente-emmen
-  post_id: post:raadslid-gemeente-emmen
-  role: Raadslid gemeente Emmen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3611807
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3611805

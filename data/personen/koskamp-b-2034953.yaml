@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/2034957
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36483/gemeente-aalten
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28638398
-- id: 0a7bdb6a-73e7-41ac-a8e3-0e23f19ed936
-  organization_id: org:gemeente-aalten
-  post_id: post:raadslid-gemeente-aalten
-  role: Raadslid gemeente Aalten
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/2034957
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/2034953

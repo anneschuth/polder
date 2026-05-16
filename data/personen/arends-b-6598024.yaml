@@ -9,6 +9,21 @@ name:
 birth:
   year: 1966
 mandaten:
+- id: mandate-post-directeur-generaal-rivm-2026-04-01
+  organization_id: org:agentschap-rivm
+  post_id: post:directeur-generaal-rivm
+  role: directeur-generaal RIVM, ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2026-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/isabel-arends-directeur-generaal-rivm-bij-vws
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-12-19
+  confidence: 0.92
 - id: bd1245b4-4585-43f4-a3b0-cc8e8c3f48f4
   organization_id: org:gemeente-westland
   post_id: post:burgemeester-gemeente-westland
@@ -18,7 +33,7 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6598026
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36327/gemeente-westland
     retrieved: '2026-05-16'
@@ -41,41 +56,6 @@ mandaten:
     fields:
     - end_date
     - applied_via:close-duo-bulk-conflict
-- id: 3f1dbc15-5487-4812-8197-1aa1e33cd9aa
-  organization_id: org:gemeente-west
-  post_id: post:burgemeester-gemeente-west
-  role: Burgemeester gemeente West
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6598026
-    retrieved: '2026-05-13'
-- id: 7f2d9b76-5911-434f-b113-8d040b0be9b2
-  organization_id: org:gemeente-westland
-  post_id: post:burgemeester-gemeente-westland
-  role: Burgemeester gemeente Westland
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6598026
-    retrieved: '2026-05-13'
-- id: mandate-post-directeur-generaal-rivm-2026-04-01
-  organization_id: org:agentschap-rivm
-  post_id: post:directeur-generaal-rivm
-  role: directeur-generaal RIVM, ministerie van Volksgezondheid, Welzijn en Sport
-  start_date: '2026-04-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/isabel-arends-directeur-generaal-rivm-bij-vws
-    retrieved: '2026-05-15'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2025-12-19
-  confidence: 0.92
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598024

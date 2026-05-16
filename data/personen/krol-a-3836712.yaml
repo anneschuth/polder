@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3836713
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/30894/gemeente-gorinchem
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28670851
-- id: 1843cf84-0ae6-48df-a35b-54ab6267a4a0
-  organization_id: org:gemeente-gorinchem
-  post_id: post:raadslid-gemeente-gorinchem
-  role: Raadslid gemeente Gorinchem
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3836713
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3836712

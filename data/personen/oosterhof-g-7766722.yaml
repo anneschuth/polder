@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7766723
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/31946/gemeente-opsterland
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30556767
-- id: 43223235-d525-4207-b6ac-2422da7a1828
-  organization_id: org:gemeente-opsterland
-  post_id: post:raadslid-gemeente-opsterland
-  role: Raadslid gemeente Opsterland
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7766723
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7766722

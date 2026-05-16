@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5199975
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/29116/gemeente-meierijstad
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30532032
-- id: 6315d2c1-b489-45b4-ab52-8f2261b12ff6
-  organization_id: org:gemeente-meierijstad
-  post_id: post:raadslid-gemeente-meierijstad
-  role: Raadslid gemeente Meierijstad
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5199975
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5199973

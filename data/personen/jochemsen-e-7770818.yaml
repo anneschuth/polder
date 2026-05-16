@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770819
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/38004/gemeente-rheden
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30553603
-- id: ebdeeaf6-3931-4894-92a3-5fc4b7f30fe5
-  organization_id: org:gemeente-rheden
-  post_id: post:raadslid-gemeente-rheden
-  role: Raadslid gemeente Rheden
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7770819
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7770818

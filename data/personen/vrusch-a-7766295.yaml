@@ -14,7 +14,7 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7777822
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/31783/gemeente-heerlen
     retrieved: '2026-05-16'
@@ -37,16 +37,6 @@ mandaten:
     fields:
     - confirmed_current
     - roo_medewerker_id=29198315
-- id: cb05d486-2bea-4132-8310-1977d2772d3a
-  organization_id: org:gemeente-heerlen
-  post_id: post:raadslid-gemeente-heerlen
-  role: Raadslid gemeente Heerlen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7777822
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7766295

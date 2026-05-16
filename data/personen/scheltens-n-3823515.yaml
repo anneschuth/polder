@@ -14,33 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3823519
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36388/gemeente-geldrop-mierlo
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28612840
-- id: d65ab047-d1bc-4b10-9f86-925eb53abb20
-  organization_id: org:gemeente-geldrop
-  post_id: post:gemeentesecretaris-gemeente-geldrop
-  role: Gemeentesecretaris gemeente Geldrop
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3823519
-    retrieved: '2026-05-13'
-- id: 9a4948e3-4d74-412a-92c2-6a79ec6898d9
-  organization_id: org:gemeente-geldrop-mierlo
-  post_id: post:gemeentesecretaris-gemeente-geldrop-mierlo
-  role: Gemeentesecretaris gemeente Geldrop Mierlo
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3823519
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3823515

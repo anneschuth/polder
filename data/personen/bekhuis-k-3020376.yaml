@@ -14,26 +14,16 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3020378
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/25660/gemeente-borne
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28668252
-- id: 8ca035b3-0f63-4b4b-b3c8-7c1c868c895a
-  organization_id: org:gemeente-borne
-  post_id: post:raadslid-gemeente-borne
-  role: Raadslid gemeente Borne
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3020378
-    retrieved: '2026-05-13'
 - id: d9fb2f4d-51b4-40b9-9736-1c16d5099be3
-  organization_id: org:gemeente-born
-  post_id: post:raadslid-gemeente-born
+  organization_id: org:gemeente-sittard-geleen
+  post_id: post:raadslid-gemeente-sittard-geleen
   role: Raadslid gemeente Born
   start_date: '2026-05-13'
   end_date: null

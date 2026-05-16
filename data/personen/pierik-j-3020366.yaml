@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3020368
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/25660/gemeente-borne
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28119473
-- id: 2118bf47-78f0-404e-ade8-8ed488a5c4bc
-  organization_id: org:gemeente-borne
-  post_id: post:burgemeester-gemeente-borne
-  role: Burgemeester gemeente Borne
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3020368
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3020366

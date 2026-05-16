@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4170868
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27630/gemeente-heiloo
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28642054
-- id: 77ec366e-9cc9-48d0-9fe4-c38e68ca3522
-  organization_id: org:gemeente-heiloo
-  post_id: post:raadslid-gemeente-heiloo
-  role: Raadslid gemeente Heiloo
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4170868
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4170866

@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6598258
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36327/gemeente-westland
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=76142
-- id: d3a41360-4e87-4bd4-973d-8e66b112f440
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6598258
-    retrieved: '2026-05-09'
-- id: 5f2c83e5-9782-431e-b6d7-a9b91d4d122a
-  organization_id: org:gemeente-west
-  post_id: post:raadslid-gemeente-west
-  role: Raadslid gemeente West
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6598258
-    retrieved: '2026-05-13'
-- id: 8eea8e9a-61b8-4efc-8665-509dc3c86ef8
-  organization_id: org:gemeente-westland
-  post_id: post:raadslid-gemeente-westland
-  role: Raadslid gemeente Westland
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6598258
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6598256

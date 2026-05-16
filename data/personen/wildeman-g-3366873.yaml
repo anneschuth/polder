@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3366874
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/21518/gemeente-diemen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28688762
-- id: 51c00595-83ff-411d-9cc5-0b4f4cc2a332
-  organization_id: org:gemeente-diemen
-  post_id: post:gemeentesecretaris-gemeente-diemen
-  role: Gemeentesecretaris gemeente Diemen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3366874
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3366873

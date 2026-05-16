@@ -14,43 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7766704
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/23566/gemeente-ooststellingwerf
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30556343
-- id: 058d91ea-57d6-4634-a474-998c9fb9bd6e
-  organization_id: org:gemeente-oost
-  post_id: post:raadslid-gemeente-oost
-  role: Raadslid gemeente Oost
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7766704
-    retrieved: '2026-05-09'
-- id: a1009756-7dd2-4ed3-87f4-2b977adbd074
-  organization_id: org:gemeente-ooststellingwerf
-  post_id: post:raadslid-gemeente-ooststellingwerf
-  role: Raadslid gemeente Ooststellingwerf
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7766704
-    retrieved: '2026-05-13'
-- id: e83d13cb-0ffb-4da5-8223-b61727b1e9b9
-  organization_id: org:gemeente-oost
-  post_id: post:raadslid-gemeente-oost
-  role: Raadslid gemeente Oost
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7766704
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7766702

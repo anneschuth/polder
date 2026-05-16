@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7267762
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/37907/gemeente-oss
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30520689
-- id: b6c0f7f2-2eb8-4026-86cc-8bfdda136e68
-  organization_id: org:gemeente-oss
-  post_id: post:raadslid-gemeente-oss
-  role: Raadslid gemeente Oss
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7267762
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7267761

@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/4681464
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/25516/gemeente-laarbeek
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28631191
-- id: 2b24df51-e23d-421e-bed7-cec944d70f5c
-  organization_id: org:gemeente-laarbeek
-  post_id: post:raadslid-gemeente-laarbeek
-  role: Raadslid gemeente Laarbeek
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/4681464
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/4681462

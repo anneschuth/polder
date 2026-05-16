@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5621471
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/33197/gemeente-oldambt
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30530786
-- id: 2159a70d-36d5-45ed-936c-66dc81392b2d
-  organization_id: org:gemeente-oldambt
-  post_id: post:raadslid-gemeente-oldambt
-  role: Raadslid gemeente Oldambt
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5621471
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5621469

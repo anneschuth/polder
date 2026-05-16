@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7774808
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27465442/gemeente-vijfheerenlanden
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30551431
-- id: 7d3eb4a6-9fb5-4129-98d8-14168c13481b
-  organization_id: org:gemeente-vijfheerenlanden
-  post_id: post:raadslid-gemeente-vijfheerenlanden
-  role: Raadslid gemeente Vijfheerenlanden
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7774808
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6404823

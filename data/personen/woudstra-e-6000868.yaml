@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6000870
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27300/gemeente-rijswijk
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=26413664
-- id: 99e51af9-30f9-4891-9db8-4b6325a5fa9c
-  organization_id: org:gemeente-rijswijk
-  post_id: post:raadslid-gemeente-rijswijk
-  role: Raadslid gemeente Rijswijk
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6000870
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6000868

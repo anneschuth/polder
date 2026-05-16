@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/6392665
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/38811/gemeente-velsen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30550086
-- id: 7d19bd74-be25-4fa0-b9a5-e4cb0f65bdaa
-  organization_id: org:gemeente-velsen
-  post_id: post:raadslid-gemeente-velsen
-  role: Raadslid gemeente Velsen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6392665
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6392663

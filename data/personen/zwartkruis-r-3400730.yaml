@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3400732
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/34358/gemeente-druten
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28659936
-- id: 14122d31-e641-4c99-aefe-f8185cf2ba08
-  organization_id: org:gemeente-druten
-  post_id: post:raadslid-gemeente-druten
-  role: Raadslid gemeente Druten
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3400732
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3400730

@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7769354
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/23236/gemeente-assen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30533273
-- id: 04652207-068a-440d-8647-529807ffacca
-  organization_id: org:gemeente-assen
-  post_id: post:raadslid-gemeente-assen
-  role: Raadslid gemeente Assen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7769354
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7769352

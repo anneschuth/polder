@@ -18,23 +18,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5161823
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/28523626/gemeente-maashorst
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28557000
-- id: b8554b5e-0b27-4b26-996e-9516a5ac636d
-  organization_id: org:gemeente-maashorst
-  post_id: post:raadslid-gemeente-maashorst
-  role: Raadslid gemeente Maashorst
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5161823
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5161821

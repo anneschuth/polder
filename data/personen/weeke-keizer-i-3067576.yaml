@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3067578
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36916/gemeente-bronckhorst
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28626036
-- id: 6a69b445-f215-46ce-88c8-9914e37b21b1
-  organization_id: org:gemeente-bronckhorst
-  post_id: post:raadslid-gemeente-bronckhorst
-  role: Raadslid gemeente Bronckhorst
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3067578
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3067576

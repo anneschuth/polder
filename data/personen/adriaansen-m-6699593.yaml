@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7219973
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/32470/gemeente-woensdrecht
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=83137
-- id: d5173a1a-ba3f-4c80-a57f-28e9b81ac10e
-  organization_id: org:gemeente-woensdrecht
-  post_id: post:raadslid-gemeente-woensdrecht
-  role: Raadslid gemeente Woensdrecht
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7219973
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6699593

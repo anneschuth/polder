@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7759157
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/33731/gemeente-zwolle
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30524856
-- id: 98297f00-22fb-4bdd-a9ea-b94735371b46
-  organization_id: org:gemeente-zwolle
-  post_id: post:raadslid-gemeente-zwolle
-  role: Raadslid gemeente Zwolle
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7759157
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7757710

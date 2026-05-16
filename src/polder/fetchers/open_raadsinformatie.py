@@ -778,6 +778,53 @@ def _merge_sources(
     return list(by_id.values())
 
 
+def _mandaat_key(mandaat: dict[str, Any]) -> tuple[str, str]:
+    """Dedup-sleutel `(post_id, start_date)`.
+
+    Een nachtelijke rerun mag geen tweede open mandaat aanmaken voor
+    dezelfde zetel. Dat werkt alleen als ``start_date`` stabiel is tussen
+    runs — zie ``person_to_polder_record``, dat geen synthetische
+    fetch-datum meer in ``start_date`` zet. Twee echte raadstermijnen op
+    dezelfde post hebben verschillende (door downstream-bronnen ingevulde)
+    start_dates en blijven zo gescheiden (het Bos-Coenraad-geval).
+    """
+    return (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
+
+
+def _earliest(*dates: str | None) -> str:
+    present = [d for d in dates if d]
+    return min(present) if present else ""
+
+
+def _is_synthetic_ori_date(mandaat: dict[str, Any]) -> bool:
+    """True als start_date een ORI-fetch-stempel is, geen echte datum.
+
+    ``build_mandaat`` zet zowel ``start_date`` als de ORI-source
+    ``retrieved`` op dezelfde fetch-dag. Een downstream-bron die een echte
+    aanvangsdatum invult laat die gelijkheid los. Alleen synthetische
+    mandaten mogen bij rerun naar een bestaand open mandaat snappen; twee
+    echte raadstermijnen op dezelfde post (Bos-Coenraad) niet.
+    """
+    sd = mandaat.get("start_date")
+    if not sd:
+        return False
+    for src in mandaat.get("sources") or []:
+        if (src or {}).get("id") == SOURCE_ID and src.get("retrieved") == sd:
+            return True
+    return False
+
+
+def _open_post_index(
+    by_key: dict[tuple[str, str], dict[str, Any]],
+) -> dict[str, tuple[str, str]]:
+    """post_id -> key, alleen voor posten met precies één open mandaat."""
+    seen: dict[str, list[tuple[str, str]]] = {}
+    for k, m in by_key.items():
+        if m.get("end_date") is None:
+            seen.setdefault(m.get("post_id", ""), []).append(k)
+    return {post: keys[0] for post, keys in seen.items() if len(keys) == 1}
+
+
 def _merge_mandaten(
     existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
 ) -> list[dict[str, Any]]:
@@ -785,18 +832,35 @@ def _merge_mandaten(
     for mandaat in existing or []:
         if not isinstance(mandaat, dict):
             continue
-        key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
-        by_key[key] = dict(mandaat)
+        by_key[_mandaat_key(mandaat)] = dict(mandaat)
     for mandaat in new or []:
-        key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
+        key = _mandaat_key(mandaat)
+        # ORI heeft geen echte start_date. Een nieuw open mandaat op een
+        # post die al precies één open mandaat heeft is dezelfde zetel,
+        # her-opgehaald: snap naar de bestaande key zodat de rerun
+        # idempotent is i.p.v. een tweede open mandaat aan te maken.
+        # Posten met al >1 open mandaat (echte meervoudige zetels) raken
+        # we niet aan.
+        if (
+            key not in by_key
+            and mandaat.get("end_date") is None
+            and _is_synthetic_ori_date(mandaat)
+        ):
+            open_idx = _open_post_index(by_key)
+            existing_key = open_idx.get(mandaat.get("post_id", ""))
+            if existing_key is not None:
+                key = existing_key
         if key in by_key:
-            merged = dict(by_key[key])
+            prev = by_key[key]
+            merged = dict(prev)
             # Behoud bestaand id (uuid).
-            kept_id = by_key[key].get("id")
+            kept_id = prev.get("id")
             merged.update(mandaat)
             if kept_id:
                 merged["id"] = kept_id
-            merged["sources"] = _merge_sources(by_key[key].get("sources"), mandaat.get("sources"))
+            # Synthetische ORI-start_date mag niet vooruit kruipen bij rerun.
+            merged["start_date"] = _earliest(prev.get("start_date"), mandaat.get("start_date"))
+            merged["sources"] = _merge_sources(prev.get("sources"), mandaat.get("sources"))
             by_key[key] = merged
         else:
             by_key[key] = dict(mandaat)
@@ -1003,10 +1067,27 @@ def _build_parser() -> argparse.ArgumentParser:
 
 
 def _gemeente_slugs_from_data(data_root: Path) -> list[str]:
+    """Actieve gemeenten uit data/.
+
+    Opgeheven gemeenten (`valid_until` gezet of een `successor_id`) blijven
+    als historisch record bestaan maar moeten geen ORI-fetch krijgen —
+    anders worden huidige griffiers/secretarissen aan een niet-bestaande
+    gemeente gekoppeld (bv. Geldrop i.p.v. Geldrop-Mierlo).
+    """
     gem_dir = data_root / "organisaties" / "gemeenten"
     if not gem_dir.exists():
         return []
-    return sorted(p.stem for p in gem_dir.glob("*.yaml"))
+    active: list[str] = []
+    for path in gem_dir.glob("*.yaml"):
+        try:
+            doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        except (OSError, yaml.YAMLError):
+            logger.warning("kon gemeente-bestand niet lezen: %s", path)
+            continue
+        if doc.get("valid_until") or doc.get("successor_id"):
+            continue
+        active.append(path.stem)
+    return sorted(active)
 
 
 def _process_gemeente(

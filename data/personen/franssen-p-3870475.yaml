@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3870477
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/34134/gemeente-gulpen-wittem
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30515133
-- id: 79c46d44-d64d-4dbe-b499-7d129b35d3e1
-  organization_id: org:gemeente-gulpen-wittem
-  post_id: post:raadslid-gemeente-gulpen-wittem
-  role: Raadslid gemeente Gulpen Wittem
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3870477
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3870475

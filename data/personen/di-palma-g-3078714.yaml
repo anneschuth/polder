@@ -18,23 +18,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/3078716
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/24566/gemeente-brunssum
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28644771
-- id: 5e2d434e-9094-46c0-989a-060e27ad3d8e
-  organization_id: org:gemeente-brunssum
-  post_id: post:raadslid-gemeente-brunssum
-  role: Raadslid gemeente Brunssum
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3078716
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/3078714

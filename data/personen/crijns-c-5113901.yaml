@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5113903
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/37823/gemeente-lingewaard
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=28633074
-- id: c13497de-9c01-4be8-baf9-dd75dce96ff7
-  organization_id: org:gemeente-lingewaard
-  post_id: post:raadslid-gemeente-lingewaard
-  role: Raadslid gemeente Lingewaard
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5113903
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5113901

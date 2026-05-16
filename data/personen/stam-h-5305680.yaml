@@ -18,23 +18,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5305682
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/27465430/gemeente-molenlanden
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=27514134
-- id: 326753a4-4b81-45d4-969f-0b1cc1e46744
-  organization_id: org:gemeente-molenlanden
-  post_id: post:raadslid-gemeente-molenlanden
-  role: Raadslid gemeente Molenlanden
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5305682
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5305680

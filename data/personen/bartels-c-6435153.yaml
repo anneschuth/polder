@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7805663
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/22144/gemeente-voerendaal
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=25408975
-- id: 6ec953f6-bd15-4965-9062-cc390514f14a
-  organization_id: org:gemeente-voerendaal
-  post_id: post:raadslid-gemeente-voerendaal
-  role: Raadslid gemeente Voerendaal
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7805663
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6435153

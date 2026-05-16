@@ -9,26 +9,6 @@ name:
 birth:
   year: 1946
 mandaten:
-- id: fecd30d6-72a3-4de7-a66e-4b413771cae5
-  organization_id: org:gemeente-zutphen
-  post_id: post:raadslid-gemeente-zutphen
-  role: Raadslid gemeente Zutphen
-  start_date: '2026-05-09'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6768812
-    retrieved: '2026-05-09'
-- id: eb304c2e-3539-496e-ae1b-73e102052776
-  organization_id: org:gemeente-zutphen
-  post_id: post:raadslid-gemeente-zutphen
-  role: Raadslid gemeente Zutphen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6768812
-    retrieved: '2026-05-13'
 - id: mandate-post-directeur-corporate-dienst-datafundamenten-analytics-belastingdienst-min-fin-2022-03-01
   organization_id: org:onderdeel-directie-datafundamenten-analytics-corporate-dienst-belastingdienst-min-fin
   post_id: post:directeur-corporate-dienst-datafundamenten-analytics-belastingdienst-min-fin
@@ -45,6 +25,16 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-12-24
   confidence: 0.92
+- id: fecd30d6-72a3-4de7-a66e-4b413771cae5
+  organization_id: org:gemeente-zutphen
+  post_id: post:raadslid-gemeente-zutphen
+  role: Raadslid gemeente Zutphen
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/6768812
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/6768810

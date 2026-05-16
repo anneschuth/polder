@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7775825
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/31453/gemeente-heerenveen
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30541683
-- id: 0fd8ad34-a53c-4586-9d48-f1681966079b
-  organization_id: org:gemeente-heerenveen
-  post_id: post:raadslid-gemeente-heerenveen
-  role: Raadslid gemeente Heerenveen
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/7775825
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7766238

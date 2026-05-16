@@ -14,23 +14,13 @@ mandaten:
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5242938
-    retrieved: '2026-05-09'
+    retrieved: '2026-05-13'
   - id: roo
     url: https://organisaties.overheid.nl/36436/gemeente-midden-delfland
     retrieved: '2026-05-16'
     fields:
     - confirmed_current
     - roo_medewerker_id=30568879
-- id: a23d2b78-fd6f-4d9f-8619-ba07fe21a8f3
-  organization_id: org:gemeente-midden-delfland
-  post_id: post:raadslid-gemeente-midden-delfland
-  role: Raadslid gemeente Midden Delfland
-  start_date: '2026-05-13'
-  end_date: null
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/5242938
-    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5242937
