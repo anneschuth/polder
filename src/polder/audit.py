@@ -1111,6 +1111,167 @@ def _normalize_initials_compact(initials: str | None) -> str:
     return re.sub(r"[^a-zA-Z]", "", initials).lower()
 
 
+_ROEPNAAM_RE = re.compile(r"\(([^)]+)\)")
+
+
+_PERSON_SPECIFIC_URL_RE = re.compile(
+    r"algemenebestuursdienst\.nl/actueel/nieuws/\d{4}/\d{2}/\d{2}/[a-z]"
+    r"|id\.openraadsinformatie\.nl/\d+"
+)
+
+
+def _holder_source_urls(mandate: dict) -> set[str]:
+    """Persoon-specifieke bron-URLs van een mandaat (genormaliseerd).
+
+    Alleen URLs die over één benoeming van één persoon gaan tellen als
+    identiteits-signaal: een ABD-nieuwsbericht (datum-pad + slug) of een
+    open-raadsinformatie-persoon-id. Generieke landingspagina's
+    (``organisaties.overheid.nl/<org>``, ``github.com/...``) worden
+    bewust genegeerd: twee verschillende ambtenaren bij dezelfde
+    organisatie delen die en zijn niet dezelfde persoon (#76).
+    """
+    urls: set[str] = set()
+    for s in mandate.get("sources") or []:
+        if not isinstance(s, dict):
+            continue
+        u = str(s.get("url") or "").strip().rstrip("/").lower()
+        if u and _PERSON_SPECIFIC_URL_RE.search(u):
+            urls.add(u)
+    return urls
+
+
+def _roepnaam_variants(name: dict) -> set[str]:
+    """Compacte voornaam-varianten: ``given`` plus de roepnaam uit ``full``.
+
+    ``full`` als ``'Drs. E.W.E. (Esther) Pijs'`` levert de roepnaam ``Esther``
+    naast het initialen-achtige ``given`` ``E.W.E.``. Zo matcht het
+    initialen-record op het roepnaam-record van dezelfde persoon.
+    """
+    out: set[str] = set()
+    g = _given_compact(name.get("given"))
+    if g:
+        out.add(g)
+    for m in _ROEPNAAM_RE.finditer(str(name.get("full") or "")):
+        c = _given_compact(m.group(1))
+        if c:
+            out.add(c)
+    return out
+
+
+def _given_sets_compatible(a: dict, b: dict) -> bool:
+    """Compatibel als enig voornaam-variant-paar (incl. roepnaam) compatibel is."""
+    va = _roepnaam_variants(a) or {""}
+    vb = _roepnaam_variants(b) or {""}
+    return any(_given_names_compatible(x, y) for x in va for y in vb)
+
+
+def _shared_roepnaam(a: dict, b: dict) -> set[str]:
+    """Gedeelde niet-triviale (>=3 letters) roepnaam-varianten.
+
+    'Annelies' in 'Ir. J.E.M. (Annelies) Opstraat' == given 'Annelies' van
+    de andere slug. Geeft de gedeelde set terug (leeg = geen match).
+    """
+    return {v for v in _roepnaam_variants(a) & _roepnaam_variants(b) if len(v) >= 3}
+
+
+def _roepnaam_overrules_initials(shared: set[str], ia: str, ib: str) -> bool:
+    """Mag een gedeelde roepnaam een initialen-mismatch overrulen?
+
+    Alleen als minstens één initiaal-set feitelijk de *roepnaam-initiaal* is
+    (één letter, gelijk aan de beginletter van een gedeelde roepnaam). Dat
+    vangt 'J.E.M.' (formeel) vs 'A.' (roepnaam-initiaal van 'Annelies').
+    Het overruled NIET 'J.P.' vs 'J.M.' — twee formele middel-initialen die
+    echt verschillen, ook al delen ze de roepnaam 'Jan'. Conservatief: bij
+    twijfel niet samenvoegen.
+    """
+    roep_initials = {v[0] for v in shared if v}
+    return (len(ia) == 1 and ia in roep_initials) or (len(ib) == 1 and ib in roep_initials)
+
+
+def _same_open_holder_identity(
+    a: tuple[str, str, str, dict, dict],
+    b: tuple[str, str, str, dict, dict],
+) -> bool:
+    """True als twee open-mandaat-holders waarschijnlijk dezelfde persoon zijn.
+
+    Conservatief en gebonden aan gelijke familienaam, plus een harde
+    geboortejaar-grens. Daarbinnen geldt als same-person: (b) een gedeeld
+    persoon-specifiek benoemings-document op het mandaat voor déze post
+    (ABD-nieuws of ORI-persoon-id), óf (a) een naam-match waarbij een hard
+    initialen-conflict altijd blokkeert tenzij het puur een formele-vs-
+    roepnaam-initiaal-verschil is. Twee echt-verschillende personen met
+    dezelfde familienaam (Suzan vs Sophie Hermans; J.P. vs J.M. de Vries)
+    collapsen niet.
+    """
+    name_a, mand_a = a[3], a[4]
+    name_b, mand_b = b[3], b[4]
+
+    fam_a = str(name_a.get("family") or "").strip().lower()
+    fam_b = str(name_b.get("family") or "").strip().lower()
+    if not fam_a or not fam_b or fam_a != fam_b:
+        return False
+
+    # Twee bekende, verschillende geboortejaren = twee personen, ongeacht
+    # gedeelde naam of bron-URL. Conservatieve harde grens vóór elke branch.
+    by_a, by_b = name_a.get("_birth_year"), name_b.get("_birth_year")
+    if isinstance(by_a, int) and isinstance(by_b, int) and by_a != by_b:
+        return False
+
+    # (b) Gedeeld persoon-specifiek benoemings-document op het mandaat voor
+    # deze post (ABD-nieuws of ORI-persoon-id; generieke org-URLs tellen niet).
+    if _holder_source_urls(mand_a) & _holder_source_urls(mand_b):
+        return True
+
+    # (a) Naam-gebaseerd. Een hard initialen-conflict (twee formele sets die
+    # ná de beginletter verschillen, bv. 'J.P.' vs 'J.M.') blokkeert altijd —
+    # ook bij een gedeelde roepnaam. Een gedeelde roepnaam overruled alleen
+    # de mildere mismatch waarbij één set de roepnaam-initiaal is ('J.E.M.'
+    # vs 'A.' voor 'Annelies').
+    ia = _normalize_initials_compact(name_a.get("initials"))
+    ib = _normalize_initials_compact(name_b.get("initials"))
+    initials_conflict = bool(
+        ia and ib and ia != ib and not (ia.startswith(ib) or ib.startswith(ia))
+    )
+    shared = _shared_roepnaam(name_a, name_b)
+    if initials_conflict:
+        return bool(shared) and _roepnaam_overrules_initials(shared, ia, ib)
+    if shared:
+        return True
+    return _given_sets_compatible(name_a, name_b)
+
+
+def _group_open_holders(
+    holders: list[tuple[str, str, str, dict, dict]],
+) -> list[list[tuple[str, str, str, dict, dict]]]:
+    """Partitioneer holders in identiteit-groepen via transitieve unie.
+
+    Twee holders die ``_same_open_holder_identity`` waarmaken belanden in
+    dezelfde groep; de relatie is transitief (union-find). Deterministische
+    output: holders binnen een groep gesorteerd op pid, groepen op laagste pid.
+    """
+    n = len(holders)
+    parent = list(range(n))
+
+    def find(x: int) -> int:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if _same_open_holder_identity(holders[i], holders[j]):
+                parent[find(i)] = find(j)
+
+    groups: dict[int, list[tuple[str, str, str, dict, dict]]] = defaultdict(list)
+    for idx, h in enumerate(holders):
+        groups[find(idx)].append(h)
+    return sorted(
+        (sorted(g, key=lambda t: t[0]) for g in groups.values()),
+        key=lambda g: g[0][0],
+    )
+
+
 def _check_cyclic_parents(org_parent: dict[str, str], findings: list[Finding]) -> None:
     """Detecteer cycli in parent_id-keten.
 
@@ -1517,6 +1678,11 @@ def _check_single_seat_both_open(
 
     Single-seat: ``post.seat_count == 1`` (expliciet in de YAML).
     Posts met ``seat_count: null`` of ``> 1`` worden niet geflagd.
+
+    Holders worden vóór de ``>= 2``-test ontdubbeld op persoon-identiteit
+    (#76): één echte persoon met meerdere UUID-fallback-slugs (#55) telde
+    anders als meerdere holders. De gecollapste dup-slugs zelf worden niet
+    hier maar door de ``quasi_dup_*``-checks gerapporteerd.
     """
     single_seat_posts: set[str] = set()
     for _, d in posts:
@@ -1526,7 +1692,7 @@ def _check_single_seat_both_open(
         if d.get("seat_count") == 1:
             single_seat_posts.add(pid)
 
-    open_holders: dict[str, list[tuple[str, str, str]]] = defaultdict(list)
+    open_holders: dict[str, list[tuple[str, str, str, dict, dict]]] = defaultdict(list)
     for path, d in persons:
         pid = d.get("id", path.name)
         for m in d.get("mandaten") or []:
@@ -1537,20 +1703,28 @@ def _check_single_seat_both_open(
             post_id = m.get("post_id")
             if not post_id or post_id not in single_seat_posts:
                 continue
-            open_holders[post_id].append((pid, m.get("start_date") or "?", path.name))
+            name = dict(d.get("name") or {})
+            by = (d.get("birth") or {}).get("year")
+            if isinstance(by, int):
+                name["_birth_year"] = by
+            open_holders[post_id].append((pid, m.get("start_date") or "?", path.name, name, m))
 
     for post_id, holders in open_holders.items():
         if len(holders) < 2:
             continue
-        # Stable key: post + sorted persons.
-        persons_sorted = sorted(holders, key=lambda t: t[0])
-        person_keys = "|".join(t[0] for t in persons_sorted)
-        descriptions = ", ".join(f"{t[0]} (start={t[1]})" for t in persons_sorted)
+        groups = _group_open_holders(holders)
+        if len(groups) < 2:
+            continue  # alle holders zijn dezelfde persoon (UUID-fallback dup)
+        reps = [g[0] for g in groups]  # 1 representant per groep, laagste pid
+        person_keys = "|".join(r[0] for r in reps)
+        descriptions = ", ".join(f"{r[0]} (start={r[1]})" for r in reps)
+        collapsed = sum(len(g) - 1 for g in groups)
+        note = f" ({collapsed} dup-slug(s) samengevoegd op persoon-identiteit)" if collapsed else ""
         findings.append(
             Finding(
                 "single_seat_both_open",
                 f"{post_id}|{person_keys}",
-                f"{post_id}: {len(holders)} personen met open mandaat — {descriptions}",
+                f"{post_id}: {len(groups)} personen met open mandaat — {descriptions}{note}",
             )
         )
 

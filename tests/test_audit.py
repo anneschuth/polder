@@ -726,6 +726,336 @@ def test_single_seat_check_skips_multi_seat_posts(fake_data: Path) -> None:
     assert "single_seat_both_open" not in _categories_in(report)
 
 
+def _set_single_seat(fake_data: Path) -> None:
+    post_path = fake_data / "posten" / "minister-min-test.yaml"
+    pd = yaml.safe_load(post_path.read_text(encoding="utf-8"))
+    pd["seat_count"] = 1
+    post_path.write_text(yaml.safe_dump(pd, sort_keys=False), encoding="utf-8")
+
+
+def test_single_seat_collapses_uuid_dup_slugs(fake_data: Path) -> None:
+    """Eén echte persoon met twee UUID-fallback-slugs (zelfde family,
+    initials '' vs 'A.') => geen single_seat_both_open finding (#76)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    # Geen gedeelde bron-URL: collapse moet uit de roepnaam-in-'full'
+    # naam-match komen (branch a), niet uit branch (b).
+    _write_person(
+        fake_data,
+        "opstraat-59bc7f2a",
+        {
+            "id": "person:opstraat-59bc7f2a",
+            "name": {
+                "full": "Ir. J.E.M. (Annelies) Opstraat",
+                "family": "Opstraat",
+                "given": "J.E.M.",
+                "initials": "J.E.M.",
+            },
+            "birth": {"year": 1970},
+            "mandaten": [
+                {
+                    **m,
+                    "sources": [{"id": "a", "url": "https://a/1", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "opstraat-a-0d9235a7",
+        {
+            "id": "person:opstraat-a-0d9235a7",
+            "name": {
+                "full": "Annelies Opstraat",
+                "family": "Opstraat",
+                "given": "Annelies",
+                "initials": "A.",
+            },
+            "birth": {"year": 1970},
+            "mandaten": [
+                {
+                    **m,
+                    "id": "m2",
+                    "sources": [{"id": "b", "url": "https://b/2", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" not in _categories_in(report)
+
+
+def test_single_seat_two_real_people_still_flagged(fake_data: Path) -> None:
+    """Twee echte verschillende personen (andere family) => wel flag (#76)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "schneiders-b-1",
+        {
+            "id": "person:schneiders-b-1",
+            "name": {"family": "Schneiders", "initials": "B."},
+            "birth": {"year": 1965},
+            "mandaten": [m],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "verkleij-w-2",
+        {
+            "id": "person:verkleij-w-2",
+            "name": {"family": "Verkleij", "initials": "W."},
+            "birth": {"year": 1970},
+            "mandaten": [{**m, "id": "m2"}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_dup_pair_plus_distinct_still_flagged(fake_data: Path) -> None:
+    """3 holders: 1 echte dup-pair + 1 distinct persoon => 2 groepen => flag (#76)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "pijs-4e556c5b",
+        {
+            "id": "person:pijs-4e556c5b",
+            "name": {"family": "Pijs"},
+            "birth": {"year": 1960},
+            "mandaten": [m],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "pijs-e-4ac09e20",
+        {
+            "id": "person:pijs-e-4ac09e20",
+            "name": {"family": "Pijs", "initials": "E."},
+            "birth": {"year": 1960},
+            "mandaten": [{**m, "id": "m2"}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "swart-c-3",
+        {
+            "id": "person:swart-c-3",
+            "name": {"family": "Swart", "initials": "C."},
+            "birth": {"year": 1975},
+            "mandaten": [{**m, "id": "m3"}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_same_family_different_given_still_flagged(fake_data: Path) -> None:
+    """plantinga-m vs plantinga-n: zelfde family, andere initialen =>
+    NIET samenvoegen, wel flaggen (#76)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    # Verschillende personen citeren persoon-specifieke (verschillende)
+    # ORI-bronnen — net als de echte data (zie schneiders/verkleij).
+    _write_person(
+        fake_data,
+        "plantinga-m-3611655",
+        {
+            "id": "person:plantinga-m-3611655",
+            "name": {"family": "Plantinga", "given": "Marleen", "initials": "M."},
+            "birth": {"year": 1960},
+            "mandaten": [
+                {
+                    **m,
+                    "sources": [
+                        {
+                            "id": "ori",
+                            "url": "https://id.openraadsinformatie.nl/3611655",
+                            "retrieved": "2026-01-01",
+                        }
+                    ],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "plantinga-n-3612246",
+        {
+            "id": "person:plantinga-n-3612246",
+            "name": {"family": "Plantinga", "given": "Nico", "initials": "N."},
+            "birth": {"year": 1962},
+            "mandaten": [
+                {
+                    **m,
+                    "id": "m2",
+                    "sources": [
+                        {
+                            "id": "ori",
+                            "url": "https://id.openraadsinformatie.nl/3612246",
+                            "retrieved": "2026-01-01",
+                        }
+                    ],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_collapses_on_shared_source_url(fake_data: Path) -> None:
+    """Twee slugs van dezelfde persoon citeren hetzelfde benoemings-document
+    op het mandaat voor deze post => collapse => geen finding (#76 branch b)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    shared_src = [
+        {
+            "id": "abd",
+            "url": "https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-pdg",
+            "retrieved": "2026-01-01",
+        }
+    ]
+    _write_person(
+        fake_data,
+        "pijs-4e556c5b",
+        {
+            "id": "person:pijs-4e556c5b",
+            "name": {
+                "full": "Drs. E.W.E. (Esther) Pijs",
+                "family": "Pijs",
+                "given": "E.W.E.",
+                "initials": "E.W.E.",
+            },
+            "birth": {"year": 1970},
+            "mandaten": [{**m, "sources": shared_src}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "pijs-e-4ac09e20",
+        {
+            "id": "person:pijs-e-4ac09e20",
+            "name": {
+                "full": "Esther Pijs",
+                "family": "Pijs",
+                "given": "Esther",
+                "initials": "E.",
+            },
+            "birth": {"year": 1970},
+            "mandaten": [{**m, "id": "m2", "sources": shared_src}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" not in _categories_in(report)
+
+
+def test_single_seat_hard_initials_conflict_with_shared_roepnaam(
+    fake_data: Path,
+) -> None:
+    """Twee echte 'Jan de Vries' (J.P. vs J.M., geen geboortejaar) delen de
+    roepnaam 'Jan' maar hebben botsende formele middel-initialen => NIET
+    samenvoegen, wel flaggen (#76 regressie: roepnaam-override mag een hard
+    initialen-conflict niet overrulen)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    _write_person(
+        fake_data,
+        "vries-jp-aaaa1111",
+        {
+            "id": "person:vries-jp-aaaa1111",
+            "name": {
+                "full": "J.P. (Jan) de Vries",
+                "family": "Vries",
+                "given": "Jan",
+                "initials": "J.P.",
+            },
+            "mandaten": [
+                {
+                    **m,
+                    "sources": [{"id": "a", "url": "https://a/1", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "vries-jm-bbbb2222",
+        {
+            "id": "person:vries-jm-bbbb2222",
+            "name": {
+                "full": "J.M. (Jan) de Vries",
+                "family": "Vries",
+                "given": "Jan",
+                "initials": "J.M.",
+            },
+            "mandaten": [
+                {
+                    **m,
+                    "id": "m2",
+                    "sources": [{"id": "b", "url": "https://b/2", "retrieved": "2026-01-01"}],
+                }
+            ],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
+def test_single_seat_generic_shared_url_does_not_collapse(fake_data: Path) -> None:
+    """Twee verschillende ambtenaren bij dezelfde organisatie delen een
+    generieke org-landingspagina als bron. Die mag GEEN identiteits-signaal
+    zijn => wel flaggen (#76 regressie: branch b alleen persoon-specifieke
+    URLs)."""
+    _set_single_seat(fake_data)
+    m = _good_mandate(start="2020-01-01", end=None)
+    generic = [
+        {
+            "id": "oo",
+            "url": "https://organisaties.overheid.nl/30046/gemeente-lelystad",
+            "retrieved": "2026-01-01",
+        }
+    ]
+    # Zelfde familie (zodat alleen branch b ze nog zou kunnen collapsen),
+    # maar duidelijk verschillende voornamen + initialen => twee personen.
+    _write_person(
+        fake_data,
+        "bergh-n-1",
+        {
+            "id": "person:bergh-n-1",
+            "name": {"family": "Bergh", "given": "Nynke", "initials": "N."},
+            "mandaten": [{**m, "sources": generic}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    _write_person(
+        fake_data,
+        "bergh-c-2",
+        {
+            "id": "person:bergh-c-2",
+            "name": {"family": "Bergh", "given": "Cor", "initials": "C."},
+            "mandaten": [{**m, "id": "m2", "sources": generic}],
+            "sources": [{"id": "test", "url": "https://t", "retrieved": "2026-01-01"}],
+        },
+    )
+    report = run_audit(fake_data, today="2026-05-11")
+    assert "single_seat_both_open" in _categories_in(report)
+
+
 # ---------------------------------------------------------------------------
 # Phase 5: ROO superset audit-checks
 # ---------------------------------------------------------------------------
