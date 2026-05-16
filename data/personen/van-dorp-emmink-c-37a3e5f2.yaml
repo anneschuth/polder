@@ -6,8 +6,7 @@ mandaten:
 - id: mandate-post-afdelingsmanager-duurzame-mobiliteit-gebouwde-omgeving-rvo-2025-06-01
   organization_id: org:onderdeel-duurzame-mobiliteit-gebouwde-omgeving-rvo
   post_id: post:afdelingsmanager-duurzame-mobiliteit-gebouwde-omgeving-rvo
-  role: Afdelingsmanager Duurzame mobiliteit en gebouwde omgeving, Rijksdienst voor
-    Ondernemend Nederland
+  role: Afdelingsmanager Duurzame mobiliteit en gebouwde omgeving, Rijksdienst voor Ondernemend Nederland
   start_date: '2025-06-01'
   end_date: null
   sources:
@@ -19,6 +18,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2025-04-22
   confidence: 0.89
+- id: mandate-post-afdelingsmanager-duurzame-mobiliteit-gebouwde-omgeving-rvo-min-ezk-2025-06-01
+  organization_id: org:onderdeel-afdeling-duurzame-mobiliteit-gebouwde-omgeving-rvo-min-ezk
+  post_id: post:afdelingsmanager-duurzame-mobiliteit-gebouwde-omgeving-rvo-min-ezk
+  role: Afdelingsmanager Duurzame mobiliteit en gebouwde omgeving, Rijksdienst voor Ondernemend Nederland, ministerie van Economische Zaken
+  start_date: '2025-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/22/carla-van-dorp-emmink-afdelingsmanager-duurzame-mobiliteit-en-gebouwde-omgeving-bij-rvo
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-04-22
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/22/carla-van-dorp-emmink-afdelingsmanager-duurzame-mobiliteit-en-gebouwde-omgeving-bij-rvo
