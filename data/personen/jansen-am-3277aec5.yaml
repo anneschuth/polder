@@ -1,0 +1,28 @@
+id: person:jansen-am-3277aec5
+name:
+  full: Drs. A.M. (Annemarie) Jansen
+  family: Jansen
+  given: Annemarie
+  initials: A.M.
+mandaten:
+- id: mandate-post-directeur-algemene-rekenkamer-2021-02-01
+  organization_id: org:hoge-college-ar
+  post_id: post:directeur-algemene-rekenkamer
+  role: Directeur bij de Algemene Rekenkamer
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/18/annemarie-jansen-directeur-bij-de-algemene-rekenkamer
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-18
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/18/annemarie-jansen-directeur-bij-de-algemene-rekenkamer
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

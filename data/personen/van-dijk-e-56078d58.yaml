@@ -1,0 +1,27 @@
+id: person:van-dijk-e-56078d58
+name:
+  full: Esther van Dijk
+  family: Esther
+mandaten:
+- id: mandate-post-directeur-emancipatie-min-ocw-2020-09-01
+  organization_id: org:onderdeel-directie-emancipatie-min-ocw
+  post_id: post:directeur-emancipatie-min-ocw
+  role: Directeur van de directie Emancipatie, ministerie van Onderwijs, Cultuur en
+    Wetenschap
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/17/esther-van-dijk-directeur-emancipatie-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-07-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/17/esther-van-dijk-directeur-emancipatie-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

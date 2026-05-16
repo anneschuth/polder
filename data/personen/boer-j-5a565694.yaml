@@ -1,0 +1,27 @@
+id: person:boer-j-5a565694
+name:
+  full: Drs. J. (Janneke) Boer
+  family: boer
+  initials: J.
+mandaten:
+- id: mandate-post-directeur-bestuurszaken-uwv-2021-06-15
+  organization_id: org:onderdeel-directie-bestuurszaken-uwv
+  post_id: post:directeur-bestuurszaken-uwv
+  role: Directeur Bestuurszaken bij UWV
+  start_date: '2021-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/16/janneke-boer-directeur-bestuurszaken-bij-uwv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-16
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/16/janneke-boer-directeur-bestuurszaken-bij-uwv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

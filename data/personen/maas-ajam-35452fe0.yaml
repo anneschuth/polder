@@ -1,0 +1,43 @@
+id: person:maas-ajam-35452fe0
+name:
+  full: A.J.A.M. (Alexander) Maas
+  family: maas
+  initials: A.J.A.M.
+mandaten:
+- id: mandate-post-directeur-beleid-en-bedrijfsvoering-cio-bureau-abd-min-bzk-2023-01-15
+  organization_id: org:onderdeel-bureau-abd-min-bzk
+  post_id: post:directeur-beleid-en-bedrijfsvoering-cio-bureau-abd-min-bzk
+  role: Directeur Beleid en Bedrijfsvoering tevens CIO bij Bureau Algemene Bestuursdienst,
+    ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2023-01-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/18/alex-maas-directeur-beleid-en-bedrijfsvoering-tevens-cio-bij-bureau-algemene-bestuursdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-18
+  confidence: 0.92
+- id: mandate-post-directeur-beleid-bedrijfsvoering-cio-bureau-abd-min-bzk-2023-01-15
+  organization_id: org:onderdeel-directie-beleid-en-bedrijfsvoering-tevens-cio-bij-bureau-algemene-bestuursdienst-min-bzk
+  post_id: post:directeur-beleid-bedrijfsvoering-cio-bureau-abd-min-bzk
+  role: Directeur Beleid en Bedrijfsvoering tevens CIO bij Bureau Algemene Bestuursdienst
+  start_date: '2023-01-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/18/alex-maas-directeur-beleid-en-bedrijfsvoering-tevens-cio-bij-bureau-algemene-bestuursdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-18
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/18/alex-maas-directeur-beleid-en-bedrijfsvoering-tevens-cio-bij-bureau-algemene-bestuursdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

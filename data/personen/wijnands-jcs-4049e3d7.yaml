@@ -1,0 +1,28 @@
+id: person:wijnands-jcs-4049e3d7
+name:
+  full: Mr. J.C.S. (Joep) Wijnands
+  family: Wijnands
+  given: Joep
+  initials: J.C.S.
+mandaten:
+- id: mandate-post-dg-beleid-min-defensie-2019-01-01
+  organization_id: org:onderdeel-dg-beleid-min-defensie
+  post_id: post:dg-beleid-min-defensie
+  role: Directeur-generaal, directoraat-generaal Beleid i.o., ministerie van Defensie
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/30/joep-wijnands-directeur-generaal-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-30
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/30/joep-wijnands-directeur-generaal-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

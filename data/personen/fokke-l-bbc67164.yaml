@@ -1,0 +1,28 @@
+id: person:fokke-l-bbc67164
+name:
+  full: Drs. Lysette Fokké
+  family: Fokké
+  given: Lysette
+mandaten:
+- id: mandate-post-clusterhoofd-open-overheid-wjz-min-vws-2023-07-01
+  organization_id: org:onderdeel-open-overheid-wjz-min-vws
+  post_id: post:clusterhoofd-open-overheid-wjz-min-vws
+  role: Clusterhoofd Open Overheid, directie Wetgeving en Juridische Zaken, ministerie
+    van Volksgezondheid, Welzijn en Sport
+  start_date: '2023-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/02/lysette-fokke-clusterhoofd-open-overheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-06-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/02/lysette-fokke-clusterhoofd-open-overheid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

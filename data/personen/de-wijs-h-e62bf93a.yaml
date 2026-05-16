@@ -1,0 +1,27 @@
+id: person:de-wijs-h-e62bf93a
+name:
+  full: Heddy de Wijs
+  family: Heddy
+mandaten:
+- id: mandate-post-hoofd-centrum-veiligheid-rivm-min-vws-2019-11-01
+  organization_id: org:onderdeel-centrum-veiligheid-rivm-min-vws
+  post_id: post:hoofd-centrum-veiligheid-rivm-min-vws
+  role: Hoofd centrum Veiligheid van het RIVM bij het ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/12/heddy-de-wijs-hoofd-centrum-veiligheid-van-het-rivm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-12
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/12/heddy-de-wijs-hoofd-centrum-veiligheid-van-het-rivm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,29 @@
+id: person:geurts-bme-d06dc18e
+name:
+  full: Ir. B.M.E. (Ben) Geurts
+  family: Geurts
+  given: Ben
+  initials: B.M.E.
+mandaten:
+- id: mandate-post-directeur-asa-min-ienw-2021-10-01
+  organization_id: org:onderdeel-directie-asa-min-ienw
+  post_id: post:directeur-asa-min-ienw
+  role: Directeur Algemeen Strategisch Advies (ASA) bij het ministerie van Infrastructuur
+    en Waterstaat
+  start_date: '2021-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/22/ben-geurts-directeur-algemeen-strategisch-advies-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/22/ben-geurts-directeur-algemeen-strategisch-advies-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

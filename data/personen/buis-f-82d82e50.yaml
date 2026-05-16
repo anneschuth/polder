@@ -1,0 +1,27 @@
+id: person:buis-f-82d82e50
+name:
+  full: Folkert Buis
+  family: Folkert
+mandaten:
+- id: mandate-post-directeur-informatievoorziening-belastingdienst-min-fin-2019-11-06
+  organization_id: org:onderdeel-informatie-voorziening-min-fin
+  post_id: post:directeur-informatievoorziening-belastingdienst-min-fin
+  role: Directeur directie Informatievoorziening, Belastingdienst, ministerie van
+    Financiën
+  start_date: '2019-11-06'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/folkert-buis-directeur-informatievoorziening
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/folkert-buis-directeur-informatievoorziening
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

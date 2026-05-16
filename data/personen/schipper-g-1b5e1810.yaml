@@ -1,0 +1,28 @@
+id: person:schipper-g-1b5e1810
+name:
+  full: Gerda Schipper
+  family: Schipper
+  given: Gerda
+mandaten:
+- id: mandate-post-regiodirecteur-mkb-arnhem-doetinchem-belastingdienst-min-fin-2022-03-01
+  organization_id: org:onderdeel-mkb-arnhem-doetinchem-belastingdienst-min-fin
+  post_id: post:regiodirecteur-mkb-arnhem-doetinchem-belastingdienst-min-fin
+  role: Regiodirecteur Midden- en Kleinbedrijf voor de vestigingen Arnhem en Doetinchem
+    bij de Belastingdienst bij het ministerie van Financiën
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/02/gerda-schipper-regiodirecteur-midden-en-kleinbedrijf-arnhem-doetinchem-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/02/gerda-schipper-regiodirecteur-midden-en-kleinbedrijf-arnhem-doetinchem-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

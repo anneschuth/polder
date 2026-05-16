@@ -1,0 +1,27 @@
+id: person:van-den-berg-mc-61f8780d
+name:
+  full: Drs. M.C. (Marten) van den Berg
+  family: berg
+  initials: M.C.
+mandaten:
+- id: mandate-post-dg-agro-min-lnv-2024-01-01
+  organization_id: org:onderdeel-dg-agro-min-lnv
+  post_id: post:dg-agro-min-lnv
+  role: Directeur-generaal Agro bij het ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2024-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/01/marten-van-den-berg-directeur-generaal-agro-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-12-01
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/01/marten-van-den-berg-directeur-generaal-agro-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

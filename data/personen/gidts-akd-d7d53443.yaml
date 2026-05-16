@@ -22,6 +22,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-11-03
   confidence: 0.85
+- id: mandate-post-afdelingshoofd-business-control-douane-min-fin-2023-10-01
+  organization_id: org:onderdeel-afdeling-business-control-douane-min-fin
+  post_id: post:afdelingshoofd-business-control-douane-min-fin
+  role: Afdelingshoofd Business Control binnen de directie Finance & Control van de
+    Douane bij het ministerie van Financiën
+  start_date: '2023-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/03/aernout-korff-de-gidts-afdelingshoofd-business-control-bij-de-douane
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-11-03
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/03/aernout-korff-de-gidts-afdelingshoofd-business-control-bij-de-douane

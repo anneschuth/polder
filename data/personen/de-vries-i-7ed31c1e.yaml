@@ -1,0 +1,44 @@
+id: person:de-vries-i-7ed31c1e
+name:
+  full: I. (Ilse) de Vries MA
+  family: de Vries
+  given: Ilse
+  initials: I.
+mandaten:
+- id: mandate-post-mt-lid-patient-en-zorgordening-min-vws-2019-11-01
+  organization_id: org:onderdeel-patient-en-zorgordening-min-vws
+  post_id: post:mt-lid-patient-en-zorgordening-min-vws
+  role: MT-lid directie Patiënt en Zorgordening, ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/13/ilse-de-vries-mt-lid-patient-en-zorgordening-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-09-13
+  confidence: 0.92
+- id: mandate-post-mt-lid-directie-patient-en-zorgordening-min-vws-2019-11-01
+  organization_id: org:onderdeel-directie-patient-en-zorgordening-min-vws
+  post_id: post:mt-lid-directie-patient-en-zorgordening-min-vws
+  role: MT-lid directie Patiënt en Zorgordening, ministerie van VWS
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/13/ilse-de-vries-mt-lid-patient-en-zorgordening-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-09-13
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/09/13/ilse-de-vries-mt-lid-patient-en-zorgordening-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

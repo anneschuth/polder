@@ -1,0 +1,44 @@
+id: person:schut-e-1221c4d0
+name:
+  full: Ellen Schut
+  family: Schut
+  given: Ellen
+mandaten:
+- id: mandate-post-afdelingshoofd-juridische-algemene-zaken-dg-migratie-min-jenv-2022-12-01
+  organization_id: org:afdeling-juridische-algemene-zaken-min-jenv
+  post_id: post:afdelingshoofd-juridische-algemene-zaken-dg-migratie-min-jenv
+  role: Hoofd Juridische en Algemene Zaken binnen het directoraat-generaal Migratie
+    van het ministerie van Justitie en Veiligheid
+  start_date: '2022-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/ellen-schut-benoemd-tot-hoofd-juridische-en-algemene-zaken-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-04
+  confidence: 0.92
+- id: mandate-post-hoofd-juridische-en-algemene-zaken-dgm-min-jenv-2022-12-01
+  organization_id: org:onderdeel-afdeling-juridische-en-algemene-zaken-dgm-min-jenv
+  post_id: post:hoofd-juridische-en-algemene-zaken-dgm-min-jenv
+  role: Hoofd Juridische en Algemene Zaken, directoraat-generaal Migratie, ministerie
+    van Justitie en Veiligheid
+  start_date: '2022-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/ellen-schut-benoemd-tot-hoofd-juridische-en-algemene-zaken-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/ellen-schut-benoemd-tot-hoofd-juridische-en-algemene-zaken-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

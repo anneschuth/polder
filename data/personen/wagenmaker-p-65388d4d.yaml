@@ -1,0 +1,28 @@
+id: person:wagenmaker-p-65388d4d
+name:
+  full: Drs. P. (Peter) Wagenmaker
+  family: Wagenmaker
+  given: Peter
+  initials: P.
+mandaten:
+- id: mandate-post-mt-lid-ov-stations-min-ienw-2019-01-01
+  organization_id: org:onderdeel-ov-stations-min-ienw
+  post_id: post:mt-lid-ov-stations-min-ienw
+  role: MT-lid Openbaar Vervoer en Stations, ministerie van Infrastructuur en Waterstaat
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/06/delroy-blokland-en-peter-wagenmaker-ruilen-van-functie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-06
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/06/delroy-blokland-en-peter-wagenmaker-ruilen-van-functie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

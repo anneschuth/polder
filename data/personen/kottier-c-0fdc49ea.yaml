@@ -1,0 +1,44 @@
+id: person:kottier-c-0fdc49ea
+name:
+  full: Charlotte Kottier
+  family: Kottier
+  given: Charlotte
+mandaten:
+- id: mandate-post-programmamanager-bedrijven-gevaarlijke-stoffen-nla-min-szw-2022-01-01
+  organization_id: org:onderdeel-programma-bmgs-directie-toezicht-nla-min-szw
+  post_id: post:programmamanager-bedrijven-gevaarlijke-stoffen-nla-min-szw
+  role: Programmamanager Bedrijven met Gevaarlijke Stoffen, directie Toezicht, Nederlandse
+    Arbeidsinspectie, ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/15/charlotte-kottier-programmamanager-bedrijven-met-gevaarlijke-stoffen-bij-de-nederlandse-arbeidsinspectie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-15
+  confidence: 0.88
+- id: mandate-post-programmamanager-bmgs-nederlandse-arbeidsinspectie-min-szw-2022-01-01
+  organization_id: org:onderdeel-programma-bmgs-nederlandse-arbeidsinspectie-min-szw
+  post_id: post:programmamanager-bmgs-nederlandse-arbeidsinspectie-min-szw
+  role: Programmamanager Bedrijven met Gevaarlijke Stoffen, Nederlandse Arbeidsinspectie,
+    ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/15/charlotte-kottier-programmamanager-bedrijven-met-gevaarlijke-stoffen-bij-de-nederlandse-arbeidsinspectie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/15/charlotte-kottier-programmamanager-bedrijven-met-gevaarlijke-stoffen-bij-de-nederlandse-arbeidsinspectie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

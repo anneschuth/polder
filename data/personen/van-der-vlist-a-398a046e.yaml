@@ -1,0 +1,43 @@
+id: person:van-der-vlist-a-398a046e
+name:
+  full: A. (Aart) van der Vlist
+  family: van der Vlist
+  given: Aart
+  initials: A.
+mandaten:
+- id: mandate-post-consultant-abdtopconsult-min-bzk-2023-09-01
+  organization_id: org:onderdeel-abdtopconsult
+  post_id: post:consultant-abdtopconsult-min-bzk
+  role: Consultant bij ABDTOPConsult, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2023-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/23/aart-van-der-vlist-consultant-bij-abdtopconsult
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-06-23
+  confidence: 0.92
+- id: mandate-post-directeur-informatievoorziening-cio-politie-2021-06-01
+  organization_id: org:politie
+  post_id: post:directeur-informatievoorziening-cio-politie
+  role: Directeur Informatievoorziening en Chief Information Officer bij de Politie
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/01/aart-van-der-vlist-directeur-informatievoorziening-en-cio-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-01
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/23/aart-van-der-vlist-consultant-bij-abdtopconsult
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

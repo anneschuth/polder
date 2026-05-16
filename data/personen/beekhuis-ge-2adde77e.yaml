@@ -1,0 +1,28 @@
+id: person:beekhuis-ge-2adde77e
+name:
+  full: Drs. G.E. (Geert) Beekhuis
+  family: Beekhuis
+  given: Geert
+  initials: G.E.
+mandaten:
+- id: mandate-post-directeur-fez-min-fin-2020-11-23
+  organization_id: org:onderdeel-directie-fez-min-fin
+  post_id: post:directeur-fez-min-fin
+  role: Directeur Financieel Economische Zaken, ministerie van Financiën
+  start_date: '2020-11-23'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/23/geert-beekhuis-directeur-financieel-economische-zaken-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-23
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/23/geert-beekhuis-directeur-financieel-economische-zaken-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -21,17 +21,7 @@ names:
   valid_from: '1900-01-01'
   valid_until: '2030-05-01'
 description:
-  text: Dienst Terugkeer en Vertrek (DTenV) is verantwoordelijk voor het zelfstandige
-    en gedwongen vertrek van vreemdelingen die niet in Nederland mogen blijven. De
-    medewerkers van DTenV opereren zorgvuldig en met respect voor de waardigheid van
-    de vreemdeling.DTenV richt zich op twee doelgroepen:- Illegale vreemdelingen die
-    zijn aangehouden in het kader van het binnenlands (mobiel) vreemdelingentoezicht
-    en vreemdelingen aan wie de toegang is geweigerd in het kader van de grensbewaking.-
-    Uitgeprocedeerde asielzoekers die het land moeten verlaten.Een persoonsgerichte
-    en multidisciplinaire aanpak op basis van casemanagement staat centraal. Deze
-    aanpak wordt uitgevoerd in samenwerking met (keten)partners. Vanuit zijn operationele
-    taak is de DTenV gesprekspartner van bevoegde autoriteiten van herkomstlanden,
-    waaronder diplomatieke vertegenwoordigingen.
+  text: Dienst Terugkeer en Vertrek (DTenV) is verantwoordelijk voor het zelfstandige en gedwongen vertrek van vreemdelingen die niet in Nederland mogen blijven. De medewerkers van DTenV opereren zorgvuldig en met respect voor de waardigheid van de vreemdeling.DTenV richt zich op twee doelgroepen:- Illegale vreemdelingen die zijn aangehouden in het kader van het binnenlands (mobiel) vreemdelingentoezicht en vreemdelingen aan wie de toegang is geweigerd in het kader van de grensbewaking.- Uitgeprocedeerde asielzoekers die het land moeten verlaten.Een persoonsgerichte en multidisciplinaire aanpak op basis van casemanagement staat centraal. Deze aanpak wordt uitgevoerd in samenwerking met (keten)partners. Vanuit zijn operationele taak is de DTenV gesprekspartner van bevoegde autoriteiten van herkomstlanden, waaronder diplomatieke vertegenwoordigingen.
   url: https://www.dienstterugkeerenvertrek.nl/over-dtv/organisatie
 classifications:
 - type: Woo
@@ -110,3 +100,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/115613/dtenv
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/12/functieruil-ewald-riks-en-hans-faber-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

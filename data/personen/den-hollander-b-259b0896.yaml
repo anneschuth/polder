@@ -1,0 +1,43 @@
+id: person:den-hollander-b-259b0896
+name:
+  full: Bas den Hollander
+  family: den Hollander
+  given: Bas
+mandaten:
+- id: mandate-post-directeur-digitale-overheid-min-bzk-2020-06-01
+  organization_id: org:onderdeel-digitale-overheid-min-bzk
+  post_id: post:directeur-digitale-overheid-min-bzk
+  role: Directeur Digitale Overheid (i.o), ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/bas-den-hollander-directeur-digitale-overheid
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-04
+  confidence: 0.91
+- id: mandate-post-interim-directeur-informatiesamenleving-overheid-min-bzk-2019-06-03
+  organization_id: org:onderdeel-informatiesamenleving-overheid-min-bzk
+  post_id: post:interim-directeur-informatiesamenleving-overheid-min-bzk
+  role: Interim-directeur Informatiesamenleving & Overheid, ministerie van Binnenlandse
+    Zaken en Koninkrijksrelaties
+  start_date: '2019-06-03'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/06/03/bas-den-hollander-interim-directeur-informatiesamenleving-overheid
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-06-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/04/bas-den-hollander-directeur-digitale-overheid
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

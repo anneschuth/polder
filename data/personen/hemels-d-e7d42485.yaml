@@ -1,0 +1,42 @@
+id: person:hemels-d-e7d42485
+name:
+  full: Danielle Hemels
+  family: Hemels
+  given: Danielle
+mandaten:
+- id: mandate-post-directeur-dienst-vastgoed-politiedienstencentrum-2025-01-01
+  organization_id: org:onderdeel-dienst-vastgoed-politiedienstencentrum
+  post_id: post:directeur-dienst-vastgoed-politiedienstencentrum
+  role: Directeur dienst Vastgoed, Politiedienstencentrum, Nationale Politie
+  start_date: '2025-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/14/danielle-hemels-directeur-dienst-vastgoed-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-01-14
+  confidence: 0.89
+- id: mandate-post-directeur-dienst-vastgoed-politiedienstencentrum-politie-2025-01-01
+  organization_id: org:onderdeel-dienst-vastgoed-politiedienstencentrum-politie
+  post_id: post:directeur-dienst-vastgoed-politiedienstencentrum-politie
+  role: Directeur dienst Vastgoed, Politiedienstencentrum, Politie
+  start_date: '2025-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/14/danielle-hemels-directeur-dienst-vastgoed-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-01-14
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/14/danielle-hemels-directeur-dienst-vastgoed-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

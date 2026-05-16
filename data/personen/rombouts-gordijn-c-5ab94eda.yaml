@@ -1,0 +1,43 @@
+id: person:rombouts-gordijn-c-5ab94eda
+name:
+  full: Carla Rombouts-Gordijn
+  family: Rombouts-Gordijn
+  given: Carla
+mandaten:
+- id: mandate-post-mt-lid-i-beleid-min-vws-2023-01-09
+  organization_id: org:onderdeel-directie-informatiebeleid-min-vws
+  post_id: post:mt-lid-i-beleid-min-vws
+  role: MT-lid i-Beleid, directie Informatiebeleid, ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2023-01-09'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/08/carla-rombouts-gordijn-mt-lid-i-beleid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-08
+  confidence: 0.92
+- id: mandate-post-mt-lid-informatiebeleid-min-vws-2023-01-09
+  organization_id: org:min-vws
+  post_id: post:mt-lid-informatiebeleid-min-vws
+  role: MT-lid i-Beleid bij het ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2023-01-09'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/08/carla-rombouts-gordijn-mt-lid-i-beleid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-08
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/08/carla-rombouts-gordijn-mt-lid-i-beleid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

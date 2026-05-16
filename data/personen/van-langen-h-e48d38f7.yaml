@@ -1,0 +1,27 @@
+id: person:van-langen-h-e48d38f7
+name:
+  full: Hans van Langen
+  family: van Langen
+  given: Hans
+mandaten:
+- id: mandate-post-afdelingshoofd-control-advies-ilt-min-ienw-2020-01-01
+  organization_id: org:onderdeel-ilt-min-ienw
+  post_id: post:afdelingshoofd-control-advies-ilt-min-ienw
+  role: Hoofd van de afdeling Control en Advies bij de Inspectie Leefomgeving en Transport
+  start_date: '2020-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/hans-van-langen-afdelingshoofd-control-en-advies-bij-de-ilt
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/06/hans-van-langen-afdelingshoofd-control-en-advies-bij-de-ilt
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

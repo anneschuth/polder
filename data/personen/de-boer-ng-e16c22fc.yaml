@@ -1,0 +1,27 @@
+id: person:de-boer-ng-e16c22fc
+name:
+  full: Drs. N.G. (Gonnie) de Boer
+  family: boer
+  initials: N.G.
+mandaten:
+- id: mandate-post-afdelingshoofd-ketenvoorziening-min-jenv-2018-08-01
+  organization_id: org:onderdeel-afdeling-ketenvoorziening-min-jenv
+  post_id: post:afdelingshoofd-ketenvoorziening-min-jenv
+  role: Afdelingshoofd Ketenvoorziening, ministerie van Justitie en Veiligheid
+  start_date: '2018-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/01/gonnie-de-boer-afdelingshoofd-ketenvoorziening-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-08-01
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/01/gonnie-de-boer-afdelingshoofd-ketenvoorziening-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

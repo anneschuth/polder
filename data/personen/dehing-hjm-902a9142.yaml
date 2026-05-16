@@ -1,0 +1,28 @@
+id: person:dehing-hjm-902a9142
+name:
+  full: H.J.M. (Hub) Dehing
+  family: Dehing
+  given: Hub
+  initials: H.J.M.
+mandaten:
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-limburg-politie-2018-07-01
+  organization_id: org:onderdeel-eenheid-limburg-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-limburg-politie
+  role: Hoofd Bedrijfsvoering, Eenheid Limburg, Politie
+  start_date: '2018-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/29/hub-dehing-hoofd-bedrijfsvoering-van-de-eenheid-limburg-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-06-29
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/29/hub-dehing-hoofd-bedrijfsvoering-van-de-eenheid-limburg-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

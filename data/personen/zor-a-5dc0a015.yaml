@@ -1,0 +1,43 @@
+id: person:zor-a-5dc0a015
+name:
+  full: Ayten Zor
+  family: Ayten
+mandaten:
+- id: mandate-post-afdelingshoofd-plv-directeur-cdmo-min-ienw-2023-05-01
+  organization_id: org:onderdeel-concerndirectie-mens-en-organisatie-min-ienw
+  post_id: post:afdelingshoofd-plv-directeur-cdmo-min-ienw
+  role: Afdelingshoofd/plaatsvervangend directeur bij de concerndirectie Mens en Organisatie
+    bij het ministerie van Infrastructuur en Waterstaat
+  start_date: '2023-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/05/09/ayten-zor-afdelingshoofd-plaatsvervangend-directeur-bij-de-concerndirectie-mens-en-organisatie-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-05-09
+  confidence: 0.92
+- id: mandate-post-afdelingshoofd-plaatsvervangend-directeur-cdmo-min-ienw-2023-05-01
+  organization_id: org:onderdeel-cdmo-min-ienw
+  post_id: post:afdelingshoofd-plaatsvervangend-directeur-cdmo-min-ienw
+  role: Afdelingshoofd/plaatsvervangend directeur concerndirectie Mens en Organisatie,
+    Ministerie van Infrastructuur en Waterstaat
+  start_date: '2023-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/05/09/ayten-zor-afdelingshoofd-plaatsvervangend-directeur-bij-de-concerndirectie-mens-en-organisatie-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-05-09
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/05/09/ayten-zor-afdelingshoofd-plaatsvervangend-directeur-bij-de-concerndirectie-mens-en-organisatie-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

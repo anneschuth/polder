@@ -1,0 +1,45 @@
+id: person:akerboom-esm-b2cde293
+name:
+  full: Drs. E.S.M. (Erik) Akerboom MPM
+  family: Akerboom
+  given: Erik
+  initials: E.S.M.
+mandaten:
+- id: mandate-post-dg-aivd-min-bzk-2020-05-01
+  organization_id: org:onderdeel-aivd-min-bzk
+  post_id: post:dg-aivd-min-bzk
+  role: Directeur-generaal, Algemene Inlichtingen- en Veiligheidsdienst, ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-05-01'
+  end_date: '2026-06-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/22/erik-akerboom-verlaat-de-algemene-inlichtingen--en-veiligheidsdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-22
+  confidence: 0.92
+- id: mandate-post-directeur-generaal-aivd-2020-05-01
+  organization_id: org:onderdeel-aivd
+  post_id: post:directeur-generaal-aivd
+  role: Directeur-generaal van de Algemene Inlichtingen- en Veiligheidsdienst (AIVD)
+    bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-05-01'
+  end_date: '2026-06-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/22/erik-akerboom-verlaat-de-algemene-inlichtingen--en-veiligheidsdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/22/erik-akerboom-verlaat-de-algemene-inlichtingen--en-veiligheidsdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

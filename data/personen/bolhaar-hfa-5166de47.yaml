@@ -1,0 +1,28 @@
+id: person:bolhaar-hfa-5166de47
+name:
+  full: Drs. H.F.A. (Hendrieneke) Bolhaar
+  family: Bolhaar
+  given: Hendrieneke
+  initials: H.F.A.
+mandaten:
+- id: mandate-post-hoofd-communicatie-douane-min-fin-2023-07-01
+  organization_id: org:onderdeel-communicatie-douane-min-fin
+  post_id: post:hoofd-communicatie-douane-min-fin
+  role: Hoofd Communicatie, Douane, ministerie van Financiën
+  start_date: '2023-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/24/hendrieneke-bolhaar-hoofd-communicatie-douane-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-04-24
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/24/hendrieneke-bolhaar-hoofd-communicatie-douane-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,29 @@
+id: person:berends-j-fb6730be
+name:
+  full: J. (Johan) Berends MSc
+  family: Berends
+  given: Johan
+  initials: J.
+mandaten:
+- id: mandate-post-afdelingshoofd-operatie-exploitatie-dfa-belastingdienst-min-fin-2023-01-16
+  organization_id: org:onderdeel-afdeling-operatie-exploitatie-dfa-belastingdienst-min-fin
+  post_id: post:afdelingshoofd-operatie-exploitatie-dfa-belastingdienst-min-fin
+  role: Afdelingshoofd Operatie & Exploitatie bij de Corporate Dienst Datafundamenten
+    & Analytics van de Belastingdienst
+  start_date: '2023-01-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/11/johan-berends-afdelingshoofd-operatie--exploitatie-bij-corporate-dienst-datafundamenten--analytics-van-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-11
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/11/johan-berends-afdelingshoofd-operatie--exploitatie-bij-corporate-dienst-datafundamenten--analytics-van-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

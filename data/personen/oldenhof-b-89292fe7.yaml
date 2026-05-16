@@ -20,6 +20,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-08-01
   confidence: 0.91
+- id: mandate-post-afdelingshoofd-kantoor-amsterdam-directie-particulieren-belastingdienst-2022-09-01
+  organization_id: org:onderdeel-kantoor-amsterdam-directie-particulieren-belastingdienst
+  post_id: post:afdelingshoofd-kantoor-amsterdam-directie-particulieren-belastingdienst
+  role: Afdelingshoofd kantoor Amsterdam bij de directie Particulieren van de Belastingdienst
+  start_date: '2022-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/01/ben-oldenhof-afdelingshoofd-kantoor-amsterdam-directie-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-08-01
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/01/ben-oldenhof-afdelingshoofd-kantoor-amsterdam-directie-particulieren-bij-de-belastingdienst

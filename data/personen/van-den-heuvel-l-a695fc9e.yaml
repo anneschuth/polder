@@ -1,0 +1,27 @@
+id: person:van-den-heuvel-l-a695fc9e
+name:
+  full: Liesbeth van den Heuvel
+  family: van den Heuvel
+  given: Liesbeth
+mandaten:
+- id: mandate-post-hoofd-winst-dbt-min-fin-2025-02-10
+  organization_id: org:onderdeel-winst-dbt-min-fin
+  post_id: post:hoofd-winst-dbt-min-fin
+  role: Hoofd Winst, Directie Directe Belastingen en Toeslagen, ministerie van Financiën
+  start_date: '2025-02-10'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/17/liesbeth-van-den-heuvel-hoofd-winst-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-01-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/17/liesbeth-van-den-heuvel-hoofd-winst-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,27 @@
+id: person:bot-wc-a4b8e45f
+name:
+  full: Drs. W. C. (Corné) Bot
+  family: bot
+  initials: W.C.
+mandaten:
+- id: mandate-post-directeur-fez-uwv-2021-07-01
+  organization_id: org:onderdeel-directie-financieel-economische-zaken-fez
+  post_id: post:directeur-fez-uwv
+  role: Directeur Financieel Economische Zaken (FEZ), UWV
+  start_date: '2021-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/13/corne-bot-directeur-financieel-economische-zaken-bij-uwv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-13
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/13/corne-bot-directeur-financieel-economische-zaken-bij-uwv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,42 @@
+id: person:de-greeff-b-522955e1
+name:
+  full: Barbara de Greeff
+  family: de Greeff
+  given: Barbara
+mandaten:
+- id: mandate-post-hoofddirecteur-personeel-min-def-2025-09-02
+  organization_id: org:onderdeel-hoofddirectie-personeel-min-def
+  post_id: post:hoofddirecteur-personeel-min-def
+  role: Hoofddirecteur Personeel, ministerie van Defensie
+  start_date: '2025-09-02'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/03/barbara-de-greeff-hoofddirecteur-personeel-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-03
+  confidence: 0.92
+- id: mandate-post-hoofddirecteur-personeelsdirectie-min-def-2025-09-03
+  organization_id: org:onderdeel-personeelsdirectie-min-def
+  post_id: post:hoofddirecteur-personeelsdirectie-min-def
+  role: Hoofddirecteur Personeel, Personeelsdirectie, ministerie van Defensie
+  start_date: '2025-09-03'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/03/barbara-de-greeff-hoofddirecteur-personeelsdirectie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-09-03
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/09/03/barbara-de-greeff-hoofddirecteur-personeel-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

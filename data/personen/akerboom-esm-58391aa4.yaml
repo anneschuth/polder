@@ -1,0 +1,29 @@
+id: person:akerboom-esm-58391aa4
+name:
+  full: E.S.M. (Erik) Akerboom
+  family: Akerboom
+  given: Erik
+  initials: E.S.M.
+mandaten:
+- id: mandate-post-dg-aivd-min-bzk-2020-05-01
+  organization_id: org:onderdeel-aivd-min-bzk
+  post_id: post:dg-aivd-min-bzk
+  role: Directeur-generaal van de Algemene Inlichtingen- en Veiligheidsdienst, ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/31/erik-akerboom-directeur-generaal-aivd
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-31
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/31/erik-akerboom-directeur-generaal-aivd
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -35,6 +35,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2026-02-17
   confidence: 0.89
+- id: mandate-post-hoofddirecteur-bedrijfsvoering-cio-min-jenv-2021-05-01
+  organization_id: org:onderdeel-hdbv-min-jenv
+  post_id: post:hoofddirecteur-bedrijfsvoering-cio-min-jenv
+  role: Hoofddirecteur Bedrijfsvoering, tevens CIO bij het ministerie van Justitie
+    en Veiligheid
+  start_date: '2021-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/12/emine-ozyenici-hoofddirecteur-bedrijfsvoering-tevens-cio-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-12
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/25/emine-ozyenici-plaatsvervangend-secretaris-generaal-jenv

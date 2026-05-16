@@ -1,0 +1,28 @@
+id: person:van-essen-h-6a1c886c
+name:
+  full: Drs. H. (Hanneke) van Essen
+  family: van Essen
+  given: Hanneke
+  initials: H.
+mandaten:
+- id: mandate-post-directeur-nationale-ombudsman-2018-11-08
+  organization_id: org:hoge-college-nationale-ombudsman
+  post_id: post:directeur-nationale-ombudsman
+  role: Directeur, Nationale ombudsman
+  start_date: '2018-11-08'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/23/hanneke-van-essen-directeur-nationale-ombudsman
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-08-23
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/23/hanneke-van-essen-directeur-nationale-ombudsman
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

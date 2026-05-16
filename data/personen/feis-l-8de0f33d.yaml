@@ -1,0 +1,28 @@
+id: person:feis-l-8de0f33d
+name:
+  full: L. (Leonard) Feis
+  family: feis
+  initials: L.
+mandaten:
+- id: mandate-post-mt-lid-zorgverzekeringen-min-vws-2022-02-01
+  organization_id: org:onderdeel-zorgverzekeringen-min-vws
+  post_id: post:mt-lid-zorgverzekeringen-min-vws
+  role: MT-lid, directie Zorgverzekeringen, ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2022-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/23/leonard-feis-mt-lid-bij-de-directie-zorgverzekeringen-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-23
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/23/leonard-feis-mt-lid-bij-de-directie-zorgverzekeringen-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

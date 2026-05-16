@@ -1,0 +1,28 @@
+id: person:hoek-j-cbdfea90
+name:
+  full: Johan Hoek
+  family: Johan
+mandaten:
+- id: mandate-post-afdelingshoofd-ova-dfa-belastingdienst-min-fin-2025-08-01
+  organization_id: org:onderdeel-afdeling-ova-dfa-belastingdienst-min-fin
+  post_id: post:afdelingshoofd-ova-dfa-belastingdienst-min-fin
+  role: Afdelingshoofd Ondersteuning Verantwoorde Analytics bij de Corporate Dienst
+    Datafundamenten & Analytics (DF&A), Cluster Dienstverlening & Operaties, bij de
+    Belastingdienst
+  start_date: '2025-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/07/07/johan-hoek-afdelingshoofd-ondersteuning-verantwoorde-analytics-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-07-07
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/07/07/johan-hoek-afdelingshoofd-ondersteuning-verantwoorde-analytics-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

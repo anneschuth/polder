@@ -1,0 +1,27 @@
+id: person:merison-i-cedfce44
+name:
+  full: Iman Merison
+  family: Merison
+  given: Iman
+mandaten:
+- id: mandate-post-mt-lid-ibeleid-min-vws-2021-04-01
+  organization_id: org:onderdeel-ibeleid-min-vws
+  post_id: post:mt-lid-ibeleid-min-vws
+  role: MT-lid i-Beleid bij het ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2021-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/02/iman-merison-mt-lid-i-beleid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/02/iman-merison-mt-lid-i-beleid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:jansen-waa-65d086c1
+name:
+  full: Drs. W.A.A. (Wim) Jansen
+  family: Jansen
+  given: Wim
+  initials: W.A.A.
+mandaten:
+- id: mandate-post-hoofd-internationale-zaken-gemeente-den-haag-2018-09-01
+  organization_id: org:gemeente-den-haag
+  post_id: post:hoofd-internationale-zaken-gemeente-den-haag
+  role: Hoofd Internationale Zaken, gemeente Den Haag
+  start_date: '2018-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/02/astrid-bronswijk-en-wim-jansen-ruilen-van-functie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-08-02
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/02/astrid-bronswijk-en-wim-jansen-ruilen-van-functie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

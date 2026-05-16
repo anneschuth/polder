@@ -1,0 +1,28 @@
+id: person:postma-a-c2c71121
+name:
+  full: Drs. A. (Allard) Postma
+  family: Postma
+  given: Allard
+  initials: A.
+mandaten:
+- id: mandate-post-hoofd-begrotingsbeleid-min-fin-2019-08-01
+  organization_id: org:onderdeel-begrotingsbeleid-min-fin
+  post_id: post:hoofd-begrotingsbeleid-min-fin
+  role: Hoofd Begrotingsbeleid, ministerie van Financiën
+  start_date: '2019-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/03/allard-postma-hoofd-begrotingsbeleid-bij-fin
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-03
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/03/allard-postma-hoofd-begrotingsbeleid-bij-fin
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

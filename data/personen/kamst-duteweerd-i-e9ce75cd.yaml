@@ -1,0 +1,44 @@
+id: person:kamst-duteweerd-i-e9ce75cd
+name:
+  full: Mr. Drs. I. (Irma) Kamst-Duteweerd
+  family: Kamst-Duteweerd
+  given: Irma
+  initials: I.
+mandaten:
+- id: mandate-post-directeur-iod-nvwa-2023-04-01
+  organization_id: org:onderdeel-iod-nvwa
+  post_id: post:directeur-iod-nvwa
+  role: Directeur Inlichtingen- en Opsporingsdienst, Nederlandse Voedsel en Warenautoriteit
+  start_date: '2023-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/26/irma-kamst-duteweerd-directeur-inlichtingen--en-opsporingsdienst-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-01-26
+  confidence: 0.92
+- id: mandate-post-directeur-iod-nvwa-min-lnv-2023-04-01
+  organization_id: org:onderdeel-iod-nvwa-min-lnv
+  post_id: post:directeur-iod-nvwa-min-lnv
+  role: Directeur Inlichtingen- en Opsporingsdienst, Nederlandse Voedsel en Warenautoriteit
+    (NVWA), ministerie van LNV
+  start_date: '2023-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/26/irma-kamst-duteweerd-directeur-inlichtingen--en-opsporingsdienst-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-01-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/26/irma-kamst-duteweerd-directeur-inlichtingen--en-opsporingsdienst-bij-de-nvwa
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

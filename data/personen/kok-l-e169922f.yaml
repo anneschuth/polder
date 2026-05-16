@@ -1,0 +1,28 @@
+id: person:kok-l-e169922f
+name:
+  full: Leonard Huibert Kok
+  family: Huibert
+  given: Leonard
+mandaten:
+- id: mandate-post-directeur-politieacademie-2023-01-01
+  organization_id: org:onderdeel-politieacademie
+  post_id: post:directeur-politieacademie
+  role: Directeur van de Politieacademie
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2023-6162.html
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Staatscourant nr. stcrt-2023-6162, 22 december 2022
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2023-6162.html
+  confidence: 0.95
+sources:
+- id: staatscourant
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2023-6162.html
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

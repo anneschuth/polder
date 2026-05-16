@@ -38,6 +38,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2019-07-18
   confidence: 0.85
+- id: mandate-post-mt-lid-publieke-gezondheid-min-vws-2021-02-01
+  organization_id: org:onderdeel-publieke-gezondheid-min-vws
+  post_id: post:mt-lid-publieke-gezondheid-min-vws
+  role: MT-lid Publieke Gezondheid bij het ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/17/florien-van-der-windt-mt-lid-publieke-gezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-17
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/18/florien-van-der-windt-afdelingshoofd-verkeersveiligheid-en-wegvervoer-bij-ienw

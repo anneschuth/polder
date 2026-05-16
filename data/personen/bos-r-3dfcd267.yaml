@@ -1,0 +1,26 @@
+id: person:bos-r-3dfcd267
+name:
+  full: Remko Bos
+  family: Remko
+mandaten:
+- id: mandate-post-directeur-consumenten-acm-2023-10-15
+  organization_id: org:zbo-acm
+  post_id: post:directeur-consumenten-acm
+  role: Directeur Mededinging, Autoriteit Consument & Markt (ACM)
+  start_date: '2023-10-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/22/functiewisselingen-bij-de-acm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-08-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/22/functiewisselingen-bij-de-acm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:wolf-f-a650160b
+name:
+  full: F. (Floris) Wolf
+  family: wolf
+  initials: F.
+mandaten:
+- id: mandate-post-mt-lid-mest-directie-pav-min-lnv-2022-08-01
+  organization_id: org:onderdeel-directie-pav-min-lnv
+  post_id: post:mt-lid-mest-directie-pav-min-lnv
+  role: MT-lid Mest bij de directie Plantaardige Agroketens en Voedselkwaliteit (PAV),
+    ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2022-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/14/floris-wolf-mt-lid-plantaardige-agroketens-en-voedselkwaliteit-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-06-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/14/floris-wolf-mt-lid-plantaardige-agroketens-en-voedselkwaliteit-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

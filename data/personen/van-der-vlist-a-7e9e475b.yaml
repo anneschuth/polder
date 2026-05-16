@@ -1,0 +1,28 @@
+id: person:van-der-vlist-a-7e9e475b
+name:
+  full: A. (Aart) van der Vlist RE MMC
+  family: van der Vlist
+  given: Aart
+  initials: A.
+mandaten:
+- id: mandate-post-directeur-informatievoorziening-cio-politie-2021-06-01
+  organization_id: org:politie
+  post_id: post:directeur-informatievoorziening-cio-politie
+  role: Directeur Informatievoorziening en Chief Information Officer bij de Politie
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/01/aart-van-der-vlist-directeur-informatievoorziening-en-cio-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-01
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/01/aart-van-der-vlist-directeur-informatievoorziening-en-cio-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

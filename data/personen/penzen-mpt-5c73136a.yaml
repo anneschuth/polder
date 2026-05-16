@@ -1,0 +1,29 @@
+id: person:penzen-mpt-5c73136a
+name:
+  full: Drs. ing. M.P.T. (Mario) Penzen
+  family: Penzen
+  given: Mario
+  initials: M.P.T.
+mandaten:
+- id: mandate-post-directeur-bedrijfsvoering-en-projectbeheersing-rws-ppo-min-ienw-2019-11-01
+  organization_id: org:onderdeel-rws-ppo-min-ienw
+  post_id: post:directeur-bedrijfsvoering-en-projectbeheersing-rws-ppo-min-ienw
+  role: Directeur Bedrijfsvoering en Projectbeheersing bij Programma's, Projecten
+    en Onderhoud bij Rijkswaterstaat, ministerie van Infrastructuur en Waterstaat
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/28/mario-penzen-directeur-bedrijfsvoering-en-projectbeheersing-bij-rijkswaterstaat
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-08-28
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/28/mario-penzen-directeur-bedrijfsvoering-en-projectbeheersing-bij-rijkswaterstaat
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

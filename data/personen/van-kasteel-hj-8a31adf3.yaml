@@ -1,0 +1,45 @@
+id: person:van-kasteel-hj-8a31adf3
+name:
+  full: H.J. (Hugo) van Kasteel
+  family: van Kasteel
+  given: Hugo
+  initials: H.J.
+mandaten:
+- id: mandate-post-directeur-dierlijke-agroketens-dierenwelzijn-dg-agro-min-lnv-2021-03-15
+  organization_id: org:onderdeel-directie-dad-dg-agro-min-lnv
+  post_id: post:directeur-dierlijke-agroketens-dierenwelzijn-dg-agro-min-lnv
+  role: Directeur van de directie Dierlijke Agroketens en Dierenwelzijn bij het directoraat-generaal
+    Agro van het ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2021-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/10/hugo-van-kasteel-directeur-dierlijke-agroketens-en-dierenwelzijn-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-10
+  confidence: 0.92
+- id: mandate-post-directeur-dierlijke-agroketens-dierenwelzijn-min-lnv-2021-03-15
+  organization_id: org:onderdeel-directie-dierlijke-agroketens-dierenwelzijn-min-lnv
+  post_id: post:directeur-dierlijke-agroketens-dierenwelzijn-min-lnv
+  role: Directeur Dierlijke Agroketens en Dierenwelzijn, Directoraat-generaal Agro,
+    ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2021-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/10/hugo-van-kasteel-directeur-dierlijke-agroketens-en-dierenwelzijn-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-10
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/10/hugo-van-kasteel-directeur-dierlijke-agroketens-en-dierenwelzijn-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

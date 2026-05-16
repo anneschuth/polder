@@ -1,0 +1,45 @@
+id: person:kooiman-fb-7bb5a12e
+name:
+  full: F.B. (Frank) Kooiman MA
+  family: Kooiman
+  given: Frank
+  initials: F.B.
+mandaten:
+- id: mandate-post-kwartiermaker-programmadirecteur-covid19-volksgezondheid-min-vws-2022-03-28
+  organization_id: org:onderdeel-directie-covid19-volksgezondheid-min-vws
+  post_id: post:kwartiermaker-programmadirecteur-covid19-volksgezondheid-min-vws
+  role: Kwartiermaker programmadirecteur coördinerende directie COVID-19 Volksgezondheid
+    bij het ministerie van Volksgezondheid, Welzijn en Sport (duo-directeurschap)
+  start_date: '2022-03-28'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/17/frank-kooiman-en-henk-soorsma-kwartiermaker-programmadirecteur-coordinerende-directie-covid-19-volksgezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-02-17
+  confidence: 0.88
+- id: mandate-post-kwartiermaker-programmadirecteur-coordinerende-directie-covid19-volksgezondheid-min-vws-2022-03-28
+  organization_id: org:onderdeel-coordinerende-directie-covid19-volksgezondheid-min-vws
+  post_id: post:kwartiermaker-programmadirecteur-coordinerende-directie-covid19-volksgezondheid-min-vws
+  role: Kwartiermaker programmadirecteur coördinerende directie COVID-19 Volksgezondheid,
+    ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2022-03-28'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/17/frank-kooiman-en-henk-soorsma-kwartiermaker-programmadirecteur-coordinerende-directie-covid-19-volksgezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-02-17
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/17/frank-kooiman-en-henk-soorsma-kwartiermaker-programmadirecteur-coordinerende-directie-covid-19-volksgezondheid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

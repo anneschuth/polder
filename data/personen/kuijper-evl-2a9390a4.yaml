@@ -1,0 +1,45 @@
+id: person:kuijper-evl-2a9390a4
+name:
+  full: Drs. E. (Edith) V.L. Kuijper
+  family: Kuijper
+  given: Edith
+  initials: E.V.L.
+mandaten:
+- id: mandate-post-hoofd-departementaal-coordinatiecentrum-crisisbeheersing-min-ienw-2020-12-01
+  organization_id: org:onderdeel-departementaal-coordinatiecentrum-crisisbeheersing-min-ienw
+  post_id: post:hoofd-departementaal-coordinatiecentrum-crisisbeheersing-min-ienw
+  role: Hoofd Departementaal Coördinatiecentrum Crisisbeheersing, ministerie van Infrastructuur
+    en Waterstaat
+  start_date: '2020-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/edith-kuijper-hoofd-departementaal-coordinatiecentrum-crisisbeheersing-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-02
+  confidence: 0.92
+- id: mandate-post-hoofd-dcc-crisisbeheersing-min-ienw-2020-12-01
+  organization_id: org:onderdeel-dcc-crisisbeheersing-min-ienw
+  post_id: post:hoofd-dcc-crisisbeheersing-min-ienw
+  role: Hoofd Departementaal Coördinatiecentrum Crisisbeheersing bij het ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/edith-kuijper-hoofd-departementaal-coordinatiecentrum-crisisbeheersing-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-02
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/02/edith-kuijper-hoofd-departementaal-coordinatiecentrum-crisisbeheersing-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

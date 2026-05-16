@@ -1,0 +1,29 @@
+id: person:de-vries-hl-e5d9956a
+name:
+  full: Mr. H.L. (Hans) de Vries
+  family: de Vries
+  given: Hans
+  initials: H.L.
+mandaten:
+- id: mandate-post-directeur-samenwerking-digitale-weerbaarheid-ncsc-min-jenv-2019-01-01
+  organization_id: org:onderdeel-ncsc-min-jenv
+  post_id: post:directeur-samenwerking-digitale-weerbaarheid-ncsc-min-jenv
+  role: Directeur van het Nationaal Cyber Security Centrum bij het ministerie van
+    Justitie en Veiligheid
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/09/13/hans-de-vries-directeur-nationaal-cyber-security-centrum-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-09-13
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/09/13/hans-de-vries-directeur-nationaal-cyber-security-centrum-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

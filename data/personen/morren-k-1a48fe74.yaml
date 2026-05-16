@@ -1,0 +1,28 @@
+id: person:morren-k-1a48fe74
+name:
+  full: Drs. K. (Karin) Morren
+  family: Morren
+  given: Karin
+  initials: K.
+mandaten:
+- id: mandate-post-directeur-regie-migratieketen-min-jenv-2021-03-01
+  organization_id: org:onderdeel-directie-regie-migratieketen-min-jenv
+  post_id: post:directeur-regie-migratieketen-min-jenv
+  role: Directeur Regie Migratieketen, ministerie van Justitie en Veiligheid
+  start_date: '2021-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/15/karin-morren-directeur-regie-migratieketen-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/15/karin-morren-directeur-regie-migratieketen-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

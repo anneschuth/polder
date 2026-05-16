@@ -1,0 +1,45 @@
+id: person:tielemans-e-02663117
+name:
+  full: Dr. E. (Erik) Tielemans
+  family: Tielemans
+  given: Erik
+  initials: E.
+mandaten:
+- id: mandate-post-hoofd-cvsp-rivm-2021-07-01
+  organization_id: org:onderdeel-cvsp-rivm
+  post_id: post:hoofd-cvsp-rivm
+  role: Hoofd Centrum Veiligheid van Stoffen en Producten, Rijksinstituut voor Volksgezondheid
+    en Milieu
+  start_date: '2021-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/12/erik-tielemans-hoofd-centrum-veiligheid-van-stoffen-en-producten
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-12
+  confidence: 0.92
+- id: mandate-post-hoofd-centrum-veiligheid-stoffen-producten-rivm-2021-07-01
+  organization_id: org:onderdeel-centrum-veiligheid-stoffen-producten-rivm
+  post_id: post:hoofd-centrum-veiligheid-stoffen-producten-rivm
+  role: Hoofd Centrum Veiligheid van Stoffen en Producten, Rijksinstituut voor Volksgezondheid
+    en Milieu (RIVM), ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2021-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/12/erik-tielemans-hoofd-centrum-veiligheid-van-stoffen-en-producten
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-12
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/12/erik-tielemans-hoofd-centrum-veiligheid-van-stoffen-en-producten
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

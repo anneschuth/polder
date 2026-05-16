@@ -1,0 +1,57 @@
+id: person:van-dijk-ej-31d4135c
+name:
+  full: E.J. (Esther) van Dijk
+  family: dijk
+  initials: E.J.
+mandaten:
+- id: mandate-post-directeur-hr-ontwikkeling-gemeente-rotterdam-2019-09-09
+  organization_id: org:gemeente-rotterdam
+  post_id: post:directeur-hr-ontwikkeling-gemeente-rotterdam
+  role: Adjunct-directeur Veiligheid en hoofd Strategie en Staf bij de gemeente Rotterdam
+  start_date: '2019-09-09'
+  end_date: '2021-09-08'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/29/esther-van-dijk-adjunct-directeur-veiligheid-en-hoofd-strategie-en-staf-bij-de-gemeente-rotterdam
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-29
+  confidence: 0.88
+- id: mandate-post-adjunct-directeur-veiligheid-gem-rotterdam-2019-09-09
+  organization_id: org:onderdeel-directie-veiligheid
+  post_id: post:adjunct-directeur-veiligheid-gem-rotterdam
+  role: Adjunct-directeur Veiligheid en hoofd Strategie en Staf bij de gemeente Rotterdam
+  start_date: '2019-09-09'
+  end_date: '2021-09-09'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/29/esther-van-dijk-adjunct-directeur-veiligheid-en-hoofd-strategie-en-staf-bij-de-gemeente-rotterdam
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-29
+  confidence: 0.87
+- id: mandate-post-programmadirecteur-anti-ondermijning-min-jenv-2018-06-15
+  organization_id: org:onderdeel-programmadirectie-anti-ondermijning-min-jenv
+  post_id: post:programmadirecteur-anti-ondermijning-min-jenv
+  role: Programmadirecteur Anti-ondermijning, ministerie van Justitie en Veiligheid
+  start_date: '2018-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/18/esther-van-dijk-programmadirecteur-anti-ondermijning-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-06-18
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/29/esther-van-dijk-adjunct-directeur-veiligheid-en-hoofd-strategie-en-staf-bij-de-gemeente-rotterdam
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

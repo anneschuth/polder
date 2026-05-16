@@ -1,0 +1,27 @@
+id: person:nienhuis-j-3364c2cc
+name:
+  full: Jacquelien Nienhuis
+  family: Nienhuis
+  given: Jacquelien
+mandaten:
+- id: mandate-post-directeur-communicatie-min-bz-2023-08-01
+  organization_id: org:onderdeel-communicatie-min-bz
+  post_id: post:directeur-communicatie-min-bz
+  role: Directeur Communicatie, ministerie van Buitenlandse Zaken
+  start_date: '2023-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/30/jacquelien-nienhuis-directeur-communicatie-bij-bz
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-30
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/30/jacquelien-nienhuis-directeur-communicatie-bij-bz
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

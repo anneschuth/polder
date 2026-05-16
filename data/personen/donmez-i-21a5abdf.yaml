@@ -1,0 +1,29 @@
+id: person:donmez-i-21a5abdf
+name:
+  full: Drs. I. (Ilknur) Dönmez
+  family: Dönmez
+  given: Ilknur
+  initials: I.
+mandaten:
+- id: mandate-post-mt-lid-ondernemerschap-min-ezk-2022-01-01
+  organization_id: org:onderdeel-ondernemerschap-min-ezk
+  post_id: post:mt-lid-ondernemerschap-min-ezk
+  role: MT-lid Ondernemerschap, directie Ondernemerschap, ministerie van Economische
+    Zaken en Klimaat
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/07/ilknur-donmez-mt-lid-ondernemerschap-bij-ezk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-07
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/07/ilknur-donmez-mt-lid-ondernemerschap-bij-ezk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

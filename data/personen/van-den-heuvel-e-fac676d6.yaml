@@ -1,0 +1,45 @@
+id: person:van-den-heuvel-e-fac676d6
+name:
+  full: E. (Eva) van den Heuvel MSc
+  family: van den Heuvel
+  given: Eva
+  initials: E.
+mandaten:
+- id: mandate-post-mt-lid-toegang-langdurige-zorg-min-vws-2020-03-01
+  organization_id: org:onderdeel-directie-langdurige-zorg-min-vws
+  post_id: post:mt-lid-toegang-langdurige-zorg-min-vws
+  role: MT-lid Toegang Langdurige Zorg bij de directie Langdurige Zorg bij het ministerie
+    van Volksgezondheid, Welzijn en Sport
+  start_date: '2020-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/20/eva-van-den-heuvel-mt-lid-toegang-langdurige-zorg-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-02-20
+  confidence: 0.92
+- id: mandate-post-mt-lid-toegang-langdurige-zorg-directie-langdurige-zorg-min-vws-2020-03-01
+  organization_id: org:onderdeel-directie-langdurige-zorg-min-vws
+  post_id: post:mt-lid-toegang-langdurige-zorg-directie-langdurige-zorg-min-vws
+  role: MT-lid Toegang Langdurige Zorg, directie Langdurige Zorg, ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2020-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/20/eva-van-den-heuvel-mt-lid-toegang-langdurige-zorg-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-02-20
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/20/eva-van-den-heuvel-mt-lid-toegang-langdurige-zorg-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

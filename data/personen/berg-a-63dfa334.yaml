@@ -1,0 +1,58 @@
+id: person:berg-a-63dfa334
+name:
+  full: Drs. Angelique Berg
+  family: Angelique
+mandaten:
+- id: mandate-post-directeur-generaal-cbs-2020-09-01
+  organization_id: org:zbo-cbs
+  post_id: post:directeur-generaal-cbs
+  role: Directeur-generaal van het Centraal Bureau voor de Statistiek (CBS)
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/angelique-berg-directeur-generaal-cbs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-20
+  confidence: 0.92
+- id: mandate-post-dg-volksgezondheid-min-vws-2015-01-01
+  organization_id: org:onderdeel-dg-volksgezondheid-min-vws
+  post_id: post:dg-volksgezondheid-min-vws
+  role: Directeur-generaal Volksgezondheid bij het ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2015-01-01'
+  end_date: '2020-09-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/angelique-berg-directeur-generaal-cbs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-20
+  confidence: 0.85
+- id: mandate-post-directeur-generaal-volksgezondheid-min-vws-2015-01-01
+  organization_id: org:onderdeel-dg-volksgezondheid-min-vws
+  post_id: post:directeur-generaal-volksgezondheid-min-vws
+  role: Directeur-generaal Volksgezondheid, ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2015-01-01'
+  end_date: '2020-09-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/angelique-berg-directeur-generaal-cbs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-20
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/angelique-berg-directeur-generaal-cbs
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

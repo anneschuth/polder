@@ -1,0 +1,42 @@
+id: person:stam-dm-aeeb056a
+name:
+  full: D.M. (Dennis) Stam
+  family: stam
+  initials: D.M.
+mandaten:
+- id: mandate-post-mt-lid-erfgoed-kunsten-min-ocw-2021-07-01
+  organization_id: org:onderdeel-directie-erfgoed-kunsten-min-ocw
+  post_id: post:mt-lid-erfgoed-kunsten-min-ocw
+  role: MT-lid Erfgoed en Kunsten bij het ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2021-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/06/dennis-stam-mt-lid-erfgoed-en-kunsten-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-05-06
+  confidence: 0.92
+- id: mandate-post-mt-lid-erfgoed-en-kunsten-min-ocw-2021-07-01
+  organization_id: org:onderdeel-erfgoed-en-kunsten-min-ocw
+  post_id: post:mt-lid-erfgoed-en-kunsten-min-ocw
+  role: MT-lid Erfgoed en Kunsten, ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2021-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/06/dennis-stam-mt-lid-erfgoed-en-kunsten-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-05-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/06/dennis-stam-mt-lid-erfgoed-en-kunsten-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

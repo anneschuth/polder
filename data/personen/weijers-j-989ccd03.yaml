@@ -1,0 +1,29 @@
+id: person:weijers-j-989ccd03
+name:
+  full: Mr. J. (Jeroen) Weijers
+  family: Weijers
+  given: Jeroen
+  initials: J.
+mandaten:
+- id: mandate-post-hoofd-bureau-directieondersteuning-particulieren-belastingdienst-min-fin-2021-12-01
+  organization_id: org:onderdeel-bureau-directieondersteuning-directie-particulieren-belastingdienst-min-fin
+  post_id: post:hoofd-bureau-directieondersteuning-particulieren-belastingdienst-min-fin
+  role: Hoofd Bureau directieondersteuning directie Particulieren Belastingdienst
+    bij het ministerie van Financiën
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/14/jeroen-weijers-hoofd-bureau-directieondersteuning-directie-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/14/jeroen-weijers-hoofd-bureau-directieondersteuning-directie-particulieren-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

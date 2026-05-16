@@ -32,17 +32,51 @@ RED_AVG_KEYWORDS = (
 )
 
 # Mapping van rolwoord -> post-classification (schema-enum).
-# Volgorde is belangrijk: meer specifieke termen eerst.
+# Volgorde is belangrijk: meer specifieke termen eerst. De extra
+# ABD-phrasings hieronder dekken de manier waarop algemenebestuursdienst.nl
+# functies omschrijft ("hoofd afdeling X" i.p.v. "afdelingshoofd X",
+# "MT-lid ...", "kwartiermaker ...", "hoofddirecteur ..."). Zonder deze
+# varianten valt ~1500 ABD-records uit op "classification niet afleidbaar".
 ROLE_TO_CLASSIFICATION: list[tuple[str, str]] = [
     ("plaatsvervangend secretaris-generaal", "abd-tmg"),
+    ("waarnemend secretaris-generaal", "abd-tmg"),
     ("secretaris-generaal", "abd-tmg"),
+    ("plaatsvervangend directeur-generaal", "abd-tmg"),
+    ("plaatsvervangend dg", "abd-tmg"),
     ("directeur-generaal", "abd-tmg"),
     ("inspecteur-generaal", "abd-tmg"),
+    # Directeur-varianten vóór de generieke "directeur"; word-boundary
+    # regex matcht "directeur" niet binnen "hoofddirecteur".
+    ("hoofddirecteur", "abd-directeur"),
+    ("programmadirecteur", "abd-directeur"),
+    ("projectdirecteur", "abd-directeur"),
+    ("plaatsvervangend directeur", "abd-directeur"),
+    ("waarnemend directeur", "abd-directeur"),
+    ("adjunct-directeur", "abd-directeur"),
+    ("unitdirecteur", "abd-directeur"),
+    ("regiodirecteur", "abd-directeur"),
     ("directeur", "abd-directeur"),
+    # Afdelingshoofd-varianten zoals ABD ze schrijft.
     ("afdelingshoofd", "abd-afdelingshoofd"),
+    ("hoofd afdeling", "abd-afdelingshoofd"),
+    ("hoofd van de afdeling", "abd-afdelingshoofd"),
+    ("afdelingsmanager", "abd-afdelingshoofd"),
+    ("afdelingsdirecteur", "abd-afdelingshoofd"),
+    ("sectiehoofd", "abd-afdelingshoofd"),
+    ("stafhoofd", "abd-afdelingshoofd"),
+    ("divisiehoofd", "abd-afdelingshoofd"),
+    ("clusterhoofd", "abd-afdelingshoofd"),
+    ("mt-lid", "abd-afdelingshoofd"),
+    ("lid van het managementteam", "abd-afdelingshoofd"),
     ("projectleider", "abd-projectleider"),
+    ("kwartiermaker", "abd-projectleider"),
+    ("programmamanager", "abd-projectleider"),
     ("minister", "bewindspersoon"),
     ("staatssecretaris", "bewindspersoon"),
+    # Laatste redmiddel: een kale "hoofd <iets>" is in ABD-context vrijwel
+    # altijd een afdelingshoofd-tier functie. Staat bewust achteraan zodat
+    # alle specifiekere termen voorgaan.
+    ("hoofd", "abd-afdelingshoofd"),
 ]
 
 # Source-id mapping uit input-bestandsnaam.
@@ -546,11 +580,35 @@ def plan_apply(
     *,
     only_high_confidence: bool = False,
     skip_persons: bool = False,
+    needs_review_floor: float | None = None,
+    person_match_floor: float = 0.85,
+    chain_create_on_parent_mismatch: bool = False,
 ) -> tuple[list[ApplyAction], list[SkippedProposal]]:
     """Bouw een plan op basis van resolved proposals.
 
     Idempotent: bestaande org/post/person-IDs leiden niet tot duplicate-actions.
     Auto-merge regels conform de specificatie in de skill-beschrijving.
+
+    `needs_review_floor`: als gezet (float), worden proposals met
+    `merge_recommendation == "needs-review"` tóch doorgelaten naar de
+    verdere guards (AVG-rood, post-classification, bron-URL, evidence)
+    mits hun top-level `confidence >= needs_review_floor`. `skip` blijft
+    altijd skippen (expliciet resolver-veto). None = ongewijzigd gedrag.
+
+    `person_match_floor`: een `resolved_person_id` wordt alleen vertrouwd
+    (mandaat appenden aan bestaande persoon) als
+    `resolution_confidence.person >= person_match_floor`. Daaronder is de
+    persoon-match te zwak — we negeren de resolved_person_id en maken een
+    NIEUW person-record aan in plaats van een mandaat aan de verkeerde
+    bestaande persoon te hangen. Beschermt data-integriteit bij de
+    needs-review-bulk (bv. "Mark Vermeer" mag niet op "Henk Vermeer"
+    geappend worden). Default 0.85.
+
+    `chain_create_on_parent_mismatch`: als True maakt een chain-entry waarvan
+    de naam-match onder een andere parent valt dan de chain zegt, alsnog een
+    NIEUW org-record uit de voorgestelde slug, in plaats van de proposal te
+    skippen. Bewuste backfill-keuze; duplicaten worden later via audit
+    ontdubbeld. Default False = strikt gedrag (daily-run veilig).
     """
     actions: list[ApplyAction] = []
     skipped: list[SkippedProposal] = []
@@ -599,13 +657,24 @@ def plan_apply(
         # auto-merge alsnog onterecht blokkeren.
         rec = proposal.get("merge_recommendation")
         if rec is not None and rec != "auto-merge":
-            skipped.append(
-                SkippedProposal(
-                    proposal=proposal,
-                    reasons=[f"merge_recommendation={rec!r} (geen auto-merge)"],
-                )
+            # `skip` is een expliciet resolver-veto en blijft altijd skippen.
+            # `needs-review` mag door als er een expliciete floor is gezet en
+            # de skill-confidence daarboven zit; de verdere guards (AVG-rood,
+            # post-classification, bron-URL, evidence) blijven van kracht.
+            allow_needs_review = (
+                rec == "needs-review"
+                and needs_review_floor is not None
+                and confidence >= needs_review_floor
             )
-            continue
+            if not allow_needs_review:
+                detail = f"merge_recommendation={rec!r} (geen auto-merge)"
+                if rec == "needs-review" and needs_review_floor is not None:
+                    detail = (
+                        f"needs-review met confidence {confidence:.2f} < "
+                        f"floor {needs_review_floor:.2f}"
+                    )
+                skipped.append(SkippedProposal(proposal=proposal, reasons=[detail]))
+                continue
 
         # Alleen terugvallen op de ruwe confidence-floor als de resolver
         # géén expliciet oordeel gaf (rec is None). Met rec == "auto-merge"
@@ -783,6 +852,7 @@ def plan_apply(
             proposal=proposal,
             confidence=confidence,
             polder_index=polder_index,
+            create_on_parent_mismatch=chain_create_on_parent_mismatch,
         )
         if chain_skip_reasons:
             skipped.append(SkippedProposal(proposal=proposal, reasons=chain_skip_reasons))
@@ -897,6 +967,7 @@ def plan_apply(
             confidence=confidence,
             pending_person_ids=pending_person_ids,
             pending_create_actions=actions,
+            person_match_floor=person_match_floor,
         )
         if person_action_or_skip is None:
             # Pending create-person record is gemuteerd met extra mandaat;
@@ -920,6 +991,7 @@ def _plan_chain(
     proposal: dict[str, Any],
     confidence: float,
     polder_index: Any = None,
+    create_on_parent_mismatch: bool = False,
 ) -> tuple[list[ApplyAction], list[str]]:
     """Bouw create-org acties voor elke chain-entry die nog niet bestaat.
 
@@ -977,12 +1049,26 @@ def _plan_chain(
         if canonical_by_name and canonical_by_name in parents:
             real_parent = parents[canonical_by_name]
             if real_parent is not None and parent_id is not None and real_parent != parent_id:
-                return [], [
-                    f"chain-entry naam {entry.get('name')!r} matched "
-                    f"{canonical_by_name!r}, maar diens parent {real_parent!r} "
-                    f"verschilt van chain-parent {parent_id!r}"
-                ]
-            slug = canonical_by_name
+                if not create_on_parent_mismatch:
+                    return [], [
+                        f"chain-entry naam {entry.get('name')!r} matched "
+                        f"{canonical_by_name!r}, maar diens parent {real_parent!r} "
+                        f"verschilt van chain-parent {parent_id!r}"
+                    ]
+                # Bewuste keuze (backfill-modus): de naam-match valt onder een
+                # andere parent dan de chain zegt. In plaats van de hele
+                # proposal te skippen, negeren we de naam-match en maken we
+                # een NIEUW org-record uit de voorgestelde slug. Mogelijke
+                # duplicaten worden later ontdubbeld (polder audit /
+                # quasi_dup). Zonder deze modus blijft het strikte gedrag.
+                proposal.setdefault("_apply_notes", []).append(
+                    f"chain-entry {entry.get('name')!r}: naam-match "
+                    f"{canonical_by_name!r} genegeerd (parent {real_parent!r} != "
+                    f"chain-parent {parent_id!r}); nieuw org-record uit "
+                    f"voorgestelde slug {slug!r}"
+                )
+            else:
+                slug = canonical_by_name
         # Sync de slug terug zodat _build_org_record en parent-tracking
         # consistent zijn.
         entry["slug_proposal"] = slug
@@ -1404,11 +1490,30 @@ def _plan_person(
     confidence: float,
     pending_person_ids: set[str],
     pending_create_actions: list[ApplyAction] | None = None,
+    person_match_floor: float = 0.85,
 ) -> ApplyAction | SkippedProposal | None:
     resolved_id = proposal.get("resolved_person_id")
     name_full = str(proposal.get("person_name", "")).strip()
     if not name_full:
         return SkippedProposal(proposal=proposal, reasons=["geen person_name"])
+
+    # Zwakke persoon-match: vertrouw resolved_person_id niet onder de floor.
+    # Anders hangt apply een mandaat aan de verkeerde bestaande persoon
+    # (bv. "Mark Vermeer" -> bestaande "Henk Vermeer" via family_unique).
+    # We laten resolved_id vallen zodat verderop een NIEUW person-record
+    # ontstaat met een eigen slug. Idempotente exact-slug-detectie verderop
+    # vangt het geval dat het tóch dezelfde persoon blijkt.
+    if resolved_id is not None:
+        person_conf = (proposal.get("resolution_confidence") or {}).get("person")
+        if person_conf is not None and float(person_conf) < person_match_floor:
+            proposal = dict(proposal)
+            proposal["resolved_person_id"] = None
+            proposal.setdefault("_apply_notes", []).append(
+                f"resolved_person_id {resolved_id!r} genegeerd: person-confidence "
+                f"{float(person_conf):.2f} < floor {person_match_floor:.2f}; "
+                "nieuw person-record aangemaakt"
+            )
+            resolved_id = None
 
     # Validate the mandate dates before doing any persoon-resolution. Invalid
     # dates poison the whole action: skip the proposal completely so we never

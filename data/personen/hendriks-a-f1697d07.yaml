@@ -1,0 +1,27 @@
+id: person:hendriks-a-f1697d07
+name:
+  full: Astrid Hendriks
+  family: Hendriks
+  given: Astrid
+mandaten:
+- id: mandate-post-directeur-handhaving-uwv-2023-01-01
+  organization_id: org:onderdeel-directie-handhaving-uwv
+  post_id: post:directeur-handhaving-uwv
+  role: Directeur Directie Handhaving, UWV
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/07/astrid-hendriks-directeur-handhaving-bij-uwv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-07
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/07/astrid-hendriks-directeur-handhaving-bij-uwv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

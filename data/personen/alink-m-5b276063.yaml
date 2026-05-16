@@ -1,0 +1,27 @@
+id: person:alink-m-5b276063
+name:
+  full: Marnix Alink
+  family: Alink
+  given: Marnix
+mandaten:
+- id: mandate-post-directeur-juridische-zaken-min-defensie-2023-01-01
+  organization_id: org:onderdeel-directie-juridische-zaken-min-defensie
+  post_id: post:directeur-juridische-zaken-min-defensie
+  role: Directeur Juridische Zaken bij het ministerie van Defensie
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/13/marnix-alink-directeur-juridische-zaken-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-01-13
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/13/marnix-alink-directeur-juridische-zaken-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

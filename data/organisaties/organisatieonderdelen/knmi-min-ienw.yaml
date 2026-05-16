@@ -1,0 +1,15 @@
+id: org:onderdeel-knmi-min-ienw
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-ienw
+names:
+- value: Koninklijk Nederlands Meteorologisch Instituut (KNMI)
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/04/byung-jonkman-vakgroepmanager-informatie--en-ketenmanagement-bij-het-knmi
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

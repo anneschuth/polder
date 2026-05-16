@@ -20,6 +20,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2024-12-20
   confidence: 0.9
+- id: mandate-post-kwartiermaker-dg-rrtlg-min-lnv-2022-02-11
+  organization_id: org:onderdeel-dg-rrtlg-min-lnv
+  post_id: post:kwartiermaker-dg-rrtlg-min-lnv
+  role: Kwartiermaker-directeur-generaal Regieorganisatie Realisatie Transitie Landelijk
+    gebied, ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2022-02-11'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/10/johan-osinga-kwartiermaker-directeur-generaal-regieorganisatie-realisatie-transitie-landelijk-gebied
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-02-10
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/20/johan-osinga-provinciesecretaris-algemeen-directeur-provincie-gelderland

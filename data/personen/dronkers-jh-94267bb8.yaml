@@ -1,0 +1,28 @@
+id: person:dronkers-jh-94267bb8
+name:
+  full: Mr. ing. J.H. (Jan Hendrik) Dronkers
+  family: Dronkers
+  given: Jan Hendrik
+  initials: J.H.
+mandaten:
+- id: mandate-post-sg-min-ienw-2020-09-01
+  organization_id: org:onderdeel-sg-min-ienw
+  post_id: post:sg-min-ienw
+  role: Secretaris-generaal, ministerie van Infrastructuur en Waterstaat
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/10/jan-hendrik-dronkers-secretaris-generaal-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-07-10
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/10/jan-hendrik-dronkers-secretaris-generaal-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

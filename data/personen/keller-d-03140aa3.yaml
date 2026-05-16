@@ -1,0 +1,28 @@
+id: person:keller-d-03140aa3
+name:
+  full: Dipl.-Ing. B.R. Keller
+  family: Keller
+  given: Dipl.-Ing.
+mandaten:
+- id: mandate-post-afdelingshoofd-stralingstoepassingen-anvs-2020-03-01
+  organization_id: org:onderdeel-afdeling-stralingstoepassingen-anvs
+  post_id: post:afdelingshoofd-stralingstoepassingen-anvs
+  role: Afdelingshoofd Stralingstoepassingen, Autoriteit Nucleaire Veiligheid en Stralingsbescherming
+    (ANVS)
+  start_date: '2020-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/02/bernd-keller-afdelingshoofd-stralingstoepassingen-anvs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-03-02
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/02/bernd-keller-afdelingshoofd-stralingstoepassingen-anvs
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

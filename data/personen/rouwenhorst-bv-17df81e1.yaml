@@ -1,0 +1,45 @@
+id: person:rouwenhorst-bv-17df81e1
+name:
+  full: B.V. (Bianca) Rouwenhorst MSc
+  family: Rouwenhorst
+  given: Bianca
+  initials: B.V.
+mandaten:
+- id: mandate-post-directeur-informatiebeleid-cio-min-vws-2022-06-01
+  organization_id: org:onderdeel-directie-informatiebeleid-min-vws
+  post_id: post:directeur-informatiebeleid-cio-min-vws
+  role: Directeur Informatiebeleid, tevens CIO, ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2022-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/02/bianca-rouwenhorst-directeur-informatiebeleid-tevens-cio-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-06-02
+  confidence: 0.92
+- id: mandate-post-duo-directeur-informatiebeleid-min-vws-2020-10-12
+  organization_id: org:onderdeel-directie-informatiebeleid-min-vws
+  post_id: post:duo-directeur-informatiebeleid-min-vws
+  role: Tijdelijk duo-directeur Informatiebeleid, ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2020-10-12'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/10/09/bianca-rouwenhorst-tijdelijk-duo-directeur-informatiebeleid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-10-09
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/02/bianca-rouwenhorst-directeur-informatiebeleid-tevens-cio-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

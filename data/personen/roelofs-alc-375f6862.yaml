@@ -1,0 +1,44 @@
+id: person:roelofs-alc-375f6862
+name:
+  full: Mr. A.L.C. (Annelore) Roelofs
+  family: Roelofs
+  given: Annelore
+  initials: A.L.C.
+mandaten:
+- id: mandate-post-algemeen-directeur-waternet-2022-03-28
+  organization_id: org:waternet
+  post_id: post:algemeen-directeur-waternet
+  role: Algemeen directeur van Waternet
+  start_date: '2022-03-28'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/annelore-roelofs-algemeen-directeur-van-waternet
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-11
+  confidence: 0.88
+- id: mandate-post-plaatsvervangend-hoofddirecteur-ind-min-jenv-2020-05-01
+  organization_id: org:onderdeel-ind-min-jenv
+  post_id: post:plaatsvervangend-hoofddirecteur-ind-min-jenv
+  role: Plaatsvervangend hoofddirecteur van de Immigratie- en Naturalisatiedienst
+    bij het ministerie van Justitie en Veiligheid
+  start_date: '2020-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/03/annelore-roelofs-plaatsvervangend-hoofddirecteur-ind-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/annelore-roelofs-algemeen-directeur-van-waternet
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

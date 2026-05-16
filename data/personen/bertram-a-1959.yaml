@@ -28,6 +28,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2026-02-17
   confidence: 0.82
+- id: mandate-post-dg-migratie-min-jv-2023-01-01
+  organization_id: org:onderdeel-dg-migratie-min-jv
+  post_id: post:dg-migratie-min-jv
+  role: Directeur-Generaal Migratie
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/annet-bertram-directeur-generaal-migratie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-04
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/17/annet-bertram-beoogd-staatssecretaris-van-infrastructuur-en-waterstaat

@@ -1,0 +1,28 @@
+id: person:van-opstal-jmm-9b46a022
+name:
+  full: Mr. J.M.M. (Jochgem) van Opstal
+  family: van Opstal
+  given: Jochgem
+  initials: J.M.M.
+mandaten:
+- id: mandate-post-directeur-bestuursondersteuning-min-jenv-2020-10-01
+  organization_id: org:onderdeel-directie-bestuursondersteuning-min-jenv
+  post_id: post:directeur-bestuursondersteuning-min-jenv
+  role: Directeur Bestuursondersteuning, ministerie van Justitie en Veiligheid
+  start_date: '2020-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/21/jochgem-van-opstal-directeur-bestuursondersteuning-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-09-21
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/21/jochgem-van-opstal-directeur-bestuursondersteuning-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

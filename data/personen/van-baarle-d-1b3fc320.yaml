@@ -1,0 +1,27 @@
+id: person:van-baarle-d-1b3fc320
+name:
+  full: David van Baarle
+  family: van Baarle
+  given: David
+mandaten:
+- id: mandate-post-directeur-bedrijfsvoering-en-projectbeheersing-gpo-rws-2023-06-15
+  organization_id: org:agentschap-rws
+  post_id: post:directeur-bedrijfsvoering-en-projectbeheersing-gpo-rws
+  role: Directeur Ontwikkeling & Services, Centrale Informatievoorziening (CIV), Rijkswaterstaat
+  start_date: '2023-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/17/david-van-baarle-directeur-ontwikkeling--services-rijkswaterstaat
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-04-17
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/17/david-van-baarle-directeur-ontwikkeling--services-rijkswaterstaat
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

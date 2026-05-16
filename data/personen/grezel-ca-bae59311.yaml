@@ -1,0 +1,29 @@
+id: person:grezel-ca-bae59311
+name:
+  full: Drs. C.A. Charlotte Grezel
+  family: Grezel
+  given: Charlotte
+  initials: C.A.
+mandaten:
+- id: mandate-post-directeur-programma-nieuwe-openheid-min-vws-2021-10-01
+  organization_id: org:onderdeel-directie-programma-nieuwe-openheid-min-vws
+  post_id: post:directeur-programma-nieuwe-openheid-min-vws
+  role: Directeur Programma nieuwe openheid, ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2021-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/24/charlotte-grezel-directeur-programma-nieuwe-openheid
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-08-24
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/24/charlotte-grezel-directeur-programma-nieuwe-openheid
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

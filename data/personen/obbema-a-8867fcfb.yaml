@@ -37,6 +37,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-07-06
   confidence: 0.92
+- id: mandate-post-afdelingshoofd-bezwaar-beroep-toezicht-eindhoven-belastingdienst-min-fin-2021-09-13
+  organization_id: org:onderdeel-afdeling-bezwaar-beroep-toezicht-eindhoven-belastingdienst-particulieren-min-fin
+  post_id: post:afdelingshoofd-bezwaar-beroep-toezicht-eindhoven-belastingdienst-min-fin
+  role: Afdelingshoofd Bezwaar, Beroep & Toezicht kantoor Eindhoven, directie Particulieren,
+    Belastingdienst, ministerie van Financiën
+  start_date: '2021-09-13'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/06/annemarijn-obbema-afdelingshoofd-toezicht-bezwaar--beroep-directie-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-06
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/06/annemarijn-obbema-afdelingshoofd-toezicht-bezwaar--beroep-directie-particulieren-bij-de-belastingdienst

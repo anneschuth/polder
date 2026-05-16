@@ -1,0 +1,28 @@
+id: person:girolami-m-e95448c7
+name:
+  full: Marius Girolami
+  family: Girolami
+  given: Marius
+mandaten:
+- id: mandate-post-hoofd-arbeid-en-vermogen-directie-dbt-min-fin-2024-10-14
+  organization_id: org:onderdeel-afdeling-arbeid-vermogen-fjz-belastingdienst-min-fin
+  post_id: post:hoofd-arbeid-en-vermogen-directie-dbt-min-fin
+  role: Hoofd Arbeid en Vermogen bij de directie Directe Belastingen en Toeslagen,
+    directoraat-generaal Fiscale Zaken, ministerie van Financiën
+  start_date: '2024-10-14'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/09/27/marius-girolami-hoofd-arbeid-en-vermogen-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-09-27
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/09/27/marius-girolami-hoofd-arbeid-en-vermogen-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

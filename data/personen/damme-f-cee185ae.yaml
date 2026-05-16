@@ -1,0 +1,42 @@
+id: person:damme-f-cee185ae
+name:
+  full: Frederieke Damme
+  family: Damme
+  given: Frederieke
+mandaten:
+- id: mandate-post-cfo-directeur-bedrijfsvoering-rivm-2019-06-01
+  organization_id: org:onderdeel-rivm-min-vws
+  post_id: post:cfo-directeur-bedrijfsvoering-rivm
+  role: CFO/directeur Bedrijfsvoering bij het RIVM en lid van de directieraad
+  start_date: '2019-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/05/02/functieruil-walter-van-wijngaarden-en-frederieke-damme
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-05-02
+  confidence: 0.91
+- id: mandate-post-cfo-directeur-bedrijfsvoering-rivm-min-vws-2019-06-01
+  organization_id: org:onderdeel-rivm-min-vws
+  post_id: post:cfo-directeur-bedrijfsvoering-rivm-min-vws
+  role: CFO/directeur Bedrijfsvoering bij het RIVM en lid van de directieraad
+  start_date: '2019-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/05/02/functieruil-walter-van-wijngaarden-en-frederieke-damme
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-05-02
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/05/02/functieruil-walter-van-wijngaarden-en-frederieke-damme
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

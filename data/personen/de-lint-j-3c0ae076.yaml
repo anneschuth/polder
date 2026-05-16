@@ -1,0 +1,44 @@
+id: person:de-lint-j-3c0ae076
+name:
+  full: J. (Jeske) de Lint
+  family: lint
+  initials: J.
+mandaten:
+- id: mandate-post-afdelingshoofd-koop-en-kapitaalmarkt-woningmarkt-min-bzk-2020-02-01
+  organization_id: org:onderdeel-koop-en-kapitaalmarkt-woningmarkt-min-bzk
+  post_id: post:afdelingshoofd-koop-en-kapitaalmarkt-woningmarkt-min-bzk
+  role: Afdelingshoofd Koop- en Kapitaalmarkt, directie Woningmarkt, ministerie van
+    Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2020-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/jeske-de-lint-afdelingshoofd-koop--en-kapitaalmarkt-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-30
+  confidence: 0.92
+- id: mandate-post-hoofd-huurbeleid-plv-directeur-wonen-min-bzk-2022-09-19
+  organization_id: org:onderdeel-afdeling-huurbeleid-directie-wonen-min-bzk
+  post_id: post:hoofd-huurbeleid-plv-directeur-wonen-min-bzk
+  role: Hoofd Huurbeleid bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+    tevens plaatsvervangend directeur van de directie Wonen
+  start_date: '2022-09-19'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/08/jeske-de-lint-hoofd-huurbeleid-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-09-08
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/jeske-de-lint-afdelingshoofd-koop--en-kapitaalmarkt-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

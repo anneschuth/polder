@@ -1,0 +1,45 @@
+id: person:van-steijn-ac-46e27ce9
+name:
+  full: Mr. A.C. (Chantal) van Steijn
+  family: van Steijn
+  given: Chantal
+  initials: A.C.
+mandaten:
+- id: mandate-post-directeur-beleid-bestuursondersteuning-dji-min-jenv-2021-07-15
+  organization_id: org:onderdeel-directie-beleid-bestuursondersteuning-dji-min-jenv
+  post_id: post:directeur-beleid-bestuursondersteuning-dji-min-jenv
+  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen
+    (DJI), ministerie van Justitie en Veiligheid
+  start_date: '2021-07-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/10/chantal-van-steijn-directeur-beleid-en-bestuursondersteuning-bij-dji
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-05-10
+  confidence: 0.89
+- id: mandate-post-directeur-beleid-en-bestuursondersteuning-dji-min-jenv-2021-07-15
+  organization_id: org:dji-min-jenv
+  post_id: post:directeur-beleid-en-bestuursondersteuning-dji-min-jenv
+  role: Directeur Beleid en Bestuursondersteuning, Dienst Justitiële Inrichtingen,
+    ministerie van Justitie en Veiligheid
+  start_date: '2021-07-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/10/chantal-van-steijn-directeur-beleid-en-bestuursondersteuning-bij-dji
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-05-10
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/05/10/chantal-van-steijn-directeur-beleid-en-bestuursondersteuning-bij-dji
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

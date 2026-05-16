@@ -1,0 +1,28 @@
+id: person:walrave-lnb-e1732170
+name:
+  full: Mr. L.N.B. (Lars) Walrave
+  family: Walrave
+  given: Lars
+  initials: L.N.B.
+mandaten:
+- id: mandate-post-directeur-internationale-aangelegenheden-bestuursstaf-min-def-2019-11-01
+  organization_id: org:onderdeel-internationale-aangelegenheden-bestuursstaf-min-def
+  post_id: post:directeur-internationale-aangelegenheden-bestuursstaf-min-def
+  role: Directeur Internationale Aangelegenheden, Bestuursstaf, ministerie van Defensie
+  start_date: '2019-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/15/lars-walrave-directeur-internationale-aangelegenheden-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/15/lars-walrave-directeur-internationale-aangelegenheden-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,27 @@
+id: person:van-der-ham-j-3bd349e8
+name:
+  full: Jan Willem van der Ham
+  family: Jan Willem
+mandaten:
+- id: mandate-post-divisiehoofd-inspectie-nvwa-min-lnv-2022-05-01
+  organization_id: org:onderdeel-divisie-inspectie-nvwa-min-lnv
+  post_id: post:divisiehoofd-inspectie-nvwa-min-lnv
+  role: Divisiehoofd Inspectie, Nederlandse Voedsel- en Warenautoriteit (NVWA), ministerie
+    van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2022-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/28/jan-willem-van-der-ham-divisiehoofd-inspectie-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-28
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/28/jan-willem-van-der-ham-divisiehoofd-inspectie-bij-de-nvwa
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

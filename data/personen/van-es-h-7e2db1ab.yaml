@@ -1,0 +1,27 @@
+id: person:van-es-h-7e2db1ab
+name:
+  full: Heika van Es
+  family: Heika
+mandaten:
+- id: mandate-post-directeur-onderwijsinstellingen-duo-min-ocw-2024-06-01
+  organization_id: org:onderdeel-directie-oi-duo-min-ocw
+  post_id: post:directeur-onderwijsinstellingen-duo-min-ocw
+  role: Directeur Onderwijsinstellingen bij het agentschap Dienst Uitvoering Onderwijs
+    van het ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2024-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/22/heika-van-es-directeur-onderwijsinstellingen-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/22/heika-van-es-directeur-onderwijsinstellingen-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

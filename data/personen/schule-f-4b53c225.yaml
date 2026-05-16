@@ -1,0 +1,27 @@
+id: person:schule-f-4b53c225
+name:
+  full: Franny Schüle
+  family: Schüle
+  given: Franny
+mandaten:
+- id: mandate-post-hoofd-personeelsbeleid-rijk-min-bzk-2024-06-01
+  organization_id: org:onderdeel-afdeling-personeelsbeleid-rijk-min-bzk
+  post_id: post:hoofd-personeelsbeleid-rijk-min-bzk
+  role: Hoofd Personeelsbeleid Rijk, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2024-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/06/franny-schule-hoofd-personeelsbeleid-rijk-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/06/franny-schule-hoofd-personeelsbeleid-rijk-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,15 @@
+id: org:onderdeel-bedrijfsvoering-min-ezk
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-ezk
+names:
+- value: Directie Bedrijfsvoering
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/30/irma-volkers-manager-cio-office-bij-ezk--lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:duveen-j-13634e73
+name:
+  full: J. (Judith) Duveen MA
+  family: Duveen
+  given: Judith
+  initials: J.
+mandaten:
+- id: mandate-post-algemeen-directeur-werkbedrijf-uwv-2023-01-16
+  organization_id: org:onderdeel-werkbedrijf-uwv
+  post_id: post:algemeen-directeur-werkbedrijf-uwv
+  role: Algemeen directeur divisie Werkbedrijf, UWV
+  start_date: '2023-01-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/01/judith-duveen-directeur-werkbedrijf-van-uwv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-01
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/01/judith-duveen-directeur-werkbedrijf-van-uwv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

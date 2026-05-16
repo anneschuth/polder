@@ -1,0 +1,42 @@
+id: person:joung-i-fe1c5c44
+name:
+  full: Inez Joung
+  family: Joung
+  given: Inez
+mandaten:
+- id: mandate-post-stafhoofd-onderzoek-en-datadiensten-rivm-2022-03-01
+  organization_id: org:onderdeel-iv-organisatie-rivm-min-vws
+  post_id: post:stafhoofd-onderzoek-en-datadiensten-rivm
+  role: Stafhoofd Onderzoek en Datadiensten bij het RIVM
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/inez-joung-stafhoofd-onderzoek-en-datadiensten-bij-het-rivm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-11
+  confidence: 0.88
+- id: mandate-post-stafhoofd-onderzoek-datadiensten-rivm-2022-03-01
+  organization_id: org:onderdeel-iv-organisatie-rivm-min-vws
+  post_id: post:stafhoofd-onderzoek-datadiensten-rivm
+  role: Stafhoofd Onderzoek en Datadiensten bij het RIVM
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/inez-joung-stafhoofd-onderzoek-en-datadiensten-bij-het-rivm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-11
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/11/inez-joung-stafhoofd-onderzoek-en-datadiensten-bij-het-rivm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:helder-jh-a84054f0
+name:
+  full: J.H. (Janet) Helder
+  family: Helder
+  given: Janet
+  initials: J.H.
+mandaten:
+- id: mandate-post-interim-plaatsvervangend-dg-belastingdienst-min-fin-2021-09-01
+  organization_id: org:onderdeel-dg-belastingdienst-min-fin
+  post_id: post:interim-plaatsvervangend-dg-belastingdienst-min-fin
+  role: Interim plaatsvervangend directeur-generaal Belastingdienst
+  start_date: '2021-09-01'
+  end_date: '2022-03-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/29/janet-helder-interim-plaatsvervangend-directeur-generaal-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-29
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/29/janet-helder-interim-plaatsvervangend-directeur-generaal-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,44 @@
+id: person:burke-e-7fe40edf
+name:
+  full: Elmer Burke
+  family: Burke
+  given: Elmer
+mandaten:
+- id: mandate-post-programmadirecteur-maatschappelijke-diensttijd-min-ocw-2022-05-16
+  organization_id: org:min-ocw
+  post_id: post:programmadirecteur-maatschappelijke-diensttijd-min-ocw
+  role: Programmadirecteur Maatschappelijke Diensttijd, Ministerie van Onderwijs,
+    Cultuur en Wetenschap
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-04
+  confidence: 0.9
+- id: mandate-post-programmadirecteur-mdt-min-ocw-2022-05-16
+  organization_id: org:onderdeel-mdt-min-ocw
+  post_id: post:programmadirecteur-mdt-min-ocw
+  role: Programmadirecteur Maatschappelijke Diensttijd, Ministerie van Onderwijs,
+    Cultuur en Wetenschap
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/04/elmer-burke-programmadirecteur-maatschappelijke-diensttijd-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

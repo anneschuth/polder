@@ -91,6 +91,29 @@ def apply_staging(
         bool,
         typer.Option(help="Alleen confidence >= 0.95 toepassen."),
     ] = False,
+    needs_review_floor: Annotated[
+        float | None,
+        typer.Option(
+            help="Pas needs-review proposals toe mits confidence >= deze floor. "
+            "AVG-rood/skip blijven geweigerd. Default: needs-review skippen."
+        ),
+    ] = None,
+    person_match_floor: Annotated[
+        float,
+        typer.Option(
+            help="Vertrouw resolved_person_id alleen als person-confidence >= "
+            "deze floor; daaronder nieuw person-record (voorkomt wrong-merge). "
+            "Default 0.85."
+        ),
+    ] = 0.85,
+    chain_create_on_parent_mismatch: Annotated[
+        bool,
+        typer.Option(
+            help="Maak nieuwe org-records uit de chain ook als een naam-match "
+            "onder een andere parent valt (backfill-modus; duplicaten later "
+            "ontdubbelen). Default: strikt skippen."
+        ),
+    ] = False,
     data: Annotated[Path, typer.Option(help="Polder data root.")] = Path("data"),
 ) -> None:
     """Pas resolver-output automatisch toe op `data/`. Default is dry-run."""
@@ -108,6 +131,9 @@ def apply_staging(
         data,
         only_high_confidence=only_high_confidence,
         skip_persons=skip_persons,
+        needs_review_floor=needs_review_floor,
+        person_match_floor=person_match_floor,
+        chain_create_on_parent_mismatch=chain_create_on_parent_mismatch,
     )
 
     _print_plan(actions, skipped, input_label=str(input))

@@ -1,0 +1,43 @@
+id: person:berends-f-f37327ac
+name:
+  full: Drs. F. (Frank) Berends
+  family: Berends
+  given: Frank
+  initials: F.
+mandaten:
+- id: mandate-post-directeur-bedrijfsvoering-rws-zn-min-ienw-2018-11-01
+  organization_id: org:onderdeel-rws-zn-min-ienw
+  post_id: post:directeur-bedrijfsvoering-rws-zn-min-ienw
+  role: Directeur Bedrijfsvoering Rijkswaterstaat Zuid-Nederland
+  start_date: '2018-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/10/frank-berends-directeur-bedrijfsvoering-rijkswaterstaat-zuid-nederland
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-10-10
+  confidence: 0.89
+- id: mandate-post-directeur-bedrijfsvoering-rijkswaterstaat-zuidnederland-min-iw-2018-11-01
+  organization_id: org:onderdeel-rijkswaterstaat-zuidnederland-min-iw
+  post_id: post:directeur-bedrijfsvoering-rijkswaterstaat-zuidnederland-min-iw
+  role: Directeur Bedrijfsvoering Rijkswaterstaat Zuid-Nederland
+  start_date: '2018-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/10/frank-berends-directeur-bedrijfsvoering-rijkswaterstaat-zuid-nederland
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-10-10
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/10/frank-berends-directeur-bedrijfsvoering-rijkswaterstaat-zuid-nederland
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

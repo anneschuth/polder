@@ -1,0 +1,27 @@
+id: person:jansen-mej-ec3e9be6
+name:
+  full: M.E.J. Jansen
+  family: Jansen
+  initials: M.E.J.
+mandaten:
+- id: mandate-post-hoofd-financieel-administratief-sodm-2025-11-28
+  organization_id: org:onderdeel-sodm-min-iw
+  post_id: post:hoofd-financieel-administratief-sodm
+  role: Hoofd Financieel Administratief, Staatstoezicht op de Mijnen
+  start_date: '2025-11-28'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/28/benoemingen-staatstoezicht-op-de-mijnen
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-11-28
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/28/benoemingen-staatstoezicht-op-de-mijnen
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,27 @@
+id: person:van-der-loo-jo-25151349
+name:
+  full: Mr. J.O. (Jan) van der Loo
+  family: loo
+  initials: J.O.
+mandaten:
+- id: mandate-post-directeur-juridische-zaken-min-bz-2018-08-01
+  organization_id: org:onderdeel-directie-juridische-zaken-min-bz
+  post_id: post:directeur-juridische-zaken-min-bz
+  role: Directeur Juridische Zaken bij het ministerie van Buitenlandse Zaken
+  start_date: '2018-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/17/jan-van-der-loo-directeur-juridische-zaken-bij-bz
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-07-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/17/jan-van-der-loo-directeur-juridische-zaken-bij-bz
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

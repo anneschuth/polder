@@ -1,0 +1,45 @@
+id: person:koenders-d-ebc9579c
+name:
+  full: Drs. D. (Dylan) Koenders RC
+  family: Koenders
+  given: Dylan
+  initials: D.
+mandaten:
+- id: mandate-post-directeur-ism-min-ienw-2022-05-16
+  organization_id: org:onderdeel-directie-ism-min-ienw
+  post_id: post:directeur-ism-min-ienw
+  role: Directeur Innovatie en Strategie voor Mobiliteit bij het ministerie van Infrastructuur
+    en Waterstaat
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/17/dylan-koenders-directeur-innovatie-en-strategie-voor-mobiliteit-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-05-17
+  confidence: 0.91
+- id: mandate-post-directeur-innovatie-strategie-mobiliteit-min-ienw-2022-05-16
+  organization_id: org:onderdeel-dir-ism-dg-mobiliteit-min-ienw
+  post_id: post:directeur-innovatie-strategie-mobiliteit-min-ienw
+  role: Directeur Innovatie en Strategie voor Mobiliteit, directoraat-generaal Mobiliteit,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2022-05-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/17/dylan-koenders-directeur-innovatie-en-strategie-voor-mobiliteit-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-05-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/17/dylan-koenders-directeur-innovatie-en-strategie-voor-mobiliteit-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

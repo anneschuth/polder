@@ -1,0 +1,27 @@
+id: person:koel-f-290496f0
+name:
+  full: Friso Koel
+  family: Friso
+mandaten:
+- id: mandate-post-directeur-consumenten-acm-2023-10-15
+  organization_id: org:zbo-acm
+  post_id: post:directeur-consumenten-acm
+  role: Teammanager en plaatsvervangend directeur, directie Mededinging, Autoriteit
+    Consument & Markt (ACM)
+  start_date: '2023-10-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/22/functiewisselingen-bij-de-acm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-08-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/22/functiewisselingen-bij-de-acm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

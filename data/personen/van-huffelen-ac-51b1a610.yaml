@@ -1,0 +1,28 @@
+id: person:van-huffelen-ac-51b1a610
+name:
+  full: drs. A.C. van Huffelen
+  family: van Huffelen
+  initials: A.C.
+mandaten:
+- id: mandate-post-staatssecretaris-min-bzk-2022-01-10
+  organization_id: org:min-bzk
+  post_id: post:staatssecretaris-min-bzk
+  role: Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-01-10'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2022-1361
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: KB nr. 2022000020, 10 januari 2022
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2022-1361
+  confidence: 0.97
+sources:
+- id: staatscourant
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2022-1361
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

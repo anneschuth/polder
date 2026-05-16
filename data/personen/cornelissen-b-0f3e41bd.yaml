@@ -1,0 +1,46 @@
+id: person:cornelissen-b-0f3e41bd
+name:
+  full: B. (Brigitte) Cornelissen
+  family: Cornelissen
+  given: Brigitte
+  initials: B.
+mandaten:
+- id: mandate-post-afdelingshoofd-vke-noord-nvwa-min-lnv-2021-06-01
+  organization_id: org:onderdeel-afdeling-vke-noord-nvwa-min-lnv
+  post_id: post:afdelingshoofd-vke-noord-nvwa-min-lnv
+  role: Afdelingshoofd Veterinaire Keuring & Exportcertificering Noord, divisie Veterinair
+    & Import, directie Keuren, NVWA, ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/brigitte-cornelissen-afdelingshoofd-veterinaire-keuring--exportcertificering-noord-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-08
+  confidence: 0.9
+- id: mandate-post-afdelingshoofd-veterinaire-keuring-exportcertificering-noord-nvwa-min-lnv-2021-06-01
+  organization_id: org:onderdeel-afdeling-veterinaire-keuring-exportcertificering-noord-nvwa-min-lnv
+  post_id: post:afdelingshoofd-veterinaire-keuring-exportcertificering-noord-nvwa-min-lnv
+  role: Afdelingshoofd Veterinaire Keuring & Exportcertificering Noord, divisie Veterinair
+    & Import, directie Keuren, Nederlandse Voedsel- en Warenautoriteit, ministerie
+    van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/brigitte-cornelissen-afdelingshoofd-veterinaire-keuring--exportcertificering-noord-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-08
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/08/brigitte-cornelissen-afdelingshoofd-veterinaire-keuring--exportcertificering-noord-bij-de-nvwa
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

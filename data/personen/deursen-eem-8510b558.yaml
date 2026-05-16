@@ -1,0 +1,45 @@
+id: person:deursen-eem-8510b558
+name:
+  full: Drs. E.E.M. (Esther) Deursen
+  family: Deursen
+  given: Esther
+  initials: E.E.M.
+mandaten:
+- id: mandate-post-directeur-toezicht-mbo-ho-inspectie-onderwijs-2022-01-01
+  organization_id: org:onderdeel-directie-mbo-ho-inspectie-onderwijs
+  post_id: post:directeur-toezicht-mbo-ho-inspectie-onderwijs
+  role: Directeur Toezicht middelbaar beroepsonderwijs en hoger onderwijs bij de Inspectie
+    van het Onderwijs
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/21/esther-deursen-directeur-toezicht-mbo-ho-bij-de-inspectie-van-het-onderwijs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-21
+  confidence: 0.91
+- id: mandate-post-directeur-toezicht-mbo-ho-inspectie-onderwijs-min-ocw-2022-01-01
+  organization_id: org:onderdeel-directie-toezicht-mbo-ho-inspectie-onderwijs-min-ocw
+  post_id: post:directeur-toezicht-mbo-ho-inspectie-onderwijs-min-ocw
+  role: Directeur Toezicht middelbaar beroepsonderwijs en hoger onderwijs bij de Inspectie
+    van het Onderwijs, ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2022-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/21/esther-deursen-directeur-toezicht-mbo-ho-bij-de-inspectie-van-het-onderwijs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-21
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/21/esther-deursen-directeur-toezicht-mbo-ho-bij-de-inspectie-van-het-onderwijs
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,42 @@
+id: person:meijers-m-3e234f36
+name:
+  full: Martijn Meijers
+  family: Meijers
+  given: Martijn
+mandaten:
+- id: mandate-post-directeur-infrastructuur-rdi-2023-01-01
+  organization_id: org:onderdeel-directie-infrastructuur-rdi
+  post_id: post:directeur-infrastructuur-rdi
+  role: Directeur Infrastructuur bij de Rijksinspectie Digitale Infrastructuur
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/01/benoemingen-bij-de-rijksinspectie-digitale-infrastructuur
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-12-01
+  confidence: 0.88
+- id: mandate-post-directeur-infrastructuur-rdi-min-ezk-2023-01-01
+  organization_id: org:onderdeel-directie-infrastructuur-rdi-min-ezk
+  post_id: post:directeur-infrastructuur-rdi-min-ezk
+  role: Directeur Infrastructuur bij de Rijksinspectie Digitale Infrastructuur
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/01/benoemingen-bij-de-rijksinspectie-digitale-infrastructuur
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-12-01
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/01/benoemingen-bij-de-rijksinspectie-digitale-infrastructuur
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

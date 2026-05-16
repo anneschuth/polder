@@ -1,0 +1,28 @@
+id: person:wildschut-ab-3d4bc999
+name:
+  full: A.B. (Arjan) Wildschut
+  family: Wildschut
+  given: Arjan
+  initials: A.B.
+mandaten:
+- id: mandate-post-hoofd-bureau-begrotingsvoorbereiding-min-fin-2018-07-01
+  organization_id: org:onderdeel-bureau-begrotingsvoorbereiding-min-fin
+  post_id: post:hoofd-bureau-begrotingsvoorbereiding-min-fin
+  role: Hoofd Bureau Begrotingsvoorbereiding, ministerie van Financiën
+  start_date: '2018-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/12/arjan-wildschut-hoofd-bureau-begrotingsvoorbereiding-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-07-12
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/12/arjan-wildschut-hoofd-bureau-begrotingsvoorbereiding-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

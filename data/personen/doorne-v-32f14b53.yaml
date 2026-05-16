@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-11-04
   confidence: 0.85
+- id: mandate-post-directeur-democratie-bestuur-min-bzk-2021-12-01
+  organization_id: org:onderdeel-democratie-bestuur-min-bzk
+  post_id: post:directeur-democratie-bestuur-min-bzk
+  role: Directeur Democratie en Bestuur, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/11/04/ellen-van-doorne-directeur-democratie-en-bestuur-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-11-04
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/11/04/ellen-van-doorne-directeur-democratie-en-bestuur-bij-bzk

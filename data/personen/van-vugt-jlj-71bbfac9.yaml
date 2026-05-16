@@ -1,0 +1,42 @@
+id: person:van-vugt-jlj-71bbfac9
+name:
+  full: Drs. J.L.J. (Jeroen) van Vugt
+  family: vugt
+  initials: J.L.J.
+mandaten:
+- id: mandate-post-directeur-strategie-en-innovatie-nationale-politie-2020-09-01
+  organization_id: org:rwt-nationale-politie
+  post_id: post:directeur-strategie-en-innovatie-nationale-politie
+  role: Directeur Strategie en Innovatie, Nationale Politie
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/14/jeroen-van-vugt-directeur-strategie-en-innovatie-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-09-14
+  confidence: 0.92
+- id: mandate-post-programmadirecteur-strategie-en-innovatie-nationale-politie-2019-04-01
+  organization_id: org:onderdeel-strategie-en-innovatie-nationale-politie
+  post_id: post:programmadirecteur-strategie-en-innovatie-nationale-politie
+  role: Programmadirecteur Strategie en Innovatie, Nationale Politie
+  start_date: '2019-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/04/01/jeroen-van-vugt-programmadirecteur-strategie-en-innovatie-bij-de-nationale-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-04-01
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/14/jeroen-van-vugt-directeur-strategie-en-innovatie-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

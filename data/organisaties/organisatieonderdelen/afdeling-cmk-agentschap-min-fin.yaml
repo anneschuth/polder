@@ -1,0 +1,15 @@
+id: org:onderdeel-afdeling-cmk-agentschap-min-fin
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-agentschap-dsta-min-fin
+names:
+- value: Afdeling Cash Management en Kapitaalmarktoperaties
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/10/19/justin-heydenrijk-hoofd-cash-management-en-kapitaalmarktoperaties-bij-het-agentschap-van-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

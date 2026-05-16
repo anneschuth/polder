@@ -1,0 +1,29 @@
+id: person:korvinus-hcd-d58ab9ff
+name:
+  full: Mr. H.C.D. (Henk) Korvinus
+  family: Korvinus
+  given: Henk
+  initials: H.C.D.
+mandaten:
+- id: mandate-post-ig-inspectie-justitie-en-veiligheid-min-jenv-2020-01-01
+  organization_id: org:onderdeel-inspectie-justitie-en-veiligheid-min-jenv
+  post_id: post:ig-inspectie-justitie-en-veiligheid-min-jenv
+  role: Inspecteur-generaal Inspectie Justitie en Veiligheid, ministerie van Justitie
+    en Veiligheid
+  start_date: '2020-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/15/henk-korvinus-inspecteur-generaal-inspectie-justitie-en-veiligheid-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/15/henk-korvinus-inspecteur-generaal-inspectie-justitie-en-veiligheid-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

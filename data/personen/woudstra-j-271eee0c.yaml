@@ -1,0 +1,27 @@
+id: person:woudstra-j-271eee0c
+name:
+  full: Jantina Woudstra
+  family: Woudstra
+  given: Jantina
+mandaten:
+- id: mandate-post-algemeen-directeur-rdw-2022-04-01
+  organization_id: org:zbo-rdw
+  post_id: post:algemeen-directeur-rdw
+  role: Algemeen directeur van de RDW
+  start_date: '2022-04-01'
+  end_date: '2026-04-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/30/jantina-woudstra-algemeen-directeur-rdw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-30
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/30/jantina-woudstra-algemeen-directeur-rdw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

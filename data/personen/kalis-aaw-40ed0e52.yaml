@@ -1,0 +1,29 @@
+id: person:kalis-aaw-40ed0e52
+name:
+  full: Drs. A.A.W. (Aginus) Kalis
+  family: Kalis
+  given: Aginus
+  initials: A.A.W.
+mandaten:
+- id: mandate-post-waarnemend-hoofd-van-dienst-dienst-testen-min-vws-2021-04-15
+  organization_id: org:onderdeel-dienst-testen-min-vws
+  post_id: post:waarnemend-hoofd-van-dienst-dienst-testen-min-vws
+  role: Waarnemend hoofd van dienst van de Dienst Testen bij het ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2021-04-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/15/aginus-kalis-hoofd-dienst-testen-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-15
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/15/aginus-kalis-hoofd-dienst-testen-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

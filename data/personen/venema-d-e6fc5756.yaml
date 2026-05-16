@@ -1,0 +1,27 @@
+id: person:venema-d-e6fc5756
+name:
+  full: Dany Venema
+  family: Venema
+  given: Dany
+mandaten:
+- id: mandate-post-directeur-doc-direkt-min-bzk-2022-05-01
+  organization_id: org:onderdeel-doc-direkt-min-bzk
+  post_id: post:directeur-doc-direkt-min-bzk
+  role: Directeur Doc-Direkt, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/23/dany-venema-directeur-doc-direkt-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-03-23
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/23/dany-venema-directeur-doc-direkt-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

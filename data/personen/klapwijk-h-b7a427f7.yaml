@@ -1,0 +1,45 @@
+id: person:klapwijk-h-b7a427f7
+name:
+  full: Ir. H. (Henk) Klapwijk
+  family: Klapwijk
+  given: Henk
+  initials: H.
+mandaten:
+- id: mandate-post-directeur-data-center-services-iv-belastingdienst-min-fin-2021-02-01
+  organization_id: org:onderdeel-data-center-services-iv-belastingdienst-min-fin
+  post_id: post:directeur-data-center-services-iv-belastingdienst-min-fin
+  role: Directeur Data Center Services, directie Informatievoorziening, directoraat-generaal
+    Belastingdienst, ministerie van Financiën
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/henk-klapwijk-directeur-data-center-services-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-27
+  confidence: 0.92
+- id: mandate-post-directeur-dcs-directie-iv-belastingdienst-min-fin-2021-02-01
+  organization_id: org:onderdeel-data-center-services-belastingdienst-min-fin
+  post_id: post:directeur-dcs-directie-iv-belastingdienst-min-fin
+  role: Directeur Data Center Services, directie Informatievoorziening, Belastingdienst,
+    ministerie van Financiën
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/henk-klapwijk-directeur-data-center-services-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-27
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/27/henk-klapwijk-directeur-data-center-services-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

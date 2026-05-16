@@ -1,0 +1,27 @@
+id: person:de-leeuw-e-e36d421e
+name:
+  full: Esther de Leeuw
+  family: de Leeuw
+  given: Esther
+mandaten:
+- id: mandate-post-algemeen-directeur-klantinteractie-services-belastingdienst-2020-10-05
+  organization_id: org:onderdeel-directie-klantinteractie-services-belastingdienst
+  post_id: post:algemeen-directeur-klantinteractie-services-belastingdienst
+  role: Algemeen directeur Klantinteractie & Services
+  start_date: '2020-10-05'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-09-15
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/15/esther-de-leeuw-algemeen-directeur-klantinteractie--services-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

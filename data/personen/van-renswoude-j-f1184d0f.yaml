@@ -1,0 +1,42 @@
+id: person:van-renswoude-j-f1184d0f
+name:
+  full: Johan van Renswoude
+  family: van Renswoude
+  given: Johan
+mandaten:
+- id: mandate-post-hoofd-operatien-eenheid-midden-nederland-politie-2021-02-01
+  organization_id: org:eenheid-midden-nederland-politie
+  post_id: post:hoofd-operatien-eenheid-midden-nederland-politie
+  role: Hoofd Operatiën, eenheid Midden-Nederland, Politie
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/01/benoemingen-eenheidsleiding-midden-nederland-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-01
+  confidence: 0.88
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-midden-nederland-nationale-politie-2019-09-01
+  organization_id: org:onderdeel-eenheid-midden-nederland-nationale-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-midden-nederland-nationale-politie
+  role: Hoofd Bedrijfsvoering, Eenheid Midden-Nederland, Nationale Politie
+  start_date: '2019-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/27/johan-van-renswoude-hoofd-bedrijfsvoering-midden-nederland-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-08-27
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/01/benoemingen-eenheidsleiding-midden-nederland-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

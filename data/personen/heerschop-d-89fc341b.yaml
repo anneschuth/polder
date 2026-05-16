@@ -1,0 +1,27 @@
+id: person:heerschop-d-89fc341b
+name:
+  full: Dick Heerschop
+  family: Heerschop
+  given: Dick
+mandaten:
+- id: mandate-post-consultant-abdtopconsult-min-bzk-2019-06-01
+  organization_id: org:onderdeel-abdtopconsult
+  post_id: post:consultant-abdtopconsult-min-bzk
+  role: Consultant ABDTOPConsult, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2019-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/22/dick-heerschop-consultant-bij-abdtopconsult
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-03-22
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/22/dick-heerschop-consultant-bij-abdtopconsult
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

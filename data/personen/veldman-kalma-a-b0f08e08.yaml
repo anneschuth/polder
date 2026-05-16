@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-01-25
   confidence: 0.9
+- id: mandate-post-directeur-dsv-svb-veldman-kalma-2025-08-01
+  organization_id: org:onderdeel-dsv-svb
+  post_id: post:directeur-dsv-svb-veldman-kalma
+  role: Directeur Dienstverlening Sociale Verzekeringen, Sociale Verzekeringsbank
+  start_date: '2025-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/13/anneke-veldman-kalma-en-jan-van-der-vliet-directeuren-dienstverlening-bij-de-sociale-verzekeringsbank
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-13
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/25/anneke-veldman--kalma-directeur-gegevens-bij-de-directie-centrale-administratieve-processen-bij-belastingdienst

@@ -1,0 +1,45 @@
+id: person:visser-g-a1aa519e
+name:
+  full: G. (Gerard) Visser MSc
+  family: Visser
+  given: Gerard
+  initials: G.
+mandaten:
+- id: mandate-post-afdelingshoofd-instroom-sso-op-belastingdienst-min-fin-2022-10-31
+  organization_id: org:onderdeel-sso-op-belastingdienst-min-fin
+  post_id: post:afdelingshoofd-instroom-sso-op-belastingdienst-min-fin
+  role: Afdelingshoofd Instroom bij de Shared Service Organisatie Organisatie & Personeel
+    van de Belastingdienst
+  start_date: '2022-10-31'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/14/gerard-visser-afdelingshoofd-instroom-shared-service-organisatie-organisatie--personeel-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-09-14
+  confidence: 0.92
+- id: mandate-post-afdelingshoofd-hosting-integratie-belastingdienst-2022-10-31
+  organization_id: org:agentschap-belastingdienst
+  post_id: post:afdelingshoofd-hosting-integratie-belastingdienst
+  role: Afdelingshoofd Instroom bij de Shared Service Organisatie Organisatie & Personeel
+    van de Belastingdienst
+  start_date: '2022-10-31'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/14/gerard-visser-afdelingshoofd-instroom-shared-service-organisatie-organisatie--personeel-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-09-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/14/gerard-visser-afdelingshoofd-instroom-shared-service-organisatie-organisatie--personeel-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

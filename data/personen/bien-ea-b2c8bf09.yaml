@@ -1,0 +1,42 @@
+id: person:bien-ea-b2c8bf09
+name:
+  full: Drs. E.A. (Ellen) Bien RC
+  family: bien
+  initials: E.A.
+mandaten:
+- id: mandate-post-hoofddirecteur-financien-en-control-min-def-2019-01-01
+  organization_id: org:onderdeel-hoofddirectie-financien-en-control-min-def
+  post_id: post:hoofddirecteur-financien-en-control-min-def
+  role: Hoofddirecteur Financiën en Control, ministerie van Defensie
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/ellen-bien-hoofddirecteur-financien-en-control-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-23
+  confidence: 0.93
+- id: mandate-post-hoofddirecteur-financien-control-min-def-2019-01-01
+  organization_id: org:onderdeel-hoofddirectie-financien-control-min-def
+  post_id: post:hoofddirecteur-financien-control-min-def
+  role: Hoofddirecteur Financiën en Control, ministerie van Defensie
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/ellen-bien-hoofddirecteur-financien-en-control-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-23
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/ellen-bien-hoofddirecteur-financien-en-control-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
