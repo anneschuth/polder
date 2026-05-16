@@ -250,3 +250,91 @@ def verify(
         yaml.safe_dump(raw, allow_unicode=True, sort_keys=False), encoding="utf-8"
     )
     typer.echo(f"Toegevoegd: {category} / {key} (note: {note})")
+
+
+@app.command("prune")
+def prune(
+    apply: Annotated[
+        bool,
+        typer.Option(
+            "--apply",
+            help="Schrijf de wijziging echt weg (default is dry-run).",
+        ),
+    ] = False,
+    data_dir: Annotated[
+        Path,
+        typer.Option("--data", help="Pad naar data/ root."),
+    ] = Path("data"),
+) -> None:
+    """Verwijder stale entries uit `data/_audit/verified.yaml`.
+
+    Een entry is stale als `(category, key)` met geen enkele huidige
+    finding matcht (audit gedraaid zonder whitelist). Nog-matchende
+    entries blijven onaangeroerd.
+
+    Default is dry-run: toont wat verwijderd zou worden. Pas met
+    `--apply` echt wegschrijven. `verified.yaml` staat in git, dus een
+    onterechte prune is reversibel.
+    """
+    from polder.audit import run_audit
+
+    if not data_dir.is_absolute():
+        data_dir = _repo_root() / data_dir
+    if not data_dir.exists():
+        typer.echo(f"data-dir niet gevonden: {data_dir}", err=True)
+        raise typer.Exit(code=2)
+
+    verified_path = data_dir / "_audit" / "verified.yaml"
+    if not verified_path.exists():
+        typer.echo("Geen verified.yaml gevonden, niets te prunen.")
+        return
+
+    raw = yaml.safe_load(verified_path.read_text(encoding="utf-8")) or {}
+    entries = raw.get("verified") or []
+    if not entries:
+        typer.echo("verified.yaml bevat geen entries, niets te prunen.")
+        return
+
+    report = run_audit(data_dir, apply_whitelist=False)
+    live_keys = {(f.category, f.key) for f in report.findings}
+
+    kept: list[dict] = []
+    stale: list[dict] = []
+    for entry in entries:
+        if not isinstance(entry, dict):
+            # Onbekende vorm: behoud, prune raakt alleen herkenbare entries.
+            kept.append(entry)
+            continue
+        cat = entry.get("category")
+        key = entry.get("key")
+        if cat is not None and key is not None and (str(cat), str(key)) in live_keys:
+            kept.append(entry)
+        else:
+            stale.append(entry)
+
+    typer.echo(f"=== audit prune ({verified_path}) ===")
+    typer.echo(f"  entries totaal:  {len(entries)}")
+    typer.echo(f"  nog matchend:    {len(kept)}")
+    typer.echo(f"  stale:           {len(stale)}")
+    typer.echo("")
+
+    if not stale:
+        typer.echo("Geen stale entries, niets te doen.")
+        return
+
+    for entry in stale:
+        cat = entry.get("category", "?")
+        key = entry.get("key", "?")
+        typer.echo(f"  - {cat} / {key}")
+    typer.echo("")
+
+    if not apply:
+        typer.echo(f"Dry-run: {len(stale)} stale entries zouden verwijderd worden.")
+        typer.echo("Draai opnieuw met --apply om echt weg te schrijven.")
+        return
+
+    raw["verified"] = kept
+    verified_path.write_text(
+        yaml.safe_dump(raw, allow_unicode=True, sort_keys=False), encoding="utf-8"
+    )
+    typer.echo(f"Verwijderd: {len(stale)} stale entries. {len(kept)} entries behouden.")
