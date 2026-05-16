@@ -17,14 +17,14 @@ relation_to_ministerie:
 names:
 - value: Logius
   valid_from: '1900-01-01'
+  abbr: KOOP
 description:
-  text: Logius (voorheen GBO.Overheid) is de dienst digitale overheid van het ministerie
-    van Binnenlandse Zaken en Koninkrijksrelaties. Logius biedt publieke dienstverleners
-    een samenhangende ICT-infrastructuur zodat burgers en bedrijven betrouwbaar, snel
-    en gemakkelijk elektronisch zaken kunnen doen. Logius levert producten op het
-    gebied van toegang (waaronder DigiD), gegevensuitwisseling, informatiebeveiliging
-    en standaardisatie. Voor meer informatie kunt u de website raadplegen (www.logius.nl).
-    Logius werkt nauw samen met Stichting ICTU.
+  text: Logius (voorheen GBO.Overheid) is de dienst digitale overheid van het ministerie van Binnenlandse
+    Zaken en Koninkrijksrelaties. Logius biedt publieke dienstverleners een samenhangende ICT-infrastructuur
+    zodat burgers en bedrijven betrouwbaar, snel en gemakkelijk elektronisch zaken kunnen doen. Logius
+    levert producten op het gebied van toegang (waaronder DigiD), gegevensuitwisseling, informatiebeveiliging
+    en standaardisatie. Voor meer informatie kunt u de website raadplegen (www.logius.nl). Logius werkt
+    nauw samen met Stichting ICTU.
   url: https://www.logius.nl/onze-organisatie/over-logius/organisatiestructuur
 classifications:
 - type: CAO
@@ -109,3 +109,11 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/71428/logius
   retrieved: '2026-05-16'
+- id: roo
+  url: https://organisaties.overheid.nl/71428/agentschap-koop
+  retrieved: '2026-05-13'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin

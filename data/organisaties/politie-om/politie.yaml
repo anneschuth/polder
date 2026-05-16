@@ -14,6 +14,7 @@ relation_to_ministerie:
 names:
 - value: Politie
   valid_from: '1900-01-01'
+  abbr: PDC
 description:
   url: https://www.politie.nl/informatie/organogram-nederlandse-politie.html
 classifications:
@@ -90,4 +91,7 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/22660975/politie
   retrieved: '2026-05-16'
+- id: roo
+  url: https://organisaties.overheid.nl/22660975/politie-pdc
+  retrieved: '2026-05-13'
 roo_start_datum: '2013-01-01'
