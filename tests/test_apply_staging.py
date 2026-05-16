@@ -688,9 +688,9 @@ def test_chain_name_implies_wrong_parent_skipped(mini_polder: Path) -> None:
     actions, skipped = plan_apply([p], mini_polder / "data")
     assert actions == []
     reasons = [r for s in skipped for r in s.reasons]
-    assert any(
-        "Belastingdienst" in r and "parent" in r and "verschilt" in r for r in reasons
-    ), reasons
+    assert any("Belastingdienst" in r and "parent" in r and "verschilt" in r for r in reasons), (
+        reasons
+    )
 
 
 def test_chain_inconsistent_with_organization_id_skipped(mini_polder: Path) -> None:
@@ -753,9 +753,9 @@ def test_filename_strips_org_prefix(mini_polder: Path) -> None:
     create_orgs = [a for a in actions if a.type == "create-org"]
     assert create_orgs, "verwacht een create-org actie"
     for a in create_orgs:
-        assert (
-            ":" not in a.target_path.name
-        ), f"filename mag geen ':' bevatten, kreeg: {a.target_path.name}"
+        assert ":" not in a.target_path.name, (
+            f"filename mag geen ':' bevatten, kreeg: {a.target_path.name}"
+        )
 
 
 def test_skip_when_role_empty(mini_polder: Path) -> None:

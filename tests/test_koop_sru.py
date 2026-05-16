@@ -127,7 +127,12 @@ def test_extract_record_metadata_picks_xml_manifestation() -> None:
 
 
 def test_search_writes_xml_per_record(tmp_path: Path) -> None:
-    client = _client_returning(SRU_FEED, EMPTY_FEED)
+    # Call 1 = SRU-zoekrespons; call 2 en 3 = de besluit-XML downloads per
+    # record (via gzd:itemUrl). search() schrijft de SRU-metadata naar een
+    # .sru.xml sidecar en de besluit-XML naar het .xml-pad dat het teruggeeft.
+    besluit_1 = b'<?xml version="1.0"?><officiele-publicatie>besluit stcrt-2026-12345</officiele-publicatie>'
+    besluit_2 = b'<?xml version="1.0"?><officiele-publicatie>besluit stcrt-2026-67890</officiele-publicatie>'
+    client = _client_returning(SRU_FEED, besluit_1, besluit_2)
     paths = ks.search(
         "benoeming",
         max_records=10,
@@ -141,8 +146,13 @@ def test_search_writes_xml_per_record(tmp_path: Path) -> None:
     assert p0.parent.name in {"04", "05"}
     assert p0.suffix == ".xml"
     assert p0.exists()
-    content = p0.read_bytes()
-    assert b"stcrt-2026-" in content
+    # Het teruggegeven pad bevat de besluit-XML.
+    assert p0.read_bytes() == besluit_1
+    assert paths[1].read_bytes() == besluit_2
+    # De SRU-metadata staat in de .sru.xml sidecar ernaast.
+    sidecar = p0.with_suffix(".sru.xml")
+    assert sidecar.exists()
+    assert b"stcrt-2026-" in sidecar.read_bytes()
 
 
 def test_search_dry_run_writes_nothing(tmp_path: Path) -> None:

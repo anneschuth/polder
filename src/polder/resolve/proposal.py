@@ -260,9 +260,15 @@ def _resolve_post(proposal: dict, idx: PolderIndex, org_id: str | None) -> PostM
         portfolio_tokens = canonical.removeprefix("post:minister-zp-").split("-")
         if len(portfolio_tokens) >= 2:
             prefix = f"post:minister-zp-{portfolio_tokens[0]}-{portfolio_tokens[1]}"
-            for existing in idx.post_ids:
-                if existing.startswith(prefix):
-                    return PostMatch(existing, 0.90, "mzp_portfolio_prefix_match")
+            candidates = [e for e in idx.post_ids if e.startswith(prefix)]
+            if candidates:
+                # Meerdere posts kunnen dezelfde portefeuille-prefix delen
+                # (bv. een Rutte-IV "Minister voor X" naast een 2024
+                # "Minister zonder portefeuille, belast met X"). Eén post
+                # per portefeuille is de regel; kies deterministisch de
+                # canonical (kortste) slug i.p.v. iteratie-volgorde.
+                best = min(candidates, key=len)
+                return PostMatch(best, 0.90, "mzp_portfolio_prefix_match")
         # Post bestaat nog niet en geen prefix-match; apply mag hem
         # aanmaken met de canonical slug.
         return PostMatch(canonical, 0.90, "creatable_mzp_portfolio")

@@ -59,9 +59,9 @@ def test_example_diff_has_expected_shape() -> None:
     types = {entry.get("type") for entry in data}
     assert "modified" in types
     assert "new" in types
-    assert any(
-        entry.get("high_stakes") for entry in data
-    ), "minstens een high-stakes entry verwacht"
+    assert any(entry.get("high_stakes") for entry in data), (
+        "minstens een high-stakes entry verwacht"
+    )
 
 
 def test_example_diff_paths_under_organisaties() -> None:

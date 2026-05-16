@@ -11,6 +11,19 @@ import yaml
 
 from polder.fetchers import wikidata_sparql as ws
 
+
+@pytest.fixture(autouse=True)
+def _reset_endpoint_circuits():
+    """De circuit-breaker-state in wikidata_sparql is module-globaal en lekt
+    anders tussen tests: een test die qlever laat falen zet de breaker open,
+    waardoor een latere auto-keten-test qlever stilletjes overslaat. Reset
+    voor elke test zodat ze isolement houden.
+    """
+    ws.reset_endpoint_circuits()
+    yield
+    ws.reset_endpoint_circuits()
+
+
 # ---------------------------------------------------------------------------
 # Fixtures: realistische SPARQL JSON-responses
 # ---------------------------------------------------------------------------
@@ -1383,9 +1396,9 @@ def test_build_bewindspersoon_records_skipt_mandate_zonder_start() -> None:
     # mandaten (de mandate-zonder-start moet geskipt zijn).
     tseggai = persons.get("Q105773583")
     if tseggai is not None:
-        assert (
-            tseggai.get("mandaten") == []
-        ), f"Verwachtte 0 mandaten voor Tseggai, kreeg {tseggai.get('mandaten')!r}"
+        assert tseggai.get("mandaten") == [], (
+            f"Verwachtte 0 mandaten voor Tseggai, kreeg {tseggai.get('mandaten')!r}"
+        )
     # Rutte moet WEL een mandaat hebben.
     rutte = persons.get("Q57792")
     assert rutte is not None
