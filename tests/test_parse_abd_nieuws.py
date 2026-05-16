@@ -27,7 +27,14 @@ REQUIRED_FIELDS = {
     "evidence_snippet",
 }
 
-ALLOWED_EVENT_TYPES = {"benoeming", "ontslag", "verlenging", "aankondiging", "overig"}
+ALLOWED_EVENT_TYPES = {
+    "benoeming",
+    "ontslag",
+    "verlenging",
+    "aankondiging",
+    "overlijden",
+    "overig",
+}
 ALLOWED_LEVELS = {"ministerie", "directoraat-generaal", "directie", "afdeling"}
 
 
@@ -50,7 +57,7 @@ def test_skill_md_frontmatter_required_fields() -> None:
     fm = _parse_frontmatter(_read_skill_md())
     assert fm.get("name") == "parse-abd-nieuws"
     assert fm.get("description")
-    assert fm.get("version") == "0.5.0"
+    assert fm.get("version") == "0.6.0"
     assert isinstance(fm.get("triggers"), list)
     assert len(fm["triggers"]) >= 3
 
@@ -101,6 +108,18 @@ def test_skill_md_describes_floor_and_cap() -> None:
     assert "functie" in lower
     assert "organisatie" in lower
     assert "datum" in lower
+
+
+def test_skill_md_describes_overlijden_event() -> None:
+    content = _read_skill_md()
+    lower = content.lower()
+    # event_type overlijden is een toegestane waarde en heeft eigen regels.
+    assert "overlijden" in lower
+    assert "overleden" in lower
+    # Bij overlijden zijn post/org niet van toepassing en is er een eigen
+    # confidence-schaal (niet de vier-kernfeiten-vloer).
+    assert "post_id: null" in content or "geen post-mutatie" in lower
+    assert "overlijdensdatum" in lower
 
 
 def test_example_input_md_exists_and_non_empty() -> None:

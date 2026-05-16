@@ -466,6 +466,28 @@ def _recommend_merge(
             f"low_confidence: proposal-confidence {proposal_conf:.2f} < drempel 0.85"
         )
 
+    # Overlijden: geen post-mutatie. org/post zijn per definitie leeg en
+    # tellen niet mee — alleen een eenduidige persoon-match telt, want de
+    # apply-sweep sluit álle lopende mandaten van die persoon. Een ambigue
+    # naam valt door de ambiguous-tak hieronder al naar needs-review.
+    if proposal.get("event_type") == "overlijden":
+        if "ambiguous" in person.method:
+            n = len(person.candidates)
+            cands = ", ".join(person.candidates[:3]) if person.candidates else "onbekend"
+            return "needs-review", (
+                f"ambiguous_person: {n} kandidaten met deze familienaam "
+                f"({cands}); overlijden niet eenduidig toe te wijzen"
+            )
+        if person.confidence < 0.85:
+            return "needs-review", (
+                f"low_confidence: person {person.confidence:.2f} ({person.method}) "
+                "< drempel 0.85 voor overlijden"
+            )
+        return "auto-merge", (
+            f"overlijden_person_strong: person {person.confidence:.2f} "
+            f"({person.method}); sluit alle lopende mandaten"
+        )
+
     if "ambiguous" in person.method:
         n = len(person.candidates)
         cands = ", ".join(person.candidates[:3]) if person.candidates else "onbekend"

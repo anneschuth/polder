@@ -671,6 +671,22 @@ def plan_apply(
             )
             continue
 
+        # Overlijden: geen post-mutatie maar een natuurlijke valid_until op
+        # ALLE lopende mandaten van de persoon. Eigen pad vóór de gewone
+        # close-detectie, want er is geen post_id/organization_id om op te
+        # mikken — de sweep sluit elk mandaat met end_date is None.
+        if proposal.get("event_type") == "overlijden":
+            death_action_or_skip = _plan_close_all_mandates(
+                proposal=proposal,
+                personen=personen,
+                confidence=confidence,
+            )
+            if isinstance(death_action_or_skip, SkippedProposal):
+                skipped.append(death_action_or_skip)
+            else:
+                actions.append(death_action_or_skip)
+            continue
+
         # Detecteer close-mandaat: een ontslag-proposal heeft geen start_date
         # (de bestaande start blijft staan) maar wel een end_date, en sluit
         # een lopend mandaat. Apart pad: geen org/post aanmaken, alleen
@@ -1270,6 +1286,92 @@ def _plan_close_mandate(
     reasons = [f"close mandaat op {resolved_id} (post={post_id})"]
     for w in warnings:
         reasons.append(f"waarschuwing: {w}")
+    return ApplyAction(
+        type="close-mandaat",
+        target_path=path,
+        record=new_record,
+        source_proposal=proposal,
+        confidence=confidence,
+        reasons=reasons,
+    )
+
+
+def _plan_close_all_mandates(
+    *,
+    proposal: dict[str, Any],
+    personen: list[tuple[Path, dict[str, Any]]],
+    confidence: float,
+) -> ApplyAction | SkippedProposal:
+    """Plan een overlijden: sluit alle lopende mandaten van de persoon.
+
+    Een overlijden is van rechtswege een `valid_until` op elk mandaat dat
+    nog open staat (`end_date is None`). Geen post/org nodig, geen nieuwe
+    persoon: zonder eenduidig gematchte persoon kunnen we niets sluiten.
+    Idempotent: een mandaat dat al op de overlijdensdatum gesloten is (met
+    bron genoteerd) blijft ongemoeid.
+    """
+    end_date = _normalize_date_string(proposal.get("end_date"))
+    if not end_date:
+        return SkippedProposal(
+            proposal=proposal, reasons=["overlijden: geen end_date (overlijdensdatum) in proposal"]
+        )
+    if not _date_in_plausible_range(end_date):
+        return SkippedProposal(
+            proposal=proposal, reasons=[f"overlijden: datum buiten redelijk bereik: {end_date}"]
+        )
+
+    resolved_id = _resolved_person_id(proposal)
+    if not resolved_id:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[
+                "overlijden: geen resolved_person_id; persoon eerst handmatig "
+                "matchen voordat mandaten gesloten kunnen worden"
+            ],
+        )
+
+    match = next((p for p in personen if p[1].get("id") == resolved_id), None)
+    if match is None:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[f"resolved_person_id {resolved_id} niet gevonden in data/personen/"],
+        )
+
+    path, record = match
+    mandaten = list(record.get("mandaten") or [])
+    open_indices = [i for i, m in enumerate(mandaten) if not m.get("end_date")]
+    if not open_indices:
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=[f"overlijden: {resolved_id} heeft geen lopend mandaat (idempotent)"],
+        )
+
+    today = _today_iso()
+    source_id = _detect_source_id(proposal)
+    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    new_source = {
+        "id": source_id,
+        "url": source_url,
+        "retrieved": today,
+        "fields": ["end_date", "applied_via:apply-staging:overlijden"],
+    }
+
+    new_mandaten = list(mandaten)
+    for i in open_indices:
+        m = dict(mandaten[i])
+        m["end_date"] = end_date
+        sources = list(m.get("sources") or [])
+        if not any(s.get("id") == source_id and s.get("url") == source_url for s in sources):
+            sources = [*sources, new_source]
+        m["sources"] = sources
+        new_mandaten[i] = m
+
+    new_record = dict(record)
+    new_record["mandaten"] = new_mandaten
+    reasons = [
+        f"overlijden {resolved_id}: {len(open_indices)} lopend(e) mandaat/mandaten "
+        f"gesloten op {end_date}"
+    ]
     return ApplyAction(
         type="close-mandaat",
         target_path=path,
