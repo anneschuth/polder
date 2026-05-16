@@ -1,6 +1,6 @@
 ---
 import Base from '~/layouts/Base.astro';
-import { totals, recordsPerSource } from '~/lib/stats';
+import { totals, recordsPerSource, lastUpdated } from '~/lib/stats';
 
 const t = totals();
 const sources = recordsPerSource();
@@ -10,11 +10,16 @@ const fmt = (n: number) => n.toLocaleString('nl-NL');
 const repo = 'https://github.com/anneschuth/polder';
 const releases = `${repo}/releases/latest`;
 
-const updated = new Date().toLocaleDateString('nl-NL', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
+// Real data-freshness date (latest `retrieved:` across record sources), not
+// the build date. Empty string if the data carries no retrieved dates.
+const updatedIso = lastUpdated();
+const updated = updatedIso
+  ? new Date(updatedIso).toLocaleDateString('nl-NL', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    })
+  : '';
 
 const personYamlExample = `id: person:jansen-jp-1965
 identifiers:
@@ -35,7 +40,13 @@ sources:
     url: https://organisaties.overheid.nl/...
     retrieved: 2026-05-16`;
 
-const entities = [
+const entities: {
+  label: string;
+  count: number;
+  popolo: string;
+  fields: string;
+  href: string | null;
+}[] = [
   {
     label: 'Organisaties',
     count: t.orgs,
@@ -62,41 +73,56 @@ const entities = [
     count: t.mandates,
     popolo: 'Membership',
     fields: `start_date, end_date, persoon, post, organisatie · ${fmt(t.currentMandates)} lopend`,
-    href: `${base}/personen/`,
+    href: null,
   },
 ];
 
-// Human-readable labels for the deterministic feeds, keyed by the source id
-// that records carry in their sources[]. Only ids that actually appear in the
-// data get a count; the rest are listed without one.
-const sourceLabels: Record<string, string> = {
-  roo: 'ROO (KOOP), alle organisatietypes, bestuurders tot SG/DG',
-  tooi: 'TOOI, URI-stelsel en SKOS-vocabulaires',
-  tk: 'TK OData, Tweede Kamer, fracties, commissies',
-  ek: 'Eerste Kamer, leden en commissies',
-  koop_sru: 'KOOP SRU, Staatscourant en benoemings-KB’s',
-  logius: 'Logius COR, OIN per organisatie',
-  wikidata: 'Wikidata, Q-id-crosswalk',
-  ori: 'Open Raadsinformatie, raadsleden, 265+ gemeenten',
-  kiesraad: 'Kiesraad, verkiezingsuitslagen en kandidaatlijsten',
-  'ar-rwt': 'Algemene Rekenkamer, RWT-register',
+// Source metadata keyed on the ACTUAL id records carry in sources[] (verified
+// against data/ and data.ts). `kind` separates deterministic feeds (fetched
+// without an LLM) from LLM-extracted sources. Both lists below are derived
+// from recordsPerSource(), so a source with zero records never shows up and
+// the feed count can't drift out of sync with the data.
+const sourceMeta: Record<string, { label: string; kind: 'feed' | 'llm' }> = {
+  roo: { label: 'ROO (KOOP), alle organisatietypes, bestuurders tot SG/DG', kind: 'feed' },
+  open_raadsinformatie: { label: 'Open Raadsinformatie, raadsleden, 265+ gemeenten', kind: 'feed' },
+  wikidata: { label: 'Wikidata, Q-id-crosswalk', kind: 'feed' },
+  tk_odata: { label: 'TK OData, Tweede Kamer, fracties, commissies', kind: 'feed' },
+  logius_cor: { label: 'Logius COR, OIN per organisatie', kind: 'feed' },
+  tooi: { label: 'TOOI, URI-stelsel en SKOS-vocabulaires', kind: 'feed' },
+  ar_rwt: { label: 'Algemene Rekenkamer, RWT-register', kind: 'feed' },
+  ek_scrape: { label: 'Eerste Kamer, leden en commissies', kind: 'feed' },
+  kiesraad: { label: 'Kiesraad, verkiezingsuitslagen en kandidaatlijsten', kind: 'feed' },
+  abd_nieuws: { label: 'ABD-nieuws, benoemingen topmanagement', kind: 'llm' },
+  staatscourant: { label: 'Staatscourant benoemings-KB’s', kind: 'llm' },
+  organogram_bzk: { label: 'Rijksoverheid.nl-organogrammen', kind: 'llm' },
+  rijksoverheid_organogram: { label: 'Rijksoverheid.nl-organogrammen', kind: 'llm' },
 };
-const sourceCount = new Map(sources.map((s) => [s.id, s.records]));
-const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
-  label,
-  records: sourceCount.get(id) ?? 0,
-}));
+// Collapse ids that share a label (e.g. the two organogram source ids) into
+// one row, summing their record counts.
+const byLabel = new Map<string, { label: string; kind: 'feed' | 'llm'; records: number }>();
+for (const s of sources) {
+  if (s.records <= 0 || !(s.id in sourceMeta)) continue;
+  const { label, kind } = sourceMeta[s.id];
+  const row = byLabel.get(label) ?? { label, kind, records: 0 };
+  row.records += s.records;
+  byLabel.set(label, row);
+}
+const withMeta = [...byLabel.values()].sort((a, b) => b.records - a.records);
+const feeds = withMeta.filter((s) => s.kind === 'feed');
+const llmSources = withMeta.filter((s) => s.kind === 'llm');
 ---
 <Base title="Polder" description="Open, machineleesbare dataset van de Nederlandse overheid: organisaties, posten, personen en mandaten. CC0.">
   <article class="lp">
     <header class="hero">
       <p class="kicker">Open dataset · Nederlandse overheid</p>
-      <h1 class="display">Polder</h1>
-      <p class="acronym">
-        <strong>P</strong>ublieke <strong>O</strong>verheid:
-        <strong>L</strong>eden, <strong>D</strong>ienstverbanden,
-        <strong>E</strong>enheden, <strong>R</strong>ollen.
-      </p>
+      <div class="wordmark">
+        <h1 class="display">Polder</h1>
+        <p class="acronym">
+          <strong>P</strong>ublieke <strong>O</strong>verheid:
+          <strong>L</strong>eden, <strong>D</strong>ienstverbanden,
+          <strong>E</strong>enheden, <strong>R</strong>ollen.
+        </p>
+      </div>
       <p class="lede">
         Wie regeert Nederland, vastgelegd als data. Een machineleesbaar
         register van overheidsorganisaties, posten, personen en hun mandaten,
@@ -111,8 +137,12 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
         <span><strong>{fmt(t.posts)}</strong> posten</span>
         <span aria-hidden="true">·</span>
         <span><strong>{fmt(t.mandates)}</strong> mandaten</span>
-        <span aria-hidden="true">·</span>
-        <span class="counts-meta">bijgewerkt {updated}</span>
+        {updated && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span class="counts-meta">bijgewerkt {updated}</span>
+          </>
+        )}
       </p>
 
       <div class="cta">
@@ -152,7 +182,7 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
         {entities.map((e) => (
           <div class="entity">
             <dt>
-              <a href={e.href}>{e.label}</a>
+              {e.href ? <a href={e.href}>{e.label}</a> : <span>{e.label}</span>}
               <span class="popolo">{e.popolo}</span>
             </dt>
             <dd class="entity-count">{fmt(e.count)}</dd>
@@ -223,14 +253,15 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
     <section class="block">
       <nldd-title size={4}><h2>Hoe de data tot stand komt</h2></nldd-title>
       <p class="block-intro">
-        Tien deterministische feeds worden zonder LLM opgehaald. Aantallen
-        hieronder tellen records die de betreffende bron als herkomst voeren.
+        Deterministische feeds worden zonder LLM opgehaald. De aantallen tellen
+        records die de betreffende bron als herkomst voeren; alleen bronnen die
+        nu in de data zitten staan in de lijst.
       </p>
       <dl class="entities feeds">
         {feeds.map((f) => (
           <div class="entity">
             <dt><span class="feed-label">{f.label}</span></dt>
-            <dd class="entity-count">{f.records > 0 ? fmt(f.records) : '·'}</dd>
+            <dd class="entity-count">{fmt(f.records)}</dd>
           </div>
         ))}
       </dl>
@@ -241,11 +272,15 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
         <strong>two-source-rule</strong>, en er is een
         human-on-the-loop-window voor de merge. LLM-output landt eerst in
         <code>data/_staging/</code>, nooit rechtstreeks in <code>data/</code>.
-        <span class="muted">
-          Allmanak (Open State Foundation) is een crosswalk-identifier, geen
-          actief gefetchte feed.
-        </span>
       </p>
+      <dl class="entities feeds">
+        {llmSources.map((s) => (
+          <div class="entity">
+            <dt><span class="feed-label">{s.label}</span></dt>
+            <dd class="entity-count">{fmt(s.records)}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
 
     <nldd-divider></nldd-divider>
@@ -355,6 +390,13 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
       text-transform: uppercase;
       color: var(--semantics-content-accent-color);
     }
+    /* Title + acronym are one unit: a tight inner gap keeps the acronym
+       hugging the wordmark, independent of the hero's larger flex gap. */
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      gap: var(--primitives-space-4, 0.25rem);
+    }
     .display {
       margin: 0;
       font: var(--primitives-font-display-1-lg);
@@ -362,7 +404,7 @@ const feeds = Object.entries(sourceLabels).map(([id, label]) => ({
       line-height: 1;
     }
     .acronym {
-      margin: calc(-1 * var(--primitives-space-8, 0.5rem)) 0 0;
+      margin: 0;
       font: var(--primitives-font-body-md-regular-flat);
       color: var(--semantics-content-accent-color);
     }
