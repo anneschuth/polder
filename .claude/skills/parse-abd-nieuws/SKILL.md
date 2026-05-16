@@ -1,7 +1,7 @@
 ---
 name: parse-abd-nieuws
 description: Parse een ABD-nieuwsbericht (HTML van algemenebestuursdienst.nl/actueel/nieuws) naar Membership-proposals met evidence_snippet als verifieerbare substring en organization_chain (ministerie, DG, directie, afdeling). Gebruik wanneer de gebruiker zegt 'parse abd-nieuws', 'verwerk abd-bericht', 'extract benoeming uit abd', 'lees abd-nieuwsbericht', of in English 'parse abd news', 'extract appointments from abd', 'process abd article'.
-version: 0.5.0
+version: 0.6.0
 triggers:
   - parse abd-nieuws
   - verwerk abd-bericht
@@ -65,7 +65,7 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
 - `decision_reference` (string): KB-nummer als het bericht dit noemt, anders `"ABD-nieuwsbericht <YYYY-MM-DD>"`.
 - `staatscourant_url` (string of null): URL naar het KB in de Staatscourant als het bericht ernaar linkt; anders null.
 - `abd_nieuws_url` (string, verplicht): de canonical URL van het nieuwsbericht.
-- `event_type` (string): één van `benoeming`, `ontslag`, `verlenging`, `aankondiging`, `overig`.
+- `event_type` (string): één van `benoeming`, `ontslag`, `verlenging`, `aankondiging`, `overlijden`, `overig`.
 - `confidence` (float, 0 tot 1).
 - `confidence_reasoning` (string): welke signalen meetelden, en welke ontbreken.
 - `evidence_snippet` (string): letterlijke substring uit de payload (uit `TWITTER_DESCRIPTION` of `BODY`) met de feiten.
@@ -79,6 +79,7 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
    - **Alternatief**: "X wordt <functie>, een <subunit> van de <parent> bij het ministerie van Y. De benoeming gaat in op <datum>."
    - **Ontslagmelding**: "X neemt afscheid / vertrekt per <datum>. X wordt opgevolgd door Y."
    - **Verlenging**: "X wordt herbenoemd / verlengd als <functie> voor <periode>."
+   - **Overlijdensbericht**: "X is op <DD-MM-YYYY> overleden" / "X is op <leeftijd>-jarige leeftijd overleden" / "In memoriam: X". Hier is er geen post-mutatie; het bericht meldt een overlijden van een (oud-)topambtenaar.
 4. Per benoeming of ontslag in de tekst:
    - Extract persoonsnaam (volledige naam, zelden titulering).
    - Extract functie. Let op samenstellingen zoals "kwartiermaker/directeur", "waarnemend pSG", "plaatsvervangend directeur".
@@ -99,7 +100,10 @@ JSON-array met proposals, één per benoeming, ontslag, verlenging of aankondigi
    - Titel of tekst noemt "benoemd", "wordt directeur", "wordt DG": `benoeming`.
    - "neemt afscheid", "vertrekt", "wordt opgevolgd": `ontslag`.
    - "verlengd", "wordt herbenoemd": `verlenging`.
+   - "is overleden", "overlijdensbericht", "is op X-jarige leeftijd overleden", "in memoriam": `overlijden`.
    - Persbericht zonder concrete persoon-functie-koppeling (jaarverslag, ABD-blad): `overig` met confidence-cap 0.4.
+
+   **Bij `overlijden`**: `post_id`, `organization_id` en `organization_chain` zijn niet van toepassing. Een overlijden is geen post-mutatie maar sluit van rechtswege alle nog lopende mandaten. Lever `post_id: null`, `organization_id: null`, `organization_chain: []`. Vul `end_date` met de overlijdensdatum (uit "is op DD-MM-YYYY overleden", "op DD-MM-YYYY", of "Nieuwsbericht DD-MM-YYYY" als laatste terugval). Laat `start_date: null`. `person_name` is verplicht; `existing_person_id` invullen als je een match in `data/personen/` vindt (de resolver matcht anders op familienaam).
 6. Bepaal `confidence` volgens de regels in "Confidence-bepaling" hieronder.
 7. Substring-check vóór output: `assert evidence_snippet in payload_text` waar `payload_text` de complete input-payload is (alle secties samen). Faal hard als de assert false retourneert. Geen paraphrase, geen normalisatie, geen whitespace-trimming.
 
@@ -127,6 +131,15 @@ De two-source rule blijft staan: zonder externe verificatie via een Staatscouran
 - **1 van de 4 kernfeiten ontbreekt** (bijvoorbeeld geen datum, of organisatie alleen impliciet): max 0.80.
 - **2 of meer kernfeiten ontbreken**: max 0.65.
 - **Naam ambigu** (twee of meer matches in `data/personen/` zonder onderscheidende informatie): max 0.55, forceert review.
+
+### Overlijden: aparte schaal
+
+Een `overlijden`-proposal kent geen vier kernfeiten (geen functie/organisatie/start). De confidence hangt af van twee dingen:
+
+1. **Familienaam expliciet** in titel of body.
+2. **Overlijdensdatum expliciet** (een ISO-converteerbare datum uit "op DD-MM-YYYY overleden" of, bij ontbreken, de berichtdatum als die als overlijdensdatum gelezen kan worden).
+
+Beide expliciet: `confidence` 0.90. Alleen naam, datum onzeker of alleen berichtdatum als proxy: 0.70. De two-source-cap is hier niet van toepassing: een ABD-overlijdensbericht is de gezaghebbende bron voor het feit zelf. De resolver/apply sluit alleen mandaten van een eenduidig gematchte persoon; bij ambigue naam forceert de lage person-confidence sowieso review.
 
 ### Verzwarende factoren (verlagen, niet onder de floor)
 
@@ -175,7 +188,7 @@ claude "Gebruik parse-abd-nieuws op _cache/abd-nieuws/marleen-heijster-afdelings
 
 ## Status
 
-Actief, versie 0.4.0. Vierde skill in Polder, na review-pr-diff, parse-staatscourant en parse-organogram. Nieuw in 0.4.0: confidence-vloer 0.85 bij vier expliciete kernfeiten, cap 0.94 zonder staatscourant_url, en expliciete verzwarende factor voor "voorlopig"-formuleringen. Nieuw in 0.3.0: `organization_chain` met expliciete niveau-keten en `organization_id` op diepste genoemde niveau.
+Actief, versie 0.6.0. Vierde skill in Polder, na review-pr-diff, parse-staatscourant en parse-organogram. Nieuw in 0.6.0: `event_type: overlijden` met eigen confidence-schaal; sluit van rechtswege alle lopende mandaten via een aparte apply-sweep, zonder post/org. Nieuw in 0.4.0: confidence-vloer 0.85 bij vier expliciete kernfeiten, cap 0.94 zonder staatscourant_url, en expliciete verzwarende factor voor "voorlopig"-formuleringen. Nieuw in 0.3.0: `organization_chain` met expliciete niveau-keten en `organization_id` op diepste genoemde niveau.
 
 ## KRITIEK: OUTPUT ENKEL JSON, GEEN MARKDOWN
 

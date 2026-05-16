@@ -402,3 +402,45 @@ def test_merge_reason_present_on_ambiguous_person(polder_index) -> None:
     result = resolve_proposal(proposal, polder_index)
     assert result["merge_recommendation"] == "needs-review"
     _assert_has_reason(result, "ambiguous_person")
+
+
+# ---------------------------------------------------------------------------
+# #32: overlijden — geen post/org, alleen person-match telt
+# ---------------------------------------------------------------------------
+
+
+def test_overlijden_strong_person_match_auto_merges(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "Mark Rutte",
+        "event_type": "overlijden",
+        "end_date": "2030-01-15",
+        "post_id": None,
+        "organization_id": None,
+        "organization_chain": [],
+        "abd_nieuws_url": "https://example.org/in-memoriam",
+        "confidence": 0.9,
+        "evidence_snippet": "Mark Rutte is op 15 januari 2030 overleden.",
+    }
+    result = resolve_proposal(proposal, polder_index)
+    # Org/post leeg maar dat mag de aanbeveling niet blokkeren.
+    assert result["resolved_person_id"] == "person:rutte-m-1967"
+    assert result["merge_recommendation"] == "auto-merge"
+    _assert_has_reason(result, "overlijden_person_strong")
+
+
+def test_overlijden_ambiguous_person_needs_review(polder_index) -> None:
+    from polder.resolve.proposal import resolve_proposal
+
+    proposal = {
+        "person_name": "drs. H.W.M. Schoof",
+        "event_type": "overlijden",
+        "end_date": "2030-02-01",
+        "post_id": None,
+        "organization_id": None,
+        "confidence": 0.9,
+    }
+    result = resolve_proposal(proposal, polder_index)
+    assert result["merge_recommendation"] == "needs-review"
+    _assert_has_reason(result, "ambiguous_person")
