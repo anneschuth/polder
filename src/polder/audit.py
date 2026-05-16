@@ -502,9 +502,22 @@ def _normalize_label(text: str | None) -> str:
 
 
 def _check_dup_org_identifier(orgs: list[tuple[Path, dict]], findings: list[Finding]) -> None:
-    """Twee org-records met verschillende `id` maar gedeelde tooi/oin/roo_id.
+    """Twee org-records met verschillende `id` maar een gedeelde
+    organisatie-specifieke identifier (tooi/roo_id/owms).
+
     Verschillende fetchers (scraper, ROO-naam, afkorting) maken elk een eigen
     slug; deze check vangt dat de `dup_id_*`-check mist omdat de ids verschillen.
+
+    Bewust *niet* op oin/rsin/kvk: dat zijn rechtspersoon-identifiers, geen
+    organisatie-identifiers. In het Nederlandse overheidsmodel valt een
+    adviescollege, inspectie, RWT of onderdeel juridisch onder de
+    rechtspersoon van zijn moederorganisatie en deelt daarom diens
+    oin/rsin/kvk (ROO modelleert dit zo: AWTI/Inspectie Onderwijs delen de
+    OCW-OIN, Werkse! deelt de OIN van gemeente Delft). Dat is geen duplicaat.
+    Een gedeelde tooi-code (oorg####/gm####/mnre####/ws####) of roo_id wijst
+    wél op hetzelfde organisatie-record onder twee slugs. owms valt af: er
+    staat een placeholder-waarde "XXXXX" in tientallen GR-records, en owms
+    is sowieso een naam-slug die niet uniek per organisatie hoeft te zijn.
     """
     # (identifier-veld, waarde) -> lijst van (org_id, bestandsnaam)
     by_ident: dict[tuple[str, str], list[tuple[str, str]]] = defaultdict(list)
@@ -513,7 +526,7 @@ def _check_dup_org_identifier(orgs: list[tuple[Path, dict]], findings: list[Find
         idents = d.get("identifiers")
         if not oid or not isinstance(idents, dict):
             continue
-        for field_name in ("tooi", "oin", "roo_id"):
+        for field_name in ("tooi", "roo_id"):
             val = idents.get(field_name)
             if val:
                 by_ident[(field_name, str(val))].append((oid, p.name))
