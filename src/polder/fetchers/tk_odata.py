@@ -400,26 +400,61 @@ def _merge_identifiers(
 def _merge_sources(
     existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
 ) -> list[dict[str, Any]]:
-    by_id: dict[str, dict[str, Any]] = {}
-    for src in existing or []:
+    """Dedupe op (id, url), niet alleen op id.
+
+    Eén bron-id (bv. `tk_odata`, `staatscourant`) kan meerdere verschillende
+    URL's hebben binnen één mandaat: meerdere Staatscourant-publicaties voor
+    dezelfde benoeming, of meerdere FractieZetelPersoon-zetels. Dedupen op id
+    alleen liet die URL's elkaar overschrijven.
+    """
+    by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for src in (existing or []) + (new or []):
         if isinstance(src, dict) and src.get("id"):
-            by_id[src["id"]] = dict(src)
-    for src in new or []:
-        if isinstance(src, dict) and src.get("id"):
-            by_id[src["id"]] = dict(src)
-    return list(by_id.values())
+            by_key[(src["id"], src.get("url", ""))] = dict(src)
+    return list(by_key.values())
+
+
+def _is_tk_only_mandaat(mandaat: dict[str, Any]) -> bool:
+    """True als alle bronnen van dit mandaat van de TK-fetcher komen.
+
+    Zo'n mandaat is volledig door deze fetcher beheerd: bij een re-fetch is de
+    live TK-set de autoriteit. Een TK-only mandaat zonder live-tegenhanger is
+    een artefact van een oudere fetcher-versie (bv. de oude logica die
+    opeenvolgende fractiezetels samenvoegde en de verkeerde end_date stempelde)
+    en moet verdwijnen. Mandaten met een niet-TK-bron (Staatscourant, ABD,
+    wikidata, handmatig) raken we nooit aan.
+    """
+    sources = [s for s in (mandaat.get("sources") or []) if isinstance(s, dict)]
+    if not sources:
+        return False
+    return all(s.get("id") == SOURCE_ID for s in sources)
 
 
 def _merge_mandaten(
     existing: list[dict[str, Any]] | None, new: list[dict[str, Any]] | None
 ) -> list[dict[str, Any]]:
-    """Match op (post_id, start_date) — vervang nieuwe waar match, behoud rest."""
+    """Match op (post_id, start_date) — vervang nieuwe waar match, behoud rest.
+
+    Stale TK-only mandaten (geen live-tegenhanger) worden verwijderd: de live
+    TK-set is de autoriteit voor wat deze fetcher beheert. Niet-TK mandaten
+    blijven altijd staan, ook zonder match.
+    """
     by_key: dict[tuple[str, str], dict[str, Any]] = {}
     for mandaat in existing or []:
         if not isinstance(mandaat, dict):
             continue
         key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
         by_key[key] = dict(mandaat)
+
+    new_keys = {
+        (m.get("post_id", ""), m.get("start_date", "")) for m in (new or []) if isinstance(m, dict)
+    }
+    # Drop alleen als er daadwerkelijk een live TK-set is om tegen af te zetten.
+    if new:
+        for key in list(by_key):
+            if key not in new_keys and _is_tk_only_mandaat(by_key[key]):
+                del by_key[key]
+
     for mandaat in new or []:
         key = (mandaat.get("post_id", ""), mandaat.get("start_date", ""))
         if key in by_key:
