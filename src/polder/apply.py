@@ -617,6 +617,23 @@ def plan_apply(
             )
             continue
 
+        # Overlijden: geen post-mutatie maar een natuurlijke valid_until op
+        # ALLE lopende mandaten van de persoon. Moet vóór de role/AVG/post-
+        # guards, want die veronderstellen allemaal een post-mutatie en een
+        # overlijden-proposal heeft per definitie geen role/post_id. De
+        # bron-URL-eis zit in _plan_close_all_mandates zelf.
+        if proposal.get("event_type") == "overlijden":
+            death_action_or_skip = _plan_close_all_mandates(
+                proposal=proposal,
+                personen=personen,
+                confidence=confidence,
+            )
+            if isinstance(death_action_or_skip, SkippedProposal):
+                skipped.append(death_action_or_skip)
+            else:
+                actions.append(death_action_or_skip)
+            continue
+
         role = str(proposal.get("role", "")).strip()
         if not role:
             skipped.append(
@@ -669,22 +686,6 @@ def plan_apply(
                     reasons=["geen publieke bron-URL (http/https) in proposal"],
                 )
             )
-            continue
-
-        # Overlijden: geen post-mutatie maar een natuurlijke valid_until op
-        # ALLE lopende mandaten van de persoon. Eigen pad vóór de gewone
-        # close-detectie, want er is geen post_id/organization_id om op te
-        # mikken — de sweep sluit elk mandaat met end_date is None.
-        if proposal.get("event_type") == "overlijden":
-            death_action_or_skip = _plan_close_all_mandates(
-                proposal=proposal,
-                personen=personen,
-                confidence=confidence,
-            )
-            if isinstance(death_action_or_skip, SkippedProposal):
-                skipped.append(death_action_or_skip)
-            else:
-                actions.append(death_action_or_skip)
             continue
 
         # Detecteer close-mandaat: een ontslag-proposal heeft geen start_date
@@ -1320,6 +1321,15 @@ def _plan_close_all_mandates(
             proposal=proposal, reasons=[f"overlijden: datum buiten redelijk bereik: {end_date}"]
         )
 
+    # Bron-URL-eis: de overlijdensdatum wordt als source op het mandaat
+    # geschreven; een placeholder of lokaal cache-pad mag daar nooit in.
+    source_url = _detect_source_url(proposal)
+    if not source_url or not str(source_url).startswith(("http://", "https://")):
+        return SkippedProposal(
+            proposal=proposal,
+            reasons=["overlijden: geen publieke bron-URL (http/https) in proposal"],
+        )
+
     resolved_id = _resolved_person_id(proposal)
     if not resolved_id:
         return SkippedProposal(
@@ -1348,7 +1358,7 @@ def _plan_close_all_mandates(
 
     today = _today_iso()
     source_id = _detect_source_id(proposal)
-    source_url = _detect_source_url(proposal) or "https://example.invalid"
+    # source_url is hierboven al gevalideerd als publieke http(s)-URL.
     new_source = {
         "id": source_id,
         "url": source_url,
