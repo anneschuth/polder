@@ -5,6 +5,7 @@ import Timeline from '~/components/Timeline.astro';
 import MandaatTimeline from '~/components/MandaatTimeline.astro';
 import Identifiers from '~/components/Identifiers.astro';
 import SourceList from '~/components/SourceList.astro';
+import EditLink from '~/components/EditLink.astro';
 import {
   loadAll,
   personDisplayName,
@@ -15,6 +16,7 @@ import {
   postUrl,
   isMandateCurrent,
   sortedMandates,
+  editUrl,
   type Person,
 } from '~/lib/data';
 
@@ -31,6 +33,7 @@ interface Props {
 }
 
 const { person } = Astro.props;
+const edit = (fieldPath: string) => editUrl(person, fieldPath);
 const data = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const name = personDisplayName(person);
@@ -41,6 +44,15 @@ const career = careerSummary(person);
 
 const allMandaten = sortedMandates(person.mandaten ?? []);
 const current = allMandaten.filter((m) => isMandateCurrent(m));
+
+// Map een (mogelijk hersorteerd) mandaat terug naar zijn originele
+// positie in de YAML-array. Op object-identiteit, niet op `id`: ids
+// kunnen in de data dubbel voorkomen, posities zijn altijd uniek.
+const origMandateList = person.mandaten ?? [];
+const mandatePath = (m: (typeof origMandateList)[number]) => {
+  const i = origMandateList.indexOf(m);
+  return i >= 0 ? `mandaten[${i}]` : '';
+};
 
 const hasIdentifiers = Object.values(person.identifiers ?? {}).some(
   (v) => v != null && v !== '',
@@ -60,6 +72,7 @@ const ICON_ID = 'diploma';
       <h1>
         {honorifics && <span class="muted">{honorifics} </span>}{name}
         {honorificsPost && <span class="muted"> {honorificsPost}</span>}
+        <EditLink href={edit('name.full')} />
       </h1>
       {career && <p class="career">{career}</p>}
       {externals.length > 0 && (
@@ -91,6 +104,7 @@ const ICON_ID = 'diploma';
                       <strong>{m.role ?? post?.label ?? 'Mandaat'}</strong>
                       {org && <> · <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
                       {post && <> · <a href={postUrl(post.slug, base)}>{post.label}</a></>}
+                      <EditLink href={edit(mandatePath(m))} />
                     </span>
                     {m.start_date && (
                       <span slot="supporting-text">sinds {m.start_date}</span>
@@ -106,29 +120,29 @@ const ICON_ID = 'diploma';
       <Card title="Persoonsgegevens" icon={ICON_USER}>
         <dl class="deflist">
           {person.birth?.year && (
-            <div><dt class="muted">Geboortejaar</dt><dd>{person.birth.year}</dd></div>
+            <div><dt class="muted">Geboortejaar</dt><dd>{person.birth.year}<EditLink href={edit('birth.year')} /></dd></div>
           )}
           {person.gender && (
-            <div><dt class="muted">Geslacht</dt><dd>{GENDER[person.gender] ?? person.gender}</dd></div>
+            <div><dt class="muted">Geslacht</dt><dd>{GENDER[person.gender] ?? person.gender}<EditLink href={edit('gender')} /></dd></div>
           )}
           {person.name?.family && (
-            <div><dt class="muted">Familienaam</dt><dd>{person.name.family}</dd></div>
+            <div><dt class="muted">Familienaam</dt><dd>{person.name.family}<EditLink href={edit('name.family')} /></dd></div>
           )}
           {person.name?.given && (
-            <div><dt class="muted">Voornaam</dt><dd>{person.name.given}</dd></div>
+            <div><dt class="muted">Voornaam</dt><dd>{person.name.given}<EditLink href={edit('name.given')} /></dd></div>
           )}
           {person.name?.tussenvoegsel && (
-            <div><dt class="muted">Tussenvoegsel</dt><dd>{person.name.tussenvoegsel}</dd></div>
+            <div><dt class="muted">Tussenvoegsel</dt><dd>{person.name.tussenvoegsel}<EditLink href={edit('name.tussenvoegsel')} /></dd></div>
           )}
           {person.name?.initials && (
-            <div><dt class="muted">Initialen</dt><dd>{person.name.initials}</dd></div>
+            <div><dt class="muted">Initialen</dt><dd>{person.name.initials}<EditLink href={edit('name.initials')} /></dd></div>
           )}
         </dl>
       </Card>
 
       {hasIdentifiers && (
         <Card title="Identifiers" icon={ICON_ID}>
-          <Identifiers identifiers={person.identifiers} kind="person" />
+          <Identifiers identifiers={person.identifiers} kind="person" editFor={edit} />
         </Card>
       )}
 
@@ -138,11 +152,11 @@ const ICON_ID = 'diploma';
 
       {allMandaten.length > 0 && (
         <Card title="Mandaten (tabel)" icon={ICON_TABLE} collapsible>
-          <MandaatTimeline mandaten={person.mandaten ?? []} />
+          <MandaatTimeline mandaten={person.mandaten ?? []} editFor={edit} />
         </Card>
       )}
     </div>
 
-    <SourceList sources={person.sources} />
+    <SourceList sources={person.sources} editFor={edit} />
   </article>
 </Base>

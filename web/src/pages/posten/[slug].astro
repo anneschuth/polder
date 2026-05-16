@@ -3,6 +3,7 @@ import Base from '~/layouts/Base.astro';
 import Card from '~/components/Card.astro';
 import Badge from '~/components/Badge.astro';
 import SourceList from '~/components/SourceList.astro';
+import EditLink from '~/components/EditLink.astro';
 import {
   loadAll,
   currentName,
@@ -12,6 +13,7 @@ import {
   personDisplayName,
   isMandateCurrent,
   orgAccent,
+  editUrl,
   type Post,
 } from '~/lib/data';
 
@@ -28,6 +30,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
+const edit = (fieldPath: string) => editUrl(post, fieldPath);
 const data = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -57,33 +60,33 @@ const ICON_BRIEFCASE = 'business-suitcase';
         {org && <> bij <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
         · <code>{post.id}</code>
       </p>
-      <h1>{post.label}</h1>
+      <h1>{post.label}<EditLink href={edit('label')} /></h1>
     </header>
 
     <div class="sections">
       <Card title="Kerngegevens" icon={ICON_INFO} accent={accent}>
         <div class="stack">
           {post.classification && (
-            <div class="badge-row"><Badge label={post.classification} tone="lint" /></div>
+            <div class="badge-row editable"><Badge label={post.classification} tone="lint" /><EditLink href={edit('classification')} /></div>
           )}
           <dl class="deflist">
             {org && (
               <div><dt class="muted">Organisatie</dt><dd><a href={orgUrl(org, base)}>{currentName(org)}</a></dd></div>
             )}
             {post.seat_count != null && (
-              <div><dt class="muted">Aantal zetels</dt><dd>{post.seat_count}</dd></div>
+              <div><dt class="muted">Aantal zetels</dt><dd>{post.seat_count}<EditLink href={edit('seat_count')} /></dd></div>
             )}
             {post.valid_from && (
-              <div><dt class="muted">Geldig vanaf</dt><dd>{post.valid_from}</dd></div>
+              <div><dt class="muted">Geldig vanaf</dt><dd>{post.valid_from}<EditLink href={edit('valid_from')} /></dd></div>
             )}
             {post.valid_until && (
-              <div><dt class="muted">Geldig tot</dt><dd>{post.valid_until}</dd></div>
+              <div><dt class="muted">Geldig tot</dt><dd>{post.valid_until}<EditLink href={edit('valid_until')} /></dd></div>
             )}
             {post.roo_functie_id && (
-              <div><dt class="muted">ROO-functie-id</dt><dd><code>{post.roo_functie_id}</code></dd></div>
+              <div><dt class="muted">ROO-functie-id</dt><dd><code>{post.roo_functie_id}</code><EditLink href={edit('roo_functie_id')} /></dd></div>
             )}
             {post.roo_naam && post.roo_naam !== post.label && (
-              <div><dt class="muted">ROO-naam</dt><dd>{post.roo_naam}</dd></div>
+              <div><dt class="muted">ROO-naam</dt><dd>{post.roo_naam}<EditLink href={edit('roo_naam')} /></dd></div>
             )}
           </dl>
         </div>
@@ -145,6 +148,6 @@ const ICON_BRIEFCASE = 'business-suitcase';
       )}
     </div>
 
-    <SourceList sources={post.sources} />
+    <SourceList sources={post.sources} editFor={edit} />
   </article>
 </Base>

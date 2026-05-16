@@ -8,6 +8,7 @@ import GeoCouncil from '~/components/GeoCouncil.astro';
 import WooCard from '~/components/WooCard.astro';
 import RelationsCard from '~/components/RelationsCard.astro';
 import SourceList from '~/components/SourceList.astro';
+import EditLink from '~/components/EditLink.astro';
 import {
   loadAll,
   currentName,
@@ -21,6 +22,7 @@ import {
   peopleByPostOfOrg,
   asIdArray,
   orgAccent,
+  editUrl,
   type Organization,
 } from '~/lib/data';
 
@@ -37,6 +39,7 @@ interface Props {
 }
 
 const { org } = Astro.props;
+const edit = (fieldPath: string) => editUrl(org, fieldPath);
 const data = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -121,13 +124,14 @@ const ICON_PEOPLE = 'users';
         )}
         · <code>{org.id}</code>
       </p>
-      <h1>{name}{abbr && <span class="muted"> ({abbr})</span>}</h1>
+      <h1>{name}{abbr && <span class="muted"> ({abbr})</span>}<EditLink href={edit('names')} /></h1>
       {org.description?.text && (
-        <p class="lede">
+        <p class="lede editable">
           {org.description.text}
           {org.description.url && (
             <> <a href={org.description.url} rel="external">↗</a></>
           )}
+          <EditLink href={edit('description')} />
         </p>
       )}
     </header>
@@ -136,36 +140,36 @@ const ICON_PEOPLE = 'users';
       <Card title="Kerngegevens" icon={ICON_INFO} accent={accent}>
         <dl class="deflist">
           {org.classification && (
-            <div><dt class="muted">Classificatie</dt><dd>{org.classification}</dd></div>
+            <div><dt class="muted">Classificatie</dt><dd>{org.classification}<EditLink href={edit('classification')} /></dd></div>
           )}
           {org.legal_form && (
-            <div><dt class="muted">Rechtsvorm</dt><dd>{org.legal_form}</dd></div>
+            <div><dt class="muted">Rechtsvorm</dt><dd>{org.legal_form}<EditLink href={edit('legal_form')} /></dd></div>
           )}
           {org.zbo_kind && (
-            <div><dt class="muted">Soort ZBO</dt><dd>{org.zbo_kind}</dd></div>
+            <div><dt class="muted">Soort ZBO</dt><dd>{org.zbo_kind}<EditLink href={edit('zbo_kind')} /></dd></div>
           )}
           {org.advisory_kind && (
-            <div><dt class="muted">Soort adviescollege</dt><dd>{org.advisory_kind}</dd></div>
+            <div><dt class="muted">Soort adviescollege</dt><dd>{org.advisory_kind}<EditLink href={edit('advisory_kind')} /></dd></div>
           )}
           {org.subname && (
-            <div><dt class="muted">Subnaam</dt><dd>{org.subname}</dd></div>
+            <div><dt class="muted">Subnaam</dt><dd>{org.subname}<EditLink href={edit('subname')} /></dd></div>
           )}
           {org.valid_from && (
-            <div><dt class="muted">Geldig vanaf</dt><dd>{org.valid_from}</dd></div>
+            <div><dt class="muted">Geldig vanaf</dt><dd>{org.valid_from}<EditLink href={edit('valid_from')} /></dd></div>
           )}
           {org.valid_until && (
-            <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}</dd></div>
+            <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}<EditLink href={edit('valid_until')} /></dd></div>
           )}
           {org.last_mutation && (
-            <div><dt class="muted">Laatste mutatie</dt><dd>{org.last_mutation}</dd></div>
+            <div><dt class="muted">Laatste mutatie</dt><dd>{org.last_mutation}<EditLink href={edit('last_mutation')} /></dd></div>
           )}
           {org.last_verified && (
-            <div><dt class="muted">Laatst geverifieerd</dt><dd>{org.last_verified}</dd></div>
+            <div><dt class="muted">Laatst geverifieerd</dt><dd>{org.last_verified}<EditLink href={edit('last_verified')} /></dd></div>
           )}
           {org.contact?.website && (
             <div>
               <dt class="muted">Website</dt>
-              <dd><a href={org.contact.website} rel="external">{org.contact.website.replace(/^https?:\/\//, '')}</a></dd>
+              <dd><a href={org.contact.website} rel="external">{org.contact.website.replace(/^https?:\/\//, '')}</a><EditLink href={edit('contact.website')} /></dd>
             </div>
           )}
         </dl>
@@ -265,7 +269,7 @@ const ICON_PEOPLE = 'users';
 
       {hasIdentifiers && (
         <Card title="Identifiers" icon={ICON_ID} accent={accent}>
-          <Identifiers identifiers={org.identifiers} kind="org" />
+          <Identifiers identifiers={org.identifiers} kind="org" editFor={edit} />
           {rtm?.naam && (
             <p style="margin-top:.75rem;">
               <span class="muted">Hoort bij ministerie</span><br />
@@ -350,6 +354,6 @@ const ICON_PEOPLE = 'users';
       )}
     </div>
 
-    <SourceList sources={org.sources} />
+    <SourceList sources={org.sources} editFor={edit} />
   </article>
 </Base>

@@ -1,10 +1,14 @@
 ---
+import EditLink from '~/components/EditLink.astro';
+
 interface Props {
   identifiers?: Record<string, string | undefined>;
   kind: 'org' | 'person';
+  /** Optioneel: veldpad → GitHub-edit-URL. Toont per rij een edit-icoon. */
+  editFor?: (fieldPath: string) => string | undefined;
 }
 
-const { identifiers, kind } = Astro.props;
+const { identifiers, kind, editFor } = Astro.props;
 const entries = Object.entries(identifiers ?? {}).filter(([, v]) => v != null && v !== '');
 
 const LABELS: Record<string, string> = {
@@ -60,6 +64,7 @@ function displayValue(value: string): string {
             ) : (
               <code>{shown}</code>
             )}
+            {editFor && <EditLink href={editFor(`identifiers.${k}`)} />}
           </dd>
         </div>
       );
