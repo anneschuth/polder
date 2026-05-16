@@ -6,22 +6,6 @@ name:
   initials: C.V.
   tussenvoegsel: van
 mandaten:
-- id: 72160870-34f6-49f4-93fe-9e697a674cf3
-  organization_id: org:gemeente-culemborg
-  post_id: post:griffier-gemeente-culemborg
-  role: Griffier gemeente Culemborg
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/3267408
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: f90369e6-a0b7-4593-aa72-0a88e3d0e3ed
   organization_id: org:gemeente-culemborg
   post_id: post:griffier-gemeente-culemborg

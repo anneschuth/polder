@@ -5,22 +5,6 @@ name:
   given: Jaap
   initials: J.
 mandaten:
-- id: 8fdc7067-816f-442a-a478-8bf56d388ec2
-  organization_id: org:gemeente-voorschoten
-  post_id: post:griffier-gemeente-voorschoten
-  role: Raadsgriffier gemeente Voorschoten
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6445759
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 6b0069ee-bc8c-4251-9e48-9f4734d645ea
   organization_id: org:gemeente-voorschoten
   post_id: post:griffier-gemeente-voorschoten

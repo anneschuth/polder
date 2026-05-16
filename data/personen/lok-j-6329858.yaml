@@ -5,22 +5,6 @@ name:
   given: Jelmer
   initials: J.
 mandaten:
-- id: 1811cbe2-b855-4997-bea3-6e18dc19c0b3
-  organization_id: org:gemeente-utrecht
-  post_id: post:griffier-gemeente-utrecht
-  role: Griffier gemeente Utrecht
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/6329859
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 5decaa90-e93f-47ee-8b08-c7b4cdb638d1
   organization_id: org:gemeente-utrecht
   post_id: post:griffier-gemeente-utrecht

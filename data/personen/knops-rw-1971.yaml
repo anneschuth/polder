@@ -78,6 +78,11 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q2125339#P39
     retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22575.html
+    retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
   end_date: '2022-01-10'
 - id: 94255200-2911-431e-b6db-a9fec785b8ac
   organization_id: org:tweede-kamer
@@ -91,22 +96,6 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(30e0da09-8f6c-4609-bb68-7022ef6523e8)
     retrieved: '2026-05-13'
-- id: mandate-post-staatssecretaris-min-bzk-2020-04-10
-  organization_id: org:min-bzk
-  post_id: post:staatssecretaris-min-bzk
-  role: Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
-  start_date: '2020-04-10'
-  end_date: null
-  sources:
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22575.html
-    retrieved: '2026-05-15'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: Staatscourant nr. stcrt-2020-22575, 10 april 2020
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22575.html
-  confidence: 0.9
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(8dfa0156-0834-4c00-87e8-c4e9919f781f)

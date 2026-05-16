@@ -5,22 +5,6 @@ name:
   given: J.A.
   initials: J.A.
 mandaten:
-- id: 37d6e9e0-f265-4624-8050-07c5e445b0a1
-  organization_id: org:gemeente-berkelland
-  post_id: post:griffier-gemeente-berkelland
-  role: Griffier gemeente Berkelland
-  start_date: '2026-05-09'
-  end_date: '2026-05-09'
-  sources:
-  - id: open_raadsinformatie
-    url: https://id.openraadsinformatie.nl/2878113
-    retrieved: '2026-05-09'
-  - id: duo-bulk-cleanup
-    url: https://github.com/anneschuth/polder/issues
-    retrieved: '2026-05-12'
-    fields:
-    - end_date
-    - applied_via:close-duo-bulk-conflict
 - id: 86d765cd-1e55-4062-b07b-b098730fefc1
   organization_id: org:gemeente-berkelland
   post_id: post:griffier-gemeente-berkelland

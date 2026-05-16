@@ -54,6 +54,11 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q4363961#P39
     retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-38995
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
   end_date: '2021-09-04'
 - id: bc14590c-3844-433a-99ac-9780875bbb5d
   organization_id: org:tweede-kamer
@@ -67,22 +72,6 @@ mandaten:
   - id: tk_odata
     url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/FractieZetelPersoon(5b66a15c-45e1-4c41-9fec-a6b6dae60be4)
     retrieved: '2026-05-13'
-- id: mandate-post-minister-zp-medische-zorg-2020-07-08
-  organization_id: org:min-vws
-  post_id: post:minister-zp-medische-zorg
-  role: Minister voor Medische Zorg
-  start_date: '2020-07-08'
-  end_date: null
-  sources:
-  - id: staatscourant
-    url: https://zoek.officielebekendmakingen.nl/stcrt-2020-38995
-    retrieved: '2026-05-14'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: KB nr. 2020001384, 8 juli 2020
-    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2020-38995
-  confidence: 0.95
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(7f3c60c7-b846-4f3a-a9f4-a18abf37bb3a)
