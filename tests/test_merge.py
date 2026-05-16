@@ -350,3 +350,36 @@ def test_merge_org_canonical_identifier_wins_on_conflict(mini_data: Path) -> Non
     canonical = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
     # Canonical roo_id behouden, oin van dup toegevoegd.
     assert canonical["identifiers"] == {"roo_id": "CANONICAL-9633", "oin": "00000001"}
+
+
+def test_apply_string_remap_does_not_corrupt_prefix_ids(tmp_path: Path) -> None:
+    """Regressie: `_apply_string_remap` mag een id dat een *prefix* is van
+    een ander, ongerelateerd id niet meeverbouwen.
+
+    Bug: merge van `org:onderdeel-sg-min-ezk` -> canonical hernoemde ook
+    `org:onderdeel-sg-min-ezk-min-kgg` (een andere org) tot
+    `...-min-ezk-<canon>-min-kgg`, wat dubbel-suffix-corruptie en 100+
+    broken refs opleverde.
+    """
+    from polder.cli.commands.merge_cmd import _apply_string_remap
+
+    f = tmp_path / "ref.yaml"
+    f.write_text(
+        "organization_id: org:onderdeel-sg-min-ezk\n"
+        "parent_id: org:onderdeel-sg-min-ezk-min-kgg\n"
+        "other: org:onderdeel-sg-min-ezk-afdeling-x\n"
+        "quoted: 'org:onderdeel-sg-min-ezk'\n",
+        encoding="utf-8",
+    )
+    changed = _apply_string_remap(
+        [f], "org:onderdeel-sg-min-ezk", "org:onderdeel-sg-cluster-min-ezk"
+    )
+    assert changed == 1
+    out = f.read_text(encoding="utf-8")
+    # Het volledige token is vervangen...
+    assert "organization_id: org:onderdeel-sg-cluster-min-ezk\n" in out
+    assert "quoted: 'org:onderdeel-sg-cluster-min-ezk'\n" in out
+    # ...maar de langere, ongerelateerde ids zijn ONGEMOEID.
+    assert "parent_id: org:onderdeel-sg-min-ezk-min-kgg\n" in out
+    assert "other: org:onderdeel-sg-min-ezk-afdeling-x\n" in out
+    assert "-min-ezk-min-ezk" not in out

@@ -13,3 +13,17 @@ sources:
   retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging
+- id: roo
+  url: https://organisaties.overheid.nl/66101/rivm
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
+identifiers:
+  oin: '00000004000000062000'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10123
+  roo_id: '66101'
+  owms: http://standaarden.overheid.nl/owms/terms/Rijksinstituut_voor_Volksgezondheid_en_Milieu
+  btw: NL821772302B01

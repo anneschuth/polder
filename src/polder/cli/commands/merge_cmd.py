@@ -15,6 +15,7 @@ Default is dry-run; pas met `--apply` echt aan.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Annotated
 
@@ -92,14 +93,26 @@ def _scan_references(data_dir: Path, record_id: str) -> dict[str, list[Path]]:
 
 
 def _apply_string_remap(paths: list[Path], old: str, new: str) -> int:
-    """Vervang alle voorkomens van `old` door `new` in de gegeven paden.
+    """Vervang `old` door `new` in de gegeven paden, maar alléén als
+    volledig id-token.
+
+    Een polder-id (`org:...`, `post:...`, `person:...`) mag nooit als
+    *prefix* van een ander id vervangen worden: `org:onderdeel-sg-min-ezk`
+    is een prefix van `org:onderdeel-sg-min-ezk-min-kgg`, en een naïeve
+    ``str.replace`` zou dat tweede, ongerelateerde id corrumperen tot
+    ``...-min-ezk-min-kgg``. We matchen daarom alleen waar `old` niet
+    direct gevolgd wordt door een teken dat het id zou verlengen
+    (alfanumeriek, ``-``, ``_``, ``:``, ``/``, ``.``). Voorafgaand teken
+    hoeft niet getoetst: ids zijn links begrensd door hun ``org:``/
+    ``post:``/``person:`` prefix die zelf in `old` zit.
 
     Returns het aantal bestanden dat daadwerkelijk is gewijzigd.
     """
+    pattern = re.compile(re.escape(old) + r"(?![\w:/.\-])")
     changed = 0
     for path in paths:
         text = path.read_text(encoding="utf-8")
-        new_text = text.replace(old, new)
+        new_text = pattern.sub(new, text)
         if new_text != text:
             path.write_text(new_text, encoding="utf-8")
             changed += 1
