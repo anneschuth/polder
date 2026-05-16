@@ -126,7 +126,7 @@ const ICON_PEOPLE = 'users';
       </p>
       <h1>{name}{abbr && <span class="muted"> ({abbr})</span>}<EditLink href={edit('names')} /></h1>
       {org.description?.text && (
-        <p class="lede">
+        <p class="lede editable">
           {org.description.text}
           {org.description.url && (
             <> <a href={org.description.url} rel="external">↗</a></>

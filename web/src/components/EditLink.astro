@@ -1,9 +1,9 @@
 ---
-// Hover-affordance die naar de GitHub web-editor linkt op exact de regels
-// van een veld. Rendert niets als `href` ontbreekt (veld niet in de
+// Edit-icoon dat naar de GitHub web-editor linkt op exact de regels van
+// een veld. Rendert niets als `href` ontbreekt (veld niet in de
 // regel-index). Inline SVG (geen web-component) zodat de grootte exact
-// vastligt. Zichtbaarheid wordt globaal geregeld via `.editable` in
-// Base.astro: het hele key+value-blok is de hover-zone.
+// vastligt. Styling staat globaal in Base.astro: standaard subtiel
+// zichtbaar, oplichtend bij hover/focus van het key+value-blok.
 interface Props {
   href?: string;
 }

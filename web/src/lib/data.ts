@@ -11,17 +11,14 @@ const GITHUB_REPO = 'anneschuth/polder';
 const GITHUB_BRANCH = 'main';
 
 /**
- * Repo-relatief POSIX-pad voor de GitHub-URL. De data leeft altijd onder
- * een `data/`-map in de repo-root; we knippen alles vóór het laatste
- * `data/`-segment weg. Robuust tegen worktree-builds (waar het absolute
- * pad een worktree-mapnaam bevat die niet in de GitHub-repo voorkomt).
+ * Repo-relatief POSIX-pad voor de GitHub-URL, bv.
+ * `data/personen/<slug>.yaml`. Berekend t.o.v. DATA_ROOT, dat uit
+ * `import.meta.url` van deze module komt en dus ook in een git-worktree
+ * naar de juiste `data/`-map wijst (geen CWD- of string-afhankelijkheid).
  */
 function toRepoRelPosix(absPath: string): string {
-  const posix = absPath.split(sep).join('/');
-  const marker = '/data/';
-  const i = posix.lastIndexOf(marker);
-  if (i >= 0) return posix.slice(i + 1); // "data/personen/<slug>.yaml"
-  return relative(DATA_ROOT, absPath).split(sep).join('/');
+  const rel = relative(DATA_ROOT, absPath).split(sep).join('/');
+  return `data/${rel}`;
 }
 
 /**
@@ -99,10 +96,10 @@ function buildLineIndex(rawText: string): Record<string, [number, number]> {
 }
 
 /**
- * GitHub web-editor URL voor een veld op een persoon, of `undefined` als
- * het veld niet in de regel-index voorkomt (dan rendert de template geen
- * icoon). Branch is hard `main`: de gepubliceerde site bouwt van `main` en
- * regelnummers kloppen alleen daar.
+ * GitHub web-editor URL voor een veld op een record (persoon, organisatie
+ * of post), of `undefined` als het veld niet in de regel-index voorkomt
+ * (dan rendert de template geen icoon). Branch is hard `main`: de
+ * gepubliceerde site bouwt van `main` en regelnummers kloppen alleen daar.
  */
 export function editUrl(
   rec: { _file?: string; _lines?: Record<string, [number, number]> },
