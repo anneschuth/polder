@@ -13,6 +13,13 @@ export interface Source {
   fields?: string[];
 }
 
+export interface Appointment {
+  decision?: string;
+  kb_nummer?: string;
+  staatscourant_url?: string;
+  [k: string]: unknown;
+}
+
 export interface Mandate {
   id: string;
   organization_id: string;
@@ -20,27 +27,38 @@ export interface Mandate {
   role?: string;
   start_date?: string | null;
   end_date?: string | null;
-  appointment?: Record<string, unknown>;
+  appointment?: Appointment;
   sources?: Source[];
+  confidence?: number;
+}
+
+export interface PersonName {
+  full?: string;
+  family?: string;
+  given?: string;
+  tussenvoegsel?: string;
+  initials?: string;
+  honorifics_pre?: string[];
+  honorifics_post?: string[];
+}
+
+export interface PersonIdentifiers {
+  tk_persoon_id?: string;
+  wikidata?: string;
+  abd_id?: string;
+  allmanak_id?: string;
+  [k: string]: string | undefined;
 }
 
 export interface Person {
   id: string;
   slug: string;
-  name: {
-    full?: string;
-    family?: string;
-    given?: string;
-    initials?: string;
-    tussenvoegsel?: string;
-    honorifics_pre?: string[];
-    honorifics_post?: string[];
-  };
+  name: PersonName;
   birth?: { year?: number };
-  gender?: string;
+  gender?: 'm' | 'f' | 'x' | string;
   mandaten?: Mandate[];
   sources?: Source[];
-  identifiers?: Record<string, string>;
+  identifiers?: PersonIdentifiers;
   [key: string]: unknown;
 }
 
@@ -51,20 +69,141 @@ export interface OrgName {
   valid_until?: string | null;
 }
 
+export interface OrgIdentifiers {
+  oin?: string;
+  tooi?: string;
+  owms?: string;
+  wikidata?: string;
+  roo_id?: string;
+  organisatiecode?: string;
+  kvk?: string;
+  rsin?: string;
+  ictu?: string;
+  atu?: string;
+  btw?: string;
+  loonheffing?: string;
+  [k: string]: string | undefined;
+}
+
+export interface Grondslag {
+  opschrift?: string;
+  referentie?: string;
+}
+
+export interface OrgClassification {
+  type: string;
+  url?: string;
+  value?: string;
+  eind_datum?: string;
+  wettelijke_grondslagen?: Grondslag[];
+}
+
+export interface OrgAddress {
+  type?: string;
+  openbare_ruimte?: string;
+  huisnummer?: string;
+  huisnummer_toevoeging?: string;
+  postbus?: string;
+  postcode?: string;
+  woonplaats?: string;
+  provincie?: string;
+  regio?: string;
+  land?: string;
+  ter_attentie_van?: string;
+  antwoordnummer?: string;
+  toelichting?: string;
+  [k: string]: unknown;
+}
+
+export interface OrgContact {
+  website?: string;
+  email?: string;
+  phone?: string;
+  fax?: string;
+  bezoekadres?: string;
+  postadres?: string;
+  beschrijving?: string;
+  addresses?: OrgAddress[];
+  phones?: { nummer: string; label?: string }[];
+  emails?: { email: string; label?: string }[];
+  internet_addresses?: { url: string; label?: string }[];
+  contact_forms?: { url: string; label?: string }[];
+  social_media?: { platform?: string; gebruikersnaam?: string; url?: string }[];
+}
+
+export interface OrgGeography {
+  oppervlakte?: string;
+  oppervlakte_km2?: number;
+  aantal_inwoners?: number;
+  inwoners?: string;
+  inwoners_per_km2?: number;
+  bevat_plaatsen?: string[];
+}
+
+export interface OrgCouncil {
+  total_seats?: number;
+  parties?: { naam: string; aantal_zetels: number }[];
+}
+
+export interface OrgWoo {
+  wooInformatie?: { urls?: { url?: string; overzichtURL?: string } };
+  wooIndex?: {
+    documentLocatie?: { informatiecategorie?: string; url?: string; toelichting?: string }[];
+  };
+  wooVerzoek?: { url?: string };
+  wooContactpersoon?: string;
+}
+
+export interface OrgRef {
+  naam?: string;
+  roo_id?: string;
+  tooi?: string;
+  owms?: string;
+  org_id?: string;
+}
+
 export interface Organization {
   id: string;
   slug: string;
   type: string;
+  subtype?: string;
   classification?: string;
+  identifiers?: OrgIdentifiers;
+  legal_form?: string;
+  zbo_kind?: string;
+  advisory_kind?: string;
+  subname?: string;
   parent_id?: string | null;
+  relation_to_ministerie?: OrgRef;
+  hoort_bij_gemeenschappelijke_regeling?: OrgRef;
   names: OrgName[];
-  identifiers?: Record<string, string>;
-  contact?: { website?: string; email?: string; phone?: string };
+  description?: { text?: string; url?: string };
+  policy_areas?: { naam?: string; tooi?: string }[];
+  kaderwet?: unknown;
+  wettelijke_grondslagen?: Grondslag[];
+  taken_en_bevoegdheden?: unknown;
+  evaluations?: {
+    datum?: string;
+    kamerstuknummer?: string;
+    referentie?: string;
+    naam_rapport?: string;
+  }[];
+  doorlichtingen?: unknown[];
+  classifications?: OrgClassification[];
+  woo?: OrgWoo;
+  organogram_url?: string;
+  afspraak?: { email?: string; telefoonnummer?: string; url?: string };
+  geography?: OrgGeography;
+  council?: OrgCouncil;
+  gr_meta?: unknown;
+  contact?: OrgContact;
   valid_from?: string;
   valid_until?: string | null;
+  last_mutation?: string;
+  last_verified?: string;
+  successor_id?: string[] | string | null;
+  predecessor_id?: string[] | string | null;
   sources?: Source[];
-  predecessor_id?: string[];
-  successor_id?: string[];
   [key: string]: unknown;
 }
 
@@ -74,8 +213,12 @@ export interface Post {
   organization_id: string;
   label: string;
   classification?: string;
+  subtype?: string;
+  seat_count?: number | null;
   valid_from?: string;
   valid_until?: string | null;
+  roo_functie_id?: string;
+  roo_naam?: string;
   sources?: Source[];
   [key: string]: unknown;
 }
@@ -103,7 +246,7 @@ function slugFromId(id: string): string {
   return idx < 0 ? id : id.slice(idx + 1);
 }
 
-interface Loaded {
+export interface Loaded {
   people: Person[];
   orgs: Organization[];
   posts: Post[];
@@ -249,4 +392,114 @@ export function personDisplayName(p: Person): string {
   if (p.name?.full) return p.name.full;
   const joined = [p.name?.given, p.name?.tussenvoegsel, p.name?.family].filter(Boolean).join(' ');
   return joined || p.slug;
+}
+
+/** Normalize successor_id/predecessor_id which may be a string, array or null. */
+export function asIdArray(v: string[] | string | null | undefined): string[] {
+  if (!v) return [];
+  return Array.isArray(v) ? v : [v];
+}
+
+/** Sibling orgs: same parent_id, excluding self, sorted by name (NL). */
+export function siblingOrgs(org: Organization, data: Loaded): Organization[] {
+  if (!org.parent_id) return [];
+  return (data.childrenByOrg.get(org.parent_id) ?? [])
+    .filter((o) => o.id !== org.id)
+    .sort((a, b) => currentName(a).localeCompare(currentName(b), 'nl'));
+}
+
+export interface PostGroup {
+  post: Post;
+  entries: { person: Person; mandate: Mandate }[];
+}
+
+/** People related to an org via any of its posts, grouped by post (current first). */
+export function peopleByPostOfOrg(org: Organization, data: Loaded): PostGroup[] {
+  const posts = (data.postsByOrg.get(org.id) ?? [])
+    .slice()
+    .sort((a, b) => a.label.localeCompare(b.label, 'nl'));
+  return posts
+    .map((post) => {
+      const entries = (data.mandatesByPost.get(post.id) ?? []).slice().sort((a, b) => {
+        const ac = isMandateCurrent(a.mandate) ? 0 : 1;
+        const bc = isMandateCurrent(b.mandate) ? 0 : 1;
+        return ac - bc || (b.mandate.start_date ?? '').localeCompare(a.mandate.start_date ?? '');
+      });
+      return { post, entries };
+    })
+    .filter((g) => g.entries.length > 0);
+}
+
+/** "Kamerlid 2017–2021, minister sinds 2024" — current first, then up to 3 recent past. */
+export function careerSummary(person: Person): string {
+  const ms = sortedMandates(person.mandaten ?? []);
+  if (ms.length === 0) return '';
+  const label = (m: Mandate): string => {
+    const role = (m.role ?? '').trim() || 'functie';
+    const sy = m.start_date?.slice(0, 4);
+    if (isMandateCurrent(m)) return sy ? `${role} sinds ${sy}` : role;
+    const ey = m.end_date?.slice(0, 4);
+    return sy && ey ? `${role} ${sy}–${ey}` : role;
+  };
+  const current = ms.filter((m) => isMandateCurrent(m)).map(label);
+  const past = ms
+    .filter((m) => !isMandateCurrent(m))
+    .slice(0, 3)
+    .map(label);
+  return [...current, ...past].join(', ');
+}
+
+/** External profile links for a person. Replaces the broken tk_id/ek_id logic. */
+export function personExternalLinks(p: Person): { label: string; url: string }[] {
+  const out: { label: string; url: string }[] = [];
+  const ids = p.identifiers ?? {};
+  if (ids.wikidata) {
+    out.push({ label: 'Wikidata', url: `https://www.wikidata.org/wiki/${ids.wikidata}` });
+  }
+  if (ids.tk_persoon_id) {
+    // The UUID has no public profile URL pattern; link the OData source if we
+    // have one (person- or mandate-level), else fall back to the TK homepage.
+    const fromPerson = (p.sources ?? []).find((s) => s.id === 'tk_odata' && s.url);
+    const fromMandate = (p.mandaten ?? [])
+      .flatMap((m) => m.sources ?? [])
+      .find((s) => s.id === 'tk_odata' && s.url);
+    out.push({
+      label: 'Tweede Kamer',
+      url: fromPerson?.url ?? fromMandate?.url ?? 'https://www.tweedekamer.nl',
+    });
+  }
+  if (ids.allmanak_id) {
+    out.push({ label: 'Almanak', url: `https://almanak.overheid.nl/${ids.allmanak_id}/` });
+  }
+  // Eerste Kamer has no id field; only reachable via the ek_scrape source URL.
+  const ekPerson = (p.sources ?? []).find((s) => s.id === 'ek_scrape' && s.url);
+  const ekMandate = (p.mandaten ?? [])
+    .flatMap((m) => m.sources ?? [])
+    .find((s) => s.id === 'ek_scrape' && s.url);
+  const ekUrl = ekPerson?.url ?? ekMandate?.url;
+  if (ekUrl) out.push({ label: 'Eerste Kamer', url: ekUrl });
+  return out;
+}
+
+/** Accent color per org type, used by Card/Timeline. Falls back to coolgray. */
+export function orgAccent(type: string | undefined): string {
+  const map: Record<string, string> = {
+    ministerie: 'var(--primitives-color-lintblauw-500, #0058a3)',
+    agentschap: 'var(--primitives-color-lintblauw-500, #0058a3)',
+    inspectie: '#1f7a8c',
+    zbo: '#6b4fa0',
+    rwt: '#6b4fa0',
+    adviescollege: '#6b4fa0',
+    'hoge-college': '#9a3b6c',
+    gemeente: '#2e7d4f',
+    provincie: '#1f7a8c',
+    waterschap: '#1f7a8c',
+    'gemeenschappelijke-regeling': '#2e7d4f',
+    politie: '#3a3f8c',
+    'openbaar-ministerie': '#3a3f8c',
+    'rechterlijke-instantie': '#9a3b6c',
+    'caribisch-openbaar-lichaam': '#2e7d4f',
+    organisatieonderdeel: 'var(--primitives-color-coolgray-400, #7f8da0)',
+  };
+  return map[type ?? ''] ?? 'var(--primitives-color-coolgray-400, #7f8da0)';
 }

@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  icon?: string;
+  accent?: string;
+  span?: number;
+  collapsible?: boolean;
+  open?: boolean;
+}
+
+const { title, icon, accent, span, collapsible, open = false } = Astro.props;
+
+// Render nothing when no body content was passed. This keeps the card-grid
+// free of empty cells for orgs/persons that lack a given data dimension.
+const body = await Astro.slots.render('default');
+const hasBody = body.trim().length > 0;
+
+const style = accent ? `--card-accent: ${accent};` : undefined;
+const cls = ['card', span && span > 1 ? `span-${span}` : null].filter(Boolean).join(' ');
+---
+
+{hasBody && (
+  <section class={cls} style={style}>
+    {collapsible ? (
+      <details open={open}>
+        <summary>
+          {icon && <span class="card-icon" set:html={icon} />}
+          {title}
+        </summary>
+        <Fragment set:html={body} />
+      </details>
+    ) : (
+      <Fragment>
+        <h2>
+          {icon && <span class="card-icon" set:html={icon} />}
+          {title}
+        </h2>
+        <Fragment set:html={body} />
+      </Fragment>
+    )}
+  </section>
+)}

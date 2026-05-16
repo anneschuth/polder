@@ -1,0 +1,92 @@
+---
+import Badge from '~/components/Badge.astro';
+import type { OrgGeography, OrgCouncil } from '~/lib/data';
+
+interface Props {
+  geography?: OrgGeography;
+  council?: OrgCouncil;
+}
+
+const { geography, council } = Astro.props;
+const g = geography;
+const c = council;
+
+const nlInt = (n?: number) =>
+  n == null ? null : n.toLocaleString('nl-NL', { maximumFractionDigits: 0 });
+
+// Stable color ramp for council parties (no chart lib).
+const SEAT_COLORS = [
+  '#0058a3',
+  '#2e7d4f',
+  '#9a3b6c',
+  '#c46210',
+  '#6b4fa0',
+  '#1f7a8c',
+  '#8a5a00',
+  '#3a3f8c',
+  '#7f8da0',
+  '#a03b3b',
+];
+const parties = (c?.parties ?? []).filter((p) => (p.aantal_zetels ?? 0) > 0);
+const seatTotal =
+  c?.total_seats ?? parties.reduce((s, p) => s + (p.aantal_zetels ?? 0), 0);
+---
+
+{(g || c) && (
+  <div class="stack">
+    {g && (
+      <div class="stat-row">
+        {g.oppervlakte_km2 != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.oppervlakte_km2)}</div>
+            <div class="stat-lbl">km² oppervlakte</div>
+          </div>
+        )}
+        {g.aantal_inwoners != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.aantal_inwoners)}</div>
+            <div class="stat-lbl">inwoners</div>
+          </div>
+        )}
+        {g.inwoners_per_km2 != null && (
+          <div class="stat">
+            <div class="stat-num">{nlInt(g.inwoners_per_km2)}</div>
+            <div class="stat-lbl">inwoners / km²</div>
+          </div>
+        )}
+      </div>
+    )}
+    {g?.bevat_plaatsen && g.bevat_plaatsen.length > 0 && (
+      <div>
+        <p class="muted" style="margin:0 0 .35rem;">Plaatsen</p>
+        <div class="badge-row">
+          {g.bevat_plaatsen.map((pl) => <Badge label={pl} />)}
+        </div>
+      </div>
+    )}
+    {parties.length > 0 && (
+      <div>
+        <p class="muted" style="margin:0 0 .35rem;">
+          Raad · {seatTotal} zetels
+        </p>
+        <div class="seatbar">
+          {parties.map((p, i) => (
+            <span
+              style={`flex:${p.aantal_zetels};background:${SEAT_COLORS[i % SEAT_COLORS.length]};`}
+              title={`${p.naam}: ${p.aantal_zetels}`}
+            >
+              {p.aantal_zetels}
+            </span>
+          ))}
+        </div>
+        <div class="badge-row" style="margin-top:.5rem;">
+          {parties.map((p, i) => (
+            <span class="badge" style={`border-color:${SEAT_COLORS[i % SEAT_COLORS.length]};`}>
+              {p.naam} · {p.aantal_zetels}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+)}

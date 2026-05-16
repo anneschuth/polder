@@ -1,0 +1,54 @@
+---
+interface Props {
+  identifiers?: Record<string, string | undefined>;
+  kind: 'org' | 'person';
+}
+
+const { identifiers, kind } = Astro.props;
+const entries = Object.entries(identifiers ?? {}).filter(([, v]) => v != null && v !== '');
+
+const LABELS: Record<string, string> = {
+  oin: 'OIN',
+  tooi: 'TOOI',
+  owms: 'OWMS',
+  wikidata: 'Wikidata',
+  roo_id: 'ROO-id',
+  organisatiecode: 'Organisatiecode',
+  kvk: 'KvK',
+  rsin: 'RSIN',
+  ictu: 'ICTU',
+  atu: 'ATU (EU)',
+  btw: 'BTW',
+  loonheffing: 'Loonheffing',
+  tk_persoon_id: 'Tweede Kamer-id',
+  abd_id: 'ABD-id',
+  allmanak_id: 'Almanak-id',
+};
+
+function linkFor(key: string, value: string): string | null {
+  if (/^https?:\/\//.test(value)) return value; // tooi/owms/atu are URLs
+  if (key === 'wikidata') return `https://www.wikidata.org/wiki/${value}`;
+  if (key === 'roo_id' && kind === 'org') return `https://organisaties.overheid.nl/${value}/`;
+  return null;
+}
+---
+
+{entries.length > 0 && (
+  <dl class="grid grid-2">
+    {entries.map(([k, v]) => {
+      const href = linkFor(k, v as string);
+      return (
+        <div>
+          <dt class="muted">{LABELS[k] ?? k}</dt>
+          <dd>
+            {href ? (
+              <a href={href} rel="external"><code>{v}</code></a>
+            ) : (
+              <code>{v}</code>
+            )}
+          </dd>
+        </div>
+      );
+    })}
+  </dl>
+)}

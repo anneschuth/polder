@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  tone?: 'default' | 'lint' | 'warn';
+  href?: string;
+  title?: string;
+}
+
+const { label, tone = 'default', href, title } = Astro.props;
+const cls = ['badge', tone === 'lint' ? 'badge--lint' : null, tone === 'warn' ? 'badge--warn' : null]
+  .filter(Boolean)
+  .join(' ');
+---
+
+{href ? (
+  <a class={cls} href={href} title={title} rel="external">{label}</a>
+) : (
+  <span class={cls} title={title}>{label}</span>
+)}

@@ -1,7 +1,28 @@
 ---
 import Base from '~/layouts/Base.astro';
+import Card from '~/components/Card.astro';
+import Badge from '~/components/Badge.astro';
+import Identifiers from '~/components/Identifiers.astro';
+import Contact from '~/components/Contact.astro';
+import GeoCouncil from '~/components/GeoCouncil.astro';
+import WooCard from '~/components/WooCard.astro';
+import RelationsCard from '~/components/RelationsCard.astro';
 import SourceList from '~/components/SourceList.astro';
-import { loadAll, currentName, currentAbbr, orgUrl, postUrl, personUrl, personDisplayName, isMandateCurrent, type Organization } from '~/lib/data';
+import {
+  loadAll,
+  currentName,
+  currentAbbr,
+  orgUrl,
+  postUrl,
+  personUrl,
+  personDisplayName,
+  isMandateCurrent,
+  siblingOrgs,
+  peopleByPostOfOrg,
+  asIdArray,
+  orgAccent,
+  type Organization,
+} from '~/lib/data';
 
 export async function getStaticPaths() {
   const { orgs } = loadAll();
@@ -20,105 +41,274 @@ const data = loadAll();
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const parent = org.parent_id ? data.orgById.get(org.parent_id) : null;
-const children = (data.childrenByOrg.get(org.id) ?? []).sort((a, b) => currentName(a).localeCompare(currentName(b), 'nl'));
-const posts = (data.postsByOrg.get(org.id) ?? []).sort((a, b) => a.label.localeCompare(b.label, 'nl'));
-const mandates = (data.mandatesByOrg.get(org.id) ?? []).sort((a, b) => {
+const children = (data.childrenByOrg.get(org.id) ?? [])
+  .slice()
+  .sort((a, b) => currentName(a).localeCompare(currentName(b), 'nl'));
+const siblings = siblingOrgs(org, data);
+const predecessors = asIdArray(org.predecessor_id).map((id) => ({ id, org: data.orgById.get(id) }));
+const successors = asIdArray(org.successor_id).map((id) => ({ id, org: data.orgById.get(id) }));
+const posts = (data.postsByOrg.get(org.id) ?? [])
+  .slice()
+  .sort((a, b) => a.label.localeCompare(b.label, 'nl'));
+const mandates = (data.mandatesByOrg.get(org.id) ?? []).slice().sort((a, b) => {
   const ac = isMandateCurrent(a.mandate) ? 0 : 1;
   const bc = isMandateCurrent(b.mandate) ? 0 : 1;
   return ac - bc || (b.mandate.start_date ?? '').localeCompare(a.mandate.start_date ?? '');
 });
 const currentMandates = mandates.filter((m) => isMandateCurrent(m.mandate));
+const postGroups = peopleByPostOfOrg(org, data);
 const name = currentName(org);
 const abbr = currentAbbr(org);
+const accent = orgAccent(org.type);
+const nameHistory = (org.names ?? []).length > 1 ? org.names : [];
+
+const policyAreas = org.policy_areas ?? [];
+const grondslagen = org.wettelijke_grondslagen ?? [];
+const evaluations = org.evaluations ?? [];
+const hasBeleid = policyAreas.length > 0 || grondslagen.length > 0 || evaluations.length > 0;
+const rtm = org.relation_to_ministerie;
+
+const ICON_INFO =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>';
+const ICON_LINK =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>';
+const ICON_MAIL =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
+const ICON_MAP =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4l6 2 6-2v14l-6 2-6-2-6 2V6z"/><path d="M9 4v14M15 6v14"/></svg>';
+const ICON_DOC =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v4h4M9 13h6M9 17h6"/></svg>';
+const ICON_ID =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2"/><path d="M14 10h4M14 14h4"/></svg>';
+const ICON_BRIEFCASE =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>';
+const ICON_PEOPLE =
+  '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 2-3.5 4-3.5"/></svg>';
 ---
 <Base title={name} description={`${name} (${org.type})`}>
   <article class="stack">
     <header class="stack">
       <p class="muted">
-        {org.type}
+        {org.type}{org.subtype && <> · {org.subtype}</>}
         {parent && (
           <> · onderdeel van <a href={orgUrl(parent, base)}>{currentName(parent)}</a></>
         )}
         · <code>{org.id}</code>
       </p>
       <h1>{name}{abbr && <span class="muted"> ({abbr})</span>}</h1>
-      <dl class="grid grid-2">
-        {org.classification && (
-          <div><dt class="muted">Classificatie</dt><dd>{org.classification}</dd></div>
-        )}
-        {org.valid_from && (
-          <div><dt class="muted">Geldig vanaf</dt><dd>{org.valid_from}</dd></div>
-        )}
-        {org.valid_until && (
-          <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}</dd></div>
-        )}
-        {org.contact?.website && (
-          <div><dt class="muted">Website</dt><dd><a href={org.contact.website} rel="external">{org.contact.website.replace(/^https?:\/\//, '')}</a></dd></div>
-        )}
-      </dl>
-      {org.identifiers && Object.keys(org.identifiers).length > 0 && (
-        <details>
-          <summary>Identifiers</summary>
-          <dl class="grid grid-2">
-            {Object.entries(org.identifiers).map(([k, v]) => (
-              <div><dt class="muted">{k}</dt><dd><code>{v}</code></dd></div>
-            ))}
-          </dl>
-        </details>
+      {org.description?.text && (
+        <p class="lede">
+          {org.description.text}
+          {org.description.url && (
+            <> <a href={org.description.url} rel="external">↗</a></>
+          )}
+        </p>
       )}
     </header>
 
-    {children.length > 0 && (
-      <section>
-        <h2>Onderdelen ({children.length})</h2>
-        <ul>
-          {children.map((c) => (
-            <li>
-              <a href={orgUrl(c, base)}>{currentName(c)}</a>
-              {currentAbbr(c) && <span class="muted"> ({currentAbbr(c)})</span>}
-              <span class="muted"> · {c.type}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    {posts.length > 0 && (
-      <section>
-        <h2>Posten ({posts.length})</h2>
-        <ul>
-          {posts.map((p) => (
-            <li>
-              <a href={postUrl(p.slug, base)}>{p.label}</a>
-              {p.classification && <span class="muted"> · {p.classification}</span>}
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
-    {mandates.length > 0 && (
-      <section>
-        <h2>Mandaten ({mandates.length}, {currentMandates.length} lopend)</h2>
-        <table class="data">
-          <thead>
-            <tr><th>Persoon</th><th>Rol</th><th>Periode</th></tr>
-          </thead>
-          <tbody>
-            {mandates.slice(0, 200).map(({ person, mandate }) => (
-              <tr>
-                <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
-                <td>{mandate.role}{isMandateCurrent(mandate) && <> <small class="muted">(lopend)</small></>}</td>
-                <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? 'heden'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {mandates.length > 200 && (
-          <p class="muted">Eerste 200 van {mandates.length} mandaten getoond.</p>
+    <div class="card-grid">
+      <Card title="Kerngegevens" icon={ICON_INFO} accent={accent}>
+        <dl class="grid grid-2">
+          {org.classification && (
+            <div><dt class="muted">Classificatie</dt><dd>{org.classification}</dd></div>
+          )}
+          {org.legal_form && (
+            <div><dt class="muted">Rechtsvorm</dt><dd>{org.legal_form}</dd></div>
+          )}
+          {org.zbo_kind && (
+            <div><dt class="muted">Soort ZBO</dt><dd>{org.zbo_kind}</dd></div>
+          )}
+          {org.advisory_kind && (
+            <div><dt class="muted">Soort adviescollege</dt><dd>{org.advisory_kind}</dd></div>
+          )}
+          {org.subname && (
+            <div><dt class="muted">Subnaam</dt><dd>{org.subname}</dd></div>
+          )}
+          {org.valid_from && (
+            <div><dt class="muted">Geldig vanaf</dt><dd>{org.valid_from}</dd></div>
+          )}
+          {org.valid_until && (
+            <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}</dd></div>
+          )}
+          {org.last_mutation && (
+            <div><dt class="muted">Laatste mutatie</dt><dd>{org.last_mutation}</dd></div>
+          )}
+          {org.last_verified && (
+            <div><dt class="muted">Laatst geverifieerd</dt><dd>{org.last_verified}</dd></div>
+          )}
+          {org.contact?.website && (
+            <div>
+              <dt class="muted">Website</dt>
+              <dd><a href={org.contact.website} rel="external">{org.contact.website.replace(/^https?:\/\//, '')}</a></dd>
+            </div>
+          )}
+        </dl>
+        {nameHistory.length > 0 && (
+          <details>
+            <summary>Naamhistorie ({nameHistory.length})</summary>
+            <ul>
+              {nameHistory.map((n) => (
+                <li>
+                  {n.value}{n.abbr && <span class="muted"> ({n.abbr})</span>}
+                  <span class="muted"> · {n.valid_from ?? '?'} – {n.valid_until ?? 'heden'}</span>
+                </li>
+              ))}
+            </ul>
+          </details>
         )}
-      </section>
-    )}
+      </Card>
+
+      <Card title="Relaties" icon={ICON_LINK} accent={accent} span={2}>
+        <RelationsCard
+          parent={parent}
+          children={children}
+          siblings={siblings}
+          predecessors={predecessors}
+          successors={successors}
+        />
+      </Card>
+
+      <Card title="Contact" icon={ICON_MAIL} accent={accent}>
+        <Contact contact={org.contact} afspraak={org.afspraak} organogram_url={org.organogram_url} />
+      </Card>
+
+      <Card title="Geografie & raad" icon={ICON_MAP} accent={accent}>
+        <GeoCouncil geography={org.geography} council={org.council} />
+      </Card>
+
+      <Card title="Woo & classificaties" icon={ICON_DOC} accent={accent}>
+        <WooCard woo={org.woo} classifications={org.classifications} />
+      </Card>
+
+      {hasBeleid && (
+        <Card title="Beleid & grondslag" icon={ICON_DOC} accent={accent}>
+          <div class="stack">
+            {policyAreas.length > 0 && (
+              <div>
+                <p class="muted" style="margin:0 0 .35rem;">Beleidsterreinen</p>
+                <div class="badge-row">
+                  {policyAreas.map((p) => <Badge label={p.naam ?? ''} href={p.tooi} />)}
+                </div>
+              </div>
+            )}
+            {grondslagen.length > 0 && (
+              <div>
+                <p class="muted" style="margin:0 0 .35rem;">Wettelijke grondslagen</p>
+                <ul>
+                  {grondslagen.map((g) => (
+                    <li>
+                      {g.referentie ? (
+                        <a href={g.referentie} rel="external">{g.opschrift ?? g.referentie}</a>
+                      ) : (
+                        g.opschrift
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {evaluations.length > 0 && (
+              <div>
+                <p class="muted" style="margin:0 0 .35rem;">Evaluaties</p>
+                <ul>
+                  {evaluations.map((e) => (
+                    <li>
+                      {e.referentie ? (
+                        <a href={e.referentie} rel="external">{e.naam_rapport ?? e.kamerstuknummer ?? e.datum}</a>
+                      ) : (
+                        e.naam_rapport ?? e.kamerstuknummer ?? e.datum
+                      )}
+                      {e.datum && <span class="muted"> · {e.datum}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </Card>
+      )}
+
+      <Card title="Identifiers" icon={ICON_ID} accent={accent}>
+        <Identifiers identifiers={org.identifiers} kind="org" />
+        {rtm?.naam && (
+          <p style="margin-top:.75rem;">
+            <span class="muted">Hoort bij ministerie</span><br />
+            {rtm.org_id && data.orgById.get(rtm.org_id) ? (
+              <a href={orgUrl(data.orgById.get(rtm.org_id)!, base)}>{rtm.naam}</a>
+            ) : (
+              rtm.naam
+            )}
+          </p>
+        )}
+      </Card>
+
+      {posts.length > 0 && (
+        <Card title={`Posten (${posts.length})`} icon={ICON_BRIEFCASE} accent={accent}>
+          <ul>
+            {posts.map((p) => (
+              <li>
+                <a href={postUrl(p.slug, base)}>{p.label}</a>
+                {p.classification && <span class="muted"> · {p.classification}</span>}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      )}
+
+      {postGroups.length > 0 && (
+        <Card title="Mensen via posten" icon={ICON_PEOPLE} accent={accent} span={2}>
+          <div class="stack">
+            {postGroups.map(({ post, entries }) => (
+              <div>
+                <p style="margin:0 0 .35rem;">
+                  <a href={postUrl(post.slug, base)}><strong>{post.label}</strong></a>
+                  <span class="muted"> · {entries.filter((e) => isMandateCurrent(e.mandate)).length} lopend</span>
+                </p>
+                <ul>
+                  {entries.slice(0, 50).map(({ person, mandate }) => (
+                    <li>
+                      <a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a>
+                      <span class="muted"> · {mandate.start_date ?? '?'} – {mandate.end_date ?? 'heden'}</span>
+                    </li>
+                  ))}
+                </ul>
+                {entries.length > 50 && (
+                  <p class="muted">Eerste 50 van {entries.length} getoond.</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {mandates.length > 0 && (
+        <Card
+          title={`Directe mandaten (${mandates.length}, ${currentMandates.length} lopend)`}
+          icon={ICON_PEOPLE}
+          accent={accent}
+          span={2}
+          collapsible
+        >
+          <table class="data">
+            <thead>
+              <tr><th>Persoon</th><th>Rol</th><th>Periode</th></tr>
+            </thead>
+            <tbody>
+              {mandates.slice(0, 200).map(({ person, mandate }) => (
+                <tr>
+                  <td><a href={personUrl(person.slug, base)}>{personDisplayName(person)}</a></td>
+                  <td>{mandate.role}{isMandateCurrent(mandate) && <> <small class="muted">(lopend)</small></>}</td>
+                  <td>{mandate.start_date ?? '?'} – {mandate.end_date ?? 'heden'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {mandates.length > 200 && (
+            <p class="muted">Eerste 200 van {mandates.length} mandaten getoond.</p>
+          )}
+        </Card>
+      )}
+    </div>
 
     <SourceList sources={org.sources} />
   </article>
