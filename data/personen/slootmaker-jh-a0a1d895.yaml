@@ -1,0 +1,28 @@
+id: person:slootmaker-jh-a0a1d895
+name:
+  full: Drs. J.H. (Jaap) Slootmaker RO CISA
+  family: Slootmaker
+  given: Jaap
+  initials: J.H.
+mandaten:
+- id: mandate-post-directeur-generaal-water-en-bodem-min-ienw-2020-07-01
+  organization_id: org:onderdeel-dg-water-en-bodem-min-ienw
+  post_id: post:directeur-generaal-water-en-bodem-min-ienw
+  role: directeur-generaal Water en Bodem, ministerie van Infrastructuur en Waterstaat
+  start_date: '2020-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/13/jaap-slootmaker-directeur-generaal-water-en-bodem-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-03-13
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/13/jaap-slootmaker-directeur-generaal-water-en-bodem-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

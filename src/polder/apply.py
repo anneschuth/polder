@@ -330,29 +330,28 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
     """
     import hashlib
 
-    # Strip parenthese-bijnaam ('A. (Abdeluheb) Choho' -> 'A. Choho').
+    from polder.resolve.names import parse_person_name
+
+    # Eén naam-parser voor de hele codebase: parse_person_name strip
+    # honorific-prefixes (drs./dr./prof./em.), post-honorifics (MPA/MSc/RA),
+    # pakt de nickname uit `(...)` en levert de volledige familienaam met
+    # tussenvoegsels via `family_full`. Geen tweede, afwijkende parser hier.
     cleaned = re.sub(r"\([^)]*\)", "", name_full).strip()
-    parts = [p for p in re.split(r"\s+", cleaned) if p]
-    if not parts:
-        return ""
-    family = parts[-1]
-    given_parts = parts[:-1]
-    # Strip honorifics zoals 'drs.', 'dr.', 'mr.' uit de given-parts.
-    given_parts = [p for p in given_parts if not p.lower().endswith(".")]
-    # Bouw initialen uit eerste letter van elke given-part, maar alleen
-    # alfabetische karakters meenemen (haakjes en cijfers wegfilteren).
-    initials_chars = []
-    for p in given_parts:
-        if p and p[0].isalpha():
-            # ASCII-fold (Ä -> a) en filter naar [a-z] om slug-regex te
-            # respecteren. Diakrieten zoals umlauts mogen niet in een slug.
-            ascii_first = _slugify(p[0])
-            if ascii_first:
-                initials_chars.append(ascii_first[0])
-    initials = "".join(initials_chars)
-    family_slug = _slugify(family)
+    parsed = parse_person_name(name_full)
+    family_for_slug = parsed.family_full or parsed.family
+    family_slug = _slugify(family_for_slug)
     if not family_slug:
         return ""
+    # Initialen: echte initialen uit de parser (lost de honorific-in-
+    # initialen-bug op). Valt die leeg uit maar is er wel een voluit-
+    # voornaam, dan de eerste letter daarvan als pseudo-initiaal — net
+    # als het oude gedrag, zodat bestaande slugs idempotent blijven en
+    # we geen duplicaten maken bij re-resolve.
+    initials = _slugify(parsed.initials or "")
+    if not initials and parsed.given:
+        first = _slugify(parsed.given[0])
+        if first:
+            initials = first[0]
     pieces = [family_slug]
     if initials:
         pieces.append(initials)
@@ -369,28 +368,14 @@ def _person_slug(name_full: str, birth_year: int | None) -> str:
 
 
 def _name_record(name_full: str) -> dict[str, Any]:
-    """Bouw een persoon.name dict uit een volledige naam-string."""
-    cleaned = name_full.strip()
-    # Knip leading honorifics (drs., dr., mr., ir., prof., etc.).
-    cleaned = re.sub(r"^((drs?|mr|ir|prof|dr)\.\s*)+", "", cleaned, flags=re.I)
-    # Knip parenthese-bijnaam tussen initialen ('N. (Niels) Kastelein').
-    cleaned = re.sub(r"\([^)]+\)\s*", "", cleaned)
-    cleaned = re.sub(r"\s+", " ", cleaned).strip()
-    parts = [p for p in cleaned.split(" ") if p]
-    if not parts:
-        return {"full": name_full.strip(), "family": name_full.strip()}
-    family = parts[-1]
-    given = " ".join(parts[:-1])
-    record: dict[str, Any] = {"full": name_full.strip(), "family": family}
-    if given:
-        record["given"] = given
-    # Initialen alleen meegeven als ze schoon matchen op A. of A.B. patroon.
-    initial_letters = [p[0].upper() for p in parts[:-1] if p and p[0].isalpha()]
-    if initial_letters:
-        candidate = "".join(f"{c}." for c in initial_letters)
-        if re.fullmatch(r"([A-Z]\.)+", candidate):
-            record["initials"] = candidate
-    return record
+    """Bouw een persoon.name dict uit een volledige naam-string.
+
+    Delegeert naar `polder.resolve.names.readable_name_parts` — één
+    naam-parser voor de hele codebase, geen eigen afwijkende logica hier.
+    """
+    from polder.resolve.names import readable_name_parts
+
+    return dict(readable_name_parts(name_full))
 
 
 # ---------------------------------------------------------------------------
