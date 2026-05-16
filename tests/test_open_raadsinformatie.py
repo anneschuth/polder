@@ -210,6 +210,29 @@ def test_build_mandaat_burgemeester():
     assert mandaat["post_id"] == "post:burgemeester-gemeente-amsterdam"
 
 
+def test_build_mandaat_raadsgriffier_is_single_seat_griffier():
+    """`Raadsgriffier` markeert de echte gemeentegriffier → single-seat post."""
+    mandaat = build_mandaat(
+        raw_membership=_membership_raw(role="Raadsgriffier"),
+        gemeente_slug="utrecht",
+        today="2026-05-09",
+    )
+    assert mandaat is not None
+    assert mandaat["post_id"] == "post:griffier-gemeente-utrecht"
+
+
+def test_build_mandaat_griffier_is_griffiemedewerker():
+    """ORI labelt de hele griffie als `Griffier`; dat is geen single-seat
+    gemeentegriffier maar een griffiemedewerker (multi-seat post)."""
+    mandaat = build_mandaat(
+        raw_membership=_membership_raw(role="Griffier"),
+        gemeente_slug="utrecht",
+        today="2026-05-09",
+    )
+    assert mandaat is not None
+    assert mandaat["post_id"] == "post:griffiemedewerker-gemeente-utrecht"
+
+
 def test_build_mandaat_skip_member():
     """Generieke `Member` rol is fractie-membership, niet relevant als mandaat."""
     mandaat = build_mandaat(
@@ -285,6 +308,14 @@ def test_build_mandaat_id_fallback_zonder_membership_id():
 def test_role_to_classification_dekt_alle_polder_rollen():
     expected = {"raadslid", "wethouder", "burgemeester", "gemeentesecretaris"}
     assert expected.issubset(set(ROLE_TO_CLASSIFICATION.values()))
+
+
+def test_role_to_classification_splitst_griffier_van_raadsgriffier():
+    """`Raadsgriffier` → single-seat `griffier`; `Griffier` → multi-seat
+    `griffiemedewerker`. Zie issue #54: ORI labelt de hele griffie als
+    `Griffier` zonder onderscheidend veld."""
+    assert ROLE_TO_CLASSIFICATION["Raadsgriffier"] == "griffier"
+    assert ROLE_TO_CLASSIFICATION["Griffier"] == "griffiemedewerker"
 
 
 # ---------------------------------------------------------------------------
