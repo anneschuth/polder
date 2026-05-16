@@ -29,14 +29,20 @@ Twee varianten van hetzelfde bron-patroon:
   - initialen-kop: `given = "J.C.M. Van"` -> `initials = "J.C.M."`,
     `given` verwijderd, `tussenvoegsel = "van"`.
   - roepnaam-kop:  `given = "Aly van"`   -> `given = "Aly"`,
-    `tussenvoegsel = "van"`, `initials` herberekend op de
-    roepnaam-letter (`A.`) zodat de gelekte tussenvoegsel-letter
-    (`A.V.`) verdwijnt.
+    `tussenvoegsel = "van"`, `initials` ontdaan van de gelekte
+    tussenvoegsel-letter (`A.V.` -> `A.`).
+
+Een roepnaam tussen haakjes in `full` (`Drs. H.A.M. (Hellen) van
+Dongen`) wordt de nieuwe `name.given`; een partij/rol-marker
+(`(SGP)`, `(raadslid)`) wordt herkend en overgeslagen.
 
 Niet in scope: de slug/filename die nog de fout-initiaal draagt
 (`aelst-jv`). Dat is cosmetisch en vereist `polder merge person` met
 refs-update — aparte vervolg-issue. Ook buiten scope: records met een
-partijnaam-stem als family (`den Boon (SGP)`) — ander bug-patroon.
+partijnaam-stem als family (`den Boon (SGP)`) en records met een
+samengestelde initiaal (`B.J.Th.`), academische prefix (`drs B.J.`)
+of samengestelde achternaam in `given` (`E. van Amelsfort-van der`) —
+te ambigu om te raden, blijven onaangeroerd.
 
 Run: `uv run python scripts/fix_tussenvoegsel_as_initial.py [--dry-run]`.
 """
@@ -81,6 +87,57 @@ def _is_init_token(tok: str) -> bool:
     return bool(INIT_TOKEN_RX.match(tok))
 
 
+def _titlecase_roepnaam(tok: str) -> str:
+    """Title-case alleen als de bron all-lowercase is.
+
+    `str.title()` mangelt al-gekapitaliseerde Nederlandse namen
+    (`IJsbrand` -> `Ijsbrand`, `André` blijft maar `McK` -> `Mck`).
+    Een token dat al een hoofdletter heeft is bron-getrouw; laat staan.
+    """
+    return tok.title() if tok.islower() else tok
+
+
+def _strip_leaked_tv_letters(initials: str, tv_tokens: list[str]) -> str | None:
+    """Verwijder de gelekte tussenvoegsel-letters van het eind van `initials`.
+
+    `A.V.D.` met tussenvoegsel `van der` -> `A.` (V en D gelekt).
+    Geeft None terug als de staart niet exact de tussenvoegsel-letters
+    zijn (dan klopt onze aanname niet en raden we niet).
+    """
+    letters = [c.upper() for c in initials if c.isalpha()]
+    tail = [t[0].upper() for t in tv_tokens if t and t[0].isalpha()]
+    if len(letters) <= len(tail) or letters[-len(tail) :] != tail:
+        return None
+    kept = letters[: -len(tail)]
+    return "".join(f"{c}." for c in kept)
+
+
+# Woorden die tussen haakjes een rol/hoedanigheid aanduiden, geen roepnaam.
+_ROLE_WORDS = {"raadslid", "wethouder", "burgemeester", "fractie", "lijst"}
+
+
+def _paren_is_nickname(inner: str) -> bool:
+    """Is de `(...)`-inhoud een roepnaam of een partij/rol-marker?
+
+    Roepnaam: één naam-achtig token (`Hellen`, `Bart-Jan`), niet een
+    acroniem (`SGP`, `CDA`, `P21`), niet een rolwoord (`raadslid`), niet
+    een meerwoordige partijnaam (`Lokaal Betrokken`).
+    """
+    inner = inner.strip()
+    if not inner or " " in inner:
+        return False
+    if inner.lower() in _ROLE_WORDS:
+        return False
+    if any(ch.isdigit() for ch in inner):  # `P21`, `50PLUS`
+        return False
+    alpha = inner.replace("-", "").replace("'", "")
+    if not alpha.isalpha():
+        return False
+    # Acroniem (ALCAPS) = partij, geen roepnaam. `IJ`-namen zijn langer
+    # dan 4 en hebben kleine letters, dus die overleven deze check.
+    return not (inner.isupper() and len(inner) <= 5)
+
+
 def _normalize_initials(tokens: list[str]) -> str:
     """`['J.C.', 'M.']` of `['J.', 'C.', 'M.']` -> `J.C.M.`.
 
@@ -97,9 +154,11 @@ def fix_record(data: dict) -> tuple[bool, dict[str, str] | None]:
       1. `name.tussenvoegsel` afwezig/leeg.
       2. `name.given` = `<≥1 initiaal-token> <≥1 tussenvoegsel-token>`,
          waarbij de tussenvoegsel-tokens een aaneengesloten staart vormen.
-      3. Ruis-uitsluiting: `name.family` / `name.full` bevatten geen
-         `(...)` (partijnaam) en `name.full` geen verdubbeld tussenvoegsel
-         (`van van`) — dat is het andere bug-patroon, buiten scope.
+      3. Ruis-uitsluiting: een `(...)` in `name.family`, een partij/rol-
+         marker tussen haakjes in `name.full`, of een verdubbeld
+         tussenvoegsel (`van van`) — dat is het andere bug-patroon,
+         buiten scope. Een echte roepnaam tussen haakjes (`(Hellen)`)
+         wordt juist gebruikt als nieuwe `name.given`.
     """
     name = data.get("name")
     if not isinstance(name, dict):
@@ -112,8 +171,12 @@ def fix_record(data: dict) -> tuple[bool, dict[str, str] | None]:
     full = (name.get("full") or "").strip()
     family = (name.get("family") or "").strip()
 
-    # Ruis-uitsluiting: partijnaam tussen haakjes of verdubbeld tussenvoegsel.
-    if "(" in family or "(" in full:
+    # Ruis-uitsluiting. Een `(...)` in family is altijd partij/rol.
+    # Een `(...)` in full is alleen ruis als het géén roepnaam is.
+    if "(" in family:
+        return False, None
+    paren = NICKNAME_RX.search(full)
+    if paren and not _paren_is_nickname(paren.group(1)):
         return False, None
     full_no_paren = NICKNAME_RX.sub("", full)
     full_toks_lc = full_no_paren.lower().split()
@@ -153,18 +216,22 @@ def fix_record(data: dict) -> tuple[bool, dict[str, str] | None]:
         # Roepnaam alleen uit een nickname tussen haakjes in `full`.
         new_initials = _normalize_initials(head)
         nick = NICKNAME_RX.search(full)
-        new_given = nick.group(1).strip().title() if nick else None
+        new_given = _titlecase_roepnaam(nick.group(1).strip()) if nick else None
     elif (
         len(head) == 1
         and head[0].replace("-", "").replace("'", "").isalpha()
         and "-" not in head[0]
     ):
         # Variant 2: kop is één schone roepnaam-token (`Aly van`).
-        # `initials` herberekenen op de roepnaam-letter, zodat de
-        # gelekte tussenvoegsel-letter (`A.V.`) verdwijnt.
         roepnaam = head[0]
-        new_given = roepnaam.title()
-        new_initials = f"{roepnaam[0].upper()}."
+        new_given = _titlecase_roepnaam(roepnaam)
+        # `initials`: strip de gelekte tussenvoegsel-letter(s) van het
+        # eind, zodat echte meer-letter-initialen (`P.J.M. van`) behouden
+        # blijven i.p.v. plat te slaan naar de roepnaam-letter. Lukt dat
+        # niet (geen/onverwachte initials), val terug op de
+        # roepnaam-letter.
+        stripped = _strip_leaked_tv_letters((old_initials or "").strip(), tv_tokens)
+        new_initials = stripped or f"{roepnaam[0].upper()}."
     else:
         # Samengestelde / rommelige kop (`Marieke Twigt-Van der`,
         # `Bart Vos - van`): niet raden, overslaan.
