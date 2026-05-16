@@ -17,14 +17,7 @@ names:
 - value: Nederlandse Arbeidsinspectie
   valid_from: '1900-01-01'
 description:
-  text: De Nederlandse Arbeidsinspectie is de toezichthouder op het terrein van het
-    ministerie van Sociale Zaken en Werkgelegenheid. Dat toezicht is gericht op de
-    naleving van de wet- en regelgeving over arbeidsomstandigheden, de arbeidsmarkt,
-    arbeidsverhoudingen en het sociale zekerheidsstelsel. Daarnaast onderzoekt ze
-    de werking van het stelsel van sociale zekerheid en signaleert ontwikkelingen
-    en risico’s op de beleidsterreinen van het ministerie van SZW. Ook werkt de Inspectie
-    op het gebied van pgb- en declaratiefraude als opsporingsorganisatie voor het
-    ministerie van Volksgezondheid, Welzijn en Sport.
+  text: De Nederlandse Arbeidsinspectie is de toezichthouder op het terrein van het ministerie van Sociale Zaken en Werkgelegenheid. Dat toezicht is gericht op de naleving van de wet- en regelgeving over arbeidsomstandigheden, de arbeidsmarkt, arbeidsverhoudingen en het sociale zekerheidsstelsel. Daarnaast onderzoekt ze de werking van het stelsel van sociale zekerheid en signaleert ontwikkelingen en risico’s op de beleidsterreinen van het ministerie van SZW. Ook werkt de Inspectie op het gebied van pgb- en declaratiefraude als opsporingsorganisatie voor het ministerie van Volksgezondheid, Welzijn en Sport.
   url: https://www.nlarbeidsinspectie.nl/nederlandse-arbeidsinspectie
 classifications:
 - type: Woo
@@ -52,10 +45,7 @@ woo:
       url: https://www.nlarbeidsinspectie.nl/nederlandse-arbeidsinspectie/jaarplannen-en-jaarverslagen
     - informatiecategorie: Beschikkingen
       url: https://resultaten.nlarbeidsinspectie.nl/
-      toelichting: 'Op deze pagina vindt u een overzicht van bedrijven die sinds 1
-        januari 2016 zijn geïnspecteerd door de NLA op de wetgeving: Wet minimumloon
-        en vakantiebijslag, Wet arbeid vreemdelingen en de Wet allocatie arbeidskrachten
-        door intermediairs.'
+      toelichting: 'Op deze pagina vindt u een overzicht van bedrijven die sinds 1 januari 2016 zijn geïnspecteerd door de NLA op de wetgeving: Wet minimumloon en vakantiebijslag, Wet arbeid vreemdelingen en de Wet allocatie arbeidskrachten door intermediairs.'
     - informatiecategorie: Beschikkingen
       url: https://zoek.officielebekendmakingen.nl/resultaten?q=(c.product-area==%22officielepublicaties%22)and((dt.type==%22Beschikking%22)or(dt.type==%22andere%20beschikking%22)or(dt.type==%22andere%20vergunning%22)or(dt.type==%22evenementenvergunning%22)or(dt.type==%22exploitatievergunning%22)or(dt.type==%22omgevingsvergunning%22)or(dt.type==%22vergunning%20voor%20activiteiten%20op%20of%20in%20oppervlaktewater%22))and(((w.publicatienaam==%22Tractatenblad%22))or((w.publicatienaam==%22Staatsblad%22))or((w.publicatienaam==%22Staatscourant%22))or((w.publicatienaam==%22Gemeenteblad%22))or((w.publicatienaam==%22Provinciaal%20blad%22))or((w.publicatienaam==%22Waterschapsblad%22))or((w.publicatienaam==%22Blad%20gemeenschappelijke%20regeling%22)))and(cql.textAndIndexes=%22arbeidsinspectie%22)%20AND%20dt.creator==%22Ministerie%20van%20Sociale%20Zaken%20en%20Werkgelegenheid%22&zv=arbeidsinspectie&pg=10&col=AlleBekendmakingen&svel=Publicatiedatum&svol=Aflopend&sf=po%7cMinisterie+van+Sociale+Zaken+en+Werkgelegenheid
     - informatiecategorie: Andere documenten
@@ -115,4 +105,9 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/20/hans-ton-directeur-analyse-programmering-en-strategie-bij-de-nederlandse-arbeidsinspectie
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 roo_start_datum: '2012-01-01'

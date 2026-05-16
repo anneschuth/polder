@@ -111,6 +111,35 @@ def _apply_string_remap(paths: list[Path], old: str, new: str) -> int:
 # ---------------------------------------------------------------------------
 
 
+def _merge_org_records(dup: dict, canonical: dict) -> dict:
+    """Consolideer identifiers + sources van `dup` in `canonical`.
+
+    Een dup-org draagt soms de stabiele externe identifier (ROO-import:
+    `roo_id`, `tooi`, `oin`, `organisatiecode`) terwijl het canonical-record
+    die mist, of andersom. Bij een blinde delete van het dup-file zou die
+    identifier verloren gaan en kan een latere ROO-fetch het record niet
+    meer terugkoppelen. We vullen alleen ontbrekende identifier-keys aan
+    (canonical wint bij conflict, want dat is per definitie het record dat
+    we behouden) en voegen nieuwe bron-URLs toe.
+    """
+    dup_idents = dup.get("identifiers") or {}
+    if dup_idents:
+        merged_idents = dict(canonical.get("identifiers") or {})
+        for key, value in dup_idents.items():
+            merged_idents.setdefault(key, value)
+        canonical["identifiers"] = merged_idents
+
+    sources = list(canonical.get("sources") or [])
+    existing_source_urls = {s.get("url") for s in sources if isinstance(s, dict) and s.get("url")}
+    for s in dup.get("sources") or []:
+        if isinstance(s, dict) and s.get("url") not in existing_source_urls:
+            sources.append(s)
+            existing_source_urls.add(s.get("url"))
+    if sources:
+        canonical["sources"] = sources
+    return canonical
+
+
 def _merge_person_records(dup: dict, canonical: dict) -> dict:
     """Voeg mandaten en sources van `dup` toe aan `canonical` zonder duplicaten."""
     mandaten = list(canonical.get("mandaten") or [])
@@ -178,11 +207,15 @@ def _merge_generic(
         typer.echo("\nDry-run. Run met --apply om de merge uit te voeren.")
         return
 
-    # 1. Voor person: voeg mandaten + sources samen voordat we het dup-file deleten.
-    if kind == "person":
+    # 1. Voor person/org: consolideer waardevolle velden van het dup-record
+    #    in het canonical record voordat we het dup-file deleten.
+    if kind in ("person", "org"):
         dup_data = yaml.safe_load(dup_path.read_text(encoding="utf-8"))
         canonical_data = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
-        merged = _merge_person_records(dup_data, canonical_data)
+        if kind == "person":
+            merged = _merge_person_records(dup_data, canonical_data)
+        else:
+            merged = _merge_org_records(dup_data, canonical_data)
         canonical_path.write_text(
             yaml.safe_dump(merged, allow_unicode=True, sort_keys=False, width=1000),
             encoding="utf-8",

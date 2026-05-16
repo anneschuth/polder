@@ -20,12 +20,7 @@ names:
   abbr: IGJ
   valid_from: '1900-01-01'
 description:
-  text: Iedereen moet in Nederland op goede en veilige zorg en jeugdhulp kunnen vertrouwen.
-    Toezichthouden is meer dan ‘controleren op basis van wetten, regels en normen’.
-    Wij agenderen kwaliteit en veiligheid bij partijen in en rondom de zorg en wij
-    stimuleren zorgorganisaties en professionals om (samen) te werken aan het borgen
-    en verbeteren van hun zorg. Waar nodig treden we op. We houden ook toezicht op
-    de kwaliteit en veiligheid van zorg op Bonaire, Sint Eustatius en Saba.
+  text: Iedereen moet in Nederland op goede en veilige zorg en jeugdhulp kunnen vertrouwen. Toezichthouden is meer dan ‘controleren op basis van wetten, regels en normen’. Wij agenderen kwaliteit en veiligheid bij partijen in en rondom de zorg en wij stimuleren zorgorganisaties en professionals om (samen) te werken aan het borgen en verbeteren van hun zorg. Waar nodig treden we op. We houden ook toezicht op de kwaliteit en veiligheid van zorg op Bonaire, Sint Eustatius en Saba.
   url: https://www.igj.nl/over-ons
 classifications:
 - type: Woo
@@ -42,18 +37,13 @@ woo:
     documentLocatie:
     - informatiecategorie: Woo-verzoeken en -besluiten
       url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/documenten
-      toelichting: Geanonimiseerde documenten die met een Woo-besluit openbaar zijn
-        gemaakt.
+      toelichting: Geanonimiseerde documenten die met een Woo-besluit openbaar zijn gemaakt.
     - informatiecategorie: Woo-verzoeken en -besluiten
       url: http://www.open.minvws.nl/
-      toelichting: 'Sinds begin september 2023 plaatst VWS Woo-besluiten over de coronabestrijding
-        en bijbehorende documenten op een nieuw platform: www.open.minvws.nl. Documenten
-        op dit platform zijn individueel toegankelijk en doorzoekbaar op zoektermen.'
+      toelichting: 'Sinds begin september 2023 plaatst VWS Woo-besluiten over de coronabestrijding en bijbehorende documenten op een nieuw platform: www.open.minvws.nl. Documenten op dit platform zijn individueel toegankelijk en doorzoekbaar op zoektermen.'
     - informatiecategorie: Onderzoeksrapporten
       url: https://toezichtdocumenten.igj.nl/
-      toelichting: Inspectierapporten over zorgaanbieders en bedrijven. Het rapport
-        geeft resultaten weer van een uitgevoerde inspectie ter plaatse of naar aanleiding
-        van een onderzoek. U vindt hier ook maatregelen die de inspectie heeft genomen.
+      toelichting: Inspectierapporten over zorgaanbieders en bedrijven. Het rapport geeft resultaten weer van een uitgevoerde inspectie ter plaatse of naar aanleiding van een onderzoek. U vindt hier ook maatregelen die de inspectie heeft genomen.
   wooVerzoek:
     url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
 afspraak:
@@ -114,4 +104,9 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/94018/igj
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/02/02/jeroen-stulen-afdelingshoofd-jeugd-bij-igj
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 roo_start_datum: '2017-10-01'

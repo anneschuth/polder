@@ -16,13 +16,7 @@ names:
   abbr: DJI
   valid_from: '1900-01-01'
 description:
-  text: Dienst Justitiële Inrichtingen (DJI) is een agentschap van het ministerie
-    van Justitie en Veiligheid. We zijn met zo'n 16.000 medewerkers verantwoordelijk
-    voor de dagelijkse verzorging van de volwassenen en jongeren in onze inrichtingen.
-    We werken op vele manieren met hen samen aan voorbereiding op hun terugkeer in
-    de maatschappij. Zo dragen we bij aan de veiligheid van de samenleving. DJI'ers
-    werken op 50 locaties, waaronder Caribisch Nederland. Jaarlijks stromen er ruim
-    29.000 nieuwe justitiabelen in.
+  text: Dienst Justitiële Inrichtingen (DJI) is een agentschap van het ministerie van Justitie en Veiligheid. We zijn met zo'n 16.000 medewerkers verantwoordelijk voor de dagelijkse verzorging van de volwassenen en jongeren in onze inrichtingen. We werken op vele manieren met hen samen aan voorbereiding op hun terugkeer in de maatschappij. Zo dragen we bij aan de veiligheid van de samenleving. DJI'ers werken op 50 locaties, waaronder Caribisch Nederland. Jaarlijks stromen er ruim 29.000 nieuwe justitiabelen in.
   url: https://www.dji.nl/over-dji/organisatie-dji
 classifications:
 - type: CAO
@@ -93,3 +87,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/13080/dji
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/22/ellen-leistra-plaatsvervangend-directeur-forensische-zorg-en-justitiele-jeugdinrichtingen-bij-jenv
+  retrieved: '2026-05-12'
+  fields:
+  - applied_via:apply-staging

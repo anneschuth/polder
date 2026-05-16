@@ -20,13 +20,9 @@ names:
   abbr: RVB
   valid_from: '1900-01-01'
 description:
-  text: Het Rijksvastgoedbedrijf (RVB) beheert de gebouwen en gronden van de Rijksoverheid en Defensie.
-    De dienst valt onder het ministerie van Volkshuisvesting en Ruimtelijke Ordening en is verantwoordelijk
-    voor het beheer en de instandhouding van de grootste en meest diverse vastgoedportefeuille van Nederland,
-    inclusief Caribisch Nederland.
+  text: Het Rijksvastgoedbedrijf (RVB) beheert de gebouwen en gronden van de Rijksoverheid en Defensie. De dienst valt onder het ministerie van Volkshuisvesting en Ruimtelijke Ordening en is verantwoordelijk voor het beheer en de instandhouding van de grootste en meest diverse vastgoedportefeuille van Nederland, inclusief Caribisch Nederland.
   url: https://www.rijksvastgoedbedrijf.nl/over
-taken_en_bevoegdheden: Het Rijksvastgoedbedrijf  beheert de gebouwen en gronden van de Rijksoverheid en
-  Defensie. De dienst valt onder het ministerie van Volkshuisvesting en Ruimtelijke Ordening.
+taken_en_bevoegdheden: Het Rijksvastgoedbedrijf  beheert de gebouwen en gronden van de Rijksoverheid en Defensie. De dienst valt onder het ministerie van Volkshuisvesting en Ruimtelijke Ordening.
 classifications:
 - type: CAO
   wettelijke_grondslagen:
@@ -51,8 +47,7 @@ woo:
     documentLocatie:
       informatiecategorie: Woo-verzoeken en -besluiten
       url: https://www.rijksoverheid.nl/documenten?trefwoord=&startdatum=&einddatum=&onderdeel=Ministerie+van+Volkshuisvesting+en+Ruimtelijke+Ordening&type=Woo-besluit
-      toelichting: Woo-verzoeken van het Rijksvastgoedbedrijf worden door het ministerie van VRO openbaar
-        gemaakt.
+      toelichting: Woo-verzoeken van het Rijksvastgoedbedrijf worden door het ministerie van VRO openbaar gemaakt.
   wooVerzoek:
     url: https://www.rijksvastgoedbedrijf.nl/contact-ons/wet-open-overheid-woo
 afspraak:
@@ -126,4 +121,9 @@ sources:
   retrieved: '2026-05-09'
   fields:
   - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/25/maaike-van-kats-schouwerwou-afdelingshoofd-strategie-en-uitvoeringsbeleid-bij-het-rijksvastgoedbedrijf
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
 roo_start_datum: '2014-07-01'
