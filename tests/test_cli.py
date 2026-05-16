@@ -203,8 +203,9 @@ def test_export_json(mini_polder: Path, tmp_path: Path) -> None:
 # ---------------------------------------------------------------------------
 
 
+# ROO-fetchers zitten sinds de pipeline-consolidatie onder `polder roo`,
+# niet meer onder `polder fetch`.
 FETCH_SUBCOMMANDS = [
-    "roo",
     "tk",
     "ek",
     "logius",
@@ -245,6 +246,7 @@ def test_top_level_lists_all_groups() -> None:
     assert code == 0
     for cmd in [
         "fetch",
+        "roo",
         "skill",
         "list",
         "show",
@@ -258,12 +260,19 @@ def test_top_level_lists_all_groups() -> None:
         assert cmd in out, f"missing top-level command in --help: {cmd}"
 
 
-def test_fetch_roo_help_runs() -> None:
-    code, out = _run(["fetch", "roo", "--help"])
+def test_roo_fetch_help_runs() -> None:
+    code, out = _run(["roo", "fetch", "--help"])
     assert code == 0
     assert "--cache" in out
     assert "--dry-run" in out
     assert "--limit" in out
+
+
+def test_roo_subapp_help_lists_pipeline() -> None:
+    code, out = _run(["roo", "--help"])
+    assert code == 0
+    for sub in ("fetch", "functies", "resolve", "roundtrip"):
+        assert sub in out, f"missing roo subcommand in --help: {sub}"
 
 
 def test_fetch_all_help_runs() -> None:
@@ -280,8 +289,8 @@ def test_fetch_subcommand_help(sub: str) -> None:
     assert code == 0, out
 
 
-def test_fetch_roo_dry_run_delegates(tmp_path: Path) -> None:
-    """`polder fetch roo --dry-run --limit 1` mag geen netwerk-call doen.
+def test_roo_fetch_dry_run_delegates(tmp_path: Path) -> None:
+    """`polder roo fetch --dry-run --limit 1` mag geen netwerk-call doen.
 
     We patchen de underlying main() en checken dat de juiste argv aankomt.
     """
@@ -294,8 +303,8 @@ def test_fetch_roo_dry_run_delegates(tmp_path: Path) -> None:
     with patch("polder.fetchers.roo.main", side_effect=fake_main):
         code, _out = _run(
             [
-                "fetch",
                 "roo",
+                "fetch",
                 "--dry-run",
                 "--limit",
                 "1",

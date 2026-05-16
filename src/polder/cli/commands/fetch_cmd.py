@@ -26,7 +26,6 @@ from polder.fetchers import (
     logius_cor,
     open_raadsinformatie,
     roo,
-    roo_functies,
     tk_odata,
     tooi,
     wikidata_sparql,
@@ -76,30 +75,10 @@ def _delegate(fn: Callable[[list[str]], int], argv: list[str]) -> None:
 # ---------------------------------------------------------------------------
 
 
-@app.command("roo")
-def fetch_roo(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
-    out: Annotated[Path, typer.Option(help="Output-directory.")] = Path("data/organisaties"),
-    limit: Annotated[int | None, typer.Option(help="Max records (voor testen).")] = None,
-    dry_run: Annotated[bool, typer.Option("--dry-run", help="Niets schrijven.")] = False,
-    verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
-) -> None:
-    """ROO: download exportOO.xml en schrijf organisatie-records."""
-    _delegate(roo.main, _common_argv(cache, out, limit, dry_run, verbose))
-
-
-@app.command("roo-functies")
-def fetch_roo_functies(
-    cache: Annotated[Path, typer.Option(help="Cache-directory voor downloads.")] = Path("_cache"),
-    out: Annotated[Path, typer.Option(help="Staging-directory.")] = Path("data/_staging"),
-    verbose: Annotated[bool, typer.Option("-v", "--verbose", help="Verbose logging.")] = False,
-) -> None:
-    """ROO functies + medewerkers: schrijf naar staging-proposals (geen
-    auto-merge). Verwerken via `polder skill resolve-staging`."""
-    argv: list[str] = ["--cache", str(cache), "--out", str(out)]
-    if verbose:
-        argv.append("-v")
-    _delegate(roo_functies.main, argv)
+# ROO-fetchers zijn verhuisd naar de `polder roo` subapp
+# (`polder roo fetch`, `polder roo functies`). De directe functie-refs
+# `roo.main` / `roo_functies.main` blijven via `DETERMINISTIC_FETCHERS`
+# beschikbaar voor `polder fetch all`.
 
 
 @app.command("tk")

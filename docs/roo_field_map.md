@@ -2,7 +2,7 @@
 
 Per ROO XML-leaf-element: hoe vaak komt het voor in de export, en in
 hoeveel procent van die gevallen kan polder de waarde terugleveren.
-Gegenereerd door `polder roo-roundtrip --emit-field-map`.
+Gegenereerd door `polder roo roundtrip --emit-field-map`.
 
 Totaal velden: **129**.
 

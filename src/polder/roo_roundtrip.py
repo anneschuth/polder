@@ -378,7 +378,7 @@ def emit_field_map(report: CoverageReport) -> str:
         "",
         "Per ROO XML-leaf-element: hoe vaak komt het voor in de export, en in",
         "hoeveel procent van die gevallen kan polder de waarde terugleveren.",
-        "Gegenereerd door `polder roo-roundtrip --emit-field-map`.",
+        "Gegenereerd door `polder roo roundtrip --emit-field-map`.",
         "",
         f"Totaal velden: **{len(report.fields)}**.",
         "",

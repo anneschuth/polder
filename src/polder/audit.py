@@ -195,7 +195,7 @@ CATEGORIES: dict[str, Category] = {
     ),
     # ROO-superset checks (Phase 5). Deze checks vergelijken polder-data met
     # het laatste ROO-export-XML in `_cache/`. Ze worden geskipt als er geen
-    # cache-bestand staat — dan run je `polder fetch roo` eerst.
+    # cache-bestand staat — dan run je `polder roo fetch` eerst.
     "roo_missing_org": Category(
         "roo_missing_org",
         "error",
@@ -213,7 +213,7 @@ CATEGORIES: dict[str, Category] = {
         "review",
         "ROO noemt een medewerker die volgens polder al uit functie is "
         "(end_date in mandaat). Vereist een geresolvde staging-file "
-        "(`polder fetch roo-functies` + `polder skill resolve-staging`); "
+        "(`polder roo functies` + `polder roo resolve`); "
         "checker leest `data/_staging/roo-functies-*.resolved.json`.",
     ),
 }

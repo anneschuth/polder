@@ -586,13 +586,13 @@ def resolve(
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="polder-resolve-roo",
+        prog="polder roo resolve",
         description="Resolve ROO functie/medewerker-proposals naar bestaande posts/personen.",
     )
     parser.add_argument(
         "proposals",
         type=Path,
-        help="Pad naar `roo-functies-YYYY-MM-DD.json` (output van `polder fetch roo-functies`).",
+        help="Pad naar `roo-functies-YYYY-MM-DD.json` (output van `polder roo functies`).",
     )
     parser.add_argument("--data", type=Path, default=Path("data"))
     parser.add_argument("--dry-run", action="store_true")

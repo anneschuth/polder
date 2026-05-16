@@ -79,13 +79,12 @@ _SINGLE_COMMANDS: dict[str, tuple[str, str]] = {
     "apply-staging": ("polder.cli.commands.apply_staging_cmd", "apply_staging"),
     "resolve": ("polder.cli.commands.resolve_cmd", "resolve"),
     "ingest": ("polder.cli.commands.ingest_cmd", "ingest"),
-    "roo-roundtrip": ("polder.cli.commands.roo_roundtrip_cmd", "roo_roundtrip"),
-    "resolve-roo": ("polder.cli.commands.resolve_roo_cmd", "resolve_roo"),
 }
 
 _SUBAPPS: dict[str, tuple[str, str]] = {
     # name on app -> (module path, app attribute)
     "fetch": ("polder.cli.commands.fetch_cmd", "app"),
+    "roo": ("polder.cli.commands.roo_cmd", "app"),
     "skill": ("polder.cli.commands.skill_cmd", "app"),
     "backfill": ("polder.cli.commands.backfill_cmd", "app"),
     "lookup": ("polder.cli.commands.lookup_cmd", "app"),

@@ -1,9 +1,8 @@
 """Extractor voor ROO `<functies>` + `<medewerkers>`-blokken.
 
 ROO bevat ~4.500 functies met ~16.500 medewerkers. We extraheren ze als
-staging-proposals (geen auto-merge) zodat de bestaande
-`resolve-staging-proposals`-skill ze kan matchen tegen polder-posten en
--personen, met field-aware precedence:
+staging-proposals (geen auto-merge) zodat `polder roo resolve` ze kan
+matchen tegen polder-posten en -personen, met field-aware precedence:
 
 - Person↔post binding (current holder, dates): Staatscourant > ABD-nieuws > ROO.
 - Administratieve metadata (functie bestaat, naam, org-membership): ROO canoniek.
@@ -159,8 +158,8 @@ def extract_functies(xml_path: Path) -> list[dict[str, Any]]:
         parent_roo_id = _functie_parent_roo_id(f)
 
         # Kandidaat-post-slug volgens polder-conventie:
-        # `post:<role-slug>-<org-suffix-zonder-prefix>`. We laten de
-        # `resolve-staging-proposals`-skill beslissen of die bestaat.
+        # `post:<role-slug>-<org-suffix-zonder-prefix>`. `polder roo resolve`
+        # beslist of die post bestaat (find_post_for_functie).
         org_suffix = ""
         if parent_org_id and parent_org_id.startswith("org:"):
             org_suffix = parent_org_id[len("org:") :]
@@ -185,8 +184,8 @@ def extract_functies(xml_path: Path) -> list[dict[str, Any]]:
             "suggested_post_id": suggested_post_id,
             "medewerkers": medewerkers,
             # Field-aware precedence is een *consumer*-regel; deze proposal
-            # is informationeel. resolve-staging-proposals leest dit en
-            # past de regel toe.
+            # is informationeel. `polder roo resolve` leest dit en past de
+            # regel toe.
             "precedence_note": (
                 "Person↔post binding: Staatscourant > ABD > ROO. "
                 "Administratieve metadata (functie bestaat, naam): ROO canoniek."
@@ -242,7 +241,7 @@ def write_staging(proposals: list[dict[str, Any]], out_dir: Path) -> Path:
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="polder-fetch-roo-functies",
+        prog="polder roo functies",
         description="Extract ROO functies + medewerkers naar staging-proposals.",
     )
     parser.add_argument("--cache", type=Path, default=Path("_cache"))
