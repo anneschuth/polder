@@ -117,7 +117,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
       }
       .muted {
-        color: var(--semantics-content-secondary-color, #555);
+        color: var(--semantics-content-secondary-color);
       }
 
       /* ---- Section + definition-list layout ----
@@ -129,7 +129,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         flex-direction: column;
         gap: 2.25rem;
       }
-      .section > .section-head {
+      /* nldd-simple-section adds its own internal padding; the page already
+         spaces sections via .sections gap, so strip the section's block
+         padding and let the heading rule own the spacing. */
+      nldd-simple-section.section {
+        --layout-page-section-padding-block: 0;
+        --layout-page-section-padding-inline: 0;
+        display: block;
+      }
+      .section-head {
         margin: 0 0 0.9rem;
         font-size: 0.95rem;
         font-weight: 600;
@@ -139,10 +147,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         align-items: center;
         gap: 0.5rem;
         color: var(--semantics-content-color);
-      }
-      .section > details > nldd-divider,
-      .section > nldd-divider {
-        margin: 0 0 1rem;
+        border-bottom: 1px solid var(--primitives-color-coolgray-100);
+        padding-bottom: 0.6rem;
       }
       .section .card-icon {
         color: var(--card-accent, var(--primitives-color-accent-500));
@@ -155,10 +161,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         width: 100%;
         height: 100%;
       }
-      .section > details > summary {
+      details.section > summary {
         cursor: pointer;
-        color: var(--semantics-content-secondary-color);
-        margin-bottom: 0.5rem;
+        list-style: none;
+      }
+      details.section > summary::-webkit-details-marker {
+        display: none;
+      }
+      details.section[open] > summary .section-head {
+        margin-bottom: 0.9rem;
       }
       /* Dense label/value grid. Label is a fixed muted column, value next to
          it. Auto-fills 2-3 columns on wide screens, 1 on narrow. */
@@ -347,12 +358,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       table.data th, table.data td {
         text-align: left;
         padding: 0.5rem 0.75rem;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid var(--primitives-color-coolgray-100);
         vertical-align: top;
       }
       table.data th {
         font-weight: 600;
-        background: #fafafa;
+        background: var(--primitives-color-coolgray-25);
       }
     </style>
 

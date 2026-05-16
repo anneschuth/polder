@@ -7,8 +7,8 @@ const labels = postsByLabelPrefix();
 const classifications = postsByClassification();
 const maxLabel = Math.max(1, ...labels.map((r) => r.posts));
 const maxClass = Math.max(1, ...classifications.map((r) => r.posts));
-const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
-const barColorAlt = 'var(--primitives-color-donkerblauw-500, #1d3a6d)';
+const barColor = 'var(--primitives-color-lintblauw-500)';
+const barColorAlt = 'var(--primitives-color-donkerblauw-500)';
 ---
 <Base title="Functies" description="Posten op label-prefix en Popolo classification">
   <article class="stack">

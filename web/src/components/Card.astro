@@ -22,25 +22,25 @@ const style = accent ? `--card-accent: ${accent};` : undefined;
 ---
 
 {hasBody && (
-  <section class="section" style={style}>
-    {collapsible ? (
-      <details open={open}>
-        <summary class="section-head">
-          {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
-          {title}
-        </summary>
-        <nldd-divider></nldd-divider>
+  collapsible ? (
+    <details class="section" open={open} style={style}>
+      <summary class="section-head">
+        {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
+        <span>{title}</span>
+      </summary>
+      <nldd-simple-section>
         <Fragment set:html={body} />
-      </details>
-    ) : (
-      <Fragment>
+      </nldd-simple-section>
+    </details>
+  ) : (
+    <nldd-simple-section class="section" style={style}>
+      <nldd-title slot="header" size={5}>
         <h2 class="section-head">
           {icon && <nldd-icon class="card-icon" name={icon}></nldd-icon>}
-          {title}
+          <span>{title}</span>
         </h2>
-        <nldd-divider></nldd-divider>
-        <Fragment set:html={body} />
-      </Fragment>
-    )}
-  </section>
+      </nldd-title>
+      <Fragment set:html={body} />
+    </nldd-simple-section>
+  )
 )}

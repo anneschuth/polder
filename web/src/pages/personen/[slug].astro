@@ -63,12 +63,15 @@ const ICON_ID = 'diploma';
       </h1>
       {career && <p class="career">{career}</p>}
       {externals.length > 0 && (
-        <p>
-          {externals.map((e, i) => (
-            <>
-              {i > 0 && ' · '}
-              <a href={e.url} rel="external">{e.label}</a>
-            </>
+        <p class="badge-row">
+          {externals.map((e) => (
+            <nldd-link
+              href={e.url}
+              text={e.label}
+              size="sm"
+              end-icon="external-link"
+              target="_blank"
+            ></nldd-link>
           ))}
         </p>
       )}
@@ -77,20 +80,26 @@ const ICON_ID = 'diploma';
     <div class="sections">
       {current.length > 0 && (
         <Card title="Huidige functie(s)" icon={ICON_USER}>
-          <ul>
+          <nldd-list>
             {current.map((m) => {
               const org = data.orgById.get(m.organization_id);
               const post = m.post_id ? data.postById.get(m.post_id) : null;
               return (
-                <li>
-                  <strong>{m.role ?? post?.label ?? 'Mandaat'}</strong>
-                  {org && <> · <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
-                  {post && <> · <a href={postUrl(post.slug, base)}>{post.label}</a></>}
-                  {m.start_date && <span class="muted"> · sinds {m.start_date}</span>}
-                </li>
+                <nldd-list-item>
+                  <nldd-title-cell size={5}>
+                    <span>
+                      <strong>{m.role ?? post?.label ?? 'Mandaat'}</strong>
+                      {org && <> · <a href={orgUrl(org, base)}>{currentName(org)}</a></>}
+                      {post && <> · <a href={postUrl(post.slug, base)}>{post.label}</a></>}
+                    </span>
+                    {m.start_date && (
+                      <span slot="supporting-text">sinds {m.start_date}</span>
+                    )}
+                  </nldd-title-cell>
+                </nldd-list-item>
               );
             })}
-          </ul>
+          </nldd-list>
         </Card>
       )}
 

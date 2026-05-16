@@ -6,8 +6,8 @@ const fmt = (n: number) => n.toLocaleString('nl-NL');
 const rows = bestuurslagen();
 const maxCurrent = Math.max(1, ...rows.map((r) => r.currentMandates));
 const maxTotal = Math.max(1, ...rows.map((r) => r.totalMandates));
-const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
-const barColorAlt = 'var(--primitives-color-donkerblauw-500, #1d3a6d)';
+const barColor = 'var(--primitives-color-lintblauw-500)';
+const barColorAlt = 'var(--primitives-color-donkerblauw-500)';
 ---
 <Base title="Bestuurslagen" description="Organisaties en mandaten per organisatie-type">
   <article class="stack">

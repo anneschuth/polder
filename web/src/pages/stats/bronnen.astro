@@ -5,7 +5,7 @@ import { recordsPerSource } from '~/lib/stats';
 const fmt = (n: number) => n.toLocaleString('nl-NL');
 const rows = recordsPerSource();
 const max = Math.max(1, ...rows.map((r) => r.records));
-const barColor = 'var(--primitives-color-lintblauw-500, #0e4a8a)';
+const barColor = 'var(--primitives-color-lintblauw-500)';
 
 const SOURCE_URLS: Record<string, string> = {
   roo: 'https://organisaties.overheid.nl/',
