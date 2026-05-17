@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import date
+from datetime import UTC, date, datetime, timedelta
+from email.utils import format_datetime
 from pathlib import Path
 
 import httpx
@@ -99,9 +100,34 @@ def test_build_query_includes_product_area_and_term() -> None:
     assert "dt.modified" not in cql
 
 
-def test_build_query_with_since_appends_modified_filter() -> None:
+def test_build_query_with_since_filters_on_available() -> None:
     cql = ks.build_query("benoeming", since=date(2026, 1, 1))
-    assert "dt.modified>=2026-01-01" in cql
+    assert "dt.available>=2026-01-01" in cql
+    # Historische backfill mag niet op de herindexerings-datum filteren.
+    assert "dt.modified" not in cql
+    assert "sortBy dt.available/sort.ascending" in cql
+
+
+def test_build_query_with_until_appends_upper_bound() -> None:
+    cql = ks.build_query("benoeming", until=date(2017, 12, 31))
+    assert "dt.available<=2017-12-31" in cql
+
+
+def test_build_query_closed_window_for_single_year() -> None:
+    cql = ks.build_query(
+        "benoeming",
+        since=date(2016, 1, 1),
+        until=date(2016, 12, 31),
+    )
+    assert "dt.available>=2016-01-01" in cql
+    assert "dt.available<=2016-12-31" in cql
+    assert cql.endswith("sortBy dt.available/sort.ascending")
+
+
+def test_build_query_no_dates_omits_sort_and_window() -> None:
+    cql = ks.build_query("benoeming")
+    assert "dt.available" not in cql
+    assert "sortBy" not in cql
 
 
 # ---------------------------------------------------------------------------
@@ -236,3 +262,140 @@ def test_cli_dry_run_via_main(
     assert rc == 0
     err = capsys.readouterr().err
     assert "1 XML-records" in err
+
+
+# ---------------------------------------------------------------------------
+# Retry-After parsing
+# ---------------------------------------------------------------------------
+
+
+def test_parse_retry_after_delta_seconds() -> None:
+    assert ks._parse_retry_after("30") == 30.0
+
+
+def test_parse_retry_after_http_date_future() -> None:
+    when = datetime.now(UTC) + timedelta(seconds=45)
+    wait = ks._parse_retry_after(format_datetime(when))
+    # Iets speling voor de seconden die verstrijken tijdens de test.
+    assert wait is not None and 40.0 <= wait <= 46.0
+
+
+def test_parse_retry_after_past_date_clamps_to_zero() -> None:
+    when = datetime.now(UTC) - timedelta(seconds=120)
+    assert ks._parse_retry_after(format_datetime(when)) == 0.0
+
+
+def test_parse_retry_after_missing_or_garbage() -> None:
+    assert ks._parse_retry_after(None) is None
+    assert ks._parse_retry_after("") is None
+    assert ks._parse_retry_after("binnenkort") is None
+
+
+# ---------------------------------------------------------------------------
+# Adaptieve rate-limiter (AIMD)
+# ---------------------------------------------------------------------------
+
+
+def test_rate_limiter_backs_off_on_throttle() -> None:
+    lim = ks._AdaptiveRateLimiter(delay=0.5)
+    lim.on_throttled()
+    assert lim.delay == pytest.approx(1.0)
+    lim.on_throttled()
+    assert lim.delay == pytest.approx(2.0)
+
+
+def test_rate_limiter_decays_on_success() -> None:
+    lim = ks._AdaptiveRateLimiter(delay=1.0)
+    lim.on_success()
+    assert lim.delay == pytest.approx(0.9)
+
+
+def test_rate_limiter_respects_bounds() -> None:
+    lim = ks._AdaptiveRateLimiter(delay=ks.RATE_MAX_DELAY)
+    lim.on_throttled()
+    assert lim.delay == ks.RATE_MAX_DELAY  # plafond
+    lim = ks._AdaptiveRateLimiter(delay=ks.RATE_MIN_DELAY)
+    for _ in range(20):
+        lim.on_success()
+    assert lim.delay == ks.RATE_MIN_DELAY  # bodem
+
+
+# ---------------------------------------------------------------------------
+# search() onder throttling: 429 → Retry-After → alsnog ophalen, niets verliezen
+# ---------------------------------------------------------------------------
+
+
+def _seq_client(steps: list[httpx.Response | bytes]) -> httpx.Client:
+    """MockTransport die een vaste reeks responses serveert.
+
+    `bytes` wordt een 200 met die body; een `httpx.Response` gaat ongewijzigd
+    door (zo injecteer je een 429 met Retry-After).
+    """
+    iterator = iter(steps)
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        try:
+            step = next(iterator)
+        except StopIteration:
+            return httpx.Response(200, content=EMPTY_FEED)
+        if isinstance(step, httpx.Response):
+            return step
+        return httpx.Response(200, content=step, headers={"content-type": "application/xml"})
+
+    return httpx.Client(transport=httpx.MockTransport(handler))
+
+
+def test_search_retries_after_429_and_keeps_record(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Een 429 met Retry-After mag het record niet laten vallen.
+
+    De besluit-XML moet alsnog op disk landen, en de fetcher moet exact zo
+    lang wachten als de Retry-After-header voorschrijft.
+    """
+    slept: list[float] = []
+    monkeypatch.setattr(ks.time, "sleep", lambda s: slept.append(s))
+
+    besluit = b'<?xml version="1.0"?><officiele-publicatie>ok</officiele-publicatie>'
+    # SRU-feed heeft 2 records. Per record: eerst een 429 (Retry-After: 7),
+    # dan de echte besluit-XML.
+    throttled = httpx.Response(429, headers={"Retry-After": "7"})
+    client = _seq_client([SRU_FEED, throttled, besluit, throttled, besluit])
+
+    paths = ks.search("benoeming", max_records=10, cache_dir=tmp_path, client=client)
+
+    assert len(paths) == 2
+    for p in paths:
+        assert p.exists()
+        assert p.read_bytes() == besluit
+    # Retry-After=7 moet exact gehonoreerd zijn, niet een blinde 2**attempt.
+    assert 7.0 in slept
+    # Geen failures.log: niets is definitief verloren.
+    assert not (tmp_path / "failures.log").exists()
+
+
+def test_search_logs_failure_after_exhausting_attempts(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Aanhoudende 429 → na MAX_ATTEMPTS naar failures.log, niet stil weg."""
+    monkeypatch.setattr(ks.time, "sleep", lambda s: None)
+
+    always_429 = httpx.Response(429, headers={"Retry-After": "1"})
+    # SRU-feed (2 records) + voor elk record MAX_ATTEMPTS keer 429.
+    steps: list[httpx.Response | bytes] = [SRU_FEED]
+    steps += [always_429] * (ks.MAX_ATTEMPTS * 2)
+    client = _seq_client(steps)
+
+    paths = ks.search("benoeming", max_records=10, cache_dir=tmp_path, client=client)
+
+    # Paden komen terug (de SRU-sidecar is wel geschreven) maar de besluit-XML
+    # ontbreekt, en beide records staan in failures.log.
+    assert len(paths) == 2
+    for p in paths:
+        assert not p.exists()
+    failures = tmp_path / "failures.log"
+    assert failures.exists()
+    lines = failures.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 2
+    assert "stcrt-2026-12345" in lines[0]
+    assert "429" in lines[0]
