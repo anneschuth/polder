@@ -124,17 +124,38 @@ NAMESPACES = {
 # ---------------------------------------------------------------------------
 
 
-def build_query(query: str, *, since: date | None = None) -> str:
-    """Bouw een CQL-query op basis van een vrije zoekterm en optionele datum-ondergrens.
+# Datum-window filtert op `dt.available` (publicatiedatum), niet op
+# `dt.modified`. `dt.modified` is de herindexerings-datum in de repository:
+# een KB uit 2015 dat in 2024 opnieuw geïndexeerd werd valt buiten een
+# `dt.modified`-window van 2015. Voor een historische backfill wil je de
+# datum waarop het document is uitgegeven. SRU CQL ondersteunt `<=`/`>=`
+# op datumvelden (zie HandleidingSRU2.0, voorbeeld dt.modified-range).
+DATE_FIELD = "dt.available"
 
-    De gebruiker geeft typisch een term als ``benoeming Secretaris-Generaal``. We
-    plakken er een ``c.product-area==officielepublicaties`` filter aan vast en, als
-    `since` is gezet, ``dt.modified>=YYYY-MM-DD``.
+
+def build_query(
+    query: str,
+    *,
+    since: date | None = None,
+    until: date | None = None,
+) -> str:
+    """Bouw een CQL-query uit een vrije zoekterm en optioneel datum-window.
+
+    De gebruiker geeft typisch een term als ``benoeming Secretaris-Generaal``.
+    We plakken er een ``c.product-area==officielepublicaties`` filter aan
+    vast en, als `since`/`until` zijn gezet, een gesloten ``dt.available``-
+    interval. Het resultaat wordt oplopend op publicatiedatum gesorteerd zodat
+    paginering deterministisch is over een grote backfill.
     """
     parts = [f"c.product-area==officielepublicaties AND ({query.strip()})"]
     if since is not None:
-        parts.append(f"dt.modified>={since.isoformat()}")
-    return " AND ".join(parts)
+        parts.append(f"{DATE_FIELD}>={since.isoformat()}")
+    if until is not None:
+        parts.append(f"{DATE_FIELD}<={until.isoformat()}")
+    cql = " AND ".join(parts)
+    if since is not None or until is not None:
+        cql += f" sortBy {DATE_FIELD}/sort.ascending"
+    return cql
 
 
 # ---------------------------------------------------------------------------
@@ -352,6 +373,7 @@ def search(
     *,
     max_records: int = 100,
     since: date | None = None,
+    until: date | None = None,
     cache_dir: Path | None = None,
     record_schema: str = DEFAULT_RECORD_SCHEMA,
     timeout: float = HTTP_TIMEOUT,
@@ -363,7 +385,9 @@ def search(
     Args:
         query: vrije zoekterm (CQL-fragment), bijv. ``benoeming Secretaris-Generaal``.
         max_records: harde bovengrens op het aantal documenten dat we ophalen.
-        since: filter op ``dt.modified``; alleen records vanaf deze datum.
+        since: ondergrens op ``dt.available`` (publicatiedatum).
+        until: bovengrens op ``dt.available``; samen met ``since`` een gesloten
+            jaar/periode-window voor gerichte historische backfill.
         cache_dir: doel-directory; default ``_cache/staatscourant``.
         record_schema: SRU recordSchema (``gzd`` voor metadata).
         client: optionele ``httpx.Client`` voor hergebruik / tests.
@@ -372,7 +396,7 @@ def search(
     Returnt een lijst paden van geschreven (of, in dry-run, voorgestelde) XML-files.
     """
     base = cache_dir or CACHE_DIR
-    cql = build_query(query, since=since)
+    cql = build_query(query, since=since, until=until)
 
     written: list[Path] = []
     start_record = 1
@@ -491,7 +515,13 @@ def _build_parser() -> argparse.ArgumentParser:
         "--since",
         type=_parse_since,
         default=None,
-        help="Ondergrens op dt.modified (ISO-date), bijv. 2026-01-01.",
+        help="Ondergrens op dt.available/publicatiedatum (ISO-date), bijv. 2015-01-01.",
+    )
+    parser.add_argument(
+        "--until",
+        type=_parse_since,
+        default=None,
+        help="Bovengrens op dt.available/publicatiedatum (ISO-date), bijv. 2017-12-31.",
     )
     parser.add_argument(
         "--limit",
@@ -532,6 +562,7 @@ def main(argv: list[str] | None = None) -> int:
             args.query,
             max_records=args.limit,
             since=args.since,
+            until=args.until,
             cache_dir=args.cache,
             dry_run=args.dry_run,
         )

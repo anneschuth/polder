@@ -100,9 +100,34 @@ def test_build_query_includes_product_area_and_term() -> None:
     assert "dt.modified" not in cql
 
 
-def test_build_query_with_since_appends_modified_filter() -> None:
+def test_build_query_with_since_filters_on_available() -> None:
     cql = ks.build_query("benoeming", since=date(2026, 1, 1))
-    assert "dt.modified>=2026-01-01" in cql
+    assert "dt.available>=2026-01-01" in cql
+    # Historische backfill mag niet op de herindexerings-datum filteren.
+    assert "dt.modified" not in cql
+    assert "sortBy dt.available/sort.ascending" in cql
+
+
+def test_build_query_with_until_appends_upper_bound() -> None:
+    cql = ks.build_query("benoeming", until=date(2017, 12, 31))
+    assert "dt.available<=2017-12-31" in cql
+
+
+def test_build_query_closed_window_for_single_year() -> None:
+    cql = ks.build_query(
+        "benoeming",
+        since=date(2016, 1, 1),
+        until=date(2016, 12, 31),
+    )
+    assert "dt.available>=2016-01-01" in cql
+    assert "dt.available<=2016-12-31" in cql
+    assert cql.endswith("sortBy dt.available/sort.ascending")
+
+
+def test_build_query_no_dates_omits_sort_and_window() -> None:
+    cql = ks.build_query("benoeming")
+    assert "dt.available" not in cql
+    assert "sortBy" not in cql
 
 
 # ---------------------------------------------------------------------------
