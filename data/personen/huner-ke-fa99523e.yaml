@@ -1,0 +1,49 @@
+id: person:huner-ke-fa99523e
+name:
+  full: K.E. (Kirsten) Hüner MSc
+  family: Hüner
+  given: Kirsten
+  initials: K.E.
+mandaten:
+- id: mandate-post-hoofd-begroting-fez-min-szw-2021-03-15
+  organization_id: org:onderdeel-begroting-fez-min-szw
+  post_id: post:hoofd-begroting-fez-min-szw
+  role: Hoofd Begroting, tevens plaatsvervangend directeur, directie Financieel Economische
+    Zaken, ministerie van Sociale Zaken en Werkgelegenheid
+  start_date: '2021-03-15'
+  end_date: '2025-09-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/28/kirsten-huner-hoofd-begroting-bij-szw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-01-28
+  confidence: 0.92
+- id: mandate-post-directeur-fez-min-ez-2025-09-01
+  organization_id: org:onderdeel-fez-min-ez
+  post_id: post:directeur-fez-min-ez
+  role: Directeur Financieel Economische Zaken, ministerie van Economische Zaken
+  start_date: '2025-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/17/kirsten-huner-directeur-financieel-economische-zaken-bij-ez
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-06-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/28/kirsten-huner-hoofd-begroting-bij-szw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/17/kirsten-huner-directeur-financieel-economische-zaken-bij-ez
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

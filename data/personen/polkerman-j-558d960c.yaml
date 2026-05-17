@@ -1,0 +1,28 @@
+id: person:polkerman-j-558d960c
+name:
+  full: Jan Polkerman
+  family: Polkerman
+  given: Jan
+mandaten:
+- id: mandate-post-algemeen-directeur-iv-belastingdienst-min-fin-2025-03-01
+  organization_id: org:onderdeel-informatie-voorziening-belastingdienst-min-fin
+  post_id: post:algemeen-directeur-iv-belastingdienst-min-fin
+  role: Algemeen directeur van de directie Informatievoorziening van de Belastingdienst
+    bij het ministerie van Financiën
+  start_date: '2025-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/28/jan-polkerman-algemeen-directeur-directie-informatievoorziening-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-02-28
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/02/28/jan-polkerman-algemeen-directeur-directie-informatievoorziening-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

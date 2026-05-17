@@ -6,7 +6,7 @@ name:
   initials: J.P.M.
 mandaten:
 - id: mandate-post-programma-directeur-generaal-nafase-covid-19-2022-09-05
-  organization_id: org:abdtopconsult
+  organization_id: org:onderdeel-abdtopconsult
   post_id: post:programma-directeur-generaal-nafase-covid-19
   role: Programma-directeur-generaal Nafase COVID-19 (departement overstijgend, vanuit
     ABDTOPConsult)
@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-09-02
   confidence: 0.87
+- id: mandate-post-consultant-abdtopconsult-min-bzk-2019-09-01
+  organization_id: org:onderdeel-abdtopconsult
+  post_id: post:programma-directeur-generaal-nafase-covid-19
+  role: Consultant ABDTOPConsult, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2019-09-01'
+  end_date: '2022-09-05'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/04/05/jose-lazeroms-consultant-bij-abdtopconsult
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-04-05
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/09/02/jose-lazeroms-programma-directeur-generaal-nafase-covid-19

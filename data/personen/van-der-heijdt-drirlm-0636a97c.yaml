@@ -1,0 +1,27 @@
+id: person:van-der-heijdt-drirlm-0636a97c
+name:
+  full: Dr.ir. L.M. van der Heijdt
+  family: van der Heijdt
+  initials: D.R.I.R.L.M.
+mandaten:
+- id: mandate-post-afdelingshoofd-nucleaire-installaties-en-transport-anvs-2020-03-01
+  organization_id: org:onderdeel-nucleaire-installaties-en-transport-anvs
+  post_id: post:afdelingshoofd-nucleaire-installaties-en-transport-anvs
+  role: Afdelingshoofd Nucleaire Installaties en Transport, Autoriteit Nucleaire Veiligheid en Stralingsbescherming
+  start_date: '2020-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/02/bertie-van-der-heijdt-afdelingshoofd-nucleaire-installaties-en-transport-anvs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-03-02
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/02/bertie-van-der-heijdt-afdelingshoofd-nucleaire-installaties-en-transport-anvs
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

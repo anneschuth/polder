@@ -1,0 +1,26 @@
+id: person:van-dijk-a-11017258
+name:
+  full: Anneke van Dijk
+  family: Anneke
+mandaten:
+- id: mandate-post-secretaris-generaal-min-jenv-2024-09-01
+  organization_id: org:min-jenv
+  post_id: post:secretaris-generaal-min-jenv
+  role: Secretaris-generaal, ministerie van Justitie en Veiligheid
+  start_date: '2024-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/12/anneke-van-dijk-secretaris-generaal-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-07-12
+  confidence: 0.93
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/12/anneke-van-dijk-secretaris-generaal-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

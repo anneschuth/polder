@@ -1,0 +1,27 @@
+id: person:ter-haar-b-7b5a458f
+name:
+  full: Bernard ter Haar
+  family: Bernard
+mandaten:
+- id: mandate-post-consultant-abdtopconsult-min-bzk-2020-07-01
+  organization_id: org:onderdeel-abdtopconsult
+  post_id: post:programma-directeur-generaal-nafase-covid-19
+  role: Consultant bij ABDTOPConsult bij het ministerie van Binnenlandse Zaken en
+    Koninkrijksrelaties
+  start_date: '2020-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/19/bernard-ter-haar-consultant-bij-abdtopconsult
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-19
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/19/bernard-ter-haar-consultant-bij-abdtopconsult
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

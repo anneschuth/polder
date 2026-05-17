@@ -1,0 +1,26 @@
+id: person:ten-cate-b-c6e6979c
+name:
+  full: Birgit ten Cate
+  family: Birgit
+mandaten:
+- id: mandate-post-hoofd-afd-begrotingszaken-hdfez-min-fin-2020-02-01
+  organization_id: org:onderdeel-afdeling-begrotingszaken-hdfez-min-fin
+  post_id: post:hoofd-afd-begrotingszaken-hdfez-min-fin
+  role: Hoofd afdeling Begrotingszaken bij het ministerie van Financiën
+  start_date: '2020-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/14/birgit-ten-cate-hoofd-begrotingszaken-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-02-14
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/14/birgit-ten-cate-hoofd-begrotingszaken-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

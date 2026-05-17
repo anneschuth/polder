@@ -1,0 +1,45 @@
+id: person:wijsman-c-c96d5bbc
+name:
+  full: C. (Celine) Wijsman
+  family: Wijsman
+  given: Celine
+  initials: C.
+mandaten:
+- id: mandate-post-hoofd-veiligheid-koninkrijksrelaties-dg-kr-min-bzk-2022-10-24
+  organization_id: org:onderdeel-afdeling-veiligheid-koninkrijksrelaties-dg-kr-min-bzk
+  post_id: post:hoofd-veiligheid-koninkrijksrelaties-dg-kr-min-bzk
+  role: Hoofd Veiligheid Koninkrijksrelaties, directoraat-generaal Koninkrijksrelaties,
+    ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-10-24'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/14/celine-wijsman-hoofd-veiligheid-koninkrijksrelaties-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-10-14
+  confidence: 0.92
+- id: mandate-post-afdelingshoofd-veiligheid-min-bzk-2022-10-24
+  organization_id: org:onderdeel-afdeling-veiligheid-min-bzk
+  post_id: post:afdelingshoofd-veiligheid-min-bzk
+  role: Afdelingshoofd Veiligheid, directoraat-generaal Koninkrijksrelaties, ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-10-24'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/14/celine-wijsman-hoofd-veiligheid-koninkrijksrelaties-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-10-14
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/14/celine-wijsman-hoofd-veiligheid-koninkrijksrelaties-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

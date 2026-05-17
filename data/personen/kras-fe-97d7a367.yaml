@@ -1,0 +1,27 @@
+id: person:kras-fe-97d7a367
+name:
+  full: F.E. (Frédéric) Kras
+  family: kras
+  initials: F.E.
+mandaten:
+- id: mandate-post-hoofd-afdeling-control-fez-min-bzk-2022-12-01
+  organization_id: org:onderdeel-afdeling-control-directie-fez-min-bzk-vro
+  post_id: post:hoofd-afdeling-control-fez-min-bzk
+  role: Hoofd afdeling Control bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/05/frederic-kras-hoofd-afdeling-control-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-05
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/05/frederic-kras-hoofd-afdeling-control-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

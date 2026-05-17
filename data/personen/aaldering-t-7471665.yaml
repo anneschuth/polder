@@ -5,13 +5,16 @@ name:
   given: Theo
   initials: T.
 mandaten:
-- id: mandate-ori-4a28fde46b937254
+- id: mandate-ori-2b6c070688c736b6
   organization_id: org:gemeente-lingewaard
   post_id: post:raadslid-gemeente-lingewaard
   role: Raadslid gemeente Lingewaard
-  start_date: '2026-05-13'
+  start_date: '2026-05-09'
   end_date: null
   sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5113806
+    retrieved: '2026-05-09'
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7770417
     retrieved: '2026-05-13'
@@ -19,3 +22,6 @@ sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7471665
   retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/5113804
+  retrieved: '2026-05-09'

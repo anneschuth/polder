@@ -1,0 +1,34 @@
+id: org:agentschap-rivm-min-vws
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-vws
+names:
+- value: Rijksinstituut voor Volksgezondheid en Milieu (RIVM)
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/isabel-arends-directeur-generaal-rivm-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: roo
+  url: https://organisaties.overheid.nl/66101/rivm
+  retrieved: '2026-05-16'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-09'
+  fields:
+  - oin
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/01/28/anne-ruth-de-vos-centrumhoofd-coordinatie-voor-preventieprogrammas-en-opschaling-bij-het-rivm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+identifiers:
+  oin: '00000004000000062000'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10123
+  roo_id: '66101'
+  owms: http://standaarden.overheid.nl/owms/terms/Rijksinstituut_voor_Volksgezondheid_en_Milieu
+  btw: NL821772302B01

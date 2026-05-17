@@ -1,0 +1,29 @@
+id: person:vreeman-dm-eef31813
+name:
+  full: D.M. (Daan) Vreeman LLM
+  family: Vreeman
+  given: Daan
+  initials: D.M.
+mandaten:
+- id: mandate-post-hoofd-internationale-aangelegenheden-dgfz-min-fin-2021-08-01
+  organization_id: org:onderdeel-afdeling-internationale-aangelegenheden-dgfz-min-fin
+  post_id: post:hoofd-internationale-aangelegenheden-dgfz-min-fin
+  role: Hoofd Internationale Aangelegenheden, directoraat-generaal voor Fiscale Zaken,
+    ministerie van Financiën
+  start_date: '2021-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/29/daan-vreeman-hoofd-internationale-aangelegenheden-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-29
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/29/daan-vreeman-hoofd-internationale-aangelegenheden-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

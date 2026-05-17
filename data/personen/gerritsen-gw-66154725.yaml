@@ -1,0 +1,50 @@
+id: person:gerritsen-gw-66154725
+name:
+  full: Drs. G.W. (Gerrit-Wim) Gerritsen
+  family: Gerritsen
+  given: Gerrit-Wim
+  initials: G.W.
+mandaten:
+- id: mandate-post-directeur-financien-bedrijfsvoering-audit-concerncontrol-dji-min-jenv-2019-09-15
+  organization_id: org:agentschap-dji
+  post_id: post:directeur-financien-bedrijfsvoering-audit-concerncontrol-dji-min-jenv
+  role: Directeur Financiën en Bedrijfsvoering / Audit en Concerncontrol, Dienst Justitiële
+    Inrichtingen, ministerie van Justitie en Veiligheid
+  start_date: '2019-09-15'
+  end_date: '2025-04-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/05/gerrit-wim-gerritsen-directeur-financien--bedrijfsvoering---audit--control-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-08-05
+  confidence: 0.92
+- id: mandate-post-directeur-bedrijfsvoering-ind-min-jenv-2025-04-01
+  organization_id: org:onderdeel-directie-bedrijfsvoering-ind-min-jenv
+  post_id: post:directeur-bedrijfsvoering-ai-ind-min-jenv
+  role: Directeur Bedrijfsvoering, Immigratie en Naturalisatiedienst, ministerie van
+    Justitie en Veiligheid
+  start_date: '2025-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/14/gerrit-wim-gerritsen-directeur-bedrijfsvoering-bij-de-ind
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-01-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/08/05/gerrit-wim-gerritsen-directeur-financien--bedrijfsvoering---audit--control-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/01/14/gerrit-wim-gerritsen-directeur-bedrijfsvoering-bij-de-ind
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

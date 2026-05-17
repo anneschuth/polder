@@ -1,0 +1,29 @@
+id: person:koeman-j-90093d83
+name:
+  full: Drs. J. (Jan) Koeman MA
+  family: Koeman
+  given: Jan
+  initials: J.
+mandaten:
+- id: mandate-post-directeur-rvdk-min-jenv-2020-09-01
+  organization_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+  post_id: post:directeur-raad-voor-de-kinderbescherming
+  role: Directeur bij de Raad voor de Kinderbescherming bij het ministerie van Justitie
+    en Veiligheid
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/10/jan-koeman-directeur-raad-voor-de-kinderbescherming
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-10
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/10/jan-koeman-directeur-raad-voor-de-kinderbescherming
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

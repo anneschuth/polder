@@ -15,6 +15,7 @@ Default is dry-run; pas met `--apply` echt aan.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Annotated
 
@@ -92,14 +93,33 @@ def _scan_references(data_dir: Path, record_id: str) -> dict[str, list[Path]]:
 
 
 def _apply_string_remap(paths: list[Path], old: str, new: str) -> int:
-    """Vervang alle voorkomens van `old` door `new` in de gegeven paden.
+    """Vervang `old` door `new` in de gegeven paden, maar alléén als
+    volledig id-token.
+
+    Een polder-id (`org:...`, `post:...`, `person:...`) mag nooit als
+    *prefix* van een ander id vervangen worden: `org:onderdeel-sg-min-ezk`
+    is een prefix van `org:onderdeel-sg-min-ezk-min-kgg`, en een naïeve
+    ``str.replace`` zou dat tweede, ongerelateerde id corrumperen tot
+    ``...-min-ezk-min-kgg``. We matchen daarom alleen waar `old` niet
+    direct gevolgd wordt door een teken dat het id zou *verlengen*: dat
+    zijn uitsluitend slug-vervolgtekens (alfanumeriek, ``_``, ``-``). Een
+    volgende ``:``/``.``/``/``/quote/komma/newline begrenst het id juist
+    en moet wél vervangen worden (id als YAML-waarde, in een flow-list,
+    aan regeleinde, of geciteerd in een bron-URL-vrijveld). Voorafgaand
+    teken hoeft niet getoetst: ids zijn links begrensd door hun ``org:``/
+    ``post:``/``person:`` prefix die zelf in `old` zit.
+
+    `new` wordt via een lambda doorgegeven zodat backslash- of
+    group-replacement-sequenties in een id niet als regex-replacement-
+    syntax worden geinterpreteerd.
 
     Returns het aantal bestanden dat daadwerkelijk is gewijzigd.
     """
+    pattern = re.compile(re.escape(old) + r"(?![\w\-])")
     changed = 0
     for path in paths:
         text = path.read_text(encoding="utf-8")
-        new_text = text.replace(old, new)
+        new_text = pattern.sub(lambda _m: new, text)
         if new_text != text:
             path.write_text(new_text, encoding="utf-8")
             changed += 1
@@ -230,7 +250,27 @@ def _merge_generic(
     changed = _apply_string_remap(remap_paths, dup_id, canonical_id)
     typer.echo(f"  remap'd in {changed} files")
 
-    # 3. Verwijder het dup-file.
+    # 3. Veiligheidscontrole: het dup-file mag pas weg als er nul
+    #    verwijzingen meer naar `dup_id` bestaan buiten het dup-file zelf.
+    #    Anders zou `unlink()` dangling pointers achterlaten (bv. omdat de
+    #    token-grens-regex een referentie niet matchte). Eerder verwijderde
+    #    deze flow het bestand onvoorwaardelijk.
+    leftover = _scan_references(data_dir, dup_id)
+    dangling = [
+        p for paths in leftover.values() for p in paths if p.resolve() != dup_path.resolve()
+    ]
+    if dangling:
+        typer.echo(
+            f"merge: ABORT — na remap resten er nog {len(dangling)} "
+            f"verwijzing(en) naar {dup_id!r}; dup-file NIET verwijderd "
+            "(geen dangling pointers achterlaten):",
+            err=True,
+        )
+        for p in dangling[:10]:
+            typer.echo(f"  - {p.relative_to(data_dir)}", err=True)
+        raise typer.Exit(code=1)
+
+    # 4. Verwijder het dup-file.
     dup_path.unlink()
     typer.echo(f"  deleted: {dup_path.relative_to(data_dir)}")
 

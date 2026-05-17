@@ -1,0 +1,29 @@
+id: person:smeels-m-aea0d178
+name:
+  full: Drs M. (Maaike) Smeels MCDM
+  family: Smeels
+  given: Maaike
+  initials: M.
+mandaten:
+- id: mandate-post-directeur-raad-voor-de-kinderbescherming-min-jenv-2020-09-01
+  organization_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+  post_id: post:directeur-raad-voor-de-kinderbescherming-min-jenv
+  role: Directeur bij de Raad voor de Kinderbescherming, ministerie van Justitie en
+    Veiligheid
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/10/maaike-smeels-directeur-raad-voor-de-kinderbescherming
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-10
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/10/maaike-smeels-directeur-raad-voor-de-kinderbescherming
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

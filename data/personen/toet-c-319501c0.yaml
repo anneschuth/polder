@@ -1,0 +1,43 @@
+id: person:toet-c-319501c0
+name:
+  full: Claudia Toet
+  family: Claudia
+mandaten:
+- id: mandate-post-directeur-belastingdienst-caribisch-nederland-min-fin-2023-09-01
+  organization_id: org:onderdeel-directie-particulieren-belastingdienst-min-fin
+  post_id: post:directeur-belastingdienst-caribisch-nederland-min-fin
+  role: Directeur Belastingdienst Caribisch Nederland, Belastingdienst, ministerie
+    van Financiën
+  start_date: '2023-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/claudia-toet-directeur-belastingdienst-caribisch-nederland-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-03-31
+  confidence: 0.92
+- id: mandate-post-directeur-bcn-belastingdienst-min-fin-2023-09-01
+  organization_id: org:onderdeel-bcn-belastingdienst-min-fin
+  post_id: post:directeur-bcn-belastingdienst-min-fin
+  role: Directeur Belastingdienst Caribisch Nederland bij de Belastingdienst, ministerie
+    van Financiën
+  start_date: '2023-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/claudia-toet-directeur-belastingdienst-caribisch-nederland-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-03-31
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/claudia-toet-directeur-belastingdienst-caribisch-nederland-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

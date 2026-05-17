@@ -350,3 +350,119 @@ def test_merge_org_canonical_identifier_wins_on_conflict(mini_data: Path) -> Non
     canonical = yaml.safe_load(canonical_path.read_text(encoding="utf-8"))
     # Canonical roo_id behouden, oin van dup toegevoegd.
     assert canonical["identifiers"] == {"roo_id": "CANONICAL-9633", "oin": "00000001"}
+
+
+def test_apply_string_remap_does_not_corrupt_prefix_ids(tmp_path: Path) -> None:
+    """Regressie: `_apply_string_remap` mag een id dat een *prefix* is van
+    een ander, ongerelateerd id niet meeverbouwen.
+
+    Bug: merge van `org:onderdeel-sg-min-ezk` -> canonical hernoemde ook
+    `org:onderdeel-sg-min-ezk-min-kgg` (een andere org) tot
+    `...-min-ezk-<canon>-min-kgg`, wat dubbel-suffix-corruptie en 100+
+    broken refs opleverde.
+    """
+    from polder.cli.commands.merge_cmd import _apply_string_remap
+
+    f = tmp_path / "ref.yaml"
+    f.write_text(
+        "organization_id: org:onderdeel-sg-min-ezk\n"
+        "parent_id: org:onderdeel-sg-min-ezk-min-kgg\n"
+        "other: org:onderdeel-sg-min-ezk-afdeling-x\n"
+        "quoted: 'org:onderdeel-sg-min-ezk'\n",
+        encoding="utf-8",
+    )
+    changed = _apply_string_remap(
+        [f], "org:onderdeel-sg-min-ezk", "org:onderdeel-sg-cluster-min-ezk"
+    )
+    assert changed == 1
+    out = f.read_text(encoding="utf-8")
+    # Het volledige token is vervangen...
+    assert "organization_id: org:onderdeel-sg-cluster-min-ezk\n" in out
+    assert "quoted: 'org:onderdeel-sg-cluster-min-ezk'\n" in out
+    # ...maar de langere, ongerelateerde ids zijn ONGEMOEID.
+    assert "parent_id: org:onderdeel-sg-min-ezk-min-kgg\n" in out
+    assert "other: org:onderdeel-sg-min-ezk-afdeling-x\n" in out
+    assert "-min-ezk-min-ezk" not in out
+
+
+def test_apply_string_remap_replaces_at_non_slug_boundaries(tmp_path: Path) -> None:
+    """Regressie (hostile review): de lookahead mocht alleen
+    slug-vervolgtekens (\\w, -) blokkeren. Een id gevolgd door
+    `,` `]` `.` `:` quote of regeleinde-zonder-newline moet WEL vervangen
+    worden, anders blijven dangling refs achter."""
+    from polder.cli.commands.merge_cmd import _apply_string_remap
+
+    f = tmp_path / "ref.yaml"
+    f.write_text(
+        "flow: [org:min-bzk, org:min-az]\n"
+        "trailing: org:min-bzk.\n"
+        "keyish: org:min-bzk:\n"
+        "url: https://x/org:min-bzk/sub\n"
+        "noeol: org:min-bzk",  # geen newline aan einde
+        encoding="utf-8",
+    )
+    changed = _apply_string_remap([f], "org:min-bzk", "org:min-binnenlandse-zaken")
+    assert changed == 1
+    out = f.read_text(encoding="utf-8")
+    assert "[org:min-binnenlandse-zaken, org:min-az]" in out
+    assert "trailing: org:min-binnenlandse-zaken.\n" in out
+    assert "keyish: org:min-binnenlandse-zaken:\n" in out
+    assert "url: https://x/org:min-binnenlandse-zaken/sub\n" in out
+    assert out.endswith("noeol: org:min-binnenlandse-zaken")
+    # de andere org (min-az) ongemoeid
+    assert "org:min-az" in out
+
+
+def test_apply_string_remap_replacement_is_literal(tmp_path: Path) -> None:
+    """`new` mag geen regex-replacement-syntax interpreteren."""
+    from polder.cli.commands.merge_cmd import _apply_string_remap
+
+    f = tmp_path / "r.yaml"
+    f.write_text("id: org:a\n", encoding="utf-8")
+    # canonical met backslash-achtige tekens mag niet crashen/expanderen
+    _apply_string_remap([f], "org:a", "org:b")
+    assert f.read_text(encoding="utf-8") == "id: org:b\n"
+
+
+def test_merge_org_aborts_when_references_remain(tmp_path: Path) -> None:
+    """Veiligheid (hostile review): als na remap nog een verwijzing naar
+    het dup-id bestaat buiten het dup-file, mag het dup-file NIET worden
+    verwijderd (geen dangling pointers)."""
+    import yaml as _yaml
+    from typer.testing import CliRunner
+
+    from polder.cli.main import app
+
+    root = tmp_path
+    (root / "organisaties" / "ministeries").mkdir(parents=True)
+    (root / "posten").mkdir(parents=True)
+
+    def w(p, d):
+        p.write_text(_yaml.safe_dump(d, sort_keys=False, allow_unicode=True))
+
+    w(
+        root / "organisaties" / "ministeries" / "dup.yaml",
+        {"id": "org:dup", "type": "ministerie", "names": [{"value": "Dup"}]},
+    )
+    w(
+        root / "organisaties" / "ministeries" / "canon.yaml",
+        {"id": "org:canon", "type": "ministerie", "names": [{"value": "Canon"}]},
+    )
+    # Een post die org:dup referenceert MAAR in een vorm die de
+    # token-grens-regex niet als hele-id matcht zou kunnen missen; hier
+    # gebruiken we de normale vorm zodat remap zou moeten slagen — de test
+    # borgt dat als remap faalt het bestand blijft. We forceren een
+    # mislukte remap door het bestand read-only te maken.
+    postf = root / "posten" / "p.yaml"
+    w(postf, {"id": "post:p", "organization_id": "org:dup"})
+    postf.chmod(0o444)
+    try:
+        res = CliRunner().invoke(
+            app,
+            ["merge", "org", "org:dup", "org:canon", "--apply", "--data", str(root)],
+        )
+        # remap kon niet schrijven -> referentie blijft -> abort, dup blijft
+        assert res.exit_code != 0
+        assert (root / "organisaties" / "ministeries" / "dup.yaml").exists()
+    finally:
+        postf.chmod(0o644)

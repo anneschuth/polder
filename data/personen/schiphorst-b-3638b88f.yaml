@@ -1,0 +1,27 @@
+id: person:schiphorst-b-3638b88f
+name:
+  full: Bernd Klein Schiphorst
+  family: Schiphorst
+  given: Bernd Klein
+mandaten:
+- id: mandate-post-afdelingshoofd-controlling-accounting-rapportage-min-fin-2019-10-01
+  organization_id: org:onderdeel-controlling-accounting-rapportage-min-fin
+  post_id: post:afdelingshoofd-controlling-accounting-rapportage-min-fin
+  role: Hoofd afdeling Controlling, Accounting en Rapportage, ministerie van Financiën
+  start_date: '2019-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/25/bernd-klein-schiphorst-hoofd-controlling-accounting-en-rapportage-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-25
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/25/bernd-klein-schiphorst-hoofd-controlling-accounting-en-rapportage-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

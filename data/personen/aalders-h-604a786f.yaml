@@ -10,7 +10,7 @@ mandaten:
   post_id: post:directeur-dienstverlening-svb
   role: Directeur Dienstverlening, Sociale Verzekeringsbank
   start_date: '2020-07-01'
-  end_date: null
+  end_date: '2025-04-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/06/hugo-aalders-directeur-dienstverlening-bij-de-sociale-verzekeringsbank
@@ -19,6 +19,21 @@ mandaten:
     - applied_via:apply-staging
   appointment:
     decision: ABD-nieuwsbericht 2020-05-06
+  confidence: 0.92
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-den-haag-politie-2025-04-01
+  organization_id: org:onderdeel-eenheid-den-haag-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-den-haag-politie
+  role: Hoofd Bedrijfsvoering, Eenheid Den Haag, Politie
+  start_date: '2025-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/27/hugo-aalders-hoofd-bedrijfsvoering-eenheid-den-haag-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-27
   confidence: 0.92
 sources:
 - id: abd_nieuws

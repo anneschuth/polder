@@ -1,0 +1,15 @@
+id: org:onderdeel-cluster-bezwaar-en-beroep-wjz-min-vws
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-directie-wjz-min-vws
+names:
+- value: Cluster Bezwaar en Beroep
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/03/lenah-beening-hoofd-bezwaar-en-beroep-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

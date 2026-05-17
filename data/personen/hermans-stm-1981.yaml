@@ -111,11 +111,29 @@ mandaten:
   - id: wikidata
     url: https://www.wikidata.org/wiki/Q28860996#P39
     retrieved: '2026-05-13'
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2026-8178/
+    retrieved: '2026-05-13'
+    fields:
+    - applied_via:apply-staging
   end_date: null
+- id: mandate-ori-230031018c95d0b2
+  organization_id: org:gemeente-peel-en-maas
+  post_id: post:raadslid-gemeente-peel-en-maas
+  role: Raadslid gemeente Peel En Maas
+  start_date: '2026-05-09'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/5925034
+    retrieved: '2026-05-13'
 sources:
 - id: tk_odata
   url: https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Persoon(b8663b71-f92b-4d2b-a06b-f78dba168d98)
   retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q28860996
+  retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/5925032
   retrieved: '2026-05-13'

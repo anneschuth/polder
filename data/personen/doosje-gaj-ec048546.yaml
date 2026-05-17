@@ -1,0 +1,50 @@
+id: person:doosje-gaj-ec048546
+name:
+  full: Mr. G.A.J. (Arjen) Doosje
+  family: Doosje
+  given: Arjen
+  initials: G.A.J.
+mandaten:
+- id: mandate-post-programma-directeur-programma-dg-stikstof-min-lnv-2019-11-18
+  organization_id: org:onderdeel-programma-dg-stikstof-min-lnv
+  post_id: post:programma-directeur-programma-dg-stikstof-min-lnv
+  role: Programma-directeur in het programma-DG Stikstof, ministerie van Landbouw,
+    Natuur en Voedselkwaliteit
+  start_date: '2019-11-18'
+  end_date: '2024-05-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/11/arjen-doosje-programma-directeur-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-11
+  confidence: 0.88
+- id: mandate-post-directeur-wetgeving-en-juridische-zaken-min-ezk-lnv-2024-05-01
+  organization_id: org:directie-wetgeving-juridische-zaken-min-ezk-lnv
+  post_id: post:directeur-wetgeving-en-juridische-zaken-min-ezk-lnv
+  role: Directeur Wetgeving en Juridische Zaken, ministerie van Economische Zaken
+    en Klimaat en ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2024-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/22/arjen-doosje-directeur-wetgeving-en-juridische-zaken-bij-ezk-en-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-22
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/22/arjen-doosje-directeur-wetgeving-en-juridische-zaken-bij-ezk-en-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/11/arjen-doosje-programma-directeur-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

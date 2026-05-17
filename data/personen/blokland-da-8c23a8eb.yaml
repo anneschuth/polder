@@ -1,0 +1,29 @@
+id: person:blokland-da-8c23a8eb
+name:
+  full: Drs. D. A. (Delroy) Blokland
+  family: Blokland
+  given: Delroy
+  initials: D.A.
+mandaten:
+- id: mandate-post-mt-lid-fez-min-ezk-2019-01-01
+  organization_id: org:onderdeel-directie-fez-min-ezk
+  post_id: post:mt-lid-fez-min-ezk
+  role: MT-lid, directie Financieel-Economische Zaken, ministerie van Economische
+    Zaken en Klimaat
+  start_date: '2019-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/06/delroy-blokland-en-peter-wagenmaker-ruilen-van-functie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-06
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/06/delroy-blokland-en-peter-wagenmaker-ruilen-van-functie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

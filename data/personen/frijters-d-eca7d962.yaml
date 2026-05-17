@@ -1,0 +1,27 @@
+id: person:frijters-d-eca7d962
+name:
+  full: Danny Frijters
+  family: Frijters
+  given: Danny
+mandaten:
+- id: mandate-post-hoofd-operatien-eenheid-limburg-politie-2025-05-01
+  organization_id: org:onderdeel-eenheid-limburg-nationale-politie
+  post_id: post:hoofd-operatien-eenheidsleiding-limburg-politie
+  role: Hoofd Operatiën, eenheidsleiding Limburg, Politie
+  start_date: '2025-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/29/danny-frijters-lid-eenheidsleiding-limburg-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-04-29
+  confidence: 0.85
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/04/29/danny-frijters-lid-eenheidsleiding-limburg-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

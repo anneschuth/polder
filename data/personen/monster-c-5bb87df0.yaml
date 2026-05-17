@@ -27,7 +27,7 @@ mandaten:
   role: Afdelingshoofd/programmamanager Veiligheidsregio's en Crisisbeheersing, directoraat-generaal
     Politie & Veiligheidsregio's, ministerie van Justitie en Veiligheid
   start_date: '2021-08-23'
-  end_date: null
+  end_date: '2023-04-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/06/15/christa-monster-afdelingshoofd-programmamanager-veiligheidsregios-en-crisisbeheersing-bij-jenv
@@ -37,6 +37,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-06-15
   confidence: 0.92
+- id: mandate-post-directeur-vcm-dgpenv-min-jenv-2023-04-01
+  organization_id: org:onderdeel-directie-veiligheidsregios-crisisbeheersing-en-meldkamer-min-jenv
+  post_id: post:directeur-vcm-dgpenv-min-jenv
+  role: Directeur Veiligheidsregio's, Crisisbeheersing en Meldkamer bij het directoraat-generaal
+    Politie en Veiligheidsregio's, ministerie van Justitie en Veiligheid
+  start_date: '2023-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/christa-monster-directeur-veiligheidsregios-crisisbeheersing-en-meldkamer-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-03-31
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/christa-monster-directeur-veiligheidsregios-crisisbeheersing-en-meldkamer-bij-jenv

@@ -1,0 +1,29 @@
+id: person:heuvelink-j-0bb8ee75
+name:
+  full: J. (Jheronymus) Heuvelink
+  family: Heuvelink
+  given: Jheronymus
+  initials: J.
+mandaten:
+- id: mandate-post-hoofd-cluster-e-bbc-directie-rl-min-bzk-2021-05-01
+  organization_id: org:onderdeel-cluster-e-directie-rl-min-bzk
+  post_id: post:hoofd-cluster-e-bbc-directie-rl-min-bzk
+  role: Hoofd cluster E, Besluitvorming, Beheersing en Communicatie, directie Ruimte
+    en Leefomgeving, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2021-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/30/jeroen-heuvelink-hoofd-cluster-e-besluitvorming-beheersing-en-communicatie-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-30
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/30/jeroen-heuvelink-hoofd-cluster-e-besluitvorming-beheersing-en-communicatie-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

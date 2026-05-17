@@ -1,0 +1,28 @@
+id: person:van-spaendonk-fw-96055f06
+name:
+  full: Mr. F.W. (Famke) van Spaendonk
+  family: van Spaendonk
+  given: Famke
+  initials: F.W.
+mandaten:
+- id: mandate-post-hoofd-operatien-eenheid-noord-holland-politie-2020-07-01
+  organization_id: org:onderdeel-eenheid-noord-holland-politie
+  post_id: post:hoofd-operatien-eenheid-noord-holland-politie
+  role: Hoofd Operatiën, Eenheid Noord-Holland, Politie
+  start_date: '2020-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/05/famke-van-spaendonk-hoofd-operatien-eenheid-noord-holland-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-05
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/05/famke-van-spaendonk-hoofd-operatien-eenheid-noord-holland-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

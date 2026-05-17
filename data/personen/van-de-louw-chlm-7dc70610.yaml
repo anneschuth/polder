@@ -1,0 +1,42 @@
+id: person:van-de-louw-chlm-7dc70610
+name:
+  full: Drs. C.H.L.M. (Coen) van de Louw
+  family: louw
+  initials: C.H.L.M.
+mandaten:
+- id: mandate-post-dg-dienst-toeslagen-min-fin-2024-05-01
+  organization_id: org:onderdeel-dienst-toeslagen-min-fin
+  post_id: post:directeur-generaal-dienst-toeslagen-min-fin
+  role: Directeur-generaal Dienst Toeslagen, ministerie van Financiën
+  start_date: '2024-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/12/coen-van-de-louw-directeur-generaal-dienst-toeslagen-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-04-12
+  confidence: 0.92
+- id: mandate-post-programma-directeur-generaal-ketenregie-min-fin-2022-01-01
+  organization_id: org:onderdeel-programma-dg-ketenregie-min-fin
+  post_id: post:programma-directeur-generaal-ketenregie-min-fin
+  role: Programma-directeur-generaal Ketenregie, ministerie van Financiën
+  start_date: '2022-01-01'
+  end_date: '2024-05-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/12/17/coen-van-de-louw-programma-directeur-generaal-ketenregie-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-12-17
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/12/coen-van-de-louw-directeur-generaal-dienst-toeslagen-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:sluiter-jh-70d80e52
+name:
+  full: Drs. J.H. (Judith) Sluiter
+  family: Sluiter
+  given: Judith
+  initials: J.H.
+mandaten:
+- id: mandate-post-directeur-communicatie-min-lnv-2019-03-15
+  organization_id: org:onderdeel-communicatie-min-lnv
+  post_id: post:directeur-communicatie-min-lnv
+  role: Directeur Communicatie, ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2019-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/02/19/judith-sluiter-directeur-communicatie-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-02-19
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/02/19/judith-sluiter-directeur-communicatie-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

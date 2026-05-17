@@ -1,7 +1,7 @@
 id: org:onderdeel-transitie-diepe-ondergrond-min-ezk
 type: organisatieonderdeel
 classification: organisatieonderdeel
-parent_id: org:onderdeel-dg-groningen-en-ondergrond-min-ezk
+parent_id: org:onderdeel-programma-dg-groningen-en-ondergrond-min-ezk
 names:
 - value: Directie Transitie Diepe Ondergrond
   valid_from: '2026-05-15'
@@ -11,5 +11,10 @@ sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/16/kees-hansma-directeur-transitie-diepe-ondergrond-bij-groningen--ondergrond-bij-ezk
   retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/23/caroline-van-dalen-mt-lid-directie-transitie-diepe-ondergrond-bij-ezk
+  retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

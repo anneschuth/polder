@@ -6,8 +6,8 @@ name:
   initials: K.
 mandaten:
 - id: mandate-post-directeur-rso-min-szw-2025-08-01
-  organization_id: org:onderdeel-rso-min-szw
-  post_id: post:directeur-rso-min-szw
+  organization_id: org:onderdeel-rijksschoonmaakorganisatie-min-szw
+  post_id: post:algemeen-directeur-rso-min-szw
   role: Directeur Rijksschoonmaakorganisatie, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2025-08-01'
   end_date: null
@@ -17,25 +17,14 @@ mandaten:
     retrieved: '2026-05-15'
     fields:
     - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2025-05-14
-  confidence: 0.92
-- id: mandate-post-algemeen-directeur-rso-min-szw-2025-08-01
-  organization_id: org:onderdeel-rijksschoonmaakorganisatie-min-szw
-  post_id: post:algemeen-directeur-rso-min-szw
-  role: Algemeen directeur Rijksschoonmaakorganisatie (RSO) bij het ministerie van
-    Sociale Zaken en Werkgelegenheid
-  start_date: '2025-08-01'
-  end_date: null
-  sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/06/loopbaanstap-kristina-bozic
     retrieved: '2026-05-15'
     fields:
     - applied_via:apply-staging
   appointment:
-    decision: ABD-nieuwsbericht 2025-11-06
-  confidence: 0.88
+    decision: ABD-nieuwsbericht 2025-05-14
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/14/kristina-bozic-directeur-rijksschoonmaakorganisatie-bij-szw

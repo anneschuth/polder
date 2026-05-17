@@ -5,17 +5,16 @@ name:
   given: Frank
   initials: F.
 mandaten:
-- id: mandate-post-directeur-iv-rvo-2023-09-01
-  organization_id: org:onderdeel-directie-iv-rvo
-  post_id: post:directeur-iv-rvo
-  role: Directeur Informatievoorziening (IV), Rijksdienst voor Ondernemend Nederland
-    (RVO)
+- id: mandate-post-directeur-iv-rvo-min-lnv-2023-09-01
+  organization_id: org:onderdeel-iv-rvo-min-lnv
+  post_id: post:directeur-iv-rvo-min-lnv
+  role: Directeur IV, Rijksdienst voor Ondernemend Nederland
   start_date: '2023-09-01'
   end_date: null
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/25/frank-ossewaarde-directeur-iv-bij-rvo
-    retrieved: '2026-05-15'
+    retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
   appointment:

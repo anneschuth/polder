@@ -1,0 +1,29 @@
+id: person:smith-ea-114705c4
+name:
+  full: Mr. E.A. (Elske) Smith
+  family: Smith
+  given: Elske
+  initials: E.A.
+mandaten:
+- id: mandate-post-raadadviseur-economie-en-bedrijfsleven-min-az-2019-08-01
+  organization_id: org:onderdeel-kmp
+  post_id: post:raadadviseur-economie-en-bedrijfsleven-min-az
+  role: Raadadviseur Economie en Bedrijfsleven, kabinet van de minister-president,
+    ministerie van Algemene Zaken
+  start_date: '2019-08-01'
+  end_date: '2026-06-08'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/26/elske-smith-raadadviseur-economie-en-bedrijfsleven-bij-az
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/26/elske-smith-raadadviseur-economie-en-bedrijfsleven-bij-az
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

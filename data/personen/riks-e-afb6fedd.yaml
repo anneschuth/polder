@@ -1,0 +1,27 @@
+id: person:riks-e-afb6fedd
+name:
+  full: Ewald Riks
+  family: Ewald
+mandaten:
+- id: mandate-post-directeur-internationale-aangelegenheden-dtv-min-jenv-2019-08-19
+  organization_id: org:onderdeel-dtenv
+  post_id: post:directeur-internationale-aangelegenheden-dtv-min-jenv
+  role: Directeur Internationale Aangelegenheden, tevens plaatsvervangend algemeen
+    directeur, Dienst Terugkeer en Vertrek, ministerie van Justitie en Veiligheid
+  start_date: '2019-08-19'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/12/functieruil-ewald-riks-en-hans-faber-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-07-12
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/12/functieruil-ewald-riks-en-hans-faber-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

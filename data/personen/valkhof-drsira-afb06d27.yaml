@@ -1,0 +1,28 @@
+id: person:valkhof-drsira-afb06d27
+name:
+  full: Drs.Ir. A. (Arno) Valkhof
+  family: Valkhof
+  given: Arno
+  initials: D.R.S.I.R.A.
+mandaten:
+- id: mandate-post-directeur-netwerkmanagement-rws-oost-nederland-min-ienw-2018-09-01
+  organization_id: org:onderdeel-rws-oost-nederland-min-ienw
+  post_id: post:directeur-netwerkmanagement-rws-oost-nederland-min-ienw
+  role: Directeur Netwerkmanagement, Rijkswaterstaat Oost-Nederland, ministerie van Infrastructuur en Waterstaat
+  start_date: '2018-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/26/arno-valkhof-directeur-netwerkmanagement-bij-rws-oost-nederland
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-07-26
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/26/arno-valkhof-directeur-netwerkmanagement-bij-rws-oost-nederland
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

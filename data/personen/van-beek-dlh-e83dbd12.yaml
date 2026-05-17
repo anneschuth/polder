@@ -1,0 +1,44 @@
+id: person:van-beek-dlh-e83dbd12
+name:
+  full: D.L.H. (Dyon) van Beek RA
+  family: beek
+  initials: D.L.H.
+mandaten:
+- id: mandate-post-algemeen-directeur-grote-ondernemingen-belastingdienst-min-fin-2021-06-01
+  organization_id: org:onderdeel-directie-grote-ondernemingen-belastingdienst-min-fin
+  post_id: post:algemeen-directeur-grote-ondernemingen-belastingdienst-min-fin
+  role: Algemeen directeur Grote Ondernemingen bij de Belastingdienst bij het ministerie
+    van Financiën
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/21/dyon-van-beek-algemeen-directeur-grote-ondernemingen-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-21
+  confidence: 0.92
+- id: mandate-post-directeur-control-en-financien-belastingdienst-2021-06-01
+  organization_id: org:agentschap-belastingdienst
+  post_id: post:directeur-control-en-financien-belastingdienst
+  role: Algemeen directeur Grote Ondernemingen bij de Belastingdienst bij het ministerie
+    van Financiën
+  start_date: '2021-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/21/dyon-van-beek-algemeen-directeur-grote-ondernemingen-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-04-21
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/04/21/dyon-van-beek-algemeen-directeur-grote-ondernemingen-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

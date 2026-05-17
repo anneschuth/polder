@@ -1,0 +1,49 @@
+id: person:van-houten-ect-154b9df8
+name:
+  full: Drs. E.C.T. (Edwin) van Houten MGM
+  family: van Houten
+  given: Edwin
+  initials: E.C.T.
+mandaten:
+- id: mandate-post-directeur-consumenten-acm-2019-01-14
+  organization_id: org:zbo-acm
+  post_id: post:directeur-consumenten-acm
+  role: Directeur Consumenten bij de Autoriteit Consument & Markt
+  start_date: '2019-01-14'
+  end_date: '2026-01-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/12/edwin-van-houten-directeur-consumenten-bij-acm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-11-12
+  confidence: 0.92
+- id: mandate-post-directeur-toezicht-en-opsporing-plaatsvervangend-ig-ilt-min-ienw-2026-01-01
+  organization_id: org:inspectie-ilt
+  post_id: post:directeur-toezicht-en-opsporing-plaatsvervangend-ig-ilt-min-ienw
+  role: Directeur Toezicht en Opsporing, tevens plaatsvervangend inspecteur-generaal,
+    Inspectie Leefomgeving en Transport, ministerie van Infrastructuur en Waterstaat
+  start_date: '2026-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/03/edwin-van-houten-directeur-toezicht-en-opsporing-tevens-plaatsvervangend-inspecteur-generaal-bij-de-inspectie-leefomgeving-en-transport
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-11-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/12/edwin-van-houten-directeur-consumenten-bij-acm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/03/edwin-van-houten-directeur-toezicht-en-opsporing-tevens-plaatsvervangend-inspecteur-generaal-bij-de-inspectie-leefomgeving-en-transport
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

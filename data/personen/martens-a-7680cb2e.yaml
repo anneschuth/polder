@@ -1,0 +1,27 @@
+id: person:martens-a-7680cb2e
+name:
+  full: Anja Martens
+  family: Martens
+  given: Anja
+mandaten:
+- id: mandate-post-directeur-mens-en-organisatie-rvo-min-ezk-2023-09-01
+  organization_id: org:onderdeel-directie-mens-en-organisatie-rvo-min-ezk
+  post_id: post:directeur-mens-en-organisatie-rvo-min-ezk
+  role: Directeur Mens en Organisatie bij Rijksdienst voor Ondernemend Nederland (RVO)
+  start_date: '2023-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/25/anja-martens-directeur-mens-en-organisatie-bij-rvo
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-08-25
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/08/25/anja-martens-directeur-mens-en-organisatie-bij-rvo
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

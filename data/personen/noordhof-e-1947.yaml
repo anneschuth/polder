@@ -22,7 +22,7 @@ mandaten:
   confidence: 0.92
 - id: mandate-post-afdelingshoofd-hid-dcs-iv-belastingdienst-min-fin-2024-11-01
   organization_id: org:onderdeel-afdeling-hid-dcs-iv-belastingdienst-min-fin
-  post_id: post:afdelingshoofd-hid-dcs-iv-belastingdienst-min-fin
+  post_id: post:afdelingshoofd-hosting-integratie-diensten-dcs-iv-belastingdienst-min-fin
   role: Afdelingshoofd Hosting & Integratie Diensten, directie Data Center Services
     (DCS-IV), Belastingdienst
   start_date: '2024-11-01'
@@ -36,17 +36,16 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2024-10-14
   confidence: 0.92
-- id: mandate-post-afdelingshoofd-hosting-integratie-diensten-dcs-iv-belastingdienst-min-fin-2024-11-01
-  organization_id: org:onderdeel-afdeling-hid-dcs-iv-belastingdienst-min-fin
-  post_id: post:afdelingshoofd-hosting-integratie-diensten-dcs-iv-belastingdienst-min-fin
-  role: Afdelingshoofd Hosting & Integratie Diensten, directie Data Center Services,
-    Belastingdienst, ministerie van Financiën
+- id: mandate-post-afdelingshoofd-hosting-integratie-diensten-min-bzk-2024-11-01
+  organization_id: org:afdeling-hid-min-bzk
+  post_id: post:afdelingshoofd-hosting-integratie-diensten-min-bzk
+  role: Afdelingshoofd Hosting & Integratie Diensten
   start_date: '2024-11-01'
   end_date: null
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/10/14/erno-noordhof-afdelingshoofd-hosting--integratie-diensten-bij-de-belastingdienst
-    retrieved: '2026-05-15'
+    retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
   appointment:

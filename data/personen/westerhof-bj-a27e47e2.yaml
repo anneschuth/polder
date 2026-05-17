@@ -1,0 +1,29 @@
+id: person:westerhof-bj-a27e47e2
+name:
+  full: Mr. B.J. (Bart-Jan) Westerhof
+  family: Westerhof
+  given: Bart-Jan
+  initials: B.J.
+mandaten:
+- id: mandate-post-hoofd-plaatsvervangend-directeur-eigenaarsadvisering-min-ienw-2022-09-01
+  organization_id: org:onderdeel-directie-eigenaarsadvisering-min-ienw
+  post_id: post:hoofd-plaatsvervangend-directeur-eigenaarsadvisering-min-ienw
+  role: Hoofd en tevens plaatsvervangend directeur directie Eigenaarsadvisering, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2022-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/26/bart-jan-westerhof-afdelingshoofd-directie-eigenaarsadvisering-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-08-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/26/bart-jan-westerhof-afdelingshoofd-directie-eigenaarsadvisering-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

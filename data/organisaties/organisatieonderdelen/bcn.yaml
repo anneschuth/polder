@@ -9,9 +9,7 @@ names:
   abbr: BCN
   valid_from: '1900-01-01'
 description:
-  text: De Belastingdienst Caribisch Nederland (BCN) is onderdeel van de Belastingdienst
-    Nederland. BCN bestaat uit zowel de Belastingdienst als de Douane Caribisch Nederland.
-    BCN heeft vestigingen op Bonaire, Saba en Sint Eustatius.
+  text: De Belastingdienst Caribisch Nederland (BCN) is onderdeel van de Belastingdienst Nederland. BCN bestaat uit zowel de Belastingdienst als de Douane Caribisch Nederland. BCN heeft vestigingen op Bonaire, Saba en Sint Eustatius.
   url: https://www.belastingdienst-cn.nl/organisatie
 contact:
   website: https://www.belastingdienst-cn.nl/
@@ -63,3 +61,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/29987745/bcn
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/03/31/claudia-toet-directeur-belastingdienst-caribisch-nederland-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

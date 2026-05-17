@@ -5,22 +5,9 @@ name:
   given: Agaath
   initials: A.
 mandaten:
-- id: mandate-post-algemeen-directeur-toeslagen-belastingdienst-2018-12-01
-  organization_id: org:agentschap-belastingdienst
-  post_id: post:algemeen-directeur-toeslagen-belastingdienst
-  role: Algemeen directeur Toeslagen
-  start_date: '2018-12-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/agaath-cleyndert-algemeen-directeur-toeslagen-bij-de-belastingdienst
-    retrieved: '2026-05-09'
-    fields:
-    - applied_via:apply-staging
-  confidence: 0.85
 - id: mandate-post-algemeen-directeur-nifp-2022-02-01
   organization_id: org:onderdeel-nifp
-  post_id: post:algemeen-directeur-nifp
+  post_id: post:algemeen-directeur-nifp-min-jenv
   role: Algemeen directeur
   start_date: '2022-02-01'
   end_date: null
@@ -30,6 +17,11 @@ mandaten:
     retrieved: '2026-05-12'
     fields:
     - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/19/agaath-cleyndert-algemeen-directeur-nifp
+    retrieved: '2026-05-14'
+    fields:
+    - applied_via:apply-staging
   confidence: 0.85
 - id: mandate-post-algemeen-directeur-toeslagen-belastingdienst-min-fin-2018-12-01
   organization_id: org:onderdeel-dgtsl
@@ -37,7 +29,7 @@ mandaten:
   role: Algemeen directeur Toeslagen bij de Belastingdienst bij het ministerie van
     Financiën
   start_date: '2018-12-01'
-  end_date: null
+  end_date: '2022-02-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/11/23/agaath-cleyndert-algemeen-directeur-toeslagen-bij-de-belastingdienst
@@ -46,22 +38,6 @@ mandaten:
     - applied_via:apply-staging
   appointment:
     decision: ABD-nieuwsbericht 2018-11-23
-  confidence: 0.9
-- id: mandate-post-algemeen-directeur-nifp-min-jenv-2022-02-01
-  organization_id: org:onderdeel-nifp
-  post_id: post:algemeen-directeur-nifp-min-jenv
-  role: Algemeen directeur van het Nederlands Instituut voor Forensische Psychiatrie
-    en Psychologie (NIFP) bij het ministerie van Justitie en Veiligheid
-  start_date: '2022-02-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/19/agaath-cleyndert-algemeen-directeur-nifp
-    retrieved: '2026-05-14'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2022-01-19
   confidence: 0.9
 sources:
 - id: abd_nieuws

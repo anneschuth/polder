@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-12-18
   confidence: 0.9
+- id: mandate-post-plaatsvervangend-sg-min-bz-2021-08-01
+  organization_id: org:min-bz
+  post_id: post:plaatsvervangend-sg-min-bz
+  role: Plaatsvervangend secretaris-generaal, ministerie van Buitenlandse Zaken
+  start_date: '2021-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/18/carola-van-rijnsoever-plaatsvervangend-secretaris-generaal-bij-buitenlandse-zaken
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-18
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/18/carola-van-rijnsoever-plaatsvervangend-secretaris-generaal-bij-buitenlandse-zaken

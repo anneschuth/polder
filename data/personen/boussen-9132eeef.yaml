@@ -10,7 +10,7 @@ mandaten:
   post_id: post:directeur-gezond-en-veilig-werken-min-szw
   role: Directeur Gezond en Veilig Werken, ministerie van Sociale Zaken en Werkgelegenheid
   start_date: '2018-08-01'
-  end_date: null
+  end_date: '2022-07-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/30/heidi-boussen-directeur-gezond-en-veilig-werken-bij-szw
@@ -19,6 +19,22 @@ mandaten:
     - applied_via:apply-staging
   appointment:
     decision: ABD-nieuwsbericht 2018-05-30
+  confidence: 0.92
+- id: mandate-post-directeur-hoger-onderwijs-en-studiefinanciering-min-ocw-2022-07-01
+  organization_id: org:onderdeel-hoger-onderwijs-en-studiefinanciering-min-ocw
+  post_id: post:directeur-hoger-onderwijs-en-studiefinanciering-min-ocw
+  role: Directeur Hoger Onderwijs en Studiefinanciering, DG Hoger Onderwijs, Beroepsonderwijs,
+    Wetenschap en Emancipatie, ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2022-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/19/heidi-boussen-directeur-hoger-onderwijs-en-studiefinanciering-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-05-19
   confidence: 0.92
 sources:
 - id: abd_nieuws

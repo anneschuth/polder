@@ -1,0 +1,15 @@
+id: org:politie-korpsleiding
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:politie
+names:
+- value: Korpsleiding
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/20/hanneke-ekelmans-voorgedragen-als-lid-korpsleiding-van-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

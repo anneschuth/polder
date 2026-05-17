@@ -1,0 +1,27 @@
+id: person:de-blaauw-a-ecdb83d5
+name:
+  full: Art de Blaauw
+  family: de Blaauw
+  given: Art
+mandaten:
+- id: mandate-post-directeur-cio-rijk-min-bzk-2024-06-01
+  organization_id: org:onderdeel-directie-cio-rijk-min-bzk
+  post_id: post:directeur-cio-rijk-min-bzk
+  role: Directeur CIO Rijk bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2024-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/05/24/art-de-blaauw-directeur-cio-rijk-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-05-24
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/05/24/art-de-blaauw-directeur-cio-rijk-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

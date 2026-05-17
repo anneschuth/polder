@@ -1,0 +1,43 @@
+id: person:van-rijn-a-dff23021
+name:
+  full: Afke van Rijn
+  family: Afke
+mandaten:
+- id: mandate-post-directeur-generaal-milieu-en-internationaal-min-ienw-2023-02-01
+  organization_id: org:onderdeel-milieu-en-internationaal-min-ienw
+  post_id: post:directeur-generaal-milieu-en-internationaal-min-ienw
+  role: Directeur-generaal Milieu en Internationaal bij het ministerie van Infrastructuur
+    en Waterstaat
+  start_date: '2023-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/25/afke-van-rijn-directeur-generaal-milieu-en-internationaal-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-25
+  confidence: 0.91
+- id: mandate-post-plaatsvervangend-dg-covid19-min-vws-2021-04-01
+  organization_id: org:onderdeel-dg-covid-19-min-vws
+  post_id: post:plaatsvervangend-dg-covid19-min-vws
+  role: Plaatsvervangend directeur-generaal COVID-19 bij het ministerie van Volksgezondheid,
+    Welzijn en Sport
+  start_date: '2021-04-01'
+  end_date: '2023-02-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/05/afke-van-rijn-plaatsvervangend-directeur-generaal-covid-19-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-05
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/25/afke-van-rijn-directeur-generaal-milieu-en-internationaal-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

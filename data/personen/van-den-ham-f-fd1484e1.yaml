@@ -1,0 +1,43 @@
+id: person:van-den-ham-f-fd1484e1
+name:
+  full: Drs. Françoise van den Ham MBA
+  family: Françoise
+mandaten:
+- id: mandate-post-afdelingshoofd-ksd-dcs-directie-iv-belastingdienst-2022-05-30
+  organization_id: org:onderdeel-afdeling-ksd-dcs-directie-iv-belastingdienst
+  post_id: post:afdelingshoofd-ksd-dcs-directie-iv-belastingdienst
+  role: Afdelingshoofd Klant Specifieke Diensten bij het onderdeel Data Center Services
+    van de directie Informatievoorziening van de Belastingdienst
+  start_date: '2022-05-30'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/08/francoise-van-den-ham-afdelingshoofd-klant-specifieke-diensten-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-08
+  confidence: 0.91
+- id: mandate-post-afdelingshoofd-hosting-integratie-belastingdienst-2022-05-30
+  organization_id: org:agentschap-belastingdienst
+  post_id: post:afdelingshoofd-hosting-integratie-belastingdienst
+  role: Afdelingshoofd Klant Specifieke Diensten, Data Center Services, directie Informatievoorziening,
+    Belastingdienst
+  start_date: '2022-05-30'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/08/francoise-van-den-ham-afdelingshoofd-klant-specifieke-diensten-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-04-08
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/04/08/francoise-van-den-ham-afdelingshoofd-klant-specifieke-diensten-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

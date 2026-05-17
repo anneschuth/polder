@@ -1,0 +1,26 @@
+id: person:van-lith-m-d5617ef8
+name:
+  full: Myria van Lith
+  family: Myria
+mandaten:
+- id: mandate-post-hoofd-operatien-eenheid-lx-min-bzk-2024-01-01
+  organization_id: org:onderdeel-eenheid-landelijke-expertise-en-operaties-politie-min-bzk
+  post_id: post:hoofd-operatien-eenheid-lx-min-bzk
+  role: Hoofd Operatiën Eenheid Landelijke Expertise en Operaties (LX)
+  start_date: '2024-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/22/benoemingen-leiding-nieuwe-landelijke-eenheden-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-12-22
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/22/benoemingen-leiding-nieuwe-landelijke-eenheden-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

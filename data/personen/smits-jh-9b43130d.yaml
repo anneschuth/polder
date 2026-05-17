@@ -1,0 +1,29 @@
+id: person:smits-jh-9b43130d
+name:
+  full: Drs. J.H. (Joost) Smits
+  family: Smits
+  given: Joost
+  initials: J.H.
+mandaten:
+- id: mandate-post-directeur-financiele-markten-min-fin-2019-12-01
+  organization_id: org:onderdeel-directie-financiele-markten-min-fin
+  post_id: post:directeur-financiele-markten-min-fin
+  role: Directeur Financiële Markten bij de Generale Thesaurie bij het ministerie
+    van Financiën
+  start_date: '2019-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/26/joost-smits-directeur-financiele-markten-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-11-26
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/11/26/joost-smits-directeur-financiele-markten-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

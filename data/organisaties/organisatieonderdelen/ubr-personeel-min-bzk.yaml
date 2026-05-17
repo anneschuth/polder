@@ -1,0 +1,15 @@
+id: org:onderdeel-ubr-personeel-min-bzk
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-sg-min-bzk
+names:
+- value: Uitvoeringsorganisatie Bedrijfsvoering Rijk Personeel i.o.
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/03/07/frank-wormgoor-manager-ubr-personeel-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

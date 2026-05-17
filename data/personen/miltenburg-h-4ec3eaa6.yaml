@@ -1,0 +1,28 @@
+id: person:miltenburg-h-4ec3eaa6
+name:
+  full: Henricus Petrus Miltenburg
+  family: Miltenburg
+  given: Henricus Petrus
+mandaten:
+- id: mandate-post-directeur-politieacademie-2022-03-15
+  organization_id: org:onderdeel-politieacademie
+  post_id: post:directeur-politieacademie
+  role: Directeur van de Politieacademie
+  start_date: '2022-03-15'
+  end_date: null
+  sources:
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2022-12231.html
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Staatscourant nr. stcrt-2022-12231, 21 april 2022
+    staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2022-12231.html
+  confidence: 0.95
+sources:
+- id: staatscourant
+  url: https://zoek.officielebekendmakingen.nl/stcrt-2022-12231.html
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

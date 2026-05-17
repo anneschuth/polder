@@ -1,0 +1,29 @@
+id: person:plattel-mm-7abff567
+name:
+  full: Drs. M.M. (Maartje) Plattel
+  family: Plattel
+  given: Maartje
+  initials: M.M.
+mandaten:
+- id: mandate-post-directeur-fez-min-ocw-2022-07-01
+  organization_id: org:onderdeel-directie-fez-min-ocw
+  post_id: post:directeur-fez-min-ocw
+  role: Directeur Financieel Economische Zaken (FEZ) van het ministerie van Onderwijs,
+    Cultuur en Wetenschap
+  start_date: '2022-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/31/maartje-plattel-directeur-financieel-economische-zaken-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-05-31
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/05/31/maartje-plattel-directeur-financieel-economische-zaken-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,45 @@
+id: person:steur-bf-1feaf199
+name:
+  full: Drs. B.F. (Boudewijn) Steur
+  family: Steur
+  given: Boudewijn
+  initials: B.F.
+mandaten:
+- id: mandate-post-directeur-kiem-min-bzk-2021-11-01
+  organization_id: org:onderdeel-kiem-min-bzk
+  post_id: post:directeur-kiem-min-bzk
+  role: Directeur Kennis, Internationaal, Europa en Macro-economie (KIEM), ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2021-11-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/24/boudewijn-steur-directeur-kennis-internationaal-europa-en-macro-economie-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-09-24
+  confidence: 0.92
+- id: mandate-post-directeur-strategie-en-kennis-covid-19-programma-dg-2020-11-01
+  organization_id: org:onderdeel-programma-dg-samenleving-covid-19-min-bzk
+  post_id: post:directeur-strategie-en-kennis-covid-19-programma-dg
+  role: Directeur Strategie en Kennis Covid-19 bij het programmadirectoraat-generaal
+    Samenleving en COVID-19
+  start_date: '2020-11-01'
+  end_date: '2021-11-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/06/boudewijn-steur-directeur-strategie-en-kennis-covid-19-bij-programma-dg-samenleving-en-covid-19
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-06
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/24/boudewijn-steur-directeur-kennis-internationaal-europa-en-macro-economie-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

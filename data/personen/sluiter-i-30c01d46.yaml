@@ -1,0 +1,29 @@
+id: person:sluiter-i-30c01d46
+name:
+  full: Mr. drs. I. (Iris) Sluiter
+  family: Sluiter
+  given: Iris
+  initials: I.
+mandaten:
+- id: mandate-post-secretaris-directeur-rob-min-bzk-2023-04-01
+  organization_id: org:onderdeel-rob-min-bzk
+  post_id: post:secretaris-directeur-rob-min-bzk
+  role: Secretaris-directeur van de Raad voor het Openbaar Bestuur (ROB) van het ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2023-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/06/iris-sluiter-secretaris-directeur-raad-voor-het-openbaar-bestuur-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-01-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/01/06/iris-sluiter-secretaris-directeur-raad-voor-het-openbaar-bestuur-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,42 @@
+id: person:van-dam-a-4d1570a1
+name:
+  full: Annemieke van Dam
+  family: Annemieke
+mandaten:
+- id: mandate-post-waarnemend-dg-politie-en-veiligheidsregios-min-jenv-2026-01-02
+  organization_id: org:onderdeel-dg-politie-en-veiligheidsregios-min-jenv
+  post_id: post:waarnemend-directeur-generaal-politie-en-veiligheidsregios-min-jenv
+  role: Waarnemend directeur-generaal Politie en Veiligheidsregio's bij het ministerie
+    van Justitie en Veiligheid
+  start_date: '2026-01-02'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/21/annemieke-van-dam-waarnemend-directeur-generaal-politie-en-veiligheidsregios-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-11-21
+  confidence: 0.87
+- id: mandate-post-dg-rechtspleging-en-rechtshandhaving-min-jv-2019-11-01
+  organization_id: org:onderdeel-dg-rechtspleging-en-rechtshandhaving-min-jv
+  post_id: post:dg-rechtspleging-en-rechtshandhaving-min-jv
+  role: Directeur-Generaal Rechtspleging en Rechtshandhaving
+  start_date: '2019-11-01'
+  end_date: '2026-01-02'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/10/31/annemieke-van-dam-directeur-generaal-rechtspleging-en-rechtshandhaving
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-10-31
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/11/21/annemieke-van-dam-waarnemend-directeur-generaal-politie-en-veiligheidsregios-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

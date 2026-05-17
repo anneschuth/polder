@@ -1,0 +1,49 @@
+id: person:van-breda-c-fb2d79a2
+name:
+  full: Mr. C. (Corry) van Breda
+  family: van Breda
+  given: Corry
+  initials: C.
+mandaten:
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-amsterdam-politie-2020-06-01
+  organization_id: org:onderdeel-eenheid-amsterdam-nationale-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-amsterdam-politie
+  role: Hoofd Bedrijfsvoering, Eenheid Amsterdam, Politie
+  start_date: '2020-06-01'
+  end_date: '2024-06-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/15/corry-van-breda-hoofd-bedrijfsvoering-eenheid-amsterdam-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-15
+  confidence: 0.92
+- id: mandate-post-hoofd-operatien-plaatsvervangend-politiechef-zeeland-west-brabant-2024-06-01
+  organization_id: org:onderdeel-eenheid-zeeland-west-brabant-politie
+  post_id: post:hoofd-operatien-plaatsvervangend-politiechef-zeeland-west-brabant
+  role: Hoofd Operatiën en plaatsvervangend politiechef, eenheid Zeeland-West-Brabant,
+    Politie
+  start_date: '2024-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/29/corry-van-breda-hoofd-operatien-en-plaatsvervangend-politiechef-zeeland-west-brabant
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-04-29
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/15/corry-van-breda-hoofd-bedrijfsvoering-eenheid-amsterdam-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/29/corry-van-breda-hoofd-operatien-en-plaatsvervangend-politiechef-zeeland-west-brabant
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

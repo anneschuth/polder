@@ -1,0 +1,64 @@
+id: person:van-overveld-emhj-361446fe
+name:
+  full: E.M.H.J. (Ilse) van Overveld
+  family: van Overveld
+  given: Ilse
+  initials: E.M.H.J.
+mandaten:
+- id: mandate-post-directeur-communicatie-min-bzk-2022-08-22
+  organization_id: org:onderdeel-directie-communicatie-min-bzk
+  post_id: post:directeur-communicatie-min-bzk
+  role: Directeur Communicatie, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-08-22'
+  end_date: '2026-08-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/15/ilse-van-overveld-directeur-communicatie-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-06-15
+  confidence: 0.92
+- id: mandate-post-hoofd-afdeling-car-rvd-min-az-2018-09-01
+  organization_id: org:onderdeel-afdeling-car-rvd-min-az
+  post_id: post:hoofd-communicatie-algemeen-regeringsbeleid-rvd-min-az
+  role: Hoofd van de afdeling Communicatie Algemeen Regeringsbeleid (CAR) van de Rijksvoorlichtingsdienst
+    bij het ministerie van Algemene Zaken
+  start_date: '2018-09-01'
+  end_date: '2026-08-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/14/ilse-van-overveld-hoofd-communicatie-algemeen-regeringsbeleid-bij-de-rvd
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-08-14
+  confidence: 0.9
+- id: mandate-post-directeur-communicatie-min-bz-2026-08-01
+  organization_id: org:onderdeel-communicatie-min-bz
+  post_id: post:directeur-communicatie-min-bz
+  role: Directeur Communicatie, ministerie van Buitenlandse Zaken
+  start_date: '2026-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/ilse-van-overveld-directeur-communicatie-bij-bz
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-12-19
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/06/15/ilse-van-overveld-directeur-communicatie-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/19/ilse-van-overveld-directeur-communicatie-bij-bz
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

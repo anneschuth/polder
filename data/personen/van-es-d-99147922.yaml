@@ -1,0 +1,42 @@
+id: person:van-es-d-99147922
+name:
+  full: Daniel Palomo van Es
+  family: Daniel Palomo
+mandaten:
+- id: mandate-post-afdelingshoofd-cybersecurity-nctv-min-jenv-2021-09-01
+  organization_id: org:onderdeel-afdeling-cybersecurity-nctv-min-jenv
+  post_id: post:afdelingshoofd-cybersecurity-nctv-min-jenv
+  role: Afdelingshoofd Cybersecurity, Nationaal Coördinator Terrorismebestrijding
+    en Veiligheid, ministerie van Justitie en Veiligheid
+  start_date: '2021-09-01'
+  end_date: '2026-02-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/19/daniel-palomo-van-es-afdelingshoofd-cybersecurity-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-19
+  confidence: 0.92
+- id: mandate-post-directeur-digitalisering-analyse-bedrijfsvoering-ksa-2026-02-01
+  organization_id: org:onderdeel-directie-digitalisering-analyse-bedrijfsvoering-ksa
+  post_id: post:directeur-digitalisering-analyse-bedrijfsvoering-ksa
+  role: Directeur Digitalisering, Analyse en Bedrijfsvoering, Kansspelautoriteit
+  start_date: '2026-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/12/02/daniel-palomo-van-es-directeur-digitalisering-analyse-en-bedrijfsvoering-kansspelautoriteit
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-12-02
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/19/daniel-palomo-van-es-afdelingshoofd-cybersecurity-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

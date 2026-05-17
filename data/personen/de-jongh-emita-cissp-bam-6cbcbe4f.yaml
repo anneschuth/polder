@@ -1,0 +1,45 @@
+id: person:de-jongh-emita-cissp-bam-6cbcbe4f
+name:
+  full: Ing. B.A.M. (Bart) de Jongh RE EMITA CISSP
+  family: de Jongh RE EMITA CISSP
+  given: Bart
+  initials: B.A.M.
+mandaten:
+- id: mandate-post-directeur-cio-concerndirectie-iv-databeheersing-belastingdienst-2024-10-01
+  organization_id: org:onderdeel-concerndirectie-iv-databeheersing-belastingdienst
+  post_id: post:directeur-cio-concerndirectie-iv-databeheersing-belastingdienst
+  role: Directeur concerndirectie Informatievoorziening & Databeheersing, tevens CIO,
+    Belastingdienst, ministerie van Financiën
+  start_date: '2024-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/09/06/bart-de-jongh-directeur-concerndirectie-informatievoorziening--databeheersing-tevens-cio-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-09-06
+  confidence: 0.92
+- id: mandate-post-directeur-concerndirectie-ivd-cio-belastingdienst-min-fin-2024-10-01
+  organization_id: org:onderdeel-ivd-belastingdienst-min-fin
+  post_id: post:directeur-concerndirectie-ivd-cio-belastingdienst-min-fin
+  role: Directeur concerndirectie Informatievoorziening & Databeheersing, tevens CIO
+    bij de Belastingdienst, ministerie van Financiën
+  start_date: '2024-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/09/06/bart-de-jongh-directeur-concerndirectie-informatievoorziening--databeheersing-tevens-cio-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-09-06
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/09/06/bart-de-jongh-directeur-concerndirectie-informatievoorziening--databeheersing-tevens-cio-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

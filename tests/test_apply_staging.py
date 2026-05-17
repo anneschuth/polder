@@ -193,6 +193,169 @@ def test_skip_red_avg(mini_polder: Path) -> None:
     assert any("AVG" in r for r in skipped[0].reasons)
 
 
+def test_needs_review_skipped_without_floor(mini_polder: Path) -> None:
+    """Default-gedrag: needs-review skipt zonder needs_review_floor."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "needs-review"
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert len(skipped) == 1
+    assert any("needs-review" in r or "auto-merge" in r for r in skipped[0].reasons)
+
+
+def test_needs_review_floor_lets_clean_proposal_through(mini_polder: Path) -> None:
+    """Met needs_review_floor en confidence >= floor komt een schone
+    needs-review proposal alsnog door de gate naar create-acties."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "needs-review"
+    p["confidence"] = 0.90
+    actions, skipped = plan_apply([p], mini_polder / "data", needs_review_floor=0.85)
+    assert actions, skipped
+    assert any(a.type == "create-org" for a in actions)
+
+
+def test_needs_review_floor_blocks_below_floor(mini_polder: Path) -> None:
+    """needs-review onder de floor blijft skippen, met expliciete reden."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "needs-review"
+    p["confidence"] = 0.70
+    actions, skipped = plan_apply([p], mini_polder / "data", needs_review_floor=0.85)
+    assert actions == []
+    assert any("floor" in r for r in skipped[0].reasons)
+
+
+def test_needs_review_floor_does_not_bypass_red_avg(mini_polder: Path) -> None:
+    """De floor opent de gate, maar AVG-rood blijft een harde stop."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "needs-review"
+    p["confidence"] = 0.95
+    p["role"] = "beleidsmedewerker bij directie Digitale Samenleving"
+    actions, skipped = plan_apply([p], mini_polder / "data", needs_review_floor=0.85)
+    assert actions == []
+    assert any("AVG" in r for r in skipped[0].reasons)
+
+
+def test_skip_recommendation_always_blocked_even_with_floor(
+    mini_polder: Path,
+) -> None:
+    """`skip` is een resolver-veto en blijft geweigerd, ook met floor."""
+    p = _kewal_proposal()
+    p["merge_recommendation"] = "skip"
+    p["confidence"] = 0.99
+    actions, skipped = plan_apply([p], mini_polder / "data", needs_review_floor=0.5)
+    assert actions == []
+    assert any("auto-merge" in r for r in skipped[0].reasons)
+
+
+def test_person_match_floor_drops_weak_resolved_id(mini_polder: Path) -> None:
+    """Een zwakke person-match (resolution_confidence.person < floor) mag
+    geen mandaat aan de verkeerde bestaande persoon hangen: in plaats
+    daarvan een NIEUW person-record. Regressie voor Mark Vermeer ->
+    bestaande Henk Vermeer."""
+    # Bestaande "andere" Vermeer in data/personen/.
+    _write_yaml(
+        mini_polder / "data" / "personen" / "vermeer-h-1966.yaml",
+        {
+            "id": "person:vermeer-h-1966",
+            "names": [{"value": "Henk Vermeer"}],
+            "birth": {"year": 1966},
+            "mandaten": [],
+            "sources": [{"id": "roo", "url": "https://example.org/x", "retrieved": "2026-05-09"}],
+        },
+    )
+    p = _kewal_proposal()
+    p["person_name"] = "Dr. W.W.M. (Mark) Vermeer"
+    p["resolved_person_id"] = "person:vermeer-h-1966"
+    p["resolution_confidence"] = {"organization": 0.85, "post": 0.85, "person": 0.70}
+    actions, skipped = plan_apply([p], mini_polder / "data", person_match_floor=0.85)
+    person_actions = [a for a in actions if a.type == "create-person"]
+    assert person_actions, (actions, skipped)
+    # Niet geappend aan Henk: een nieuw record met eigen slug.
+    assert person_actions[0].record["id"] != "person:vermeer-h-1966"
+    assert "vermeer" in person_actions[0].record["id"]
+    assert not any(a.type == "append-mandaat" for a in actions)
+
+
+def test_person_match_floor_trusts_strong_resolved_id(mini_polder: Path) -> None:
+    """Boven de floor blijft de resolved_person_id vertrouwd: append."""
+    _write_yaml(
+        mini_polder / "data" / "personen" / "kewal-s-1975.yaml",
+        {
+            "id": "person:kewal-s-1975",
+            "names": [{"value": "Suzie Kewal"}],
+            "birth": {"year": 1975},
+            "mandaten": [],
+            "sources": [{"id": "roo", "url": "https://example.org/x", "retrieved": "2026-05-09"}],
+        },
+    )
+    p = _kewal_proposal()
+    p["resolved_person_id"] = "person:kewal-s-1975"
+    p["resolution_confidence"] = {"organization": 0.85, "post": 0.85, "person": 0.95}
+    actions, _ = plan_apply([p], mini_polder / "data", person_match_floor=0.85)
+    assert any(a.type == "append-mandaat" for a in actions)
+
+
+def test_chain_parent_mismatch_skips_by_default(mini_polder: Path) -> None:
+    """Default: een chain-entry waarvan de naam-match onder een andere
+    parent valt, skipt de proposal (strikt, daily-run-veilig)."""
+    # Bestaande directie met naam "Digitale Samenleving" maar parent = BZK.
+    # De Kewal-chain plaatst "directie Digitale Samenleving" onder BZK; dat
+    # matcht. We forceren mismatch door een afwijkende chain-parent-slug.
+    p = _kewal_proposal()
+    p["organization_id"] = "org:onderdeel-directie-digitale-samenleving-anders"
+    p["resolved_organization_id"] = None
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+            "slug_proposal": "org:min-bzk",
+        },
+        {
+            "level": "directoraat-generaal",
+            "name": "DG Verzonnen Tak",
+            "slug_proposal": "org:onderdeel-dg-verzonnen-tak-min-bzk",
+        },
+        {
+            "level": "directie",
+            "name": "directie Digitale Samenleving",
+            "slug_proposal": "org:onderdeel-directie-digitale-samenleving-anders",
+        },
+    ]
+    actions, skipped = plan_apply([p], mini_polder / "data")
+    assert actions == []
+    assert any("verschilt van chain-parent" in r for r in skipped[0].reasons)
+
+
+def test_chain_parent_mismatch_creates_when_enabled(mini_polder: Path) -> None:
+    """Met chain_create_on_parent_mismatch=True wordt de proposal niet
+    geskipt maar de voorgestelde org alsnog aangemaakt."""
+    p = _kewal_proposal()
+    p["organization_id"] = "org:onderdeel-directie-digitale-samenleving-anders"
+    p["resolved_organization_id"] = None
+    p["organization_chain"] = [
+        {
+            "level": "ministerie",
+            "name": "ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
+            "slug_proposal": "org:min-bzk",
+        },
+        {
+            "level": "directoraat-generaal",
+            "name": "DG Verzonnen Tak",
+            "slug_proposal": "org:onderdeel-dg-verzonnen-tak-min-bzk",
+        },
+        {
+            "level": "directie",
+            "name": "directie Digitale Samenleving",
+            "slug_proposal": "org:onderdeel-directie-digitale-samenleving-anders",
+        },
+    ]
+    actions, skipped = plan_apply([p], mini_polder / "data", chain_create_on_parent_mismatch=True)
+    org_actions = [a for a in actions if a.type == "create-org"]
+    assert org_actions, (actions, skipped)
+    created = {a.record["id"] for a in org_actions}
+    assert "org:onderdeel-dg-verzonnen-tak-min-bzk" in created
+
+
 def test_create_person_even_with_familyname_collision(mini_polder: Path) -> None:
     """Familienaam-collision blokkeert geen create-person meer.
 
@@ -609,6 +772,36 @@ def test_classification_word_boundary() -> None:
         _classification_from_role("afdelingshoofd Bedrijfsvoering, ministerie X")
         == "abd-afdelingshoofd"
     )
+
+
+def test_classification_anchors_on_leading_role_phrase() -> None:
+    """Regressie (hostile review): classificeer op de leidende rol-frase,
+    niet op keywords die in de trailing organisatie-context staan."""
+    from polder.apply import _classification_from_role as c
+
+    # 'DG' in de org-context na de komma mag MT-lid niet tot tmg promoten
+    assert (
+        c("MT-lid Curatieve Zorg (CZ) bij het directoraat-generaal Curatieve Zorg")
+        == "abd-afdelingshoofd"
+    )
+    # leidend 'hoofd' wint van 'secretaris-generaal' verderop in de frase
+    assert c("hoofd Bureau Secretaris-Generaal, ministerie van X") == "abd-afdelingshoofd"
+    # hoofd van de Auditdienst: leidend 'hoofd' -> afdelingshoofd-tier
+    assert c("hoofd van de Auditdienst Rijk, ministerie van Financien") == "abd-afdelingshoofd"
+    # raadadviseur is geen ABD-classificatie; 'Minister-President' verderop
+    # mag het niet tot bewindspersoon maken
+    assert c("raadadviseur bij het Kabinet Minister-President") is None
+    # rang-bepalingen veranderen de tier niet
+    assert c("Plaatsvervangend secretaris-generaal, ministerie van LNV") == "abd-tmg"
+    assert c("Waarnemend directeur-generaal Politie") == "abd-tmg"
+    assert c("Plaatsvervangend directeur Wetgeving") == "abd-directeur"
+    # echte gevallen blijven correct
+    assert c("Directeur Digitale Overheid, DGDOO, BZK") == "abd-directeur"
+    assert (
+        c("Hoofd afdeling Basisinfrastructuur en Dienstverlening, directie X")
+        == "abd-afdelingshoofd"
+    )
+    assert c("Minister van Volksgezondheid, Welzijn en Sport") == "bewindspersoon"
 
 
 def test_chain_unknown_ministerie_skipped(mini_polder: Path) -> None:

@@ -1,0 +1,15 @@
+id: org:onderdeel-dienstverlening-incasso-cjib-min-jenv
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-cjib-min-jenv
+names:
+- value: Directie Dienstverlening & Incasso
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/10/24/jurjen-van-gent-afdelingshoofd-dienstverlening-incasso-bij-cjib
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

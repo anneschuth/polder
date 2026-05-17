@@ -1,0 +1,29 @@
+id: person:lammertsma-kt-162d8eb5
+name:
+  full: Mr. K.T. (Kjille) Lammertsma
+  family: Lammertsma
+  given: Kjille
+  initials: K.T.
+mandaten:
+- id: mandate-post-mt-lid-plv-directeur-zorgverzekeringen-min-vws-2019-03-15
+  organization_id: org:onderdeel-directie-zorgverzekeringen-min-vws
+  post_id: post:mt-lid-plv-directeur-zorgverzekeringen-min-vws
+  role: MT-lid / plaatsvervangend directeur Zorgverzekeringen bij het ministerie van
+    Volksgezondheid, Welzijn en Sport
+  start_date: '2019-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/01/22/kjille-lammertsma-mt-lid-directie-zorgverzekeringen-plaatsvervangend-directeur-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-01-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/01/22/kjille-lammertsma-mt-lid-directie-zorgverzekeringen-plaatsvervangend-directeur-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

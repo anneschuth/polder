@@ -1,0 +1,28 @@
+id: person:harmsma-ha-c3bc1268
+name:
+  full: Mr. ing. H.A. (Harmen) Harmsma
+  family: Harmsma
+  given: Harmen
+  initials: H.A.
+mandaten:
+- id: mandate-post-dg-duo-min-ocw-2020-09-01
+  organization_id: org:onderdeel-duo-min-ocw
+  post_id: post:dg-duo-min-ocw
+  role: Directeur-generaal DUO, ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/19/harmen-harmsma-directeur-generaal-duo-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-06-19
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/19/harmen-harmsma-directeur-generaal-duo-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

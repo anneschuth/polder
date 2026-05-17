@@ -11,12 +11,7 @@ names:
   valid_from: '1900-01-01'
   valid_until: '2021-01-01'
 description:
-  text: De Chief Information Officer (CIO) van VWS adviseert bestuurders, beleidsmedewerkers
-    en de bestuursraad gevraagd en ongevraagd over de informatie- en ICT-aspecten
-    van beleid, uitvoering en bedrijfsvoering.De CIO zorgt ervoor dat alles wat met
-    informatievoorziening en ICT te maken heeft binnen VWS in samenhang gebeurt, en
-    volgens afspraken die met de zorgsector, binnen het Rijk en binnen VWS gemaakt
-    zijn.
+  text: De Chief Information Officer (CIO) van VWS adviseert bestuurders, beleidsmedewerkers en de bestuursraad gevraagd en ongevraagd over de informatie- en ICT-aspecten van beleid, uitvoering en bedrijfsvoering.De CIO zorgt ervoor dat alles wat met informatievoorziening en ICT te maken heeft binnen VWS in samenhang gebeurt, en volgens afspraken die met de zorgsector, binnen het Rijk en binnen VWS gemaakt zijn.
 contact:
   bezoekadres: Parnassusplein 5, 2511 VX Den Haag
   postadres: Postbus 20350, 2500 EJ Den Haag
@@ -39,3 +34,18 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/29788020/cio-office
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/14/job-de-jong-manager-cio-office-bij-acm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/21/astrid-zwiers-chief-information-officer-bij-de-sociale-verzekeringsbank
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/02/arnold-de-leeuw-manager-cio-office-bij-rijkswaterstaat
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

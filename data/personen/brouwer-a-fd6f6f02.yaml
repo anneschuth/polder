@@ -1,0 +1,29 @@
+id: person:brouwer-a-fd6f6f02
+name:
+  full: A. (Artur) Brouwer MSc
+  family: Brouwer
+  given: Artur
+  initials: A.
+mandaten:
+- id: mandate-post-mt-lid-curatieve-zorg-min-vws-2021-02-15
+  organization_id: org:onderdeel-directie-curatieve-zorg-min-vws
+  post_id: post:mt-lid-curatieve-zorg-min-vws
+  role: MT-lid, directie Curatieve Zorg, ministerie van Volksgezondheid, Welzijn en
+    Sport
+  start_date: '2021-02-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/17/artur-brouwer-mt-lid-curatieve-zorg-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-12-17
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/12/17/artur-brouwer-mt-lid-curatieve-zorg-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

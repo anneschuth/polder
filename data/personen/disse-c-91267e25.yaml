@@ -1,0 +1,43 @@
+id: person:disse-c-91267e25
+name:
+  full: Claudia Disse
+  family: Disse
+  given: Claudia
+mandaten:
+- id: mandate-post-unitdirecteur-tbb-directie-particulieren-belastingdienst-min-fin-2024-05-01
+  organization_id: org:onderdeel-directie-particulieren-belastingdienst-min-fin
+  post_id: post:unitdirecteur-toezicht-bezwaar-beroep-directie-particulieren-min-fin
+  role: Unitdirecteur Toezicht, Bezwaar en Beroep, directie Particulieren, Belastingdienst,
+    ministerie van Financiën
+  start_date: '2024-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/26/claudia-disse-unitdirecteur-toezicht-bezwaar-en-beroep-directie-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-04-26
+  confidence: 0.91
+- id: mandate-post-unitdirecteur-toezicht-bezwaar-beroep-particulieren-belastingdienst-2024-05-01
+  organization_id: org:onderdeel-unit-toezicht-bezwaar-beroep-particulieren-belastingdienst
+  post_id: post:unitdirecteur-toezicht-bezwaar-beroep-particulieren-belastingdienst
+  role: Unitdirecteur Toezicht, Bezwaar en Beroep, directie Particulieren, Belastingdienst
+  start_date: '2024-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/26/claudia-disse-unitdirecteur-toezicht-bezwaar-en-beroep-directie-particulieren-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-04-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/04/26/claudia-disse-unitdirecteur-toezicht-bezwaar-en-beroep-directie-particulieren-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

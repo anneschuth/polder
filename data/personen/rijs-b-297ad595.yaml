@@ -1,0 +1,43 @@
+id: person:rijs-b-297ad595
+name:
+  full: Bart Rijs
+  family: Bart
+mandaten:
+- id: mandate-post-plaatsvervangend-directeur-afdelingshoofd-communicatie-min-vws-2022-09-01
+  organization_id: org:onderdeel-directie-communicatie-min-vws
+  post_id: post:plaatsvervangend-directeur-afdelingshoofd-communicatie-min-vws
+  role: Plaatsvervangend directeur en afdelingshoofd Communicatie, directie Communicatie,
+    ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2022-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/07/07/bart-rijs-afdelingshoofd-communicatie-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-07-07
+  confidence: 0.91
+- id: mandate-post-afdelingshoofd-plv-directeur-communicatie-advies-publiek-min-vws-2022-09-01
+  organization_id: org:onderdeel-afdeling-communicatie-advies-publiek-min-vws
+  post_id: post:afdelingshoofd-plv-directeur-communicatie-advies-publiek-min-vws
+  role: Plaatsvervangend directeur en afdelingshoofd Communicatie (advies en publiekscommunicatie),
+    ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2022-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/07/07/bart-rijs-afdelingshoofd-communicatie-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-07-07
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/07/07/bart-rijs-afdelingshoofd-communicatie-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

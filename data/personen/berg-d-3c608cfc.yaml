@@ -1,0 +1,28 @@
+id: person:berg-d-3c608cfc
+name:
+  full: D. (David) Berg
+  family: berg
+  initials: D.
+mandaten:
+- id: mandate-post-directeur-strategie-analyse-bedrijfsvoering-nctv-min-jenv-2021-02-01
+  organization_id: org:onderdeel-directie-strategie-analyse-en-bedrijfsvoering-nctv-min-jenv
+  post_id: post:directeur-strategie-analyse-bedrijfsvoering-nctv-min-jenv
+  role: Directeur Strategie, Analyse en Bedrijfsvoering, NCTV, ministerie van Justitie
+    en Veiligheid
+  start_date: '2021-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/14/david-berg-directeur-strategie-analyse-en-bedrijfsvoering-bij-de-nctv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-01-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/01/14/david-berg-directeur-strategie-analyse-en-bedrijfsvoering-bij-de-nctv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

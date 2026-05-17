@@ -1,0 +1,32 @@
+id: org:agentschap-ind-min-jenv
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-jenv
+names:
+- value: Immigratie- en Naturalisatiedienst (IND)
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/10/15/edwin-koop-directeur-regulier-verblijf-en-nederlanderschap-bij-de-ind
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/02/05/aly-van-berckel-gemeentesecretaris-bij-de-gemeente-tilburg
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: roo
+  url: https://organisaties.overheid.nl/115615/ind
+  retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/05/diana-storm-mt-lid-tevens-plaatsvervangend-directeur-bedrijfsvoering-bij-de-ind
+  retrieved: '2026-05-15'
+  fields:
+  - applied_via:apply-staging
+identifiers:
+  roo_id: '115615'
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10222
+  owms: http://standaarden.overheid.nl/owms/terms/Immigratie-_en_Naturalisatiedienst

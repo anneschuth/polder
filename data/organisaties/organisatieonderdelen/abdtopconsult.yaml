@@ -8,10 +8,7 @@ names:
 - value: ABDTOPConsult
   valid_from: '1900-01-01'
 description:
-  text: In 2010 stemde de Ministerraad in met de oprichting van ABDTOPConsult. ABDTOPConsult
-    is een klein team van ervaren topambtenaren dat snel inzetbaar is bij complexe
-    of urgente vraagstukken. De leden zijn benoemd door de ministerraad. ABDTOPConsult
-    is van en voor de (rijks)overheid.
+  text: In 2010 stemde de Ministerraad in met de oprichting van ABDTOPConsult. ABDTOPConsult is een klein team van ervaren topambtenaren dat snel inzetbaar is bij complexe of urgente vraagstukken. De leden zijn benoemd door de ministerraad. ABDTOPConsult is van en voor de (rijks)overheid.
 contact:
   website: http://www.algemenebestuursdienst.nl
   email: abd@minbzk.nl
@@ -45,3 +42,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/116761/abdtopconsult
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/23/aart-van-der-vlist-consultant-bij-abdtopconsult
+  retrieved: '2026-05-09'
+  fields:
+  - applied_via:apply-staging

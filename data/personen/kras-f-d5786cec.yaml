@@ -1,0 +1,43 @@
+id: person:kras-f-d5786cec
+name:
+  full: Frédéric Kras
+  family: Frédéric
+mandaten:
+- id: mandate-post-directeur-fez-min-vro-2025-06-15
+  organization_id: org:onderdeel-directie-fez-min-vro
+  post_id: post:directeur-fez-min-vro
+  role: Directeur Financieel-Economische Zaken, ministerie van Volkshuisvesting en
+    Ruimtelijke Ordening
+  start_date: '2025-06-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/17/frederic-kras-directeur-financieel-economische-zaken-bij-vro
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-06-17
+  confidence: 0.92
+- id: mandate-post-afdelingshoofd-control-min-bzk-2022-12-01
+  organization_id: org:onderdeel-afdeling-control-directie-fez-min-bzk-vro
+  post_id: post:afdelingshoofd-control-min-bzk
+  role: Hoofd afdeling Control, directie Financieel-Economische Zaken, ministerie
+    van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-12-01'
+  end_date: '2025-06-15'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/05/frederic-kras-hoofd-afdeling-control-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-05
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/17/frederic-kras-directeur-financieel-economische-zaken-bij-vro
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,28 @@
+id: person:schut-e-32ff123c
+name:
+  full: Erik Schut
+  family: Schut
+  given: Erik
+mandaten:
+- id: mandate-post-directeur-bewaken-en-beveiligen-nctv-min-jenv-2025-07-01
+  organization_id: org:onderdeel-directie-bewaken-en-beveiligen-nctv-min-jenv
+  post_id: post:directeur-bewaken-en-beveiligen-nctv-min-jenv
+  role: Directeur Bewaken en Beveiligen, Nationaal Coördinator Terrorismebestrijding
+    en Veiligheid, ministerie van Justitie en Veiligheid
+  start_date: '2025-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/26/erik-schut-directeur-bewaken-en-beveiligen-bij-de-nctv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-06-26
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/06/26/erik-schut-directeur-bewaken-en-beveiligen-bij-de-nctv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,27 @@
+id: person:de-boer-g-f548c805
+name:
+  full: Gonnie de Boer
+  family: Gonnie
+mandaten:
+- id: mandate-post-directeur-bestuur-bedrijfsvoering-commit-min-def-2024-03-01
+  organization_id: org:onderdeel-bb-commit-min-def
+  post_id: post:directeur-bestuur-bedrijfsvoering-commit-min-def
+  role: Directeur Bestuur en Bedrijfsvoering, Commando Materieel en IT, ministerie
+    van Defensie
+  start_date: '2024-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/04/gonnie-de-boer-directeur-bestuur-en-bedrijfsvoering-bij-commit-bij-defensie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/04/gonnie-de-boer-directeur-bestuur-en-bedrijfsvoering-bij-commit-bij-defensie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

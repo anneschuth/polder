@@ -1,0 +1,47 @@
+id: person:lodeweges-a-9de45c88
+name:
+  full: Mr. A. (Anna) Lodeweges
+  family: Lodeweges
+  given: Anna
+  initials: A.
+mandaten:
+- id: mandate-post-hoofd-airs-djoa-dgrr-min-jenv-2024-03-15
+  organization_id: org:onderdeel-afdeling-airs-dgrr-min-jenv
+  post_id: post:hoofd-airs-djoa-dgrr-min-jenv
+  role: Hoofd afdeling Internationale Aangelegenheden en Rechtshulp in Strafzaken
+    (AIRS), Directie Juridische en Operationele Aangelegenheden, directoraat-generaal
+    Rechtspleging en Rechtshandhaving, ministerie van Justitie en Veiligheid
+  start_date: '2024-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/14/anna-lodeweges-hoofd-internationale-aangelegenheden-en-rechtshulp-in-strafzaken-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-14
+  confidence: 0.9
+- id: mandate-post-hoofd-airs-min-jenv-2024-03-15
+  organization_id: org:onderdeel-airs-dgrh-min-jenv
+  post_id: post:hoofd-airs-dgrh-min-jenv
+  role: Hoofd afdeling Internationale Aangelegenheden en Rechtshulp in Strafzaken,
+    Directie Juridische en Operationele Aangelegenheden, directoraat-generaal Rechtspleging
+    en Rechtshandhaving, ministerie van Justitie en Veiligheid
+  start_date: '2024-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/14/anna-lodeweges-hoofd-internationale-aangelegenheden-en-rechtshulp-in-strafzaken-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-14
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/14/anna-lodeweges-hoofd-internationale-aangelegenheden-en-rechtshulp-in-strafzaken-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

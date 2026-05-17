@@ -1,0 +1,27 @@
+id: person:uijlenbroek-j-ac7aced2
+name:
+  full: Jaap Uijlenbroek
+  family: Uijlenbroek
+  given: Jaap
+mandaten:
+- id: mandate-post-dg-belastingdienst-min-fin-2017-01-01
+  organization_id: org:onderdeel-dg-belastingdienst-min-fin
+  post_id: post:dg-belastingdienst-min-fin
+  role: Directeur-generaal Belastingdienst bij het ministerie van Financiën
+  start_date: '2017-01-01'
+  end_date: '2020-01-11'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/11/jaap-uijlenbroek-vertrekt-als-directeur-generaal-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-11
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/11/jaap-uijlenbroek-vertrekt-als-directeur-generaal-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

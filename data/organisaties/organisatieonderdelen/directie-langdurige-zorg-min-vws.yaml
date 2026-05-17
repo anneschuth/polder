@@ -1,0 +1,20 @@
+id: org:onderdeel-directie-langdurige-zorg-min-vws
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-sg-min-vws
+names:
+- value: Directie Langdurige Zorg
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/06/29/ard-van-briemen-mt-lid-langdurige-zorg-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/12/17/lisette-ter-horst-manager-langdurige-zorg-en-tevens-plaatsvervangend-directeur-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

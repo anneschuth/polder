@@ -1,0 +1,44 @@
+id: person:kouwenberg-c-1ca35cb5
+name:
+  full: Chantal Kouwenberg
+  family: Kouwenberg
+  given: Chantal
+mandaten:
+- id: mandate-post-afdelingshoofd-bestuurlijk-instrumentarium-directie-veiligheid-bestuur-dg-rr-min-jenv-2023-01-01
+  organization_id: org:onderdeel-afdeling-bestuurlijk-instrumentarium-directie-veiligheid-bestuur-dg-rr-min-jenv
+  post_id: post:afdelingshoofd-bestuurlijk-instrumentarium-directie-veiligheid-bestuur-dg-rr-min-jenv
+  role: Afdelingshoofd Bestuurlijk Instrumentarium, directie Veiligheid en Bestuur,
+    DG Rechtspleging en Rechtshandhaving, ministerie van Justitie en Veiligheid
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/22/chantal-kouwenberg-afdelingshoofd-bestuurlijk-instrumentarium-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-22
+  confidence: 0.92
+- id: mandate-post-afdelingshoofd-bestuurlijk-instrumentarium-dvb-min-jenv-2023-01-01
+  organization_id: org:onderdeel-afdeling-bestuurlijk-instrumentarium-dvb-min-jenv
+  post_id: post:afdelingshoofd-bestuurlijk-instrumentarium-dvb-min-jenv
+  role: Afdelingshoofd Bestuurlijk Instrumentarium, directie Veiligheid en Bestuur,
+    DG Rechtspleging en Rechtshandhaving, ministerie van Justitie en Veiligheid
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/22/chantal-kouwenberg-afdelingshoofd-bestuurlijk-instrumentarium-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/22/chantal-kouwenberg-afdelingshoofd-bestuurlijk-instrumentarium-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

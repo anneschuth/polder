@@ -1,0 +1,28 @@
+id: person:reiding-e-c45a828e
+name:
+  full: Drs. E. (Emiel) Reiding
+  family: Reiding
+  given: Emiel
+  initials: E.
+mandaten:
+- id: mandate-post-secretaris-directeur-metropoolregio-amsterdam-2020-08-01
+  organization_id: org:onderdeel-metropoolregio-amsterdam
+  post_id: post:secretaris-directeur-metropoolregio-amsterdam
+  role: Secretaris-directeur Metropoolregio Amsterdam
+  start_date: '2020-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/emiel-reiding-directeur-metropoolregio-amsterdam
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-05-20
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/05/20/emiel-reiding-directeur-metropoolregio-amsterdam
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

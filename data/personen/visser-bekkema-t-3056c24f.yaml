@@ -1,0 +1,27 @@
+id: person:visser-bekkema-t-3056c24f
+name:
+  full: Thea Visser-Bekkema
+  family: Visser-Bekkema
+  given: Thea
+mandaten:
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-midden-nederland-politie-2021-03-01
+  organization_id: org:eenheid-midden-nederland-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-midden-nederland-politie
+  role: Hoofd Bedrijfsvoering, eenheid Midden-Nederland, Politie
+  start_date: '2021-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/01/benoemingen-eenheidsleiding-midden-nederland-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-03-01
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/03/01/benoemingen-eenheidsleiding-midden-nederland-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

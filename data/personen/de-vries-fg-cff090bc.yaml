@@ -1,0 +1,28 @@
+id: person:de-vries-fg-cff090bc
+name:
+  full: Mr. F.G. (Foppe) de Vries
+  family: de Vries
+  given: Foppe
+  initials: F.G.
+mandaten:
+- id: mandate-post-mt-lid-bpz-min-lnv-2022-12-01
+  organization_id: org:onderdeel-directie-bpz-min-lnv
+  post_id: post:mt-lid-bestuurlijke-politieke-zaken-min-lnv
+  role: MT-lid Bestuurlijke Politieke Zaken, ministerie van Landbouw, Natuur en Voedselkwaliteit
+  start_date: '2022-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/foppe-de-vries-mt-lid-bestuurlijke-politieke-zaken-bij-lnv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-11-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/11/04/foppe-de-vries-mt-lid-bestuurlijke-politieke-zaken-bij-lnv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

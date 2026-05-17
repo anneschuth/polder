@@ -1,0 +1,44 @@
+id: person:roozendaal-t-0a5b7673
+name:
+  full: Tjeerd Roozendaal
+  family: Roozendaal
+  given: Tjeerd
+mandaten:
+- id: mandate-post-hid-west-nederland-noord-rws-min-ienw-2021-12-01
+  organization_id: org:onderdeel-rws-west-nederland-noord-min-ienw
+  post_id: post:hid-west-nederland-noord-rws-min-ienw
+  role: Hoofdingenieur-directeur West-Nederland Noord, Rijkswaterstaat, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-19
+  confidence: 0.92
+- id: mandate-post-hoofdingenieur-directeur-west-nederland-noord-rijkswaterstaat-min-ienw-2021-12-01
+  organization_id: org:onderdeel-hid-west-nederland-noord-rijkswaterstaat-min-ienw
+  post_id: post:hoofdingenieur-directeur-west-nederland-noord-rijkswaterstaat-min-ienw
+  role: Hoofdingenieur-directeur (HID) West-Nederland Noord, Rijkswaterstaat, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2021-12-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-10-19
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/10/19/functiewisselingen-in-topmanagement-rijkswaterstaat
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

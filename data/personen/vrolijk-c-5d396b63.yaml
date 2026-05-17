@@ -1,0 +1,30 @@
+id: person:vrolijk-c-5d396b63
+name:
+  full: Dr. Ir. C. (Cassandra) Vrolijk
+  family: Vrolijk
+  given: Cassandra
+  initials: C.
+mandaten:
+- id: mandate-post-divisiehoofd-klant-bedrijf-consument-directie-handhaven-nvwa-min-lnv-2020-02-01
+  organization_id: org:onderdeel-directie-handhaven-nvwa-min-lnv
+  post_id: post:divisiehoofd-klant-bedrijf-consument-directie-handhaven-nvwa-min-lnv
+  role: Divisiehoofd Klant, Bedrijf en Consument van de directie Handhaven bij de
+    Nederlandse Voedsel- en Warenautoriteit (NVWA) van het ministerie van Landbouw,
+    Natuur en Voedselkwaliteit
+  start_date: '2020-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/12/30/cassandra-vrolijk-divisiehoofd-klant-bedrijf-en-consument-bij-de-nvwa
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-12-30
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/12/30/cassandra-vrolijk-divisiehoofd-klant-bedrijf-en-consument-bij-de-nvwa
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

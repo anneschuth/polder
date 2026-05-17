@@ -1,0 +1,26 @@
+id: person:de-lint-j-2dbd4ff4
+name:
+  full: Jeske de Lint
+  family: Jeske
+mandaten:
+- id: mandate-post-directeur-wonen-min-bzk-2025-05-01
+  organization_id: org:onderdeel-directie-wonen-min-bzk
+  post_id: post:directeur-wonen-min-bzk
+  role: Directeur Wonen bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2025-05-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/09/jeske-de-lint-directeur-wonen-bij-bzk---vro
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-09
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/09/jeske-de-lint-directeur-wonen-bij-bzk---vro
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

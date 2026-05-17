@@ -7,24 +7,8 @@ name:
 birth:
   year: 1978
 mandaten:
-- id: mandate-post-directeur-bedrijfsvoering-inkoop-strategie-civ-rws-2024-06-01
-  organization_id: org:rijkswaterstaat-onderdeel-centrale-informatievoorziening-min-ienw
-  post_id: post:directeur-bedrijfsvoering-inkoop-strategie-civ-rws
-  role: Directeur Bedrijfsvoering, Inkoop en Strategie bij het onderdeel Centrale
-    Informatievoorziening (CIV) van Rijkswaterstaat
-  start_date: '2024-06-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/04/emilie-sturm-directeur-bedrijfsvoering-inkoop-en-strategie-bij-de-centrale-informatievoorziening-van-rijkswaterstaat
-    retrieved: '2026-05-12'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2024-03-04
-  confidence: 0.9
 - id: mandate-post-directeur-bedrijfsvoering-inkoop-strategie-civ-rws-min-ienw-2024-06-01
-  organization_id: org:onderdeel-civ-rws-min-ienw
+  organization_id: org:rijkswaterstaat-onderdeel-centrale-informatievoorziening-min-ienw
   post_id: post:directeur-bedrijfsvoering-inkoop-strategie-civ-rws-min-ienw
   role: Directeur Bedrijfsvoering, Inkoop en Strategie, Centrale Informatievoorziening,
     Rijkswaterstaat, ministerie van Infrastructuur en Waterstaat
@@ -34,6 +18,22 @@ mandaten:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/04/emilie-sturm-directeur-bedrijfsvoering-inkoop-en-strategie-bij-de-centrale-informatievoorziening-van-rijkswaterstaat
     retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-03-04
+  confidence: 0.92
+- id: mandate-post-directeur-bedrijfsvoering-inkoop-strategie-civ-rijkswaterstaat-2024-06-01
+  organization_id: org:onderdeel-directie-bis-civ-rijkswaterstaat-min-ienw
+  post_id: post:directeur-bedrijfsvoering-inkoop-strategie-civ-rijkswaterstaat
+  role: Directeur Bedrijfsvoering, Inkoop en Strategie, Centrale Informatievoorziening,
+    Rijkswaterstaat
+  start_date: '2024-06-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/03/04/emilie-sturm-directeur-bedrijfsvoering-inkoop-en-strategie-bij-de-centrale-informatievoorziening-van-rijkswaterstaat
+    retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
   appointment:

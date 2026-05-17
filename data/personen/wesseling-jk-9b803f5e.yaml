@@ -1,0 +1,28 @@
+id: person:wesseling-jk-9b803f5e
+name:
+  full: Drs. J.K. (Jasper) Wesseling
+  family: Wesseling
+  given: Jasper
+  initials: J.K.
+mandaten:
+- id: mandate-post-dg-fiscale-zaken-min-fin-2020-04-01
+  organization_id: org:onderdeel-dg-fiscale-zaken-min-fin
+  post_id: post:dg-fiscale-zaken-min-fin
+  role: Directeur-generaal Fiscale Zaken bij het ministerie van Financiën
+  start_date: '2020-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/27/jasper-wesseling-directeur-generaal-fiscale-zaken-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-03-27
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/03/27/jasper-wesseling-directeur-generaal-fiscale-zaken-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

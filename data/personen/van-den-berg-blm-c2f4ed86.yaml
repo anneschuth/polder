@@ -1,0 +1,42 @@
+id: person:van-den-berg-blm-c2f4ed86
+name:
+  full: Ir. B.L.M. (Bart) van den Berg
+  family: berg
+  initials: B.L.M.
+mandaten:
+- id: mandate-post-directeur-verbreding-bestuurskracht-rijkswaterstaat-2018-09-01
+  organization_id: org:onderdeel-directie-verbreding-bestuurskracht-rijkswaterstaat
+  post_id: post:directeur-verbreding-bestuurskracht-rijkswaterstaat
+  role: Directeur Verbreding Bestuurskracht bij Rijkswaterstaat
+  start_date: '2018-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/19/bart-van-den-berg-directeur-verbreding-bestuurskracht-bij-rws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-06-19
+  confidence: 0.88
+- id: mandate-post-directeur-verbreding-bestuurskracht-rws-min-ienw-2018-09-01
+  organization_id: org:onderdeel-rws-verbreding-bestuurskracht-min-ienw
+  post_id: post:directeur-verbreding-bestuurskracht-rws-min-ienw
+  role: Directeur Verbreding Bestuurskracht bij Rijkswaterstaat
+  start_date: '2018-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/19/bart-van-den-berg-directeur-verbreding-bestuurskracht-bij-rws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-06-19
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/19/bart-van-den-berg-directeur-verbreding-bestuurskracht-bij-rws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

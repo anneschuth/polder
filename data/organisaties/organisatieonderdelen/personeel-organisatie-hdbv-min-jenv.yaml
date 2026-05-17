@@ -1,0 +1,15 @@
+id: org:onderdeel-personeel-organisatie-hdbv-min-jenv
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:onderdeel-hdbv-min-jenv
+names:
+- value: Directie Personeel & Organisatie (DP&O)
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/02/15/klaske-de-jonge-directeur-personeel--organisatie-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

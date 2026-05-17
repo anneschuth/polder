@@ -9,8 +9,7 @@ names:
   valid_from: '1900-01-01'
   valid_until: '2018-11-15'
 description:
-  text: "TAAK-\tTijdig signaleren van achterliggende en toekomstgerichte vragen\\\
-    ;-\tOntwikkelen van basisconcepten ten behoeve van beleid  en besturing."
+  text: "TAAK-\tTijdig signaleren van achterliggende en toekomstgerichte vragen\\;-\tOntwikkelen van basisconcepten ten behoeve van beleid  en besturing."
 contact:
   postadres: Postbus 20301, 2500 EH Den Haag
   addresses:
@@ -31,3 +30,8 @@ sources:
 - id: roo
   url: https://organisaties.overheid.nl/12383/directie-strategie
   retrieved: '2026-05-16'
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/06/08/dick-sijm-directeur-bureau-risicobeoordeling--onderzoek-bij-de-nvwa
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

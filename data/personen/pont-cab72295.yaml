@@ -7,7 +7,7 @@ name:
 mandaten:
 - id: mandate-post-directeur-financien-facilitair-corporate-dienst-rws-min-ienw-2018-07-16
   organization_id: org:onderdeel-corporate-dienst-rws-min-ienw
-  post_id: post:directeur-financien-facilitair-corporate-dienst-rws-min-ienw
+  post_id: post:directeur-bedrijfsvoering-inkoop-rws-corporate-dienst-min-im
   role: Directeur Financiën en Facilitair, Corporate Dienst, Rijkswaterstaat, ministerie
     van Infrastructuur en Waterstaat
   start_date: '2018-07-16'
@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2018-05-25
   confidence: 0.91
+- id: mandate-post-directeur-financien-facilitair-corporate-dienst-rws-2018-07-16
+  organization_id: org:onderdeel-directie-financien-facilitair-corporate-dienst-rws
+  post_id: post:directeur-financien-facilitair-corporate-dienst-rws
+  role: Directeur Financiën en Facilitair bij de Corporate Dienst van Rijkswaterstaat
+  start_date: '2018-07-16'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/25/bert-pont-directeur-financien-en-facilitair-bij-rijkswaterstaat
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-05-25
+  confidence: 0.88
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/25/bert-pont-directeur-financien-en-facilitair-bij-rijkswaterstaat

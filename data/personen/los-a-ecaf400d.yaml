@@ -1,0 +1,26 @@
+id: person:los-a-ecaf400d
+name:
+  full: Adrian Los
+  family: Adrian
+mandaten:
+- id: mandate-post-directeur-ruimtelijke-ontwikkeling-bzk-2024-02-26
+  organization_id: org:onderdeel-directie-ruimtelijke-ontwikkeling-min-bzk
+  post_id: post:directeur-ruimtelijke-ontwikkeling-bzk
+  role: Directeur Ruimtelijke Ontwikkeling bij het ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2024-02-26'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/21/adrian-los-directeur-ruimtelijke-ontwikkeling-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-12-21
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/12/21/adrian-los-directeur-ruimtelijke-ontwikkeling-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

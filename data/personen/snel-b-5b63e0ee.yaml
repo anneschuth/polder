@@ -1,0 +1,28 @@
+id: person:snel-b-5b63e0ee
+name:
+  full: Drs. B. (Bart) Snel
+  family: snel
+  initials: B.
+mandaten:
+- id: mandate-post-afdelingshoofd-mobiliteit-transities-directie-mg-min-ienw-2023-06-12
+  organization_id: org:onderdeel-afdeling-mobiliteit-transities-directie-mg-min-ienw
+  post_id: post:afdelingshoofd-mobiliteit-transities-directie-mg-min-ienw
+  role: Afdelingshoofd Mobiliteit en Transities, directie Mobiliteit en Gebieden,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2023-06-12'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/24/bart-snel-afdelingshoofd-mobiliteit-en-transities-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-04-24
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/24/bart-snel-afdelingshoofd-mobiliteit-en-transities-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

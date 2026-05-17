@@ -1,0 +1,28 @@
+id: person:tillema-e-8543c231
+name:
+  full: Elles Tillema-van Loo
+  family: Tillema-van
+  given: Elles
+mandaten:
+- id: mandate-post-algemeen-directeur-oostvaarderskliniek-dji-min-jenv-2023-06-05
+  organization_id: org:onderdeel-oostvaarderskliniek-dji-min-jenv
+  post_id: post:algemeen-directeur-oostvaarderskliniek-dji-min-jenv
+  role: Algemeen Directeur van het Forensisch Psychiatrisch Centrum de Oostvaarderskliniek
+    bij de Dienst Justitiële Inrichtingen, ministerie van Justitie en Veiligheid
+  start_date: '2023-06-05'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/03/elles-tillema-van-loo-algemeen-directeur-oostvaarderskliniek-bij-de-dienst-justitiele-inrichtingen
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-04-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/04/03/elles-tillema-van-loo-algemeen-directeur-oostvaarderskliniek-bij-de-dienst-justitiele-inrichtingen
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -6,8 +6,8 @@ name:
   initials: E.
 mandaten:
 - id: mandate-post-dg-migratie-min-jenv-2026-06-15
-  organization_id: org:dg-migratie
-  post_id: post:dg-migratie-min-jenv
+  organization_id: org:onderdeel-dg-migratie-min-jenv
+  post_id: post:directeur-generaal-migratie-min-jenv
   role: Directeur-generaal Migratie, ministerie van Justitie en Veiligheid
   start_date: '2026-06-15'
   end_date: null
@@ -21,11 +21,11 @@ mandaten:
     decision: ABD-nieuwsbericht 2026-05-08
   confidence: 0.92
 - id: mandate-post-pdg-groningen-ondergrond-min-ezk-2022-04-01
-  organization_id: org:onderdeel-pdg-groningen-en-ondergrond-min-ezk
-  post_id: post:pdg-groningen-en-ondergrond-min-ezk
+  organization_id: org:onderdeel-programma-dg-groningen-en-ondergrond-min-ezk
+  post_id: post:kwartiermaker-programma-dg-groningen-en-ondergrond-min-ezk
   role: Programma-directeur-generaal Groningen en Ondergrond
   start_date: '2022-04-01'
-  end_date: null
+  end_date: '2026-06-15'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
@@ -36,12 +36,12 @@ mandaten:
     decision: ABD-nieuwsbericht 2022-03-25
   confidence: 0.92
 - id: mandate-post-directeur-warmte-ondergrond-dg-klimaat-energie-min-ezk-2020-08-01
-  organization_id: org:dg-klimaat-energie-min-ezk
+  organization_id: org:onderdeel-dg-klimaat-en-energie-min-ezk
   post_id: post:directeur-warmte-ondergrond-dg-klimaat-energie-min-ezk
   role: Directeur Warmte & Ondergrond, directoraat-generaal Klimaat & Energie, ministerie
     van Economische Zaken en Klimaat
   start_date: '2020-08-01'
-  end_date: null
+  end_date: '2022-04-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/06/11/esther-pijs-directeur-warmte--ondergrond-bij-ezk
@@ -51,45 +51,13 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-06-11
   confidence: 0.9
-- id: mandate-post-programma-dg-groningen-en-ondergrond-min-ezk-2022-04-01
-  organization_id: org:onderdeel-programma-dg-groningen-en-ondergrond-min-ezk
-  post_id: post:programma-dg-groningen-en-ondergrond-min-ezk
-  role: Programma-directeur-generaal Groningen en Ondergrond bij het ministerie van
-    Economische Zaken en Klimaat
-  start_date: '2022-04-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
-    retrieved: '2026-05-15'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2022-03-25
-  confidence: 0.92
-- id: mandate-post-programma-dg-groningen-ondergrond-min-ezk-2022-04-01
-  organization_id: org:onderdeel-programma-dg-groningen-ondergrond-min-ezk
-  post_id: post:programma-dg-groningen-ondergrond-min-ezk
-  role: Programma-directeur-generaal Groningen en Ondergrond bij het ministerie van
-    Economische Zaken en Klimaat
-  start_date: '2022-04-01'
-  end_date: null
-  sources:
-  - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/03/25/esther-pijs-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
-    retrieved: '2026-05-15'
-    fields:
-    - applied_via:apply-staging
-  appointment:
-    decision: ABD-nieuwsbericht 2022-03-25
-  confidence: 0.92
 - id: mandate-post-kwartiermaker-programma-dg-groningen-en-ondergrond-min-ezk-2022-03-01
   organization_id: org:onderdeel-programma-dg-groningen-en-ondergrond-min-ezk
   post_id: post:kwartiermaker-programma-dg-groningen-en-ondergrond-min-ezk
   role: Kwartiermaker en beoogd programma-directeur-generaal Groningen en Ondergrond
     bij het ministerie van Economische Zaken en Klimaat
   start_date: '2022-03-01'
-  end_date: null
+  end_date: '2022-04-01'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/25/esther-pijs-kwartiermaker-en-beoogd-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
@@ -99,22 +67,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-02-25
   confidence: 0.87
-- id: mandate-post-kwartiermaker-programma-dg-groningen-ondergrond-min-ezk-2022-03-01
-  organization_id: org:onderdeel-programma-dg-groningen-ondergrond-min-ezk
-  post_id: post:kwartiermaker-programma-dg-groningen-ondergrond-min-ezk
-  role: Kwartiermaker en beoogd programma-directeur-generaal Groningen en Ondergrond,
-    ministerie van Economische Zaken en Klimaat
-  start_date: '2022-03-01'
-  end_date: null
+- id: mandate-post-kwartiermaker-programma-dg-groningen-en-ondergrond-min-ezk-2022-02-25
+  organization_id: org:onderdeel-programma-dg-groningen-en-ondergrond-min-ezk
+  post_id: post:kwartiermaker-programma-dg-groningen-en-ondergrond-min-ezk
+  role: Kwartiermaker en beoogd programma-DG Groningen en Ondergrond, ministerie van
+    Economische Zaken en Klimaat
+  start_date: '2022-02-25'
+  end_date: '2022-03-01'
   sources:
   - id: abd_nieuws
-    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/25/esther-pijs-kwartiermaker-en-beoogd-programma-directeur-generaal-groningen-en-ondergrond-bij-ezk
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/25/esther-pijs-kwartiermaker-en-beoogd-programma-dg-groningen-en-ondergrond
     retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
   appointment:
     decision: ABD-nieuwsbericht 2022-02-25
-  confidence: 0.88
+  confidence: 0.85
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/05/08/esther-pijs-directeur-generaal-migratie-bij-jenv

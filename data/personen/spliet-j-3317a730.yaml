@@ -20,6 +20,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2025-03-19
   confidence: 0.91
+- id: mandate-post-programmadirecteur-inzicht-in-kwaliteit-min-fin-2018-08-01
+  organization_id: org:onderdeel-programmadirectie-inzicht-in-kwaliteit-min-fin
+  post_id: post:programmadirecteur-inzicht-in-kwaliteit-min-fin
+  role: Programmadirecteur Inzicht in Kwaliteit bij het ministerie van Financiën
+  start_date: '2018-08-01'
+  end_date: '2025-03-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/05/08/julien-spliet-programmadirecteur-inzicht-in-kwaliteit-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-05-08
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/19/julien-spliet-plaatsvervangend-directeur-generaal-dienstverlening-en-operaties-bij-de-belastingdienst

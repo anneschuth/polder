@@ -1,0 +1,29 @@
+id: person:allessie-mmj-e3d384f2
+name:
+  full: Ing. M.M.J. (Mark) Allessie
+  family: Allessie
+  given: Mark
+  initials: M.M.J.
+mandaten:
+- id: mandate-post-interim-directeur-ambtenaar-en-organisatie-min-bzk-2018-09-01
+  organization_id: org:onderdeel-directie-ambtenaar-en-organisatie-min-bzk
+  post_id: post:interim-directeur-ambtenaar-en-organisatie-min-bzk
+  role: Interim-directeur Ambtenaar en Organisatie, ministerie van Binnenlandse Zaken
+    en Koninkrijksrelaties
+  start_date: '2018-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/22/marc-allessie-interim-directeur-ambtenaar-en-organisatie-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-08-22
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/08/22/marc-allessie-interim-directeur-ambtenaar-en-organisatie-bij-bzk
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

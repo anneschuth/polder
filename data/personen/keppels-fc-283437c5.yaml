@@ -1,0 +1,29 @@
+id: person:keppels-fc-283437c5
+name:
+  full: Drs. F.C. (Freek) Keppels
+  family: Keppels
+  given: Freek
+  initials: F.C.
+mandaten:
+- id: mandate-post-directeur-fez-min-bz-2020-08-15
+  organization_id: org:onderdeel-directie-fez-min-bz
+  post_id: post:directeur-fez-min-bz
+  role: Directeur Financieel Economische Zaken bij het ministerie van Buitenlandse
+    Zaken
+  start_date: '2020-08-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/03/freek-keppels-directeur-financieel-economische-zaken-bij-bz
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-04-03
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/04/03/freek-keppels-directeur-financieel-economische-zaken-bij-bz
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

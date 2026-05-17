@@ -1,0 +1,45 @@
+id: person:soorsma-he-ab349a75
+name:
+  full: Ing. H.E. (Henk) Soorsma
+  family: Soorsma
+  given: Henk
+  initials: H.E.
+mandaten:
+- id: mandate-post-kwartiermaker-programmadirecteur-covid19-volksgezondheid-min-vws-2022-03-14
+  organization_id: org:onderdeel-coordinerende-directie-covid19-volksgezondheid-min-vws
+  post_id: post:kwartiermaker-programmadirecteur-coordinerende-directie-covid19-volksgezondheid-min-vws
+  role: Kwartiermaker programmadirecteur coördinerende directie COVID-19 Volksgezondheid
+    bij het ministerie van Volksgezondheid, Welzijn en Sport (duo-directeurschap)
+  start_date: '2022-03-14'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/17/frank-kooiman-en-henk-soorsma-kwartiermaker-programmadirecteur-coordinerende-directie-covid-19-volksgezondheid-bij-vws
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-02-17
+  confidence: 0.88
+- id: mandate-post-programmadirecteur-programma-dg-samenleving-covid19-min-vws-2020-12-01
+  organization_id: org:onderdeel-programma-dg-samenleving-covid19-min-vws
+  post_id: post:programmadirecteur-programma-dg-samenleving-covid19-min-vws
+  role: Programmadirecteur, programmadirectoraat-generaal Samenleving en COVID-19,
+    ministerie van Volksgezondheid, Welzijn en Sport
+  start_date: '2020-12-01'
+  end_date: '2022-03-14'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/11/13/henk-soorsma-programmadirecteur-bij-programma-dg-samenleving-en-covid-19
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-11-13
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/17/frank-kooiman-en-henk-soorsma-kwartiermaker-programmadirecteur-coordinerende-directie-covid-19-volksgezondheid-bij-vws
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,15 +1,20 @@
-id: org:onderdeel-inspectie-der-rijksfinancien-min-fin
+id: org:inspectie-der-rijksfinancien-min-fin
 type: organisatieonderdeel
 classification: organisatieonderdeel
-parent_id: org:onderdeel-sg-min-fin
+parent_id: org:onderdeel-directoraat-generaal-rijksbegroting-min-fin
 names:
 - value: Inspectie der Rijksfinanciën
-  valid_from: '2026-05-14'
-valid_from: '2026-05-14'
+  valid_from: '2026-05-16'
+valid_from: '2026-05-16'
 valid_until: null
 sources:
 - id: abd_nieuws
-  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/09/18/coen-hogendoorn-directeur-inspectie-der-rijksfinancien-bij-financien
-  retrieved: '2026-05-14'
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/11/28/eric-verweij-sectiehoofd-defensie-buitenlandse-zaken-en-buitenlandse-handel-en-ontwikkelingssamenwerking-bij-inspectie-der-rijksfinancien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/22/barbara-jansen-sectiehoofd-financien-gemeenten-en-provincies-bij-de-inspectie-der-rijksfinancien
+  retrieved: '2026-05-16'
   fields:
   - applied_via:apply-staging

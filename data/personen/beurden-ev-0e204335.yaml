@@ -13,7 +13,7 @@ mandaten:
     Veiligheid, Nationaal Coördinator Terrorismebestrijding en Veiligheid (NCTV),
     ministerie van Justitie en Veiligheid
   start_date: '2024-09-15'
-  end_date: null
+  end_date: '2026-03-02'
   sources:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/12/esther-van-beurden-directeur-cybersecurity-weerbaarheid-statelijke-dreigingen-en-analyse-nationale-veiligheid-bij-nctv
@@ -25,7 +25,7 @@ mandaten:
   confidence: 0.92
 - id: mandate-post-plaatsvervangend-nctv-min-jenv-2026-03-15
   organization_id: org:onderdeel-nctv-min-jenv
-  post_id: post:plaatsvervangend-nctv-min-jenv
+  post_id: post:directeur-cybersecurity-weerbaarheid-statelijke-dreigingen-analyse-nationale-veiligheid-nctv
   role: Plaatsvervangend Nationaal Coördinator Terrorismebestrijding en Veiligheid,
     tevens directeur Cybersecurity en Weerbaarheid Statelijke Dreigingen, NCTV, ministerie
     van Justitie en Veiligheid
@@ -35,6 +35,21 @@ mandaten:
   - id: abd_nieuws
     url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/03/02/esther-van-beurden-plaatsvervangend-nctv
     retrieved: '2026-05-15'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-03-02
+  confidence: 0.92
+- id: mandate-post-plaatsvervangend-nctv-min-jenv-2026-03-02
+  organization_id: org:onderdeel-nctv-min-jenv
+  post_id: post:directeur-cybersecurity-weerbaarheid-statelijke-dreigingen-analyse-nationale-veiligheid-nctv
+  role: Plaatsvervangend NCTV, ministerie van Justitie en Veiligheid
+  start_date: '2026-03-02'
+  end_date: '2026-03-15'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/03/02/esther-van-beurden-plaatsvervangend-nctv
+    retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
   appointment:

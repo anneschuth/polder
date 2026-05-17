@@ -1,0 +1,27 @@
+id: person:de-keizer-g-ed2b31b8
+name:
+  full: Gerrit de Keizer
+  family: de Keizer
+  given: Gerrit
+mandaten:
+- id: mandate-post-regiodirecteur-zuid-directie-go-belastingdienst-2022-02-01
+  organization_id: org:onderdeel-directie-grote-ondernemingen-belastingdienst-min-fin
+  post_id: post:regiodirecteur-zuid-directie-go-belastingdienst
+  role: Regiodirecteur Zuid bij de directie Grote Ondernemingen (GO) van de Belastingdienst
+  start_date: '2022-02-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/25/gerrit-de-keizer-regiodirecteur-zuid-directie-grote-ondernemingen-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-01-25
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/25/gerrit-de-keizer-regiodirecteur-zuid-directie-grote-ondernemingen-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -6,7 +6,7 @@ name:
   initials: B.
 mandaten:
 - id: mandate-post-afdelingshoofd-integrale-veiligheid-min-jenv-2019-04-01
-  organization_id: org:onderdeel-iv
+  organization_id: org:onderdeel-informatievoorziening-belastingdienst
   post_id: post:afdelingshoofd-integrale-veiligheid-min-jenv
   role: Afdelingshoofd Integrale Veiligheid bij directoraat-generaal Rechtspleging
     en Rechtshandhaving bij het ministerie van Justitie en Veiligheid
@@ -21,6 +21,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2019-04-16
   confidence: 0.9
+- id: mandate-post-afdelingshoofd-integrale-veiligheid-dg-rechtspleging-rechtshandhaving-min-jenv-2019-04-01
+  organization_id: org:onderdeel-afdeling-integrale-veiligheid-dg-rechtspleging-rechtshandhaving-min-jenv
+  post_id: post:afdelingshoofd-integrale-veiligheid-dg-rechtspleging-rechtshandhaving-min-jenv
+  role: Afdelingshoofd Integrale Veiligheid, directoraat-generaal Rechtspleging en
+    Rechtshandhaving, ministerie van Justitie en Veiligheid
+  start_date: '2019-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/04/16/barbara-perels-afdelingshoofd-integrale-veiligheid-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2019-04-16
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/04/16/barbara-perels-afdelingshoofd-integrale-veiligheid-bij-jenv

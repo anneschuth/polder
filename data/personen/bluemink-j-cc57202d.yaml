@@ -21,6 +21,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2022-02-02
   confidence: 0.88
+- id: mandate-post-afdelingshoofd-bouwregelgeving-bouwkwaliteit-min-bzk-2022-03-01
+  organization_id: org:onderdeel-afdeling-bouwregelgeving-en-bouwkwaliteit-min-bzk
+  post_id: post:afdelingshoofd-bouwregelgeving-bouwkwaliteit-min-bzk
+  role: Afdelingshoofd Bouwregelgeving en Bouwkwaliteit, Directie Bouwen en Energie,
+    ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/02/functieruil-jelle-bluemink-en-herman-scholten-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-02-02
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/02/02/functieruil-jelle-bluemink-en-herman-scholten-bij-bzk

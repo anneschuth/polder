@@ -10,17 +10,30 @@ mandaten:
   post_id: post:raadslid-gemeente-maastricht
   role: Raadslid gemeente Maastricht
   start_date: '2026-05-09'
-  end_date: null
+  end_date: '2026-05-13'
   sources:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/1910596
     retrieved: '2026-05-09'
+- id: mandate-ori-9c4836d0845dd0ad
+  organization_id: org:gemeente-maastricht
+  post_id: post:raadslid-gemeente-maastricht
+  role: Raadslid gemeente Maastricht
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7768692
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/1910405
   retrieved: '2026-05-09'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q89534570
+  retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/7768660
   retrieved: '2026-05-13'
 birth:
   year: 1953

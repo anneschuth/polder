@@ -1,0 +1,29 @@
+id: person:konings-mhg-a0ae96fd
+name:
+  full: Drs. M.H.G. (Marc) Konings
+  family: Konings
+  given: Marc
+  initials: M.H.G.
+mandaten:
+- id: mandate-post-waarnemend-psg-min-ienw-2024-08-18
+  organization_id: org:min-ienw
+  post_id: post:waarnemend-psg-min-ienw
+  role: Waarnemend plaatsvervangend secretaris-generaal bij het ministerie van Infrastructuur
+    en Waterstaat
+  start_date: '2024-08-18'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/11/marc-konings-waarnemend-plaatsvervangend-secretaris-generaal-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-07-11
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/07/11/marc-konings-waarnemend-plaatsvervangend-secretaris-generaal-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

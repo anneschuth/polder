@@ -1,0 +1,26 @@
+id: person:van-hees-c-beafd4bf
+name:
+  full: Charlotte van Hees
+  family: Charlotte
+mandaten:
+- id: mandate-post-directeur-scp-2024-10-01
+  organization_id: org:onderdeel-scp
+  post_id: post:directeur-scp
+  role: Adjunct-directeur van het Sociaal Cultureel Planbureau
+  start_date: '2024-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/06/13/charlotte-van-hees-adjunct-directeur-sociaal-en-cultureel-planbureau
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2024-06-13
+  confidence: 0.9
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2024/06/13/charlotte-van-hees-adjunct-directeur-sociaal-en-cultureel-planbureau
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

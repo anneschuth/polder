@@ -1,0 +1,43 @@
+id: person:van-der-stelt-hr-132baded
+name:
+  full: Drs. H.R. (Hans) van der Stelt
+  family: van der Stelt
+  given: Hans
+  initials: H.R.
+mandaten:
+- id: mandate-post-directeur-concernzaken-provincie-noord-holland-2020-03-15
+  organization_id: org:prov-nh
+  post_id: post:directeur-concernzaken-provincie-noord-holland
+  role: Directeur Concernzaken, provincie Noord-Holland
+  start_date: '2020-03-15'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/06/hans-van-der-stelt-directeur-concernzaken-provincie-noord-holland
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-06
+  confidence: 0.92
+- id: mandate-post-programmadirecteur-wederopbouw-min-bzk-2018-02-15
+  organization_id: org:onderdeel-sg-min-bzk
+  post_id: post:programmadirecteur-wederopbouw-min-bzk
+  role: Programmadirecteur Wederopbouw, ministerie van Binnenlandse Zaken en Koninkrijksrelaties
+  start_date: '2018-02-15'
+  end_date: '2020-03-15'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/01/15/hans-van-der-stelt-programmadirecteur-wederopbouw-bij-bzk
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-01-15
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/06/hans-van-der-stelt-directeur-concernzaken-provincie-noord-holland
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

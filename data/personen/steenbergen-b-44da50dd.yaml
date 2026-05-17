@@ -1,0 +1,28 @@
+id: person:steenbergen-b-44da50dd
+name:
+  full: Drs. B. (Bertine) Steenbergen MPA
+  family: Steenbergen
+  given: Bertine
+  initials: B.
+mandaten:
+- id: mandate-post-directeur-veiligheid-en-bestuur-min-jenv-2018-08-01
+  organization_id: org:onderdeel-veiligheid-en-bestuur-min-jenv
+  post_id: post:directeur-veiligheid-en-bestuur-min-jenv
+  role: Directeur Veiligheid en Bestuur bij het ministerie van Justitie en Veiligheid
+  start_date: '2018-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/13/bertine-steenbergen-directeur-veiligheid-en-bestuur-bij-jenv
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2018-07-13
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/07/13/bertine-steenbergen-directeur-veiligheid-en-bestuur-bij-jenv
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

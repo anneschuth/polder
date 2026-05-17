@@ -1,0 +1,70 @@
+id: person:zonneveld-bje-fd9b4800
+name:
+  full: Drs. B.J.E. (Brigitte) Zonneveld
+  family: Zonneveld
+  given: Brigitte
+  initials: B.J.E.
+mandaten:
+- id: mandate-post-directeur-bestuursondersteuning-min-ienw-2020-06-15
+  organization_id: org:onderdeel-directie-bestuursondersteuning-min-ienw
+  post_id: post:directeur-bestuursondersteuning-min-ienw
+  role: Directeur Bestuursondersteuning, ministerie van Infrastructuur en Waterstaat
+  start_date: '2020-06-15'
+  end_date: '2026-03-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/18/brigitte-zonneveld-directeur-bestuursondersteuning-bij-ienw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-02-18
+  confidence: 0.92
+- id: mandate-post-directeur-opo-dg-funderend-onderwijs-min-ocw-2026-03-01
+  organization_id: org:onderdeel-onderwijspersoneel-primair-onderwijs-min-ocw
+  post_id: post:directeur-onderwijspersoneel-primair-onderwijs-min-ocw
+  role: Directeur Onderwijspersoneel en Primair Onderwijs (OPO) bij het ministerie
+    van Onderwijs, Cultuur en Wetenschap
+  start_date: '2026-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/01/07/brigitte-zonneveld-directeur-onderwijspersoneel-en-primair-onderwijs-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/brigitte-zonneveld-benoemd-tot-directeur-onderwijspersoneel-en-primair-onderwijs
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-01-07
+  confidence: 0.92
+- id: mandate-post-directeur-opo-min-ocw-2026-03-01
+  organization_id: org:onderdeel-directie-opo-min-ocw
+  post_id: post:directeur-opo-min-ocw
+  role: Directeur Onderwijspersoneel en Primair Onderwijs (OPO) bij het ministerie
+    van Onderwijs, Cultuur en Wetenschap
+  start_date: '2026-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/01/07/brigitte-zonneveld-directeur-onderwijspersoneel-en-primair-onderwijs-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-01-07
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/02/18/brigitte-zonneveld-directeur-bestuursondersteuning-bij-ienw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/01/07/brigitte-zonneveld-directeur-onderwijspersoneel-en-primair-onderwijs-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

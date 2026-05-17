@@ -1,0 +1,28 @@
+id: person:stam-cs-4e622a38
+name:
+  full: C.S. (Lotte) Stam
+  family: stam
+  initials: C.S.
+mandaten:
+- id: mandate-post-afdelingshoofd-toeslagen-dgfz-min-fin-2021-08-01
+  organization_id: org:onderdeel-afdeling-toeslagen-directie-dbt-min-fin
+  post_id: post:afdelingshoofd-toeslagen-dgfz-min-fin
+  role: Afdelingshoofd Toeslagen, directoraat-generaal Fiscale Zaken, ministerie van
+    Financiën
+  start_date: '2021-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/04/lotte-stam-afdelingshoofd-toeslagen-bij-financien
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-08-04
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/08/04/lotte-stam-afdelingshoofd-toeslagen-bij-financien
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

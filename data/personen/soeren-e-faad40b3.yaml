@@ -1,0 +1,27 @@
+id: person:soeren-e-faad40b3
+name:
+  full: Enno Soeren
+  family: Soeren
+  given: Enno
+mandaten:
+- id: mandate-post-hoofd-bedrijfsvoering-eenheid-limburg-politie-2023-08-01
+  organization_id: org:onderdeel-eenheid-limburg-nationale-politie
+  post_id: post:hoofd-bedrijfsvoering-eenheid-limburg-politie
+  role: Hoofd Bedrijfsvoering binnen de eenheidsleiding van Limburg bij de Politie
+  start_date: '2023-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/07/17/enno-soeren-hoofd-bedrijfsvoering-eenheid-limburg-bij-de-politie
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2023-07-17
+  confidence: 0.89
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2023/07/17/enno-soeren-hoofd-bedrijfsvoering-eenheid-limburg-bij-de-politie
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

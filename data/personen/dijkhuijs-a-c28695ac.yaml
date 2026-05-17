@@ -1,0 +1,42 @@
+id: person:dijkhuijs-a-c28695ac
+name:
+  full: André Dijkhuijs
+  family: Dijkhuijs
+  given: André
+mandaten:
+- id: mandate-post-stafhoofd-fci-rivm-2022-03-01
+  organization_id: org:agentschap-rivm-min-vws
+  post_id: post:stafhoofd-financien-control-inkoop-rivm
+  role: Stafhoofd Financiën, Control en Inkoop (FCI) bij het RIVM
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/11/andre-dijkhuijs-stafhoofd-financien-control-en-inkoop-bij-het-rivm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-01-11
+  confidence: 0.92
+- id: mandate-post-stafhoofd-fci-rivm-min-vws-2022-03-01
+  organization_id: org:onderdeel-staf-fci-rivm-min-vws
+  post_id: post:stafhoofd-fci-rivm-min-vws
+  role: Stafhoofd Financiën, Control en Inkoop (FCI), RIVM
+  start_date: '2022-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/11/andre-dijkhuijs-stafhoofd-financien-control-en-inkoop-bij-het-rivm
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-01-11
+  confidence: 0.87
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/01/11/andre-dijkhuijs-stafhoofd-financien-control-en-inkoop-bij-het-rivm
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

@@ -1,0 +1,29 @@
+id: person:de-groot-k-aef2e3a8
+name:
+  full: Drs. K. (Kor) de Groot RC
+  family: de Groot
+  given: Kor
+  initials: K.
+mandaten:
+- id: mandate-post-directeur-sso-noord-duo-min-ocw-2020-09-01
+  organization_id: org:onderdeel-sso-noord-duo-min-ocw
+  post_id: post:directeur-sso-noord-duo-min-ocw
+  role: Directeur Shared Service Organisatie – Noord, Dienst Uitvoering Onderwijs,
+    ministerie van Onderwijs, Cultuur en Wetenschap
+  start_date: '2020-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/09/kor-de-groot-directeur-sso-noord-bij-ocw
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-07-09
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/07/09/kor-de-groot-directeur-sso-noord-bij-ocw
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging

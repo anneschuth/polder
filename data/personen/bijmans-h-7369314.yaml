@@ -15,12 +15,25 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/7376630
     retrieved: '2026-05-13'
+- id: mandate-ori-7cf059166f0979ed
+  organization_id: org:gemeente-wijchen
+  post_id: post:raadslid-gemeente-wijchen
+  role: Raadslid gemeente Wijchen
+  start_date: '2026-05-13'
+  end_date: null
+  sources:
+  - id: open_raadsinformatie
+    url: https://id.openraadsinformatie.nl/7377129
+    retrieved: '2026-05-13'
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/7369314
   retrieved: '2026-05-13'
 - id: wikidata
   url: https://www.wikidata.org/wiki/Q133588547
+  retrieved: '2026-05-13'
+- id: open_raadsinformatie
+  url: https://id.openraadsinformatie.nl/7366805
   retrieved: '2026-05-13'
 birth:
   year: 1934

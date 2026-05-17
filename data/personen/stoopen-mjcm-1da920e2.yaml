@@ -1,0 +1,28 @@
+id: person:stoopen-mjcm-1da920e2
+name:
+  full: M.J.C.M. (Johan) Stoopen MPM
+  family: Stoopen
+  given: Johan
+  initials: M.J.C.M.
+mandaten:
+- id: mandate-post-regiodirecteur-mkb-eindhoven-belastingdienst-min-fin-2021-09-01
+  organization_id: org:onderdeel-mkb-eindhoven-belastingdienst-min-fin
+  post_id: post:regiodirecteur-mkb-eindhoven-belastingdienst-min-fin
+  role: Regiodirecteur Eindhoven Midden- en Kleinbedrijf bij de Belastingdienst
+  start_date: '2021-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/22/johan-stoopen-regiodirecteur-eindhoven-midden--en-kleinbedrijf-bij-de-belastingdienst
+    retrieved: '2026-05-16'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-22
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/22/johan-stoopen-regiodirecteur-eindhoven-midden--en-kleinbedrijf-bij-de-belastingdienst
+  retrieved: '2026-05-16'
+  fields:
+  - applied_via:apply-staging
