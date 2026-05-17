@@ -20,11 +20,13 @@ Tracking issue: https://github.com/anneschuth/polder/issues/TODO-koop-sru
 from __future__ import annotations
 
 import argparse
+import email.utils
 import logging
 import re
 import sys
+import time
 from collections.abc import Iterable
-from datetime import date
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 import httpx
@@ -49,6 +51,64 @@ CACHE_DIR = Path("_cache/staatscourant")
 HTTP_TIMEOUT = 90.0
 USER_AGENT = "polder-bot/0.1 (https://github.com/anneschuth/polder; anne.schuth@gmail.com)"
 PAGE_SIZE = 100
+
+# Adaptieve rate-limiting. `repository.overheid.nl` publiceert geen numeriek
+# rate-limit-contract; KOOP zegt enkel "gebruik de API, geen scraping". We
+# moeten ons dus aanpassen aan wat de server in de praktijk teruggeeft (429's).
+# AIMD-regelaar, zelfde principe als TCP-congestiecontrole: bij een schoon
+# antwoord durven we iets sneller, bij een 429 meteen fors gas terug.
+RATE_MIN_DELAY = 0.2  # ondergrens tussen besluit-XML-downloads (s)
+RATE_START_DELAY = 0.5  # startwaarde; klimt/zakt vanaf hier
+RATE_MAX_DELAY = 10.0  # bovengrens; voorbij dit punt is de bron simpelweg traag
+RATE_DECAY = 0.9  # multiplicatieve daling na een schoon antwoord
+RATE_BACKOFF = 2.0  # multiplicatieve stijging na een 429
+MAX_ATTEMPTS = 8  # pogingen per document voordat we het naar failures.log schrijven
+MAX_SINGLE_WAIT = 60.0  # cap op één enkele wachtperiode (s)
+
+
+class _AdaptiveRateLimiter:
+    """Stuurt de pauze tussen besluit-XML-downloads zelf bij.
+
+    `wait()` pauzeert het lopende tempo. `on_success()` versnelt langzaam,
+    `on_throttled()` remt direct. De regelaar deelt staat over alle records
+    binnen één `search()`-run, zodat aanhoudende throttling het tempo
+    structureel verlaagt in plaats van per record opnieuw te ontdekken.
+    """
+
+    def __init__(self, delay: float = RATE_START_DELAY) -> None:
+        self.delay = delay
+
+    def wait(self) -> None:
+        if self.delay > 0:
+            time.sleep(self.delay)
+
+    def on_success(self) -> None:
+        self.delay = max(RATE_MIN_DELAY, self.delay * RATE_DECAY)
+
+    def on_throttled(self) -> None:
+        self.delay = min(RATE_MAX_DELAY, self.delay * RATE_BACKOFF)
+
+
+def _parse_retry_after(value: str | None) -> float | None:
+    """Lees een `Retry-After`-header: delta-seconden of een HTTP-datum.
+
+    Retourneert het aantal seconden om te wachten, of ``None`` als de header
+    ontbreekt of onleesbaar is.
+    """
+    if not value:
+        return None
+    value = value.strip()
+    if value.isdigit():
+        return float(value)
+    try:
+        when = email.utils.parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        return None
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=UTC)
+    delta = (when - datetime.now(UTC)).total_seconds()
+    return max(0.0, delta)
+
 
 NAMESPACES = {
     "sru": "http://docs.oasis-open.org/ns/search-ws/sruResponse",
@@ -200,6 +260,88 @@ def _write_xml(path: Path, content: bytes, *, dry_run: bool) -> Path:
     return path
 
 
+def _log_failure(base: Path, identifier: str, item_url: str, reason: str) -> None:
+    """Schrijf een definitief mislukte download naar `<base>/failures.log`.
+
+    Eén regel per record zodat een tweede pass de identifiers gericht kan
+    herproberen in plaats van ze in de logspam te verliezen.
+    """
+    line = f"{datetime.now(UTC).isoformat()}\t{identifier}\t{item_url}\t{reason}\n"
+    failures = base / "failures.log"
+    failures.parent.mkdir(parents=True, exist_ok=True)
+    with failures.open("a", encoding="utf-8") as fh:
+        fh.write(line)
+
+
+def _download_besluit_xml(
+    item_url: str,
+    target: Path,
+    identifier: str,
+    *,
+    base: Path,
+    limiter: _AdaptiveRateLimiter,
+    timeout: float,
+    client: httpx.Client | None,
+    dry_run: bool,
+) -> bool:
+    """Haal één besluit-XML op, met adaptieve rate-limiting en Retry-After.
+
+    Returnt ``True`` bij succes (XML weggeschreven), ``False`` als het document
+    na ``MAX_ATTEMPTS`` pogingen niet binnen te halen was; dat geval landt in
+    ``failures.log``.
+    """
+    last_reason = "onbekend"
+    for attempt in range(MAX_ATTEMPTS):
+        try:
+            response = _http_get(item_url, timeout=timeout, client=client)
+        except httpx.HTTPError as exc:
+            last_reason = f"http-error: {exc}"
+            if attempt < MAX_ATTEMPTS - 1:
+                limiter.on_throttled()
+                time.sleep(min(MAX_SINGLE_WAIT, limiter.delay))
+            continue
+
+        if response.status_code == 429:
+            limiter.on_throttled()
+            retry_after = _parse_retry_after(response.headers.get("Retry-After"))
+            wait = retry_after if retry_after is not None else limiter.delay
+            wait = min(MAX_SINGLE_WAIT, wait)
+            last_reason = f"429 (Retry-After={retry_after})"
+            logger.debug(
+                "429 op %s, wachten %.1fs (poging %d/%d, delay=%.2f)",
+                identifier,
+                wait,
+                attempt + 1,
+                MAX_ATTEMPTS,
+                limiter.delay,
+            )
+            time.sleep(wait)
+            continue
+
+        try:
+            response.raise_for_status()
+        except httpx.HTTPError as exc:
+            last_reason = f"status {response.status_code}: {exc}"
+            if attempt < MAX_ATTEMPTS - 1:
+                limiter.on_throttled()
+                time.sleep(min(MAX_SINGLE_WAIT, limiter.delay))
+            continue
+
+        _write_xml(target, response.content, dry_run=dry_run)
+        limiter.on_success()
+        return True
+
+    logger.warning(
+        "Kon besluit-XML voor %s niet ophalen na %d pogingen: %s",
+        identifier,
+        MAX_ATTEMPTS,
+        last_reason,
+    )
+    if not dry_run:
+        _log_failure(base, identifier, item_url, last_reason)
+    return False
+
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -235,6 +377,7 @@ def search(
     written: list[Path] = []
     start_record = 1
     page_size = min(PAGE_SIZE, max_records)
+    limiter = _AdaptiveRateLimiter()
 
     while len(written) < max_records:
         remaining = max_records - len(written)
@@ -264,41 +407,26 @@ def search(
             record_xml = etree.tostring(record, pretty_print=True, encoding="utf-8")
             _write_xml(meta_target, record_xml, dry_run=dry_run)
             # Daarnaast: de echte besluit-XML downloaden via gzd:itemUrl.
-            # Skip stcrt-files zonder gzd:itemUrl en KB-records die geen XML hebben.
-            # Met retry-on-429 (exponential backoff) want repository.overheid.nl
-            # rate-limit op individuele XML-downloads.
+            # Skip stcrt-files zonder gzd:itemUrl en KB-records die geen XML
+            # hebben. `repository.overheid.nl` rate-limit op de individuele
+            # XML-downloads; _download_besluit_xml regelt het tempo adaptief
+            # en honoreert Retry-After. Definitief mislukte records gaan naar
+            # failures.log voor een gerichte tweede pass.
             item_url = meta.get("url")
             target = _cache_path_for(identifier, modified=meta["modified"], base=base)
             if item_url and not dry_run and not target.exists():
-                import time as _time
-
-                for attempt in range(5):
-                    try:
-                        response = _http_get(item_url, timeout=timeout, client=client)
-                        if response.status_code == 429:
-                            wait = 2**attempt
-                            logger.debug(
-                                "429 op %s, wachten %ds (attempt %d/5)",
-                                identifier,
-                                wait,
-                                attempt + 1,
-                            )
-                            _time.sleep(wait)
-                            continue
-                        response.raise_for_status()
-                        _write_xml(target, response.content, dry_run=dry_run)
-                        break
-                    except httpx.HTTPError as exc:
-                        if attempt == 4:
-                            logger.warning(
-                                "Kon besluit-XML voor %s niet ophalen na 5 pogingen: %s",
-                                identifier,
-                                exc,
-                            )
-                        else:
-                            _time.sleep(2**attempt)
-                # Throttle tussen records om rate-limit te ontwijken.
-                _time.sleep(0.1)
+                _download_besluit_xml(
+                    item_url,
+                    target,
+                    identifier,
+                    base=base,
+                    limiter=limiter,
+                    timeout=timeout,
+                    client=client,
+                    dry_run=dry_run,
+                )
+                # Adaptieve pauze vóór het volgende record.
+                limiter.wait()
             written.append(target)
             if len(written) >= max_records:
                 break
