@@ -1,5 +1,6 @@
 ---
 import EditLink from '~/components/EditLink.astro';
+import CopyButton from '~/components/CopyButton.astro';
 
 interface Props {
   identifiers?: Record<string, string | undefined>;
@@ -65,6 +66,7 @@ function displayValue(value: string): string {
               <code>{shown}</code>
             )}
             {editFor && <EditLink href={editFor(`identifiers.${k}`)} />}
+            <CopyButton value={v as string} label={LABELS[k] ?? k} />
           </dd>
         </div>
       );

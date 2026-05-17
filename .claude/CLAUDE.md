@@ -26,6 +26,25 @@ Project: `polder`. Een git-versioned, CC0-gelicenseerde dataset van Nederlandse 
 - Pydantic v2 voor model-validatie in code, JSON Schema voor data-validatie op disk.
 - httpx (niet requests). lxml voor XML. PyYAML met `safe_load` en `safe_dump`.
 
+## Web / frontend (`web/`)
+
+- **Altijd `@nldd/design-system`-componenten gebruiken, nooit hand-rollen.**
+  De site (`web/`, Astro) bouwt op de design-system web-componenten en
+  tokens. Voor elk UI-patroon eerst kijken of er een DS-component is
+  (`nldd-icon-button`, `nldd-icon`, `nldd-list`, ...). Geen eigen knoppen,
+  iconen-als-inline-SVG, of nagebouwde affordances als de DS het levert.
+- Geen hardcoded kleur-fallbacks in `var(--token, #hex)`. Als de
+  DS-stylesheet geladen is resolven de tokens; een per-property hex-fallback
+  is dode code die buiten het tokensysteem drift. Gebruik de echte
+  tokennaam (check `node_modules/@nldd/design-system/dist/css/settings.css`
+  voor wat bestaat — bv. `--semantics-content-success-color`, niet
+  `-positive-color`).
+- Eigen CSS alleen voor layout-lijm die de DS niet dekt (grid/flex om
+  componenten heen). Niet voor het herstylen van een component zelf.
+- Gat in de DS gevonden? Noteer het in `web/docs/nldd-feature-requests.md`
+  als input voor een feature-request, val terug op minimale eigen code,
+  hand-roll niet stilletjes een vervanger.
+
 ## Pad-conventies
 
 - Organisaties: `data/organisaties/<type>/<slug>.yaml` waar `<type>` een van `{ministeries, zbo, agentschappen, rwt, hoge-colleges, gemeenten, provincies, waterschappen, gemeenschappelijke-regelingen, adviescolleges, inspecties, rechterlijke-macht, politie-om, caribisch-nederland}`.
