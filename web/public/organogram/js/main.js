@@ -144,22 +144,41 @@ function findInRootData(id) {
   return rootData ? walk(rootData) : null;
 }
 
+// Cap on simultaneous bundle fetches. The eager preload touches every
+// ministerie/category-tree tile plus all their members (~1700 bundles);
+// firing them all at once exhausts the browser's connection pool and
+// Chrome returns ERR_INSUFFICIENT_RESOURCES. A small worker pool keeps
+// the preload fire-and-forget but bounded.
+const PRELOAD_CONCURRENCY = 6;
+
 async function preloadBundles(tiles) {
   const targets = tiles.filter(
     (t) => t.kind === "ministerie" || t.kind === "category-tree",
   );
+  const jobs = [];
   for (const t of targets) {
-    if (t.bundle) {
-      loadJSON(t.bundle).then((data) => mergeBundle(t.id, data)).catch(() => {});
+    if (t.bundle) jobs.push({ id: t.id, bundle: t.bundle });
+    for (const m of t.members || []) {
+      if (m.bundle) jobs.push({ id: m.id, bundle: m.bundle });
     }
-    if (t.members) {
-      for (const m of t.members) {
-        if (m.bundle) {
-          loadJSON(m.bundle).then((data) => mergeBundle(m.id, data)).catch(() => {});
-        }
+  }
+  let next = 0;
+  async function worker() {
+    while (next < jobs.length) {
+      const job = jobs[next++];
+      try {
+        const data = await loadJSON(job.bundle);
+        mergeBundle(job.id, data);
+      } catch {
+        /* preload is best-effort; the chart works without it */
       }
     }
   }
+  const pool = Array.from(
+    { length: Math.min(PRELOAD_CONCURRENCY, jobs.length) },
+    worker,
+  );
+  await Promise.all(pool);
 }
 
 function mergeBundle(id, data) {
