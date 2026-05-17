@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import shutil
 from pathlib import Path
 from unittest.mock import patch
@@ -404,7 +405,91 @@ def test_build_help_runs() -> None:
 def test_serve_help_runs() -> None:
     code, out = _run(["serve", "--help"])
     assert code == 0
+    # serve is een subapp: site (bare default) + db (datasette).
+    assert "site" in out
+    assert "db" in out
+
+
+def test_serve_db_help_runs() -> None:
+    code, out = _run(["serve", "db", "--help"])
+    assert code == 0
     assert "datasette" in out.lower() or "polder.db" in out
+
+
+def _seed_viz_target(root: Path) -> Path:
+    """Maak een web/-checkout met al gekopieerde organogram-data."""
+    target = root / "web" / "public" / "organogram" / "data"
+    target.mkdir(parents=True)
+    (target / "index.json").write_text("{}", encoding="utf-8")
+    (root / "web" / "package.json").write_text("{}", encoding="utf-8")
+    (root / "web" / "node_modules").mkdir()
+    return target
+
+
+def test_serve_site_skips_build_when_fresh(
+    mini_polder: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Niet-stale data: geen build_viz, dev-server wordt wel gestart."""
+    _seed_viz_target(mini_polder)
+    monkeypatch.chdir(mini_polder)
+
+    calls: dict[str, int] = {"build": 0, "dev": 0}
+
+    def fake_build_viz(_data: Path, _out: Path) -> None:
+        calls["build"] += 1
+
+    class _Proc:
+        returncode = 0
+
+    def fake_run(cmd: list[str], **_kw: object) -> _Proc:
+        if cmd[:3] == ["npm", "run", "dev"]:
+            calls["dev"] += 1
+        return _Proc()
+
+    monkeypatch.setattr("polder.build.to_viz.build_viz", fake_build_viz)
+    monkeypatch.setattr("subprocess.run", fake_run)
+
+    code, out = _run(["serve", "--no-open", "--no-install"])
+    assert code == 0
+    assert calls["build"] == 0
+    assert calls["dev"] == 1
+    assert "up-to-date" in out
+
+
+def test_serve_site_rebuilds_when_stale(mini_polder: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Bron nieuwer dan doel: build_viz draait, daarna copy + dev-server."""
+    target = _seed_viz_target(mini_polder)
+    monkeypatch.chdir(mini_polder)
+
+    # Maak doel ouder dan de bron-YAML.
+    old = 1.0
+    os.utime(target / "index.json", (old, old))
+
+    calls: dict[str, int] = {"build": 0, "dev": 0}
+
+    def fake_build_viz(_data: Path, out: Path) -> None:
+        calls["build"] += 1
+        data_out = out / "data"
+        data_out.mkdir(parents=True, exist_ok=True)
+        (data_out / "index.json").write_text('{"built": true}', encoding="utf-8")
+
+    class _Proc:
+        returncode = 0
+
+    def fake_run(cmd: list[str], **_kw: object) -> _Proc:
+        if cmd[:3] == ["npm", "run", "dev"]:
+            calls["dev"] += 1
+        return _Proc()
+
+    monkeypatch.setattr("polder.build.to_viz.build_viz", fake_build_viz)
+    monkeypatch.setattr("subprocess.run", fake_run)
+
+    code, _out = _run(["serve", "--no-open", "--no-install"])
+    assert code == 0
+    assert calls["build"] == 1
+    assert calls["dev"] == 1
+    # Copy heeft de nieuwe inhoud overgenomen.
+    assert json.loads((target / "index.json").read_text())["built"] is True
 
 
 def test_daily_update_help_runs() -> None:

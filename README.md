@@ -119,7 +119,8 @@ uv run polder roo roundtrip --xml _cache/roo-export-YYYY-MM-DD.xml --data data/o
 uv run polder validate
 uv run polder diff
 uv run polder build all             # SQLite + CSV + datapackage
-uv run polder serve                 # datasette op dist/polder.db
+uv run polder serve                 # lokale site (organogram), :4321
+uv run polder serve db              # datasette op dist/polder.db, :8001
 
 # Claude Code skills
 uv run polder skill review-diff diff.json
@@ -179,7 +180,8 @@ ad-hoc loops, geen UI-clicks.
 | ABD-nieuws-backfill | `polder backfill abd-nieuws --since 2024-01-01` |
 | Staatscourant-backfill | `polder backfill staatscourant --since 2024-01-01` |
 | Validatie | `polder validate` |
-| Datasette lokaal | `polder serve` |
+| Site lokaal (organogram) | `polder serve` |
+| Datasette lokaal | `polder serve db` |
 
 Alle paden in commando's zijn relatief aan de repo-root. Caches in `_cache/`,
 build-output in `dist/`, beide gitignored. Records in `data/` zijn de

@@ -21,7 +21,7 @@ uv run polder --help
 | `polder export <fmt> <out>` | Exporteer alles naar CSV of JSON |
 | `polder skill <name>` | Roep een Claude Code skill aan |
 | `polder daily-update` | Run de daily-update pipeline lokaal |
-| `polder serve` | Start datasette op `dist/polder.db` |
+| `polder serve` | Start de lokale site (organogram); `serve db` voor datasette |
 
 Top-level opties (gelden op alle subcommands):
 
@@ -259,10 +259,26 @@ Geen commits, geen PR; Anne reviewt zelf.
 
 ## `polder serve`
 
+Bare `polder serve` (of `polder serve site`) brengt de lokale Astro-site op.
+Het bouwt de organogram-JSON met `build viz` als `web/public/organogram/data/`
+ontbreekt of stale is (ouder dan de nieuwste mtime in `data/`), kopieert die
+naar de webapp, opent de browser op `/polder/organogram/` en start de Astro
+dev-server.
+
 ```
-polder serve                              # dist/polder.db op :8001
-polder serve --port 8080 --host 0.0.0.0
-polder serve --db /pad/naar/db.db --metadata /pad/naar/metadata.json
+polder serve                              # site op :4321, organogram-data auto
+polder serve --port 3000 --host 0.0.0.0
+polder serve --force                      # forceer rebuild + copy
+polder serve --no-open --no-install       # geen browser, sla npm install over
+```
+
+`polder serve db` start datasette op de gebouwde SQLite-database (de oude
+`polder serve`-functionaliteit):
+
+```
+polder serve db                           # dist/polder.db op :8001
+polder serve db --port 8080 --host 0.0.0.0
+polder serve db --db /pad/naar/db.db --metadata /pad/naar/metadata.json
 ```
 
 ## Backwards-compatible scripts

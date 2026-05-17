@@ -5,7 +5,7 @@ voor snelheid (~50x sneller dan pure Python op 4724+ files). Valt automatisch
 terug op een Python-implementatie als rg ontbreekt.
 
 Voor eenvoudige queries (substring of regex) is dit een grep-with-context.
-Voor cross-field of structured queries: gebruik `polder serve` (datasette).
+Voor cross-field of structured queries: gebruik `polder serve db` (datasette).
 """
 
 from __future__ import annotations

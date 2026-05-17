@@ -6,7 +6,7 @@
 - `polder validate` / `diff` / `build` / `list` / `show` / `export`
 - `polder skill <name>` voor de Claude Code skills (review-diff, parse-*)
 - `polder daily-update` als shortcut naar de daily-update pipeline
-- `polder serve` voor datasette op de gebouwde SQLite-database
+- `polder serve` brengt de lokale Astro-site op (`serve db` = datasette)
 
 De oude `polder-fetch-*`, `polder-validate`, `polder-diff` en `polder-build`
 entrypoints in `pyproject.toml` blijven staan voor backwards-compatibility.
@@ -75,7 +75,6 @@ _SINGLE_COMMANDS: dict[str, tuple[str, str]] = {
     "fix-casing": ("polder.cli.commands.fix_casing_cmd", "fix_casing"),
     "diff": ("polder.cli.commands.diff_cmd", "diff"),
     "build": ("polder.cli.commands.build_cmd", "build"),
-    "serve": ("polder.cli.commands.serve_cmd", "serve"),
     "daily-update": ("polder.cli.commands.daily_cmd", "daily_update"),
     "apply-staging": ("polder.cli.commands.apply_staging_cmd", "apply_staging"),
     "resolve": ("polder.cli.commands.resolve_cmd", "resolve"),
@@ -91,6 +90,7 @@ _SUBAPPS: dict[str, tuple[str, str]] = {
     "lookup": ("polder.cli.commands.lookup_cmd", "app"),
     "audit": ("polder.cli.commands.audit_cmd", "app"),
     "merge": ("polder.cli.commands.merge_cmd", "app"),
+    "serve": ("polder.cli.commands.serve_cmd", "app"),
 }
 
 _LIST_COMMANDS: dict[str, tuple[str, str]] = {

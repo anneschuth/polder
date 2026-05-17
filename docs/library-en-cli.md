@@ -202,7 +202,8 @@ polder export datapackage ./dist/
 polder pull [--ref main]
 polder validate [./data]
 polder diff <ref1> <ref2>
-polder serve [--port 8001]
+polder serve [--port 4321]                # lokale site (organogram)
+polder serve db [--port 8001]             # datasette
 ```
 
 `pull` cloned of fetcht een release naar de lokale cache. `validate` is een wrapper rond `polder.validate`. `diff` toont YAML-diff tussen twee refs zoals `src/diff.py` doet, geformatteerd voor terminal. `serve` bouwt SQLite-in-temp en start Datasette.
