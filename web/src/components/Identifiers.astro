@@ -65,8 +65,8 @@ function displayValue(value: string): string {
             ) : (
               <code>{shown}</code>
             )}
-            <CopyButton value={v as string} label={LABELS[k] ?? k} />
             {editFor && <EditLink href={editFor(`identifiers.${k}`)} />}
+            <CopyButton value={v as string} label={LABELS[k] ?? k} />
           </dd>
         </div>
       );

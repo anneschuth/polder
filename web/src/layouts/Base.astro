@@ -266,11 +266,22 @@ const releases = `${repo}/releases/latest`;
         opacity: 1;
         color: var(--semantics-content-default-color, #1a1a1a);
       }
-      /* Kopieer-knop: <nldd-icon-button> styelt zichzelf; alleen iets
-         gedempt tot het blok hover/focus krijgt, net als .edit-link. */
+      /* Kopieer-knop: zelfde inline-box als .edit-link zodat hij exact op
+         dezelfde regel/baseline als het potlood zit. <nldd-icon-button>
+         heeft van zichzelf een tap-target-minmaat (xs-min-size) die hem
+         groter maakt en uit de tekstregel duwt; daarom hier hard op
+         1.05em begrensd en gedempt tot het blok hover/focus krijgt. */
       .copy-btn {
+        display: inline-flex;
+        margin-inline-start: 0.4em;
+        vertical-align: middle;
         opacity: 0.45;
         transition: opacity 0.12s ease-in-out;
+        /* Schaal de DS-knop terug naar potlood-formaat door de tokens te
+           overschrijven die de interne knop voor maat/icoon gebruikt. De
+           DS houdt zo zijn eigen centrering/padding-berekening intact. */
+        --semantics-controls-xs-min-size: 1.05em;
+        --semantics-buttons-xs-icon-only-icon-size: 0.95em;
       }
       .deflist > div:hover .copy-btn,
       .deflist > div:focus-within .copy-btn,
@@ -279,11 +290,19 @@ const releases = `${repo}/releases/latest`;
         opacity: 1;
       }
 
-      /* Klok-stempel: icoon en tekst op één regel uitgelijnd. */
+      /* Klok-stempel: icoon en tekst op één regel uitgelijnd. <nldd-icon>
+         heeft zelf geen maat (svg vult de host 100%), dus expliciet op
+         tekstgrootte zetten en niet laten uitrekken door de flex-rij. */
       .timestamp {
         display: inline-flex;
         align-items: center;
         gap: 0.35em;
+      }
+      .timestamp nldd-icon {
+        flex: none;
+        width: 1em;
+        height: 1em;
+        color: var(--semantics-content-secondary-color);
       }
 
       .lede {
