@@ -9,6 +9,7 @@ import WooCard from '~/components/WooCard.astro';
 import RelationsCard from '~/components/RelationsCard.astro';
 import SourceList from '~/components/SourceList.astro';
 import EditLink from '~/components/EditLink.astro';
+import TimeStamp from '~/components/TimeStamp.astro';
 import {
   loadAll,
   currentName,
@@ -161,10 +162,10 @@ const ICON_PEOPLE = 'users';
             <div><dt class="muted">Geldig tot</dt><dd>{org.valid_until}<EditLink href={edit('valid_until')} /></dd></div>
           )}
           {org.last_mutation && (
-            <div><dt class="muted">Laatste mutatie</dt><dd>{org.last_mutation}<EditLink href={edit('last_mutation')} /></dd></div>
+            <div><dt class="muted">Laatste mutatie</dt><dd><TimeStamp>{org.last_mutation}</TimeStamp><EditLink href={edit('last_mutation')} /></dd></div>
           )}
           {org.last_verified && (
-            <div><dt class="muted">Laatst geverifieerd</dt><dd>{org.last_verified}<EditLink href={edit('last_verified')} /></dd></div>
+            <div><dt class="muted">Laatst geverifieerd</dt><dd><TimeStamp>{org.last_verified}</TimeStamp><EditLink href={edit('last_verified')} /></dd></div>
           )}
           {org.contact?.website && (
             <div>

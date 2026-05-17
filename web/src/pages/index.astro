@@ -1,5 +1,6 @@
 ---
 import Base from '~/layouts/Base.astro';
+import TimeStamp from '~/components/TimeStamp.astro';
 import { totals, recordsPerSource, lastUpdated } from '~/lib/stats';
 
 const t = totals();
@@ -140,7 +141,9 @@ const llmSources = withMeta.filter((s) => s.kind === 'llm');
         {updated && (
           <>
             <span aria-hidden="true">·</span>
-            <span class="counts-meta">bijgewerkt {updated}</span>
+            <span class="counts-meta">
+              <TimeStamp>bijgewerkt {updated}</TimeStamp>
+            </span>
           </>
         )}
       </p>

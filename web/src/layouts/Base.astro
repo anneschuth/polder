@@ -79,6 +79,19 @@ const releases = `${repo}/releases/latest`;
       import '@nldd/design-system';
     </script>
 
+    <script>
+      // Eén gedelegeerde handler voor alle <nldd-icon-button class="copy-btn">.
+      // data-copy bevat de ruwe waarde; na succes 1,2s het icoon naar
+      // check-mark wisselen als bevestiging.
+      document.addEventListener('click', async (e) => {
+        const btn = (e.target as HTMLElement)?.closest('.copy-btn[data-copy]');
+        if (!btn) return;
+        await navigator.clipboard.writeText(btn.getAttribute('data-copy') ?? '');
+        btn.setAttribute('icon', 'check-mark');
+        window.setTimeout(() => btn.setAttribute('icon', 'square-on-square'), 1200);
+      });
+    </script>
+
     <style is:global>
       /* NLDD ships its own @font-face with font-display: swap. We rely on
          the preload <link> in <head> to put the regular weight in cache
@@ -253,6 +266,26 @@ const releases = `${repo}/releases/latest`;
         opacity: 1;
         color: var(--semantics-content-default-color, #1a1a1a);
       }
+      /* Kopieer-knop: <nldd-icon-button> styelt zichzelf; alleen iets
+         gedempt tot het blok hover/focus krijgt, net als .edit-link. */
+      .copy-btn {
+        opacity: 0.45;
+        transition: opacity 0.12s ease-in-out;
+      }
+      .deflist > div:hover .copy-btn,
+      .deflist > div:focus-within .copy-btn,
+      .copy-btn:hover,
+      .copy-btn:focus-within {
+        opacity: 1;
+      }
+
+      /* Klok-stempel: icoon en tekst op één regel uitgelijnd. */
+      .timestamp {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35em;
+      }
+
       .lede {
         font-size: 1.05rem;
         line-height: 1.6;

@@ -1,0 +1,23 @@
+---
+// Kopieer-naar-klembord-knop op basis van het design-system
+// <nldd-icon-button> (square-on-square = "copy", nieuw in 0.8.44). De
+// klembord-write zelf kan het design-system niet doen; één gedelegeerde
+// listener in Base.astro vangt elke knop via het data-copy-attribuut en
+// wisselt kort naar check-mark als bevestiging.
+interface Props {
+  /** Ruwe waarde die naar het klembord gaat (niet de afgekorte weergave). */
+  value: string;
+  /** Wat er gekopieerd wordt, voor de accessible-label. Bijv. "OIN". */
+  label: string;
+}
+
+const { value, label } = Astro.props;
+---
+<nldd-icon-button
+  class="copy-btn"
+  variant="neutral-transparent"
+  size="xs"
+  icon="square-on-square"
+  accessible-label={`Kopieer ${label}`}
+  data-copy={value}
+></nldd-icon-button>
