@@ -1,11 +1,33 @@
-import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, dirname, basename, sep } from 'node:path';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { join, relative, dirname, basename, sep, parse as parsePath } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { parseDocument, isMap, isSeq, isPair, isScalar } from 'yaml';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const DATA_ROOT = join(HERE, '..', '..', '..', 'data');
+
+/**
+ * Loop vanaf de (gebundelde) module-locatie omhoog tot een map met een
+ * `data/personen`-submap. Niet een vaste `../../..`-hop: de bundler bepaalt
+ * de chunk-diepte (Astro 6 verplaatste prerender-chunks dieper in `dist/`),
+ * dus een hardcoded hop-count breekt bij elke layout-wijziging. Omhoog
+ * zoeken blijft CWD-onafhankelijk en worktree-veilig.
+ */
+function findDataRoot(start: string): string {
+  let dir = start;
+  for (;;) {
+    if (existsSync(join(dir, 'data', 'personen'))) return join(dir, 'data');
+    const parent = dirname(dir);
+    if (parent === dir || dir === parsePath(dir).root) {
+      throw new Error(
+        `Geen data/personen gevonden vanaf ${start} omhoog. Draai de build vanuit de polder-repo.`,
+      );
+    }
+    dir = parent;
+  }
+}
+
+const DATA_ROOT = findDataRoot(HERE);
 
 const GITHUB_REPO = 'anneschuth/polder';
 const GITHUB_BRANCH = 'main';
