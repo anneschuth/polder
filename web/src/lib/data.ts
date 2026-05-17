@@ -1,5 +1,5 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, dirname, basename, sep, parse as parsePath } from 'node:path';
+import { join, relative, dirname, basename, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { parseDocument, isMap, isSeq, isPair, isScalar } from 'yaml';
@@ -7,20 +7,28 @@ import { parseDocument, isMap, isSeq, isPair, isScalar } from 'yaml';
 const HERE = dirname(fileURLToPath(import.meta.url));
 
 /**
- * Loop vanaf de (gebundelde) module-locatie omhoog tot een map met een
- * `data/personen`-submap. Niet een vaste `../../..`-hop: de bundler bepaalt
- * de chunk-diepte (Astro 6 verplaatste prerender-chunks dieper in `dist/`),
- * dus een hardcoded hop-count breekt bij elke layout-wijziging. Omhoog
- * zoeken blijft CWD-onafhankelijk en worktree-veilig.
+ * Loop vanaf de (gebundelde) module-locatie omhoog tot de polder-repo-root.
+ * Niet een vaste `../../..`-hop: de bundler bepaalt de chunk-diepte (Astro 6
+ * verplaatste prerender-chunks dieper in `dist/`), dus een hardcoded
+ * hop-count breekt bij elke layout-wijziging. Omhoog zoeken blijft
+ * CWD-onafhankelijk en worktree-veilig.
+ *
+ * De root wordt herkend aan `data/personen` EN `data/organisaties` samen:
+ * een losse `data/personen` elders in het pad (geneste checkout, stray map)
+ * matcht zo niet per ongeluk de eerste de beste ancestor.
  */
 function findDataRoot(start: string): string {
   let dir = start;
   for (;;) {
-    if (existsSync(join(dir, 'data', 'personen'))) return join(dir, 'data');
+    const dataDir = join(dir, 'data');
+    if (existsSync(join(dataDir, 'personen')) && existsSync(join(dataDir, 'organisaties'))) {
+      return dataDir;
+    }
     const parent = dirname(dir);
-    if (parent === dir || dir === parsePath(dir).root) {
+    if (parent === dir) {
       throw new Error(
-        `Geen data/personen gevonden vanaf ${start} omhoog. Draai de build vanuit de polder-repo.`,
+        `Geen polder data/-root (personen + organisaties) gevonden vanaf ${start} omhoog. ` +
+          'Draai de build vanuit de polder-repo.',
       );
     }
     dir = parent;
