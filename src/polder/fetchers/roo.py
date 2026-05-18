@@ -1694,16 +1694,17 @@ def _resolve_parents(records: Iterable[dict[str, Any]]) -> None:
             record["parent_id"] = None
 
 
-def _existing_tooi_to_path(out_dir: Path) -> dict[str, Path]:
-    """Bouw index `tooi-id -> bestaand pad` over álle subfolders.
+def _existing_tooi_to_path(out_dir: Path) -> dict[str, tuple[Path, str | None]]:
+    """Bouw index `tooi-id -> (bestaand pad, record-id)` over álle subfolders.
 
     Gebruikt om te voorkomen dat een organisatieonderdeel-record geschreven
     wordt als er al een echte (gemeente/ministerie/zbo) record met dezelfde
     TOOI-id bestaat. Anders zou dezelfde fysieke organisatie als zowel
     `gemeenten/groningen.yaml` als `organisatieonderdelen/groningen.yaml`
-    eindigen.
+    eindigen. De record-id wordt meegenomen zodat `parent_id`-referenties
+    van overgeslagen records geremapt kunnen worden naar het bewaarde record.
     """
-    index: dict[str, Path] = {}
+    index: dict[str, tuple[Path, str | None]] = {}
     if not out_dir.exists():
         return index
     # `sorted` zodat bij twee records met dezelfde TOOI-id deterministisch
@@ -1716,7 +1717,7 @@ def _existing_tooi_to_path(out_dir: Path) -> dict[str, Path]:
             continue
         tooi = (data.get("identifiers") or {}).get("tooi")
         if tooi:
-            index.setdefault(tooi, path)
+            index.setdefault(tooi, (path, data.get("id")))
     return index
 
 
@@ -1735,6 +1736,35 @@ def write_records(
     """
     _resolve_parents(records)
     tooi_index = _existing_tooi_to_path(out_dir)
+
+    # Pass 1: bepaal welke organisatieonderdeel-records overgeslagen worden
+    # wegens een TOOI-duplicate, en bouw een remap van de overgeslagen
+    # record-id naar de id van het bewaarde record. Zonder deze remap blijven
+    # `parent_id`-referenties van kinderen naar het overgeslagen record
+    # dangling (validator-errors "Onbekende organisatie-referentie").
+    parent_remap: dict[str, str] = {}
+    for record in records:
+        sub_folder = record.get("_sub_folder")
+        slug = record.get("_slug")
+        if sub_folder != "organisatieonderdelen" or not slug:
+            continue
+        tooi = ((record.get("identifiers") or {}).get("tooi")) if record else None
+        if not tooi or tooi not in tooi_index:
+            continue
+        target = out_dir / sub_folder / f"{slug}.yaml"
+        existing_path, existing_id = tooi_index[tooi]
+        if existing_path == target:
+            continue
+        own_id = record.get("id")
+        if own_id and existing_id and own_id != existing_id:
+            parent_remap[own_id] = existing_id
+
+    if parent_remap:
+        for record in records:
+            parent_id = record.get("parent_id")
+            if parent_id in parent_remap:
+                record["parent_id"] = parent_remap[parent_id]
+
     n_written = 0
     n_skipped_duplicate = 0
     for record in records:
@@ -1754,12 +1784,12 @@ def write_records(
             sub_folder == "organisatieonderdelen"
             and tooi
             and tooi in tooi_index
-            and tooi_index[tooi] != target
+            and tooi_index[tooi][0] != target
         ):
             logger.info(
                 "Skip organisatieonderdeel %s: tooi-id al in %s",
                 target.relative_to(out_dir),
-                tooi_index[tooi].relative_to(out_dir),
+                tooi_index[tooi][0].relative_to(out_dir),
             )
             n_skipped_duplicate += 1
             continue
@@ -1790,7 +1820,7 @@ def write_records(
                 allow_unicode=True,
             )
         if tooi:
-            tooi_index[tooi] = target
+            tooi_index[tooi] = (target, clean.get("id"))
         n_written += 1
     if n_skipped_duplicate:
         logger.info(
