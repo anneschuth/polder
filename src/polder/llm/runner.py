@@ -115,6 +115,25 @@ def run_skill(
         ) as session:
             result = session.call(text_input, timeout_s=timeout_s)
 
+    # JSON-skill die "succesvol" was maar geen JSON teruggaf (alleen prose,
+    # typisch een begroeting bij een gedegradeerde sessie): markeer als error.
+    # Anders cachen we de stub als goed resultaat en schrijven we een corrupte
+    # .resolved.json die downstream stil wordt overgeslagen, terwijl de job
+    # als "ok" telt. Liever een zichtbare fout die geretried kan worden.
+    if (
+        not result.is_error
+        and not result.rate_limited
+        and skill_name in _JSON_SKILLS
+        and not _has_json_payload(result.text)
+    ):
+        from dataclasses import replace
+
+        result = replace(
+            result,
+            is_error=True,
+            error_message="JSON-skill gaf geen JSON terug (alleen prose/begroeting)",
+        )
+
     if use_cache and cache_key is not None:
         response_cache.store(skill_name, cache_key, result)
 
@@ -151,6 +170,27 @@ _FENCE_RE = re.compile(
     r"```(?:json|JSON)?\s*\n(?P<body>.*?)\n```",
     re.DOTALL,
 )
+
+
+def _has_json_payload(text: str) -> bool:
+    """True als `_extract_json_payload` echte JSON zou vinden (geen fallback).
+
+    Spiegelt de drie strategieën van `_extract_json_payload`. Gebruikt door
+    `run_skill` om een JSON-skill die alleen prose teruggaf (typisch een
+    begroeting "I'm ready to help...") als error te markeren in plaats van
+    een corrupte stub te cachen en weg te schrijven.
+    """
+    stripped = text.strip()
+    if stripped.startswith(("[", "{")):
+        return True
+    if _FENCE_RE.search(stripped) is not None:
+        return True
+    for opener, closer in (("[", "]"), ("{", "}")):
+        start = stripped.find(opener)
+        end = stripped.rfind(closer)
+        if start != -1 and end > start:
+            return True
+    return False
 
 
 def _extract_json_payload(text: str) -> str:
