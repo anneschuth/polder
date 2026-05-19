@@ -15,6 +15,7 @@ Respects two-source rule: abd-only capped at 0.85, staatscourant ≥0.95.
 
 import difflib
 import json
+import re
 import sys
 import unicodedata
 from dataclasses import asdict, dataclass, field
@@ -263,19 +264,81 @@ def match_person(
     if not parts:
         return None, "empty person_name", 0.0
 
-    # Extract initials (e.g., "N.G.") and family name
-    extracted_initials = None
-    family_candidate = parts[-1]
+    # Titels die geen initialen/naam zijn.
+    _TITLES = {
+        "drs.",
+        "dr.",
+        "mr.",
+        "ms.",
+        "mrs.",
+        "prof.",
+        "ir.",
+        "ing.",
+        "mr",
+        "drs",
+        "dr",
+        "ir",
+        "ing",
+        "prof",
+        "bsc",
+        "msc",
+        "ll.m.",
+        "ma",
+        "ba",
+    }
+    # Nederlandse tussenvoegsels: horen bij de achternaam, niet weglaten.
+    _TUSSENVOEGSELS = {
+        "van",
+        "de",
+        "der",
+        "den",
+        "ten",
+        "ter",
+        "te",
+        "het",
+        "in",
+        "'t",
+        "op",
+        "aan",
+        "bij",
+        "tot",
+        "uit",
+        "voor",
+    }
+    # Initialen: 1-6 hoofdletter-met-punt-groepen, eventueel aaneen (J.W.H.M.)
+    # of los (J. W. H. M.). Detecteer op vorm, niet op lengte — ambtenaren
+    # hebben vrijwel altijd >=3 initialen.
+    _INITIALS_RE = re.compile(r"^(?:[A-Za-z]\.){1,6}$")
 
-    # Look for pattern "X.Y." or "X.Y.Z."
-    for _i, part in enumerate(parts):
-        if (
-            "." in part
-            and len(part) <= 4
-            and part not in ("Drs.", "Dr.", "Mr.", "Ms.", "Mrs.", "Prof.")
-        ):
-            extracted_initials = part.replace(".", "").upper()
-            break
+    extracted_initials = None
+    init_tokens: list[str] = []
+    name_tokens: list[str] = []
+    for part in parts:
+        low = part.lower()
+        if low in _TITLES:
+            continue
+        if _INITIALS_RE.match(part) or (len(part) == 1 and part.isalpha()):
+            init_tokens.append(part.replace(".", "").upper())
+            continue
+        # Roepnaam tussen haakjes "(Gonnie)" overslaan voor familie-bepaling.
+        if part.startswith("(") and part.endswith(")"):
+            continue
+        name_tokens.append(part)
+
+    if init_tokens:
+        extracted_initials = "".join(init_tokens)
+
+    # Familienaam = laatste naam-token plus aaneengesloten voorafgaande
+    # tussenvoegsels ("de Boer", "van der Zee"), niet alleen parts[-1].
+    if name_tokens:
+        fam_parts = [name_tokens[-1]]
+        idx = len(name_tokens) - 2
+        while idx >= 0 and name_tokens[idx].lower() in _TUSSENVOEGSELS:
+            fam_parts.insert(0, name_tokens[idx])
+            idx -= 1
+        family_candidate = " ".join(fam_parts)
+    else:
+        family_candidate = parts[-1]
 
     notes = []
     matches = []
@@ -441,18 +504,16 @@ def resolve_record(
 
     # 2. Person
     person_name = record.get("person_name")
-    # Try to extract birth_year if available in start_date
-    birth_year = None
-    if record.get("start_date"):
+    # Geen birth_year afleiden uit start_date: dat is het aanstellingsjaar,
+    # niet het geboortejaar. Het als birth_year doorgeven filtert juist elke
+    # persoon met een echt geboortejaar weg (year != start_year). Alleen een
+    # echt geboortejaar uit het record/proposal mag hier gebruikt worden.
+    birth_year = record.get("birth_year")
+    if birth_year is not None:
         try:
-            # start_date format: "2024-03-01"
-            year_str = str(record["start_date"]).split("-")[0]
-            if len(year_str) == 4 and year_str.isdigit():
-                birth_year = int(
-                    year_str
-                )  # Actually start year, but person birth year might be in person record
-        except ValueError:
-            pass
+            birth_year = int(birth_year)
+        except (TypeError, ValueError):
+            birth_year = None
 
     person_id, person_notes, person_conf = match_person(person_name, all_persons, birth_year)
     resolved.resolved_person_id = person_id

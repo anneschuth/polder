@@ -1760,10 +1760,26 @@ def write_records(
             parent_remap[own_id] = existing_id
 
     if parent_remap:
+        # Volg ketens A->B, B->E tot een fixed point. Zonder dit blijft
+        # parent_id hangen op B (zelf een overgeslagen record-id) wanneer
+        # de remap-target van het ene overgeslagen record gelijk is aan de
+        # id van een ander overgeslagen record -> opnieuw dangling.
+        def _chase(start: str) -> str:
+            seen = {start}
+            cur = start
+            while cur in parent_remap:
+                nxt = parent_remap[cur]
+                if nxt in seen:  # cycle: laat ongemoeid
+                    return start
+                seen.add(nxt)
+                cur = nxt
+            return cur
+
+        resolved_remap = {key: _chase(key) for key in parent_remap}
         for record in records:
             parent_id = record.get("parent_id")
-            if parent_id in parent_remap:
-                record["parent_id"] = parent_remap[parent_id]
+            if parent_id in resolved_remap:
+                record["parent_id"] = resolved_remap[parent_id]
 
     n_written = 0
     n_skipped_duplicate = 0

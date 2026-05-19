@@ -30,6 +30,7 @@ sessie). Voor parse/resolve-skills met variërende payloads: laat het uit.
 
 from __future__ import annotations
 
+import json
 import logging
 import re
 from pathlib import Path
@@ -173,24 +174,22 @@ _FENCE_RE = re.compile(
 
 
 def _has_json_payload(text: str) -> bool:
-    """True als `_extract_json_payload` echte JSON zou vinden (geen fallback).
+    """True als de skill-output echt parseerbare JSON-array bevat.
 
-    Spiegelt de drie strategieën van `_extract_json_payload`. Gebruikt door
-    `run_skill` om een JSON-skill die alleen prose teruggaf (typisch een
-    begroeting "I'm ready to help...") als error te markeren in plaats van
-    een corrupte stub te cachen en weg te schrijven.
+    Niet een tekenheuristiek: een gedegradeerde begroeting die toevallig
+    een pad of toolnaam tussen blokhaken noemt ("... the skill [data/].")
+    haalt `_extract_json_payload` -> "[data/]", wat geen geldige JSON is.
+    De enige betrouwbare check is het resultaat daadwerkelijk parsen en
+    eisen dat het een list is — alle JSON-skills (parse-*, resolve-*,
+    lookup-*) leveren een array. Een leeg `[]` (geen proposals) is een
+    geldig, niet-fout resultaat en passeert correct.
     """
-    stripped = text.strip()
-    if stripped.startswith(("[", "{")):
-        return True
-    if _FENCE_RE.search(stripped) is not None:
-        return True
-    for opener, closer in (("[", "]"), ("{", "}")):
-        start = stripped.find(opener)
-        end = stripped.rfind(closer)
-        if start != -1 and end > start:
-            return True
-    return False
+    payload = _extract_json_payload(text)
+    try:
+        parsed = json.loads(payload)
+    except (json.JSONDecodeError, ValueError):
+        return False
+    return isinstance(parsed, list)
 
 
 def _extract_json_payload(text: str) -> str:
