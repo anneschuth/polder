@@ -688,13 +688,19 @@ def print_report(
 
 
 def exit_code(issues: list[ValidationIssue], *, strict: bool) -> int:
+    """Exit-code voor validate.
+
+    Errors falen altijd (1). Warnings zijn een soft check: ze falen alleen
+    onder `strict` (2), niet standaard. Dit moet gelijklopen met de
+    `polder-validate` CLI en met `run_validate` in de ingest-pipeline —
+    anders blokkeert een dataset met alleen pre-existing warnings de
+    auto-merge terwijl die schema-clean is.
+    """
     n_errors = sum(1 for i in issues if i.severity == "error")
     n_warnings = sum(1 for i in issues if i.severity == "warning")
     if n_errors > 0:
         return 1
     if n_warnings > 0 and strict:
-        return 2
-    if n_warnings > 0:
         return 2
     return 0
 
@@ -722,13 +728,7 @@ def main(argv: list[str] | None = None) -> int:
     n_files = count_files(args.data)
     print_report(issues, n_files)
 
-    n_errors = sum(1 for i in issues if i.severity == "error")
-    n_warnings = sum(1 for i in issues if i.severity == "warning")
-    if n_errors > 0:
-        return 1
-    if n_warnings > 0:
-        return 2 if args.strict else 0
-    return 0
+    return exit_code(issues, strict=args.strict)
 
 
 if __name__ == "__main__":

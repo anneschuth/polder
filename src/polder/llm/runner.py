@@ -30,6 +30,7 @@ sessie). Voor parse/resolve-skills met variërende payloads: laat het uit.
 
 from __future__ import annotations
 
+import json
 import logging
 import re
 from pathlib import Path
@@ -115,6 +116,25 @@ def run_skill(
         ) as session:
             result = session.call(text_input, timeout_s=timeout_s)
 
+    # JSON-skill die "succesvol" was maar geen JSON teruggaf (alleen prose,
+    # typisch een begroeting bij een gedegradeerde sessie): markeer als error.
+    # Anders cachen we de stub als goed resultaat en schrijven we een corrupte
+    # .resolved.json die downstream stil wordt overgeslagen, terwijl de job
+    # als "ok" telt. Liever een zichtbare fout die geretried kan worden.
+    if (
+        not result.is_error
+        and not result.rate_limited
+        and skill_name in _JSON_SKILLS
+        and not _has_json_payload(result.text)
+    ):
+        from dataclasses import replace
+
+        result = replace(
+            result,
+            is_error=True,
+            error_message="JSON-skill gaf geen JSON terug (alleen prose/begroeting)",
+        )
+
     if use_cache and cache_key is not None:
         response_cache.store(skill_name, cache_key, result)
 
@@ -151,6 +171,28 @@ _FENCE_RE = re.compile(
     r"```(?:json|JSON)?\s*\n(?P<body>.*?)\n```",
     re.DOTALL,
 )
+
+
+def _has_json_payload(text: str) -> bool:
+    """True als de skill-output echt parseerbare JSON bevat.
+
+    Niet een tekenheuristiek: een gedegradeerde begroeting die toevallig
+    een pad of toolnaam tussen blokhaken noemt ("... the skill [data/].")
+    haalt `_extract_json_payload` -> "[data/]", wat geen geldige JSON is.
+    De betrouwbare check is het resultaat daadwerkelijk parsen.
+
+    Zowel array als object telt als geldig: parse-/resolve-skills leveren
+    een array (`[]` = geen proposals, óók geldig), maar `lookup-person` en
+    `entity-resolution` leveren per contract één JSON-object. Alleen een
+    list eisen markeert die laatste twee skills ten onrechte als error en
+    sloopt de hele LLM-enrichment in `polder resolve`.
+    """
+    payload = _extract_json_payload(text)
+    try:
+        parsed = json.loads(payload)
+    except (json.JSONDecodeError, ValueError):
+        return False
+    return isinstance(parsed, (list, dict))
 
 
 def _extract_json_payload(text: str) -> str:

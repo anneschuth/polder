@@ -586,9 +586,12 @@ def test_exit_code_with_warnings_only(tmp_path: Path) -> None:
     from polder.validate import ValidationIssue
 
     only_warn = [ValidationIssue(severity="warning", path=tmp_path / "x", field=None, message="m")]
+    # Warnings zijn een soft check: alleen falen onder --strict. Zonder
+    # strict is exit 0, gelijk aan de `polder-validate` CLI. Anders
+    # blokkeert een dataset met alleen pre-existing warnings de ingest-
+    # auto-merge terwijl die schema-clean is.
     assert exit_code(only_warn, strict=True) == 2
-    # Spec: warnings-only is exit 2, ook zonder strict.
-    assert exit_code(only_warn, strict=False) == 2
+    assert exit_code(only_warn, strict=False) == 0
 
 
 def test_exit_code_with_errors(tmp_path: Path) -> None:

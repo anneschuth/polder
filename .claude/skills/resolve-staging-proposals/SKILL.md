@@ -31,7 +31,12 @@ De skill detecteert het staging-type uit de filenaam-prefix en uit de aanwezige 
 
 ## Output
 
-Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde records als de input, plus per record:
+**Geef het resultaat terug als één kale JSON-array in je antwoord. Schrijf
+zelf geen bestand.** De aanroepende laag (`run_skill`) leest je antwoord en
+schrijft het naar `data/_staging/<input-stem>.resolved.json`. Géén markdown,
+géén samenvatting, géén toelichtende tekst eromheen: alleen de JSON-array
+(eventueel in één ```json``` fence). De array bevat dezelfde records als de
+input, plus per record:
 
 - `resolved_organization_id` (string of null): bestaande slug uit `data/organisaties/` of null.
 - `resolved_organization_level` (string of null): `afdeling`, `directie`, `directoraat-generaal`, `ministerie`, of null.
@@ -60,7 +65,9 @@ Pad: `data/_staging/<input-stem>.resolved.json`. Format: JSON-array met dezelfde
 
 ## Harde regels
 
-1. **Diff-only mode.** Lees `data/`, schrijf alleen naar `data/_staging/<input-stem>.resolved.json`. Nooit naar canonical mappen.
+1. **Diff-only mode.** Lees `data/` met de Read/Grep-tools. Schrijf zélf
+   geen enkel bestand: lever de JSON-array terug via je antwoord, de
+   aanroepende laag persisteert die. Nooit naar canonical mappen schrijven.
 2. **Geen records aanmaken.** Geen nieuwe organisatie-, post- of persoon-yaml. Alleen voorstellen via `propose_post_creation` en de slug-suggesties uit de input.
 3. **Quote-or-die voor matches.** Elke geresolvde claim heeft in `resolution_notes` de evidence: bestand-pad plus het veld dat matchte. Voorbeeld: `matched on data/organisaties/organisatieonderdelen/directie-wonen.yaml names[0].value`.
 4. **Confidence per veld.** `resolution_confidence` is een object met aparte floats voor `organization`, `post`, `person`. Niet één globale score.
@@ -76,10 +83,10 @@ Zie `example_input.json` voor een staging-record uit parse-abd-nieuws v0.3 met e
 
 ```bash
 polder skill resolve-staging data/_staging/abd-nieuws-2026-04.json
-# Output: data/_staging/abd-nieuws-2026-04.resolved.json
 ```
 
-Output landt in `data/_staging/abd-nieuws-2026-04.resolved.json` naast het input-bestand.
+De skill geeft de JSON-array terug via stdout; `run_skill` schrijft die
+naar `data/_staging/abd-nieuws-2026-04.resolved.json` naast het input-bestand.
 
 ## Status
 

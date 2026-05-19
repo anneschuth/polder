@@ -387,10 +387,18 @@ def _default_skill_runner(
     #    op parse-abd-nieuws na de payload-extractie. Factor 5 goedkoper en
     #    de wallclock blijft gelijk (subprocess-spawn ~1s, output-generation
     #    ~10s, dominant).
+    # 3. resolve-staging-proposals is de meest tool-heavy skill van allemaal
+    #    (Read/Bash/Grep over data/). Onder session-reuse degradeert de
+    #    sessie na de eerste tool-call: elke volgende job in dezelfde
+    #    worker-thread kreeg alleen een begroeting ("I'm ready to help...")
+    #    terug i.p.v. JSON. Gemeten op een lokale daily-run: 9391/9393
+    #    staatscourant-resolves corrupt (greeting-only), 90% faalratio,
+    #    stilletjes als "ok" geteld. Zelfde klasse als reden 1.
     _NO_SESSION_REUSE = {
         "parse-organogram",
         "lookup-person",
         "parse-abd-nieuws",
+        "resolve-staging-proposals",
     }
     reuse_session = skill_name not in _NO_SESSION_REUSE
     result = run_skill(

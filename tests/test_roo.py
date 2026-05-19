@@ -944,6 +944,101 @@ def test_write_records_idempotent_preserves_local_fields(tmp_path: Path):
     assert loaded["identifiers"]["oin"] == "00000001003214345000"
 
 
+def test_write_records_remap_collapses_transitive_chain(tmp_path: Path):
+    """B1-regressie: een echte transitieve keten X -> Y -> Z.
+
+    Constructie zo dat `parent_remap` = {org:X: org:Y, org:Y: org:Z}, d.w.z.
+    een value (org:Y) is zelf ook een key. De oude single-lookup-code
+    (`record["parent_id"] = parent_remap[parent_id]`) zou org:X -> org:Y
+    geven, en org:Y is zelf een overgeslagen record -> dangling. Alleen
+    de fixed-point chase resolveert naar org:Z. Deze test faalt dus op de
+    oude code en slaagt op de fix (niet-tautologisch).
+
+    Mechaniek: write_records bouwt parent_remap[own_id] = existing_id, waar
+    existing_id de id is van het disk-record met dezelfde TOOI. Twee TOOIs:
+      - incoming org:X (tooi t1), disk-record id=org:Y heeft t1  -> X->Y
+      - incoming org:Y (tooi t2), disk-record id=org:Z heeft t2  -> Y->Z
+    """
+    disk_dir = tmp_path / "agentschappen"
+    disk_dir.mkdir(parents=True)
+    t1 = "https://identifier.overheid.nl/tooi/id/oorg/oorg11111"
+    t2 = "https://identifier.overheid.nl/tooi/id/oorg/oorg22222"
+
+    def _disk(slug: str, oid: str, tooi: str) -> None:
+        (disk_dir / f"{slug}.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "id": oid,
+                    "type": "agentschap",
+                    "identifiers": {"tooi": tooi},
+                    "names": [{"value": slug, "valid_from": "2020-01-01"}],
+                    "valid_from": "2020-01-01",
+                    "valid_until": None,
+                    "sources": [
+                        {
+                            "id": "roo",
+                            "url": f"https://example.org/{slug}",
+                            "retrieved": "2026-01-01",
+                        }
+                    ],
+                },
+                sort_keys=False,
+                allow_unicode=True,
+            ),
+            encoding="utf-8",
+        )
+
+    # Disk-record id=org:Y draagt t1; id=org:Z draagt t2.
+    _disk("y", "org:Y", t1)
+    _disk("z", "org:Z", t2)
+
+    def _onderdeel(slug: str, oid: str, tooi: str, parent: str | None = None) -> dict:
+        rec: dict = {
+            "id": oid,
+            "type": "organisatieonderdeel",
+            "identifiers": {"tooi": tooi},
+            "names": [{"value": slug, "valid_from": "2020-01-01"}],
+            "valid_from": "2020-01-01",
+            "valid_until": None,
+            "sources": [
+                {"id": "roo", "url": f"https://example.org/{slug}", "retrieved": "2026-01-01"}
+            ],
+            "_sub_folder": "organisatieonderdelen",
+            "_slug": slug,
+        }
+        if parent is not None:
+            rec["parent_id"] = parent
+        return rec
+
+    # incoming org:X deelt t1 -> overgeslagen, remap X->org:Y
+    # incoming org:Y deelt t2 -> overgeslagen, remap Y->org:Z
+    inc_x = _onderdeel("x", "org:X", t1)
+    inc_y = _onderdeel("y_inc", "org:Y", t2)
+    child = {
+        "id": "org:child",
+        "type": "organisatieonderdeel",
+        "identifiers": {},
+        "names": [{"value": "Kind", "valid_from": "2020-01-01"}],
+        "valid_from": "2020-01-01",
+        "valid_until": None,
+        "sources": [{"id": "roo", "url": "https://example.org/child", "retrieved": "2026-01-01"}],
+        "parent_id": "org:X",
+        "_sub_folder": "organisatieonderdelen",
+        "_slug": "child",
+    }
+
+    roo.write_records([inc_x, inc_y, child], tmp_path)
+
+    written = yaml.safe_load(
+        (tmp_path / "organisatieonderdelen" / "child.yaml").read_text(encoding="utf-8")
+    )
+    # Keten X -> Y -> Z volledig gevolgd; niet blijven hangen op org:Y.
+    assert written["parent_id"] == "org:Z", (
+        f"parent_id bleef hangen op {written['parent_id']!r} i.p.v. org:Z "
+        "(transitieve chase werkt niet)"
+    )
+
+
 # ---------------------------------------------------------------------------
 # Helpers (test-gaten dichtmaken)
 # ---------------------------------------------------------------------------
