@@ -975,7 +975,11 @@ def test_write_records_remap_collapses_transitive_chain(tmp_path: Path):
                     "valid_from": "2020-01-01",
                     "valid_until": None,
                     "sources": [
-                        {"id": "roo", "url": f"https://example.org/{slug}", "retrieved": "2026-01-01"}
+                        {
+                            "id": "roo",
+                            "url": f"https://example.org/{slug}",
+                            "retrieved": "2026-01-01",
+                        }
                     ],
                 },
                 sort_keys=False,
