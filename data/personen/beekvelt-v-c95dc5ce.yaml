@@ -22,6 +22,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-01-30
   confidence: 0.85
+- id: mandate-post-directeur-netwerkontwikkeling-rws-wnn-min-ienw-2020-04-01
+  organization_id: org:onderdeel-netwerkontwikkeling-rws-wnn-min-ienw
+  post_id: post:directeur-netwerkontwikkeling-rws-wnn-min-ienw
+  role: Directeur Netwerkontwikkeling, Rijkswaterstaat West-Nederland Noord, ministerie
+    van Infrastructuur en Waterstaat
+  start_date: '2020-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/bregje-van-beekvelt-directeur-netwerkontwikkeling-bij-rijkswaterstaat-west-nederland-noord
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2020-01-30
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2020/01/30/bregje-van-beekvelt-directeur-netwerkontwikkeling-bij-rijkswaterstaat-west-nederland-noord

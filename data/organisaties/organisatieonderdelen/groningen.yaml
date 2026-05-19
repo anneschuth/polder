@@ -1,0 +1,34 @@
+id: org:onderdeel-groningen
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132317'
+  oin: 00000001825783434000
+  kvk: '73558907'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0014
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Groningen
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Cascadeplein 8, 9726 AD Groningen
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Cascadeplein
+    huisnummer: '8'
+    postcode: 9726 AD
+    woonplaats: Groningen
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv20
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132317/groningen
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'

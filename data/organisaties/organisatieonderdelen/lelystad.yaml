@@ -1,0 +1,34 @@
+id: org:onderdeel-lelystad
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132347'
+  oin: 00000001005024249000
+  kvk: '50000578'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0995
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Lelystad
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Stationsplein 15, 8232 DL Lelystad
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Stationsplein
+    huisnummer: '15'
+    postcode: 8232 DL
+    woonplaats: Lelystad
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv24
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132347/lelystad
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'

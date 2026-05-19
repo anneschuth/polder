@@ -1,0 +1,74 @@
+id: org:agentschap-ubr
+type: agentschap
+identifiers:
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10214
+  kvk: '50555596'
+  roo_id: '97026'
+  oin: 00000003505555960000
+classification: agentschap
+parent_id: null
+names:
+- value: Uitvoeringsorganisatie Bedrijfsvoering Rijk
+  abbr: UBR
+  valid_from: '1900-01-01'
+  valid_until: '2023-01-01'
+contact:
+  bezoekadres: Wilhelmina van Pruisenweg 52, 2595 AN Den Haag
+  postadres: Postbus 20011, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Rijkskantoor Beatrixpark
+    openbare_ruimte: Wilhelmina van Pruisenweg
+    huisnummer: '52'
+    postcode: 2595 AN
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '20011'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+  internet_addresses:
+  - url: https://www.ubrijk.nl/
+    label: algemeen
+  contact_forms:
+  - url: https://www.ubrijk.nl/contact
+    label: Algemeen
+valid_from: '1900-01-01'
+valid_until: '2023-01-01'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/97026/ubr
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+relation_to_ministerie:
+  naam: Binnenlandse Zaken en Koninkrijksrelaties
+  roo_id: '9632'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1034
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Binnenlandse_Zaken_en_Koninkrijksrelaties
+description:
+  text: Uitvoeringsorganisatie Bedrijfsvoering Rijk (UBR)  draagt bij aan een doelmatig
+    en goed functionerend concern Rijk door op ondernemende wijze de krachten te bundelen
+    rond dienstverlening in de meest brede zin van het woord, en de kwaliteit daarvan
+    te verhogen.Daarbij geeft UBR vernieuwende initiatieven kansen om zich te ontwikkelen
+    tot concernbrede dienstverlening.UBR  biedt het Rijk een breed, innovatief en
+    samenhangend pakket aan producten en diensten aan. Dat doet zij in een partnerrelatie
+    met andere aanbieders binnen het concern Rijk en vanuit een open, transparante
+    en professionele houding.
+classifications:
+- type: CAO
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  eind_datum: '2023-01-01'
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+last_mutation: '2023-01-03'
+last_verified: '2023-01-03'

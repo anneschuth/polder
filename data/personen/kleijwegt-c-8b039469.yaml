@@ -36,6 +36,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2025-05-13
   confidence: 0.92
+- id: mandate-post-directeur-asiel-bescherming-min-bzk-2025-07-01
+  organization_id: org:onderdeel-directie-asiel-bescherming-min-bzk
+  post_id: post:directeur-asiel-bescherming-min-bzk
+  role: Directeur Asiel en Bescherming bij de Immigratie- en Naturalisatiedienst (IND)
+  start_date: '2025-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/13/coert-kleijwegt-directeur-asiel-en-bescherming-bij-de-ind
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-13
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/13/coert-kleijwegt-directeur-asiel-en-bescherming-bij-de-ind

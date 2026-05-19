@@ -1,0 +1,34 @@
+id: org:onderdeel-alkmaar
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132235'
+  oin: 00000001001721926000
+  kvk: '62255398'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0361
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Alkmaar
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Kruseman van Eltenweg 2, 1817 BC Alkmaar
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Kruseman van Eltenweg
+    huisnummer: '2'
+    postcode: 1817 BC
+    woonplaats: Alkmaar
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132235/alkmaar
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'

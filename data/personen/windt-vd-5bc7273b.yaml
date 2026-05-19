@@ -38,6 +38,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-12-17
   confidence: 0.88
+- id: mandate-post-directeur-publieke-gezondheid-min-vws-2023-01-01
+  organization_id: org:onderdeel-directie-publieke-gezondheid-dg-v-min-vws
+  post_id: post:directeur-publieke-gezondheid-min-vws
+  role: Directeur Publieke Gezondheid bij het ministerie van Volksgezondheid, Welzijn
+    en Sport
+  start_date: '2023-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/12/20/florien-van-der-windt-directeur-publieke-gezondheid-bij-vws
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2022-12-20
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/18/florien-van-der-windt-afdelingshoofd-verkeersveiligheid-en-wegvervoer-bij-ienw

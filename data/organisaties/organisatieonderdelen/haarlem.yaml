@@ -1,0 +1,34 @@
+id: org:onderdeel-haarlem
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132327'
+  oin: '00000001001005650000'
+  kvk: '34369366'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0392
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Haarlem
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Jansweg 15, 2011 KL Haarlem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Jansweg
+    huisnummer: '15'
+    postcode: 2011 KL
+    woonplaats: Haarlem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132327/haarlem
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'

@@ -1,0 +1,34 @@
+id: org:onderdeel-arnhem
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132265'
+  oin: 00000001001825112000
+  kvk: 09214908
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0202
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Arnhem
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Nieuwe Stationsstraat 20, 6811 KS Arnhem
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Nieuwe Stationsstraat
+    huisnummer: '20'
+    postcode: 6811 KS
+    woonplaats: Arnhem
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv25
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132265/arnhem
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'

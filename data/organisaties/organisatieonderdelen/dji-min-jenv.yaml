@@ -1,0 +1,15 @@
+id: org:onderdeel-dji-min-jenv
+type: organisatieonderdeel
+classification: organisatieonderdeel
+parent_id: org:min-jenv
+names:
+- value: Dienst Justitiële Inrichtingen (DJI)
+  valid_from: '2026-05-18'
+valid_from: '2026-05-18'
+valid_until: null
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2022/08/10/hayo-van-der-brugge-directeur-shared-service-center-dienst-justitiele-inrichtingen
+  retrieved: '2026-05-18'
+  fields:
+  - applied_via:apply-staging

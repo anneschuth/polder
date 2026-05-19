@@ -1,0 +1,114 @@
+id: org:agentschap-ind
+type: agentschap
+identifiers:
+  owms: http://standaarden.overheid.nl/owms/terms/Immigratie-_en_Naturalisatiedienst
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10222
+  roo_id: '115615'
+classification: agentschap
+parent_id: null
+relation_to_ministerie:
+  naam: Asiel en Migratie
+  roo_id: '29481986'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1162
+  owms: http://standaarden.overheid.nl/owms/terms/minasmi
+names:
+- value: Immigratie- en Naturalisatiedienst
+  abbr: IND
+  valid_from: '1900-01-01'
+description:
+  text: De Immigratie- en Naturalisatiedienst (IND) voert het vreemdelingenbeleid
+    in Nederland uit. Dat betekent dat de IND alle verblijfsaanvragen beoordeelt van
+    mensen die in Nederland willen wonen of die graag Nederlander willen worden. Het
+    kan daarbij gaan om vluchtelingen die niet veilig zijn in eigen land en die daarom
+    hier asiel aanvragen. Maar ook om mensen die hier willen werken, studeren, of
+    een gezin willen vormen met iemand die hier al woont. Daarnaast behandelt de IND
+    naturalisatieverzoeken van mensen die hier al zo lang wonen dat zij zich Nederlander
+    voelen en daarom een Nederlands paspoort willen aanvragen. Bij de IND toetsen
+    we elke aanvraag afzonderlijk aan de regels van het vreemdelingenbeleid. Dat betekent
+    dat we goed luisteren naar het verhaal van elke aanvrager zodat elke beslissing
+    die we nemen, recht doet aan ieders persoonlijke situatie.
+  url: https://ind.nl/nl/over-ons/onze-organisatie
+taken_en_bevoegdheden: De Immigratie- en Naturalisatiedienst (IND) is de toelatingsorganisatie
+  van Nederland die als uitvoeringsorganisatie het immigratie- en asielbeleid effectief
+  en efficiënt uitvoert in samenwerking met de partners in de keten. Dit houdt in
+  dat de IND de aanvragen beoordeelt van vreemdelingen die in Nederland willen verblijven
+  of Nederlander willen worden.
+doorlichtingen:
+- datum: '2021-05-20'
+  naam_rapport: 'Eindrapportage  doorlichting IND:  Verbetermogelijkheden IND met  specifieke
+    aandacht voor het  asielproces'
+  referentie: https://www.rijksoverheid.nl/documenten/rapporten/2021/05/21/tk-bijlage-eindrapportage-doorlichting-ind
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://ind.nl/nl/service-contact/contact-met-ind/woo-verzoek-indienen
+      overzichtURL: https://organisaties.overheid.nl/woo/115615/Immigratie-_en_Naturalisatiedienst
+  wooVerzoek:
+    url: https://ind.nl/nl/service-contact/contact-met-ind/woo-verzoek-indienen
+organogram_url: https://ind.nl/nl/over-ons/onze-organisatie/organogram
+afspraak:
+  telefoonnummer: (088) 043 04 30
+  url: https://ind.nl/nl/service-contact/afspraak-maken-met-de-ind
+personnel:
+  aantalFte: 6039,0
+  peildatumFte: '2023-12-31'
+  toelichtingFte: Ambtelijk en extern personeel
+contact:
+  bezoekadres: Rijnstraat 8, 2515 XP Den Haag
+  postadres: Postbus 16275, 2500 BG Den Haag
+  addresses:
+  - type: Bezoekadres
+    toelichting: Hoofdkantoor
+    openbare_ruimte: Rijnstraat
+    huisnummer: '8'
+    postcode: 2515 XP
+    woonplaats: Den Haag
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv28
+  - type: Postadres
+    postbus: '16275'
+    postcode: 2500 BG
+    woonplaats: Den Haag
+  - type: Woo-Adres
+    toelichting: T.a.v. Woo-coördinator
+    postbus: '11'
+    postcode: 9560 AA
+    woonplaats: Ter Apel
+    land: Nederland
+  phones:
+  - nummer: (088) 043 04 30
+    label: algemeen
+  internet_addresses:
+  - url: https://www.ind.nl/
+    label: algemeen
+  - url: https://ind.nl/contact/Paginas/E-mail.aspx
+    label: contactformulier
+  - url: https://ind.nl/contact/Paginas/Faxnummers.aspx
+    label: faxnummers
+  contact_forms:
+  - url: https://ind.nl/contact
+    label: Algemeen
+  - url: https://ind.nl/en/contact
+    label: Algemeen
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2025-10-02'
+last_verified: '2025-02-05'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/115615/ind
+  retrieved: '2026-05-18'

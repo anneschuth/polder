@@ -1,0 +1,43 @@
+id: person:de-kleuver-e-f7d94a79
+name:
+  full: Esther de Kleuver
+  family: de Kleuver
+  given: Esther
+mandaten:
+- id: mandate-post-ig-inspectie-jenv-min-jenv-2023-01-01
+  organization_id: org:inspectie-jenv
+  post_id: post:ig-inspectie-jenv-min-jenv
+  role: Inspecteur-generaal, Inspectie Justitie en Veiligheid, ministerie van Justitie
+    en Veiligheid
+  start_date: '2023-01-01'
+  end_date: '2025-06-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/30/esther-de-kleuver-legt-functie-van-inspecteur-generaal-van-de-inspectie-justitie-en-veiligheid-neer
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-30
+  confidence: 0.92
+- id: mandate-post-inspecteur-generaal-inspectie-justitie-en-veiligheid-min-jenv-2023-01-01
+  organization_id: org:onderdeel-inspectie-justitie-en-veiligheid-min-jenv
+  post_id: post:inspecteur-generaal-inspectie-justitie-en-veiligheid-min-jenv
+  role: Inspecteur-generaal van de Inspectie Justitie en Veiligheid
+  start_date: '2023-01-01'
+  end_date: '2025-06-01'
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/30/esther-de-kleuver-legt-functie-van-inspecteur-generaal-van-de-inspectie-justitie-en-veiligheid-neer
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-05-30
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/05/30/esther-de-kleuver-legt-functie-van-inspecteur-generaal-van-de-inspectie-justitie-en-veiligheid-neer
+  retrieved: '2026-05-18'
+  fields:
+  - applied_via:apply-staging

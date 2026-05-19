@@ -1,0 +1,34 @@
+id: org:onderdeel-eindhoven
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132307'
+  oin: 00000001001902763000
+  kvk: '17272738'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0772
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: EIndhoven
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Keizersgracht 5, 5611 GB Eindhoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Keizersgracht
+    huisnummer: '5'
+    postcode: 5611 GB
+    woonplaats: Eindhoven
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv30
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132307/eindhoven
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'

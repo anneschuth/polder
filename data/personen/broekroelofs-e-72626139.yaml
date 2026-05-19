@@ -52,6 +52,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-12-16
   confidence: 0.92
+- id: mandate-post-algemeen-directeur-cluster-financien-control-beheersing-belastingdienst-2025-03-01
+  organization_id: org:onderdeel-belastingdienst-min-bzk
+  post_id: post:algemeen-directeur-cluster-financien-control-beheersing-belastingdienst
+  role: Algemeen directeur van het cluster Financiën, Control & Beheersing bij de
+    Belastingdienst
+  start_date: '2025-03-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/14/benoemingen-erik-broekroelofs-en-mariska-plomp-in-hoofdstructuur-belastingdienst
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-14
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/13/corne-bot-directeur-financieel-economische-zaken-bij-uwv

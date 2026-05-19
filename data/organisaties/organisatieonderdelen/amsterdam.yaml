@@ -1,0 +1,34 @@
+id: org:onderdeel-amsterdam
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132255'
+  oin: '00000001002564440000'
+  kvk: '34366966'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0363
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Amsterdam
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Pieter Calandlaan 1, 1065 KH Amsterdam
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Pieter Calandlaan
+    huisnummer: '1'
+    postcode: 1065 KH
+    woonplaats: Amsterdam
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv27
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132255/amsterdam
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-06-17'
+last_verified: '2025-06-17'

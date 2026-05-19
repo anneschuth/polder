@@ -1,0 +1,121 @@
+id: org:agentschap-rivm
+type: agentschap
+identifiers:
+  owms: http://standaarden.overheid.nl/owms/terms/Rijksinstituut_voor_Volksgezondheid_en_Milieu
+  tooi: https://identifier.overheid.nl/tooi/id/oorg/oorg10123
+  btw: NL821772302B01
+  oin: '00000004000000062000'
+  roo_id: '66101'
+classification: agentschap
+legal_form: Publiekrechtelijk - Onderdeel Staat der Nederlanden
+parent_id: null
+relation_to_ministerie:
+  naam: Volksgezondheid, Welzijn en Sport
+  roo_id: '8591'
+  tooi: https://identifier.overheid.nl/tooi/id/ministerie/mnre1025
+  owms: http://standaarden.overheid.nl/owms/terms/Ministerie_van_Volksgezondheid,_Welzijn_en_Sport
+names:
+- value: Rijksinstituut voor Volksgezondheid en Milieu
+  abbr: RIVM
+  valid_from: '1900-01-01'
+description:
+  text: Het RIVM bestaat uit specialistische kenniscentra en een centrale bedrijfsvoering
+    die RIVM’ers in staat stelt om hun werk goed te doen. Voor ondersteuning op het
+    gebied van ICT (Informatie- en communicatietechnologie) en informatievoorziening,
+    onderzoeksmethoden en data is er de IV (Informatievoorziening) -organisatie. Het
+    instituut staat onder leiding van een Directieraad als hoogste besluitvormingsorgaan
+    van het RIVM. De Commissie van Toezicht heeft tot taak het wetenschappelijk niveau
+    en de onafhankelijkheid van het RIVM te bewaken
+  url: https://www.rivm.nl/over-het-rivm/organisatie
+classifications:
+- type: CAO
+  wettelijke_grondslagen:
+  - opschrift: CAO Rijk
+    referentie: https://www.caorijk.nl/
+- type: Overheidswerkgever
+  url: https://www.wnra.nl
+  wettelijke_grondslagen:
+  - opschrift: Ambtenarenwet 2017
+    referentie: https://wetten.overheid.nl/BWBR0001947
+- type: Woo
+  url: https://www.rijksoverheid.nl/onderwerpen/wet-open-overheid-woo
+  wettelijke_grondslagen:
+  - opschrift: Wet open overheid
+    referentie: https://wetten.overheid.nl/BWBR0045754
+woo:
+  wooInformatie:
+    urls:
+      url: https://www.rivm.nl/woo-verzoeken-bij-het-rivm
+      overzichtURL: https://organisaties.overheid.nl/woo/66101/Rijksinstituut_voor_Volksgezondheid_en_Milieu
+  wooIndex:
+    documentLocatie:
+      informatiecategorie: Woo-verzoeken en -besluiten
+      url: https://open.minvws.nl/
+      toelichting: Informatie die met een Woo-besluit openbaar is gemaakt, is toegankelijk
+        voor iedereen. Alle geanonimiseerde Woo-besluiten voor het ministerie van
+        VWS met de openbaar gemaakte documenten vindt u bij documenten en publicaties.
+  wooVerzoek:
+    url: https://www.rijksoverheid.nl/ministeries/ministerie-van-volksgezondheid-welzijn-en-sport/contact/woo-verzoek-indienen
+organogram_url: https://www.rivm.nl/documenten/organogram-rivm-2025-nederlands
+afspraak:
+  email: info@rivm.nl
+  telefoonnummer: (088) 689 89 89
+  url: https://www.rivm.nl/contact
+contact:
+  bezoekadres: Antonie van Leeuwenhoeklaan 9, 3721 MA Bilthoven
+  postadres: Postbus 1, 3720 BA Bilthoven
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Antonie van Leeuwenhoeklaan
+    huisnummer: '9'
+    postcode: 3721 MA
+    woonplaats: Bilthoven
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Postadres
+    postbus: '1'
+    postcode: 3720 BA
+    woonplaats: Bilthoven
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  - type: Woo-Adres
+    postbus: '1'
+    postcode: 3720 BA
+    woonplaats: Bilthoven
+    provincie: https://identifier.overheid.nl/tooi/id/provincie/pv26
+    land: Nederland
+  phones:
+  - nummer: (088) 689 89 89
+    label: RIVM (algemeen nummer)
+  emails:
+  - email: info@rivm.nl
+    label: algemeen
+  internet_addresses:
+  - url: https://www.rivm.nl
+    label: algemeen
+  social_media:
+  - platform: X
+    gebruikersnaam: '@rivm'
+    url: https://x.com/rivm
+  - platform: LinkedIn
+    gebruikersnaam: Rijksinstituut voor Volksgezondheid en Milieu
+    url: https://nl.linkedin.com/company/rivm
+  - platform: YouTube
+    gebruikersnaam: RIVMnl
+    url: https://www.youtube.com/user/RIVMnl
+  - platform: Instagram
+    gebruikersnaam: rivmnl
+    url: https://www.instagram.com/rivmnl/#
+  - platform: Mastodon
+    gebruikersnaam: '@rivm'
+    url: https://social.overheid.nl/@rivm
+  email: info@rivm.nl
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2026-05-02'
+last_verified: '2026-05-02'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/66101/rivm
+  retrieved: '2026-05-18'
+roo_start_datum: '1984-01-01'

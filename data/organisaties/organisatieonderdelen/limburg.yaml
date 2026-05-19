@@ -1,0 +1,25 @@
+id: org:onderdeel-limburg
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30474990'
+  oin: '00000001001737430000'
+  kvk: '50052969'
+  tooi: https://identifier.overheid.nl/tooi/id/provincie/pv31
+classification: organisatieonderdeel
+parent_id: org:gr-woningmarktregios
+names:
+- value: Limburg
+  valid_from: '1900-01-01'
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30474990/limburg
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2026-01-12'
+last_verified: '2026-01-12'

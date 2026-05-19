@@ -37,6 +37,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2020-09-18
   confidence: 0.89
+- id: mandate-post-directeur-generaal-rijksbegroting-min-fin-2025-07-14
+  organization_id: org:onderdeel-directoraat-generaal-rijksbegroting-min-fin
+  post_id: post:directeur-generaal-rijksbegroting-min-fin
+  role: Directeur-generaal Rijksbegroting bij het ministerie van Financiën
+  start_date: '2025-07-14'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/07/11/coen-hogendoorn-directeur-generaal-rijksbegroting-bij-financien
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-07-11
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2018/06/19/coen-hogendoorn-directeur-begrotingszaken-tevens-plaatsvervangend-directeur-generaal-rijksbegroting-bij-financien

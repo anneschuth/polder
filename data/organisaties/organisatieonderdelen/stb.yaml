@@ -1,0 +1,34 @@
+id: org:onderdeel-stb
+type: organisatieonderdeel
+identifiers:
+  roo_id: '695'
+classification: organisatieonderdeel
+parent_id: org:kabinet-kvdk
+names:
+- value: Stafbureau
+  abbr: STB
+  valid_from: '1900-01-01'
+description:
+  text: Het Stafbureau zorgt voor de interne bedrijfsvoering van het Kabinet. Het
+    gaat dan om praktische zaken als personeelsbeleid, financieel beheer en facilitaire
+    dienstverlening.
+contact:
+  bezoekadres: Korte Vijverberg 3, 2513 AB Den Haag
+  postadres: Postbus 20016, 2500 EA Den Haag
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Korte Vijverberg 3
+    postcode: 2513 AB
+    woonplaats: Den Haag
+  - type: Postadres
+    postbus: '20016'
+    postcode: 2500 EA
+    woonplaats: Den Haag
+valid_from: '1900-01-01'
+valid_until: null
+last_mutation: '2026-02-09'
+last_verified: '2026-02-09'
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/695/stb
+  retrieved: '2026-05-18'

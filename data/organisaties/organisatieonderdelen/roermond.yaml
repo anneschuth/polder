@@ -1,0 +1,33 @@
+id: org:onderdeel-roermond
+type: organisatieonderdeel
+identifiers:
+  roo_id: '30132374'
+  oin: 00000001816963186000
+  kvk: '14117104'
+  tooi: https://identifier.overheid.nl/tooi/id/gemeente/gm0957
+classification: organisatieonderdeel
+parent_id: org:onderdeel-raad-voor-de-kinderbescherming-min-jenv
+names:
+- value: Roermond
+  valid_from: '1900-01-01'
+contact:
+  bezoekadres: Willem II Singel 67, 6041 HR Roermond
+  addresses:
+  - type: Bezoekadres
+    openbare_ruimte: Willem II Singel
+    huisnummer: '67'
+    postcode: 6041 HR
+    woonplaats: Roermond
+valid_from: '1900-01-01'
+valid_until: null
+sources:
+- id: roo
+  url: https://organisaties.overheid.nl/30132374/roermond
+  retrieved: '2026-05-18'
+- id: logius_cor
+  url: https://oinregister.logius.nl/pubproxy/organisations/public
+  retrieved: '2026-05-18'
+  fields:
+  - oin
+last_mutation: '2025-05-15'
+last_verified: '2025-08-20'

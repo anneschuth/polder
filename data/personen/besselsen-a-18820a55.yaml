@@ -35,6 +35,22 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2025-03-20
   confidence: 0.9
+- id: mandate-post-directeur-productie-en-informatievoorziening-rws-min-ienw-2025-04-01
+  organization_id: org:onderdeel-directie-piv-bestuursstaf-rws-min-ienw
+  post_id: post:directeur-productie-en-informatievoorziening-rws-min-ienw
+  role: Directeur Productie en Informatievoorziening, Bestuursstaf Rijkswaterstaat,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2025-04-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/20/anita-besselsen-directeur-productie-en-informatievoorziening-bij-bestuursstaf-rijkswaterstaat
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2025-03-20
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2025/03/20/anita-besselsen-directeur-productie-en-informatievoorziening-bij-bestuursstaf-rijkswaterstaat

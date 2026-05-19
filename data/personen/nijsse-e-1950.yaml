@@ -38,6 +38,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2023-03-31
   confidence: 0.92
+- id: mandate-post-directeur-stafdirectie-nationaal-groeifonds-min-ezk-2021-09-01
+  organization_id: org:onderdeel-nationaal-groeifonds-min-ezk
+  post_id: post:directeur-stafdirectie-nationaal-groeifonds-min-ezk
+  role: Directeur Stafdirectie Groeifonds, ministerie van Economische Zaken en Klimaat
+  start_date: '2021-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/09/erwin-nijsse-directeur-stafdirectie-groeifonds-bij-ezk
+    retrieved: '2026-05-18'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2021-07-09
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/07/09/erwin-nijsse-directeur-stafdirectie-groeifonds-bij-ezk
