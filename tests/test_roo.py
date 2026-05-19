@@ -945,37 +945,50 @@ def test_write_records_idempotent_preserves_local_fields(tmp_path: Path):
 
 
 def test_write_records_remap_collapses_transitive_chain(tmp_path: Path):
-    """B1-regressie: parent_id mag niet dangling blijven als de remap-target
-    van het ene overgeslagen record de id van een ander overgeslagen record is.
+    """B1-regressie: een echte transitieve keten X -> Y -> Z.
 
-    Setup: een canoniek record `org:final` staat al op disk met TOOI `T`.
-    Twee inkomende organisatieonderdeel-dups dragen óók TOOI `T` en worden
-    daarom overgeslagen. Een kind verwijst naar de id van de overgeslagen
-    dup. Zonder ketens-volgen blijft parent_id op die overgeslagen id hangen.
+    Constructie zo dat `parent_remap` = {org:X: org:Y, org:Y: org:Z}, d.w.z.
+    een value (org:Y) is zelf ook een key. De oude single-lookup-code
+    (`record["parent_id"] = parent_remap[parent_id]`) zou org:X -> org:Y
+    geven, en org:Y is zelf een overgeslagen record -> dangling. Alleen
+    de fixed-point chase resolveert naar org:Z. Deze test faalt dus op de
+    oude code en slaagt op de fix (niet-tautologisch).
+
+    Mechaniek: write_records bouwt parent_remap[own_id] = existing_id, waar
+    existing_id de id is van het disk-record met dezelfde TOOI. Twee TOOIs:
+      - incoming org:X (tooi t1), disk-record id=org:Y heeft t1  -> X->Y
+      - incoming org:Y (tooi t2), disk-record id=org:Z heeft t2  -> Y->Z
     """
-    canonical_dir = tmp_path / "agentschappen"
-    canonical_dir.mkdir(parents=True)
-    tooi = "https://identifier.overheid.nl/tooi/id/oorg/oorg99999"
-    (canonical_dir / "final.yaml").write_text(
-        yaml.safe_dump(
-            {
-                "id": "org:final",
-                "type": "agentschap",
-                "identifiers": {"tooi": tooi},
-                "names": [{"value": "Echte Dienst", "valid_from": "2020-01-01"}],
-                "valid_from": "2020-01-01",
-                "valid_until": None,
-                "sources": [
-                    {"id": "roo", "url": "https://example.org/f", "retrieved": "2026-01-01"}
-                ],
-            },
-            sort_keys=False,
-            allow_unicode=True,
-        ),
-        encoding="utf-8",
-    )
+    disk_dir = tmp_path / "agentschappen"
+    disk_dir.mkdir(parents=True)
+    t1 = "https://identifier.overheid.nl/tooi/id/oorg/oorg11111"
+    t2 = "https://identifier.overheid.nl/tooi/id/oorg/oorg22222"
 
-    def _onderdeel(slug: str, oid: str, parent: str | None = None) -> dict:
+    def _disk(slug: str, oid: str, tooi: str) -> None:
+        (disk_dir / f"{slug}.yaml").write_text(
+            yaml.safe_dump(
+                {
+                    "id": oid,
+                    "type": "agentschap",
+                    "identifiers": {"tooi": tooi},
+                    "names": [{"value": slug, "valid_from": "2020-01-01"}],
+                    "valid_from": "2020-01-01",
+                    "valid_until": None,
+                    "sources": [
+                        {"id": "roo", "url": f"https://example.org/{slug}", "retrieved": "2026-01-01"}
+                    ],
+                },
+                sort_keys=False,
+                allow_unicode=True,
+            ),
+            encoding="utf-8",
+        )
+
+    # Disk-record id=org:Y draagt t1; id=org:Z draagt t2.
+    _disk("y", "org:Y", t1)
+    _disk("z", "org:Z", t2)
+
+    def _onderdeel(slug: str, oid: str, tooi: str, parent: str | None = None) -> dict:
         rec: dict = {
             "id": oid,
             "type": "organisatieonderdeel",
@@ -993,10 +1006,10 @@ def test_write_records_remap_collapses_transitive_chain(tmp_path: Path):
             rec["parent_id"] = parent
         return rec
 
-    # Beide dups delen TOOI `T` -> beide overgeslagen, beiden remappen naar
-    # org:final. Het kind wijst naar org:mid (een overgeslagen id).
-    mid = _onderdeel("mid", "org:mid")
-    dup = _onderdeel("dup", "org:dup")
+    # incoming org:X deelt t1 -> overgeslagen, remap X->org:Y
+    # incoming org:Y deelt t2 -> overgeslagen, remap Y->org:Z
+    inc_x = _onderdeel("x", "org:X", t1)
+    inc_y = _onderdeel("y_inc", "org:Y", t2)
     child = {
         "id": "org:child",
         "type": "organisatieonderdeel",
@@ -1005,19 +1018,20 @@ def test_write_records_remap_collapses_transitive_chain(tmp_path: Path):
         "valid_from": "2020-01-01",
         "valid_until": None,
         "sources": [{"id": "roo", "url": "https://example.org/child", "retrieved": "2026-01-01"}],
-        "parent_id": "org:mid",
+        "parent_id": "org:X",
         "_sub_folder": "organisatieonderdelen",
         "_slug": "child",
     }
 
-    roo.write_records([mid, dup, child], tmp_path)
+    roo.write_records([inc_x, inc_y, child], tmp_path)
 
     written = yaml.safe_load(
         (tmp_path / "organisatieonderdelen" / "child.yaml").read_text(encoding="utf-8")
     )
-    # parent_id moet naar het canonieke record, niet naar de overgeslagen dup.
-    assert written["parent_id"] == "org:final", (
-        f"parent_id bleef dangling op {written['parent_id']!r} i.p.v. org:final"
+    # Keten X -> Y -> Z volledig gevolgd; niet blijven hangen op org:Y.
+    assert written["parent_id"] == "org:Z", (
+        f"parent_id bleef hangen op {written['parent_id']!r} i.p.v. org:Z "
+        "(transitieve chase werkt niet)"
     )
 
 

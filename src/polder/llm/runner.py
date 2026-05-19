@@ -174,22 +174,25 @@ _FENCE_RE = re.compile(
 
 
 def _has_json_payload(text: str) -> bool:
-    """True als de skill-output echt parseerbare JSON-array bevat.
+    """True als de skill-output echt parseerbare JSON bevat.
 
     Niet een tekenheuristiek: een gedegradeerde begroeting die toevallig
     een pad of toolnaam tussen blokhaken noemt ("... the skill [data/].")
     haalt `_extract_json_payload` -> "[data/]", wat geen geldige JSON is.
-    De enige betrouwbare check is het resultaat daadwerkelijk parsen en
-    eisen dat het een list is — alle JSON-skills (parse-*, resolve-*,
-    lookup-*) leveren een array. Een leeg `[]` (geen proposals) is een
-    geldig, niet-fout resultaat en passeert correct.
+    De betrouwbare check is het resultaat daadwerkelijk parsen.
+
+    Zowel array als object telt als geldig: parse-/resolve-skills leveren
+    een array (`[]` = geen proposals, óók geldig), maar `lookup-person` en
+    `entity-resolution` leveren per contract één JSON-object. Alleen een
+    list eisen markeert die laatste twee skills ten onrechte als error en
+    sloopt de hele LLM-enrichment in `polder resolve`.
     """
     payload = _extract_json_payload(text)
     try:
         parsed = json.loads(payload)
     except (json.JSONDecodeError, ValueError):
         return False
-    return isinstance(parsed, list)
+    return isinstance(parsed, (list, dict))
 
 
 def _extract_json_payload(text: str) -> str:

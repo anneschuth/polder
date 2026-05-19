@@ -147,3 +147,82 @@ def test_cli_has_resolve_staging_subcommand() -> None:
     content = cli_file.read_text(encoding="utf-8")
     assert '"resolve-staging"' in content
     assert "resolve-staging-proposals" in content
+
+
+# ---------------------------------------------------------------------------
+# Directe match_person-tests (E2 tussenvoegsel, E3 >2 initialen)
+#
+# Het hoogste-risico-onderdeel van de skill — de heuristische naam-parser —
+# had geen enkele directe unit-test. Deze laden main.py per pad en testen
+# match_person rechtstreeks.
+# ---------------------------------------------------------------------------
+
+
+def _load_skill_main():
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("rsp_main", SKILL_DIR / "main.py")
+    assert spec and spec.loader
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _persons(*entries: tuple[str, str, str, int | None]) -> dict:
+    """entries: (person_id, family, initials, year) -> all_persons-mapping."""
+    out: dict = {}
+    for pid, family, initials, year in entries:
+        data = {"name": {"family": family, "initials": initials}}
+        if year is not None:
+            data["birth"] = {"year": year}
+        out[pid] = (Path(f"/tmp/{pid}.yaml"), data)
+    return out
+
+
+def test_match_person_tussenvoegsel_family() -> None:
+    """E2: 'de Boer' moet matchen, niet alleen 'Boer'."""
+    m = _load_skill_main()
+    persons = _persons(("person:de-boer-ng-1970", "de Boer", "N.G.", 1970))
+    pid, notes, conf = m.match_person("Drs. N.G. de Boer", persons)
+    assert pid == "person:de-boer-ng-1970", notes
+    assert conf >= 0.85
+
+
+def test_match_person_meervoudig_tussenvoegsel() -> None:
+    """E2: 'van der Zee' (twee tussenvoegsels)."""
+    m = _load_skill_main()
+    persons = _persons(("person:van-der-zee-ki-1966", "van der Zee", "K.I.", 1966))
+    pid, notes, _ = m.match_person("mr. K.I. van der Zee", persons)
+    assert pid == "person:van-der-zee-ki-1966", notes
+
+
+def test_match_person_long_initials() -> None:
+    """E3: 'J.W.H.M.' (>2 initialen) moet als initialen herkend worden."""
+    m = _load_skill_main()
+    persons = _persons(
+        ("person:a-jwhm-1971", "Jansen", "J.W.H.M.", 1971),
+        ("person:a-j-1980", "Jansen", "J.", 1980),
+    )
+    pid, notes, conf = m.match_person("J.W.H.M. Jansen", persons)
+    # Initialen disambigueren tussen de twee Jansens.
+    assert pid == "person:a-jwhm-1971", notes
+    assert conf >= 0.85
+
+
+def test_match_person_no_tussenvoegsel_simple_name() -> None:
+    """Reguliere naam zonder tussenvoegsel blijft werken."""
+    m = _load_skill_main()
+    persons = _persons(("person:rutte-m-1967", "Rutte", "M.", 1967))
+    pid, notes, _ = m.match_person("Mark Rutte", persons)
+    assert pid == "person:rutte-m-1967", notes
+
+
+def test_match_person_real_birth_year_not_rejected() -> None:
+    """E1: een persoon met echt geboortejaar mag niet weggefilterd worden."""
+    m = _load_skill_main()
+    persons = _persons(("person:bos-a-1970", "Bos", "A.", 1970))
+    # birth_year matcht -> moet vinden; mismatch -> moet afwijzen.
+    pid_ok, _, _ = m.match_person("A. Bos", persons, birth_year=1970)
+    assert pid_ok == "person:bos-a-1970"
+    pid_no, _, _ = m.match_person("A. Bos", persons, birth_year=1999)
+    assert pid_no is None

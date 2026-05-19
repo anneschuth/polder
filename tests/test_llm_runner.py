@@ -13,7 +13,7 @@ from polder.llm.runner import _extract_json_payload, _has_json_payload
 
 
 def test_has_json_payload_array() -> None:
-    # Skill-output is altijd een JSON-array (parse-*, resolve-*, lookup-*).
+    # parse-/resolve-skills leveren een array.
     assert _has_json_payload('[{"a": 1}]')
     assert _has_json_payload("Hier is het resultaat:\n```json\n[]\n```\n")
     assert _has_json_payload("Tekst vooraf [\n  1, 2\n] tekst erna")
@@ -26,10 +26,12 @@ def test_has_json_payload_empty_array_is_valid() -> None:
     assert _has_json_payload("```json\n[]\n```")
 
 
-def test_has_json_payload_bare_object_rejected() -> None:
-    # Een kaal object is geen geldige skill-payload (moet een array zijn).
-    # Niet aan een tekenheuristiek hangen: echt parsen + list eisen.
-    assert not _has_json_payload('{"x": true}')
+def test_has_json_payload_object_is_valid() -> None:
+    # lookup-person en entity-resolution leveren per contract één JSON-
+    # object. Dat als error markeren sloopt de LLM-enrichment in
+    # `polder resolve` — een object moet dus geldig zijn.
+    assert _has_json_payload('{"outcome": "matched", "chosen_person_id": "person:x"}')
+    assert _has_json_payload('Hier:\n```json\n{"matched_id": "person:y"}\n```')
 
 
 def test_has_json_payload_greeting_only() -> None:

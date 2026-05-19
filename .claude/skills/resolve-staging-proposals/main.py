@@ -29,6 +29,19 @@ POLDER_ROOT = SCRIPT_DIR.parent.parent.parent  # .claude/skills/resolve-staging-
 DATA_DIR = POLDER_ROOT / "data"
 
 
+def _rel_path(path: Path) -> str:
+    """Pad relatief aan DATA_DIR voor noot-strings, zonder te crashen.
+
+    `Path.relative_to` gooit ValueError als het pad buiten DATA_DIR ligt
+    (bv. in tests of bij een onverwachte werkdir). Een cosmetische noot
+    mag nooit de hele resolve laten falen — val terug op het kale pad.
+    """
+    try:
+        return str(path.relative_to(DATA_DIR))
+    except ValueError:
+        return str(path)
+
+
 @dataclass
 class ResolutionConfidence:
     """Per-field confidence scores [0, 1]."""
@@ -193,7 +206,7 @@ def match_organization(
                                     f"afdeling '{name}' parent_id={parent_id} but no directie in chain"
                                 )
 
-                        rel_path = org_path.relative_to(DATA_DIR)
+                        rel_path = _rel_path(org_path)
                         notes.append(f"matched '{name}' (level={level}) on {rel_path}")
                         return org_id, level, "; ".join(notes), confidence
 
@@ -229,7 +242,7 @@ def match_organization(
                     ratio = levenshtein_ratio(name_variant, name_value)
                     if 0.85 < ratio < 1.0:
                         confidence = min(0.85, 0.90 * ratio)
-                        rel_path = org_path.relative_to(DATA_DIR)
+                        rel_path = _rel_path(org_path)
                         notes.append(
                             f"fuzzy matched '{name}' (level={level}, ratio={ratio:.2f}) on {rel_path}"
                         )
@@ -369,7 +382,7 @@ def match_person(
     if initials_matches:
         if len(initials_matches) == 1:
             person_id, family, initials, year, person_path = initials_matches[0]
-            rel_path = person_path.relative_to(DATA_DIR)
+            rel_path = _rel_path(person_path)
             notes.append(
                 f"matched '{person_name}' on {rel_path} (family={family}, initials={initials}, year={year})"
             )
@@ -391,7 +404,7 @@ def match_person(
             return None, "; ".join(notes), 0.0
     elif len(matches) == 1:
         person_id, family, initials, year, person_path = matches[0]
-        rel_path = person_path.relative_to(DATA_DIR)
+        rel_path = _rel_path(person_path)
         notes.append(
             f"matched '{person_name}' on {rel_path} (family={family}, initials={initials}, year={year})"
         )
@@ -466,7 +479,7 @@ def match_post(
     # Check if post exists
     for post_id, (post_path, _post_data) in all_posts.items():
         if post_id == candidate_id:
-            rel_path = post_path.relative_to(DATA_DIR)
+            rel_path = _rel_path(post_path)
             notes.append(f"matched post on {rel_path}")
             return f"post:{post_id}", "; ".join(notes), False, 0.95
 
