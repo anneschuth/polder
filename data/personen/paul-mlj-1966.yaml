@@ -65,13 +65,24 @@ mandaten:
   role: Minister zonder portefeuille, belast met de aangelegenheden betreffende Primair
     en Voortgezet Onderwijs
   start_date: '2023-07-18'
-  end_date: null
+  end_date: '2024-07-02'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2023-23790.html
     retrieved: '2026-05-15'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2024-22491.html
+    retrieved: '2026-10-05'
+    fields:
+    - end_date
+    - applied_via:close-bewindspersonen-2026-10
+  - id: parlement_com
+    url: https://www.parlement.com/biografie/drs-mlj-marielle-paul
+    retrieved: '2026-10-05'
+    fields:
+    - end_date
   appointment:
     decision: Staatscourant nr. stcrt-2023-23790, 18 juli 2023
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2023-23790.html

@@ -101,13 +101,24 @@ mandaten:
   post_id: post:staatssecretaris-min-bzk
   role: Staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties
   start_date: '2020-04-10'
-  end_date: null
+  end_date: '2022-01-10'
   sources:
   - id: staatscourant
     url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22575.html
     retrieved: '2026-05-16'
     fields:
     - applied_via:apply-staging
+  - id: staatscourant
+    url: https://zoek.officielebekendmakingen.nl/stcrt-2022-1326.html
+    retrieved: '2026-10-05'
+    fields:
+    - end_date
+    - applied_via:close-bewindspersonen-2026-10
+  - id: wikidata
+    url: https://www.wikidata.org/wiki/Q2125339#P39
+    retrieved: '2026-10-05'
+    fields:
+    - end_date
   appointment:
     decision: Staatscourant nr. stcrt-2020-22575, 10 april 2020
     staatscourant_url: https://zoek.officielebekendmakingen.nl/stcrt-2020-22575.html
