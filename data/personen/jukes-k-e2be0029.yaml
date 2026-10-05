@@ -1,0 +1,27 @@
+id: person:jukes-k-e2be0029
+name:
+  full: Karin Jukes
+  family: Jukes
+  given: Karin
+mandaten:
+- id: mandate-post-kwartiermaker-procesdirecteur-aangiften-dg-douane-min-fin-2026-10-01
+  organization_id: org:onderdeel-procesdirectie-aangiften-dg-douane-min-fin
+  post_id: post:kwartiermaker-procesdirecteur-aangiften-dg-douane-min-fin
+  role: Kwartiermaker, beoogd procesdirecteur Aangiften
+  start_date: '2026-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/10/02/benoemingen-kwartiermakers-beoogd-procesdirecteuren-bij-dg-douane
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-10-02
+  confidence: 0.88
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/10/02/benoemingen-kwartiermakers-beoogd-procesdirecteuren-bij-dg-douane
+  retrieved: '2026-10-05'
+  fields:
+  - applied_via:apply-staging

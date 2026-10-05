@@ -1,0 +1,27 @@
+id: person:sueters-k-3b3d7cb3
+name:
+  full: Koen Sueters
+  family: Sueters
+  given: Koen
+mandaten:
+- id: mandate-post-directeur-bedrijfsvoering-cbr-2027-01-01
+  organization_id: org:zbo-cbr
+  post_id: post:directeur-bedrijfsvoering-cbr
+  role: Directeur Bedrijfsvoering
+  start_date: '2027-01-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/08/27/koen-sueters-directeur-bedrijfsvoering-bij-het-cbr
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: Benoeming door Minister Vincent Karremans, ABD-nieuwsbericht 2026-08-27
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/08/27/koen-sueters-directeur-bedrijfsvoering-bij-het-cbr
+  retrieved: '2026-10-05'
+  fields:
+  - applied_via:apply-staging

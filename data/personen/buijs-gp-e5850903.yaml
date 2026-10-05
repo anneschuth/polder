@@ -21,6 +21,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2021-09-23
   confidence: 0.91
+- id: mandate-post-mt-lid-npvi-directie-verduurzaming-industrie-min-ezk-2026-10-01
+  organization_id: org:onderdeel-directie-verduurzaming-industrie-min-ezk
+  post_id: post:mt-lid-npvi-directie-verduurzaming-industrie-min-ezk
+  role: MT-lid
+  start_date: '2026-10-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/08/03/geert-buijs-mt-lid-bij-de-directie-verduurzaming-industrie-bij-ezk
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-08-03
+  confidence: 0.9
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2021/09/23/geert-buijs-afdelingshoofd-beleid-en-omgeving-bij-ienw

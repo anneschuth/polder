@@ -1,0 +1,27 @@
+id: person:nehmelman-r-ab4f328d
+name:
+  full: Remco Nehmelman
+  family: Nehmelman
+  given: Remco
+mandaten:
+- id: mandate-post-directeur-kabinet-van-de-koning-2026-09-28
+  organization_id: org:kabinet-kvdk
+  post_id: post:directeur-kabinet-van-de-koning
+  role: Directeur Kabinet van de Koning
+  start_date: '2026-09-28'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/08/21/remco-nehmelman-directeur-kabinet-van-de-koning
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-08-21
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/08/21/remco-nehmelman-directeur-kabinet-van-de-koning
+  retrieved: '2026-10-05'
+  fields:
+  - applied_via:apply-staging
