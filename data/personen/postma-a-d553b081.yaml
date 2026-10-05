@@ -19,6 +19,21 @@ mandaten:
   appointment:
     decision: ABD-nieuwsbericht 2019-07-03
   confidence: 0.88
+- id: mandate-post-directeur-meva-min-vws-2026-08-01
+  organization_id: org:onderdeel-meva-min-vws
+  post_id: post:directeur-meva-min-vws
+  role: Directeur Macro-Economisch Vraagstukken en Arbeidsmarkt
+  start_date: '2026-08-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/06/05/allard-postma-directeur-macro-economische-vraagstukken-en-arbeidsmarkt-bij-vws
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-06-05
+  confidence: 0.92
 sources:
 - id: abd_nieuws
   url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2019/07/03/allard-postma-hoofd-begrotingsbeleid-bij-fin

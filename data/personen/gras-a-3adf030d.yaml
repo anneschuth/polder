@@ -1,0 +1,26 @@
+id: person:gras-a-3adf030d
+name:
+  full: Arjan Gras
+  family: Arjan
+mandaten:
+- id: mandate-post-directeur-toezichtregie-igj-min-vws-2026-09-01
+  organization_id: org:directie-toezichtregie-igj-min-vws
+  post_id: post:directeur-toezichtregie-igj-min-vws
+  role: Directeur Toezichtregie
+  start_date: '2026-09-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/07/10/arjan-gras-directeur-toezichtregie-bij-de-inspectie-gezondheidszorg-en-jeugd
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-07-10
+  confidence: 0.91
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/07/10/arjan-gras-directeur-toezichtregie-bij-de-inspectie-gezondheidszorg-en-jeugd
+  retrieved: '2026-10-05'
+  fields:
+  - applied_via:apply-staging

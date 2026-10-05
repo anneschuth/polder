@@ -1,0 +1,27 @@
+id: person:withaar-e-adab4a03
+name:
+  full: Eric Withaar
+  family: Withaar
+  given: Eric
+mandaten:
+- id: mandate-post-directeur-financien-control-commit-min-def-2026-08-10
+  organization_id: org:onderdeel-commit-min-def
+  post_id: post:directeur-financien-control-commit-min-def
+  role: Directeur Financiën & Control
+  start_date: '2026-08-10'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/06/19/eric-withaar-directeur-financien-control-bij-het-commando-materieel-en-it-commit-bij-defensie
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-06-19
+  confidence: 0.92
+sources:
+- id: abd_nieuws
+  url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/06/19/eric-withaar-directeur-financien-control-bij-het-commando-materieel-en-it-commit-bij-defensie
+  retrieved: '2026-10-05'
+  fields:
+  - applied_via:apply-staging

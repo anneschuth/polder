@@ -15,6 +15,22 @@ mandaten:
   - id: open_raadsinformatie
     url: https://id.openraadsinformatie.nl/5481733
     retrieved: '2026-05-13'
+- id: mandate-post-afdelingshoofd-luchtruim-onbemande-luchtvaart-min-ienw-2026-07-01
+  organization_id: org:onderdeel-onbemande-luchtvaart-luchtruim-luchthavens-min-ienw
+  post_id: post:afdelingshoofd-luchtruim-onbemande-luchtvaart-min-ienw
+  role: Afdelingshoofd Luchtruim, directie Onbemande Luchtvaart, Luchtruim en Luchthavens,
+    ministerie van Infrastructuur en Waterstaat
+  start_date: '2026-07-01'
+  end_date: null
+  sources:
+  - id: abd_nieuws
+    url: https://www.algemenebestuursdienst.nl/actueel/nieuws/2026/06/11/marieke-smit-afdelingshoofd-luchtruim-bij-ienw
+    retrieved: '2026-10-05'
+    fields:
+    - applied_via:apply-staging
+  appointment:
+    decision: ABD-nieuwsbericht 2026-06-11
+  confidence: 0.93
 sources:
 - id: open_raadsinformatie
   url: https://id.openraadsinformatie.nl/5481731
